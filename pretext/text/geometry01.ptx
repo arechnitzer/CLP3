@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xml:id="sec-points">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title>Points</title>
+
+<p>Each point in two dimensions may be labeled by two coordinates
+  <fn>This is why the <m>xy</m>-plane is called <q>two dimensional</q> <mdash/> the name of each point consists of two real numbers.</fn><m>(x,y)</m> which specify the position of the point in some units with respect to some axes as in the figure below.
+</p>
+
+  <sidebyside width="33%" >
+  <image source="figs/point2d.svg"/>
+  </sidebyside>
+<p>
+  The set of all points in two dimensions is denoted
+  <fn>
+    Not surprisingly, the <m>2</m> in <m>\bbbr^2</m> signifies that each point is labelled by two numbers and the <m>\bbbr</m> in <m>\bbbr^2</m> signifies that the numbers in question are real numbers.
+    There are more advanced applications (for example in signal analysis and in quantum mechanics) where complex numbers are used. The space of all pairs <m>(z_1,z_2)</m>, with <m>z_1</m> and <m>z_2</m> complex numbers is denoted  <m>\bbbc^2</m>.
+  </fn> <m>\bbbr^2</m>.
+  Observe that
+  <ul>
+  <li> the distance from the point <m>(x,y)</m> to the <m>x</m>-axis is <m>|y|</m>
+  </li>
+  <li> the distance from the point <m>(x,y)</m> to the <m>y</m>-axis is <m>|x|</m>
+  </li>
+  <li> the distance from the point <m>(x,y)</m> to the origin <m>(0,0)</m> is
+       <m>\sqrt{x^2+y^2}</m>
+  </li>
+  </ul>
+  Similarly, each point in three dimensions may be labeled by three coordinates <m>(x,y,z)</m>, as in the two figures below.
+</p>
+<sidebyside width="33%" >
+  <image source="figs/point3d.svg"/> <image source="figs/point3db.svg"/>
+  </sidebyside>
+<p>
+  The set of all points in three dimensions is denoted <m>\bbbr^3</m>.
+  The plane that contains, for example, the <m>x</m>- and <m>y</m>-axes
+  is called the <m>xy</m>-plane.
+  <ul>
+  <li> The <m>xy</m>-plane is the set of all points <m>(x,y,z)</m> that
+  satisfy <m>z=0</m>.
+  </li>
+  <li> The <m>xz</m>-plane is the set of all points <m>(x,y,z)</m> that
+  satisfy <m>y=0</m>.
+  </li>
+  <li> The <m>yz</m>-plane is the set of all points <m>(x,y,z)</m> that
+  satisfy <m>x=0</m>.
+  </li>
+  </ul>
+  More generally,
+  <ul>
+  <li> The set of all points <m>(x,y,z)</m> that obey <m>z=c</m> is a plane
+  that is parallel to the <m>xy</m>-plane and is a distance <m>|c|</m> from it.
+  If <m>c \gt 0</m>, the plane <m>z=c</m> is above the <m>xy</m>-plane.
+  If <m>c \lt 0</m>, the plane <m>z=c</m> is below the <m>xy</m>-plane.
+  We say that the plane <m>z=c</m> is a signed distance <m>c</m> from the
+  <m>xy</m>-plane.
+  </li>
+  <li> The set of all points <m>(x,y,z)</m> that obey <m>y=b</m> is a plane
+  that is parallel to the <m>xz</m>-plane and is a signed distance <m>b</m> from it.
+  </li>
+  <li> The set of all points <m>(x,y,z)</m> that obey <m>x=a</m> is a plane
+  that is parallel to the <m>yz</m>-plane and is a signed distance <m>a</m> from it.
+  </li>
+  </ul>
+</p>
+
+  <sidebyside>
+  <image source="figs/xyplaneN.svg"/>
+     <image source="figs/xzplaneN.svg"/>
+     <image source="figs/yzplaneN.svg"/>
+  </sidebyside>
+<p>
+  Observe that our 2d distances extend quite easily to 3d.
+  <ul>
+  <li> the distance from the point <m>(x,y,z)</m> to the <m>xy</m>-plane is <m>|z|</m>
+  </li>
+  <li> the distance from the point <m>(x,y,z)</m> to the <m>xz</m>-plane is <m>|y|</m>
+  </li>
+  <li> the distance from the point <m>(x,y,z)</m> to the <m>yz</m>-plane is <m>|x|</m>
+  </li>
+  <li> the distance from the point <m>(x,y,z)</m> to the origin <m>(0,0,0)</m> is
+       <m>\sqrt{x^2+y^2+z^2}</m>
+  </li>
+  </ul>
+  To see that the distance from the point <m>(x,y,z)</m> to the origin <m>(0,0,0)</m>
+  is indeed  <m>\sqrt{x^2+y^2+z^2}</m>,
+  <ul>
+  <li>
+  apply Pythagoras to the right-angled triangle with vertices <m>(0,0,0)</m>,
+  <m>(x,0,0)</m> and <m>(x,y,0)</m> to see that the distance from <m>(0,0,0)</m>
+  to <m>(x,y,0)</m> is <m>\sqrt{x^2+y^2}</m> and then
+  </li>
+  <li>
+  apply Pythagoras to the right-angled triangle with vertices <m>(0,0,0)</m>,
+  <m>(x,y,0)</m> and <m>(x,y,z)</m> to see that the distance from <m>(0,0,0)</m>
+  to <m>(x,y,z)</m> is <m>\sqrt{{\big(\sqrt{x^2+y^2}\big)}^2+z^2}
+  =\sqrt{x^2+y^2+z^2}</m>.
+  </li>
+  </ul>
+</p>
+
+<sidebyside width="50%" >
+  <image source="figs/pythag3d.svg"/>
+  </sidebyside>
+<p>
+  More generally, the distance from the point <m>(x,y,z)</m> to the point
+  <m>(x',y',z')</m> is
+  <me>
+  \sqrt{(x-x')^2+(y-y')^2+(z-z')^2}
+  </me>
+  Notice that this gives us the equation for a sphere quite directly.
+  All the points on a sphere are equidistant from the centre of the sphere.
+  So, for example, the equation of the sphere centered on <m>(1,2,3)</m> with
+  radius <m>4</m>, that is, the set of all points <m>(x,y,z)</m> whose distance
+  from <m>(1,2,3)</m> is <m>4</m>, is
+  <me>
+  (x-1)^2+(y-2)^2+(z-3)^2=16
+  </me>
+  </p>
+
+</section>

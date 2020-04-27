@@ -1,0 +1,2396 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="sec_vectors"><title>Vectors</title>
+<introduction>
+
+<p>In many of our applications in 2d and 3d, we will encounter quantities
+that have both a magnitude (like a distance) and also a
+direction. Such quantities are called vectors. That is,
+a <em>vector</em> is a quantity which has both a direction and a magnitude,
+like a velocity. If you are moving, the magnitude (length) of your
+velocity vector is your speed (distance travelled per unit time)  and the
+direction of your velocity vector is your direction of motion. To specify
+a vector in three dimensions you have to give three components, just as for
+a point. To draw the vector with components <m>a, b, c </m> you can draw
+an arrow from the point <m>(0,0,0)</m> to the point <m>(a,b,c)</m>.
+</p>
+
+
+
+<sidebyside width="40%">
+<image source="figs/vector2d.svg"/>
+<image source="figs/vector3d.svg"/>
+</sidebyside>
+
+<p>
+Similarly, to specify a vector in two dimensions
+you have to give two components and to draw the vector
+with components <m>a, b </m> you can draw an arrow from the point <m>(0,0)</m>
+to the point <m>(a,b)</m>.
+</p>
+
+
+<p>There are many situations in which it is preferable to draw a vector
+with its tail at some point other than the origin. For example, it is
+natural to draw the velocity vector of a moving particle with the tail
+of the velocity vector at the position of the particle, whether or not
+the particle is at the origin. The sketch below shows a moving particle
+and its velocity vector at two different times.
+</p>
+
+  <sidebyside width="50%">
+  <image source="figs/movingParticle.svg"/>
+  </sidebyside>
+
+<p>
+As a second example, suppose that you are analyzing the motion of a pendulum.
+There are three forces acting on the pendulum bob: gravity <m>\vg</m>, which
+is pulling the bob straight down, tension <m>\vt</m> in the rod, which is
+pulling the bob in the direction of the rod, and air resistance <m>\vr</m>,
+which is pulling the bob in a direction opposite to its direction of motion.
+All three forces are acting on the bob. So it is natural to draw all three
+arrows representing the forces with their tails at the ball.
+</p>
+
+<sidebyside width="50%">
+<image source="figs/pendulum.svg"/>
+</sidebyside>
+
+
+<p>In this text, we will used bold faced letters, like <m>\vv</m>, <m>\vt</m>, <m>\vg</m>,
+to designate vectors. In handwriting, it is clearer to use a small
+overhead arrow
+  <fn>
+    Some people use an underline, as in <m>\underline{v}</m>, rather than an arrow.</fn>,
+as in <m>\vec{v}</m>, <m>\vec{t}</m>, <m>\vec{g}</m>, instead.
+Also, when we want to emphasise that some quantity is a number,
+rather than a vector, we will call the number a <em>scalar</em>.
+</p>
+
+<p>
+Both points and vectors in 2d are specified by two numbers. Until
+you get used to this, it might confuse you sometimes <mdash/> does a given pair of
+numbers represent a point or a vector?
+To distinguish
+<fn>
+  Or, in the Wikipedia jargon, disambiguate.
+</fn>
+between the components of a vector and the coordinates
+of the point at its head, when its tail is at some point other than
+the origin, we shall use angle brackets rather than round brackets
+around the components of a vector. For example, the figure below shows
+the two-dimensional vector <m>\llt 2,1\rgt</m> drawn in three different positions.
+In each case, when the tail is at the point <m>(u,v)</m> the head is at
+<m>(2+u,1+v)</m>. We warn you that, out in the  real world
+<fn>
+  OK. OK. Out in that (admittedly very small) part of the real world that actually knows
+what a vector is.
+</fn>,
+no one uses notation
+that distinguishes between components of a vector and the coordinates of its
+head <mdash/> usually round brackets are used for both. It is up to you to
+keep straight which is being referred to.
+</p>
+
+<sidebyside>
+  <image source="figs/positions.svg"/>
+</sidebyside>
+
+<p>By way of summary,</p>
+<definition xml:id="not_scalar_vector">
+<statement>
+  <p>
+    we use
+<ul>
+<li>
+bold faced letters, like <m>\vv</m>, <m>\vt</m>, <m>\vg</m>, to designate vectors,
+and
+</li>
+<li>
+angle brackets, like <m>\llt 2,1\rgt</m>, around the components of a vector,
+but use
+</li>
+<li>
+round brackets, like <m>(2,1)</m>, around the coordinates of a point,
+and use
+</li>
+<li> <q>scalar</q> to emphasise that some quantity is a number,
+rather than a vector.
+</li>
+</ul>
+</p></statement>
+</definition>
+
+</introduction>
+
+<subsection xml:id="subsec-addvec">
+  <title>Addition of Vectors and Multiplication of a Vector by a Scalar</title>
+
+<p>Just as we have done many times in the CLP texts, when we define a new
+type of object, we want to understand how it interacts with the basic
+operations of addition and multiplication. Vectors are no different, and
+the following is a natural way to define addition of vectors.
+Multiplication will be more subtle, and we start with multiplication of a vector by a number (rather than with multiplication of a vector by
+another vector).
+</p>
+
+<definition xml:id="def_addScalMult">
+  <title>Adding Vectors and Multiplying a Vector by a Number</title>
+<statement>
+  <p>
+    These two operations have the obvious definitions
+<md>
+  <mrow>
+  \va=\llt a_1,a_2\rgt,\ \vb =\llt b_1,b_2\rgt
+  \amp\amp
+  \implies\amp\amp \va+\vb=\llt a_1+b_1,a_2+b_2\rgt
+  </mrow>
+  <mrow>
+  \va=\llt a_1,a_2\rgt,\ s\text{ a number}
+  \amp\amp
+  \implies\amp\amp s\va=\llt sa_1,sa_2\rgt
+  </mrow>
+</md>
+and similarly in three dimensions.
+</p></statement>
+</definition>
+
+<p>
+Pictorially, you add the vector <m>\vb</m> to the vector <m>\va</m>
+by drawing <m>\vb</m> with its tail at the head of <m>\va</m> and then drawing
+a vector from the tail of <m>\va</m> to the head of <m>\vb</m>, as in the figure
+on the left below. For a number <m>s</m>, we can draw the vector <m>s\va</m>, by
+just
+<ul>
+<li>
+changing the vector <m>\va</m>'s length by the factor <m>|s|</m>, and,
+</li>
+<li>
+if <m>s \lt 0</m>, reversing the arrow's direction,
+</li>
+</ul>
+as in the other two figures below.
+</p>
+<sidebyside>
+  <image source="figs/addvec.svg"/>
+  <image source="figs/scalmul.svg"/>
+  <image source="figs/negmul.svg"/>
+  </sidebyside>
+<p>
+The special case of multiplication by <m>s=-1</m> appears so frequently that
+<m>(-1)\va</m> is given the shorter notation <m>-\va</m>. That is,
+<me>
+-\llt a_1,a_2\rgt=\llt -a_1,-a_2\rgt
+</me>
+Of course <m>\va+(-\va)</m> is <m>\vZero</m>, the vector all of whose components
+are zero.
+</p>
+
+<p>
+  To subtract <m>\vb</m> from <m>\va</m> pictorially, you may add <m>-\vb</m> (which is drawn by reversing the direction of <m>\vb</m>) to <m>\va</m>.
+  Alternatively, if you draw <m>\va</m> and <m>\vb</m> with their tails at a common point, then <m>\va-\vb</m> is the vector from the head of <m>\vb</m> to the head of <m>\va</m>.
+  That is, <m>\va-\vb</m> is the vector you must add to <m>\vb</m> in order to get <m>\va</m>.
+</p>
+
+<sidebyside width="50%">
+  <image source="figs/subtract.svg"/>
+</sidebyside>
+
+<p>
+  The operations of addition and multiplication by a scalar that we have just
+defined are quite natural and rarely cause any problems, because
+they inherit from the real numbers the properties of  addition and
+multiplication that you are used to.
+</p>
+
+<theorem xml:id="thm_addScalMult">
+  <title>Properties of Addition and Scalar Multiplication</title>
+<statement><p>
+
+Let <m>\va</m>, <m>\vb</m> and <m>\vc</m> be vectors and <m>s</m> and <m>t</m> be scalars. Then
+<md alignment="alignat">
+  <mrow>
+&amp; (1)\quad&amp;&amp;\va+\vb=\vb+\va \qquad\qquad\qquad
+&amp;&amp; (2)\quad&amp;&amp;\va+(\vb+\vc)=(\va+\vb)+\vc
+</mrow>
+<mrow>
+&amp; (3) &amp;&amp;\va+\vZero =\va
+&amp;&amp; (4) &amp;&amp;\va+(-\va)=\vZero
+</mrow>
+<mrow>
+&amp; (5) &amp;&amp;s(\va+\vb)=s\va+s\vb
+&amp;&amp; (6) &amp;&amp;(s+t)\va=s\va+t\va
+</mrow>
+<mrow>
+&amp; (7) &amp;&amp;(st)\va = s(t\va)
+&amp;&amp; (8) &amp;&amp;1\va=\va
+</mrow>
+</md>
+</p></statement>
+</theorem>
+
+<p>
+  We have just been introduced to many definitions. Let's see some of them in action.
+</p>
+
+<example>
+<p>
+For example, if
+<me>
+\va = \llt 1,2,3\rgt\qquad
+\vb = \llt 3,2,1\rgt\qquad
+\vc = \llt 1,0,1\rgt
+</me>
+then
+<md alignment="alignat">
+  <mrow>
+2\va&amp;=2\llt 1,2,3\rgt&amp;&amp;=\llt 2,4,6\rgt
+</mrow>
+<mrow>
+-\vb&amp;=-\llt 3,2,1\rgt&amp;&amp;=\llt -3,-2,-1\rgt
+</mrow>
+<mrow>
+3\vc&amp;=3\llt 1,0,1\rgt&amp;&amp;=\llt 3,0,3\rgt
+</mrow>
+</md>
+and
+<md>
+<mrow>
+2\va-\vb+3\vc
+&amp;= \llt 2,4,6\rgt + \llt -3,-2,-1\rgt+\llt 3,0,3\rgt
+</mrow><mrow>
+&amp;= \llt 2-3+3\,,\,4-2+0\,,\,6-1+3\rgt
+</mrow><mrow>
+&amp;= \llt 2,2,8 \rgt
+</mrow>
+</md>
+</p>
+</example>
+
+
+<definition xml:id="def_parallel_vectors">
+<statement>
+<p>
+Two vectors <m>\va</m> and <m>\vb</m>
+<ul>
+<li>
+are said to be parallel if <m>\ \va= s\,\vb\ </m> for some nonzero real number <m>s</m> and
+</li>
+<li>
+are said to have the same direction if <m>\ \va=s\,\vb\ </m> for some number <m>s \gt 0</m>.
+</li>
+</ul>
+</p></statement>
+</definition>
+
+
+<p>There are some vectors that occur sufficiently commonly that they are
+given special names. One is the vector <m>\vZero</m>. Some others are the
+<q>standard basis vectors</q>.
+</p>
+
+<definition xml:id="def_basis_vectors">
+<statement>
+<p>
+The standard basis vectors in two dimensions are
+<me>
+\hi = \llt 1,0\rgt \qquad\qquad\hj =\llt 0,1\rgt
+</me>
+</p>
+<sidebyside width="20%">
+  <image source="figs/basis2d.svg"/>
+</sidebyside>
+<p>
+The standard basis vectors in three dimensions are
+<me>
+\hi = \llt 1,0,0\rgt \qquad\qquad\hj =\llt 0,1,0\rgt
+\qquad\qquad\hk =\llt 0,0,1\rgt
+</me>
+</p>
+<sidebyside width="30%">
+<image source="figs/basis3d.svg"/>
+</sidebyside>
+</statement>
+</definition>
+
+<p>
+We'll explain the little hats in the notation <m>\hi</m>, <m>\hj</m>, <m>\hk</m> shortly.
+Some people rename <m>\hi</m>, <m>\hj</m> and <m>\hk</m> to <m>\he_1</m>, <m>\he_2</m> and
+<m>\he_3</m> respectively.
+Using the above properties we have, for all vectors,
+<me>
+\llt a_1,a_2\rgt =a_1\,\hi+a_2\,\hj\qquad\qquad
+\llt a_1,a_2,a_3\rgt =a_1\,\hi+a_2\,\hj+a_3\,\hk
+</me>
+A sum of numbers times vectors, like <m>a_1\hi+a_2\hj</m> is called
+a linear combination of the vectors.
+Thus all vectors can be expressed as linear combinations of the standard
+basis vectors. This makes basis vectors very helpful in computations.
+The  standard basis vectors are unit vectors, meaning that they are of
+length one, where the length of a vector <m>\va</m> is denoted
+<fn>The notation <m>\|\va\|</m> is also used for the length of <m>\va</m>.</fn>
+ <m>|\va|</m>
+and is defined by
+</p>
+
+<definition xml:id="def_vectLen"><title>Length of a Vector</title>
+<statement><p>
+<md alignment="alignat">
+<mrow>
+&amp;\va=\llt a_1,a_2\rgt \qquad&amp;&amp;\implies\qquad &amp;&amp;|\va|=\sqrt{a_1^2+a_2^2}
+</mrow>
+<mrow>
+&amp;\va=\llt a_1,a_2,a_3\rgt \qquad&amp;&amp;\implies\qquad &amp;&amp;|\va|=\sqrt{a_1^2+a_2^2+a_3^2}
+</mrow>
+</md>
+A unit vector is a vector of length one. We'll sometimes use the accent
+<m>\hat{\ }</m> to emphasise that the vector <m>\hat\va</m> is a unit vector.
+That is, <m>|\hat\va|=1</m>.
+</p></statement>
+</definition>
+
+
+<example xml:id="eg_unit_vector">
+<p>
+Recall that multiplying a vector <m>\va</m> by a positive number <m>s</m>,
+changes the length of the vector by a factor <m>s</m> without changing
+the direction of the vector. So (assuming that <m>|\va|\ne 0)</m>
+<m>\frac{\va}{|\va|}</m> is a unit vector that has the same direction as
+<m>\va</m>. For example, <m>\frac{\llt 1,1,1\rgt}{\sqrt{3}}</m> is a unit vector
+that points in the same direction as <m>\llt 1,1,1\rgt</m>.
+</p>
+</example>
+
+
+<example xml:id="eg_walk">
+<p>
+We go for a walk on a flat Earth. We use a coordinate system
+with the positive x-axis pointing due east and the positive y-axis pointing due
+north. We
+<ul>
+<li>
+start at the origin and
+</li>
+<li>
+walk due east for 4 units and then
+</li>
+<li>
+walk northeast for <m>5\sqrt{2}</m> units and then
+</li>
+<li>
+head towards the point <m>(0,11)</m>, but we only go
+</li>
+<li>
+one third of the way.
+</li>
+</ul>
+</p>
+    <sidebyside widths="40% 25%">
+    <image source="figs/addSubtractMult.svg"/>
+    <image source="figs/triangleWalk.svg"/>
+    </sidebyside>
+
+<p>
+We will now use vectors to figure out our final location.
+<ul>
+<li>
+On the first leg of our walk, we go 4 units in the positive <m>x</m>-direction.
+So our displacement vector <mdash/> the vector whose tail is at our starting point and whose head is at the end point of the first leg <mdash/> is <m>\llt 4,0\rgt</m>.
+As we started at <m>(0,0)</m> we finish the first leg of the walk at <m>(4,0)</m>.
+</li>
+<li>
+On the second leg of our walk, our direction of motion is northeast. i.e. is
+<m>45^\circ</m> above the direction of the positive <m>x</m>-axis. Looking at the figure
+on the right above, we see that our displacement vector, for the second leg of the walk, has to be in the same direction as the vector <m>\llt 1,1\rgt</m>.
+So our displacement vector is the vector of length <m>5\sqrt{2}</m> with the same direction as <m>\llt 1,1\rgt</m>. The vector <m>\llt 1,1\rgt</m> has length
+<m>\sqrt{1^2+1^2}=\sqrt{2}</m> and so <m>\frac{\llt 1,1\rgt}{\sqrt{2}}</m> has length one
+and our displacement vector is
+<me>
+5\sqrt{2}\ \frac{\llt 1,1\rgt}{\sqrt{2}}
+=5 \llt 1,1\rgt
+=\llt 5,5\rgt
+</me>
+If we draw this displacement vector, <m>\llt 5,5\rgt</m> with its tail at
+<m>(4,0)</m>, the starting point of the second leg of the walk, then its head
+will be at <m>(4+5, 0+5)=(9,5)</m> and that is the end point of the second
+leg of the walk.
+</li>
+<li>
+On the final leg of our walk, we start at <m>(9,5)</m> and walk towards <m>(0,11)</m>.
+The vector from <m>(9,5)</m> to <m>(0,11)</m> is <m>\llt 0-9\,,\,11-5\rgt =\llt -9,6\rgt</m>.
+As we go only one third of the way, our final displacement vector is
+<me>
+\frac{1}{3}\llt -9,6\rgt
+=\llt -3,2\rgt
+</me>
+If we draw this displacement vector with its tail at
+<m>(9,5)</m>, the starting point of the final leg, then its head
+will be at <m>(9-3, 5+2)=(6,7)</m> and that is the end point of the final
+leg of the walk, and our final location.
+</li>
+</ul>
+</p>
+</example>
+
+
+</subsection>
+
+
+<subsection xml:id="subsec-dotprod">
+  <title>The Dot Product</title>
+
+<p>Let's get back to the arithmetic operations of addition and multiplication.
+We will be using both scalars and vectors. So, for each operation there are
+three possibilities that we need to explore:
+<ul>
+<li> <q>scalar plus scalar</q>, <q>scalar plus vector</q> and <q>vector plus vector</q>
+</li>
+<li><q>scalar times scalar</q>, <q>scalar times vector</q> and
+         <q>vector times vector</q>
+</li>
+</ul>
+We have been using <q>scalar plus scalar</q> and <q>scalar times scalar</q>
+since childhood. <q>vector plus vector</q> and <q>scalar times vector</q>
+were just defined above. There is no sensible way to define <q>scalar plus vector</q>, so we won't. This leaves <q>vector times vector</q>.
+There are actually two widely used such products.
+The first is the <em>dot product</em>, which is the topic of this section,
+and which is used to easily determine the angle <m>\theta</m> (or more precisely,
+<m>\cos\theta</m>) between two vectors.
+We'll get to the second, the cross product, later.
+</p>
+
+
+<definition xml:id="def_dotProd">
+  <title>Dot Product</title>
+<statement><p>
+The dot product of the vectors <m>\va</m> and <m>\vb</m> is denoted <m>\va\cdot\vb</m>
+and is defined by
+<md alignment="alignat">
+  <mrow>
+&amp;\va=\llt a_1,a_2\rgt ,\quad &amp;&amp;\vb=\llt b_1,b_2\rgt\quad &amp;\implies\quad
+&amp;\va\cdot\vb = a_1b_1+a_2b_2
+</mrow>
+<mrow>
+&amp;\va=\llt a_1,a_2,a_3\rgt ,\quad &amp;&amp;\vb=\llt b_1,b_2,b_3\rgt\quad &amp;\implies\quad
+&amp;\va\cdot\vb = a_1b_1+a_2b_2+a_3b_3
+</mrow>
+</md>
+in two and three dimensions respectively.
+</p></statement>
+</definition>
+
+
+<p>
+The properties of the dot product are as follows:
+</p>
+
+<theorem xml:id="thm_dotPppties">
+<title>Properties of the Dot Product</title>
+<statement>
+<p>
+Let <m>\va</m>, <m>\vb</m> and <m>\vc</m> be vectors and let <m>s</m> be a scalar.
+Then
+<md alignment="alignat">
+  <mrow>
+&amp;(0)\quad &amp;&amp;\va,\vb\text{ are vectors and }\va\cdot\vb
+              \text{ is a scalar}
+  </mrow>
+  <mrow>
+&amp;(1) &amp;&amp;\va\cdot\va=|\va|^2
+</mrow>
+<mrow>
+&amp;(2) &amp;&amp;\va\cdot\vb=\vb\cdot\va
+</mrow>
+<mrow>
+&amp;(3) &amp;&amp;\va\cdot(\vb+\vc)=\va\cdot\vb+\va\cdot\vc,\quad
+       (\va+\vb)\cdot\vc=\va\cdot\vc+\vb\cdot\vc
+</mrow>
+ <mrow>
+&amp;(4) &amp;&amp;(s\va)\cdot\vb= s(\va\cdot\vb)
+</mrow>
+<mrow>
+&amp;(5)  &amp;&amp;\vZero \cdot\va=0
+</mrow>
+<mrow>
+&amp;(6) &amp;&amp;\va\cdot\vb=|\va|\,|\vb|\,\cos\theta
+        \text{ where \(\theta\) is the angle between \(\va\) and \(\vb\)}
+  </mrow>
+  <mrow>
+&amp;(7) &amp;&amp;\va\cdot\vb=0\iff \va=\vZero \text{ or }\vb=\vZero
+    \text{ or } \va\perp\vb
+  </mrow>
+</md>
+</p>
+</statement>
+</theorem>
+
+<proof>
+<p>
+Properties 0 through 5 are almost immediate consequences of the definition.
+For example, for property 3 (which is called the distributive law)
+in dimension 2,
+<md>
+<mrow>
+\va\cdot(\vb+\vc)
+    &amp;=\llt a_1,a_2\rgt \cdot\llt b_1+c_1,b_2+c_2\rgt
+</mrow><mrow>
+    &amp;=a_1(b_1+c_1)+a_2(b_2+c_2)=a_1b_1+a_1c_1+a_2b_2+a_2c_2
+</mrow><mrow>
+\va\cdot\vb+\va\cdot\vc
+&amp;=\llt a_1,a_2\rgt \cdot\llt b_1,b_2\rgt
+             +\llt a_1,a_2\rgt \cdot\llt c_1,c_2\rgt
+</mrow><mrow>
+&amp;=a_1b_1+a_2b_2+a_1c_1+a_2c_2
+</mrow>
+</md>
+</p>
+
+<p>
+  Property 6 is sufficiently important that it is often used as the
+definition of dot product. It is not at all an obvious consequence of the definition.
+To verify it, we just write <m>|\va-\vb|^2</m> in two different ways.
+The first expresses <m>|\va-\vb|^2</m> in terms of <m>\va\cdot\vb</m>.
+It is
+<md>
+<mrow>
+|\va-\vb|^2\ &amp;{\buildrel 1 \over =}\ (\va-\vb\,)\cdot(\va-\vb\,)
+</mrow><mrow>
+&amp;{\buildrel 3 \over =}\ \va\cdot\va-\va\cdot\vb-\vb\cdot\va
++\vb\cdot\vb
+</mrow><mrow>
+&amp;{\buildrel 1,2 \over =}\ |\va|^2+|\vb|^2-2\va\cdot\vb
+</mrow>
+</md>
+Here, <m>{\buildrel 1 \over =}</m>, for
+example, means that the equality is  a consequence of property 1.
+The second way we write <m>|\va-\vb|^2</m> involves <m>\cos\theta</m> and follows from
+the cosine law for triangles. Just in case you don't remember the
+cosine law, we'll derive it right now! Start by applying Pythagoras to the
+shaded triangle in the right hand figure of
+</p>
+
+<sidebyside width="75%">
+  <image source="figs/cosineB.svg"/>
+</sidebyside>
+
+<p>
+That triangle is a right triangle whose hypotenuse has length <m>|\va-\vb|</m>
+and  whose other two sides have lengths <m>\big(|\vb|-|\va|\cos\theta\big)</m>
+and <m>|\va|\sin\theta</m>. So Pythagoras gives
+<md>
+<mrow>
+|\va-\vb|^2&amp;=\big(|\vb|-|\va|\cos\theta\big)^2+
+\big(|\va|\sin\theta\big)^2
+</mrow><mrow>
+&amp;=|\vb|^2-2|\va|\,|\vb|\,\cos\theta+|\va|^2\cos^2\theta
++|\va|^2\sin^2\theta
+</mrow><mrow>
+&amp;=|\vb|^2-2|\va|\,|\vb|\,\cos\theta+|\va|^2
+</mrow>
+</md>
+This is precisely the cosine law
+<fn>
+  You may be used to seeing it written as <m>c^2=a^2+b^2-2 a b \cos C</m>, where <m>a</m>, <m>b</m> and <m>c</m> are the lengths of the three sides of the triangle and <m>C</m> is the angle opposite the side of length <m>c</m>
+</fn>.
+Observe that, when <m>\theta=\tfrac{\pi}{2}</m>,
+this reduces to, (surprise!) Pythagoras' theorem.
+</p>
+
+<p>
+  Setting our two expressions for <m>|\va-\vb|^2</m> equal to each other,
+<md>
+<mrow>
+|\va-\vb|^2=|\va|^2+|\vb|^2-2\va\cdot\vb
+=|\vb|^2-2|\va|\,|\vb|\,\cos\theta+|\va|^2
+</mrow>
+</md>
+cancelling the <m>|\va|^2</m> and <m>|\vb|^2</m> common to both sides
+<md>
+<mrow>
+-2\va\cdot\vb
+=-2|\va|\,|\vb|\,\cos\theta
+</mrow>
+</md>
+and dividing by <m>-2</m> gives
+<md>
+<mrow>
+\va\cdot\vb=|\va|\,|\vb|\,\cos\theta
+</mrow>
+</md>
+which is exactly property 6.
+</p>
+
+
+<p>Property 7 follows directly from property 6. First note that the dot product <m>\va\cdot\vb=|\va|\,|\vb|\,\cos\theta</m>
+is zero if and only if at least one of the three factors
+<m>|\va|,\ |\vb|,\ \cos\theta</m> is zero. The first factor is zero if
+and only if <m>\va=\vZero </m>. The second factor is zero if and only if
+<m>\vb=\vZero </m>.
+The third factor is zero if and only if <m>\theta=\pm\tfrac{\pi}{2}+2k\pi</m>,
+for some integer <m>k</m>, which in turn is true if and only if <m>\va</m> and
+<m>\vb</m> are mutually perpendicular.
+</p>
+</proof>
+
+
+<p>
+Because of Property 7 of Theorem <xref ref="thm_dotPppties"/>, the dot product
+can be used to test whether or not two vectors are perpendicular to
+each other. That is, whether or not the angle between the two vectors
+is <m>90^\circ</m>. Another name
+<fn>The concepts of the dot product
+and perpendicularity have been generalized a lot in mathematics (for example,
+from 2d and 3d vectors to functions). The generalization of the dot
+product is called the <q>inner product</q> and the generalization
+of perpendicularity is called <q>orthogonality</q>.</fn>
+ for <q>perpendicular</q>
+is <q>orthogonal</q>. Testing for orthogonality is one of the main uses of the
+dot product.
+</p>
+
+
+<example>
+<p>
+Consider the three vectors
+<me>
+\va=\llt 1,1,0 \rgt\qquad
+\vb=\llt 1,0,1 \rgt \qquad
+\vc=\llt -1,1,1\rgt
+</me>
+Their dot products
+<md alignment="alignat">
+<mrow>
+\va\cdot\vb &amp; = \llt 1,1,0 \rgt \cdot \llt 1,0,1 \rgt
+           &amp;&amp; = 1\times 1 +1\times 0+0\times 1
+           &amp;&amp; = 1
+</mrow>
+<mrow>
+\va\cdot\vc &amp; = \llt 1,1,0 \rgt \cdot \llt -1,1,1 \rgt
+           &amp;&amp; = 1\times(-1) +1\times 1+0\times 1
+           &amp;&amp; = 0
+</mrow>
+<mrow>
+\vb\cdot\vc &amp; = \llt 1,0,1 \rgt \cdot \llt -1,1,1 \rgt
+           &amp;&amp; = 1\times(-1) +0\times 1+1\times 1
+           &amp;&amp; = 0
+</mrow>
+</md>
+tell us that <m>\vc</m> is perpendicular to both <m>\va</m> and <m>\vb</m>.
+Since both <m>|\va|=|\vb|=\sqrt{1^2+1^2+0^2}=\sqrt{2}</m> the first dot product
+tells us that the angle, <m>\theta</m>, between <m>\va</m> and <m>\vb</m> obeys
+<md>
+<mrow>
+\cos\theta =\frac{\va\cdot\vb}{|\va|\,|\vb|}=\frac{1}{2}
+\implies
+\theta =\frac{\pi}{3}
+</mrow>
+</md>
+</p>
+
+<sidebyside width="50%">
+<image source="figs/dotProd.svg"/>
+</sidebyside>
+
+</example>
+
+<p>
+  Dot products are also used to compute projections.  First, here's
+the definition.
+</p>
+
+<definition xml:id="def_projection">
+  <title>Projection</title>
+<statement><p>
+Draw two vectors, <m>\va</m> and <m>\vb</m>,
+with their tails at a common point and drop a perpendicular from the head of
+<m>\va</m> to the line that passes through both the head and tail of <m>\vb</m>.
+By definition, the projection of the vector <m>\va</m>
+on the vector <m>\vb</m> is the vector from the tail of <m>\vb</m> to the point
+on the line where the perpendicular hits.
+</p>
+  <sidebyside width="33%">
+  <image source="figs/projA.svg"/>
+  <image source="figs/projB.svg"/>
+  </sidebyside>
+</statement>
+
+</definition>
+<p>
+Think of the projection of <m>\va</m> on <m>\vb</m> as the part of <m>\va</m> that is in the
+direction of <m>\vb</m>.
+</p>
+
+<p>
+  Now let's develop a formula for the projection of <m>\va</m> on <m>\vb</m>.
+Denote by <m>\theta</m> the angle between <m>\va</m> and <m>\vb</m>. If <m>|\theta|</m> is no
+more than <m>90^\circ</m>, as in the figure on the left above,
+the length of the projection of <m>\va</m> on <m>\vb</m> is
+<m>|\va|\cos\theta</m>.
+By Property 6 of Theorem <xref ref="thm_dotPppties"/>,
+<m>|\va|\cos\theta=\va\cdot\vb/|\vb|</m>, so the
+projection is a vector whose length is <m>\va\cdot\vb/|\vb|</m> and
+whose direction is given by the unit vector <m>\vb/|\vb|</m>. Hence
+<md>
+<mrow>
+\text{projection of \(\va\) on \(\vb\)}={\rm proj}_{\vb}\,\va
+=\frac{\va\cdot\vb}{|\vb|}\frac{\vb}{|\vb|}
+=\frac{\va\cdot\vb}{|\vb|^2}\,\vb
+</mrow>
+</md>
+If <m>|\theta|</m> is larger than <m>90^\circ</m>, as in the figure on the right above, the projection has length
+<m>|\va|\,\cos(\pi-\theta)=-|\va|\cos\theta=-\va\cdot\vb/|\vb|</m>
+ and direction <m>-\vb/|\vb|</m>. In this case
+<md>
+<mrow>
+{\rm proj}_{\vb}\,\va
+=-\frac{\va\cdot\vb}{|\vb|}\frac{-\vb}{|\vb|}
+=\frac{\va\cdot\vb}{|\vb|^2}\ \vb
+</mrow>
+</md>
+</p>
+<fact xml:id="eqn_proj">
+<p>
+<me>
+{\rm proj}_{\vb}\,\va=\frac{\va\cdot\vb}{|\vb|^2}\,\vb
+</me>
+</p>
+</fact>
+<p>
+is applicable whenever <m>\vb\ne\vZero </m>. As a special case, if <m>\vb</m> happens
+to be a unit vector, which, for emphasis, we'll now write has <m>\hat\vb</m>,
+the projection formula simplifies to
+</p>
+<fact xml:id="eqn_unit_proj">
+<p>
+<me>
+{\rm proj}_{\hat\vb}\,\va
+=  (\va\cdot\hat\vb)\,\hat\vb
+</me>
+</p>
+</fact>
+
+
+<example xml:id="eg_proj">
+<p>
+In this example, we will find the projection of the vector <m>\llt 0,3\rgt</m>
+on the vector <m>\llt 1,1\rgt</m>, as in the figure
+</p>
+
+      <sidebyside width="50%">
+      <image source="figs/projEg.svg"/>
+      </sidebyside>
+<p>
+By Equation <xref ref="eqn_proj"/> with <m>\va=\llt 0,3\rgt</m> and <m>\vb=\llt 1,1\rgt</m>,
+that projection is
+<md>
+<mrow>
+{\rm proj}_{\llt 1,1\rgt}\,\llt 0,3\rgt
+  &amp;=\frac{\llt 0,3\rgt\cdot\llt 1,1\rgt}{|\llt 1,1\rgt|^2}\,\llt 1,1\rgt
+</mrow><mrow>
+  &amp;=\frac{0\times1+3\times 1}{1^2+1^2}\,\llt 1,1\rgt
+  =\llt \frac{3}{2},\frac{3}{2}\rgt
+</mrow>
+</md>
+</p>
+
+</example>
+
+<p>One use of projections is to <q>resolve forces</q>. There is an example in
+the next (optional) section.
+</p>
+
+</subsection>
+
+<subsection xml:id="subsec-pendulum">
+  <title>(Optional) Using Dot Products to Resolve Forces <mdash/> The Pendulum</title>
+
+
+<p>
+  Model a pendulum by a mass <m>m</m> that is connected to a hinge by an idealized
+rod that is massless and of fixed length <m>\ell</m>. Denote by <m>\theta</m> the angle
+between the rod and vertical. The forces acting on the mass are
+<ul>
+<li> gravity, which has magnitude <m>mg</m> and direction <m>\llt 0,-1\rgt</m>,
+</li>
+<li> tension in the rod, whose magnitude <m>\tau(t)</m> automatically
+adjusts itself so that the distance between the mass and the hinge is fixed
+at <m>\ell</m> (so that the rod does not stretch or contract) and whose
+direction is always parallel to the rod,
+</li>
+<li> and possibly some frictional forces, like friction in the hinge and air resistance. Assume
+that the total frictional force has magnitude proportional
+<fn>The behaviour of air resistance (sometimes called drag) is pretty complicated.
+We're using a reasonable low speed approximation. At high speeds drag is typically proportional to the square of the speed.
+</fn> to the speed of the
+mass and has direction opposite to the direction of motion of the mass.
+We'll call the constant of proportionality <m>\beta</m>.
+</li>
+</ul>
+</p>
+
+      <sidebyside width="50%">
+      <image source="figs/pendulum3.svg"/>
+      </sidebyside>
+
+<p>
+If we use a coordinate system centered on the hinge, the <m>(x,y)</m> coordinates
+of the mass at time <m>t</m> are
+<md>
+<mrow>
+x(t)&amp;=\ell\sin\theta(t)
+</mrow><mrow>
+y(t)&amp;=-\ell\cos\theta(t)
+</mrow>
+</md>
+where <m>\theta(t)</m> is the angle between the rod and vertical at time <m>t</m>.
+We are now going to use Newton's law of motion
+<md>
+<mrow>
+\text{mass}\times\text{acceleration}=\text{total applied force}
+</mrow>
+</md>
+to determine now <m>\theta</m> evolves in time. By definition, the
+velocity and acceleration vectors
+<fn>
+  For a more comprehensive treatment of derivatives of vector valued functions <m>\vr(t)</m>, and in particular of velocity and acceleration, see Section <xref ref="sec_curves"/> in this text and Section 1.1 in the CLP-4 text.
+</fn> for the position vector
+<m>\llt x(t),y(t)\rgt</m> are
+<md>
+<mrow>
+\diff{}{t}\llt x(t),y(t)\rgt
+   &amp;= \llt \diff{x}{t}(t),\diff{y}{t}(t)\rgt
+</mrow><mrow>
+\ddiff{2}{}{t}\llt x(t),y(t)\rgt
+   &amp;=\llt \ddiff{2}{x}{t}(t),\ddiff{2}{y}{t}(t)\rgt
+</mrow>
+</md>
+So, the velocity and acceleration vectors of our mass are
+<md alignment="alignat">
+<mrow>
+\vv(t)&amp;=\diff{}{t}\llt x(t),y(t)\rgt
+</mrow>
+<mrow>
+&amp;=\llt \ell\diff{}{t}\sin\theta(t),-\ell\diff{}{t}\cos\theta(t)\rgt
+</mrow>
+<mrow>
+&amp;=\llt \ell\cos\theta(t)\,\diff{\theta}{t}(t)\,,\,
+             \ell\sin\theta(t)\,\diff{\theta}{t}(t)\rgt
+</mrow>
+<mrow>
+&amp;=\ell\,\diff{\theta}{t}(t)\,\llt \cos\theta(t),\sin\theta(t)\rgt
+</mrow>
+<mrow>
+\va(t)&amp;=\ddiff{2}{}{t}\llt x(t),y(t)\rgt
+</mrow>
+<mrow>
+&amp;=\diff{}{t}
+  \left\{\ell\,\diff{\theta}{t}(t)\,
+               \llt \cos\theta(t),\sin\theta(t)\rgt \right\}
+</mrow>
+<mrow>
+&amp;=\ell\,\ddiff{2}{\theta}{t}(t)\,\llt \cos\theta(t),\sin\theta(t)\rgt
++\ell\,\diff{\theta}{t}(t)
+       \llt \diff{}{t}\cos\theta(t),\diff{}{t}\sin\theta(t)\rgt
+</mrow>
+<mrow>
+&amp;= \ell\,\ddiff{2}{\theta}{t}(t)\llt \cos\theta(t),\sin\theta(t)\rgt
++\ell \Big(\diff{\theta}{t}(t)\Big)^2
+     \llt -\sin\theta(t),\cos\theta(t)\rgt
+</mrow>
+</md>
+</p>
+
+<p>The negative of the velocity vector is
+<m>- \ell\, \diff{\theta}{t}\llt \cos\theta,\sin\theta\rgt</m>, so the total frictional force is
+<me>
+-\beta\ell\, \diff{\theta}{t}\llt \cos\theta,\sin\theta\rgt
+</me>
+with <m>\beta</m> our constant of proportionality.
+</p>
+
+<p>The vector
+<me>
+\tau(t) \llt -\sin\theta(t),\cos\theta(t)\rgt
+</me>
+has magnitude <m>\tau(t)</m> and direction parallel to the rod pointing
+from the mass towards the hinge and so is the force due to tension
+in the rod.
+</p>
+
+<p>Hence, for this physical system, Newton's law of motion is
+<md>
+<mrow>
+&amp;\overbrace{m\ell\,\ddiff{2}{\theta}{t}\llt \cos\theta,\sin\theta\rgt
++m\ell\,\Big(\diff{\theta}{t}\Big)^2\llt -\sin\theta,\cos\theta\rgt}^
+        {\text{mass}\times\text{acceleration}}
+</mrow>
+<mrow>
+&amp;\hskip1in=
+\overbrace{mg\llt 0,-1\rgt}^{\rm gravity}
+ +\overbrace{\tau \llt -\sin\theta,\cos\theta\rgt}^{\rm tension}
+-\overbrace{\beta\ell\,\diff{\theta}{t}\llt \cos\theta,\sin\theta\rgt}^{\rm friction}
+\tag{\(*\)}
+</mrow>
+</md>
+This is a rather complicated looking equation. Writing out its <m>x</m>- and
+<m>y</m>-components doesn't help. They also look complicated.
+Instead, the equation can be considerably simplified (and
+consequently better understood) by <q>taking its components parallel to
+and perpendicular to the direction of motion</q>. From the velocity vector
+<m>\vv(t)</m>, we see that <m>\llt \cos\theta(t),\sin\theta(t)\rgt </m> is a unit
+vector parallel to the direction of motion at time <m>t</m>.
+Recall, from <xref ref="eqn_unit_proj"/>, that the projection of any vector
+<m>\vb</m> on any unit vector <m>\hat\vd</m>
+(with the <q>hat</q> on <m>\hat\vd</m> reminding ourselves that the vector is a unit
+vector) is
+<md>
+<mrow>
+\big(\vb\cdot \hat\vd\big)\,\hat\vd
+</mrow>
+</md>
+The coefficient <m>\vb\cdot \hat\vd</m> is, by definition, the
+component of <m>\vb</m> in the direction <m>\hat\vd</m>.
+So, by dotting both sides of the equation of motion <m>(*)</m> with
+<m>\hat\vd=\llt \cos\theta(t),\sin\theta(t)\rgt </m>, we extract the component
+parallel to the direction of motion. Since
+<md>
+<mrow>
+\llt \cos\theta,\sin\theta\rgt \cdot\llt \cos\theta,\sin\theta\rgt &amp;=1
+</mrow><mrow>
+\llt \cos\theta,\sin\theta\rgt \cdot\llt -\sin\theta,\cos\theta\rgt &amp;=0
+</mrow><mrow>
+\llt \cos\theta,\sin\theta\rgt \cdot\llt 0,-1\rgt &amp;=-\sin\theta
+</mrow>
+</md>
+this gives
+<md>
+<mrow>
+m\ell\ddiff{2}{\theta}{t}=-mg\sin\theta-\beta\ell\diff{\theta}{t}
+</mrow>
+</md>
+which is <em>much</em> cleaner than <m>(*)</m>!
+When <m>\theta</m> is small, we can approximate <m>\sin\theta\approx\theta</m>
+and get the equation
+<md>
+<mrow>
+\ddiff{2}{\theta}{t}+\frac{\beta}{m}\diff{\theta}{t}+\frac{g}{\ell}\theta=0
+</mrow>
+</md>
+which is easily solved. There are systematic procedures for finding
+the solution, but we'll just guess.
+</p>
+
+<p>
+  When there is no friction (so that <m>\beta=0</m>), we would expect the pendulum to just oscillate. So it is natural to guess
+<me>
+\theta(t)=A\sin(\omega t-\delta)
+</me>
+which is an oscillation with (unknown) amplitude <m>A</m>, frequency <m>\omega</m> (radians per unit time) and phase <m>\delta</m>.
+Substituting this guess into the left hand side,
+<m>\theta'  + \tfrac{g}{\ell}\theta</m>,  yields
+<me>
+-A\omega^2\sin(\omega t-\delta)+A\tfrac{g}{\ell}\sin(\omega t-\delta)
+</me>
+which is zero if <m>\omega=\sqrt{g/\ell}</m>.
+So <m>\ \theta(t)=A\sin(\omega t-\delta)\ </m> is a solution for any amplitude <m>A</m> and phase <m>\delta</m>, provided the frequency <m>\omega=\sqrt{g/\ell}</m>.
+</p>
+
+
+<p>
+  When there is some, but not too much, friction, so that <m>\beta \gt 0</m> is
+relatively small, we would expect <q>oscillation with decaying amplitude</q>.
+So we  guess
+<me>
+\theta(t)=Ae^{-\gamma t}\sin(\omega t-\delta)
+</me>
+for some constant decay rate <m>\gamma</m>, to be determined.
+With this guess,
+<md alignment="alignat">
+<mrow>
+\theta(t)&amp;=\phantom{- -\gamma\omega^{2})} Ae^{-\gamma t}
+         &amp;\sin(\omega t-\delta)
+</mrow>
+<mrow>
+\theta'(t)&amp;=\phantom{-\omega^{2})}-\gamma Ae^{-\gamma t}
+          &amp;\sin(\omega t-\delta)
+&amp;+\phantom{2\gamma }\omega A e^{-\gamma t}&amp;\cos(\omega t-\delta)
+</mrow>
+<mrow>
+\theta'(t)&amp;=(\gamma^2-\omega^2)Ae^{-\gamma t}&amp;\sin(\omega t-\delta)
+                    &amp;-2\gamma\omega A e^{-\gamma t}&amp;\cos(\omega t-\delta)
+</mrow>
+</md>
+and the left hand side
+<md>
+<mrow>
+\ddiff{2}{\theta}{t}+\frac{\beta}{m}\diff{\theta}{t}+\frac{g}{\ell}\theta
+&amp;
+=\left[\gamma^2-\omega^2-\frac{\beta}{m}\gamma+\frac{g}{\ell}\right]
+                         Ae^{-\gamma t}\sin(\omega t-\delta)
++\left[-2\gamma\omega+\frac{\beta}{m}\omega\right]
+                         Ae^{-\gamma t}\cos(\omega t-\delta)
+</mrow>
+</md>
+vanishes if <m>\gamma^2-\omega^2-\frac{\beta}{m}\gamma+\tfrac{g}{\ell}=0</m> and
+<m>-2\gamma\omega+\frac{\beta}{m}\omega=0.</m> The second equation tells us the decay
+rate <m>\gamma=\tfrac{\beta}{2m}</m> and then the first tells us the frequency
+<md>
+<mrow>
+\omega=\sqrt{\gamma^2-\tfrac{\beta}{m}\gamma+\tfrac{g}{\ell}}
+=\sqrt{\tfrac{g}{\ell}-\tfrac{\beta^2}{4m^2}}
+</mrow>
+</md>
+When there is a lot of friction
+(namely when <m>\tfrac{\beta^2}{4m^2} \gt \tfrac{g}{\ell}</m>, so that the frequency
+<m>\omega</m> is not a real number), we would expect damping without oscillation
+and so would guess <m>\theta(t)=Ae^{-\gamma t}</m>. You can determine the allowed
+values of <m>\gamma</m> by substituting this guess in.
+</p>
+
+<p>To extract the components perpendicular to the direction of motion, we
+dot with <m>\llt -\sin\theta,\cos\theta\rgt </m> rather than
+<m>\llt \cos\theta,\sin\theta\rgt </m>.
+
+Note that, because
+<me>\llt -\sin\theta,\cos\theta\rgt \cdot \llt \cos\theta,\sin\theta\rgt =0,</me>
+the vector
+<m>\llt -\sin\theta,\cos\theta\rgt </m> really is perpendicular to the
+direction of motion.  Since
+<md>
+<mrow>
+\llt -\sin\theta,\cos\theta\rgt \cdot\llt \cos\theta,\sin\theta\rgt &amp;=0
+</mrow><mrow>
+\llt -\sin\theta,\cos\theta\rgt \cdot\llt -\sin\theta,cos\theta\rgt &amp;=1
+</mrow><mrow>
+\llt -\sin\theta,\cos\theta\rgt \cdot\llt 0,-1\rgt &amp;=-\cos\theta
+</mrow>
+</md>
+dotting both sides of the equation of motion <m>(*)</m> with
+<m>\llt -\sin\theta,\cos\theta\rgt </m> gives
+<md>
+<mrow>
+m\ell\Big(\diff{\theta}{t}\Big)^2=-mg\cos\theta+\tau
+</mrow>
+</md>
+This equation just determines the tension
+<me>\tau=m\ell\big(\diff{\theta}{t}\big)^2+mg\cos\theta</me>
+in the rod, once you know <m>\theta(t)</m>.
+</p>
+
+</subsection>
+
+<subsection xml:id="sec_GEOparallelogram">
+  <title>(Optional) Areas of Parallelograms</title>
+
+<p>
+  A parallelogram is naturally determined by the two vectors that define its sides.
+  We'll now develop a formula for the area of a parallelogram in terms of these two vectors.
+</p>
+
+<p>
+  Construct a parallelogram as follows. Pick two vectors <m>\llt a,b\rgt </m>
+and <m>\llt c,d\rgt </m>. Draw them with their tails at a common point. Then
+draw <m>\llt a,b\rgt </m> a second time with its tail at the head of
+<m>\llt c,d\rgt </m> and draw  <m>\llt c,d\rgt </m> a second time with its tail
+at the head of <m>\llt a,b\rgt </m>. If the common point is the
+origin, you get a picture like the figure below.
+</p>
+
+<sidebyside width="66%">
+<image source="figs/area3"/>
+</sidebyside>
+
+<p>
+  Any parallelogram can be constructed like this if you pick the common point
+and two vectors appropriately. Let's compute the area of the parallelogram.
+The area of the large rectangle with vertices <m>(0,0),\ (0, b+d),\ (a+c,0)</m>
+and <m>(a+c,b+d)</m> is <m>(a+c)(b+d)</m>. The parallelogram we want can be extracted
+from the large rectangle by deleting the two small rectangles (each of
+area <m>bc</m>), and the two lightly shaded triangles (each of area <m>\half cd</m>),
+and the two darkly shaded triangles (each of area <m>\half ab</m>). So the desired
+<md>
+<mrow>
+{\rm area} = (a+c)(b+d) - (2\times bc) -\big(2\times \half cd\big)
+ -\big(2\times\half ab\big)
+=ad-bc
+</mrow>
+</md>
+In the above figure, we have implicitly assumed that <m>a,\ b,\ c,\ d\ge 0</m>
+and <m>d/c\ge b/a</m>. In words, we have assumed that both vectors
+<m>\llt a,b\rgt ,\ \llt c,d\rgt </m> lie in the first quadrant and that
+<m>\llt c,d\rgt </m> lies above <m>\llt a,b\rgt </m>.
+By simply interchanging <m>a\leftrightarrow c</m> and <m>b\leftrightarrow d</m>
+in the picture and throughout the argument, we see that when
+<m>a,\ b,\ c,\ d\ge 0</m> and <m>b/a\ge d/c</m>, so that the vector <m>\llt c,d\rgt </m>
+lies below <m>\llt a,b\rgt </m>, the area of the parallelogram is <m>bc-ad</m>.
+In fact, all cases are covered by the formula
+</p>
+
+<fact xml:id="eq_pgram_area">
+<p>
+<md>
+<mrow>
+\text{area of parallelogram with sides }
+\llt a,b\rgt
+\text{ and }
+\llt c,d\rgt =|ad-bc|
+</mrow>
+</md>
+</p>
+</fact>
+
+
+<p>Given two vectors <m>\llt a,b\rgt </m> and <m>\llt c,d\rgt </m>, the expression
+<m>ad-bc</m> is generally written
+<md>
+<mrow>
+\det\left[\begin{matrix}a&amp;b
+</mrow><mrow> c&amp;d\end{matrix}\right]=ad-bc
+</mrow>
+</md>
+and is called the <em>determinant</em> of the matrix
+<fn>The topics of
+matrices and determinants appear prominently in linear algebra courses. We
+are only going to use them as notation, and we will explicitly explain
+that notation. A linear algebra course is <em>not</em> a prerequisite
+for this text.</fn>
+<md>
+<mrow>
+\left[\begin{matrix}a&amp;b \\ c&amp;d\end{matrix}\right]
+</mrow>
+</md>
+with rows <m>\llt a,b\rgt </m> and <m>\llt c,d\rgt </m>. The determinant
+of a <m>2\times 2</m> matrix is the product of the diagonal entries
+minus the product of the off-diagonal entries.
+</p>
+
+
+<p>
+  There is a similar formula in three dimensions. Any three vectors
+<m>\va=\llt a_1,a_2,a_3\rgt ,\ \vb=\llt b_1,b_2,b_3\rgt </m> and
+<m>\vc=\llt c_1,c_2,c_3\rgt </m> in three dimensions
+</p>
+
+<sidebyside width="33%">
+<image source="figs/piped"/>
+</sidebyside>
+
+<p>
+  determine a parallelepiped (three dimensional parallelogram). Its volume is given by the formula
+</p>
+<fact xml:id="eq_piped_volume">
+  <p>
+<md>
+<mrow>
+\text{volume of parallelepiped with edges }
+\va,\ \vb,\ \vc\
+=\ \left|
+\det\left[\begin{matrix}a_1&amp;a_2&amp;a_3 \\  b_1&amp;b_2&amp;b_3\\ c_1&amp;c_2&amp;c_3\end{matrix}\right]
+\right|
+</mrow>
+</md>
+</p>
+</fact>
+
+<p>
+The determinant of a <m>3\times 3</m> matrix can be defined in terms
+of some <m>2\times 2</m> determinants by
+</p>
+<sidebyside width="95%">
+  <image source="figs/det2"/>
+</sidebyside>
+<p>
+      This formula is called <q>expansion along the top row</q>. There
+is one term in the formula for each entry in the top row of the <m>3\times 3</m>
+matrix. The term is
+a sign times the entry itself times the determinant of the <m>2\times 2</m> matrix
+gotten by deleting the row and column that contains the entry. The sign
+alternates, starting with a <q><m>+</m></q>.
+</p>
+
+
+<p>We shall not prove this formula completely. It gets a little tedious.
+But, there is one case in which we can easily verify that the volume of the
+parallelepiped is really given by the absolute value of the
+claimed determinant. If the vectors <m>\vb</m> and <m>\vc</m> happen to lie
+in the <m>xy</m> plane, so that <m>b_3=c_3=0</m>, then
+<md>
+<mrow>
+\det\left[\begin{matrix}
+a_1&amp;a_2&amp;a_3\\ b_1&amp;b_2&amp;0\\ c_1&amp;c_2&amp;0
+\end{matrix}\right]
+&amp;=a_1(b_20-0c_2) -a_2(b_10-0c_1) +a_3(b_1c_2-b_2c_1)
+</mrow><mrow>
+&amp;=a_3(b_1c_2-b_2c_1)
+</mrow>
+</md>
+The first factor, <m>a_3</m>, is the <m>z</m>-coordinate of the one vector not contained in the <m>xy</m>-plane. It
+is (up to a sign) the height of the parallelepiped. The second factor is,
+up to a sign, the area of the parallelogram determined by <m>\vb</m>
+and <m>\vc</m>. This parallelogram forms the base of the parallelepiped.
+The product is indeed, up to a sign, the volume of the parallelepiped.
+That the formula is true in general is a consequence of the fact (that
+we will not prove) that the value of a determinant does not change when
+one rotates the coordinate system and that one can always rotate
+our coordinate axes around so that <m>\vb</m> and <m>\vc</m> both lie in the
+<m>xy</m>-plane.
+</p>
+
+</subsection>
+<subsection xml:id="subsec-crossprod">
+  <title>The Cross Product</title>
+
+
+<p>We have already seen two different products involving vectors <mdash/>
+the multiplication of a vector by a scalar
+and the dot product of two vectors. The dot product of two vectors
+yields a scalar. We now introduce another product
+of two vectors, called the <em>cross product</em>. The cross product of
+two vectors will give a vector. There are applications which have two
+vectors as inputs and produce one vector as an output, and which are related
+to the cross product. Here is a very brief mention of two such applications.
+We will look at them in much more detail later.
+<ul>
+<li>
+<p>
+Consider a parallelogram in three dimensions.
+A parallelogram is naturally determined by the two vectors that define
+its sides.
+One measure of the size of a parallelogram is its area.
+One way to specify the orientation of the parallelogram is to give a vector
+that is perpendicular to it.
+A very compact way to encode both the area and the orientation of
+the parallelogram is to give a vector whose direction is perpendicular
+to the plane in which it lies and whose magnitude is its area.
+We shall see that such a vector can be easily constructed by taking the cross product (definition coming shortly) of the two vectors that give
+the sides of the parallelogram.
+</p>
+
+<sidebyside width="40%">
+<image source="figs/pgramCross.svg"/>
+</sidebyside>
+</li>
+<li>
+<p>
+Imagine a rigid body which is rotating at a rate <m>\Omega</m> radians per
+second about an axis whose direction is given by the unit vector <m>\hat\va</m>.
+Let <m>P</m> be any point on the body. We shall see, in the (optional)
+§<xref ref="sec_rot_motion"/>, that the velocity, <m>\vv</m>, of the point <m>P</m>
+is the cross product
+(again, definition coming shortly) of the vector <m>\Om\hat\va</m> with the vector
+<m>\vr</m> from any point on the axis of rotation to <m>P</m>.
+</p>
+<sidebyside width="40%">
+<image source="figs/rigidBB"/>
+</sidebyside>
+</li>
+</ul>
+</p>
+<p>\noindent
+Finally, here is the definition of the cross product.
+</p>
+
+<definition xml:id="def_crossProd"><title>Cross Product</title>
+<statement><p>
+The cross product of the vectors <m>\va=\llt a_1,a_2,a_3\rgt</m> and
+<m>\vb=\llt b_1,b_2,b_3\rgt</m> is denoted <m>\va\times\vb</m>
+and is defined by
+<md>
+<mrow>
+\va\times\vb = \llt a_2b_3-a_3b_2\,,\, a_3b_1-a_1b_3\,,\, a_1b_2-a_2b_1\rgt
+</mrow>
+</md>
+</p></statement>
+</definition>
+
+
+<p>Note that each component has the form <m>a_ib_j-a_jb_i</m>. The index <m>i</m> of
+the first <m>a</m> in component number <m>k</m> of <m>\va\times\vb</m>
+is just after <m>k</m> in the list <m>1,2,3,1,2,3,1,2,3,\cdots</m>.
+The index <m>j</m> of the first <m>b</m> is just before <m>k</m> in the list.
+<md>
+<mrow>
+(\va\times\vb)_k
+=a_{{\rm just\  after\  }k}\ b_{{\rm just\  before\  }k}
+-a_{{\rm just\  before\  }k}\ b_{{\rm just\  after\  }k}
+</mrow>
+</md>
+For example, for component number <m>k=3</m>,
+<md>
+<mrow>
+\left.{\text{``just after 3'' is 1}}\atop{\text{``just before 3'' is 2}}\right\}
+\implies (\va\times\vb)_3= a_1b_2-a_2b_1
+</mrow>
+</md>
+</p>
+
+<p>
+There is a much better way to remember this definition. Recall that
+a <m>2\times 2</m> matrix is an array of numbers having two rows and two columns
+and that the determinant of a <m>2\times 2</m> matrix is  defined by
+<md>
+<mrow>
+\det \left[\begin{matrix}a&amp; b \\ c&amp;d\end{matrix}\right]=ad-bc
+</mrow>
+</md>
+It is the product of the entries on the diagonal minus the product
+of the entries not on the diagonal.
+</p>
+
+
+<p>
+  A <m>3\times 3</m> matrix is an array of numbers having three rows and three columns.
+<md>
+<mrow>
+ \left[\begin{matrix}
+i&amp; j &amp;k
+\\
+a_1&amp;a_2&amp;a_3
+\\
+b_1&amp;b_2&amp;b_3\end{matrix}\right]
+</mrow>
+</md>
+You will shortly see why the entries in the top row have been given the
+rather peculiar names <m>i</m>, <m>j</m> and <m>k</m>. The determinant of a <m>3\times 3</m>
+matrix can be defined in terms of some <m>2\times 2</m> determinants by
+</p>
+<sidebyside width="95%">
+  <image source="figs/det.svg"/>
+</sidebyside>
+
+<p>
+This formula is called <q>expansion of the determinant along the top row</q>.
+There is one term in the formula for each entry in the top row. The term is
+a sign times the entry itself times the determinant of the <m>2\times 2</m> matrix
+gotten by deleting the row and column that contains the entry.
+The sign alternates, starting with a <m>+</m>. If we now replace <m>i</m> by <m>\hi</m>, <m>j</m> by <m>\hj</m> and <m>k</m> by <m>\hk</m>, we get exactly the formula for <m>\va\times \vb</m>
+of Definition <xref ref="def_crossProd"/>. That is the reason for the peculiar
+choice of names for the matrix entries. So
+<md>
+<mrow>
+\va\times\vb
+&amp;=\det\left[\begin{matrix}\hi&amp; \hj &amp;\hk
+\\
+a_1&amp;a_2&amp;a_3
+\\
+b_1&amp;b_2&amp;b_3\end{matrix}\right]
+</mrow><mrow>
+&amp;=\hi\big(a_2b_3-a_3b_2) -\hj(a_1b_3-a_3b_1) +\hk(a_1b_2-a_2b_1)
+</mrow>
+</md>
+is a mnemonic device for remembering the definition of <m>\va\times\vb</m>.
+It is also good from the point of view of
+evaluating <m>\va\times\vb</m>.
+</p>
+
+
+<example xml:id="eg_GEOcrossijji">
+<p>
+In this example, we'll use the mnemonic device to compute two very simple cross
+products. First
+</p>
+<sidebyside width="95%">
+  <image source="figs/detij.svg"/>
+</sidebyside>
+
+<p>
+Second
+</p>
+<sidebyside width="95%">
+  <image source="figs/detji.svg"/>
+</sidebyside>
+<p>
+Note that, unlike most (or maybe even all) products that you have seen before, <m>\hi\times\hj</m> is <em>not</em> the same as <m>\hj\times\hi</m>!
+</p>
+</example>
+
+
+<p>
+  Our first properties of the cross product lead up to a more intuitive geometric definition of <m>\va\times\vb</m>, which is better for interpreting <m>\va\times\vb</m>.
+ These properties of the cross product, which state that  <m>\va\times\vb</m>
+is a vector and then determine its direction and length, are as follows.
+We will collect these properties, and a few others, into a theorem shortly.
+<!-- <ol start=0> -->
+<dl width="narrow">
+<li><title>(0)</title>
+<p>
+<m>\va,\vb</m>  are vectors in three dimensions and <m>\va\times\vb</m> is a vector in three dimensions.
+</p>
+</li>
+<li><title>(1)</title>
+  <p>
+  <m>\va\times\vb</m> is perpendicular to both  <m>\va</m> and <m>\vb</m>.
+</p>
+</li>
+</dl>
+</p>
+
+<proof>
+<p>
+To check that <m>\va</m> and <m>\va\times \vb</m> are perpendicular, one just has to check that the dot product <m>\va\cdot(\va\times \vb)=0</m>. The six terms in
+<me>
+\va\cdot(\va\times \vb)=
+a_1(a_2b_3-a_3b_2)+a_2(a_3b_1-a_1b_3)+a_3(a_1b_2-a_2b_1)
+</me>
+cancel pairwise.
+The computation showing that <m>\vb\cdot(\va\times \vb)=0</m> is similar.
+</p>
+</proof>
+
+<p>
+<dl width="narrow">
+<li><title>(2)</title>
+<p>
+<md>
+  <mrow>|\va\times\vb| \amp = |\va|\,|\vb|\sin\theta
+   \text{ where } 0\le\theta\le\pi \text{ is the angle between } \va,\vb
+  </mrow>
+  <mrow> \amp = \text{the area of the parallelogram with sides } \va, \vb</mrow>
+</md>
+</p>
+<sidebyside width="33%">
+<image source="figs/area.svg"/>
+</sidebyside>
+</li>
+</dl>
+</p>
+<proof>
+<p>The formula <m>|\va\times\vb|=|\va|\,|\vb|\sin\theta</m> is gotten by comparing
+<md>
+<mrow>
+|\va\times\vb|^2
+&amp;=\big(\va\times\vb\big)\cdot\big(\va\times\vb\big)
+</mrow><mrow>
+&amp;=(a_2b_3-a_3b_2)^2+(a_3b_1-a_1b_3)^2+ (a_1b_2-a_2b_1)^2
+</mrow><mrow>
+&amp;=a_2^2b_3^2-2a_2b_3a_3b_2+a_3^2b_2^2
++a_3^2b_1^2-2a_3b_1a_1b_3+a_1^2b_3^2
+</mrow><mrow>&amp;\hskip0.5in
++a_1^2b_2^2-2a_1b_2a_2b_1+a_2^2b_1^2
+</mrow><mrow>
+</mrow>
+<intertext>and</intertext><mrow>
+|\va|^2\,|\vb|^2\sin^2\theta
+&amp;=|\va|^2|\vb|^2(1-\cos^2\theta)
+</mrow><mrow>
+&amp;=|\va|^2|\vb|^2-(\va\cdot\vb)^2
+</mrow><mrow>
+&amp;=\big(a_1^2+a_2^2+a_3^2\big)\big(b_1^2+b_2^2+b_3^2\big)
+-\big(a_1b_1+a_2b_2+a_3b_3\big)^2
+</mrow><mrow>
+&amp;=a_1^2b_2^2+a_1^2b_3^2+a_2^2b_1^2+a_2^2b_3^2+a_3^2b_1^2+a_3^2b_2^2
+</mrow><mrow>
+&amp;\hskip0.5in
+ -\big(2a_1b_1a_2b_2+2a_1b_1a_3b_3+2a_2b_2a_3b_3\big)
+</mrow><mrow>
+</mrow>
+</md>
+To see that <m>|\va|\,|\vb|\sin\theta</m> is the area of the parallelogram
+with sides <m>\va</m> and <m>\vb</m>, just recall that the area of any parallelogram
+is given by the length of its base times its height. Think of <m>\va</m> as the
+base of the parallelogram. Then <m>|\va|</m> is the length of the base
+and <m>|\vb|\sin\theta</m> is the height.
+</p>
+      <sidebyside width="40%">
+      <image source="figs/areaB.svg"/>
+      </sidebyside>
+</proof>
+
+<p>
+These properties almost determine <m>\va\times\vb</m>.
+Property 1 forces the vector <m>\va\times\vb</m> to lie on the line perpendicular to the
+plane containing <m>\va</m> and <m>\vb</m>.
+There are precisely two vectors on this line that have the length given by property 2.
+In the left hand figure of
+</p>
+      <sidebyside width="30%">
+      <image source="figs/crossLL.svg"/>
+      <image source="figs/crossRR.svg"/>
+      <image source="figs/RHR.svg"/>
+      </sidebyside>
+<p>
+  the two vectors are labeled <m>\vc</m> and <m>\vd</m>. Which of these two
+candidates is correct is determined by the right hand rule
+<fn>
+That the cross product uses the right hand rule, rather than the left hand rule, is an example of the tyranny of the masses <mdash/> only roughly 10\%
+of humans are left-handed. </fn>,
+which says that if you form your right hand into a fist with your fingers curling from
+<m>\va</m> to <m>\vb</m>, then when you stick your thumb straight out from
+the fist, it points in the direction of <m>\va\times\vb</m>. This is
+illustrated in the figure on the right
+above<fn>This figure is a variant of
+<url href="https://commons.wikimedia.org/wiki/File:Right_hand_rule_simple.png"/>
+</fn>.
+The important special cases
+<dl width="narrow">
+<li><title>(3)</title>
+<p>
+<me>
+  \hi\times\hj=\phantom{-}\hk,\ \ \ \hj\times\hk=\phantom{-}\hi,\ \ \  \hk\times\hi=\phantom{-}\hj
+</me>
+<me>
+\hj\times\hi=-\hk,\ \ \ \hk\times\hj=-\hi,\ \ \ \hi\times\hk=-\hj
+</me>
+all follow directly from the definition of the cross product (see, for example,
+Example <xref ref="eg_GEOcrossijji"/>) and all
+obey the right hand rule.  Combining properties 1, 2 and the right hand
+rule give the geometric definition of <m>\va\times\vb</m>. To remember
+these three special cases, just remember this figure.
+</p>
+      <sidebyside width="33%">
+      <image source="figs/cp_circle.svg"/>
+      </sidebyside>
+<p>
+The product of any two standard basis vectors, taken in the order of
+the arrows in the figure, is the third standard basis vector.
+Going against the arrows introduces a minus sign.
+</p>
+</li>
+<li><title>(4)</title>
+<p>
+<me>\va\times\vb=|\va|\,|\vb|\sin\theta\ \hn</me>
+where <m>\theta</m> is the angle between <m>\va, \vb</m>,
+<m>|\hn|=1,\ \hn\perp\va,\vb</m>, and <m>(\va,\vb,\hn)</m> obey the right hand rule.
+</p>
+</li>
+</dl>
+</p>
+
+<proof><title>Outline of Proof</title>
+<p>
+  We have already seen that the right hand side has the correct length and, except possibly for a sign, direction. To check that the right hand rule holds in general, rotate your coordinate system around<fn>
+  Note that as you translate or rotate the coordinate system, the right hand rule is preserved.
+  If <m>(\va,\vb,\hn)</m> obey the right hand rule so do their rotated and translated versions.
+</fn>
+so that <m>\va</m> points along the positive <m>x</m> axis and <m>\vb</m> lies in the <m>xy</m>-plane with positive <m>y</m> component.
+That is <m>\va=\alpha\hi</m> and <m>\vb=\beta\hi+\gamma\hj</m> with <m>\alpha,\gamma\ge 0</m>.
+Then
+<me>\va\times\vb=\alpha\hi\times(\beta\hi+\gamma\hj) =\alpha\beta\,\hi\times\hi+\alpha\gamma\,\hi\times\hj.
+</me>
+The first term vanishes by property 2, because the angle <m>\theta</m> between <m>\hi</m>
+and <m>\hi</m> is zero.
+So, by property 3, <m>\va\times\vb= \alpha\gamma\hk</m> points along the positive <m>z</m> axis, which is consistent with the right hand rule.
+</p>
+</proof>
+
+
+<p>
+  The analog of property 7 of the dot product (which says that <m>\va\cdot\vb</m> is zero if and only if  <m>\va=\vZero</m> or <m>\vb=\vZero</m> or  <m>\va\perp\vb</m>) follows immediately from property 2.
+<dl width="narrow">
+<li><title>(5)</title>
+<p>
+<me>
+\va\times\vb=\vZero\iff \va=\vZero  \text{ or }
+\vb=\vZero
+\text{ or }
+\va\parallel\vb.
+</me>
+</p>
+</li>
+</dl>
+</p>
+
+<p>
+The remaining properties are all tools for
+helping do computations with cross products.
+Here is a theorem which summarizes the properties of the cross product.
+We have already seen the first five. The other properties are all tools
+for helping do computations with cross products.
+</p>
+
+
+<theorem xml:id="thm_crossPppties"><title>Properties of the Cross Product</title>
+<statement><p>
+<dl  width="narrow">
+  <li><title>(0)</title>
+  <p>
+  <m>\va,\vb</m>  are vectors in three dimensions and <m>\va\times\vb</m> is a vector in three dimensions.
+  </p>
+  </li>
+  <li><title>(1)</title>
+    <p>
+    <m>\va\times\vb</m> is perpendicular to both  <m>\va</m> and <m>\vb</m>.
+  </p>
+  </li>
+  <li><title>(2)</title>
+  <p>
+  <md>
+    <mrow>|\va\times\vb| \amp = |\va|\,|\vb|\sin\theta
+     \text{ where } 0\le\theta\le\pi \text{ is the angle between } \va,\vb
+    </mrow>
+    <mrow> \amp = \text{the area of the parallelogram with sides } \va, \vb</mrow>
+  </md>
+  </p>
+  <sidebyside width="33%">
+  <image source="figs/area.svg"/>
+  </sidebyside>
+  </li>
+  <li><title>(3)</title>
+  <p>
+  <me>
+    \hi\times\hj=\phantom{-}\hk,\ \ \ \hj\times\hk=\phantom{-}\hi,\ \ \  \hk\times\hi=\phantom{-}\hj
+  </me>
+</p>
+</li>
+<li><title>(4)</title>
+<p>
+<me>\va\times\vb=|\va|\,|\vb|\sin\theta\ \hn</me>
+where <m>\theta</m> is the angle between <m>\va, \vb</m>,
+<m>|\hn|=1,\ \hn\perp\va,\vb</m>, and <m>(\va,\vb,\hn)</m> obey the right hand rule.
+</p>
+</li>
+
+<li><title>(5)</title>
+<p>
+<me>
+\va\times\vb=\vZero\iff \va=\vZero  \text{ or }
+\vb=\vZero
+\text{ or }
+\va\parallel\vb.
+</me>
+</p>
+</li>
+<li><title>(6)</title>
+<p> <me>\va\times \vb=-\vb\times\va</me></p>
+</li>
+<li><title>(7)</title>
+<p>
+   <me>(s\va)\times \vb=\va\times(s\vb)=s(\va\times \vb)</me>
+   for any scalar (i.e. number) <m>s</m>.
+</p>
+</li>
+<li><title>(8)</title>
+<p> <me>\va\times(\vb+\vc)=\va\times\vb+\va\times \vc</me></p>
+</li>
+<li><title>(9)</title>
+<p>
+<me>\va\cdot(\vb\times\vc)=(\va\times\vb)\cdot\vc</me>
+</p>
+</li>
+<li><title>(10)</title>
+<p>
+  <me>\va\times(\vb\times\vc)=(\vc\cdot\va)\vb -(\vb\cdot\va)\vc</me>
+</p>
+</li>
+</dl>
+</p>
+</statement>
+</theorem>
+
+
+<proof>
+<p>
+We have already seen the proofs up to number 5. Numbers 6, 7 and 8
+follow immediately from the definition, using a little algebra. To prove
+numbers 9 and 10 we just write out the definitions of the left hand sides
+and the right hand sides and observe that they are equal.
+</p>
+
+<p>
+<dl width="narrow">
+<li><title>(9)</title>
+<p>
+The left hand side is
+<md>
+<mrow>
+\va\cdot(\vb\times\vc)
+&amp;=\llt a_1,a_2,a_3\rgt\cdot
+      \llt b_2c_3-b_3c_2\,,\, b_3c_1-b_1c_3\,,\, b_1c_2-b_2c_1\rgt
+</mrow><mrow>
+&amp;=a_1b_2c_3 - a_1b_3c_2 + a_2b_3c_1 - a_2b_1c_3 + a_3b_1c_2 - a_3b_2c_1
+</mrow>
+</md>
+The right hand side is
+<md>
+<mrow>
+(\va\times\vb)\cdot\vc
+&amp;=\llt a_2b_3-a_3b_2\,,\, a_3b_1-a_1b_3\,,\, a_1b_2-a_2b_1\rgt\cdot
+       \llt c_1,c_2,c_3\rgt
+</mrow><mrow>
+&amp;=a_2b_3c_1 - a_3b_2c_1 + a_3b_1c_2 - a_1b_3c_2 + a_1b_2c_3 - a_2b_1c_3
+</mrow>
+</md>
+The left and right hand sides are the same.
+</p>
+</li>
+<li><title>(10)</title>
+<p>
+Since
+<me>
+\vb\times\vc
+\ =\ (b_2c_3-b_3c_2)\,\hi-(b_1c_3-b_3c_1)\,\hj
+    +(b_1c_2-b_2c_1)\,\hk
+</me>
+The left hand side is
+<md>
+<mrow>
+\va\times(\vb\times\vc)
+ = &amp;\det\left[\begin{matrix}
+\hi &amp; \hj &amp; \hk \\
+a_1&amp;a_2&amp;a_3 \\
+b_2c_3-b_3c_2&amp;-b_1c_3+b_3c_1&amp;b_1c_2-b_2c_1
+\end{matrix}\right]
+</mrow>
+<mrow>
+= &amp;\phantom{-}\hi\,[a_2(b_1c_2-b_2c_1)-a_3(-b_1c_3+b_3c_1)]
+</mrow><mrow>
+     &amp; {-}\hj\,[a_1(b_1c_2-b_2c_1)-a_3(b_2c_3-b_3c_2)]
+</mrow><mrow>
+     &amp; {+}\hk\,[a_1(-b_1c_3+b_3c_1)-a_2(b_2c_3-b_3c_2)]
+</mrow>
+</md>
+</p>
+<p>
+The right hand side is
+<md>
+<mrow>
+(\va\cdot\vc)\vb-(\va\cdot\vb)\vc
+&amp;=(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
+</mrow><mrow>
+     &amp;\hskip1in -(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
+</mrow><mrow>
+&amp;=\phantom{-}
+\hi[a_1b_1c_1+a_2b_1c_2+a_3b_1c_3-a_1b_1c_1-a_2b_2c_1-a_3b_3c_1]
+</mrow><mrow>
+&amp;\phantom{=}+\hj[a_1b_2c_1+a_2b_2c_2+a_3b_2c_3-a_1b_1c_2-a_2b_2c_2-a_3b_3c_2]
+</mrow><mrow>
+&amp;\phantom{=}+\hk[a_1b_3c_1+a_2b_3c_2+a_3b_3c_3-a_1b_1c_3-a_2b_2c_3-a_3b_3c_3]
+</mrow><mrow>
+&amp;=\phantom{-} \hi[a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]
+</mrow><mrow>
+ &amp;\phantom{=} +\hj[a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
+</mrow><mrow>
+ &amp;\phantom{=} +\hk[a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
+</mrow>
+</md>
+</p>
+<p>
+The left and right hand sides are the same. Oof! This is a little tedious
+to do by hand. But any computer algebra system will do it for you in a
+flash.
+</p>
+</li>
+</dl>
+</p>
+</proof>
+
+
+<warning xml:id="warning_GEOMcross">
+<p>
+Take particular care with properties 6 and 10. They are
+counterintuitive and are a frequent source of errors. In particular,
+for general vectors <m>\va</m>, <m>\vb</m>, <m>\vc</m>, the cross product is neither
+commutative nor associative, meaning that
+<md>
+<mrow>
+\va\times\vb&amp;\ne\vb\times\va
+</mrow><mrow>
+\va\times(\vb\times\vc)&amp;\ne (\va\times\vb)\times\vc
+</mrow>
+</md>
+For example
+<md>
+<mrow>
+\hi\times(\hi\times\hj)
+&amp;=\hi\times\hk=-\hk\times\hi =-\hj
+</mrow><mrow>
+(\hi\times \hi)\times\hj&amp;= \vZero \times\hj=\vZero
+</mrow><mrow>
+</mrow>
+</md>
+</p>
+</warning>
+
+
+
+<example xml:id="eg_GEOcross">
+<p>
+As an illustration of the properties of the dot and cross product, we now
+derive the formula for the volume of the parallelepiped with edges
+<m>\va=\llt a_1,a_2,a_3\rgt </m>, <m>\vb = \llt b_1,b_2,b_3\rgt </m>,
+<m>\vc = \llt c_1,c_2,c_3\rgt </m> that was mentioned in
+§<xref ref="sec_GEOparallelogram"/>.
+</p>
+
+<sidebyside width="50%">
+<image source="figs/pipedVolume.svg"/>
+</sidebyside>
+
+<p>
+The volume of the parallelepiped is the area of its base times its
+height
+<fn>
+  This is a simple integral calculus exercise.
+</fn>.
+The base is the parallelogram with sides <m>\vb</m> and
+<m>\vc</m>. Its area is the length of its base, which is <m>|\vb|</m>,
+times its height, which is <m>|\vc|\,\sin\theta</m>. (Drop a
+perpendicular from the head of <m>\vc</m> to the line containing <m>\vb</m>).
+Here <m>\theta</m> is the angle between <m>\vb</m> and <m>\vc</m>. So the area of the
+base is <m>|\vb|\,|\vc|\,\sin\theta= |\vb\times\vc|</m>, by
+property 2 of the cross product.
+</p>
+<p>
+To get the height of the parallelepiped,
+we drop a perpendicular from the head of <m>\va</m> to the line that passes
+through the tail of <m>\va</m> and is perpendicular to the base of the parallelepiped. In other words, from the head of <m>\va</m> to the line that contains both the head and the tail
+of <m>\vb\times\vc</m>. So the height of the parallelepiped is
+<m>|\va|\,|\cos\varphi|</m>.  (The absolute values have been included because
+if the angle between <m>\vb\times\vc</m> and <m>\va</m> happens to be greater
+than <m>90^\circ</m>, the <m>\cos\varphi</m> produced by taking the dot product of
+<m>\va</m> and  <m>(\vb\times\vc</m>) will be negative.)
+</p>
+<p>
+All together
+<md>
+<mrow>
+\text{volume of parallelepiped}
+&amp;=(\text{area of base})\,(\text{height})
+</mrow><mrow>
+&amp;=|\vb\times\vc|\ |\va|\ |\cos\varphi|
+</mrow><mrow>
+&amp;=\big|\va\cdot(\vb\times\vc)\big|
+</mrow><mrow>
+&amp;=\left|a_1 (\vb\times\vc)_1 +a_2 (\vb\times\vc)_2
+               +a_3 (\vb\times\vc)_3\right|
+</mrow><mrow>
+&amp;=\left|a_1\det\left[\begin{matrix} b_2&amp;b_3 \\ c_2&amp;c_3\end{matrix}\right]
+        -a_2 \det\left[\begin{matrix}b_1&amp;b_3 \\ c_1&amp;c_3\end{matrix}\right]
+               +a_3\det\left[\begin{matrix}b_1&amp;b_2 \\ c_1&amp;c_2\end{matrix}\right]\right|
+</mrow>
+<mrow>
+&amp;=\left|\det\left[\begin{matrix}a_1&amp;a_2&amp;a_3\\ b_1&amp;b_2&amp;b_3\\c_1&amp;c_2&amp;c_3\end{matrix}\right]\right|
+</mrow>
+</md>
+</p>
+
+</example>
+
+<example xml:id="eg_GEOcrossConcrete">
+<p>
+As a concrete example of the computation of the volume of a parallelepiped,
+we consider the parallelepiped with edges
+<md>
+<mrow>
+\va &amp;= \llt 0,1,2\rgt
+</mrow><mrow>
+\vb &amp;= \llt 1,1,0\rgt
+</mrow><mrow>
+\vc &amp;= \llt 0,1,0\rgt
+</mrow>
+</md>
+Here is a sketch.
+</p>
+
+<sidebyside width="50%">
+<image source="figs/pipedVolumeEg.svg"/>
+</sidebyside>
+
+<p>
+  The base of the parallelepiped is the parallelogram with sides <m>\vb</m> and <m>\vc</m>.
+It is the shaded parallelogram in the sketch above. As
+<md>
+<mrow>
+\vb\times\vc
+&amp;=\det\left[\begin{matrix}
+\hi&amp; \hj &amp;\hk \\ 1&amp;1&amp;0 \\ 0&amp;1&amp;0\end{matrix}\right]
+</mrow><mrow>
+&amp;=\hi\det\left[\begin{matrix} 1&amp;0 \\ 1&amp;0\end{matrix}\right]
+  -\hj\det\left[\begin{matrix}1&amp;0 \\ 0&amp;0\end{matrix}\right]
+   +\hk\det\left[\begin{matrix} 1&amp;1 \\ 0&amp;1\end{matrix}\right]
+</mrow><mrow>
+&amp;=\hi\big(1\times 0-0\times 1) -\hj(1\times 0-0\times 0)
+                  +\hk(1\times 1-1\times 0)
+</mrow><mrow>
+&amp;=\hk
+</mrow>
+</md>
+We should not be surprised that <m>\vb\times\vc</m> has direction <m>\hk</m>.
+<ul>
+<li> <m>\vb\times\vc</m> has to be perpendicular to both <m>\vb</m> and <m>\vc</m> and
+</li>
+<li> both <m>\vb</m> and <m>\vc</m> lie in the <m>xy</m>-plane,
+</li>
+<li> so that <m>\vb\times\vc</m> has to the parallel to the <m>z</m>-axis.
+</li>
+</ul>
+The area of the base, i.e. of the shaded parallelogram in the figure above,
+is
+<me>
+|\vb\times\vc| = |\hk| =1
+</me>
+and the volume of the parallelepiped is
+<me>
+|\va\cdot (\vb\times\vc)|
+= |\llt 0,1,2\rgt\cdot\llt 0,0,1\rgt|=2
+</me>
+</p>
+
+</example>
+
+</subsection>
+
+
+<subsection xml:id="sec_vector_identities">
+  <title>(Optional) Some Vector Identities</title>
+
+<p>Here are a few identities involving dot and cross products.</p>
+
+<lemma xml:id="lem_tripProd">
+<statement><p>
+<ol label="(a)">
+<li>
+<m>\va\cdot(\vb\times\vc)=(\va\times\vb)\cdot\vc</m>
+</li>
+<li>
+<m>\va\times(\vb\times\vc)=(\vc\cdot\va)\vb-(\vb\cdot\va)\vc</m>
+</li>
+<li>
+           <m>\va\times(\vb\times\vc) +
+            \vb\times(\vc\times\va) +
+            \vc\times(\va\times\vb) =\vZero</m>
+</li>
+</ol>
+</p></statement>
+</lemma>
+
+
+<proof><title>Proof of (a)</title>
+<p>
+Here are two proofs.
+For the first, just write out both sides
+<md>
+<mrow>
+\va\cdot(\vb\times\vc)
+&amp;=(a_1,a_2,a_3)\cdot(b_2c_3-b_3c_2\,,\,b_3c_1-b_1c_3\,,\,b_1c_2-b_2c_1)
+</mrow><mrow>
+&amp;=a_1b_2c_3-a_1b_3c_2+a_2b_3c_1-a_2b_1c_3+a_3b_1c_2-a_3b_2c_1
+</mrow><mrow>
+(\va\times\vb)\cdot\vc
+&amp;=(a_2b_3-a_3b_2\,,\,a_3b_1-a_1b_3\,,\,a_1b_2-a_2b_1)\cdot(c_1,c_2,c_3)
+</mrow><mrow>
+&amp;=a_2b_3c_1-a_3b_2c_1+a_3b_1c_2-a_1b_3c_2+a_1b_2c_3-a_2b_1c_3
+</mrow>
+</md>
+and observe that they are the same.
+</p>
+
+<p>
+For the second proof,
+we again write out both sides, but this time we express them
+in terms of determinants.
+<md>
+<mrow>
+\va\cdot\vb\times\vc
+&amp;=(a_1,a_2,a_3)\cdot\det\left[\begin{matrix}
+\hi&amp;\hj&amp;\hk \\ b_1&amp;b_2&amp;b_3 \\ c_1&amp;c_2&amp;c_3\end{matrix}\right]
+</mrow><mrow>
+&amp;=a_1\det\left[\begin{matrix} b_2&amp;b_3 \\ c_2&amp;c_3\end{matrix}\right]
+     -a_2\det\left[\begin{matrix} b_1&amp;b_3 \\ c_1&amp;c_3\end{matrix}\right]
+      +a_3\det\left[\begin{matrix} b_1&amp;b_2 \\ c_1&amp;c_2\end{matrix}\right]
+</mrow><mrow>
+&amp;=\det\left[\begin{matrix}
+a_1&amp;a_2&amp;a_3 \\
+b_1&amp;b_2&amp;b_3 \\
+c_1&amp;c_2&amp;c_3\end{matrix}\right]
+</mrow>
+<mrow>
+\va\times\vb\cdot\vc
+&amp;=\det\left[\begin{matrix}
+\hi&amp;\hj&amp;\hk \\
+a_1&amp;a_2&amp;a_3 \\
+b_1&amp;b_2&amp;b_3\end{matrix}\right]\cdot(c_1,c_2,c_3)
+</mrow><mrow>
+&amp;=c_1\det\left[\begin{matrix}  a_2&amp;a_3 \\ b_2&amp;b_3\end{matrix}\right]
+   -c_2\det\left[\begin{matrix} a_1&amp;a_3 b_1&amp;b_3\end{matrix}\right]
+   +c_3\det\left[\begin{matrix} a_1&amp;a_2 \\ b_1&amp;b_2\end{matrix}\right]
+</mrow><mrow>
+&amp;=\det\left[\begin{matrix}
+c_1&amp;c_2&amp;c_3 \\ a_1&amp;a_2&amp;a_3 \\
+b_1&amp;b_2&amp;b_3
+\end{matrix}\right]
+</mrow>
+</md>
+Exchanging two rows in a determinant changes the sign of the determinant.
+Moving the top row of a <m>3\times 3</m> determinant to the bottom row requires
+two exchanges of rows.
+So the two <m>3\times 3</m> determinants are equal.
+</p>
+</proof>
+<proof><title>Proof of (b)</title>
+<p>
+The proof is not exceptionally difficult <mdash/> just write out both sides and grind.
+Substituting in
+<me>
+\vb\times\vc
+\ =\ (b_2c_3-b_3c_2)\hi-(b_1c_3-b_3c_1)\hj + (b_1c_2-b_2c_1)\hk
+</me>
+gives, for the left hand side,
+<md>
+<mrow>
+\va\times(\vb\times\vc)
+=\phantom{-}&amp;\!\!\!\det\left[\begin{matrix}
+\hi&amp;\hj &amp;\hk \\
+a_1&amp;a_2&amp;a_3\\
+b_2c_3-b_3c_2&amp;-b_1c_3+b_3c_1&amp;b_1c_2-b_2c_1
+\end{matrix}\right]
+</mrow>
+<mrow>
+=\phantom{-}&amp;\hi\big[a_2(b_1c_2-b_2c_1)-a_3(-b_1c_3+b_3c_1)\big]
+</mrow><mrow>
+-&amp;\hj\big[a_1(b_1c_2-b_2c_1)-a_3(b_2c_3-b_3c_2)\big]
+</mrow><mrow>
++&amp;\hk\big[a_1(-b_1c_3+b_3c_1)-a_2(b_2c_3-b_3c_2)\big]
+</mrow>
+</md>
+On the other hand, the right hand side
+<md>
+<mrow>
+(\va\cdot\vc)\vb-(\va\cdot\vb)\vc
+\ =\ &amp;(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
+-(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)\cr
+=\ &amp;
+\hi\ \big[\color{blue}{a_1b_1c_1}
+         +a_2b_1c_2+a_3b_1c_3-
+         \color{blue}{a_1b_1c_1}
+         -a_2b_2c_1-a_3b_3c_1\big]
+</mrow><mrow>
+{+}&amp;\hj\ \big[a_1b_2c_1
+      +\color{blue}{a_2b_2c_2}
+      +a_3b_2c_3-a_1b_1c_2
+      -\color{blue}{a_2b_2c_2}
+      -a_3b_3c_2\big]
+</mrow><mrow>
+{+}&amp;\hk\ \big[a_1b_3c_1+a_2b_3c_2
+          +\color{blue}{a_3b_3c_3}
+          -a_1b_1c_3-a_2b_2c_3
+          -\color{blue}{a_3b_3c_3}\big]
+</mrow><mrow>
+{=}\ &amp;
+\hi\ [a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]
+</mrow><mrow>
+{+}&amp;\hj\ [a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
+</mrow><mrow>
+{+}&amp;\hk\ [a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
+</mrow>
+</md>
+The last formula that we had for the left hand side is the same as the last formula we had for the right hand side.
+</p>
+</proof>
+
+<proof><title>Proof of (c)</title>
+<p>
+We just apply part (b) three times
+<md>
+<mrow>
+&amp;\va\times(\vb\times\vc) +
+            \vb\times(\vc\times\va) +
+            \vc\times(\va\times\vb)
+</mrow><mrow>
+&amp; = (\vc\cdot\va)\vb-(\vb\cdot\va)\vc
+            + (\va\cdot\vb)\vc-(\vc\cdot\vb)\va
+            + (\vb\cdot\vc)\va-(\va\cdot\vc)\vb
+</mrow><mrow>
+&amp; =\vZero
+</mrow>
+</md>
+</p>
+</proof>
+
+</subsection>
+<subsection xml:id="sec_rot_motion">
+  <title>(Optional) Application of Cross Products to Rotational Motion</title>
+
+<p>
+  In most computations involving rotational motion, the cross product shows
+up in one form or another. This is one of the main applications of the cross
+product. Consider, for example, a rigid body which is rotating
+ at a constant rate of <m>\Omega</m> radians per second about an axis
+whose direction is given by the unit vector <m>\hat\va</m>. Let <m>P</m> be any point
+on the body. Let's figure out its velocity. Pick any point on the axis
+of rotation and designate it as the origin of our coordinate system. Denote
+by <m>\vr</m> the vector from the origin to the point <m>P</m>. Let <m>\theta</m> denote
+the angle between <m>\hat\va</m> and <m>\vr</m>. As time progresses the point <m>P</m>
+sweeps out a circle of radius <m>R=|\vr\,|\sin\theta</m>.
+</p>
+
+<sidebyside width="33%">
+<image source="figs/rigid"/>
+</sidebyside>
+
+<p>
+In one second <m>P</m> travels along an arc that subtends an angle of
+<m>\Omega</m> radians, which is the fraction <m>\tfrac{\Omega}{2\pi}</m>
+of a full circle.  The length of this arc is
+<m>\tfrac{\Omega}{2\pi}\times 2\pi R=\Omega R=\Omega|\vr\,|\sin\theta</m> so <m>P</m> travels the distance <m>\Omega|\vr\,|\sin\theta</m>
+in one second and its speed, which is also the length of its velocity vector,
+is <m>\Omega|\vr\,|\sin\theta</m>.
+</p>
+
+<p>Now we just need to figure out the direction
+of the velocity vector. That is, the direction of motion of the point <m>P</m>.
+Imagine that both <m>\hat\va</m> and <m>\vr</m> lie in the plane of a piece of paper,
+as in the figure above. Then <m>\vv</m> points either straight into
+or straight out of the page and consequently is perpendicular
+to both <m>\hat\va</m> and <m>\vr</m>. To distinguish between the <q>into the page</q>
+and <q>out of the page</q> cases, let's impose the conventions that
+<m>\Omega \gt 0</m> and the axis of rotation <m>\hat\va</m> is chosen to obey the right hand
+ rule, meaning that if the thumb of
+your right hand is pointing in the direction <m>\hat\va</m>, then your fingers
+are pointing in the direction of motion of the rigid body.  Under these
+conventions, the velocity vector <m>\vv</m> obeys
+<ul>
+<li> <m>|\vv|=\Omega|\vr||\hat\va|\sin\theta</m>
+</li>
+<li> <m>\vv\perp\hat\va,\vr</m>
+</li>
+<li> <m>(\hat\va,\vr,\vv)</m> obey the right hand rule
+</li>
+</ul>
+That is, <m>\vv</m> is exactly <m>\Omega\hat\va\times\vr</m>. It is conventional
+to define the <q>angular velocity</q> of a rigid body to be vector
+<m>\mathbf{\Omega}=\Omega\hat\va</m>. That is, the vector with length given
+by the rate of rotation and direction given by the axis of rotation
+of the rigid body. In particular, the bigger the rate of rotation, the longer
+the angular velocity vector. In terms of this angular
+velocity vector, the velocity of the point <m>P</m> is
+<md>
+<mrow>
+\vv=\mathbf{\Omega}\times\vr
+</mrow>
+</md>
+</p>
+
+</subsection>
+
+
+<subsection xml:id="sec_rot_frame">
+  <title>(Optional) Application of Cross Products to Rotating Reference Frames</title>
+
+
+
+<p>Imagine a moving particle that is being tracked by two observers.
+<ol label="a">
+<li> One observer is fixed (out in space) and measures the position of
+  the particle to be <m>\big(X(t), Y(t), Z(t)\big)</m>.
+</li>
+<li> The other observer is tied to a merry-go-round (the Earth) and
+  measures the position of the particle to be <m>\big(x(t),y(t),z(t)\big)</m>.
+</li>
+</ol>
+The merry-go-round is sketched in the figure on the left below. It
+is rotating about the <m>Z</m>-axis at a (constant) rate of <m>\Omega</m> radians per second.
+The vector <m>\vOmega = \Omega \hk</m>, whose length is the rate of rotation and
+whose direction is the axis of rotation, is called the angular velocity.
+</p>
+
+<sidebyside width="33%">
+<image source="figs/merry.svg"/>
+<image source="figs/merryB.svg"/>
+</sidebyside>
+
+<p>
+The <m>x</m>- and <m>y</m>-axes of the moving observer are painted in red on
+the merry-go-round. The figure on the right above shows a top view of the
+merry-go-round. The <m>x</m>- and <m>y</m>-axes of the moving observer are again
+red. The <m>X</m>- and <m>Y</m>-axes of the fixed observer are blue.  We are
+assuming that at time <m>0</m>, the <m>x</m>-axis of the moving observer and
+the <m>X</m>-axis of the fixed observer coincide. As the merry-go-round
+is rotating at <m>\Om</m> radians per second, the angle between the <m>X</m>-axis
+and <m>x</m>-axis after <m>t</m> seconds is <m>\Omega t</m>.
+</p>
+
+<p>As an example, suppose that the moving particle is tied to the tip of the
+moving observer's unit <m>x</m> vector. Then
+<md>
+<mrow>
+x(t) &amp; = 1 &amp;  y(t) &amp;= 0 &amp; z(t) &amp;= 0
+</mrow><mrow>
+X(t) &amp; = \cos(\Om t) &amp;  Y(t) &amp;=\sin(\Om t) &amp; Z(t) &amp;= 0
+</mrow>
+</md>
+or, if we write <m>\vr(t) = \big(x(t), y(t), z(t)\big)</m> and
+<m>\vR(t) = \big(X(t), Y(t), Z(t)\big)</m>, then
+<md>
+<mrow>
+\vr(t) = (1\,,\,0\,,\,0) \qquad
+\vR(t)= \big(\cos(\Om t)\,,\,\sin(\Om t)\,,\,0\Big)
+</mrow>
+</md>
+</p>
+
+
+<p>
+  In general, denote by <m>\hi(t)</m> the coordinates of the unit <m>x</m>-vector
+of the moving observer at time <m>t</m>, as measured by the fixed observer.
+Similarly <m>\hj(t)</m> for the unit <m>y</m>-vector, and <m>\hk(t)</m> for the unit
+<m>z</m>-vector. As the merry-go-round is rotating about the <m>Z</m>-axis at a rate of <m>\Omega</m> radians per second, the angle between the <m>X</m>-axis
+and <m>x</m>-axis after <m>t</m> seconds is <m>\Omega t</m>, and
+<md>
+<mrow>
+\hi(t) &amp;= \big(\cos(\Om t)\,,\,\sin(\Om t)\,,\,0\Big)
+</mrow><mrow>
+\hj(t) &amp;= \big(-\sin(\Om t)\,,\,\cos(\Om t)\,,\,0\Big)
+</mrow><mrow>
+\hk(t) &amp;= \big(0\,,\,0\,,\,1\Big)
+</mrow>
+</md>
+</p>
+<sidebyside width="33%">
+  <image source="figs/merryC.svg"/>
+</sidebyside>
+<p>
+The position of the moving particle, as seen by the fixed observer is
+<md>
+<mrow>
+\vR(t) &amp;= x(t)\,\hi(t) + y(t)\,\hj(t) +z(t)\,\hk(t)
+</mrow>
+</md>
+Differentiating, the velocity of the moving particle, as measured
+by the fixed observer is
+<md>
+<mrow>
+\vV(t)=\diff{\vR}{t} &amp;= \phantom{+}\diff{x}{t}\!(t)\ \hi(t)
+                         + \diff{y}{t}\!(t)\ \hj(t)
+                         + \diff{z}{t}\!(t)\ \hk(t)
+</mrow>
+<mrow>
+                     &amp;\phantom{=} +x(t)\diff{}{t} \hi(t)
+                                  +y(t)\diff{}{t} \hj(t)
+                                  +z(t)\diff{}{t} \hk(t)
+</mrow>
+</md>
+We saw, in the last (optional) §<xref ref="sec_rot_motion"/>, that
+<md>
+<mrow>
+\diff{}{t} \hi(t)=\vOmega\times\hi(t)\quad
+\diff{}{t} \hj(t)=\vOmega\times\hj(t)\quad
+\diff{}{t} \hk(t)=\vOmega\times\hk(t)
+</mrow>
+</md>
+(You could also verify that these are correct by putting in
+<m>\vOmega = (0,0,\Om)</m> and explicitly computing the cross products.)
+So
+<md>
+<mrow>
+\vV(t)&amp;= \Big(\diff{x}{t}\!(t)\ \hi(t)
+                         + \diff{y}{t}\!(t)\ \hj(t)
+                         + \diff{z}{t}\!(t)\ \hk(t)\Big)
+                     +\vOmega\times\Big(x(t)\ \hi(t)
+                                  +y(t)\ \hj(t)
+                                  +z(t)\ \hk(t)\Big)
+</mrow>
+</md>
+Differentiating a second time, the acceleration of the moving particle
+(which is also <m>\frac{\vF}{m}</m>, where <m>\vF</m> is the net force being applied
+to the particle and <m>m</m> is the mass of the particle)
+as measured  by the fixed observer is
+<md>
+<mrow>
+\frac{\vF}{m}
+=\vA(t)
+=&amp; \Big(\difftwo{x}{t}\!(t)\ \hi(t)
+           + \difftwo{y}{t}\!(t)\ \hj(t)
+           + \difftwo{z}{t}\!(t)\ \hk(t)\Big)
+</mrow>
+<mrow>
+&amp; +2\vOmega\times\Big(\diff{x}{t}\!(t)\ \hi(t)
+      +\diff{y}{t}\!(t)\ \hj(t)
+      +\diff{z}{t}\!(t)\ \hk(t)\Big)
+</mrow>
+<mrow>
+&amp;+\vOmega\times\Big(\vOmega\times\big[
+            x(t)\ \hi(t)
+            +y(t)\ \hj(t)
+          +z(t)\ \hk(t)\big]\Big)
+</mrow>
+</md>
+</p>
+
+<p>
+Recall that the angular velocity <m>\vOmega=(0,0,\Omega)</m> does
+not depend on time.
+The rotating observer sees <m>\hi(t)</m> as <m>\hi=(1,0,0)</m>,
+sees <m>\hj(t)</m> as <m>\hj=(0,1,0)</m>, and sees <m>\hk(t)</m> as <m>\hk=(0,0,1)</m> and so sees
+<md>
+<mrow>
+\frac{\vF}{m}
+&amp;=\va(t) + 2\vOmega\times\vv(t) +\vOmega\times\big[\vOmega\times\vr(t)\big]
+</mrow>
+</md>
+where, as usual,
+<md alignment="alignat">
+<mrow>
+\vv(t) &amp;= \diff{}{t}\vr(t)
+       &amp;&amp;= \Big(\diff{x}{t}(t)\,,\,\diff{y}{t}(t)\,,\,\diff{z}{t}(t)\Big)
+</mrow><mrow>
+\va(t) &amp;= \difftwo{}{t}\vr(t)
+    &amp;&amp;= \Big(\difftwo{x}{t}(t)\,,\,\difftwo{y}{t}(t)\,,\,\difftwo{z}{t}(t)\Big)
+</mrow>
+</md>
+So the acceleration of the particle seen by the moving observer is
+<md>
+<mrow>
+\va(t) = \frac{\vF}{m} -  2\vOmega\times\vv(t)
+                     - \vOmega\times\big[\vOmega\times\vr(t)\big]
+</mrow>
+</md>
+Here
+<ul>
+<li>
+   <m>\vF</m> is the sum of all external forces acting on the moving particle,
+</li>
+<li>
+   <m>\vF_{{\rm cor}}=-2 \vOmega\times\vv(t)</m> is called the Coriolis force and
+</li>
+<li>
+   <m> - \vOmega\times\big[\vOmega\times\vr(t)\big]</m> is called the centrifugal force.
+</li>
+</ul>
+As an example, suppose that you are the moving particle and that
+you are at the edge of the merry-go-round. Let's say <m>t=0</m> and you are
+at <m>\hi</m>. Then <m>\vF</m> is the friction that the surface of the merry-go-round
+applies to the soles of your shoes. If you are just standing there,
+<m>\vv(t)=\vZero</m>, so that <m>\vF_{{\rm cor}}=\vZero</m>, and the friction
+<m>\vF</m> exactly cancels the centrifugal force
+<m>-\vOmega\times\big[\vOmega\times\vr(t)\big]</m>
+so that you remain at <m>\hi(t)</m>. Assume that <m>\Om \gt 0</m>. Now suppose that
+you start walking around the edge of the merry-go-round. Then,
+at <m>t=0</m>, <m>\vr=\hi</m> and
+<ul>
+<li>
+   if you walk in the direction of rotation, as in the figure on the
+   left below, <m>\vv=\hj</m> and the Coriolis force <m>\vF_{{\rm cor}}=
+   -2\Om\hk\times\hj = 2\Om\,\hi</m> tries to push you off of
+   the merry-go-round, while
+</li>
+<li>
+   if you walk opposite to the direction of rotation, as in the figure
+   on the right below,  <m>\vv=-\hj</m> so that the Coriolis force
+   <m>\vF_{{\rm cor}}=-2\Om\hk\times(-\hj) = -2\Om\,\hi</m> tries to pull you
+   into the centre of the merry-go-round.
+</li>
+</ul>
+</p>
+<sidebyside width="40%">
+<image source="figs/merryD.svg"/>
+<image source="figs/merryE.svg"/>
+</sidebyside>
+
+<p>
+  On a rotating ball, such as the Earth, the Coriolis force deflects
+wind to the right (counterclockwise) in the northern hemisphere
+and to the left (clockwise) is the southern hemisphere. In particular,
+hurricanes/cyclones/typhoons rotate counterclockwise in the northern
+hemisphere and clockwise in the southern hemisphere. On the other
+hand, when it comes to water draining out of, for example, a toilet,
+Coriolis force effects are dominated by other factors like asymmetry
+of the toilet.
+</p>
+
+</subsection>
+
+</section>

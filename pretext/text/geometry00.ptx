@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chap_geometry">
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+<title>Vectors and Geometry in Two and Three Dimensions</title>
+<introduction>
+  <p>
+  Before we get started doing calculus in two and three dimensions we need to brush up on some basic geometry, that we will use a lot.
+  We are already familiar with the Cartesian plane<fn>
+  René Descartes (1596<ndash/>1650) was a French scientist and philosopher, who lived in the Dutch Republic for roughly twenty years after serving in the (mercenary) Dutch States Army.
+  He is viewed as the father of analytic geometry, which uses numbers
+  to study geometry.
+</fn>,
+but we'll start from the beginning.
+</p>
+</introduction>
+
+<xi:include href="./geometry01.ptx" />
+<xi:include href="./geometry02.ptx" />
+
+</chapter>
