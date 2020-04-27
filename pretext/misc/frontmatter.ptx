@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018-2019 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<frontmatter xml:id="frontmatter" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<titlepage>
+
+		<author>
+			<personname>Joel Feldman</personname>
+			<department>Department of Mathematics</department>
+			<institution>University of British Columbia</institution>
+			<email>feldman@math.ubc.ca</email>
+		</author>
+
+		<author>
+			<personname>Andrew Rechnitzer</personname>
+			<department>Department of Mathematics</department>
+			<institution>University of British Columbia</institution>
+			<email>andrewr@math.ubc.ca</email>
+		</author>
+
+		<author>
+			<personname>Elyse Yeager</personname>
+			<department>Department of Mathematics</department>
+			<institution>University of British Columbia</institution>
+			<email>elyse@math.ubc.ca</email>
+		</author>
+		<date>
+			<today />
+		</date>
+	</titlepage>
+
+
+	<colophon>
+		<credit>
+        <role>Cover Design</role>
+				<entity>Nick Loewen <mdash/> licensed under the <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0 License</url>.</entity>
+    </credit>
+		<credit>
+			<role>Source files</role>
+			<entity>
+				A link to the source files for this document can be found at the <url href="http://www.math.ubc.ca/~CLP/">CLP textbook website</url>. The sources are licensed under the <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0 License</url>.
+		</entity>
+		</credit>
+
+		<edition>CLP32 Multivariable Calculus: April 2020</edition>
+
+		<website>
+			<name>
+				<c>CLP-3</c>
+			</name>
+			<address>http://www.math.ubc.ca/~CLP/</address>
+		</website>
+
+		<copyright>
+			<year>2016 <ndash/> 2020</year>
+			<holder>Joel Feldman, Andrew Rechnitzer, Elyse Yeager</holder>
+			<minilicense>CC-BY-NC-SA 4.0 License</minilicense>
+			<shortlicense>
+				This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. You can view a copy of the license <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">here</url>.
+
+					<!-- <image source = "text/figs/by-nc-sa" width="25%"/> -->
+			</shortlicense>
+		</copyright>
+
+	</colophon>
+
+	<preface>
+		<p>
+		This text is a merger of the CLP Integral Calculus textbook and problembook. It is, at the time that we write this, still a work in progress; some bits and pieces around the edges still need polish. Consequently we recommend to the student that they still consult text webpage for links to the errata <mdash/> especially if they think there might be a typo or error. We also request that you send us an email at <url href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext"> <c>clp@ugrad.math.ubc.ca</c></url>
+		</p>
+
+
+		<p>
+		Additionally, if you are not a student at UBC and using these texts please send us an email (again using the feedback button) <mdash/> we'd love to hear from you.
+		</p>
+
+		<attribution>
+			<line>
+				Joel Feldman, Andrew Rechnitzer and Elyse Yeager
+			</line>
+		</attribution>
+	</preface>
+
+
+	<preface>
+		<title>Feedback about the text</title>
+		<p>
+		The CLP-3 Multivariable Calculus text is still undergoing testing and changes. Because of this we request that if you find a problem or error in the text then:
+		<ol>
+		<li>Please check the errata list that can be found at the text webpage.</li>
+		<li>Is the problem in the online version or the PDF version or both?</li>
+		<li>Note the URL of the online version and the page number in the PDF</li>
+		<li>
+			<p>Send an email to
+			<url href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext"> <c>clp@ugrad.math.ubc.ca</c></url>.
+			Please be sure to include
+			<ul>
+			<li>a description of the error</li>
+			<li>the URL of the page, if found in the online edition</li>
+			<li>and if the problem also exists in the PDF, then the page number in the PDF and the compile date on the front page of PDF.</li>
+			</ul>
+			</p>
+		</li>
+		</ol>
+		</p>
+
+	</preface>
+</frontmatter>

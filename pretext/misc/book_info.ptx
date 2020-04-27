@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<docinfo>
+
+<!-- <covers front="cover/clp3-cover"/> -->
+<latex-preamble>
+  <package>palatino</package>
+	<package>mathrsfs</package>
+	<package>cancel</package>
+	<package>nicefrac</package>
+</latex-preamble>
+
+<macros>
+  \newcommand{\dee}[1]{\mathrm{d}#1}
+  \newcommand{\half}{ \frac{1}{2} }
+  \newcommand{\ds}{\displaystyle}
+  \newcommand{\ts}{\textstyle}
+  \newcommand{\es}{ {\varnothing}}
+  \newcommand{\st}{ {\mbox{ s.t. }} }
+  \newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+  \newcommand{\set}[1]{ \left\{#1\right\} }
+  \newcommand{\lin}{{\text{LIN}}}
+  \newcommand{\quot}{{\text{QR}}}
+  \newcommand{\simp}{{\text{SMP}}}
+  \newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+  \newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+  \newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+  \newcommand{\difftwo}[2]{ \frac{\mathrm{d^2}#1}{\mathrm{d}{#2}^2}}
+  \renewcommand{\neg}{ {\sim} }
+  \newcommand{\limp}{ {\;\Rightarrow\;} }
+  \newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+  \newcommand{\liff}{ {\;\Leftrightarrow\;} }
+  \newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+  \newcommand{\De}{\Delta}
+  \newcommand{\bbbn}{\mathbb{N}}
+  \newcommand{\bbbr}{\mathbb{R}}
+  \newcommand{\bbbp}{\mathbb{P}}
+  \newcommand{\cI}{\mathcal{I}}
+  \newcommand{\cR}{\mathcal{R}}
+  \newcommand{\cV}{\mathcal{V}}
+  \newcommand{\Si}{\Sigma}
+
+  \newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+  \newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+  \newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+  \newcommand{\erf}{\mathop{\mathrm{erf}}}
+  \newcommand{\smsum}{\mathop{{\ts \sum}}}
+  \newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+  \newcommand{\ave}{\mathrm{ave}}
+  \newcommand{\llt}{\left \lt }
+  \newcommand{\rgt}{\right \gt }
+
+
+  \newcommand{\vd}{\mathbf{d}}
+  \newcommand{\he}{\mathbf{e}}
+  \newcommand{\vg}{\mathbf{g}}
+  \newcommand{\vt}{\mathbf{t}}
+  \newcommand{\vw}{\mathbf{w}}
+  \def\eqover#1{\ {\buildrel #1 \over =}\ }
+  \newcommand{\impliesover}[1]{ {\buildrel #1 \over\implies} }
+
+
+
+  \newcommand{\vr}{\mathbf{r}}
+  \newcommand{\vR}{\mathbf{R}}
+  \newcommand{\vv}{\mathbf{v}}
+  \newcommand{\va}{\mathbf{a}}
+  \newcommand{\vb}{\mathbf{b}}
+  \newcommand{\vc}{\mathbf{c}}
+  \newcommand{\ve}{\mathbf{e}}
+  \newcommand{\vC}{\mathbf{C}}
+  \newcommand{\vp}{\mathbf{p}}
+  \newcommand{\vn}{\mathbf{n}}
+  \newcommand{\vu}{\mathbf{u}}
+  %\newcommand{\vv}{\mathbf{v}}
+  \newcommand{\vV}{\mathbf{V}}
+  \newcommand{\vx}{\mathbf{x}}
+  \newcommand{\vX}{\mathbf{X}}
+  \newcommand{\vy}{\mathbf{y}}
+  \newcommand{\vz}{\mathbf{z}}
+  \newcommand{\vF}{\mathbf{F}}
+  \newcommand{\vG}{\mathbf{G}}
+  \newcommand{\vH}{\mathbf{H}}
+  \newcommand{\vT}{\mathbf{T}}
+  \newcommand{\vN}{\mathbf{N}}
+  \newcommand{\vL}{\mathbf{L}}
+  \newcommand{\vA}{\mathbf{A}}
+  \newcommand{\vB}{\mathbf{B}}
+  \newcommand{\vD}{\mathbf{D}}
+  \newcommand{\vE}{\mathbf{E}}
+  \newcommand{\vJ}{\mathbf{J}}
+  \newcommand{\vZero}{\mathbf{0}}
+  \newcommand{\vPhi}{\mathbf{\Phi}}
+  \newcommand{\vOmega}{\mathbf{\Omega}}
+  \newcommand{\vTheta}{\mathbf{\Theta}}
+  \newcommand{\cA}{\mathcal{A}}
+  \newcommand{\cB}{\mathcal{B}}
+  \newcommand{\cM}{\mathcal{M}}
+  \newcommand{\cO}{\mathcal{O}}
+  \newcommand{\cR}{\mathcal{R}}
+  \newcommand{\cS}{\mathcal{S}}
+  \newcommand{\cT}{\mathcal{T}}
+  \newcommand{\cU}{\mathcal{U}}
+  \newcommand{\cV}{\mathcal{V}}
+  \newcommand{\cW}{\mathcal{W}}
+  \newcommand{\cX}{\mathcal{X}}
+
+  %\newcommand{\hi}{\hat{\mathbf{i}}}
+  %\newcommand{\hj}{\hat{\mathbf{j}}}
+  \newcommand{\hi}{\hat{\pmb{\imath}}}
+  \newcommand{\hj}{\hat{\pmb{\jmath}}}
+  \newcommand{\hk}{\hat{\mathbf{k}}}
+  \newcommand{\hn}{\hat{\mathbf{n}}}
+  \newcommand{\hr}{\hat{\mathbf{r}}}
+  \newcommand{\hvt}{\hat{\mathbf{t}}}
+  \newcommand{\hN}{\hat{\mathbf{N}}}
+  \newcommand{\vth}{{\pmb{\theta}}}
+  \newcommand{\vTh}{{\pmb{\Theta}}}
+  %\newcommand{\vnabla}{\pmb{\nabla}}
+  \newcommand{\vnabla}{   { \mathchoice{\pmb{\nabla}}
+                              {\pmb{\nabla}}
+                              {\pmb{\scriptstyle\nabla}}
+                              {\pmb{\scriptscriptstyle\nabla}} }   }
+  \newcommand{\ha}[1]{\mathbf{\hat e}^{(#1)}}
+
+  \newcommand{\bbbc}{\mathbb{C}}
+
+  \newcommand{\Om}{\Omega}
+  \newcommand{\om}{\omega}
+  \newcommand{\vOm}{\pmb{\Omega}}
+  \newcommand{\svOm}{\pmb{\scriptsize\Omega}}
+  \newcommand{\al}{\alpha}
+  \newcommand{\be}{\beta}
+  \newcommand{\de}{\delta}
+  \newcommand{\ga}{\gamma}
+  \newcommand{\ka}{\kappa}
+  \newcommand{\la}{\lambda}
+
+  \newcommand{\cC}{\mathcal{C}}
+  \newcommand{\bbbone}{\mathbb{1}}
+
+  \DeclareMathOperator{\sgn}{sgn}
+  \def\tr{\mathop{\rm tr}}
+  \newcommand{\Atop}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
+
+
+  \newcommand{\pdiff}[2]{ \frac{\partial\hfil#1\hfil}{\partial #2}}
+  \newcommand{\dblInt}{\iint}
+  \newcommand{\tripInt}{\iiint}
+
+  \newcommand{\Set}[2]{\big\{ \ #1\ \big|\ #2\ \big\}}
+  \newcommand{\rhof}{{\rho_{\!{\scriptscriptstyle f}}}}
+  \newcommand{\rhob}{{\rho_{{\scriptscriptstyle b}}}}
+
+</macros>
+<!-- <xi:include href="misc/latex_image_preamble.xml" /> -->
+
+
+<!-- to make referencing like latex referencing - just the number -->
+  <cross-references text="global" />
+  <rename element="fact" xml:lang="en-US">Equation</rename> <!-- use to replace impeqn -->
+
+  <feedback>
+    <url>mailto:clp@ugrad.math.ubc.ca?subject=clp3-pretext</url>
+  </feedback>
+
+
+</docinfo>
