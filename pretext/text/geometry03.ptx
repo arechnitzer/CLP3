@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="sec_lines_2d">
+  <title>Equations of Lines in 2d</title>
+
+<p>
+  A line in two dimensions can be specified  by giving one point
+<m>(x_0,y_0)</m> on the line and one vector <m>\vd=\llt d_x,d_y\rgt </m>
+whose direction is parallel to the line.
+</p>
+
+<sidebyside width="50%">
+<image source="figs/twodLine.svg"/>
+</sidebyside>
+
+<p>
+If <m>(x,y)</m> is any point on the line then the vector <m>\llt x-x_0,y-y_0\rgt </m>,
+whose tail is at <m>(x_0,y_0)</m> and whose head is at <m>(x,y)</m>,  must be parallel
+to <m>\vd</m> and hence must be a scalar multiple of <m>\vd</m>. So
+</p>
+<fact xml:id="eqn_par_line">
+  <title>Parametric Equations</title>
+  <statement>
+    <p>
+    <md>
+    <mrow>
+       \llt x-x_0,y-y_0\rgt =t \vd
+    </mrow>
+    </md>
+    or, writing out in components,
+    <md>
+    <mrow>
+       x-x_0&amp;=t d_x
+    </mrow><mrow>
+       y-y_0&amp;=t d_y
+    </mrow>
+    </md>
+    </p>
+  </statement>
+</fact>
+
+<p>
+These are called the parametric equations of the line, because they contain
+a free parameter, namely <m>t</m>. As <m>t</m> varies from <m>-\infty</m> to <m>\infty</m>,
+the point <m>(x_0+td_x,y_0+td_y)</m> traverses the entire line.
+</p>
+
+
+<p>It is easy to eliminate the parameter <m>t</m> from the equations. Just
+multiply <m>x-x_0=t d_x</m> by <m>d_y</m>, multiply <m>y-y_0=t d_y</m> by <m>d_x</m>
+and subtract to give
+<md>
+<mrow>
+(x-x_0)d_y-(y-y_0)d_x=0
+</mrow>
+</md>
+In the event that <m>d_x</m> and <m>d_y</m> are both nonzero, we can rewrite this
+as
+\begin{impeqn}[Symmetric Equation]xml:id="eqn_symm_eqn_line"
+<md>
+<mrow>
+   \frac{x-x_0}{d_x}=\frac{y-y_0}{d_y}
+</mrow>
+</md>
+\end{impeqn}
+which is called the symmetric equation for the line.
+</p>
+
+<p>A second way to specify a line in two dimensions is to give one point
+<m>(x_0,y_0)</m> on the line and one vector <m>\vn=\llt n_x,n_y\rgt </m> whose
+direction is  perpendicular to that of the line.
+</p>
+
+<sidebyside width="50%">
+<image source="figs/twodLineNormal.svg"/>
+</sidebyside>
+
+<p>
+  If <m>(x,y)</m> is any point on the line then the vector <m>\llt x-x_0,y-y_0\rgt </m>,
+whose tail is at <m>(x_0,y_0)</m> and whose head is at <m>(x,y)</m>,
+must be perpendicular to <m>\vn</m> so that
+</p>
+
+<fact xml:id="eqn_line">
+  <statement>
+    <p>
+    <md>
+    <mrow>
+    \vn\cdot\llt x-x_0,y-y_0\rgt =0
+    </mrow>
+    </md>
+    Writing out in components
+    <md>
+    <mrow>
+    n_x(x-x_0)+n_y(y-y_0)=0\qquad\text{or}\qquad n_xx+n_yy= n_xx_0+n_yy_0
+    </mrow>
+    </md>
+    </p>
+  </statement>
+</fact>
+<p>
+Observe that the coefficients <m>n_x,n_y</m> of <m>x</m> and <m>y</m> in the equation
+of the line are the components of a vector <m>\llt n_x,n_y\rgt </m> perpendicular
+to the line. This enables us to read off a vector perpendicular to any
+given line directly from the equation of the line. Such a vector is called
+a normal vector for the line.
+</p>
+
+<example>
+<p>
+Consider, for example, the line <m>y=3x+7</m>. To rewrite this equation in the form
+<me>
+n_xx+n_yy= n_xx_0+n_yy_0
+</me>
+we have to move terms around so that <m>x</m> and
+<m>y</m> are on one side of the equation and <m>7</m> is  on the other side:
+ <m>3x-y=-7</m>. Then <m>n_x</m> is the coefficient of <m>x</m>, namely <m>3</m>, and <m>n_y</m>
+is the coefficient of <m>y</m>, namely <m>-1</m>. One normal vector
+for <m>y=3x+7</m> is <m>\llt 3,-1\rgt </m>.
+</p>
+
+<p>Of course, if <m>\llt 3,-1\rgt </m> is perpendicular to <m>y=3x+7</m>, so is
+<m>-5\llt 3,-1\rgt =\llt -15,5\rgt </m>.
+In fact, if we first multiply the equation <m>3x-y=-7</m> by <m>-5</m> to
+get <m>-15x+5y=35</m> and then set <m>n_x</m> and <m>n_y</m> to the coefficients of <m>x</m>
+and <m>y</m> respectively, we get <m>\vn=\llt -15,5\rgt </m>.
+</p>
+</example>
+
+
+<example xml:id="eg_nearest_point">
+<p>
+In this example, we find the point on the line <m>y=6-3x</m> (call the line <m>L</m>)
+that is closest to the point <m>(7,5)</m>.
+</p>
+
+<p>
+  We'll start by sketching the line. To do so, we guess two points on <m>L</m> and then draw the line that passes through the two points.
+<ul>
+<li>  If <m>(x,y)</m> is on <m>L</m> and <m>x=0</m>, then <m>y=6</m>. So <m>(0,6)</m> is
+on <m>L</m>.
+</li>
+<li> If <m>(x,y)</m> is on <m>L</m> and <m>y=0</m>, then <m>x=2</m>. So <m>(2,0)</m> is
+on <m>L</m>.
+</li>
+</ul>
+</p>
+
+<sidebyside width="40%">
+<image source="figs/closestA.svg"/>
+<image source="figs/closestB.svg"/>
+</sidebyside>
+
+<p>
+Denote by <m>P</m> the point on <m>L</m> that is closest to <m>(7,5)</m>.
+It is characterized by the property that the line from <m>(7,5)</m> to <m>P</m>
+is perpendicular to <m>L</m>. This is the case just because if <m>Q</m> is any
+other point on <m>L</m>, then, by Pythagoras, the distance from <m>(7,5)</m>
+to <m>Q</m> is larger than the distance from <m>(7,5)</m> to <m>P</m>. See the figure on the
+right above.
+</p>
+
+<p>
+  Let's use <m>N</m> to denote the line which passes through <m>(7,5)</m> and which is perpendicular to <m>L</m>.
+</p>
+
+<sidebyside width="40%">
+<image source="figs/closest.svg"/>
+</sidebyside>
+
+
+<p>
+  Since <m>L</m> has the equation <m>3x+y=6</m>, one vector perpendicular to <m>L</m>, and hence parallel to <m>N</m>, is <m>\llt 3,1\rgt </m>. So if <m>(x,y)</m> is any point on <m>N</m>, the vector <m>\llt x-7,y-5\rgt </m> must be of the form <m>t\llt 3,1\rgt </m>. So the parametric equations of <m>N</m> are
+<md>
+<mrow>
+\llt x-7,y-5\rgt =t\llt 3,1\rgt \qquad\text{or}\qquad x=7+3t,\ y=5+t
+</mrow>
+</md>
+Now let <m>(x,y)</m> be the coordinates of <m>P</m>. Since <m>P</m> is on <m>N</m>,
+we have <m>x=7+3t</m>, <m>y=5+t</m> for some <m>t</m>. Since <m>P</m> is also on <m>L</m>, we also
+have <m>3x+y=6</m>. So
+<md alignment="alignat">
+  <mrow>
+&amp; &amp; 3(7+3t)+(5+t)&amp;= 6
+</mrow><mrow>
+&amp; \iff\qquad&amp; 10t+26&amp;= 6
+</mrow><mrow>
+&amp; \iff\qquad&amp; t&amp;=-2
+</mrow><mrow>
+&amp; \implies\qquad&amp; x&amp;= 7+3\times (-2)=1,\ y=5+(-2)=3
+</mrow>
+</md>
+and <m>P</m> is <m>(1,3)</m>.
+</p>
+
+</example>
+</section>
