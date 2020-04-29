@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="sec_curves">
+  <title>Curves and their Tangent Vectors</title>
+<introduction>
+
+<p>The right hand side of the parametric equation
+ <m>(x,y,z)=(1,1,0)+t\llt 1,2,-2\rgt</m> that we just saw in Warning
+<xref ref="warn_line_normal"/> is a vector-valued function of the one real
+variable <m>t</m>.
+We are now going to study more general vector-valued functions of one
+real variable. That is, we are going to study functions that assign to
+each real number <m>t</m> (typically in some interval) a vector <m>\vr(t)</m>.
+For example
+<me>
+\vr(t) = \big( x(t), y(t), z(t)\big)
+</me>
+might be the position of a particle at time <m>t</m>. As <m>t</m> varies
+<m>\vr(t)</m> sweeps out a curve.
+</p>
+<sidebyside width="50%">
+<image source="figs/parCurve.svg"/>
+</sidebyside>
+<p>
+While in some applications <m>t</m> will indeed be <q>time</q>, it does not
+have to be. It can be simply a parameter that is used to label the
+different points on the curve that <m>\vr(t)</m> sweeps out. We then say
+that <m>\vr(t)</m> provides a parametrization of the curve.
+</p>
+
+<example xml:id="eg_paramCircle">
+<p>
+While we will often use <m>t</m> as the parameter in a parametrized curve <m>\vr(t)</m>,
+there is no need to call it <m>t</m>. Sometimes it is natural to use a different
+name for the parameter. For example, consider the circle <m>x^2+y^2=a^2</m>.
+It is natural to use the angle <m>\theta</m> in the sketch below to label
+the point <m>\big(a\cos\theta\,,\,a\sin\theta\big)</m> on the circle.
+</p>
+
+<sidebyside width="66%">
+<image source="figs/parCircle.svg"/>
+</sidebyside>
+
+<p>
+That is,
+<me>
+\vr(\theta) = \big(a\cos\theta\,,\,a\sin\theta\big)\qquad
+0\le \theta\le 2\pi
+</me>
+is a parametrization of the circle <m>x^2+y^2=a^2</m>. Just looking at the figure above, it is clear that, as <m>\theta</m> runs from <m>0</m> to <m>2\pi</m>, <m>\vr(\theta)</m>
+traces out the full circle.
+</p>
+
+<p>However beware that just knowing that
+<m>\vr(t)</m> lies on a specified curve does not guarantee that, as <m>t</m> varies,
+<m>\vr(t)</m> covers the entire curve. For example, as <m>t</m> runs over the whole
+real line, <m>\frac{2}{\pi}\arctan(t)</m> runs over the interval <m>(-1,1)</m>.
+For all <m>t</m>,
+<me>
+\vr(t) = \big(x(t),y(t)\big)
+       = a\left(\frac{2}{\pi}\arctan(t)\,,\,
+                \sqrt{1-\frac{4}{\pi^2}\arctan^2(t)}\,\right)
+</me>
+is well-defined and obeys <m>x(t)^2+y(t)^2=a^2</m>. But this <m>\vr(t)</m> does not
+cover the entire circle because <m>y(t)</m> is always positive.
+</p>
+
+</example>
+
+<p>Curves often arise as the intersection of two surfaces. For example,
+the intersection of the sphere <m>x^2+y^2+z^2=1</m>
+with the plane <m>y=x</m> is a circle. The part of that circle that is
+in the first octant is the red curve in the figure below.
+</p>
+
+<sidebyside width="75%">
+<image source="figs/spherePlane.svg"/>
+</sidebyside>
+
+<p>
+One way to parametrize such curves is to
+choose one of the three coordinates <m>x</m>, <m>y</m>, <m>z</m> as the parameter,
+and solve the two given equations for the remaining two coordinates,
+as functions of the parameter. Here are two examples.
+</p>
+
+<example xml:id="eg_paramIntersectA">
+<p>
+The set of all <m>(x,y,z)</m> obeying
+<md alignment="alignat">
+<mrow>{3}
+ x&amp;-y           &amp;&amp;=0
+</mrow><mrow>
+ x^2&amp;+y^2 +z^2 &amp;&amp;=1
+</mrow>
+</md>
+is the circle sketched above. We can choose to use <m>y</m> as the parameter and think of
+<md alignment="alignat">
+<mrow>{3}
+ x&amp;    &amp;&amp;=y
+</mrow><mrow>
+ x^2&amp;+z^2  &amp;&amp;=1-y^2
+</mrow>
+</md>
+as a system of two equations for the two unknowns <m>x</m> and <m>z</m>,
+with <m>y</m> being treated as a given constant, rather than as an unknown.
+We can now (trivially) solve the first equation for <m>x</m>, substitute
+the result into the second equation, and finally solve for <m>z</m>.
+<md alignment="alignat">
+<mrow>{7}
+x=y,\  x^2+z^2  &amp;&amp;=1-y^2 \quad \implies z^2 = 1-2y^2
+</mrow>
+</md>
+If, for example, we are interested in points <m>(x,y,z)</m> on the curve with
+<m>z\ge 0</m>, we have <m>z=\sqrt{1-2y^2} </m> and
+<me>
+\vr(y) = \left(y\,,\,y\,,\,\sqrt{1-2y^2}\,\right),\qquad
+-\frac{1}{\sqrt{2}}\le y \le \frac{1}{\sqrt{2}}
+</me>
+is a parametrization for the part of the circle above the <m>xy</m>-plane.
+If, on the other hand, we are interested in points <m>(x,y,z)</m> on the curve with
+<m>z\le 0</m>, we have <m>z=-\sqrt{1-2y^2} </m> and
+<me>
+\vr(y) = \left(y\,,\,y\,,\,-\sqrt{1-2y^2}\,\right),\qquad
+-\frac{1}{\sqrt{2}}\le y \le \frac{1}{\sqrt{2}}
+</me>
+is a parametrization for the part of the circle below the <m>xy</m>-plane.
+</p>
+</example>
+
+
+<example xml:id="eg_paramIntersectB">
+<p>
+The previous example was rigged so that it was easy to solve
+for <m>x</m> and <m>z</m> as functions of <m>y</m>. In practice it is not always
+easy, or even possible, to do so. A more realistic example is
+the set of all <m>(x,y,z)</m> obeying
+<md alignment="alignat">
+<mrow>
+ x^2+\frac{y^2}{2}+\frac{z^2}{3}&amp;=1
+</mrow><mrow>
+ x^2+2y^2&amp;=z
+</mrow>
+</md>
+which is the blue curve in the figure
+</p>
+
+<sidebyside width="66%">
+<image source="figs/stokes6.svg"/>
+</sidebyside>
+
+<p>
+(Don't worry about how we make sketches like this. We'll develop some
+surface sketching technique in \S<xref ref="sec_sketching"/> below.)
+Substituting <m>x^2=z-2y^2</m> (from the second equation)
+into the first equation gives
+<me>
+-\frac{3}{2}y^2+z+\frac{z^2}{3}=1
+</me>
+or, completing the square,
+<me>
+-\frac{3}{2}y^2 + \frac{1}{3}\Big(z+\frac{3}{2}\Big)^2 = \frac{7}{4}
+</me>
+If, for example, we are interested in points <m>(x,y,z)</m> on the curve with
+<m>y\ge 0</m>, this can be solved to give <m>y</m> as a function of <m>z</m>.
+<me>
+y=\sqrt{\frac{2}{9}\Big(z+\frac{3}{2}\Big)^2-\frac{14}{12}}
+</me>
+Then <m>x^2=z-2y^2</m> also gives <m>x</m> as a function of <m>z</m>. If <m>x\ge 0</m>,
+<md>
+<mrow>
+x&amp;=\sqrt{z-\frac{4}{9}\Big(z+\frac{3}{2}\Big)^2+\frac{14}{6}}
+</mrow><mrow>
+&amp;=\sqrt{\frac{4}{3}-\frac{4}{9}z^2-\frac{1}{3}z}
+</mrow>
+</md>
+The other signs of <m>x</m> and <m>y</m> can be gotten by using the appropriate
+square roots. In this example, <m>(x,y,z)</m> is on the curve, i.e. satisfies
+the two original equations, if and only if all of <m>(\pm x,\pm y, z)</m> are also
+on the curve.
+</p>
+
+</example>
+
+</introduction>
+
+<subsection xml:id="sec_curve_derivs">
+<title>Derivatives and Tangent Vectors</title>
+
+
+<p>This being a Calculus text, one of our main operations is differentiation.
+We are now interested in parametrizations <m>\vr(t)</m>.
+It is very easy and natural to extend our definition of derivative to <m>\vr(t)</m>
+as follows.
+</p>
+
+<definition xml:id="def__curve_deriv">
+<statement><p>
+The derivative of the vector valued function <m>\vr(t)</m> is defined to be
+<me>
+\vr'(t) =  \diff{\vr}{t}(t)=\lim_{h\rightarrow 0}\frac{\vr(t+h)-\vr(t)}{h}
+</me>
+</p>
+<sidebyside width="40%">
+  <image source="figs/parCurveDerivA.svg"/>
+</sidebyside>
+
+<p>
+when the limit exists. In particular, if
+<m>\vr(t)=\big(x(t)\,,\,y(t)\,,\,z(t)\big)</m>, then
+<me>
+\vr'(t)=\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big)
+</me>
+That is, to differentiate a vector valued function of <m>t</m>, just differentiate
+each of its components.
+</p></statement>
+</definition>
+
+
+<p>And of course differentiation interacts with arithmetic operations,
+like addition, in the obvious way. Only a little more thought is required to
+see that differentiation interacts quite nicely with dot and cross
+products too.
+</p>
+
+<theorem xml:id="thm_DIFFalgebra"><title>Arithmetic of differentiation</title>
+<statement><p>
+Let
+<ul>
+<li>
+<m>\va(t),\vb(t)</m> be vector valued differentiable functions of <m>t\in\bbbr</m>
+that take values in <m>\bbbr^n</m> and
+</li>
+<li>
+ <m>\alpha,\beta \in \mathbb{R}</m> be constants and
+</li>
+<li>
+ <m>\ga(t)</m> and <m>s(t)</m> be real valued differentiable functions of <m>t\in\bbbr</m>
+</li>
+</ul>
+Then
+<md alignment="alignat">
+<mrow>
+&amp;\text{(a)}\quad &amp;&amp;\diff{}{t}\big[\alpha\,\va(t)+\beta\,\vb(t)\big]
+         =\alpha\,\va'(t)+\beta\,\vb'(t)
+           &amp;&amp;\text{(linear combination)}
+</mrow><mrow>
+&amp;\text{(b)} &amp;&amp;\diff{}{t}\big[\ga(t)\vb(t)\big]
+         =\ga'(t)\vb(t)+\ga(t)\vb'(t)
+           &amp;&amp;\text{(multiplication by scalar function)}
+</mrow><mrow>
+&amp;\text{(c)} &amp;&amp;\diff{}{t}\big[\va(t)\cdot\vb(t)\big]
+         =\va'(t)\cdot\vb(t)+\va(t)\cdot\vb'(t)
+           &amp;&amp;\text{(dot product)}
+</mrow><mrow>
+&amp;\text{(d)} &amp;&amp;\diff{}{t}\big[\va(t)\times\vb(t)\big]
+         =\va'(t)\times\vb(t)+\va(t)\times\vb'(t)
+           \ \ &amp;&amp;\text{(cross product)}
+</mrow><mrow>
+&amp;\text{(e)} &amp;&amp;\diff{}{t}\big[\va\big(s(t)\big)\big]
+         =\va'\big(s(t)\big)\,s'(t)
+           &amp;&amp;\text{(composition)}
+</mrow>
+</md>
+</p>
+
+</statement>
+</theorem>
+
+
+<p>Let's think about the geometric significance of <m>\vr'(t)</m>.
+In particular, let's think about the relationship between <m>\vr'(t)</m>
+and distances along the curve.
+The derivative <m>\vr'(t)</m> is the limit of   <m>\frac{\vr(t+h)-\vr(t)}{h}</m> as <m>h\rightarrow 0</m>.
+The numerator, <m>\vr(t+h)-\vr(t)</m>, is the vector with head at <m>\vr(t+h)</m>
+and tail at <m>\vr(t)</m>.
+</p>
+
+<sidebyside width="50%">
+<image source="figs/parCurveDeriv.svg"/>
+</sidebyside>
+<p>
+When <m>h</m> is very small this vector
+<ul>
+<li>
+has the essentially the same direction as the tangent vector to the curve at <m>\vr(t)</m> and
+</li>
+<li>
+has length being essentially the length of the part of the curve between
+<m>\vr(t)</m> and <m>\vr(t+h)</m>.
+</li>
+</ul>
+Taking the limit as <m>h\rightarrow 0</m> yields that
+<ul>
+<li>
+<m>\vr'(t)</m> is a tangent vector to the curve at <m>\vr(t)</m> that points in
+the direction of increasing <m>t</m> and
+</li>
+<li>
+if <m>s(t)</m> is the length of the part of the curve between
+<m>\vr(0)</m> and <m>\vr(t)</m>, then  <m>\diff{s}{t}(t)=\big|\diff{\vr}{t}(t)\big|</m>.
+</li>
+</ul>
+This is worth stating formally.
+</p>
+
+<lemma xml:id="lem_CVtanArclen">
+<statement><p>
+Let <m>\vr(t)</m> be a parametrized curve.
+<ol label="(a)">
+<li>
+Denote by <m>\hat\vT(t)</m> the unit tangent vector to the curve
+at <m>\vr(t)</m> pointing in the direction of increasing <m>t</m>. If
+<m>\vr'(t)\ne 0</m>
+then
+<me>
+\hat\vT(t) = \frac{\vr'(t)}{|\vr'(t)|}
+</me>
+</li>
+<li>
+  <p>
+Denote by <m>s(t)</m> the length of the part of the curve between
+<m>\vr(0)</m> and <m>\vr(t)</m>. Then
+<md>
+<mrow>
+\diff{s}{t}(t)&amp;=\Big|\diff{\vr}{t}(t)\Big|
+</mrow><mrow>
+s(T)-s(T_0)&amp;= \int_{T_0}^T \left|\diff{\vr}{t}(t)\right|\,\dee{t}
+</mrow>
+</md>
+</p>
+<sidebyside width="50%">
+  <image source="figs/parCurveDerivB.svg"/>
+</sidebyside>
+</li>
+<li>
+In particular, if the parameter happens to be arc length, i.e. if <m>t=s</m>,
+so that <m>\diff{s}{s}=1</m>, then
+<me>
+\left|\diff{\vr}{s}(s)\right|=1\qquad
+\hat\vT(s) = \vr'(s)
+</me>
+</li>
+</ol>
+</p></statement>
+</lemma>
+
+
+
+<p>As an application, we have the</p>
+
+<lemma xml:id="lem_CVvelocityEtc">
+<statement><p>
+If <m>\vr(t)=\big(x(t)\,,\,y(t)\,,\,z(t)\big)</m> is the position of a
+particle at time <m>t</m>, then
+<md>
+<mrow>
+\text{velocity at time } t
+       &amp;=\vv(t)=\vr'(t)=\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big)
+        = \diff{s}{t}(t)\,\hat\vT(t)
+</mrow>
+
+<mrow>
+\text{speed at time } t
+       &amp;= \diff{s}{t}(t)=|\vv(t)|=|\vr'(t)|=\sqrt{(x'(t)^2+y'(t)^2+z'(t)^2}
+</mrow>
+
+<mrow>
+\text{acceleration at time } t
+       &amp;=\va(t)=\vr'(t)=\vv'(t)
+       =\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big)
+</mrow>
+
+<intertext>and the distance travelled between times \(T_0\) and \(T\) is</intertext>
+<mrow>
+  s(T)-s(T_0)&amp;= \int_{T_0}^T \Big|\diff{\vr}{t}(t)\Big|\,\dee{t}
+       = \int_{T_0}^T \sqrt{(x'(t)^2+y'(t)^2+z'(t)^2}\,\dee{t}
+</mrow>
+</md>
+</p></statement>
+</lemma>
+
+
+
+<p>
+Note that the velocity <m>\vv(t) = \vr'(t)</m> is a vector quantity while the
+speed <m>\diff{s}{t}(t)=|\vr'(t)|</m> is a scalar quantity.
+</p>
+
+<example xml:id="eg_paramCircleTan">
+<p>
+In general it can be quite difficult to compute arc lengths.
+So, as an easy warmup example, we will compute the circumference of the circle
+<m>x^2+y^2=a^2</m>. We'll also find a unit tangent to the circle at any point on
+the circle. We'll use the parametrization
+<me>
+\vr(\theta) = \big(a\cos\theta\,,\,a\sin\theta\big)\qquad
+0\le \theta\le 2\pi
+</me>
+of Example <xref ref="eg_paramCircle"/>. Using Lemma <xref ref="lem_CVtanArclen"/>,
+but with the parameter <m>t</m> renamed to <m>\theta</m>
+<md>
+<mrow>
+\vr'(\theta) &amp;= a\big(-\sin\theta\,,\cos\theta\big)
+</mrow><mrow>
+\hat\vT(\theta) &amp;= \frac{\vr'(\theta)}{|\vr'(\theta)|}
+               =  \big(-\sin\theta\,,\cos\theta\big)
+</mrow><mrow>
+\diff{s}{\theta}(\theta)&amp;=\big|\vr'(\theta)\big| = a
+</mrow><mrow>
+s(\Theta)-s(0)&amp;= \int_{0}^\Theta \big|\vr'(\theta)\big|\,\dee{\theta}
+          =a\Theta
+</mrow>
+</md>
+As
+<fn>You might guess that <m>\Theta</m> is a capital Greek theta. You'd be right.</fn>
+ <m>s(\Theta)</m> is the arc length of the part of the circle with
+<m>0\le\theta\le\Theta</m>, the circumference of the whole circle is
+<me>
+s(2\pi) = 2\pi a
+</me>
+which is reassuring, since this formula has been known
+<fn>The earliest known written approximations of <m>\pi</m>, in Egypt and Babylon, date
+from 1900<ndash/>1600BC. The first recorded algorithm for rigorously evaluating <m>\pi</m>
+was developed by Archimedes around 250 BC. The first use of the symbol <m>\pi</m>,
+for the ratio between the circumference of a circle and its diameter,
+in print was in 1706 by William Jones.</fn>
+for thousands of years.
+</p>
+
+<sidebyside width="66%">
+<image source="figs/parCircleT.svg"/>
+</sidebyside>
+
+<p>
+  The formula <m>s(\Theta)-s(0)=a\Theta</m> also makes sense <mdash/> the part of the
+circle with <m>0\le\theta\le\Theta</m> is the fraction <m>\frac{\Theta}{2\pi}</m>
+of the whole circle, and so should have length <m>\frac{\Theta}{2\pi}\times
+2\pi a</m>. Also note that
+<me>
+\vr(\theta)\cdot\hat\vT(\theta) = \big(a\cos\theta\,,\,a\sin\theta\big)
+\cdot \big(-\sin\theta\,,\cos\theta\big)
+=0
+</me>
+so that the tangent to the circle at any point is perpendicular
+to the radius vector of the circle at that point. This is another geometric fact
+that has been known
+<fn>It is Proposition 18 in Book 3 of Euclid's Elements. It was published around 300BC.</fn>
+ for thousands of years.
+</p>
+</example>
+
+<example xml:id="eg_paramHelix">
+<p>
+Consider the curve
+<me>
+\vr(t) = 6\sin(2t)\hi + 6\cos(2t)\hj +5t\hk
+</me>
+where the standard basis vectors <m>\hi = (1,0,0)</m>, <m>\hj=(0,1,0)</m>
+and <m>\hk =(0,0,1)</m>.
+We'll first sketch it, by observing that
+<ul>
+<li> <m>x(t)=6\sin(2t)</m> and <m>y(t) =6\cos(2t)</m> obey
+<me>
+x(t)^2+y(t)^2 = 36 \sin^2(2t) + 36\cos^2(2t) = 36
+</me>
+So all points of the curve lie on the cylinder <m>x^2+y^2=36</m> and
+</li>
+<li> as <m>t</m> increases, <m>\big(x(t),y(t)\big)</m> runs clockwise
+around the circle <m>x^2+y^2=36</m> and at the same time <m>z(t) = 5t</m>
+just increases linearly.
+</li>
+</ul>
+Our curve is the helix
+</p>
+<sidebyside width="66%">
+<image source="figs/helix4.svg"/>
+</sidebyside>
+<p>
+We have marked three points of the curve on the above sketch. The first has
+<m>t=0</m> and is <m>0\hi+6\hj+0\hk</m>. The second has <m>t=\frac{\pi}{2}</m> and is <m>0\hi-6\hj+\frac{5\pi}{2}\hk</m>, and the third has <m>t=\pi</m> and is
+<m>0\hi+6\hj+5\pi\hk</m>.
+We'll now use Lemma <xref ref="lem_CVtanArclen"/> to find a unit tangent
+<m>\hat\vT(t)</m> to the curve at <m>\vr(t)</m> and also the arclength of the part of curve between <m>t=0</m> and <m>t=\pi</m>.
+<md>
+<mrow>
+\vr(t) &amp;= 6\sin(2t)\hi + 6\cos(2t)\hj +5t\hk
+</mrow><mrow>
+\vr'(t) &amp;= 12\cos(2t)\hi -12\sin(2t)\hj +5\hk
+</mrow><mrow>
+\diff{s}{t}(t)&amp;=\big|\vr'(t)\big|
+=\sqrt{12^2\cos^2(2t) +12^2\sin^2(2t)+5^2}
+= \sqrt{12^2+5^2}
+</mrow><mrow>
+&amp; = 13
+</mrow><mrow>
+\hat\vT(t) &amp;= \frac{\vr'(t)}{|\vr'(t))|}
+               =  \frac{12}{13}\cos(2t)\hi -\frac{12}{13}\sin(2t)\hj +\frac{5}{13}\hk
+</mrow><mrow>
+s(\pi)-s(0)&amp;= \int_{0}^\pi \big|\vr'(t)\big|\,\dee{t}
+          =13\pi
+</mrow>
+</md>
+</p></example>
+
+</subsection>
+</section>

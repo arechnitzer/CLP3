@@ -21,5 +21,6 @@ but we'll start from the beginning.
 <xi:include href="./geometry03.ptx" />
 <xi:include href="./geometry04.ptx" />
 <xi:include href="./geometry05.ptx" />
+<xi:include href="./geometry06.ptx" />
 
 </chapter>
