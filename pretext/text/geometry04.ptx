@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="sec_planes_3d">
+  <title>Equations of Planes in 3d</title>
+
+  <p>
+    Specifying one point <m>(x_0,y_0,z_0)</m> on a plane and a vector <m>\vd</m> parallel
+  to the plane does not uniquely determine the plane, because it is free
+  to rotate about <m>\vd</m>. On the other hand, giving one point
+</p>
+
+<sidebyside width="45%">
+<image source="figs/threedPlane.svg"/>
+<image source="figs/threedPlane2.svg"/>
+</sidebyside>
+
+<p>
+  on the plane and one vector <m>\vn=\llt n_x,n_y, n_z\rgt </m> with direction
+  perpendicular to that of the plane does uniquely determine the plane.
+  If <m>(x,y,z)</m> is any point on the line then the vector
+  <m>\llt x-x_0,y-y_0,z-z_0\rgt </m>,
+  whose tail is at <m>(x_0,y_0,z_0)</m> and whose head is at <m>(x,y,z)</m>,  lies
+  entirely inside the plane and so must be perpendicular to <m>\vn</m>. That is,
+</p>
+
+<fact xml:id="eqn_of_plane">
+  <title>The Equation of a Plane</title>
+  <p>
+  <md>
+  <mrow>
+    \vn\cdot\llt x-x_0,y-y_0,z-z_0\rgt =0
+  </mrow>
+  </md>
+  Writing out in components
+  <md>
+  <mrow>
+     n_x(x-x_0)+n_y(y-y_0)+n_z(z-z_0)=0
+  \quad\text{or}\quad n_xx+n_yy+n_zz= d
+  </mrow>
+  </md>
+  where <m>d=n_xx_0+n_yy_0+n_zz_0</m>.
+</p>
+</fact>
+
+<p>
+  Again, the coefficients <m>n_x,n_y,n_z</m> of <m>x,\ y</m> and <m>z</m> in the equation
+  of the plane are the components of a vector <m>\llt n_x,n_y,n_z\rgt </m>
+  perpendicular to the plane. The vector <m>\vn</m> is often called a normal vector
+  for the plane. Any nonzero multiple of <m>\vn</m> will also be perpendicular
+  to the plane and is also called a normal vector.
+</p>
+
+
+<example xml:id="eg_VPparallel-normal-Planes">
+  <p>
+  We have just seen that if we write the equation of a plane in the standard
+  form
+  <me>
+  ax+by+cz=d
+  </me>
+  then it is easy to read off a normal vector for the plane.
+  It is just <m>\llt a,b,c\rgt</m>. So for example the planes
+  <me>
+  P:\ x+2y+3z=4 \qquad
+  P':\ 3x+6y+9z=7
+  </me>
+  have normal vectors <m>\vn=\llt 1,2,3\rgt</m> and <m>\vn'=\llt 3,6,9\rgt</m>,
+  respectively. Since <m>\vn'=3\vn</m>, the two normal vectors <m>\vn</m> and <m>\vn'</m>
+  are parallel to each other. This tells us that the planes <m>P</m> and <m>P'</m>
+  are parallel to each other.
+  </p>
+
+  <p>When the normal vectors of two planes are perpendicular to each other,
+  we say that
+  the planes are perpendicular to each other. For example
+  the planes
+  <me>
+  P:\ x+2y+3z=4 \qquad
+  P':\ 2x-y=7
+  </me>
+  have normal vectors  <m>\vn=\llt 1,2,3\rgt</m> and <m>\vn'=\llt 2,-1,0\rgt</m>,
+  respectively. Since
+  <me>
+  \vn\cdot\vn' = 1\times 2+2\times(-1)+3\times 0 = 0
+  </me>
+  the normal vectors <m>\vn</m> and <m>\vn'</m> are mutually perpendicular,
+  so the corresponding planes <m>P</m> and <m>P'</m> are perpendicular to each other.
+  </p>
+</example>
+
+
+<example xml:id="eg_VPsketchPlane">
+  <p>
+  In this example, we'll sketch the plane
+  <me>
+  P:\ 4x + 3y + 2z = 12
+  </me>
+  A good way to prepare for sketching a plane is to find the intersection
+  points of the plane with the <m>x</m>-, <m>y</m>- and <m>z</m>-axes, just as you are used
+  to doing when sketching lines in the <m>xy</m>-plane. For example,
+  any point on the <m>x</m> axis must be of the form <m>(x,0,0)</m>. For <m>(x,0,0)</m>
+  to also be on <m>P</m> we need <m>x=\frac{12}{4}=3</m>. So <m>P</m> intersects
+  the <m>x</m>-axis at <m>(3,0,0)</m>. Similarly, <m>P</m> intersects the <m>y</m>-axis
+  at <m>(0,4,0)</m> and the <m>z</m>-axis at <m>(0,0,6)</m>. Now plot the points
+  <m>(3,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,6)</m>. <m>P</m> is the plane containing these
+  three points.
+  Often a visually effective way to sketch a surface in three dimensions
+  is to
+  <ul>
+  <li> only sketch the part of the surface in the first octant. That is,
+  the part with <m>x\ge0</m>, <m>y\ge 0</m> and <m>z\ge 0</m>.
+  </li>
+  <li> To do so, sketch the curve of intersection of the surface with
+  the part of the <m>xy</m>-plane in the first octant and,
+  </li>
+  <li> similarly, sketch the curve of intersection of the surface with
+  the part of the <m>xz</m>-plane in the first octant and
+  the curve of intersection of the surface with
+  the part of the <m>yz</m>-plane in the first octant.
+  </li>
+  </ul>
+  That's what we'll do. The intersection of the plane <m>P</m> with the <m>xy</m>-plane
+  is the straight line through the two points <m>(3,0,0)</m> and <m>(0,4,0)</m>. So
+  the part of that intersection in the first octant is the line segment
+  from <m>(3,0,0)</m> to <m>(0,4,0)</m>. Similarly the part of the intersection of
+  <m>P</m> with the <m>xz</m>-plane that is in the first octant is the line segment
+  from <m>(3,0,0)</m> to <m>(0,0,6)</m> and  the part of the intersection of
+  <m>P</m> with the <m>yz</m>-plane that is in the first octant is the line segment
+  from <m>(0,4,0)</m> to <m>(0,0,6)</m>. So we just have to sketch the three line segments
+  joining three axis intercepts <m>(3,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,6)</m>.
+  That's it.
+  </p>
+
+<sidebyside width="50%">
+  <image source="figs/planeSketch.svg"/>
+  </sidebyside>
+</example>
+
+
+<example xml:id="eg_VPdistance-point-plane">
+  <p>
+  In this example, we'll compute the distance between the point
+  <me>
+  \vx = (1,-1,-3) \qquad\text{and the plane}\qquad
+  P:\ x+2y+3z=18
+  </me>
+  By the <q>distance between <m>\vx</m> and the plane <m>P</m></q> we mean the shortest
+  distance between <m>\vx</m> and any point <m>\vy</m> on <m>P</m>. In fact, we'll evaluate the
+  distance in two different ways. In the next
+  Example <xref ref="eg_VPdistance-point-plane-bis"/>, we'll use projection.
+  In this example, our strategy for finding the distance will be to
+  <ul>
+  <li> first observe that the vector <m>\vn=\llt 1,2,3\rgt</m> is normal to <m>P</m>
+  and then
+  </li>
+  <li> start walking
+  <fn>To see why heading in the normal direction gives
+  the shortest walk, revisit Example <xref ref="eg_nearest_point"/>.</fn>
+   away from <m>\vx</m>
+  in the  direction of the normal vector <m>\vn</m> and
+  </li>
+  <li> keep walking until we hit <m>P</m>. Call the point on <m>P</m> where we hit,
+  <m>\vy</m>. Then the desired distance is the distance between <m>\vx</m> and <m>\vy</m>.
+  From the figure below it does indeed look like distance between <m>\vx</m> and <m>\vy</m>
+  is the shortest distance between <m>\vx</m> and any point on <m>P</m>. This is in
+  fact true, though we won't prove it.
+  </li>
+  </ul>
+</p>
+<sidebyside width="66%">
+<image source="figs/pointDist.svg"/>
+</sidebyside>
+<p>
+  So imagine that we start walking, and that we start at time <m>t=0</m> at <m>\vx</m>
+  and walk in the direction <m>\vn</m>. Then at time <m>t</m> we might be at
+  <me>
+  \vx+t\vn = (1,-1,-3) +t\,\llt 1,2,3\rgt
+           = (1+t, -1+2t, -3+3t)
+  </me>
+  We hit the plane <m>P</m> at exactly the time <m>t</m> for which
+  <m>(1+t, -1+2t, -3+3t)</m> satisfies the equation for <m>P</m>, which is
+  <m>x+2y+3z=18</m>. So we are on <m>P</m> at the unique time <m>t</m> obeying
+  <md>
+  <mrow>
+  (1+t)+2(-1+2t)+3(-3+3t)=18
+  &amp;\iff 14t = 28
+  \iff t=2
+  </mrow>
+  </md>
+  So the point on <m>P</m> which is closest to <m>\vx</m> is
+  <md>
+  <mrow>
+  \vy = \big[\vx+t\vn\big]_{t=2}
+       = (1+t, -1+2t, -3+3t)\big|_{t=2}
+       = (3, 3, 3)
+  </mrow>
+  </md>
+  and the distance from <m>\vx</m> to <m>P</m> is the distance from
+  <m>\vx</m> to <m>\vy</m>, which is
+  </p>
+
+  <p><md>
+  <mrow>
+  |\vy-\vx| = 2|\vn| = 2\sqrt{1^2+2^2+3^2} =2\sqrt{14}
+  </mrow>
+  </md>
+  </p>
+</example>
+
+
+<example xml:id="eg_VPdistance-point-plane-bis">
+  <title>Example <xref ref="eg_VPdistance-point-plane"/>, revisited</title>
+<p>
+  We are again going to find the distance from the point
+  <me>
+  \vx = (1,-1,-3) \qquad\text{to the plane}\qquad
+  P:\ x+2y+3z=18
+  </me>
+  But this time we will use the following strategy.
+  <ul>
+  <li> We'll first find any point <m>\vz</m> on <m>P</m> and then
+  </li>
+  <li> we'll denote by <m>\vy</m> the point on <m>P</m> nearest <m>\vx</m>, and we'll
+     denote by <m>\vv</m> the vector from <m>\vx</m> to <m>\vz</m> (see the figure below)
+     and then
+  </li>
+  <li> we'll realize, by looking at the figure, that the vector from <m>\vx</m>
+  to <m>\vy</m> is exactly the projection
+  <fn>Now might be a good time to review
+  the Definition <xref ref="def_projection"/> of projection.</fn>
+   of the vector <m>\vv</m> on <m>\vn</m> so that
+  </li>
+  <li> the distance from <m>\vx</m> to <m>P</m>, i.e. the length of the vector
+  from <m>\vx</m> to <m>\vy</m>, is exactly <m>\left|\text{proj}_\vn\vv \right|</m>.
+  </li>
+  </ul>
+</p>
+
+<sidebyside width="66%">
+<image source="figs/pointDistProj.svg"/>
+</sidebyside>
+
+<p>
+  Now let's find a point on <m>P</m>. The plane <m>P</m> is given by a single equation,
+  namely
+  <me>
+  x+2y+3z=18
+  </me>
+  in the three unknowns, <m>x</m>, <m>y</m>, <m>z</m>. The easiest way
+  to find one solution to this equation is to assign two of the unknowns
+  the value zero and then solve for the third unknown. For example, if we
+  set <m>x=y=0</m>, then the equation reduces to <m>3z=18</m>. So we may take
+  <m>\vz=(0,0,6)</m>.
+  </p>
+
+  <p>Then <m>\vv</m>, the vector from <m>\vx=(1,-1,-3)</m> to <m>\vz=(0,0,6)</m> is
+  <m>\llt 0-1\,,\,0-(-1)\,,\,6-(-3)  \rgt=\llt -1,1,9\rgt</m> so that,
+  by Equation <xref ref="eqn_proj"/>,
+  <md>
+  <mrow>
+  {\rm proj}_{\vn}\,\vv&amp;=\frac{\vv\cdot\vn}{|\vn|^2}\,\vn
+  </mrow><mrow>
+      &amp;= \frac{\llt -1,1,9\rgt\cdot\llt 1,2,3\rgt}{|\llt 1,2,3\rgt|^2}\,
+                 \llt 1,2,3\rgt
+  </mrow><mrow>
+      &amp;= \frac{28}{14} \llt 1,2,3\rgt
+  </mrow><mrow>
+      &amp;= 2 \llt 1,2,3\rgt
+  </mrow>
+  </md>
+  and the distance from <m>\vx</m> to <m>P</m> is
+  <md>
+  <mrow>
+  \left|{\rm proj}_{\vn}\,\vv\right| = \big|2 \llt 1,2,3\rgt\big|
+     =2\sqrt{14}
+  </mrow>
+  </md>
+  just as we found in Example <xref ref="eg_VPdistance-point-plane"/>.
+  </p>
+</example>
+
+
+<example xml:id="eg_VPdistance-Planes">
+  <p>
+  Now we'll increase the degree of difficulty a tiny bit, and compute
+  the distance between the planes
+  <me>
+  P:\ x+2y+2z=1 \qquad\text{and}\qquad
+  P':\ 2x+4y+4z=11
+  </me>
+  By the <q>distance between the planes <m>P</m> and <m>P'</m></q> we mean the shortest
+     distance between any pair of points <m>\vx</m> and <m>\vx'</m> with <m>\vx</m> in <m>P</m>
+     and <m>\vx'</m> in <m>P'</m>.
+  First observe that the normal vectors
+  <me>
+  \vn=\llt 1,2,2\rgt \qquad\text{and}\qquad
+  \vn'=\llt 2,4,4\rgt=2\vn
+  </me>
+  to <m>P</m> and <m>P'</m> are parallel to each other. So the planes <m>P</m> and <m>P'</m>
+  are parallel to each other. If they had not been parallel, they would have crossed
+  and the distance between them would have been zero.
+  </p>
+
+  <p>Our strategy for finding the distance will be to
+  <ul>
+  <li> first find a point <m>\vx</m> on <m>P</m> and then, like we did in Example
+  <xref ref="eg_VPdistance-point-plane"/>,
+  </li>
+  <li> start walking away from <m>P</m> in the
+  direction of the normal vector <m>\vn</m> and
+  </li>
+  <li> keep walking until we hit <m>P'</m>. Call the point on <m>P'</m> that we hit
+  <m>\vx'</m>. Then the desired distance is the distance between <m>\vx</m> and <m>\vx'</m>.
+  From the figure below it does indeed look like distance between <m>\vx</m> and <m>\vx'</m>
+  is the shortest distance between any pair of points with one point on <m>P</m> and
+  one point on <m>P'</m>. Again, this is in fact true, though we won't prove it.
+  </li>
+  </ul>
+</p>
+  <sidebyside width="66%">
+  <image source="figs/planeDist.svg"/>
+  </sidebyside>
+<p>
+  We can find a point on <m>P</m> just as we did on Example <xref ref="eg_VPdistance-point-plane-bis"/>. The plane <m>P</m> is given by the single equation
+  <me>
+  x+2y+2z=1
+  </me>
+  in the three unknowns, <m>x</m>, <m>y</m>, <m>z</m>. We can find one solution to this
+  equation by assigning two of the unknowns the value zero and then
+  solving for the third unknown. For example, if we
+  set <m>y=z=0</m>, then the equation reduces to <m>x=1</m>. So we may take
+  <m>\vx=(1,0,0)</m>.
+  </p>
+
+  <p>Now imagine that we start walking, and that we start at time <m>t=0</m> at <m>\vx</m>
+  and walk in the direction <m>\vn</m>. Then at time <m>t</m> we might be at
+  <me>
+  \vx+t\vn = (1,0,0) +t\,\llt 1,2,2\rgt
+           = (1+t, 2t, 2t)
+  </me>
+  We hit the second plane <m>P'</m> at exactly the time <m>t</m> for which
+  <m>(1+t, 2t, 2t)</m> satisfies the equation for <m>P'</m>, which is
+  <m>2x+4y+4z=11</m>. So we are on <m>P'</m> at the unique time <m>t</m> obeying
+  <md>
+  <mrow>
+  2(1+t)+4(2t)+4(2t)=11
+  &amp;\iff 18t = 9
+  \iff t=\frac{1}{2}
+  </mrow>
+  </md>
+  So the point on <m>P'</m> which is closest to <m>\vx</m> is
+  <md>
+  <mrow>
+  \vx' = \big[\vx+t\vn\big]_{t=\frac{1}{2}}
+       = (1+t, 2t, 2t)\big|_{t=\frac{1}{2}}
+       = (\frac{3}{2}, 1, 1)
+  </mrow>
+  </md>
+  and the distance from <m>P</m> to <m>P'</m> is the distance from
+  <m>\vx</m> to <m>\vx'</m> which is
+  <md>
+  <mrow>
+  \sqrt{(1-\frac{3}{2})^2+(0-1)^2+(0-1)^2}
+  =\sqrt{\frac{9}{4}}
+  =\frac{3}{2}
+  </mrow>
+  </md>
+  </p>
+</example>
+
+
+<example xml:id="eg_VPangle-Planes">
+  <p>
+  The orientation (i.e. direction) of a plane is determined by its normal vector.
+  So, by definition, the angle between two planes is the angle between their
+  normal vectors. For example, the normal vectors of the two planes
+
+  <md alignment="alignat">
+  <mrow>
+  P_1&amp;:\quad &amp; 2x+y-z&amp;=3
+  </mrow><mrow>
+  P_2&amp;: &amp;  x+y+z&amp;=4
+  </mrow>
+  </md>
+
+  are
+  <md>
+  <mrow>
+  \vn_1&amp;=\llt 2,1,-1\rgt
+  </mrow><mrow>
+  \vn_2&amp;=\llt 1,1,1\rgt
+  </mrow>
+  </md>
+  If we use <m>\theta</m> to denote the angle between <m>\vn_1</m> and <m>\vn_2</m>, then
+  <md>
+  <mrow>
+  \cos\theta &amp;=\frac{\vn_1\cdot\vn_1}{|\vn_1|\,|\vn_2|}
+  </mrow><mrow>
+             &amp;=\frac{\llt 2,1,-1\rgt\cdot\llt 1,1,1\rgt}
+                         {|\llt 2,1,-1\rgt|\,|\llt 1,1,1\rgt|}
+  </mrow><mrow>
+             &amp;=\frac{2}{\sqrt{6}\,\sqrt{3}}
+  </mrow>
+  </md>
+  so that
+  <md>
+  <mrow>
+  \theta =\arccos\frac{2}{\sqrt{18}} =1.0799
+  </mrow>
+  </md>
+  to four decimal places. That's in radians. In degrees, it is
+  <m>1.0799\frac{180}{\pi}=61.87^\circ</m> to two decimal places.
+  </p>
+</example>
+
+</section>
