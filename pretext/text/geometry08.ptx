@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="sec_cylinders">
+  <title>Cylinders</title>
+<p>There some classes of relatively simple, but commonly occurring,
+surfaces that are given their own names. One such class is cylindrical surfaces.
+You are probably used to thinking of a cylinder as being something that looks
+like <m>x^2+y^2=1</m>.
+</p>
+
+<sidebyside width="50%">
+<image source="figs/cylinderA.svg"/>
+</sidebyside>
+
+<p>
+In Mathematics the word <q>cylinder</q> is given a more general meaning.
+</p>
+
+<definition xml:id="def_cylinder"><title>Cylinder</title>
+<statement><p>
+A <term>cylinder</term> is a surface that consists of all points that are
+on all lines that are
+<ul>
+<li>   parallel to a given line and
+</li>
+<li>   pass through a given fixed plane curve (in a plane not parallel
+to the given line).
+</li>
+</ul>
+</p>
+</statement>
+</definition>
+
+<example xml:id="eg_cylinders">
+  <p>
+  Here are sketches of three cylinders. The familiar cylinder on the left below
+  </p>
+  <sidebyside>
+  <image source="figs/cylinderR.svg"/>
+     <image source="figs/cylinderO.svg"/>
+  </sidebyside>
+  <p>
+  is called a right circular cylinder, because the given fixed plane curve
+  (<m>x^2+y^2=1</m>, <m>z=0</m>)
+  is a circle and the given line (the <m>z</m>-axis) is perpendicular
+  (i.e. at right angles) to the fixed plane curve.
+  </p>
+
+  <p>The cylinder on the left above can be thought of as a vertical stack of
+  circles. The cylinder on the right above can also be thought of as a stack
+  of circles, but the centre of the circle at height <m>z</m> has been shifted
+  rightward to <m>(0,z,z)</m>. For that cylinder, the given fixed plane curve
+  is once again the circle <m>x^2+y^2=1</m>, <m>z=0</m>, but the given line is <m>y=z</m>, <m>x=0</m>.
+  </p>
+
+  <p>We have already seen the the third cylinder
+  </p>
+
+  <sidebyside>
+  <image source="figs/hyperbolicCylinderD.svg"/>
+  </sidebyside>
+
+  <p>
+  in Example <xref ref="eg_hyperbolic_cylinder"/>. It is called a hyperbolic cylinder.
+  In this example, the given fixed plane curve is the hyperbola <m>yz=1</m>, <m>x=0</m>
+  and the given line is the <m>x</m>-axis.
+  </p>
+</example>
+
+</section>

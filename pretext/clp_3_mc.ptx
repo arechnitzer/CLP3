@@ -15,7 +15,7 @@
 		<xi:include href="text/geometry00.ptx" />
 		<backmatter>
 			<title>Appendices</title>
-			<!-- <xi:include href="text/appendix01.xml" /> -->
+			<xi:include href="text/appendix00.ptx" />
 
 
 			<solutions xml:id="app_hint" divisional="hint">

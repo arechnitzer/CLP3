@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="sec_quadrics"><title>Quadric Surfaces</title>
+<p>
+  Another named class of relatively simple, but commonly occurring,  surfaces is the quadric surfaces.</p>
+<definition xml:id="def_quadric"><title>Quadrics</title>
+  <statement><p>
+  A <term>quadric</term> surface is surface that consists of all points that
+  obey <m>Q(x,y,z)=0</m>, with <m>Q</m> being a polynomial of degree two
+  <fn>Technically, we should also require that the polynomial
+  can't be factored into the product of two polynomials of degree one.</fn>
+  .
+  </p></statement>
+</definition>
+
+<p>
+  For <m>Q(x,y,z)</m> to be a polynomial of degree two, it must be of the form
+  <md>
+  <mrow>
+  Q(x,y,z) = Ax^2 +By^2 +Cz^2 +Dxy +Eyz +Fxz +Gx +Hy +Iz +J
+  </mrow>
+  </md>
+  for some constants <m>A</m>, <m>B</m>, <m>\cdots</m>, <m>J</m>. Each constant <m>z</m> cross section
+  of a quadric surface has an equation of the form
+  <md>
+  <mrow>
+  Ax^2 + Dxy +By^2 +gx +hy +j =0,\quad z=z_0
+  </mrow>
+  </md>
+  If <m>A=B=D=0</m> but <m>g</m> and <m>h</m> are not both zero, this is a straight line.
+  If <m>A</m>, <m>B</m>, and <m>D</m> are not all zero, then by rotating and translating
+  our coordinate system the equation of the cross section can be brought
+  into one of the forms
+  <fn>This statement can be justified using a
+  linear algebra eigenvalue/eigenvector analysis. It is
+  beyond what we can cover here, but is not too difficult for a standard
+  linear algebra course.</fn>
+  <ul>
+  <li>
+  <m>\al x^2 + \be y^2 =\ga</m> with <m>\al,\be \gt 0</m>, which, if <m>\ga \gt 0</m>, is an ellipse
+  (or a circle),
+  </li>
+  <li>
+  <m>\al x^2 - \be y^2 =\ga</m> with <m>\al,\be \gt 0</m>, which, if <m>\ga\ne0</m>, is a hyperbola,
+  and if <m>\ga=0</m> is two lines,
+  </li>
+  <li>
+  <m>x^2 = \delta y</m>, which, if <m>\delta\ne 0</m> is a parabola, and if <m>\delta=0</m> is a straight line.
+  </li>
+  </ul>
+  There are similar statements for the constant <m>x</m> cross sections and the
+  constant <m>y</m> cross sections. Hence quadratic surfaces are built by stacking
+  these three types of curves.
+  </p>
+
+  <p>We have already seen a number of quadric surfaces in the last couple of
+  sections.
+  <ul>
+  <li>
+    <p>
+  We saw the quadric surface <m>4x^2+y^2-z^2=1</m> in Example <xref ref="eg_hyperboloid"/>.
+  </p>
+  <sidebyside>
+  <image source="figs/hyperboloid1.svg"/>
+  </sidebyside>
+  <p>
+  Its constant <m>z</m> cross sections are ellipses and its <m>x=0</m> and <m>y=0</m>
+  cross sections are hyperbolae. It is called a hyperboloid of one sheet.
+</p>
+  </li>
+  <li>
+    <p>
+  We saw the quadric surface <m>x^2+y^2=1</m> in Example <xref ref="eg_cylinders"/>.
+  </p>
+  <sidebyside>
+  <image source="figs/cylinder.svg"/>
+  </sidebyside>
+  <p>
+  Its constant <m>z</m> cross sections are circles and its <m>x=0</m> and <m>y=0</m>
+  cross sections are straight lines. It is called a right circular cylinder.
+</p>
+  </li>
+  </ul>
+  </p>
+
+  <p>Appendix <xref ref="app_quadric"/> contains other quadric surfaces.</p>
+</section>

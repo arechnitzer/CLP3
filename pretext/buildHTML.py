@@ -86,7 +86,13 @@ print("Reading in source file")
 # read in the source file
 src = ET.parse(sourceFile)
 # and its xincludes
-src.xinclude()
+try:
+    src.xinclude()
+except Exception as err:
+    print(">>> ERROR <<< ")
+    print(err)
+    exit(1)
+
 # now process any user tags
 print("Processing any user tags")
 procd = userTags(src)

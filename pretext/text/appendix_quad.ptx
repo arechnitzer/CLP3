@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="app_quadric">
+<title>Conic Sections and Quadric Surfaces</title>
+
+  <p>A conic section is the curve of intersection of a cone and a plane
+  that does not pass through the vertex of the cone.
+  This is illustrated in the figures below.
+
+  </p>
+  <sidebyside valign="middle">
+  <image source="figs/conePlaneCircle.svg"/>
+      <image source="figs/conePlaneEllipse.svg"/>
+      <image source="figs/conePlaneParabola.svg"/>
+      <image source="figs/conePlaneHyperbola.svg"/>
+  </sidebyside>
+
+  <p>
+  An equivalent
+  <fn>It is outside our scope to prove this equivalence.</fn>
+  (and often used) definition is that a conic section is the set of all points
+  in the <m>xy</m>--plane that obey <m>Q(x,y)=0</m> with
+  <me>
+  Q(x,y) = Ax^2 + By^2 + Cxy + Dx + Ey + F =0
+  </me>
+  being a polynomial of degree two
+  <fn>Technically, we should also require
+  that the constants <m>A</m>, <m>B</m>, <m>C</m>, <m>D</m>, <m>E</m>, <m>F</m>, are real numbers,
+  that <m>A</m>, <m>B</m>, <m>C</m> are not all zero, that <m>Q(x,y)=0</m> has more than one
+  real solution, and that the polynomial can't be factored
+  into the product of two polynomials of degree one.</fn>.
+  By rotating and translating  our coordinate system the equation of the conic section can be brought
+  into one of the forms
+  <fn>This statement can be justified using a
+  linear algebra eigenvalue/eigenvector analysis. It is
+  beyond what we can cover here, but is not too difficult for a standard
+  linear algeba course.</fn>
+  </p>
+
+
+
+<p>
+<ul>
+  <li>
+  <m>\al x^2 + \be y^2 =\ga</m> with <m>\al,\be,\ga  \gt 0</m>, which is an ellipse
+  (or a circle),
+  </li>
+  <li>
+  <m>\al x^2 - \be y^2 =\ga</m> with <m>\al,\be \gt 0</m>, <m>\ga\ne0</m>, which is a hyperbola,
+  </li>
+  <li>
+  <m>x^2 = \delta y</m>, with <m>\delta\ne 0</m> which is a parabola.
+  </li>
+  </ul>
+</p>
+
+<p>The three dimensional analogs of conic sections, surfaces
+  in three dimensions given by quadratic equations, are called quadrics.
+  An example is the sphere <m>x^2+y^2+z^2=1</m>.
+</p>
+<p>
+  Here are some tables giving all of the quadric surfaces.
+</p>
+
+<figure><caption>Table of conic sections</caption>
+<sbsgroup width="18%" valign="middle">
+<sidebyside>
+  <p> name </p>
+    <p>elliptic cylinder</p>
+      <p>parabolic cylinder</p>
+      <p>hyperbolic cylinder</p>
+  <p> sphere </p>
+</sidebyside><sidebyside>
+  <p>equation in standard form</p>
+    <p> <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m></p>
+    <p> <m>y=ax^2</m>
+               </p>
+               <p> <m>\frac{x^2}{a^2}-\frac{y^2}{b^2}=1</m>
+               </p>
+               <p> <m>x^2+y^2+z^2=r^2</m></p>
+</sidebyside><sidebyside>
+  <p> <m>x=</m>constant cross-section
+              </p><p> two lines
+              </p><p> one line
+              </p><p> two lines
+            </p><p> circle </p>
+</sidebyside><sidebyside>
+  <p><m>y=</m>constant cross-section
+              </p><p> two lines
+              </p><p> two lines
+              </p><p> two lines
+            </p><p> circle</p>
+</sidebyside><sidebyside>
+  <p><m>z=</m>constant cross-section
+              </p><p> ellipse
+              </p><p> parabola
+              </p><p> hyperbola
+            </p><p> circle </p>
+</sidebyside><sidebyside>
+    <p>sketch</p>
+    <image source="figs/cylinder.svg"/>
+    <image source="figs/parabolic_cylinder.svg"/>
+    <image source="figs/hyperbolic_cylinder.svg"/>
+    <image source="figs/sphere.svg"/>
+</sidebyside>
+</sbsgroup>
+</figure>
+
+<figure><caption>Table of quadric surfaces-1</caption>
+<sbsgroup valign="middle" width="22%">
+  <sidebyside>
+    <p> ellipsoid </p>
+    <p> elliptic paraboloid</p>
+    <p>elliptic cone</p>
+  </sidebyside>
+  <sidebyside>
+  <p>equation in standard form</p><p>
+               <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1</m>
+         </p><p>
+               <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{z}{c}</m>
+         </p><p>
+               <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{z^2}{c^2}</m>
+         </p>
+  </sidebyside>
+  <sidebyside>
+  <p> <m>x=</m> constant cross-section</p>
+              <p> ellipse
+              </p><p> parabola
+            </p><p> two lines if <m>x=0</m>, hyperbola if <m>x\ne 0</m>
+      </p>
+  </sidebyside>
+  <sidebyside>
+  <p><m>y=</m> constant cross-section</p>
+              <p> ellipse
+              </p><p> parabola
+            </p><p> two lines if <m>y=0</m>,hyperbola if <m>y\ne 0</m></p>
+  </sidebyside><sidebyside>
+  <p><m>z=</m> constant cross-section</p>
+              <p> ellipse
+              </p><p> ellipse
+            </p><p> ellipse </p>
+</sidebyside><sidebyside>
+<p>sketch</p>
+<image source="figs/ellipsoid.svg"/>
+<image source="figs/elliptic_paraboloid.svg"/>
+<image source="figs/cone.svg"/>
+</sidebyside>
+</sbsgroup>
+</figure>
+
+<figure><caption>Table of quadric surfaces-2</caption>
+<sbsgroup  valign="middle" width="22%">
+  <sidebyside>
+  <p>name </p>
+  <p>hyperboloid of one sheet</p>
+  <p> hyperboloid of two sheets</p>
+  <p> hyperbolic paraboloid </p>
+  </sidebyside><sidebyside>
+  <p>equation in standard form</p>
+  <p> <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1</m>
+  </p><p><m>\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=-1</m>
+  </p><p><m>\frac{y^2}{b^2}-\frac{x^2}{a^2}=\frac{z}{c}</m>
+  </p>
+  </sidebyside><sidebyside>
+  <p>  <m>x=</m> constant cross-section</p>
+    <p> hyperbola</p>
+    <p> hyperbola</p>
+    <p> parabola </p>
+  </sidebyside><sidebyside>
+  <p>  <m>y=</m> constant cross-section</p>
+  <p> hyperbola</p>
+  <p> hyperbola</p>
+  <p> ellipse </p>
+  </sidebyside><sidebyside>
+  <p> <m>z=</m> constant cross-section</p>
+  <p> ellipse</p>
+  <p> ellipse </p>
+  <p> two lines if <m>z=0</m>, hyperbola if <m>z\ne 0</m> </p>
+</sidebyside><sidebyside>
+<p>sketch></p>
+  <image source="figs/hyperboloid1.svg"/>
+  <image source="figs/hyperboloid2.svg"/>
+  <image source="figs/hyperbolic_paraboloid.svg"/>
+  </sidebyside>
+</sbsgroup>
+</figure>
+
+  </section>

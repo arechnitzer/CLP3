@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="app_parent">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title>Appendices</title>
+<introduction>
+  <p></p>
+</introduction>
+<xi:include href="./appendix_quad.ptx" />
+
+</appendix>

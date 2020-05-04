@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="sec_sketching">
+  <title>Sketching Surfaces in 3d</title>
+
+<p>In practice students taking multivariable calculus regularly have great
+difficulty visualising surfaces in three dimensions, despite the fact
+that we all live in three dimensions. We'll now develop some
+technique to help us sketch surfaces in three dimensions
+<fn>Of course you could instead use some fancy graphing software, but part of the point is to
+build intuition. Not to mention that you can't use fancy graphing software on
+your exam.</fn>.
+</p>
+
+<p>We all have a fair
+bit of experience drawing curves in two dimensions. Typically the intersection
+of a surface (in three dimensions) with a plane is a curve lying in
+the (two dimensional) plane. Such an intersection is usually called a cross-section.
+In the special case that the plane is one of the coordinate planes, the
+intersection is sometimes called a trace. One can often get a pretty good
+idea of what a surface looks like by sketching a bunch of cross-sections.
+Here are some examples.
+</p>
+
+<example xml:id="eg_hyperboloid"><title><m>4x^2+y^2-z^2=1</m></title>
+<statement>
+  <p>
+  Sketch the surface that satisfies <m>4x^2+y^2-z^2=1</m>.
+  </p>
+</statement>
+  <solution>
+  <p>We'll start by fixing any number <m>z_0</m> and sketching the part of
+  the surface that lies in the horizontal plane <m>z=z_0</m>.
+</p>
+  <sidebyside>
+  <image source="figs/zedzeroPlane.svg"/>
+  </sidebyside>
+  <p>
+  The intersection of our surface with that horizontal plane is a horizontal
+  cross-section. Any point <m>(x,y,z)</m> lying on that horizontal cross-section
+  satisfies both
+  <md>
+  <mrow>
+  &amp;z=z_0\text{\ \ and\ \ }4x^2+y^2-z^2=1
+  </mrow><mrow>
+  \iff
+  &amp;z=z_0\text{\  \ and\ \ }4x^2+y^2=1+z_0^2
+  </mrow>
+  </md>
+  Think of <m>z_0</m> as a constant.
+  Then <m>4x^2+y^2=1+z_0^2</m> is a curve in the <m>xy</m>-plane. As <m>1+z_0^2</m> is a constant, the curve is an ellipse. To determine its semi-axes
+  <fn>The
+  semi-axes of an ellipse are the line segments from the centre of the ellipse
+  to the farthest point on the curve and to the nearest point on the curve.
+  For a circle the lengths of both of these line segments are just the  radius.
+  </fn>, we observe that
+  when <m>y=0</m>, we have <m>x=\pm\frac{1}{2}\sqrt{1+z_0^2}</m> and when <m>x=0</m>,
+  we have <m>y=\pm\sqrt{1+z_0^2}</m>. So the curve is just an ellipse with
+  <m>x</m> semi-axis <m>\frac{1}{2}\sqrt{1+z_0^2}</m> and <m>y</m> semi-axis
+  <m>\sqrt{1+z_0^2}</m>. It's easy to sketch.
+</p>
+  <sidebyside>
+  <image source="figs/ellipse.svg"/>
+  </sidebyside>
+<p>
+  Remember that this ellipse is the part of our surface that lies in the
+  plane <m>z=z_0</m>. Imagine that the sketch of the ellipse is on a single
+  sheet of paper. Lift the sheet of paper up, move it around so that
+  the <m>x</m>- and <m>y</m>-axes point in the directions of the three dimensional
+  <m>x</m>- and <m>y</m>-axes and place the sheet of paper into the three
+  dimensional sketch at height <m>z_0</m>.
+  This gives a single horizontal ellipse in 3d, as in the figure below.
+</p>
+  <sidebyside>
+  <image source="figs/hyperboloidZX.svg"/>
+  </sidebyside>
+<p>
+  We can build up the full surface by stacking many of these horizontal
+  ellipses <mdash/> one for each possible height <m>z_0</m>.
+  So we now draw a few of them as in the figure below. To reduce the
+  amount of clutter in the sketch, we have only drawn the first octant
+  (i.e. the part of three dimensions that has <m>x\ge 0</m>, <m>y\ge 0</m> and <m>z\ge 0</m>).
+</p>
+
+  <sidebyside>
+  <image source="figs/hyperboloidZXB.svg"/>
+  </sidebyside>
+
+  <p>Here is why it is OK, in this case, to just sketch the first octant.
+  Replacing <m>x</m> by <m>-x</m> in the equation <m>4x^2+y^2-z^2=1</m>
+  does not change the equation. That means that a point <m>(x,y,z)</m> is on the
+  surface if and only if the point <m>(-x,y,z)</m> is on the surface. So the surface
+  is invariant under reflection in the <m>yz</m>-plane. Similarly, the equation
+  <m>4x^2+y^2-z^2=1</m> does not change when <m>y</m> is replaced by <m>-y</m> or <m>z</m> is
+  replaced by <m>-z</m>. Our surface is also invariant reflection in the <m>xz</m>-
+  and <m>yz</m>-planes. Once we have the part in the first octant, the remaining
+  octants can be gotten simply by reflecting about the coordinate planes.
+  </p>
+
+  <p>We can get a more visually meaningful sketch by adding in some vertical
+  cross-sections. The <m>x=0</m> and <m>y=0</m> cross-sections (also called traces
+  <mdash/> they are the parts of our surface that are in the <m>yz</m>- and <m>xz</m>-planes,
+  respectively)
+  are
+  <me>
+  x=0,\ y^2-z^2=1\qquad\text{and}\qquad
+  y=0,\ 4x^2-z^2=1
+  </me>
+  These equations describe hyperbolae
+  <fn>It's not just a figure of speech!</fn>
+  . If you don't remember how to sketch them, don't worry. We'll
+  do it now. We'll first sketch them in 2d. Since
+  <md alignment="alignat">
+  <mrow>
+  y^2&amp;=1+z^2 &amp;\quad\implies\quad
+     &amp;|y|\ge 1\quad\text{ and }\quad
+      y=\pm 1\text{ when }z=0\quad
+      \text{ and\quad for large } z, }y\approx\pm z
+  </mrow><mrow>
+  4x^2&amp;=1+z^2 &amp; \quad\implies\quad
+     &amp;|x|\ge \tfrac{1}{2}\quad\text{ and }\quad
+     x=\pm\tfrac{1}{2}\text{ when }z=0\quad
+     \text{and\quad for large } z, }x\approx\pm \tfrac{1}{2}z
+  </mrow>
+  </md>
+  the sketches are
+</p>
+
+  <sidebyside>
+  <image source="figs/hyperbolaXa.svg"/>
+     <image source="figs/hyperbolaYa.svg"/>
+  </sidebyside>
+<p>
+  Now we'll incorporate them into the 3d sketch. Once again imagine that each
+  is a single sheet of paper. Pick each up and move it into the 3d sketch,
+  carefully matching up the axes. The red (blue) parts of the hyperbolas
+  above become the red (blue) parts of the 3d sketch below (assuming of course
+  that you are looking at this on a colour screen).
+  </p>
+
+  <sidebyside>
+  <image source="figs/hyperboloidBa.svg"/>
+  </sidebyside>
+
+  <p>
+  Now that we have a pretty good idea of what the surface looks like
+  we can clean up and simplify the sketch. Here are a couple of
+  possibilities.
+</p>
+
+  <sidebyside>
+  <image source="figs/hyperboloidC.svg"/>
+   <image source="figs/hyperboloidD.svg"/>
+  </sidebyside>
+  <p>
+  This type of surface is called a hyperboloid of one sheet.
+  </p>
+
+  <p>There are also hyperboloids of two sheets. For example, replacing the <m>+1</m>
+  on the right hand side of <m>x^2+y^2-z^2=1</m> gives <m>x^2+y^2-z^2=-1</m>, which is
+  a hyperboloid of two sheets. We'll sketch it quickly in the next example.
+  </p>
+</solution>
+</example>
+
+  <example xml:id="eg_hyperboloid_two"><title><m>4x^2+y^2-z^2=-1</m></title>
+  <statement>
+  <p>
+  Sketch the surface that satisfies <m>4x^2+y^2-z^2=-1</m>.
+  </p>
+</statement>
+<solution>
+  <p> As in the last example, we'll start by fixing any number <m>z_0</m>
+  and sketching the part of the surface that lies in the horizontal
+  plane <m>z=z_0</m>. The intersection of our surface with that horizontal plane is
+  <md>
+  <mrow>
+  &amp;z=z_0\text{\  \ and\ \ }4x^2+y^2=z_0^2-1
+  </mrow>
+  </md>
+  Think of <m>z_0</m> as a constant.
+  <ul>
+  <li>
+  If <m>|z_0| \lt 1</m>, then <m>z_0^2-1 \lt 0</m> and there
+  are no solutions to <m>x^2+y^2=z_0^2-1</m>.
+  </li>
+  <li>
+  If <m>|z_0|=1</m> there is exactly one solution, namely <m>x=y=0</m>.
+  </li>
+  <li>
+  If <m>|z_0| \gt 1</m> then <m>4x^2+y^2=z_0^2-1</m> is an ellipse with
+  <m>x</m> semi-axis <m>\frac{1}{2}\sqrt{z_0^2-1}</m> and <m>y</m> semi-axis
+  <m>\sqrt{z_0^2-1}</m>. These semi-axes are small when <m>|z_0|</m> is close to
+  <m>1</m> and grow as <m>|z_0|</m> increases.
+  </li>
+  </ul>
+  The first octant parts of a few of these horizontal cross-sections
+  are drawn in the figure below.
+</p>
+
+  <sidebyside>
+  <image source="figs/hyperboloidZXBB.svg"/>
+  </sidebyside>
+
+<p>
+  Next we add in the <m>x=0</m> and <m>y=0</m> cross-sections (i.e. the parts of
+  our surface that are in the <m>yz</m>- and <m>xz</m>-planes, respectively)
+  <me>
+  x=0,\ z^2=1+y^2\qquad\text{and}\qquad
+  y=0,\ z^2=1+4x^2
+  </me>
+</p>
+
+  <sidebyside>
+  <image source="figs/hyperboloidBaa.svg"/>
+  </sidebyside>
+
+<p>
+  Now that we have a pretty good idea of what the surface looks like
+  we clean up and simplify the sketch.
+</p>
+  <sidebyside>
+  <image source="figs/hyperboloidCC.svg"/>
+  <image source="figs/hyperboloidDD.svg"/>
+  </sidebyside>
+
+<p>
+  This type of surface is called a hyperboloid of two sheets.
+  </p>
+</solution>
+</example>
+
+<example xml:id="eg_hyperbolic_cylinder"><title><m>yz=1</m></title>
+<statement>
+  <p>
+  Sketch the surface <m>yz=1</m>.
+  </p>
+</statement>
+
+<solution>
+  <p>
+  This surface has a special property that
+  makes it relatively easy to sketch. There are no <m>x</m>'s in the equation
+  <m>yz=1</m>. That means that if some <m>y_0</m> and <m>z_0</m> obey <m>y_0z_0=1</m>,
+  then the point <m>(x,y_0,z_0)</m> lies on the surface <m>yz=1</m> for all values
+  of <m>x</m>. As <m>x</m> runs from <m>-\infty</m> to <m>\infty</m>, the point <m>(x,y_0,z_0)</m>
+  sweeps out a straight line parallel to the <m>x</m>-axis. So the surface
+  <m>yz=1</m> is a union of lines parallel to the <m>x</m>-axis. It is invariant under
+  translations parallel to the <m>x</m>-axis. To sketch <m>yz=1</m>, we just need
+  to sketch its intersection with the <m>yz</m>-plane and then translate the
+  resulting curve parallel to the <m>x</m>-axis to sweep out the surface.
+  </p>
+
+  <p>We'll start with a sketch of the hyperbola <m>yz=1</m> in two dimensions.
+</p>
+  <sidebyside>
+  <image source="figs/hyperbola3.svg"/>
+  </sidebyside>
+<p>
+  Next we'll move this 2d sketch into the <m>yz</m>-plane, i.e. the plane <m>x=0</m>,
+  in 3d, except that we'll only draw in the part in the first octant.
+</p>
+  <sidebyside>
+  <image source="figs/hyperbolicCylinderA.svg"/>
+  </sidebyside>
+  <p>
+  The we'll draw in <m>x=x_0</m> cross-sections for a couple of more values of
+  <m>x_0</m>
+</p>
+  <sidebyside>
+  <image source="figs/hyperbolicCylinderB.svg"/>
+  </sidebyside>
+<p>
+  and clean up the sketch a bit
+</p>
+  <sidebyside>
+  <image source="figs/hyperbolicCylinderC.svg"/>
+  </sidebyside>
+
+</solution>
+</example>
+
+<example xml:id="eg_xyz"><title><m>xyz=1</m></title>
+<statement>
+  <p>
+  Sketch the surface <m>xyz=4</m>.
+  </p>
+</statement>
+<solution>
+  <p>
+  We'll sketch this surface using much the same procedure as we used
+  in Examples <xref ref="eg_hyperboloid"/> and <xref ref="eg_hyperboloid_two"/>.
+  We'll only sketch the part of the surface in the first octant. The
+  remaining parts (in the octants with <m>x,y \lt 0</m>, <m>z\ge 0</m>, with
+  <m>x,z \lt 0</m>, <m>y\ge 0</m> and with <m>y,z \lt 0</m>, <m>x\ge0</m>) are just reflections of
+  the first octant part.
+  </p>
+
+  <p>As usual, we start by fixing any number <m>z_0</m>
+  and sketching the part of the surface that lies in the horizontal
+  plane <m>z=z_0</m>. The intersection of our surface with that horizontal plane is
+  the hyperbola
+  <md>
+  <mrow>
+  &amp;z=z_0\text{\  \ and\ \ }xy=\frac{1}{z_0}
+  </mrow>
+  </md>
+  Note that <m>x\rightarrow\infty</m> as <m>y\rightarrow 0</m> and that
+  <m>y\rightarrow\infty</m> as <m>x\rightarrow 0</m>. So the hyperbola
+  has both the <m>x</m>-axis and the <m>y</m>-axis as asymptotes, when drawn in the <m>xy</m>-plane.
+  The first octant parts of a few of these horizontal cross-sections
+  (namely, <m>z_0=4</m>, <m>z_0=2</m> and <m>z_0=\frac{1}{2}</m>)
+  are drawn in the figure below.
+</p>
+  <sidebyside>
+  <image source="figs/seatB.svg"/>
+  </sidebyside>
+<p>
+  Next we add some vertical cross-sections.
+  We can't use <m>x=0</m> or <m>y=0</m> because any point on <m>xyz=1</m>
+  must have all of <m>x</m>, <m>y</m>, <m>z</m> nonzero. So we use
+  <me>
+  x=4,\ yz=1\qquad\text{and}\qquad
+  y=4,\ xz=1
+  </me>
+  instead. They are again hyperbolae.
+</p>
+
+  <sidebyside>
+  <image source="figs/seatC.svg"/>
+  </sidebyside>
+<p>
+  Finally, we clean up and simplify the sketch.
+</p>
+  <sidebyside>
+  <image source="figs/seatA.svg"/>
+  </sidebyside>
+
+</solution>
+</example>
+
+
+<p>Often the reason you are interested in a surface in 3d is that it is
+the graph <m>z=f(x,y)</m> of a function of two variables <m>f(x,y)</m>. Another good
+way to visualize the behaviour of a function <m>f(x,y)</m> is to sketch what
+are called its level curves. By definition, a level curve of <m>f(x,y)</m>
+is a curve whose equation is <m>f(x,y)=C</m>, for some constant <m>C</m>. It is the
+set of points in the <m>xy</m>-plane where <m>f</m> takes the value <m>C</m>. Because
+it is a curve in 2d, it is usually easier to sketch than the graph of <m>f</m>.
+Here are a couple of examples.
+</p>
+
+<example><title><m>f(x,y) = x^2+4y^2-2x+2</m></title>
+<statement>
+  <p>
+  Sketch the level curves of <m>f(x,y) = x^2+4y^2-2x+2</m>.
+  </p>
+</statement>
+<solution>
+  <p>
+  Fix any real number <m>C</m>. Then, for the specified function <m>f</m>,
+  the level curve <m>f(x,y)=C</m> is the set of points <m>(x,y)</m> that obey
+  <md>
+  <mrow>
+  x^2+4y^2-2x+2=C
+  &amp;\iff x^2-2x+1 + 4y^2 +1 =C
+  </mrow><mrow>
+  &amp;\iff (x-1)^2 + 4y^2 = C-1
+  </mrow>
+  </md>
+  Now <m>(x-1)^2 + 4y^2</m> is the sum of two squares, and so is always at least zero.
+  So if <m>C-1 \lt 0</m>, i.e. if <m>C \lt 1</m>, there is no curve <m>f(x,y)=C</m>. If <m>C-1=0</m>,
+  i.e. if <m>C=1</m>, then <m>f(x,y)=C-1=0</m> if and only if both <m>(x-1)^2=0</m> and
+  <m>4y^2=0</m> and so the level curve consists of the single point <m>(1,0)</m>.
+  If <m>C \gt 1</m>, then <m>f(x,y)=C</m> become <m>(x-1)^2+4y^2=C-1 \gt 0</m> which describes an
+  ellipse centred on <m>(1,0)</m>. It intersects the <m>x</m>-axis when <m>y=0</m> and
+  <me>
+  (x-1)^2 = C-1 \iff x-1=\pm\sqrt{C-1} \iff x=1\pm \sqrt{C-1}
+  </me>
+  and it intersects the line <m>x=1</m> (i.e. the vertical line through the centre)
+  when
+  <me>
+  4y^2 = C-1 \iff 2y=\pm\sqrt{C-1} \iff y=\pm\tfrac{1}{2} \sqrt{C-1}
+  </me>
+  So, when <m>C \gt 1</m>, <m>f(x,y)=C</m> is the ellipse centred on <m>(1,0)</m> with
+  <m>x</m> semi-axis <m>\sqrt{C-1} </m> and <m>y</m> semi-axis <m>\tfrac{1}{2}\sqrt{C-1}</m>.
+  Here is a sketch of some representative level curves of
+  <m>f(x,y) = x^2+4y^2-2x+2</m>.
+</p>
+  <sidebyside>
+  <image source="figs/ellipseLevelB.svg"/>
+  </sidebyside>
+<p>
+  It is often easier to develop an understanding of the behaviour of a function
+  <m>f(x,y)</m> by looking at a sketch of its level curves, than it is by looking
+  at a sketch of its graph. On the other hand, you can also
+  use a sketch of the level curves of <m>f(x,y)</m> as the first step in building
+  a sketch of the graph <m>z=f(x,y)</m>. The next step would be to redraw,
+  for each <m>C</m>, the level curve <m>f(x,y)=C</m>, in the plane <m>z=C</m>, as we did in
+  Example <xref ref="eg_hyperboloid"/>.
+  </p>
+</solution>
+</example>
+
+
+<example><title><m>e^{x+y+z}=1</m></title>
+<statement>
+  <p>
+  The function <m>f(x,y)</m> is given implicitly by the equation <m>e^{x+y+z}=1</m>.
+  Sketch the level curves of <m>f</m>.
+  </p>
+</statement>
+
+<solution>
+  <p>
+  This one is not as nasty as it appears.
+  That <q><m>f(x,y)</m> is given implicitly by the equation <m>e^{x+y+z}=1</m></q>
+  means that, for each <m>x,y</m>,  the solution <m>z</m> of <m>e^{x+y+z}=1</m> is
+  <m>f(x,y)</m>. So, for the specified function <m>f</m> and any fixed real number <m>C</m>,
+  the level curve <m>f(x,y)=C</m> is the set of points <m>(x,y)</m> that obey
+  <md>
+  <mrow>
+  e^{x+y+C}=1
+  &amp;\iff x+y+C = 0\qquad\text{(by taking the logarithm of both sides)}
+  </mrow><mrow>
+  &amp;\iff x+y = -C
+  </mrow>
+  </md>
+  This is of course a straight line. It intersects the <m>x</m>-axis when <m>y=0</m>
+  and <m>x=-C</m> and it intersects the <m>y</m>-axis when <m>x=0</m> and <m>y=-C</m>.
+  Here is a sketch of some level curves.
+  </p>
+
+  <sidebyside>
+  <image source="figs/planeLevel.svg"/>
+  </sidebyside>
+
+</solution>
+</example>
+
+<p>We have just seen that sketching the level curves of a function <m>f(x,y)</m>
+can help us understand the behaviour of <m>f</m>. We can generalise this
+to functions <m>F(x,y,z)</m> of three variables. A level surface of <m>F(x,y,z)</m>
+is a surface whose equation is of the form <m>F(x,y,z)=C</m> for some
+constant <m>C</m>. It is the set of points <m>(x,y,z)</m> at which <m>F</m> takes
+the value <m>C</m>.
+</p>
+
+<example xml:id="eg_level_surface_sphere"><title><m>F(x,y,z)=x^2+y^2+z^2</m></title>
+  <p>
+  Let <m>F(x,y,z)=x^2+y^2+z^2</m>. If <m>C \gt 0</m>, then the level surface
+  <m>F(x,y,z)=C</m> is the sphere of radius <m>\sqrt{C}</m> centred on the origin.
+  Here is a sketch of the parts of the level surfaces
+             <m>F=1</m> (radius <m>1</m>),
+             <m>F=4</m> (radius <m>2</m>) and
+             <m>F=9</m> (radius <m>3</m>)
+  that are in the first octant.
+  </p>
+
+  <sidebyside>
+  <image source="figs/spherA.svg"/>
+  </sidebyside>
+  </example>
+
+<example xml:id="eg_level_surface_cylinder"><title><m>F(x,y,z)=x^2+z^2</m></title>
+<p>
+  Let <m>F(x,y,z)=x^2+z^2</m> and <m>C \gt 0</m>. Consider the level surface
+  <m>x^2+z^2=C</m>.  The variable <m>y</m> does not appear in this equation.
+  So for any fixed <m>y_0</m>, the intersection of the our surface
+  <m>x^2+z^2=C</m> with the plane <m>y=y_0</m> is the circle of radius <m>\sqrt{C}</m>
+  centred on <m>x=z=0</m>. Here is a sketch of the first quadrant part of
+  one such circle.
+  </p>
+
+  <sidebyside>
+  <image source="figs/cylB.svg"/>
+  </sidebyside>
+
+  <p>
+  The full surface is the horizontal stack of all of those
+  circles with <m>y_0</m> running over <m>\bbbr</m>. It is the cylinder of radius
+  <m>\sqrt{C}</m> centred on the <m>y</m>-axis.
+  Here is a sketch of the parts of the level surfaces
+             <m>F=1</m> (radius <m>1</m>),
+             <m>F=4</m> (radius <m>2</m>) and
+             <m>F=9</m> (radius <m>3</m>)
+  that are in the first octant.
+  </p>
+
+  <sidebyside>
+  <image source="figs/cylA.svg"/>
+  </sidebyside>
+
+  </example>
+
+
+<example xml:id="eg_level_surface_plane"><title><m>F(x,y,z)=e^{x+y+z}</m></title>
+<p>
+  Let <m>F(x,y,z)=e^{x+y+z}</m> and <m>C \gt 0</m>. Consider the level surface
+  <m>e^{x+y+z}=C</m>, or equivalently, <m>x+y+z=\ln C</m>. It is the plane
+  that contains the intercepts <m>(\ln C,0,0)</m>, <m>(0,\ln C,0)</m> and
+  <m>(0,0,\ln C)</m>.
+  Here is a sketch of the parts of the level surfaces
+  <ul>
+  <li>       <m>F=e</m> (intercepts <m>(1,0,0)</m>, <m>(0,1,0)</m>, <m>(0,0,1)</m>),
+  </li>
+  <li>       <m>F=e^2</m> (intercepts <m>(2,0,0)</m>, <m>(0,2,0)</m>, <m>(0,0,2)</m>) and
+  </li>
+  <li>       <m>F=e^3</m> (intercepts <m>(3,0,0)</m>, <m>(0,3,0)</m>, <m>(0,0,3)</m>)
+  </li>
+  </ul>
+  that are in the first octant.
+  </p>
+
+  <sidebyside>
+  <image source="figs/rampABC.svg"/>
+  </sidebyside>
+
+  </example>
+</section>
