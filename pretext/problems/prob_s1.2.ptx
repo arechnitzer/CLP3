@@ -439,7 +439,7 @@ be of this form.
 <statement><p>
 Consider the three points <m>O=(0,0)</m>, <m>A=(a,0)</m> and <m>B=(b,c)</m>.
 <ol label="a">
-<li>
+<li><p>
 Sketch, in a single figure,
 <ul>
 <li>
@@ -449,7 +449,7 @@ the triangle with vertices <m>O</m>, <m>A</m> and <m>B</m>, and
 the circumscribing circle for the triangle (i.e. the circle that goes
 through all three vertices), and
 </li>
-<li>
+<li><p>
 the vectors
 <ul>
 <li>
@@ -461,7 +461,7 @@ the vectors
 <li>
 <m>\overrightarrow{OC}</m>, from <m>O</m> to <m>C</m>, where <m>C</m> is the centre of the circumscribing circle.
 </li>
-</ul>
+</ul></p>
 </li>
 </ul>
 Then add to the sketch and evaluate, from the sketch,
@@ -474,11 +474,11 @@ the projection of the vector <m>\overrightarrow{OC}</m> on the vector
 the projection of the vector <m>\overrightarrow{OC}</m> on the vector
 <m>\overrightarrow{OB}</m>.
 </li>
-</ul>
+</ul></p>
 </li>
 <li> Determine <m>C</m>.
 </li>
-<li>
+<li><p>
 Evaluate, using the formula <xref ref="eqn_proj"/> in the CLP-3 text,
 <ul>
 <li>
@@ -489,7 +489,7 @@ the projection of the vector <m>\overrightarrow{OC}</m> on the vector
 the projection of the vector <m>\overrightarrow{OC}</m> on the vector
 <m>\overrightarrow{OB}</m>.
 </li>
-</ul>
+</ul></p>
 </li>
 </ol>
 </p></statement>

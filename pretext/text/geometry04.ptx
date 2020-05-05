@@ -3,7 +3,7 @@
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<section xml:id="sec_planes_3d">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_planes_3d">
   <title>Equations of Planes in 3d</title>
 
   <p>
@@ -415,5 +415,7 @@
   <m>1.0799\frac{180}{\pi}=61.87^\circ</m> to two decimal places.
   </p>
 </example>
+
+<xi:include href="../problems/prob_s1.4.ptx" />
 
 </section>

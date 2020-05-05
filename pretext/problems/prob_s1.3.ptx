@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise xml:id="prob1_3_signs">
+<statement><p>
+A line in <m>\mathbb R^2</m> has direction <m>\mathbf d</m> and passes through point <m>\mathbf c</m>.
+</p>
+
+<p>Which of the following gives its parametric equation: <m>\llt x,y\rgt =\mathbf c + t\mathbf d </m>, or <m>\llt x,y\rgt =\mathbf c - t\mathbf d </m>?
+</p>
+
+</statement>
+<hint><p>
+What, exactly, is <m>t</m>?
+</p></hint>
+<answer><p>
+Both!
+</p></answer>
+<solution><p>
+Since <m>t</m> can be any real number, these equation describe the same line. They're both valid. For example, the point given by the first parametric
+equation with <m>t=7</m>, namely <m>\mathbf c + 7\mathbf d </m>,
+is exactly the same as the point given by the second  parametric equation
+with <m>t=-7</m>, namely <m>\mathbf c -(-7)\mathbf d </m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+A line in <m>\mathbb R^2</m> has direction <m>\mathbf d</m> and passes through point <m>\mathbf c</m>.
+</p>
+
+<p>Which of the following gives its parametric equation: <m>\llt x,y\rgt =\mathbf c + t\mathbf d </m>, or <m>\llt x,y\rgt =-\mathbf c +t \mathbf d</m>?
+</p>
+
+</statement>
+<hint><p>
+What, exactly, is <m>\mathbf c</m>?
+</p></hint>
+<answer><p>
+Generally, only the first.
+</p></answer>
+<solution><p>
+In contrast to Question<nbsp/><xref ref="prob1_3_signs"/>, the sign on <m>\mathbf c</m> does generally matter. <m>\mathbf c</m> is required to be a point on the line, but except in particular circumstances, there's no reason to believe that
+<m>-\mathbf c =-\mathbf c +t\mathbf d\big|_{t=0}</m> is a point on the line.
+Indeed <m>-\mathbf c</m> is on the line if and only if there is a <m>t</m> with
+<m>\mathbf c + t\mathbf d = -\mathbf c</m>, i.e. <m>t\mathbf d = -2\mathbf c</m>.
+That is the case if and only if <m>\mathbf d</m> is parallel to <m>\mathbf c</m>.
+So, only the first equation is correct in general.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p> Two points determine a line. Verify that the equations
+</p>
+
+<p><me>
+\llt x-1,y-9\rgt=t\llt 8,4\rgt</me>
+</p>
+
+<p>and
+<me>
+\llt x-9,y-13\rgt=t\llt 1,\tfrac12\rgt</me>
+</p>
+
+<p>describe the same line by finding two different points that lie on both lines.
+</p></statement>
+<hint><p>
+Set <m>t=0</m> in both equation to get two different points with integer coordinates; show that these two points are on both lines.
+</p></hint>
+<answer><p>
+Since both lines pass through <m>(1,9)</m> and <m>(9,13)</m>, the lines are identical.
+</p></answer>
+<solution><p>
+Here is one answer of many.
+</p>
+
+<p>Setting <m>t=0</m> in the first equation shows that
+<m>(1,9)</m> is on the first line. To see that <m>(1,9)</m> is also on the second line,
+we substitute <m>x=1</m>, <m>y=9</m> into the second equation to give
+<me>
+\llt 1-9,9-13\rgt=t\llt 1,\tfrac12\rgt\qquad \text{or}\qquad
+\llt -8,-4\rgt=t\llt 1,\tfrac12\rgt
+</me>
+This equation is satisfied when <m>t=-8</m>. So <m>(1,9)</m> is on both lines.
+</p>
+
+<p>Setting <m>t=0</m> in the second equation shows that
+<m>(9,13)</m> is on the second line. To see that <m>(9,13)</m> is also on the first line,
+we substitute <m>x=9</m>, <m>y=13</m> into the first equation to give
+<me>
+\llt 9-1,13-9\rgt=t\llt 8,4\rgt\qquad \text{or}\qquad
+\llt 8,4\rgt=t\llt 8,4\rgt
+</me>
+This equation is satisfied when <m>t=1</m>. So <m>(9,13)</m> is on both lines.
+</p>
+
+<p>Since both lines pass through <m>(1,9)</m> and <m>(9,13)</m>, the lines are identical.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+A line in <m>\mathbb R^2</m> has parametric equations
+<me>
+\begin{array}{lcl}
+x-3&amp;=&amp;9t\\
+y-5&amp;=&amp;7t
+\end{array}</me>
+</p>
+
+<p>There are many different ways to write the parametric equations of this line. If we rewrite the equations as
+<me>
+\begin{array}{lcl}
+x-x_0&amp;=&amp;d_xt\\
+y-y_0&amp;=&amp;d_yt
+\end{array}</me>
+</p>
+
+<p>what are all possible values of <m>\llt x_0,y_0\rgt</m> and <m>\llt d_x,d_y\rgt</m>?
+</p></statement>
+<hint><p>
+A line is specified by two things: one point on the line, and a vector parallel to the direction of the line.
+</p></hint>
+<answer><p>
+<m>\llt d_x,d_y\rgt</m> can be any nonzero scalar multiple of <m>\llt 9,7\rgt</m>, and <m>\llt x_0,y_0\rgt</m> can be any point on the line, i.e. any pair that satisfies <m>7x_0+24=9y_0</m>.
+</p></answer>
+<solution><p>
+<m>\llt d_x,d_y\rgt</m> is the direction of the line, so it can be any <alert>non-zero</alert> scalar multiple of <m>\llt 9,7\rgt</m>.
+</p>
+
+<p><m>\llt x_0,y_0\rgt</m> can be any point on the line. Describing these is the same as describing the line itself. We're trying to find all
+doubles <m>\llt x_0,y_0\rgt</m>  that obey
+<md>
+<mrow>
+\begin{cases}
+x_0-3&amp;=9t
+</mrow><mrow>
+y_0-5&amp;=7t
+\end{cases}
+</mrow>
+</md>
+for some real number <m>t</m>. That is,
+<md>
+<mrow>
+t=\frac{x_0-3}{9}&amp;=\frac{y_0-5}{7}
+</mrow><mrow>
+7(x_0-3)&amp;=9(y_0-5)
+</mrow><mrow>
+7x_0+24&amp;=9y_0
+</mrow>
+</md>
+</p>
+
+<p>Any of these steps could specify the possible values of <m>\llt x_0,y_0\rgt</m>.
+Say, they can be any pair satisfying <m>7x_0+24=9y_0</m>.
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise>
+<statement><p>
+Find the vector parametric, scalar parametric
+ and symmetric equations for the line
+containing the given point and with the given direction.
+<ol label="a">
+<li> point <m>(1,2)</m>, direction <m>\llt 3,2\rgt </m>
+</li>
+<li> point <m>(5,4)</m>, direction <m>\llt 2,-1\rgt </m>
+</li>
+<li> point <m>(-1,3)</m>, direction <m>\llt -1,2\rgt </m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Remember that the parametric equation of a line with direction <m>\mathbf d</m>, passing through point <m>\mathbf c</m>, is <m>\llt x,y\rgt =\mathbf c + t\mathbf d </m>.
+</p></hint>
+
+<answer><p>
+(a) <m>\llt x,y\rgt=\llt 1,2\rgt+t\llt 3,2\rgt </m>,
+    <m>x=1+3t,\ y=2+2t</m>,
+    <m>\frac{x-1}{3}=\frac{y-2}{2}</m>
+</p>
+
+<p>(b) <m>\llt x,y\rgt=\llt 5,4\rgt+t\llt 2,-1\rgt </m>,
+    <m>x=5+2t,\ y=4-t</m>,
+    <m>\frac{x-5}{2}=\frac{y-4}{-1}</m>
+</p>
+
+<p>(c) <m>\llt x,y\rgt=\llt -1,3\rgt+t\llt -1,2\rgt </m>,
+    <m>x=-1-t,\ y=3+2t</m>,
+    <m>\frac{x+1}{-1}=\frac{y-3}{2}</m>
+</p></answer>
+
+<solution><p>
+(a)
+The vector parametric equation is <m>\llt x,y\rgt=\llt 1,2\rgt+t\llt 3,2\rgt </m>.
+The scalar parametric equations are <m>x=1+3t,\ y=2+2t</m>.
+The symmetric equation is <m>\frac{x-1}{3}=\frac{y-2}{2}</m>.
+</p>
+
+<p>(b)
+The vector parametric equation is <m>\llt x,y\rgt=\llt 5,4\rgt+t\llt 2,-1\rgt </m>.
+The scalar parametric equations are <m>x=5+2t,\ y=4-t</m>.
+The symmetric equation is <m>\frac{x-5}{2}=\frac{y-4}{-1}</m>.
+</p>
+
+<p>(c)
+The vector parametric equation is <m>\llt x,y\rgt=\llt -1,3\rgt+t\llt -1,2\rgt </m>.
+The scalar parametric equations are <m>x=-1-t,\ y=3+2t</m>.
+The symmetric equation is <m>\frac{x+1}{-1}=\frac{y-3}{2}</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the vector parametric, scalar parametric
+ and symmetric equations for the line
+containing the given point and with the given normal.
+<ol label="a">
+<li> point <m>(1,2)</m>, normal <m>\llt 3,2\rgt </m>
+</li>
+<li> point <m>(5,4)</m>, normal <m>\llt 2,-1\rgt </m>
+</li>
+<li> point <m>(-1,3)</m>, normal <m>\llt -1,2\rgt </m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review Equation<nbsp/><xref ref="eqn_line"/> in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+(a) <m>\llt x,y\rgt=\llt 1,2\rgt+t\llt -2,3\rgt </m>,
+    <m>x=1-2t,\ y=2+3t</m>,
+    <m>\frac{x-1}{-2}=\frac{y-2}{3}</m>
+</p>
+
+<p>(b) <m>\llt x,y\rgt=\llt 5,4\rgt+t\llt 1,2\rgt </m>,
+    <m>x=5+t,\ y=4+2t</m>,
+    <m>x-5=\frac{y-4}{2}</m>
+</p>
+
+<p>(c) <m>\llt x,y\rgt=\llt -1,3\rgt+t\llt 2,1\rgt </m>,
+    <m>x=-1+2t,\ y=3+t</m>,
+    <m>\frac{x+1}{2}=y-3</m>
+</p></answer>
+
+<solution><p>
+(a) The vector <m>\llt -2,3\rgt </m> is perpendicular to <m>\llt 3,2\rgt </m> (you can
+verify this by taking the dot product of the two vectors) and hence is
+a direction vector for the line.
+The vector parametric equation is <m>\llt x,y\rgt=\llt 1,2\rgt+t\llt -2,3\rgt </m>.
+The scalar parametric equations are <m>x=1-2t,\ y=2+3t</m>.
+The symmetric equation is <m>\frac{x-1}{-2}=\frac{y-2}{3}</m>.
+</p>
+
+<p>(b) The vector <m>\llt 1,2\rgt </m> is perpendicular to <m>\llt 2,-1\rgt </m>
+ and hence is a direction vector for the line.
+The vector parametric equation for the line is
+           <m>\llt x,y\rgt=\llt 5,4\rgt+t\llt 1,2\rgt </m>.
+The scalar parametric equations are <m>x=5+t,\ y=4+2t</m>.
+The symmetric equation is <m>x-5=\frac{y-4}{2}</m>.
+</p>
+
+<p>(c) The vector <m>\llt 2,1\rgt </m> is perpendicular to <m>\llt -1,2\rgt </m>
+and hence is a direction vector for the line.
+The vector parametric equation is <m>\llt x,y\rgt=\llt -1,3\rgt+t\llt 2,1\rgt </m>.
+The scalar parametric equations are the two component equations <m>x=-1+2t,\ y=3+t</m>.
+The symmetric equation is <m>\frac{x+1}{2}=y-3</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Use a projection to find the distance from the point <m>(-2,3)</m>
+to the line <m>3x-4y=-4</m>.
+</p></statement>
+
+<hint><p>
+Review Example<nbsp/><xref ref="eg_nearest_point"/> in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+<m>14/5</m>
+</p></answer>
+
+<solution><p>
+<m>(0,1)</m> is one point on the line <m>3x-4y=-4</m>. So <m>\llt-2-0,3-1\rgt
+=\llt-2,2\rgt</m> is a vector whose tail is on the line and whose
+head is at <m>(-2,3)</m>. <m>\llt 3,-4\rgt</m> is a vector perpendicular to the line,
+so <m>\frac{1}{5}\llt 3,-4\rgt</m> is a unit vector perpendicular to the line.
+The distance from <m>(-2,3)</m> to the line is the length of the projection
+of <m>\llt-2,2\rgt</m> on <m>\frac{1}{5}\llt 3,-4\rgt</m>, which is the magnitude of
+<m>\frac{1}{5}\llt 3,-4\rgt\cdot\llt -2,2\rgt</m>. So the distance is <m>14/5</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>\va</m>, <m>\vb</m> and <m>\vc</m> be the vertices of a triangle. By definition,
+a median of a triangle is a straight line that passes through a vertex of
+the triangle and through the midpoint of the opposite side.
+<ol label="a">
+<li>
+ Find the parametric equations of the three medians.
+</li>
+<li>
+ Do the three medians meet at a common point? If so, which point?
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a)
+<md>
+<mrow>
+\vx(t)&amp;=\va+t\big(\half\vb+\half\vc-\va\big)
+</mrow><mrow>
+\vx(s)&amp;=\vb+s\big(\half\va+\half\vc-\vb\big)
+</mrow><mrow>
+\vx(u)&amp;=\vc+u\big(\half\va+\half\vb-\vc\big)
+</mrow>
+</md>
+</p>
+
+<p>(b)
+<m>\frac{1}{3}(\va+\vb+\vc)</m>
+</p></answer>
+
+<solution><p>
+(a) The midpoint of the side opposite <m>\va</m> is
+<m>\half(\vb+\vc)</m>. The vector joining <m>\va</m> to that midpoint
+is <m>\half\vb+\half\vc-\va</m>. The vector parametric equation
+of the line through <m>\va</m> and <m>\half(\vb+\vc)</m> is
+<me>
+\vx(t)=\va+t\big(\half\vb+\half\vc-\va\big)
+</me>
+Similarly, for the other two medians (but using <m>s</m> and <m>u</m> as
+parameters, rather than <m>t</m>)
+<md>
+<mrow>
+\vx(s)&amp;=\vb+s\big(\half\va+\half\vc-\vb\big)
+</mrow><mrow>
+\vx(u)&amp;=\vc+u\big(\half\va+\half\vb-\vc\big)
+</mrow>
+</md>
+</p>
+
+<p>(b) The three medians meet at a common point if there are
+values of <m>s,t</m> and <m>u</m> such that
+<md alignment="alignat">
+<mrow>{3}
+\va+t\big(\half\vb+\half\vc-\va\big)
+&amp;\ =\ \vb+s\big(\half\va+\half\vc-\vb\big)
+&amp;&amp;\ =\ \vc+u\big(\half\va+\half\vb-\vc\big)
+</mrow><mrow>
+(1-t)\va+\frac{t}{2}\vb+\frac{t}{2}\vc
+&amp;\ =\ \frac{s}{2}\va+(1-s)\vb+\frac{s}{2}\vc
+&amp;&amp;\ =\ \frac{u}{2}\va+\frac{u}{2}\vb+(1-u)\vc
+</mrow>
+</md>
+Assuming that the triangle has not degenerated to a line segment,
+this is the case if and only if the coefficients of <m>\va,\ \vb</m>
+and <m>\vc</m> match
+<md alignment="alignat">
+<mrow>{3}
+1-t&amp;=\frac{s}{2}&amp;&amp;=\frac{u}{2}
+</mrow><mrow>
+\frac{t}{2}&amp;=1-s&amp;&amp;=\frac{u}{2}
+</mrow><mrow>
+\frac{t}{2}&amp;=\frac{s}{2}&amp;&amp;=1-u
+</mrow>
+</md>
+or
+<me>
+s=t=u,\  1-t=\frac{t}{2}
+\implies
+s=t=u=\frac{2}{3}
+</me>
+The medians meet at <m>\frac{1}{3}(\va+\vb+\vc)</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>C</m> be the circle of radius 1 centred at <m>(2,1)</m>. Find an equation for the line tangent to <m>C</m> at the point <m>\left(\frac{5}{2},1+\frac{\sqrt3}{2}\right)</m>.
+</p></statement>
+<hint><p>
+The radius of the circle will serve as a normal vector to the line.
+</p></hint>
+<answer><p>
+One way of writing the equation is <m>x+{\sqrt3}y=4+{\sqrt3}</m>.
+</p></answer>
+<solution><p>
+A normal vector to the line is the vector with its tail at the centre of <m>C</m>, <m>(2,1)</m>, and its head at <m>\left(\frac{5}{2},1+\frac{\sqrt3}{2}\right)</m>.
+So, we set <m>\mathbf{n}=\llt \frac{5}{2},1+\frac{\sqrt3}{2} \rgt-\llt 2,1\rgt =
+\llt \frac12, \frac{\sqrt3}{2}\rgt</m>.
+</p>
+
+
+<sidebyside>
+<image><latex-image>
+\begin{tikzpicture}
+\YEaaxis{.5}{3}{.5}{2}
+\draw (2,1) circle (1cm);
+\YExcoord{2}{2}
+\YEycoord{1}{1}
+\draw[thick,- \gt ] (2,1)--(2.5,1.87) node[midway, left]{$\mathbf n$};
+\draw plot[domain=1.75:3.25](\x,{3.31-\x/1.73});
+\end{tikzpicture}
+</latex-image></image>
+</sidebyside>
+<p>
+We know one point on the line is <m>\left(\frac{5}{2},1+\frac{\sqrt3}{2}\right)</m>, so following Equation<nbsp/><xref ref="eqn_line"/>  in the CLP-3 text:
+<md>
+<mrow>
+n_xx+n_yy&amp;=n_xx_0+n_yy_0
+</mrow><mrow>
+\frac12x+\frac{\sqrt3}{2}y&amp;=\frac12\cdot\frac52+\frac{\sqrt3}{2}\cdot\left(1+\frac{\sqrt3}{2}\right)
+</mrow><mrow>
+\frac12x+\frac{\sqrt3}{2}y&amp;=2+\frac{\sqrt3}{2}
+</mrow><mrow>
+x+{\sqrt3}y&amp;=4+{\sqrt3}
+</mrow><mrow>
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+</exercisegroup>
+
+</exercises>

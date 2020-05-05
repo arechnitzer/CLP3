@@ -23,9 +23,11 @@
   \newcommand{\quot}{{\text{QR}}}
   \newcommand{\simp}{{\text{SMP}}}
   \newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+  \newcommand{\pdiff}[2]{ \frac{\partial #1}{\partial #2}}
   \newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
   \newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
   \newcommand{\difftwo}[2]{ \frac{\mathrm{d^2}#1}{\mathrm{d}{#2}^2}}
+
   \renewcommand{\neg}{ {\sim} }
   \newcommand{\limp}{ {\;\Rightarrow\;} }
   \newcommand{\nimp}{ {\;\not\Rightarrow\;} }
@@ -146,7 +148,6 @@
   \newcommand{\Atop}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
 
 
-  \newcommand{\pdiff}[2]{ \frac{\partial\hfil#1\hfil}{\partial #2}}
   \newcommand{\dblInt}{\iint}
   \newcommand{\tripInt}{\iiint}
 
@@ -157,6 +158,9 @@
 </macros>
 <!-- <xi:include href="misc/latex_image_preamble.xml" /> -->
 
+<latex-image-preamble>
+\usepackage{tikz}
+</latex-image-preamble>
 
 <!-- to make referencing like latex referencing - just the number -->
   <cross-references text="global" />

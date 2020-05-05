@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise>
+<statement><p>
+The vector <m>\hk</m> is a normal vector (i.e. is perpendicular) to the plane <m>z=0</m>.
+Find another nonzero vector that is normal to <m>z=0</m>.
+</p></statement>
+
+<hint><p>
+You are looking for a vector that is perpendicular to <m>z=0</m> and hence is
+parallel to <m>\hk</m>.
+</p></hint>
+
+<answer><p>
+Any vector of the form <m>c\,\hk</m> with <m>c\ne 0</m> and <m>c\ne 1</m> works.
+Three possible choices are <m>-\hk</m>, <m>2\,\hk</m>, <m>7.12345\,\hk</m>.
+</p></answer>
+
+<solution><p>
+We are looking for a vector that is perpendicular to <m>z=0</m> and hence is
+parallel to <m>\hk</m>. To be parallel of <m>\hk</m>, the vector has to be of the form <m>c\,\hk</m> for some real number <m>c</m>.  For the vector to be nonzero, we need <m>c\ne 0</m> and for the vector to be different from <m>\hk</m>, we need <m>c\ne 1</m>. So
+three possible choices are <m>-\hk</m>, <m>2\,\hk</m>, <m>7.12345\,\hk</m>.
+</p></solution>
+</exercise>
+
+<exercise xml:id="prob1_4_planeeqn"><title><fromexam>M200 2008A</fromexam></title>
+<statement><p>
+Find the equation of the plane that contains <m>(1,0,0)</m>,
+<m>(0,1,0)</m> and <m>(0,0,1)</m>.
+</p></statement>
+
+<hint><p>
+Guess.
+</p></hint>
+
+<answer><p>
+<m>x+y+z=1</m>
+</p></answer>
+
+<solution><p>
+<em>Solution 1:</em> That's too easy. We just guess.
+The plane <m>x+y+z=1</m> contains all three given points.
+</p>
+
+<p><em>Solution 2:</em> The plane does not pass through the origin.
+(You can see this by just making a quick sketch.) So the plane has an equation
+of the form <m>ax+by+cz=1</m>.
+<ul>
+<li> For <m>(1,0,0)</m> to be on the plane we need that
+<me>
+a(1) +b(0) +c(0) =1
+\implies a=1
+</me>
+</li>
+<li> For <m>(0,1,0)</m> to be on the plane we need that
+<me>
+a(0) +b(1) +c(0) =1
+\implies b=1
+</me>
+</li>
+<li> For <m>(0,0,1)</m> to be on the plane we need that
+<me>
+a(0) +b(0) +c(1) =1
+\implies c=1
+</me>
+</li>
+</ul>
+So the plane is <m>x+y+z=1</m>.
+</p>
+
+<p><em>Solution 3:</em>
+Both the head and the tail of the vector from <m>(1,0,0)</m> to <m>(0,1,0)</m>,
+namely <m>\llt -1,1,0\rgt</m>, lie in the plane. Similarly,
+both the head and the tail of the vector from <m>(1,0,0)</m> to <m>(0,0,1)</m>,
+namely <m>\llt -1,0,1\rgt</m>, lie in the plane. So the vector
+<md>
+<mrow>
+\llt -1,1,0\rgt \times \llt -1,0,1\rgt
+=\det\left[\begin{matrix}
+           \hi &amp; \hj &amp; \hk
+</mrow><mrow>
+           -1  &amp;  1  &amp;  0
+</mrow><mrow>
+           -1  &amp;  0  &amp;  1
+  \end{matrix}\right]
+=\llt 1 , 1 ,1  \rgt
+</mrow>
+</md>
+is a normal vector for the plane. As <m>(1,0,0)</m> is a point in the plane,
+<md>
+<mrow>
+\llt 1 , 1 ,1 \rgt \cdot \llt x-1\,,\,y-0\,,\, z-0 \rgt = 0\qquad
+\text{or}\quad
+x+y+z=1
+</mrow>
+</md>
+is an equation for the plane.
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the equation of the plane containing the points <m>(1,0,1)</m>,
+<m>(1,1,0)</m> and <m>(0,1,1)</m>.
+</p></statement>
+
+<hint><p>
+See Question<nbsp/><xref ref="prob1_4_planeeqn"/> <mdash/> or just have a guess!
+</p></hint>
+
+<answer><p>
+<m>x+y+z=2</m>
+</p></answer>
+
+<solution><p>
+<em>Solution 1:</em> That's too easy. We just guess.
+The plane <m>x+y+z=2</m> contains all three given points.
+</p>
+
+<p><em>Solution 2:</em>
+Both the head and the tail of the vector from <m>(1,0,1)</m> to <m>(0,1,1)</m>,
+namely <m>\llt 1,-1,0\rgt</m>, lie in the plane. Similarly,
+both the head and the tail of the vector from <m>(1,1,0)</m> to <m>(0,1,1)</m>,
+namely <m>\llt 1,0,-1\rgt</m>, lie in the plane. So the vector
+<md>
+<mrow>
+\llt 1,-1,0\rgt \times \llt 1,0,-1\rgt
+=\det\left[\begin{matrix}
+           \hi &amp; \hj &amp; \hk
+</mrow><mrow>
+           1  &amp;  -1  &amp;  0
+</mrow><mrow>
+           1  &amp;  0  &amp;  -1
+  \end{matrix}\right]
+=\llt 1 , 1 ,1  \rgt
+</mrow>
+</md>
+is a normal vector for the plane. As <m>(0,1,1)</m> is a point in the plane,
+<md>
+<mrow>
+\llt 1 , 1 ,1 \rgt \cdot \llt x-0\,,\,y-1\,,\, z-1 \rgt = 0\qquad
+\text{or}\quad
+x+y+z=2
+</mrow>
+</md>
+is an equation for the plane.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+ What's wrong with the following exercise? <q>Find the equation of the plane
+containing <m>(1,2,3)</m>, <m>(2,3,4)</m> and <m>(3,4,5)</m>.</q>
+</p></statement>
+
+<hint><p>
+Three points don't always determine a plane <mdash/> why?
+</p></hint>
+
+<answer><p>
+ All three points <m>(1,2,3),\ (2,3,4)</m> and <m>(3,4,5)</m>
+are on the line <m>\vx(t)=(1,2,3)+t(1,1,1)</m>. There are many planes
+through that line.
+</p></answer>
+
+<solution><p>
+The vector from <m>(1,2,3)</m> to <m>(2,3,4)</m>, namely <m>\llt 1,1,1\rgt</m>
+is parallel to the vector from <m>(1,2,3)</m> to <m>(3,4,5)</m>, namely
+<m>\llt 2,2,2\rgt</m>. So the three given points are collinear. Precisely,
+ all three points <m>(1,2,3),\ (2,3,4)</m> and <m>(3,4,5)</m>
+are on the line <m>\llt x-1,y-2,z-3\rgt=t\llt 1,1,1\rgt</m>. There are many planes
+through that line.
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+<exercise>
+<statement><p>
+Find the plane containing the given three points.
+<ol label="a">
+<li>
+<m>(1,0,1),\ (2,4,6),\ (1,2,-1)</m>
+</li>
+<li>
+<m>(1,-2,-3),\ (4,-4,4),\ (3,2,-3)</m>
+</li>
+<li>
+<m>(1,-2,-3),\ (5,2,1),\ (-1,-4,-5)</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol label="a">
+<li><m>9x-y-z=8</m></li>
+<li><m>14x-7y-8z=52</m></li>
+</ol>
+</p>
+
+<p>(c) For any real numbers <m>a</m> and <m>b</m>, the plane
+<m>ax+by-(a+b)z=4a+b</m> contains the three given points.
+</p>
+
+</answer>
+
+<solution><p>
+(a) The plane must be parallel to
+   <m>\llt 2,4,6\rgt -\llt 1,0,1\rgt =\llt 1,4,5\rgt </m>
+ and to <m>\llt 1,2,-1\rgt -\llt 1,0,1\rgt =\llt 0,2,-2\rgt </m>.
+So its normal vector must be perpendicular to both <m>\llt 1,4,5\rgt </m>
+and <m>\llt 0,2,-2\rgt </m> and hence parallel to
+<me>
+\llt 1,4,5\rgt \times\llt 0,2,-2\rgt
+=\det\left[\begin{matrix}
+           \hi &amp; \hj &amp; \hk \\
+           1  &amp;  4  &amp;  5 \\
+           0  &amp;  2  &amp;  -2
+  \end{matrix}\right]
+=\llt -18,2,2\rgt
+</me>
+The plane is <m>9(x-1)-y-(z-1)=0</m> or <m>9x-y-z=8</m>.
+</p>
+
+<p>We can check this by observing that
+<m>(1,0,1),\ (2,4,6)</m> and <m>(1,2,-1)</m> all satisfy <m>9x-y-z=8</m>.
+</p>
+
+<p>(b) The plane must be parallel to
+<m>\llt 4,-4,4\rgt -\llt 1,-2,-3\rgt =\llt 3,-2,7\rgt </m>
+and to <m>\llt 3,2,-3\rgt -\llt 1,-2,-3\rgt =\llt 2,4,0\rgt </m>. So its normal
+vector must be perpendicular to both <m>\llt 3,-2,7\rgt </m> and <m>\llt 2,4,0\rgt</m>
+and hence parallel to
+<me>
+\llt 3,-2,7\rgt \times\llt 2,4,0\rgt
+=\det\left[\begin{matrix}
+           \hi &amp; \hj &amp; \hk \\
+           3  &amp;  -2  &amp;  7 \\
+           2  &amp;  4  &amp;  0
+  \end{matrix}\right]
+=\llt -28,14,16\rgt
+</me>
+The plane is <m>14(x-1)-7(y+2)-8(z+3)=0</m> or <m>14x-7y-8z=52</m>.
+</p>
+
+<p>We can check this by observing that
+<m>(1,-2,-3),\ (4,-4,4)</m> and <m>(3,2,-3)</m> all satisfy <m>14x-7y-8z=52</m>.
+</p>
+
+<p>(c) The plane must be parallel to
+     <m>\llt 5,2,1\rgt -\llt 1,-2,-3\rgt =\llt 4,4,4\rgt </m>
+ and to <m>\llt -1,-4,-5\rgt -\llt 1,-2,-3\rgt =\llt -2,-2,-2\rgt </m>.
+My, my. These two vectors are parallel. So the three points are all on the
+same straight line. Any plane containing the line contains all three points.
+If <m>\llt a,b,c\rgt</m> is any vector perpendicular to <m>\llt 1,1,1\rgt</m>
+(i.e. which obeys <m>a+b+c=0</m>) then the plane
+<m>a(x-1)+b(y+2)+c(z+3)=0</m> or <m>a(x-1)+b(y+2)-(a+b)(z+3)=0</m>
+or <m>ax+by-(a+b)z=4a+b</m> contains the three given points.
+</p>
+
+<p>We can check this by observing that
+<m>(1,-2,-3),\ (5,2,1)</m> and <m>(-1,-4,-5)</m> all
+satisfy the equation <m>ax+by-(a+b)z=4a+b</m> for all <m>a</m> and <m>b</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the distance from the given point to the given plane.
+<ol label="a">
+<li>
+point <m>(-1,2,3)</m>, plane <m>x+y+z=7</m>
+</li>
+<li>
+point <m>(1,-4,3)</m>, plane <m>x-2y+z=5</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol label="a">
+<li><m>\sqrt{3}</m></li>
+<li><m>7/\sqrt{6}</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+(a) One point on the plane is <m>(0,0,7)</m>. The vector from <m>(-1,2,3)</m>
+to <m>(0,0,7)</m> is <m>\llt 0,0,7\rgt -\llt -1,2,3\rgt =\llt 1,-2,4\rgt </m>.
+A unit vector perpendicular to the plane is
+<m>\frac{1}{\sqrt{3}}\llt 1,1,1\rgt </m>. The distance from
+<m>(-1,2,3)</m> to the plane is the length of the projection of
+<m>\llt 1,-2,4\rgt </m> on <m>\frac{1}{\sqrt{3}}\llt 1,1,1\rgt </m> which is <md>
+<mrow>
+\frac{1}{\sqrt{3}}\llt 1,1,1\rgt \cdot\llt 1,-2,4\rgt
+=\frac{3}{\sqrt{3}}
+=\sqrt{3}
+</mrow>
+</md>
+</p>
+
+<p>(b) One point on the plane is <m>(0,0,5)</m>. The vector from
+<m>(1,-4,3)</m> to <m>(0,0,5)</m> is <m>\llt 0,0,5\rgt -\llt 1,-4,3\rgt =\llt -1,4,2\rgt</m>. A unit vector perpendicular to the plane is
+<m>\frac{1}{\sqrt{6}}\llt 1,-2,1\rgt </m>. The distance from
+<m>(1,-4,3)</m> to the plane is the length of the projection of
+<m>\llt -1,4,2\rgt </m> on <m>\frac{1}{\sqrt{6}}\llt 1,-2,1\rgt </m> which is
+the absolute value of
+<me>
+\frac{1}{\sqrt{6}}\llt 1,-2,1\rgt \cdot \llt -1,4,2\rgt
+=\frac{-7}{\sqrt{6}}
+</me>
+or <m>7/\sqrt{6}</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2007A</fromexam></title>
+<statement><p>
+A plane <m>\Pi</m> passes through the points <m>A = (1, 1, 3)</m>, <m>B = (2, 0, 2)</m>
+and <m>C = (2, 1, 0)</m> in <m>\bbbr^3</m>.
+<ol label="a">
+<li>
+ Find an equation for the plane <m>\Pi</m>.
+</li>
+<li>
+ Find the point <m>E</m> in the plane <m>\Pi</m> such that the line <m>L</m> through
+<m>D = (6, 1, 2)</m> and <m>E</m> is perpendicular to <m>\Pi</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol label="a">
+<li><m>3x+2y+z = 8</m></li>
+<li><m>\big(3\,,\,-1\,,\,1\big)</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+(a)
+The vector from <m>C</m> to <m>A</m>, namely
+ <m>\llt 1-2\,,\,1-1\,,\,3-0\rgt = \llt -1\,,\,0\,,\,3\rgt</m> lies entirely inside
+<m>\Pi</m>.
+The vector from <m>C</m> to <m>B</m>, namely
+ <m>\llt 2-2\,,\,0-1\,,\,2-0\rgt = \llt 0\,,\,-1\,,\,2\rgt</m> also
+lies entirely inside  <m>\Pi</m>.  Consequently, the vector
+<md>
+<mrow>
+\llt -1\,,\,0\,,\,3\rgt\times \llt 0\,,\,-1\,,\,2\rgt
+=\det\left[\begin{matrix}
+            \hi  &amp;  \hj  &amp;  \hk
+</mrow><mrow>
+            -1    &amp;  0   &amp;    3
+</mrow><mrow>
+            0    &amp;   -1   &amp;    2
+            \end{matrix}\right]
+=\llt 3 \,,\, 2 \,,\, 1 \rgt
+</mrow>
+</md>
+is perpendicular to <m>\Pi</m>. The equation of <m>\Pi</m> is then
+<md>
+<mrow>
+\llt 3 \,,\, 2 \,,\, 1 \rgt \cdot \llt x-2 \,,\, y-1 \,,\, z \rgt = 0
+\qquad\text{or}\qquad
+3x+2y+z = 8
+</mrow>
+</md>
+</p>
+
+<p>(b) Let <m>E</m> be <m>(x,y,z)</m>. Then the vector from <m>D</m> to <m>E</m>,
+namely <m>\llt x-6\,,\,y-1\,,\,z-2\rgt</m> has to be parallel to
+the vector <m>\llt 3 \,,\, 2 \,,\, 1 \rgt</m>, which is perpendicular to
+<m>\Pi</m>. That is, there must be a number <m>t</m> such that
+<md>
+<mrow>
+&amp; \llt x-6\,,\,y-1\,,\,z-2\rgt = t \llt 3 \,,\, 2 \,,\, 1 \rgt
+</mrow><mrow>
+&amp;\text{or }x=6+3t,\ y=1+2t,\ z=2+t
+</mrow>
+</md>
+As <m>(x,y,z)</m> must be in <m>\Pi</m>,
+<md>
+<mrow>
+8 = 3x+2y+z = 3(6+3t) + 2(1+2t) +(2+t) = 22 +14 t
+\implies t=-1
+</mrow>
+</md>
+So <m>(x,y,z) = \big(6+3(-1)\,,\,1+2(-1)\,,\,2+(-1)\big)
+            = \big(3\,,\,-1\,,\,1\big)</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2011A</fromexam></title>
+<statement><p>
+Let <m>A = (2, 3, 4)</m> and let <m>L</m> be the line given by the equations <m>x + y = 1</m> and
+<m>x + 2y + z = 3</m>.
+<ol label="a">
+<li>
+Write an equation for the plane containing <m>A</m> and perpendicular to <m>L</m>.
+</li>
+<li>
+Write an equation for the plane containing <m>A</m> and <m>L</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol label="a">
+<li><m>x-y+z=3</m></li>
+<li><m>5x+y-4z=-3</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+We are going to need a direction vector for <m>L</m> in both parts (a) and (b).
+So we find one first.
+<ul>
+<li>
+The vector <m>\llt 1,1,0\rgt</m> is perpendicular to <m>x + y = 1</m>
+and hence to <m>L</m>.
+</li>
+<li>
+The vector <m>\llt 1,2,1\rgt</m> is perpendicular to <m>x + 2y + z = 3</m>
+and hence to <m>L</m>.
+</li>
+</ul>
+So the vector
+<md>
+<mrow>
+\llt 1,1,0\rgt \times \llt 1,2,1\rgt
+    =\det\left[\begin{matrix}
+            \hi  &amp;  \hj  &amp;  \hk
+</mrow><mrow>
+            1    &amp;   1   &amp;   0
+</mrow><mrow>
+            1    &amp;   2   &amp;    1
+            \end{matrix}\right]
+=\llt 1 \,,\, -1 \,,\, 1 \rgt
+</mrow>
+</md>
+is a direction vector for <m>L</m>.
+</p>
+
+<p>(a) The plane is to contain the point <m>(2,3,4)</m> and is to have
+<m>\llt-1,1,-1 \rgt</m> as a normal vector. So
+<md>
+<mrow>
+\llt-1,1,-1 \rgt\cdot \llt x-2,y-3,z-4 \rgt =0\qquad\text{or}\qquad
+x-y+z=3
+</mrow>
+</md>
+does the job.
+</p>
+
+<p>(b) The plane is to contain the points <m>A=(2,3,4)</m> and <m>(1,0,2)</m>
+(which is on <m>L</m>) so that the vector <m> \llt 2-1,3-0,4-2 \rgt
+=\llt 1,3,2 \rgt</m> is to be parallel to the plane. The direction
+vector of <m>L</m>, namely <m>\llt -1 , 1 , -1 \rgt</m>, is also to be parallel
+to the plane. So the vector
+<md>
+<mrow>
+\llt 1,3,2\rgt \times \llt -1,1,-1\rgt
+    =\det\left[\begin{matrix}
+            \hi  &amp;  \hj  &amp;  \hk
+</mrow><mrow>
+            1    &amp;   3   &amp;   2
+</mrow><mrow>
+            -1   &amp;   1   &amp;  -1
+            \end{matrix}\right]
+=\llt -5 \,,\, -1 \,,\, 4 \rgt
+</mrow>
+</md>
+is to be normal to the plane. So
+<md>
+<mrow>
+\llt-5,-1,4 \rgt\cdot \llt x-2,y-3,z-4 \rgt =0\qquad\text{or}\qquad
+5x+y-4z=-3
+</mrow>
+</md>
+does the job.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2015D</fromexam></title>
+<statement><p>
+Consider the plane <m>4x + 2y - 4z = 3</m>. Find all parallel planes that
+are distance <m>2</m> from the above plane. Your answers should be in the
+following form: <m>4x + 2y - 4z = C</m>.
+</p></statement>
+
+<answer><p>
+<m>4x + 2y - 4z=15</m> and <m>4x + 2y - 4z=-9</m>
+</p></answer>
+
+<solution><p>
+All planes that are parallel to the plane <m>4x + 2y - 4z = 3</m>
+must have <m>\llt 4\,,\,2\,,\,-4\rgt</m> as a normal vector and
+hence must have an equation of the form <m>4x + 2y - 4z = C</m>
+for some constant <m>C</m>. We must find the <m>C</m>'s for which the distance
+from  <m>4x + 2y - 4z = 3</m> to <m>4x + 2y - 4z = C</m> is <m>2</m>.
+One point on <m>4x + 2y - 4z = 3</m> is <m>\big(0,\frac{3}{2},0\big)</m>.
+The two points <m>(x',y',z')</m> with
+<md>
+<mrow>
+\overbrace{\llt x'-0\,,\,y'-\frac{3}{2}\,,\,z'-0\rgt}^{\text{vector from
+<m>\big(0,\frac{3}{2},0\big)</m> to <m>(x',y',z')</m>}}
+=\pm 2\ \overbrace{\frac{\llt 4\,,\,2\,,\,-4\rgt}{\sqrt{16+4+16}}}^{\text{unit vector}}
+=\pm \frac{2}{6} \llt 4\,,\,2\,,\,-4\rgt
+=\pm\llt \frac{4}{3}\,,\,\frac{2}{3}\,,\,-\frac{4}{3}\rgt
+</mrow>
+</md>
+are the two points that are a distance <m>2</m> from <m>\big(0,\frac{3}{2},0\big)</m>
+in the direction of the normal.The two points <m>(x',y',z')</m> are
+<md>
+<mrow>
+\left(0+\frac{4}{3}\,,\, \frac{3}{2}+\frac{2}{3}\,,\,0-\frac{4}{3}\right)
+&amp;=\left(\frac{4}{3}\,,\, \frac{13}{6}\,,\,-\frac{4}{3}\right)
+</mrow><mrow>\text{ and }
+\left(0-\frac{4}{3}\,,\, \frac{3}{2}-\frac{2}{3}\,,\,0+\frac{4}{3}\right)
+&amp;=\left(-\frac{4}{3}\,,\, \frac{5}{6}\,,\,\frac{4}{3}\right)
+</mrow>
+</md>
+These two points lie on the desired planes, so the two desired planes are
+<md>
+<mrow>
+4x + 2y - 4z
+=\frac{4\times 4}{3} +\frac{2\times 13}{6}-\frac{-4\times 4}{3}
+=\frac{32+26+32}{6}
+=15
+</mrow>
+</md>
+and
+<md>
+<mrow>
+4x + 2y - 4z
+=\frac{4\times(-4)}{3} +\frac{2\times 5}{6}-\frac{4\times 4}{3}
+=\frac{-32+10-32}{6}
+=-9
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2004A</fromexam></title>
+<statement><p>
+Find the distance from the point <m>(1,2,3)</m> to the plane that passes through
+the points <m>(0,1,1)</m>, <m>(1,-1,3)</m> and <m>(2,0,-1)</m>.
+</p></statement>
+
+<answer><p>
+<m>2</m>
+</p></answer>
+
+<solution><p>
+The two vectors
+<md alignment="alignat">
+<mrow>{3}
+\va&amp;=\llt 1,-1,3\rgt - \llt 0,1,1\rgt &amp;&amp;= \llt 1,-2, 2\rgt
+</mrow><mrow>
+\vb&amp;=\llt 2,0,-1\rgt - \llt 0,1,1\rgt &amp;&amp;= \llt 2,-1,-2\rgt
+</mrow>
+</md>
+both lie entirely inside the plane. So the vector
+<me>
+\va\times\vb
+   =\det\left[\begin{matrix}
+           \hi &amp; \hj &amp; \hk \\
+            1  &amp;  -2  &amp;  2 \\
+            2  &amp;  -1 &amp;  -2
+  \end{matrix}\right]
+   =\llt 6,6,3\rgt
+</me>
+is perpendicular to the plane. The vector
+     <m>\vc=\frac{1}{3}\llt 6,6,3\rgt =\llt 2,2,1\rgt</m>
+is also perpendicular to the plane. The vector
+<me>
+\vd=\llt 1,2,3\rgt-\llt 0,1,1\rgt=\llt 1,1,2\rgt
+</me>
+joins the point to the plane. So, if <m>\theta</m> is the angle between <m>\vd</m> and
+<m>\vc</m>, the distance is
+<me>
+|\vd|\cos\theta=\frac{\vc\cdot\vd}{|\vc|}=\frac{6}{\sqrt{9}}=2
+</me>
+</p>
+
+</solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise><title><fromexam>M200 2014A</fromexam></title>
+<statement><p>
+Consider two planes <m>W_1</m>, <m>W_2</m>, and a line <m>M</m> defined by:
+<me>
+W_1\ :\  -2x + y + z = 7,\qquad
+W_2\ :\ -x + 3y + 3z = 6,\qquad
+M\ :\
+\frac{x}{2} = \frac{2y-4}{4} = z + 5.
+</me>
+<ol label="a">
+<li>
+Find a parametric equation of the line of intersection <m>L</m> of <m>W_1</m> and <m>W_2</m>.
+</li>
+<li>
+Find the distance from L to M .
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol label="a">
+<li><m>(x,y,z) = (-3,1,0) +t \llt 0,-1,1\rgt</m></li>
+<li><m>\sqrt{17}</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+(a) Let's use <m>z</m> as the parameter and rename it to <m>t</m>.
+That is, <m>z=t</m>. Subtracting <m>2</m> times the <m>W_2</m> equation from the <m>W_1</m>
+equation gives
+<me>
+-5y -5z = -5
+\implies y = 1-z = 1-t\quad\text{ or }\quad y-1=-t
+</me>
+Substituting the result into the equation for <m>W_2</m> gives
+<md>
+<mrow>
+-x +3(1-t) +3t =6
+\implies x = -3\quad\text{ or }\quad x+3=0
+</mrow>
+</md>
+So a parametric equation is
+<me>
+\llt x+3,y-1,z\rgt = t \llt 0,-1,1\rgt
+</me>
+</p>
+
+<p>(b) <em>Solution 1</em>
+</p>
+
+<p>We can also parametrize <m>M</m> using <m>z=t</m>:
+<me>
+x=2z+10=2t+10,\
+y=2z+12=2t+12\quad\implies\quad
+\llt x,y,z\rgt = \llt 10,12,0\rgt +t \llt 2,2,1\rgt
+</me>
+So one point on <m>M</m> is <m>(10,12,0)</m> and one point on <m>L</m> is <m>(-3,1,0)</m> and
+<me>
+\vv= \llt (-3)-10\,,\, 1 -12  \,,\,  0-0\rgt
+   =\llt  -13 \,,\, -11  \,,\, 0\rgt
+</me>
+is one vector from a point on <m>M</m> to a point on <m>L</m>.
+</p>
+
+<p>The direction vectors of <m>L</m> and <m>M</m> are <m>\llt 0,-1,1\rgt</m> and
+<m>\llt 2,2,1\rgt</m>, respectively. The vector
+<md>
+<mrow>
+\vn = \llt 0,-1,1\rgt \times \llt 2,2,1\rgt
+=\det\left[\begin{matrix}
+            \hi  &amp;  \hj  &amp;  \hk
+</mrow><mrow>
+            0    &amp;  -1   &amp;    1
+</mrow><mrow>
+            2    &amp;   2   &amp;    1
+            \end{matrix}\right]
+=\llt -3 \,,\, 2 \,,\, 2 \rgt
+</mrow>
+</md>
+is then perpendicular to both <m>L</m> and <m>M</m>.
+</p>
+
+<p>The distance from <m>L</m> to <m>M</m> is then the length of the projection
+of <m>\vv</m> on <m>\vn</m>, which is
+<md>
+<mrow>
+\frac{|\vv\cdot\vn|}{|\vn|}
+=\frac{|39-22+0|}{\sqrt{9+4+4}}
+=\sqrt{17}
+</mrow>
+</md>
+</p>
+
+<p>(b) <em>Solution 2</em>
+We can also parametrize <m>M</m> using <m>z=s</m>:
+<me>
+x=2z+10=2s+10,\
+y=2z+12=2s+12\quad\implies\quad
+\llt x,y,z\rgt = \llt 10,12,0\rgt +s \llt 2,2,1\rgt
+</me>
+The vector from the point  <m>(-3\,,\,1-t\,,\,t)</m> on <m>L</m>
+to the point <m>(10+2s\,,\,12+2s\,,\,s)</m> on <m>M</m> is
+<me>
+\llt 13+2s \,,\, 11+2s+t \,,\, s-t \rgt
+</me>
+So the distance from the point  <m>(-3\,,\,1-t\,,\,t)</m> on <m>L</m>
+to the point <m>(10+2s\,,\,12+2s\,,\,s)</m> on <m>M</m> is the square root of
+<me>
+D(s,t) = (13+2s)^2 +(11+2s+t)^2 +(s-t)^2
+</me>
+That distance is minimized when
+<md>
+<mrow>
+0 = \pdiff{D}{s} &amp;=4(13+2s) +4(11+2s+t) +2(s-t)
+</mrow><mrow>
+0 = \pdiff{D}{t} &amp;=2(11+2s+t) -2(s-t)
+</mrow>
+</md>
+Cleaning up those equations gives
+<md>
+<mrow>
+18s +2t &amp;= -96
+</mrow><mrow>
+2s  +4t &amp;=-22
+</mrow>
+</md>
+or
+<md>
+<mrow>
+9s +t &amp;=-48 \tag{E1}
+</mrow><mrow>
+ s+2t &amp;=-11 \tag{E2}
+</mrow>
+</md>
+Subtracting (E2) from twice (E1) gives
+<me>
+17s = -85 \implies s=-5
+</me>
+Substituting that into (E2) gives
+<me>
+2t= -11 +5 \implies t = -3
+</me>
+Note that
+<md>
+<mrow>
+13+2s &amp;= 3
+</mrow><mrow>
+11+2s+t &amp;= -2
+</mrow><mrow>
+s-t &amp;= -2
+</mrow>
+</md>
+So the distance is
+<md>
+<mrow>
+\sqrt{D(-5,-3)}
+&amp;=\sqrt{3^2 + (-2)^2 + (-2)^2}
+=\sqrt{17}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the equation of the sphere which has the two planes
+<m>x+y+z=3,\ x+y+z=9</m> as tangent planes if the center of the sphere is on
+the planes <m>2x-y=0,\ 3x-z=0</m>.
+</p></statement>
+
+<answer><p>
+<m>(x-1)^2+(y-2)^2+(z-3)^2=3</m>
+</p></answer>
+
+<solution><p>
+The two planes <m>x+y+z=3</m> and <m>x+y+z=9</m> are parallel.
+The centre must be on the plane <m>x+y+z=6</m> half way between them.
+So, the center is on <m>x+y+z=6</m>, <m>2x-y=0</m> and <m>3x-z=0</m>. Solving these
+three equations, or equvalently,
+<me>
+y=2x,\ z=3x,\ x+y+z=6x=6
+</me>
+gives <m>(1,2,3)</m> as the centre. <m>(1,1,1)</m> is a point on
+<m>x+y+z=3</m>. <m>(3,3,3)</m> is a point on <m>x+y+z=9</m>. So <m>\llt 2,2,2\rgt</m> is a vector
+with tail on <m>x+y+x=3</m> and head on <m>x+y+z=9</m>. Furthermore <m>\llt 2,2,2\rgt</m>
+is perpendicular to the two planes. So the distance between the planes
+is <m>|\llt 2,2,2\rgt|=2\sqrt{3}</m> and the radius of the sphere is <m>\sqrt{3}</m>.
+The sphere is
+<me>
+(x-1)^2+(y-2)^2+(z-3)^2=3
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the equation of the plane that passes through the point
+<m>(-2,0,1)</m> and through the line of intersection of <m>2x+3y-z=0,\ x-4y+2z=-5</m>.
+</p></statement>
+
+<answer><p>
+<m>3x-y+z=-5</m>
+</p></answer>
+
+<solution><p>
+Set <m>y=0</m> and then solve <m>2x+3y-z=0,\ x-4y+2z=-5</m>, i.e.
+<m>2x-z=0</m>, <m>x+2z=-5</m>, or equvalently
+<me>
+z=2x,\ x+2z=5x=-5
+</me>
+The result, <m>(-1,0,-2)</m>, is one point on the plane. Set <m>y=5</m> and then
+solve <m>2x+3y-z=0,\ x-4y+2z=-5</m>, i.e. <m>2x+15-z=0</m>, <m>x-20+2z=-5</m>,
+or equivalently
+<me>
+z=2x+15,\ x-20+4x+30=-5
+</me>
+The result, <m>(-3,5,9)</m>, is another
+point on the plane. So three points on the plane are <m>(-2,0,1),
+\ (-1,0,-2)</m> and <m>(-3,5,9)</m>.
+<m>\llt -2+1\,,\,0-0\,,\, 1+2 \rgt=\llt -1,0,3\rgt</m> and
+<m>\llt -2+3\,,\,0-5\,,\, 1-9 \rgt = \llt 1,-5,-8\rgt</m> are two
+vectors having both head and tail in the plane.
+<md>
+<mrow>
+\llt -1,0,3\rgt \times  \llt 1,-5,-8\rgt
+=\det\left[\begin{matrix}
+           \hi &amp; \hj &amp; \hk
+</mrow><mrow>
+           -1  &amp;  0  &amp;  3
+</mrow><mrow>
+            1  &amp;  -5 &amp;  -8
+  \end{matrix}\right]
+=\llt 15 , -5 ,5  \rgt
+</mrow>
+</md>
+is a vector perpendicular to the plane.
+<m>\frac{1}{5}\llt 15 , -5 ,5  \rgt=\llt 3,-1,1\rgt</m>
+is also a vector perpendicular to the plane. The plane is
+<me>
+3(x+1) -(y-0) + (z+2)=0\quad\text{or}\quad
+3x-y+z=-5
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the distance from the point <m>\vp</m> to the plane <m>\vn\cdot
+\vx= c</m>.
+</p></statement>
+
+<answer><p>
+<m>|c-\vn\cdot\vp|/|\vn|</m>
+</p></answer>
+
+<solution><p>
+The vector <m>\vn</m> is perpendicular to the plane
+<m>\vn\cdot\vx= c</m>. So the line
+<me>
+\vx(t)=\vp+t\vn
+</me>
+passes through <m>\vp</m> and is perpendicular to the plane.
+</p>
+<sidebyside width="">
+<image source="pfigs/distance.svg"/>
+</sidebyside>
+
+<p>
+It crosses the plane at the value of <m>t</m> which obeys
+<me>
+\vn\cdot\vx(t)= c
+\hskip .25 in\text{or}\hskip .25 in
+\vn\cdot[\vp+t\vn]= c
+</me>
+namely
+<me>
+t=[c-\vn\cdot\vp]/|\vn|^2
+</me>
+The vector
+<me>
+\vx(t)-\vp=t\,\vn=\vn\,[c-\vn\cdot\vp]/|\vn|^2
+</me>
+has head on the plane <m>\vn\cdot\vx= c</m>, tail at <m>\vp</m>, and
+is perpendicular to the plane. So the distance is the length of that
+vector, which is
+<me>
+|c-\vn\cdot\vp|/|\vn|
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Describe the set of points equidistant from <m>(1,2,3)</m> and
+<m>(5,2,7)</m>.
+</p></statement>
+
+<answer><p>
+It is the plane <m>x+z=8</m>, which is
+the plane through <m>(3,2,5)=\half(1,2,3)+\half(5,2,7)</m> with normal
+<m>\llt 1,0,1\rgt=\frac{1}{4}\big(\llt 5,2,7\rgt-\llt 1,2,3\rgt \big)</m>.
+</p></answer>
+
+<solution><p>
+The distance from the point <m>(x,y,z)</m> to <m>(1,2,3)</m>
+is <m>\sqrt{(x-1)^2+(y-2)^2+(z-3)^2}</m> and
+the distance from <m>(x,y,z)</m>to <m>(5,2,7)</m> is
+<m>\sqrt{(x-5)^2+(y-2)^2+(z-7)^2}</m>. Hence <m>(x,y,z)</m> is equidistant
+from <m>(1,2,3)</m> and <m>(5,2,7)</m> if and only if
+<md>
+<mrow>
+&amp; &amp; (x-1)^2+(y-2)^2+(z-3)^2&amp;=(x-5)^2+(y-2)^2+(z-7)^2
+</mrow><mrow>
+&amp;\iff &amp; x^2-2x+1+z^2-6z+9&amp;=x^2-10x+25+z^2-14z+49
+</mrow><mrow>
+&amp;\iff &amp; 8x+8z&amp;=64
+</mrow><mrow>
+&amp;\iff &amp; x+z&amp;=8
+</mrow>
+</md>
+This is the plane through <m>(3,2,5)=\half(1,2,3)+\half(5,2,7)</m>
+with normal vector
+<m>\llt 1,0,1\rgt=\frac{1}{4}\big(\llt 5,2,7\rgt-\llt 1,2,3\rgt \big)</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+ Describe the set of points equidistant from <m>\va</m> and <m>\vb</m>.
+</p></statement>
+
+<answer><p>
+It is the plane <m>2(\vb-\va)\cdot\vx=|\vb|^2-|\va|^2</m>,
+which is the plane through <m>\half\va+\half\vb</m>
+with normal vector  <m>\vb-\va</m>.
+</p></answer>
+
+<solution><p>
+The distance from the point <m>\vx</m> to <m>\va</m> is
+<m>\sqrt{(\vx-\va)\cdot(\vx-\va)}</m> and the distance from <m>\vx</m> to <m>\vb</m> is
+<m>\sqrt{(\vx-\vb)\cdot(\vx-\vb)}</m>. Hence <m>\vx</m> is equidistant
+from <m>\va</m> and <m>\vb</m> if and only if
+<md alignment="alignat">
+<mrow>{3}
+&amp; &amp; (\vx-\va)\cdot(\vx-\va)&amp;=(\vx-\vb)\cdot(\vx-\vb)
+</mrow><mrow>
+&amp;\iff\qquad &amp; |\vx|^2-2\va\cdot\vx+|\va|^2&amp;=|\vx|^2-2\vb\cdot\vx+|\vb|^2
+</mrow><mrow>
+&amp;\iff &amp; 2(\vb-\va)\cdot\vx&amp;=|\vb|^2-|\va|^2
+</mrow>
+</md>
+This is the plane through <m>\half\va+\half\vb</m>
+with normal vector  <m>\vb-\va</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2003D</fromexam></title>
+<statement><p>
+Consider a point <m>P(5,-10,2)</m> and the triangle with vertices
+<m>A(0,1,1)</m>, <m>B(1,0,1)</m> and <m>C(1,3,0)</m>.
+<ol label="a">
+<li>
+Compute the area of the triangle <m>ABC</m>.
+</li>
+<li>
+Find the distance from the point <m>P</m> to the plane containing
+the triangle.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol label="a">
+<li><m>\half\sqrt{11}\approx 1.658</m></li>
+<li><m>\frac{3}{\sqrt{11}}\approx 0.9045</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+(a) One side of the triangle is
+      <m>\overrightarrow{AB}=\llt 1,0,1\rgt - \llt 0,1,1\rgt = \llt 1,-1,0\rgt</m>.
+A second side of the triangle is
+      <m>\overrightarrow{AC}=\llt 1,3,0\rgt - \llt 0,1,1\rgt = \llt 1,2,-1\rgt</m>.
+If the angle between <m>\overrightarrow{AB}</m> and <m>\overrightarrow{AC}</m>
+is <m>\theta</m> and if we take <m>\overrightarrow{AB}</m> as the base of the triangle,
+then the triangle has base length <m>b=|\overrightarrow{AB}|</m>
+and height <m>h=|\overrightarrow{AC}|\sin\theta</m> and hence
+<me>
+\text{area}=\half bh
+=\half |\overrightarrow{AB}|\,|\overrightarrow{AC}|\sin\theta
+=\half|\overrightarrow{AB}\times\overrightarrow{AC}|
+=\half|\llt 1,-1,0\rgt \times \llt 1,2,-1\rgt|
+</me>
+As
+<me>
+\llt 1,-1,0\rgt\times\llt 1,2,-1\rgt
+=\det\left[\begin{matrix}
+           \hi &amp; \hj &amp; \hk \\
+            1  &amp;  -1  &amp;  0 \\
+            1  &amp;  2   &amp;  -1
+  \end{matrix}\right]
+=\hi+\hj+3\hk
+</me>
+we have
+<me>
+\text{area}=\half|\llt 1,1,3\rgt|=\half\sqrt{11}\approx 1.658
+</me>
+</p>
+
+<p>(b) A unit vector perpendicular to the plane containing the
+triangle is
+<me>
+\hn=\frac{\overrightarrow{AB}\times\overrightarrow{AC}}
+            {|\overrightarrow{AB}\times\overrightarrow{AC}|}
+=\frac{\llt 1,1,3\rgt}{\sqrt{11}}
+</me>
+The distance from <m>P</m> to the plane containing the triangle is
+the length of the projection of
+<m>\overrightarrow{AP}=\llt 5,-10,2\rgt-\llt 0,1,1\rgt
+               =\llt 5,-11,1\rgt</m>
+on <m>\hn</m>. If <m>\theta</m> the angle between <m>\overrightarrow{AP}</m>
+and <m>\hn</m>, then this is
+<me>
+\text{distance}= |\overrightarrow{AP}|\,|\cos\theta|
+=\big|\overrightarrow{AP}\cdot\hn\big|
+=\left|\llt 5,-11,1\rgt\cdot\frac{\llt 1,1,3\rgt}{\sqrt{11}}\right|
+=\frac{3}{\sqrt{11}}\approx 0.9045
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2003A</fromexam></title>
+<statement><p>
+Consider the sphere given by
+<me>
+(x-1)^2+(y-2)^2+(z+1)^2=2
+</me>
+Suppose that you are at the point <m>(2,2,0)</m> on <m>S</m>, and you plan to follow
+the shortest path on <m>S</m> to <m>(2,1,-1)</m>. Express your initial direction
+as a cross product.
+</p></statement>
+
+<answer><p>
+Any positive constant times
+<m>\llt 1,1,-1\rgt\times\llt 1,0,1\rgt
+=\llt 1, -2, -1\rgt</m>
+</p></answer>
+
+<solution><p>
+Switch to a new coordinate system with
+<me>
+X=x-1\qquad Y=y-2\qquad Z=z+1
+</me>
+In this new coordinate system, the sphere has equation <m>X^2+Y^2+Z^2=2</m>.
+So the sphere is centred at <m>(X,Y,Z)=(0,0,0)</m> and has radius <m>\sqrt{2}</m>.
+In the new coordinate system, the initial point <m>(x,y,z)=(2,2,0)</m>
+has <m>(X,Y,Z)=(1,0,1)</m> and our final point  <m>(x,y,z)=(2,1,-1)</m>
+has <m>(X,Y,Z)=(1,-1,0)</m>. Call the initial point <m>P</m> and the final point
+<m>Q</m>. The shortest path will follow the great circle from <m>P</m> to <m>Q</m>.
+</p>
+
+<sidebyside width="">
+  <image source="pfigs/OE03AQB.svg"/>
+</sidebyside>
+
+<p>
+A great circle on a sphere is the intersection of the sphere with a plane
+that contains the centre of the sphere. Our strategy for finding the initial
+direction will be based on two observations.
+<ul>
+<li> The shortest path lies on the plane <m>\Pi</m> that contains the origin and the points <m>P</m> and <m>Q</m>. Since the shortest path lies on <m>\Pi</m>,
+our direction vector must also lie on <m>\Pi</m> and hence must
+be perpendicular to the normal vector to <m>\Pi</m>.
+</li>
+<li>
+The shortest path also remains on the sphere, so our initial direction
+must also be perpendicular to the normal vector to
+the sphere at our initial point <m>P</m>.
+</li>
+</ul>
+As our initial direction is perpendicular to the two normal vectors,
+it is parallel to their cross product.
+</p>
+
+<p>So our main job is to find normal vectors to the plane <m>\Pi</m> and to the
+sphere at <m>P</m>.
+<ul>
+<li> One way to find a normal vector to <m>\Pi</m> is to guess an equation for
+<m>\Pi</m>. As <m>(0,0,0)</m> is on <m>\Pi</m>, <m>(0,0,0)</m> must obey <m>\Pi</m>'s equation.
+So <m>\Pi</m>'s equation must be of the form <m>aX+bY+cZ=0</m>. That <m>(X,Y,Z)=(1,0,1)</m>
+is on <m>\Pi</m> forces <m>a+c=0</m>.   That <m>(X,Y,Z)=(1,-1,0)</m> is on <m>\Pi</m> forces
+<m>a-b=0</m>. So we may take <m>a=1</m>, <m>b=1</m> and <m>c=-1</m>. That is, <m>\Pi</m> is
+<m>X+Y-Z=0</m>.  (Check that all three points <m>(0,0,0)</m>, <m>(1,0,1)</m> and
+<m>(1,-1,0)</m> do indeed obey <m>X+Y-Z=0</m>.) A normal vector to <m>\Pi</m> is
+<m>\llt 1,1,-1\rgt</m>.
+</li>
+<li><p> A second way to find a normal vector to <m>\Pi</m> is to observe that
+both
+<ul>
+<li>
+the vector from <m>(0,0,0)</m> to <m>(1,0,1)</m>, that is <m>\llt 1,0,1\rgt</m>,
+lies completely inside <m>\Pi</m> and
+</li>
+<li>
+the vector from <m>(0,0,0)</m> to <m>(1,-1,0)</m>, that is <m>\llt 1,-1,0\rgt</m>,
+lies completely inside <m>\Pi</m>.
+</li>
+</ul>
+So the vector
+<me>
+\llt 1,0,1\rgt\times\llt 1,-1,0\rgt
+=\det\left[\begin{matrix}
+                     \hi &amp; \hj &amp; \hk \\
+                     1   &amp;  0  &amp; 1 \\
+                     1   &amp;  -1  &amp; 0
+                \end{matrix}\right]
+=\hi + \hj -\hk
+</me>
+is perpendicular to <m>\Pi</m>.</p>
+</li>
+<li>
+The vector from the centre of the sphere to the point <m>P</m> on the sphere
+is perpendicular to the sphere at <m>P</m>. So a normal vector to
+the sphere at our initial point <m>(X,Y,Z)=(1,0,1)</m> is <m>\llt 1,0,1\rgt</m>.
+</li>
+</ul>
+Since our initial direction
+<fn>Note that the change of coordinates
+<m>X=x-1</m>, <m>Y=y-2</m>, <m>Z=z+1</m> has absolutely no effect on any velocity or direction
+vector. If our position at time <m>t</m> is <m>(x(t),y(t),z(t))</m> in the
+original coordinate system, then it is <m>(X(t),Y(t),Z(t))
+=(x(t)-1,y(t)-2,z(t)+1)</m> in the new coordinate system. The velocity
+vectors in the two coordinate systems <m>\llt x'(t),y'(t),z'(t)\rgt
+=\llt X'(t),Y'(t),Z'(t)\rgt</m> are identical.</fn>
+</p>
+
+<p>must be perpendicular to both <m>\llt 1,1,-1\rgt</m> and <m>\llt 1,0,1\rgt</m>,
+it must be one of  <m>\pm\llt 1,1,-1\rgt\times\llt 1,0,1\rgt</m>.
+To get from <m>(1,0,1)</m> to <m>(1,-1,0)</m> by the shortest path, our <m>Z</m>
+coordinate should decrease from <m>1</m> to <m>0</m>. So the <m>Z</m> coordinate of
+our initial direction should be negative. This is the case for
+<me>
+\llt 1,1,-1\rgt\times\llt 1,0,1\rgt
+=\det\left[\begin{matrix}
+                     \hi &amp; \hj &amp; \hk \\
+                     1   &amp;  1  &amp; -1 \\
+                     1   &amp;  0  &amp;  1
+                \end{matrix}\right]
+=\hi - 2\,\hj -\hk
+</me>
+</p></solution>
+</exercise></exercisegroup>
+
+</exercises>

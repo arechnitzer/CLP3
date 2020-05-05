@@ -7,7 +7,7 @@ __credits__ = ["Andrew Rechnitzer"]
 __license__ = "GPL-3.0-or-later"
 
 import os
-import xmlschema
+import subprocess
 import lxml.etree as ET
 
 # source file
@@ -15,9 +15,9 @@ sourceFile = "./clp_3_mc.ptx"
 # xslt pretext file
 xsltFile = "/home/andrew/Projects/mathbook/xsl/mathbook-html.xsl"
 # the schema to check against
-xs = xmlschema.XMLSchema(
-    "/home/andrew/Projects/mathbook/schema/pretext.xsd", validation="lax"
-)
+xs = ET.RelaxNG(ET.parse("/home/andrew/Projects/mathbook/schema/pretext.rng"))
+# mbx location
+mbx = "/home/andrew/Projects/mathbook/script/mbx"
 # output directory
 outDir = "./site"
 
@@ -30,19 +30,26 @@ myDescTags = [
 # each tag should be a 3-ple [tag, replace-before, replace-after]
 myTags = [
     ["answerproof", "<p><term>Proof:</term></p>", "<p><m>\square</m></p>",],
-    ["conceptual", "<p><alert>Exercises &#8212; Stage 1</alert></p>", ""],
+]
+
+myRep = [
+    ["hint", "statement"],
+    ["answer", "statement"],
+    ["solution", "statement"],
 ]
 
 mySubs = [
     ["conceptual", "<p><alert>Exercises &#8212; Stage 1</alert></p>"],
     ["procedural", "<p><alert>Exercises &#8212; Stage 2</alert></p>"],
+    ["application", "<p><alert>Exercises &#8212; Stage 3</alert></p>"],
+    ["fromexam", "<em>&#x2733;</em>"],
 ]
 
 # build parameters as dict
 param = {
-    "exercise.divisional.answer": "'no'",
-    "exercise.divisional.hint": "'no'",
-    "exercise.divisional.solution": "'no'",
+    "exercise.divisional.answer": "'yes'",
+    "exercise.divisional.hint": "'yes'",
+    "exercise.divisional.solution": "'yes'",
 }
 
 
@@ -93,7 +100,16 @@ def replaceSubsTag(src, tg, sb):
     return src
 
 
+def repTag(src, tg, sb):
+    print("Replacing tag {} with {}".format(tg, sb))
+    for repTag in src.findall("//{}".format(tg)):
+        repTag.tag = sb
+    return src
+
+
 def userTags(src):
+    for [tg, sb] in myRep:
+        src = repTag(src, tg, sb)
     for [tg, sb] in mySubs:
         src = replaceSubsTag(src, tg, sb)
     for [tg, pre, post] in myTags:
@@ -126,7 +142,11 @@ except Exception as err:
 # try to validate before building
 print("Validate before building")
 try:
-    xs.validate(procd)
+    if xs.validate(procd):
+        print("\tSource is valid")
+    else:
+        print("\tValidation problems:")
+        print(xs.error_log)
 except Exception as err:
     print(">>> ERROR <<< ")
     print(err)
@@ -147,5 +167,10 @@ os.chdir(outDir)
 print("Transform the source")
 htmlSource = transform(procd, **param)
 print("HTML written")
+print("Processing tikz to svg")
+subprocess.check_output(
+    [mbx, "-vv", "-c", "latex-image", "-f", "svg", "-d", "images", "../" + sourceFile]
+)
+
 print("Error log:")
 print(transform.error_log)
