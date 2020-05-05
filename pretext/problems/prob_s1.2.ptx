@@ -1,0 +1,2160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise>
+<statement><p>
+Let <m>\va=\llt 2,0\rgt </m> and <m>\vb=\llt 1,1\rgt </m>. Evaluate and sketch
+<m>\va+\vb,\ \va+2\vb</m> and <m>2\va-\vb</m>.
+</p></statement>
+
+<answer><p>
+<m>\va+\vb=\llt 3,1\rgt </m>, <m>\va+2\vb=\llt 4,2\rgt </m>
+<m>2\va-\vb=\llt 3,-1\rgt </m>
+</p>
+
+<sidebyside width="30%">
+<image source="pfigs/add1.svg"/>
+<image source="pfigs/add2.svg"/>
+<image source="pfigs/add3.svg"/>
+</sidebyside>
+</answer>
+
+<solution><p>
+<m>\va+\vb=\llt 3,1\rgt </m>, <m>\va+2\vb=\llt 4,2\rgt </m>
+<m>2\va-\vb=\llt 3,-1\rgt </m>
+</p>
+<sidebyside width="30%">
+<image source="pfigs/add1.svg"/>
+<image source="pfigs/add2.svg"/>
+<image source="pfigs/add3.svg"/>
+</sidebyside>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Determine whether or not the given points are collinear (that is,
+lie on a common straight line)
+<ol label="a">
+<li>
+ <m>(1,2,3),\ (0,3,7),\ (3,5,11)</m>
+</li>
+<li>
+<m>(0,3,-5),\ (1,2,-2),\ (3,0,4)</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+If three points are collinear, then the vector from the first point
+to the second point, and the vector from the first point to the third point
+must both be parallel to the line, and hence must be parallel to each other
+(i.e. must be multiples of each other).
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/collinear.svg"/>
+</sidebyside>
+</hint>
+
+<answer>
+<p>
+<ol label="a">
+  <li>not collinear</li>
+  <li>collinear</li>
+</ol>
+</p>
+</answer>
+
+<solution><p>
+If three points are collinear, then the vector from the first point
+to the second point, and the vector from the first point to the third point
+must both be parallel to the line, and hence must be parallel to each other
+(i.e. must be multiples of each other).
+</p>
+<sidebyside width="">
+<image source="pfigs/collinear.svg"/>
+</sidebyside>
+
+<p>
+<ol label="a">
+  <li>
+    <p>
+The vectors <m>\llt 0,3,7\rgt -\llt 1,2,3\rgt =\llt -1,1,4\rgt </m> and <m>\llt 3,5,11\rgt -\llt 1,2,3\rgt =\llt 2,3,8\rgt </m>
+are not parallel (i.e. are not multiples of each other),
+so the three points are not on the same line.
+</p>
+</li>
+<li>
+<p>
+The vectors <m>\llt 1,2,-2\rgt -\llt 0,3,-5\rgt =\llt 1,-1,3\rgt </m> and
+<m>\llt 3,0,4\rgt -\llt 0,3,-5\rgt =\llt 3,-3,9\rgt </m> are parallel (i.e. are  multiples of each other),
+so the three points are on the same line.
+</p>
+</li>
+</ol>
+</p>
+</solution>
+</exercise>
+
+
+<exercise>
+<statement><p>
+Determine whether the given pair of vectors is perpendicular
+<ol label="a">
+<li>
+<m>\llt 1,3,2\rgt ,\ \llt 2,-2,2\rgt </m>
+</li>
+<li>
+<m>\llt -3,1,7\rgt ,\ \llt 2,-1,1\rgt </m>
+</li>
+<li>
+<m>\llt 2,1,1\rgt ,\ \llt -1,4,2\rgt </m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review Theorem <xref ref="thm_dotPppties"/> in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+<ol label="a">
+  <li>perpendicular</li>
+  <li>perpendicular</li>
+  <li>not perpendicular</li>
+</ol>
+</p></answer>
+
+<solution><p>
+By property 7 of Theorem <xref ref="thm_dotPppties"/> in the CLP-3 text,
+<md alignment="alignat">
+<mrow>
+\llt 1,3,2\rgt \cdot\llt 2,-2,2\rgt
+&amp;=1\times2-3\times 2+2\times2=0\
+&amp;&amp;\implies\ \text{perpendicular}
+\tag{a}
+</mrow><mrow>
+\llt -3,1,7\rgt \cdot\llt 2,-1,1\rgt
+&amp;=-3\times2-1\times 1+7\times1=0\
+&amp;&amp;\implies\ \text{perpendicular}
+\tag{b}
+</mrow><mrow>
+\llt 2,1,1\rgt \cdot\llt -1,4,2\rgt
+&amp;=-2\times1+1\times 4+1\times2=4\ne 0\
+&amp;&amp;\implies\ \text{not perpendicular}
+\tag{c}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+
+<exercise>
+<statement><p>
+Let <m>\va=\llt a_1,a_2\rgt</m>. Compute the projection of <m>\va</m> on
+<m>\hi</m> and <m>\hj</m>.
+</p></statement>
+
+<answer><p>
+<m>\text{proj}_{\hi}\va=a_1\hi</m>
+<m>\text{proj}_{\hj}\va=a_2\hj</m>.
+</p></answer>
+
+<solution><p>
+<m>\text{proj}_{\hi}\va=(\va\cdot\hi)\hi
+=a_1\hi</m> and
+<m>\text{proj}_{\hj}\va=(\va\cdot\hj)\hj
+=a_2\hj</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Does the triangle with vertices <m>(1,2,3),\ (4,0,5)</m> and <m>(3,6,4)</m>
+have a right angle?
+</p></statement>
+
+<answer><p>
+Yes.
+</p></answer>
+
+<solution><p>
+The vector from <m>(1,2,3)</m> to <m>(4,0,5)</m> is <m>\llt 3,-2,2\rgt</m>.
+The vector from <m>(1,2,3)</m> to <m>(3,6,4)</m> is <m>\llt 2,4,1\rgt</m>.
+The dot product between these two vectors is
+<m>\llt 3,-2,2\rgt\cdot\llt 2,4,1\rgt=0</m>,
+so the vectors are perpendicular and the triangle does contain a right
+angle.
+</p>
+
+</solution>
+</exercise>
+
+
+<exercise>
+<statement><p>
+Show that the area of the parallelogram determined by the
+vectors <m>\va</m> and <m>\vb</m> is <m>|\va\times \vb|</m>.
+</p>
+<sidebyside width="40$">
+  <image source="pfigs/sec_1_2_pgramA.svg"/>
+</sidebyside>
+</statement>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+ The area of a parallelogram is the length of its
+base time its height.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/sec_1_2_pgramB.svg"/>
+</sidebyside>
+
+<p>
+We can choose the base to be <m>\va</m>. Then, if <m>\theta</m>
+is the angle between its sides <m>\va</m> and <m>\vb</m>, its height is
+<m>|\vb|\sin\theta</m>.
+So
+<me>
+\text{area} = |\va||\vb|\sin\theta=|\va\times\vb|
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Show that the volume of the parallelepiped determined by the
+vectors <m>\va,\ \vb</m> and <m>\vc</m> is
+<me>
+    |\va\cdot(\vb\times\vc)|
+</me>
+</p>
+
+<sidebyside width="40%">
+
+<image source="pfigs/piped.svg"/>
+</sidebyside>
+</statement>
+
+<answer><p>
+See the solution
+</p></answer>
+
+<solution><p>
+The volume of a parallelepiped is the area of its
+base time its height. We can choose the base to be the parallelogram
+determined by the vectors <m>\vb</m> and <m>\vc</m>. It has area <m>|\vb\times\vc|</m>.
+The vector <m>\vb\times\vc</m> is perpendicular to the base.
+</p>
+<sidebyside width="40%">
+
+<image source="pfigs/pipedVolume.svg"/>
+</sidebyside>
+
+<p>
+  Denote by
+<m>\theta</m> the angle between <m>\va</m> and the perpendicular <m>\vb\times\vc</m>.
+The height of the parallelepiped is <m>|\va| |\cos\theta|</m>. So
+<me>
+\text{volume} = |\va|\, |\cos\theta|\, |\vb\times\vc|
+=|\va\cdot(\vb\times\vc)|
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Verify by direct computation that
+<ol label="a">
+<li>
+<m>\hi\times\hj=\hk</m>, <m>\hj\times\hk=\hi</m>, <m>\hk\times\hi=\hj</m>
+</li>
+<li>
+<m>\va\cdot(\va\times\vb)=\vb\cdot(\va\times\vb)=\vZero</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+(a)
+<md alignment="alignat">
+<mrow>
+\hi\times\hj&amp;=\det\left[\begin{matrix}\hi&amp;\hj &amp;\hk
+\\                     1&amp;0&amp;0
+\\                     0&amp;1&amp;0\end{matrix}\right]
+&amp;&amp;=\hi(0\times 0-0\times 1)
+-\hj(1\times 0-0\times 0)
++\hk(1\times 1-0\times 0)
+</mrow><mrow>
+&amp;=\hk
+</mrow><mrow>
+\hj\times\hk&amp;=\det\left[\begin{matrix}\hi&amp;\hj &amp;\hk
+\\                     0&amp;1&amp;0
+\\                     0&amp;0&amp;1\end{matrix}\right]
+&amp;&amp;=\hi(1\times 1-0\times 0)
+-\hj(0\times 1-0\times 0)
++\hk(0\times 0-1\times 0)
+</mrow><mrow>
+&amp;=\hi
+</mrow><mrow>
+\hk\times\hi&amp;=\det\left[\begin{matrix}\hi&amp;\hj &amp;\hk
+\\                     0&amp;0&amp;1
+\\                     1&amp;0&amp;0\end{matrix}\right]
+&amp;&amp;=\hi(0\times 0-1\times 0)
+-\hj(0\times 0-1\times 1)
++\hk(0\times 0-0\times 1)
+</mrow><mrow>
+&amp;=\hj
+</mrow>
+</md>
+</p>
+
+<p>(b)
+<md alignment="alignat">
+<mrow>
+\va\cdot(\va\times\vb)
+&amp;=a_1\big(a_2b_3-a_3b_2\big)
+  -a_2\big(a_1b_3-a_3b_1\big)
+  +a_3\big(a_1b_2-a_2b_1\big)
+&amp;&amp;=0
+</mrow><mrow>
+\vb\cdot(\va\times\vb)
+&amp;=b_1\big(a_2b_3-a_3b_2\big)
+  -b_2\big(a_1b_3-a_3b_1\big)
+  +b_3\big(a_1b_2-a_2b_1\big)
+&amp;&amp;=0
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Consider the following statement: <q>If <m>\va\ne\vZero</m>
+and if <m>\va\cdot\vb=\va\cdot\vc</m> then <m>\vb=\vc</m>.</q>
+If the statment is true, prove it. If the statement is false, give a
+counterexample.
+</p></statement>
+
+<answer><p>
+This statement is false. One counterexample is <m>\va=\llt 1,0,0\rgt </m>,
+<m>\vb=\llt 0,1,0\rgt ,\ \vc=\llt 0,0,1\rgt </m>. Then <m>\va\cdot\vb=\va\cdot\vc=0</m>, but <m>\vb\ne\vc</m>. There are <em>many</em> other counterexamples.
+</p></answer>
+
+<solution><p>
+This statement is false. The two numbers
+<m>\va\cdot\vb</m>, <m>\va\cdot\vc</m> are equal if and only if
+<m>\va\cdot(\vb-\vc)= 0</m>. This in turn is the case if and only
+if <m>\va</m> is perpendicular to <m>\vb-\vc</m> (under the convention that
+<m>\vZero</m> is perpendicular to all vectors). For example,
+if <m>\va=\llt 1,0,0\rgt </m>, <m>\vb=\llt 0,1,0\rgt ,\ \vc=\llt 0,0,1\rgt </m>, then <m>\vb-\vc=\llt 0,1,-1\rgt</m> is perpendicular to <m>\va</m> so that
+<m>\va\cdot\vb=\va\cdot\vc</m>.
+</p></solution>
+</exercise>
+
+<exercise xml:id="PRB_Qnine">
+<statement><p>
+Consider the following statement: <q>The vector <m>\va\times(\vb\times\vc)</m>
+is of the form <m>\al\vb+\be\vc</m> for some real numbers <m>\al</m> and <m>\be</m>.</q>
+If the statement is true, prove it. If the statement is false, give a
+counterexample.
+</p>
+
+</statement>
+
+<answer><p>
+True.
+</p></answer>
+
+<solution><p>
+This statement is true. In the event that <m>\vb</m> and
+<m>\vc</m> are parallel, <m>\vb\times\vc=\vZero</m> so that
+<m>\va\times(\vb\times\vc)=\vZero=0\vb+0\vc</m>, so we may assume
+that <m>\vb</m> and <m>\vc</m> are not parallel. Then as <m>\al</m> and <m>\be</m> run
+over <m>\bbbr</m>, the vector <m>\al\vb+\be \vc</m> runs over the plane that
+contains the origin and the vectors <m>\vb</m> and <m>\vc</m>. Call this plane
+<m>P</m>. Because
+<m>\vd=\vb\times\vc</m> is nonzero and perpendicular to both
+<m>\vb</m> and <m>\vc</m>, <m>P</m> is the plane that contains the origin
+and is perpendicular to <m>\vd</m>. As <m>\va\times(\vb\times\vc)=\va\times\vd</m> is always perpendicular to <m>\vd</m>, it lies in <m>P</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+What geometric conclusions can you draw from
+<m>\va\cdot(\vb\times\vc)=\llt 1,2,3\rgt</m>?
+</p></statement>
+
+<answer><p>
+None. The given equation is nonsense.
+</p></answer>
+
+<solution><p>
+None. The given equation is nonsense. The left hand side is
+a number while the right hand side is a vector.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+What geometric conclusions can you draw from
+<m>\va\cdot(\vb\times\vc)=0</m>?
+</p></statement>
+
+<answer><p>
+If <m>\vb</m> and <m>\vc</m> are parallel, then <m>\va\cdot(\vb\times\vc)=0</m> for all <m>\va</m>.
+If <m>\vb</m> and <m>\vc</m> are not parallel, then <m>\va</m> must be of the form
+<m>\al\vb+\be\vc</m> with <m>\al</m> and <m>\be</m> real numbers.
+</p></answer>
+
+<solution><p>
+If <m>\vb</m> and <m>\vc</m> are parallel, then <m>\vb\times\vc=\vZero</m>
+and <m>\va\cdot(\vb\times\vc)=0</m> for all <m>\va</m>.
+If <m>\vb</m> and <m>\vc</m> are not parallel, <m>\va\cdot(\vb\times\vc)=0</m>
+if and only if <m>\va</m> is perpendicular to <m>\vd=\vb\times\vc</m>.
+As we saw in question <xref ref="PRB_Qnine"/>, the set of all vectors perpendicular to
+<m>\vd</m> is the plane consisting of all vectors of the form
+<m>\al\vb+\be\vc</m> with <m>\al</m> and <m>\be</m> real numbers. So <m>\va</m> must
+be of this form.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Consider the three points <m>O=(0,0)</m>, <m>A=(a,0)</m> and <m>B=(b,c)</m>.
+<ol label="a">
+<li>
+Sketch, in a single figure,
+<ul>
+<li>
+the triangle with vertices <m>O</m>, <m>A</m> and <m>B</m>, and
+</li>
+<li>
+the circumscribing circle for the triangle (i.e. the circle that goes
+through all three vertices), and
+</li>
+<li>
+the vectors
+<ul>
+<li>
+<m>\overrightarrow{OA}</m>, from <m>O</m> to <m>A</m>,
+</li>
+<li>
+<m>\overrightarrow{OB}</m>, from <m>O</m> to <m>B</m>,
+</li>
+<li>
+<m>\overrightarrow{OC}</m>, from <m>O</m> to <m>C</m>, where <m>C</m> is the centre of the circumscribing circle.
+</li>
+</ul>
+</li>
+</ul>
+Then add to the sketch and evaluate, from the sketch,
+<ul>
+<li>
+the projection of the vector <m>\overrightarrow{OC}</m> on the vector
+<m>\overrightarrow{OA}</m>, and
+</li>
+<li>
+the projection of the vector <m>\overrightarrow{OC}</m> on the vector
+<m>\overrightarrow{OB}</m>.
+</li>
+</ul>
+</li>
+<li> Determine <m>C</m>.
+</li>
+<li>
+Evaluate, using the formula <xref ref="eqn_proj"/> in the CLP-3 text,
+<ul>
+<li>
+the projection of the vector <m>\overrightarrow{OC}</m> on the vector
+<m>\overrightarrow{OA}</m>, and
+</li>
+<li>
+the projection of the vector <m>\overrightarrow{OC}</m> on the vector
+<m>\overrightarrow{OB}</m>.
+</li>
+</ul>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+(a)
+The three line segments from <m>C</m> to <m>O</m>, from <m>C</m> to <m>A</m> and from <m>C</m> to <m>B</m>
+all have exactly the same length, namely the radius of the circumscribing
+circle.
+</p>
+
+<p>(b)
+Let <m>(\bar x,\bar y)</m> be the coordinates of <m>C</m>.
+Write down the equations that say that <m>(\bar x,\bar y)</m> is
+equidistant from the three vertices <m>O</m>, <m>A</m> and <m>B</m>.
+</p></hint>
+
+<answer><p>
+(a), (c)
+</p>
+<sidebyside width="40%">
+<image source="pfigs/circumA.svg"/>
+</sidebyside>
+<p>
+<m>\text{proj}_{\overrightarrow{\scriptstyle OA}}\,\overrightarrow{OC}
+    =\overrightarrow{OP_A}=\llt a/2,0\rgt</m>
+<m>\text{proj}_{\overrightarrow{\scriptstyle OB}}\,\overrightarrow{OC}
+    =\overrightarrow{OP_A}=\llt b/2,c/2\rgt</m>
+</p>
+
+<p>(b) The centre of the circumscribing circle is <m>(\bar x,\bar y)</m> with
+<m>\bar x=\frac{a}{2}</m> and
+<m> \bar y =\frac{b^2+c^2-ab}{2c}</m>.
+</p></answer>
+
+<solution><p>
+(a) The sketch for part (a) is on the left below.
+To sketch the projections, we dropped perpendiculars
+<ul>
+<li>
+from <m>C</m> to the line from <m>O</m> to <m>A</m>, and
+</li>
+<li>
+from <m>C</m> to the line from <m>O</m> to <m>B</m>.
+</li>
+</ul>
+By definition,
+<ul>
+<li>
+<m>\text{proj}_{\overrightarrow{\scriptstyle OA}}\,\overrightarrow{OC}</m>
+is the vector <m>\overrightarrow{OP_A}</m> from <m>O</m> to the point <m>P_A</m>, where
+the perpendicular from <m>C</m> to the line from <m>O</m> to <m>A</m> hits the line,
+and
+</li>
+<li>
+<m>\text{proj}_{\overrightarrow{\scriptstyle OB}}\,\overrightarrow{OC}</m>
+is the vector <m>\overrightarrow{OP_B}</m> from <m>O</m> to the point <m>P_B</m>, where
+the perpendicular from <m>C</m> to the line from <m>O</m> to <m>B</m> hits the line.
+</li>
+</ul>
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/circumA.svg"/>
+       <image source="pfigs/circum.svg"/>
+</sidebyside>
+<p>
+To evaluate the projections we observe that the three lines from
+<m>C</m> to <m>O</m>, from <m>C</m> to <m>A</m> and from <m>C</m> to <m>B</m> all have exactly the same length
+(namely the radius of the circumscribing circle). Consequently
+(see the figure on the right above),
+<ul>
+<li>
+the triangle <m>OCA</m> is an isoceles triangle, so that <m>P_A</m> is exactly the
+midpoint of the line segement from <m>O</m> to <m>A</m>. That is, <m>P_A</m> is <m>(a/2,0)</m> and
+<me>
+\text{proj}_{\overrightarrow{\scriptstyle OA}}\,\overrightarrow{OC}
+    =\overrightarrow{OP_A}=\llt a/2,0\rgt
+</me>
+</li>
+<li>
+Similarly, the triangle <m>OCB</m> is an isoceles triangle, so that <m>P_B</m> is
+exactly the midpoint of the line segement from <m>O</m> to <m>B</m>. That is <m>P_A</m> is <m>(b/2,c/2)</m> and
+<me>
+\text{proj}_{\overrightarrow{\scriptstyle OB}}\,\overrightarrow{OC}
+    =\overrightarrow{OP_B}=\llt b/2,c/2\rgt
+</me>
+</li>
+</ul>
+</p>
+
+<p>(b)
+Call the centre of the circumscribing circle <m>(\bar x,\bar y)</m>.
+This centre must be equidistant from the three vertices.
+So
+<md>
+<mrow>
+\bar x^2+\bar y^2=(\bar x-a)^2+\bar y^2=(\bar x-b)^2+(\bar y-c)^2
+</mrow>
+</md>
+or, subtracting <m>\bar x^2+\bar y^2</m> from all three expression,
+<md>
+<mrow>
+0=a^2-2a\bar x=b^2-2b\bar x+c^2-2c\bar y
+</mrow>
+</md>
+which implies
+<me>
+\bar x=\frac{a}{2}\qquad\qquad \bar y
+=\frac{b^2+c^2-2b\bar x}{2c}=\frac{b^2+c^2-ab}{2c}
+</me>
+</p>
+
+<p>(c) From part (b), we have
+<md>
+<mrow>
+\overrightarrow{OA}\cdot\overrightarrow{OC}
+&amp;=\llt a,0\rgt\cdot\llt\frac{a}{2}\,,\,\frac{b^2+c^2-ab}{2c}\rgt
+=\frac{a^2}{2}=\frac{1}{2}|\overrightarrow{OA}|^2
+</mrow><mrow>
+\overrightarrow{OB}\cdot\overrightarrow{OC}
+&amp;=\llt b,c\rgt\cdot\llt\frac{a}{2}\,,\,\frac{b^2+c^2-ab}{2c}\rgt
+=\frac{ab}{2}+\frac{b^2+c^2-ab}{2}=\frac{b^2+c^2}{2}
+=\frac{1}{2}|\overrightarrow{OB}|^2
+</mrow>
+</md>
+So, by Equation <xref ref="eqn_proj"/> in the CLP-3 text,
+<md>
+<mrow>
+\text{proj}_{\overrightarrow{\scriptstyle OA}}\,\overrightarrow{OC}
+&amp;=\frac{\overrightarrow{OA}\cdot\overrightarrow{OC}}{|\overrightarrow{OA}|^2}
+           \overrightarrow{OA}
+=\frac{1}{2}\overrightarrow{OA}
+=\llt a/2,0\rgt
+</mrow><mrow>
+\text{proj}_{\overrightarrow{\scriptstyle OB}}\,\overrightarrow{OC}
+&amp;=\frac{\overrightarrow{OB}\cdot\overrightarrow{OC}}{|\overrightarrow{OB}|^2}
+           \overrightarrow{OB}
+=\frac{1}{2}\overrightarrow{OB}
+=\llt b/2,c/2\rgt
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+</exercisegroup>
+
+
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise>
+<statement><p>
+Find the equation of a sphere if one of its diameters has end
+points <m>(2,1,4)</m> and <m>(4,3,10)</m>.
+</p></statement>
+
+<hint><p>
+The centre of the sphere is the midpoint of the diameter.
+</p></hint>
+
+<answer><p>
+<m>(x-3)^2+(y-2)^2+(z-7)^2=11</m>
+</p></answer>
+
+<solution><p>
+The center of the sphere is
+<m>\half\big\{(2,1,4)+(4,3,10)\big\}=(3,2,7)</m>. The diameter (i.e. twice the radius) is <m>|(2,1,4)-(4,3,10)|=|(-2,-2,-6)|=2|(1,1,3)|=2\sqrt{11}</m>.
+The equation of the sphere is
+<me>
+(x-3)^2+(y-2)^2+(z-7)^2=11
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Show that the set of all points <m>P</m> that are twice as far from
+<m>(3,-2,3)</m> as from <m>(3/2,1,0)</m> is a sphere. Find its centre and radius.
+</p></statement>
+
+<answer><p>
+The sphere has radius 3 and is centered on <m>(1,2,-1)</m>.
+</p></answer>
+
+<solution><p>
+Let <m>(x,y,z)</m> be a point in <m>P</m>. The distances from
+<m>(x,y,z)</m> to <m>(3,-2,3)</m> and to <m>(3/2,1,0)</m> are
+<me>
+\sqrt{(x-3)^2+(y+2)^2+(z-3)^2}\quad\text{ and }\quad
+\sqrt{(x-3/2)^2+(y-1)^2+z^2}
+</me>
+respectively. To be in <m>P</m>, <m>(x,y,z)</m> must obey
+<md>
+<mrow>
+\sqrt{(x-3)^2+(y+2)^2+(z-3)^2}&amp;=2\sqrt{(x-3/2)^2+(y-1)^2+z^2}
+</mrow><mrow>
+(x-3)^2+(y+2)^2+(z-3)^2&amp;=4(x-3/2)^2+4(y-1)^2+4z^2
+</mrow><mrow>
+x^2-6x+9+y^2+4y+4+z^2-6z+9&amp;=4x^2-12x+9+4y^2-8y+4+4z^2
+</mrow><mrow>
+3x^2-6 x+3y^2-12y+3z^2+6z-9&amp;=0
+</mrow><mrow>
+x^2-2 x+y^2-4y+z^2+2z-3&amp;=0
+</mrow><mrow>
+(x-1)^2+(y-2)^2+(z+1)^2&amp;=9
+</mrow>
+</md>
+This is a sphere of radius 3 centered on <m>(1,2,-1)</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Use vectors to prove that the line joining the midpoints of two sides
+of a triangle is parallel to the third side  and half its length.
+</p></statement>
+
+<hint><p>
+Draw a sketch.
+Call the vertices of the triangle <m>A</m>, <m>B</m> and <m>C</m> with <m>C</m> being the
+vertex that joins the two sides. Let <m>\va</m> be the vector from <m>C</m> to <m>A</m>
+and <m>\vb</m> be the vector from <m>C</m> to <m>B</m>. Determine, in terms of <m>\va</m> and
+<m>\vb</m>,
+<ul>
+<li>
+the vector from <m>A</m> to <m>B</m>,
+</li>
+<li>
+the two vectors from <m>C</m> to the two midpoints and finally
+</li>
+<li>
+the vector joining the two midpoints.
+</li>
+</ul>
+</p></hint>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+Call the vertices of the triangle <m>A</m>, <m>B</m> and <m>C</m> with <m>C</m> being the
+vertex that joins the two sides. We can always
+choose our coordinate system so that <m>C</m> is at the origin.
+Let <m>\va</m> be the vector from <m>C</m> to <m>A</m>
+and <m>\vb</m> be the vector from <m>C</m> to <m>B</m>.
+</p>
+
+<sidebyside width="">
+  <image source="pfigs/triangleMidPt.svg"/>
+</sidebyside>
+
+<p>
+  <ul>
+<li>
+Then the vector from <m>C</m> to the midpoint of the side from <m>C</m> to <m>A</m> is
+<m>\half\va</m> and
+</li>
+<li>
+the vector from <m>C</m> to the midpoint of the side from <m>C</m> to <m>B</m> is
+<m>\half\vb</m> so that
+</li>
+<li>
+the vector joining the two midpoints is <m>\half\vb-\half\va</m>.
+</li>
+</ul>
+As the vector from <m>A</m> to <m>B</m> is <m>\vb-\va=2\big[\half\vb-\half\va\big]</m>,
+the line joining the midpoints is indeed parallel to the third side
+and half its length.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Compute the areas of the parallelograms determined by the
+following vectors.
+<ol label="a">
+<li>
+<m>\llt -3,1\rgt,\ \llt 4,3\rgt</m>
+</li>
+<li>
+<m>\llt 4,2\rgt,\ \llt 6,8\rgt</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review § <xref ref="sec_GEOparallelogram"/> in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+<ol label="a">
+  <li><m>13</m></li>
+  <li><m>20</m></li>
+</ol>
+</p></answer>
+
+<solution><p> (a)
+By <xref ref="eq_pgram_area"/> in the CLP-3 text, the area is
+<md>
+<mrow>
+\left| \det\left[\begin{matrix}-3&amp;1
+</mrow><mrow> 4&amp;3 \end{matrix}\right] \right|
+  &amp;=\big|-3\times 3-1\times 4\big| = |-13| = 13
+</mrow>
+</md>
+</p>
+
+<p>(b)
+By <xref ref="eq_pgram_area"/> in the CLP-3 text, the area is
+<md>
+<mrow>
+\left|\det\left[\begin{matrix} 4&amp;2
+</mrow><mrow> 6&amp;8 \end{matrix}\right]\right|
+&amp;=\big|4\times 8-2\times 6\big|
+= 20
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2014A</fromexam></title>
+<statement><p>
+Consider the plane <m>W</m>, defined by:
+<me>
+W\ :\ -x + 3y + 3z = 6,\qquad
+</me>
+Find the area of the parallelogram on <m>W</m> defined by
+<m>0 \le x \le 3</m>, <m>0 \le y \le 2</m>.
+</p></statement>
+
+<hint><p>
+Determine the four corners of the parallelogram.
+</p></hint>
+
+<answer><p>
+<m>2\sqrt{19}</m>
+</p></answer>
+
+<solution><p>
+Note that
+<ul>
+<li> the point on <m>W</m> with <m>x=0</m>, <m>y=0</m> obeys
+                         <m>-0+3(0)+3z=6</m> and so has <m>z=2</m>
+</li>
+<li> the point on <m>W</m> with <m>x=0</m>, <m>y=2</m> obeys
+                         <m>-0+3(2)+3z=6</m> and so has <m>z=0</m>
+</li>
+<li> the point on <m>W</m> with <m>x=3</m>, <m>y=0</m> obeys
+                         <m>-3+3(0)+3z=6</m> and so has <m>z=3</m>
+</li>
+<li> the point on <m>W</m> with <m>x=3</m>, <m>y=2</m> obeys
+                         <m>-3+3(2)+3z=6</m> and so has <m>z=1</m>
+</li>
+</ul>
+So the four corners of the parallelogram are
+<m>(0,0,2)</m>, <m>(0,2,0)</m>, <m>(3,0,3)</m> and <m>(3,2,1)</m>. The vectors
+<md>
+<mrow>
+\vd_1&amp;=\llt 0-0 \,,\, 2-0 \,,\, 0-2 \rgt = \llt 0 \,,\, 2 \,,\, -2\rgt
+</mrow><mrow>
+\vd_2&amp;=\llt 3-0 \,,\, 0-0 \,,\, 3-2 \rgt = \llt 3 \,,\, 0 \,,\, 1\rgt
+</mrow>
+</md>
+form two sides of the paralleogram. So the area of the parallelogram is
+<md>
+<mrow>
+\big|\vd_1\times\vd_2\big|
+=\left|\det\left[\begin{matrix}
+                     \hi &amp; \hj &amp; \hk
+</mrow><mrow>
+                     0   &amp;  2  &amp; -2
+</mrow><mrow>
+                     3   &amp;  0  &amp;  1
+                \end{matrix}\right]\right|
+=\left| 2\,\hi - 6\,\hj -6\hk  \right|
+=\sqrt{76}
+=2\sqrt{19}
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Compute the volumes of the parallelepipeds determined by the
+following vectors.
+<ol label="a">
+<li>
+ <m>\llt 4,1,-1\rgt,\ \llt -1,5,2\rgt,\ \llt 1,1,6\rgt</m>
+</li>
+<li>
+  <m>\llt -2,1,2\rgt,\ \llt 3,1,2\rgt,\ \llt 0,2,5\rgt</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review §<xref ref="sec_GEOparallelogram"/> in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+<ol label="a">
+  <li><m>126</m></li>
+  <li><m>5</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+(a)
+By <xref ref="eq_piped_volume"/> in the CLP-3 text, the volume is
+<md>
+<mrow>
+\left| \det\left[\begin{matrix}
+          4&amp;1&amp;-1
+</mrow><mrow>
+         -1&amp;5&amp;2
+</mrow><mrow>
+          1&amp;1&amp;6\end{matrix}\right] \right|
+&amp;=\left| 4\det\left[\begin{matrix}
+          5&amp;2
+</mrow><mrow>
+          1&amp;6 \end{matrix}\right]
+        -1\det\left[\begin{matrix}
+         -1&amp;2
+</mrow><mrow>
+          1&amp;6 \end{matrix}\right]
+        +(-1)\det\left[\begin{matrix}
+         -1&amp;5
+</mrow><mrow>1&amp;1\end{matrix}\right]\right| \\
+&amp;= \big|4(30-2)-1(-6-2)-1(-1-5)\big| = 4\times28+8+6
+</mrow><mrow>
+&amp;=126
+</mrow>
+</md>
+</p>
+
+<p>(b)
+By <xref ref="eq_piped_volume"/> in the CLP-3 text, the volume is
+<md>
+<mrow>
+\left|\det\left[\begin{matrix}
+       -2&amp;1&amp;2
+</mrow><mrow>
+       3&amp;1&amp;2
+</mrow><mrow>
+       0&amp;2&amp;5\end{matrix}\right] \right|
+&amp;=\left|-2\det\left[\begin{matrix}
+          1&amp;2
+</mrow><mrow>
+          2&amp;5\end{matrix}\right]
+        -1\det\left[\begin{matrix}
+          3&amp;2
+</mrow><mrow>
+          0&amp;5\end{matrix}\right]
+       +2\det\left[\begin{matrix}
+         3&amp;1
+</mrow><mrow>
+         0&amp;2\end{matrix}\right] \right|
+</mrow><mrow>
+&amp;=\big|-2(5-4)-1(15-0)+2(6-0)\big| =\big|-2-15+12\big|=\big|-5\big|
+</mrow><mrow>
+&amp;=5
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Compute the dot product of the vectors <m>\va</m> and <m>\vb</m>.
+Find the angle between them.
+<ol label="a">
+<li> <m>\va=\llt 1,2\rgt ,\ \vb=\llt -2,3\rgt </m>
+</li>
+<li> <m>\va=\llt -1,1\rgt ,\ \vb=\llt 1,1\rgt </m>
+</li>
+<li> <m>\va=\llt 1,1\rgt ,\ \vb=\llt 2,2\rgt </m>
+</li>
+<li> <m>\va=\llt 1,2,1\rgt ,\ \vb=\llt -1,1,1\rgt </m>
+</li>
+<li> <m>\va=\llt -1,2,3\rgt ,\ \vb=\llt 3,0,1\rgt </m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<md alignment="alignat">
+<mrow>
+\va\cdot\vb&amp;=4\qquad &amp;
+\theta &amp;= 60.25^\circ\hskip4in
+\tag{a}
+</mrow><mrow>
+\va\cdot\vb&amp;=0 &amp;
+\theta &amp;= 90^\circ
+\tag{b}
+</mrow><mrow>
+\va\cdot\vb&amp;=4 &amp;
+\theta &amp;= 0^\circ
+\tag{c}
+</mrow><mrow>
+\va\cdot\vb&amp;=2 &amp;
+\theta &amp;= 61.87^\circ
+\tag{d}
+</mrow><mrow>
+\va\cdot\vb&amp;=0 &amp;
+\theta &amp;= 90^\circ
+\tag{e}
+</mrow>
+</md>
+</p></answer>
+
+<solution><p>
+<md>
+<mrow>
+\va\cdot\vb&amp;=\llt 1,2\rgt\cdot\llt -2,3\rgt=4 &amp;
+\cos\theta&amp;=\frac{4}{\sqrt{5}\sqrt{13}}=.4961 &amp;
+\theta &amp;= 60.25^\circ
+\tag{a}
+</mrow><mrow>
+\va\cdot\vb&amp;=\llt -1,1\rgt\cdot\llt 1,1\rgt=0 &amp;
+\cos\theta&amp;=\frac{0}{\sqrt{2}\sqrt{2}}=0 &amp;
+\theta &amp;= 90^\circ
+\tag{b}
+</mrow><mrow>
+\va\cdot\vb&amp;=\llt 1,1\rgt\cdot\llt 2,2\rgt=4 &amp;
+\cos\theta&amp;=\frac{4}{\sqrt{2}\sqrt{8}}=1 &amp;
+\theta &amp;= 0^\circ
+\tag{c}
+</mrow><mrow>
+\va\cdot\vb&amp;=\llt 1,2,1\rgt\cdot\llt -1,1,1\rgt=2 &amp;
+\cos\theta&amp;=\frac{2}{\sqrt{6}\sqrt{3}}=.4714 &amp;
+\theta &amp;= 61.87^\circ
+\tag{d}
+</mrow><mrow>
+\va\cdot\vb&amp;=\llt -1,2,3\rgt\cdot\llt 3,0,1\rgt=0 &amp;
+\cos\theta&amp;=\frac{0}{\sqrt{14}\sqrt{10}}=0 &amp;
+\theta &amp;= 90^\circ
+\tag{e}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Determine the angle between the vectors <m>\va</m> and <m>\vb</m> if
+<ol label="a">
+<li>
+   <m>\va=\llt 1,2\rgt,\ \vb=\llt 3,4\rgt</m>
+</li>
+<li>
+   <m>\va=\llt 2,1,4\rgt,\ \vb=\llt 4,-2,1\rgt</m>
+</li>
+<li>
+  <m>\va=\llt 1,-2,1\rgt,\ \vb=\llt 3,1,0\rgt</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol label="a">
+  <li><m>10.3^\circ</m></li>
+  <li><m>61.6^\circ</m></li>
+  <li><m>82.6^\circ</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+By property 6 of Theorem <xref ref="thm_dotPppties"/> in the CLP-3 text,
+<md alignment="alignat">
+<mrow>
+&amp;\cos\theta=\frac{\va\cdot\vb}{|\va|\,|\vb|}
+        =\frac{1\times 3+2\times 4}{\sqrt{1+4}\sqrt{9+16}}
+        =\frac{11}{5\sqrt{5}}= .9839
+\qquad &amp;&amp;\implies\quad \theta=10.3^\circ
+\tag{a}
+</mrow><mrow>
+&amp;\cos\theta=\frac{\va\cdot\vb}{|\va|\,|\vb|}
+        =\frac{2\times 4-1\times 2+4\times 1}{\sqrt{4+1+16}\sqrt{16+4+1}}
+        =\frac{10}{21}= .4762
+\qquad &amp;&amp;\implies\quad \theta=61.6^\circ
+\tag{b}
+</mrow><mrow>
+ &amp;\cos\theta=\frac{\va\cdot\vb}{|\va|\,|\vb|}
+        =\frac{1\times 3-2\times 1+1\times 0}{\sqrt{1+4+1}\sqrt{9+1}}
+        =\frac{1}{\sqrt{60}}= .1291
+\qquad &amp;&amp;\implies\quad \theta=82.6^\circ
+\tag{c}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Determine all values of <m>y</m> for which the given vectors are perpendicular.
+<ol label="a">
+<li>
+<m>\llt 2,4\rgt ,\ \llt 2,y\rgt </m>
+</li>
+<li>
+<m>\llt 4,-1\rgt ,\ \llt y,y^2\rgt </m>
+</li>
+<li>
+<m>\llt 3,1,1\rgt ,\ \llt 2,5y,y^2\rgt </m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol label="a">
+  <li><m>-1</m></li>
+  <li><m>0,4</m></li>
+  <li><m>-2,-3</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+<md alignment="alignat">
+<mrow>
+&amp;\llt 2,4\rgt \cdot\llt 2,y\rgt =2\times2+4\times y=4+4y=0
+   &amp;&amp;\ \iff\  y=-1
+\tag{a}
+</mrow><mrow>
+&amp;\llt 4,-1\rgt \cdot\llt y,y^2\rgt =4\times y-1\times y^2=4y-y^2=0
+   &amp;&amp;\ \iff\  y=0,4
+\tag{b}
+</mrow><mrow>
+&amp;\llt 3,1,1\rgt \cdot\llt 2,5y,y^2\rgt
+  =6+5y+y^2=0
+   &amp;&amp;\ \iff\  y=-2,-3
+\tag{c}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>\vu=-2\hi+5\hj</m> and <m>\vv=\al\hi-2\hj</m>. Find <m>\al</m> so that
+<ol label="a">
+<li>
+   <m>\vu\perp\vv</m>
+</li>
+<li>
+   <m>\vu \| \vv</m>
+</li>
+<li>
+   The angle between <m>\vu</m> and <m>\vv</m> is <m>60^\circ</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol>
+  <li><m>-5</m></li>
+  <li><m>0.8</m></li>
+  <li>none</li>
+</ol>
+</p></answer>
+
+<solution><p>
+(a)
+   We want <m>0=\vu\cdot\vv=-2\al-10</m> or <m>\al=-5</m>.
+</p>
+
+<p>(b)
+   We want <m>-2/\al=5/(-2)</m> or <m>\al=0.8</m>.
+</p>
+
+<p>(c)
+   We want <m>\vu\cdot\vv=-2\al-10
+             =|\vu|\,|\vv|\,\cos 60^\circ
+             =\sqrt{29}\,\sqrt{\al^2+4}\,\half</m>. Squaring both sides gives
+<md alignment="alignat">
+<mrow>
+&amp; &amp; 4\al^2+40\al+100&amp;=\frac{29}{4}(\al^2+4)
+</mrow><mrow>
+&amp;\implies\quad &amp;  13\al^2-160\al-284&amp;=0
+</mrow><mrow>
+&amp;\implies\quad &amp; \al &amp;=\frac{160\pm\sqrt{160^2+4\times13\times284}}{26}
+\approx 13.88\text{ or }-1.574
+</mrow>
+</md>
+Both of these <m>\al</m>'s give <m>\vu\cdot\vv \lt 0</m> so no <m>\al</m> works.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Define <m>\va=\llt 1,2,3\rgt</m> and <m>\vb=\llt 4,10,6\rgt</m>.
+<ol label="a">
+<li>
+   Find the component of <m>\vb</m> in the direction <m>\va</m>.
+</li>
+<li>
+   Find the projection of <m>\vb</m> on <m>\va</m>.
+</li>
+<li>
+  Find the projection of <m>\vb</m> perpendicular to <m>\va</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol label="a">
+  <li><m>\frac{42}{\sqrt{14}}</m></li>
+  <li><m>\llt 3,6,9\rgt</m></li>
+  <li><m>\llt 1,4,-3\rgt</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+(a) The component of <m>\vb</m> in the direction <m>\va</m> is
+<me>
+\vb\cdot\frac{\va}{|\va|}
+=\frac{1\times 4+2\times 10+3\times 6}{\sqrt{1+4+9}}
+= \frac{42}{\sqrt{14}}
+</me>
+</p>
+
+<p>(b) The projection of <m>\vb</m> on <m>\va</m> is a vector of length
+<m>42/\sqrt{14}</m> in direction <m>\va/|\va|</m>, namely
+<m>\frac{42}{14}\llt 1,2,3\rgt=\llt 3,6,9\rgt</m>.
+</p>
+
+<p>(c) The projection of <m>\vb</m> perpendicular to <m>\va</m>
+is <m>\vb</m> minus its projection on <m>\va</m>, namely
+<m>\llt 4,10,6\rgt-\llt 3,6,9\rgt=\llt 1,4,-3\rgt</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Compute <m>\llt 1,2,3\rgt\times\llt 4,5,6\rgt</m>.
+</p></statement>
+
+<answer><p>
+<m>-3\hi+6\hj-3\hk</m>
+</p></answer>
+
+<solution><p>
+<md>
+<mrow>
+\llt 1,2,3\rgt\times\llt 4,5,6\rgt
+ &amp;=\det\left[\begin{matrix}\hi&amp;\hj &amp;\hk
+</mrow><mrow>
+                     1&amp;2&amp;3
+</mrow><mrow>
+                     4&amp;5&amp;6\end{matrix}\right]
+=\hi\,(2\times 6-3\times 5)
+-\hj\,(1\times 6-3\times 4)
++\hk\,(1\times 5-2\times 4)
+</mrow><mrow>
+&amp;=-3\,\hi+6\,\hj-3\,\hk
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Calculate the following cross products.
+<ol label="a">
+<li> <m>\llt 1,-5,2\rgt \times\llt -2,1,5\rgt </m>
+</li>
+<li> <m>\llt 2,-3,-5\rgt \times\llt 4,-2,7\rgt </m>
+</li>
+<li> <m>\llt -1,0,1\rgt \times\llt 0,4,5\rgt </m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol label="a">
+<li><m>\llt -27,-9,-9\rgt</m></li>
+<li><m>\llt -31,-34,8\rgt</m></li>
+<li><m>\llt -4,5,-4\rgt</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+<md>
+<mrow>
+\det\left[\begin{matrix}\hi&amp;\hj&amp;\hk\cr1&amp;-5&amp;2\cr-2&amp;1&amp;5\end{matrix}\right]
+&amp;=\hi\det\left[\begin{matrix}-5&amp;2\cr1&amp;5\end{matrix}\right]
+-\hj\det\left[\begin{matrix}1&amp;2\cr-2&amp;5\end{matrix}\right]
++\hk\det\left[\begin{matrix}1&amp;-5\cr-2&amp;1\end{matrix}\right]\tag{a}
+</mrow>
+<mrow>
+&amp;=\hi(-25-2)-\hj(5+4)+\hk(1-10)
+= \llt -27,-9,-9\rgt \notag
+</mrow>
+<mrow>
+\det\left[\begin{matrix}\hi&amp;\hj&amp;\hk\cr2&amp;-3&amp;-5\cr4&amp;-2&amp;7\end{matrix}\right]
+&amp;=\hi\det\left[\begin{matrix}-3&amp;-5\cr-2&amp;7\end{matrix}\right]
+-\hj\det\left[\begin{matrix}2&amp;-5\cr4&amp;7\end{matrix}\right]
++\hk\det\left[\begin{matrix}2&amp;-3\cr4&amp;-2\end{matrix}\right]\tag{b}
+</mrow>
+<mrow>
+&amp;=\hi(-21-10)-\hj(14+20)+\hk(-4+12)
+= \llt -31,-34,8\rgt \notag
+</mrow>
+<mrow>
+\det\left[\begin{matrix}\hi&amp;\hj&amp;\hk\cr-1&amp;0&amp;1\cr0&amp;4&amp;5\end{matrix}\right]
+&amp;=\hi\det\left[\begin{matrix}0&amp;1\cr4&amp;5\end{matrix}\right]
+-\hj\det\left[\begin{matrix}-1&amp;1\cr0&amp;5\end{matrix}\right]
++\hk\det\left[\begin{matrix}-1&amp;0\cr0&amp;4\end{matrix}\right] \tag{c}
+</mrow>
+<mrow>
+&amp;=\hi(0-4)-\hj(-5-0)+\hk(-4-0)
+= \llt -4,5,-4\rgt \notag
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>\vp=\llt -1,4,2\rgt ,\ \vq=\llt 3,1,-1\rgt ,\ \vr=\llt 2,-3,-1\rgt </m>.
+Check, by direct computation, that
+<ol label="a">
+<li> <m>\vp\times\vp=\vZero</m>
+</li>
+<li> <m>\vp\times\vq=-\vq\times\vp</m>
+</li>
+<li> <m>\vp\times(3\vr)=3(\vp\times\vr)</m>
+</li>
+<li> <m>\vp\times(\vq+\vr) = \vp\times\vq+\vp\times\vr</m>
+</li>
+<li> <m>\vp\times(\vq\times\vr) \ne (\vp\times\vq)\times\vr</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) See the solution.
+</p>
+
+<p>(b) <m>\vp\times\vq = -\vq\times\vp = \llt -6,5,-13\rgt</m>
+</p>
+
+<p>(c) <m>\vp \times (3\vr) = 3(\vp\times\vr) =  \llt 6,9,-15\rgt</m>
+</p>
+
+<p>(d) <m>\vp\times(\vq+\vr) = \vp\times\vq+\vp\times\vr =  \llt -4,8,-18\rgt</m>
+</p>
+
+<p>(e) <m>\vp\times(\vq\times\vr) = \llt -46,-19,15\rgt</m>,
+    <m>(\vp\times\vq)\times\vr = \llt -44,-32,8\rgt</m>
+</p>
+
+</answer>
+
+<solution><p>
+<md>
+<mrow>
+\vp\times\vp
+&amp;= \det\left[ \begin{matrix}\hi&amp;\hj&amp;\hk\cr-1&amp;4&amp;2\cr-1&amp;4&amp;2\end{matrix}\right]
+=\hi(4\times2-2\times4)-\hj(2-(-2))
++\hk(-4-(-4)) \tag{a}
+</mrow>
+<mrow>
+&amp;= \llt 0,0,0\rgt \notag
+</mrow>
+<mrow>
+\vp\times\vq
+&amp;= \det\left[ \begin{matrix}\hi&amp;\hj&amp;\hk\cr-1&amp;4&amp;2\cr3&amp;1&amp;-1\end{matrix}\right]
+=\hi(-4-2)-\hj(1-6)
++\hk(-1-12)
+= \llt -6,5,-13\rgt \tag{b}
+</mrow>
+<mrow>
+\vq\times\vp
+&amp;= \det\left[ \begin{matrix}\hi&amp;\hj&amp;\hk\cr3&amp;1&amp;-1\cr-1&amp;4&amp;2\end{matrix}\right]
+=\hi(2+4)-\hj(6-1)
++\hk(12+1)
+= \llt 6,-5,13\rgt \notag
+</mrow>
+<mrow>
+\vp\!\times\!(3\vr)
+&amp;= \det\left[ \begin{matrix}\hi&amp;\hj&amp;\hk\cr-1&amp;4&amp;2\cr6&amp;-9&amp;-3\end{matrix}\right]
+=\hi(-12+18)-\hj(3-12)
++\hk(9-24)
+= \llt 6,9,-15\rgt \tag{c}
+</mrow><mrow>
+3(\vp\times\vr)
+&amp;= 3\det\left[ \begin{matrix}\hi&amp;\hj&amp;\hk\cr-1&amp;4&amp;2\cr2&amp;-3&amp;-1\end{matrix}\right]
+=3\Big(\hi(-4+6)-\hj(1-4)
++\hk(3-8) \Big)
+= \llt 6,9,-15\rgt \notag
+</mrow>
+</md>
+(d) As <m>\vq+\vr=\llt 5,-2,-2\rgt </m>
+<md>
+<mrow>
+\vp\times(\vq+\vr)
+= \det\left[\begin{matrix}\hi&amp;\hj&amp;\hk\cr-1&amp;4&amp;2\cr5&amp;-2&amp;-2\end{matrix}\right]
+=\hi(-8+4)-\hj(2-10)
++\hk(2-20)
+=  \llt -4,8,-18\rgt
+</mrow>
+</md>
+Using the values of <m>\vp\times\vq</m> and <m>3(\vp\times\vr)</m> computed
+in parts (b) and (c)
+<me>
+\vp\times\vq+\vp\times\vr=\llt -6,5,-13\rgt +\frac{1}{3}\llt 6,9,-15\rgt
+ = \llt -4,8,-18\rgt
+</me>
+<md>
+<mrow>
+\vq\times\vr
+&amp;= \det\left[\begin{matrix}\hi&amp;\hj&amp;\hk\cr3&amp;1&amp;-1\cr2&amp;-3&amp;-1\end{matrix}\right]
+=\hi(-1-3)-\hj(-3+2)
++\hk(-9-2)
+= \llt -4,1,-11\rgt \tag{e}
+</mrow>
+<mrow>
+\vp\times(\vq\times\vr)
+&amp;= \det\left[\begin{matrix}\hi&amp;\hj&amp;\hk\cr-1&amp;4&amp;2\cr-4&amp;1&amp;-11\end{matrix}\right]
+=\hi(-44-2)-\hj(11+8)
++\hk(-1+16)
+= \llt -46,-19,15\rgt \notag
+</mrow>
+<mrow>
+(\vp\times\vq)\times\vr
+&amp;= \det\left[\begin{matrix}\hi&amp;\hj&amp;\hk\cr-6&amp;5&amp;-13\cr2&amp;-3&amp;-1\end{matrix}\right]
+=\hi(-5-39)-\hj(6+26)
++\hk(18-10)
+= \llt -44,-32,8\rgt \notag
+</mrow>
+</md>
+</p>
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Calculate the area of the triangle with vertices <m>(0,0,0)</m>,
+<m>(1,2,3)</m> and <m>(3,2,1)</m>.
+</p></statement>
+
+<answer><p>
+<m>2\sqrt{6}</m>
+</p></answer>
+
+<solution><p>
+Denote by <m>\theta</m> the angle between the two vectors
+<m>\va=\llt 1,2,3\rgt</m> and <m>\vb=\llt 3,2,1\rgt</m>. The area of the triangle is one
+half times the length, <m>|\va|</m>, of its base times its height
+<m>h=|\vb|\sin\theta</m>.
+</p>
+<sidebyside width="">
+  <image source="pfigs/sec_1_2_triangle.svg"/>
+</sidebyside>
+
+<p>
+Thus the area of the triangle is  <m>\half|\va|\,|\vb|\,\sin\theta</m>.
+By property 2 of the cross product in Theorem <xref ref="thm_crossPppties"/>
+of the CLP-3 text,
+ <m>|\va\times\vb|=|\va|\,|\vb|\,\sin\theta</m>. So
+<md>
+<mrow>
+\text{area} &amp;= \half|\va\times\vb|
+=\half|\llt 1,2,3\rgt\times\llt 3,2,1\rgt|
+</mrow><mrow>
+&amp;=\half | \hi\,(2-6)-\hj\,(1-9) +\hk\,(2-6)|
+</mrow><mrow>
+&amp;=\half\sqrt{16+64+16}
+</mrow><mrow>
+&amp;=2\sqrt{6}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2003D</fromexam></title>
+<statement><p>
+ A particle <m>P</m> of unit mass whose position in space at time
+<m>t</m> is <m>\vr(t)</m> has angular momentum <m>L(t)=\vr(t)\times\vr'(t)</m>.
+If <m>\vr'(t)=\rho(t)\vr(t)</m> for a scalar function <m>\rho</m>, show that
+<m>L</m> is constant, i.e. does not change with time. Here <m>'</m> denotes
+<m>\diff{}{t}</m>.
+</p></statement>
+
+<hint><p>
+Evaluate <m>\diff{L}{t}</m> by differentiating <m>\vr(t)\times\vr'(t)</m>.
+</p></hint>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+The derivative of <m>L</m> is
+<md>
+<mrow>
+\diff{L}{t}=\diff{}{t}\big(\vr(t)\times\vr'(t)\big)
+=\vr'(t)\times\vr'(t)+\vr(t)\times\vr'(t)
+=\vr'(t)\times\vr'(t)+\vr(t)\times\big(\rho(t)\vr(t)\big)
+</mrow>
+</md>
+Both terms vanish because the cross product of any two parallel vectors
+is zero. So <m>\diff{L}{t}=0</m> and <m>L(t)</m> is independent of <m>t</m>.
+</p></solution>
+</exercise>
+</exercisegroup>
+
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise>
+<statement><p>
+Show that the diagonals of a parallelogram bisect each other.
+</p></statement>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+The parallelogram determined by the vectors <m>\va</m> and <m>\vb</m>
+has vertices <m>\vZero,\ \va,\ \vb</m> and <m>\va+\vb</m>.
+As <m>t</m> varies from <m>0</m> to <m>1</m>, <m>t(\va+\vb)</m> traverses the
+diagonal from <m>\vZero</m> to <m>\va+\vb</m>.
+As <m>s</m> varies from <m>0</m> to <m>1</m>, <m>\va+s(\vb-\va)</m> traverses the
+diagonal from <m>\va</m> to <m>\vb</m>. These two straight lines meet
+when <m>s</m> and <m>t</m> are such that
+<me>
+t(\va+\vb)=\va+s(\vb-\va)
+</me>
+or
+<me>
+(t+s-1)\va=(s-t)\vb
+</me>
+Assuming that <m>\va</m> and <m>\vb</m> are not parallel (i.e. the parallelogram
+has not degenerated to a line segment), this is the case only
+when <m>t+s-1=0</m> and <m>s-t=0</m>. That is, <m>s=t=\half</m>. So the two lines
+meet at their midpoints.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Consider a cube such that each side has length <m>s</m>. Name,
+in order, the four vertices on the bottom of the cube <m>A, B, C, D</m> and the
+corresponding four vertices on the top of the cube <m>A', B', C', D'</m>.
+<ol label="a">
+<li>
+Show that all edges of the tetrahedron <m>A'C'BD</m> have the same length.
+</li>
+<li>
+Let <m>E</m> be the center of the cube. Find the angle between <m>EA</m> and <m>EC</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol label="a">
+<li>All <m>6</m> edges have length <m>\sqrt{2}s</m>.</li>
+<li><m>109.5^\circ</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+We may choose our coordinate axes so that <m>A=(0,0,0)</m>,  <m>B=(s,0,0)</m>,
+<m>C=(s,s,0)</m>, <m>D=(0,s,0)</m> and <m>A'=(0,0,s)</m>, <m>B'=(s,0,s)</m>,
+<m>C'=(s,s,s)</m>, <m>D'=(0,s,s)</m>.
+</p>
+
+<p>(a) Then
+<md alignment="alignat">
+<mrow>
+|A'C'|&amp;=\big|\llt s,s,s\rgt -\llt 0,0,s\rgt \big|
+      &amp;&amp;=\big|\llt s,s,0\rgt \big|&amp;=\sqrt{2}\,s
+</mrow><mrow>
+|A'B|&amp;=\big|\llt s,0,0\rgt -\llt 0,0,s\rgt \big|
+     &amp;&amp;=\big|\llt s,0,-s\rgt \big|&amp;=\sqrt{2}\,s
+</mrow><mrow>
+|A'D|&amp;=\big|\llt 0,s,0\rgt -\llt 0,0,s\rgt \big|
+     &amp;&amp;=\big|\llt 0,s,-s\rgt \big|&amp;=\sqrt{2}\,s
+</mrow><mrow>
+|C'B|&amp;=\big|\llt s,0,0\rgt -\llt s,s,s\rgt \big|
+     &amp;&amp;=\big|\llt 0,-s,-s\rgt \big|&amp;=\sqrt{2}\,s
+</mrow><mrow>
+|C'D|&amp;=\big|\llt 0,s,0\rgt -\llt s,s,s\rgt \big|
+     &amp;&amp;=\big|\llt -s,0,-s\rgt \big|&amp;=\sqrt{2}\,s
+</mrow><mrow>
+|BD|&amp;=\big|\llt 0,s,0\rgt -\llt s,0,0\rgt \big|
+    &amp;&amp;=\big|\llt -s,s,0\rgt \big|&amp;=\sqrt{2}\,s
+</mrow>
+</md>
+</p>
+
+<p>(b) <m>E=\half(s,s,s)</m> so that <m>EA=\llt 0,0,0\rgt -\half\llt s,s,s\rgt
+      =-\half\llt s,s,s\rgt </m> and
+<m>EC=\llt s,s,0\rgt -\half\llt s,s,s\rgt =\half\llt s,s,-s\rgt </m>.
+<me>
+\cos\theta =\frac{-\llt s,s,s\rgt \cdot\llt s,s,-s\rgt}
+                 {|\llt s,s,s\rgt |\,|\llt s,s,-s\rgt |}
+        =\frac{-s^2}{3s^2}
+        =-\frac{1}{3}
+\qquad \implies\quad \theta=109.5^\circ
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the angle between the diagonal of a cube and the diagonal
+of one of its faces.
+</p></statement>
+
+<answer><p>
+<m>35.26^\circ</m> or <m>90^\circ</m> or <m>144.74^\circ</m>
+</p></answer>
+
+<solution><p>
+Suppose that the cube has height, length and width <m>s</m>.
+We may choose our coordinate axes so that the vertices
+of the cube are at <m>(0,0,0)</m>, <m>(s,0,0)</m>, <m>(0,s,0)</m>, <m>(0,0,s)</m>,
+<m>(s,s,0)</m>, <m>(0,s,s)</m>, <m>(s,0,s)</m> and <m>(s,s,s)</m>.
+</p>
+
+<p>We'll start with a couple of examples. The diagonal from <m>(0,0,0)</m>
+to <m>(s,s,s)</m> is <m>\llt s,s,s\rgt</m>. One face of the cube has vertices <m>(0,0,0)</m>,
+<m>(s,0,0)</m>, <m>(0,s,0)</m> and <m>(s,s,0)</m>. One diagonal of this face runs from
+<m>(0,0,0)</m> to <m>(s,s,0)</m> and hence is <m>\llt s,s,0\rgt</m>. The angle between
+<m>\llt s,s,s\rgt</m> and <m>\llt s,s,0\rgt</m> is
+<md>
+<mrow>
+\arccos\left(\frac{\llt s,s,s\rgt\cdot\llt s,s,0\rgt}
+                    {|\llt s,s,s\rgt|\,|\llt s,s,0\rgt|}\right)
+=\arccos\left(\frac{2s^2}{\sqrt{3}s\,\sqrt{2}s}\right)
+=\arccos\left(\frac{2}{\sqrt{6}}\right)\approx 35.26^\circ
+</mrow>
+</md>
+A second diagonal for the face with vertices  <m>(0,0,0)</m>,
+<m>(s,0,0)</m>, <m>(0,s,0)</m> and <m>(s,s,0)</m> is that running from
+<m>(s,0,0)</m> to <m>(0,s,0)</m>. This diagonal is <m>\llt -s,s,0\rgt</m>. The angle between
+<m>\llt s,s,s\rgt</m> and <m>\llt -s,s,0\rgt</m> is
+<md>
+<mrow>
+\arccos\left(\frac{\llt s,s,s\rgt\cdot\llt -s,s,0\rgt}
+               {|\llt s,s,s\rgt|\,|\llt -s,s,0\rgt|}\right)
+=\arccos\left(\frac{0}{\sqrt{3}s\,\sqrt{2}s}\right)
+=\arccos(0)=90^\circ
+</mrow>
+</md>
+</p>
+
+<p>Now we'll consider the general case.
+Note that every component of every vertex of the cube is either <m>0</m> or
+<m>s</m>. In general, two vertices of the cube are at
+opposite ends of a diagonal of the cube if all three components of the
+two vertices are different. For example, if one end of the diagonal is
+<m>(s,0,s)</m>, the other end is <m>(0,s,0)</m>. The diagonals of the cube are all
+of the form <m>\llt \pm s,\pm s,\pm s\rgt</m>. All of these diagonals are of length <m>\sqrt{3}s</m>.
+Two vertices are on the same face of the cube if one of their components
+agree. They are on opposite ends of a diagonal for the face if their other
+two components differ. For example <m>(0,s,s)</m> and <m>(s,0,s)</m> are both on
+the face with <m>z=s</m>.  Because the <m>x</m> components <m>0,\ s</m> are different
+and the <m>y</m> components <m>s,\ 0</m> are different, <m>(0,s,s)</m> and <m>(s,0,s)</m>
+are the ends of a diagonal of the face with <m>z=s</m>. The diagonals of the
+faces with <m>z=0</m> or <m>z=s</m> are <m>\llt \pm s,\pm s,0\rgt</m>. The diagonals of the
+faces with <m>y=0</m> or <m>y=s</m> are <m>\llt \pm s,0, \pm s\rgt</m>. The diagonals of the
+faces with <m>x=0</m> or <m>x=s</m> are <m>\llt 0,\pm s,\pm s\rgt</m>. All of these diagonals
+have length <m>\sqrt{2}s</m>. The dot product of one the cube diagonals
+<m>\llt \pm s,\pm s,\pm s\rgt</m> with one of the face diagonals  <m>\llt \pm s,\pm s,0\rgt</m>,
+ <m>\llt \pm s,0, \pm s\rgt</m>, <m>\llt 0,\pm s,\pm s\rgt</m> is of the form <m>\pm s^2\pm s^2+0</m>
+and hence must be either <m>2s^2</m> or <m>0</m> or <m>-2s^2</m>. In general, the angle
+between a cube diagonal and a face diagonal is
+<md>
+<mrow>
+\arccos\left(\frac{2s^2 \text{ or } 0 \text{ or } -2s^2}{\sqrt{3}s\,\sqrt{2}s}\right)
+=\arccos\left(\frac{2 \text{ or } 0 \text{ or } or -2}{\sqrt{6}}\right)\approx
+5.26^\circ \text{ or } 90^\circ \text{ or } 144.74^\circ.
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Consider a skier who is sliding without friction on the
+hill <m>y=h(x)</m> in a two dimensional world. The skier is subject to two
+forces. One is gravity. The other acts perpendicularly to the hill. The second force automatically adjusts its magnitude so as to prevent the skier from burrowing into the hill. Suppose that the skier became
+airborne at some <m>(x_0,y_0)</m> with <m>y_0=h(x_0)</m>. How fast was the skier going?
+</p>
+
+</statement>
+
+<answer><p>
+<m>\sqrt{1+h'\big(x_0\big)^2}\sqrt{-g/h'\big(x_0\big)}</m>
+</p></answer>
+
+<solution><p>
+Denote by <m>\big(x(t),y(t)\big)</m> the position of the skier at time <m>t</m>. As long as the skier remains on the surface of the hill
+<md>
+<mrow>
+y(t)&amp;=h\big(x(t)\big)
+</mrow><mrow>
+\implies y'(t)&amp;=h'\big(x(t)\big)\,x'(t)
+</mrow><mrow>
+\implies y'(t)&amp;=h'\big(x(t)\big)\, x'(t)^2+h'\big(x(t)\big)\,x'(t)
+</mrow>
+</md>
+So the velocity and acceleration vectors of the skier are
+<md>
+<mrow>
+\vv(t)&amp;=\llt 1,h'\big(x(t)\big)\rgt x'(t)
+</mrow><mrow>
+\va(t)&amp;=\llt 1,h'\big(x(t)\big)\rgt x'(t)
++\llt 0,h'\big(x(t)\big)\rgt x'(t)^2
+</mrow>
+</md>
+The skier is subject to two forces. One is gravity. The other
+acts perpendicularly to the hill and has a magnitude such that the skier
+remains on the surface of the hill. From the velocity vector of the
+skier (which remain tangential to the hill as long as the skier
+remains of the surface of the hill),we see that one vector normal to
+the hill at <m>\big(x(t),y(t)\big)</m> is
+<me>
+\vn(t)=\llt-h'\big(x(t)\big),1\rgt
+</me>
+This vector is not a unit  vector, but that's ok. By Newton's law
+of motion
+<me>
+m\va=-mg\,\hj+p(t)\,\vn(t)
+</me>
+for some function <m>p(t)</m>.
+Dot both sides of this equation with <m>\vn(t)</m>.
+<me>
+m\va(t)\cdot\vn(t)=-mg\hj\cdot\vn(t)+p(t)|\vn(t)|^2
+</me>
+Substituting in
+<md>
+<mrow>
+mh'\big(x(t)\big)\,x'(t)^2&amp;=-mg+p(t)\left[1+h'\big(x(t)\big)^2\right]
+</mrow><mrow>
+\implies p(t)\left[1+h'\big(x(t)\big)^2\right]
+&amp;=m\Big(g+h'\big(x(t)\big)\,x'(t)^2\Big)
+</mrow>
+</md>
+As long as <m>p(t)\ge 0</m>, the hill is pushing up in order to keep the skier
+on the surface. When <m>p(t)</m> becomes negative, the hill has to pull on the
+skier in order to keep her on the surface. But the hill can't pull,
+so the skier becomes airborne instead. This happens when
+<me>
+g+h'\big(x(t)\big)x'(t)^2=0
+</me>
+That is when <m>x'(t)=\sqrt{-g/h'\big(x(t)\big)}</m>. At this time <m>x(t)=x_0</m>, <m>y(t)=y_0</m> and the speed of the skier is
+<me>
+\sqrt{x'(t)^2+y'(t)^2}
+=\sqrt{1+h'\big(x_0\big)^2}\sqrt{-g/h'\big(x_0\big)}
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+A marble is placed on the plane <m>ax+by+cz=d</m>. The coordinate
+system has been chosen so that the positive <m>z</m>-axis points straight up.
+The coefficient <m>c</m> is nonzero and the coefficients <m>a</m> and <m>b</m> are not
+both zero.
+In which direction does the marble roll?
+Why were the conditions <q><m>c\ne 0</m></q> and <q><m>a,b</m> not both zero</q> imposed?
+</p></statement>
+
+<answer><p>
+The marble rolls in the directionn<m>\llt ac,bc,-a^2-b^2\rgt</m>.
+If <m>c=0</m>, the plane is vertical. In this case, the marble
+doesn't roll - it falls straight down. If <m>a=b=0</m>, the plane is horizontal.
+ In this case, the marble doesn't roll <mdash/> it remains stationary.
+</p></answer>
+
+<solution><p>
+The marble is subject to two forces. The first, gravity, is
+<m>-mg\,\hk</m> with <m>m</m> being the mass of the marble. The second is the normal
+force imposed by the plane. This forces acts in a direction perpendicular
+to the plane. One vector normal to the plane is <m>a\,\hi+b\,\hj+c\,\hk</m>.
+So the force due to the plane is <m>T\llt a,b,c\rgt</m> with <m>T</m> determined  by the
+property that the net force perpendicular to the plane must be exactly
+zero, so that the marble remains on the plane, neither digging into nor
+flying off of it. The projection of the gravitational force onto the normal
+vector <m>\llt a,b,c\rgt</m> is
+<me>
+\frac{-mg\llt 0,0,1\rgt\cdot\llt a,b,c\rgt}{|\llt a,b,c\rgt|^2}\llt a,b,c\rgt
+=\frac{-mgc}{a^2+b^2+c^2}\llt a,b,c\rgt
+</me>
+The condition that determines <m>T</m> is thus
+<me>
+T\llt a,b,c\rgt+\frac{-mgc}{a^2+b^2+c^2}\llt a,b,c\rgt =0
+\implies T=\frac{mgc}{a^2+b^2+c^2}
+</me>
+The total force on the marble is then (ignoring friction - which will
+have no effect on the direction of motion)
+<md>
+<mrow>
+T\llt a,b,c\rgt-mg\llt 0,0,1\rgt&amp;=\frac{mgc}{a^2+b^2+c^2}\llt a,b,c\rgt-mg\llt 0,0,1\rgt\cr
+&amp;=mg\frac{c\llt a,b,c\rgt-\llt 0,0,a^2+b^2+c^2\rgt}{a^2+b^2+c^2}\cr
+&amp;=mg\frac{\llt ac,bc,-a^2-b^2\rgt}{a^2+b^2+c^2}\cr
+</mrow>
+</md>
+The direction of motion <m>\llt ac,bc,-a^2-b^2\rgt</m>. If you want to turn
+this into a unit vector, just divide by <m>\sqrt{(a^2+b^2)(a^2+b^2+c^2)}</m>.
+Note that the direction vector in perpendicular <m>\llt a,b,c\rgt</m> and hence is parallel
+to the plane. If <m>c=0</m>, the plane is vertical. In this case, the marble
+doesn't roll - it falls straight down. If <m>a=b=0</m>, the plane is horizontal.
+ In this case, the marble doesn't roll <mdash/> it remains stationary.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Show that <m>\va\cdot(\vb\times\vc)
+                         =(\va\times\vb)\cdot\vc</m>.
+</p></statement>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p> By definition, the left and right hand sides are
+<md>
+<mrow>
+\va\cdot(\vb\times\vc)
+&amp;=\llt a_1,a_2,a_3\rgt \cdot\llt b_2c_3-b_3c_2, b_3c_1-b_1c_3, b_1c_2-b_2c_1\rgt
+</mrow>
+<mrow>
+&amp;=a_1b_2c_3 - a_1b_3c_2 + a_2b_3c_1 - a_2b_1c_3 + a_3b_1c_2 - a_3b_2c_1
+\tag{lhs}
+</mrow>
+<mrow>
+(\va\times\vb)\cdot\vc
+&amp;=\llt a_2b_3-a_3b_2, a_3b_1-a_1b_3, a_1b_2-a_2b_1\rgt \cdot\llt c_1,c_2,c_3\rgt \notag
+</mrow>
+<mrow>
+&amp;=a_2b_3c_1 - a_3b_2c_1 + a_3b_1c_2 - a_1b_3c_2 + a_1b_2c_3 - a_2b_1c_3
+\tag{rhs}
+</mrow>
+</md>
+(lhs) and (rhs) are the same.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Show that <m>\va\times(\vb\times\vc)
+=(\va\cdot\vc)\vb-(\va\cdot\vb)\vc</m>.
+</p></statement>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+By definition,
+<md>
+<mrow>
+\vb\times\vc
+\ =\ &amp;(b_2c_3-b_3c_2)\hi-(b_1c_3-b_3c_1)\hj
+    +(b_1c_2-b_2c_1)\hk
+</mrow><mrow>
+</mrow>
+<intertext>so that the left and right hand sides are</intertext><mrow>
+\va\times(\vb\times\vc)
+\ =\ &amp;\det\left[\begin{matrix}\hi&amp;\hj &amp;\hk
+</mrow><mrow>
+                     a_1&amp;a_2&amp;a_3
+</mrow><mrow>
+            b_2c_3-b_3c_2&amp;-b_1c_3+b_3c_1&amp;b_1c_2-b_2c_1\end{matrix}\right]
+</mrow><mrow>
+\ =\ &amp;\hi\,[a_2(b_1c_2-b_2c_1)-a_3(-b_1c_3+b_3c_1)]
+</mrow><mrow>
+{-}&amp;\hj\,[a_1(b_1c_2-b_2c_1)-a_3(b_2c_3-b_3c_2)]
+</mrow><mrow>
+{+}&amp;\hk\,[a_1(-b_1c_3+b_3c_1)-a_2(b_2c_3-b_3c_2)]&amp;{\rm (lhs)}
+</mrow><mrow>
+(\va\cdot\vc)\vb-(\va\cdot\vb)\vc
+\ =\ &amp;(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
+-(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
+</mrow><mrow>
+{=}\ &amp;
+\hi\,[a_1b_1c_1+a_2b_1c_2+a_3b_1c_3-a_1b_1c_1-a_2b_2c_1-a_3b_3c_1]
+</mrow><mrow>
+{+}&amp;\hj\,[a_1b_2c_1+a_2b_2c_2+a_3b_2c_3-a_1b_1c_2-a_2b_2c_2-a_3b_3c_2]
+</mrow><mrow>
+{+}&amp;\hk\,[a_1b_3c_1+a_2b_3c_2+a_3b_3c_3-a_1b_1c_3-a_2b_2c_3-a_3b_3c_3]\cr
+{=}\ &amp;
+\hi\,[a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]
+</mrow><mrow>
+{+}&amp;\hj\,[a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
+</mrow><mrow>
+{+}&amp;\hk\,[a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
+&amp;{\rm (rhs)}
+</mrow>
+</md>
+(lhs) and (rhs) are the same.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Derive a formula for <m>(\va\times\vb)\cdot(\vc\times\vd)</m>
+that involves dot but not cross products.
+</p></statement>
+
+<answer><p>
+<m>(\va\times\vb)\cdot(\vc\times\vd)=
+(\va\cdot\vc)(\vb\cdot\vd)
+-(\va\cdot\vd)(\vb\cdot\vc)</m>
+</p></answer>
+
+<solution><p>
+By properties 9 and 10 of Theorem <xref ref="thm_crossPppties"/> in the CLP-3
+text,
+<md>
+<mrow>
+(\va\times\vb)\cdot(\vc\times\vd)
+&amp;=\va\cdot[\vb\times(\vc\times\vd)]
+&amp;\text{(by property 9 with } \vc\rightarrow (\vc\times\vd))
+</mrow><mrow>
+&amp;=\va\cdot[(\vb\cdot\vd)\vc-(\vb\cdot\vc)\vd]
+&amp;\text{(by property 10)}\cr
+&amp;=(\va\cdot\vc)(\vb\cdot\vd)
+-(\va\cdot\vd)(\vb\cdot\vc)
+</mrow>
+</md>
+So
+<me>
+(\va\times\vb)\cdot(\vc\times\vd)=
+(\va\cdot\vc)(\vb\cdot\vd)
+-(\va\cdot\vd)(\vb\cdot\vc)
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+A prism has the six vertices
+<md alignment="alignat">
+<mrow>
+A&amp;=(1,0,0)\qquad   &amp;  A'&amp;=(5,0,1)
+</mrow><mrow>
+B&amp;=(0,3,0)   &amp;  B'&amp;=(4,3,1)
+</mrow><mrow>
+C&amp;=(0,0,4)   &amp;  C'&amp;=(4,0,5)
+</mrow>
+</md>
+<ol label="a">
+<li>
+  Verify that three of the faces are parallelograms.
+  Are they rectangular?
+</li>
+<li>
+  Find the length of <m>AA'</m>.
+</li>
+<li>
+  Find the area of the triangle <m>ABC</m>.
+</li>
+<li>
+   Find the volume of the prism.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol>
+  <li>
+    <p>
+  <ul>
+  <li><m>AA'B'B</m> is a parallelogram, but not a rectangle.</li>
+  <li><m>AA'C'C</m> is a rectangle.</li>
+  <li><m>BB'C'C</m> is a parallelogram, but not a rectangle.</li>
+  </ul>
+  </p>
+</li>
+<li><m>\sqrt{17}</m></li>
+<li><m>\frac{13}{2}</m></li>
+<li><m>\frac{51}{2}</m></li>
+</ol>
+</p>
+
+</answer>
+
+<solution><p>
+(a) <m>AA'=\llt 4,0,1\rgt </m> and <m>BB'=\llt 4,0,1\rgt </m> are opposite sides
+of the quadrilateral <m>AA'B'B</m>. They have the same length
+and direction. The same is true for <m>AB=\llt -1,3,0\rgt </m> and
+<m>A'B'=\llt -1,3,0\rgt </m>. So <m>AA'B'B</m> is a parallelogram. Because,
+<m>AA'\cdot AB=\llt 4,0,1\rgt \cdot\llt -1,3,0\rgt =-4\ne 0</m>,
+the neighbouring edges of <m>AA'B'B</m> are not perpendicular and so <m>AA'B'B</m>
+is <em>not</em> a rectangle.
+</p>
+
+<p>Similarly, the quadilateral <m>ACC'A'</m> has opposing sides
+<m>AA'=\llt 4,0,1\rgt =CC'=\llt 4,0,1\rgt </m> and
+<m>AC=\llt -1,0,4\rgt =A'C'=\llt -1,0,4\rgt </m> and so is
+a parallelogram. Because <m>AA'\cdot AC=\llt 4,0,1\rgt \cdot\llt -1,0,4\rgt = 0</m>, the neighbouring edges of <m>ACC'A'</m> are perpendicular, so
+<m>ACC'A'</m> <em>is</em> a rectangle.
+</p>
+
+<p>Finally, the quadilateral <m>BCC'B'</m> has opposing sides
+<m>BB'=\llt 4,0,1\rgt =CC'=\llt 4,0,1\rgt </m> and
+<m>BC=\llt 0,-3,4\rgt =B'C'=\llt 0,-3,4\rgt </m> and so is
+a parallelogram. Because <m>BB'\cdot BC=\llt 4,0,1\rgt \cdot\llt 0,-3,4\rgt
+= 4\ne 0</m>, the neighbouring edges of <m>BCC'B'</m> are not perpendicular, so
+<m>BCC'B'</m> is <em>not</em> a rectangle.
+</p>
+
+<p>(b) The length of <m>AA'</m> is <m>|\llt 4,0,1\rgt |=\sqrt{16+1}=\sqrt{17}</m>.
+</p>
+
+<p>(c) The area of a triangle is one half its base times its height.
+That is, one half times <m>|AB|</m> times <m>|AC|\sin\theta</m>, where
+<m>\theta</m> is the angle between <m>AB</m> and <m>AC</m>. This is precisely
+<m>\half |AB\times AC|=\half|\llt -1,3,0\rgt \times\llt -1,0,4\rgt |
+=\half |\llt 12,4,3\rgt|=\frac{13}{2}</m>.
+</p>
+
+<p>(d) The volume of the prism is the area of its base <m>ABC</m>,
+ times its height, which is the length of <m>AA'</m> times the cosine of the
+angle between <m>AA'</m> and the normal to <m>ABC</m>. This coincides with
+<m>\half \llt 12,4,3\rgt \cdot\llt 4,0,1\rgt =\half(48+3)=\frac{51}{2}</m>, which is
+one half times the length of <m>\llt 12,4,3\rgt </m> (the area of <m>ABC</m>)
+times the length of <m>\llt 4,0,1\rgt </m> (the length of <m>AA'</m>) times the
+cosine of the angle between <m>\llt 12,4,3\rgt </m> and
+<m>\llt 4,0,1\rgt </m> (the angle between the normal to <m>ABC</m> and <m>AA'</m>).
+</p>
+
+</solution>
+</exercise>
+
+<exercise xml:id="prb_pythagorous">
+<statement><p>
+(Three dimensional Pythagorean Theorem) A solid body in space
+with exactly four vertices is called a tetrahedron. Let <m>A</m>, <m>B</m>, <m>C</m> and
+<m>D</m> be the areas of the four faces of a tetrahedron. Suppose that the
+three edges meeting at the vertex opposite the face of area <m>D</m> are
+perpendicular to each other. Show that <m>D^2=A^2+B^2+C^2</m>.
+</p>
+
+<sidebyside width="">
+  <image source="pfigs/tetrahedron.svg"/>
+</sidebyside>
+</statement>
+
+<hint><p>
+Choose coordinate axes so that the vertex opposite
+the face of area <m>D</m> is at the origin. Denote  by <m>\va</m>, <m>\vb</m> and
+<m>\vc</m> the vertices opposite the sides of area <m>A</m>, <m>B</m> and <m>C</m> respectively.
+Express <m>A</m>, <m>B</m>, <m>C</m> and <m>D</m>, which are areas of triangles, as one half
+times cross products of vectors built from <m>\va</m>, <m>\vb</m> and <m>\vc</m>.
+</p></hint>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+Choose our coordinate axes so that the vertex opposite
+the face of area <m>D</m> is at the origin. Denote  by <m>\va</m>, <m>\vb</m> and
+<m>\vc</m> the vertices opposite the sides of area <m>A</m>, <m>B</m> and <m>C</m> respectively.
+Then the face of area <m>A</m> has edges <m>\vb</m> and <m>\vc</m> so that
+<m>A=\half |\vb\times\vc|</m>. Similarly <m>B=\half|\vc\times\va|</m> and
+<m>C=\half|\va\times \vb|</m>. The face of area <m>D</m> is the triangle
+spanned by <m>\vb-\va</m> and <m>\vc-\va</m> so that
+<md>
+<mrow>
+D&amp;=\half|(\vb-\va)\times(\vc-\va)|\cr
+&amp;=\half|\vb\times \vc-\va\times\vc-\vb\times\va|
+</mrow><mrow>
+&amp;=\half|\vb\times \vc+\vc\times\va+\va\times\vb|
+</mrow>
+</md>
+By hypothesis, the vectors <m>\va</m>, <m>\vb</m> and <m>\vc</m> are all perpendicular
+to each other. Consequently the vectors <m>\vb\times \vc</m> (which is
+a scalar times <m>\va</m>), <m>\vc\times\va</m> (which is a scalar times
+<m>\vb</m>) and <m>\va\times\vb</m> (which is a scalar times <m>\vc</m>)
+are also mutually perpendicular. So, when we multiply out
+<me>
+D^2=\frac{1}{4}\big[\vb\times \vc+\vc\times\va+\va\times\vb\big]\cdot\big[\vb\times \vc+\vc\times\va+\va\times\vb\big]
+</me>
+all the cross terms vanish, leaving
+<me>
+D^2=\frac{1}{4}\big[(\vb\times \vc)\cdot(\vb\times \vc)
++(\vc\times\va)\cdot(\vc\times\va)
++(\va\times\vb)\cdot(\va\times\vb)\big]=A^2+B^2+C^2
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+(Three dimensional law of cosines)  Let <m>A</m>, <m>B</m>, <m>C</m> and
+<m>D</m> be the areas of the four faces of a tetrahedron. Let
+<m>\al</m> be the angle between the faces with areas <m>B</m> and <m>C</m>,
+<m>\be</m> be the angle between the faces with areas <m>A</m> and <m>C</m> and
+<m>\ga</m> be the angle between the faces with areas <m>A</m> and <m>B</m>.
+(By definition, the angle between two faces is the angle between the normal vectors to the faces.)
+ Show that
+<me>
+D^2=A^2+B^2+C^2-2BC\cos\al-2AC\cos\be-2AB\cos\ga
+</me>
+</p></statement>
+
+<hint><p>
+  Do problem <xref ref="prb_pythagorous"/> first.
+</p></hint>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+As in problem <xref ref="prb_pythagorous"/>,
+<me>
+D^2=\frac{1}{4}
+  \big[\vb\times \vc+\vc\times\va+\va\times\vb\big]\cdot
+  \big[\vb\times \vc+\vc\times\va+\va\times\vb\big]
+</me>
+But now <m>(\vb\times \vc)\cdot(\va\times\vc)</m>, instead of vanishing,
+is <m>|\vb\times \vc|=2A</m> times <m>|\va\times\vc|=2B</m> times
+the cosine of the angle between <m>\vb\times \vc</m> (which is perpendicular
+to the face of area <m>A</m>) and <m>\va\times\vc</m> (which is perpendicular
+to the face of area <m>B</m>). That is
+<md>
+<mrow>
+(\vb\times \vc)\cdot(\va\times\vc)&amp;=4 AB\cos \ga
+</mrow><mrow>
+(\va\times \vb)\cdot(\vc\times\vb)&amp;=4 AC\cos \be
+</mrow><mrow>
+(\vb\times \va)\cdot(\vc\times\va)&amp;=4 BC\cos \al
+</mrow>
+</md>
+(If you're worried about the signs, that is, if you are worried about
+why <m>(\vb\times \vc)\cdot(\va\times\vc)=4 AB\cos \ga</m>
+rather than <m>(\vb\times \vc)\cdot(\vc\times\va)=4 AB\cos \ga</m>,
+note  that when <m>\va\approx\vb</m>,
+<m>(\vb\times \vc)\cdot(\va\times\vc)\approx|\vb\times\vc|^2</m> is positive and
+<m>(\vb\times \vc)\cdot(\vc\times\va) \approx -|\vb\times\vc|^2</m> is negative.) Now, expanding out
+<md>
+<mrow>
+D^2\ =\ &amp;\frac{1}{4}
+   \big[\vb\times \vc+\vc\times\va+\va\times\vb\big]\cdot
+   \big[\vb\times \vc+\vc\times\va+\va\times\vb\big]
+</mrow><mrow>
+=\ &amp;\frac{1}{4}\big[(\vb\times \vc)\cdot(\vb\times \vc)
+     +(\vc\times\va)\cdot(\vc\times\va)
+     +(\va\times\vb)\cdot(\va\times\vb)
+</mrow><mrow>
+&amp;+2(\vb\times \vc)\cdot(\vc\times \va)
+ +2(\vb\times \vc)\cdot(\va\times \vb)
+ +2(\vc\times \va)\cdot(\va\times \vb)\big]
+</mrow><mrow>
+=\ &amp;A^2+B^2+C^2-2 AB\cos \ga-2 AC\cos \be-2 BC\cos \al
+</mrow>
+</md>
+</p></solution>
+</exercise>
+</exercisegroup>
+
+</exercises>

@@ -3,7 +3,8 @@
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<section xml:id="sec_vectors"><title>Vectors</title>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_vectors">
+  <title>Vectors</title>
 <introduction>
 
 <p>In many of our applications in 2d and 3d, we will encounter quantities
@@ -1289,7 +1290,7 @@ is the cross product
 </li>
 </ul>
 </p>
-<p>\noindent
+<p>
 Finally, here is the definition of the cross product.
 </p>
 
@@ -2392,5 +2393,7 @@ of the toilet.
 </p>
 
 </subsection>
+
+<xi:include href="../problems/prob_s1.2.ptx" />
 
 </section>

@@ -71,6 +71,7 @@
   \newcommand{\ve}{\mathbf{e}}
   \newcommand{\vC}{\mathbf{C}}
   \newcommand{\vp}{\mathbf{p}}
+  \newcommand{\vq}{\mathbf{q}}
   \newcommand{\vn}{\mathbf{n}}
   \newcommand{\vu}{\mathbf{u}}
   %\newcommand{\vv}{\mathbf{v}}
