@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<section xml:id="sec-points">
+<section  xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-points">
 
 <!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
@@ -121,5 +121,7 @@
   (x-1)^2+(y-2)^2+(z-3)^2=16
   </me>
   </p>
+
+<xi:include href="../problems/prob_s1.1.ptx" />
 
 </section>

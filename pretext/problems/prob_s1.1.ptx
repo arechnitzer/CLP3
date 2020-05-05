@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+<exercise>
+  <statement>
+    <p>
+      Describe the set of all points <m>(x,y,z)</m> in <m>\bbbr^3</m> that satisfy
+     <ol label="a">
+     <li><m>x^2 +y^2+z^2= 2x-4y+4</m></li>
+     <li><m>x^2 +y^2+z^2 \lt  2x-4y+4</m></li>
+     </ol>
+    </p>
+  </statement>
+  <answer>
+    <p>
+    <ol label="a">
+    <li> The sphere of radius 3 centered on <m>(1,-2,0)</m>.
+    </li>
+    <li> The interior of the sphere of radius 3 centered on <m>(1,-2,0)</m>.</li>
+    </ol>
+    </p>
+  </answer>
+  <solution>
+    <p>
+<ol label="a">
+  <li>
+    The point <m>(x,y,z)</m> satisfies <m>x^2 +y^2+z^2= 2x-4y+4</m>
+      if and only if it satisfies <m>x^2-2x +y^2+4y+z^2= 4</m>, or equivalently
+      <m>(x-1)^2 +(y+2)^2+z^2=9 </m>. Since <m>\sqrt{(x-1)^2 +(y+2)^2+z^2}</m> is the distance
+      from <m>(1, -2, 0)</m> to <m>(x,y,z)</m>, our point satisfies the given equation
+      if and only if its distance from <m>(1,-2,0)</m> is three. So the set is
+      the sphere of radius 3 centered on <m>(1,-2,0)</m>.
+    </li>
+    <li>
+      As in part (a), <m>x^2 +y^2+z^2 \lt  2x-4y+4</m>
+      if and only if  <m>(x-1)^2 +(y+2)^2+z^2 \lt 9 </m>. Hence our point
+      satifies the given inequality
+      if and only if its distance from <m>(1,-2,0)</m> is strictly smaller than three.
+      The set is the interior of the sphere of radius 3 centered on <m>(1,-2,0)</m>.
+  </li>
+</ol>
+</p>
+</solution>
+</exercise>
+
+
+<exercise>
+<statement><p>
+Describe and sketch the set of all points <m>(x,y)</m>
+in <m>\bbbr^2</m> that satisfy
+<ol label="a">
+<li>
+<m>x=y</m>
+</li>
+<li>
+<m>x+y=1</m>
+</li>
+<li>
+<m>x^2+y^2=4</m>
+</li>
+<li>
+<m>x^2+y^2=2y</m>
+</li>
+<li>
+<m>x^2+y^2 \lt 2y</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+In part (d), complete a square.
+</p></hint>
+
+<answer><p>
+<ol label="a">
+<li><p>
+<m>x=y</m> is the straight line through the origin that makes an
+angle <m>45^\circ</m> with the <m>x</m>- and <m>y</m>-axes. It is sketched in the
+figure on the left below.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/sec1_1_Q1a.svg"/>
+   <image source="pfigs/sec1_1_Q1b.svg"/>
+</sidebyside>
+</li>
+<li><p>
+<m>x+y=1</m> is the straight line through the points <m>(1,0)</m> and
+<m>(0,1)</m>. It is sketched in the figure on the right above.
+</p>
+</li>
+<li><p><m>x^2+y^2=4</m> is the circle with centre <m>(0,0)</m> and radius 2. It is
+sketched in the figure on the left below.
+</p>
+<sidebyside width="40%">
+<image source="pfigs/sec1_1_Q1c.svg"/>
+<image source="pfigs/sec1_1_Q1d.svg"/>
+</sidebyside>
+</li>
+<li><m>x^2+y^2=2y</m> is the circle with centre <m>(0,1)</m> and radius 1.
+It is sketched in the figure on the right above.
+</li>
+<li><p><m>x^2+y^2 \lt 2y</m> is the set of points that are strictly inside
+the circle with centre <m>(0,1)</m> and radius 1.
+It is the shaded region (not including the dashed circle) in the sketch below.
+</p>
+<sidebyside width="40%">
+<image source="pfigs/sec1_1_Q1e.svg"/>
+</sidebyside>
+</li>
+</ol>
+</p>
+</answer>
+<solution>
+  <p>
+<ol label="a">
+  <li>
+    <p><m>x=y</m> is a straight line and passes through the points <m>(0,0)</m>
+and <m>(1,1)</m>. So it is the straight line through the origin that makes an angle <m>45^\circ</m> with the <m>x</m>- and <m>y</m>-axes. It is sketched in the figure on the
+left below.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/sec1_1_Q1a.svg"/>
+ <image source="pfigs/sec1_1_Q1b.svg"/>
+</sidebyside>
+</li>
+<li>
+<m>x+y=1</m> is the straight line through the points <m>(1,0)</m> and
+<m>(0,1)</m>. It is sketched in the figure on the right above.
+</li>
+
+<li>
+  <p><m>x^2+y^2</m> is the square of the distance from <m>(0,0)</m> to <m>(x,y)</m>.
+So <m>x^2+y^2=4</m> is the circle with centre <m>(0,0)</m> and radius 2.
+It is sketched in the figure on the left below.
+</p>
+<sidebyside width="40%">
+    <image source="pfigs/sec1_1_Q1c.svg"/>
+     <image source="pfigs/sec1_1_Q1d.svg"/>
+   </sidebyside>
+ </li>
+ <li>The equation <m>x^2+y^2=2y</m> is equivalent to  <m>x^2+(y-1)^2=1</m>.
+As <m>x^2+(y-1)^2</m> is the square of the distance from <m>(0,1)</m> to <m>(x,y)</m>,
+<m>x^2+(y-1)^2=1</m> is the circle with centre <m>(0,1)</m> and radius 1.
+It is sketched in the figure on the right above.
+</li>
+<li>
+<p>As in part (d),
+<me>
+x^2+y^2 \lt 2y
+\iff x^2+y^2-2y \lt 0
+\iff x^2+y^2-2y+1 \lt 1
+\iff x^2+(y-1)^2 \lt 1
+</me>
+As <m>x^2+(y-1)^2</m> is the square of the distance from <m>(0,1)</m> to <m>(x,y)</m>,
+<m>x^2+(y-1)^2 \lt 1</m> is the set of points whose distance from <m>(0,1)</m> is
+strictly less than <m>1</m>. That is, it is the set of points strictly inside
+the circle with centre <m>(0,1)</m> and radius 1.
+That set is the shaded region (not including the dashed circle)
+in the sketch below.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/sec1_1_Q1e.svg"/>
+</sidebyside>
+</li>
+</ol>
+</p>
+</solution>
+</exercise>
+
+
+<exercise>
+<statement><p>
+Describe the set of all points <m>(x,y,z)</m> in <m>\bbbr^3</m> that satisfy
+the following conditions. Sketch the part of the set that is in the
+first octant.
+<ol label="a">
+<li>
+<m>z = x</m>
+</li>
+<li>
+<m>x + y + z = 1</m>
+</li>
+<li>
+<m>x^2 + y^2 + z^2 = 4</m>
+</li>
+<li>
+<m>x^2 + y^2 + z^2 = 4</m>, <m>z = 1</m>
+</li>
+<li>
+<m>x^2+y^2=4</m>
+</li>
+<li>
+<m>z = x^2 + y^2</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+<ol>
+<li>
+<p>
+The set <m>z=x</m> is the plane which contains the <m>y</m>-axis and which
+makes an angle <m>45^\circ</m> with the <m>xy</m>-plane. Here is a sketch
+of the part of the plane that is in the first octant.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/xeqzPlane.svg"/>
+</sidebyside>
+</li>
+<li>
+  <p>
+<m>x+y+z=1</m> is the plane through the points <m>(1,0,0)</m>, <m>(0,1,0)</m>
+and  <m>(0,0,1)</m>. Here is a sketch of the part of the plane
+that is in the first octant.
+</p>
+
+<sidebyside width="40%">
+  <image source="pfigs/xyzPlane.svg"/>
+</sidebyside>
+</li>
+<li><p>
+<m>x^2+y^2+z^2=4</m> is the sphere with centre <m>(0,0,0)</m> and radius 2.
+Here is a sketch of the part of the sphere that is in the first octant.
+</p>
+
+<sidebyside width="40%">
+  <image source="pfigs/quarterSphere.svg"/>
+</sidebyside>
+</li>
+<li><p>(d)
+<m>x^2+y^2+z^2=4</m>, <m>z=1</m> is the circle in the plane <m>z=1</m>
+that has centre <m>(0,0,1)</m> and radius <m>\sqrt{3}</m>. The part of the circle
+in the first octant is the heavy quarter circle in the sketch
+</p>
+<sidebyside width="40%">
+<image source="pfigs/quarterCircle.svg"/>
+</sidebyside>
+</li>
+<li><p>
+<m>x^2+y^2=4</m> is the cylinder of radius <m>2</m> centered on the <m>z</m>-axis.
+Here is a sketch of the part of the cylinder that is in the first octant.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/quarterCylinder.svg"/>
+</sidebyside>
+</li>
+<li>
+<p>
+<m>z=x^2+y^2</m> is a paraboloid consisting of a vertical stack of
+horizontal circles. The intersection of the surface with the <m>yz</m>-plane
+is the parabola <m>z=y^2</m>.  Here is a sketch of the part of the paraboloid
+that is in the first octant.
+</p>
+
+<sidebyside width="40%">
+  <image source="pfigs/quarterParaboloid.svg"/>
+</sidebyside>
+</li>
+</ol>
+</p>
+</answer>
+
+<solution><p>
+<ol label="a">
+  <li>
+    <p>
+      For each fixed <m>y_0</m>, <m>z=x,\ y=y_0</m> is a straight line
+that lies in the plane, <m>y=y_0</m> (which is parallel to the plane
+containing the <m>x</m> and <m>z</m> axes and is a distance <m>y_0</m> from it).
+This line passes through <m>x=z=0</m> and makes an angle <m>45^\circ</m>
+with the <m>xy</m>-plane. Such a line (with <m>y_0=0</m>) is sketched in the
+figure below.
+The set <m>z=x</m> is the union of all the lines <m>z=x,\ y=y_0</m> with all
+values of <m>y_0</m>. As <m>y_0</m> varies  <m>z=x,\ y=y_0</m> sweeps out the
+plane which contains the <m>y</m>-axis and which  makes an angle
+<m>45^\circ</m> with the <m>xy</m>-plane. Here is a sketch of the part of the plane
+that is in the first octant.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/xeqzPlane.svg"/>
+  </sidebyside>
+</li>
+<li><p>
+<m>x+y+z=1</m> is the plane through the points <m>(1,0,0)</m>, <m>(0,1,0)</m>
+and  <m>(0,0,1)</m>. Here is a sketch of the part of the plane
+that is in the first octant.
+</p>
+
+<sidebyside width="40%">
+  <image source="pfigs/xyzPlane.svg"/>
+</sidebyside>
+</li>
+<li><p>
+  <m>x^2+y^2+z^2</m> is the square of the distance from <m>(0,0,0)</m> to <m>(x,y,z)</m>.
+So <m>x^2+y^2+z^2=4</m> is the set of points whose distance from <m>(0,0,0)</m> is
+<m>2</m>. It is the sphere with centre <m>(0,0,0)</m> and radius 2.
+Here is a sketch of the part of the sphere that is in the first octant.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/quarterSphere.svg"/>
+</sidebyside>
+</li>
+<li><p>
+<m>x^2+y^2+z^2=4</m>, <m>z=1</m> or equivalently <m>x^2+y^2=3</m>, <m>z=1</m>,
+is the intersection of the plane <m>z=1</m> with the sphere of centre
+<m>(0,0,0)</m> and radius 2. It is a circle in the plane <m>z=1</m>
+that has centre <m>(0,0,1)</m> and radius <m>\sqrt{3}</m>. The part of the circle
+in the first octant is the heavy quarter circle in the sketch
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/quarterCircle.svg"/>
+</sidebyside>
+</li>
+<li><p>
+For each fixed <m>z_0</m>, <m>x^2+y^2=4</m>, <m>z=z_0</m> is a circle in the
+plane <m>z=z_0</m> with centre <m>(0,0,z_0)</m> and radius <m>2</m>.
+So <m>x^2+y^2=4</m> is the union of <m>x^2+y^2=4,\ z=z_0</m> for all
+possible values of <m>z_0</m>. It is  a vertical stack of horizontal
+circles. It is the cylinder of radius <m>2</m> centered on the <m>z</m>-axis.
+Here is a sketch of the part of the cylinder that is in the first octant.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/quarterCylinder.svg"/>
+</sidebyside>
+</li>
+<li><p>
+For each fixed <m>z_0\ge 0</m>, the curve <m>z = x^2 + y^2,\ z=z_0</m> is the circle in the plane <m>z=z_0</m> with centre <m>(0,0,z_0)</m> and radius <m>\sqrt{z_0}</m>. As
+<m>z = x^2 + y^2</m> is the union of <m>z = x^2 + y^2,\ z=z_0</m> for all
+possible values of <m>z_0\ge 0</m>, it is  a vertical stack of horizontal circles.
+The intersection of the surface with the <m>yz</m>-plane is the parabola
+<m>z=y^2</m>.  Here is a sketch of the part of the paraboloid that is in the
+first octant.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/quarterParaboloid.svg"/>
+</sidebyside>
+</li>
+</ol>
+</p>
+</solution>
+</exercise>
+
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise>
+<statement><p>
+The pressure <m>p(x,y)</m> at the point <m>(x,y)</m> is determined by
+<m>x^2-2px+y^2=1</m>. Sketch several isobars. An isobar is a curve with
+equation <m>p(x,y)=c</m> for some constant <m>c</m>.
+</p></statement>
+
+<answer>
+  <sidebyside width="40%">
+    <image source="pfigs/pressure.svg"/>
+  </sidebyside>
+</answer>
+
+<solution><p>
+For each fixed <m>c</m>, the isobar <m>p(x,y)=c</m> is the curve
+<m>x^2-2cx+y^2=1</m>, or equivalently, <m>(x-c)^2+y^2=1+c^2</m>. This is a
+circle with centre <m>(c,0)</m> and radius <m>\sqrt{1+c^2}</m>, which for large <m>c</m> is just a bit bigger than <m>c</m>.
+</p>
+<sidebyside width="40%">
+<image source="pfigs/pressure.svg"/>
+</sidebyside>
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Consider any triangle. Pick a coordinate system so that one vertex
+is at the origin and a second vertex is on the positive <m>x</m>-axis. Call
+the coordinates of the second vertex <m>(a,0)</m> and those of the third vertex
+<m>(b,c)</m>. Find the circumscribing circle (the circle that goes through all
+three vertices).
+</p></statement>
+
+<answer><p>
+The circumscribing circle has centre <m>(\bar x,\bar y)</m> and radius <m>r</m>
+with <m>\bar x=\frac{a}{2}</m>, <m>\bar y=\frac{b^2+c^2-ab}{2c}</m> and
+<m>r=\sqrt{\big(\frac{a}{2}\big)^2+\big(\frac{b^2+c^2-ab}{2c}\big)^2}</m>.
+</p></answer>
+
+<solution><p>
+Call the centre of the circumscribing circle
+<m>(\bar x,\bar y)</m>. This centre must be equidistant from the three vertices.
+So
+<me>
+\bar x^2+\bar y^2=(\bar x-a)^2+\bar y^2=(\bar x-b)^2+(\bar y-c)^2
+</me>
+or, subtracting <m>\bar x^2+\bar y^2</m> from the three equal expressions,
+<me>
+0=a^2-2a\bar x=b^2-2b\bar x+c^2-2c\bar y
+</me>
+which implies
+<me>
+\bar x=\frac{a}{2}\qquad\qquad \bar y
+=\frac{b^2+c^2-2b\bar x}{2c}=\frac{b^2+c^2-ab}{2c}
+</me>
+The radius is the distance from the vertex <m>(0,0)</m> to the centre
+<m>(\bar x,\bar y)</m>, which is
+<m>\sqrt{\big(\frac{a}{2}\big)^2+\big(\frac{b^2+c^2-ab}{2c}\big)^2}</m>.
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p> [M200 2001A]
+A certain quadric surface consists of all points <m>P=(x,y,z)</m>
+such that the distance from <m>P</m> to the point <m>(0,0,1)</m> is equal to the
+distance from <m>P</m> to the plane <m>z+1=0</m>. Find an equation for the surface,
+sketch and describe it verbally.
+</p></statement>
+
+<answer><p>
+<m>x^2+y^2=4z</m>
+The surface is a paraboloid consisting of a stack of horizontal circles, starting with a point at the origin and with radius increasing vertically.
+The circle in the plane <m>z=z_0</m> has radius <m>2\sqrt{z_0}</m>.
+</p></answer>
+
+<solution><p>
+The distance from <m>P</m> to the point <m>(0,0,1)</m> is <m>\sqrt{x^2+y^2+(z-1)^2}</m>.
+The distance from <m>P</m> to the specified plane is <m>|z+1|</m>. Hence the equation
+of the surface is
+<me>
+x^2+y^2+(z-1)^2=(z+1)^2\text{ or }
+   x^2+y^2=4z
+</me>
+All points on this surface have <m>z\ge 0</m>. The set of points on the surface
+that have any fixed value, <m>z_0\ge 0</m>, of <m>z</m> consists of a circle that is
+centred on the <m>z</m>-axis, is parallel to the <m>xy</m>-plane and has radius
+<m>2\sqrt{z_0}</m>. The surface consists of a stack of these circles, starting
+with a point at the origin and with radius increasing vertically. The surface
+is a paraboloid and is sketched below.
+</p>
+<sidebyside width="40%">
+<image source="pfigs/OE01AQ1.svg"/>
+</sidebyside>
+</solution>
+</exercise>
+
+</exercisegroup>
+</exercises>

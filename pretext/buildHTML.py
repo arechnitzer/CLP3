@@ -28,7 +28,15 @@ myDescTags = [
 ]
 
 # each tag should be a 3-ple [tag, replace-before, replace-after]
-myTags = [["answerproof", "<p><term>Proof:</term></p>", "<p><m>\square</m></p>",]]
+myTags = [
+    ["answerproof", "<p><term>Proof:</term></p>", "<p><m>\square</m></p>",],
+    ["conceptual", "<p><alert>Exercises &#8212; Stage 1</alert></p>", ""],
+]
+
+mySubs = [
+    ["conceptual", "<p><alert>Exercises &#8212; Stage 1</alert></p>"],
+    ["procedural", "<p><alert>Exercises &#8212; Stage 2</alert></p>"],
+]
 
 # build parameters as dict
 param = {
@@ -74,7 +82,20 @@ def replaceTag(src, tg, pre, post):
     return src
 
 
+def replaceSubsTag(src, tg, sb):
+    for repTag in reversed(src.findall("//{}".format(tg))):
+        par = repTag.getparent()
+        parIndex = par.index(repTag)
+        # now insert the pre-string before the reptag
+        par.insert(parIndex, ET.fromstring(sb))
+        # finally remove the reptag.
+        par.remove(repTag)
+    return src
+
+
 def userTags(src):
+    for [tg, sb] in mySubs:
+        src = replaceSubsTag(src, tg, sb)
     for [tg, pre, post] in myTags:
         src = replaceTag(src, tg, pre, post)
     for [atg, tg, pre, post] in myDescTags:
@@ -95,7 +116,12 @@ except Exception as err:
 
 # now process any user tags
 print("Processing any user tags")
-procd = userTags(src)
+try:
+    procd = userTags(src)
+except Exception as err:
+    print(">>> ERROR <<< ")
+    print(err)
+    exit(1)
 
 # try to validate before building
 print("Validate before building")

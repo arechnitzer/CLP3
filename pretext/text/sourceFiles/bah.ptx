@@ -1,0 +1,4688 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+</p>
+
+<p>\graphicspath{{figs_geometry/}}
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Vectors and Geometry in Two and Three Dimensions</title>
+<introduction>
+</p>
+
+<p>xml:id="chap_geometry"
+\chaptermark{Vectors and Geometry}
+</p>
+
+<p>Before we get started doing calculus in two and three dimensions 
+we need to brush up on some basic geometry, that we will use a lot. 
+We are already familiar with the Cartesian plane
+<fn>Ren\'e Descartes
+(1596--1650) was a French scientist and philosopher, who lived in the Dutch Republic for roughly twenty years after serving in the (mercenary) Dutch States Army.
+He is viewed as the father of analytic geometry, which uses numbers
+to study geometry.</fn>
+,  but we'll start from the beginning.
+</p>
+
+<p>\section{Points}xml:id="sec_points"
+</p>
+
+<p>Each point in two dimensions may be labeled by two coordinates
+<fn>This is why the <m>xy</m>-plane is called <q>two dimensional</q> <mdash/> the name of each point consists of two real numbers.</fn>
+</p>
+
+<p><m>(x,y)</m> which specify the position of the point in some units with respect
+to some axes as in the figure below. 
+</p>
+<sidebyside>
+<image source="problems/figs/point2d.pdf"/>
+</sidebyside>
+<p>
+The set of all points in two dimensions is denoted
+<fn>Not surprisingly,
+the <m>2</m> in <m>\bbbr^2</m> signifies that each point is labelled by two numbers
+and the <m>\bbbr</m> in <m>\bbbr^2</m> signifies that the numbers in question are
+real numbers. There are more advanced applications (for example in
+signal analysis and in quantum mechanics) where complex numbers are used.
+The space of all pairs <m>(z_1,z_2)</m>, with <m>z_1</m> and <m>z_2</m> complex numbers 
+is denoted  <m>\bbbc^2</m>.</fn>
+ <m>\bbbr^2</m>.
+Observe that 
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li> the distance from the point <m>(x,y)</m> to the <m>x</m>-axis is <m>|y|</m>
+</li>
+<li> the distance from the point <m>(x,y)</m> to the <m>y</m>-axis is <m>|x|</m>
+</li>
+<li> the distance from the point <m>(x,y)</m> to the origin <m>(0,0)</m> is 
+     <m>\sqrt{x^2+y^2}</m>
+</li>
+</ul>
+</p>
+
+<p>Similarly, each point in three dimensions may be labeled by 
+three coordinates <m>(x,y,z)</m>, as in the two figures below.
+</p>
+<sidebyside>
+<image source="problems/figs/point3d.pdf"/>\qquad
+   <image source="problems/figs/point3db.pdf"/>
+</sidebyside>
+<p>
+The set of all points in three dimensions is denoted <m>\bbbr^3</m>.
+The plane that contains, for example, the <m>x</m>- and <m>y</m>-axes
+is called the <m>xy</m>-plane.
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li> The <m>xy</m>-plane is the set of all points <m>(x,y,z)</m> that
+satisfy <m>z=0</m>.
+</li>
+<li> The <m>xz</m>-plane is the set of all points <m>(x,y,z)</m> that
+satisfy <m>y=0</m>.
+</li>
+<li> The <m>yz</m>-plane is the set of all points <m>(x,y,z)</m> that
+satisfy <m>x=0</m>.
+</li>
+</ul>
+More generally,
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li> The set of all points <m>(x,y,z)</m> that obey <m>z=c</m> is a plane
+that is parallel to the <m>xy</m>-plane and is a distance <m>|c|</m> from it. 
+If <m>c \gt 0</m>, the plane <m>z=c</m> is above the <m>xy</m>-plane.
+If <m>c \lt 0</m>, the plane <m>z=c</m> is below the <m>xy</m>-plane.
+We say that the plane <m>z=c</m> is a signed distance <m>c</m> from the
+<m>xy</m>-plane.
+</li>
+<li> The set of all points <m>(x,y,z)</m> that obey <m>y=b</m> is a plane
+that is parallel to the <m>xz</m>-plane and is a signed distance <m>b</m> from it.
+</li>
+<li> The set of all points <m>(x,y,z)</m> that obey <m>x=a</m> is a plane
+that is parallel to the <m>yz</m>-plane and is a signed distance <m>a</m> from it.
+</li>
+</ul>
+</p>
+<sidebyside>
+<image source="problems/figs/xyplaneN.pdf"/>\qquad
+   <image source="problems/figs/xzplaneN.pdf"/>\qquad
+   <image source="problems/figs/yzplaneN.pdf"/>
+</sidebyside>
+<p>
+Observe that our 2d distances extend quite easily to 3d.
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li> the distance from the point <m>(x,y,z)</m> to the <m>xy</m>-plane is <m>|z|</m>
+</li>
+<li> the distance from the point <m>(x,y,z)</m> to the <m>xz</m>-plane is <m>|y|</m>
+</li>
+<li> the distance from the point <m>(x,y,z)</m> to the <m>yz</m>-plane is <m>|x|</m>
+</li>
+<li> the distance from the point <m>(x,y,z)</m> to the origin <m>(0,0,0)</m> is 
+     <m>\sqrt{x^2+y^2+z^2}</m>
+</li>
+</ul>
+To see that the distance from the point <m>(x,y,z)</m> to the origin <m>(0,0,0)</m> 
+is indeed  <m>\sqrt{x^2+y^2+z^2}</m>,
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li> 
+apply Pythagoras to the right-angled triangle with vertices <m>(0,0,0)</m>,
+<m>(x,0,0)</m> and <m>(x,y,0)</m> to see that the distance from <m>(0,0,0)</m>
+to <m>(x,y,0)</m> is <m>\sqrt{x^2+y^2}</m> and then
+</li>
+<li> 
+apply Pythagoras to the right-angled triangle with vertices <m>(0,0,0)</m>,
+<m>(x,y,0)</m> and <m>(x,y,z)</m> to see that the distance from <m>(0,0,0)</m>
+to <m>(x,y,z)</m> is <m>\sqrt{{\big(\sqrt{x^2+y^2}\big)}^2+z^2}
+=\sqrt{x^2+y^2+z^2}</m>.
+</li>
+</ul>
+</p>
+<sidebyside>
+<image source="problems/figs/pythag3d.pdf"/>
+</sidebyside>
+<p>
+More generally, the distance from the point <m>(x,y,z)</m> to the point 
+<m>(x',y',z')</m> is
+<me>
+\sqrt{(x-x')^2+(y-y')^2+(z-z')^2}
+</me>
+Notice that this gives us the equation for a sphere quite directly. 
+All the points on a sphere are equidistant from the centre of the sphere.
+So, for example, the equation of the sphere centered on <m>(1,2,3)</m> with 
+radius <m>4</m>, that is, the set of all points <m>(x,y,z)</m> whose distance 
+from <m>(1,2,3)</m> is <m>4</m>, is 
+<me>
+(x-1)^2+(y-2)^2+(z-3)^2=16
+</me>
+</p>
+
+<p>\section{Vectors}xml:id="sec_vectors"
+</p>
+
+<p>In many of our applications in 2d and 3d, we will encounter quantities
+that have both a magnitude (like a distance) and also a 
+direction. Such quantities are called vectors. That is,
+a <em>vector</em> is a quantity which has both a direction and a magnitude,
+like a velocity. If you are moving, the magnitude (length) of your 
+velocity vector is your speed (distance travelled per unit time)  and the
+direction of your velocity vector is your direction of motion. To specify 
+a vector in three dimensions you have to give three components, just as for 
+a point. To draw the vector with components <m>\ a,\ b,\ c\ </m> you can draw 
+an arrow from the point <m>(0,0,0)</m> to the point <m>(a,b,c)</m>. 
+\vadjust{
+      </p>
+<sidebyside> 
+      <image source="problems/figs/vector2d.pdf"/> \qquad\qquad
+      <image source="problems/figs/vector3d.pdf"/>
+      </sidebyside>
+<p>
+        }
+Similarly, to specify a vector in two dimensions
+you have to give two components and to draw the vector
+with components <m>\ a,\ b\ </m> you can draw an arrow from the point <m>(0,0)</m>
+to the point <m>(a,b)</m>.
+</p>
+
+<p>There are many situations in which it is preferable to draw a vector 
+with its tail at some point other than the origin. For example, it is 
+natural to draw the velocity vector of a moving particle with the tail
+of the velocity vector at the position of the particle, whether or not
+the particle is at the origin. The sketch below shows a moving particle
+and its velocity vector at two different times.
+      </p>
+<sidebyside> 
+      <image source="problems/figs/movingParticle.pdf"/>
+      </sidebyside>
+<p>
+As a second example, suppose that you are analyzing the motion of a pendulum.
+There are three forces acting on the pendulum bob: gravity <m>\vg</m>, which
+is pulling the bob straight down, tension <m>\vt</m> in the rod, which is
+pulling the bob in the direction of the rod, and air resistance <m>\vr</m>, 
+which is pulling the bob in a direction opposite to its direction of motion.
+All three forces are acting on the bob. So it is natural to draw all three
+arrows representing the forces with their tails at the ball. 
+      </p>
+<sidebyside> 
+      <image source="problems/figs/pendulum.pdf"/>
+      </sidebyside>
+
+
+<p>In this text, we will used bold faced letters, like <m>\vv</m>, <m>\vt</m>, <m>\vg</m>,
+to designate vectors. In handwriting, it is clearer to use a small 
+overhead arrow
+<fn>Some people use an underline, as in <m>\underline{v</fn>
+</m>,
+rather than an arrow.}, as in <m>\vec{v}</m>, <m>\vec{t}</m>, <m>\vec{g}</m>, instead. 
+Also, when we want to emphasise that some quantity is a number,
+rather than a vector, we will call the number a <em>scalar</em>. 
+</p>
+
+<p>Both points and vectors in 2d are specified by two numbers. Until 
+you get used to this, it might confuse you sometimes <mdash/> does a given pair of 
+numbers represent a point or a vector?
+To distinguish
+<fn>Or, in the Wikipedia jargon, disambiguate.</fn>
+</p>
+
+<p>between the components of a vector and the coordinates 
+of the point at its head, when its tail is at some point other than 
+the origin, we shall use angle brackets rather than round brackets 
+around the components of a vector. For example, the figure below shows 
+the two-dimensional vector <m>\llt 2,1\rgt</m> drawn in three different positions.
+In each case, when the tail is at the point <m>(u,v)</m> the head is at 
+<m>(2+u,1+v)</m>. We warn you that, out in the  real world
+<fn>OK. OK. Out in 
+that (admittedly very small) part of the real world that actually knows 
+what a vector is.</fn>
+, no one uses notation
+that distinguishes between components of a vector and the coordinates of its 
+head <mdash/> usually round brackets are used for both. It is up to you to 
+keep straight which is being referred to.
+</p>
+
+
+<sidebyside>
+  <image source="problems/figs/positions.pdf"/>
+  </sidebyside>
+
+
+<p>By way of summary, 
+<definition>
+<statement><p>xml:id="not_scalar_vector"
+we use
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+bold faced letters, like <m>\vv</m>, <m>\vt</m>, <m>\vg</m>, to designate vectors,
+and
+</li>
+<li>
+angle brackets, like <m>\llt 2,1\rgt</m>, around the components of a vector,
+but use
+</li>
+<li>
+round brackets, like <m>(2,1)</m>, around the coordinates of a point,
+and use
+</li>
+<li> <q>scalar</q> to emphasise that some quantity is a number,
+rather than a vector.
+</li>
+</ul>
+</p></statement>
+</definition>
+</p>
+
+<p>\subsection{Addition of Vectors and Multiplication of a Vector by a Scalar}
+</p>
+
+<p>Just as we have done many times in the CLP texts, when we define a new 
+type of object, we want to understand how it interacts with the basic 
+operations of addition and multiplication. Vectors are no different, and 
+the following is a natural way to define addition of vectors.
+Multiplication will be more subtle, and we start with multiplication of a vector by a number (rather than with multiplication of a vector by 
+another vector).
+</p>
+
+<p><definition><title>Adding Vectors and Multiplying a Vector by a Number</title>
+<statement><p>
+             xml:id="def_addScalMult"
+These two operations have the obvious definitions
+<md alignment="alignat">
+<mrow>{2}
+&amp;\va=\llt a_1,a_2\rgt,\ \vb =\llt b_1,b_2\rgt
+             \qquad&amp;&amp;\implies\qquad\va+\vb=\llt a_1+b_1,a_2+b_2\rgt
+</mrow><mrow>
+&amp;\va=\llt a_1,a_2\rgt,\ s\text{ a number}
+            \qquad&amp;&amp;\implies\qquad s\va=\llt sa_1,sa_2\rgt
+</mrow>
+</md>
+and similarly in three dimensions.
+</p></statement>
+</definition> 
+Pictorially, you add the vector <m>\vb</m> to the vector <m>\va</m> 
+by drawing <m>\vb</m> with its tail at the head of <m>\va</m> and then drawing
+a vector from the tail of <m>\va</m> to the head of <m>\vb</m>, as in the figure
+on the left below. For a number <m>s</m>, we can draw the vector <m>s\va</m>, by 
+just 
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+changing the vector <m>\va</m>'s length by the factor <m>|s|</m>, and,
+</li>
+<li>
+if <m>s \lt 0</m>, reversing the arrow's direction,
+</li>
+</ul>
+as in the other two figures below.
+</p>
+<sidebyside>
+  <image source="problems/figs/addvec.pdf"/>\qquad\qquad
+  <image source="problems/figs/scalmul.pdf"/>\qquad\qquad
+  <image source="problems/figs/negmul.pdf"/>
+  </sidebyside>
+<p>
+The special case of multiplication by <m>s=-1</m> appears so frequently that
+<m>(-1)\va</m> is given the shorter notation <m>-\va</m>. That is, 
+<me>
+-\llt a_1,a_2\rgt=\llt -a_1,-a_2\rgt
+</me>
+Of course <m>\va+(-\va)</m> is <m>\vZero</m>, the vector all of whose components
+are zero. 
+</p>
+
+<p>To subtract <m>\vb</m> from <m>\va</m> pictorially, 
+you may add <m>-\vb</m> (which is drawn by reversing the direction of <m>\vb</m>)
+ to <m>\va</m>. Alternatively,
+if you draw <m>\va</m> and <m>\vb</m> with their tails at a common point,
+then <m>\va-\vb</m> is the vector from the head of <m>\vb</m> to
+the head of <m>\va</m>. That is, <m>\va-\vb</m> is the vector you
+must add to <m>\vb</m> in order to get <m>\va</m>.
+</p>
+<sidebyside>
+  <image source="problems/figs/subtract.pdf"/>
+  </sidebyside>
+
+
+<p>The operations of addition and multiplication by a scalar that we have just
+defined are quite natural and rarely cause any problems, because 
+they inherit from the real numbers the properties of  addition and 
+multiplication that you are used to. 
+<theorem><title>Properties of Addition and Scalar Multiplication</title>
+<statement><p>
+                    xml:id="thm_addScalMult"
+Let <m>\va</m>, <m>\vb</m> and <m>\vc</m> be vectors and <m>s</m> and <m>t</m> be scalars. Then 
+<md alignment="alignat">
+<mrow>{5}
+&amp; (1)\quad&amp;&amp;\va+\vb=\vb+\va \qquad\qquad\qquad
+&amp;&amp; (2)\quad&amp;&amp;\va+(\vb+\vc)=(\va+\vb)+\vc
+</mrow><mrow>
+&amp; (3) &amp;&amp;\va+\vZero =\va 
+&amp;&amp; (4) &amp;&amp;\va+(-\va)=\vZero
+</mrow><mrow>
+&amp; (5) &amp;&amp;s(\va+\vb)=s\va+s\vb
+&amp;&amp; (6) &amp;&amp;(s+t)\va=s\va+t\va
+</mrow><mrow>
+&amp; (7) &amp;&amp;(st)\va = s(t\va)
+&amp;&amp; (8) &amp;&amp;1\va=\va
+</mrow><mrow>
+</mrow>
+</md>
+</p></statement>
+</theorem>
+</p>
+
+<p>\noindent We have just been introduced to many definitions. Let's
+see some of them in action.
+<example>
+<p>
+For example, if 
+<me>
+\va = \llt 1,2,3\rgt\qquad
+\vb = \llt 3,2,1\rgt\qquad
+\vc = \llt 1,0,1\rgt
+</me>
+then
+<md alignment="alignat">
+<mrow>{3}
+2\va&amp;=2\llt 1,2,3\rgt&amp;&amp;=\llt 2,4,6\rgt 
+</mrow><mrow>
+-\vb&amp;=-\llt 3,2,1\rgt&amp;&amp;=\llt -3,-2,-1\rgt 
+</mrow><mrow>
+3\vc&amp;=3\llt 1,0,1\rgt&amp;&amp;=\llt 3,0,3\rgt
+</mrow>
+</md>
+and 
+<md>
+<mrow>
+2\va-\vb+3\vc 
+&amp;= \llt 2,4,6\rgt + \llt -3,-2,-1\rgt+\llt 3,0,3\rgt 
+</mrow><mrow>
+&amp;= \llt 2-3+3\,,\,4-2+0\,,\,6-1+3\rgt 
+</mrow><mrow>
+&amp;= \llt 2,2,8 \rgt
+</mrow>
+</md>
+</p></example>\goodbreak
+</p>
+
+<p><definition>
+<statement><p>xml:id="def_parallel_vectors"
+Two vectors <m>\va</m> and <m>\vb</m>
+<ul>
+<li>
+are said to be parallel if <m>\ \va= s\,\vb\ </m> for some nonzero real number <m>s</m> and
+</li>
+<li>
+are said to have the same direction if <m>\ \va=s\,\vb\ </m> for some number <m>s \gt 0</m>.
+</li>
+</ul> 
+</p></statement>
+</definition>
+</p>
+
+<p>There are some vectors that occur sufficiently commonly that they are
+given special names. One is the vector <m>\vZero</m>. Some others are the 
+<q>standard basis vectors</q>.
+<definition>
+<statement><p>xml:id="def_basis_vectors"
+<ol label="a">
+<li>
+The standard basis vectors in two dimensions are
+<md>
+<mrow>
+\<me>
+-0.1in]
+\hi = \llt 1,0\rgt \qquad\qquad\hj =\llt 0,1\rgt \qquad\qquad
+\smash{\raisebox{-0.5\height}{<image source="problems/figs/basis2d.pdf"/>}}\<me>
+-0.1in]
+</mrow>
+</md>
+</li>
+<li>
+The standard basis vectors in three dimensions are
+<md>
+<mrow>
+\<me>
+-0.1in]
+\hi = \llt 1,0,0\rgt \qquad\qquad\hj =\llt 0,1,0\rgt 
+\qquad\qquad\hk =\llt 0,0,1\rgt \qquad\quad
+\smash{\raisebox{-0.25\height}{<image source="problems/figs/basis3d.pdf"/>}}\<me>
+-0.1in]
+</mrow>
+</md>
+</li>
+</ol> 
+</p></statement>
+</definition>
+We'll explain the little hats in the notation <m>\hi</m>, <m>\hj</m>, <m>\hk</m> shortly.
+Some people rename <m>\hi</m>, <m>\hj</m> and <m>\hk</m> to <m>\he_1</m>, <m>\he_2</m> and 
+<m>\he_3</m> respectively.
+Using the above properties we have, for all vectors,
+<me>
+\llt a_1,a_2\rgt =a_1\,\hi+a_2\,\hj\qquad\qquad
+\llt a_1,a_2,a_3\rgt =a_1\,\hi+a_2\,\hj+a_3\,\hk
+</me>
+A sum of numbers times vectors, like <m>a_1\hi+a_2\hj</m> is called
+a linear combination of the vectors.
+Thus all vectors can be expressed as linear combinations of the standard
+basis vectors. This makes basis vectors very helpful in computations.
+The  standard basis vectors are unit vectors, meaning that they are of 
+length one, where the length of a vector <m>\va</m> is denoted
+<fn>The notation <m>\|\va\|</m> is also used for the length of <m>\va</m>.</fn>
+ <m>|\va|</m> 
+and is defined by
+<definition><title>Length of a Vector</title>
+<statement><p>xml:id="def_vectLen"
+<md alignment="alignat">
+<mrow>{5}
+&amp;\va=\llt a_1,a_2\rgt \qquad&amp;&amp;\implies\qquad &amp;&amp;|\va|=\sqrt{a_1^2+a_2^2}
+</mrow><mrow>
+&amp;\va=\llt a_1,a_2,a_3\rgt \qquad&amp;&amp;\implies\qquad &amp;&amp;|\va|=\sqrt{a_1^2+a_2^2+a_3^2}
+</mrow>
+</md>
+A unit vector is a vector of length one. We'll sometimes use the accent 
+<m>\hat{\ }</m> to emphasise that the vector <m>\hat\va</m> is a unit vector.
+That is, <m>|\hat\va|=1</m>.
+</p></statement>
+</definition>
+</p>
+
+<p><example>
+<p>xml:id="eg_unit_vector"
+Recall that multiplying a vector <m>\va</m> by a positive number <m>s</m>,
+changes the length of the vector by a factor <m>s</m> without changing
+the direction of the vector. So (assuming that <m>|\va|\ne 0)</m>
+<m>\frac{\va}{|\va|}</m> is a unit vector that has the same direction as
+<m>\va</m>. For example, <m>\frac{\llt 1,1,1\rgt}{\sqrt{3}}</m> is a unit vector
+that points in the same direction as <m>\llt 1,1,1\rgt</m>.
+</p></example>
+\goodbreak
+</p>
+
+<p><example>
+<p>xml:id="eg_walk"
+We go for a walk on a flat Earth. We use a coordinate system
+with the positive x-axis pointing due east and the positive y-axis pointing due
+north. We  
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+start at the origin and
+</li>
+<li> 
+walk due east for 4 units and then
+</li>
+<li> 
+walk northeast for <m>5\sqrt{2}</m> units and then
+</li>
+<li> 
+head towards the point <m>(0,11)</m>, but we only go
+</li>
+<li>
+one third of the way.
+</li>
+</ul>
+      </p>
+<sidebyside> 
+      <image source="problems/figs/addSubtractMult.pdf"/>\qquad\qquad
+      \raisebox{0.65\height}{<image source="problems/figs/triangleWalk.pdf"/>}
+      </sidebyside>
+<p>
+We will now use vectors to figure out our final location.
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+On the first leg of our walk, we go 4 units in the positive <m>x</m>-direction.
+So our displacement vector <mdash/> the vector whose tail is at our starting point and whose head is at the end point of the first leg <mdash/> is <m>\llt 4,0\rgt</m>. 
+As we started at <m>(0,0)</m> we finish the first leg of the walk at <m>(4,0)</m>.
+</li>
+<li>
+On the second leg of our walk, our direction of motion is northeast. i.e. is
+<m>45^\circ</m> above the direction of the positive <m>x</m>-axis. Looking at the figure 
+on the right above, we see that our displacement vector, for the second leg of the walk, has to be in the same direction as the vector <m>\llt 1,1\rgt</m>.
+So our displacement vector is the vector of length <m>5\sqrt{2}</m> with the same direction as <m>\llt 1,1\rgt</m>. The vector <m>\llt 1,1\rgt</m> has length
+<m>\sqrt{1^2+1^2}=\sqrt{2}</m> and so <m>\frac{\llt 1,1\rgt}{\sqrt{2}}</m> has length one
+and our displacement vector is
+<me>
+5\sqrt{2}\ \frac{\llt 1,1\rgt}{\sqrt{2}}
+=5 \llt 1,1\rgt 
+=\llt 5,5\rgt
+</me>
+If we draw this displacement vector, <m>\llt 5,5\rgt</m> with its tail at 
+<m>(4,0)</m>, the starting point of the second leg of the walk, then its head 
+will be at <m>(4+5, 0+5)=(9,5)</m> and that is the end point of the second 
+leg of the walk.
+</li>
+<li>
+On the final leg of our walk, we start at <m>(9,5)</m> and walk towards <m>(0,11)</m>.
+The vector from <m>(9,5)</m> to <m>(0,11)</m> is <m>\llt 0-9\,,\,11-5\rgt =\llt -9,6\rgt</m>.
+As we go only one third of the way, our final displacement vector is
+<me>
+\frac{1}{3}\llt -9,6\rgt
+=\llt -3,2\rgt
+</me>
+If we draw this displacement vector with its tail at 
+<m>(9,5)</m>, the starting point of the final leg, then its head 
+will be at <m>(9-3, 5+2)=(6,7)</m> and that is the end point of the final
+leg of the walk, and our final location.
+</li>
+</ul>
+</p></example>
+</p>
+
+<p>\subsection{The Dot Product}
+</p>
+
+<p>Let's get back to the arithmetic operations of addition and multiplication.
+We will be using both scalars and vectors. So, for each operation there are 
+three possibilities that we need to explore: 
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li> <q>scalar plus scalar</q>, <q>scalar plus vector</q> and <q>vector plus vector</q>
+</li>
+<li><q>scalar times scalar</q>, <q>scalar times vector</q> and 
+         <q>vector times vector</q>
+</li>
+</ul>
+We have been using <q>scalar plus scalar</q> and <q>scalar times scalar</q>
+since childhood. <q>vector plus vector</q> and <q>scalar times vector</q>
+were just defined above. There is no sensible way to define <q>scalar plus vector</q>, so we won't. This leaves <q>vector times vector</q>. 
+There are actually two widely used such products.
+The first is the <em>dot product</em>, which is the topic of this section,
+and which is used to easily determine the angle <m>\theta</m> (or more precisely,
+<m>\cos\theta</m>) between two vectors.
+We'll get to the second, the cross product, later. 
+<definition><title>Dot Product</title>
+<statement><p>xml:id="def_dotProd"
+The dot product of the vectors <m>\va</m> and <m>\vb</m> is denoted <m>\va\cdot\vb</m> 
+and is defined by
+<md alignment="alignat">
+<mrow>{5}
+&amp;\va=\llt a_1,a_2\rgt ,\quad &amp;&amp;\vb=\llt b_1,b_2\rgt\quad &amp;\implies\quad
+&amp;\va\cdot\vb = a_1b_1+a_2b_2
+</mrow><mrow>
+&amp;\va=\llt a_1,a_2,a_3\rgt ,\quad &amp;&amp;\vb=\llt b_1,b_2,b_3\rgt\quad &amp;\implies\quad
+&amp;\va\cdot\vb = a_1b_1+a_2b_2+a_3b_3
+</mrow>
+</md>
+in two and three dimensions respectively. 
+</p></statement>
+</definition>
+The properties of the dot 
+product are as follows:
+<theorem><title>Properties of the Dot Product</title>
+<statement><p>xml:id="thm_dotPppties"
+Let <m>\va</m>, <m>\vb</m> and <m>\vc</m> be vectors and let <m>s</m> be a scalar. Then
+<md alignment="alignat">
+<mrow>{3}
+&amp;(0)\quad &amp;&amp;\va,\vb\text{ are vectors and }\va\cdot\vb
+              \text{ is a scalar}
+</mrow><mrow>
+&amp;(1) &amp;&amp;\va\cdot\va=|\va|^2
+</mrow><mrow>
+&amp;(2) &amp;&amp;\va\cdot\vb=\vb\cdot\va
+</mrow><mrow>
+&amp;(3) &amp;&amp;\va\cdot(\vb+\vc)=\va\cdot\vb+\va\cdot\vc,\quad 
+       (\va+\vb)\cdot\vc=\va\cdot\vc+\vb\cdot\vc
+</mrow><mrow>
+&amp;(4) &amp;&amp;(s\va)\cdot\vb= s(\va\cdot\vb)
+</mrow><mrow>
+&amp;(5)  &amp;&amp;\vZero \cdot\va=0
+</mrow><mrow>
+&amp;(6) &amp;&amp;\va\cdot\vb=|\va|\,|\vb|\,\cos\theta
+        \text{ where <m>\theta</m> is the angle between <m>\va</m> and <m>\vb</m>}
+</mrow><mrow>
+&amp;(7) &amp;&amp;\va\cdot\vb=0\iff \va=\vZero \text{ or }\vb=\vZero 
+    \text{ or } \va\perp\vb
+</mrow>
+</md>
+</p></statement>
+</theorem>
+<proof>
+<p>
+Properties 0 through 5 are almost immediate consequences of the definition.
+For example, for property 3 (which is called the distributive law)
+in dimension 2,
+<md>
+<mrow>
+\va\cdot(\vb+\vc)
+    &amp;=\llt a_1,a_2\rgt \cdot\llt b_1+c_1,b_2+c_2\rgt 
+</mrow><mrow>
+    &amp;=a_1(b_1+c_1)+a_2(b_2+c_2)=a_1b_1+a_1c_1+a_2b_2+a_2c_2
+</mrow><mrow>
+\va\cdot\vb+\va\cdot\vc
+&amp;=\llt a_1,a_2\rgt \cdot\llt b_1,b_2\rgt 
+             +\llt a_1,a_2\rgt \cdot\llt c_1,c_2\rgt 
+</mrow><mrow>
+&amp;=a_1b_1+a_2b_2+a_1c_1+a_2c_2
+</mrow>
+</md>
+</p>
+
+<p>Property 6 is sufficiently important that it is often used as the 
+definition of dot product. It is not at all an obvious consequence of the definition.
+To verify it, we just write <m>|\va-\vb|^2</m> in two different ways. 
+The first expresses <m>|\va-\vb|^2</m> in terms of <m>\va\cdot\vb</m>. 
+It is
+<md>
+<mrow>
+|\va-\vb|^2\ &amp;{\buildrel 1 \over =}\ (\va-\vb\,)\cdot(\va-\vb\,)
+</mrow><mrow>
+&amp;{\buildrel 3 \over =}\ \va\cdot\va-\va\cdot\vb-\vb\cdot\va
++\vb\cdot\vb
+</mrow><mrow>
+&amp;{\buildrel 1,2 \over =}\ |\va|^2+|\vb|^2-2\va\cdot\vb
+</mrow>
+</md>
+Here, <m>{\buildrel 1 \over =}</m>, for
+example, means that the equality is  a consequence of property 1.
+The second way we write <m>|\va-\vb|^2</m> involves <m>\cos\theta</m> and follows from
+the cosine law for triangles. Just in case you don't remember the 
+cosine law, we'll derive it right now! Start by applying Pythagoras to the 
+shaded triangle in the right hand figure of
+</p>
+
+
+<sidebyside> 
+      <image source="problems/figs/cosineB.pdf"/>
+      </sidebyside>
+<p>
+That triangle is a right triangle whose hypotenuse has length <m>|\va-\vb|</m> 
+and  whose other two sides have lengths <m>\big(|\vb|-|\va|\cos\theta\big)</m> 
+and <m>|\va|\sin\theta</m>. So Pythagoras gives
+<md>
+<mrow>
+|\va-\vb|^2&amp;=\big(|\vb|-|\va|\cos\theta\big)^2+
+\big(|\va|\sin\theta\big)^2
+</mrow><mrow>
+&amp;=|\vb|^2-2|\va|\,|\vb|\,\cos\theta+|\va|^2\cos^2\theta
++|\va|^2\sin^2\theta
+</mrow><mrow>
+&amp;=|\vb|^2-2|\va|\,|\vb|\,\cos\theta+|\va|^2
+</mrow>
+</md>
+This is precisely the cosine law
+<fn>You may be used to seeing it written as <m>c^2=a^2+b^2-2 a b \cos C</m>, where <m>a</m>, <m>b</m> and <m>c</m> are the lengths of the 
+three sides of the triangle and <m>C</m> is the angle opposite the side of length <m>c</m></fn>
+. 
+Observe that, when <m>\theta=\tfrac{\pi}{2}</m>, 
+this reduces to, (surprise!) Pythagoras' theorem.
+</p>
+
+<p>Setting our two expressions for <m>|\va-\vb|^2</m> equal to each other,
+<md>
+<mrow>
+|\va-\vb|^2=|\va|^2+|\vb|^2-2\va\cdot\vb
+=|\vb|^2-2|\va|\,|\vb|\,\cos\theta+|\va|^2
+</mrow>
+</md>
+cancelling the <m>|\va|^2</m> and <m>|\vb|^2</m> common to both sides
+<md>
+<mrow>
+-2\va\cdot\vb
+=-2|\va|\,|\vb|\,\cos\theta
+</mrow>
+</md>
+and dividing by <m>-2</m> gives 
+<md>
+<mrow>
+\va\cdot\vb=|\va|\,|\vb|\,\cos\theta
+</mrow>
+</md>
+which is exactly property 6. 
+</p>
+
+<p>Property 7 follows directly from property 6. First note that the dot product <m>\va\cdot\vb=|\va|\,|\vb|\,\cos\theta</m>
+is zero if and only if at least one of the three factors 
+<m>|\va|,\ |\vb|,\ \cos\theta</m> is zero. The first factor is zero if
+and only if <m>\va=\vZero </m>. The second factor is zero if and only if 
+<m>\vb=\vZero </m>.
+The third factor is zero if and only if <m>\theta=\pm\tfrac{\pi}{2}+2k\pi</m>,
+for some integer <m>k</m>, which in turn is true if and only if <m>\va</m> and 
+<m>\vb</m> are mutually perpendicular.
+</p></proof>
+Because of Property 7 of Theorem <xref ref="thm_dotPppties"/>, the dot product 
+can be used to test whether or not two vectors are perpendicular to 
+each other. That is, whether or not the angle between the two vectors 
+is <m>90^\circ</m>. Another name
+<fn>The concepts of the dot product
+and perpendicularity have been generalized a lot in mathematics (for example,
+from 2d and 3d vectors to functions). The generalization of the dot 
+product is called the <q>inner product</q> and the generalization 
+of perpendicularity is called <q>orthogonality</q>.</fn>
+ for <q>perpendicular</q> 
+is <q>orthogonal</q>. Testing for orthogonality is one of the main uses of the
+dot product. 
+</p>
+
+<p><example>
+<p>
+Consider the three vectors
+<me>
+\va=\llt 1,1,0 \rgt\qquad
+\vb=\llt 1,0,1 \rgt \qquad
+\vc=\llt -1,1,1\rgt
+</me>
+Their dot products
+<md alignment="alignat">
+<mrow>{3}
+\va\cdot\vb &amp; = \llt 1,1,0 \rgt \cdot \llt 1,0,1 \rgt
+           &amp;&amp; = 1\times 1 +1\times 0+0\times 1
+           &amp;&amp; = 1 
+</mrow><mrow>
+\va\cdot\vc &amp; = \llt 1,1,0 \rgt \cdot \llt -1,1,1 \rgt
+           &amp;&amp; = 1\times(-1) +1\times 1+0\times 1
+           &amp;&amp; = 0 
+</mrow><mrow>
+\vb\cdot\vc &amp; = \llt 1,0,1 \rgt \cdot \llt -1,1,1 \rgt
+           &amp;&amp; = 1\times(-1) +0\times 1+1\times 1
+           &amp;&amp; = 0
+</mrow>
+</md>
+tell us that <m>\vc</m> is perpendicular to both <m>\va</m> and <m>\vb</m>.
+Since both <m>|\va|=|\vb|=\sqrt{1^2+1^2+0^2}=\sqrt{2}</m> the first dot product
+tells us that the angle, <m>\theta</m>, between <m>\va</m> and <m>\vb</m> obeys
+<md>
+<mrow>
+\cos\theta =\frac{\va\cdot\vb}{|\va|\,|\vb|}=\frac{1}{2}
+\implies
+\theta =\frac{\pi}{3}
+</mrow>
+</md>
+</p>
+
+
+<sidebyside>
+  <image source="problems/figs/dotProd.pdf"/>
+  </sidebyside>
+
+
+</example>
+\goodbreak
+</p>
+
+<p>Dot products are also used to compute projections.  First, here's
+the definition.
+</p>
+
+<p><definition><title>Projection</title>
+<statement><p>xml:id="def_projection"
+Draw two vectors, <m>\va</m> and <m>\vb</m>,
+with their tails at a common point and drop a perpendicular from the head of
+<m>\va</m> to the line that passes through both the head and tail of <m>\vb</m>. 
+By definition, the projection of the vector <m>\va</m>
+on the vector <m>\vb</m> is the vector from the tail of <m>\vb</m> to the point
+on the line where the perpendicular hits.
+      </p>
+<sidebyside> 
+      <image source="problems/figs/projA.pdf"/>\qquad\qquad
+      <image source="problems/figs/projB.pdf"/>
+      </sidebyside>
+</statement>
+</definition>\noindent
+Think of the projection of <m>\va</m> on <m>\vb</m> as the part of <m>\va</m> that is in the 
+direction of <m>\vb</m>.
+</p>
+
+<p>Now let's develop a formula for the projection of <m>\va</m> on <m>\vb</m>.
+Denote by <m>\theta</m> the angle between <m>\va</m> and <m>\vb</m>. If <m>|\theta|</m> is no
+more than <m>90^\circ</m>, as in the figure on the left above, 
+the length of the projection of <m>\va</m> on <m>\vb</m> is 
+<m>|\va|\cos\theta</m>.
+By Property 6 of Theorem <xref ref="thm_dotPppties"/>,  
+<m>|\va|\cos\theta=\va\cdot\vb/|\vb|</m>, so the
+projection is a vector whose length is <m>\va\cdot\vb/|\vb|</m> and
+whose direction is given by the unit vector <m>\vb/|\vb|</m>. Hence
+<md>
+<mrow>
+\text{projection of <m>\va</m> on <m>\vb</m>}={\rm proj}_{\vb}\,\va
+=\frac{\va\cdot\vb}{|\vb|}\frac{\vb}{|\vb|}
+=\frac{\va\cdot\vb}{|\vb|^2}\,\vb
+</mrow>
+</md>
+If <m>|\theta|</m> is larger than <m>90^\circ</m>, as in the figure on the right above, the projection has length 
+<m>|\va|\,\cos(\pi-\theta)=-|\va|\cos\theta=-\va\cdot\vb/|\vb|</m>
+ and direction <m>-\vb/|\vb|</m>. In this case
+<md>
+<mrow>
+{\rm proj}_{\vb}\,\va
+=-\frac{\va\cdot\vb}{|\vb|}\frac{-\vb}{|\vb|}
+=\frac{\va\cdot\vb}{|\vb|^2}\ \vb
+</mrow>
+</md>
+So the formula 
+\begin{impeqn}xml:id="eqn_proj"
+<me>
+{\rm proj}_{\vb}\,\va=\frac{\va\cdot\vb}{|\vb|^2}\,\vb
+</me> 
+\end{impeqn}\noindent
+is applicable whenever <m>\vb\ne\vZero </m>. As a special case, if <m>\vb</m> happens 
+to be a unit vector, which, for emphasis, we'll now write has <m>\hat\vb</m>, 
+the projection formula simplifies to
+\begin{impeqn}xml:id="eqn_unit_proj"
+<md>
+<mrow>
+{\rm proj}_{\hat\vb}\,\va
+=  (\va\cdot\hat\vb)\,\hat\vb
+</mrow>
+</md>
+\end{impeqn}
+</p>
+
+<p><example>
+<p>xml:id="eg_proj"
+In this example, we will find the projection of the vector <m>\llt 0,3\rgt</m>
+on the vector <m>\llt 1,1\rgt</m>, as in the figure
+      </p>
+<sidebyside> 
+      <image source="problems/figs/projEg.pdf"/>
+      </sidebyside>
+<p>
+By Equation <xref ref="eqn_proj"/> with <m>\va=\llt 0,3\rgt</m> and <m>\vb=\llt 1,1\rgt</m>, 
+that projection is
+<md>
+<mrow>
+{\rm proj}_{\llt 1,1\rgt}\,\llt 0,3\rgt
+  &amp;=\frac{\llt 0,3\rgt\cdot\llt 1,1\rgt}{|\llt 1,1\rgt|^2}\,\llt 1,1\rgt 
+</mrow><mrow>
+  &amp;=\frac{0\times1+3\times 1}{1^2+1^2}\,\llt 1,1\rgt
+  =\llt \frac{3}{2},\frac{3}{2}\rgt
+</mrow>
+</md>
+</p>
+
+</example>
+</p>
+
+<p>One use of projections is to <q>resolve forces</q>. There is an example in
+the next (optional) section.
+</p>
+
+<p>\subsection{(Optional) Using Dot Products to Resolve Forces
+<mdash/> The Pendulum}
+</p>
+
+<p>Model a pendulum by a mass <m>m</m> that is connected to a hinge by an idealized
+rod that is massless and of fixed length <m>\ell</m>. Denote by <m>\theta</m> the angle
+between the rod and vertical. The forces acting on the mass are
+<ul>
+<li> gravity, which has magnitude <m>mg</m> and direction <m>\llt 0,-1\rgt</m>,
+</li>
+<li> tension in the rod, whose magnitude <m>\tau(t)</m> automatically 
+adjusts itself so that the distance between the mass and the hinge is fixed 
+at <m>\ell</m> (so that the rod does not stretch or contract) and whose 
+direction is always parallel to the rod,
+</li>
+<li> and possibly some frictional
+forces, like friction in the hinge and air resistance. Assume
+that the total frictional force has magnitude proportional
+<fn>The
+behaviour of air resistance (sometimes called drag) is pretty complicated. 
+We're using a reasonable low speed approximation. At high speeds drag is typically proportional to the square of the speed.</fn>
+ to the speed of the 
+mass and has direction opposite to the direction of motion of the mass.
+We'll call the constant of proportionality <m>\beta</m>.
+</li>
+</ul>
+      </p>
+<sidebyside> 
+      <image source="problems/figs/pendulum3.pdf"/>
+      </sidebyside>
+<p>
+If we use a coordinate system centered on the hinge, the <m>(x,y)</m> coordinates
+of the mass at time <m>t</m> are 
+<md>
+<mrow>
+x(t)&amp;=\ell\sin\theta(t)
+</mrow><mrow>
+y(t)&amp;=-\ell\cos\theta(t)
+</mrow>
+</md>
+where <m>\theta(t)</m> is the angle between the rod and vertical at time <m>t</m>.
+We are now going to use Newton's law of motion
+<md>
+<mrow>
+\text{mass}\times\text{acceleration}=\text{total applied force}
+</mrow>
+</md>
+to determine now <m>\theta</m> evolves in time. By definition, the
+velocity and acceleration vectors
+<fn>For a more comprehensive treatment 
+of derivatives of vector valued functions <m>\vr(t)</m>, and in particular of
+velocity and acceleration, see Section <xref ref="sec_curves"/> in this text and
+Section 1.1 in the CLP-4 text.</fn>
+ for the position vector 
+<m>\llt x(t),y(t)\rgt</m> are
+<md>
+<mrow>
+\diff{}{t}\llt x(t),y(t)\rgt 
+   &amp;= \llt \diff{x}{t}(t),\diff{y}{t}(t)\rgt 
+</mrow><mrow>
+\ddiff{2}{}{t}\llt x(t),y(t)\rgt 
+   &amp;=\llt \ddiff{2}{x}{t}(t),\ddiff{2}{y}{t}(t)\rgt 
+</mrow>
+</md>
+So, the velocity and acceleration vectors of our mass are
+<md alignment="alignat">
+<mrow>{3}
+\vv(t)&amp;=\diff{}{t}\llt x(t),y(t)\rgt 
+&amp;&amp;=\llt \ell\diff{}{t}\sin\theta(t),-\ell\diff{}{t}\cos\theta(t)\rgt 
+</mrow><mrow>
+&amp;=\llt \ell\cos\theta(t)\,\diff{\theta}{t}(t)\,,\,
+             \ell\sin\theta(t)\,\diff{\theta}{t}(t)\rgt\hidewidth 
+</mrow><mrow>
+&amp;=\ell\,\diff{\theta}{t}(t)\,\llt \cos\theta(t),\sin\theta(t)\rgt \hidewidth
+  \<me>
+0.1in]
+\va(t)&amp;=\ddiff{2}{}{t}\llt x(t),y(t)\rgt 
+&amp;&amp;=\diff{}{t}
+  \left\{\ell\,\diff{\theta}{t}(t)\,
+               \llt \cos\theta(t),\sin\theta(t)\rgt \right\} 
+</mrow><mrow> 
+&amp;=\ell\,\ddiff{2}{\theta}{t}(t)\,\llt \cos\theta(t),\sin\theta(t)\rgt 
++\ell\,\diff{\theta}{t}(t)
+       \llt \diff{}{t}\cos\theta(t),\diff{}{t}\sin\theta(t)\rgt \,\hidewidth
+</mrow><mrow>
+&amp;= \ell\,\ddiff{2}{\theta}{t}(t)\llt \cos\theta(t),\sin\theta(t)\rgt 
++\ell \Big(\diff{\theta}{t}(t)\Big)^2
+     \llt -\sin\theta(t),\cos\theta(t)\rgt\hidewidth
+</mrow>
+</md>
+</p>
+
+<p>The negative of the velocity vector is  
+<m>- \ell\, \diff{\theta}{t}\llt \cos\theta,\sin\theta\rgt</m>, so the total frictional force is 
+<me>
+-\beta\ell\, \diff{\theta}{t}\llt \cos\theta,\sin\theta\rgt 
+</me> 
+with <m>\beta</m> our constant of proportionality. 
+</p>
+
+<p>The vector 
+<me>
+\tau(t) \llt -\sin\theta(t),\cos\theta(t)\rgt 
+</me>
+has magnitude <m>\tau(t)</m> and direction parallel to the rod pointing 
+from the mass towards the hinge and so is the force due to tension 
+in the rod. 
+</p>
+
+<p>Hence, for this physical system, Newton's law of motion is 
+\begin{align}
+&amp;\overbrace{m\ell\,\ddiff{2}{\theta}{t}\llt \cos\theta,\sin\theta\rgt 
++m\ell\,\Big(\diff{\theta}{t}\Big)^2\llt -\sin\theta,\cos\theta\rgt}^
+        {\text{mass}\times\text{acceleration}}
+  \notag\\
+&amp;\hskip1in=
+\overbrace{mg\llt 0,-1\rgt}^{\rm gravity} 
+ +\overbrace{\tau \llt -\sin\theta,\cos\theta\rgt}^{\rm tension}
+-\overbrace{\beta\ell\,\diff{\theta}{t}\llt \cos\theta,\sin\theta\rgt}^{\rm friction} 
+\tag{<m>*</m>}
+\end{align}
+This is a rather complicated looking equation. Writing out its <m>x</m>- and
+<m>y</m>-components doesn't help. They also look complicated.
+Instead, the equation can be considerably simplified (and 
+consequently better understood) by <q>taking its components parallel to
+and perpendicular to the direction of motion</q>. From the velocity vector
+<m>\vv(t)</m>, we see that <m>\llt \cos\theta(t),\sin\theta(t)\rgt </m> is a unit 
+vector parallel to the direction of motion at time <m>t</m>.
+Recall, from <xref ref="eqn_unit_proj"/>, that the projection of any vector 
+<m>\vb</m> on any unit vector <m>\hat\vd</m> 
+(with the <q>hat</q> on <m>\hat\vd</m> reminding ourselves that the vector is a unit
+vector) is
+<md>
+<mrow>
+</p>
+
+<p>\big(\vb\cdot \hat\vd\big)\,\hat\vd
+</mrow>
+</md>
+The coefficient <m>\vb\cdot \hat\vd</m> is, by definition, the
+component of <m>\vb</m> in the direction <m>\hat\vd</m>.
+So, by dotting both sides of the equation of motion <m>(*)</m> with
+<m>\hat\vd=\llt \cos\theta(t),\sin\theta(t)\rgt </m>, we extract the component 
+parallel to the direction of motion. Since
+<md>
+<mrow>
+\llt \cos\theta,\sin\theta\rgt \cdot\llt \cos\theta,\sin\theta\rgt &amp;=1
+</mrow><mrow>
+\llt \cos\theta,\sin\theta\rgt \cdot\llt -\sin\theta,\cos\theta\rgt &amp;=0
+</mrow><mrow>
+\llt \cos\theta,\sin\theta\rgt \cdot\llt 0,-1\rgt &amp;=-\sin\theta
+</mrow>
+</md>
+this gives
+<md>
+<mrow> 
+m\ell\ddiff{2}{\theta}{t}=-mg\sin\theta-\beta\ell\diff{\theta}{t}
+</mrow>
+</md>
+which is <em>much</em> cleaner than <m>(*)</m>!
+When <m>\theta</m> is small, we can approximate <m>\sin\theta\approx\theta</m> 
+and get the equation
+<md>
+<mrow>
+\ddiff{2}{\theta}{t}+\frac{\beta}{m}\diff{\theta}{t}+\frac{g}{\ell}\theta=0
+</mrow>
+</md>
+which is easily solved. There are systematic procedures for finding 
+the solution, but we'll just guess. 
+</p>
+
+<p>When there is no friction (so that <m>\beta=0</m>),
+we would expect the pendulum to just oscillate. So it is natural to guess
+<me>
+\theta(t)=A\sin(\omega t-\delta)
+</me>
+which is an oscillation with (unknown) amplitude <m>A</m>, 
+frequency <m>\omega</m> (radians per unit time) and 
+phase <m>\delta</m>. Substituting this guess into the left hand side, 
+<m>\theta</q>+\tfrac{g}{\ell}\theta</m>,  yields 
+<me>
+-A\omega^2\sin(\omega t-\delta)+A\tfrac{g}{\ell}\sin(\omega t-\delta)
+</me> 
+which is zero if <m>\omega=\sqrt{g/\ell}</m>. So
+<m>\ \theta(t)=A\sin(\omega t-\delta)\ </m> is a solution for any amplitude 
+<m>A</m> and phase <m>\delta</m>, provided the frequency <m>\omega=\sqrt{g/\ell}</m>. 
+</p>
+
+<p>When there is some, but not too much, friction, so that <m>\beta \gt 0</m> is 
+relatively small, we would expect <q>oscillation with decaying amplitude</q>. 
+So we  guess 
+<me>
+\theta(t)=Ae^{-\gamma t}\sin(\omega t-\delta)
+</me>
+for some constant decay rate <m>\gamma</m>, to be determined.
+With this guess,
+<md alignment="alignat">
+<mrow>{3}
+\theta(t)&amp;=\phantom{- -\gamma\omega^{2})} Ae^{-\gamma t}
+                   &amp;\sin(\omega t-\delta)
+</mrow><mrow>
+\theta'(t)&amp;=\phantom{-\omega^{2})}-\gamma Ae^{-\gamma t}
+                  &amp;\sin(\omega t-\delta)
+&amp;+\phantom{2\gamma }\omega A e^{-\gamma t}&amp;\cos(\omega t-\delta)
+</mrow><mrow>
+\theta</q>(t)&amp;=(\gamma^2-\omega^2)Ae^{-\gamma t}&amp;\sin(\omega t-\delta)
+                    &amp;-2\gamma\omega A e^{-\gamma t}&amp;\cos(\omega t-\delta)
+</mrow>
+</md>
+and the left hand side
+<md>
+<mrow>
+&amp;\ddiff{2}{\theta}{t}+\frac{\beta}{m}\diff{\theta}{t}+\frac{g}{\ell}\theta
+</p>
+
+<p></mrow><mrow>
+&amp;\hskip0.5in
+=\left[\gamma^2-\omega^2-\frac{\beta}{m}\gamma+\frac{g}{\ell}\right] 
+                         Ae^{-\gamma t}\sin(\omega t-\delta)
++\left[-2\gamma\omega+\frac{\beta}{m}\omega\right] 
+                         Ae^{-\gamma t}\cos(\omega t-\delta)
+</mrow>
+</md>
+vanishes if <m>\gamma^2-\omega^2-\frac{\beta}{m}\gamma+\tfrac{g}{\ell}=0</m> and 
+<m>-2\gamma\omega+\frac{\beta}{m}\omega=0.</m> The second equation tells us the decay
+rate <m>\gamma=\tfrac{\beta}{2m}</m> and then the first tells us the frequency
+<md>
+<mrow>
+\omega=\sqrt{\gamma^2-\tfrac{\beta}{m}\gamma+\tfrac{g}{\ell}}
+=\sqrt{\tfrac{g}{\ell}-\tfrac{\beta^2}{4m^2}}
+</mrow>
+</md> 
+When there is a lot of friction
+(namely when <m>\tfrac{\beta^2}{4m^2} \gt \tfrac{g}{\ell}</m>, so that the frequency
+<m>\omega</m> is not a real number), we would expect damping without oscillation 
+and so would guess <m>\theta(t)=Ae^{-\gamma t}</m>. You can determine the allowed
+values of <m>\gamma</m> by substituting this guess in. 
+</p>
+
+<p>To extract the components perpendicular to the direction of motion, we
+dot with <m>\llt -\sin\theta,\cos\theta\rgt </m> rather than <m>\llt \cos\theta,\sin\theta\rgt </m>. Note that,
+because <m>\llt -\sin\theta,\cos\theta\rgt \cdot
+   \llt \cos\theta,\sin\theta\rgt =0</m>, the vector
+<m>\llt -\sin\theta,\cos\theta\rgt </m> really is perpendicular to the 
+direction of motion.  Since
+<md>
+<mrow>
+\llt -\sin\theta,\cos\theta\rgt \cdot\llt \cos\theta,\sin\theta\rgt &amp;=0
+</mrow><mrow>
+\llt -\sin\theta,\cos\theta\rgt \cdot\llt -\sin\theta,cos\theta\rgt &amp;=1
+</mrow><mrow>
+\llt -\sin\theta,\cos\theta\rgt \cdot\llt 0,-1\rgt &amp;=-\cos\theta
+</mrow>
+</md>
+dotting both sides of the equation of motion <m>(*)</m>
+with <m>\llt -\sin\theta,\cos\theta\rgt </m> gives
+<md>
+<mrow>
+m\ell\Big(\diff{\theta}{t}\Big)^2=-mg\cos\theta+\tau 
+</mrow>
+</md>
+This equation just determines the tension
+<m>\tau=m\ell\big(\diff{\theta}{t}\big)^2+mg\cos\theta</m> in the rod, once you know
+<m>\theta(t)</m>.
+</p>
+
+<p>\subsection{(Optional) Areas of Parallelograms}xml:id="sec_GEOparallelogram"
+</p>
+
+<p>A parallelogram is naturally determined by the two vectors that 
+define its sides. We'll now develop a formula for the area of a
+parallelogram in terms of these two vectors. 
+</p>
+
+<p>Construct a parallelogram as follows. Pick two vectors <m>\llt a,b\rgt </m> 
+and <m>\llt c,d\rgt </m>. Draw them with their tails at a common point. Then 
+draw <m>\llt a,b\rgt </m> a second time with its tail at the head of 
+<m>\llt c,d\rgt </m> and draw  <m>\llt c,d\rgt </m> a second time with its tail 
+at the head of <m>\llt a,b\rgt </m>. If the common point is the
+origin, you get a picture like the figure below.
+\vadjust{
+      </p>
+<sidebyside> 
+      <image source="problems/figs/area3"/>
+      </sidebyside>
+<p>
+        }
+Any parallelogram can be constructed like this if you pick the common point
+and two vectors appropriately. Let's compute the area of the parallelogram.
+The area of the large rectangle with vertices <m>(0,0),\ (0, b+d),\ (a+c,0)</m>
+and <m>(a+c,b+d)</m> is <m>(a+c)(b+d)</m>. The parallelogram we want can be extracted
+from the large rectangle by deleting the two small rectangles (each of
+area <m>bc</m>), and the two lightly shaded triangles (each of area <m>\half cd</m>),
+and the two darkly shaded triangles (each of area <m>\half ab</m>). So the desired
+<md>
+<mrow>
+{\rm area} = (a+c)(b+d) - (2\times bc) -\big(2\times \half cd\big)
+ -\big(2\times\half ab\big)
+=ad-bc
+</mrow>
+</md>
+In the above figure, we have implicitly assumed that <m>a,\ b,\ c,\ d\ge 0</m>
+and <m>d/c\ge b/a</m>. In words, we have assumed that both vectors 
+<m>\llt a,b\rgt ,\ \llt c,d\rgt </m> lie in the first quadrant and that 
+<m>\llt c,d\rgt </m> lies above <m>\llt a,b\rgt </m>.
+By simply interchanging <m>a\leftrightarrow c</m> and <m>b\leftrightarrow d</m>
+in the picture and throughout the argument, we see that when 
+<m>a,\ b,\ c,\ d\ge 0</m> and <m>b/a\ge d/c</m>, so that the vector <m>\llt c,d\rgt </m> 
+lies below <m>\llt a,b\rgt </m>, the area of the parallelogram is <m>bc-ad</m>. 
+In fact, all cases are covered by the formula
+\begin{impeqn}xml:id="eq_pgram_area"
+<md>
+<mrow>
+\text{area of parallelogram with sides <m>\llt a,b\rgt </m> and <m>\llt c,d\rgt =|ad-bc|</m>}
+</mrow>
+</md>
+\end{impeqn}
+</p>
+
+<p>Given two vectors <m>\llt a,b\rgt </m> and <m>\llt c,d\rgt </m>, the expression 
+<m>ad-bc</m> is generally written
+<md>
+<mrow>
+\det\left[\begin{matrix}a&amp;b
+</mrow><mrow> c&amp;d\end{matrix}\right]=ad-bc
+</mrow>
+</md>
+and is called the <em>determinant</em> of the matrix
+<fn>The topics of
+matrices and determinants appear prominently in linear algebra courses. We
+are only going to use them as notation, and we will explicitly explain
+that notation. A linear algebra course is <em>not</em> a prerequisite 
+for this text.</fn>
+</p>
+
+<p><md>
+<mrow>
+\left[\begin{matrix}a&amp;b
+</mrow><mrow> c&amp;d\end{matrix}\right]
+</mrow>
+</md> 
+with rows <m>\llt a,b\rgt </m> and <m>\llt c,d\rgt </m>. The determinant
+of a <m>2\times 2</m> matrix is the product of the diagonal entries 
+minus the product of the off-diagonal entries. 
+</p>
+
+<p>There is a similar formula in three dimensions. Any three vectors 
+<m>\va=\llt a_1,a_2,a_3\rgt ,\ \vb=\llt b_1,b_2,b_3\rgt </m> and 
+<m>\vc=\llt c_1,c_2,c_3\rgt </m> in three dimensions
+\vadjust{
+      </p>
+<sidebyside> 
+      <image source="problems/figs/piped"/>
+      </sidebyside>
+<p>
+        }
+determine a parallelepiped 
+(three dimensional parallelogram). Its volume is given by the formula
+\begin{impeqn}xml:id="eq_piped_volume"
+<md>
+<mrow>
+\text{volume of parallelepiped with edges <m>\va,\ \vb,\ \vc\ 
+=\ \left|
+\det\left[\begin{matrix}a_1&amp;a_2&amp;a_3
+</mrow><mrow> b_1&amp;b_2&amp;b_3\\ c_1&amp;c_2&amp;c_3\end{matrix}\right]
+\right|</m>}
+</mrow>
+</md>
+\end{impeqn}
+The determinant of a <m>3\times 3</m> matrix can be defined in terms
+of some <m>2\times 2</m> determinants by
+</p>
+
+<p>      <image source="problems/figs/det2"/>
+      This formula is called <q>expansion along the top row</q>. There
+is one term in the formula for each entry in the top row of the <m>3\times 3</m>
+matrix. The term is
+a sign times the entry itself times the determinant of the <m>2\times 2</m> matrix
+gotten by deleting the row and column that contains the entry. The sign
+alternates, starting with a <m>+</m>. 
+</p>
+
+<p>We shall not prove this formula completely. It gets a little tedious.
+But, there is one case in which we can easily verify that the volume of the 
+parallelepiped is really given by the absolute value of the
+claimed determinant. If the vectors <m>\vb</m> and <m>\vc</m> happen to lie
+in the <m>xy</m> plane, so that <m>b_3=c_3=0</m>, then 
+<md>
+<mrow>
+\det\left[\begin{matrix}a_1&amp;a_2&amp;a_3
+</mrow><mrow> b_1&amp;b_2&amp;0\\ c_1&amp;c_2&amp;0\end{matrix}\right]
+&amp;=a_1(b_20-0c_2) -a_2(b_10-0c_1) +a_3(b_1c_2-b_2c_1)
+</mrow><mrow>
+&amp;=a_3(b_1c_2-b_2c_1)
+</mrow>
+</md>
+The first factor, <m>a_3</m>, is the <m>z</m>-coordinate of the one vector not contained in the <m>xy</m>-plane. It 
+is (up to a sign) the height of the parallelepiped. The second factor is,
+up to a sign, the area of the parallelogram determined by <m>\vb</m>
+and <m>\vc</m>. This parallelogram forms the base of the parallelepiped. 
+The product is indeed, up to a sign, the volume of the parallelepiped.
+That the formula is true in general is a consequence of the fact (that
+we will not prove) that the value of a determinant does not change when
+one rotates the coordinate system and that one can always rotate
+our coordinate axes around so that <m>\vb</m> and <m>\vc</m> both lie in the
+<m>xy</m>-plane. 
+</p>
+
+<p>\subsection{The Cross Product}
+</p>
+
+<p>We have already seen two different products involving vectors <mdash/>
+the multiplication of a vector by a scalar 
+and the dot product of two vectors. The dot product of two vectors
+yields a scalar. We now introduce another product 
+of two vectors, called the <em>cross product</em>. The cross product of
+two vectors will give a vector. There are applications which have two 
+vectors as inputs and produce one vector as an output, and which are related
+to the cross product. Here is a very brief mention of two such applications. 
+We will look at them in much more detail later. 
+<ul>
+<li> 
+Consider a parallelogram in three dimensions.
+A parallelogram is naturally determined by the two vectors that define 
+its sides.
+One measure of the size of a parallelogram is its area. 
+One way to specify the orientation of the parallelogram is to give a vector
+that is perpendicular to it. 
+A very compact way to encode both the area and the orientation of
+the parallelogram is to give a vector whose direction is perpendicular 
+to the plane in which it lies and whose magnitude is its area.
+We shall see that such a vector can be easily constructed by taking the cross product (definition coming shortly) of the two vectors that give
+the sides of the parallelogram.
+</p>
+
+
+<sidebyside> 
+      <image source="problems/figs/pgramCross.pdf"/>
+      </sidebyside>
+<p>
+</li>
+<li> 
+Imagine a rigid body which is rotating at a rate <m>\Omega</m> radians per 
+second about an axis whose direction is given by the unit vector <m>\hat\va</m>. 
+Let <m>P</m> be any point on the body. We shall see, in the (optional)
+\S<xref ref="sec_rot_motion"/>, that the velocity, <m>\vv</m>, of the point <m>P</m> 
+is the cross product 
+(again, definition coming shortly) of the vector <m>\Om\hat\va</m> with the vector
+<m>\vr</m> from any point on the axis of rotation to <m>P</m>.
+      </p>
+<sidebyside> 
+      <image source="problems/figs/rigidBB"/>
+      </sidebyside>
+<p>
+</li>
+</ul>
+</p>
+
+<p>\noindent
+Finally, here is the definition of the cross product.
+</p>
+
+<p><definition><title>Cross Product</title>
+<statement><p>xml:id="def_crossProd"
+The cross product of the vectors <m>\va=\llt a_1,a_2,a_3\rgt</m> and 
+<m>\vb=\llt b_1,b_2,b_3\rgt</m> is denoted <m>\va\times\vb</m> 
+and is defined by
+<md>
+<mrow>
+\va\times\vb = \llt a_2b_3-a_3b_2\,,\, a_3b_1-a_1b_3\,,\, a_1b_2-a_2b_1\rgt 
+</mrow>
+</md>
+</p></statement>
+</definition>
+</p>
+
+<p>Note that each component has the form <m>a_ib_j-a_jb_i</m>. The index <m>i</m> of
+the first <m>a</m> in component number <m>k</m> of <m>\va\times\vb</m>
+is just after <m>k</m> in the list <m>1,2,3,1,2,3,1,2,3,\cdots</m>. 
+The index <m>j</m> of the first <m>b</m> is just before <m>k</m> in the list. 
+<md>
+<mrow>
+(\va\times\vb)_k
+=a_{{\rm just\  after\  }k}\ b_{{\rm just\  before\  }k}
+-a_{{\rm just\  before\  }k}\ b_{{\rm just\  after\  }k}
+</mrow>
+</md>
+For example, for component number <m>k=3</m>,
+<md>
+<mrow>
+\left.{\text{<q>just after 3</q> is 1}}\atop{\text{<q>just before 3</q> is 2}}\right\}
+\implies (\va\times\vb)_3= a_1b_2-a_2b_1
+</mrow>
+</md>
+</p>
+
+<p>There is a much better way to remember this definition. Recall that
+a <m>2\times 2</m> matrix is an array of numbers having two rows and two columns
+and that the determinant of a <m>2\times 2</m> matrix is  defined by
+<md>
+<mrow>
+\det \left[\begin{matrix}a&amp; b
+</mrow><mrow> c&amp;d\end{matrix}\right]=ad-bc
+</mrow>
+</md>
+It is the product of the entries on the diagonal minus the product
+of the entries not on the diagonal. 
+</p>
+
+<p>A <m>3\times 3</m> matrix is an array of
+numbers having three rows and three columns.
+<md>
+<mrow>
+ \left[\begin{matrix}i&amp; j &amp;k
+</mrow><mrow> a_1&amp;a_2&amp;a_3\\ b_1&amp;b_2&amp;b_3\end{matrix}\right]
+</mrow>
+</md>
+You will shortly see why the entries in the top row have been given the
+rather peculiar names <m>i</m>, <m>j</m> and <m>k</m>. The determinant of a <m>3\times 3</m> 
+matrix can be defined in terms of some <m>2\times 2</m> determinants by
+      <image source="problems/figs/det.pdf"/>
+      This formula is called <q>expansion of the determinant along the top row</q>. 
+There is one term in the formula for each entry in the top row. The term is
+a sign times the entry itself times the determinant of the <m>2\times 2</m> matrix
+gotten by deleting the row and column that contains the entry. The sign
+alternates, starting with a <m>+</m>. If we now replace <m>i</m> by <m>\hi</m>, <m>j</m> by <m>\hj</m> 
+and <m>k</m> by <m>\hk</m>, we get exactly the formula for <m>\va\times \vb</m>
+of Definition <xref ref="def_crossProd"/>. That is the reason for the peculiar 
+choice of names for the matrix entries. So
+<md>
+<mrow>
+\va\times\vb
+&amp;=\det\left[\begin{matrix}\hi&amp; \hj &amp;\hk
+</mrow><mrow> 
+                            a_1&amp;a_2&amp;a_3
+</mrow><mrow> 
+                            b_1&amp;b_2&amp;b_3\end{matrix}\right] 
+</mrow><mrow>
+&amp;=\hi\big(a_2b_3-a_3b_2) -\hj(a_1b_3-a_3b_1) +\hk(a_1b_2-a_2b_1)
+</mrow>
+</md>
+is a mnemonic device for remembering the definition of <m>\va\times\vb</m>.
+It is also good from the point of view of 
+evaluating <m>\va\times\vb</m>.
+</p>
+
+<p><example>
+<p>xml:id="eg_GEOcrossijji"
+In this example, we'll use the mnemonic device to compute two very simple cross
+products. First
+      <image source="problems/figs/detij.pdf"/>
+      Second
+      <image source="problems/figs/detji.pdf"/>
+      Note that, unlike most (or maybe even all) products that you have seen before, <m>\hi\times\hj</m> is <em>not</em> the same as <m>\hj\times\hi</m>!
+</p></example>
+</p>
+
+<p>Our first properties of the cross product 
+lead up to a more intuitive geometric definition of <m>\va\times\vb</m>, which is better for interpreting <m>\va\times\vb</m>. 
+ These properties of the cross product, which state that  <m>\va\times\vb</m>
+is a vector and then determine its direction and length, are as follows.
+We will collect these properties, and a few others, into a theorem shortly.
+<ol>[(1)]
+\setcounter{enumi}{-1}
+</li>
+<li> <m>\va,\vb\text{ are vectors in three dimensions and }
+\va\times\vb\text{ is a vector in three dimensions}</m>.
+</li>
+<li> <m>\va\times\vb</m> is perpendicular to both  <m>\va</m> and <m>\vb</m>.
+</p>
+
+<p>\textit{Proof}: To check that <m>\va</m> and <m>\va\times \vb</m> are perpendicular, 
+one just has to check that the dot product <m>\va\cdot(\va\times \vb)=0</m>.
+The six terms in 
+<me>
+\va\cdot(\va\times \vb)=
+a_1(a_2b_3-a_3b_2)+a_2(a_3b_1-a_1b_3)+a_3(a_1b_2-a_2b_1)
+</me> 
+cancel pairwise. The computation showing that <m>\vb\cdot(\va\times \vb)=0</m> 
+is similar.
+</p>
+
+<p>\bigskip
+</li>
+<li> <m>|\va\times\vb|=|\va|\,|\vb|\sin\theta
+\text{ where </m>0\le\theta\le\pi<m> is the angle between </m>\va<m> and </m>\vb<m>}</m>
+</p>
+
+<p><m>\phantom{|\va\times\vb|}=\text{the area of the parallelogram
+with sides </m>\va<m> and </m>\vb<m>}\qquad\qquad\quad
+\smash{\raisebox{-0.2\height}{<image source="problems/figs/area.pdf"/>}}</m>
+</p>
+
+<p>\textit{Proof}: 
+</p>
+
+<p>The formula <m>|\va\times\vb|=|\va|\,|\vb|\sin\theta</m> is gotten by comparing
+<md>
+<mrow>
+|\va\times\vb|^2
+&amp;=\big(\va\times\vb\big)\cdot\big(\va\times\vb\big) 
+</mrow><mrow>
+&amp;=(a_2b_3-a_3b_2)^2+(a_3b_1-a_1b_3)^2+ (a_1b_2-a_2b_1)^2
+</mrow><mrow>
+&amp;=a_2^2b_3^2-2a_2b_3a_3b_2+a_3^2b_2^2
++a_3^2b_1^2-2a_3b_1a_1b_3+a_1^2b_3^2
+</mrow><mrow>&amp;\hskip0.5in
++a_1^2b_2^2-2a_1b_2a_2b_1+a_2^2b_1^2
+</mrow><mrow>
+</mrow>
+<intertext>and</intertext><mrow>
+|\va|^2\,|\vb|^2\sin^2\theta
+&amp;=|\va|^2|\vb|^2(1-\cos^2\theta)
+</mrow><mrow>
+&amp;=|\va|^2|\vb|^2-(\va\cdot\vb)^2 
+</mrow><mrow>
+&amp;=\big(a_1^2+a_2^2+a_3^2\big)\big(b_1^2+b_2^2+b_3^2\big)
+-\big(a_1b_1+a_2b_2+a_3b_3\big)^2
+</mrow><mrow>
+&amp;=a_1^2b_2^2+a_1^2b_3^2+a_2^2b_1^2+a_2^2b_3^2+a_3^2b_1^2+a_3^2b_2^2
+</mrow><mrow>
+&amp;\hskip0.5in
+ -\big(2a_1b_1a_2b_2+2a_1b_1a_3b_3+2a_2b_2a_3b_3\big)
+</mrow><mrow>
+</mrow>
+</md>
+To see that <m>|\va|\,|\vb|\sin\theta</m> is the area of the parallelogram
+with sides <m>\va</m> and <m>\vb</m>, just recall that the area of any parallelogram
+is given by the length of its base times its height. Think of <m>\va</m> as the
+base of the parallelogram. Then <m>|\va|</m> is the length of the base
+and <m>|\vb|\sin\theta</m> is the height.
+      </p>
+<sidebyside> 
+      <image source="problems/figs/areaB.pdf"/>
+      </sidebyside>
+<p>
+</li>
+</ol>
+</p>
+
+<p>\noindent
+These properties almost determine <m>\va\times\vb</m>. Property 1 forces
+the vector <m>\va\times\vb</m> to lie on the line perpendicular to the
+plane containing <m>\va</m> and <m>\vb</m>. There are precisely two vectors
+on this line that have the length given by property 2. In the left hand
+figure of
+      </p>
+<sidebyside> 
+      <image source="problems/figs/crossLL.pdf"/>\qquad\quad
+      \raisebox{-0.05\height}{<image source="problems/figs/crossRR.pdf"/>}\qquad\quad
+</p>
+
+<p>    \raisebox{0.2\height}{<image source="problems/figs/RHR.pdf"/>}
+      </sidebyside>
+<p>
+the two vectors are labeled <m>\vc</m> and <m>\vd</m>. Which of these two
+candidates is correct is determined by the right hand rule
+<fn>
+That the cross product uses the right hand rule, rather than the left hand rule, is an example of the tyranny of the masses <mdash/> only roughly 10\% 
+of humans are left-handed. </fn>
+, which says
+that if you form your right hand into a fist with your fingers curling from 
+<m>\va</m> to <m>\vb</m>, then when you stick your thumb straight out from
+the fist, it points in the direction of <m>\va\times\vb</m>. This is
+illustrated in the figure on the right 
+above
+</p>
+
+<p><fn>This figure is a variant of 
+https:/\hskip-1pt/commons.wikimedia.org/wiki/File:Right\_hand\_rule\_simple.png
+</fn>
+.
+The important special cases
+</p>
+
+<p><ol>[(1)]
+\setcounter{enumi}{2}
+</li>
+<li> <m>\hi\times\hj=\phantom{-}\hk,\ \ \ \hj\times\hk=\phantom{-}\hi,\ \ \  \hk\times\hi=\phantom{-}\hj</m> \\
+      <m>\hj\times\hi=-\hk,\ \ \ \hk\times\hj=-\hi,\ \ \ \hi\times\hk=-\hj</m>
+</p>
+
+<p>all follow directly from the definition of the cross product (see, for example,
+Example <xref ref="eg_GEOcrossijji"/>) and all 
+obey the right hand rule.  Combining properties 1, 2 and the right hand 
+rule give the geometric definition of <m>\va\times\vb</m>. To remember
+these three special cases, just remember this figure.
+      </p>
+<sidebyside> 
+      <image source="problems/figs/cp_circle.pdf"/>
+      </sidebyside>
+<p>
+The product of any two standard basis vectors, taken in the order of 
+the arrows in the figure, is the third standard basis vector.
+Going against the arrows introduces a minus sign.
+</li>
+<li> <m>\va\times\vb=|\va|\,|\vb|\sin\theta\ \hn
+\text{ where </m>\theta<m> is the angle between </m>\va<m> and </m>\vb<m>, }
+|\hn|=1,\ \hn\perp\va,\vb</m>
+  and <m>(\va,\vb,\hn)</m> obey the right hand rule.
+</p>
+
+<p>\textit{Outline of Proof}: We have already seen that the right hand side
+has the correct length and, except possibly for a sign, direction.
+To check that the right hand rule holds in
+general, rotate your coordinate system around
+<fn>Note that as you 
+translate or rotate the coordinate system, the right hand rule is preserved. 
+If <m>(\va,\vb,\hn)</m> obey the right hand rule so do their rotated and 
+translated versions.</fn>
+</p>
+
+<p>so that <m>\va</m> points along
+the positive <m>x</m> axis and <m>\vb</m> lies in the <m>xy</m>-plane with positive
+<m>y</m> component. That is <m>\va=\alpha\hi</m> and <m>\vb=\beta\hi+\gamma
+\hj</m> with <m>\alpha,\gamma\ge 0</m>. Then 
+<m>\va\times\vb=\alpha\hi\times(\beta\hi+\gamma\hj)
+=\alpha\beta\,\hi\times\hi+\alpha\gamma\,\hi\times\hj</m>. The
+first term vanishes by property 2, because the angle <m>\theta</m> between <m>\hi</m>
+and <m>\hi</m> is zero. So, by property 3, 
+<m>\va\times\vb= \alpha\gamma\hk</m> points
+along the positive <m>z</m> axis, which is consistent with the right hand rule.
+</li>
+</ol>
+</p>
+
+<p>\noindent  The analog of property 7 of the dot product (which says that
+<m>\va\cdot\vb</m> is zero if and only if  <m>\va=\vZero</m> or <m>\vb=\vZero</m> or  <m>\va\perp\vb</m>) follows
+immediately from property 2.
+</p>
+
+<p><ol>[(1)]
+\setcounter{enumi}{4}
+</li>
+<li> <m>\va\times\vb=\vZero\iff \va=\vZero \text{ or }\vb=\vZero 
+\text{ or }\va\parallel\vb</m>
+</li>
+</ol>
+</p>
+
+<p>\noindent
+The remaining properties are all tools for
+helping do computations with cross products.
+Here is a theorem which summarizes the properties of the cross product.
+We have already seen the first five. The other properties are all tools 
+for helping do computations with cross products.
+</p>
+
+<p><theorem><title>Properties of the Cross Product</title>
+<statement><p>xml:id="thm_crossPppties"
+<ol>[(1)]
+\setcounter{enumi}{-1}
+</li>
+<li> <m>\va,\vb\text{ are vectors in three dimensions and }
+\va\times\vb\text{ is a vector in three dimensions}</m>.
+</li>
+<li> <m>\va\times\vb</m> is perpendicular to both  <m>\va</m> and <m>\vb</m>.
+</p>
+
+<p>\bigskip
+</li>
+<li> <m>|\va\times\vb|=|\va|\,|\vb|\sin\theta
+\text{ where </m>\theta<m> is the angle between </m>\va<m> and </m>\vb<m>}</m>
+</p>
+
+<p><m>\phantom{|\va\times\vb|}=\text{the area of the parallelogram
+with sides </m>\va<m> and </m>\vb<m>}\qquad
+\smash{\raisebox{-0.1\height}{<image source="problems/figs/area.pdf"/>}}</m>
+</li>
+<li> <m>\hi\times\hj=\hk,\ \hj\times\hk=\hi,\ \hk\times\hi=\hj</m>
+</li>
+<li> <m>\va\times\vb=|\va|\,|\vb|\sin\theta\ \vn
+\text{ where </m>\theta<m> is the angle between </m>\va<m> and </m>\vb<m>, }
+|\vn|=1,\\ \vn\perp\va,\vb</m>
+  and <m>(\va,\vb,\vn)</m> obey the right hand rule.
+</li>
+<li> <m>\va\times\vb=\vZero\iff \va=\vZero \text{ or }\vb=\vZero 
+\text{ or }\va\parallel\vb</m>
+</li>
+</ol>
+</p></statement>
+</theorem>
+</p>
+
+<p>\addtocounter{theorem}{-1}
+<theorem><title>continued</title>
+<statement><p>
+<ol>[(1)]
+\setcounter{enumi}{5}
+</li>
+<li> <m>\va\times \vb=-\vb\times\va</m>
+</li>
+<li> <m>(s\va)\times \vb=\va\times(s\vb)=s(\va\times \vb)</m> for any scalar
+(i.e. number) <m>s</m>.
+</li>
+<li> <m>\va\times(\vb+\vc)=\va\times\vb+\va\times \vc</m>
+</li>
+<li> <m>\va\cdot(\vb\times\vc)=(\va\times\vb)\cdot\vc</m>
+</li>
+<li> <m>\va\times(\vb\times\vc)=(\vc\cdot\va)\vb -(\vb\cdot\va)\vc</m>
+</li>
+</ol>
+</p>
+
+</statement>
+</theorem>
+<proof>
+<p>
+We have already seen the proofs up to number 5. Numbers 6, 7 and 8 
+follow immediately from the definition, using a little algebra. To prove 
+numbers 9 and 10 we just write out the definitions of the left hand sides 
+and the right hand sides and observe that they are equal.
+</p>
+
+<p>\medskip
+\noindent (9)\ \ \ The left hand side is
+<md>
+<mrow>
+\va\cdot(\vb\times\vc)
+&amp;=\llt a_1,a_2,a_3\rgt\cdot
+      \llt b_2c_3-b_3c_2\,,\, b_3c_1-b_1c_3\,,\, b_1c_2-b_2c_1\rgt
+</mrow><mrow>
+&amp;=a_1b_2c_3 - a_1b_3c_2 + a_2b_3c_1 - a_2b_1c_3 + a_3b_1c_2 - a_3b_2c_1
+</mrow>
+</md>
+The right hand side is
+<md>
+<mrow>
+(\va\times\vb)\cdot\vc
+&amp;=\llt a_2b_3-a_3b_2\,,\, a_3b_1-a_1b_3\,,\, a_1b_2-a_2b_1\rgt\cdot
+       \llt c_1,c_2,c_3\rgt 
+</mrow><mrow>
+&amp;=a_2b_3c_1 - a_3b_2c_1 + a_3b_1c_2 - a_1b_3c_2 + a_1b_2c_3 - a_2b_1c_3
+</mrow>
+</md>
+The left and right hand sides are the same.
+</p>
+
+<p>\medskip
+\noindent (10)\ \ \ Since
+<me>
+\vb\times\vc
+\ =\ (b_2c_3-b_3c_2)\,\hi-(b_1c_3-b_3c_1)\,\hj
+    +(b_1c_2-b_2c_1)\,\hk
+</me>
+The left hand side is
+<md>
+<mrow>
+\va\times(\vb\times\vc)
+\ =\ &amp;\det\left[\begin{matrix} \hi &amp; \hj &amp; \hk 
+</mrow><mrow>
+                     a_1&amp;a_2&amp;a_3
+</mrow><mrow>
+                 b_2c_3-b_3c_2&amp;-b_1c_3+b_3c_1&amp;b_1c_2-b_2c_1
+             \end{matrix}\right]\<me>
+0.05in]
+\ =\ &amp;\phantom{-}\hi\,[a_2(b_1c_2-b_2c_1)-a_3(-b_1c_3+b_3c_1)]
+</mrow><mrow>
+     &amp; {-}\hj\,[a_1(b_1c_2-b_2c_1)-a_3(b_2c_3-b_3c_2)]
+</mrow><mrow>
+     &amp; {+}\hk\,[a_1(-b_1c_3+b_3c_1)-a_2(b_2c_3-b_3c_2)]
+</mrow>
+</md>
+The right hand side is
+<md>
+<mrow>
+(\va\cdot\vc)\vb-(\va\cdot\vb)\vc
+&amp;=(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk) 
+</mrow><mrow>
+     &amp;\hskip1in -(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
+</mrow><mrow>
+&amp;=\phantom{-}
+\hi[a_1b_1c_1+a_2b_1c_2+a_3b_1c_3-a_1b_1c_1-a_2b_2c_1-a_3b_3c_1] 
+</mrow><mrow>
+&amp;\phantom{=}+\hj[a_1b_2c_1+a_2b_2c_2+a_3b_2c_3-a_1b_1c_2-a_2b_2c_2-a_3b_3c_2] 
+</mrow><mrow>
+&amp;\phantom{=}+\hk[a_1b_3c_1+a_2b_3c_2+a_3b_3c_3-a_1b_1c_3-a_2b_2c_3-a_3b_3c_3]
+\<me>
+0.05in]
+&amp;=\phantom{-} \hi[a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1] 
+</mrow><mrow>
+ &amp;\phantom{=} +\hj[a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
+</mrow><mrow>
+ &amp;\phantom{=} +\hk[a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
+</mrow>
+</md>
+The left and right hand sides are the same. Oof! This is a little tedious
+to do by hand. But any computer algebra system will do it for you in a 
+flash.
+</p></proof>
+</p>
+
+<p>\begin{warning}xml:id="warning_GEOMcross" 
+Take particular care with properties 6 and 10. They are 
+counterintuitive and are a frequent source of errors. In particular, 
+for general vectors <m>\va</m>, <m>\vb</m>, <m>\vc</m>, the cross product is neither
+commutative nor associative, meaning that
+<md>
+<mrow>
+\va\times\vb&amp;\ne\vb\times\va
+</mrow><mrow>
+\va\times(\vb\times\vc)&amp;\ne (\va\times\vb)\times\vc
+</mrow>
+</md> 
+For example
+<md>
+<mrow>
+\hi\times(\hi\times\hj)
+&amp;=\hi\times\hk=-\hk\times\hi =-\hj
+</mrow><mrow>
+(\hi\times \hi)\times\hj&amp;= \vZero \times\hj=\vZero
+</mrow><mrow>
+</mrow>
+</md> 
+\end{warning}
+</p>
+
+<p><example>
+<p>xml:id="eg_GEOcross"
+As an illustration of the properties of the dot and cross product, we now
+derive the formula for the volume of the parallelepiped with edges 
+<m>\va=\llt a_1,a_2,a_3\rgt </m>, <m>\vb = \llt b_1,b_2,b_3\rgt </m>, 
+<m>\vc = \llt c_1,c_2,c_3\rgt </m> that was mentioned in 
+\S<xref ref="sec_GEOparallelogram"/>.
+\vadjust{
+      </p>
+<sidebyside> 
+      <image source="problems/figs/pipedVolume.pdf"/>
+      </sidebyside>
+<p>
+        }
+The volume of the parallelepiped is the area of its base times its 
+height
+<fn>This is a simple integral calculus exercise.</fn>
+.
+The base is the parallelogram with sides <m>\vb</m> and
+<m>\vc</m>. Its area is the length of its base, which is <m>|\vb|</m>,
+times its height, which is <m>|\vc|\,\sin\theta</m>. (Drop a 
+perpendicular from the head of <m>\vc</m> to the line containing <m>\vb</m>). 
+Here <m>\theta</m> is the angle between <m>\vb</m> and <m>\vc</m>. So the area of the 
+base is <m>|\vb|\,|\vc|\,\sin\theta= |\vb\times\vc|</m>, by 
+property 2 of the cross product. To get the height of the parallelepiped, 
+we drop a perpendicular from the head of <m>\va</m> to the line that passes 
+through the tail of <m>\va</m> and is perpendicular to the base of the parallelepiped. In other words, from
+the head of <m>\va</m> to the line that contains both the head and the tail
+of <m>\vb\times\vc</m>. So the height of the parallelepiped is
+<m>|\va|\,|\cos\varphi|</m>.  (The absolute values have been included because 
+if the angle between <m>\vb\times\vc</m> and <m>\va</m> happens to be greater
+than <m>90^\circ</m>, the <m>\cos\varphi</m> produced by taking the dot product of 
+<m>\va</m> and  <m>(\vb\times\vc</m>) will be negative.) All together
+<md>
+<mrow>
+\text{volume of parallelepiped}
+&amp;=(\text{area of base})\,(\text{height})
+</mrow><mrow>
+&amp;=|\vb\times\vc|\ |\va|\ |\cos\varphi|
+</mrow><mrow>
+&amp;=\big|\va\cdot(\vb\times\vc)\big|
+</mrow><mrow>
+&amp;=\left|a_1 (\vb\times\vc)_1 +a_2 (\vb\times\vc)_2 
+               +a_3 (\vb\times\vc)_3\right|
+</mrow><mrow>
+&amp;=\left|a_1\det\left[\begin{matrix}b_2&amp;b_3
+</mrow><mrow> c_2&amp;c_3\end{matrix}\right] 
+        -a_2 \det\left[\begin{matrix}b_1&amp;b_3
+</mrow><mrow> c_1&amp;c_3\end{matrix}\right] 
+               +a_3\det\left[\begin{matrix}b_1&amp;b_2
+</mrow><mrow> c_1&amp;c_2\end{matrix}\right]\right|\\
+&amp;=\left|\det\left[\begin{matrix}a_1&amp;a_2&amp;a_3
+</mrow><mrow>
+                          b_1&amp;b_2&amp;b_3
+</mrow><mrow>
+                          c_1&amp;c_2&amp;c_3\end{matrix}\right]\right|
+</mrow>
+</md>
+</p>
+
+</example>
+</p>
+
+<p><example>
+<p>xml:id="eg_GEOcrossConcrete"
+As a concrete example of the computation of the volume of a parallelepiped,
+we consider the parallelepiped with edges
+<md>
+<mrow>
+\va &amp;= \llt 0,1,2\rgt 
+</mrow><mrow>
+\vb &amp;= \llt 1,1,0\rgt 
+</mrow><mrow>
+\vc &amp;= \llt 0,1,0\rgt
+</mrow>
+</md>
+Here is a sketch.
+\vadjust{
+      </p>
+<sidebyside> 
+      <image source="problems/figs/pipedVolumeEg.pdf"/>
+      </sidebyside>
+<p>
+        }
+The base of the parallelepiped is the parallelogram with sides <m>\vb</m> and <m>\vc</m>.
+It is the shaded parallelogram in the sketch above. As
+<md>
+<mrow>
+\vb\times\vc
+&amp;=\det\left[\begin{matrix}\hi&amp; \hj &amp;\hk
+</mrow><mrow> 
+                            1&amp;1&amp;0
+</mrow><mrow> 
+                            0&amp;1&amp;0\end{matrix}\right] 
+</mrow><mrow>
+&amp;=\hi\det\left[\begin{matrix} 1&amp;0
+</mrow><mrow> 
+                              1&amp;0\end{matrix}\right]
+  -\hj\det\left[\begin{matrix}1&amp;0
+</mrow><mrow> 
+                              0&amp;0\end{matrix}\right] 
+   +\hk\det\left[\begin{matrix} 1&amp;1
+</mrow><mrow> 
+                                0&amp;1\end{matrix}\right] 
+</mrow><mrow>
+&amp;=\hi\big(1\times 0-0\times 1) -\hj(1\times 0-0\times 0) 
+                  +\hk(1\times 1-1\times 0) 
+</mrow><mrow>
+&amp;=\hk
+</mrow>
+</md>
+We should not be surprised that <m>\vb\times\vc</m> has direction <m>\hk</m>.
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>[<m>\circ</m>]
+<m>\vb\times\vc</m> has to be perpendicular to both <m>\vb</m> and <m>\vc</m> and
+</li>
+<li>[<m>\circ</m>]
+both <m>\vb</m> and <m>\vc</m> lie in the <m>xy</m>-plane,
+</li>
+<li>[<m>\circ</m>]
+so that <m>\vb\times\vc</m> has to the parallel to the <m>z</m>-axis.
+</li>
+</ul>
+The area of the base, i.e. of the shaded parallelogram in the figure above,
+is
+<me>
+|\vb\times\vc| = |\hk| =1
+</me>
+and the volume of the parallelepiped is
+<me>
+|\va\cdot (\vb\times\vc)|
+= |\llt 0,1,2\rgt\cdot\llt 0,0,1\rgt|=2
+</me>
+</p>
+
+</example>
+</p>
+
+<p>\subsection{(Optional) Some Vector Identities}
+xml:id="sec_vector_identities"
+</p>
+
+<p>Here are a few identities involving dot and cross products.
+<lemma>
+<statement><p>xml:id="lem_tripProd"
+<ol label="a">
+<li>\ \ \ 
+<m>\va\cdot(\vb\times\vc)=(\va\times\vb)\cdot\vc</m>
+</li>
+<li>\ \ \ 
+<m>\va\times(\vb\times\vc)=(\vc\cdot\va)\vb-(\vb\cdot\va)\vc</m>
+</li>
+<li>\ \ \ 
+           <m>\va\times(\vb\times\vc) + 
+            \vb\times(\vc\times\va) +
+            \vc\times(\va\times\vb) =\vZero</m>
+</li>
+</ol>
+</p></statement>
+</lemma>
+<proof>
+<p> (a)
+Here are two proofs.
+For the first, just write out both sides
+<md>
+<mrow>
+\va\cdot(\vb\times\vc)
+&amp;=(a_1,a_2,a_3)\cdot(b_2c_3-b_3c_2\,,\,b_3c_1-b_1c_3\,,\,b_1c_2-b_2c_1)
+</mrow><mrow>
+&amp;=a_1b_2c_3-a_1b_3c_2+a_2b_3c_1-a_2b_1c_3+a_3b_1c_2-a_3b_2c_1
+</mrow><mrow>
+(\va\times\vb)\cdot\vc
+&amp;=(a_2b_3-a_3b_2\,,\,a_3b_1-a_1b_3\,,\,a_1b_2-a_2b_1)\cdot(c_1,c_2,c_3)
+</mrow><mrow>
+&amp;=a_2b_3c_1-a_3b_2c_1+a_3b_1c_2-a_1b_3c_2+a_1b_2c_3-a_2b_1c_3
+</mrow>
+</md>
+and observe that they are the same.
+</p>
+
+<p>\medskip
+For the second proof,
+we again write out both sides, but this time we express them
+in terms of determinants.
+<md>
+<mrow>
+\va\cdot\vb\times\vc
+&amp;=(a_1,a_2,a_3)\cdot\det\left[\begin{matrix}\hi&amp;\hj&amp;\hk
+</mrow><mrow>
+                                       b_1&amp;b_2&amp;b_3
+</mrow><mrow>
+                                       c_1&amp;c_2&amp;c_3\end{matrix}\right]
+</mrow><mrow>
+&amp;=a_1\det\left[\begin{matrix}
+                                       b_2&amp;b_3
+</mrow><mrow>
+                                       c_2&amp;c_3\end{matrix}\right]
+                             -a_2\det\left[\begin{matrix}
+                                       b_1&amp;b_3
+</mrow><mrow>
+                                       c_1&amp;c_3\end{matrix}\right]
+                             +a_3\det\left[\begin{matrix}
+                                       b_1&amp;b_2
+</mrow><mrow>
+                                       c_1&amp;c_2\end{matrix}\right]
+</mrow><mrow>
+&amp;=\det\left[\begin{matrix}a_1&amp;a_2&amp;a_3
+</mrow><mrow>
+                                       b_1&amp;b_2&amp;b_3
+</mrow><mrow>
+                                       c_1&amp;c_2&amp;c_3\end{matrix}\right]\<me>
+0.1in]
+\va\times\vb\cdot\vc
+&amp;=\det\left[\begin{matrix}\hi&amp;\hj&amp;\hk
+</mrow><mrow>
+                     a_1&amp;a_2&amp;a_3
+</mrow><mrow>
+                     b_1&amp;b_2&amp;b_3\end{matrix}\right]\cdot(c_1,c_2,c_3)
+</mrow><mrow>
+&amp;=c_1\det\left[\begin{matrix}
+                                       a_2&amp;a_3
+</mrow><mrow>
+                                       b_2&amp;b_3\end{matrix}\right]
+                             -c_2\det\left[\begin{matrix}
+                                       a_1&amp;a_3
+</mrow><mrow>
+                                       b_1&amp;b_3\end{matrix}\right]
+                             +c_3\det\left[\begin{matrix}
+                                       a_1&amp;a_2
+</mrow><mrow>
+                                       b_1&amp;b_2\end{matrix}\right]
+</mrow><mrow>
+&amp;=\det\left[\begin{matrix}c_1&amp;c_2&amp;c_3\cr a_1&amp;a_2&amp;a_3
+</mrow><mrow>
+                                       b_1&amp;b_2&amp;b_3
+</mrow><mrow>
+                                       \end{matrix}\right]
+</mrow>
+</md>
+Exchanging two rows in a determinant changes the sign of the determinant.
+Moving the top row of a <m>3\times 3</m> determinant to the bottom row requires
+two exchanges of rows.
+So the two <m>3\times 3</m> determinants are equal.
+</p>
+
+<p>\noindent (b)
+The proof is not exceptionally difficult <mdash/> just write out both sides and grind.
+Substituting in
+<me>
+\vb\times\vc
+\ =\ (b_2c_3-b_3c_2)\hi-(b_1c_3-b_3c_1)\hj + (b_1c_2-b_2c_1)\hk
+</me>
+gives, for the left hand side,
+<md>
+<mrow>
+\va\times(\vb\times\vc)
+=\phantom{-}&amp;\!\!\!\det\left[\begin{matrix}\hi&amp;\hj &amp;\hk
+</mrow><mrow>
+                     a_1&amp;a_2&amp;a_3
+</mrow><mrow>
+                     b_2c_3-b_3c_2&amp;-b_1c_3+b_3c_1&amp;b_1c_2-b_2c_1
+                     \end{matrix}\right]\<me>
+0.1in]
+=\phantom{-}&amp;\hi\big[a_2(b_1c_2-b_2c_1)-a_3(-b_1c_3+b_3c_1)\big]
+</mrow><mrow>
+-&amp;\hj\big[a_1(b_1c_2-b_2c_1)-a_3(b_2c_3-b_3c_2)\big]
+</mrow><mrow>
++&amp;\hk\big[a_1(-b_1c_3+b_3c_1)-a_2(b_2c_3-b_3c_2)\big]
+</mrow>
+</md>
+On the other hand, the right hand side
+<md>
+<mrow>
+(\va\cdot\vc)\vb-(\va\cdot\vb)\vc
+\ =\ &amp;(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
+-(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)\cr
+=\ &amp;
+\hi\ \big[\textcolor{blue}{a_1b_1c_1}
+         +a_2b_1c_2+a_3b_1c_3-
+         \textcolor{blue}{a_1b_1c_1}
+         -a_2b_2c_1-a_3b_3c_1\big]
+</p>
+
+<p></mrow><mrow>
+{+}&amp;\hj\ \big[a_1b_2c_1
+      +\textcolor{blue}{a_2b_2c_2}
+      +a_3b_2c_3-a_1b_1c_2
+      -\textcolor{blue}{a_2b_2c_2}
+      -a_3b_3c_2\big]
+\cr
+{+}&amp;\hk\ \big[a_1b_3c_1+a_2b_3c_2
+          +\textcolor{blue}{a_3b_3c_3}
+          -a_1b_1c_3-a_2b_2c_3
+          -\textcolor{blue}{a_3b_3c_3}\big]
+</p>
+
+<p></mrow><mrow>
+{=}\ &amp;
+\hi\ [a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]
+\cr
+{+}&amp;\hj\ [a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
+\cr
+{+}&amp;\hk\ [a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
+</mrow>
+</md>
+The last formula that we had for the left hand side is the same as the last formula we had for the right hand side.
+</p>
+
+<p>\noindent (c)
+We just apply part (b) three times
+<md>
+<mrow>
+          &amp;\va\times(\vb\times\vc) + 
+            \vb\times(\vc\times\va) +
+            \vc\times(\va\times\vb)  
+</mrow><mrow>
+&amp;\hskip0.5in= (\vc\cdot\va)\vb-(\vb\cdot\va)\vc
+            + (\va\cdot\vb)\vc-(\vc\cdot\vb)\va
+            + (\vb\cdot\vc)\va-(\va\cdot\vc)\vb 
+</mrow><mrow>
+&amp;\hskip0.5in=\vZero            
+</mrow>
+</md>
+</p></proof>
+</p>
+
+<p>\subsection{(Optional) Application of Cross Products to Rotational Motion}
+xml:id="sec_rot_motion"
+</p>
+
+<p>In most computations involving rotational motion, the cross product shows
+up in one form or another. This is one of the main applications of the cross
+product. Consider, for example, a rigid body which is rotating 
+ at a constant rate of <m>\Omega</m> radians per second about an axis 
+whose direction is given by the unit vector <m>\hat\va</m>. Let <m>P</m> be any point
+on the body. Let's figure out its velocity. Pick any point on the axis
+of rotation and designate it as the origin of our coordinate system. Denote
+by <m>\vr</m> the vector from the origin to the point <m>P</m>. Let <m>\theta</m> denote
+the angle between <m>\hat\va</m> and <m>\vr</m>. As time progresses the point <m>P</m>
+sweeps out a circle of radius <m>R=|\vr\,|\sin\theta</m>.
+      </p>
+<sidebyside> 
+      <image source="problems/figs/rigid"/>
+      </sidebyside>
+<p>
+In one second <m>P</m> travels along an arc that subtends an angle of 
+<m>\Omega</m> radians, which is the fraction <m>\tfrac{\Omega}{2\pi}</m> 
+of a full circle.  The length of this arc is
+<m>\tfrac{\Omega}{2\pi}\times 2\pi R=\Omega R=\Omega|\vr\,|\sin\theta</m> so <m>P</m> travels the distance <m>\Omega|\vr\,|\sin\theta</m>
+in one second and its speed, which is also the length of its velocity vector,
+is <m>\Omega|\vr\,|\sin\theta</m>. 
+</p>
+
+<p>Now we just need to figure out the direction
+of the velocity vector. That is, the direction of motion of the point <m>P</m>.
+Imagine that both <m>\hat\va</m> and <m>\vr</m> lie in the plane of a piece of paper, 
+as in the figure above. Then <m>\vv</m> points either straight into 
+or straight out of the page and consequently is perpendicular
+to both <m>\hat\va</m> and <m>\vr</m>. To distinguish between the <q>into the page</q>
+and <q>out of the page</q> cases, let's impose the conventions that 
+<m>\Omega \gt 0</m> and the axis of rotation <m>\hat\va</m> is chosen to obey the right hand
+ rule, meaning that if the thumb of
+your right hand is pointing in the direction <m>\hat\va</m>, then your fingers
+are pointing in the direction of motion of the rigid body.  Under these
+conventions, the velocity vector <m>\vv</m> obeys
+<ul>
+<li> <m>|\vv|=\Omega|\vr||\hat\va|\sin\theta</m>
+</li>
+<li> <m>\vv\perp\hat\va,\vr</m>
+</li>
+<li> <m>(\hat\va,\vr,\vv)</m> obey the right hand rule
+</li>
+</ul>
+That is, <m>\vv</m> is exactly <m>\Omega\hat\va\times\vr</m>. It is conventional
+to define the <q>angular velocity</q> of a rigid body to be vector
+<m>\mathbf{\Omega}=\Omega\hat\va</m>. That is, the vector with length given 
+by the rate of rotation and direction given by the axis of rotation 
+of the rigid body. In particular, the bigger the rate of rotation, the longer
+the angular velocity vector. In terms of this angular 
+velocity vector, the velocity of the point <m>P</m> is
+<md>
+<mrow>
+\vv=\mathbf{\Omega}\times\vr
+</mrow>
+</md>
+</p>
+
+<p>\subsection{(Optional) Application of Cross Products to Rotating Reference Frames}xml:id="sec_rot_frame"
+</p>
+
+<p>Imagine a moving particle that is being tracked by two observers.
+<ol label="a">
+<li> One observer is fixed (out in space) and measures the position of 
+  the particle to be <m>\big(X(t), Y(t), Z(t)\big)</m>.
+</li>
+<li> The other observer is tied to a merry-go-round (the Earth) and 
+  measures the position of the particle to be <m>\big(x(t),y(t),z(t)\big)</m>.
+</li>
+</ol>
+The merry-go-round is sketched in the figure on the left below. It
+is rotating about the <m>Z</m>-axis at a (constant) rate of <m>\Omega</m> radians per second.
+The vector <m>\vOmega = \Omega \hk</m>, whose length is the rate of rotation and
+whose direction is the axis of rotation, is called the angular velocity.
+\vadjust{
+      </p>
+<sidebyside> 
+      <image source="problems/figs/merry.pdf"/>\qquad\qquad
+      <image source="problems/figs/merryB.pdf"/>
+      </sidebyside>
+<p>
+        }
+The <m>x</m>- and <m>y</m>-axes of the moving observer are painted in red on
+the merry-go-round. The figure on the right above shows a top view of the
+merry-go-round. The <m>x</m>- and <m>y</m>-axes of the moving observer are again
+red. The <m>X</m>- and <m>Y</m>-axes of the fixed observer are blue.  We are
+assuming that at time <m>0</m>, the <m>x</m>-axis of the moving observer and 
+the <m>X</m>-axis of the fixed observer coincide. As the merry-go-round
+is rotating at <m>\Om</m> radians per second, the angle between the <m>X</m>-axis
+and <m>x</m>-axis after <m>t</m> seconds is <m>\Omega t</m>.
+</p>
+
+<p>As an example, suppose that the moving particle is tied to the tip of the
+moving observer's unit <m>x</m> vector. Then
+<md>
+<mrow>
+x(t) &amp; = 1 &amp;  y(t) &amp;= 0 &amp; z(t) &amp;= 0 
+</mrow><mrow>
+X(t) &amp; = \cos(\Om t) &amp;  Y(t) &amp;=\sin(\Om t) &amp; Z(t) &amp;= 0 
+</mrow>
+</md>
+or, if we write <m>\vr(t) = \big(x(t), y(t), z(t)\big)</m> and 
+<m>\vR(t) = \big(X(t), Y(t), Z(t)\big)</m>, then
+<md>
+<mrow>
+\vr(t) = (1\,,\,0\,,\,0) \qquad
+\vR(t)= \big(\cos(\Om t)\,,\,\sin(\Om t)\,,\,0\Big)
+</mrow>
+</md>
+</p>
+
+<p>In general, denote by <m>\hi(t)</m> the coordinates of the unit <m>x</m>-vector
+of the moving observer at time <m>t</m>, as measured by the fixed observer.
+Similarly <m>\hj(t)</m> for the unit <m>y</m>-vector, and <m>\hk(t)</m> for the unit 
+<m>z</m>-vector. As the merry-go-round is rotating about the <m>Z</m>-axis at a rate of <m>\Omega</m> radians per second, the angle between the <m>X</m>-axis
+and <m>x</m>-axis after <m>t</m> seconds is <m>\Omega t</m>, and
+\medskip
+<md>
+<mrow>
+\null\hskip1.5in
+\hi(t) &amp;= \big(\cos(\Om t)\,,\,\sin(\Om t)\,,\,0\Big) 
+</mrow><mrow>
+\hj(t) &amp;= \big(-\sin(\Om t)\,,\,\cos(\Om t)\,,\,0\Big)\hskip0.5in
+\smash{\raisebox{-0.45\height}{<image source="problems/figs/merryC.pdf"/>}} 
+</mrow><mrow>
+\hk(t) &amp;= \big(0\,,\,0\,,\,1\Big) 
+</mrow>
+</md>
+The position of the moving particle, as seen by the fixed observer is
+<md>
+<mrow>
+\vR(t) &amp;= x(t)\,\hi(t) + y(t)\,\hj(t) +z(t)\,\hk(t)
+</mrow>
+</md>
+Differentiating, the velocity of the moving particle, as measured 
+by the fixed observer is
+<md>
+<mrow>
+\vV(t)=\diff{\vR}{t} &amp;= \phantom{+}\diff{x}{t}\!(t)\ \hi(t) 
+                         + \diff{y}{t}\!(t)\ \hj(t) 
+                         + \diff{z}{t}\!(t)\ \hk(t) 
+</mrow><mrow>
+                     &amp;\phantom{=} +x(t)\diff{\hfill}{t} \hi(t)
+                                  +y(t)\diff{\hfill}{t} \hj(t)
+                                  +z(t)\diff{\hfill}{t} \hk(t)
+</mrow>
+</md>
+We saw, in the last (optional) \S<xref ref="sec_rot_motion"/>, that
+<md>
+<mrow>
+\diff{\hfill}{t} \hi(t)=\vOmega\times\hi(t)\quad
+\diff{\hfill}{t} \hj(t)=\vOmega\times\hj(t)\quad
+\diff{\hfill}{t} \hk(t)=\vOmega\times\hk(t)
+</mrow>
+</md>
+(You could also verify that these are correct by putting in
+<m>\vOmega = (0,0,\Om)</m> and explicitly computing the cross products.)
+So
+<md>
+<mrow>
+\vV(t)&amp;= \Big(\diff{x}{t}\!(t)\ \hi(t) 
+                         + \diff{y}{t}\!(t)\ \hj(t) 
+                         + \diff{z}{t}\!(t)\ \hk(t)\Big)
+                     +\vOmega\times\Big(x(t)\ \hi(t)
+                                  +y(t)\ \hj(t)
+                                  +z(t)\ \hk(t)\Big)
+</mrow>
+</md>
+Differentiating a second time, the acceleration of the moving particle
+(which is also <m>\frac{\vF}{m}</m>, where <m>\vF</m> is the net force being applied
+to the particle and <m>m</m> is the mass of the particle) 
+as measured  by the fixed observer is
+<md>
+<mrow>
+\frac{\vF}{m}
+=\vA(t)
+=&amp;  \Big(\difftwo{x}{t}\!(t)\ \hi(t) 
+                         + \difftwo{y}{t}\!(t)\ \hj(t) 
+                         + \difftwo{z}{t}\!(t)\ \hk(t)\Big) 
+</mrow><mrow>
+&amp; +2\vOmega\times\Big(\diff{x}{t}\!(t)\ \hi(t)
+                                  +\diff{y}{t}\!(t)\ \hj(t)
+                                  +\diff{z}{t}\!(t)\ \hk(t)\Big) 
+</mrow><mrow>
+&amp;+\vOmega\times\Big(\vOmega\times\big[x(t)\ \hi(t)
+                                  +y(t)\ \hj(t)
+                                  +z(t)\ \hk(t)\big]\Big)
+</mrow>
+</md>
+Recall that the angular velocity <m>\vOmega=(0,0,\Omega)</m> does 
+not depend on time.
+The rotating observer sees <m>\hi(t)</m> as <m>\hi=(1,0,0)</m>,
+sees <m>\hj(t)</m> as <m>\hj=(0,1,0)</m>, and sees <m>\hk(t)</m> as <m>\hk=(0,0,1)</m> and so sees
+<md>
+<mrow>
+\frac{\vF}{m}
+&amp;=\va(t) + 2\vOmega\times\vv(t) +\vOmega\times\big[\vOmega\times\vr(t)\big]
+</mrow>
+</md>
+where, as usual,
+<md alignment="alignat">
+<mrow>{3}
+\vv(t) &amp;= \diff{\hfill}{t}\vr(t)
+       &amp;&amp;= \Big(\diff{x}{t}(t)\,,\,\diff{y}{t}(t)\,,\,\diff{z}{t}(t)\Big) 
+</mrow><mrow>
+\va(t) &amp;= \difftwo{\hfill}{t}\vr(t)
+    &amp;&amp;= \Big(\difftwo{x}{t}(t)\,,\,\difftwo{y}{t}(t)\,,\,\difftwo{z}{t}(t)\Big)
+</mrow>
+</md>
+So the acceleration of the particle seen by the moving observer is
+<md>
+<mrow>
+\va(t) = \frac{\vF}{m} -  2\vOmega\times\vv(t)      
+                     - \vOmega\times\big[\vOmega\times\vr(t)\big]
+</mrow>
+</md>
+Here 
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li> 
+   <m>\vF</m> is the sum of all external forces acting on the moving particle,
+</li>
+<li> 
+   <m>\vF_{{\rm cor}}=-2 \vOmega\times\vv(t)</m> is called the Coriolis force and
+</li>
+<li>
+   <m> - \vOmega\times\big[\vOmega\times\vr(t)\big]</m> is called the centrifugal force.
+</li>
+</ul>
+As an example, suppose that you are the moving particle and that
+you are at the edge of the merry-go-round. Let's say <m>t=0</m> and you are
+at <m>\hi</m>. Then <m>\vF</m> is the friction that the surface of the merry-go-round 
+applies to the soles of your shoes. If you are just standing there, 
+<m>\vv(t)=\vZero</m>, so that <m>\vF_{{\rm cor}}=\vZero</m>, and the friction 
+<m>\vF</m> exactly cancels the centrifugal force 
+<m>-\vOmega\times\big[\vOmega\times\vr(t)\big]</m> 
+so that you remain at <m>\hi(t)</m>. Assume that <m>\Om \gt 0</m>. Now suppose that 
+you start walking around the edge of the merry-go-round. Then, 
+at <m>t=0</m>, <m>\vr=\hi</m> and
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li> 
+   if you walk in the direction of rotation, as in the figure on the 
+   left below, <m>\vv=\hj</m> and the Coriolis force <m>\vF_{{\rm cor}}=
+   -2\Om\hk\times\hj = 2\Om\,\hi</m> tries to push you off of 
+   the merry-go-round, while
+</li>
+<li> 
+   if you walk opposite to the direction of rotation, as in the figure 
+   on the right below,  <m>\vv=-\hj</m> so that the Coriolis force 
+   <m>\vF_{{\rm cor}}=-2\Om\hk\times(-\hj) = -2\Om\,\hi</m> tries to pull you
+   into the centre of the merry-go-round.
+</li>
+</ul>
+      </p>
+<sidebyside> 
+      <image source="problems/figs/merryD.pdf"/>\qquad\qquad
+      <image source="problems/figs/merryE.pdf"/>
+      </sidebyside>
+<p>
+On a rotating ball, such as the Earth, the Coriolis force deflects
+wind to the right (counterclockwise) in the northern hemisphere
+and to the left (clockwise) is the southern hemisphere. In particular,
+hurricanes/cyclones/typhoons rotate counterclockwise in the northern
+hemisphere and clockwise in the southern hemisphere. On the other
+hand, when it comes to water draining out of, for example, a toilet,
+Coriolis force effects are dominated by other factors like asymmetry 
+of the toilet. 
+</p>
+
+<p>\section{Equations of Lines in 2d}xml:id="sec_lines_2d"
+</p>
+
+<p>A line in two dimensions can be specified  by giving one point
+<m>(x_0,y_0)</m> on the line and one vector <m>\vd=\llt d_x,d_y\rgt </m> 
+whose direction is parallel to the line.
+\vadjust{
+      </p>
+<sidebyside> 
+      <image source="problems/figs/twodLine.pdf"/>
+      </sidebyside>
+<p>
+        }
+If <m>(x,y)</m> is any point on the line then the vector <m>\llt x-x_0,y-y_0\rgt </m>, 
+whose tail is at <m>(x_0,y_0)</m> and whose head is at <m>(x,y)</m>,  must be parallel
+to <m>\vd</m> and hence must be a scalar multiple of <m>\vd</m>. So
+\begin{impeqn}[Parametric Equations]xml:id="eqn_par_line"
+<md>
+<mrow>
+   \llt x-x_0,y-y_0\rgt =t \vd
+</mrow>
+</md>
+or, writing out in components,
+<md>
+<mrow>
+   x-x_0&amp;=t d_x
+</mrow><mrow>
+   y-y_0&amp;=t d_y
+</mrow>
+</md>
+\end{impeqn}\noindent
+These are called the parametric equations of the line, because they contain
+a free parameter, namely <m>t</m>. As <m>t</m> varies from <m>-\infty</m> to <m>\infty</m>,
+the point <m>(x_0+td_x,y_0+td_y)</m> traverses the entire line.
+</p>
+
+<p>It is easy to eliminate the parameter <m>t</m> from the equations. Just 
+multiply <m>x-x_0=t d_x</m> by <m>d_y</m>, multiply <m>y-y_0=t d_y</m> by <m>d_x</m>
+and subtract to give
+<md>
+<mrow>
+(x-x_0)d_y-(y-y_0)d_x=0
+</mrow>
+</md>
+In the event that <m>d_x</m> and <m>d_y</m> are both nonzero, we can rewrite this
+as
+\begin{impeqn}[Symmetric Equation]xml:id="eqn_symm_eqn_line" 
+<md>
+<mrow>
+   \frac{x-x_0}{d_x}=\frac{y-y_0}{d_y}
+</mrow>
+</md>
+\end{impeqn}
+which is called the symmetric equation for the line. 
+</p>
+
+<p>A second way to specify a line in two dimensions is to give one point
+<m>(x_0,y_0)</m> on the line and one vector <m>\vn=\llt n_x,n_y\rgt </m> whose 
+direction is  perpendicular to that of the line.
+\vadjust{
+      </p>
+<sidebyside> 
+      <image source="problems/figs/twodLineNormal.pdf"/>
+      </sidebyside>
+<p>
+        }
+If <m>(x,y)</m> is any point on the line then the vector <m>\llt x-x_0,y-y_0\rgt </m>, 
+whose tail is at <m>(x_0,y_0)</m> and whose head is at <m>(x,y)</m>,   
+must be perpendicular to <m>\vn</m> so that
+\begin{impeqn}xml:id="eqn_line"
+<md>
+<mrow>
+\vn\cdot\llt x-x_0,y-y_0\rgt =0
+</mrow>
+</md>
+Writing out in components
+<md>
+<mrow>
+n_x(x-x_0)+n_y(y-y_0)=0\qquad\text{or}\qquad n_xx+n_yy= n_xx_0+n_yy_0
+</mrow>
+</md>
+\end{impeqn}\noindent
+Observe that the coefficients <m>n_x,n_y</m> of <m>x</m> and <m>y</m> in the equation
+of the line are the components of a vector <m>\llt n_x,n_y\rgt </m> perpendicular 
+to the line. This enables us to read off a vector perpendicular to any
+given line directly from the equation of the line. Such a vector is called 
+a normal vector for the line. 
+<example>
+<p>
+Consider, for example, the line <m>y=3x+7</m>. To rewrite this equation in the form 
+<me>
+n_xx+n_yy= n_xx_0+n_yy_0
+</me> 
+we have to move terms around so that <m>x</m> and
+<m>y</m> are on one side of the equation and <m>7</m> is  on the other side:
+ <m>3x-y=-7</m>. Then <m>n_x</m> is the coefficient of <m>x</m>, namely <m>3</m>, and <m>n_y</m>
+is the coefficient of <m>y</m>, namely <m>-1</m>. One normal vector
+for <m>y=3x+7</m> is <m>\llt 3,-1\rgt </m>. 
+</p>
+
+<p>Of course, if <m>\llt 3,-1\rgt </m> is perpendicular to <m>y=3x+7</m>, so is 
+<m>-5\llt 3,-1\rgt =\llt -15,5\rgt </m>.
+In fact, if we first multiply the equation <m>3x-y=-7</m> by <m>-5</m> to
+get <m>-15x+5y=35</m> and then set <m>n_x</m> and <m>n_y</m> to the coefficients of <m>x</m>
+and <m>y</m> respectively, we get <m>\vn=\llt -15,5\rgt </m>.
+</p></example>
+</p>
+
+<p><example>
+<p>xml:id="eg_nearest_point"
+In this example, we find the point on the line <m>y=6-3x</m> (call the line <m>L</m>)
+that is closest to the point <m>(7,5)</m>. 
+</p>
+
+<p>We'll start by sketching the line. 
+To do so, we guess two points on <m>L</m> and then draw the line that passes 
+through the two points.
+<ul>
+<li>  If <m>(x,y)</m> is on <m>L</m> and <m>x=0</m>, then <m>y=6</m>. So <m>(0,6)</m> is 
+on <m>L</m>.
+</li>
+<li> If <m>(x,y)</m> is on <m>L</m> and <m>y=0</m>, then <m>x=2</m>. So <m>(2,0)</m> is 
+on <m>L</m>.
+</li>
+</ul>
+</p>
+
+
+<sidebyside> 
+      <image source="problems/figs/closestA.pdf"/> \qquad\qquad
+      <image source="problems/figs/closestB.pdf"/> 
+      </sidebyside>
+<p> 
+Denote by <m>P</m> the point on <m>L</m> that is closest to <m>(7,5)</m>. 
+It is characterized by the property that the line from <m>(7,5)</m> to <m>P</m>
+is perpendicular to <m>L</m>. This is the case just because if <m>Q</m> is any
+other point on <m>L</m>, then, by Pythagoras, the distance from <m>(7,5)</m> 
+to <m>Q</m> is larger than the distance from <m>(7,5)</m> to <m>P</m>. See the figure on the
+right above.
+</p>
+
+<p>Let's use <m>N</m> to denote the line 
+which passes through <m>(7,5)</m> and which is perpendicular to <m>L</m>. 
+\vadjust{
+      </p>
+<sidebyside> 
+      <image source="problems/figs/closest.pdf"/> 
+      </sidebyside>
+<p> 
+}
+Since <m>L</m>
+has the equation <m>3x+y=6</m>, one vector perpendicular to <m>L</m>, and hence parallel
+to <m>N</m>, is <m>\llt 3,1\rgt </m>. So if <m>(x,y)</m> is any point on <m>N</m>, the vector <m>\llt x-7,y-5\rgt </m>
+must be of the form <m>t\llt 3,1\rgt </m>. So the parametric equations of <m>N</m> are
+<md>
+<mrow>
+\llt x-7,y-5\rgt =t\llt 3,1\rgt \qquad\text{or}\qquad
+x=7+3t,\ y=5+t
+</mrow>
+</md>
+Now let <m>(x,y)</m> be the coordinates of <m>P</m>. Since <m>P</m> is on <m>N</m>,
+we have <m>x=7+3t</m>, <m>y=5+t</m> for some <m>t</m>. Since <m>P</m> is also on <m>L</m>, we also
+have <m>3x+y=6</m>. So
+<md alignment="alignat">
+<mrow>{4}
+&amp; &amp; 3(7+3t)+(5+t)&amp;= 6
+</mrow><mrow>
+&amp; \iff\qquad&amp; 10t+26&amp;= 6
+</mrow><mrow>
+&amp; \iff\qquad&amp; t&amp;=-2
+</mrow><mrow>
+&amp; \implies\qquad&amp; x&amp;= 7+3\times (-2)=1,\ y=5+(-2)=3
+</mrow>
+</md>
+and <m>P</m> is <m>(1,3)</m>.
+</p>
+
+</example>
+</p>
+
+<p>\section{Equations of Planes in 3d}xml:id="sec_planes_3d"
+</p>
+
+<p>Specifying one point <m>(x_0,y_0,z_0)</m> on a plane and a vector <m>\vd</m> parallel
+to the plane does not uniquely determine the plane, because it is free
+to rotate about <m>\vd</m>. On the other hand, giving one point
+\vadjust{
+      </p>
+<sidebyside> 
+      \raisebox{0.3\height}{<image source="problems/figs/threedPlane.pdf"/>}\qquad
+      <image source="problems/figs/threedPlane2.pdf"/>
+      </sidebyside>
+<p>
+        }
+on the plane and one vector <m>\vn=\llt n_x,n_y, n_z\rgt </m> with direction 
+perpendicular to that of the plane does uniquely determine the plane.
+If <m>(x,y,z)</m> is any point on the line then the vector 
+<m>\llt x-x_0,y-y_0,z-z_0\rgt </m>,
+whose tail is at <m>(x_0,y_0,z_0)</m> and whose head is at <m>(x,y,z)</m>,  lies
+entirely inside the plane and so must be perpendicular to <m>\vn</m>. That is,
+\begin{impeqn}[The Equation of a Plane]xml:id="eqn_of_plane"
+<md>
+<mrow>
+  \vn\cdot\llt x-x_0,y-y_0,z-z_0\rgt =0
+</mrow>
+</md>
+Writing out in components
+<md>
+<mrow>
+   n_x(x-x_0)+n_y(y-y_0)+n_z(z-z_0)=0
+\quad\text{or}\quad n_xx+n_yy+n_zz= d
+</mrow>
+</md>
+where <m>d=n_xx_0+n_yy_0+n_zz_0</m>.
+\end{impeqn}\noindent
+Again, the coefficients <m>n_x,n_y,n_z</m> of <m>x,\ y</m> and <m>z</m> in the equation
+of the plane are the components of a vector <m>\llt n_x,n_y,n_z\rgt </m> 
+perpendicular to the plane. The vector <m>\vn</m> is often called a normal vector
+for the plane. Any nonzero multiple of <m>\vn</m> will also be perpendicular
+to the plane and is also called a normal vector.
+</p>
+
+<p><example>
+<p>xml:id="eg_VPparallel-normal-Planes"
+We have just seen that if we write the equation of a plane in the standard
+form 
+<me>
+ax+by+cz=d
+</me> 
+then it is easy to read off a normal vector for the plane.
+It is just <m>\llt a,b,c\rgt</m>. So for example the planes
+<me>
+P:\ x+2y+3z=4 \qquad
+P':\ 3x+6y+9z=7
+</me>
+have normal vectors <m>\vn=\llt 1,2,3\rgt</m> and <m>\vn'=\llt 3,6,9\rgt</m>, 
+respectively. Since <m>\vn'=3\vn</m>, the two normal vectors <m>\vn</m> and <m>\vn'</m> 
+are parallel to each other. This tells us that the planes <m>P</m> and <m>P'</m> 
+are parallel to each other.
+</p>
+
+<p>When the normal vectors of two planes are perpendicular to each other,
+we say that 
+the planes are perpendicular to each other. For example
+the planes 
+<me>
+P:\ x+2y+3z=4 \qquad
+P</q>:\ 2x-y=7
+</me>
+have normal vectors  <m>\vn=\llt 1,2,3\rgt</m> and <m>\vn</q>=\llt 2,-1,0\rgt</m>, 
+respectively. Since
+<me>
+\vn\cdot\vn</q> = 1\times 2+2\times(-1)+3\times 0 = 0
+</me>
+the normal vectors <m>\vn</m> and <m>\vn</q></m> are mutually perpendicular,
+so the corresponding planes <m>P</m> and <m>P</q></m> are perpendicular to each other.
+</p></example>
+\goodbreak
+</p>
+
+<p><example>
+<p>xml:id="eg_VPsketchPlane"
+In this example, we'll sketch the plane 
+<me>
+P:\ 4x + 3y + 2z = 12
+</me>
+A good way to prepare for sketching a plane is to find the intersection 
+points of the plane with the <m>x</m>-, <m>y</m>- and <m>z</m>-axes, just as you are used 
+to doing when sketching lines in the <m>xy</m>-plane. For example, 
+any point on the <m>x</m> axis must be of the form <m>(x,0,0)</m>. For <m>(x,0,0)</m> 
+to also be on <m>P</m> we need <m>x=\frac{12}{4}=3</m>. So <m>P</m> intersects 
+the <m>x</m>-axis at <m>(3,0,0)</m>. Similarly, <m>P</m> intersects the <m>y</m>-axis 
+at <m>(0,4,0)</m> and the <m>z</m>-axis at <m>(0,0,6)</m>. Now plot the points 
+<m>(3,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,6)</m>. <m>P</m> is the plane containing these 
+three points. 
+Often a visually effective way to sketch a surface in three dimensions
+is to 
+<ul>
+<li> only sketch the part of the surface in the first octant. That is,
+the part with <m>x\ge0</m>, <m>y\ge 0</m> and <m>z\ge 0</m>.
+</li>
+<li> To do so, sketch the curve of intersection of the surface with
+the part of the <m>xy</m>-plane in the first octant and,
+</li>
+<li> similarly, sketch the curve of intersection of the surface with
+the part of the <m>xz</m>-plane in the first octant and
+the curve of intersection of the surface with
+the part of the <m>yz</m>-plane in the first octant.
+</li>
+</ul>
+That's what we'll do. The intersection of the plane <m>P</m> with the <m>xy</m>-plane
+is the straight line through the two points <m>(3,0,0)</m> and <m>(0,4,0)</m>. So
+the part of that intersection in the first octant is the line segment
+from <m>(3,0,0)</m> to <m>(0,4,0)</m>. Similarly the part of the intersection of
+<m>P</m> with the <m>xz</m>-plane that is in the first octant is the line segment
+from <m>(3,0,0)</m> to <m>(0,0,6)</m> and  the part of the intersection of
+<m>P</m> with the <m>yz</m>-plane that is in the first octant is the line segment
+from <m>(0,4,0)</m> to <m>(0,0,6)</m>. So we just have to sketch the three line segments
+joining three axis intercepts <m>(3,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,6)</m>.
+That's it.
+</p>
+
+
+<sidebyside>
+<image source="problems/figs/planeSketch.pdf"/>
+</sidebyside>
+</example>
+</p>
+
+<p><example>
+<p>xml:id="eg_VPdistance-point-plane"
+In this example, we'll compute the distance between the point
+<me>
+\vx = (1,-1,-3) \qquad\text{and the plane}\qquad
+P:\ x+2y+3z=18
+</me>
+By the <q>distance between <m>\vx</m> and the plane <m>P</m></q> we mean the shortest
+distance between <m>\vx</m> and any point <m>\vy</m> on <m>P</m>. In fact, we'll evaluate the
+distance in two different ways. In the next 
+Example <xref ref="eg_VPdistance-point-plane-bis"/>, we'll use projection.
+In this example, our strategy for finding the distance will be to
+<ul>
+<li> first observe that the vector <m>\vn=\llt 1,2,3\rgt</m> is normal to <m>P</m> 
+and then
+</li>
+<li> start walking
+<fn>To see why heading in the normal direction gives
+the shortest walk, revisit Example <xref ref="eg_nearest_point"/>.</fn>
+ away from <m>\vx</m> 
+in the  direction of the normal vector <m>\vn</m> and
+</li>
+<li> keep walking until we hit <m>P</m>. Call the point on <m>P</m> where we hit,
+<m>\vy</m>. Then the desired distance is the distance between <m>\vx</m> and <m>\vy</m>.
+From the figure below it does indeed look like distance between <m>\vx</m> and <m>\vy</m>
+is the shortest distance between <m>\vx</m> and any point on <m>P</m>. This is in 
+fact true, though we won't prove it.
+</li>
+</ul>
+</p>
+<sidebyside>
+<image source="problems/figs/pointDist.pdf"/>
+</sidebyside>
+<p>
+So imagine that we start walking, and that we start at time <m>t=0</m> at <m>\vx</m> 
+and walk in the direction <m>\vn</m>. Then at time <m>t</m> we might be at
+<me>
+\vx+t\vn = (1,-1,-3) +t\,\llt 1,2,3\rgt
+         = (1+t, -1+2t, -3+3t)
+</me>
+We hit the plane <m>P</m> at exactly the time <m>t</m> for which 
+<m>(1+t, -1+2t, -3+3t)</m> satisfies the equation for <m>P</m>, which is 
+<m>x+2y+3z=18</m>. So we are on <m>P</m> at the unique time <m>t</m> obeying
+<md>
+<mrow>
+(1+t)+2(-1+2t)+3(-3+3t)=18
+&amp;\iff 14t = 28 
+\iff t=2
+</mrow>
+</md>
+So the point on <m>P</m> which is closest to <m>\vx</m> is
+<md>
+<mrow>
+\vy = \big[\vx+t\vn\big]_{t=2} 
+     = (1+t, -1+2t, -3+3t)\big|_{t=2}
+     = (3, 3, 3) 
+</mrow>
+</md>
+and the distance from <m>\vx</m> to <m>P</m> is the distance from
+<m>\vx</m> to <m>\vy</m>, which is
+</p>
+
+<p><md>
+<mrow>
+|\vy-\vx| = 2|\vn| = 2\sqrt{1^2+2^2+3^2} =2\sqrt{14}
+</mrow>
+</md>
+</p></example>
+</p>
+
+<p><example><title>Example <xref ref="eg_VPdistance-point-plane"/>, revisited</title>
+<p>
+                                xml:id="eg_VPdistance-point-plane-bis"
+We are again going to find the distance from the point 
+<me>
+\vx = (1,-1,-3) \qquad\text{to the plane}\qquad
+P:\ x+2y+3z=18
+</me>
+But this time we will use the following strategy.
+<ul>
+<li> We'll first find any point <m>\vz</m> on <m>P</m> and then
+</li>
+<li> we'll denote by <m>\vy</m> the point on <m>P</m> nearest <m>\vx</m>, and we'll 
+   denote by <m>\vv</m> the vector from <m>\vx</m> to <m>\vz</m> (see the figure below)
+   and then
+</li>
+<li> we'll realize, by looking at the figure, that the vector from <m>\vx</m> 
+to <m>\vy</m> is exactly the projection
+<fn>Now might be a good time to review 
+the Definition <xref ref="def_projection"/> of projection.</fn>
+ of the vector <m>\vv</m> on <m>\vn</m> so that
+</li>
+<li> the distance from <m>\vx</m> to <m>P</m>, i.e. the length of the vector 
+from <m>\vx</m> to <m>\vy</m>, is exactly <m>\left|\text{proj}_\vn\vv \right|</m>.
+</li>
+</ul>
+</p>
+<sidebyside>
+<image source="problems/figs/pointDistProj.pdf"/>
+</sidebyside>
+<p>
+Now let's find a point on <m>P</m>. The plane <m>P</m> is given by a single equation,
+namely 
+<me>
+x+2y+3z=18
+</me> 
+in the three unknowns, <m>x</m>, <m>y</m>, <m>z</m>. The easiest way
+to find one solution to this equation is to assign two of the unknowns
+the value zero and then solve for the third unknown. For example, if we
+set <m>x=y=0</m>, then the equation reduces to <m>3z=18</m>. So we may take
+<m>\vz=(0,0,6)</m>.
+</p>
+
+<p>Then <m>\vv</m>, the vector from <m>\vx=(1,-1,-3)</m> to <m>\vz=(0,0,6)</m> is
+<m>\llt 0-1\,,\,0-(-1)\,,\,6-(-3)  \rgt=\llt -1,1,9\rgt</m> so that, 
+by Equation <xref ref="eqn_proj"/>,
+<md>
+<mrow>
+{\rm proj}_{\vn}\,\vv&amp;=\frac{\vv\cdot\vn}{|\vn|^2}\,\vn 
+</mrow><mrow>
+    &amp;= \frac{\llt -1,1,9\rgt\cdot\llt 1,2,3\rgt}{|\llt 1,2,3\rgt|^2}\,
+               \llt 1,2,3\rgt 
+</mrow><mrow>
+    &amp;= \frac{28}{14} \llt 1,2,3\rgt 
+</mrow><mrow>
+    &amp;= 2 \llt 1,2,3\rgt 
+</mrow>
+</md> 
+and the distance from <m>\vx</m> to <m>P</m> is
+<md>
+<mrow>
+\left|{\rm proj}_{\vn}\,\vv\right| = \big|2 \llt 1,2,3\rgt\big|
+   =2\sqrt{14}
+</mrow>
+</md>
+just as we found in Example <xref ref="eg_VPdistance-point-plane"/>.
+</p></example>
+</p>
+
+<p><example>
+<p>xml:id="eg_VPdistance-Planes"
+Now we'll increase the degree of difficulty a tiny bit, and compute 
+the distance between the planes
+<me>
+P:\ x+2y+2z=1 \qquad\text{and}\qquad
+P':\ 2x+4y+4z=11
+</me>
+By the <q>distance between the planes <m>P</m> and <m>P'</m></q> we mean the shortest
+   distance between any pair of points <m>\vx</m> and <m>\vx'</m> with <m>\vx</m> in <m>P</m>
+   and <m>\vx'</m> in <m>P'</m>.
+First observe that the normal vectors
+<me>
+\vn=\llt 1,2,2\rgt \qquad\text{and}\qquad
+\vn'=\llt 2,4,4\rgt=2\vn
+</me>
+to <m>P</m> and <m>P'</m> are parallel to each other. So the planes <m>P</m> and <m>P'</m> 
+are parallel to each other.
+</p>
+
+<p>If they had not been parallel, they would have crossed
+and the distance between them would have been zero. 
+</p>
+
+<p>Our strategy for finding the distance will be to
+<ul>
+<li> first find a point <m>\vx</m> on <m>P</m> and then, like we did in Example
+<xref ref="eg_VPdistance-point-plane"/>,
+</li>
+<li> start walking away from <m>P</m> in the 
+direction of the normal vector <m>\vn</m> and
+</li>
+<li> keep walking until we hit <m>P'</m>. Call the point on <m>P'</m> that we hit
+<m>\vx'</m>. Then the desired distance is the distance between <m>\vx</m> and <m>\vx'</m>.
+From the figure below it does indeed look like distance between <m>\vx</m> and <m>\vx'</m>
+is the shortest distance between any pair of points with one point on <m>P</m> and
+one point on <m>P'</m>. Again, this is in fact true, though we won't prove it.
+</li>
+</ul>
+</p>
+<sidebyside>
+<image source="problems/figs/planeDist.pdf"/>
+</sidebyside>
+<p>
+We can find a point on <m>P</m> just as we did on Example <xref ref="eg_VPdistance-point-plane-bis"/>. The plane <m>P</m> is given by the single equation
+<me>
+x+2y+2z=1
+</me> 
+in the three unknowns, <m>x</m>, <m>y</m>, <m>z</m>. We can find one solution to this 
+equation by assigning two of the unknowns the value zero and then 
+solving for the third unknown. For example, if we
+set <m>y=z=0</m>, then the equation reduces to <m>x=1</m>. So we may take
+<m>\vx=(1,0,0)</m>.
+</p>
+
+<p>Now imagine that we start walking, and that we start at time <m>t=0</m> at <m>\vx</m> 
+and walk in the direction <m>\vn</m>. Then at time <m>t</m> we might be at
+<me>
+\vx+t\vn = (1,0,0) +t\,\llt 1,2,2\rgt
+         = (1+t, 2t, 2t)
+</me>
+We hit the second plane <m>P'</m> at exactly the time <m>t</m> for which 
+<m>(1+t, 2t, 2t)</m> satisfies the equation for <m>P'</m>, which is 
+<m>2x+4y+4z=11</m>. So we are on <m>P'</m> at the unique time <m>t</m> obeying
+<md>
+<mrow>
+2(1+t)+4(2t)+4(2t)=11
+&amp;\iff 18t = 9 
+\iff t=\frac{1}{2}
+</mrow>
+</md>
+So the point on <m>P'</m> which is closest to <m>\vx</m> is
+<md>
+<mrow>
+\vx' = \big[\vx+t\vn\big]_{t=\frac{1}{2}} 
+     = (1+t, 2t, 2t)\big|_{t=\frac{1}{2}}
+     = (\frac{3}{2}, 1, 1) 
+</mrow>
+</md>
+and the distance from <m>P</m> to <m>P'</m> is the distance from
+<m>\vx</m> to <m>\vx'</m> which is
+<md>
+<mrow>
+\sqrt{(1-\frac{3}{2})^2+(0-1)^2+(0-1)^2}
+=\sqrt{\frac{9}{4}}
+=\frac{3}{2}
+</mrow>
+</md>
+</p></example>
+</p>
+
+<p><example>
+<p>xml:id="eg_VPangle-Planes"
+The orientation (i.e. direction) of a plane is determined by its normal vector.
+So, by definition, the angle between two planes is the angle between their
+normal vectors. For example, the normal vectors of the two planes
+<md alignment="alignat">
+<mrow>{3}
+P_1&amp;:\quad &amp; 2x+y-z&amp;=3
+</mrow><mrow>
+P_2&amp;: &amp;  x+y+z&amp;=4
+</mrow>
+</md> 
+are
+<md>
+<mrow>
+\vn_1&amp;=\llt 2,1,-1\rgt 
+</mrow><mrow>
+\vn_2&amp;=\llt 1,1,1\rgt
+</mrow>
+</md>
+If we use <m>\theta</m> to denote the angle between <m>\vn_1</m> and <m>\vn_2</m>, then
+<md>
+<mrow>
+\cos\theta &amp;=\frac{\vn_1\cdot\vn_1}{|\vn_1|\,|\vn_2|} 
+</mrow><mrow>
+           &amp;=\frac{\llt 2,1,-1\rgt\cdot\llt 1,1,1\rgt}
+                       {|\llt 2,1,-1\rgt|\,|\llt 1,1,1\rgt|} 
+</mrow><mrow>
+           &amp;=\frac{2}{\sqrt{6}\,\sqrt{3}}
+</mrow>
+</md> 
+so that
+<md>
+<mrow>
+\theta =\arccos\frac{2}{\sqrt{18}} =1.0799
+</mrow>
+</md>
+to four decimal places. That's in radians. In degrees, it is
+<m>1.0799\frac{180}{\pi}=61.87^\circ</m> to two decimal places.
+</p></example>
+</p>
+
+<p>\section{Equations of Lines in 3d}xml:id="sec_lines_3d"
+</p>
+
+<p>Just as in two dimensions, a line in three dimensions can be specified  by
+giving one point <m>(x_0,y_0,z_0)</m> on the line and one vector 
+<m>\vd=\llt d_x,d_y,d_z\rgt </m> whose direction is parallel to that of the line.
+If <m>(x,y,z)</m> is any point on the line then the vector <m>\llt x-x_0,y-y_0,z-z_0\rgt </m>,
+whose tail is at <m>(x_0,y_0,z_0)</m> and whose arrow is at <m>(x,y,z)</m>,  must be
+parallel to <m>\vd</m> and hence a scalar multiple of <m>\vd</m>. By translating
+this statement into a vector equation we get
+\begin{impeqn}[Parametric Equations of a Line]xml:id="par_eqn_of_line"
+<md>
+<mrow>
+\llt x-x_0,y-y_0,z-z_0\rgt =t \vd
+</mrow>
+</md>
+or the three corresponding scalar equations
+<md>
+<mrow>
+x-x_0 = t d_x\qquad
+y-y_0 = t d_y\qquad
+z-z_0 = t d_z
+</mrow>
+</md>
+\end{impeqn}\noindent
+again gives the parametric equations of the plane.
+Solving all three equations for the parameter <m>t</m> 
+<md>
+<mrow>
+t=\frac{x-x_0}{d_x}=\frac{y-y_0}{d_y}=\frac{z-z_0}{d_z}
+</mrow>
+</md>
+and erasing the <q><m>t=</m></q> again gives the (so called) symmetric 
+equations for the line. 
+</p>
+
+<p><example>
+<p>xml:id="eg_line_equations"
+The set of points <m>(x,y,z)</m> that obey <m>x+y+z=2</m> form a
+plane. The set of points <m>(x,y,z)</m> that obey <m>x-y=0</m> form a second plane. 
+ The set of points <m>(x,y,z)</m> that obey both <m>x+y+z=2</m> and <m>x-y=0</m>  lie
+on the intersection of these two planes and hence form a line. We shall
+find the parametric equations for that line. 
+</p>
+
+<p>To sketch <m>x+y+z=2</m> we observe
+that if any two of <m>x,y,z</m> are zero, then the third is <m>2</m>. So all of <m>(0,0,2)</m>,
+<m>(0,2,0)</m> and <m>(2,0,0)</m> are on <m>x+y+z=2</m>. The plane <m>x-y=0</m> contains all
+of the <m>z</m>-axis, since <m>(0,0,z)</m> obeys <m>x-y=0</m> for all <m>z</m>.
+Here are separate sketches of (parts of) the two planes.
+      </p>
+<sidebyside> 
+      \raisebox{0.05\height}{<image source="problems/figs/planeIntA"/>}\qquad
+      <image source="problems/figs/planeIntB"/>
+      </sidebyside>
+<p>
+And here is a sketch of their intersection
+      </p>
+<sidebyside> 
+      <image source="problems/figs/planeInt"/>
+      </sidebyside>
+
+
+<p>\noindent<em>Method 1.</em> Each point on the line has a different value of
+<m>z</m>. We'll use <m>z</m> as the parameter. (We could just as well use <m>x</m> or
+<m>y</m>.) There is no law that requires us to use the parameter name <m>t</m>,
+but that's what we have done so far, so set <m>t=z</m>. If <m>(x,y,z)</m> is on 
+the line then <m>z=t</m> and
+<md>
+<mrow>
+x+y+t&amp;=2 
+</mrow><mrow>
+x-y\phantom{\ \,+t}&amp;=0  
+</mrow><mrow>
+</mrow>
+</md>
+The second equation forces <m>y=x</m>. Substituting this into the first equation
+gives
+<md>
+<mrow>
+2x+t=2 \implies x=y=1-\tfrac{t}{2}
+</mrow>
+</md>
+So the parametric equations are
+<md>
+<mrow>
+x=1-\frac{t}{2},\ 
+y=1-\frac{t}{2},\ 
+z=t\qquad\text{or}\qquad
+\llt x-1,y-1,z\rgt  = t\llt -\frac{1}{2}, -\frac{1}{2}, 1\rgt 
+</mrow>
+</md>
+</p>
+
+<p>\smallskip
+\noindent<em>Method 2.</em> We first find one point on the line. There
+are lots of them. We'll find the point with <m>z=0</m>. (We could just as well
+use z=123.4, but arguably <m>z=0</m> is a little easier.) If  <m>(x,y,z)</m> is 
+on the line and <m>z=0</m>, then
+<md>
+<mrow>
+x+y&amp;=2
+</mrow><mrow>
+x-y&amp;=0
+</mrow>
+</md>
+The second equation forces again <m>y=x</m>. Substituting this into the first 
+equation gives
+<md>
+<mrow>
+2x=2 \implies x=y=1
+</mrow>
+</md>
+So <m>(1,1,0)</m> is on the line. Now we'll find a direction vector, <m>\vd</m>,
+for the line. Since the line is contained in the plane <m>x+y+z=2</m>,
+any vector lying on the line, like <m>\vd</m>, is also completely contained
+in that plane. So <m>\vd</m> must be perpendicular to the normal vector of
+<m>x+y+z=2</m>, which is <m>\llt 1,1,1\rgt </m>. Similarly, since the line is 
+contained in the plane <m>x-y=0</m>, any vector lying on the line, like <m>\vd</m>, is also completely contained in that plane.  So <m>\vd</m> must be perpendicular to 
+the normal vector of <m>x-y=0</m>, which is <m>\llt 1,-1,0\rgt </m>. So we may choose for
+<m>\vd</m> any vector which is perpendicular to both <m>\llt 1,1,1\rgt </m> and 
+<m>\llt 1,-1,0\rgt</m>, like, for example,
+<md>
+<mrow>
+\vd&amp;=\llt 1,-1,0\rgt \times\llt 1,1,1\rgt 
+=\det\left[ \begin{matrix}\hi &amp;\hj&amp;\hk
+</mrow><mrow> 1&amp;-1&amp;0\\ 1&amp;1&amp;1\end{matrix}\right]
+=\hi\det\left[\begin{matrix}-1&amp;0
+</mrow><mrow>1&amp;1\end{matrix}\right]
+-\hj\det\left[\begin{matrix}1&amp;0
+</mrow><mrow> 1&amp;1\end{matrix}\right]
++\hk\det\left[\begin{matrix}1&amp;-1
+</mrow><mrow> 1&amp;1\end{matrix}\right]\\
+&amp;=-\hi-\hj+2\hk
+</mrow>
+</md>
+We now have both a point on the line and a direction vector for the line,
+so, as usual, the parametric equations for the line are
+<md>
+<mrow>
+\llt x-1,y-1,z\rgt =t\llt -1,-1,2\rgt \qquad\text{or}\qquad
+x=1-t,\ y=1-t,\ z=2t
+</mrow>
+</md>
+This looks a little different than the solution from method 1, but we'll see in a moment that they are really the same. Before that, let's do one more method. 
+</p>
+
+<p>\smallskip
+\noindent<em>Method 3.</em> We'll find two points on the line. We
+have already found that <m>(1,1,0)</m> is on the line. From the picture above,
+it looks like <m>(0,0,2)</m> is also on the line. This is indeed the case
+since <m>(0,0,2)</m> obeys both <m>x+y+z=2</m> and <m>x-y=0</m>. Notice that we could also have
+guessed <m>(0,0,2)</m> by setting <m>x=0</m>  and then solving <m>y+z=x+y+z=2</m>, <m>-y=x-y=0</m>
+for <m>x</m> and <m>y</m>. As both <m>(1,1,0)</m>
+and <m>(0,0,2)</m> are on the line, the vector with head at <m>(1,1,0)</m> and tail
+at <m>(0,0,2)</m>, which is <m>\llt 1-0,1-0,0-2\rgt =\llt 1,1,-2\rgt </m>, is a direction vector for the 
+line. As <m>(0,0,2)</m> is a point on the line and <m>\llt 1,1,-2\rgt </m> is a direction
+vector for the line, the parametric equations for the line are
+<md>
+<mrow>
+\llt x-0,y-0,z-2\rgt =t\llt 1,1,-2\rgt \qquad\text{or}\qquad
+x=t,\ y=t,\ z=2-2t
+</mrow>
+</md>
+This also looks similar, but not quite identical, to our previous answers.
+Time for a comparison.
+</p>
+
+<p>\smallskip
+\noindent<em>Comparing the answers.</em>
+The parametric equations given by the three methods are different. That's
+just because we have really used different parameters in the three methods,
+even though we have called the parameter <m>t</m> in each case. 
+To clarify the relation
+between the three answers, rename the parameter of method 1 to <m>t_1</m>,
+the parameter of method 2 to <m>t_2</m> and the parameter of method 3 to <m>t_3</m>.
+The parametric equations then become
+<md alignment="alignat">
+<mrow>{6}
+&amp;\text{Method 1:}\qquad &amp;
+   x&amp;=1-\frac{t_1}{2}\qquad &amp;
+   y&amp;=1-\frac{t_1}{2}\qquad &amp; 
+   z&amp;=t_1 
+</mrow><mrow>
+&amp;\text{Method 2:}\qquad &amp;
+   x&amp;=1-t_2\qquad &amp;
+   y&amp;=1-t_2\qquad &amp; 
+   z&amp;=2t_2 
+</mrow><mrow>
+&amp;\text{Method 3:}\qquad &amp;
+   x&amp;=t_3\qquad &amp;
+   y&amp;=t_3\qquad &amp; 
+   z&amp;=2-2t_3 
+</mrow><mrow>
+</mrow>
+</md>  
+Substituting <m>t_1=2t_2</m> into the Method 1 equations gives the Method 2
+equations, and substituting <m>t_3=1-t_2</m> into the Method 3 equations gives 
+the Method 2 equations. So all three really give the same line, just parametrized a little differently,
+</p>
+
+</example>
+</p>
+
+<p>\begin{warning}xml:id="warn_line_normal"
+<em>A line in three dimensions has infinitely many normal vectors.</em>
+</p>
+
+<p>For example, the line
+<me>
+\llt x-1,y-1,z\rgt=t\llt 1,2,-2\rgt 
+</me>
+has direction vector <m>\llt 1,2,-2\rgt</m>. Any vector perpendicular to 
+<m>\llt 1,2,-2\rgt </m>
+is perpendicular to the line. The vector <m>\llt n_1,n_2,n_3\rgt</m> is 
+perpendicular to <m>\llt 1,2,-2\rgt</m> if and only if 
+<me>
+0=\llt 1,2,-2\rgt \cdot \llt n_1,n_2,n_3\rgt = n_1+2n_2-2n_3
+</me>
+There is  whole plane of <m>\llt n_1,n_2,n_3\rgt</m>'s obeying this condition,
+of which <m>\llt 2,-1,0\rgt</m>, <m>\llt 0,1,1\rgt</m> and <m>\llt 2,0,1\rgt</m> 
+are only three examples.
+\end{warning}
+</p>
+
+<p><example>
+<p>xml:id="eg_VPdistance-point-line"
+In this example, we find the distance between the point <m>(2,3,-1)</m> and the line
+<me>
+L:\  \llt x-1,y-2,z-3\rgt=t\llt 1,1,2\rgt \quad \text{or, equivalently,}\quad 
+x=1+t,\ y=2+t,\ z=3+2t
+</me>
+The vector from <m>(2,3,-1)</m> to the point <m>(1+t\,,\,2+t\,,\,3+2t)</m> on <m>L</m> is
+<m>
+\llt t-1\,,\,t-1\,,\,2t+4\rgt</m>.
+The square of the distance between <m>(2,3,-1)</m> and the point 
+<m>(1+t\,,\,2+t\,,\,3+2t)</m>  on <m>L</m> is the square of the length of that vector, namely
+<me>
+d(t)^2 = (t-1)^2 +(t-1)^2 +(2t+4)^2
+</me>
+The point on <m>L</m> that is closest to <m>(2,3,-1)</m> is that whose value of <m>t</m>
+obeys
+<md>
+<mrow>
+0= \diff{}{t} d(t)^2 = 2(t-1) +2(t-1) + 2(2)(2t+4)
+\tag{<m>*</m>}</mrow>
+</md>
+</p>
+
+<p>Before we solve this equation for <m>t</m> and finish of our computation, observe
+that this equation (divided by <m>2</m>) says that
+<me>
+\llt 1\,,\,1\,,\,2\rgt\cdot\llt t-1\,,\,t-1\,,\, 2t+4\rgt = 0
+</me>
+That is, <em>the vector from <m>(2,3,-1)</m> to the point on <m>L</m> nearest <m>(2,3,-1)</m>
+is perpendicular to <m>L</m>'s direction vector</em>.
+</p>
+
+<p>Now back to our computation. The equation <m>(*)</m> simplifies to <m>12t+12=0</m>.
+So the optimal <m>t=-1</m> and the distance is
+<md>
+<mrow>
+d(-1) =\sqrt{(-1-1)^2+(-1-1)^2+(-2+4)^2}
+=\sqrt{12}
+</mrow>
+</md>
+</p>
+
+</example>
+</p>
+
+<p><example><title>Example <xref ref="eg_VPdistance-point-line"/> revisited</title>
+<p>
+xml:id="eg_VPdistance-point-line-bis"
+In this example, we again find the distance between the point <m>(2,3,-1)</m> 
+and the line
+<me>
+L:\  \llt x-1,y-2,z-3\rgt=t\llt 1,1,2\rgt
+</me>
+but we use a different method. In the figure below, <m>Q</m> is the point <m>(2,3,-1)</m>. 
+</p>
+<sidebyside>
+<image source="problems/figs/pointDistProjB.pdf"/>
+</sidebyside>
+<p>
+If we drop a perpendicular from <m>Q</m> to the line <m>L</m>, it hits the line <m>L</m> 
+at the point <m>N</m>, which is the point on <m>L</m> that is nearest <m>Q</m>. So 
+the distance from <m>Q</m> to <m>L</m> is exactly the distance from <m>Q</m> to <m>N</m>, which 
+is exactly the length of the vector from <m>Q</m> to <m>N</m>. In the figure above,
+<m>\vw</m> is the vector from <m>Q</m> to <m>N</m>. Now the vector <m>\vw</m> has to be perpendicular to the direction vector for <m>L</m>. That is,  <m>\vw</m> has to be perpendicular to <m>\vd=\llt 1,1,2\rgt</m>. However, as we saw in Warning
+<xref ref="warn_line_normal"/>, there are a huge number of vectors in different 
+directions that are perpendicular to <m>\vd</m>. So you might think that it is very hard to even determine the direction of <m>\vw</m>. 
+</p>
+
+<p>Fortunately, it isn't. Here is the strategy.
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li> 
+Pick any point on <m>L</m> and call it <m>P</m>.
+</li>
+<li>
+It is very easy to find the vector from <m>P</m> to <m>N</m> <mdash/> it is just the projection of the vector from <m>P</m> to <m>Q</m> (called <m>\vv</m> in the figure above)
+on <m>\vd</m>.
+</li>
+<li>
+Once we know <m>{\rm proj}_{\vd}\,\vv</m>, we will be able to compute
+<me>
+\vw = {\rm proj}_{\vd}\,\vv -\vv
+</me>
+</li>
+<li>
+and then the distance from <m>Q</m> to the line <m>L</m> is just <m>|\vw|</m>.
+</li>
+</ul>
+Here is the computation. We'll choose <m>P</m> to be the point on <m>L</m> that has 
+<m>t=0</m>, which is <m>(1,2,3)</m>. So the vector from <m>P=(1,2,3)</m> to <m>Q=(2,3,-1)</m> is
+<me>
+\vv = \llt 2-1,3-2,-1-3\rgt=\llt 1,1,-4\rgt
+</me>
+The projection of <m>\vv=\llt 1,1,-4\rgt</m> on <m>\vd=\llt 1,1,2\rgt</m> is
+<me>
+{\rm proj}_{\vd}\,\vv
+=\frac{\llt 1,1,-4\rgt\cdot\llt 1,1,2\rgt}{|\llt 1,1,2\rgt|^2}\llt 1,1,2\rgt
+=\frac{-6}{6}\llt 1,1,2\rgt
+=\llt -1,-1,-2\rgt
+</me>
+and then
+<me>
+\vw = {\rm proj}_{\vd}\,\vv -\vv
+    = \llt -1,-1,-2\rgt -\llt 1,1,-4\rgt
+    = \llt -2,-2,2\rgt
+</me>
+and finally the distance from <m>Q</m> to the  line <m>L</m> is
+<me>
+|\vw| = |\llt -2,-2,2\rgt|
+      =|2\llt -1,-1,1\rgt|
+      =2\sqrt{3}
+</me>
+</p>
+
+</example>
+</p>
+
+<p><example><title>Optional</title>
+<p>xml:id="eg_VPdistance-line-line"
+In this example, we find the distance between the lines
+<md>
+<mrow>
+L&amp;:\  \llt x-1,y-2,z-3\rgt = t \llt 1,0,-1 \rgt 
+</mrow><mrow>
+L'&amp;:\ \llt x-1,y-2,z-1\rgt = t \llt 1,-2,1 \rgt 
+</mrow>
+</md>
+We can rewrite the equations of the lines as
+<md>
+<mrow>
+L&amp;:\  x=1+t,\ y=2,\ z=3-t 
+</mrow><mrow>
+L'&amp;:\ x=1+t,\ y=2-2t,\ z=1+t 
+</mrow>
+</md>
+Of course the value of <m>t</m> in the parametric equation for <m>L</m> need not be 
+the same as the value of <m>t</m> in the parametric equation for <m>L'</m>. So 
+let us denote by <m>\vx(s) = (1+s\,,\,2\,,\,3-s)</m> and 
+<m>\vy(t) = (1+t\,,\,2-2t\,,\,1+t)</m> 
+the points on <m>L</m> and <m>L'</m>, respectively, that are closest together. 
+Note that the vector from <m>\vx(s)</m> to <m>\vy(t)</m> is
+<m>\llt  t-s\,,\,-2t\,,\,-2+s+t \rgt</m>. Then, in particular,
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+<m>\vx(s)</m> is the point on <m>L</m> that is closest to the point <m>\vy(t)</m>, and
+</li>
+<li>
+<m>\vy(t)</m> is the point on <m>L'</m> that is closest to the point <m>\vx(s)</m>.
+</li>
+</ul>
+So, as we saw in Example <xref ref="eg_VPdistance-point-line"/>,
+the vector, <m>\llt  t-s\,,\,-2t\,,\,-2+s+t \rgt</m>, that joins <m>\vx(s)</m> and <m>\vy(t)</m>, must be perpendicular to both the direction vector of <m>L</m> and the
+direction vector of <m>L'</m>. Consequently
+<md alignment="alignat">
+<mrow>{3}
+0&amp;= \llt 1,0,-1\rgt\cdot\llt  t-s\,,\,-2t\,,\,-2+s+t \rgt
+ &amp;&amp;= \phantom{-}2-2s
+</p>
+
+<p></mrow><mrow>
+0&amp;= \llt 1,-2,1\rgt\cdot\llt  t-s\,,\,-2t\,,\,-2+s+t \rgt
+ &amp;&amp;=-2+6t
+</mrow>
+</md>
+So <m>s=1</m> and <m>t=\frac{1}{3}</m> and the distance between <m>L</m> and <m>L'</m> is
+<md>
+<mrow>
+\big|\llt  t-s\,,\,-2t\,,\,-2+s+t \rgt\big|_{s=1,\ t=1/3}
+=\big|\llt -2/3\,,\,-2/3\,,\,-2/3 \rgt\big|_{s=1,\ t=1/3}
+=\frac{2}{\sqrt{3}}
+</mrow>
+</md>
+</p>
+
+</example>
+</p>
+
+<p><example><title>Example <xref ref="eg_VPdistance-line-line"/> revisited, again optional</title>
+<p>xml:id="eg_VPdistance-line-line-bis"
+In this example, we again find the distance between the lines
+<md>
+<mrow>
+L&amp;:\  \llt x-1,y-2,z-3\rgt = t \llt 1,0,-1 \rgt 
+</mrow><mrow>
+L'&amp;:\ \llt x-1,y-2,z-1\rgt = t \llt 1,-2,1 \rgt 
+</mrow>
+</md>
+this time using a projection, much as in 
+Example <xref ref="eg_VPdistance-point-plane-bis"/>. The procedure,
+which will be justified below, is
+<ul>
+<li>
+first form a vector <m>\vn</m> that is perpendicular to the direction vectors
+of both lines by taking the cross product of the two direction vectors.
+In this example,
+<md>
+<mrow>
+\llt 1,0,-1\rgt \times\llt 1,-2,1\rgt 
+    &amp; = \det\left[\begin{matrix}\hi&amp;\hj&amp;\hk
+</mrow><mrow>
+                                       1 &amp; 0 &amp; -1
+</mrow><mrow>
+                                       1 &amp;-2 &amp; 1\end{matrix}\right]
+    = -2\hi -2 \hj -2\hk
+</mrow>
+</md>
+Since we just want <m>\hn</m> to be perpendicular to both direction vectors,
+we may simplify our computations by dividing this vector by <m>-2</m>, and take
+<m>\vn = \llt 1,1,1 \rgt</m>.
+</li>
+<li>
+Next find one point on <m>L</m> and one point on <m>L'</m> and subtract to form a 
+vector <m>\vv</m> whose tail is at one point and whose head is at the 
+other point. This vector goes from one line to the other line. In this example,
+the point <m>(1,2,3)</m> is on <m>L</m> (just set <m>t=0</m> in the equation for <m>L</m>) and the point <m>(1,2,1)</m> is on <m>L'</m> (just set <m>t=0</m> in the equation for <m>L'</m>),
+so that we may take
+<me>
+\vv = \llt 1-1\,,\,2-2\,,\,3-1\rgt = \llt 0,0,2 \rgt
+</me>
+</li>
+<li>
+The distance between the two lines is the length of the projection of <m>\vv</m>
+on <m>\vn</m>. In this example, by <xref ref="eqn_proj"/>, the distance is
+<md>
+<mrow>
+\big|{\rm proj}_{\vn}\,\vv\big|
+&amp;=\left|\frac{\vv\cdot\vn}{|\vn|^2}\,\vn\right|
+ =\frac{|\vv\cdot\vn|}{|\vn|} 
+</mrow><mrow>
+&amp;= \frac{|\llt 0,0,2\rgt\cdot\llt 1,1,1\rgt|}{|\llt 1,1,1\rgt|} 
+</mrow><mrow>
+    &amp;= \frac{2}{\sqrt{3}}
+</mrow>
+</md> 
+just as we found in Example <xref ref="eg_VPdistance-line-line"/>
+</li>
+</ul>
+Now, here is the justification for the procedure. 
+<ul>
+<li>
+As we did in Example <xref ref="eg_VPdistance-line-line"/>, denote by
+<m>\vx(s)</m> and <m>\vy(t)</m> the points on <m>L</m> and <m>L'</m>, respectively, 
+that are closest together. Note that, as we observed in 
+Example <xref ref="eg_VPdistance-line-line"/>, the vector from <m>\vx(s)</m> to <m>\vy(t)</m>
+is perpendicular to the direction vectors of both lines, and so is parallel 
+to <m>\vn</m>.
+</li>
+<li>
+Denote by <m>P</m> the plane through <m>\vx(s)</m> that is perpendicular to <m>\vn</m>.
+As <m>\vx(s)</m> is on <m>L</m> and the direction vector of <m>L</m> is perpendicular to
+<m>\vn</m>, the line <m>L</m> is contained in <m>P</m>.
+</li>
+<li>
+Denote by <m>P'</m> the plane through <m>\vy(t)</m> that is perpendicular to <m>\vn</m>.
+As <m>\vy(t)</m> is on <m>L'</m> and the direction vector of <m>L'</m> is perpendicular to
+<m>\vn</m>, the line <m>L'</m> is contained in <m>P'</m>.
+</li>
+<li>
+The planes <m>P</m> and <m>P'</m> are parallel to each other. As <m>\vx(s)</m> is on <m>P</m>
+and <m>\vy(t)</m> is on <m>P'</m>, and the vector from <m>\vx(s)</m> to <m>\vy(t)</m> 
+is perpendicular to both <m>P</m> and <m>P'</m>, the distance from <m>P</m> to <m>P'</m>  
+is exactly the length of the vector from <m>\vx(s)</m> to <m>\vy(t)</m>.
+That is also the distance from <m>L</m> to <m>L'</m>.
+</li>
+<li>
+The vector <m>\vv</m> constructed in the procedure above is a vector between <m>L</m> and <m>L'</m> and so is also a vector between <m>P</m> and <m>P'</m>. Looking at the figure
+below
+<fn>and possibly reviewing the Definition <xref ref="def_projection"/>
+of projection</fn>
+, we see that the vector from <m>\vx(s)</m> to <m>\vy(t)</m> is 
+(up to a sign) the projection of <m>\vv</m> on <m>\vn</m>. 
+</p>
+<sidebyside>
+<image source="problems/figs/planeDistB.pdf"/>
+</sidebyside>
+<p>
+</li>
+<li> 
+So the distance from <m>P</m> to <m>P'</m>, and hence the distance from <m>L</m> to <m>L'</m>,
+is exactly the length of <m>{\rm proj}_{\vn}\vv</m>.
+</li>
+</ul>
+</p>
+
+</example>
+</p>
+
+<p>\section{Curves and their Tangent Vectors}xml:id="sec_curves"
+</p>
+
+<p>The right hand side of the parametric equation 
+ <m>(x,y,z)=(1,1,0)+t\llt 1,2,-2\rgt</m> that we just saw in Warning 
+<xref ref="warn_line_normal"/> is a vector-valued function of the one real 
+variable <m>t</m>.
+We are now going to study more general vector-valued functions of one 
+real variable. That is, we are going to study functions that assign to 
+each real number <m>t</m> (typically in some interval) a vector <m>\vr(t)</m>. 
+For example
+<me>
+\vr(t) = \big( x(t), y(t), z(t)\big)
+</me>
+might be the position of a particle at time <m>t</m>. As <m>t</m> varies
+<m>\vr(t)</m> sweeps out a curve.
+</p>
+<sidebyside>
+<image source="problems/figs/parCurve.pdf"/>
+</sidebyside>
+<p>
+While in some applications <m>t</m> will indeed be <q>time</q>, it does not
+have to be. It can be simply a parameter that is used to label the
+different points on the curve that <m>\vr(t)</m> sweeps out. We then say 
+that <m>\vr(t)</m> provides a parametrization of the curve.
+</p>
+
+<p><example>
+<p>xml:id="eg_paramCircle"
+While we will often use <m>t</m> as the parameter in a parametrized curve <m>\vr(t)</m>,
+there is no need to call it <m>t</m>. Sometimes it is natural to use a different 
+name for the parameter. For example, consider the circle <m>x^2+y^2=a^2</m>.
+It is natural to use the angle <m>\theta</m> in the sketch below to label
+the point <m>\big(a\cos\theta\,,\,a\sin\theta\big)</m> on the circle. 
+</p>
+<sidebyside>
+<image source="problems/figs/parCircle.pdf"/>
+</sidebyside>
+<p>
+That is,
+<me>
+\vr(\theta) = \big(a\cos\theta\,,\,a\sin\theta\big)\qquad
+0\le \theta\le 2\pi
+</me>
+is a parametrization of the circle <m>x^2+y^2=a^2</m>. Just looking at the figure above, it is clear that, as <m>\theta</m> runs from <m>0</m> to <m>2\pi</m>, <m>\vr(\theta)</m>
+traces out the full circle. 
+</p>
+
+<p>However beware that just knowing that 
+<m>\vr(t)</m> lies on a specified curve does not guarantee that, as <m>t</m> varies,
+<m>\vr(t)</m> covers the entire curve. For example, as <m>t</m> runs over the whole
+real line, <m>\frac{2}{\pi}\arctan(t)</m> runs over the interval <m>(-1,1)</m>.
+For all <m>t</m>,
+<me>
+\vr(t) = \big(x(t),y(t)\big) 
+       = a\left(\frac{2}{\pi}\arctan(t)\,,\,
+                \sqrt{1-\frac{4}{\pi^2}\arctan^2(t)}\,\right)
+</me>
+is well-defined and obeys <m>x(t)^2+y(t)^2=a^2</m>. But this <m>\vr(t)</m> does not
+cover the entire circle because <m>y(t)</m> is always positive.
+</p>
+
+</example>
+</p>
+
+<p>Curves often arise as the intersection of two surfaces. For example,
+the intersection of the sphere <m>x^2+y^2+z^2=1</m>
+with the plane <m>y=x</m> is a circle. The part of that circle that is
+in the first octant is the red curve in the figure below.
+\vadjust{
+</p>
+<sidebyside>
+<image source="problems/figs/spherePlane.pdf"/>
+</sidebyside>
+<p>
+}
+One way to parametrize such curves is to
+choose one of the three coordinates <m>x</m>, <m>y</m>, <m>z</m> as the parameter,
+and solve the two given equations for the remaining two coordinates,
+as functions of the parameter. Here are two examples.
+</p>
+
+<p><example>
+<p>xml:id="eg_paramIntersectA"
+The set of all <m>(x,y,z)</m> obeying
+<md alignment="alignat">
+<mrow>{3}
+ x&amp;-y           &amp;&amp;=0 
+</mrow><mrow>
+ x^2&amp;+y^2 +z^2 &amp;&amp;=1
+</mrow>
+</md>
+is the circle sketched above. We can choose to use <m>y</m> as the parameter and think of 
+<md alignment="alignat">
+<mrow>{3}
+ x&amp;    &amp;&amp;=y 
+</mrow><mrow>
+ x^2&amp;+z^2  &amp;&amp;=1-y^2
+</mrow>
+</md>
+as a system of two equations for the two unknowns <m>x</m> and <m>z</m>,
+with <m>y</m> being treated as a given constant, rather than as an unknown.
+We can now (trivially) solve the first equation for <m>x</m>, substitute 
+the result into the second equation, and finally solve for <m>z</m>.
+<md alignment="alignat">
+<mrow>{7}
+x=y,\  x^2+z^2  &amp;&amp;=1-y^2 \quad \implies z^2 = 1-2y^2
+</mrow>
+</md>
+If, for example, we are interested in points <m>(x,y,z)</m> on the curve with 
+<m>z\ge 0</m>, we have <m>z=\sqrt{1-2y^2} </m> and 
+<me>
+\vr(y) = \left(y\,,\,y\,,\,\sqrt{1-2y^2}\,\right),\qquad
+-\frac{1}{\sqrt{2}}\le y \le \frac{1}{\sqrt{2}}
+</me>
+is a parametrization for the part of the circle above the <m>xy</m>-plane.
+If, on the other hand, we are interested in points <m>(x,y,z)</m> on the curve with 
+<m>z\le 0</m>, we have <m>z=-\sqrt{1-2y^2} </m> and 
+<me>
+\vr(y) = \left(y\,,\,y\,,\,-\sqrt{1-2y^2}\,\right),\qquad
+-\frac{1}{\sqrt{2}}\le y \le \frac{1}{\sqrt{2}}
+</me>
+is a parametrization for the part of the circle below the <m>xy</m>-plane.
+</p></example>
+</p>
+
+<p><example>
+<p>xml:id="eg_paramIntersectB"
+The previous example was rigged so that it was easy to solve
+for <m>x</m> and <m>z</m> as functions of <m>y</m>. In practice it is not always
+easy, or even possible, to do so. A more realistic example is 
+the set of all <m>(x,y,z)</m> obeying
+<md alignment="alignat">
+<mrow>{3}
+ x^2+\frac{y^2}{2}+\frac{z^2}{3}&amp;=1  
+</mrow><mrow>
+ x^2+2y^2&amp;=z
+</mrow>
+</md>
+which is the blue curve in the figure 
+</p>
+<sidebyside>
+<image source="problems/figs/stokes6.pdf"/>
+</sidebyside>
+<p>
+(Don't worry about how we make sketches like this. We'll develop some
+surface sketching technique in \S<xref ref="sec_sketching"/> below.)
+Substituting <m>x^2=z-2y^2</m> (from the second equation)
+into the first equation gives 
+<me>
+-\frac{3}{2}y^2+z+\frac{z^2}{3}=1
+</me>
+or, completing the square,
+<me>
+-\frac{3}{2}y^2 + \frac{1}{3}\Big(z+\frac{3}{2}\Big)^2 = \frac{7}{4}
+</me>
+If, for example, we are interested in points <m>(x,y,z)</m> on the curve with 
+<m>y\ge 0</m>, this can be solved to give <m>y</m> as a function of <m>z</m>.
+<me>
+y=\sqrt{\frac{2}{9}\Big(z+\frac{3}{2}\Big)^2-\frac{14}{12}}
+</me>
+Then <m>x^2=z-2y^2</m> also gives <m>x</m> as a function of <m>z</m>. If <m>x\ge 0</m>,
+<md>
+<mrow>
+x&amp;=\sqrt{z-\frac{4}{9}\Big(z+\frac{3}{2}\Big)^2+\frac{14}{6}} 
+</mrow><mrow>
+&amp;=\sqrt{\frac{4}{3}-\frac{4}{9}z^2-\frac{1}{3}z} 
+</mrow>
+</md>
+The other signs of <m>x</m> and <m>y</m> can be gotten by using the appropriate
+square roots. In this example, <m>(x,y,z)</m> is on the curve, i.e. satisfies
+the two original equations, if and only if all of <m>(\pm x,\pm y, z)</m> are also
+on the curve.
+</p>
+
+</example>
+</p>
+
+<p>\subsection{Derivatives and Tangent Vectors}xml:id="sec_curve_derivs"
+</p>
+
+<p>This being a Calculus text, one of our main operations is differentiation.
+We are now interested in parametrizations <m>\vr(t)</m>.
+It is very easy and natural to extend our definition of derivative to <m>\vr(t)</m>
+as follows.
+</p>
+
+<p><definition>
+<statement><p>xml:id="def__curve_deriv"
+The derivative of the vector valued function <m>\vr(t)</m> is defined to be
+<me>
+\vr'(t) =  \diff{\vr}{t}(t)=\lim_{h\rightarrow 0}\frac{\vr(t+h)-\vr(t)}{h}
+\qquad
+\raisebox{-25pt}[25pt][20pt]{<image source="problems/figs/parCurveDerivA.pdf"/>}
+</me>
+when the limit exists. In particular, if 
+<m>\vr(t)=\big(x(t)\,,\,y(t)\,,\,z(t)\big)</m>, then
+<me>
+\vr'(t)=\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big)
+</me>
+That is, to differentiate a vector valued function of <m>t</m>, just differentiate
+each of its components.
+</p></statement>
+</definition>
+</p>
+
+<p>And of course differentiation interacts with arithmetic operations, 
+like addition, in the obvious way. Only a little more thought is required to 
+see that differentiation interacts quite nicely with dot and cross 
+products too.  
+</p>
+
+<p><theorem><title>Arithmetic of differentiation</title>
+<statement><p>xml:id="thm_DIFFalgebra"
+Let 
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>[<m>\circ</m>]
+<m>\va(t),\vb(t)</m> be vector valued differentiable functions of <m>t\in\bbbr</m>
+that take values in <m>\bbbr^n</m> and
+</li>
+<li>[<m>\circ</m>]
+ <m>\alpha,\beta \in \mathbb{R}</m> be constants and
+</li>
+<li>[<m>\circ</m>]
+ <m>\ga(t)</m> and <m>s(t)</m> be real valued differentiable functions of <m>t\in\bbbr</m>
+</li>
+</ul>
+Then
+<md alignment="alignat">
+<mrow>{5}
+&amp;\text{(a)}\quad &amp;&amp;\diff{}{t}\big[\alpha\,\va(t)+\beta\,\vb(t)\big]
+         =\alpha\,\va'(t)+\beta\,\vb'(t)
+           &amp;&amp;\text{(linear combination)}
+</p>
+
+<p></mrow><mrow>
+&amp;\text{(b)} &amp;&amp;\diff{}{t}\big[\ga(t)\vb(t)\big]
+         =\ga'(t)\vb(t)+\ga(t)\vb'(t)
+           &amp;&amp;\text{(multiplication by scalar function)}
+</p>
+
+<p></mrow><mrow>
+&amp;\text{(c)} &amp;&amp;\diff{}{t}\big[\va(t)\cdot\vb(t)\big]
+         =\va'(t)\cdot\vb(t)+\va(t)\cdot\vb'(t)
+           &amp;&amp;\text{(dot product)}
+</p>
+
+<p></mrow><mrow>
+&amp;\text{(d)} &amp;&amp;\diff{}{t}\big[\va(t)\times\vb(t)\big]
+         =\va'(t)\times\vb(t)+\va(t)\times\vb'(t)
+           \ \ &amp;&amp;\text{(cross product)}
+</p>
+
+<p></mrow><mrow>
+&amp;\text{(e)} &amp;&amp;\diff{}{t}\big[\va\big(s(t)\big)\big]
+         =\va'\big(s(t)\big)\,s'(t)
+           &amp;&amp;\text{(composition)}
+</mrow>
+</md>
+</p>
+
+</statement>
+</theorem>
+</p>
+
+<p>Let's think about the geometric significance of <m>\vr'(t)</m>.
+In particular, let's think about the relationship between <m>\vr'(t)</m>
+and distances along the curve.
+The derivative <m>\vr'(t)</m> is the limit of   <m>\frac{\vr(t+h)-\vr(t)}{h}</m> as <m>h\rightarrow 0</m>. 
+The numerator, <m>\vr(t+h)-\vr(t)</m>, is the vector with head at <m>\vr(t+h)</m> 
+and tail at <m>\vr(t)</m>. 
+</p>
+<sidebyside>
+<image source="problems/figs/parCurveDeriv.pdf"/>
+</sidebyside>
+<p>
+When <m>h</m> is very small this vector
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>[<m>\circ</m>]
+has the essentially the same direction as the tangent vector to the curve at <m>\vr(t)</m> and
+</li>
+<li>[<m>\circ</m>]
+has length being essentially the length of the part of the curve between
+<m>\vr(t)</m> and <m>\vr(t+h)</m>.
+</li>
+</ul>
+Taking the limit as <m>h\rightarrow 0</m> yields that
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>[<m>\circ</m>]
+<m>\vr'(t)</m> is a tangent vector to the curve at <m>\vr(t)</m> that points in
+the direction of increasing <m>t</m> and
+</li>
+<li>[<m>\circ</m>]
+if <m>s(t)</m> is the length of the part of the curve between
+<m>\vr(0)</m> and <m>\vr(t)</m>, then  <m>\diff{s}{t}(t)=\big|\diff{\vr}{t}(t)\big|</m>.
+</li>
+</ul>
+This is worth stating formally.
+</p>
+
+<p><lemma>
+<statement><p>xml:id="lem_CVtanArclen"
+Let <m>\vr(t)</m> be a parametrized curve.
+<ol label="a">
+<li> 
+Denote by <m>\hat\vT(t)</m> the unit tangent vector to the curve 
+at <m>\vr(t)</m> pointing in the direction of increasing <m>t</m>. If
+<m>\vr'(t)\ne 0</m>
+then
+<me>
+\hat\vT(t) = \frac{\vr'(t)}{|\vr'(t)|}
+</me>
+</li>
+<li>
+Denote by <m>s(t)</m> the length of the part of the curve between
+<m>\vr(0)</m> and <m>\vr(t)</m>. Then
+<md>
+<mrow>
+\diff{s}{t}(t)&amp;=\Big|\diff{\vr}{t}(t)\Big| 
+</mrow><mrow>
+s(T)-s(T_0)&amp;= \int_{T_0}^T \left|\diff{\vr}{t}(t)\right|\,\dee{t}\qquad
+\raisebox{-20pt}{\smash{<image source="problems/figs/parCurveDerivB.pdf"/>}}
+</mrow>
+</md>
+</li>
+<li>
+In particular, if the parameter happens to be arc length, i.e. if <m>t=s</m>,
+so that <m>\diff{s}{s}=1</m>, then
+<me>
+\left|\diff{\vr}{s}(s)\right|=1\qquad
+\hat\vT(s) = \vr'(s)
+</me>
+</li>
+</ol>
+</p></statement>
+</lemma>
+</p>
+
+<p>As an application, we have the
+</p>
+
+<p><lemma>
+<statement><p>xml:id="lem_CVvelocityEtc"
+If <m>\vr(t)=\big(x(t)\,,\,y(t)\,,\,z(t)\big)</m> is the position of a 
+particle at time <m>t</m>, then
+<md>
+<mrow>
+</p>
+
+<p>\text{velocity at time <m>t</m>}
+       &amp;=\vv(t)=\vr'(t)=\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big) 
+        = \diff{s}{t}(t)\,\hat\vT(t)
+</mrow><mrow>
+\text{speed at time <m>t</m>}
+       &amp;= \diff{s}{t}(t)=|\vv(t)|=|\vr'(t)|=\sqrt{(x'(t)^2+y'(t)^2+z'(t)^2} 
+</mrow><mrow>
+\text{acceleration at time <m>t</m>}
+       &amp;=\va(t)=\vr</q>(t)=\vv'(t)=\big(x</q>(t)\,,\,y</q>(t)\,,\,z</q>(t)\big) 
+</mrow><mrow>
+</mrow>
+<intertext>and the distance travelled between times <m>T_0</m> and <m>T</m> is</intertext><mrow>
+  s(T)-s(T_0)&amp;= \int_{T_0}^T \Big|\diff{\vr}{t}(t)\Big|\,\dee{t}
+       = \int_{T_0}^T \sqrt{(x'(t)^2+y'(t)^2+z'(t)^2}\,\dee{t}
+</mrow>
+</md>
+</p></statement>
+</lemma>
+Note that the velocity <m>\vv(t) = \vr'(t)</m> is a vector quantity while the
+speed <m>\diff{s}{t}(t)=|\vr'(t)|</m> is a scalar quantity.
+\goodbreak
+</p>
+
+<p><example>
+<p>xml:id="eg_paramCircleTan"
+In general it can be quite difficult to compute arc lengths.
+So, as an easy warmup example, we will compute the circumference of the circle
+<m>x^2+y^2=a^2</m>. We'll also find a unit tangent to the circle at any point on
+the circle. We'll use the parametrization
+<me>
+\vr(\theta) = \big(a\cos\theta\,,\,a\sin\theta\big)\qquad
+0\le \theta\le 2\pi
+</me>
+of Example <xref ref="eg_paramCircle"/>. Using Lemma <xref ref="lem_CVtanArclen"/>,
+but with the parameter <m>t</m> renamed to <m>\theta</m>
+<md>
+<mrow>
+\vr'(\theta) &amp;= a\big(-\sin\theta\,,\cos\theta\big) 
+</mrow><mrow>
+\hat\vT(\theta) &amp;= \frac{\vr'(\theta)}{|\vr'(\theta)|}
+               =  \big(-\sin\theta\,,\cos\theta\big) 
+</mrow><mrow>
+\diff{s}{\theta}(\theta)&amp;=\big|\vr'(\theta)\big| = a
+</mrow><mrow>
+s(\Theta)-s(0)&amp;= \int_{0}^\Theta \big|\vr'(\theta)\big|\,\dee{\theta}
+          =a\Theta
+</mrow>
+</md>
+As
+<fn>You might guess that <m>\Theta</m> is a capital Greek theta. You'd be right.</fn>
+ <m>s(\Theta)</m> is the arc length of the part of the circle with 
+<m>0\le\theta\le\Theta</m>, the circumference of the whole circle is
+<me>
+s(2\pi) = 2\pi a
+</me> 
+which is reassuring, since this formula has been known
+<fn>The earliest known written approximations of <m>\pi</m>, in Egypt and Babylon, date 
+from 1900--1600BC. The first recorded algorithm for rigorously evaluating <m>\pi</m>
+was developed by Archimedes around 250 BC. The first use of the symbol <m>\pi</m>,
+for the ratio between the circumference of a circle and its diameter,
+in print was in 1706 by William Jones.</fn>
+</p>
+
+<p>for thousands of years.
+\vadjust{
+</p>
+<sidebyside>
+<image source="problems/figs/parCircleT.pdf"/>
+</sidebyside>
+<p>
+}
+The formula <m>s(\Theta)-s(0)=a\Theta</m> also makes sense <mdash/> the part of the 
+circle with <m>0\le\theta\le\Theta</m> is the fraction <m>\frac{\Theta}{2\pi}</m>
+of the whole circle, and so should have length <m>\frac{\Theta}{2\pi}\times
+2\pi a</m>. Also note that
+<me>
+\vr(\theta)\cdot\hat\vT(\theta) = \big(a\cos\theta\,,\,a\sin\theta\big)
+\cdot \big(-\sin\theta\,,\cos\theta\big)
+=0
+</me>
+so that the tangent to the circle at any point is perpendicular
+to the radius vector of the circle at that point. This is another geometric fact 
+that has been known
+<fn>It is Proposition 18 in Book 3 of Euclid's Elements. It was published around 300BC.</fn>
+ for thousands of years.
+</p></example>
+\goodbreak
+</p>
+
+<p><example>
+<p>xml:id="eg_paramHelix"
+Consider the curve
+<me>
+\vr(t) = 6\sin(2t)\hi + 6\cos(2t)\hj +5t\hk
+</me>
+where the standard basis vectors <m>\hi = (1,0,0)</m>, <m>\hj=(0,1,0)</m> 
+and <m>\hk =(0,0,1)</m>.
+We'll first sketch it, by observing that
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>[<m>\circ</m>] <m>x(t)=6\sin(2t)</m> and <m>y(t) =6\cos(2t)</m> obey
+<me>
+x(t)^2+y(t)^2 = 36 \sin^2(2t) + 36\cos^2(2t) = 36
+</me>
+So all points of the curve lie on the cylinder <m>x^2+y^2=36</m> and
+</li>
+<li>[<m>\circ</m>] as <m>t</m> increases, <m>\big(x(t),y(t)\big)</m> runs clockwise 
+around the circle <m>x^2+y^2=36</m> and at the same time <m>z(t) = 5t</m> 
+just increases linearly.
+</li>
+</ul>
+Our curve is the helix
+</p>
+<sidebyside>
+<image source="problems/figs/helix4.pdf"/>
+</sidebyside>
+<p>
+We have marked three points of the curve on the above sketch. The first has
+<m>t=0</m> and is <m>0\hi+6\hj+0\hk</m>. The second has <m>t=\frac{\pi}{2}</m> and is <m>0\hi-6\hj+\frac{5\pi}{2}\hk</m>, and the third has <m>t=\pi</m> and is 
+<m>0\hi+6\hj+5\pi\hk</m>.
+We'll now use Lemma <xref ref="lem_CVtanArclen"/> to find a unit tangent
+<m>\hat\vT(t)</m> to the curve at <m>\vr(t)</m> and also the arclength of the part of curve between <m>t=0</m> and <m>t=\pi</m>.
+<md>
+<mrow>
+\vr(t) &amp;= 6\sin(2t)\hi + 6\cos(2t)\hj +5t\hk 
+</mrow><mrow>
+\vr'(t) &amp;= 12\cos(2t)\hi -12\sin(2t)\hj +5\hk 
+</mrow><mrow>
+\diff{s}{t}(t)&amp;=\big|\vr'(t)\big| 
+=\sqrt{12^2\cos^2(2t) +12^2\sin^2(2t)+5^2}
+= \sqrt{12^2+5^2}
+</mrow><mrow>
+&amp; = 13
+</mrow><mrow>
+\hat\vT(t) &amp;= \frac{\vr'(t)}{|\vr'(t))|}
+               =  \frac{12}{13}\cos(2t)\hi -\frac{12}{13}\sin(2t)\hj +\frac{5}{13}\hk 
+</mrow><mrow>
+s(\pi)-s(0)&amp;= \int_{0}^\pi \big|\vr'(t)\big|\,\dee{t}
+          =13\pi
+</mrow>
+</md>
+</p></example>
+\goodbreak
+</p>
+
+<p>\section{Sketching Surfaces in 3d}xml:id="sec_sketching"
+</p>
+
+<p>In practice students taking multivariable calculus regularly have great
+difficulty visualising surfaces in three dimensions, despite the fact
+that we all live in three dimensions. We'll now develop some
+technique to help us sketch surfaces in three dimensions
+<fn>Of course you could instead use some fancy graphing software, but part of the point is to
+build intuition. Not to mention that you can't use fancy graphing software on 
+your exam.</fn>
+.
+</p>
+
+<p>We all have a fair
+bit of experience drawing curves in two dimensions. Typically the intersection
+of a surface (in three dimensions) with a plane is a curve lying in 
+the (two dimensional) plane. Such an intersection is usually called a cross-section.
+In the special case that the plane is one of the coordinate planes, the
+intersection is sometimes called a trace. One can often get a pretty good
+idea of what a surface looks like by sketching a bunch of cross-sections.
+Here are some examples.
+</p>
+
+<p>\bigskip
+<example><title><m>4x^2+y^2-z^2=1</m></title>
+<p>xml:id="eg_hyperboloid"
+\medskip
+Sketch the surface that satisfies <m>4x^2+y^2-z^2=1</m>.
+</p>
+
+<p>\soln We'll start by fixing any number <m>z_0</m> and sketching the part of
+the surface that lies in the horizontal plane <m>z=z_0</m>. 
+</p>
+<sidebyside>
+<image source="problems/figs/zedzeroPlane.pdf"/>
+</sidebyside>
+<p>
+The intersection of our surface with that horizontal plane is a horizontal
+cross-section. Any point <m>(x,y,z)</m> lying on that horizontal cross-section
+satisfies both 
+<md>
+<mrow>
+&amp;z=z_0\text{\ \ and\ \ }4x^2+y^2-z^2=1 
+</mrow><mrow>
+\iff
+&amp;z=z_0\text{\  \ and\ \ }4x^2+y^2=1+z_0^2
+</mrow>
+</md>
+Think of <m>z_0</m> as a constant.
+Then <m>4x^2+y^2=1+z_0^2</m> is a curve in the <m>xy</m>-plane. As <m>1+z_0^2</m> is a constant, the curve is an ellipse. To determine its semi-axes
+<fn>The
+semi-axes of an ellipse are the line segments from the centre of the ellipse
+to the farthest point on the curve and to the nearest point on the curve.
+For a circle the lengths of both of these line segments are just the  radius.</fn>
+, we observe that
+when <m>y=0</m>, we have <m>x=\pm\frac{1}{2}\sqrt{1+z_0^2}</m> and when <m>x=0</m>,
+we have <m>y=\pm\sqrt{1+z_0^2}</m>. So the curve is just an ellipse with 
+<m>x</m> semi-axis <m>\frac{1}{2}\sqrt{1+z_0^2}</m> and <m>y</m> semi-axis 
+<m>\sqrt{1+z_0^2}</m>. It's easy to sketch.
+</p>
+<sidebyside>
+<image source="problems/figs/ellipse.pdf"/>
+</sidebyside>
+<p>
+Remember that this ellipse is the part of our surface that lies in the
+plane <m>z=z_0</m>. Imagine that the sketch of the ellipse is on a single
+sheet of paper. Lift the sheet of paper up, move it around so that 
+the <m>x</m>- and <m>y</m>-axes point in the directions of the three dimensional 
+<m>x</m>- and <m>y</m>-axes and place the sheet of paper into the three 
+dimensional sketch at height <m>z_0</m>.
+This gives a single horizontal ellipse in 3d, as in the figure below.
+</p>
+<sidebyside>
+<image source="problems/figs/hyperboloidZX.pdf"/>
+</sidebyside>
+<p>
+We can build up the full surface by stacking many of these horizontal 
+ellipses <mdash/> one for each possible height <m>z_0</m>. 
+So we now draw a few of them as in the figure below. To reduce the 
+amount of clutter in the sketch, we have only drawn the first octant 
+(i.e. the part of three dimensions that has <m>x\ge 0</m>, <m>y\ge 0</m> and <m>z\ge 0</m>). 
+</p>
+<sidebyside>
+<image source="problems/figs/hyperboloidZXB.pdf"/>
+</sidebyside>
+
+
+<p>Here is why it is OK, in this case, to just sketch the first octant.
+Replacing <m>x</m> by <m>-x</m> in the equation <m>4x^2+y^2-z^2=1</m>
+does not change the equation. That means that a point <m>(x,y,z)</m> is on the
+surface if and only if the point <m>(-x,y,z)</m> is on the surface. So the surface
+is invariant under reflection in the <m>yz</m>-plane. Similarly, the equation
+<m>4x^2+y^2-z^2=1</m> does not change when <m>y</m> is replaced by <m>-y</m> or <m>z</m> is
+replaced by <m>-z</m>. Our surface is also invariant reflection in the <m>xz</m>-
+and <m>yz</m>-planes. Once we have the part in the first octant, the remaining 
+octants can be gotten simply by reflecting about the coordinate planes.
+</p>
+
+<p>We can get a more visually meaningful sketch by adding in some vertical
+cross-sections. The <m>x=0</m> and <m>y=0</m> cross-sections (also called traces
+<mdash/> they are the parts of our surface that are in the <m>yz</m>- and <m>xz</m>-planes,
+respectively)
+are
+<me>
+x=0,\ y^2-z^2=1\qquad\text{and}\qquad
+y=0,\ 4x^2-z^2=1
+</me>
+These equations describe hyperbolae
+<fn>It's not just a figure of speech!</fn>
+. If you don't remember how to sketch them, don't worry. We'll
+do it now. We'll first sketch them in 2d. Since
+<md alignment="alignat">
+<mrow>{3}
+y^2&amp;=1+z^2 &amp;\quad\implies\quad
+   &amp;|y|\ge 1\quad\text{ and }\quad 
+    y=\pm 1\text{ when }z=0\quad
+    \text{ and\quad for large <m>z</m>, }y\approx\pm z 
+</mrow><mrow>
+4x^2&amp;=1+z^2 &amp; \quad\implies\quad
+   &amp;|x|\ge \tfrac{1}{2}\quad\text{ and }\quad 
+   x=\pm\tfrac{1}{2}\text{ when }z=0\quad 
+   \text{and\quad for large <m>z</m>, }x\approx\pm \tfrac{1}{2}z
+</mrow>
+</md>
+the sketches are
+</p>
+<sidebyside>
+<image source="problems/figs/hyperbolaXa.pdf"/>\qquad
+   <image source="problems/figs/hyperbolaYa.pdf"/>
+</sidebyside>
+<p>
+Now we'll incorporate them into the 3d sketch. Once again imagine that each
+is a single sheet of paper. Pick each up and move it into the 3d sketch,
+carefully matching up the axes. The red (blue) parts of the hyperbolas
+above become the red (blue) parts of the 3d sketch below (assuming of course
+that you are looking at this on a colour screen).  
+</p>
+
+
+<sidebyside>
+<image source="problems/figs/hyperboloidBa.pdf"/>
+</sidebyside>
+<p>
+Now that we have a pretty good idea of what the surface looks like
+we can clean up and simplify the sketch. Here are a couple of 
+possibilities.
+</p>
+<sidebyside>
+<image source="problems/figs/hyperboloidC.pdf"/>\qquad\qquad
+   \raisebox{0.2\height}{<image source="problems/figs/hyperboloidD.pdf"/>}
+</sidebyside>
+<p>
+This type of surface is called a hyperboloid of one sheet.
+</p>
+
+<p>There are also hyperboloids of two sheets. For example, replacing the <m>+1</m>
+on the right hand side of <m>x^2+y^2-z^2=1</m> gives <m>x^2+y^2-z^2=-1</m>, which is
+a hyperboloid of two sheets. We'll sketch it quickly in the next example. 
+</p></example>
+</p>
+
+<p>\bigskip
+<example><title><m>4x^2+y^2-z^2=-1</m></title>
+<p>xml:id="eg_hyperboloid_two"
+\medskip
+Sketch the surface that satisfies <m>4x^2+y^2-z^2=-1</m>.
+</p>
+
+<p>\soln As in the last example, we'll start by fixing any number <m>z_0</m> 
+and sketching the part of the surface that lies in the horizontal 
+plane <m>z=z_0</m>. The intersection of our surface with that horizontal plane is 
+<md>
+<mrow>
+&amp;z=z_0\text{\  \ and\ \ }4x^2+y^2=z_0^2-1
+</mrow>
+</md>
+Think of <m>z_0</m> as a constant. 
+<ul>
+<li>
+If <m>|z_0| \lt 1</m>, then <m>z_0^2-1 \lt 0</m> and there
+are no solutions to <m>x^2+y^2=z_0^2-1</m>.
+</li>
+<li>
+If <m>|z_0|=1</m> there is exactly one solution, namely <m>x=y=0</m>.
+</li>
+<li>
+If <m>|z_0| \gt 1</m> then <m>4x^2+y^2=z_0^2-1</m> is an ellipse with 
+<m>x</m> semi-axis <m>\frac{1}{2}\sqrt{z_0^2-1}</m> and <m>y</m> semi-axis 
+<m>\sqrt{z_0^2-1}</m>. These semi-axes are small when <m>|z_0|</m> is close to
+<m>1</m> and grow as <m>|z_0|</m> increases.
+</li>
+</ul>
+\noindent
+The first octant parts of a few of these horizontal cross-sections 
+are drawn in the figure below.
+</p>
+<sidebyside>
+<image source="problems/figs/hyperboloidZXBB.pdf"/>
+</sidebyside>
+<p>
+Next we add in the <m>x=0</m> and <m>y=0</m> cross-sections (i.e. the parts of 
+our surface that are in the <m>yz</m>- and <m>xz</m>-planes, respectively)
+<me>
+x=0,\ z^2=1+y^2\qquad\text{and}\qquad
+y=0,\ z^2=1+4x^2
+</me>
+</p>
+<sidebyside>
+<image source="problems/figs/hyperboloidBaa.pdf"/>
+</sidebyside>
+<p>
+Now that we have a pretty good idea of what the surface looks like
+we clean up and simplify the sketch.
+</p>
+<sidebyside>
+<image source="problems/figs/hyperboloidCC.pdf"/>\qquad\qquad
+   \raisebox{0.2\height}{<image source="problems/figs/hyperboloidDD.pdf"/>}
+</sidebyside>
+<p>
+This type of surface is called a hyperboloid of two sheets. 
+</p></example>
+</p>
+
+<p>\bigskip
+<example><title><m>yz=1</m></title>
+<p>xml:id="eg_hyperbolic_cylinder"
+\medskip
+Sketch the surface <m>yz=1</m>. 
+</p>
+
+<p>\soln
+This surface has a special property that 
+makes it relatively easy to sketch. There are no <m>x</m>'s in the equation
+<m>yz=1</m>. That means that if some <m>y_0</m> and <m>z_0</m> obey <m>y_0z_0=1</m>,
+then the point <m>(x,y_0,z_0)</m> lies on the surface <m>yz=1</m> for all values
+of <m>x</m>. As <m>x</m> runs from <m>-\infty</m> to <m>\infty</m>, the point <m>(x,y_0,z_0)</m>
+sweeps out a straight line parallel to the <m>x</m>-axis. So the surface
+<m>yz=1</m> is a union of lines parallel to the <m>x</m>-axis. It is invariant under
+translations parallel to the <m>x</m>-axis. To sketch <m>yz=1</m>, we just need
+to sketch its intersection with the <m>yz</m>-plane and then translate the
+resulting curve parallel to the <m>x</m>-axis to sweep out the surface.
+</p>
+
+<p>We'll start with a sketch of the hyperbola <m>yz=1</m> in two dimensions.
+</p>
+<sidebyside>
+<image source="problems/figs/hyperbola3.pdf"/>
+</sidebyside>
+<p>
+Next we'll move this 2d sketch into the <m>yz</m>-plane, i.e. the plane <m>x=0</m>,
+in 3d, except that we'll only draw in the part in the first octant.
+</p>
+<sidebyside>
+<image source="problems/figs/hyperbolicCylinderA.pdf"/>
+</sidebyside>
+<p>
+The we'll draw in <m>x=x_0</m> cross-sections for a couple of more values of
+<m>x_0</m>
+</p>
+<sidebyside>
+<image source="problems/figs/hyperbolicCylinderB.pdf"/>
+</sidebyside>
+<p>
+and clean up the sketch a bit
+</p>
+<sidebyside>
+<image source="problems/figs/hyperbolicCylinderC.pdf"/>
+</sidebyside>
+</example>
+</p>
+
+<p>\bigskip
+<example><title><m>xyz=1</m></title>
+<p>xml:id="eg_xyz"
+\medskip
+Sketch the surface <m>xyz=4</m>. 
+</p>
+
+<p>\soln
+We'll sketch this surface using much the same procedure as we used
+in Examples <xref ref="eg_hyperboloid"/> and <xref ref="eg_hyperboloid_two"/>.
+We'll only sketch the part of the surface in the first octant. The
+remaining parts (in the octants with <m>x,y \lt 0</m>, <m>z\ge 0</m>, with
+<m>x,z \lt 0</m>, <m>y\ge 0</m> and with <m>y,z \lt 0</m>, <m>x\ge0</m>) are just reflections of
+the first octant part.
+</p>
+
+<p>As usual, we start by fixing any number <m>z_0</m> 
+and sketching the part of the surface that lies in the horizontal 
+plane <m>z=z_0</m>. The intersection of our surface with that horizontal plane is 
+the hyperbola
+<md>
+<mrow>
+&amp;z=z_0\text{\  \ and\ \ }xy=\frac{1}{z_0}
+</mrow>
+</md>
+Note that <m>x\rightarrow\infty</m> as <m>y\rightarrow 0</m> and that 
+<m>y\rightarrow\infty</m> as <m>x\rightarrow 0</m>. So the hyperbola 
+has both the <m>x</m>-axis and the <m>y</m>-axis as asymptotes, when drawn in the <m>xy</m>-plane. 
+The first octant parts of a few of these horizontal cross-sections 
+(namely, <m>z_0=4</m>, <m>z_0=2</m> and <m>z_0=\frac{1}{2}</m>)
+are drawn in the figure below.
+</p>
+<sidebyside>
+<image source="problems/figs/seatB.pdf"/>
+</sidebyside>
+<p>
+Next we add some vertical cross-sections.
+We can't use <m>x=0</m> or <m>y=0</m> because any point on <m>xyz=1</m> 
+must have all of <m>x</m>, <m>y</m>, <m>z</m> nonzero. So we use
+<me>
+x=4,\ yz=1\qquad\text{and}\qquad
+y=4,\ xz=1
+</me>
+instead. They are again hyperbolae.
+</p>
+<sidebyside>
+<image source="problems/figs/seatC.pdf"/>
+</sidebyside>
+<p>
+Finally, we clean up and simplify the sketch.
+</p>
+<sidebyside>
+<image source="problems/figs/seatA.pdf"/>
+</sidebyside>
+
+
+</example>
+</p>
+
+<p>Often the reason you are interested in a surface in 3d is that it is
+the graph <m>z=f(x,y)</m> of a function of two variables <m>f(x,y)</m>. Another good
+way to visualize the behaviour of a function <m>f(x,y)</m> is to sketch what
+are called its level curves. By definition, a level curve of <m>f(x,y)</m>
+is a curve whose equation is <m>f(x,y)=C</m>, for some constant <m>C</m>. It is the
+set of points in the <m>xy</m>-plane where <m>f</m> takes the value <m>C</m>. Because
+it is a curve in 2d, it is usually easier to sketch than the graph of <m>f</m>.
+Here are a couple of examples. 
+</p>
+
+<p>\bigskip
+<example><title><m>f(x,y) = x^2+4y^2-2x+2</m></title>
+<p>
+\medskip
+Sketch the level curves of <m>f(x,y) = x^2+4y^2-2x+2</m>. 
+</p>
+
+<p>\soln  
+Fix any real number <m>C</m>. Then, for the specified function <m>f</m>,
+the level curve <m>f(x,y)=C</m> is the set of points <m>(x,y)</m> that obey
+<md>
+<mrow>
+x^2+4y^2-2x+2=C
+&amp;\iff x^2-2x+1 + 4y^2 +1 =C 
+</mrow><mrow>
+&amp;\iff (x-1)^2 + 4y^2 = C-1
+</mrow>
+</md>
+Now <m>(x-1)^2 + 4y^2</m> is the sum of two squares, and so is always at least zero. 
+So if <m>C-1 \lt 0</m>, i.e. if <m>C \lt 1</m>, there is no curve <m>f(x,y)=C</m>. If <m>C-1=0</m>, 
+i.e. if <m>C=1</m>, then <m>f(x,y)=C-1=0</m> if and only if both <m>(x-1)^2=0</m> and 
+<m>4y^2=0</m> and so the level curve consists of the single point <m>(1,0)</m>. 
+If <m>C \gt 1</m>, then <m>f(x,y)=C</m> become <m>(x-1)^2+4y^2=C-1 \gt 0</m> which describes an
+ellipse centred on <m>(1,0)</m>. It intersects the <m>x</m>-axis when <m>y=0</m> and 
+<me>
+(x-1)^2 = C-1 \iff x-1=\pm\sqrt{C-1} \iff x=1\pm \sqrt{C-1} 
+</me>
+and it intersects the line <m>x=1</m> (i.e. the vertical line through the centre)
+when 
+<me>
+4y^2 = C-1 \iff 2y=\pm\sqrt{C-1} \iff y=\pm\tfrac{1}{2} \sqrt{C-1} 
+</me>
+So, when <m>C \gt 1</m>, <m>f(x,y)=C</m> is the ellipse centred on <m>(1,0)</m> with 
+<m>x</m> semi-axis <m>\sqrt{C-1} </m> and <m>y</m> semi-axis <m>\tfrac{1}{2}\sqrt{C-1}</m>.
+Here is a sketch of some representative level curves of 
+<m>f(x,y) = x^2+4y^2-2x+2</m>.
+</p>
+<sidebyside>
+<image source="problems/figs/ellipseLevelB.pdf"/>
+</sidebyside>
+<p>
+It is often easier to develop an understanding of the behaviour of a function
+<m>f(x,y)</m> by looking at a sketch of its level curves, than it is by looking
+at a sketch of its graph. On the other hand, you can also
+use a sketch of the level curves of <m>f(x,y)</m> as the first step in building
+a sketch of the graph <m>z=f(x,y)</m>. The next step would be to redraw, 
+for each <m>C</m>, the level curve <m>f(x,y)=C</m>, in the plane <m>z=C</m>, as we did in 
+Example <xref ref="eg_hyperboloid"/>.
+</p>
+
+</example>
+</p>
+
+<p>\bigskip\goodbreak
+<example><title><m>e^{x+y+z}=1</m></title>
+<p>
+\medskip
+The function <m>f(x,y)</m> is given implicitly by the equation <m>e^{x+y+z}=1</m>.
+Sketch the level curves of <m>f</m>. 
+</p>
+
+<p>\soln 
+This one is not as nasty as it appears.  
+That <q><m>f(x,y)</m> is given implicitly by the equation <m>e^{x+y+z}=1</m></q>
+means that, for each <m>x,y</m>,  the solution <m>z</m> of <m>e^{x+y+z}=1</m> is
+<m>f(x,y)</m>. So, for the specified function <m>f</m> and any fixed real number <m>C</m>,
+the level curve <m>f(x,y)=C</m> is the set of points <m>(x,y)</m> that obey
+<md>
+<mrow>
+e^{x+y+C}=1
+&amp;\iff x+y+C = 0\qquad\text{(by taking the logarithm of both sides)} 
+</mrow><mrow>
+&amp;\iff x+y = -C
+</mrow>
+</md>
+This is of course a straight line. It intersects the <m>x</m>-axis when <m>y=0</m> 
+and <m>x=-C</m> and it intersects the <m>y</m>-axis when <m>x=0</m> and <m>y=-C</m>.
+Here is a sketch of some level curves.
+</p>
+<sidebyside>
+<image source="problems/figs/planeLevel.pdf"/>
+</sidebyside>
+</example>
+</p>
+
+<p>We have just seen that sketching the level curves of a function <m>f(x,y)</m>
+can help us understand the behaviour of <m>f</m>. We can generalise this
+to functions <m>F(x,y,z)</m> of three variables. A level surface of <m>F(x,y,z)</m>
+is a surface whose equation is of the form <m>F(x,y,z)=C</m> for some 
+constant <m>C</m>. It is the set of points <m>(x,y,z)</m> at which <m>F</m> takes 
+the value <m>C</m>. 
+</p>
+
+<p>\bigskip\goodbreak
+<example><title><m>F(x,y,z)=x^2+y^2+z^2</m></title>
+<p>xml:id="eg_level_surface_sphere"
+Let <m>F(x,y,z)=x^2+y^2+z^2</m>. If <m>C \gt 0</m>, then the level surface
+<m>F(x,y,z)=C</m> is the sphere of radius <m>\sqrt{C}</m> centred on the origin.
+Here is a sketch of the parts of the level surfaces 
+           <m>F=1</m> (radius <m>1</m>), 
+           <m>F=4</m> (radius <m>2</m>) and 
+           <m>F=9</m> (radius <m>3</m>)
+that are in the first octant.
+</p>
+<sidebyside>
+<image source="problems/figs/spherA.pdf"/>
+</sidebyside>
+</example>
+</p>
+
+<p>\bigskip\goodbreak
+<example><title><m>F(x,y,z)=x^2+z^2</m></title>
+<p>xml:id="eg_level_surface_cylinder"
+Let <m>F(x,y,z)=x^2+z^2</m> and <m>C \gt 0</m>. Consider the level surface
+<m>x^2+z^2=C</m>.  The variable <m>y</m> does not appear in this equation. 
+So for any fixed <m>y_0</m>, the intersection of the our surface
+<m>x^2+z^2=C</m> with the plane <m>y=y_0</m> is the circle of radius <m>\sqrt{C}</m>
+centred on <m>x=z=0</m>. Here is a sketch of the first quadrant part of
+one such circle.
+</p>
+<sidebyside>
+<image source="problems/figs/cylB.pdf"/>
+</sidebyside>
+<p>
+The full surface is the horizontal stack of all of those
+circles with <m>y_0</m> running over <m>\bbbr</m>. It is the cylinder of radius  
+<m>\sqrt{C}</m> centred on the <m>y</m>-axis.
+Here is a sketch of the parts of the level surfaces 
+           <m>F=1</m> (radius <m>1</m>), 
+           <m>F=4</m> (radius <m>2</m>) and 
+           <m>F=9</m> (radius <m>3</m>)
+that are in the first octant.
+</p>
+<sidebyside>
+<image source="problems/figs/cylA.pdf"/>
+</sidebyside>
+</example>
+</p>
+
+<p>\bigskip\goodbreak
+<example><title><m>F(x,y,z)=e^{x+y+z}</m></title>
+<p>xml:id="eg_level_surface_plane"
+Let <m>F(x,y,z)=e^{x+y+z}</m> and <m>C \gt 0</m>. Consider the level surface
+<m>e^{x+y+z}=C</m>, or equivalently, <m>x+y+z=\ln C</m>. It is the plane
+that contains the intercepts <m>(\ln C,0,0)</m>, <m>(0,\ln C,0)</m> and
+<m>(0,0,\ln C)</m>.
+Here is a sketch of the parts of the level surfaces 
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>       <m>F=e</m> (intercepts <m>(1,0,0)</m>, <m>(0,1,0)</m>, <m>(0,0,1)</m>),
+</li>
+<li>       <m>F=e^2</m> (intercepts <m>(2,0,0)</m>, <m>(0,2,0)</m>, <m>(0,0,2)</m>) and
+</li>
+<li>       <m>F=e^3</m> (intercepts <m>(3,0,0)</m>, <m>(0,3,0)</m>, <m>(0,0,3)</m>)
+</li>
+</ul>
+that are in the first octant.
+</p>
+<sidebyside>
+<image source="problems/figs/rampABC.pdf"/>
+</sidebyside>
+</example>
+</p>
+
+<p>\section{Cylinders}xml:id="sec_cylinders"
+</p>
+
+<p>There some classes of relatively simple, but commonly occurring, 
+surfaces that are given their own names. One such class is cylindrical surfaces.
+You are probably used to thinking of a cylinder as being something that looks 
+like <m>x^2+y^2=1</m>. 
+</p>
+<sidebyside>
+<image source="problems/figs/cylinderA.pdf"/>
+</sidebyside>
+<p>
+In Mathematics the word <q>cylinder</q> is given a more general meaning.
+</p>
+
+<p><definition><title>Cylinder</title>
+<statement><p>xml:id="def_cylinder"
+A <em>cylinder</em> is a surface that consists of all points that are 
+on all lines that are
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>   parallel to a given line and
+</li>
+<li>   pass through a given fixed plane curve (in a plane not parallel
+to the given line).
+</li>
+</ul>
+</p></statement>
+</definition>
+</p>
+
+<p><example>
+<p>xml:id="eg_cylinders"
+Here are sketches of three cylinders.
+The familiar cylinder on the left below
+</p>
+<sidebyside>
+<image source="problems/figs/cylinderR.pdf"/>\qquad
+   <image source="problems/figs/cylinderO.pdf"/>
+</sidebyside>
+<p>
+is called a right circular cylinder, because the given fixed plane curve
+(<m>x^2+y^2=1</m>, <m>z=0</m>)
+is a circle and the given line (the <m>z</m>-axis) is perpendicular 
+(i.e. at right angles) to the fixed plane curve.
+</p>
+
+<p>The cylinder on the left above can be thought of as a vertical stack of 
+circles. The cylinder on the right above can also be thought of as a stack 
+of circles, but the centre of the circle at height <m>z</m> has been shifted
+rightward to <m>(0,z,z)</m>. For that cylinder, the given fixed plane curve 
+is once again the circle <m>x^2+y^2=1</m>, <m>z=0</m>, but the given line is <m>y=z</m>, <m>x=0</m>.
+</p>
+
+<p>We have already seen the the third cylinder 
+</p>
+<sidebyside>
+<image source="problems/figs/hyperbolicCylinderD.pdf"/>
+</sidebyside>
+<p>
+in Example <xref ref="eg_hyperbolic_cylinder"/>. It is called a hyperbolic cylinder.
+In this example, the given fixed plane curve is the hyperbola <m>yz=1</m>, <m>x=0</m>
+and the given line is the <m>x</m>-axis.
+</p></example>
+</p>
+
+<p>\section{Quadric Surfaces}xml:id="sec_quadrics"
+</p>
+
+<p>Another named class of relatively simple, but commonly occurring, 
+surfaces is the quadric surfaces.
+</p>
+
+<p><definition><title>Quadrics</title>
+<statement><p>xml:id="def_quadric"
+A <em>quadric</em> surface is surface that consists of all points that
+obey <m>Q(x,y,z)=0</m>, with <m>Q</m> being a polynomial of degree two
+<fn>Technically, we should also require that the polynomial
+can't be factored into the product of two polynomials of degree one.</fn>
+. 
+</p></statement>
+</definition>
+For <m>Q(x,y,z)</m> to be a polynomial of degree two, it must be of the form
+<md>
+<mrow>
+Q(x,y,z) = Ax^2 +By^2 +Cz^2 +Dxy +Eyz +Fxz +Gx +Hy +Iz +J
+</mrow>
+</md>
+for some constants <m>A</m>, <m>B</m>, <m>\cdots</m>, <m>J</m>. Each constant <m>z</m> cross section
+of a quadric surface has an equation of the form
+<md>
+<mrow>
+Ax^2 + Dxy +By^2 +gx +hy +j =0,\quad z=z_0
+</mrow>
+</md>
+If <m>A=B=D=0</m> but <m>g</m> and <m>h</m> are not both zero, this is a straight line.
+If <m>A</m>, <m>B</m>, and <m>D</m> are not all zero, then by rotating and translating 
+our coordinate system the equation of the cross section can be brought
+into one of the forms
+<fn>This statement can be justified using a 
+linear algebra eigenvalue/eigenvector analysis. It is 
+beyond what we can cover here, but is not too difficult for a standard 
+linear algebra course.</fn>
+</p>
+
+<p><ul>
+<li>
+<m>\al x^2 + \be y^2 =\ga</m> with <m>\al,\be \gt 0</m>, which, if <m>\ga \gt 0</m>, is an ellipse
+(or a circle),
+</li>
+<li>
+<m>\al x^2 - \be y^2 =\ga</m> with <m>\al,\be \gt 0</m>, which, if <m>\ga\ne0</m>, is a hyperbola,
+and if <m>\ga=0</m> is two lines,
+</li>
+<li> 
+<m>x^2 = \delta y</m>, which, if <m>\delta\ne 0</m> is a parabola, and if <m>\delta=0</m> is a straight line.
+</li>
+</ul>
+There are similar statements for the constant <m>x</m> cross sections and the
+constant <m>y</m> cross sections. Hence quadratic surfaces are built by stacking
+these three types of curves.
+</p>
+
+<p>We have already seen a number of quadric surfaces in the last couple of 
+sections.
+<ul>
+<li>
+We saw the quadric surface <m>4x^2+y^2-z^2=1</m> in Example <xref ref="eg_hyperboloid"/>. 
+</p>
+<sidebyside>
+<image source="problems/figs/../figs_quadric/hyperboloid1.pdf"/>\qquad
+</sidebyside>
+<p>
+Its constant <m>z</m> cross sections are ellipses and its <m>x=0</m> and <m>y=0</m>
+cross sections are hyperbolae. It is called a hyperboloid of one sheet.
+</li>
+<li> 
+We saw the quadric surface <m>x^2+y^2=1</m> in Example <xref ref="eg_cylinders"/>.
+</p>
+<sidebyside>
+<image source="problems/figs/../figs_quadric/cylinder.pdf"/>\qquad
+</sidebyside>
+<p>
+Its constant <m>z</m> cross sections are circles and its <m>x=0</m> and <m>y=0</m>
+cross sections are straight lines. It is called a right circular cylinder.
+</li>
+</ul>
+</p>
+
+<p>Appendix <xref ref="ap_quadric"/> contains other quadric surfaces.</exercisegroup>
+
+</exercises>
+
+
+</introduction>
+</chapter>
