@@ -10,34 +10,48 @@ import os
 import subprocess
 import lxml.etree as ET
 
+# Hopefully only these paths need setting
+pretextPath = "/home/andrew/Projects/mathbook"
 # source file
 sourceFile = "./clp_3_mc.ptx"
-# xslt pretext file
-xsltFile = "/home/andrew/Projects/mathbook/xsl/mathbook-html.xsl"
-# the schema to check against
-xs = ET.RelaxNG(ET.parse("/home/andrew/Projects/mathbook/schema/pretext.rng"))
-# mbx location
-mbx = "/home/andrew/Projects/mathbook/script/mbx"
 # output directory
 outDir = "./site"
 
+# Hopefully don't need hacking
+# xslt pretext file
+xsltFile = pretextPath + "/xsl/mathbook-html.xsl"
+# the schema to check against
+xsFile = pretextPath + "/schema/pretext.rng"
+xs = ET.RelaxNG(ET.parse(xsFile))
+# mbx location
+mbx = pretextPath + "/script/mbx"
+
+# now some tag operations
 # each in this list should be a 4-ple [ancestor-tag, tag, replace-before, replace-after]
-myDescTags = [
-    ["answer", "proof", "<p><term>Proof:</term></p>", "<p><m>\square</m></p>"],
-    ["solution", "proof", "<p><term>Proof:</term></p>", "<p><m>\square</m></p>"],
-]
+# I needed this for something for the proof-book
+myDescTags = []
 
 # each tag should be a 3-ple [tag, replace-before, replace-after]
 myTags = [
-    ["answerproof", "<p><term>Proof:</term></p>", "<p><m>\square</m></p>",],
+    [
+        "answerproof",
+        "<p><term>Proof:</term></p>",
+        "<p><m>\square</m></p>",
+    ],  # this was for a proof in an exercise answer
 ]
 
+# These ["foo", "bar"] does replacement of <foo> with <bar>
+# Joel - you might want these when hacking the pretext image sizes, and then comment out to do a proper compile.
 myRep = [
-    ["hint", "statement"],
-    ["answer", "statement"],
+    [
+        "hint",
+        "statement",
+    ],  # I had these set so that I could see all parts of exercises on page.
+    ["answer", "statement"],  # breaks validation, but really helps debugging.
     ["solution", "statement"],
 ]
 
+# ["foo", pretextStuff] replaces <foo/> with pretextStuff
 mySubs = [
     ["conceptual", "<p><alert>Exercises &#8212; Stage 1</alert></p>"],
     ["procedural", "<p><alert>Exercises &#8212; Stage 2</alert></p>"],
@@ -47,9 +61,9 @@ mySubs = [
 
 # build parameters as dict
 param = {
-    "exercise.divisional.answer": "'no'",
-    "exercise.divisional.hint": "'no'",
-    "exercise.divisional.solution": "'no'",
+    "exercise.divisional.answer": "'yes'",
+    "exercise.divisional.hint": "'yes'",
+    "exercise.divisional.solution": "'yes'",
 }
 
 
@@ -108,8 +122,8 @@ def repTag(src, tg, sb):
 
 
 def userTags(src):
-    # for [tg, sb] in myRep:
-    #     src = repTag(src, tg, sb)
+    for [tg, sb] in myRep:
+        src = repTag(src, tg, sb)
     for [tg, sb] in mySubs:
         src = replaceSubsTag(src, tg, sb)
     for [tg, pre, post] in myTags:
