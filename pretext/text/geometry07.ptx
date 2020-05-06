@@ -3,7 +3,7 @@
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<section xml:id="sec_sketching">
+<section  xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_sketching">
   <title>Sketching Surfaces in 3d</title>
 
 <p>In practice students taking multivariable calculus regularly have great
@@ -520,4 +520,7 @@ the value <m>C</m>.
   </sidebyside>
 
   </example>
+
+  <xi:include href="../problems/prob_s1.7.ptx" />
+
 </section>

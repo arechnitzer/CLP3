@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+
+<exercise>
+<statement><p>
+What is wrong with the following exercise?
+</p>
+
+<p><q>Give an equation for the line passing through the point <m>(3,1,3)</m> that is normal to the vectors <m>\llt 4,-6,2 \rgt</m> and <m>\llt \frac13,-\frac12,\frac16 \rgt</m>.</q>
+</p></statement>
+<hint><p>
+What's fishy about those normal vectors?
+</p></hint>
+<answer><p>
+There are infinitely many planes satisfying the condition described, but we're asked for <q>the</q> line.
+</p>
+
+<p>We need two normal directions to figure out the direction of a line in <m>\mathbb R^3</m>. Since the given normal vectors are parallel to each other, they really only specify <em>one</em> normal direction.
+</p></answer>
+<solution><p>
+Note <m>12\llt \frac13,-\frac12,\frac16 \rgt=\llt 4,-6,2 \rgt</m>. So, we actually only know one normal direction to the line we're supposed to be describing. That means there are actually <em>infinitely many</em> lines satisfying the given conditions.
+</p>
+
+<sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\draw[thick,- \gt ] (0,0) node[vertex]{}--(0,2.5) node[above]{$\mathbf n$};
+\clip (3,0) arc (0:360:3cm and 1cm);
+\draw (-3,0)--(3,0);
+\draw (-3,-1)--(3,1);
+\draw (-3,1)--(3,-1);
+\draw (-3,-2)--(3,2) (-3,2)--(3,-2) (3,-3)--(-3,-3) (1,2)--(-1,-2) (1,-2)--(-1,2);
+\end{tikzpicture}</latex-image></image>
+</sidebyside></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find, if possible, four lines in 3d with
+<ul>
+<li>
+   no two of the lines parallel to each other and
+</li>
+<li>
+   no two of the lines intersecting.
+</li>
+</ul>
+</p></statement>
+
+<hint><p>
+The two lines <m>\llt x-x_0\,,\,y-y_0\,,\,z-z_0\rgt =t\vd</m> and
+<m>\llt x-x'_0\,,\,y-y'_0\,,\,z-z'_0\rgt =t\vd'</m> are not parallel if
+<m>\vd\times\vd'\ne\vZero</m>.
+</p></hint>
+
+<answer><p>
+There are infinitely many correct answers. One is
+<md>
+<mrow>
+\llt x\,,\,x\,,\,z-1\rgt &amp;= t\llt 1,0,0\rgt &amp;
+\llt x\,,\,x\,,\,z-2\rgt &amp;= t\llt 0,1,0\rgt
+</mrow><mrow>
+\llt x\,,\,x\,,\,z-3\rgt &amp;= t\llt 1,1,0\rgt &amp;
+\llt x\,,\,x\,,\,z-4\rgt &amp;= t\llt 1,-1,0\rgt
+</mrow>
+</md>
+</p>
+
+</answer>
+<solution><p>
+There are infinitely many correct answers. One is
+<md>
+<mrow>
+L_1:\ \llt x\,,\,x\,,\,z-1\rgt &amp;= t\llt 1,0,0\rgt &amp;
+L_2:\ \llt x\,,\,x\,,\,z-2\rgt &amp;= t\llt 0,1,0\rgt
+</mrow><mrow>
+L_3:\ \llt x\,,\,x\,,\,z-3\rgt &amp;= t\llt 1,1,0\rgt &amp;
+L_4:\ \llt x\,,\,x\,,\,z-4\rgt &amp;= t\llt 1,-1,0\rgt
+</mrow>
+</md>
+No two of the lines are parallel because
+<ul>
+<li>
+<m>L_1</m> and <m>L_2</m> are not parallel because
+<m>\llt 1,0,0\rgt\times \llt 0,1,0\rgt=\llt 0,0,1\rgt\ne\vZero</m>.
+</li>
+<li>
+<m>L_1</m> and <m>L_3</m> are not parallel because
+<m>\llt 1,0,0\rgt\times \llt 1,1,0\rgt=\llt 0,0,1\rgt\ne\vZero</m>.
+</li>
+<li>
+<m>L_1</m> and <m>L_4</m> are not parallel because
+<m>\llt 1,0,0\rgt\times \llt 1,-1,0\rgt=\llt 0,0,-1\rgt\ne\vZero</m>.
+</li>
+<li>
+<m>L_2</m> and <m>L_3</m> are not parallel because
+<m>\llt 0,1,0\rgt\times \llt 1,1,0\rgt=\llt 0,0,-1\rgt\ne\vZero</m>.
+</li>
+<li>
+<m>L_2</m> and <m>L_4</m> are not parallel because
+<m>\llt 0,1,0\rgt\times \llt 1,-1,0\rgt=\llt 0,0,-1\rgt\ne\vZero</m>.
+</li>
+<li>
+<m>L_3</m> and <m>L_4</m> are not parallel because
+<m>\llt 1,1,0\rgt\times \llt 1,-1,0\rgt=\llt 0,0,-2\rgt\ne\vZero</m>.
+</li>
+</ul>
+No two of the lines intersect because
+<ul>
+<li> every point on <m>L_1</m> has <m>z=1</m> and
+</li>
+<li> every point on <m>L_2</m> has <m>z=2</m> and
+</li>
+<li> every point on <m>L_3</m> has <m>z=3</m> and
+</li>
+<li> every point on <m>L_4</m> has <m>z=4</m>.
+</li>
+</ul>
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise>
+<statement><p>
+Find a vector parametric equation for the line of intersection
+of the given planes.
+<ol label="a">
+<li> <m>x-2z=3</m> and <m>y+\half z=5</m>
+</li>
+<li> <m>2x-y-2z=-3</m> and <m>4x-3y-3 z=-5</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review Example <xref ref="eg_line_equations"/> in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+(a) <m>\llt x,y,z\rgt =  \llt 3,5,0\rgt+\llt 2,-\half,1\rgt t</m>
+</p>
+
+<p>(b) <m>\llt x,y,z\rgt =  \llt -2,-1,0\rgt +\llt \frac{3}{2},1,1\rgt t</m>
+</p></answer>
+
+<solution><p>
+(a) The point <m>(x,y,z)</m> obeys both <m>x-2z=3</m> and <m>y+\half z=5</m>
+if and only if <m>\llt x,y,z\rgt = \llt 3+2z, 5-\half z, z\rgt
+                  = \llt 3,5,0\rgt+\llt 2,-\half,1\rgt z</m>.
+So, introducing a new variable <m>t</m> obeying <m>t=z</m>, we get the vector
+parametric equation <m>\llt x,y,z\rgt =  \llt 3,5,0\rgt+\llt 2,-\half,1\rgt t</m>.
+</p>
+
+<p>(b) The point <m>(x,y,z)</m> obeys
+<md>
+<mrow>
+\left\{\Atop{2x-y-2z=-3}{4x-3y-3 z=-5} \right\}
+&amp;\iff \left\{\Atop{2x-y=2z-3}{4x-3y=3 z-5} \right\}
+\iff\left\{\Atop{4x-2y=4z-6}{4x-3y=3 z-5} \right\}
+</mrow><mrow>
+&amp;\iff\left\{\Atop{4x-2y=4z-6}{y=z-1} \right\}
+</mrow>
+</md>
+Hence the point <m>(x,y,z)</m> is on the line if and only if
+<m>\llt x,y,z\rgt = \llt \frac{1}{4}(2y+4z-6), z-1, z\rgt=
+\llt \frac{3}{2}z-2, z-1, z\rgt = \llt -2,-1,0\rgt+\llt \frac{3}{2},1,1\rgt z</m>.
+So, introducing a new variable <m>t</m> obeying <m>t=z</m>, we get the vector
+parametric equation <m>\llt x,y,z\rgt =  \llt -2,-1,0\rgt
+        +\llt \frac{3}{2},1,1\rgt t</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Determine a vector equation for the line of intersection
+of the planes
+<ol label="a">
+<li> <m>x+y+z=3</m> and <m>x+2y+3z=7</m>
+</li>
+<li> <m>x+y+z=3</m> and <m>2x+2y+2z=7</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review Example <xref ref="eg_line_equations"/> in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+(a) <m>\llt x,y,z\rgt=\llt -1,4,0\rgt+t\llt 1,-2,1\rgt </m>
+</p>
+
+<p>(b) The two planes are parallel and <em>do not intersect</em>.
+</p>
+
+</answer>
+
+<solution><p>
+(a) The normals to the two planes are <m>\llt 1,1,1\rgt </m> and <m>\llt 1,2,3\rgt </m>
+respectively. The line of intersection must have direction perpendicular
+to both of these normals. Its direction vector is
+<me>
+\llt 1,1,1\rgt \times\llt 1,2,3\rgt
+=\det\left[\begin{matrix} \hi &amp;\hj &amp;\hk \\ 1&amp;1&amp;1 \\ 1&amp;2&amp;3 \end{matrix}\right]
+=\llt 1,-2,1\rgt
+</me>
+Substituting <m>z=0</m> into the equations of the two planes and solving
+<md>
+<mrow>
+\left\{\Atop{x+y=3}{x+2y=7} \right\}
+&amp;\iff \left\{\Atop{x=3-y}{x+2y=7} \right\}
+\iff\left\{\Atop{x=3-y}{3-y+2y=7} \right\}
+</mrow>
+</md>
+we see that <m>z=0,\ y=4, x=-1</m> lies on both planes. The line of
+intersection is <m>\llt x,y,z\rgt=\llt -1,4,0\rgt+t\llt 1,-2,1\rgt </m>.
+This can be checked by verifying that,  for all values of <m>t</m>,
+<m>\llt x,y,z\rgt=\llt -1,4,0\rgt+t\llt 1,-2,1\rgt </m> satisfies both
+<m>x+y+z=3</m> and <m>x+2y+3z=7</m>.
+</p>
+
+<p>(b) The equation <m>x+y+z=3</m> is equivalent to <m>2x+2y+2z=6</m>.
+So the two equations <m>x+y+z=3</m> and <m>2x+2y+2z=7</m> are mutually
+contradictory. They have no solution. The two planes are parallel and
+<em>do not intersect</em>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+In each case, determine whether or not the given pair
+of lines intersect. Also find all planes containing the pair of lines.
+<ol label="a">
+<li> <m>\llt x,y,z\rgt = \llt -3,2,4\rgt+t\llt -4,2,1\rgt</m> and
+      <m>\llt x,y,z\rgt = \llt 2,1,2\rgt+t\llt 1,1,-1\rgt</m>
+</li>
+<li> <m>\llt x,y,z\rgt = \llt -3,2,4\rgt+t\llt -4,2,1\rgt</m> and
+      <m>\llt x,y,z\rgt = \llt 2,1,-1\rgt+t\llt 1,1,-1\rgt</m>
+</li>
+<li> <m>\llt x,y,z\rgt = \llt -3,2,4\rgt+t\llt -2,-2,2\rgt</m> and
+      <m>\llt x,y,z\rgt = \llt 2,1,-1\rgt+t\llt 1,1,-1\rgt</m>
+</li>
+<li> <m>\llt x,y,z\rgt = \llt 3,2,-2\rgt+t\llt -2,-2,2\rgt</m> and
+      <m>\llt x,y,z\rgt = \llt 2,1,-1\rgt+t\llt 1,1,-1\rgt</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>(1,0,3)</m> lies on both lines.
+     <m>x+y+2z=7</m> is the only plane containing both lines.
+</p>
+
+<p>(b) The two lines do not intersect. No plane contains the two lines.
+</p>
+
+<p>(c) The two lines do not intersect.
+     <m>x+z=1</m> is the only plane containing both lines.
+</p>
+
+<p>(d) The two lines are identical.
+    For arbitrary <m>a</m> and <m>b</m> (not both zero) the plane <m>ax+by+(a+b)z=a</m>
+    contains both lines.
+</p></answer>
+
+<solution><p>
+(a) Note that the value of the parameter <m>t</m> in the
+equation <m>\llt x,y,z\rgt = \llt -3,2,4\rgt+t\llt -4,2,1\rgt</m>
+need not have the same value as the parameter <m>t</m> in the
+equation <m>\llt x,y,z\rgt = \llt 2,1,2\rgt+t\llt 1,1,-1\rgt</m>. So it is
+much safer to change the name of the parameter in the first equation
+from <m>t</m> to <m>s</m>. In order for a point <m>(x,y,z)</m> to lie on both
+lines we need
+<me>
+\llt -3,2,4\rgt+s\llt -4,2,1\rgt = \llt 2,1,2\rgt+t\llt 1,1,-1\rgt
+</me>
+or equivalently, writing out the three component equations and moving
+all <m>s</m>'s and <m>t</m>'s to the left and constants to the right,
+<md>
+<mrow>
+-4s -t &amp;= 5
+</mrow><mrow>
+2s -t &amp;= -1
+</mrow><mrow>
+s +t &amp;= -2
+</mrow>
+</md>
+Adding the last two equations together gives <m>3s=-3</m> or <m>s=-1</m>. Substituting
+this into the last equation gives <m>t=-1</m>. Note that <m>s=t=-1</m> does indeed
+satisfy all three equations so that
+ <m>\llt x,y,z\rgt=\llt -3,2,4\rgt-\llt -4,2,1\rgt=\llt 1,0,3\rgt</m>
+lies on both lines. Any plane that contains the two lines must be parallel
+to both direction vectors <m>\llt -4,2,1\rgt</m> and <m>\llt 1,1,-1\rgt</m>. So
+its normal vector must be perpendicular to them, i.e. must be parallel to
+<m>\llt -4,2,1\rgt\times\llt 1,1,-1\rgt=\llt -3,-3,-6\rgt=-3\llt 1,1,2\rgt</m>.
+The plane must contain <m>(1,0,3)</m> and be perpendicular to <m>\llt 1,1,2\rgt</m>.
+Its equation is <m>\llt 1,1,2\rgt\cdot\llt x-1,y,z-3\rgt=0</m> or <m>x+y+2z=7</m>.
+This can be checked by verifying that <m>\llt -3,2,4\rgt+s\llt -4,2,1\rgt</m> and
+<m>\llt 2,1,2\rgt+t\llt 1,1,-1\rgt</m> obey
+<m>x+y+2z=7</m> for all <m>s</m> and <m>t</m> respectively.
+</p>
+
+<p>(b) In order for a point <m>(x,y,z)</m> to lie on both lines we need
+<me>
+\llt -3,2,4\rgt+s\llt -4,2,1\rgt = \llt 2,1,-1\rgt+t\llt 1,1,-1\rgt
+</me>
+or equivalently, writing out the three component equations and moving
+all <m>s</m>'s and <m>t</m>'s to the left and constants to the right,
+<md>
+<mrow>
+-4s -t &amp;= 5
+</mrow><mrow>
+2s -t &amp;= -1
+</mrow><mrow>
+s +t &amp;= -5
+</mrow>
+</md>
+Adding the last two equations together gives <m>3s=-6</m> or <m>s=-2</m>. Substituting
+this into the last equation gives <m>t=-3</m>. However, substituting
+<m>s=-2,\ t=-3</m> into the first equation gives <m>11=5</m>, which is impossible. The
+two lines <em>do not intersect</em>. In order for two lines to lie
+in a common plane and not intersect, they must be parallel. So, in this
+case <em>no plane contains the two lines</em>.
+</p>
+
+<p>(c) In order for a point <m>(x,y,z)</m> to lie on both lines we need
+<me>
+\llt -3,2,4\rgt+s\llt -2,-2,2\rgt = \llt 2,1,-1\rgt+t\llt 1,1,-1\rgt
+</me>
+or equivalently, writing out the three component equations and moving
+all <m>s</m>'s and <m>t</m>'s to the left and constants to the right,
+<md>
+<mrow>
+-2s -t &amp;= 5
+</mrow><mrow>
+-2s -t &amp;= -1
+</mrow><mrow>
+2s +t &amp;= -5
+</mrow>
+</md>
+The first two equations are obviously contradictory. The
+two lines <em>do not intersect</em>. Any plane containing the two lines
+must be parallel to <m>\llt 1,1,-1\rgt</m> (and hence automatically parallel
+to <m>\llt -2,-2,2\rgt=-2\llt 1,1,-1\rgt</m>) and must also be parallel to the vector
+from the point <m>(-3,2,4)</m>, which lies on the first line, to the point
+<m>(2,1,-1)</m>, which lies on the second. The vector is <m>\llt 5,-1,-5\rgt</m>.
+Hence the normal to the plane is
+<m>\llt 5,-1,-5\rgt\times\llt 1,1,-1\rgt=\llt 6,0,6\rgt=6\llt 1,0,1\rgt</m>.
+The plane perpendicular to <m>\llt 1,0,1\rgt</m> containing <m>(2,1,-1)</m> is
+<m>\llt 1,0,1\rgt\cdot\llt x-2,y-1,z+1\rgt=0</m> or <m>x+z=1</m>.
+</p>
+
+<p>(d) Again the two lines are parallel, since
+<m>\llt -2,-2,2\rgt=-2\llt 1,1,-1\rgt</m>.
+Furthermore the point
+<m>\llt 3,2,-2\rgt=\llt 3,2,-2\rgt+0\llt -2,-2,2\rgt
+       =\llt 2,1,-1\rgt+1\llt 1,1,-1\rgt</m>
+lies on both lines. So the two lines not only <em>intersect</em> but
+are identical. Any plane that contains the point <m>(3,2,-2)</m> and is parallel
+to <m>\llt 1,1,-1\rgt</m> contains both lines. In general, the plane <m>ax+by+cz=d</m>
+contains <m>(3,2,-2)</m> if and only if <m>d=3a+2b-2c</m> and is parallel to
+<m>\llt 1,1,-1\rgt</m> if and only if <m>\llt a,b,c\rgt\cdot\llt 1,1,-1\rgt=a+b-c=0</m>. So, for arbitrary <m>a</m> and <m>b</m> (not both zero) <m>ax+by+(a+b)z=a</m> works.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the equation of the line through <m>(2,-1,-1)</m> and parallel
+to each of the two planes <m>x+y=0</m> and <m>x-y+2z=0</m>. Express the equations
+of the line in vector and scalar parametric forms and in symmetric form.
+</p></statement>
+
+<answer><p>
+vector parametric equation: <m>\llt x-2,y+1,z+1\rgt= t\llt 1,-1,-1\rgt</m>
+</p>
+
+<p>scalar parametric equation: <m>x=2+t</m>,  <m>y=-1-t</m>,  <m>z=-1-t</m>
+</p>
+
+<p>symmetric equation: <m>x-2=-y-1=-z-1</m>
+</p></answer>
+
+<solution><p>
+First observe that
+<ul>
+<li>
+<m>\llt 1,1,0\rgt</m> is perpendicular to <m>x+y=0</m>  and hence to the line, and
+</li>
+<li>
+<m>\llt 1,-1,2\rgt</m> is perpendicular to <m>x-y+2z=0</m>  and hence to the line.
+</li>
+</ul>
+Consequently
+<md>
+<mrow>
+\llt 1\,,\,1\,,\,0\rgt \times \llt 1\,,\,-1\,,\,2\rgt
+    =\det\left[\begin{matrix}
+            \hi  &amp;  \hj  &amp;  \hk
+</mrow><mrow>
+            1    &amp;   1   &amp;   0
+</mrow><mrow>
+            1    &amp;  -1   &amp;   2
+            \end{matrix}\right]
+=\llt 2 \,,\, -2 \,,\, -2 \rgt
+</mrow>
+</md>
+is perpendicular to both <m>\llt 1,1,0\rgt</m> and <m>\llt 1,-1,2\rgt</m>.
+So <m>\frac{1}{2}\llt 2 \,,\, -2 \,,\, -2 \rgt=\llt 1,-1,-1\rgt\ \gt </m>
+is also perpendicular to both <m>\llt 1,1,0\rgt</m> and <m>\llt 1,-1,2\rgt</m>
+and hence is parallel to the line. As the point <m>(2,-1,-1)</m> is on the line,
+the vector  equation of the line is
+<me>
+\llt x-2,y+1,z+1\rgt= t\llt 1,-1,-1\rgt
+</me>
+The scalar parametric equations for the line are
+<md>
+<mrow>
+x-2=t,\
+y+1=-t,\
+z+1=-t
+\hskip .25 in\hbox{or}\hskip .25 in
+x=2+t,\
+y=-1-t,\
+z=-1-t
+</mrow>
+</md>
+The symmetric equations for the line are
+<md>
+<mrow>
+(t=)\frac{x-2}{1}=\frac{y+1}{-1}=\frac{z+1}{-1}
+\hskip .25 in\hbox{or}\hskip .25 in
+x-2=-y-1=-z-1
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2011A</fromexam></title>
+<statement><p>
+Let  <m>L</m> be the line given by the equations <m>x + y = 1</m> and
+<m>x + 2y + z = 3</m>.
+Write a vector parametric equation for <m>L</m>.
+</p></statement>
+
+<hint><p>
+Review Example <xref ref="eg_line_equations"/> in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+<m>\llt x,y,z\rgt = \llt 1,0,2\rgt +t\llt-1,1,-1 \rgt</m>
+</p></answer>
+
+<solution><p>
+Let's parametrize <m>L</m> using <m>y</m>, renamed to <m>t</m>, as the parameter.
+Then <m>y=t</m>, so that
+<me>
+x+y=1
+\implies x+t=1
+\implies x=1-t
+</me>
+and
+<me>
+x+2y+z=3
+\implies
+1-t + 2t +z =3
+\implies z = 2-t
+</me>
+and
+<me>
+\llt x,y,z\rgt = \llt 1,0,2\rgt +t\llt-1,1,-1 \rgt
+</me>
+is a vector parametric equation for <m>L</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+<ol label="a">
+<li>
+Find a vector parametric equation for the line
+<m>x+2y+3z=11,\ x-2y+z=-1</m>.
+</li>
+<li>
+Find the distance from <m>(1,0,1)</m> to the line
+<m>x+2y+3z=11,\ x-2y+z=-1</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review Example <xref ref="eg_VPdistance-point-line"/> in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+(a) <m>\llt x,y,z\rgt=\llt 5,3,0\rgt+t\llt 4,1,-2\rgt =\llt 5+4t,3+t,-2t\rgt</m>.
+</p><p>
+(b) <m>\sqrt{5}</m>
+</p></answer>
+
+<solution><p> (a)
+The normal vectors to the two given planes are
+<m>\llt 1,2,3\rgt </m> and <m>\llt 1,-2,1\rgt </m> respectively.
+Since the line is to be contained in both planes, its direction vector
+must be perpendicular to both <m>\llt 1,2,3\rgt </m> and <m>\llt 1,-2,1\rgt </m>,
+and hence must be parallel to
+<me>
+\llt 1,2,3\rgt \times\llt 1,-2,1\rgt
+=\det\left[\begin{matrix}
+           \hi &amp; \hj &amp; \hk \\
+           1  &amp;  2  &amp;  3 \\
+           1  &amp;  -2  &amp; 1
+  \end{matrix}\right]
+=\llt 8, 2,-4\rgt
+</me>
+or to <m>\llt 4,1,-2\rgt </m>. Setting <m>z=0</m> in <m>x+2y+3z=11,\ x-2y+z=-1</m> and
+solving
+<md>
+<mrow>
+\left\{\Atop{x+2y=11}{x-2y=-1} \right\}
+\iff \left\{\Atop{2y=11-x}{x-2y=-1} \right\}
+\iff \left\{\Atop{2y=11-x}{x-(11-x)=-1} \right\}
+\iff \left\{\Atop{2y=11-x}{2x=10} \right\}
+</mrow>
+</md>
+we see that <m>(5,3,0)</m> is on the line. So
+the vector parametric equation of the line is
+<m>\llt x,y,z\rgt=\llt 5,3,0\rgt+t\llt 4,1,-2\rgt =\llt 5+4t,3+t,-2t\rgt</m>.
+</p>
+
+<p>(b)
+The vector from <m>(1,0,1)</m> to the point <m>(5+4t,3+t,-2t)</m> on the line
+is <m>\llt 4+4t,3+t,-1-2t\rgt</m>. In order for <m>(5+4t,3+t,-2t)</m> to be the point
+of the line closest to <m>(1,0,1)</m>, the vector <m>\llt 4+4t,3+t,-1-2t\rgt</m>
+joining those two points must be perpendicular to the direction vector
+<m>\llt 4,1,-2\rgt </m> of the line. (See Example <xref ref="eg_VPdistance-point-line"/>  in the CLP-3 text.)
+This is the case when
+<me>
+\llt 4,1,-2\rgt \cdot \llt 4+4t,3+t,-1-2t\rgt =0\quad\text{or}\quad
+16+16t+3+t+2+4t=0\quad\text{or}\quad t=-1
+</me>
+The point on the line nearest <m>(1,0,1)</m> is thus
+<m>(5+4t,3+t,-2t)\Big|_{t=-1}=(5-4,3-1,2)=(1,2,2)</m>. The distance
+from the point to the line is the length of the vector from
+<m>(1,0,1)</m> to the point on the line nearest <m>(1,0,1)</m>. That vector is
+<m>\llt 1,2,2\rgt -\llt 1,0,1\rgt =\llt 0,2,1\rgt</m>. So the distance is
+<m>|\llt 0,2,1\rgt|=\sqrt{5}</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>L_1</m> be the line passing through <m>(1,-2,-5)</m> in the direction of
+<m>\vd_1=\llt 2,3,2\rgt</m>.
+Let <m>L_2</m> be the line passing through <m>(-3,4,-1)</m> in the direction
+<m>\vd_2=\llt 5,2,4\rgt</m>.
+<ol label="a">
+<li>
+Find the equation of the plane <m>P</m> that contains <m>L_1</m>
+and is parallel to <m>L_2</m>.
+</li>
+<li>
+Find the distance from <m>L_2</m> to <m>P</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review Example <xref ref="eg_VPdistance-point-plane"/> in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+(a) <m>8x+2y-11z=59</m>
+</p><p>
+(b) <m>\frac{64}{\sqrt{189}} \approx 4.655</m>
+</p></answer>
+
+<solution><p>
+(a) The plane <m>P</m> must be parallel to both <m>\llt 2,3,2\rgt </m> (since it
+contains <m>L_1</m>) and <m>\llt 5,2,4\rgt </m> (since it is parallel to <m>L_2</m>).
+Hence
+<me>
+\llt 2,3,2\rgt \times \llt 5,2,4\rgt
+=\det\left[\begin{matrix}
+           \hi &amp; \hj &amp; \hk \\
+           2  &amp;  3  &amp; 2 \\
+           5  &amp;  2  &amp; 4
+  \end{matrix}\right]
+=\llt 8,2,-11\rgt
+</me>
+is normal to <m>P</m>. As the point <m>(1,-2,-5)</m> is on <m>P</m>, the equation
+of <m>P</m> is
+<me>
+\llt 8,2,-11\rgt \cdot\llt x-1,y+2,z+5\rgt =0\qquad \text{or}\qquad 8x+2y-11z=59
+</me>
+</p>
+
+<p>(b) As <m>L_2</m> is parallel to <m>P</m>, the distance from <m>L_2</m> to <m>P</m> is the
+same as the distance from any one point of <m>L_2</m>, for example <m>(-3,4,-1)</m>,
+to <m>P</m>. As <m>(1,-2,-5)</m> is a point on <m>P</m>, the vector
+<m>\llt 1,-2,-5\rgt-\llt -3, 4,-1\rgt =\llt 4,-6,-4\rgt </m> has its head on <m>P</m>
+and tail at <m>(-3,4,-1)</m> on <m>L_2</m>.
+The distance from <m>L_2</m> to <m>P</m> is the length of the projection of the vector <m>\llt 4,-6,-4\rgt </m> on the normal to <m>P</m>. (See Example <xref ref="eg_VPdistance-point-plane-bis"/> in the CLP-3 text.) This is
+<me>
+\left|\text{proj}_{\llt 8,2,-11\rgt}\llt 4,-6,-4\rgt\right|
+=\frac{|\llt 4,-6,-4\rgt \cdot\llt 8,2,-11\rgt|} {|\llt 8,2,-11\rgt|}
+=\frac{64}{\sqrt{189}}
+\approx4.655
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2012a</fromexam></title>
+<statement><p>
+Let <m>L</m> be a line which is parallel to the plane <m>2x + y  - z = 5</m> and
+perpendicular to the line <m>x = 3 - t</m>, <m>y = 1 - 2t</m> and <m>z = 3t</m>.
+<ol label="a">
+<li>
+Find a vector parallel to the line <m>L</m>.
+</li>
+<li>
+Find parametric equations for the line <m>L</m> if <m>L</m> passes through a point
+<m>Q(a, b, c)</m>
+where <m>a  \lt  0</m>, <m>b  \gt  0</m>, <m>c  \gt  0</m>, and the distances from <m>Q</m> to the <m>xy</m>--plane,
+the <m>xz</m>--plane and the <m>yz</m>--plane are <m>2</m>, <m>3</m> and <m>4</m> respectively.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) Any nonzero constant times <m>\llt 1 \,,\, -5 \,,\, -3 \rgt</m>.
+</p>
+<p>
+(b) <m>x = -4 + t</m>,
+    <m>y = 3 - 5t</m>,
+    <m>z = 2 - 3t</m>
+</p></answer>
+
+<solution><p>
+(a) The line <m>L</m> must be perpendicular both to
+        <m>\llt 2\,,\,1\,,\,-1\rgt</m>, which is a normal vector
+        for the plane <m>2x + y  - z = 5</m>,
+and to
+        <m>\llt -1\,,\,-2\,,\,3\rgt</m>, which is a direction vector for
+the line <m>x = 3 - t</m>, <m>y = 1 - 2t</m> and <m>z = 3t</m>.
+Any such vector must be a nonzero constant times
+<md>
+<mrow>
+\llt 2\,,\,1\,,\,-1\rgt \times \llt -1\,,\,-2\,,\,3\rgt
+    =\det\left[\begin{matrix}
+            \hi  &amp;  \hj  &amp;  \hk
+</mrow><mrow>
+            2    &amp;   1   &amp;    -1
+</mrow><mrow>
+           -1    &amp;  -2   &amp;   3
+            \end{matrix}\right]
+=\llt 1 \,,\, -5 \,,\, -3 \rgt
+</mrow>
+</md>
+</p>
+
+<p>(b) For the point <m>Q(a, b, c)</m>
+<ul>
+<li>
+to be a distance <m>2</m> from the <m>xy</m>--plane, it is necessary that <m>|c|=2</m>,
+and
+</li>
+<li>
+to be a distance <m>3</m> from the <m>xz</m>--plane, it is necessary that <m>|b|=3</m>,
+and
+</li>
+<li>
+to be a distance <m>4</m> from the <m>yz</m>--plane, it is necessary that <m>|a|=4</m>.
+</li>
+</ul>
+As <m>a  \lt  0</m>, <m>b  \gt  0</m>, <m>c  \gt  0</m>, the point <m>Q</m> is <m>(-4, 3, 2)</m> and the line <m>L</m>
+is
+<me>
+x = -4 + t \qquad
+y = 3 - 5t \qquad
+z = 2 - 3t
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2012D</fromexam></title>
+<statement><p>
+Let <m>L</m> be the line of intersection of the planes <m>x + y + z = 6</m> and
+<m>x - y + 2z = 0</m>.
+<ol label="a">
+<li>
+Find the points in which the line <m>L</m> intersects the coordinate planes.
+</li>
+<li>
+Find parametric equations for the line through the point <m>(10, 11, 13)</m>
+that is perpendicular to the line <m>L</m> and parallel to the plane <m>y = z</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>(3,3,0)</m>,  <m>(12,0,-6)</m>, <m>(0,4,2)</m>
+</p><p>
+(b) <m>x=10+t</m>, <m>y=11+t</m>, <m>z=13+t</m>.
+</p></answer>
+
+<solution><p>
+(a)
+The line <m>L</m> intersects the <m>xy</m>--plane when
+<m>x + y + z = 6</m>,
+<m>x - y + 2z = 0</m>,
+and <m>z=0</m>. When <m>z=0</m> the equations of <m>L</m> reduce to
+<m>x + y = 6</m>,
+<m>x - y = 0</m>.
+So the intersection point is <m>(3,3,0)</m>.
+</p>
+
+<p>The line <m>L</m> intersects the <m>xz</m>--plane when
+<m>x + y + z = 6</m>,
+<m>x - y + 2z = 0</m>,
+and <m>y=0</m>. When <m>y=0</m> the equations of <m>L</m> reduce to
+<m>x + z = 6</m>,
+<m>x +2z = 0</m>.
+Substituting <m>x=-2z</m> into <m>x+z=6</m> gives <m>-z=6</m>.
+So the intersection point is <m>(12,0,-6)</m>.
+</p>
+
+<p>The line <m>L</m> intersects the <m>yz</m>--plane when
+<m>x + y + z = 6</m>,
+<m>x - y + 2z = 0</m>,
+and <m>x=0</m>. When <m>x=0</m> the equations of <m>L</m> reduce to
+<m>y + z = 6</m>,
+<m>-y +2z = 0</m>.
+Substituting <m>y=2z</m> into <m>y+z=6</m> gives <m>3z=6</m>.
+So the intersection point is <m>(0,4,2)</m>.
+</p>
+
+<p>(b)
+Our main job is to find a direction vector <m>\vd</m> for the line.
+<ul>
+<li>
+Since the line is to be parallel to <m>y=z</m>, <m>\vd</m> must be perpendicular
+to the normal vector for <m>y=z</m>, which is <m>\llt 0,1,-1\rgt</m>.
+</li>
+<li>
+<m>\vd</m> must also be perpendicular to <m>L</m>. For a point <m>(x,y,z)</m> to be on <m>L</m>
+it must obey <m>x+y = 6-z</m> and <m>x-y =-2z</m>. Adding these two equations
+gives <m>2x=6-3z</m> and subtracting the second equation from the first
+gives <m>2y= 6+z</m>. So for a point <m>(x,y,z)</m> to be on <m>L</m> it must obey
+<m>x=3-\frac{3z}{2}</m>, <m>y=3+\frac{z}{2}</m>. The point on <m>L</m> with <m>z=0</m>
+is <m>(3,3,0)</m> and the point on <m>L</m> with <m>z=2</m> is <m>(0,4,2)</m>. So
+ <m>\llt 0-3,4-3,2-0 \rgt=\llt -3,1,2 \rgt</m> is a direction vector for <m>L</m>.
+</li>
+</ul>
+So <m>\vd</m> must be perpendicular to both <m>\llt 0,1,-1\rgt</m>
+and <m>\llt -3,1,2 \rgt</m> and so must be a nonzero constant times
+<md>
+<mrow>
+\llt 0,1,-1\rgt \times \llt -3,1,2 \rgt
+    =\det\left[\begin{matrix}
+            \hi  &amp;  \hj  &amp;  \hk
+</mrow><mrow>
+            0    &amp;   1   &amp;   -1
+</mrow><mrow>
+            -3    &amp;   1   &amp;    2
+            \end{matrix}\right]
+=\llt 3 \,,\, 3 \,,\, 3 \rgt
+</mrow>
+</md>
+We choose <m>\vd=\frac{1}{3}\llt 3 \,,\, 3 \,,\, 3 \rgt=\llt 1\,,\,1\,,\,1 \rgt</m>.
+So
+<me>
+\llt x,y,z\rgt = \llt 10,11,13\rgt + t \llt 1\,,\,1\,,\,1 \rgt
+</me>
+is a vector parametric equation for the line. We can also write this as
+<m>x=10+t</m>, <m>y=11+t</m>, <m>z=13+t</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2013D</fromexam></title>
+<statement><p>
+The line <m>L</m> has vector parametric equation
+<m>\vr(t) = (2 + 3t)\hi + 4t\hj - \hk</m>.
+<ol label="a">
+<li>
+Write the symmetric equations for <m>L</m>.
+</li>
+<li>
+Let <m>\alpha</m> be the angle between the line <m>L</m> and the plane given
+by the equation <m>x - y + 2z = 0</m>. Find <m>\alpha</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review the properties of the dot product in
+Theorem <xref ref="thm_dotPppties"/> of the CLP-3 text.
+</p></hint>
+
+<answer><p>
+(a)  <m>\frac{x-2}{3}=\frac{y}{4}\qquad z=-1</m>
+</p>
+
+<p>(b)  <m>\al =\frac{\pi}{2}-\arccos\frac{1}{5\sqrt{6}}
+             \approx 0.08\,\text{radians}</m>
+</p></answer>
+
+<solution><p>
+(a)  Since
+<md alignment="alignat">
+<mrow>{3}
+x&amp;=2+3t &amp;&amp;\implies t=\frac{x-2}{3}
+</mrow><mrow>
+y&amp;=4t   &amp;&amp;\implies t=\frac{y}{4}
+</mrow>
+</md>
+we have
+<me>
+\frac{x-2}{3}=\frac{y}{4}\qquad z=-1
+</me>
+</p>
+
+<p>(b) The direction vector for the line
+   <m>\vr(t) = 2\,\hi-\hk +t(3\,\hi+4\,\hj)</m>
+  is <m>\vd=3\,\hi+4\,\hj</m>. A normal vector for the plane <m>x-y+2z=0</m> is
+   <m>\vn=\pm\big(\hi-\hj+2\,\hk\big)</m>. The angle <m>\theta</m> between <m>\vd</m>
+   and <m>\vn</m> obeys
+<md>
+<mrow>
+\cos\theta =\frac{\vd\cdot\vn}{|\vd|\,|\vn|}
+           =\frac{1}{5\sqrt{6}}
+\implies \theta =\arccos\frac{1}{5\sqrt{6}}\approx 1.49\,\text{radians}
+</mrow>
+</md>
+(We picked <m>\vn=-\hi+\hj-2\hk</m> to make <m>0\le\theta\le\frac{\pi}{2}</m>.)
+Then the angle between <m>\vd</m> and the plane is
+<me>
+\al =\frac{\pi}{2}-\arccos\frac{1}{5\sqrt{6}}\approx 0.08\,\text{radians}
+</me>
+</p>
+
+<sidebyside width="">
+  <image source="problems/figs/fig/OE13D_1.pdf"/>
+</sidebyside>
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2015D</fromexam></title>
+<statement><p>
+Find the parametric equation for the line of intersection of the
+planes
+<me>
+x + y + z = 11\qquad \text{and}\qquad x - y - z = 13.
+</me>
+</p></statement>
+
+<answer><p>
+<m>(x,y,z) = \big(12\,,\,-1-t\,,\,t\big)</m>
+</p></answer>
+
+<solution><p>
+Let's use <m>z</m> as the parameter and call it <m>t</m>. Then <m>z=t</m>
+and
+<md>
+<mrow>
+x+y&amp;=11-t
+</mrow><mrow>
+x-y&amp;=13+t
+</mrow>
+</md>
+Adding the two equations gives <m>2x=24</m> and subtracting the
+second equation from the first gives <m>2y=-2-2t</m>. So
+<me>
+(x,y,z) = \big(12\,,\,-1-t\,,\,t\big)
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2000A</fromexam></title>
+<statement><p>
+<ol label="a">
+<li>
+Find a point on the y-axis equidistant from
+                <m>(2, 5, -3)</m> and <m>(-3, 6, 1)</m>.
+</li>
+<li>
+Find the equation of the plane containing the point
+           <m>(1, 3, 1)</m> and the line <m>\vr(t) = t\,\hi + t\,\hj + (t + 2)\,\hk</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>(0,4,0)</m>
+</p>
+<p>
+(b) <m>2x-y-z=-2</m>
+</p></answer>
+
+<solution><p>
+(a)
+The point <m>(0,y,0)</m>, on the <m>y</m>--axis, is equidistant from
+                <m>(2, 5, -3)</m> and <m>(-3, 6, 1)</m> if and only if
+<md>
+<mrow>
+&amp;\big|\llt 2, 5, -3\rgt-\llt 0,y,0\rgt\big|
+         =\big|\llt -3, 6, 1\rgt-\llt 0,y,0\rgt\big|
+</mrow><mrow>
+&amp;\iff 2^2+(5-y)^2+(-3)^2=(-3)^2+(6-y)^2+1^2
+</mrow><mrow>
+&amp;\iff 2y=8
+</mrow><mrow>
+&amp;\iff y=4
+</mrow>
+</md>
+</p>
+
+<p>(b)
+The points <m>(1,3,1)</m> and <m>\vr(0)=(0,0,2)</m> are both on the plane.
+Hence the vector <m>\llt 1,3,1\rgt-\llt 0,0,2\rgt=\llt 1,3,-1\rgt</m>
+joining them,
+and the direction vector of the line, namely <m>\llt 1,1,1\rgt</m> are
+both parallel to the plane. So
+<me>
+\llt 1,3,-1\rgt\times \llt 1,1,1\rgt
+=\det\left[\begin{matrix} \hi &amp;\hj &amp;\hk \\
+                           1&amp;3&amp;-1 \\
+                           1&amp;1&amp;1 \end{matrix}\right]
+= \llt 4,-2,-2\rgt
+</me>
+is perpendicular to the plane. As the point <m>(0,0,2)</m> is on the plane
+and the vector  <m>\llt 4,-2,-2\rgt</m> is perpendicular to the plane, the
+equation of the plane is
+<me>
+4(x-0)-2(y-0)-2(z-2)=0\text{ or } 2x-y-z=-2
+</me>
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise><title><fromexam>M200 2016D</fromexam></title>
+<statement><p>
+Let <m>A=(0,2,2)</m>, <m>B=(2,2,2)</m>, <m>C=(5,2,1)</m>.
+<ol label="a">
+<li>
+Find the parametric equations for the line which contains <m>A</m>
+and is perpendicular to the triangle <m>ABC</m>.
+</li>
+<li>
+Find the equation of the set of all points <m>P</m> such that <m>\overrightarrow{PA}</m>
+is perpendicular to <m>\overrightarrow{PB}</m>. This set forms a
+Plane/Line/Sphere/Cone/Paraboloid/Hyperboloid (circle one) in
+space.
+</li>
+<li><p>
+A light source at the origin shines on the triangle <m>ABC</m> making
+a shadow on the plane <m>x+7y+z=32</m>. (See the diagram.) Find <m>\tilde A</m>.
+</p>
+
+<sidebyside width="">
+  <image source="problems/figs/fig/OE16D_1.pdf"/>
+</sidebyside>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+All three of the points <m>A</m>, <m>B</m>, <m>C</m> lie in the plane <m>y=2</m>.
+</p></hint>
+
+<answer><p>
+(a) <m>x=0,\ y=2+t,\ z=2</m>
+</p><p>
+(b) The sphere <m>(x-1)^2 +(y-2)^2+(z-2)^2 = 1</m>
+</p>
+
+<p>(c) <m>(0,4,4)</m>
+</p></answer>
+
+<solution><p>
+(a) We are given one point on the line, so we just need a
+direction vector. That direction vector has to be perpendicular to the
+triangle <m>ABC</m>.
+</p>
+
+<p>The fast way to get a direction vector is to observe that all
+three points <m>A</m>, <m>B</m> and <m>C</m>, and consequently the entire triangle <m>ABC</m>,
+are contained in the plane <m>y=2</m>. A normal vector to that plane, and
+consequently a direction vector for the desired line, is <m>\hj</m>.
+</p>
+
+<p>Here is another, more mechanical, way to get a direction vector.
+The vector from <m>A</m> to <m>B</m> is <m>\llt 2-0\,,\,2-2\,,\,2-2\rgt= \llt 2,0,0\rgt</m>
+and the vector from <m>A</m> to <m>C</m> is <m>\llt 5-0\,,\,2-2\,,\,1-2\rgt=
+\llt 5,0,-1\rgt</m>. So a vector perpendicular to the triangle <m>ABC</m> is
+<md>
+<mrow>
+\llt 2,0,0\rgt \times \llt 5,0,-1\rgt
+=\det\left[\begin{matrix}
+            \hi  &amp;  \hj  &amp;  \hk
+</mrow><mrow>
+            2    &amp;   0   &amp;    0
+</mrow><mrow>
+            5    &amp;   0   &amp;   -1
+            \end{matrix}\right]
+=\llt 0 \,,\, 2 \,,\, 0 \rgt
+</mrow>
+</md>
+The vector <m>\frac{1}{2}\llt 0 \,,\, 2 \,,\, 0 \rgt=\llt 0 \,,\, 1 \,,\, 0 \rgt</m>
+is also perpendicular to the triangle <m>ABC</m>.
+</p>
+
+<p>So the specified line has to contain the point <m>(0,2,2)</m> and have direction
+vector <m>\llt 0 , 1 , 0 \rgt</m>. The parametric equations
+<md>
+<mrow>
+\llt x,y,z \rgt = \llt 0 , 2 , 2 \rgt + t\llt 0 , 1 , 0 \rgt
+</mrow>
+</md>
+or
+<md>
+<mrow>
+x=0,\
+y=2+t,\
+z=2
+</mrow>
+</md>
+do the job.
+</p>
+
+<p>
+(b) Let <m>P</m> be the point <m>(x,y,z)</m>. Then the vector from  <m>P</m> to <m>A</m>
+is <m>\llt 0-x\,,\,2-y\,,\,2-z\rgt</m> and the vector from  <m>P</m> to <m>B</m>
+is <m>\llt 2-x\,,\,2-y\,,\,2-z\rgt</m>. These two vector are perpendicular
+if and only if
+<md>
+<mrow>
+0 &amp;= \llt -x\,,\,2-y\,,\,2-z\rgt \cdot \llt 2-x\,,\,2-y\,,\,2-z\rgt
+  = x(x-2) +(y-2)^2 +(z-2)^2
+</mrow><mrow>
+  &amp;= (x-1)^2 -1 +(y-2)^2 +(z-2)^2
+</mrow>
+</md>
+This is a sphere.
+</p>
+
+<p>(c)
+The light ray that forms <m>\tilde A</m> starts at the origin,
+passes through <m>A</m> and then intersects the plane <m>x+7y+z=32</m>
+at <m>\tilde A</m>. The line from the origin through <m>A</m> has vector
+parametric equation
+<md>
+<mrow>
+\llt x,y,z\rgt = \llt 0,0,0 \rgt +t \llt 0,2,2\rgt
+               =\llt 0,2t,2t\rgt
+</mrow>
+</md>
+This line intersects the plane <m>x+7y+z=32</m> at the point whose value of <m>t</m>
+obeys
+<md>
+<mrow>
+(0) +7\overbrace{(2t)}^{y} +\overbrace{(2t)}^{z} =32
+\iff t=2
+</mrow>
+</md>
+So <m>\tilde A</m> is <m>(0,4,4)</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>P,\ Q,\ R</m> and <m>S</m> be the vertices of a tetrahedron.
+Denote by <m>\vp,\ \vq,\ \vr</m> and <m>\vs</m> the vectors from the origin
+to <m>P,\ Q,\ R</m> and <m>S</m> respectively. A line is drawn from each vertex to
+the centroid of the opposite face, where the centroid of a triangle with
+vertices <m>\va,\ \vb</m> and <m>\vc</m> is <m>\frac{1}{3}(\va+\vb+\vc)</m>.
+Show that these four lines meet at <m>\frac{1}{4}(\vp+\vq+\vr+\vs</m>).
+</p></statement>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+The face opposite <m>\vp</m> is the triangle with vertices <m>\vq</m>, <m>\vr</m> and <m>\vs</m>.
+The centroid of this triangle is <m>\frac{1}{3}(\vq+\vr+\vs)</m>.
+The direction vector of the line through <m>\vp</m> and the
+centroid <m>\frac{1}{3}(\vq+\vr+\vs)</m> is
+<m>\frac{1}{3}(\vq+\vr+\vs)-\vp</m>. The points on the line through
+<m>\vp</m> and the centroid <m>\frac{1}{3}(\vq+\vr+\vs)</m> are those
+of the form
+<me>
+\vx=\vp+ t\left[\frac{1}{3}(\vq+\vr+\vs)-\vp\right]
+</me>
+for some real number <m>t</m>. Observe that when <m>t=\frac{3}{4}</m>
+<me>
+\vp+ t\left[\frac{1}{3}(\vq+\vr+\vs)-\vp\right]
+=\frac{1}{4}(\vp+\vq+\vr+\vs)
+</me>
+so that <m>\frac{1}{4}(\vp+\vq+\vr+\vs)</m> is on the line.
+The other three lines have vector parametric equations
+<md>
+<mrow>
+\vx&amp;=\vq+ t\left[\frac{1}{3}(\vp+\vr+\vs)-\vq\right]
+</mrow><mrow>
+\vx&amp;=\vr+ t\left[\frac{1}{3}(\vp+\vq+\vs)-\vr\right]
+</mrow><mrow>
+\vx&amp;=\vs+ t\left[\frac{1}{3}(\vp+\vq+\vr)-\vs\right]
+</mrow>
+</md>
+When <m>t=\frac{3}{4}</m>, each of the three right hand sides also reduces
+to <m>\frac{1}{4}(\vp+\vq+\vr+\vs)</m> so that
+<m>\frac{1}{4}(\vp+\vq+\vr+\vs)</m> is also on each of these
+three lines.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Calculate the distance between the lines
+<m>\frac{x+2}{3}=\frac{y-7}{-4}=\frac{z-2}{4}</m> and <m>\frac{x-1}{-3}=\frac{y+2}{4}=\frac{z+1}{1}</m>.
+</p></statement>
+
+<hint><p>
+Review Example <xref ref="eg_VPdistance-line-line-bis"/>
+in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+<m>3</m>
+</p></answer>
+
+<solution><p>
+We'll use the procedure of Example <xref ref="eg_VPdistance-line-line-bis"/>
+in the CLP-3 text.
+The vector
+<me>
+\llt 3,-4,4\rgt \times\llt -3,4,1\rgt
+=\det\left[\begin{matrix}
+           \hi &amp; \hj &amp; \hk \\
+           3  &amp;  -4  &amp;  4 \\
+          -3  &amp;   4  &amp; 1
+  \end{matrix}\right]
+=\llt -20,-15,0\rgt
+</me>
+is perpendicular to both lines. Hence so is
+<m>\vn=-\frac{1}{5}\llt -20,-15,0\rgt =\llt 4,3,0\rgt </m>. The point
+<m>(-2,7,2)</m> is on the first line and the point <m>(1,-2,-1)</m> is on the second
+line. Hence
+<m>\vv=\llt -2,7,2 \rgt-\llt1,-2,-1 \rgt=\llt -3,9,3\rgt </m> is a vector
+joining the two lines.
+The desired distance is the length of the projection of <m>\vv</m> on <m>\vn</m>.
+This is
+<me>
+\big|{\rm proj}_{\vn}\vv\big|
+=\frac{|\llt -3,9,3\rgt \cdot\llt 4,3,0\rgt|}{|\llt 4,3,0\rgt|}
+=\frac{15}{5}=3
+</me>
+</p></solution>
+</exercise></exercisegroup>
+
+</exercises>

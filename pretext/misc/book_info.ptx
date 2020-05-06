@@ -38,8 +38,6 @@
   \newcommand{\bbbr}{\mathbb{R}}
   \newcommand{\bbbp}{\mathbb{P}}
   \newcommand{\cI}{\mathcal{I}}
-  \newcommand{\cR}{\mathcal{R}}
-  \newcommand{\cV}{\mathcal{V}}
   \newcommand{\Si}{\Sigma}
 
   \newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
@@ -66,6 +64,7 @@
 
   \newcommand{\vr}{\mathbf{r}}
   \newcommand{\vR}{\mathbf{R}}
+  \newcommand{\vs}{\mathbf{s}}
   \newcommand{\vv}{\mathbf{v}}
   \newcommand{\va}{\mathbf{a}}
   \newcommand{\vb}{\mathbf{b}}
@@ -155,11 +154,32 @@
   \newcommand{\rhof}{{\rho_{\!{\scriptscriptstyle f}}}}
   \newcommand{\rhob}{{\rho_{{\scriptscriptstyle b}}}}
 
+
+  \newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+	\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+	\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+	\newcommand{\YEtaaxis}[4]{\draw[help lines, &lt;-&gt;] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines, &lt;-&gt;] (0,-#3)--(0,#4) node[above]{$y$};}
+
+	\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+	\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+	\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+	\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+	\newcommand{\YEstickfig}[3]{
+	\draw (#1,#2) arc(-90:270:2mm);
+	\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
 </macros>
 <!-- <xi:include href="misc/latex_image_preamble.xml" /> -->
 
 <latex-image-preamble>
+\usepackage{calculator}
 \usepackage{tikz}
+\usetikzlibrary{shapes, patterns, snakes}
+\tikzstyle{vertex}=[shape=circle, minimum size=2mm, inner sep=0, fill]
+\tikzstyle{opendot}=[shape=circle, minimum size=2mm, inner sep=0, fill=white, draw]
 </latex-image-preamble>
 
 <!-- to make referencing like latex referencing - just the number -->

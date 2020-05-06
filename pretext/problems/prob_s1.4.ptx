@@ -511,8 +511,8 @@ One point on <m>4x + 2y - 4z = 3</m> is <m>\big(0,\frac{3}{2},0\big)</m>.
 The two points <m>(x',y',z')</m> with
 <md>
 <mrow>
-\overbrace{\llt x'-0\,,\,y'-\frac{3}{2}\,,\,z'-0\rgt}^{\text{vector from
-<m>\big(0,\frac{3}{2},0\big)</m> to <m>(x',y',z')</m>}}
+\overbrace{\llt x'-0\,,\,y'-\frac{3}{2}\,,\,z'-0\rgt}^{\text{vector from}
+\big(0,\frac{3}{2},0\big)\text{ to } (x',y',z')}
 =\pm 2\ \overbrace{\frac{\llt 4\,,\,2\,,\,-4\rgt}{\sqrt{16+4+16}}}^{\text{unit vector}}
 =\pm \frac{2}{6} \llt 4\,,\,2\,,\,-4\rgt
 =\pm\llt \frac{4}{3}\,,\,\frac{2}{3}\,,\,-\frac{4}{3}\rgt

@@ -1,0 +1,1863 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<introduction><p>Questions <xref ref="prob_s1_0first"/> through <xref ref="prob_s1_0last"/> provide practice with curve parametrization. Being comfortable with the
+algebra and interpretation of these descriptions are essential ingredients
+in working effectively with parametrizations.</p></introduction>
+
+<exercise xml:id="prob_s1_0first">
+<statement><p>
+Consider the following time-parametrized curve:
+<me>
+\vr(t)=\left( \cos\left(\frac{\pi}{4}t\right), (t-5)^2\right)</me>
+</p>
+
+<p>List the three points <m>(-1/\sqrt{2},0)</m>, <m>(1,25)</m>, and <m>(0,25)</m> in chronological order.
+</p></statement>
+<hint><p>
+Find the value of <m>t</m> at which the three points occur on the curve.
+</p></hint>
+<answer><p>
+<m>(1,25)</m>, <m>(-1/\sqrt2,0)</m>, <m>(0,25)</m>.
+</p></answer>
+<solution><p>
+We can find the time at which the curve hits a given point by considering the two equations that arise from the two coordinates. For the <m>y</m>-coordinate to be 0, we must have <m>(t-5)^2=0</m>, i.e. <m>t=5</m>. So, the point <m>(-1/\sqrt{2},0)</m> happens when <m>t=5</m>.
+</p>
+
+<p>Similarly, for the <m>y</m>-coordinate to be <m>25</m>,  we need <m>(t-5)^2=25</m>, so <m>(t-5)=\pm 5</m>.
+When <m>t=0</m>, the curve hits <m>(1, 25)</m>; when <m>t=10</m>, the curve hits <m>(0,25)</m>.
+</p>
+
+<p>So, in order, the curve passes through the points <m>(1,25)</m>, <m>(-1/\sqrt2,0)</m>, and <m>(0,25)</m>.
+</p></solution>
+</exercise>
+
+
+<exercise>
+<statement><p>
+At what points in the <m>xy</m>-plane does the curve <m>(\sin t, t^2)</m> cross itself? What is the difference in <m>t</m> between the first time the curve crosses through a point, and the last?
+</p></statement>
+<hint><p>
+The curve <q>crosses itself</q> when <m>(\sin t,t^2)</m> gives the same coordinate for different values of <m>t</m>. When these crossings occur will depend on which crossing you're referring to, so your answers should all depend on <m>t</m>.
+</p></hint>
+<answer><p>
+The curve crosses itself at all points <m>(0,(\pi n)^2)</m> where <m>n</m> is an integer. It passes such a point twice, <m>2\pi n</m> time units apart.
+</p></answer>
+<solution><p>
+The curve <q>crosses itself</q> when the same coordinates occur for different values of <m>t</m>, say <m>t_1</m> and <m>t_2</m>. So, we want to know when <m>\sin t_1=\sin t_2</m> and also <m>t_1^2=t_2^2</m>. Since <m>t_1</m> and <m>t_2</m> should be different, the second equation tells us <m>t_2=-t_1</m>. Then the first equation tells us <m>\sin t_1=\sin t_2=\sin(-t_1)=-\sin t_1</m>. That is, <m>\sin t_1 = -\sin t_1</m>, so <m>\sin t_1=0</m>. That happens whenever <m>t_1=\pi n</m> for an integer <m>n</m>.
+</p>
+
+<p>So, the points at which the curve crosses itself are those points <m>(0,(\pi n)^2)</m> where <m>n</m> is an integer. It passes such a point at times <m>t=\pi n </m> and <m>t=-\pi n</m>. So, the curve hits this point <m>2\pi n</m> time units apart.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the specified parametrization of the first quadrant part
+of the circle <m>x^2+y^2=a^2</m>.
+<ol label="a">
+<li>
+  In terms of the <m>y</m> coordinate.
+</li>
+<li>
+  In terms of the angle between the tangent line and the
+  positive <m>x</m>-axis.
+</li>
+<li>
+  In terms of the arc length from <m>(0,a)</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Draw sketches. Don't forget the range that the parameter runs over.
+</p></hint>
+
+<answer><p>
+(a) <m>\vr(y)=\sqrt{a^2-y^2}\,\hi+ y\,\hj</m>, <m>0\le y\le a</m>
+</p>
+
+<p>(b) <m>\big(x(\phi),y(\phi)\big)
+       =\big(a\sin \phi ,-a\cos \phi \big)</m>,
+   <m>\frac{\pi}{2}\le\phi\le\pi</m>
+</p>
+
+<p>(c) <m>\big(x(s),y(s)\big)
+    =\big(a\cos(\tfrac{\pi}{2}-\frac{s}{a}),
+           a\sin(\tfrac{\pi}{2}-\tfrac{s}{a})\big)</m>,
+   <m>0\le s\le\tfrac{\pi}{2}a</m>
+</p></answer>
+
+<solution><p>
+(a)
+Since, on the specified part of the  circle,
+<m>x=\sqrt{a^2-y^2}</m> and  <m>y</m> runs from <m>0</m> to <m>a</m>,
+the parametrization is
+<m>\vr(y)=\sqrt{a^2-y^2}\,\hi+ y\,\hj</m>, <m>0\le y\le a</m>.
+</p>
+
+<p>(b) Let <m>\theta</m> be the angle between
+<ul>
+<li> the radius vector from the origin to the point
+<m>(a\cos\theta,a\sin\theta)</m>  on the circle and
+</li>
+<li>
+the positive <m>x</m>-axis.
+</li>
+</ul>
+The tangent line to the circle at <m>(a\cos\theta,a\sin\theta)</m>
+is perpendicular to the radius vector and so makes angle <m>\phi=\frac{\pi}{2}+\theta</m> with the positive <m>x</m> axis.
+(See the figure on the left below.)
+As <m>\theta =\phi-\frac{\pi}{2}</m>, the desired parametrization is
+<me>
+\big(x(\phi),y(\phi)\big)
+=\big(a\cos(\phi-\tfrac{\pi}{2}),a\sin(\phi-\tfrac{\pi}{2})\big)
+=\big(a\sin \phi ,-a\cos \phi \big),\
+  \tfrac{\pi}{2}\le\phi\le\pi
+</me>
+</p>
+<sidebyside width="40%">
+<image source="pfigs/parCirclePhi.svg"/>
+<image source="pfigs/parCircleS.svg"/>
+</sidebyside>
+<p>
+(c) Let <m>\theta</m> be the angle between
+<ul>
+<li> the radius vector from the origin to the point
+<m>(a\cos\theta,a\sin\theta)</m>  on the circle and
+</li>
+<li>
+the positive <m>x</m>-axis.
+</li>
+</ul>
+The arc from <m>(0,a)</m> to <m>(a\cos\theta,a\sin\theta)</m>
+subtends an angle <m>\frac{\pi}{2}-\theta</m> and so
+has length <m>s=a\big(\frac{\pi}{2}-\theta\big)</m>. (See the figure
+on the right above.) Thus <m>\theta=\frac{\pi}{2}-\frac{s}{a}</m>
+and the desired parametrization is
+<me>
+\big(x(s),y(s)\big)
+=\left(a\cos\left(\frac{\pi}{2}-\frac{s}{a}\right)\,,\,
+           a\sin\left(\frac{\pi}{2}-\frac{s}{a}\right)\right)
+,\ 0\le s\le\frac{\pi}{2}a
+</me>
+</p></solution>
+</exercise>
+
+<exercise xml:id="prob_s1_1_cycloid">
+<statement><p>
+</p>
+
+<sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\YEaaxis{1}{13}{.5}{3}
+\YExcoord{1}{1}
+\YEycoord{1}{1}
+\draw[thick] (1,2) node[red,vertex, label=above:{\textcolor{red}{$P$}}]{} arc (90:450:1cm);
+\foreach \x in {0,1,2,3,4}{
+	\MULTIPLY{\x}{.2}{\y}
+	\SUBTRACT{1}{\y}{\o}
+	\MULTIPLY{\x}{2.25}{\z}
+	\MULTIPLY{\z}{57.3}{\zrad}
+	\draw[red,opacity=\o] ({1+\z+sin(\zrad)},{1+cos(\zrad)}) node[vertex](P\x){};
+	\draw[opacity=\o] ({1+\z},1) node[shape=circle, draw, minimum size=2cm]{}--(P\x);
+		}
+\draw[red] plot[smooth,domain=0:13]({1+\x+sin(\x r)},{1+cos(\x r)});
+\end{tikzpicture}</latex-image></image>
+</sidebyside><p>
+A circle of radius <m>a</m> rolls along the <m>x</m>-axis in the positive direction, starting with its centre at <m>(a,a)</m>. In that position, we mark the topmost point on the circle <m>P</m>. As the circle moves, <m>P</m> moves with it. Let <m>\theta</m> be  the angle the circle has rolled--see the diagram below.
+<ol label="a">
+<li> Give the position of the centre of the circle as a function of <m>\theta</m>.
+</li>
+<li> Give the position of <m>P</m> a function of <m>\theta</m>.
+</li>
+</ol>
+</p><sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\draw[thick] (0,0) node[shape=circle, minimum size=4cm, draw]{};
+\draw (1.4,1.4)--(0,0)--(0,2);
+\draw[red] (1.4,1.4) node[vertex, label= right:$P$](P){};
+\draw[] (0,1) arc (90:45:1cm) node[midway, above]{$\theta$};
+\draw[- \gt ] (0,2.5) arc(90:45:2.5cm);
+\end{tikzpicture}</latex-image></image>
+</sidebyside></statement>
+<hint><p>
+For part (b), find the position of <m>P</m> relative to the centre of the circle. Then combine your answer with part (a).
+</p></hint>
+<answer><p>
+(a) <m>(a+a\theta,a)</m>
+</p><p>
+(b)<m>(a+a\theta+a\sin\theta,a+a\cos\theta)</m>
+</p></answer>
+<solution><p>
+Pretend that the circle is a spool of thread. As the
+           circle rolls it dispenses the thread along the ground.
+           When the circle rolls <m>\theta</m> radians it dispenses the
+           arc length <m>\theta a</m> of thread and the circle advances
+           a distance <m>\theta a</m>. So centre of the circle has
+           moved <m>\theta a</m> units to the right from its starting point, <m>x=a</m>. The centre of the circle always has <m>y</m>-coordinate <m>a</m>. So, after rolling <m>\theta</m> radians, the centre of the circle is at position <m>\vc(\theta)=(a+a\theta,a)</m>.
+</p>
+
+<p>Now, let's consider the position of <m>P</m> on the circle, after the circle has rolled <m>\theta</m> radians.
+</p>
+
+<sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\draw[thick] (0,0) node[shape=circle, minimum size=8cm, draw]{};
+\draw (2.8,2.8)--(0,0)--(0,4);
+\draw[red] (2.8,2.8) node[vertex, label=above right:$P$](P){};
+\draw[] (0,1) arc (90:45:1cm) node[midway, above]{$\theta$};
+\draw[dashed] (P)--(0,2.8) node[midway, above]{$a\sin\theta$};
+\draw[decorate, decoration={brace, amplitude=10pt}](-.25,0)--(-.25,2.8) node[midway,rotate=90,yshift=7.5mm]{$a\cos\theta$};
+\draw[- \gt ] (0,5) arc(90:45:5cm);
+\end{tikzpicture}</latex-image></image>
+</sidebyside><p>
+From the diagram, we see that <m>P</m> is <m>a\cos \theta</m> units above the centre of the circle, and <m>a\sin \theta</m> units to the right of it. So, the position of <m>P</m> is <m>(a+a\theta+a\sin\theta,a+a\cos\theta)</m>.
+</p>
+
+<p>Remark: this type of curve is known as a <em>cycloid</em>.
+</p></solution>
+</exercise>
+
+<exercise xml:id="prob_s1_0last">
+<statement><p>
+The curve <m>C</m> is defined to be the intersection of the ellipsoid
+<me>
+x^2-\frac{1}{4}y^2+3z^2=1</me>
+</p>
+
+<p>and the plane
+<me>
+x+y+z=0.</me>
+</p>
+
+<p>When <m>y</m> is very close to 0, and <m>z</m> is negative, find an expression giving <m>z</m> in terms of <m>y</m>.
+</p></statement>
+<hint><p>
+We aren't concerned with <m>x</m>, so we can eliminate it by solving one equation for <m>x</m> as a function
+        of <m>y</m> and <m>z</m> and plugging the result into the other equation.
+        </p></hint>
+<answer><p>
+<m>z=-\frac12\sqrt{1-\frac{y^2}{2}}-\frac{y}{4}</m>
+</p></answer>
+<solution><p>
+We aren't concerned with <m>x</m>, so we can eliminate it by solving for it in one equation, and plugging that into the other. Since <m>C</m> lies on the plane, <m>x=-y-z</m>, so:
+<md>
+<mrow>
+1&amp;=x^2-\frac{1}{4}y^2+3z^2=(-y-z)^2-\frac14y^2+3z^2
+</mrow><mrow>
+&amp;=\frac{3}{4}y^2+4z^2+2yz
+</mrow>
+<intertext>Completing the square,</intertext><mrow>
+1&amp;=\frac{1}{2}y^2+\left(2z+\frac{y}{2}\right)^2
+</mrow><mrow>
+1-\frac{y^2}{2}&amp;=\left(2z+\frac{y}{2}\right)^2
+</mrow>
+<intertext>Since <m>y</m> is small, the left hand is close to <m>1</m>
+         and the right hand side is close to <m>(2z)^2</m>.
+         So <m>(2z^2)\approx 1</m>. Since <m>z</m> is negative,
+         <m>z\approx -\frac{1}{2}</m> and  <m>2z+\frac{y}{2} \lt 0</m>. Also, <m>1-\frac{y^2}{2}</m> is positive, so it has a real square root.
+ </intertext>
+ <mrow>
+-\sqrt{1-\frac{y^2}{2}}&amp;=2z+\frac{y}{2}
+</mrow><mrow>
+-\frac12\sqrt{1-\frac{y^2}{2}}-\frac{y}{4}&amp;=z
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+A particle traces out a curve in space, so that its position at time <m>t</m> is <me>
+\vr(t)=e^{-t}\,\hi+\frac{1}{t}\,\hj+(t-1)^2(t-3)^2\,\hk</me>
+ for <m>t  \gt  0</m>.
+</p>
+
+<p>Let the positive <m>z</m> axis point vertically upwards, as usual. When is the particle moving upwards, and when is it moving downwards? Is it moving faster at time <m>t=1</m> or at time <m>t=3</m>?
+</p></statement>
+<hint><p>
+To determine whether the particle is rising or falling, we only need to consider its <m>z</m>-coordinate.
+</p></hint>
+<answer><p>
+The particle is moving upwards from <m>t=1</m> to <m>t=2</m>, and from <m>t=3</m> onwards.  The particle is moving downwards from <m>t=0</m> to <m>t=1</m>, and from <m>t=2</m> to <m>t=3</m>.
+</p>
+
+<p>The particle is moving faster when <m>t=1</m> than when <m>t=3</m>.
+</p></answer>
+<solution><p>
+To determine whether the particle is rising or falling, we only need to consider its <m>z</m>-coordinate: <m>z(t)=(t-1)^2(t-3)^2</m>. Its derivative with respect to time is <m>z'(t)=4(t-1)(t-2)(t-3)</m>. This is positive when <m>1 \lt t \lt 2</m> and when <m>3 \lt t</m>, so the particle is increasing on <m>(1,2) \cup (3,\infty)</m> and decreasing on <m>(0,1) \cup (2,3)</m>.
+</p>
+
+<p>If <m>\vr(t)</m> is the position of the particle at time <m>t</m>, then its speed is <m>|\vr'(t)|</m>. We differentiate:
+<me>
+\vr'(t)=-e^{-t}\,\hi-\frac{1}{t^2}\,\hj+4(t-1)(t-2)(t-3)\hk</me>
+</p>
+
+<p>So, <m>\vr(1)=-\frac{1}{e}\,\hi-1\,\hj</m> and <m>\vr(3)=-\frac{1}{e^3}\,\hi-\frac{1}{9}\,\hj</m>. The absolute value of every component of <m>\vr(1)</m> is greater than or equal to that of the corresponding component of <m>\vr(3)</m>, so <m>|\vr(1)| \gt |\vr(3)|</m>. That is, the particle is moving more swiftly at <m>t=1</m> than at <m>t=3</m>.
+</p>
+
+<p>Note: We could also compute the sizes of both vectors directly: <m>|\vr'(1)|=\sqrt{\left(\frac{1}{e}\right)^2+(-1)^2}</m>, and <m>|\vr'(3)|=\sqrt{\left(\frac{1}{e^3}\right)^2+\left(-\frac{1}{9}\right)^2}</m>.
+</p></solution>
+</exercise>
+<exercise>
+<statement><p>
+Below is the graph of the parametrized function <m>\vr(t)</m>. Let <m>s(t)</m> be the arclength along the curve from <m>\vr(0)</m> to <m>\vr(t)</m>.
+</p>
+
+<sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\draw[thick] plot[domain=-4.5:1]({4-\x*\x/4},\x);
+\draw (4-1/16,-.5) node[vertex, label=right: $\vr(t+h)$](th){};
+\draw (3,-2) node[vertex, label=right: $\vr(t)$](t){};
+\draw (0,-4) node[vertex, label=below right: $\vr(0)$](zero){};
+\end{tikzpicture}</latex-image></image>
+</sidebyside><p>
+Indicate on the graph <m>s(t+h)-s(t)</m> and <m>\vr(t+h)-\vr(t)</m>. Are the quantities scalars or vectors?
+</p>
+
+</statement>
+<hint><p>
+This is the setup from Lemma<nbsp/><xref ref="lem_CVtanArclen"/> in the CLP-3 text.
+The two quantities you're labelling are related, but different.
+</p></hint>
+<answer>
+
+<sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\draw[thick] plot[domain=-4.5:1]({4-\x*\x/4},\x);
+\draw (4-1/16,-.5) node[vertex, label=right: $\vr(t+h)$](th){};
+\draw (3,-2) node[vertex, label=right: $\vr(t)$](t){};
+\draw (0,-4) node[vertex, label=below right: $\vr(0)$](zero){};
+\draw[|-|, blue,yshift=-5mm, xshift=10mm] plot[domain=-2:-.5]({4-\x*\x/4},\x);
+\draw[very thick, red, - \gt ] (t)--(th);
+\end{tikzpicture}</latex-image></image>
+</sidebyside><p>
+The red vector is <m>\vr(t+h)-\vr(t)</m>. The arclength of the segment indicated by the blue line is the (scalar) <m>s(t+h)-s(t)</m>.
+</p>
+
+<p>Remark: as <m>h</m> approaches 0, the curve (if it's differentiable at <m>t</m>) starts to resemble a straight line, with the length of the vector <m>\vr(t+h)-\vr(t)</m> approaching the scalar <m>s(t+h)-s(t)</m>. This step is crucial to understanding Lemma<nbsp/><xref ref="lem_CVtanArclen"/> in the CLP-3 text.
+</p></answer>
+<solution>
+
+<sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\draw[thick] plot[domain=-4.5:1]({4-\x*\x/4},\x);
+\draw (4-1/16,-.5) node[vertex, label=right: $\vr(t+h)$](th){};
+\draw (3,-2) node[vertex, label=right: $\vr(t)$](t){};
+\draw (0,-4) node[vertex, label=below right: $\vr(0)$](zero){};
+\draw[|-|, blue,yshift=-5mm, xshift=10mm] plot[domain=-2:-.5]({4-\x*\x/4},\x);
+\draw[very thick, red, - \gt ] (t)--(th);
+\end{tikzpicture}</latex-image></image>
+</sidebyside><p>
+The red vector is <m>\vr(t+h)-\vr(t)</m>. The arclength of the segment indicated by the blue line is the (scalar) <m>s(t+h)-s(t)</m>.
+</p>
+
+<p>Remark: as <m>h</m> approaches 0, the curve (if it's differentiable at <m>t</m>) starts to resemble a straight line, with the length of the vector <m>\vr(t+h)-\vr(t)</m> approaching the scalar <m>s(t+h)-s(t)</m>. This step is crucial to understanding Lemma<nbsp/><xref ref="lem_CVtanArclen"/> in the CLP-3 text.
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+What is the relationship between velocity and speed in a vector-valued function of time?
+</p></statement>
+<hint><p> See the note just before Example<nbsp/><xref ref="eg_paramCircleTan"/>
+in the CLP-3 text.
+</p></hint>
+<answer><p>
+Velocity is a vector-valued quantity, so it has both a magnitude and a direction. Speed is a scalar--the magnitude of the velocity. It does not include a direction.
+</p></answer>
+<solution><p>
+Velocity is a vector-valued quantity, so it has both a magnitude and a direction. Speed is a scalar--the magnitude of the velocity. It does not include a direction.</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M317 2005D</fromexam></title>
+<statement><p>
+Let <m>\vr(t)</m> be a vector valued function. Let <m>\vr'</m>, <m>\vr'</m> , and <m>\vr''</m>
+denote <m>\diff{\vr}{t}</m>, <m>\difftwo{\vr}{t}</m> and
+<m>\frac{\mathrm{d}^3\vr}{\mathrm{d}{t}^3}</m>, respectively.
+Express
+<me>
+\diff{}{t}\big[ (\vr \times \vr')\cdot\vr' \big]
+</me>
+in terms of <m>\vr</m>, <m>\vr'</m> , <m>\vr'</m> , and <m>\vr''</m>.
+Select the correct answer.
+<ol label="a">
+<li> <m>(\vr'\times\vr' )\cdot\vr''</m>
+</li>
+<li>  <m>(\vr'\times\vr' )\cdot\vr + (\vr\times\vr' )\cdot\vr''</m>
+</li>
+<li>  <m>(\vr\times\vr' )\cdot\vr''</m>
+</li>
+<li>  <m>0</m>
+</li>
+<li>  None of the above.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+To simplify your answer, remember: the cross product of <m>\va</m> and <m>\vb</m> is a vector orthogonal to both <m>\va</m> and <m>\vb</m>; the cross product of a vector with itself is zero; and two orthogonal vectors have dot product 0.
+</p></hint>
+
+<answer><p>
+(c)
+</p></answer>
+
+<solution><p>
+By the product rule
+<md>
+<mrow>
+\diff{}{t}\big[ (\vr \times \vr')\cdot\vr' \big]
+&amp;= (\vr' \times \vr')\cdot\vr'
+  +(\vr \times \vr')\cdot\vr'
+  +(\vr \times \vr')\cdot\vr''
+</mrow>
+</md>
+The first term vanishes because <m>\vr'\times\vr'=\vZero</m>.
+The second term vanishes because <m>\vr \times \vr'</m> is perpendicular to
+<m>\vr'</m>. So
+<me>
+\diff{}{t}\big[ (\vr \times \vr')\cdot\vr' \big]
+= (\vr \times \vr')\cdot\vr''
+</me>
+which is (c).
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise><title><fromexam>M317 2005D</fromexam></title>
+<statement><p>
+Find the speed of a particle with the given position function
+<me>
+\vr(t) = 5 \sqrt{2}\,t\,\hi + e^{5t}\,\hj - e^{-5t}\,\hk
+</me>
+Select the correct answer:
+<ol label="a">
+<li>
+<m>|\vv(t)| = \big(e^{5t} + e^{-5t}\big)</m>
+</li>
+<li>
+<m>|\vv(t)| = \sqrt{10 + 5e^{t} + 5e^{-t}}</m>
+</li>
+<li>
+<m>|\vv(t)| = \sqrt{10 + e^{10t} + e^{-10t}}</m>
+</li>
+<li>
+<m>|\vv(t)| = 5\big(e^{5t} + e^{-5t}\big)</m>
+</li>
+<li>
+<m>|\vv(t)| = 5\big(e^t + e^{-t}\big)</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Just compute <m>|\vv(t)|</m>. Note that <m>\big(e^{at}+e^{-at}\big)^2
+=e^{2at} + 2 + e^{-2at}</m>.
+</p></hint>
+
+<answer><p>
+(d)
+</p></answer>
+
+<solution><p>
+We have
+<me>
+\vv(t) = \vr'(t)
+      = 5 \sqrt{2}\,\hi + 5e^{5t}\,\hj +5 e^{-5t}\,\hk
+</me>
+and hence
+<me>
+|\vv(t)| = |\vr'(t)|
+         = 5 \big|\sqrt{2}\,\hi + e^{5t}\,\hj + e^{-5t}\,\hk\big|
+         = 5\sqrt{2+ e^{10t}+ e^{-10t}}
+</me>
+Since <m>2+ e^{10t}+ e^{-10t} = \big(e^{5t}+e^{-5t}\big)^2</m>, that's (d).
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the velocity, speed and acceleration at time <m>t</m> of
+the particle whose position is <m>\vr(t)</m>. Describe the path of the particle.
+<ol label="a">
+<li>
+<m>\vr(t)= a \cos t\,\hi + a\sin t\,\hj + ct\,\hk</m>
+</li>
+<li>
+<m>\vr(t)= a \cos t\sin t\,\hi + a\sin^2 t\,\hj + a\cos t\,\hk</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+To figure out what the curves look like, first detemine what curve
+<m>\big(x(t),y(t)\big)</m> traces out. For part (b) this will be easier
+if trig identities are first used to express <m>x(t)</m> and <m>y(t)</m> in terms of
+<m>\sin(2t)</m> and <m>\cos(2t)</m>.
+</p></hint>
+
+<answer><p>
+(a)
+<md>
+<mrow>
+\vv(t)&amp;= -a \sin t\,\hi+a\cos t\,\hj+c\,\hk
+</mrow><mrow>
+\diff{s}{t}(t)&amp;= \sqrt{a^2+c^2}
+</mrow><mrow>
+\va(t)&amp;= -a \cos t\,\hi-a\sin t\,\hj
+</mrow>
+</md>
+The path is a helix with radius <m>a</m> and with each turn having height <m>2\pi c</m>.
+</p>
+
+<p>(b)
+<md>
+<mrow>
+\vv(t)&amp;= a \cos 2t\,\hi +a\sin 2t\,\hj-a\sin t\,\hk
+</mrow><mrow>
+\diff{s}{t}(t)&amp;= a\sqrt{1+\sin^2t}
+</mrow><mrow>
+\va(t)&amp;= -2a \sin 2t\,\hi +2a\cos 2t\,\hj-a\cos t\,\hk
+</mrow>
+</md>
+The <m>(x,y)</m> coordinates go around a circle of radius <m>\frac{a}{2}</m> and
+centre <m>\big(0,\frac{a}{2}\big)</m> counterclockwise. At the same time the <m>z</m> coordinate oscillates over the interval between <m>1</m> and <m>-1</m> half as fast.
+</p></answer>
+
+<solution><p>
+(a) By definition,
+<md>
+<mrow>
+\vr(t)&amp;= a \cos t\,\hi+a\sin t\,\hj+ct\,\hk
+</mrow><mrow>
+\vv(t)=\vr'(t)&amp;= -a \sin t\,\hi+a\cos t\,\hj+c\,\hk
+</mrow><mrow>
+\diff{s}{t}(t)=|\vv(t)|&amp;= \sqrt{a^2+c^2}
+</mrow><mrow>
+\va(t)=\vr'(t)&amp;= -a \cos t\,\hi-a\sin t\,\hj
+</mrow>
+</md>
+The <m>(x,y)= a(\cos t,\sin t)</m> coordinates go
+     around a circle of radius <m>a</m> and centre <m>(0,0)</m> counterclockwise.
+     One circle is completed for each increase of <m>t</m> by <m>2\pi</m>.
+     At the same time, the <m>z</m> coordinate increases at a constant rate.
+     Each time the <m>(x,y)</m> coordinates complete one circle, the <m>z</m>
+     coordinate increases by <m>2 \pi c</m>.
+The path is a helix with radius <m>a</m> and with each turn having height <m>2\pi c</m>.
+</p>
+
+<p>(b) By definition,
+<md>
+<mrow>
+\vr(t)&amp;= a \cos t\sin t\,\hi +a\sin^2 t\,\hj+a\cos t\,\hk
+</mrow><mrow>
+      &amp;= \frac{a}{2} \sin 2t\,\hi+a\frac{1-\cos 2t}{2}\,\hj+a\cos t\,\hk
+</mrow><mrow>
+\vv(t)=\vr'(t)&amp;= a \cos 2t\,\hi +a\sin 2t\,\hj-a\sin t\,\hk
+</mrow><mrow>
+\diff{s}{t}(t)=|\vv(t)|&amp;= a\sqrt{1+\sin^2t}
+</mrow><mrow>
+\va(t)=\vr'(t)&amp;= -2a \sin 2t\,\hi +2a\cos 2t\,\hj-a\cos t\,\hk
+</mrow>
+</md>
+The <m>(x,y)</m> coordinates go around a circle of radius <m>\frac{a}{2}</m> and
+centre <m>\big(0,\frac{a}{2}\big)</m> counterclockwise. At the same time the <m>z</m> coordinate oscillates over the interval between <m>1</m> and <m>-1</m> half as fast.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M317 2013D</fromexam></title>
+<statement><p><ol label="a">
+<li>
+Let
+<me>
+\vr(t) = \left(t^2 , 3, \tfrac{1}{3} t^3 \right)
+</me>
+Find the unit tangent vector to this parametrized curve at <m>t = 1</m>,
+pointing in the direction of increasing <m>t</m>.
+</li>
+<li>
+Find the arc length of the curve from (a) between the points <m>(0, 3, 0)</m>
+and <m>(1, 3, -\frac{1}{3})</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review Lemma <xref ref="lem_CVtanArclen"/> in the CLP-3 text.
+The arc length should be positive.
+</p></hint>
+
+<answer><p>
+(a) <m>\hat\vT(1) = \frac{(2,0,1)}{\sqrt{5}}</m>
+</p><p>
+(b) <m>\frac{1}{3}\big[5^{3/2}-8\big]</m>
+</p></answer>
+
+<solution><p> (a)
+Since <m>\vr'(t) = (2t,0,t^2)</m>, the specified unit tangent at <m>t=1</m> is
+<me>
+\hat\vT(1) = \frac{(2,0,1)}{\sqrt{5}}
+</me>
+</p>
+
+<p>(b)
+We are to find the arc length between <m>\vr(0)</m> and <m>\vr(-1)</m>.
+As <m>\diff{s}{t}=\sqrt{4t^2+t^4}</m>, the
+<md>
+<mrow>
+\text{arc length} &amp;= \int_{-1}^0 \sqrt{4t^2+t^4}\ \dee{t}
+</mrow>
+</md>
+The integrand is even, so
+<md>
+<mrow>
+\text{arc length} &amp;= \int_0^1 \sqrt{4t^2+t^4}\ \dee{t}
+=\int_0^1 t\sqrt{4+t^2}\ \dee{t}
+=\Big[\tfrac{1}{3}{(4+t^2)}^{3/2}\Big]_0^1
+=\tfrac{1}{3}\big[5^{3/2}-8\big]
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise xml:id="prob_s1_1_lemma113">
+<statement><p>
+Using Lemma<nbsp/><xref ref="lem_CVtanArclen"/> in the CLP-3 text, find the arclength of <m>\vr(t)=\left(t,\sqrt{\frac{3}{2}}t^2,t^3\right)</m> from <m>t=0</m> to <m>t=1</m>.
+</p></statement>
+<hint><p>
+From Lemma<nbsp/><xref ref="lem_CVtanArclen"/> in the CLP-3 text,
+we know the arclength from <m>t=0</m> to <m>t=1</m> will be
+<me>
+\int_{0}^1\left| \diff{\vr}{t}(t)\right|\dee t</me>
+</p>
+
+<p>The notation looks a little confusing at first, but we can break it down piece by piece: <m>\diff{\vr}{t}(t)</m> is a vector, whose components are functions of <m>t</m>. If we take its magnitude, we'll get one big function of <m>t</m>. That function is what we integrate. Before integrating it, however, we should simplify as much as possible.
+</p></hint>
+<answer><p>
+2
+</p></answer>
+<solution><p>
+By Lemma<nbsp/><xref ref="lem_CVtanArclen"/> in the CLP-3 text,
+the arclength of <m>\vr(t)</m> from <m>t=0</m> to <m>t=1</m> is
+<m>\int_{0}^1\left| \diff{\vr}{t}(t)\right|\dee t</m>. We'll calculate this in a few pieces to make the steps clearer.
+<md>
+<mrow>
+\vr(t)&amp;=\left(t,\sqrt{\frac{3}{2}}t^2,t^3\right)
+</mrow><mrow>
+\diff{\vr}{t}(t)&amp;=\left(1,\sqrt{6}t,3t^2\right)
+</mrow><mrow>
+\left|\diff{\vr}{t}(t)\right|&amp;=\sqrt{1^2+(\sqrt{6}t)^2+(3t^2)^2}=\sqrt{1+6t^2+9t^4}=\sqrt{(3t^2+1)^2}=3t^2+1
+</mrow><mrow>
+\int_{0}^1\left| \diff{\vr}{t}(t)\right|\dee t&amp;=\int_0^1\left(3t^2+1 \right)\dee t=2
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+A particle's position at time <m>t</m> is given by <m>\vr(t)=(t+\sin t, \cos t)</m>
+<fn>The particle traces out a cycloid--see Question<nbsp/><xref ref="prob_s1_1_cycloid"/></fn>
+. What is the magnitude of the acceleration of the particle at time <m>t</m>?
+</p></statement>
+<hint><p>
+<m>\vr(t)</m> is the position of the particle, so its acceleration is <m>r'(t)</m>.
+</p></hint>
+<answer><p>
+1
+</p></answer>
+<solution><p>
+Since <m>\vr(t)</m> is the position of the particle,  its acceleration is <m>r'(t)</m>.
+<md>
+<mrow>
+\vr(t)&amp;=(t+\sin t, \cos t)
+</mrow><mrow>
+\vr'(t)&amp;=(1+\cos t,-\sin t)
+</mrow><mrow>
+\vr'(t)&amp;=(-\sin t,-\cos t)
+</mrow><mrow>
+|\vr'(t)|&amp;=\sqrt{\sin^2t+\cos^2t}=1
+</mrow>
+</md>
+The magnitude of acceleration is constant, but its <em>direction</em> is changing, since <m>\vr'(t)</m> is a vector with changing direction.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M317 2011D</fromexam></title>
+<statement><p>
+A curve in <m>\bbbr^3</m> is given by the vector equation
+<m>\vr(t) = \left(2t \cos t, 2t \sin t,\frac{t^3}{3}\right)</m>
+</p>
+
+<p><ol label="a">
+<li>
+Find the length of the curve between <m>t = 0</m> and <m>t = 2</m>.
+</li>
+<li>
+Find the parametric equations of the tangent line to the curve at <m>t = \pi</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review §<xref ref="sec_lines_3d"/> and  Lemma <xref ref="lem_CVtanArclen"/>
+in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+(a) <m>\frac{20}{3}</m>
+</p><p>
+(b) <m>x(t) = -2\pi -2t,\
+     y(t) =  -2\pi t,\
+     z(t) = \frac{\pi^3}{3} + \pi^2 t</m>
+</p></answer>
+
+<solution><p> (a) The speed is
+<md>
+<mrow>
+\diff{s}{t}(t)
+=\big|\vr'(t)\big| &amp; = \left|\left(2\cos t - 2t\sin t\,,\,
+                                  2\sin t + 2t \cos t\,,\,
+                                  t^2\right)\right|
+</mrow><mrow>
+                  &amp;=\sqrt{\big(2\cos t - 2t\sin t\big)^2
+                         +\big(2\sin t + 2t \cos t\big)^2
+                         +t^4}
+</mrow><mrow>
+                 &amp;= \sqrt{4+ 4t^2 +t^4}
+</mrow><mrow>
+                 &amp;= 2+t^2
+</mrow>
+</md>
+so the length of the curve is
+<md>
+<mrow>
+\text{length }
+&amp;=\int_0^2 \diff{s}{t}\,\dee{t}
+  =\int_0^2 (2+t^2)\,\dee{t}
+  = \left[2t +\frac{t^3}{3}\right]_0^2
+  =\frac{20}{3}
+</mrow>
+</md>
+</p>
+
+<p>(b)
+A tangent vector to the curve at
+<m>\vr(\pi)=\big(-2\pi\,,\, 0\,,\, \frac{\pi^3}{3}\big)</m> is
+<me>
+\vr'(\pi) = \left(2\cos\pi - 2\pi\sin\pi\,,\,
+                                  2\sin\pi + 2\pi \cos\pi\,,\,
+                                  \pi^2\right)
+ = (-2\,,\,-2\pi\,,\,\pi^2)
+</me>
+So parametric equations for the tangent line at <m>\vr(\pi)</m> are
+<md>
+<mrow>
+x(t) &amp;= -2\pi -2t
+</mrow><mrow>
+y(t) &amp;=  -2\pi t
+</mrow><mrow>
+z(t) &amp;= \frac{\pi^3}{3} + \pi^2 t
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M317 2010D</fromexam></title>
+<statement><p>
+Let <m>\vr(t) = \big(3 \cos t, 3 \sin t, 4t\big)</m> be the position vector
+of a particle as a function of time <m>t \ge 0</m>.
+<ol label="a">
+<li>
+Find the velocity of the particle as a function of time <m>t</m>.
+</li>
+<li>
+Find the arclength of its path between <m>t = 1</m> and <m>t = 2</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review Lemma <xref ref="lem_CVtanArclen"/> in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+(a) <m>\vr'(t) = \big(-3 \sin t, 3 \cos t, 4\big)</m>
+</p><p>
+(b) 5
+</p></answer>
+
+<solution><p> (a) As <m>\vr(t) = \big(3 \cos t, 3 \sin t, 4t\big)</m>,
+the velocity of the particle is
+<me>
+\vr'(t) = \big(-3 \sin t, 3 \cos t, 4\big)
+</me>
+</p>
+
+<p> (b) As <m>\diff{s}{t}</m>, the rate of change of arc length per unit time,
+is
+<me>
+\diff{s}{t}(t) = |\vr'(t)| = \big|\big(-3 \sin t, 3 \cos t, 4\big)\big|
+  =5
+</me>
+the arclength of its path between <m>t = 1</m> and <m>t = 2</m> is
+<me>
+\int_1^2\dee{t}\ \diff{s}{t}(t)
+=\int_1^2\dee{t}\ 5
+=5
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M317 2007A</fromexam></title>
+<statement><p>
+	Consider the curve
+	<me>
+	\vr(t) = \frac{1}{3}\cos^3 t\,\hi +\frac{1}{3} \sin^3 t\,\hj + \sin^3 t\,\hk
+	</me>
+	<ol label="a">
+<li>
+		Compute the arc length of the curve from <m>t = 0</m> to <m>t = \frac{\pi}{2}</m>.
+</li>
+<li>
+		Compute the arc length of the curve from <m>t = 0</m> to <m>t = \pi</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+	If you got the answer <m>0</m> in part (b), you dropped some absolute value signs.
+</p></hint>
+
+<answer><p>
+	(a) <m>\frac{1}{27}\big(10\sqrt{10}-1\big)</m>
+</p><p>
+	(b) <m>\frac{2}{27}\big(10\sqrt{10}-1\big)</m>
+</p></answer>
+
+<solution><p> (a)
+	As
+	<md>
+<mrow>
+	\vr'(t) &amp; = -\sin t\cos^2 t\,\hi + \sin^2 t\cos t\,\hi + 3\sin^2 t\cos t\,\hk
+	= \sin t\cos t\big(-\cos t\,\hi +\sin t\,\hj +3\sin t\,\hk\big)
+</mrow><mrow>
+	\diff{s}{t}(t) &amp; = |\sin t\cos t|\sqrt{\cos^2 t + \sin ^2 t + 9\sin^2 t}
+	= |\sin t\cos t|\sqrt{1+ 9\sin^2 t}
+	</mrow>
+</md>
+	the arclength from <m>t = 0</m> to <m>t = \frac{\pi}{2}</m> is
+	<md>
+<mrow>
+	\int_0^{\pi/2} \diff{s}{t}(t)\,\dee{t}
+	&amp;=\int_0^{\pi/2} \sin t\cos t \sqrt{1+ 9\sin^2 t}\,\dee{t}
+</mrow><mrow>
+	&amp;=\frac{1}{18}\int_1^{10} \sqrt{u}\ \dee{u} \qquad
+	\text{with } u = 1+ 9\sin^2 t,\ \dee{u}  = 18\sin t\cos t\,\dee{t}
+</mrow><mrow>
+	&amp;=\frac{1}{18}\Big[\frac{2}{3}u^{3/2}\Big]_1^{10}
+</mrow><mrow>
+	&amp;=\frac{1}{27}\big(10\sqrt{10}-1\big)
+	</mrow>
+</md>
+</p>
+
+<p>	(b) The arclength from <m>t = 0</m> to <m>t = \pi</m> is
+	<md>
+<mrow>
+	\int_0^{\pi} \diff{s}{t}(t)\,\dee{t}
+	&amp;=\int_0^{\pi} |\sin t\cos t| \sqrt{1+ 9\sin^2 t}\,\dee{t}
+	\qquad\text{Don't forget the absolute value signs!}
+</mrow><mrow>
+	&amp;=2\int_0^{\pi/2} |\sin t\cos t| \sqrt{1+ 9\sin^2 t}\,\dee{t}
+	= 2\int_0^{\pi/2} \sin t\cos t \sqrt{1+ 9\sin^2 t}\,\dee{t}
+	</mrow>
+</md>
+	since the integrand is invariant under <m>t\rightarrow\pi-t</m>. So the arc length
+	from <m>t = 0</m> to <m>t = \pi</m> is just twice the arc length from part (a), namely <m>\frac{2}{27}\big(10\sqrt{10}-1\big)</m>.
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M317 2017D</fromexam></title>
+<statement><p>
+Let <m>\vr(t)=\big(\frac{1}{3}t^3,\frac{1}{2}t^2,\frac{1}{2}t\big)</m>,
+<m>t\ge 0</m>. Compute <m>s(t</m>), the arclength of the curve at time
+<m>t</m>.
+</p></statement>
+
+<answer><p>
+<m>s(t)=\frac{t^3}{3} +\frac{t}{2}</m>
+</p></answer>
+
+<solution><p>
+Since
+<md>
+<mrow>
+\vr(t)&amp;= \frac{t^3}{3}\,\hi + \frac{t^2}{2}\,\hj +  \frac{t}{2}\,\hk
+</mrow><mrow>
+\vr'(t)&amp;= t^2\,\hi + t\,\hj + \frac{1}{2}\,\hk
+</mrow><mrow>
+\diff{s}{t}(t)=|\vr'(t)|&amp;=\sqrt{t^4+t^2+\frac{1}{4}}
+=\sqrt{\Big(t^2+\frac{1}{2}\Big)^2}=t^2+\frac{1}{2}
+</mrow>
+</md>
+the length of the curve is
+<md>
+<mrow>
+s(t)=\int_0^t \diff{s}{t}(u)\,\dee{u}
+=\int_0^t \Big(u^2+\frac{1}{2}\Big)\,\dee{u}
+=\frac{t^3}{3} +\frac{t}{2}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M317 2011A</fromexam></title>
+<statement><p>
+Find the arc length of the curve
+<m>\vr(t) = \big(t^m\,,\, t^m\,,\, t^{3m/2}\big)</m> for <m>0 \le a \le t \le b</m>,
+and where <m>m  \gt  0</m>.
+Express your result in terms of <m>m</m>, <m>a</m>, and <m>b</m>.
+</p></statement>
+
+<hint><p>
+The integral you get can be evaluated with
+a simple substitution. You may want to factor the integrand first.
+</p></hint>
+
+<answer><p>
+<m>\frac{8}{27}\Big[\Big(2 + \frac{9}{4}b^m\Big)^{3/2}
+                   -\Big(2 + \frac{9}{4}a^m\Big)^{3/2}\Big]</m>
+</p></answer>
+
+<solution><p>
+Since
+<md>
+<mrow>
+\vr(t) &amp; = t^m\,\hi + t^m\,\hj + t^{3m/2}\,\hk
+</mrow><mrow>
+\vr'(t) &amp;= mt^{m-1}\,\hi + mt^{m-1}\,\hj +\frac{3m}{2}t^{3m/2-1}\,\hk
+</mrow><mrow>
+\diff{s}{t} = |\vr'(t)| &amp; = \sqrt{ 2m^2 t^{2m-2} +\frac{9m^2}{4} t^{3m-2} }
+= mt^{m-1}\sqrt{2 + \frac{9}{4}t^m }
+</mrow>
+</md>
+the arc length is
+<md>
+<mrow>
+\int_a^b \diff{s}{t}(t)\,\dee{t}
+&amp;=\int_a^b mt^{m-1}\sqrt{2 + \frac{9}{4}t^m }\ \dee{t}
+</mrow><mrow>
+&amp;=\frac{4}{9}\int_{2 + \frac{9}{4}a^m}^{2 + \frac{9}{4}b^m}\sqrt{u}\,\dee{u}
+\qquad\text{with } u = 2 + \frac{9}{4}t^m,\ \dee{u} = \frac{9m}{4}t^{m-1}
+</mrow><mrow>
+&amp;=\frac{4}{9}\Big[\frac{2}{3}u^{3/2}\Big]_{2 + \frac{9}{4}a^m}
+                                         ^{2 + \frac{9}{4}b^m}
+</mrow><mrow>
+&amp;=\frac{8}{27}\Big[\Big(2 + \frac{9}{4}b^m\Big)^{3/2}
+                   -\Big(2 + \frac{9}{4}a^m\Big)^{3/2}\Big]
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+If a particle has constant mass <m>m</m>, position <m>\vr</m>, and is moving with velocity <m>\vv</m>, then its angular momentum is <m>\vL=m(\vr\times\vv)</m>.
+</p>
+
+<p>For a particle with mass <m>m=1</m> and position function <m>\vr=(\sin t, \cos t, t)</m>, find <m>\left|\diff{\vL}{t} \right|</m>.
+</p>
+
+</statement>
+<hint><p>
+Given the position of a particle, you can find its velocity.
+</p></hint>
+<answer><p>
+<m>|t|</m>
+</p></answer>
+<solution><p>
+Given the position of the particle, we can find its velocity:
+<me>
+\vv(t)=\vr'(t)=(\cos t, -\sin t , 1)</me>
+</p>
+
+<p>Applying the given formula,
+<me>
+\vL(t)=\vr \times \vv=(\sin t , \cos t , t) \times (\cos t, -\sin t , 1).</me>
+</p>
+
+<p><ul>
+<li>[<alert>Solution 1:</alert>]
+We can first compute the cross product, then differentiate:
+<md>
+<mrow>
+\vL(t)&amp; = (\cos t + t\sin t)\hi + (t\cos t - \sin t)\hj-\hk
+</mrow><mrow>
+\vL'(t)&amp;=t\cos t\,\hi -t\sin t\, \hj
+</mrow><mrow>
+|\vL'(t)|&amp;=\sqrt{t^2(\sin^2 t + \cos^2 t)}=\sqrt{t^2}=|t|
+</mrow>
+</md>
+</li>
+<li>[<alert>Solution 2:</alert>]
+Using the product rule:
+<md>
+<mrow>
+\vL'(t)&amp;=\vr'(t)\times \vv(t) + \vr(t) \times \vv'(t)
+</mrow><mrow>
+&amp;=\underbrace{\vr'(t)\times \vr'(t)}_{0} + \vr(t) \times \vv'(t)
+</mrow><mrow>
+&amp;= (\sin t ,\cos t,t)\times(-\sin t , -\cos t, 0)
+</mrow><mrow>
+&amp;=t\cos t\,\hi-t\sin t\,\hj
+</mrow><mrow>
+|\vL'(t)|&amp;=\sqrt{t^2\cos^2 t + t^2\sin t^2  }=|t|
+</mrow>
+</md>
+</li>
+</ul>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2002A</fromexam></title>
+<statement><p>
+ Consider the space curve <m>\Gamma</m> whose vector equation is
+<me>
+\vr(t)=t\sin(\pi t)\,\hi+t\cos(\pi t)\,\hj +t^2\hk\,\qquad 0\le t \lt \infty
+</me>
+This curve starts from the origin and eventually reaches the ellipsoid
+<m>E</m> whose equation is <m>2x^2+2y^2+z^2=24</m>.
+<ol label="a">
+<li>
+Determine the coordinates of the point <m>P</m> where <m>\Gamma</m> intersects <m>E</m>.
+</li>
+<li>
+Find the tangent vector of <m>\Gamma</m> at the point <m>P</m>.
+</li>
+<li>
+Does <m>\Gamma</m> intersect <m>E</m> at right angles? Why or why not?
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\vr(2)=2\hj+4\hk</m>
+</p><p>
+(b) any nonzero multiple of <m>\vr'(2)=2\pi\,\hi+\hj+4\,\hk</m>
+</p>
+
+<p>(c) <m>\Gamma</m> and <m>E</m> do not intersect at right angles.
+</p></answer>
+
+<solution><p>
+(a) The curve intersects <m>E</m> when
+<me>
+2\big(t\sin(\pi t)\big)^2+2\big(t\cos(\pi t)\big)^2 +\big(t^2\big)^2=24
+\iff 2t^2+t^4=24
+\iff (t^2-4)(t^2+6)=0
+</me>
+Since we need <m>t \gt 0</m>, the desired time is <m>t=2</m> and the corresponding point
+is <m>\vr(2)=2\,\hj+4\,\hk</m>.
+</p>
+
+<p>(b) Since
+<me>
+\vr'(t)=\big[\sin(\pi t)+\pi t\cos(\pi t)\big]\hi
+    +\big[\cos(\pi t)-\pi t\sin(\pi t)\big]\hj + 2t\hk
+</me>
+a tangent vector to <m>\Gamma</m> at <m>P</m> is any nonzero multiple of
+<me>
+\vr'(2)=2\pi\,\hi+\hj+4\,\hk
+</me>
+</p>
+
+<p>(c) A normal vector to <m>E</m> at <m>P</m> is
+<me>
+\vnabla(2x^2+2y^2+z^2)\big|_{(0,2,4)}= \llt 4x,4y,2z\rgt\big|_{(0,2,4)}
+=\llt 0,8,8\rgt
+</me>
+Since <m>\vr'(2)</m> and <m>\llt 0,8,8\rgt</m> are not parallel, <m>\Gamma</m> and <m>E</m>
+do not intersect at right angles.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2001A</fromexam></title>
+<statement><p>
+Suppose a particle in 3-dimensional space travels with
+position vector <m>\vr(t)</m>, which satisfies <m>\vr'(t)=-\vr(t)</m>. Show
+that the <q>energy</q> <m>|\vr(t)|^2+|\vr'(t)|^2</m> is constant (that is,
+independent of <m>t</m>).
+</p></statement>
+
+<answer><p>
+<m>\diff{}{t}\big[|\vr(t)|^2+|\vr'(t)|^2\big]=0</m>
+</p></answer>
+
+<solution><p>
+<md>
+<mrow>
+\diff{}{t}\big[|\vr(t)|^2+|\vr'(t)|^2\big]
+&amp;=\diff{}{t}\big[\vr(t)\cdot\vr(t)+\vr'(t)\cdot\vr'(t)\big]
+</mrow><mrow>
+&amp;=2\vr(t)\cdot\vr'(t)+2\vr'(t)\cdot\vr'(t)
+</mrow><mrow>
+&amp;=2\vr'(t)\cdot\big[\vr(t)+\vr'(t)\big]
+</mrow><mrow>
+&amp;=0\qquad \text{ since } \vr'(t)=-\vr(t)
+</mrow>
+</md>
+Since <m>\diff{}{t}\big[|\vr(t)|^2+|\vr'(t)|^2\big]=0</m> for all
+<m>t</m>, <m>|\vr(t)|^2+|\vr'(t)|^2</m> is independent of <m>t</m>.
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise><title><fromexam>M317 2000A</fromexam></title>
+<statement><p>
+ A particle moves along the curve <m>\cC</m> of intersection of
+the surfaces <m>z^2=12y</m> and <m>18x=yz</m> in the upward direction. When the particle
+is at <m>(1,3,6)</m> its velocity <m>\vv</m> and acceleration <m>\va</m> are given by
+<me>
+\vv =6\,\hi+12\,\hj+12\,\hk\qquad
+\va = 27\,\hi+30\,\hj+6\,\hk
+</me>
+<ol label="a">
+<li>
+ Write a vector parametric equation for <m>\cC</m> using
+<m>u=\frac{z}{6}</m> as a parameter.
+</li>
+<li>
+ Find the length of <m>\cC</m> from <m>(0,0,0)</m> to <m>(1,3,6)</m>.
+</li>
+<li>
+ If <m>u=u(t)</m> is the parameter value for the particle's position
+at time <m>t</m>, find <m>\diff{u}{t}</m> when the particle is at <m>(1,3,6)</m>.
+</li>
+<li>
+ Find <m>\difftwo{u}{t}</m> when the particle is at <m>(1,3,6)</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+If <m>\vr(u)</m> is the parametrization of <m>\cC</m> by <m>u</m>, then
+the position of the particle at time <m>t</m> is <m>\vR(t) = \vr\big(u(t)\big)</m>.
+</p></hint>
+
+<answer><p>
+<ol label="a">
+<li> <m>\vr(u)=u^3\,\hi+3u^2\,\hj+6u\,\hk</m> </li>
+<li> <m>7</m> </li>
+<li>  <m>2</m> </li>
+<li> <m>1</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+(a)
+Since <m>z=6u</m>, <m>y=\frac{z^2}{12}=3u^2</m> and <m>x=\frac{yz}{18}=u^3</m>,
+<md>
+<mrow>
+\vr(u)&amp;=u^3\,\hi+3u^2\,\hj+6u\,\hk\cr
+</mrow>
+</md>
+(b)
+<md>
+<mrow>
+\vr'(u)&amp;=3u^2\,\hi+6u\,\hj+6\,\hk\cr
+\vr'(u)&amp;=6u\,\hi+6\,\hj\cr
+\diff{s}{u}(u)=|\vr'(u)|
+&amp;=\sqrt{9u^4+36u^2+36}=3\big(u^2+2\big)\cr
+</mrow>
+</md>
+</p>
+
+<p><me>
+\int_\cC \ ds
+=\int_0^1 \diff{s}{u}\ \dee{u}
+=\int_0^1 3\big(u^2+2\big)\ \dee{u}
+=\big[u^3+6u\big]_0^1
+=7
+</me>
+</p>
+
+<p>(c) Denote by <m>\vR(t)</m> the position of the particle at time <m>t</m>.
+Then
+<me>
+\vR(t)=\vr\big(u(t)\big)\implies
+\vR'(t)=\vr'\big(u(t)\big)\diff{u}{t}
+</me>
+In particular, if the particle is at <m>(1,3,6)</m> at time <m>t_1</m>, then <m>u(t_1)=1</m>
+and
+<me>
+6\,\hi+12\,\hj+12\,\hk=\vR'(t_1)=\vr'(1)\diff{u}{t}(t_1)
+=\big(3\,\hi+6\,\hj+6\,\hk\big)\diff{u}{t}(t_1)
+</me>
+which implies that <m>\diff{u}{t}(t_1)=2</m>.
+</p>
+
+<p>(d) By the product and chain rules,
+<me>
+\vR'(t)=\vr'\big(u(t)\big)\diff{u}{t}\implies
+\vR'(t)=\vr'\big(u(t)\big)\Big(\diff{u}{t}\Big)^2
++\vr'\big(u(t)\big)\difftwo{u}{t}
+</me>
+In particular,
+<md>
+<mrow>
+27\,\hi+30\,\hj+6\,\hk
+&amp;=\vR'(t_1)=\vr'(1)\Big(\diff{u}{t}(t_1)\Big)^2
++\vr'\big(1\big)\difftwo{u}{t}(t_1)
+</mrow><mrow>
+&amp;=\big(6\,\hi+6\,\hj\big)2^2+\big(3\,\hi+6\,\hj+6\,\hk\big)\difftwo{u}{t}(t_1)
+</mrow>
+</md>
+Simplifying
+<me>
+3\,\hi+6\,\hj+6\,\hk
+=\big(3\,\hi+6\,\hj+6\,\hk\big)\difftwo{u}{t}(t_1)
+\implies \difftwo{u}{t}(t_1)=1
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M317 2008A</fromexam></title>
+<statement><p>
+A particle of mass <m>m = 1</m> has position <m>\vr_0 = \frac{1}{2}\,\hk</m>
+and velocity <m>\vv_0 =\frac{\pi^2}{2}\,\hi</m> at time <m>0</m>.
+It moves under a force
+<me>
+\vF(t) = -3t\,\hi + \sin t\,\hj + 2e^{2t}\,\hk.
+</me>
+<ol label="a">
+<li>
+Determine the position <m>\vr(t)</m> of the particle depending on <m>t</m>.
+</li>
+<li>
+At what time after time <m>t = 0</m> does the particle cross the plane
+<m>x = 0</m> for the first time?
+</li>
+<li>
+What is the velocity of the particle when it crosses the plane <m>x = 0</m>
+in part (b)?
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+By Newton's law, <m>\vF=m\va</m>.
+</p></hint>
+
+<answer><p>
+(a) <m>\vr(t) = \big(\frac{\pi^2 t}{2}-\frac{t^3}{2}\big)\,\hi +
+              (t- \sin t)\,\hj + \left(\frac{1}{2}e^{2t}-t\right)\,\hk</m>
+</p><p>
+(b) <m>t=\pi</m>
+</p>
+
+<p>(c) <m>-\pi^2\,\hi +2\,\hj + \big(e^{2\pi}-1\big)\,\hk</m>
+</p></answer>
+
+<solution><p> (a)
+According to Newton,
+<me>
+m\vr'(t) = \vF(t)\qquad\text{so that}\qquad
+\vr'(t) = -3t\,\hi + \sin t\,\hj + 2e^{2t}\,\hk
+</me>
+Integrating once gives
+<md>
+<mrow>
+\vr'(t) = -3\frac{t^2}{2}\,\hi - \cos t\,\hj + e^{2t}\,\hk +\vc
+</mrow>
+</md>
+for some constant vector <m>\vc</m>. We are told that <m>\vr'(0)=\vv_0
+=\frac{\pi^2}{2}\,\hi</m>. This forces <m>\vc=\frac{\pi^2}{2}\,\hi+\hj-\hk</m>
+so that
+<md>
+<mrow>
+\vr'(t) = \left(\frac{\pi^2}{2}-\frac{3t^2}{2}\right)\,\hi +(1- \cos t)\,\hj + \big(e^{2t}-1\big)\,\hk
+</mrow>
+</md>
+Integrating a second time gives
+<md>
+<mrow>
+\vr(t) = \left(\frac{\pi^2 t}{2}-\frac{t^3}{2}\right)\,\hi +(t- \sin t)\,\hj
+ + \left(\frac{1}{2}e^{2t}-t\right)\,\hk  + \vc
+</mrow>
+</md>
+for some (other) constant vector <m>\vc</m>.  We are told that <m>\vr(0)=\vr_0
+=\frac{1}{2}\,\hk</m>. This forces <m>\vc=\vZero</m>
+so that
+<md>
+<mrow>
+\vr(t) = \left(\frac{\pi^2 t}{2}-\frac{t^3}{2}\right)\,\hi +(t- \sin t)\,\hj
+ + \left(\frac{1}{2}e^{2t}-t\right)\,\hk
+</mrow>
+</md>
+</p>
+
+<p>(b) The particle is in the plane <m>x=0</m> when
+<md>
+<mrow>
+0=\left(\frac{\pi^2 t}{2}-\frac{t^3}{2}\right)
+ =\frac{t}{2}(\pi^2-t^2)
+\iff t=0, \pm\pi
+</mrow>
+</md>
+So the desired time is <m>t=\pi</m>.
+</p>
+
+<p>(c) At time <m>t=\pi</m>, the velocity is
+<md>
+<mrow>
+\vr'(\pi)
+&amp;= \left(\frac{\pi^2}{2}-\frac{3\pi^2}{2}\right)\,\hi +(1- \cos\pi)\,\hj +                 \big(e^{2\pi}-1\big)\,\hk
+</mrow><mrow>
+&amp;= -\pi^2\,\hi +2\,\hj + \big(e^{2\pi}-1\big)\,\hk
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M317 1999A</fromexam></title>
+<statement><p>
+ Let <m>C</m> be the curve of intersection of
+the surfaces <m>y=x^2</m> and <m>z=\frac{2}{3}x^3</m>.
+A particle moves along <m>C</m> with constant speed such that <m>\diff{x}{t} \gt 0</m>.
+The particle is at <m>(0,0,0)</m> at time <m>t=0</m> and is at <m>(3,9,18)</m> at time
+<m>t=\frac{7}{2}</m>.
+<ol label="a">
+<li>
+Find the length of the part of <m>C</m> between <m>(0,0,0)</m> and <m>(3,9,18)</m>.
+</li>
+<li>
+Find the constant speed of the particle.
+</li>
+<li>
+Find the velocity of the particle when it is at <m>\big(1,1,\frac{2}{3}\big)</m>.
+</li>
+<li>
+Find the acceleration of the particle when it is at <m>\big(1,1,\frac{2}{3}\big)</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Denote by <m>\vr(x)</m> the parametrization of <m>C</m> by <m>x</m>. If the <m>x</m>--coordinate
+of the particle at time <m>t</m> is <m>x(t)</m>, then the position of the particle at time <m>t</m> is <m>\vR(t)=\vr\big(x(t)\big)</m>. Also, though the particle is moving at a constant speed, it doesn't necessarily have a constant value of <m>\diff{\vx}{t}</m>.
+</p></hint>
+
+<answer><p>
+<ol label="a">
+<li><m>21</m></li>
+<li><m>6</m></li>
+<li><m>2\hi+4\,\hj+4\,\hk</m></li>
+<li><m>-\frac{8}{3}\big(2\hi+\,\hj-2\,\hk\big)</m></li>
+</ol>
+</p></answer>
+
+<solution><p>
+(a) Parametrize <m>C</m> by <m>x</m>. Since <m>y=x^2</m> and <m>z=\frac{2}{3}x^3</m>,
+<md>
+<mrow>
+\vr(x)&amp;=x\,\hi+x^2\,\hj+\frac{2}{3}x^3\,\hk\cr
+\vr'(x)&amp;=\hi+2x\,\hj+2x^2\,\hk\cr
+\vr'(x)&amp;=2\,\hj+4x\,\hk\cr
+\diff{s}{x}
+&amp;=|\vr'(x)|
+=\sqrt{1+4x^2+4x^4}=1+2x^2\cr
+</mrow>
+</md>
+and
+<me>
+\int_C \ \dee{s}
+=\int_0^3 \diff{s}{x}\ \dee{x}
+=\int_0^3 \big(1+2x^2\big)\ \dee{x}
+={\Big[x+\frac{2}{3}x^3\Big]}_0^3
+=21
+</me>
+</p>
+
+<p>(b) The particle travelled a distance of 21 units in <m>\frac{7}{2}</m>
+time units. This corresponds to a speed of <m>\frac{21}{7/2}=6</m>.
+</p>
+
+<p>(c) Denote by <m>\vR(t)</m> the position of the particle at time <m>t</m>.
+Then
+<me>
+\vR(t)=\vr\big(x(t)\big)\implies
+\vR'(t)=\vr'\big(x(t)\big)\diff{x}{t}
+</me>
+By parts (a) and (b) and the chain rule
+<me>
+6=\diff{s}{t}=\diff{s}{x}\diff{x}{t}=(1+2x^2)\diff{x}{t}
+\implies \diff{x}{t}=\frac{6}{1+2x^2}
+</me>
+In particular, the particle is at <m>\big(1,1,\frac{2}{3}\big)</m> at <m>x=1</m>.
+At this time <m>\diff{x}{t}=\frac{6}{1+2\times 1}=2</m> and
+<me>
+\vR'=\vr'\big(1\big)\diff{x}{t}
+=\big(\hi+2\,\hj+2\,\hk\big)2
+=2\hi+4\,\hj+4\,\hk
+</me>
+</p>
+
+<p>(d) By the product and chain rules,
+<me>
+\vR'(t)=\vr'\big(x(t)\big)\diff{x}{t}\implies
+\vR'(t)=\vr'\big(x(t)\big){\Big(\diff{x}{t}\Big)}^2
++\vr'\big(x(t)\big)\difftwo{x}{t}
+</me>
+Applying <m>\diff{}{t}</m> to <m>6=\big(1+2x(t)^2\big)\diff{x}{t}(t)</m> gives
+<me>
+0=4x{\Big(\diff{x}{t}\Big)}^2+(1+2x^2)\difftwo{x}{t}
+</me>
+In particular, when <m>x=1</m> and <m>\diff{x}{t}=2</m>,
+ <m>0=4\times 1\big(2\big)^2+(3)\difftwo{x}{t}</m> gives
+<m>\difftwo{x}{t}=-\frac{16}{3}</m> and
+<me>
+\vR'=\big(2\,\hj+4\,\hk\big)\big(2\big)^2
+-\big(\hi+2\,\hj+2\,\hk\big)\frac{16}{3}
+= -\frac{8}{3}\big(2\hi+\,\hj-2\,\hk\big)
+</me>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+A camera mounted to a pole can swivel around in a full circle. It is tracking an object whose position at time <m>t</m> seconds is <m>x(t)</m> metres east of the pole, and <m>y(t)</m> metres north of the pole.
+</p>
+
+<p>In order to always be pointing directly at the object, how fast should the camera be programmed to rotate at time <m>t</m>? (Give your answer in terms of <m>x(t)</m> and <m>y(t)</m> and their derivatives, in the units rad/sec.)
+</p></statement>
+<hint><p>
+The question is already set up as an <m>xy</m>--plane, with the camera at the origin, so the vector in the direction the camera is pointing is <m>(x(t),y(t))</m>. Let <m>\theta</m> be the angle the camera makes with the positive <m>x</m>-axis (due east). The tangent function gives a clean-looking relation between <m>\theta(t)</m>, <m>x(t)</m>, and <m>y(t)</m>.
+</p></hint>
+<answer><p>
+<m>\frac{x(t)y'(t)-y(t)x'(t)}{x^2+y^2}</m>
+</p></answer>
+<solution><p>
+The question is already set up as an <m>xy</m>--plane, with the camera at the origin, so the vector in the direction the camera is pointing is <m>(x(t),y(t))</m>. Let <m>\theta</m> be the angle the camera makes with the positive <m>x</m>-axis (due east). The camera, the object, and the due-east direction (positive <m>x</m>-axis) make a right triangle.
+</p><sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\YEaaxis{.5}{4}{.5}{3}
+\draw[thick, - \gt ] (0,0)--(3,2)node[xshift=1mm,yshift=.67mm,vertex, label=right:{object}]{};
+\draw (1,0) arc (0:32:10mm) node[midway, right]{$\theta$};
+\YExcoord{3}{x(t)}
+\YEycoord{2}{y(t)}
+\draw (0,0) node[vertex, label=below left:{camera}]{};
+\end{tikzpicture}</latex-image></image>
+</sidebyside><p>
+<md>
+<mrow>
+\tan\theta&amp;=\frac{y}{x}</mrow>
+<intertext>Differentiating implicitly with respect to <m>t</m>:</intertext><mrow>
+\sec^2\theta\,\diff{\theta}{t}&amp;=\frac{xy'-yx'}{x^2}
+</mrow><mrow>
+\diff{\theta}{t}&amp;=\cos^2\theta\left(\frac{xy'-yx'}{x^2}\right)=\left(\frac{x}{\sqrt{x^2+y^2}}\right)^2\left(\frac{xy'-yx'}{x^2}\right)=\frac{xy'-yx'}{{x^2+y^2}}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>A projectile falling under the influence of gravity and slowed
+by air resistance proportional to its speed has position satisfying
+<me>
+\frac{d^2\vr}{dt^2}=-g\hk-\alpha\frac{d\vr}{dt}
+</me>
+where <m>\alpha</m> is a positive constant. If <m>\vr=\vr_0</m> and
+<m>\frac{d\vr}{dt}=\vv_0</m> at time <m>t=0</m>, find <m>\vr(t)</m>.
+(Hint: Define <m>\vu(t)=e^{\alpha t}\frac{d\vr}{dt}(t)</m> and substitute
+<m>\frac{d\vr}{dt}(t)=e^{-\alpha t}\vu(t)</m> into the given
+differential equation to find a differential equation for <m>\vu</m>.)
+</p></statement>
+
+<answer><p>
+<m>\vr(t)=\vr_0-\frac{e^{-\alpha t}-1}{\alpha}\vv_0
++g\frac{1-\alpha t-e^{-\alpha t}}{\alpha^2}\hk</m>
+</p></answer>
+<solution><p>
+Define <m>\vu(t)=e^{\alpha t}\frac{d\vr}{dt}(t)</m>. Then
+<md>
+<mrow>
+\frac{d\vu}{dt}(t)&amp;=\alpha e^{\alpha t}\frac{d\vr}{dt}(t)
++e^{\alpha t}\frac{d^2\vr}{dt^2}(t)\cr
+&amp;=\alpha e^{\alpha t}\frac{d\vr}{dt}(t)
+-ge^{\alpha t}\hk
+-\alpha e^{\alpha t}\frac{d\vr}{dt}(t)\cr
+&amp;=-ge^{\alpha t}\hk\cr
+</mrow>
+</md>
+Integrating both sides of this equation from <m>t=0</m> to <m>t=T</m> gives
+<md>
+<mrow>
+&amp;\vu(T)-\vu(0)=-g\frac{e^{\alpha T}-1}{\alpha}\hk
+</mrow><mrow>
+&amp;\implies
+\vu(T)=\vu(0)-g\frac{e^{\alpha T}-1}{\alpha}\hk
+=\frac{d\vr}{dt}(0)-g\frac{e^{\alpha T}-1}{\alpha}\hk
+=\vv_0-g\frac{e^{\alpha T}-1}{\alpha}\hk
+</mrow>
+</md>
+Substituting in <m>\vu(T)=e^{\alpha t}\frac{d\vr}{dt}(T)</m> and multiplying
+through by <m>e^{-\alpha T}</m>
+<me>
+\frac{d\vr}{dt}(T)
+=e^{-\alpha T}\vv_0-g\frac{1-e^{-\alpha T}}{\alpha}\hk
+</me>
+Integrating both sides of this equation from <m>T=0</m> to <m>T=t</m> gives
+<md>
+<mrow>
+&amp;\vr(t)-\vr(0)
+=\frac{e^{-\alpha t}-1}{-\alpha}\vv_0-g\frac{ t}{\alpha}\hk
++g\frac{e^{-\alpha t}-1}{-\alpha^2}\hk
+</mrow><mrow>
+&amp;\implies \vr(t)=\vr_0-\frac{e^{-\alpha t}-1}{\alpha}\vv_0
++g\frac{1-\alpha t-e^{-\alpha t}}{\alpha^2}\hk
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2003A</fromexam></title>
+<statement><p>
+ At time <m>t=0</m> a particle has position and velocity vectors
+<m>\vr(0)=\llt -1,0,0\rgt</m> and <m>\vv(0)=\llt 0,-1,1\rgt</m>. At time <m>t</m>,
+the particle has acceleration vector
+<me>
+\va(t)=\llt \cos t,\sin t,0\rgt
+</me>
+<ol label="a">
+<li>
+Find the position of the particle after <m>t</m> seconds.
+</li>
+<li>
+Show that the velocity and acceleration of the particle are
+always perpendicular for every <m>t</m>.
+</li>
+<li>
+ Find the equation of the tangent line to the particle's path
+at <m>t=-\pi/2</m>.
+</li>
+<li>
+True or False: None of the lines tangent to the path of the
+particle pass through <m>(0,0,0)</m>. Justify your answer.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\vr(t)=\llt -\cos t, -\sin t, t\rgt</m>
+</p><p>
+(b) <m>\vv(t)\cdot\va(t)=0</m>
+</p>
+
+<p>(c) <m>\vr(u)=\llt 0,1,-\frac{\pi}{2}\rgt+u\llt -1,0,1\rgt</m>
+</p><p>
+(d) True
+</p></answer>
+
+<solution><p>
+(a) By definition,
+<me>
+\vv'(t)=\va(t)=\llt \cos t,\sin t,0\rgt
+\implies \vv(t)=\llt \sin t+c_1, -\cos t+c_2, c_3\rgt
+</me>
+for some constants <m>c_1</m>, <m>c_2</m>, <m>c_3</m>. To satisfy <m>\vv(0)=\llt 0,-1,1\rgt</m>,
+we need <m>c_1=0</m>, <m>c_2=0</m> and <m>c_3=1</m>. So
+<m>\vv(t)=\llt \sin t, -\cos t, 1\rgt</m>. Similarly,
+<me>
+\vr'(t)=\vv(t)=\llt \sin t,-\cos t,1\rgt
+\implies \vr(t)=\llt -\cos t+d_1, -\sin t+d_2, t+d_3\rgt
+</me>
+for some constants <m>d_1</m>, <m>d_2</m>, <m>d_3</m>. To satisfy <m>\vr(0)=\llt -1,0,0\rgt</m>,
+we need <m>d_1=0</m>, <m>d_2=0</m> and <m>d_3=0</m>. So
+<m>\vr(t)=\llt -\cos t, -\sin t, t\rgt</m>.
+</p>
+
+<p>(b) To test for orthogonality, we compute the dot product
+<me>
+\vv(t)\cdot\va(t)=\llt \sin t, -\cos t, 1\rgt\cdot\llt \cos t,\sin t,0\rgt
+=\sin t\cos t-\cos t \sin t+1\times 0=0
+</me>
+so <m>\vv(t)\perp\va(t)</m> for all <m>t</m>.
+</p>
+
+<p>(c)
+At <m>t=-\frac{\pi}{2}</m> the particle is at
+<m>\vr\big(-\frac{\pi}{2}\big)=\llt 0,1,-\frac{\pi}{2}\rgt</m> and has velocity
+<m>\vv\big(-\frac{\pi}{2}\big)=\llt -1,0,1\rgt</m>. So the tangent line must pass through <m>\llt 0,1,-\frac{\pi}{2}\rgt</m> and have direction vector
+<m>\llt -1,0,1\rgt</m>. Here is a vector parametric
+equation for the tangent line.
+<me>
+\vr(u)=\llt 0,1,-\frac{\pi}{2}\rgt+u\llt -1,0,1\rgt
+</me>
+</p>
+
+<p>(d) True. Look at the path followed by the particle from
+the top so that we only see <m>x</m> and <m>y</m> coordinates. The path we see (call
+this the projected path) is
+<m>x(t)=-\cos t</m>, <m>y(t)=-\sin t</m>, which is a circle of radius one centred
+on the origin. Any tangent line to any circle always remains outside the
+circle. So no tangent line to the projected path can pass through the <m>(0,0)</m>.
+So no tangent line to the path followed by the particle can pass through
+the <m>z</m>--axis and, in particular, through <m>(0,0,0)</m>.
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2002D</fromexam></title>
+<statement><p>
+The position of a particle at time <m>t</m> (measured in seconds s)
+is given by
+<me>
+\vr(t)=t\cos\left(\frac{\pi t}{2}\right)\hi
+         +t\sin\left(\frac{\pi t}{2}\right)\hj +t\,\hk
+</me>
+<ol label="a">
+<li>
+Show that the path of the particle lies on the cone <m>z^2=x^2+y^2</m>.
+</li>
+<li>
+Find the velocity vector and the speed at time <m>t</m>.
+</li>
+<li>
+Suppose that at time <m>t=1</m>s the particle flies off the path
+on a line <m>L</m> in the direction tangent to the path. Find the equation of
+the line <m>L</m>.
+</li>
+<li>
+How long does it take for the particle to hit the plane <m>x=-1</m>
+after it started moving along the straight line <m>L</m>?
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>x(t)^2+y(t)^2=z(t)^2</m> for all <m>t</m>
+</p>
+
+<p>(b) <me>\text{velocity}= \big[\cos\big(\tfrac{\pi t}{2}\big)
+           -\tfrac{\pi t}{2}\sin\big(\tfrac{\pi t}{2}\big)\big]\hi
+         +\big[\sin\big(\tfrac{\pi t}{2}\big)
+           +\tfrac{\pi t}{2}\cos\big(\tfrac{\pi t}{2}\big)\big]\hj +\hk</me>
+<me>\text{speed}=\sqrt{2+\frac{\pi^2 t^2}{4}}</me>
+</p>
+
+<p>(c) <m>\llt x,y,z\rgt = \llt 0,1,1\rgt +(t-1)\llt -\frac{\pi}{2},1,1\rgt</m>
+</p>
+
+<p>(d)   <m>\frac{2}{\pi}</m> seconds
+</p></answer>
+
+<solution><p> (a)
+Since
+<me>
+x(t)^2+y(t)^2=t^2\cos^2\big(\tfrac{\pi t}{2}\big)
+   +t^2\sin^2\big(\tfrac{\pi t}{2}\big)=t^2\qquad\text{and}\qquad
+z(t)^2=t^2
+</me>
+are the same, the path of the particle lies on the cone <m>z^2=x^2+y^2</m>.
+</p>
+
+<p>(b) By definition,
+<md alignment="alignat">
+<mrow>{3}
+\text{velocity}&amp;=\vr'(t)&amp;&amp;= \big[\cos\big(\tfrac{\pi t}{2}\big)
+           -\tfrac{\pi t}{2}\sin\big(\tfrac{\pi t}{2}\big)\big]\hi
+         +\big[\sin\big(\tfrac{\pi t}{2}\big)
+           +\tfrac{\pi t}{2}\cos\big(\tfrac{\pi t}{2}\big)\big]\hj +\hk
+</mrow><mrow>
+\text{speed}&amp;=|\vr'(t)|&amp;&amp;=
+\sqrt{\big[\cos\big(\tfrac{\pi t}{2}\big)
+           -\tfrac{\pi t}{2}\sin\big(\tfrac{\pi t}{2}\big)\big]^2
+         +\big[\sin\big(\tfrac{\pi t}{2}\big)
+           +\tfrac{\pi t}{2}\cos\big(\tfrac{\pi t}{2}\big)\big]^2 +1^2}
+</mrow><mrow>
+&amp; &amp;&amp;=
+   \Big[\cos^2\big(\tfrac{\pi t}{2}\big)
+          -2\tfrac{\pi t}{2}\cos\big(\tfrac{\pi t}{2}\big)
+               \sin\big(\tfrac{\pi t}{2}\big)
+           +\big(\tfrac{\pi t}{2}\big)^2\sin^2\big(\tfrac{\pi t}{2}\big)
+</mrow><mrow>
+&amp; &amp;&amp;\hskip.2in         +\sin^2\big(\tfrac{\pi t}{2}\big)
+           +2\tfrac{\pi t}{2}\cos\big(\tfrac{\pi t}{2}\big)
+               \sin\big(\tfrac{\pi t}{2}\big)
+  +\big(\tfrac{\pi t}{2}\big)^2\cos^2\big(\tfrac{\pi t}{2}\big) +1\Big]^{1/2}
+</mrow><mrow>
+&amp; &amp;&amp;=\sqrt{2+\frac{\pi^2 t^2}{4}}
+</mrow>
+</md>
+</p>
+
+<p>(c) At <m>t=1</m>, the particle is at <m>\vr(1)=(0,1,1)</m> and has velocity
+<m>\vr'(1)=\llt -\frac{\pi}{2},1,1\rgt</m>. So for <m>t\ge 1</m>, the particle
+is at
+<me>
+   \llt x,y,z\rgt = \llt 0,1,1\rgt+(t-1)\llt -\frac{\pi}{2},1,1\rgt
+</me>
+This is also a vector parametric equation for the line.
+</p>
+
+<p>(d) Assume that the particle's speed remains constant as it flies along <m>L</m>.
+Then the <m>x</m>-coordinate of the particle at time <m>t</m> (for <m>t\ge 1</m>)
+is  <m>-\frac{\pi}{2}(t-1)</m>. This takes the value <m>-1</m> when <m>t-1=\frac{2}{\pi}</m>.
+So the particle hits <m>x=-1</m>, <m>\frac{2}{\pi}</m> seconds after it
+flew off the cone.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2001D</fromexam></title>
+<statement><p>
+<ol label="a">
+<li>
+The curve <m>\vr_1(t)=\llt 1+t, t^2, t^3\rgt</m> and
+<m>\vr_2(t)=\llt \cos t, \sin t, t\rgt</m> intersect at the point <m>P(1,0,0)</m>.
+Find the angle of intersection between the curves at the point <m>P</m>.
+</li>
+<li>
+Find the distance between the line of intersection of the
+planes <m>x+y-z=4</m> and <m>2x-z=4</m> and the line <m>\vr(t)=\llt t, -1+2t, 1+3t\rgt</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>90^\circ</m>
+</p><p>
+(b) <m>2\sqrt{3}</m>
+</p></answer>
+
+<solution><p>
+(a) The tangent vectors to the two curves are
+<me>
+\vr'_1(t)=\llt 1, 2t, 3t^2\rgt\qquad
+\vr'_2(t)=\llt-\sin t, \cos t, 1\rgt
+</me>
+Both curves pass through <m>P</m> at <m>t=0</m> and then the tangent vectors are
+<me>
+\vr'_1(0)=\llt 1, 0, 0\rgt\qquad
+\vr'_2(0)=\llt 0, 1, 1\rgt
+</me>
+So the angle of intersection, <m>\theta</m>, is determined by
+<md>
+<mrow>
+\vr'_1(0)\cdot\vr'_2(0)=|\vr'_1(0)|\,|\vr'_2(0)|\,\cos\theta
+&amp;\implies \llt 1, 0, 0\rgt\cdot\llt 0, 1, 1\rgt=1\cdot\sqrt{2}\cdot\cos\theta
+</mrow><mrow>
+&amp;\implies\cos\theta=0\implies \theta=90^\circ
+</mrow>
+</md>
+</p>
+
+<p>(b) Our strategy will be to
+<ul>
+<li>
+  find a vector <m>\vv</m> whose tail is on one line and whose head is on the
+  other line and then
+</li>
+<li>
+  find a vector <m>\vn</m> that is perpendicular to both lines.
+</li>
+<li>
+  Then, if we denote by <m>\theta</m> the angle between <m>\vv</m> and <m>\vn</m>,
+  the distance between the two lines is
+  <m>|\vv|\cos\theta = \frac{|\vv\cdot\vn|}{|\vn|}</m>
+</li>
+</ul>
+Here we go
+<ul>
+<li><p>
+So the first step is to find a <m>\vv</m>.
+<ul>
+<li>
+One point on the line <m>\vr(t)=\llt t, -1+2t, 1+3t\rgt</m> is
+<m>\vr(0)=\llt 0,-1,1\rgt</m>.
+</li>
+<li>
+<m>(x,y,z)</m> is on the other line if and only if <m>x+y-z=4</m> and <m>2x-z=4</m>.
+In particular, if <m>z=0</m> then <m>x+y=4</m> and <m>2x=4</m> so that <m>x=2</m> and <m>y=2</m>.
+</li>
+<li>
+So the vector <m>\vv=\llt 2-0\,,\,2-(-1)\,,\,0-1\rgt=\llt 2,3,-1\rgt</m>
+has its head on one line and its tail on the other line.
+</li>
+</ul></p>
+</li>
+<li><p>
+Next we find a vector <m>\vn</m> that is perpendicular to both lines.
+<ul>
+<li>
+First we find a direction vector for the line <m>x+y-z=4</m>, <m>2x-z=4</m>.
+We already know that <m>x=y=2</m>, <m>z=0</m> is on that line. We can find a second point
+on that line by choosing, for example, <m>z=2</m> and then solving <m>x+y=6</m>, <m>2x=6</m>
+to get <m>x=3</m>, <m>y=3</m>.  So one direction vector for the line <m>x+y-z=4</m>, <m>2x-z=4</m>
+is <m>\vd_1=\llt3-2\,,\,3-2\,,\,2-0 \rgt = \llt 1,1,2\rgt</m>.
+</li>
+<li>
+A second way to get a direction vector for the line <m>x+y-z=4</m>, <m>2x-z=4</m>
+is to observe that <m>\llt 1,1,-1\rgt</m> is normal to <m>x+y-z=4</m> and so
+is perpendicular to the line and <m>\llt 2,0,-1\rgt</m> is normal to <m>2x-z=4</m>
+and so is also perpendicular to the line.
+So <m>\llt 1,1,-1\rgt\times\llt 2,0,-1\rgt</m> is a direction vector for the line.
+</li>
+<li>
+A direction vector for the line <m>\vr(t)=\llt t, -1+2t, 1+3t\rgt</m> is <m>\vd_2=\vr'(t)=\llt 1,2,3\rgt</m>.
+</li>
+<li>
+So
+<me>
+\vn=\vd_2\times\vd_1
+=\det\left[\begin{matrix}
+                     \hi &amp; \hj &amp; \hk \\
+                     1   &amp;  2  &amp; 3 \\
+                     1   &amp;  1  &amp; 2
+                \end{matrix}\right]
+= \hi + \hj -\hk
+</me>
+is perpendicular to both lines.
+</li>
+</ul></p>
+</li>
+</ul>
+The distance between the two lines is then
+<me>
+|\vv|\cos\theta = \frac{|\vv\cdot\vn|}{|\vn|}
+=\frac{\llt 2,3,-1\rgt \cdot\llt 1,1,-1\rgt}{|\llt 1,1,-1\rgt|}
+=\frac{6}{\sqrt{3}}
+=2\sqrt{3}
+</me>
+</p>
+
+</solution>
+</exercise></exercisegroup>
+
+</exercises>

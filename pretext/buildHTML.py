@@ -47,9 +47,9 @@ mySubs = [
 
 # build parameters as dict
 param = {
-    "exercise.divisional.answer": "'yes'",
-    "exercise.divisional.hint": "'yes'",
-    "exercise.divisional.solution": "'yes'",
+    "exercise.divisional.answer": "'no'",
+    "exercise.divisional.hint": "'no'",
+    "exercise.divisional.solution": "'no'",
 }
 
 
@@ -108,8 +108,8 @@ def repTag(src, tg, sb):
 
 
 def userTags(src):
-    for [tg, sb] in myRep:
-        src = repTag(src, tg, sb)
+    # for [tg, sb] in myRep:
+    #     src = repTag(src, tg, sb)
     for [tg, sb] in mySubs:
         src = replaceSubsTag(src, tg, sb)
     for [tg, pre, post] in myTags:

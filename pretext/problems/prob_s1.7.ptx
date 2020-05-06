@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+
+<exercise><title><fromexam>M200 2008A</fromexam></title>
+<statement><p>
+Match the following equations and expressions with the corresponding
+pictures. Cartesian coordinates are <m>(x, y, z)</m>, cylindrical coordinates
+are <m>(r, \theta, z)</m>, and spherical coordinates are <m>(\rho, \theta, \varphi)</m>.
+</p>
+<sbsgroup widths="5% 35% 5% 35%">
+<sidebyside>
+<p>(A)</p> <image source="pfigs/surface1.svg"/>
+<p>(B)</p> <image source="pfigs/surface2.svg"/>
+</sidebyside>
+<sidebyside>
+<p>(C)</p> <image source="pfigs/surface3.svg"/>
+<p>(D)</p> <image source="pfigs/surface4.svg"/>
+</sidebyside>
+<sidebyside>
+<p>(E)</p>  <image source="pfigs/surface5.svg"/>
+<p>(F)</p> <image source="pfigs/surface6a.svg"/>
+</sidebyside>
+</sbsgroup>
+
+<p>
+<md alignment="alignat">
+<mrow>
+&amp;\text{(a)}\quad&amp; \varphi&amp;=\pi/3 &amp;
+&amp;\text{(b)}\quad&amp; r&amp;=2\cos\theta &amp;
+&amp;\text{(c)}\quad&amp; x^2+y^2&amp;=z^2+1
+</mrow><mrow>
+&amp;\text{(d)}&amp; y&amp;=x^2+z^2\qquad &amp;
+&amp;\text{(e)}&amp; \rho&amp;=2\cos\varphi\qquad &amp;
+&amp;\text{(f)}&amp; z&amp;=x^4+y^4-4xy &amp;
+</mrow>
+</md>
+</p></statement>
+
+<answer><p>
+(a) <m>\leftrightarrow</m> (C) </p><p>
+(b) <m>\leftrightarrow</m> (F) </p><p>
+(c) <m>\leftrightarrow</m> (D) </p><p>
+(d) <m>\leftrightarrow</m> (B) </p><p>
+(e) <m>\leftrightarrow</m> (A) </p><p>
+(f) <m>\leftrightarrow</m> (E)
+</p></answer>
+
+<solution><p>
+(a) <m>\varphi =\frac{\pi}{3}</m> is a surface of constant (spherical coordinate)
+<m>\varphi</m>. So it is a cone with vertex at the origin. We can express
+<m>\varphi=\frac{\pi}{3}</m> in cartesian coordinates by observing that
+<m>0\le\varphi\le\frac{\pi}{2}</m> so that <m>z\ge 0</m>, and
+<md>
+<mrow>
+\varphi=\frac{\pi}{3}
+\iff
+\tan\varphi =\frac{\sqrt{3}}{2}
+\iff
+\rho\sin\varphi =\frac{\sqrt{3}}{2}\rho\cos\varphi
+\iff
+\sqrt{x^2+y^2}=\frac{\sqrt{3}}{2} z
+</mrow>
+</md>
+So the picture that corresponds to (a) is (C).
+</p>
+
+<p>(b) As <m>r</m> and <m>\theta</m> are cylindrical coordinates
+<md>
+<mrow>
+r=2\cos\theta
+\iff
+r^2=2 r\cos\theta
+\iff
+x^2+y^2 = 2x
+\iff
+(x-1)^2+y^2=1
+</mrow>
+</md>
+There is no <m>z</m> appearing in <m>(x-1)^2+y^2=1</m>. So every constant <m>z</m>
+cross--section of <m>(x-1)^2+y^2=1</m> is a (horizontal) circle of radius
+<m>1</m> centred on the line <m>x=1</m>, <m>y=0</m>. It is a cylinder of radius <m>1</m>
+centred on the line <m>x=1</m>, <m>y=0</m>.
+So the picture that corresponds to (b) is (F).
+</p>
+
+<p>(c) Each constant <m>z</m> cross--section of <m>x^2+y^2=z^2+1</m> is a (horizontal)
+circle centred on the <m>z</m>--axis. The radius of the circle is <m>1</m>
+when <m>z=0</m> and grows as <m>z</m> moves away from <m>z=0</m>.  So
+<m>x^2+y^2=z^2+1</m> consists of a bunch of (horizontal) circles stacked
+on top of each other, with the radius increasing with <m>|z|</m>. It
+is a hyperboloid of one sheet.
+The picture that corresponds to (c) is (D).
+</p>
+
+<p>(d) Every point of <m>y=x^2+z^2</m> has <m>y\ge 0</m>. Only (B) has that
+property. We can also observe that every constant <m>y</m> cross--section
+is a circle centred on <m>x=z=0</m>. The radius of the circle is zero
+when <m>y=0</m> and increases as <m>y</m> increases. The surface <m>y=x^2+z^2</m>
+is a paraboloid.
+The picture that corresponds to (d) is (B).
+</p>
+
+<p>(e) As <m>\rho</m> and <m>\varphi</m> are spherical coordinates
+<md>
+<mrow>
+\rho=2\cos\varphi
+\iff
+\rho^2=2\rho\cos\varphi
+\iff
+x^2+y^2+z^2=2z
+\iff
+x^2+y^2 + (z-1)^2=1
+</mrow>
+</md>
+This is the sphere of radius <m>1</m> centred on <m>(0,0,1)</m>.
+The picture that corresponds to (e) is (A).
+</p>
+
+<p>(f) The only possibility left is that the picture that
+corresponds to (f) is (E).
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+In each of (a) and (b) below, you are provided with a sketch of the first quadrant parts of a few level curves of some function <m>f(x,y)</m>.
+Sketch the first octant part of the corresponding graph <m>z=f(x,y)</m>.
+</p>
+<sidebyside widths="5% 35% 5% 35%">
+  <p>(a)</p>  <image source="pfigs/planeLevelA.svg"/>
+  <p>(b)</p>  <image source="pfigs/paraboloidLevelA.svg"/>
+</sidebyside>
+</statement>
+
+<hint><p>
+For each <m>C</m>, redraw the level curve <m>f(x,y)=C</m> in the plane <m>z=C</m>.
+</p></hint>
+
+<answer>
+  <sidebyside widths="5% 35% 5% 35%">
+    <p>(a)</p>  <image source="pfigs/planeGraphB.svg"/>
+    <p>(b)</p>  <image source="pfigs/paraboloidGraphB.svg"/>
+  </sidebyside>
+</answer>
+
+<solution><p>
+Each solution below consists of three sketchs.
+<ul>
+<li>
+In the first sketch, we just redraw the given level curves with the
+<m>x</m>- and <m>y</m>-axes reoriented so that the sketch looks like we are high on the <m>z</m>-axis looking down at the <m>xy</m>-plane.
+</li>
+<li>
+In the second sketch, we lift up each level curve <m>f(x,y)=C</m> and draw it in
+the horizontal plane <m>z=C</m>. That is we draw
+<md>
+<mrow>
+&amp;\Set{(x,y,z)}{f(x,y)=C,\ z=C,\ x\ge 0, y\ge 0}
+</mrow><mrow>
+&amp; =\Set{(x,y,z)}{z=f(x,y),\ z=C,\ x\ge 0, y\ge 0}
+</mrow>
+</md>
+</li>
+<li>
+Finally, in the third sketch, we draw the part of graph <m>z=f(x,y)</m> in the
+first octant, just by <q>filling in the gaps in the second sketch</q>.
+</li>
+</ul>
+</p>
+
+<sbsgroup  widths="5% 30% 30% 30%">
+<sidebyside>
+<p>(a)</p>
+<image source="pfigs/planeLevelB.svg"/>
+<image source="pfigs/planeGraphA.svg"/>
+<image source="pfigs/planeGraphB.svg"/>
+</sidebyside>
+<sidebyside>
+<p>(b)</p>
+<image source="pfigs/paraboloidLevelB.svg"/>
+<image source="pfigs/paraboloidGraphA.svg"/>
+<image source="pfigs/paraboloidGraphB.svg"/>
+</sidebyside>
+</sbsgroup>
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Sketch a few level curves for the function <m>f(x,y)</m> whose graph <m>z=f(x,y)</m>
+is sketched below.
+</p>
+<sidebyside width="">
+<image source="pfigs/hyperCylinderGraph.svg"/>
+</sidebyside>
+</statement>
+
+<hint><p>
+Draw in the plane <m>z=C</m> for several values of <m>C</m>.
+</p></hint>
+
+<answer>
+  <sidebyside width="">
+    <image source="pfigs/hyperCylinderLevel.svg"/>
+</sidebyside>
+</answer>
+
+<solution><p>
+We first add into the sketch of the graph the horizontal planes <m>z=C</m>,
+for <m>C=3</m>, <m>2</m>, <m>1</m>, <m>0.5</m>, <m>0.25</m>.
+</p>
+<sidebyside width="">
+  <image source="pfigs/hyperCylinderGraphB.svg"/>
+</sidebyside>
+
+<p>
+To reduce clutter, for each <m>C</m>, we have drawn in only
+<ul>
+<li>
+the (gray) intersection of the horizontal plane <m>z=C</m> with the <m>yz</m>--plane,
+i.e. with the vertical plane <m>x=0</m>, and
+</li>
+<li>
+the (blue) intersection of the horizontal plane <m>z=C</m> with the graph <m>z=f(x,y)</m>.
+</li>
+</ul>
+We have also omitted the label for the plane <m>z=0.25</m>.
+</p>
+
+<p>The intersection of the plane <m>z=C</m> with the graph <m>z=f(x,y)</m> is line
+<me>
+\Set{(x,y,z)}{z=f(x,y),\ z=C} =  \Set{(x,y,z)}{f(x,y)=C,\ z=C}
+</me>
+Drawing this line (which is parallel to the <m>x</m>-axis) in the <m>xy</m>-plane,
+rather than in the plane <m>z=C</m>, gives a level curve. Doing this for each of
+<m>C=3</m>, <m>2</m>, <m>1</m>, <m>0.5</m>, <m>0.25</m> gives five level curves.
+</p>
+<sidebyside width="">
+  <image source="pfigs/hyperCylinderLevel.svg"/>
+</sidebyside>
+</solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+<exercise>
+<statement><p>
+Sketch some of the level curves of
+<ol label="a">
+<li> <m>f(x,y)=x^2+2y^2</m>
+</li>
+<li> <m>f(x,y)=xy</m>
+</li>
+<li> <m>f(x,y)=xe^{-y}</m>
+</li>
+</ol>
+</p>
+
+</statement>
+
+<answer>
+<sbsgroup widths="10% 50%">
+<sidebyside>
+<p>(a)</p>
+<image source="pfigs/levelEllipse.svg"/>
+</sidebyside>
+<sidebyside>
+<p>(b)</p>
+<image source="pfigs/levelHyperbola.svg"/>
+</sidebyside>
+<sidebyside>
+  <p>(c)</p>
+<image source="pfigs/levelLog.svg"/>
+</sidebyside>
+</sbsgroup>
+</answer>
+
+<solution><p> (a)
+For each fixed <m>c \gt 0</m>, the level curve <m>x^2+2y^2=c</m> is the ellipse
+centred on the origin with <m>x</m> semi axis <m>\sqrt{c}</m> and
+<m>y</m> semi axis <m>\sqrt{c/2}</m>. If <m>c=0</m>,  the level curve <m>x^2+2y^2=c=0</m>
+is the single point <m>(0,0)</m>.
+</p>
+<sidebyside width="">
+  <image source="pfigs/levelEllipse.svg"/>
+</sidebyside>
+
+<p>
+  (b)
+For each fixed <m>c\ne 0</m>, the level curve <m>xy=c</m> is a hyperbola
+centred on the origin with asymptotes the <m>x</m>- and <m>y</m>-axes.
+If <m>c \gt 0</m>, any <m>x</m> and <m>y</m> obeying <m>xy=c \gt 0</m> are of the same sign.
+So the hyperbola is contained in the first and third quadrants.
+If <m>c \lt 0</m>, any <m>x</m> and <m>y</m> obeying <m>xy=c \gt 0</m> are of opposite sign.
+So the hyperbola is contained in the second and fourth quadrants.
+If <m>c=0</m>,  the level curve <m>xy=c=0</m>
+is the single point <m>(0,0)</m>.
+</p>
+<sidebyside width="">
+  <image source="pfigs/levelHyperbola.svg"/>
+</sidebyside>
+<p>
+(c)
+For each fixed <m>c\ne 0</m>, the level curve <m>xe^{-y}=c</m> is the logarithmic curve
+<m>y=-\ln\frac{c}{x}</m>. Note that, for <m>c \gt 0</m>, the curve
+<ul>
+<li> is restricted to <m>x \gt 0</m>, so that <m>\frac{c}{x} \gt 0</m> and <m>\ln \frac{c}{x}</m>
+  is defined, and that
+</li>
+<li> as <m>x\rightarrow 0^+</m>, <m>y</m> goes to <m>-\infty</m>, while
+</li>
+<li> as <m>x\rightarrow +\infty</m>, <m>y</m> goes to <m>+\infty</m>, and
+</li>
+<li> the curve crosses the <m>x</m>-axis (i.e. has <m>y=0</m>) when <m>x=c</m>.
+</li>
+</ul>
+and for <m>c \lt 0</m>, the curve
+<ul>
+<li> is restricted to <m>x \lt 0</m>, so that <m>\frac{c}{x} \gt 0</m> and <m>\ln \frac{c}{x}</m>
+  is defined, and that
+</li>
+<li> as <m>x\rightarrow 0^-</m>, <m>y</m> goes to <m>-\infty</m>, while
+</li>
+<li> as <m>x\rightarrow -\infty</m>, <m>y</m> goes to <m>+\infty</m>, and
+</li>
+<li> the curve crosses the <m>x</m>-axis (i.e. has <m>y=0</m>) when <m>x=c</m>.
+</li>
+</ul>
+If <m>c=0</m>,  the level curve <m>xe^{-y}=c=0</m>
+is the <m>y</m>-axis, <m>x=0</m>.
+</p>
+<sidebyside width="">
+  <image source="pfigs/levelLog.svg"/>
+</sidebyside>
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2010D</fromexam></title>
+<statement><p>
+Sketch the level curves of <m>f(x,y)=\frac{2y}{x^2+y^2}</m>.
+</p></statement>
+
+<answer>
+  <sidebyside width="">
+    <image source="pfigs/OE10D_1.svg"/>
+</sidebyside>
+</answer>
+
+<solution><p>
+ If <m>C=0</m>, the level curve <m>f=C=0</m> is just the line <m>y=0</m>.
+If <m>C\ne 0</m> (of either sign), we may rewrite the equation, <m>f(x,y)=\frac{2y}{x^2+y^2}=C</m>,
+of the level curve <m>f=C</m> as
+<me>
+x^2-\frac{2}{C}y+y^2=0
+\iff x^2+\left(y-\frac{1}{C}\right)^2 =\frac{1}{C^2}
+</me>
+which is the equation of the circle of radius <m>\frac{1}{|C|}</m> centred on
+<m>\left(0\,,\,\frac{1}{C}\right)</m>.
+</p>
+
+<sidebyside width="">
+  <image source="pfigs/OE10D_1.svg"/>
+</sidebyside>
+
+<p>
+<em>Remark.</em>
+To be picky, the function <m>f(x,y)=\frac{2y}{x^2+y^2}</m>
+is not defined at <m>(x,y)=(0,0)</m>. The question should have either specified
+that the domain of <m>f</m> excludes <m>(0,0)</m> or have specified a value
+for <m>f(0,0)</m>. In fact, it is impossible to assign a value to <m>f(0,0)</m>
+in such a way that <m>f(x,y)</m> is continuous at <m>(0,0)</m>, because
+<m>\lim_{x\rightarrow 0}f(x,0)=0</m> while  <m>\lim_{y\rightarrow 0}f(0,|y|)=\infty</m>.
+So it makes more sense to have the domain of <m>f</m> being <m>\bbbr^2</m>
+with the point <m>(0,0)</m> removed. That's why there is a little hole at the origin
+in the above sketch.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2011D</fromexam></title>
+<statement><p>
+Draw a <q>contour map</q> of <m>f(x, y) = e^{-x^2 +4y^2}</m> , showing all types of level curves that occur.
+</p></statement>
+
+<answer>
+  <sidebyside width="">
+    <image source="pfigs/OE11D_1.svg"/>
+</sidebyside>
+</answer>
+
+<solution><p>
+ Observe that, for any constant <m>C</m>, the curve <m>-x^2+4y^2=C</m>
+is the level curve <m>f=e^C</m>.
+<ul>
+<li>
+If <m>C=0</m>, then <m>-x^2+4y^2=C=0</m> is the pair of lines <m>y=\pm\frac{x}{2}</m>.
+</li>
+<li>
+If <m>C \gt 0</m>, then <m>-x^2+4y^2=C \gt 0</m> is the hyperbola <m>y=\pm\frac{1}{2}\sqrt{C+x^2}</m>.
+</li>
+<li>
+If <m>C \lt 0</m>, then <m>-x^2+4y^2=C \lt 0</m> is the hyperbola <m>x=\pm\sqrt{|C|+4y^2}</m>.
+</li>
+</ul>
+</p>
+
+<sidebyside width="">
+  <image source="pfigs/OE11D_1.svg"/>
+</sidebyside>
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M253 2011D</fromexam></title>
+<statement><p>
+A surface is given implicitly by
+<me>
+x^2 + y^2 - z^2 + 2z = 0
+</me>
+<ol label="a">
+<li>
+Sketch several level curves <m>z = </m>constant.
+</li>
+<li>
+Draw a rough sketch of the surface.
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="10% 50%">
+<p>(a)</p>
+<image source="pfigs/OE253_11D_1a.svg"/>
+</sidebyside>
+<sidebyside widths="10% 30% 30%">
+<p>(b)</p>
+<image source="pfigs/OE253_11D_1bl.svg"/>
+<image source="pfigs/OE253_11D_1br.svg"/>
+</sidebyside>
+</answer>
+
+<solution><p> (a)
+We can rewrite the equation as
+<me>
+x^2 + y^2 = (z-1)^2 - 1
+</me>
+The right hand side is negative for <m>|z-1| \lt 1</m>, i.e. for <m>0 \lt z \lt 2</m>.
+So no point on the surface has <m>0 \lt z \lt 2</m>. For any
+fixed <m>z</m>, outside that range, the curve <m>x^2 + y^2 = (z-1)^2 - 1</m>
+is the circle of radius <m>\sqrt{(z-1)^2 - 1}</m> centred on the <m>z</m>--axis.
+That radius is <m>0</m> when <m>z=0,2</m> and increases as <m>z</m> moves away from
+<m>z=0,2</m>. For very large <m>|z|</m>, the radius increases roughly linearly with
+<m>|z|</m>. Here is a sketch of some level curves.
+</p>
+<sidebyside width="">
+  <image source="pfigs/OE253_11D_1a.svg"/>
+</sidebyside>
+<p>
+(b)
+The surface consists of two stacks of circles.
+One stack starts with radius <m>0</m> at <m>z=2</m>.
+The radius increases as <m>z</m> increases.
+The other stack starts with radius <m>0</m> at <m>z=0</m>.
+The radius increases as <m>z</m> decreases.
+This surface is a hyperboloid of two sheets. Here are two
+sketchs. The sketch on the left is of the part of the surface in the
+first octant. The sketch on the right of the full surface.
+</p>
+
+<sidebyside width="40%">
+  <image source="pfigs/OE253_11D_1bl.svg"/>
+  <image source="pfigs/OE253_11D_1br.svg"/>
+</sidebyside>
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M226 2009A</fromexam></title>
+<statement><p>
+Sketch the hyperboloid <m>z^2=4x^2+y^2-1</m>.
+</p></statement>
+
+<answer>
+<sidebyside width="40%">
+  <image source="pfigs/OE226_09A_l.svg"/>
+  <image source="pfigs/OE226_09A_r.svg"/>
+ </sidebyside>
+</answer>
+
+<solution><p>
+For each fixed <m>z</m>, <m>4x^2+y^2=1+z^2</m> is an ellipse. So the surface
+consists of a stack of ellipses one on top of the other. The semi axes are
+<m>\frac{1}{2}\sqrt{1+z^2}</m> and <m>\sqrt{1+z^2}</m>. These are smallest when <m>z=0</m>
+(i.e. for the ellipse in the <m>xy</m>-plane) and increase as <m>|z|</m> increases.
+The intersection of the surface with the <m>xz</m>-plane (i.e. with the plane <m>y=0</m>) is the hyperbola <m>4x^2-z^2=1</m> and the intersection with
+the <m>yz</m>-pane (i.e. with the plane <m>x=0</m>) is the hyperbola <m>y^2-z^2=1</m>.
+Here are two sketches of the surface. The sketch on the left only shows
+the part of the surface in the first octant  (with axes).
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/OE226_09A_l.svg"/>
+  <image source="pfigs/OE226_09A_r.svg"/>
+ </sidebyside>
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Describe the level surfaces of
+<ol label="a">
+<li> <m>f(x,y,z)=x^2+y^2+z^2</m>
+</li>
+<li> <m>f(x,y,z)=x+2y+3z</m>
+</li>
+<li> <m>f(x,y,z)=x^2+y^2</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a)
+ If <m>c \gt 0</m>, <m>f(x,y,z)=c</m>
+is the sphere of radius <m>\sqrt{c}</m> centered at the origin.
+If <m>c=0</m>, <m>f(x,y,z)=c</m> is just the origin. If <m>c \lt 0</m>, no
+<m>(x,y,z)</m> satisfies <m>f(x,y,z)=c</m>.
+</p>
+
+<p>(b) <m>f(x,y,z)=c</m> is the plane normal to
+<m>(1,2,3)</m> passing through <m>(c,0,0)</m>.
+</p>
+
+<p>(c) If <m>c \gt 0</m>, <m>f(x,y,z)=c</m> is the cylinder
+parallel to the <m>z</m>-axis whose cross-section is a circle of
+radius <m>\sqrt{c}</m> that is parallel to the <m>xy</m>-plane and is centered on the
+<m>z</m>-axis.
+If <m>c=0</m>, <m>f(x,y,z)=c</m> is the <m>z</m>-axis. If <m>c \lt 0</m>, no
+<m>(x,y,z)</m> satisfies <m>f(x,y,z)=c</m>.
+</p>
+
+</answer>
+
+<solution><p> (a)
+ If <m>c \gt 0</m>, <m>f(x,y,z)=c</m>, i.e. <m>x^2+y^2+z^2=c</m>,
+is the sphere of radius <m>\sqrt{c}</m> centered at the origin.
+If <m>c=0</m>, <m>f(x,y,z)=c</m> is just the origin. If <m>c \lt 0</m>, no
+<m>(x,y,z)</m> satisfies <m>f(x,y,z)=c</m>.
+</p>
+
+<p>(b)  <m>f(x,y,z)=c</m>, i.e. <m>x+2y+3z=c</m>, is the plane normal to
+<m>(1,2,3)</m> passing through <m>(c,0,0)</m>.
+</p>
+
+<p>(c) If <m>c \gt 0</m>, <m>f(x,y,z)=c</m>, i.e. <m>x^2+y^2=c</m>, is the cylinder
+parallel to the <m>z</m>-axis whose cross-section is a circle of
+radius <m>\sqrt{c}</m> that is parallel to the <m>xy</m>-plane and is centered on the
+<m>z</m>-axis.
+If <m>c=0</m>, <m>f(x,y,z)=c</m> is the <m>z</m>-axis. If <m>c \lt 0</m>, no
+<m>(x,y,z)</m> satisfies <m>f(x,y,z)=c</m>.
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Sketch the graphs of
+<ol label="a">
+<li> <m>f(x,y)=\sin x\qquad 0\le x\le 2\pi,\ 0\le y\le 1</m>
+</li>
+<li> <m>f(x,y)=\sqrt{x^2+y^2}</m>
+</li>
+<li> <m>f(x,y)=|x|+|y|</m>
+</li>
+</ol>
+</p>
+
+</statement>
+
+<answer>
+<sbsgroup>
+<sidebyside widths="10% 50%">
+  <p>(a)</p>
+  <image source="pfigs/sinGraph.svg"/>
+</sidebyside>
+<sidebyside widths="10% 50%">
+<p>(b)</p>
+<image source="pfigs/coneGraph.svg"/>
+</sidebyside>
+<sidebyside widths="10% 40% 40%">
+<p>(c)</p>
+<image source="pfigs/pmidGraph.svg"/>
+<image source="pfigs/pmidGraphB.svg"/>
+</sidebyside>
+</sbsgroup>
+</answer>
+
+<solution><p> (a)
+ The graph is <m>z=\sin x</m> with <m>(x,y)</m> running over
+<m>0\le x\le 2\pi</m>,  <m>0\le y\le 1</m>. For each fixed <m>y_0</m> between <m>0</m> and <m>1</m>,
+the intersection of this graph with the vertical plane <m>y=y_0</m> is the
+same sin graph <m>z=\sin x</m> with <m>x</m> running from <m>0</m> to <m>2\pi</m>. So the whole
+graph is just a bunch of 2-d sin graphs stacked side-by-side. This gives
+the graph on the left below.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/sinGraph.svg"/>
+  <image source="pfigs/coneGraph.svg"/>
+ </sidebyside>
+<p>
+(b)
+The graph is <m>z=\sqrt{x^2+y^2}</m>. For each fixed <m>z_0\ge 0</m>,
+the intersection of this graph with the horizontal plane <m>z=z_0</m> is the
+circle <m>\sqrt{x^2+y^2}=z_0</m>. This circle is centred on the <m>z</m>-axis
+and has radius <m>z_0</m>. So the graph is the upper half of a cone. It is the
+sketch on the right above.
+</p>
+
+<p>(c)
+The graph is <m>z=|x|+|y|</m>. For each fixed <m>z_0\ge 0</m>,
+the intersection of this graph with the horizontal plane <m>z=z_0</m> is the
+square <m>|x|+|y|=z_0</m>. The side of the square with <m>x,y\ge 0</m> is the straight
+line <m>x+y=z_0</m>. The side of the square with <m>x\ge 0</m> and <m>y\le 0</m> is
+the straight line <m>x-y=z_0</m> and so on. The four corners of the square are
+<m>(\pm z_0,0,z_0)</m> and <m>(0, \pm z_0,z_0)</m>.  So the graph is a stack of squares.
+It is an upside down four-sided pyramid. The part of the pyramid in the
+first octant (that is, <m>x,y,z\ge 0</m>) is the sketch below.
+</p>
+
+<sidebyside width="40%">
+    <image source="pfigs/pmidGraph.svg"/>
+    <image source="pfigs/pmidGraphB.svg"/>
+ </sidebyside>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Sketch and describe the following surfaces.
+<ol label="a">
+<li>
+<m>4x^2+y^2=16</m>
+</li>
+<li>
+<m>x+y+2z=4</m>
+</li>
+<li>
+<m>\frac{y^2}{9}+\frac{z^2}{4}=1+\frac{x^2}{16}</m>
+</li>
+<li>
+<m>y^2=x^2+z^2</m>
+</li>
+<li>
+<m>\frac{x^2}{9}+\frac{y^2}{12}+\frac{z^2}{9}=1</m>
+</li>
+<li>
+<m>x^2+y^2+z^2+4x-by+9z-b=0</m> where <m>b</m> is a constant.
+</li>
+<li>
+ <m>\frac{x}{4}=\frac{y^2}{4}+\frac{z^2}{9}</m>
+</li>
+<li>
+<m>z=x^2</m>
+</li>
+</ol>
+</p>
+
+</statement>
+
+<answer><p>
+(a) This is an elliptic cylinder parallel to the <m>z</m>-axis.
+Here is a sketch of the part of the surface above the <m>xy</m>--plane.
+</p>
+<sidebyside width="50%">
+  <image source="pfigs/elliptical_cylinder"/>
+</sidebyside>
+<p>
+(b)
+This is a plane through <m>(4,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,2)</m>.
+Here is a sketch of the part of the plane in the first octant.
+</p>
+<sidebyside width="50%">
+  <image source="pfigs/plane.svg"/>
+</sidebyside>
+<p>
+(c)
+This is a hyperboloid of one sheet with axis the <m>x</m>-axis.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/hyperboloidX_l.svg"/>
+<image source="pfigs/hyperboloidX_r.svg"/>
+</sidebyside>
+<p>
+(d)
+This is a circular cone centred
+on the <m>y</m>-axis.
+</p>
+<sidebyside width="50%">
+  <image source="pfigs/coneYY_r.svg"/>
+</sidebyside>
+
+<p>(e)
+This is an ellipsoid centered on the origin with semiaxes <m>3</m>,
+<m>\sqrt{12}=2\sqrt{3}</m> and <m>3</m> along the <m>x</m>, <m>y</m> and <m>z</m>-axes, respectively.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/ellipsoid_l.svg"/>
+     <image source="pfigs/ellipsoid_r.svg"/>
+</sidebyside>
+<p>
+(f)
+This is a sphere of radius <m>r_b=\frac{1}{2}\sqrt{b^2+4b+97}</m> centered on
+<m>\frac{1}{2}(-4,b,-9)</m>.
+</p>
+<sidebyside width="50%">
+  <image source="pfigs/shiftSphere.svg"/>
+</sidebyside>
+<p>
+(g)
+This is an elliptic paraboloid with axis the <m>x</m>-axis.
+</p>
+<sidebyside width="40%">
+<image source="pfigs/paraboloidX_l.svg"/>
+     <image source="pfigs/paraboloidX_r.svg"/>
+   </sidebyside>
+<p>
+(h)
+This is an upward openning parabolic cylinder.
+</p>
+<sidebyside width="50%">
+<image source="pfigs/parabolicCylinder.svg"/>
+</sidebyside>
+</answer>
+
+<solution><p>
+(a)
+For each fixed <m>z_0</m>, the <m>z=z_0</m> cross-section (parallel to the <m>xy</m>-plane)
+of this surface is an ellipse centered on the origin with
+one semiaxis of length 2 along the <m>x</m>-axis and one semiaxis of length
+4 along the <m>y</m>-axis. So this is an elliptic cylinder parallel to the <m>z</m>-axis.
+Here is a sketch of the part of the surface above the <m>xy</m>--plane.
+</p>
+<sidebyside width="50%">
+  <image source="pfigs/elliptical_cylinder.svg"/>
+</sidebyside>
+<p>
+(b)
+This is a plane through <m>(4,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,2)</m>.
+Here is a sketch of the part of the plane in the first octant.
+</p>
+<sidebyside width="50%">
+<image source="pfigs/plane.svg"/>
+</sidebyside>
+<p>
+(c)
+For each fixed <m>x_0</m>, the <m>x=x_0</m>
+cross-section parallel to the <m>yz</m>-plane is an ellipse with semiaxes
+<m>3\sqrt{1+\frac{x_0^2}{16}}</m> parallel to the <m>y</m>-axis and
+<m>2\sqrt{1+\frac{x_0^2}{16}}</m> parallel to the <m>z</m>-axis.
+ As you move out along the <m>x</m>-axis, away from <m>x=0</m>, the ellipses grow
+at a rate proportional to <m>\sqrt{1+\frac{x^2}{16}}</m>, which for large <m>x</m>
+is approximately <m>\frac{|x|}{4}</m>.
+This is called a hyperboloid of one sheet. Its
+</p>
+<sidebyside width="40%">
+<image source="pfigs/hyperboloidX_l.svg"/>
+     <image source="pfigs/hyperboloidX_r.svg"/>
+   </sidebyside>
+<p>
+(d)
+For each fixed <m>y_0</m>, the <m>y=x_0</m> cross-section (parallel to the <m>xz</m>-plane)
+is a circle of radius <m>|y|</m> centred on the <m>y</m>-axis. When <m>y_0=0</m> the radius
+is <m>0</m>. As you move further from the <m>xz</m>-plane, in either direction,
+i.e. as <m>|y_0|</m> increases, the radius grows linearly. The full surface
+consists of a bunch of these circles stacked sideways. This is a
+circular cone centred on the <m>y</m>-axis.
+</p>
+<sidebyside width="50%">
+<image source="pfigs/coneYY_r.svg"/>
+</sidebyside>
+
+
+<p>(e)
+This is an ellipsoid centered on the origin with semiaxes <m>3</m>,
+<m>\sqrt{12}=2\sqrt{3}</m> and <m>3</m> along the <m>x</m>, <m>y</m> and <m>z</m>-axes, respectively.
+</p>
+<sidebyside width="40%">
+<image source="pfigs/ellipsoid_l.svg"/>
+     <image source="pfigs/ellipsoid_r.svg"/>
+</sidebyside>
+<p>
+(f)
+Completing three squares, we have that
+<m>x^2+y^2+z^2+4x-by+9z-b=0</m> if and only if
+<m>(x+2)^2+\big(y-\frac{b}{2}\big)^2+\big(z+\frac{9}{2}\big)^2
+=b+4+\frac{b^2}{4}+\frac{81}{4}</m>.
+This is a sphere of radius <m>r_b=\frac{1}{2}\sqrt{b^2+4b+97}</m> centered on
+<m>\frac{1}{2}(-4,b,-9)</m>.
+</p>
+<sidebyside width="50%">
+<image source="pfigs/shiftSphere.svg"/>
+</sidebyside>
+<p>
+(g)
+There are no points on the surface with <m>x \lt 0</m>.
+For each fixed <m>x_0 \gt 0</m> the cross-section <m>x=x_0</m> parallel to the
+<m>yz</m>-plane is an ellipse centred on the <m>x</m>--axis with semiaxes <m>\sqrt{x_0}</m>
+in the <m>y</m>-axis direction and <m>\frac{3}{2}\sqrt{x_0}</m> in the <m>z</m>--axis
+direction.  As you increase <m>x_0</m>, i.e. move out along the <m>x</m>-axis,
+the ellipses grow at a rate proportional to <m>\sqrt{x_0}</m>. This is
+an elliptic paraboloid  with axis the <m>x</m>-axis.
+</p>
+<sidebyside width="40%">
+<image source="pfigs/paraboloidX_l.svg"/>
+ <image source="pfigs/paraboloidX_r.svg"/>
+</sidebyside>
+<p>
+(h)
+This is called a parabolic cylinder. For any fixed <m>y_0</m>, the
+<m>y=y_0</m> cross-section (parallel to the <m>xz</m>-plane) is the upward
+opening parabola <m>z=x^2</m> which has vertex on the <m>y</m>-axis.
+</p>
+<sidebyside width="50%">
+  <image source="pfigs/parabolicCylinder.svg"/>
+</sidebyside>
+</solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise>
+<statement><p>
+The surface below has circular level curves, centred along the <m>z</m>-axis. The lines given are the intersection of the surface with the right half of the <m>yz</m>-plane. Give an equation for the surface.
+</p><sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\draw (0,0)--(0,3)node[above]{$z$};
+\draw (0,0)--(3,0) node[right]{$y$};
+\draw (0,0)--(-1,-1) node[below left]{$x$};
+\draw[very thick,blue] (1,0) arc (360:180:1cm and .333 cm);
+\draw[dotted, very thick, blue] (1,0) arc (0:180:1cm and .333 cm);
+\draw[very thick,blue] (2,3) arc (360:180:2cm and .667 cm);
+\draw[very thick,blue] (2,3) arc (0:180:2cm and .667 cm);
+\draw[very thick,blue] (2,-3,0) arc (360:180:2cm and .667 cm);
+\draw[dotted, very thick, blue] (2,-3) arc (0:180:2cm and .667 cm);
+\draw[very thick, blue] (2,-3)--(1,0)--(2,3) (-2,-3)--(-1,0)--(-2,3);
+\draw[very thick, dashed] (1,0)--(2.25,3.75)node[right]{$z=3(y-1)$};
+\draw[very thick, dashed] (1,0)--(2.25,-3.75)node[right]{$z=-3(y-1)$};
+\end{tikzpicture}</latex-image></image>
+</sidebyside></statement>
+<hint><p>
+Since the level curves are circles centred at the origin (in the <m>xy</m>-plane), the equation will have the form <m>x^2+y^2=g(z)</m>, where <m>g(z)</m> is a function depending only on <m>z</m>.
+</p></hint>
+<answer><p>
+<m>\displaystyle x^2+y^2=\left( \frac{|z|}{3}+1\right)^2</m>
+</p></answer>
+<solution><p>
+Since the level curves are circles centred at the origin (in the <m>xy</m>-plane), when <m>z</m> is a constant, the equation will have the form <m>x^2+y^2=c</m> for some constant. That is, our equation looks like
+<me>
+x^2+y^2=g(z),</me>
+ where <m>g(z)</m> is a function depending only on <m>z</m>.
+</p>
+
+<p>Because our cross-sections are so nicely symmetric, we know the intersection of the figure with the left side of the <m>yz</m>-plane as well: <m>z=3(-y-1)=-3(y+1)</m>
+(when <m>z\ge0</m>) and <m>z=-3(-y-1)=3(y+1)</m> (when <m>z \lt 0</m>). Below is the intersection of our surface with the <m>yz</m> plane.
+</p>
+
+<sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\draw (0,-3)--(0,3)node[above]{$z$};
+\draw (-3,0)--(3,0) node[right]{$y$};
+\draw[very thick, dashed] (1,0)--(2.25,3.75)node[right]{$z=3(y-1)$};
+\draw[very thick, dashed] (1,0)--(2.25,-3.75)node[right]{$z=-3(y-1)$};
+\draw[very thick, dashed] (-1,0)--(-2.25,3.75)node[left]{$z=-3(y+1)$};
+\draw[very thick, dashed] (-1,0)--(-2.25,-3.75)node[left]{$z=3(y+1)$};
+\end{tikzpicture}</latex-image></image>
+</sidebyside><p>
+Setting <m>x=0</m>, our equation becomes <m>y^2=g(z)</m>. Looking at the right side of the <m>yz</m> plane, this should lead to:
+<m>\left.\begin{cases}
+z=3(y-1) &amp;\mbox{if } z\geq 0,\ y\ge 1\\
+z=-3(y-1) &amp;\mbox{if } z \lt  0,\ y\ge 1
+\end{cases}\right\} </m>. That is:
+</p>
+
+<p><md>
+<mrow>
+|z|&amp;=3(y-1)
+</mrow><mrow>
+\frac{|z|}{3}+1&amp;=y
+</mrow><mrow>
+\left(\frac{|z|}{3}+1\right)^2&amp;=y^2 &amp;(*)
+</mrow>
+</md>
+</p>
+
+<p>A quick check: when we squared both sides of the equation in <m>(*)</m>, we added another solution, <m>\frac{|z|}{3}+1=-y</m>. Let's make sure we haven't diverged from our diagram.
+</p>
+
+<p><md>
+<mrow>
+&amp;&amp;&amp; \left(\frac{|z|}{3}+1\right)^2=y^2
+</mrow><mrow>
+&amp;\Leftrightarrow&amp;&amp; \underbrace{\frac{|z|}{3}+1}_{\text{positive}}=\pm y
+</mrow><mrow>
+&amp;\Leftrightarrow&amp;&amp; \begin{cases}
+ \frac{|z|}{3}+1 =y &amp; y \gt 0\\
+  \frac{|z|}{3}+1 =-y &amp; y \lt 0
+ \end{cases}
+</mrow><mrow>
+&amp; \Leftrightarrow&amp;&amp; \begin{cases}
+ \frac{|z|}{3}+1 =y &amp; y\ge1\\
+  \frac{|z|}{3}+1 =-y &amp; y\le-1
+ \end{cases}
+ </mrow><mrow>
+&amp;\Leftrightarrow&amp;&amp;  \begin{cases}
+|z| =3(y-1) &amp; y\ge1\\
+|z|=-3(y+1) &amp; y\le-1
+ \end{cases}
+</mrow><mrow>
+&amp;\Leftrightarrow&amp;&amp;  \begin{cases}
+z =\pm \underbrace{3(y-1)}_{\text{positive}} &amp; y\ge1
+\\
+z=\pm \underbrace{3(y+1)}_{\text{negative}} &amp; y\le-1
+ \end{cases}
+</mrow><mrow>
+&amp;\Leftrightarrow&amp;&amp;  \begin{cases}
+z =3(y-1) &amp; y\ge1,\ z\ge0
+\\
+z =-3(y-1) &amp; y\ge1,\ z\le0
+\\
+z=-3(y+1) &amp; y\le-1,\ z \ge 0
+\\
+z=3(y+1) &amp; y\le-1,\ z\le 0
+ \end{cases}
+</mrow>
+</md>
+</p>
+
+<p>This matches our diagram eactly. So, all together, the equation of the surface is
+<me>
+x^2+y^2=\left( \frac{|z|}{3}+1\right)^2</me>
+</p>
+
+</solution>
+</exercise></exercisegroup>
+
+</exercises>

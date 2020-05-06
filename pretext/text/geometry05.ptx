@@ -3,7 +3,7 @@
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<section xml:id="sec_lines_3d">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_lines_3d">
   <title>Equations of Lines in 3d</title>
 
   <p>Just as in two dimensions, a line in three dimensions can be specified  by
@@ -518,5 +518,7 @@
   </p>
 
   </example>
+
+  <xi:include href="../problems/prob_s1.5.ptx" />
 
 </section>

@@ -3,7 +3,7 @@
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<section xml:id="sec_curves">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_curves">
   <title>Curves and their Tangent Vectors</title>
 <introduction>
 
@@ -154,7 +154,7 @@ which is the blue curve in the figure
 
 <p>
 (Don't worry about how we make sketches like this. We'll develop some
-surface sketching technique in \S<xref ref="sec_sketching"/> below.)
+surface sketching technique in §<xref ref="sec_sketching"/> below.)
 Substituting <m>x^2=z-2y^2</m> (from the second equation)
 into the first equation gives
 <me>
@@ -374,7 +374,7 @@ particle at time <m>t</m>, then
        =\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big)
 </mrow>
 
-<intertext>and the distance travelled between times \(T_0\) and \(T\) is</intertext>
+<intertext>and the distance travelled between times <m>T_0</m> and <m>T</m> is</intertext>
 <mrow>
   s(T)-s(T_0)&amp;= \int_{T_0}^T \Big|\diff{\vr}{t}(t)\Big|\,\dee{t}
        = \int_{T_0}^T \sqrt{(x'(t)^2+y'(t)^2+z'(t)^2}\,\dee{t}
@@ -507,4 +507,7 @@ s(\pi)-s(0)&amp;= \int_{0}^\pi \big|\vr'(t)\big|\,\dee{t}
 </p></example>
 
 </subsection>
+
+<xi:include href="../problems/prob_s1.6.ptx" />
+
 </section>
