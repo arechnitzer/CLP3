@@ -409,7 +409,7 @@ So, we set <m>\mathbf{n}=\llt \frac{5}{2},1+\frac{\sqrt3}{2} \rgt-\llt 2,1\rgt =
 </p>
 
 
-<sidebyside>
+<sidebyside width="33%">
 <image><latex-image>
 \begin{tikzpicture}
 \YEaaxis{.5}{3}{.5}{2}
