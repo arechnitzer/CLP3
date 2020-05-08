@@ -29,7 +29,7 @@ There are infinitely many planes satisfying the condition described, but we're a
 Note <m>12\llt \frac13,-\frac12,\frac16 \rgt=\llt 4,-6,2 \rgt</m>. So, we actually only know one normal direction to the line we're supposed to be describing. That means there are actually <em>infinitely many</em> lines satisfying the given conditions.
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image><latex-image>\begin{tikzpicture}
 \draw[thick,- \gt ] (0,0) node[vertex]{}--(0,2.5) node[above]{$\mathbf n$};
 \clip (3,0) arc (0:360:3cm and 1cm);
@@ -165,14 +165,22 @@ parametric equation <m>\llt x,y,z\rgt =  \llt 3,5,0\rgt+\llt 2,-\half,1\rgt t</m
 <mrow>
 \left\{\Atop{2x-y-2z=-3}{4x-3y-3 z=-5} \right\}
 &amp;\iff \left\{\Atop{2x-y=2z-3}{4x-3y=3 z-5} \right\}
+</mrow><mrow>
+&amp;
 \iff\left\{\Atop{4x-2y=4z-6}{4x-3y=3 z-5} \right\}
 </mrow><mrow>
 &amp;\iff\left\{\Atop{4x-2y=4z-6}{y=z-1} \right\}
 </mrow>
 </md>
 Hence the point <m>(x,y,z)</m> is on the line if and only if
-<m>\llt x,y,z\rgt = \llt \frac{1}{4}(2y+4z-6), z-1, z\rgt=
-\llt \frac{3}{2}z-2, z-1, z\rgt = \llt -2,-1,0\rgt+\llt \frac{3}{2},1,1\rgt z</m>.
+<md>
+<mrow>
+\llt x,y,z\rgt &amp;= \llt \frac{1}{4}(2y+4z-6), z-1, z\rgt
+=\llt \frac{3}{2}z-2, z-1, z\rgt 
+</mrow><mrow>
+&amp;= \llt -2,-1,0\rgt+\llt \frac{3}{2},1,1\rgt z
+</mrow>
+</md>
 So, introducing a new variable <m>t</m> obeying <m>t=z</m>, we get the vector
 parametric equation <m>\llt x,y,z\rgt =  \llt -2,-1,0\rgt
         +\llt \frac{3}{2},1,1\rgt t</m>.
@@ -528,9 +536,10 @@ solving
 <md>
 <mrow>
 \left\{\Atop{x+2y=11}{x-2y=-1} \right\}
-\iff \left\{\Atop{2y=11-x}{x-2y=-1} \right\}
+&amp;\iff \left\{\Atop{2y=11-x}{x-2y=-1} \right\}
 \iff \left\{\Atop{2y=11-x}{x-(11-x)=-1} \right\}
-\iff \left\{\Atop{2y=11-x}{2x=10} \right\}
+</mrow><mrow>
+&amp;\iff \left\{\Atop{2y=11-x}{2x=10} \right\}
 </mrow>
 </md>
 we see that <m>(5,3,0)</m> is on the line. So
@@ -545,10 +554,16 @@ of the line closest to <m>(1,0,1)</m>, the vector <m>\llt 4+4t,3+t,-1-2t\rgt</m>
 joining those two points must be perpendicular to the direction vector
 <m>\llt 4,1,-2\rgt </m> of the line. (See Example <xref ref="eg_VPdistance-point-line"/>  in the CLP-3 text.)
 This is the case when
-<me>
-\llt 4,1,-2\rgt \cdot \llt 4+4t,3+t,-1-2t\rgt =0\quad\text{or}\quad
-16+16t+3+t+2+4t=0\quad\text{or}\quad t=-1
-</me>
+<md>
+<mrow>
+&amp;\llt 4,1,-2\rgt \cdot \llt 4+4t,3+t,-1-2t\rgt =0
+</mrow><mrow>
+&amp;\text{or}\quad
+16+16t+3+t+2+4t=0
+</mrow><mrow>
+&amp;\text{or}\quad t=-1
+</mrow>
+</md>
 The point on the line nearest <m>(1,0,1)</m> is thus
 <m>(5+4t,3+t,-2t)\Big|_{t=-1}=(5-4,3-1,2)=(1,2,2)</m>. The distance
 from the point to the line is the length of the vector from
@@ -849,8 +864,8 @@ Then the angle between <m>\vd</m> and the plane is
 </me>
 </p>
 
-<sidebyside width="">
-  <image source="problems/figs/fig/OE13D_1.pdf"/>
+<sidebyside width="60%">
+  <image source="pfigs/OE13D_1.svg"/>
 </sidebyside>
 </solution>
 </exercise>
@@ -969,8 +984,8 @@ A light source at the origin shines on the triangle <m>ABC</m> making
 a shadow on the plane <m>x+7y+z=32</m>. (See the diagram.) Find <m>\tilde A</m>.
 </p>
 
-<sidebyside width="">
-  <image source="problems/figs/fig/OE16D_1.pdf"/>
+<sidebyside width="66%">
+  <image source="pfigs/OE16D_1.svg"/>
 </sidebyside>
 </li>
 </ol>
@@ -1048,7 +1063,8 @@ if and only if
 <md>
 <mrow>
 0 &amp;= \llt -x\,,\,2-y\,,\,2-z\rgt \cdot \llt 2-x\,,\,2-y\,,\,2-z\rgt
-  = x(x-2) +(y-2)^2 +(z-2)^2
+</mrow><mrow>
+  &amp;= x(x-2) +(y-2)^2 +(z-2)^2
 </mrow><mrow>
   &amp;= (x-1)^2 -1 +(y-2)^2 +(z-2)^2
 </mrow>
