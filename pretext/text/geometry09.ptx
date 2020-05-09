@@ -63,7 +63,7 @@
     <p>
   We saw the quadric surface <m>4x^2+y^2-z^2=1</m> in Example <xref ref="eg_hyperboloid"/>.
   </p>
-  <sidebyside>
+  <sidebyside width="28%">
   <image source="figs/hyperboloid1.svg"/>
   </sidebyside>
   <p>
@@ -75,7 +75,7 @@
     <p>
   We saw the quadric surface <m>x^2+y^2=1</m> in Example <xref ref="eg_cylinders"/>.
   </p>
-  <sidebyside>
+  <sidebyside  width="25%">
   <image source="figs/cylinder.svg"/>
   </sidebyside>
   <p>

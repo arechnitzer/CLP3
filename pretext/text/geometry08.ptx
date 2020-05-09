@@ -11,7 +11,7 @@ You are probably used to thinking of a cylinder as being something that looks
 like <m>x^2+y^2=1</m>.
 </p>
 
-<sidebyside width="50%">
+<sidebyside width="33%">
 <image source="figs/cylinderA.svg"/>
 </sidebyside>
 
@@ -38,7 +38,7 @@ to the given line).
   <p>
   Here are sketches of three cylinders. The familiar cylinder on the left below
   </p>
-  <sidebyside>
+  <sidebyside widths="28% 38%" valign="middle">
   <image source="figs/cylinderR.svg"/>
      <image source="figs/cylinderO.svg"/>
   </sidebyside>
@@ -59,7 +59,7 @@ to the given line).
   <p>We have already seen the the third cylinder
   </p>
 
-  <sidebyside>
+  <sidebyside width="35%">
   <image source="figs/hyperbolicCylinderD.svg"/>
   </sidebyside>
 
