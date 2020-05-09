@@ -11,7 +11,7 @@
   This is illustrated in the figures below.
 
   </p>
-  <sidebyside valign="middle">
+  <sidebyside widths="20% 20% 20% 20%" valign="middle">
   <image source="figs/conePlaneCircle.svg"/>
       <image source="figs/conePlaneEllipse.svg"/>
       <image source="figs/conePlaneParabola.svg"/>
