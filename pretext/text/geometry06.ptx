@@ -21,7 +21,7 @@ For example
 might be the position of a particle at time <m>t</m>. As <m>t</m> varies
 <m>\vr(t)</m> sweeps out a curve.
 </p>
-<sidebyside width="50%">
+<sidebyside width="38%">
 <image source="figs/parCurve.svg"/>
 </sidebyside>
 <p>
@@ -76,7 +76,7 @@ with the plane <m>y=x</m> is a circle. The part of that circle that is
 in the first octant is the red curve in the figure below.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="50%">
 <image source="figs/spherePlane.svg"/>
 </sidebyside>
 
@@ -91,7 +91,7 @@ as functions of the parameter. Here are two examples.
 <p>
 The set of all <m>(x,y,z)</m> obeying
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
  x&amp;-y           &amp;&amp;=0
 </mrow><mrow>
  x^2&amp;+y^2 +z^2 &amp;&amp;=1
@@ -99,7 +99,7 @@ The set of all <m>(x,y,z)</m> obeying
 </md>
 is the circle sketched above. We can choose to use <m>y</m> as the parameter and think of
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
  x&amp;    &amp;&amp;=y
 </mrow><mrow>
  x^2&amp;+z^2  &amp;&amp;=1-y^2
@@ -110,7 +110,7 @@ with <m>y</m> being treated as a given constant, rather than as an unknown.
 We can now (trivially) solve the first equation for <m>x</m>, substitute
 the result into the second equation, and finally solve for <m>z</m>.
 <md alignment="alignat">
-<mrow>{7}
+<mrow>
 x=y,\  x^2+z^2  &amp;&amp;=1-y^2 \quad \implies z^2 = 1-2y^2
 </mrow>
 </md>
@@ -204,7 +204,7 @@ The derivative of the vector valued function <m>\vr(t)</m> is defined to be
 \vr'(t) =  \diff{\vr}{t}(t)=\lim_{h\rightarrow 0}\frac{\vr(t+h)-\vr(t)}{h}
 </me>
 </p>
-<sidebyside width="40%">
+<sidebyside width="35%">
   <image source="figs/parCurveDerivA.svg"/>
 </sidebyside>
 
@@ -332,7 +332,7 @@ s(T)-s(T_0)&amp;= \int_{T_0}^T \left|\diff{\vr}{t}(t)\right|\,\dee{t}
 </mrow>
 </md>
 </p>
-<sidebyside width="50%">
+<sidebyside width="45%">
   <image source="figs/parCurveDerivB.svg"/>
 </sidebyside>
 </li>
@@ -476,7 +476,7 @@ just increases linearly.
 </ul>
 Our curve is the helix
 </p>
-<sidebyside width="66%">
+<sidebyside width="45%">
 <image source="figs/helix4.svg"/>
 </sidebyside>
 <p>

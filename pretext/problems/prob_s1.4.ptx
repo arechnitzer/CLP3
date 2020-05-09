@@ -565,7 +565,7 @@ the points <m>(0,1,1)</m>, <m>(1,-1,3)</m> and <m>(2,0,-1)</m>.
 <solution><p>
 The two vectors
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 \va&amp;=\llt 1,-1,3\rgt - \llt 0,1,1\rgt &amp;&amp;= \llt 1,-2, 2\rgt
 </mrow><mrow>
 \vb&amp;=\llt 2,0,-1\rgt - \llt 0,1,1\rgt &amp;&amp;= \llt 2,-1,-2\rgt

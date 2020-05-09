@@ -360,7 +360,7 @@ parameters, rather than <m>t</m>)
 <p>(b) The three medians meet at a common point if there are
 values of <m>s,t</m> and <m>u</m> such that
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 \va+t\big(\half\vb+\half\vc-\va\big)
 &amp;\ =\ \vb+s\big(\half\va+\half\vc-\vb\big)
 &amp;&amp;\ =\ \vc+u\big(\half\va+\half\vb-\vc\big)
@@ -374,7 +374,7 @@ Assuming that the triangle has not degenerated to a line segment,
 this is the case if and only if the coefficients of <m>\va,\ \vb</m>
 and <m>\vc</m> match
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 1-t&amp;=\frac{s}{2}&amp;&amp;=\frac{u}{2}
 </mrow><mrow>
 \frac{t}{2}&amp;=1-s&amp;&amp;=\frac{u}{2}

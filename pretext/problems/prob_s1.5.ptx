@@ -435,7 +435,7 @@ The scalar parametric equations for the line are
 x-2=t,\
 y+1=-t,\
 z+1=-t
-\hskip .25 in\hbox{or}\hskip .25 in
+\ \ \hbox{or}\ \  
 x=2+t,\
 y=-1-t,\
 z=-1-t
@@ -833,7 +833,7 @@ Theorem <xref ref="thm_dotPppties"/> of the CLP-3 text.
 <solution><p>
 (a)  Since
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 x&amp;=2+3t &amp;&amp;\implies t=\frac{x-2}{3}
 </mrow><mrow>
 y&amp;=4t   &amp;&amp;\implies t=\frac{y}{4}

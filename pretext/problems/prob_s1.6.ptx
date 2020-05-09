@@ -123,7 +123,7 @@ As <m>\theta =\phi-\frac{\pi}{2}</m>, the desired parametrization is
   \tfrac{\pi}{2}\le\phi\le\pi
 </me>
 </p>
-<sidebyside width="40%">
+<sidebyside widths="55% 40%" valign="middle">
 <image source="pfigs/parCirclePhi.svg"/>
 <image source="pfigs/parCircleS.svg"/>
 </sidebyside>
@@ -172,14 +172,14 @@ and the desired parametrization is
 \draw[red] plot[smooth,domain=0:13]({1+\x+sin(\x r)},{1+cos(\x r)});
 \end{tikzpicture}</latex-image></image>
 </sidebyside><p>
-A circle of radius <m>a</m> rolls along the <m>x</m>-axis in the positive direction, starting with its centre at <m>(a,a)</m>. In that position, we mark the topmost point on the circle <m>P</m>. As the circle moves, <m>P</m> moves with it. Let <m>\theta</m> be  the angle the circle has rolled--see the diagram below.
+A circle of radius <m>a</m> rolls along the <m>x</m>-axis in the positive direction, starting with its centre at <m>(a,a)</m>. In that position, we mark the topmost point on the circle <m>P</m>. As the circle moves, <m>P</m> moves with it. Let <m>\theta</m> be  the angle the circle has rolled - see the diagram below.
 <ol label="a">
 <li> Give the position of the centre of the circle as a function of <m>\theta</m>.
 </li>
 <li> Give the position of <m>P</m> a function of <m>\theta</m>.
 </li>
 </ol>
-</p><sidebyside>
+</p><sidebyside width="33%">
 <image><latex-image>\begin{tikzpicture}
 \draw[thick] (0,0) node[shape=circle, minimum size=4cm, draw]{};
 \draw (1.4,1.4)--(0,0)--(0,2);
@@ -208,7 +208,7 @@ Pretend that the circle is a spool of thread. As the
 <p>Now, let's consider the position of <m>P</m> on the circle, after the circle has rolled <m>\theta</m> radians.
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image><latex-image>\begin{tikzpicture}
 \draw[thick] (0,0) node[shape=circle, minimum size=8cm, draw]{};
 \draw (2.8,2.8)--(0,0)--(0,4);
@@ -313,8 +313,7 @@ To determine whether the particle is rising or falling, we only need to consider
 <statement><p>
 Below is the graph of the parametrized function <m>\vr(t)</m>. Let <m>s(t)</m> be the arclength along the curve from <m>\vr(0)</m> to <m>\vr(t)</m>.
 </p>
-
-<sidebyside>
+<sidebyside width="50">
 <image><latex-image>\begin{tikzpicture}
 \draw[thick] plot[domain=-4.5:1]({4-\x*\x/4},\x);
 \draw (4-1/16,-.5) node[vertex, label=right: $\vr(t+h)$](th){};
@@ -332,7 +331,7 @@ The two quantities you're labelling are related, but different.
 </p></hint>
 <answer>
 
-<sidebyside>
+<sidebyside width="50%">
 <image><latex-image>\begin{tikzpicture}
 \draw[thick] plot[domain=-4.5:1]({4-\x*\x/4},\x);
 \draw (4-1/16,-.5) node[vertex, label=right: $\vr(t+h)$](th){};
@@ -349,7 +348,7 @@ The red vector is <m>\vr(t+h)-\vr(t)</m>. The arclength of the segment indicated
 </p></answer>
 <solution>
 
-<sidebyside>
+<sidebyside width="50%">
 <image><latex-image>\begin{tikzpicture}
 \draw[thick] plot[domain=-4.5:1]({4-\x*\x/4},\x);
 \draw (4-1/16,-.5) node[vertex, label=right: $\vr(t+h)$](th){};
@@ -629,7 +628,8 @@ The integrand is even, so
 \text{arc length} &amp;= \int_0^1 \sqrt{4t^2+t^4}\ \dee{t}
 =\int_0^1 t\sqrt{4+t^2}\ \dee{t}
 =\Big[\tfrac{1}{3}{(4+t^2)}^{3/2}\Big]_0^1
-=\tfrac{1}{3}\big[5^{3/2}-8\big]
+</mrow><mrow>
+&amp;=\tfrac{1}{3}\big[5^{3/2}-8\big]
 </mrow>
 </md>
 </p>
@@ -663,7 +663,9 @@ the arclength of <m>\vr(t)</m> from <m>t=0</m> to <m>t=1</m> is
 </mrow><mrow>
 \diff{\vr}{t}(t)&amp;=\left(1,\sqrt{6}t,3t^2\right)
 </mrow><mrow>
-\left|\diff{\vr}{t}(t)\right|&amp;=\sqrt{1^2+(\sqrt{6}t)^2+(3t^2)^2}=\sqrt{1+6t^2+9t^4}=\sqrt{(3t^2+1)^2}=3t^2+1
+\left|\diff{\vr}{t}(t)\right|&amp;=\sqrt{1^2+(\sqrt{6}t)^2+(3t^2)^2}=\sqrt{1+6t^2+9t^4}
+</mrow><mrow>
+&amp;=\sqrt{(3t^2+1)^2}=3t^2+1
 </mrow><mrow>
 \int_{0}^1\left| \diff{\vr}{t}(t)\right|\dee t&amp;=\int_0^1\left(3t^2+1 \right)\dee t=2
 </mrow>
@@ -852,25 +854,28 @@ the arclength of its path between <m>t = 1</m> and <m>t = 2</m> is
 	(b) <m>\frac{2}{27}\big(10\sqrt{10}-1\big)</m>
 </p></answer>
 
-<solution><p> (a)
-	As
-	<md>
+<solution>
+<p> (a)
+As
+<md>
 <mrow>
-	\vr'(t) &amp; = -\sin t\cos^2 t\,\hi + \sin^2 t\cos t\,\hi + 3\sin^2 t\cos t\,\hk
-	= \sin t\cos t\big(-\cos t\,\hi +\sin t\,\hj +3\sin t\,\hk\big)
+   \vr'(t) &amp; = -\sin t\cos^2 t\,\hi + \sin^2 t\cos t\,\hi + 3\sin^2 t\cos t\,\hk
+</mrow><mrow>
+	&amp;= \sin t\cos t\big(-\cos t\,\hi +\sin t\,\hj +3\sin t\,\hk\big)
 </mrow><mrow>
 	\diff{s}{t}(t) &amp; = |\sin t\cos t|\sqrt{\cos^2 t + \sin ^2 t + 9\sin^2 t}
 	= |\sin t\cos t|\sqrt{1+ 9\sin^2 t}
 	</mrow>
 </md>
-	the arclength from <m>t = 0</m> to <m>t = \frac{\pi}{2}</m> is
-	<md>
+the arclength from <m>t = 0</m> to <m>t = \frac{\pi}{2}</m> is
+<md>
 <mrow>
 	\int_0^{\pi/2} \diff{s}{t}(t)\,\dee{t}
 	&amp;=\int_0^{\pi/2} \sin t\cos t \sqrt{1+ 9\sin^2 t}\,\dee{t}
 </mrow><mrow>
-	&amp;=\frac{1}{18}\int_1^{10} \sqrt{u}\ \dee{u} \qquad
-	\text{with } u = 1+ 9\sin^2 t,\ \dee{u}  = 18\sin t\cos t\,\dee{t}
+	&amp;=\frac{1}{18}\int_1^{10} \sqrt{u}\ \dee{u} 
+</mrow><mrow>
+	&amp;\hskip0.5in\text{with } u = 1+ 9\sin^2 t,\ \dee{u}  = 18\sin t\cos t\,\dee{t}
 </mrow><mrow>
 	&amp;=\frac{1}{18}\Big[\frac{2}{3}u^{3/2}\Big]_1^{10}
 </mrow><mrow>
@@ -884,10 +889,11 @@ the arclength of its path between <m>t = 1</m> and <m>t = 2</m> is
 <mrow>
 	\int_0^{\pi} \diff{s}{t}(t)\,\dee{t}
 	&amp;=\int_0^{\pi} |\sin t\cos t| \sqrt{1+ 9\sin^2 t}\,\dee{t}
-	\qquad\text{Don't forget the absolute value signs!}
+</mrow><mrow>&amp;\hskip0.5in\text{Don't forget the absolute value signs!}
 </mrow><mrow>
 	&amp;=2\int_0^{\pi/2} |\sin t\cos t| \sqrt{1+ 9\sin^2 t}\,\dee{t}
-	= 2\int_0^{\pi/2} \sin t\cos t \sqrt{1+ 9\sin^2 t}\,\dee{t}
+</mrow><mrow>
+        &amp;= 2\int_0^{\pi/2} \sin t\cos t \sqrt{1+ 9\sin^2 t}\,\dee{t}
 	</mrow>
 </md>
 	since the integrand is invariant under <m>t\rightarrow\pi-t</m>. So the arc length
@@ -1071,11 +1077,14 @@ Does <m>\Gamma</m> intersect <m>E</m> at right angles? Why or why not?
 
 <solution><p>
 (a) The curve intersects <m>E</m> when
-<me>
+<md>
+<mrow>
 2\big(t\sin(\pi t)\big)^2+2\big(t\cos(\pi t)\big)^2 +\big(t^2\big)^2=24
-\iff 2t^2+t^4=24
-\iff (t^2-4)(t^2+6)=0
-</me>
+&amp;\iff 2t^2+t^4=24
+</mrow><mrow>
+&amp;\iff (t^2-4)(t^2+6)=0
+</mrow>
+</md>
 Since we need <m>t \gt 0</m>, the desired time is <m>t=2</m> and the corresponding point
 is <m>\vr(2)=2\,\hj+4\,\hk</m>.
 </p>
@@ -1464,7 +1473,8 @@ The question is already set up as an <m>xy</m>--plane, with the camera at the or
 </p></answer>
 <solution><p>
 The question is already set up as an <m>xy</m>--plane, with the camera at the origin, so the vector in the direction the camera is pointing is <m>(x(t),y(t))</m>. Let <m>\theta</m> be the angle the camera makes with the positive <m>x</m>-axis (due east). The camera, the object, and the due-east direction (positive <m>x</m>-axis) make a right triangle.
-</p><sidebyside>
+</p>
+<sidebyside width="50%">
 <image><latex-image>\begin{tikzpicture}
 \YEaaxis{.5}{4}{.5}{3}
 \draw[thick, - \gt ] (0,0)--(3,2)node[xshift=1mm,yshift=.67mm,vertex, label=right:{object}]{};
@@ -1480,7 +1490,9 @@ The question is already set up as an <m>xy</m>--plane, with the camera at the or
 <intertext>Differentiating implicitly with respect to <m>t</m>:</intertext><mrow>
 \sec^2\theta\,\diff{\theta}{t}&amp;=\frac{xy'-yx'}{x^2}
 </mrow><mrow>
-\diff{\theta}{t}&amp;=\cos^2\theta\left(\frac{xy'-yx'}{x^2}\right)=\left(\frac{x}{\sqrt{x^2+y^2}}\right)^2\left(\frac{xy'-yx'}{x^2}\right)=\frac{xy'-yx'}{{x^2+y^2}}
+\diff{\theta}{t}&amp;=\cos^2\theta\left(\frac{xy'-yx'}{x^2}\right)=\left(\frac{x}{\sqrt{x^2+y^2}}\right)^2\left(\frac{xy'-yx'}{x^2}\right)
+</mrow><mrow>
+&amp;=\frac{xy'-yx'}{{x^2+y^2}}
 </mrow>
 </md>
 </p></solution>
@@ -1518,12 +1530,13 @@ Define <m>\vu(t)=e^{\alpha t}\frac{d\vr}{dt}(t)</m>. Then
 Integrating both sides of this equation from <m>t=0</m> to <m>t=T</m> gives
 <md>
 <mrow>
-&amp;\vu(T)-\vu(0)=-g\frac{e^{\alpha T}-1}{\alpha}\hk
+\vu(T)-\vu(0)&amp;=-g\frac{e^{\alpha T}-1}{\alpha}\hk
 </mrow><mrow>
-&amp;\implies
-\vu(T)=\vu(0)-g\frac{e^{\alpha T}-1}{\alpha}\hk
+\implies
+\vu(T)&amp;=\vu(0)-g\frac{e^{\alpha T}-1}{\alpha}\hk
 =\frac{d\vr}{dt}(0)-g\frac{e^{\alpha T}-1}{\alpha}\hk
-=\vv_0-g\frac{e^{\alpha T}-1}{\alpha}\hk
+</mrow><mrow>
+&amp;=\vv_0-g\frac{e^{\alpha T}-1}{\alpha}\hk
 </mrow>
 </md>
 Substituting in <m>\vu(T)=e^{\alpha t}\frac{d\vr}{dt}(T)</m> and multiplying
@@ -1593,20 +1606,25 @@ particle pass through <m>(0,0,0)</m>. Justify your answer.
 for some constants <m>c_1</m>, <m>c_2</m>, <m>c_3</m>. To satisfy <m>\vv(0)=\llt 0,-1,1\rgt</m>,
 we need <m>c_1=0</m>, <m>c_2=0</m> and <m>c_3=1</m>. So
 <m>\vv(t)=\llt \sin t, -\cos t, 1\rgt</m>. Similarly,
-<me>
-\vr'(t)=\vv(t)=\llt \sin t,-\cos t,1\rgt
-\implies \vr(t)=\llt -\cos t+d_1, -\sin t+d_2, t+d_3\rgt
-</me>
+<md>
+<mrow>
+\vr'(t)=\vv(t)&amp;=\llt \sin t,-\cos t,1\rgt
+</mrow><mrow>&amp;\implies \vr(t)=\llt -\cos t+d_1, -\sin t+d_2, t+d_3\rgt
+</mrow>
+</md>
 for some constants <m>d_1</m>, <m>d_2</m>, <m>d_3</m>. To satisfy <m>\vr(0)=\llt -1,0,0\rgt</m>,
 we need <m>d_1=0</m>, <m>d_2=0</m> and <m>d_3=0</m>. So
 <m>\vr(t)=\llt -\cos t, -\sin t, t\rgt</m>.
 </p>
 
 <p>(b) To test for orthogonality, we compute the dot product
-<me>
-\vv(t)\cdot\va(t)=\llt \sin t, -\cos t, 1\rgt\cdot\llt \cos t,\sin t,0\rgt
-=\sin t\cos t-\cos t \sin t+1\times 0=0
-</me>
+<md>
+<mrow>
+\vv(t)\cdot\va(t)&amp;=\llt \sin t, -\cos t, 1\rgt\cdot\llt \cos t,\sin t,0\rgt
+</mrow><mrow>
+&amp;=\sin t\cos t-\cos t \sin t+1\times 0=0
+</mrow>
+</md>
 so <m>\vv(t)\perp\va(t)</m> for all <m>t</m>.
 </p>
 
@@ -1689,31 +1707,34 @@ are the same, the path of the particle lies on the cone <m>z^2=x^2+y^2</m>.
 </p>
 
 <p>(b) By definition,
-<md alignment="alignat">
-<mrow>{3}
-\text{velocity}&amp;=\vr'(t)&amp;&amp;= \big[\cos\big(\tfrac{\pi t}{2}\big)
+<md>
+<mrow>
+\text{velocity}&amp;=\vr'(t)
+</mrow><mrow>
+&amp;= \big[\cos\big(\tfrac{\pi t}{2}\big)
            -\tfrac{\pi t}{2}\sin\big(\tfrac{\pi t}{2}\big)\big]\hi
          +\big[\sin\big(\tfrac{\pi t}{2}\big)
            +\tfrac{\pi t}{2}\cos\big(\tfrac{\pi t}{2}\big)\big]\hj +\hk
 </mrow><mrow>
-\text{speed}&amp;=|\vr'(t)|&amp;&amp;=
-\sqrt{\big[\cos\big(\tfrac{\pi t}{2}\big)
+\text{speed}&amp;=|\vr'(t)|
+</mrow><mrow>
+&amp;=\sqrt{\big[\cos\big(\tfrac{\pi t}{2}\big)
            -\tfrac{\pi t}{2}\sin\big(\tfrac{\pi t}{2}\big)\big]^2
          +\big[\sin\big(\tfrac{\pi t}{2}\big)
            +\tfrac{\pi t}{2}\cos\big(\tfrac{\pi t}{2}\big)\big]^2 +1^2}
 </mrow><mrow>
-&amp; &amp;&amp;=
+&amp;=
    \Big[\cos^2\big(\tfrac{\pi t}{2}\big)
           -2\tfrac{\pi t}{2}\cos\big(\tfrac{\pi t}{2}\big)
                \sin\big(\tfrac{\pi t}{2}\big)
            +\big(\tfrac{\pi t}{2}\big)^2\sin^2\big(\tfrac{\pi t}{2}\big)
 </mrow><mrow>
-&amp; &amp;&amp;\hskip.2in         +\sin^2\big(\tfrac{\pi t}{2}\big)
+&amp;\hskip.2in         +\sin^2\big(\tfrac{\pi t}{2}\big)
            +2\tfrac{\pi t}{2}\cos\big(\tfrac{\pi t}{2}\big)
                \sin\big(\tfrac{\pi t}{2}\big)
   +\big(\tfrac{\pi t}{2}\big)^2\cos^2\big(\tfrac{\pi t}{2}\big) +1\Big]^{1/2}
 </mrow><mrow>
-&amp; &amp;&amp;=\sqrt{2+\frac{\pi^2 t^2}{4}}
+&amp; =\sqrt{2+\frac{\pi^2 t^2}{4}}
 </mrow>
 </md>
 </p>
