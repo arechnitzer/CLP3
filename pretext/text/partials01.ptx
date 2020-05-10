@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_limits">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title>Limits</title>
+<introduction>
+  <p>
+Before we really start, let's recall some useful notation.
+</p>
+
+<definition xml:id="notn_multivariable_functions">
+<statement><p>
+<ul>
+<li>
+<m>\bbbn</m> is the set <m>\{1,2,3,\cdots\}</m> of all natural numbers.
+</li>
+<li>
+<m>\bbbr</m> is the set of all real numbers.
+</li>
+<li>
+<m>\in</m> is read <q>is an element of</q>.
+</li>
+<li>
+<m>\notin</m> is read <q>is not an element of</q>.
+</li>
+<li>
+<m>\Set{A}{B}</m> is read <q>the set of all <m>A</m> such that <m>B</m></q>
+</li>
+<li>
+If <m>S</m> is a set and <m>T</m> is a subset of <m>S</m>, then <m>S\setminus T</m>
+ is <m>\Set{x\in S}{x\notin T}</m>, the set <m>S</m> with the elements of <m>T</m> removed.
+In particular, if  <m>S</m> is a set and <m>a</m> is an element of <m>S</m>,
+then <m>S\setminus\{a\}=\Set{x\in S}{x\ne\ a}</m> is the set <m>S</m> with the element <m>a</m> removed.
+</li>
+<li>
+If <m>n</m> is a natural number, <m>\bbbr^n</m> is used for both the
+set of <m>n</m>-component vectors  <m>\llt x_1,x_2,\cdots,x_n \rgt</m> and
+the set of  points <m>(x_1,x_2,\cdots,x_n)</m> with <m>n</m> coordinates.
+</li>
+<li>
+If <m>S</m> and <m>T</m> are sets, then <m>f:S\rightarrow T</m> means that
+<m>f</m> is a function which assigns to each element of <m>S</m> an element of <m>T</m>.
+The set <m>S</m> is called the domain of <m>f</m>.
+</li>
+<li>
+ <m>[a,b]=\Set{x\in\bbbr}{a\le x\le b}</m> \qquad
+ <m>(a,b]=\Set{x\in\bbbr}{a \lt  x\le b}</m> \\
+ <m>[a,b)=\Set{x\in\bbbr}{a\le x \lt  b}</m> \qquad
+ <m>\!(a,b)=\Set{x\in\bbbr}{a \lt  x \lt  b}</m>
+</li>
+</ul>
+</p></statement>
+</definition>
+
+<p>The definition of the limit of a function of more than one
+variable looks just like the definition
+<fn>Definition 1.3.3 in the CLP-1 text.</fn>
+</p>
+
+<p>of the limit of a function of one variable.
+</p>
+
+<p>Very roughly speaking
+<md>
+<mrow>
+  \lim_{\vx\to \va} f(\vx) = \vL
+</mrow>
+</md>
+if <m>f(\vx)</m> approaches  <m>\vL</m> whenever <m>\vx</m> approaches <m>\va</m>.
+Here is a more careful definition of limit.
+</p>
+
+<definition><title>Limit</title>
+<statement><p>xml:id="def_limit"
+Let
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>[<m>\circ</m>]
+<m>m</m>, <m>n</m> be natural numbers
+</li>
+<li>[<m>\circ</m>]
+<m>D</m> be a subset of <m>\bbbr^m</m>
+</li>
+<li>[<m>\circ</m>]
+<m>\va\in D</m>
+</li>
+<li>[<m>\circ</m>]
+<m>f:D\setminus\{\va\}\rightarrow\bbbr^n</m>
+</li>
+<li>[<m>\circ</m>]
+<m>\vL\in\bbbr^n</m>
+</li>
+</ul>
+  We write
+<md>
+<mrow>
+  \lim_{\vx\to \va} f(\vx) = \vL
+</mrow>
+</md>
+if, no matter how small a number <m>\veps \gt 0</m> you pick, the value of <m>f(\vx)</m>
+is within a distance <m>\veps</m> of <m>\vL</m>, whenever <m>\vx</m> is sufficiently
+close to <m>\va</m> (i.e. within some nonzero distance of <m>\va</m>),
+</p>
+
+<p>without
+<fn>You may find the condition <q>without  being exactly <m>\va</m></q>
+a little strange, but there is a good reason for it, which we have already seen in Calculus I. In the definition
+  <m>f'(x) = \lim\limits_{x\rightarrow a \frac{f(x)-f(a)}{x-a}</m>,
+the function whose limit is being taken, namely  <m>\frac{f(x)-f(a)}{x-a}</m>,
+is not defined at all at <m>x=a</m>. This will again happen when we define
+derivatives of functions of more than one variable.
+</fn>
+being exactly <m>\va</m>.
+</p>
+</statement>
+</definition>
+
+<p>
+Now that we have extended the definition of limit, we can extend the definition
+of continuity.
+</p>
+
+<definition xml:id="def_continuity"><title>Continuity</title>
+<statement><p>
+Let
+<ul>
+<li>
+<m>m</m>, <m>n</m> be natural numbers
+</li>
+<li>
+<m>D</m> be a subset of <m>\bbbr^m</m>
+</li>
+<li>
+<m>\va\in D</m>
+</li>
+<li>
+<m>f:D\rightarrow\bbbr^n</m>
+</li>
+</ul>
+<ol label="a">
+<li>
+The function <m>f</m> is continuous at a point <m>\va</m> if
+<me>
+\lim_{\vx\to \va} f(\vx) = f(\va)
+</me>
+</li>
+<li>
+The function <m>f</m> is continuous on the set <m>D</m> if it is continuous at
+every point of <m>D</m>.
+</li>
+</ol>
+</p></statement>
+</definition>
+
+<p>
+Here are a few very simple examples. There will be some more substantial examples later <mdash/> after, as we did in the CLP-1 text, we build some tools
+that can be used to build complicated limits from simpler ones.
+</p>
+
+<example xml:id="eg_trivial_limits">
+<p>
+<ol label="a">
+<li>
+If <m>f(x,y)</m> is the constant function which always takes the value <m>L</m>,
+then
+<me>
+\lim_{(x,y)\to(a,b)} f(x,y) = L
+</me>
+</li>
+<li>
+If <m>f:\bbbr^2\rightarrow\bbbr^2</m> is defined by <m>f(x,y) = (x,y)</m>,
+then
+<me>
+\lim_{(x,y)\to(a,b)} f(x,y) = (a,b)
+</me>
+</li>
+<li>
+By definition, as <m>(x,y)</m> approaches <m>(a,b)</m>, <m>x</m> approaches <m>a</m>
+and <m>y</m> approaches <m>b</m>, so that
+if <m>f:\bbbr^2\rightarrow\bbbr</m> is defined by <m>f(x,y) = x</m>,
+then
+<me>
+\lim_{(x,y)\to(a,b)} f(x,y) = a
+</me>
+Similarly, if <m>g:\bbbr^2\rightarrow\bbbr</m> is defined by <m>g(x,y) = y</m>,
+then
+<me>
+\lim_{(x,y)\to(a,b)} g(x,y) = b
+</me>
+</li>
+</ol>
+</p>
+
+</example>
+
+
+<p>Limits of multivariable functions have much the same
+computational properties as limits of functions of one variable.
+The following theorem summarizes a bunch of them. For simplicity,
+it concerns primarily real valued functions. That is, functions that output
+real numbers as opposed to vectors. However it does contain one
+vector valued function. The function <m>\vX</m> in the theorem takes as input
+an <m>m</m>-component vector and returns another <m>m</m>-component vector.
+We will not deal with many vector valued functions here in CLP-3,
+but we will see a lot in CLP-4.
+</p>
+
+<theorem xml:id="thm_LIMpptiesB"><title>Arithmetic, and Other, Properties of Limits</title>
+<statement><p>
+Let
+<ul>
+<li>
+<m>m</m> be a natural number
+</li>
+<li>
+<m>D</m> be a subset of <m>\bbbr^m</m>
+</li>
+<li>
+<m>\va,\vb\in D</m>
+</li>
+<li>
+<m>c,F,G\in\bbbr</m>
+</li>
+</ul>
+and
+<me>
+f,g:D\setminus\{\va\}\rightarrow\bbbr\qquad
+\vX:\bbbr^m\setminus\{\vb\}\rightarrow D\setminus\{\va\}\qquad
+\ga:\bbbr\rightarrow\bbbr
+</me>
+Assume that
+<me>
+\lim_{\vx\to \va} f(\vx) = F\qquad
+\lim_{\vx\to \va} g(\vx) = G\qquad
+\lim_{\vy\to \vb} \vX(\vy) = \va\qquad
+\lim_{t\to F} \ga(t) = \ga(F)
+</me>
+Then
+<ol label="a">
+<li>
+<m>\lim\limits_{\vx\rightarrow \va}\big[f(\vx)+g(\vx)\big]
+         =F+G</m>\\
+\null\qquad<m>\lim\limits_{\vx\rightarrow \va}\big[f(\vx)-g(\vx)\big]
+         =F-G</m>
+</li>
+<li>\qquad
+<m>\lim\limits_{\vx\rightarrow \va} f(\vx)\,g(\vx)
+         =FG</m>\\
+\null\qquad<m>\lim\limits_{\vx\rightarrow \va} cf(\vx)
+         =cF</m>
+</li>
+<li>\qquad
+<m>\lim\limits_{\vx\rightarrow \va} \frac{f(\vx)}{g(\vx)}
+         =\frac{F}{G}</m> if <m>G\ne 0</m>
+</li>
+<li>\qquad
+<m>\lim\limits_{\vy\rightarrow \vb} f\big(\vX(\vy)\big)
+         =F</m>
+</li>
+<li>\qquad
+<m>\lim\limits_{\vx\rightarrow \va} \ga\big(f(\vx)\big)
+         =\ga(F)</m>
+</li>
+</ol>
+</p></statement>
+</theorem>
+
+<p>
+This shows that multivariable limits interact very nicely with arithmetic,
+just like single variable limits did. Also recall, from Theorem 1.6.8 in the
+CLP-1 text,
+</p>
+
+<theorem xml:id="thm_one_d_continuity">
+<statement><p>
+The following functions are continuous everywhere in their domains
+<ul>
+<li> polynomials, rational functions
+</li>
+<li> roots and powers
+</li>
+<li> trig functions and their inverses
+</li>
+<li> exponential and the logarithm
+</li>
+</ul>
+</p></statement>
+</theorem>
+
+<example xml:id="eg_LIMtwodA">
+<p>
+In this example we evaluate
+<me>
+\lim_{(x,y)\rightarrow (2,3)} \frac{x+\sin y}{x^2y^2+1}
+</me>
+as a typical application of Theorem <xref ref="thm_LIMpptiesB"/>.
+Here <q><m>\eqover{a}</m></q> means that part (a) of Theorem <xref ref="thm_LIMpptiesB"/>
+justifies that equality. Start by computing separately the limits of
+the numerator and denominator.
+<md>
+<mrow>
+\lim_{(x,y)\rightarrow (2,3)} \big(x+\sin y\big)\
+  &amp;\eqover{a} \lim_{(x,y)\rightarrow (2,3)} x
+                +\lim_{(x,y)\rightarrow (2,3)}\sin y
+</mrow><mrow>
+  &amp;\eqover{e} \lim_{(x,y)\rightarrow (2,3)} x
+                +\sin\Big(\lim_{(x,y)\rightarrow (2,3)} y\Big)
+</mrow><mrow>
+  &amp;=\  2+\sin 3
+</mrow><mrow>
+\lim_{(x,y)\rightarrow (2,3)} \big(x^2y^2+1\big)\
+  &amp;\eqover{a}\  \lim_{(x,y)\rightarrow (2,3)} x^2y^2
+                +\lim_{(x,y)\rightarrow (2,3)}1
+</mrow><mrow>
+  &amp;\eqover{b}\  \Big(\lim_{(x,y)\rightarrow (2,3)} x\Big)
+              \Big(\lim_{(x,y)\rightarrow (2,3)} x\Big)
+               \Big(\lim_{(x,y)\rightarrow (2,3)} y\Big)
+              \Big(\lim_{(x,y)\rightarrow (2,3)} y\Big)+1
+</mrow><mrow>
+  &amp;=\  2^23^2+1
+</mrow><mrow>
+</mrow>
+<intertext>Since the limit of the denominator is nonzero, we can simply divide.</intertext><mrow>
+\lim_{(x,y)\rightarrow (2,3)} \frac{x+\sin y}{x^2y^2+1}\
+&amp;\eqover{c}\ \frac
+              {\lim\limits_{(x,y)\rightarrow (2,3)}(x+\sin y)}
+                 {\lim\limits_{(x,y)\rightarrow (2,3)}(x^2y^2+1)}
+</mrow><mrow>
+&amp;=\ \frac{2+\sin 3}{37}
+</mrow>
+</md>
+Here we have used that <m>\sin x</m> is a continuous function.
+</p>
+
+</example>
+
+<p>While the CLP-1 text's Definition 1.3.3 of the limit of a function
+of one variable, and our Definition <xref ref="def_limit"/> of the limit
+of a multivariable function look virtually identical, there is a
+substantial practical difference between the two. In dimension one, you
+can approach a point from the left or from the right and that's it.
+There are only two possible directions of approach. In two or more dimensions
+there is <q>much more room</q> and there are infinitely many possible
+types of approach.  One can even spiral in to a point. See the
+middle and right hand figures below.
+</p>
+<sidebyside>
+<image source="problems/figs/room1.pdf"/>
+<image source="problems/figs/room2.pdf"/>
+<image source="problems/figs/room3.pdf"/>
+</sidebyside>
+
+
+<p>The next few examples illustrate the impact that the<q>extra room</q>
+in dimensions greater than one has on limits.
+</p>
+
+<example xml:id="ex_LIMtwodB">
+<p>
+As a second example, we consider
+<m>\lim\limits_{(x,y)\rightarrow (0,0)}\frac{x^2y}{x^2+y^2}</m>.
+In this example, both the numerator, <m>x^2y</m>, and the denominator,
+<m>x^2+y^2</m>, tend to zero as <m>(x,y)</m> approaches <m>(0,0)</m>, so we have to be more
+careful.
+</p>
+
+<p> A good way to see the behaviour of a function <m>f(x,y)</m>
+when <m>(x,y)</m> is close to <m>(0,0)</m> is to switch to the polar coordinates,
+<m>r,\theta</m>, that are defined by
+</p>
+<sidebyside width="">
+<p><md>
+<mrow>
+x&amp;=r\cos\theta
+</mrow><mrow>
+y&amp;=r\sin\theta
+</mrow><mrow>
+</mrow>
+</md></p>
+<image source="problems/figs/polar.pdf"/>
+</sidebyside>
+
+<p>
+The points <m>(x,y)</m> that are close to <m>(0,0)</m> are those with small <m>r</m>,
+regardless of what <m>\theta</m> is.
+Recall that <m>\lim\limits_{{(x,y)\rightarrow (0,0)}} f(x,y)=L</m> when
+<m>f(x,y)</m> approaches <m>L</m> as <m>(x,y)</m> approaches <m>(0,0)</m>.
+Substituting <m>x=r\cos\theta</m>, <m>y=r\sin\theta</m> into that statement turns it into
+the statement that <m>\lim\limits_{{(x,y)\rightarrow (0,0)}} f(x,y)=L</m> when
+<m>f(r\cos\theta,r\sin\theta)</m> approaches <m>L</m> as <m>r</m> approaches <m>0</m>.
+For our current example
+<md>
+<mrow>
+\frac{x^2y}{x^2+y^2}
+=\frac{(r\cos\theta)^2(r\sin\theta)}{r^2}
+=r\cos^2\theta\sin\theta
+</mrow>
+</md>
+As <m>\big|r\cos^2\theta\sin\theta\big|\le r\rightarrow 0</m> when <m>r\rightarrow 0</m>
+(regardless of what <m>\theta</m> does as <m>r\rightarrow 0</m>) we have
+<me>
+\lim\limits_{(x,y)\rightarrow (0,0)}\frac{x^2y}{x^2+y^2}=0
+</me>
+</p></example>
+
+<example>
+<p>xml:id="ex_LIMtwodC"
+As a third example, we consider
+<m>\lim\limits_{(x,y)\rightarrow (0,0)}\frac{x^2-y^2}{x^2+y^2}</m>.
+Once again, the best way to see the behaviour of
+<m>f(x,y)=\frac{x^2-y^2}{x^2+y^2}</m> for <m>(x,y)</m> close to <m>(0,0)</m> is to
+switch to polar coordinates.
+<me>
+f(x,y)=\frac{x^2-y^2}{x^2+y^2}=\frac{(r\cos\theta)^2-(r\sin\theta)^2}{r^2}
+  =\cos^2\theta-\sin^2\theta
+  =\cos(2\theta)
+</me>
+Note that, this time, <m>f</m> is independent of <m>r</m> but does depend on <m>\theta</m>.
+Here is a greatly magnified sketch of a number of level curves for <m>f(x,y)</m>.
+</p>
+<sidebyside>
+<image source="problems/figs/polarD.pdf"/>
+</sidebyside>
+<p>
+Observe that
+<ul>
+<li>[<m>\circ</m>] as <m>(x,y)</m> approaches <m>(0,0)</m> along the ray with
+<m>2\theta =30^\circ</m>, <m>f(x,y)</m> approaches the value <m>\frac{\sqrt{3}}{2}</m>
+(and in fact <m>f(x,y)</m> takes the value <m>\cos(30^\circ)=\frac{\sqrt{3}}{2}</m>
+at every point of that ray)
+</li>
+<li>[<m>\circ</m>] as <m>(x,y)</m> approaches <m>(0,0)</m> along the ray with
+<m>2\theta =60^\circ</m>, <m>f(x,y)</m> approaches the value <m>\frac{1}{2}</m>
+(and in fact <m>f(x,y)</m> takes the value <m>\cos(60^\circ)=\frac{1}{2}</m>
+at every point of that ray)
+</li>
+<li>[<m>\circ</m>] as <m>(x,y)</m> approaches <m>(0,0)</m> along the ray with
+<m>2\theta =90^\circ</m>, <m>f(x,y)</m> approaches the value <m>0</m>
+(and in fact <m>f(x,y)</m> takes the value <m>\cos(90^\circ)=0</m>
+at every point of that ray)
+</li>
+<li>[<m>\circ</m>] and so on
+</li>
+</ul>
+So there is not single number <m>L</m> such that <m>f(x,y)</m> approaches
+<m>L</m> as <m>r=|(x,y)|\rightarrow 0</m>, no matter what the direction of
+approach is. The limit
+<m>\lim\limits_{(x,y)\rightarrow (0,0)}\frac{x^2-y^2}{x^2+y^2}</m>
+does not exist.
+</p>
+
+<p>Here is another way to come to the same conclusion.
+Pick any really small positive number, like for example
+<m>10^{-137}</m>.  For every number <m>F</m> between <m>-1</m> and <m>1</m>, like
+for example <m>F=\frac{\sqrt{3}}{2}</m>, <m>f(x,y)</m> takes the value <m>F</m>
+for some <m>(x,y)</m> obeying <m>|(x,y)| \lt 10^{-137}</m>. That is true regardless
+of which really small number you picked. So <m>f(x,y)=\frac{x^2-y^2}{x^2+y^2}</m>
+does not approach any single value as <m>r=|(x,y)|</m> approaches <m>0</m>
+and we conclude that
+<m>\lim\limits_{(x,y)\rightarrow (0,0)}\frac{x^2-y^2}{x^2+y^2}</m>
+does not exist.
+</p>
+
+</example>
+
+
+</introduction>
+<subsection><title>Optional <mdash/> A Nasty Limit That Doesn't Exist</title>
+
+<example xml:id="eg_nasty_limit">
+<p>
+In this example we study the behaviour of the function
+<me>
+f(x,y)=\begin{cases}
+      \frac{(2x-y)^2}{x-y} &amp; \text{if } x\ne y\\
+                  0 &amp; \text{if }  x=y
+        \end{cases}
+</me>
+as <m>(x,y)\rightarrow (0,0)</m>.
+Here is a graph of the level curve, <m>f(x,y)=-3</m>, for this function.
+</p>
+<sidebyside>
+<image source="problems/figs/noLimS.pdf"/>
+</sidebyside>
+<p>
+Here is a larger graph of level curves, <m>f(x,y)=c</m>, for
+various values of the constant <m>c</m>.
+</p>
+<sidebyside>
+<image source="problems/figs/noLim.pdf"/>
+</sidebyside>
+<p>
+As before, it helps to convert to polar coordinates <mdash/> it is a good
+approach
+<fn>Not just a pun.</fn>
+.
+In polar coordinates
+<me>
+f(r\cos\theta,r\sin\theta)
+=\begin{cases}
+             r\frac{(2\cos\theta-\sin\theta)^2}{\cos\theta-\sin\theta} &amp;
+               \text{if } \cos\theta\ne\sin\theta
+               \\
+                  0 &amp; \text{if } \cos\theta=\sin\theta
+ \end{cases}
+</me>
+If we approach the origin along any fixed ray <m>\theta=\text{const}</m>,
+then <m>f(r\cos\theta,r\sin\theta)</m> is the constant
+<m>\frac{(2\cos\theta-\sin\theta)^2}{\cos\theta-\sin\theta}</m>
+(or <m>0</m> if <m>\cos\theta=\sin\theta</m>) times <m>r</m> and so approaches zero as
+<m>r</m> approaches zero. You can see this in the figure below, which shows
+the level curves again, with the rays <m>\theta=\frac{1}{8}\pi</m>
+and <m>\theta=\frac{3}{16}\pi</m> superimposed.
+\vadjust{
+</p>
+<sidebyside>
+<image source="problems/figs/noLimA.pdf"/>
+</sidebyside>
+<p>
+}
+If you move towards the origin on either of those rays, you first cross
+the <m>f=3</m> level curve, then the <m>f=2</m> level curve, then the <m>f=1</m> level curve, then the <m>f=\frac{1}{2}</m> level curve, and so on.
+</p>
+
+<p>That <m>f(x,y)\rightarrow 0</m> as <m>(x,y)\rightarrow (0,0)</m> along any fixed ray
+is suggestive, but <em>does not imply</em> that the limit exists and is zero.
+Recall that to have <m>\lim_{(x,y)\rightarrow(0,0)}f(x,y)=0</m>,
+we need <m>f(x,y)\rightarrow 0</m> no matter how <m>(x,y)\rightarrow (0,0)</m>.
+It is not sufficient to check only straight line approaches.
+</p>
+
+<p>In fact, the limit of <m>f(x,y)</m> as <m>(x,y)\rightarrow (0,0)</m> does not exist.
+A good way to see this is to observe that if you fix any <m>r \gt 0</m>,
+no matter how small, <m>f(x,y)</m>
+takes all values from <m>-\infty</m> to <m>+\infty</m> on the circle <m>x^2+y^2=r^2</m>.
+You can see this in the figure below, which shows the level
+curves yet again, with a circle <m>x^2+y^2=r^2</m> superimposed.
+For every single <m>-\infty  \lt  c  \lt \infty</m>, the level curve <m>f(x,y)=c</m> crosses
+the circle.
+\vadjust{
+</p>
+<sidebyside>
+<image source="problems/figs/noLimB.pdf"/>
+</sidebyside>
+<p>
+}
+Consequently there is no one number <m>L</m> such that <m>f(x,y)</m> is close to <m>L</m>
+whenever <m>(x,y)</m> is sufficiently close to <m>(0,0)</m>. The limit
+<m>\lim_{(x,y)\rightarrow(0,0)} f(x,y)</m> does not exist.
+</p>
+
+<p>Another way to see that  <m>f(x,y)</m> does not have any limit
+as <m>(x,y)\rightarrow (0,0)</m> is to show that <m>f(x,y)</m> does not have  a limit
+as <m>(x,y)</m> approaches <m>(0,0)</m> along some specific curve. This can be done
+by picking a curve  that makes the denominator,
+<m>x-y</m>, tend to zero very quickly. One such curve is <m>x-y=x^3</m> or, equivalently,
+<m>y=x-x^3</m>.  Along this
+curve, for <m>x\ne 0</m>,
+<md>
+<mrow>
+f(x,x-x^3)&amp;=\frac{{(2x-x+x^3)}^2}{x-x+x^3}
+=\frac{{(x+x^3)}^2}{x^3}
+</mrow><mrow>
+&amp;=\frac{{(1+x^2)}^2}{x}\longrightarrow
+\begin{cases}+\infty &amp; \text{as $x\rightarrow 0$ with } x \gt 0
+  \\
+       -\infty &amp; \text{as $x\rightarrow 0$ with } x \lt 0
+\end{cases}
+</mrow>
+</md>
+</p>
+
+<p>The choice of the specific power <m>x^3</m> is not important. Any power
+<m>x^p</m> with <m>p \gt 2</m> will have the same effect.
+</p>
+
+<p>If we send <m>(x,y)</m> to  <m>(0,0)</m>
+along the curve  <m>x-y=ax^2</m> or, equivalently, <m>y=x-ax^2</m>, where <m>a</m> is a
+nonzero constant,
+<me>
+\lim_{x\rightarrow 0}f(x,x-ax^2)
+=\lim_{x\rightarrow 0}\frac{{(2x-x+ax^2)}^2}{x-x+ax^2}
+=\lim_{x\rightarrow 0}\frac{{(x+ax^2)}^2}{ax^2}
+=\lim_{x\rightarrow 0}\frac{{(1+ax)}^2}{a}
+=\frac{1}{a}
+</me>
+This limit depends on the choice of the constant <m>a</m>. Once again, this
+proves that <m>f(x,y)</m> does not have a limit as <m>(x,y)\rightarrow (0,0)</m>.
+</p></example>
+
+</subsection>
+</section>

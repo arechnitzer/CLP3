@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chap_partials">
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+<title>Partial Derivatives</title>
+<introduction>
+  <p>In this chapter we are going to generalize the definition of
+  <q>derivative</q> to functions of more than one variable and then we are
+  going to use those derivatives. We will parallel the development
+  in Chapters 1 and 2 of the CLP-1 text. We shall
+  <ul>
+  <li>
+  define limits and continuity of functions of more than one variable
+  (Definitions <xref ref="def_limit"/> and <xref ref="def_continuity"/>) and then
+  </li>
+  <li>
+  study the properties of limits in more than one dimension
+  (Theorem <xref ref="thm_LIMpptiesB"/>) and then
+  </li>
+  <li>
+  define derivatives of functions of more than one variable
+  (Definition <xref ref="def_partials"/>).
+  </li>
+  </ul>
+  We are going to be able to speed things up considerably by recycling
+  what we have already learned in the CLP-1 text.
+  </p>
+
+  <p>We start by generalizing the definition
+  of <q>limit</q> to functions of more than one variable.
+  </p>
+</introduction>
+<xi:include href="./partials01.ptx" />
+<xi:include href="./partials02.ptx" />
+<xi:include href="./partials03.ptx" />
+<xi:include href="./partials04.ptx" />
+<xi:include href="./partials05.ptx" />
+<xi:include href="./partials06.ptx" />
+<xi:include href="./partials07.ptx" />
+<xi:include href="./partials08.ptx" />
+<xi:include href="./partials09.ptx" />
+<xi:include href="./partials10.ptx" />
+ </chapter>

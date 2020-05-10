@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_Lagrange">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title>Lagrange Multipliers</title>
+
+  <p>In the last section we had to solve a number of problems
+  of the form <q>What is the maximum value of the function <m>f</m>
+  on the curve <m>C</m>?</q> In those examples, the curve <m>C</m> was simple
+  enough that we could reduce the problem to finding the maximum
+  of a function of one variable. For more complicated problems
+  this reduction might not be possible. In this section, we introduce
+  another method for solving such problems. First some nomenclature.
+  </p>
+
+  <p><definition>
+  <statement><p>xml:id="def_constrained_optimization"
+  A problem of the form
+  <ul>
+  <li> <q>Find the maximum and minimum values of the function
+  <m>f(x,y)</m> for <m>(x,y)</m> on the curve <m>g(x,y)=0</m>.</q>
+  </li>
+  </ul>
+  is one type of <em>constrained optimization</em> problem. The function
+  being maximized or minimized, <m>f(x,y)</m>, is called the <em>objective
+  function</em>. The function, <m>g(x,y)</m>, whose zero set is the curve of interest,
+  is called the <em>constraint function</em>.
+  </p></statement>
+  </definition>
+  </p>
+
+  <p>Such problems are quite common. As we said above, we have already
+  encountered them in the last section on absolute maxima and minima,
+  when we were looking for the extreme values of a function on the
+  boundary of a region. In economics
+  <q>utility functions</q> are used to model the relative <q>usefulness</q>
+  or <q>desirability</q> or <q>preference</q>
+  of various economic choices. For example, a utility function <m>U(w,\ka)</m>
+  might specify the relative level of satisfaction a consumer would get
+  from purchasing a quantity <m>w</m> of wine and <m>\ka</m> of coffee. If the consumer
+  wants to spend \$100 and wine costs \$20 per unit
+  and coffee costs \$5 per unit, then the consumer would like to maximize
+  <m>U(w,\ka)</m> subject to the constraint that <m>20w+5\ka=100</m>.
+  </p>
+
+  <p>To this point we have always solved such constrained optimization
+  problems either by
+  <ul>
+  <li> solving <m>g(x,y)=0</m> for <m>y</m> as a function of <m>x</m> (or for
+  <m>x</m> as a function of <m>y</m>) or by
+  </li>
+  <li> parametrizing the curve <m>g(x,y)=0</m>. This means writing all points
+  of the curve in the form <m>\big(x(t), y(t)\big)</m> for some functions <m>x(t)</m>
+  and <m>y(t)</m>. For example we used <m>x(t)=\cos t</m>, <m>y(t)=\sin t</m> as
+  a parametrization of the circle <m>x^2+y^2=1</m> in Example <xref ref="eg_MXMNabsA"/>.
+  </li>
+  </ul>
+  However quite often the function <m>g(x,y)</m> is so complicated that
+  one cannot explicitly solve <m>g(x,y)=0</m> for <m>y</m> as a function  of <m>x</m> or
+  for <m>x</m> as a function of <m>y</m> and one also cannot explicitly
+  parametrize <m>g(x,y)=0</m>. Or sometimes you can, for example, solve <m>g(x,y)=0</m>
+  for <m>y</m> as a function of <m>x</m>, but the resulting solution is so
+  complicated that it is really hard, or even virtually impossible, to work
+  with. Direct attacks become even harder in higher dimensions when, for example,
+  we wish to optimize a function <m>f(x,y,z)</m> subject to a constraint
+  <m>g(x,y,z)=0</m>.
+  </p>
+
+  <p>There is another procedure called the method of
+  <q>Lagrange
+  <fn>Joseph-Louis Lagrange was actually born
+  Giuseppe Lodovico Lagrangia in Turin, Italy in 1736. He moved to Berlin
+  in 1766 and then to Paris in 1786. He eventually acquired French citizenship
+  and then the French claimed he was a French mathematician, while the
+  Italians continued to claim that he was an Italian mathematician.
+  </p>
+
+  <p></fn>
+   multipliers</q>
+  that comes to our rescue in these scenarios. Here is the three dimensional
+  version of the method. There are obvious analogs is other dimensions.
+  </p>
+
+  <p><theorem><title>Lagrange Multipliers</title>
+  <statement><p>xml:id="thm_Lagrange"
+  Let <m>f(x,y,z)</m> and <m>g(x,y,z)</m>  have continuous first partial derivatives in a
+  region of <m>\bbbr^3</m> that contains the surface <m>S</m> given by the equation
+  <m>g(x,y,z)=0</m>. Further assume that <m>\vnabla g(x,y,z)\ne\vZero</m> on <m>S</m>.
+  </p>
+
+  <p>\medskip
+  </p>
+
+  <p>If <m>f</m>, restricted
+  to the surface <m>S</m>, has a local extreme value at the point <m>(a,b,c)</m> on <m>S</m>,
+  then there is a real number <m>\la</m> such that
+  <md>
+  <mrow>
+  \vnabla f(a,b,c) &amp;= \la\vnabla g(a,b,c)
+  </mrow><mrow>
+  </mrow>
+  <intertext>that is</intertext><mrow>
+  f_x(a,b,c) &amp;= \la\, g_x(a,b,c)
+  </mrow><mrow>
+  f_y(a,b,c) &amp;= \la\, g_y(a,b,c)
+  </mrow><mrow>
+  f_z(a,b,c) &amp;= \la\, g_z(a,b,c)
+  </mrow>
+  </md>
+  The number <m>\la</m> is called a <em>Lagrange multiplier</em>.
+  </p></statement>
+  </theorem>
+  </p>
+
+  <p><proof>
+  <p>
+  Suppose that <m>(a,b,c)</m> is a
+  point of <m>S</m> and that <m>f(x,y,z)\ge f(a,b,c)</m> for all points <m>(x,y,z)</m> on <m>S</m>
+  that are close to <m>(a,b,c)</m>. That is <m>(a,b,c)</m> is a local minimum for <m>f</m>
+  on <m>S</m>. Of course the argument for a local maximum is virtually identical.
+  </p>
+
+  <p>Imagine that we go for a walk on <m>S</m>, with the time <m>t</m> running, say,
+  from <m>t=-1</m> to <m>t=+1</m> and that at time <m>t=0</m> we happen to be exactly
+  at <m>(a,b,c)</m>. Let's say that our position is <m>\big(x(t),y(t),z(t)\big)</m>
+  at time <m>t</m>.
+  </p>
+
+  <p>Write
+  <me>
+  F(t) = f\big(x(t),y(t),z(t)\big)
+  </me>
+  So <m>F(t)</m> is the value of <m>f</m> that we see on our walk at time <m>t</m>. Then
+  for all <m>t</m> close to <m>0</m>, <m>\big(x(t),y(t),z(t)\big)</m> is close
+  to <m>\big(x(0),y(0),z(0)\big)=(a,b,c)</m> so that
+  <me>
+  F(0) = f\big(x(0),y(0),z(0)\big)
+       = f(a,b,c)
+       \le f\big(x(t),y(t),z(t)\big)
+       =F(t)
+  </me>
+  for all <m>t</m> close to zero. So <m>F(t)</m> has a local minimum at <m>t=0</m>
+  and consequently <m>F'(0)=0</m>.
+  </p>
+
+  <p>By the chain rule, Theorem <xref ref="thm_chainRule"/>,
+  <md>
+  <mrow>
+  F'(0) &amp;= \diff{}{t}f\big(x(t),y(t),z(t)\big)\Big|_{t=0}
+  </mrow><mrow>
+        &amp;=f_x\big(a,b,c\big) x'(0)+f_y\big(a,b,c\big) y'(0)
+                 +f_z\big(a,b,c\big) z'(0)
+         =0
+  \tag{<m>*</m>}</mrow>
+  </md>
+  We may rewrite this as a dot product:
+  <md>
+  <mrow>
+  &amp;0=F'(0)=\vnabla f(a,b,c)\cdot\llt x'(0)\,,\,y'(0)\,,\,z'(0)\rgt
+  </mrow><mrow>
+  &amp;\implies \vnabla f(a,b,c) \perp \llt x'(0)\,,\,y'(0)\,,\,z'(0)\rgt
+  </mrow>
+  </md>
+  This is true for all paths on <m>S</m> that pass through <m>(a,b,c)</m> at time <m>0</m>.
+  In particular it is true for all vectors <m>\llt x'(0)\,,\,y'(0)\,,\,z'(0)\rgt</m>
+  that are tangent to <m>S</m> at <m>(a,b,c)</m>. So <m>\vnabla f(a,b,c)</m> is perpendicular
+  to <m>S</m> at <m>(a,b,c)</m>.
+  </p>
+
+  <p>But we already know, by Theorem <xref ref="thm_tan_plane_G"/>.a,
+  that <m>\vnabla g(a,b,c)</m> is also perpendicular to <m>S</m> at <m>(a,b,c)</m>.
+  So <m>\vnabla f(a,b,c)</m> and <m>\vnabla g(a,b,c)</m> have to be parallel vectors.
+  That is,
+  <me>
+  \vnabla f(a,b,c) = \la \vnabla g(a,b,c)
+  </me>
+  for some number <m>\la</m>. That's the Lagrange multiplier rule of our
+  theorem.
+  </p></proof>
+  </p>
+
+  <p>So to find the maximum and minimum values of <m>f(x,y,z)</m> on a surface
+  <m>g(x,y,z)=0</m>, assuming that both the objective function <m>f(x,y,z)</m>
+  and constraint function <m>g(x,y,z)</m> have continuous first partial
+  derivatives and that <m>\vnabla g(x,y,z)\ne\vZero</m>, you
+  <ol>
+  <li> build up a list of candidate points <m>(x,y,z)</m> by finding all
+  solutions to the equations
+  <md>
+  <mrow>
+  f_x(x,y,z) &amp;= \la\, g_x(x,y,z)
+  </mrow><mrow>
+  f_y(x,y,z) &amp;= \la\, g_y(x,y,z)
+  </mrow><mrow>
+  f_z(x,y,z) &amp;= \la\, g_y(x,y,z)
+  </mrow><mrow>
+  g(x,y,z)&amp;=0
+  </mrow>
+  </md>
+  Note that there are four equations and four unknowns, namely <m>x</m>, <m>y</m>, <m>z</m>
+  and <m>\lambda</m>.
+  </li>
+  <li> Then you evaluate <m>f(x,y,z)</m> at each <m>(x,y,z)</m> on the list
+  of candidates.
+     The biggest of these candidate values is the absolute maximum
+     and the smallest of these candidate values is the absolute minimum.
+  </li>
+  </ol>
+  Another way to write the system of equations in the first step is
+  <me>
+  L_x(a,b,c,\la) = L_y(a,b,c,\la) = L_z(a,b,c,\la) = L_\la(a,b,c,\la) = 0
+  </me>
+  where <m>L(x,y,z,\la)</m> is the auxiliary function
+  <fn>We call <m>L</m> an auxiliary function because, while we use it to help solve the problem,
+  it doesn't actually appear in either the statement of the question or in
+  the answer itself.</fn>
+  </p>
+
+  <p><fn>Some people
+  use <m>L(x,y,z,\la)=f(x,y,z)+\la\, g(x,y,z)</m> instead. This amounts to renaming
+  <m>\la</m> to <m>-\la</m>. While we care that <m>\la</m> has a value, we don't care what it
+  is.</fn>
+  </p>
+
+  <p><me>
+  L(x,y,z,\la)=f(x,y,z)-\la\, g(x,y,z)
+  </me>
+  </p>
+
+  <p>Now for a bunch of examples.
+  </p>
+
+  <p><example>
+  <p>xml:id="eg_LagrangeA"
+  Find the maximum and minimum of the function <m>x^2-10x-y^2</m> on the
+  ellipse whose equation is <m>x^2+4y^2= 16</m>.
+  </p>
+
+  <p>\soln For this problem the objective function is <m>f(x,y) = x^2-10x-y^2</m>
+  and the constraint function is <m>g(x,y)=x^2+4y^2-16</m>.
+  To apply the method of Lagrange multipliers we need <m>\vnabla f</m>
+  and <m>\vnabla g</m>. So we start by computing the first order derivatives
+  of these functions.
+  <me>
+  f_x=2x-10\qquad
+  f_y=-2y\qquad
+  g_x=2x\qquad
+  g_y=8y
+  </me>
+  So, according to the method of Lagrange multipliers, we need to find all solutions to
+  <md>
+  <mrow>
+  2x-10&amp;=\la (2x)
+  </mrow><mrow>
+  -2y&amp;=\la (8y)
+  </mrow><mrow>
+  x^2+4y^2-16&amp;=0
+  </mrow>
+  </md>
+  Rearranging these equations gives
+  <md>
+  <mrow>
+       (\la-1)x&amp;=-5 \tag{E1}
+  </mrow><mrow>
+       (4\la+1)y&amp;=0 \tag{E2}
+  </mrow><mrow>
+     x^2+4y^2-16&amp;=0   \tag{E3}
+  </mrow>
+  </md>
+  From (E2), we see that we must have either
+  <m>\la=-\frac{1}{4}</m> or <m>y=0</m>.
+  <ul>
+  <li> If <m>\la=-\frac{1}{4}</m>, (E1) gives
+  <m>-\frac{5}{4}x=-5</m>, i.e. <m>x=4</m>, and then
+  (E3) gives <m>y=0</m>.
+  </li>
+  <li> If <m>y=0</m>, then (c) gives <m>x=\pm 4</m> (and while we could easily
+  use (E1) to solve for <m>\la</m>, we don't actually need <m>\la</m>).
+  </li>
+  </ul>
+  So the method of Lagrange multipliers, Theorem <xref ref="thm_Lagrange"/>
+  (actually the dimension two version of Theorem <xref ref="thm_Lagrange"/>), gives
+  that the only possible locations of the maximum and minimum of the function
+  <m>f</m> are <m>(4,0)</m> and <m>(-4,0)</m>. To complete the problem, we only have to
+  compute <m>f</m> at those points.
+  \renewcommand{\arraystretch}{1.3}
+       <tabular>
+  <row>
+  <cell>{|c|c|c|}
+       \hline
+         point
+         </cell><cell><m>(4,0)</m>
+         </cell><cell><m>(-4,0)</m> </cell>
+  </row><row>
+  <cell> \hline
+         value of <m>f</m>
+         </cell><cell><m>-24</m>
+         </cell><cell><m>56</m> </cell>
+  </row><row>
+  <cell> \hline
+         </cell><cell>min
+         </cell><cell>max  </cell>
+  </row><row>
+  <cell> \hline
+       </row>
+  </tabular>
+  \renewcommand{\arraystretch}{1.0}
+  Hence the maximum value of <m>x^2-10x-y^2</m> on the ellipse is <m>56</m>
+  and the minimum value is <m>-24</m>.
+  </p>
+
+  <p><sidebyside>
+  <image source="problems/figs/lagrangeA"/>
+  </sidebyside>
+  </p></example>
+  </p>
+
+  <p>In the previous example, the objective function and the constraint were
+  specified explicitly. That will not always be the case. In the next example,
+  we have to do a little geometry to extract them.
+  </p>
+
+  <p><example>
+  <p>xml:id="eg_LagrangeB"
+  Find the rectangle of largest area (with sides parallel to the coordinates
+  axes) that can be inscribed in the ellipse <m>x^2+2y^2=1</m>.
+  </p>
+
+  <p>\soln
+  Since this question is so geometric, it is best to start by drawing a
+  picture.
+  </p>
+
+  <p><sidebyside>
+  <image source="problems/figs/lagrangeB"/>
+  </sidebyside>
+  </p>
+
+  <p>Call the coordinates of the upper right corner of the rectangle
+  <m>(x,y)</m>, as in the figure above. The four corners of the rectangle are
+  <m>(\pm x, \pm y)</m> so the rectangle has width <m>2x</m> and height <m>2y</m>
+  and the objective function is <m>f(x,y) = 4xy</m>.  The constraint function
+  for this problem is <m>g(x,y)=x^2+2y^2-1</m>. Again, to use Lagrange
+  multipliers we need the first order partial derivatives.
+  <me>
+  f_x=4y\qquad
+  f_y=4x\qquad
+  g_x=2x\qquad
+  g_y=4y
+  </me>
+  So, according to the method of Lagrange multipliers, we need to find all solutions to
+  <md>
+  <mrow>
+  4y&amp;=\la (2x) \tag{E1}
+  </mrow><mrow>
+  4x&amp;=\la (4y) \tag{E2}
+  </mrow><mrow>
+  x^2+2y^2-1&amp;=0  \tag{E3}
+  </mrow>
+  </md>
+  Equation (E1) gives <m>y=\frac{1}{2}\la x</m>.
+  Substituting this into equation (E2) gives
+  <md>
+  <mrow>
+  4x=2\la^2 x \qquad\text{or}\qquad
+           2x\big(2-\la^2\big)=0
+  </mrow>
+  </md>
+  So (E2) is satisfied if either <m>x=0</m> or <m>\la=\sqrt{2}</m> or <m>\la=-\sqrt{2}</m>.
+  <ul>
+  <li> If <m>x=0</m>, then (E1) gives <m>y=0</m> too. But
+  <m>(0,0)</m> violates the constraint equation (E3). Note that, to have a
+  solution, <em>all</em> of the equations (E1), (E2) and (E3) must be
+  satisfied.
+  </li>
+  <li> If <m>\la=\sqrt{2}</m>, then
+  <ul>
+  <li>sep1pt \parskip0pt \parsep0pt
+  </li>
+  <li>
+  (E1) gives <m>x=\sqrt{2}y</m> and then
+  </li>
+  <li>
+  (E3) gives <m>2y^2+2y^2=1</m> or <m>y^2=\frac{1}{4}</m> so that
+  </li>
+  <li>
+  <m>y=\pm\frac{1}{2}</m> and <m>x=\sqrt{2}y=\pm\frac{1}{\sqrt{2}}</m>.
+  </li>
+  </ul>
+  </li>
+  <li> If <m>\la=-\sqrt{2}</m>, then
+  <ul>
+  <li>sep1pt \parskip0pt \parsep0pt
+  </li>
+  <li>
+  (E1) gives <m>x=-\sqrt{2}y</m> and then
+  </li>
+  <li>
+  (E3) gives <m>2y^2+2y^2=1</m> or <m>y^2=\frac{1}{4}</m> so that
+  </li>
+  <li>
+  <m>y=\pm\frac{1}{2}</m> and <m>x=-\sqrt{2}y=\mp\frac{1}{\sqrt{2}}</m>.
+  </li>
+  </ul>
+  </li>
+  </ul>
+  We now have four possible values of <m>(x,y)</m>, namely
+  <m>\big(\frac{1}{\sqrt{2}}\,,\,\frac{1}{2}\big)</m>,
+  <m>\big(-\frac{1}{\sqrt{2}}\,,\,-\frac{1}{2}\big)</m>,
+  <m>\big(\frac{1}{\sqrt{2}}\,,\,-\frac{1}{2}\big)</m>
+  and
+  <m>\big(-\frac{1}{\sqrt{2}}\,,\,\frac{1}{2}\big)</m>.
+  They are the four corners of a single rectangle. We said that we wanted
+  <m>(x,y)</m> to be the upper right corner, i.e. the corner in the first quadrant.
+  It is <m>\big(\frac{1}{\sqrt{2}}\,,\,\frac{1}{2}\big)</m>.
+  </p></example>
+  </p>
+
+  <p><example>
+  <p>xml:id="eg_LagrangeC"
+  Find the ends of the major and minor axes of the ellipse
+  <m>3x^2-2xy+3y^2=4</m>. They are the points on the ellipse that are farthest
+  from and nearest to the origin.
+  </p>
+
+  <p>\soln
+   Let <m>(x,y)</m> be a point on <m>3x^2-2xy+3y^2=4</m>. This point is at
+  the end of a major axis when it maximizes its distance from the centre,
+  <m>(0,0)</m> of the ellipse. It is at the end of a minor axis when it minimizes
+  its distance from <m>(0,0)</m>. So we wish to maximize and minimize the
+  distance <m>\sqrt{x^2+y^2}</m> subject to the constraint
+  <me>
+  g(x,y)=3x^2-2xy+3y^2-4=0
+  </me>
+  Now maximizing/minimizing <m>\sqrt{x^2+y^2}</m>
+  is equivalent
+  <fn>The function <m>S(z)=z^2</m> is a strictly increasing function for <m>z\ge 0</m>. So, for <m>a,b\ge 0</m>, the statement <q><m>a \lt b</m></q>
+  is equivalent to the statement <m><q>S(a) \lt S(b)</m></q>.</fn>
+   to maximizing/minimizing
+  its square <m>\big(\sqrt{x^2+y^2}\big)^2=x^2+y^2</m>.
+  So we are free to choose the objective function
+  <me>
+  f(x,y)=x^2+y^2
+  </me>
+  which we will do, because it makes the derivatives cleaner.
+  Again, we use Lagrange multipliers to solve this problem, so we start
+  by finding the partial derivatives.
+  <me>
+  f_x(x,y)=2x\qquad f_y(x,y)=2y \qquad
+  g_x(x,y)=6x-2y\qquad g_y(x,y)=-2x+6y
+  </me>
+  We need to find all solutions to
+  <md>
+  <mrow>
+  2x&amp;=\la (6x-2y)
+  </mrow><mrow>
+  2y&amp;=\la (-2x+6y)
+  </mrow><mrow>
+  3x^2-2xy+3y^2-4&amp;=0
+  </mrow>
+  </md>
+  Dividing the first two equations by <m>2</m>, and
+  then collecting together the <m>x</m>'s and the <m>y</m>'s gives
+  <md>
+  <mrow>
+         (1-3\la)x+\la y&amp;=0  \tag{E1}
+  </mrow><mrow>
+         \la x+(1-3\la)y&amp;=0  \tag{E2}
+  </mrow><mrow>
+      3x^2-2xy+3y^2-4&amp;=0  \tag{E3}
+  </mrow>
+  </md>
+  To start, let's concentrate on the first two equations. Pretend, for a couple
+  of minutes, that we already know the value of <m>\la</m> and are trying to find
+  <m>x</m> and <m>y</m>.
+  \intremark{
+  The system of equations
+   <m>(1+3\la)x-\la y=0</m>, <m>-\la x+(1+3\la)y=0</m>
+  has one obvious solution. Namely <m>x=y=0</m>. But this solution is not acceptable
+  because it does not satisfy the equation of the ellipse. If have already
+  taken a linear algebra course, you know a system of two linear homogeneous
+  equations in two unknowns have a nonzero solution if and only if the determinant
+  of the matrix of coefficients is zero. (You use this when you find eigenvalues
+  and eigenvectors.) For the equations of interest, this
+  is
+  <me>
+  \det\left[\begin{matrix}
+                   1-3\la&amp;\la\\
+                  \la&amp;1-3\la
+            \end{matrix}\right]=(1-3\la)^2-\la^2
+  =(1-2\la)(1-4\la)=0\implies\la=\half,\frac{1}{4}
+  </me>
+  Even if you have not already taken a linear algebra course, you also come to
+  this conclusion directly when you try to solve the equations.
+  }
+  Note that <m>\la</m> cannot be zero because if it is, (E1)
+  forces <m>x=0</m> and (E2) forces <m>y=0</m> and <m>(0,0)</m> is
+  not on the ellipse, i.e. violates (E3).  So we may divide by <m>\la</m> and (E1)
+  gives
+  <me>
+  y=-\frac{1-3\la}{\la}x
+  </me>
+  Subbing this into (E2) gives
+  <me>
+  \la x-\frac{(1-3\la)^2}{\la}x=0
+  </me>
+  Again, <m>x</m> cannot be zero, since
+  then <m>y=-\frac{1-3\la}{\la}x</m> would give <m>y=0</m> and <m>(0,0)</m> is still not
+  on the ellipse.
+  </p>
+
+  <p>So we may divide <m>\la x-\frac{(1-3\la)^2}{\la}x=0</m>
+  by <m>x</m>, giving
+  <md>
+  <mrow>
+  \la -\frac{(1-3\la)^2}{\la}=0
+  &amp;\iff (1-3\la)^2-\la^2=0
+  </mrow><mrow>
+  &amp;\iff 8\la^2-6\la+1 =(2\la-1)(4\la-1)=0
+  </mrow>
+  </md>
+  We now know that <m>\la</m> must be either <m>\frac{1}{2}</m> or <m>\frac{1}{4}</m>.
+  Subbing these into either (E1) or (E2) gives
+  <md alignment="alignat">
+  <mrow>{5}
+  \la&amp;=\frac{1}{2}
+          &amp;\ \implies\  -\frac{1}{2} x+\frac{1}{2} y&amp;=0
+          &amp;\ \implies\   x&amp;=y
+          &amp;\ \impliesover{(E3)}\  3x^2-2x^2+3x^2&amp;=4
+          &amp;\ \implies\   x&amp;=\pm 1\<me>
+  0.1in]
+  \la&amp;=\frac{1}{4}
+          &amp;\ \implies\  \phantom{-}\frac{1}{4} x+\frac{1}{4} y&amp;=0
+          &amp;\ \implies\  x&amp;=-y
+          &amp;\ \impliesover{(E3)}\   3x^2+2x^2+3x^2&amp;=4
+          &amp;\ \implies\  x&amp;=\pm \frac{1}{\sqrt{2}}
+  </mrow>
+  </md>
+  Here <q><m>\impliesover{(E3)}</m></q> indicates that we have
+  just used (E1). We now have <m>(x,y)=\pm (1,1)</m>, from <m>\la=\frac{1}{2}</m>,
+  and <m>(x,y)=\pm\left(\frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\right)</m> from
+  <m>\la=\frac{1}{4}</m>.
+  The distance from <m>(0,0)</m> to <m>\pm (1,1)</m>, namely <m>\sqrt{2}</m>,
+  is larger than the distance from <m>(0,0)</m> to
+  <m>\pm\big(\frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\big)</m>, namely <m>1</m>.
+  So the ends of the minor axes are <m>\pm\big(\frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\big)</m> and the
+  ends of the major axes are <m>\pm(1,1)</m>. Those ends are sketched in the
+  figure on the left below. Once we have the ends, it is an easy
+  matter
+  <fn>if you tilt your head so that the line through
+  <m>(1,1)</m> and <m>(-1,-1)</m> appears horizontal</fn>
+  </p>
+
+  <p>to sketch the ellipse as in the figure on the right below.
+  </p>
+
+  <p><sidebyside>
+  <image source="problems/figs/lagrangeCC"/>\qquad
+     <image source="problems/figs/lagrangeC"/>
+  </sidebyside>
+  </p>
+
+  </example>
+  </p>
+
+  <p><example>
+  <p>xml:id="eg_LagrangeD"
+  Find the values of <m>w\ge0</m> and <m>\ka\ge0</m> that maximize the utility
+  function
+  <me>
+  U(w,\ka) =6 w^{\frac{2}{3}}\ka^{\frac{1}{3}}
+   \qquad\text{subject to the constraint}\qquad
+  4w+2\ka=12
+  </me>
+  \soln
+  The constraint <m>4w+2\ka=12</m> is simple enough that we can
+  easily use it to express <m>\ka</m> in terms of <m>w</m>,
+  then substitute <m>\ka=6-2w</m> into  <m>U(w,\ka)</m>, and then
+  maximize
+  <m>U(w,6-2w) = 6 w^{\frac{2}{3}}(6-2w)^{\frac{1}{3}}</m>
+  using the techniques of §\eref{CLP100}{sec optimise} in
+  the CLP-1 textbook.
+  </p>
+
+  <p>However, for practice purposes, we'll use Lagrange multipliers
+  with the objective function
+  <m>U(w,\ka) =6 w^{\frac{2}{3}}\ka^{\frac{1}{3}}</m>
+  and the constraint function <m>g(w,\ka)=4w+2\ka-12</m>.
+  The first order derivatives of these functions are
+  <me>
+  U_w=4w^{-\frac{1}{3}}\ka^{\frac{1}{3}}\qquad
+  U_\ka=2w^{\frac{2}{3}}\ka^{-\frac{2}{3}}\qquad
+  g_w=4\qquad
+  g_\ka=2
+  </me>
+  The boundary values <m>w=0</m> and <m>\ka=0</m> give utility <m>0</m>, which
+  is obviously not going to be the maximum utility. So it suffices to
+  consider only local maxima.
+  According to the method of Lagrange multipliers, we need to find
+  all solutions to
+  <md alignment="alignat">
+  <mrow>{5}
+  4w^{-\frac{1}{3}}\ka^{\frac{1}{3}}&amp;=4\la  \tag{E1}
+  </mrow><mrow>
+  2w^{\frac{2}{3}}\ka^{-\frac{2}{3}}&amp;=2\la  \tag{E2}
+  </mrow><mrow>
+  4w+2\ka-12&amp;=0 \tag{E3}
+  </mrow>
+  </md>
+  Then
+  <ul>
+  <li> equation (E1) gives <m>\la=w^{-\frac{1}{3}}\ka^{\frac{1}{3}}</m>.
+  </li>
+  <li> Substituting this into (E2) gives
+      <m>w^{\frac{2}{3}}\ka^{-\frac{2}{3}}=\la
+     =w^{-\frac{1}{3}}\ka^{\frac{1}{3}}</m>
+  and hence  <m>w=\ka</m>.
+  </li>
+  <li> Then substituting <m>w=\ka</m> into
+  (E3) gives <m>6\ka=12</m>.
+  </li>
+  </ul>
+  So <m>w=\ka=2</m> and the maximum utility is <m>U(2,2)=12</m>.
+  </p>
+
+  </example>
+  </p>
+
+  <p><example>
+  <p>xml:id="eg_LagrangeE"
+  Find the point on the sphere <m>x^2+y^2+z^2=1</m> that is farthest
+  from <m>(1,2,3)</m>.
+  </p>
+
+  <p>\soln
+  As before, we simplify the algebra by maximizing the square
+  of the distance rather than the distance itself. So we are to maximize
+  <me>
+  f(x,y,z) = (x-1)^2 +(y-2)^2 + (z-3)^2
+  </me>
+  subject to the constraint
+  <me>
+  g(x,y,z)= x^2 + y^2 + z^2 -1=0
+  </me>
+  Since
+  <md>
+  <mrow>
+  f_x(x,y,z)&amp;=2(x-1)  &amp; f_y(x,y,z)&amp;=2(y-2) &amp; f_z(x,y,z)&amp;=2(z-3)
+  </mrow><mrow>
+  g_x(x,y,z)&amp;=2x      &amp; g_y(x,y,z)&amp;=2y     &amp; g_z(x,y,z)&amp;= 2z
+  </mrow>
+  </md>
+  we need to find all solutions to
+  <md alignment="alignat">
+  <mrow>{3}
+  2(x-1)&amp;=\la (2x)\qquad&amp;\iff\qquad
+         x&amp;=\frac{1}{1-\la}  \tag{E1}
+  </mrow><mrow>
+  2(y-2)&amp;=\la (2y)\qquad&amp;\iff\qquad
+         y&amp;=\frac{2}{1-\la}  \tag{E2}
+  </mrow><mrow>
+  2(z-3)&amp;=\la (2z)\qquad&amp;\iff\qquad
+           z&amp;=\frac{3}{1-\la}  \tag{E3}
+  </mrow><mrow>
+  0&amp;=x^2+y^2+z^2-1 \hidewidth \tag{E4}
+  </mrow>
+  </md>
+  Substituting (E1), (E2) and (E3) into (E4) gives
+  <md>
+  <mrow>
+  \frac{1+4+9}{(1-\la)^2}-1=0
+  \implies (1-\la)^2 = 14
+  \implies 1-\la = \pm\sqrt{14}
+  </mrow>
+  </md>
+  We can then substitute these two values of <m>\la</m> back into the expressions
+  for <m>x</m>, <m>y</m>, <m>z</m> in terms of <m>\la</m> to get the two points
+  <m>\frac{1}{\sqrt{14}}(1,2,3)</m> and <m>-\frac{1}{\sqrt{14}}(1,2,3)</m>.
+  </p>
+
+  <p>The vector from <m>\frac{1}{\sqrt{14}}(1,2,3)</m> to <m>(1,2,3)</m>,
+    namely  <m>\left\{1-\frac{1}{\sqrt{14}}\right\}(1,2,3)</m>, is obviously
+  shorter than the vector from  <m>-\frac{1}{\sqrt{14}}(1,2,3)</m> to <m>(1,2,3)</m>,
+  which is  <m>\left\{1+\frac{1}{\sqrt{14}}\right\}(1,2,3)</m>.
+  So the nearest point is <m>\frac{1}{\sqrt{14}}(1,2,3)</m> and the farthest
+  point is <m>-\frac{1}{\sqrt{14}}(1,2,3)</m> .
+  </p></example>
+  </p>
+
+  <p>\subsection{(Optional) An Example with Two Lagrange Multipliers}
+   xml:id="sec_double_Lagrange"
+  </p>
+
+  <p>In this optional section, we consider an example of a problem of
+  the form <q>maximize (or minimize)  <m>f(x,y,z)</m> subject to the two
+  constraints <m>g(x,y,z)=0</m> and <m>h(x,y,z)=0</m></q>. We use the following variant of
+  Theorem <xref ref="thm_Lagrange"/>.
+  <theorem><title>Two Lagrange Multipliers</title>
+  <statement><p>xml:id="thm_doubleLagrange"
+  Let <m>f(x,y,z)</m>, <m>g(x,y,z)</m> and <m>h(x,y,z)</m> have continuous first
+  partial derivatives in a region of <m>\bbbr^3</m> that contains the curve
+  <m>C</m> given by the equations
+  <me>
+  g(x,y,z)=h(x,y,z)=0
+  </me>
+  Assume
+  <fn>This condition says that the normal vectors to <m>g=0</m> and <m>h=0</m>
+  at <m>(x,y,z)</m> are not parallel. This ensures that the surfaces <m>g=0</m>
+  and <m>h=0</m> are not tangent to each other at <m>(x,y,z)</m>. They intersect
+  in a curve.</fn>
+   that <m>\vnabla g(x,y,z)\times \vnabla h(x,y,z) \ne 0</m>
+  on <m>C</m>. If <m>f</m>, restricted
+  to the curve <m>C</m>, has a local extreme value at the point <m>(a,b,c)</m> on <m>C</m>,
+  then there are real numbers <m>\la</m> and <m>\mu</m> such that
+  <md>
+  <mrow>
+  \vnabla f(a,b,c) &amp;= \la\vnabla g(a,b,c) + \mu\vnabla h(a,b,c)
+  </mrow><mrow>
+  </mrow>
+  <intertext>that is</intertext><mrow>
+  f_x(a,b,c) &amp;= \la\, g_x(a,b,c) + \mu\, h_x(a,b,c)
+  </mrow><mrow>
+  f_y(a,b,c) &amp;= \la\, g_y(a,b,c) + \mu\, h_y(a,b,c)
+  </mrow><mrow>
+  f_z(a,b,c) &amp;= \la\, g_z(a,b,c) + \mu\, h_z(a,b,c)
+  </mrow>
+  </md>
+  </p></statement>
+  </theorem>
+  We can reformulate this theorem in terms of the auxiliary function
+  <me>
+  L(x,y,z,\la,\mu)=f(x,y,z)-\la\, g(x,y,z) - \mu\, h(x,y,z)
+  </me>
+  It is a function of five variables <mdash/> the original variables <m>x</m>, <m>y</m>
+  and <m>z</m>, and two auxiliary variables <m>\la</m> and <m>\mu</m>.
+  If there is a local extreme value at <m>(a,b,c)</m> then <m>(a,b,c)</m> must obey
+  \begin{impeqn}xml:id="eqn_Ll"
+  <md alignment="alignat">
+  <mrow>{3}
+  0&amp;= L_x(a,b,c,\la,\mu)
+   &amp;&amp;= f_x(a,b,c) - \la g_x(a,b,c) -\mu h_x(a,b,c)
+  </mrow><mrow>
+  0&amp;= L_y(a,b,c,\la,\mu)
+   &amp;&amp;= f_y(a,b,c) - \la g_y(a,b,c) -\mu h_y(a,b,c)
+  </mrow><mrow>
+  0&amp;=L_z(a,b,c,\la,\mu)
+   &amp;&amp;= f_z(a,b,c) - \la g_z(a,b,c) -\mu h_z(a,b,c)
+  </mrow><mrow>
+  0&amp;=L_\la(a,b,c,\la,\mu)
+   &amp;&amp;= g(a,b,c)
+  </mrow><mrow>
+  0&amp;=L_\mu(a,b,c,\la,\mu)
+   &amp;&amp;= h(a,b,c)
+  </mrow>
+  </md>
+  \end{impeqn}\noindent
+  for some <m>\la</m> and <m>\mu</m>. So solving this system of five equations in five
+  unknowns gives all possible candidates for the locations of local maxima
+  and minima. We'll go through an example shortly.
+  </p>
+
+  <p><proof><title>Proof of Theorem <xref ref="thm_doubleLagrange"/></title>
+  <p>
+  Before we get to the example itself, here is why the above approach
+  works. Assume that a local minimum occurs at <m>(a,b,c)</m>, which is the
+  grey point in the schematic figure below. Imagine that you start walking
+  away from <m>(a,b,c)</m> along the curve <m>g=h=0</m>. Your path is the grey
+  line in the schematic figure below.
+  \vadjust{
+  </p>
+
+  <p><sidebyside>
+  <image source="problems/figs/dblLagrangeB.pdf"/>
+  </sidebyside>
+  }
+  Call your velocity vector <m>\vv</m>. It is tangent to the curve
+  <m>g(x,y,z)=h(x,y,z)=0</m>. Because <m>f</m> has a local minimum at <m>(a,b,c)</m>,
+  <m>f</m> must be increasing (or constant) as we leave <m>(a,b,c)</m>. So
+  the directional derivative
+  <me>
+  D_{\vv}f(a,b,c)=\vnabla f(a,b,c) \cdot \vv\ge 0
+  </me>
+  Now start over. Again walk away from <m>(a,b,c)</m> along the curve <m>g=h=0</m>,
+  but this time moving in the opposite direction, with velocity vector
+  <m>-\vv</m>. Again <m>f</m> must be increasing (or constant) as we leave
+  <m>(a,b,c)</m>, so the directional derivative
+  <me>
+  D_{-\vv}f(a,b,c)=\vnabla f(a,b,c) \cdot (-\vv)\ge 0
+  </me>
+  As both <m>\vnabla f(a,b,c) \cdot \vv</m> and
+  <m>-\vnabla f(a,b,c) \cdot \vv</m> are at least zero, we now have
+  that
+  <me>
+  \vnabla f(a,b,c) \cdot \vv=0
+  \tag{<m>*</m>}</me>
+  for all vectors <m>\vv</m> that are tangent to the curve <m>g=h=0</m>
+  at <m>(a,b,c)</m>. Let's denote by <m>\cT</m> the set of all vectors <m>\vv</m>
+  that are tangent to the curve <m>g=h=0</m> at <m>(a,b,c)</m> and let's denote
+  by <m>\cT^\perp</m> the set of all vectors that are perpendicular to all vectors
+  in <m>\cT</m>. So <m>(*)</m> says that <m>\vnabla f(a,b,c)</m> must in <m>\cT^\perp</m>.
+  </p>
+
+  <p>We now find all vectors in <m>\cT^\perp</m>. We can easily guess two such vectors.
+  Since the curve <m>g=h=0</m> lies inside the surface <m>g=0</m> and
+  <m>\vnabla g(a,b,c)</m>
+  is normal to <m>g=0</m> at <m>(a,b,c)</m>, we have
+  <me>
+  \vnabla g(a,b,c) \cdot \vv=0
+  \tag{E1}</me>
+  Similarly, since the the curve <m>g=h=0</m> lies inside the surface <m>h=0</m>
+  and <m>\vnabla h(a,b,c)</m> is normal to <m>h=0</m> at <m>(a,b,c)</m>, we have
+  <me>
+  \vnabla h(a,b,c) \cdot \vv=0
+  \tag{E2}</me>
+  Picking any two constants <m>\la</m> and <m>\mu</m>, multiplying (E1)
+  by <m>\la</m>, multiplying (E2) by <m>\mu</m> and adding gives that
+  <me>
+  \big(\la\vnabla g(a,b,c)
+       +\mu\vnabla h(a,b,c)\big) \cdot \vv=0
+  </me>
+  for all vectors <m>\vv</m>  in <m>\cT</m>. Thus, for all <m>\la</m> and <m>\mu</m>, the
+  vector <m>\la\vnabla g(a,b,c)+\mu\vnabla h(a,b,c)</m>
+  is in <m>\cT^\perp</m>.
+  </p>
+
+  <p>Now the vectors in <m>\cT</m> form a line. (They are all tangent to the same
+  curve at the same point.) So, <m>\cT^\perp</m>, the set of all vectors
+  perpendicular to <m>\cT</m>,  forms a plane. As <m>\la</m> and <m>\mu</m> run over all
+  real numbers, the vectors <m>\la\vnabla g(a,b,c)
+  +\mu\vnabla h(a,b,c)</m>  form a plane. Thus we have found all vector
+  in <m>\cT^\perp</m> and we conclude that <m>\vnabla f(a,b,c)</m> must be
+  of the form <m>\la\vnabla g(a,b,c)+\mu\vnabla h(a,b,c)</m>
+  for some real numbers <m>\la</m> and <m>\mu</m>. The three components of the
+  equation
+  <me>
+  \vnabla f(a,b,c)
+  =\la\vnabla g(a,b,c)+\mu\vnabla h(a,b,c)
+  </me>
+  are exactly the first three equations of <xref ref="eqn_Ll"/>. This completes the
+  explanation of why Lagrange multipliers work in this setting.
+  </p></proof>
+  </p>
+
+  <p><example>
+  <p>xml:id="eg_double_Lagrange"
+  Find the distance from the origin to the curve that is the intersection
+  of the two surfaces
+  <me>
+  z^2=x^2+y^2\qquad x-2z=3
+  </me>
+  </p>
+
+  <p>\soln
+  Yet again, we simplify the algebra by maximizing the square
+  of the distance rather than the distance itself. So we are to maximize
+  <me>
+  f(x,y,z)=x^2+y^2+z^2
+  </me>
+  subject to the constraints
+  <me>
+  0=g(x,y,z)=x^2+y^2-z^2\qquad
+  0=h(x,y,z)=x-2z-3
+  </me>
+  Since
+  <md>
+  <mrow>
+  f_x&amp;=2x &amp;  f_y&amp;=2y  &amp; f_z&amp;=2z
+  </mrow><mrow>
+  g_x&amp;=2x &amp;  g_y&amp;=2y  &amp; g_z&amp;=-2z
+  </mrow><mrow>
+  h_x&amp;=1  &amp;  h_y&amp;=0   &amp; h_z&amp;=-2
+  </mrow>
+  </md>
+  the method of Lagrange multipliers requires us to find all solutions to
+  <md alignment="alignat">
+  <mrow>{3}
+  2x&amp;=\la(2x) + \mu(1)  \tag{E1}
+  </mrow><mrow>
+  2y&amp;=\la(2y) + \mu(0) \qquad&amp;\iff\qquad(1-\la)y&amp;=0 \tag{E2}
+  </mrow><mrow>
+  2z&amp;=\la(-2z) + \mu(-2)  \tag{E3}
+  </mrow><mrow>
+  z^2&amp;=x^2+y^2 \tag{E4}
+  </mrow><mrow>
+  x-2z&amp;=3 \tag{E5}
+  </mrow>
+  </md>
+  Since equation (E2) factors so nicely we start there.
+  It tells us that either <m>y=0</m> or <m>\la=1</m>.
+  </p>
+
+  <p>\medskip
+  \noindent{\it Case <m>\la=1</m>:\ \ \ }
+  When <m>\la=1</m> the remaining equations reduce to
+  <md alignment="alignat">
+  <mrow>{3}
+  0&amp;=\mu  \tag{E1}
+  </mrow><mrow>
+  0&amp;=4z + 2 \mu  \tag{E3}
+  </mrow><mrow>
+  z^2&amp;=x^2+y^2 \tag{E4}
+  </mrow><mrow>
+  x-2z&amp;=3 \tag{E5}
+  </mrow>
+  </md>
+  So
+  <ul>
+  <li>sep1pt \parskip0pt \parsep0pt
+  </li>
+  <li>
+  equation (E1) gives <m>\mu=0</m>.
+  </li>
+  <li>
+  Then substituting <m>\mu=0</m> into (E3) gives <m>z=0</m>.
+  </li>
+  <li>
+  Then substituting <m>z=0</m> into (E5) gives <m>x=3</m>.
+  </li>
+  <li>
+  Then substituting <m>z=0</m> and <m>x=3</m> into (E4) gives <m>0=9+y^2</m>,
+  which is impossible, since <m>9+y^2\ge 9 \gt 0</m> for all <m>y</m>.
+  </li>
+  </ul>
+  So we can't have <m>\la=1</m>.
+  </p>
+
+  <p>\medskip
+  \noindent{\it Case <m>y=0</m>:\ \ \ }
+  When <m>y=0</m> the remaining equations reduce
+  to
+  <md alignment="alignat">
+  <mrow>{3}
+  2(1-\la)x &amp;= \mu  \tag{E1}
+  </mrow><mrow>
+  (1+\la)z&amp;= -\mu  \tag{E3}
+  </mrow><mrow>
+  z^2&amp;=x^2 \tag{E4}
+  </mrow><mrow>
+  x-2z&amp;=3 \tag{E5}
+  </mrow>
+  </md>
+  These don't clean up quite so nicely as in the <m>\la=1</m> case.
+  But at least equation (E4) tells us that <m>z=\pm x</m>. So we have
+  to consider those two possibilities.
+  </p>
+
+  <p>\medskip
+  \noindent{\it Subcase <m>y=0</m>, <m>z=x</m>:\ \ \ }
+  When <m>y=0</m> and <m>z=x</m>, the remaining equations reduce to
+  <md alignment="alignat">
+  <mrow>{3}
+  2(1-\la)x &amp;= \mu  \tag{E1}
+  </mrow><mrow>
+  (1+\la)x&amp;= -\mu  \tag{E3}
+  </mrow><mrow>
+  -x&amp;=3 \tag{E5}
+  </mrow>
+  </md>
+  So equation (E5) now tells us that <m>x=-3</m> so that
+  <m>
+  (x,y,z)=(-3,0,-3)
+  </m>.
+  (We don't really care what <m>\la</m> and <m>\mu</m> are. But as they
+  obey <m>-6(1-\la)=\mu</m>, <m>-3(1+\la)=-\mu</m> we have, adding the two equations
+  together
+  <me>
+  -9+3\la=0 \implies \la=3
+  </me>
+  and then, subbing into either equation, <m>\mu=12</m>.)
+  </p>
+
+  <p>\medskip
+  \noindent{\it Subcase <m>y=0</m>, <m>z=-x</m>:\ \ \ }
+  When <m>y=0</m> and <m>z=-x</m>, the
+  remaining equations reduce to
+  <md alignment="alignat">
+  <mrow>{3}
+  2(1-\la)x &amp;= \mu  \tag{E1}
+  </mrow><mrow>
+  (1+\la)x&amp;= \mu  \tag{E3}
+  </mrow><mrow>
+  3x&amp;=3 \tag{E5}
+  </mrow>
+  </md>
+  So equation (E5) now tells us that <m>x=1</m> so that
+  <m>
+  (x,y,z)=(1,0,-1)
+  </m>.
+  (Again, we don't really care what <m>\la</m> and <m>\mu</m> are. But as they
+  obey <m>2(1-\la)=\mu</m>, <m>(1+\la)=\mu</m> we have, subtracting the second
+  equation from the first,
+  <me>
+  1-3\la=0
+  \implies \la=\frac{1}{3}
+  </me>
+  and then, subbing into either equation, <m>\mu=\frac{4}{3}</m>.)
+  </p>
+
+  <p>\medskip
+  \noindent{\it Conclusion:\ \ \ } We have two candidates for the location
+  of the max and min, namely <m>(-3,0,-3)</m> and <m>(1,0,-1)</m>. The first is a distance
+  <m>3\sqrt{2}</m> from the origin, giving the maximum, and the second is a
+  distance <m>\sqrt{2}</m> from the origin, giving the minimum. In particular,
+  the distance is <m>\sqrt{2}</m>.
+  </p>
+
+  </example>
+</section>
