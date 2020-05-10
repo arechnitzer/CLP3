@@ -413,8 +413,8 @@ The radius is the distance from the vertex <m>(0,0)</m> to the centre
 </solution>
 </exercise>
 
-<exercise>
-<statement><p> [M200 2001A]
+<exercise><title><fromexam>M200 2001A</fromexam></title>
+<statement><p>
 A certain quadric surface consists of all points <m>P=(x,y,z)</m>
 such that the distance from <m>P</m> to the point <m>(0,0,1)</m> is equal to the
 distance from <m>P</m> to the plane <m>z+1=0</m>. Find an equation for the surface,
