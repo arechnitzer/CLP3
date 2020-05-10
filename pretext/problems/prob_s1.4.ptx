@@ -300,7 +300,8 @@ to <m>(0,0,7)</m> is <m>\llt 0,0,7\rgt -\llt -1,2,3\rgt =\llt 1,-2,4\rgt </m>.
 A unit vector perpendicular to the plane is
 <m>\frac{1}{\sqrt{3}}\llt 1,1,1\rgt </m>. The distance from
 <m>(-1,2,3)</m> to the plane is the length of the projection of
-<m>\llt 1,-2,4\rgt </m> on <m>\frac{1}{\sqrt{3}}\llt 1,1,1\rgt </m> which is <md>
+<m>\llt 1,-2,4\rgt </m> on <m>\frac{1}{\sqrt{3}}\llt 1,1,1\rgt </m> which is 
+<md>
 <mrow>
 \frac{1}{\sqrt{3}}\llt 1,1,1\rgt \cdot\llt 1,-2,4\rgt
 =\frac{3}{\sqrt{3}}
@@ -391,9 +392,9 @@ As <m>(x,y,z)</m> must be in <m>\Pi</m>,
 <md>
 <mrow>
 8 = 3x+2y+z = 3(6+3t) + 2(1+2t) +(2+t) = 22 +14 t
-\implies t=-1
 </mrow>
 </md>
+which implies that <m>t=-1</m>.
 So <m>(x,y,z) = \big(6+3(-1)\,,\,1+2(-1)\,,\,2+(-1)\big)
             = \big(3\,,\,-1\,,\,1\big)</m>.
 </p></solution>
@@ -513,9 +514,10 @@ The two points <m>(x',y',z')</m> with
 <mrow>
 \overbrace{\llt x'-0\,,\,y'-\frac{3}{2}\,,\,z'-0\rgt}^{\text{vector from}
 \big(0,\frac{3}{2},0\big)\text{ to } (x',y',z')}
-=\pm 2\ \overbrace{\frac{\llt 4\,,\,2\,,\,-4\rgt}{\sqrt{16+4+16}}}^{\text{unit vector}}
+&amp;=\pm 2\ \overbrace{\frac{\llt 4\,,\,2\,,\,-4\rgt}{\sqrt{16+4+16}}}^{\text{unit vector}}
 =\pm \frac{2}{6} \llt 4\,,\,2\,,\,-4\rgt
-=\pm\llt \frac{4}{3}\,,\,\frac{2}{3}\,,\,-\frac{4}{3}\rgt
+</mrow><mrow>
+&amp;=\pm\llt \frac{4}{3}\,,\,\frac{2}{3}\,,\,-\frac{4}{3}\rgt
 </mrow>
 </md>
 are the two points that are a distance <m>2</m> from <m>\big(0,\frac{3}{2},0\big)</m>
@@ -563,7 +565,7 @@ the points <m>(0,1,1)</m>, <m>(1,-1,3)</m> and <m>(2,0,-1)</m>.
 <solution><p>
 The two vectors
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 \va&amp;=\llt 1,-1,3\rgt - \llt 0,1,1\rgt &amp;&amp;= \llt 1,-2, 2\rgt
 </mrow><mrow>
 \vb&amp;=\llt 2,0,-1\rgt - \llt 0,1,1\rgt &amp;&amp;= \llt 2,-1,-2\rgt
@@ -601,12 +603,16 @@ joins the point to the plane. So, if <m>\theta</m> is the angle between <m>\vd</
 <exercise><title><fromexam>M200 2014A</fromexam></title>
 <statement><p>
 Consider two planes <m>W_1</m>, <m>W_2</m>, and a line <m>M</m> defined by:
-<me>
-W_1\ :\  -2x + y + z = 7,\qquad
-W_2\ :\ -x + 3y + 3z = 6,\qquad
-M\ :\
-\frac{x}{2} = \frac{2y-4}{4} = z + 5.
-</me>
+<md>
+<mrow>
+W_1\ &amp;:\  -2x + y + z = 7
+</mrow><mrow>
+W_2\ &amp;:\ -x + 3y + 3z = 6
+</mrow><mrow>
+M\ &amp;:\
+\frac{x}{2} = \frac{2y-4}{4} = z + 5
+</mrow>
+</md>
 <ol label="a">
 <li>
 Find a parametric equation of the line of intersection <m>L</m> of <m>W_1</m> and <m>W_2</m>.
@@ -649,11 +655,15 @@ So a parametric equation is
 </p>
 
 <p>We can also parametrize <m>M</m> using <m>z=t</m>:
-<me>
+<md>
+<mrow>
 x=2z+10=2t+10,\
-y=2z+12=2t+12\quad\implies\quad
+&amp;y=2z+12=2t+12
+</mrow><mrow>
+&amp;\implies\quad
 \llt x,y,z\rgt = \llt 10,12,0\rgt +t \llt 2,2,1\rgt
-</me>
+</mrow>
+</md>
 So one point on <m>M</m> is <m>(10,12,0)</m> and one point on <m>L</m> is <m>(-3,1,0)</m> and
 <me>
 \vv= \llt (-3)-10\,,\, 1 -12  \,,\,  0-0\rgt
@@ -693,11 +703,15 @@ of <m>\vv</m> on <m>\vn</m>, which is
 
 <p>(b) <em>Solution 2</em>
 We can also parametrize <m>M</m> using <m>z=s</m>:
-<me>
+<md>
+<mrow>
 x=2z+10=2s+10,\
-y=2z+12=2s+12\quad\implies\quad
+&amp;y=2z+12=2s+12
+</mrow><mrow>
+&amp;\implies\quad
 \llt x,y,z\rgt = \llt 10,12,0\rgt +s \llt 2,2,1\rgt
-</me>
+</mrow>
+</md>
 The vector from the point  <m>(-3\,,\,1-t\,,\,t)</m> on <m>L</m>
 to the point <m>(10+2s\,,\,12+2s\,,\,s)</m> on <m>M</m> is
 <me>
@@ -861,7 +875,7 @@ The vector <m>\vn</m> is perpendicular to the plane
 </me>
 passes through <m>\vp</m> and is perpendicular to the plane.
 </p>
-<sidebyside width="">
+<sidebyside width="35%">
 <image source="pfigs/distance.svg"/>
 </sidebyside>
 
@@ -941,7 +955,7 @@ The distance from the point <m>\vx</m> to <m>\va</m> is
 <m>\sqrt{(\vx-\vb)\cdot(\vx-\vb)}</m>. Hence <m>\vx</m> is equidistant
 from <m>\va</m> and <m>\vb</m> if and only if
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 &amp; &amp; (\vx-\va)\cdot(\vx-\va)&amp;=(\vx-\vb)\cdot(\vx-\vb)
 </mrow><mrow>
 &amp;\iff\qquad &amp; |\vx|^2-2\va\cdot\vx+|\va|^2&amp;=|\vx|^2-2\vb\cdot\vx+|\vb|^2
@@ -985,12 +999,15 @@ If the angle between <m>\overrightarrow{AB}</m> and <m>\overrightarrow{AC}</m>
 is <m>\theta</m> and if we take <m>\overrightarrow{AB}</m> as the base of the triangle,
 then the triangle has base length <m>b=|\overrightarrow{AB}|</m>
 and height <m>h=|\overrightarrow{AC}|\sin\theta</m> and hence
-<me>
-\text{area}=\half bh
+<md>
+<mrow>
+\text{area}&amp;=\half bh
 =\half |\overrightarrow{AB}|\,|\overrightarrow{AC}|\sin\theta
 =\half|\overrightarrow{AB}\times\overrightarrow{AC}|
-=\half|\llt 1,-1,0\rgt \times \llt 1,2,-1\rgt|
-</me>
+</mrow><mrow>
+&amp;=\half|\llt 1,-1,0\rgt \times \llt 1,2,-1\rgt|
+</mrow>
+</md>
 As
 <me>
 \llt 1,-1,0\rgt\times\llt 1,2,-1\rgt
@@ -1020,12 +1037,16 @@ the length of the projection of
                =\llt 5,-11,1\rgt</m>
 on <m>\hn</m>. If <m>\theta</m> the angle between <m>\overrightarrow{AP}</m>
 and <m>\hn</m>, then this is
-<me>
-\text{distance}= |\overrightarrow{AP}|\,|\cos\theta|
+<md>
+<mrow>
+\text{distance}&amp;= |\overrightarrow{AP}|\,|\cos\theta|
 =\big|\overrightarrow{AP}\cdot\hn\big|
 =\left|\llt 5,-11,1\rgt\cdot\frac{\llt 1,1,3\rgt}{\sqrt{11}}\right|
-=\frac{3}{\sqrt{11}}\approx 0.9045
-</me>
+=\frac{3}{\sqrt{11}}
+</mrow><mrow>
+&amp;\approx 0.9045
+</mrow>
+</md>
 </p></solution>
 </exercise>
 
@@ -1059,7 +1080,7 @@ has <m>(X,Y,Z)=(1,-1,0)</m>. Call the initial point <m>P</m> and the final point
 <m>Q</m>. The shortest path will follow the great circle from <m>P</m> to <m>Q</m>.
 </p>
 
-<sidebyside width="">
+<sidebyside width="40%">
   <image source="pfigs/OE03AQB.svg"/>
 </sidebyside>
 

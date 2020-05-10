@@ -11,7 +11,7 @@
   <fn>This is why the <m>xy</m>-plane is called <q>two dimensional</q> <mdash/> the name of each point consists of two real numbers.</fn><m>(x,y)</m> which specify the position of the point in some units with respect to some axes as in the figure below.
 </p>
 
-  <sidebyside width="33%" >
+  <sidebyside width="28%" >
   <image source="figs/point2d.svg"/>
   </sidebyside>
 <p>
@@ -103,7 +103,7 @@
   </ul>
 </p>
 
-<sidebyside width="50%" >
+<sidebyside width="40%" >
   <image source="figs/pythag3d.svg"/>
   </sidebyside>
 <p>

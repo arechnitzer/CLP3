@@ -84,7 +84,7 @@ In part (d), complete a square.
 angle <m>45^\circ</m> with the <m>x</m>- and <m>y</m>-axes. It is sketched in the
 figure on the left below.
 </p>
-<sidebyside width="40%">
+<sidebyside widths="28% 33%" valign="middle">
   <image source="pfigs/sec1_1_Q1a.svg"/>
    <image source="pfigs/sec1_1_Q1b.svg"/>
 </sidebyside>
@@ -97,7 +97,7 @@ figure on the left below.
 <li><p><m>x^2+y^2=4</m> is the circle with centre <m>(0,0)</m> and radius 2. It is
 sketched in the figure on the left below.
 </p>
-<sidebyside width="40%">
+<sidebyside widths="35% 40%" valign="middle">
 <image source="pfigs/sec1_1_Q1c.svg"/>
 <image source="pfigs/sec1_1_Q1d.svg"/>
 </sidebyside>
@@ -124,7 +124,7 @@ It is the shaded region (not including the dashed circle) in the sketch below.
 and <m>(1,1)</m>. So it is the straight line through the origin that makes an angle <m>45^\circ</m> with the <m>x</m>- and <m>y</m>-axes. It is sketched in the figure on the
 left below.
 </p>
-<sidebyside width="40%">
+<sidebyside widths="28% 33%" valign="middle">
   <image source="pfigs/sec1_1_Q1a.svg"/>
  <image source="pfigs/sec1_1_Q1b.svg"/>
 </sidebyside>
@@ -139,7 +139,7 @@ left below.
 So <m>x^2+y^2=4</m> is the circle with centre <m>(0,0)</m> and radius 2.
 It is sketched in the figure on the left below.
 </p>
-<sidebyside width="40%">
+<sidebyside widths="35% 40%" valign="middle">
     <image source="pfigs/sec1_1_Q1c.svg"/>
      <image source="pfigs/sec1_1_Q1d.svg"/>
    </sidebyside>
@@ -209,7 +209,7 @@ The set <m>z=x</m> is the plane which contains the <m>y</m>-axis and which
 makes an angle <m>45^\circ</m> with the <m>xy</m>-plane. Here is a sketch
 of the part of the plane that is in the first octant.
 </p>
-<sidebyside width="40%">
+<sidebyside width="35%">
   <image source="pfigs/xeqzPlane.svg"/>
 </sidebyside>
 </li>
@@ -220,7 +220,7 @@ and  <m>(0,0,1)</m>. Here is a sketch of the part of the plane
 that is in the first octant.
 </p>
 
-<sidebyside width="40%">
+<sidebyside width="50%">
   <image source="pfigs/xyzPlane.svg"/>
 </sidebyside>
 </li>
@@ -246,7 +246,7 @@ in the first octant is the heavy quarter circle in the sketch
 <m>x^2+y^2=4</m> is the cylinder of radius <m>2</m> centered on the <m>z</m>-axis.
 Here is a sketch of the part of the cylinder that is in the first octant.
 </p>
-<sidebyside width="40%">
+<sidebyside width="35%">
   <image source="pfigs/quarterCylinder.svg"/>
 </sidebyside>
 </li>
@@ -292,7 +292,7 @@ and  <m>(0,0,1)</m>. Here is a sketch of the part of the plane
 that is in the first octant.
 </p>
 
-<sidebyside width="40%">
+<sidebyside width="50%">
   <image source="pfigs/xyzPlane.svg"/>
 </sidebyside>
 </li>
@@ -325,7 +325,7 @@ possible values of <m>z_0</m>. It is  a vertical stack of horizontal
 circles. It is the cylinder of radius <m>2</m> centered on the <m>z</m>-axis.
 Here is a sketch of the part of the cylinder that is in the first octant.
 </p>
-<sidebyside width="40%">
+<sidebyside width="35%">
   <image source="pfigs/quarterCylinder.svg"/>
 </sidebyside>
 </li>
@@ -442,7 +442,7 @@ centred on the <m>z</m>-axis, is parallel to the <m>xy</m>-plane and has radius
 with a point at the origin and with radius increasing vertically. The surface
 is a paraboloid and is sketched below.
 </p>
-<sidebyside width="40%">
+<sidebyside width="33%">
 <image source="pfigs/OE01AQ1.svg"/>
 </sidebyside>
 </solution>

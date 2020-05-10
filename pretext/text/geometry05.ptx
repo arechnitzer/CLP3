@@ -61,7 +61,7 @@
   Here are separate sketches of (parts of) the two planes.
 </p>
 
-<sidebyside width="40%">
+<sidebyside widths="50% 40%" valign="middle">
 <image source="figs/planeIntA"/>
 <image source="figs/planeIntB"/>
 </sidebyside>
@@ -70,7 +70,7 @@
   And here is a sketch of their intersection
 </p>
 
-<sidebyside width="66%">
+<sidebyside width="50%">
 <image source="figs/planeInt"/>
 </sidebyside>
 
@@ -240,10 +240,14 @@
 <example xml:id="eg_VPdistance-point-line">
   <p>
   In this example, we find the distance between the point <m>(2,3,-1)</m> and the line
-  <me>
-  L:\  \llt x-1,y-2,z-3\rgt=t\llt 1,1,2\rgt \quad \text{or, equivalently,}\quad
-  x=1+t,\ y=2+t,\ z=3+2t
-  </me>
+  <md>
+  <mrow>
+      L&amp;:\  \llt x-1,y-2,z-3\rgt=t\llt 1,1,2\rgt 
+  </mrow><mrow>
+      &amp;\quad \text{or, equivalently,}\quad
+       x=1+t,\ y=2+t,\ z=3+2t
+  </mrow> 
+  </md>
   The vector from <m>(2,3,-1)</m> to the point <m>(1+t\,,\,2+t\,,\,3+2t)</m> on <m>L</m> is
   <m>
   \llt t-1\,,\,t-1\,,\,2t+4\rgt</m>.
@@ -292,7 +296,7 @@
   </me>
   but we use a different method. In the figure below, <m>Q</m> is the point <m>(2,3,-1)</m>.
 </p>
-  <sidebyside width="66%">
+  <sidebyside width="45%">
   <image source="figs/pointDistProjB.svg"/>
   </sidebyside>
 <p>
@@ -402,8 +406,9 @@
   <md>
   <mrow>
   \big|\llt  t-s\,,\,-2t\,,\,-2+s+t \rgt\big|_{s=1,\ t=1/3}
-  =\big|\llt -2/3\,,\,-2/3\,,\,-2/3 \rgt\big|_{s=1,\ t=1/3}
-  =\frac{2}{\sqrt{3}}
+  &amp;=\big|\llt -2/3\,,\,-2/3\,,\,-2/3 \rgt\big|_{s=1,\ t=1/3}
+  </mrow><mrow>
+  &amp;=\frac{2}{\sqrt{3}}
   </mrow>
   </md>
   </p>
@@ -505,7 +510,7 @@
   (up to a sign) the projection of <m>\vv</m> on <m>\vn</m>.
   </p>
 
-  <sidebyside width="66%">
+  <sidebyside width="55%">
   <image source="figs/planeDistB.svg"/>
   </sidebyside>
   </li>
