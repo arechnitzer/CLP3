@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title></title>
+<p>\section{Optional<mdash/> Integrals in General Coordinates} xml:id="sec_Jacobian"
+</p>
+
+<p>One of the most important tools used in dealing with single variable
+integrals is the change of variable (substitution) rule
+\begin{impeqn}xml:id="eq_1d_substitution"
+<me>
+x=f(u)\qquad
+\dee{x} = f'(u)\,\dee{u}
+</me>
+\end{impeqn}
+\noindent
+See Theorems \eref{CLP101}{thm subs indef} and \eref{CLP101}{thm subs def}
+in the CLP-2 text.
+Expressing multivariable integrals using polar or cylindrical or
+spherical coordinates are really  multivariable substitutions. For example,
+switching to spherical coordinates amounts replacing the coordinates <m>x,y,z</m> with the coordinates <m>\rho,\theta,\varphi</m> by using the substitution
+<me>
+\vX =\vr(\rho,\theta,\varphi)\qquad
+\dee{x}\,\dee{y}\,\dee{z}
+       = \rho^2\,\sin\varphi\,\dee{\rho}\,\dee{\theta}\,\dee{\varphi}
+</me>
+where
+<me>
+\vX=\llt x\,,\, y\,,\, z\rgt\qquad\text{and}\qquad
+\vr(\rho,\theta,\varphi)=\llt \rho\cos\theta\sin\varphi\,,\,
+                              \rho\sin\theta\sin\varphi\,,\,
+                              \rho\cos\varphi\rgt
+</me>
+We'll now derive a generalization of the substitution rule
+<xref ref="eq_1d_substitution"/> to two dimensions. It will include polar
+coordinates as a special case. Later, we'll state (without proof)
+its generalization to three dimensions. It will include cylindrical and
+spherical coordinates as special cases.
+</p>
+
+<p>Suppose that we wish to integrate over a region, <m>\cR</m>, in <m>\bbbr^2</m> and that
+we also wish
+<fn>We'll keep our third wish in reserve.</fn>
+ to use two new coordinates, that we'll call <m>u</m> and <m>v</m>, in place
+of <m>x</m> and <m>y</m>. The new coordinates <m>u</m>, <m>v</m> are related to the old coordinates
+<m>x</m>, <m>y</m>, by the functions
+<fn>We are abusing notation a little here by
+using <m>x</m> and <m>y</m> both as coordinates and as functions. We could
+write <m>x=f(u,v)</m> and <m>y=g(u,v)</m>, but it is easier to remember
+<m>x=x(u,v)</m> and <m>y=y(u,v)</m>.</fn>
+</p>
+
+<p><md>
+<mrow>
+x&amp;=x(u,v)
+</mrow><mrow>
+y&amp;=y(u,v)
+</mrow>
+</md>
+To make formulae more compact, we'll define the vector valued function
+<m>\vr(u,v)</m> by
+<me>
+\vr(u,v) = \llt x(u,v) \,,\, y(u,v) \rgt
+</me>
+As an example, if the new coordinates are polar coordinates, with <m>r</m>
+renamed to <m>u</m> and <m>\theta</m> renamed to <m>v</m>, then
+<m>x(u,v) = u\cos v</m> and <m>y=u\sin v</m>.
+</p>
+
+<p>Note that if we hold <m>v</m> fixed and vary <m>u</m>, then <m>\vr(u,v)</m> sweeps out a curve.
+For example, if <m>x(u,v) = u\cos v</m> and <m>y=u\sin v</m>, then, if we hold
+<m>v</m> fixed and vary <m>u</m>, <m>\vr(u,v)</m> sweeps out a straight line (that makes
+the angle <m>v</m> with the <m>x</m>-axis), while, if we hold
+<m>u \gt 0</m> fixed and vary <m>v</m>, <m>\vr(u,v)</m> sweeps out a circle (of radius <m>u</m>
+centred on the origin).
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/polarU.pdf"/>\qquad
+    <image source="problems/figs/polarV.pdf"/>
+</sidebyside>
+</p>
+
+<p>We start by cutting <m>\cR</m> (the shaded region in the figure below)
+up into small pieces by drawing a bunch of curves of constant <m>u</m>
+(the blue curves in the figure below) and a bunch of curves of
+constant <m>v</m> (the red curves in the figure below).
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/RSlice.pdf"/>
+</sidebyside>
+Concentrate on any one the small pieces. Here is a greatly magnified
+sketch.
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/dA.pdf"/>
+</sidebyside>
+For example, the  lower red curve was constructed by holding <m>v</m> fixed
+at the value <m>v_0</m>, varying <m>u</m> and sketching <m>\vr(u,v_0)</m>, and
+the  upper red curve was constructed by holding <m>v</m> fixed
+at the slightly larger value <m>v_0+\dee{v}</m>, varying <m>u</m> and
+sketching <m>\vr(u,v_0+\dee{v})</m>. So the four intersection points in
+the figure are
+<md alignment="alignat">
+<mrow>{3}
+P_2&amp;=\vr(u_0, v_0+\dee{v}) &amp;\qquad
+   P_3&amp;=\vr(u_0+\dee{u}, v_0+\dee{v})
+</mrow><mrow>
+P_0&amp;=\vr(u_0, v_0) &amp;
+   P_1&amp;=\vr(u_0+\dee{u}, v_0)
+</mrow>
+</md>
+Now, for any small constants <m>\dee{U}</m> and <m>\dee{V}</m>, we have the linear
+approximation
+<fn>Recall <xref ref="eqn_lin_approx_2d"/>.</fn>
+</p>
+
+<p><md>
+<mrow>
+\vr(u_0+\dee{U},v_0+\dee{V})
+&amp;\approx \vr(u_0\,,\,v_0)
+   +\pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{U}
+   +\pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{V}
+</mrow>
+</md>
+Applying this three times,
+once with <m>\dee{U}=\dee{u}</m>, <m>\dee{V}=0</m> (to approximate <m>P_1</m>),
+once with <m>\dee{U}=0</m>, <m>\dee{V}=\dee{v}</m> (to approximate <m>P_2</m>),
+and once with  <m>\dee{U}=\dee{u}</m>, <m>\dee{V}=\dee{v}</m> (to approximate <m>P_3</m>),
+<md alignment="alignat">
+<mrow>{5}
+P_0&amp;=\vr(u_0\,,\,v_0)
+</mrow><mrow>
+P_1&amp;=\vr(u_0+\dee{u}, v_0)
+   &amp;&amp;\approx \vr(u_0\,,\,v_0)
+   &amp;&amp;+\pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u}
+</mrow><mrow>
+P_2&amp;=\vr(u_0, v_0+\dee{v})
+   &amp;&amp;\approx \vr(u_0\,,\,v_0) &amp;&amp;
+   &amp;&amp;+\pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{v}
+</mrow><mrow>
+P_3&amp;=\vr(u_0+\dee{u}, v_0+\dee{v})
+   &amp;&amp;\approx\vr(u_0\,,\,v_0)
+   &amp;&amp;+\pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u}
+   &amp;&amp;+\pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{v}
+</mrow>
+</md>
+We have dropped all Taylor expansion terms that are of degree two or higher
+in <m>\dee{u}</m>, <m>\dee{v}</m>. The reason is that, in defining the integral, we take
+the limit <m>\dee{u},\dee{v}\rightarrow 0</m>. Because of that limit,
+all of the dropped terms contribute exactly <m>0</m> to the integral.
+We shall not prove this. But we shall show, in the optional
+§<xref ref="sec_hoterms"/>, why this is the case.
+</p>
+
+<p>The small piece of <m>\cR</m> surface with corners <m>P_0</m>, <m>P_1</m>, <m>P_2</m>, <m>P_3</m>
+is approximately a parallelogram with sides
+<md>
+<mrow>
+\overrightarrow{P_0P_1}
+\approx \overrightarrow{P_2P_3}
+&amp;\approx \pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u}
+=\llt\pdiff{x}{u}(u_0,v_0)\,,\,
+     \pdiff{y}{u}(u_0,v_0) \rgt \dee{u}
+</mrow><mrow>
+\overrightarrow{P_0P_2}
+\approx \overrightarrow{P_1P_3}
+&amp;\approx \pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{v}
+=\llt\pdiff{x}{v}(u_0,v_0)\,,\,
+     \pdiff{y}{v}(u_0,v_0) \rgt \dee{v}
+\qquad
+\raisebox{-15pt}[20pt][10pt]{\smash{<image source="problems/figs/dA2.pdf"/>}}
+</mrow>
+</md>
+Here the notation, for example, <m>\overrightarrow{P_0P_1}</m> refers to the vector
+whose tail is at the point <m>P_0</m> and whose head is at the point <m>P_1</m>.
+Recall, from <xref ref="eq_pgram_area"/> that
+<me>
+\text{area of parallelogram with sides <m>\llt a,b\rgt </m> and <m>\llt c,d\rgt</m>} =
+\left|\det\left[\begin{matrix}a&amp;b\\ c&amp;d\end{matrix}\right]\right|
+=\big|ad-bc\big|
+</me>
+So the area of our small piece of <m>\cR</m> is essentially
+\begin{impeqn}xml:id="eq_dA"
+<md>
+<mrow>
+\dee{A}
+   = \left|\det\left[\begin{matrix}\pdiff{x}{u}&amp;\pdiff{y}{u}\<me>
+0.05in]
+                                   \pdiff{x}{v}&amp;\pdiff{y}{v}
+       \end{matrix}\right]\right| \dee{u}\,\dee{v}
+</mrow>
+</md>
+\end{impeqn}
+\noindent Recall that <m>\det M</m> denotes the determinant of the matrix <m>M</m>.
+Also recall that we don't really need determinants for this text, though it
+does make for nice compact notation.
+</p>
+
+<p>The formula <xref ref="eq_dA"/> is the heart of the following theorem, which tells
+us how to translate an integral in one coordinate system into an
+integral in another coordinate system.
+<theorem>
+<statement><p>xml:id="thm_2d_sub"
+Let the functions <m>x(u,v)</m> and <m>y(u,v)</m> have continuous first partial
+derivatives and let the function <m>f(x,y)</m> be continuous. Assume that
+<m>x=x(u,v)</m>, <m>y=y(u,v)</m> provides a one-to-one correspondence
+between the points <m>(u,v)</m> of the region <m>\cU</m> in the <m>uv</m>-plane and
+the points <m>(x,y)</m> of the region <m>\cR</m> in the <m>xy</m>-plane. Then
+<me>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+ = \dblInt_{\cU} f\big(x(u,v)\,,\,y(u,v)\big)
+      \left|\det\left[\begin{matrix}
+            \pdiff{x}{u}(u,v)&amp;\pdiff{y}{u}(u,v)\<me>
+0.05in]
+            \pdiff{x}{v}(u,v)&amp;\pdiff{y}{v}(u,v)
+       \end{matrix}\right]\right| \dee{u}\,\dee{v}
+</me>
+</p>
+
+</statement>
+</theorem>
+</p>
+
+<p>The determinant
+<md>
+<mrow>
+\det\left[\begin{matrix}
+            \pdiff{x}{u}(u,v)&amp;\pdiff{y}{u}(u,v)\<me>
+0.05in]
+            \pdiff{x}{v}(u,v)&amp;\pdiff{y}{v}(u,v)
+       \end{matrix}\right]
+</mrow>
+</md>
+that appears in <xref ref="eq_dA"/> and Theorem <xref ref="thm_2d_sub"/> is known as
+the Jacobian
+<fn>It is not named after the Jacobin Club, a political
+movement of the French revolution. It is not named after the Jacobite rebellions that took place in Great Britain and Ireland between 1688 and 1746.
+It is not named after the Jacobean era of English and Scottish history.
+It is named after the German mathematician Carl Gustav Jacob Jacobi
+(1804--1851). He died from smallpox.</fn>
+.
+</p>
+
+<p><example><title><m>\dee{A}</m> for <m>x\leftrightarrow y</m></title>
+<p>xml:id="eg_exchange_dA"
+We'll start with a pretty trivial example in which we simply rename
+<m>x</m> to <m>Y</m> and <m>y</m> to <m>X</m>. That is
+<md>
+<mrow>
+x(X,Y) &amp;= Y
+</mrow><mrow>
+y(X,Y) &amp;= X
+</mrow>
+</md>
+Since
+<md>
+<mrow>
+\pdiff{x}{X}&amp;=0   &amp;\pdiff{y}{X}&amp;=1
+</mrow><mrow>
+\pdiff{x}{Y}&amp;=1   &amp;\pdiff{y}{Y}&amp;=0
+</mrow><mrow>
+</mrow>
+</md>
+<xref ref="eq_dA"/>, but with <m>u</m> renamed to <m>X</m> and <m>v</m> renamed to <m>Y</m>,
+gives
+<md>
+<mrow>
+\dee{A} &amp;= \left|\det\left[\begin{matrix}0 &amp; 1 \<me>
+0.05in]
+                                         1 &amp; 0
+       \end{matrix}\right]\right| \dee{X}\,\dee{Y}
+        = \dee{X}\,\dee{Y}
+</mrow>
+</md>
+which should really not be a shock.
+</p>
+
+</example>
+</p>
+
+<p><example><title><m>\dee{A}</m> for Polar Coordinates</title>
+<p>xml:id="eg_polar_dA"
+Polar coordinates have
+<md>
+<mrow>
+x(r,\theta) &amp;= r\cos\theta
+</mrow><mrow>
+y(r,\theta) &amp;= r\sin\theta
+</mrow>
+</md>
+Since
+<md>
+<mrow>
+\pdiff{x}{r}&amp;=\cos\theta   &amp;\pdiff{y}{r}&amp;=\sin\theta
+</mrow><mrow>
+\pdiff{x}{\theta}&amp;=-r\sin\theta   &amp;\pdiff{y}{\theta}&amp;=r\cos\theta
+</mrow><mrow>
+</mrow>
+</md>
+<xref ref="eq_dA"/>, but with <m>u</m> renamed to <m>r</m> and <m>v</m> renamed to <m>\theta</m>,
+gives
+<md>
+<mrow>
+\dee{A} &amp;= \left|\det\left[\begin{matrix}\cos\theta &amp;\sin\theta \<me>
+0.05in]
+                                   -r\sin\theta &amp; r\cos\theta
+       \end{matrix}\right]\right| \dee{r}\dee{\theta}
+   =\big(r\cos^2\theta + r\sin^2\theta\big)\,\dee{r}\dee{\theta}
+</mrow><mrow>
+  &amp;= r\,\dee{r}\,\dee{\theta}
+</mrow>
+</md>
+which is exactly what we found in <xref ref="eq_dA_polar"/>.
+</p></example>
+</p>
+
+<p><example><title><m>\dee{A}</m> for Parabolic Coordinates</title>
+<p>xml:id="eg_parabolic_dA"
+Parabolic
+<fn>The name comes from the fact that both the curves of constant <m>u</m> and the curves of constant <m>v</m> are parabolas.</fn>
+ coordinates are defined by
+<md>
+<mrow>
+x(u,v) &amp;= \frac{u^2-v^2}{2}
+</mrow><mrow>
+y(u,v) &amp;= uv
+</mrow>
+</md>
+Since
+<md>
+<mrow>
+\pdiff{x}{u}&amp;= u   &amp;\pdiff{y}{u}&amp;=v
+</mrow><mrow>
+\pdiff{x}{v}&amp;=-v   &amp;\pdiff{y}{v}&amp;=u
+</mrow><mrow>
+</mrow>
+</md>
+<xref ref="eq_dA"/> gives
+<md>
+<mrow>
+\dee{A} &amp;= \left|\det\left[\begin{matrix} u &amp; v \<me>
+0.05in]
+                                         -v &amp; u
+       \end{matrix}\right]\right| \dee{u}\dee{v}
+   = (u^2+v^2)\,\dee{u}\,\dee{v}
+</mrow>
+</md>
+</p>
+
+</example>
+</p>
+
+<p>In practice applying the change of variables Theorem <xref ref="thm_2d_sub"/> can
+be quite tricky. Here is just one simple (and rigged) example.
+<example>
+<p>xml:id="eg_2d_sub"
+Evaluate
+<me>
+\dblInt_\cR\frac{y}{1+x}\ \dee{x}\,\dee{y}\qquad\text{where }
+\cR=§et{(x,y)}{0\le x\le 1,\ 1+x\le y\le 2+2x}
+</me>
+</p>
+
+<p>\soln We can simplify the integrand considerably by making the
+change of variables
+<md>
+<mrow>
+s&amp;=x                    &amp; x&amp;=s
+</mrow><mrow>
+t&amp;=\frac{y}{1+x}        &amp; y&amp;=t(1+x) = t(1+s)
+</mrow>
+</md>
+Of course to evaluate the given integral by
+applying Theorem <xref ref="thm_2d_sub"/> we also need to know
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>[<m>\circ</m>] the domain of integration in terms of <m>s</m> and <m>t</m> and
+</li>
+<li>[<m>\circ</m>] <m>\dee{x}\,\dee{y}</m> in terms of <m>\dee{s}\,\dee{t}</m>.
+</li>
+</ul>
+</p>
+
+<p>\noindent
+By <xref ref="eq_dA"/>, recalling that <m>x(s,t)=s</m> and <m>y(s,t)=t(1+s)</m>,
+<md>
+<mrow>
+\dee{x}\,\dee{y}
+  &amp;= \left|\det\left[\begin{matrix}\pdiff{x}{s}&amp;\pdiff{y}{s}\<me>
+0.05in]
+                                   \pdiff{x}{t}&amp;\pdiff{y}{t}
+       \end{matrix}\right]\right| \dee{s}\,\dee{t}
+   = \left|\det\left[\begin{matrix}1&amp;t\<me>
+0.05in]
+                                   0&amp;1+s
+       \end{matrix}\right]\right| \dee{s}\,\dee{t}
+   = (1+s)\,\dee{s}\,\dee{t}
+</mrow>
+</md>
+</p>
+
+<p>To determine what the change of variables does to the domain of
+integration, we'll sketch <m>\cR</m> and then reexpress the boundary of <m>\cR</m>
+in terms of the new coordinates <m>s</m> and <m>t</m>. Here is the sketch of <m>\cR</m>
+in the original coordinates <m>(x,y)</m>.
+</p>
+
+<p><sidebyside>
+      <image source="problems/figs/genSub.pdf"/>
+      </sidebyside>
+The region <m>\cR</m> is a quadrilateral. It has four sides.
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+The left side is part of the line <m>x=0</m>. Recall that <m>x=s</m>.
+So, in terms of <m>s</m> and <m>t</m>, this line is <m>s=0</m>.
+</li>
+<li>
+The right side is part of the line <m>x=1</m>. In terms of <m>s</m> and <m>t</m>,
+this line is <m>s=1</m>.
+</li>
+<li>
+The bottom side is part of the line <m>y=1+x</m>, or <m>\frac{y}{1+x}=1</m>.
+Recall that <m>t=\frac{y}{1+x}</m>. So,
+in terms of <m>s</m> and <m>t</m>, this line is <m>t=1</m>.
+</li>
+<li>
+The top side is part of the line <m>y=2(1+x)</m>, or <m>\frac{y}{1+x}=2</m>.
+In terms of <m>s</m> and <m>t</m>, this line is <m>t=2</m>.
+</li>
+</ul>
+Here is another copy of the sketch of <m>\cR</m>. But this time
+the equations of its four sides are expressed in terms of <m>s</m> and <m>t</m>.
+</p>
+
+<p><sidebyside>
+      <image source="problems/figs/genSubB.pdf"/>
+      </sidebyside>
+So, expressed in terms of <m>s</m> and <m>t</m>, the domain of integration <m>\cR</m> is
+much simpler:
+<me>
+§et{(s,t)}{0\le s\le 1,\ 1\le t\le 2}
+</me>
+As <m>\dee{x}\,\dee{y} = (1+s)\,\dee{s}\,\dee{t}</m> and the integrand
+<m>\frac{y}{1+x}=t</m>, the integral is, by Theorem <xref ref="thm_2d_sub"/>,
+<md>
+<mrow>
+\dblInt_\cR\frac{y}{1+x}\ \dee{x}\,\dee{y}
+&amp;=\int_0^1\dee{s}\int_1^2\dee{t}\ (1+s)t
+=\int_0^1\dee{s}\ (1+s)\ \left[\frac{t^2}{2}\right]_1^2
+=\frac{3}{2}\left[s+\frac{s^2}{2}\right]_0^1
+=\frac{3}{2}\times \frac{3}{2}
+</mrow><mrow>
+&amp;=\frac{9}{4}
+</mrow>
+</md>
+</p>
+
+</example>
+</p>
+
+<p>There are natural generalizations of <xref ref="eq_dA"/> and
+Theorem <xref ref="thm_2d_sub"/> to three (and also to higher) dimensions,
+that are derived in precisely the same way as <xref ref="eq_dA"/>
+was derived. The derivation is based on the fact, discussed in
+the optional Section <xref ref="sec_GEOparallelogram"/>, that
+the volume of the parallelepiped (three dimensional parallelogram)
+\vadjust{
+</p>
+
+<p><sidebyside>
+      <image source="problems/figs/../figs_geometry/piped.pdf"/>
+      </sidebyside>
+        }
+determined by the three vectors
+<m>\va=\llt a_1,a_2,a_3\rgt ,\ \vb=\llt b_1,b_2,b_3\rgt </m> and
+<m>\vc=\llt c_1,c_2,c_3\rgt </m> is given by the formula
+<md>
+<mrow>
+\text{volume of parallelepiped with edges <m>\va,\ \vb,\ \vc\
+=\ \left|
+\det\left[\begin{matrix}a_1&amp;a_2&amp;a_3
+</mrow><mrow> b_1&amp;b_2&amp;b_3\\ c_1&amp;c_2&amp;c_3\end{matrix}\right]
+\right|</m>}
+</mrow>
+</md>
+where the determinant of a <m>3\times 3</m> matrix can be defined in terms
+of some <m>2\times 2</m> determinants by
+</p>
+
+<p>      <image source="problems/figs/../figs_geometry/det2"/>
+      If we use
+<md>
+<mrow>
+x&amp;=x(u,v,w)
+</mrow><mrow>
+y&amp;=y(u,v,w)
+</mrow><mrow>
+z&amp;=z(u,v,w)
+</mrow>
+</md>
+to change from old coordinates <m>x,y,z</m> to new coordinates <m>u,v,w</m>,
+then
+\begin{impeqn}xml:id="eq_dV"
+<md>
+<mrow>
+\dee{V}
+   = \left|\det\left[\begin{matrix}
+            \pdiff{x}{u}&amp;\pdiff{y}{u}&amp;\pdiff{z}{u}\<me>
+0.05in]
+            \pdiff{x}{v}&amp;\pdiff{y}{v}&amp;\pdiff{z}{v}\<me>
+0.05in]
+            \pdiff{x}{w}&amp;\pdiff{y}{w}&amp;\pdiff{z}{w}
+       \end{matrix}\right]\right| \dee{u}\,\dee{v}\,\dee{w}
+</mrow>
+</md>
+\end{impeqn}
+</p>
+
+<p><example><title><m>\dee{V}</m> for Cylindrical Coordinates</title>
+<p>xml:id="eg_cylindrical_dV"
+Cylindrical coordinates have
+<md>
+<mrow>
+x(r,\theta,z) &amp;= r\cos\theta
+</mrow><mrow>
+y(r,\theta,z) &amp;= r\sin\theta
+</mrow><mrow>
+z(r,\theta,z) &amp; = z
+</mrow>
+</md>
+Since
+<md>
+<mrow>
+\pdiff{x}{r}&amp;=\cos\theta   &amp;\pdiff{y}{r}&amp;=\sin\theta &amp;\pdiff{z}{r}&amp;=0
+</mrow><mrow>
+\pdiff{x}{\theta}&amp;=-r\sin\theta  &amp;\pdiff{y}{\theta}&amp;=r\cos\theta
+               &amp;\pdiff{z}{\theta}&amp;=0
+</mrow><mrow>
+\pdiff{x}{z}&amp;= 0  &amp;\pdiff{y}{z}&amp;=0
+               &amp;\pdiff{z}{z}&amp;=1
+</mrow>
+</md>
+<xref ref="eq_dV"/>, but with <m>u</m> renamed to <m>r</m> and <m>v</m> renamed to <m>\theta</m>,
+gives
+<md>
+<mrow>
+\dee{V} &amp;= \left|\det\left[\begin{matrix}\cos\theta &amp;\sin\theta&amp;0 \<me>
+0.05in]
+                                   -r\sin\theta &amp; r\cos\theta&amp;0 \<me>
+0.05in]
+                                     0 &amp; 0 &amp; 1
+       \end{matrix}\right]\right| \dee{r}\,\dee{\theta}\,\dee{z}
+</mrow><mrow>
+&amp;= \left|\cos\theta\det\left[\begin{matrix}
+                                            r\cos\theta&amp;0 \<me>
+0.05in]
+                                                0 &amp; 1
+                           \end{matrix}\right]
+        -\sin\theta\det\left[\begin{matrix}
+                                            -r\sin\theta&amp;0 \<me>
+0.05in]
+                                                0 &amp; 1
+                           \end{matrix}\right]
+        +0\det\left[\begin{matrix}
+                              -r\sin\theta  &amp;  r\cos\theta \<me>
+0.05in]
+                                                0 &amp; 0
+                           \end{matrix}\right]
+    \right| \dee{r}\,\dee{\theta}\,\dee{z}
+</mrow><mrow>
+   &amp;=\big(r\cos^2\theta + r\sin^2\theta\big)\,\dee{r}\,\dee{\theta}\,\dee{z}
+</mrow><mrow>
+  &amp;= r\,\dee{r}\,\dee{\theta}\,\dee{z}
+</mrow>
+</md>
+which is exactly what we found in <xref ref="eq_dV_cylindrical"/>.
+</p></example>
+</p>
+
+<p><example><title><m>\dee{V}</m> for Spherical Coordinates</title>
+<p>xml:id="eg_spherical_dV"
+Spherical coordinates have
+<md>
+<mrow>
+x(\rho,\theta,\varphi) &amp;= \rho\,\cos\theta\,\sin\varphi
+</mrow><mrow>
+y(\rho,\theta,\varphi) &amp;= \rho\,\sin\theta\,\sin\varphi
+</mrow><mrow>
+z(\rho,\theta,\varphi) &amp; =  \rho\,\cos\varphi
+</mrow>
+</md>
+Since
+<md>
+<mrow>
+\pdiff{x}{\rho}&amp;=\cos\theta\,\sin\varphi
+         &amp;\pdiff{y}{\rho}&amp;=\sin\theta\,\sin\varphi
+         &amp;\pdiff{z}{\rho}&amp;=\cos\varphi
+</mrow><mrow>
+\pdiff{x}{\theta}&amp;=-\rho\,\sin\theta\,\sin\varphi
+         &amp;\pdiff{y}{\theta}&amp;=\rho\,\cos\theta\,\sin\varphi
+               &amp;\pdiff{z}{\theta}&amp;=0
+</mrow><mrow>
+\pdiff{x}{\varphi}&amp;= \rho\,\cos\theta\,\cos\varphi
+          &amp;\pdiff{y}{\varphi}&amp;=\rho\,\sin\theta\,\cos\varphi
+               &amp;\pdiff{z}{\varphi}&amp;=-\rho\,\sin\varphi
+</mrow>
+</md>
+<xref ref="eq_dV"/>, but with <m>u</m> renamed to <m>\rho</m>, <m>v</m> renamed to <m>\theta</m>
+and <m>w</m> renamed to <m>\varphi</m>, gives
+<md>
+<mrow>
+\dee{V} &amp;= \left|\det\left[\begin{matrix}\cos\theta\,\sin\varphi
+                                       &amp; \sin\theta\,\sin\varphi
+                                       &amp;\cos\varphi \<me>
+0.05in]
+                                   -\rho\,\sin\theta\,\sin\varphi
+                                   &amp;\rho\,\cos\theta\,\sin\varphi
+                                   &amp;0 \<me>
+0.05in]
+                                    \rho\,\cos\theta\,\cos\varphi
+                                  &amp;\rho\,\sin\theta\,\cos\varphi
+                                  &amp;-\rho\,\sin\varphi
+       \end{matrix}\right]\right| \dee{\rho}\,\dee{\theta}\,\dee{\varphi}
+</mrow><mrow>
+&amp;= \left|\cos\theta\,\sin\varphi\det\left[\begin{matrix}
+                           \rho\,\cos\theta\,\sin\varphi&amp;0 \<me>
+0.05in]
+                         \rho\,\sin\theta\,\cos\varphi  &amp;-\rho\,\sin\varphi
+                           \end{matrix}\right]
+        -\sin\theta\,\sin\varphi\det\left[\begin{matrix}
+                             -\rho\,\sin\theta\,\sin\varphi &amp;0 \<me>
+0.05in]
+                              \rho\,\cos\theta\,\cos\varphi &amp;-\rho\,\sin\varphi
+                           \end{matrix}\right] \right.
+</mrow><mrow> &amp;\hskip1in\left.
+        +\cos\varphi\det\left[\begin{matrix}
+                       -\rho\,\sin\theta\,\sin\varphi
+                                   &amp;\rho\,\cos\theta\,\sin\varphi  \<me>
+0.05in]
+                        \rho\,\cos\theta\,\cos\varphi
+                                          &amp;\rho\,\sin\theta\,\cos\varphi
+                           \end{matrix}\right]
+    \right| \dee{\rho}\,\dee{\theta}\,\dee{\varphi}
+</mrow><mrow>
+   &amp;=\rho^2 \big|-\cos^2\theta \sin^3\varphi
+                 - \sin^2\theta\sin^3\varphi
+                 -\sin\varphi\cos^2\varphi
+          \big|\,\dee{\rho}\,\dee{\theta}\,\dee{\varphi}
+</mrow><mrow>
+   &amp;=\rho^2 \big|-\sin\varphi \sin^2\varphi
+                 -\sin\varphi\cos^2\varphi
+          \big|\,\dee{\rho}\,\dee{\theta}\,\dee{\varphi}
+</mrow><mrow>
+  &amp;= \rho^2\sin\varphi\,\dee{\rho}\,\dee{\theta}\,\dee{\varphi}
+</mrow>
+</md>
+which is exactly what we found in <xref ref="eq_dV_spherical"/>.
+</p></example>
+</p>
+
+<p>\subsection{Optional <mdash/> Dropping Higher Order Terms in <m>\dee{u},\dee{v}</m>}xml:id="sec_hoterms"
+</p>
+
+<p>In the course of deriving <xref ref="eq_dA"/>, that is,
+the <m>\dee{A}</m> formula for
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/dA.pdf"/>
+</sidebyside>
+we approximated, for example, the vectors
+<md alignment="alignat">
+<mrow>{3}
+\overrightarrow{P_0P_1}
+&amp;=\vr(u_0+\dee{u}, v_0) -\vr(u_0\,,\,v_0)
+&amp;= \pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u} + E_1
+&amp;\approx \pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u}  \<me>
+0.1in]
+\overrightarrow{P_0P_2}
+&amp;=\vr(u_0, v_0+\dee{v})-\vr(u_0\,,\,v_0)
+&amp;= \pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{v}  + E_2
+&amp;\approx \pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{v}
+</mrow>
+</md>
+where <m>\vE_1</m> is bounded
+<fn>Remember the error in the Taylor polynomial
+approximations. See <xref ref="eqn_quadratic_exact"/> and
+<xref ref="eqn_linear_bound"/>.</fn>
+ by a constant times <m>\dee{u}^2</m>
+and <m>E_2</m> is bounded by a constant times <m>\dee{v}^2</m>. That is, we assumed
+that we could just ignore the errors and drop <m>E_1</m> and <m>E_2</m> by setting them
+to zero.
+</p>
+
+<p>So we approximated
+<md>
+<mrow>
+\big|\overrightarrow{P_0P_1}\times\overrightarrow{P_0P_2}\big|
+&amp;=\Big|\Big[\pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u} + \vE_1\Big]
+\times\Big[\pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{v} + \vE_2\Big]
+\Big|
+</mrow><mrow>
+&amp;=\Big|\pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u}
+\times\pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{v} + \vE_3
+\Big|
+</mrow><mrow>
+&amp;\approx \Big|\pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u}
+\times\pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{v}
+\Big|
+</mrow>
+</md>
+where the length of the vector <m>\vE_3</m> is bounded by a constant times
+<m>\dee{u}^2\,\dee{v}+\dee{u}\,\dee{v}^2</m>.
+We'll now see why dropping terms like <m>\vE_3</m> does not change the value
+of the integral at all
+<fn>See the optional § 1.1.6 of the CLP-2 text
+for an analogous argument concerning Riemann sums.</fn>
+.
+</p>
+
+<p>Suppose that our domain of integration consists of all <m>(u,v)</m>'s
+in a rectangle of width <m>W</m> and height <m>H</m>, as in the figure below.
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/slicing.pdf"/>
+</sidebyside>
+Subdivide the rectangle into a grid of <m>n\times n</m> small subrectangles
+by drawing lines of constant <m>v</m> (the red lines in the figure) and
+lines of constant <m>u</m> (the blue lines in the figure).
+Each subrectangle has width <m>\dee{u} = \frac{W}{n}</m> and height
+<m>\dee{v} = \frac{H}{n}</m>. Now suppose that in setting up the integral
+we make, for each subrectangle, an error that is bounded by some constant
+times
+<me>
+\dee{u}^2\,\dee{v}+\dee{u}\,\dee{v}^2
+=\Big(\frac{W}{n}\Big)^2 \frac{H}{n}
+ +  \frac{W}{n}\Big(\frac{H}{n}\Big)^2
+=\frac{WH(W+H)}{n^3}
+</me>
+Because there are a total of <m>n^2</m> subrectangles, the total error that
+we have introduced, for all of these subrectangles, is no larger than
+a constant times
+<me>
+n^2 \times \frac{WH(W+H)}{n^3} = \frac{WH(W+H)}{n}
+</me>
+When we define our integral by taking the limit <m>n\rightarrow 0</m> of
+the Riemann sums, this error converges to exactly <m>0</m>. As a consequence,
+it was safe for us to ignore the error terms when we established the change
+of variables formulae.
+</p>
+</section>

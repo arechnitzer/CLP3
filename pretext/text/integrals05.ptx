@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title></title>
+<p>\section{Triple Integrals}xml:id="sec_3d_integrals"
+</p>
+
+<p>Triple integrals, that is integrals over three dimensional regions,
+are just like double integrals, only more so. We decompose the
+domain of integration into tiny cubes, for example,
+compute the contribution from each cube and then use integrals
+to add up all of the different pieces. We'll go through the
+details now by means of a number of examples.
+</p>
+
+<p><example>
+<p>xml:id="eg_sphere_mass_A"
+Find the mass inside the sphere <m>x^2+y^2+z^2=1</m> if the density
+is <m>\rho(x,y,z) = |xyz|</m>.
+</p>
+
+<p>\soln
+The absolute values can complicate the computations. We can avoid
+those complications by exploiting the fact that,
+by symmetry, the total mass of the sphere will be eight times the mass
+in the first octant.
+We shall cut the first octant part of the sphere into tiny pieces using
+Cartesian coordinates. That is, we shall cut it up using planes of
+constant <m>z</m>, planes of constant <m>y</m>, and planes of constant <m>x</m>,
+which we recall look like
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/../figs_coord/cart2.pdf"/>\qquad
+    <image source="problems/figs/../figs_coord/cart4.pdf"/>\qquad
+    <image source="problems/figs/../figs_coord/cart3.pdf"/>
+</sidebyside>
+<ul>
+<li>
+First slice the (the first octant part of the) sphere into horizontal
+plates by inserting many planes of
+constant <m>z</m>, with the various values of <m>z</m> differing by <m>\dee{z}</m>.
+The figure on the left below shows the part of one plate in the first octant
+outlined in red. Each plate
+\vspace{-\topsep}
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+has thickness <m>\dee{z}</m>,
+</li>
+<li>
+has <m>z</m> almost constant throughout the plate (it only varies by <m>\dee{z}</m>), and
+</li>
+<li>
+has <m>(x,y)</m> running over <m>x\ge 0</m>, <m>y\ge 0</m>, <m>x^2+y^2\le 1-z^2</m>.
+</li>
+<li>
+The bottom plate starts at <m>z=0</m> and the top plate ends at
+<m>z=1</m>. See the figure on the right below.
+</li>
+</ul>
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/sphereMass1.pdf"/>\qquad
+    <image source="problems/figs/sphereMass1a.pdf"/>
+</sidebyside>
+\vspace{-\topsep}
+</li>
+<li>
+Concentrate on any one plate. Subdivide it into long thin <q>square</q> beams
+by inserting many planes of constant <m>y</m>, with the various values of <m>y</m> differing by <m>\dee{y}</m>. The figure on the left below shows the part
+of one beam in the first octant outlined in blue. Each beam
+\vspace{-\topsep}
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+has cross-sectional area  <m>\dee{y}\,\dee{z}</m>,
+</li>
+<li>
+has <m>z</m>  and <m>y</m> essentially constant throughout the beam, and
+</li>
+<li>
+has <m>x</m> running over <m>0\le x\le \sqrt{1-y^2-z^2}</m>.
+</li>
+<li> The leftmost beam has, essentially, <m>y=0</m> and the rightmost beam has,
+essentially, <m>y=\sqrt{1-z^2}</m>.  See the figure on the right below.
+</li>
+</ul>
+\vspace{-\topsep}
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/sphereMass2.pdf"/>\quad
+    <image source="problems/figs/sphereMass2a.pdf"/>
+</sidebyside>
+</li>
+<li>
+Concentrate on any one beam. Subdivide it into tiny approximate cubes
+by inserting many planes of constant <m>x</m>, with the various values of <m>x</m> differing by <m>\dee{x}</m>. The figure on the left below shows the top of one
+approximate cube in black. Each cube
+\vspace{-\topsep}
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+has volume <m>\dee{x}\,\dee{y}\,\dee{z}</m>, and
+</li>
+<li>
+has <m>x</m>, <m>y</m> and <m>z</m> all essentially constant throughout the cube.
+</li>
+<li> The first cube has, essentially, <m>x=0</m> and the last cube has,
+essentially, <m>x=\sqrt{1-y^2-z^2}</m>.  See the figure on the right below.
+</li>
+</ul>
+\vspace{-\topsep}
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/sphereMass3.pdf"/>\qquad
+    <image source="problems/figs/sphereMass3a.pdf"/>
+</sidebyside>
+</li>
+</ul>
+</p>
+
+<p>Now we can build up the mass.
+<ul>
+<li>
+Concentrate on one approximate cube. Let's say that it contains the point
+<m>(x,y,z)</m>.
+<ul>
+<li>
+The cube has volume essentially <m>\dee{V} =  \dee{x}\,\dee{y}\,\dee{z}</m>
+and
+</li>
+<li>
+essentially has density <m>\rho(x,y,z) = xyz</m> and so
+</li>
+<li>
+essentially has mass <m>xyz\,\dee{x}\,\dee{y}\,\dee{z}</m>.
+</li>
+</ul>
+</li>
+<li>
+To get the mass of any one beam, say the beam whose <m>y</m> coordinate runs
+from <m>y</m> to <m>y+\dee{y}</m>, we just add up the masses of the approximate
+cubes in that beam, by integrating <m>x</m> from its smallest value on
+the beam, namely <m>0</m>, to its largest value on the beam, namely
+<m>\sqrt{1-y^2-z^2}</m>. The mass of the beam is thus
+<md>
+<mrow>
+\dee{y}\,\dee{z} \int_0^{\sqrt{1-y^2-z^2}}  \dee{x}\,xyz
+</p>
+
+<p></mrow>
+</md>
+</li>
+<li>
+To get the mass of any one plate, say the plate whose <m>z</m> coordinate runs
+from <m>z</m> to <m>z+\dee{z}</m>, we just add up the masses of the beams
+in that plate, by integrating <m>y</m> from its smallest value on
+the plate, namely <m>0</m>, to its largest value on the plate, namely
+<m>\sqrt{1-z^2}</m>. The mass of the plate is thus
+<md>
+<mrow>
+\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\int_0^{\sqrt{1-y^2-z^2}}  \dee{x}\,xyz
+</mrow>
+</md>
+</li>
+<li>
+To get the mass of the part of the sphere in the first octant, we just
+add up the masses of the plates that it contains, by integrating <m>z</m> from its smallest value in the octant, namely <m>0</m>, to its largest value on the sphere,
+namely  <m>1</m>. The mass in the first octant is thus
+<md>
+<mrow>
+\int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\int_0^{\sqrt{1-y^2-z^2}}  \dee{x}\,xyz
+&amp;= \int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\ yz
+          \left[\int_0^{\sqrt{1-y^2-z^2}}  \dee{x}\,x\right]
+</mrow><mrow>
+&amp;= \int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\
+              \frac{1}{2}yz \big(1-y^2-z^2\big)
+</mrow><mrow>
+&amp;=\int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\
+                      \left[\frac{z(1-z^2)}{2}y-\frac{z}{2}y^3\right]
+</mrow><mrow>
+&amp;=\int_0^1\dee{z}\ \left[\frac{z{(1-z^2)}^2}{4}-\frac{z{(1-z^2)}^2}{8}\right]
+</mrow><mrow>
+&amp;=-\int_1^0\dee{u}\ \frac{u^2}{16}
+           \qquad\text{with }u=1-z^2,\ \dee{u}=-2z\,\dee{z}
+</mrow><mrow>
+&amp;=\frac{1}{48}
+</mrow>
+</md>
+</li>
+<li>
+So the mass of the total (eight octant) sphere is <m>8\times\frac{1}{48}=\frac{1}{6}</m>.
+</li>
+</ul>
+</p>
+
+</example>
+</p>
+
+<p>Consider, for example, the limits of integration for the integral
+<md>
+<mrow>
+\int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\int_0^{\sqrt{1-y^2-z^2}}  \dee{x}\,xyz
+=\int_0^1\left(\int_0^{\sqrt{1-z^2}}\left(\int_0^{\sqrt{1-y^2-z^2}}  xyz\ \dee{x}\right)\dee{y} \right)\dee{z}
+</mrow>
+</md>
+that we have just evaluated.
+<ul>
+<li>
+When we are integrating over the innermost integral, with respect to <m>x</m>,
+the quantities <m>y</m> and <m>z</m> are treated as constants. In particular,
+<m>y</m> and <m>z</m> may appear in the limits of integration for the <m>x</m>-integral,
+but <m>x</m> may not appear in those limits.
+</li>
+<li>
+When we are integrating over <m>y</m>, we have already integrated out <m>x</m>;
+<m>x</m> no longer exists. The quantity <m>z</m> is treated as a constant. In particular,
+<m>z</m>, but neither <m>x</m> nor <m>y</m>, may appear in the limits of integration for the <m>y</m>-integral.
+</li>
+<li>
+Finally, when we are integrating over <m>z</m>, we have already integrated out
+<m>x</m> and <m>y</m>; they no longer exist. None of <m>x</m>, <m>y</m> or <m>z</m>, may appear in the limits of integration for the <m>z</m>-integral.
+</li>
+</ul>
+</p>
+
+<p><example>
+<p>xml:id="eg_3d_limits_of_integration"
+In practice, often the hardest part of dealing with
+a triple integral is setting up the limits of integration.
+In this example, we'll concentrate on exactly that.
+</p>
+
+<p>Let <m>\cV</m> be the solid region in <m>\bbbr^3</m> bounded by the planes
+<m>x = 0</m>, <m>y = 0</m>, <m>z=0</m>, <m>y = 4 - x</m>, and the surface <m>z = 4 - x^2</m>. We
+are now going to write
+<m>\tripInt_\cV f(x, y, z)\ \dee{V}</m> as an iterated integral
+(i.e. find the limits of integration) in two different ways.
+Here <m>f</m> is just some general, unspecified, function.
+</p>
+
+<p>First, we'll figure out what <m>\cV</m> looks like.
+The following three figures show
+<ul>
+<li>
+the part of the first octant with <m>y \le 4 - x</m>  (except that
+it continues vertically upward)
+</li>
+<li>
+the part of the first octant with <m>z \le 4 - x^2</m> (except that it
+continues to the right)
+</li>
+<li>
+the part of the first octant with both <m>y\le 4-x</m> and  <m>z \le 4 - x^2</m>.
+That's
+<me>
+\cV=§et{(x,y,z)}{x\ge 0, y\ge 0,\  z\ge 0,\ x+y\le 4,\ z\le 4-x^2}
+</me>
+</li>
+</ul>
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/limits3dA.pdf"/>\qquad
+    <image source="problems/figs/limits3dB.pdf"/>\qquad
+    <image source="problems/figs/limits3dC.pdf"/>
+</sidebyside>
+</p>
+
+<p>\noindent
+<em>The iterated integral
+   <m>\tripInt_\cV f(x, y, z)\ \dee{z</em>\,\dee{y} \,\dee{x}
+     =\int\left(\int\left(\int f(x, y, z)\ \dee{z}\right)\dee{y}\right)\dee{x} </m>:}\ \ \
+For this iterated integral, the outside integral is with respect to
+<m>x</m>, so we first slice up <m>\cV</m> using planes of constant <m>x</m>,
+as in the figure below.
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/limits3dD.pdf"/>
+</sidebyside>
+Observe from that figure that, on <m>\cV</m>,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>2</m>, and
+</li>
+<li>
+for each <m>x</m> in that range, <m>y</m> runs from <m>0</m> to <m>4-x</m> and
+</li>
+<li>
+for each <m>(x,y)</m> as above,
+<m>z</m> runs from <m>0</m> to <m>4-x^2</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+\tripInt_\cV f(x, y, z)\ \dee{z}\,\dee{y} \,\dee{x}
+&amp;=\int_0^2 \dee{x} \int_0^{4-x} \dee{y}\int_0^{4-x^2}\dee{z}\  f(x, y, z)
+</mrow><mrow>
+&amp;=\int_0^2  \int_0^{4-x} \int_0^{4-x^2}f(x, y, z)\ \dee{z}\,\dee{y}\,\dee{x}
+</mrow>
+</md>
+</p>
+
+<p>\goodbreak\noindent
+<em>The iterated integral
+   <m>\tripInt_\cV f(x, y, z)\ \dee{y</em>\,\dee{x} \,\dee{z}
+   =\int\left(\int\left(\int f(x, y, z)\ \dee{y}\right)\dee{x} \right)\dee{z}</m>:}
+    \ \ \
+For this iterated integral, the outside integral is with respect to
+<m>z</m>, so we first slice up <m>\cV</m> using planes of constant <m>z</m>,
+as in the figure below.
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/limits3dE.pdf"/>
+</sidebyside>
+Observe from that figure that, on <m>\cV</m>,
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+<m>z</m> runs from <m>0</m> to <m>4</m>, and
+</li>
+<li>
+for each <m>z</m> in that range, <m>x</m> runs from <m>0</m> to <m>\sqrt{4-z}</m> and
+</li>
+<li>
+for each <m>(x,z)</m> as above,
+<m>y</m> runs from <m>0</m> to <m>4-x</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+\tripInt_\cV f(x, y, z)\ \dee{y}\,\dee{x} \,\dee{z}
+&amp;=\int_0^4 \dee{z} \int_0^{\sqrt{4-z}} \dee{x}\int_0^{4-x}\dee{y}\  f(x, y, z)
+</mrow><mrow>
+&amp;=\int_0^4  \int_0^{\sqrt{4-z}} \int_0^{4-x}f(x, y, z)
+            \ \dee{y}\,\dee{x}\,\dee{z}
+</mrow>
+</md>
+</p>
+
+</example>
+</p>
+
+<p><example>
+<p>xml:id="eg_3d_integrals_exchange_of_order"
+As was said in the last example, in practice, often the hardest parts of
+dealing with a triple integral concern the limits of integration.
+In this example, we'll again concentrate on exactly that. This time, we will consider the integral
+<me>
+I=\int_0^2\dee{y}\int_0^{2-y}\dee{z}\int_0^{\frac{2-y}{2}}\dee{x}\ f(x,y,z)
+</me>
+and we will reexpress <m>I</m> with the outside integral being over <m>z</m>. We will
+figure out the limits of integration for both the order
+<m>\int\dee{z}\int\dee{x}\int\dee{y}\ f(x,y,z)</m> and for the order
+<m>\int\dee{z}\int\dee{y}\int\dee{x}\ f(x,y,z)</m>.
+</p>
+
+<p>Our first task is to get a good idea as to what the domain of integration looks like. We start by reading off of the given integral that
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+the outside integral says that <m>y</m> runs from <m>0</m> to <m>2</m>, and
+</li>
+<li>
+the middle integral says that, for each <m>y</m> in that range, <m>z</m> runs from <m>0</m> to <m>2-y</m> and
+</li>
+<li>
+the inside integral says that, for each <m>(y,z)</m> as above,
+<m>x</m> runs from <m>0</m> to <m>\frac{2-y}{2}</m>.
+</li>
+</ul>
+So the domain of integration is
+<me>
+V=§et{(x,y,z)}{ 0\le y\le 2,\
+                 0\le z\le 2-y,\
+                 0\le x\le \tfrac{2-y}{2}}
+\tag{<m>*</m>}</me>
+We'll sketch <m>V</m> shortly. Because it is generally easier to make 2d sketches than it is to make 3d sketches, we'll first make a 2d sketch of the part of <m>V</m> that lies in the vertical plane <m>y=Y</m>. Here <m>Y</m> is any constant between
+<m>0</m> and <m>2</m>. Looking at the definition of <m>V</m>, we see that the point <m>(x,Y,z)</m>
+lies in <m>V</m> if and only if
+<md>
+<mrow>
+0\le z\le 2-Y\qquad   0\le x\le \frac{2-Y}{2}
+</mrow>
+</md>
+Here, on the left, is a (2d) sketch of all <m>(x,z)</m>'s that obey those
+inequalities, and, on the right, is a (3d) sketch of all <m>(x,Y,z)</m>'s that obey those inequalities.
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/figs_integration/xchange2.pdf"/>\qquad\qquad
+    <image source="problems/figs/figs_integration/xchange5.pdf"/>
+</sidebyside>
+So our solid <m>V</m> consists of a bunch of vertical rectangles stacked sideways along the <m>y</m>-axis. The rectangle in the plane <m>y=Y</m> has side lengths
+<m>\frac{2-Y}{2}</m> and <m>2-Y</m>. As we move from the plane <m>y=Y=0</m>, i.e. the <m>xz</m>-plane, to the plane <m>y=Y=2</m>, the rectangle decreases in size linearly
+from a one by two rectangle, when <m>Y=0</m>, to a zero by zero rectangle,
+i.e. a point, when <m>Y=2</m>.
+Here is a sketch of <m>V</m> together with a typical <m>y=Y</m> rectangle.
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/figs_integration/xchange4.pdf"/>
+</sidebyside>
+To reepress the given integral with the outside integral being with respect to <m>z</m>, we have to slice up <m>V</m> into horizontal plates by inserting planes
+of constant <m>z</m>. So we have to figure out what the part of <m>V</m> that lies in
+the horizontal plane <m>z=Z</m> looks like. From the figure above, we see that, in <m>V</m>, the smallest value of <m>z</m> is <m>0</m> and the biggest value of <m>z</m> is <m>2</m>.
+So <m>Z</m> is any constant between <m>0</m> and <m>2</m>. Again looking at the definition of <m>V</m> in <m>(*)</m> above, we see that the point <m>(x,y,Z)</m> lies in <m>V</m> if and only if
+<md>
+<mrow>
+y\ge 0\qquad y\le 2\qquad
+y\le 2-Z\qquad
+x\ge 0\qquad
+2x+y\le 2
+</mrow>
+</md>
+Here, on the left, is a (2d) sketch showing the top view of all <m>(x,y)</m>'s
+that obey those inequalities, and, on the right, is a (3d) sketch of all <m>(x,y,Z)</m>'s that obey those inequalities.
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/figs_integration/xchange3.pdf"/>\qquad
+    <image source="problems/figs/figs_integration/xchange6.pdf"/>
+</sidebyside>
+To express <m>I</m> as an integral with the order of integration
+<m>\int\dee{z}\int\dee{y}\int\dee{x}\ f(x,y,z)</m>, we subdivide the plate at height <m>z</m> into vertical strips as in the figure
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/figs_integration/xchange3v.pdf"/>
+</sidebyside>
+Since
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+<m>y</m> is essentially constant on each strip with the leftmost strip having <m>y=0</m>
+and the rightmost strip having <m>y=2-z</m> and
+</li>
+<li>
+for each <m>y</m> in that range, <m>x</m> runs from <m>0</m> to <m>\tfrac{2-y}{2}</m>
+</li>
+</ul>
+we have
+<me>
+I=\int_0^2\dee{z}\int_0^{2-z}\dee{y}\int_0^{\frac{2-y}{2}}\dee{x}\ f(x,y,z)
+</me>
+Alternatively, to express <m>I</m> as an integral with the order of integration
+<m>\int\dee{z}\int\dee{x}\int\dee{y}\ f(x,y,z)</m>, we subdivide the plate at height <m>z</m> into horizontal strips as in the figure
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/figs_integration/xchange3h.pdf"/>
+</sidebyside>
+Since
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+<m>x</m> is essentially constant on each strip with the first strip having <m>x=0</m>
+and the last strip having <m>x=1</m> and
+</li>
+<li>
+for each <m>x</m> between <m>0</m> and <m>z/2</m>, <m>y</m> runs from <m>0</m> to <m>2-z</m> and
+</li>
+<li>
+for each <m>x</m> between <m>z/2</m> and <m>1</m>, <m>y</m> runs from <m>0</m> to <m>2-2x</m>
+</li>
+</ul>
+we have
+<me>
+I=\int_0^2\dee{z}\int_0^{z/2}\dee{x}\int_0^{2-z}\dee{y}\ f(x,y,z)
++\int_0^2\dee{z}\int_{z/2}^{1}\dee{x}\int_0^{2-2x}\dee{y}\ f(x,y,z)
+</me>
+</p></example>
+</p>
+
+
+
+</section>

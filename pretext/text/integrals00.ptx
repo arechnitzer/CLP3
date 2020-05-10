@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chap_integrals">
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+<title>Multiple Integrals</title>
+<introduction>
+  <p>In your previous calculus courses you defined and worked
+  with single variable integrals, like <m>\int_a^b f(x)\ \dee{x}</m>.
+  In this chapter, we define and work with multivariable integrals,
+  like <m>\dblInt_R f(x,y)\ \dee{x}\,\dee{y}</m> and
+  <m>\tripInt_V f(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z}</m>. We start with two variable
+  integrals.
+  </p>
+</introduction>
+<xi:include href="./integrals01.ptx" />
+ </chapter>

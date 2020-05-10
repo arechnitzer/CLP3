@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title></title>
+<p>\section{Triple Integrals in Cylindrical Coordinates} xml:id="sec_cylindrical"
+</p>
+
+<p>Many problems possess natural symmetries. We can make our work easier
+by using coordinate systems, like  polar coordinates, that are
+tailored to those symmetries. In this section we will look at two
+more such coordinate systems <mdash/> cylindrical and spherical coordinates.
+</p>
+
+<p>\subsection{Cylindrical Coordinates} xml:id="sec_cylindrical_coords"
+</p>
+
+<p>In the event that we wish to compute, for example, the mass
+of an object that is invariant under rotations about the
+<m>z</m>-axis
+<fn>like a pipe or a can of tuna fish</fn>
+,
+it is advantageous to use a natural generalization of polar coordinates
+to three dimensions. The coordinate system is called <em>cylindrical
+coordinates</em>.
+<definition>
+<statement><p>xml:id="def_cylindrical"
+Cylindrical coordinates are denoted
+<fn>We are using the
+standard mathematics conventions for the cylindrical coordinates.
+Under the ISO conventions they are <m>(\rho,\varphi,z)</m>.</fn>
+</p>
+
+<p><m>r</m>, <m>\theta</m> and <m>z</m> and are defined by
+<md>
+<mrow>
+r&amp;=\text{ the distance from }(x,y,0)\text{ to }(0,0,0)
+</mrow><mrow>
+ &amp;=\text{ the distance from }(x,y,z)\text{ to the <m>z</m>-axis}
+</mrow><mrow>
+\theta&amp;=\text{ the angle between the positive <m>x</m> axis and the
+            line joining <m>(x,y,0)</m> to <m>(0,0,0)</m>}
+</mrow><mrow>
+z&amp;=\text{ the signed distance from }(x,y,z)
+\text{ to the <m>xy</m>-plane}
+</mrow>
+</md>
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/../figs_coord/cyl1.pdf"/>
+</sidebyside>
+That is, <m>r</m> and <m>\theta</m> are the usual polar coordinates and <m>z</m> is the
+usual <m>z</m>.
+</p></statement>
+</definition>
+ The Cartesian and cylindrical coordinates
+are related by
+<fn>As was the case for polar coordinates, it is
+sometimes convenient to extend these definitions by saying that
+<m>x = r\cos\theta</m> and <m>y = r\sin\theta</m> even when r is negative. See the end of Section <xref ref="sec_polar_coords"/>.</fn>
+</p>
+
+<p>\begin{impeqn}xml:id="eqn_cylindrical"
+<md>
+<mrow>
+x&amp;=r\cos\theta &amp;
+y&amp;=r\sin\theta &amp;
+z&amp;=z
+</mrow><mrow>
+    r&amp;=\sqrt{x^2+y^2} &amp;
+    \theta&amp;=\arctan\frac{y}{x} &amp;
+    z&amp;=z
+</mrow>
+</md>
+\end{impeqn}
+Here are sketches of surfaces of constant <m>r</m>, constant <m>\theta</m>, and constant <m>z</m>.
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/../figs_coord/cyl3.pdf"/>\qquad
+    <image source="problems/figs/../figs_coord/cyl4.pdf"/>\qquad
+    <image source="problems/figs/../figs_coord/cyl2.pdf"/>
+</sidebyside>
+</p>
+
+<p>\subsection{The Volume Element in Cylindrical Coordinates} xml:id="sec_cylindrical_vol"
+</p>
+
+<p> Before we can start integrating using these coordinates
+we need to determine the volume element. Recall that before integrating
+in polar coordinates, we had to establish that
+<m>\dee{A}=r\,\dee{r}\,\dee{\theta}</m>. In the arguments that follow we establish
+that <m>\dee{V} =r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>.
+</p>
+
+<p>If we cut up a solid by
+<ul>
+<li>
+first slicing it into horizontal plates of thickness <m>\dee{z}</m>
+by using planes of constant <m>z</m>,
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/sphereCyl1.pdf"/>
+</sidebyside>
+</li>
+<li>
+and then subdividing the plates into wedges using surfaces of  constant <m>\theta</m>,
+say with the difference between successive <m>\theta</m>'s being <m>\dee{\theta}</m>,
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/sphereCyl2.pdf"/>
+</sidebyside>
+</li>
+<li>
+and then subdividing the wedges into approximate cubes using surfaces
+of  constant <m>r</m>, say with the difference between successive <m>r</m>'s
+being <m>\dee{r}</m>,
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/sphereCyl3.pdf"/>
+</sidebyside>
+</li>
+</ul>
+we end up with approximate cubes that look like
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/cylCube.pdf"/>
+</sidebyside>
+<ul>
+<li>
+When we introduced slices using surfaces of constant <m>r</m>,
+the difference between the successive <m>r</m>'s was <m>\dee{r}</m>, so the indicated
+edge of the cube has length <m>\dee{r}</m>.
+</li>
+<li>
+When we introduced slices using surfaces of constant <m>z</m>,
+the difference between the successive <m>z</m>'s was <m>\dee{z}</m>, so the vertical
+edges of the cube have length <m>\dee{z}</m>.
+</li>
+<li>
+When we introduced slices using surfaces of constant <m>\theta</m>,
+the difference between the successive <m>\theta</m>'s was <m>\dee{\theta}</m>, so
+the remaining edges of the cube are circular arcs of radius
+essentially
+<fn>The inner edge has radius <m>r</m>,
+but the outer edge has radius <m>r+\dee{r</fn>
+</m>. However the
+error that this generates goes to zero in the limit <m>\dee{r}</m>, <m>\dee{\theta}</m>,
+<m>\dee{z}</m> <m>\rightarrow 0</m>.} <m>r</m> that subtend an angle <m>\theta</m>, and
+so have length <m>r\,\dee{\theta}</m>. See the derivation of equation
+<xref ref="eq_dA_polar"/>.
+</li>
+</ul>
+So the volume of the approximate cube in cylindrical coordinates is
+(essentially
+<fn>By <q>essentially</q>, we mean that the formula for
+<m>\dee{V</fn>
+</m> works perfectly when we take the limit <m>\dee{r},\dee{\theta},
+\dee{z}\rightarrow 0</m> of Riemann sums.})
+\begin{impeqn}xml:id="eq_dV_cylindrical"
+<me>
+\dee{V} = r\,\dee{r}\,\dee{\theta}\,\dee{z}
+</me>
+\end{impeqn}
+</p>
+
+<p>\subsection{Sample Integrals in Cylindrical Coordinates} xml:id="sec_cylindrical_eg"
+</p>
+
+<p>Now we can use <xref ref="eq_dV_cylindrical"/> to handle a variant of
+Example <xref ref="eg_sphere_mass_A"/>
+in which the density is invariant under rotations around the <m>z</m> axis.
+Cylindrical coordinates are tuned to provide easier integrals to
+evaluate when the integrand is invariant under rotations about the <m>z</m>-axis,
+or when the domain of integration is cylindrical.
+</p>
+
+<p><example>
+<p>xml:id="eg_sphere_mass_B"
+Find the mass inside the sphere <m>x^2+y^2+z^2=1</m> if the density
+is <m>\rho(x,y,z) = x^2+y^2</m> (which is the square of the
+distance from the <m>z</m>-axis).
+</p>
+
+<p>\soln
+Before we get started, note that both the integrand, <m>x^2+y^2</m>,
+and the domain of integration, <m>x^2+y^2+z^2\le 1</m>, are invariant under rotations about the <m>z</m>-axis. That makes this
+integral a good candidate for cylindrical coordinates.
+</p>
+
+<p>Again, by symmetry the total mass of the sphere will be eight times
+the mass in the first octant. We shall cut the first octant part
+of the sphere into tiny pieces using  cylindrical coordinates. That is,
+we shall cut it up using planes of constant <m>z</m>, planes of constant <m>\theta</m>,
+and surfaces of constant <m>r</m>.
+<ul>
+<li>
+First slice the (the first octant part of the) sphere into horizontal
+plates by inserting many planes of
+constant <m>z</m>, with the various values of <m>z</m> differing by <m>\dee{z}</m>.
+The figure on the left below shows the part of one plate in the first octant
+outlined in red. Each plate
+\vspace{-\topsep}
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+has thickness <m>\dee{z}</m>,
+</li>
+<li>
+has <m>z</m> essentially constant on the plate, and
+</li>
+<li>
+has <m>(x,y)</m> running over <m>x\ge 0</m>, <m>y\ge 0</m>, <m>x^2+y^2\le 1-z^2</m>.
+In cylindrical coordinates, <m>r</m> runs from <m>0</m> to <m>\sqrt{1-z^2}</m>
+and <m>\theta</m> runs from <m>0</m> to <m>\frac{\pi}{2}</m>.
+</li>
+<li>
+The bottom plate has, essentially, <m>z=0</m> and the top plate has, essentially,
+<m>z=1</m>. See the figure on the right below.
+</li>
+</ul>
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/sphereCyl1a.pdf"/>\qquad
+    <image source="problems/figs/sphereCyl1b.pdf"/>
+</sidebyside>
+\vspace{-\topsep}
+So far, this looks just like what we did in Example <xref ref="eg_sphere_mass_A"/>.
+</li>
+<li>
+Concentrate on any one plate. Subdivide it into wedges
+by inserting many planes of constant <m>\theta</m>, with the various
+values of <m>\theta</m> differing by <m>\dee{\theta}</m>. The figure on the
+left below shows one such wedge outlined in blue. Each wedge
+\vspace{-\topsep}
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+has <m>z</m>  and <m>\theta</m> essentially constant on the wedge, and
+</li>
+<li>
+has <m>r</m> running over <m>0\le r\le \sqrt{1-z^2}</m>.
+</li>
+<li> The leftmost wedge has, essentially, <m>\theta=0</m> and the rightmost
+wedge has, essentially, <m>\theta=\frac{\pi}{2}</m>.  See the figure
+on the right below.
+</li>
+</ul>
+\vspace{-\topsep}
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/sphereCyl2a.pdf"/>\quad
+    <image source="problems/figs/sphereCyl2b.pdf"/>
+</sidebyside>
+</li>
+<li>
+Concentrate on any one wedge. Subdivide it into tiny approximate cubes
+by inserting many surfaces of constant <m>r</m>, with the various values of <m>r</m> differing by <m>\dee{r}</m>. The figure on the left below shows the top of one
+approximate cube in black. Each cube
+\vspace{-\topsep}
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+has volume <m>r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>, by <xref ref="eq_dV_cylindrical"/>
+and
+</li>
+<li>
+has <m>r</m>, <m>\theta</m> and <m>z</m> all essentially constant on the cube.
+</li>
+<li> The first cube has, essentially, <m>r=0</m> and the last cube has,
+essentially, <m>r=\sqrt{1-z^2}</m>.  See the figure on the right below.
+</li>
+</ul>
+\vspace{-\topsep}
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/sphereCyl3a.pdf"/>\qquad\qquad
+    <image source="problems/figs/sphereCyl3b.pdf"/>
+</sidebyside>
+</li>
+</ul>
+</p>
+
+<p>Now we can build up the mass.
+<ul>
+<li>
+Concentrate on one approximate cube. Let's say that it contains the point
+with cylindrical coordinates <m>r</m>, <m>\theta</m> and <m>z</m>.
+<ul>
+<li>
+The cube has volume essentially <m>\dee{V}=r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>
+and
+</li>
+<li>
+essentially has density <m>\rho(x,y,z)=\rho(r\cos\theta,r\sin\theta,z) = r^2</m>
+and so
+</li>
+<li>
+essentially has mass <m>r^3\,\dee{r}\,\dee{\theta}\,\dee{z}</m>.
+(See how nice the right coordinate system can be!)
+</li>
+</ul>
+</li>
+<li>
+To get the mass any one wedge, say the wedge whose <m>\theta</m> coordinate runs
+from <m>\theta</m> to <m>\theta+\dee{\theta}</m>, we just add up the masses of
+the approximate cubes in that wedge, by integrating <m>r</m> from its smallest
+value on the wedge, namely <m>0</m>, to its largest value on the wedge, namely
+<m>\sqrt{1-z^2}</m>. The mass of the wedge is thus
+<md>
+<mrow>
+\dee{\theta}\,\dee{z} \int_0^{\sqrt{1-z^2}}  \dee{r}\,r^3
+</mrow>
+</md>
+</li>
+<li>
+To get the mass of any one plate, say the plate whose <m>z</m> coordinate runs
+from <m>z</m> to <m>z+\dee{z}</m>, we just add up the masses of the wedges
+in that plate, by integrating <m>\theta</m> from its smallest value on
+the wedge, namely <m>0</m>, to its largest value on the wedge, namely
+<m>\frac{\pi}{2}</m>. The mass of the plate is thus
+<md>
+<mrow>
+\dee{z}\int_0^{\pi/2}\dee{\theta}\int_0^{\sqrt{1-z^2}}  \dee{r}\,r^3
+</mrow>
+</md>
+</li>
+<li>
+To get the mass of the part of the sphere in the first octant, we just
+add up the masses of the plates that it contains, by integrating <m>z</m> from its smallest value in the octant, namely <m>0</m>, to its largest value on the sphere,
+namely  <m>1</m>. The mass in the first octant is thus
+<md>
+<mrow>
+\int_0^1\dee{z}\int_0^{\pi/2}\dee{\theta}\int_0^{\sqrt{1-z^2}}  \dee{r}\,r^3
+&amp;= \frac{1}{4}\int_0^1\dee{z}\int_0^{\pi/2}\dee{\theta}\ {(1-z^2)}^2
+</mrow><mrow>
+&amp;= \frac{\pi}{8}\int_0^1\dee{z}\ {(1-z^2)}^2
+ =\frac{\pi}{8}\int_0^1\dee{z}\ (1-2z^2+z^4)
+</mrow><mrow>
+&amp;= \frac{\pi}{8}\overbrace{\left[1-\frac{2}{3}+\frac{1}{5}\right]}^{8/15}
+</mrow><mrow>
+&amp;=\frac{1}{15}\pi
+</mrow>
+</md>
+</li>
+<li>
+So the mass of the total (eight octant) sphere is <m>8\times\frac{1}{15}\pi=\frac{8}{15}\pi</m>.
+</li>
+</ul>
+</p>
+
+<p>\noindent
+Just by way of comparison, here is the integral in Cartesian
+coordinates that gives the mass in the first octant. (We found the limits
+of integration in Example <xref ref="eg_sphere_mass_A"/>.)
+<me>
+\int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\int_0^{\sqrt{1-y^2-z^2}}  \dee{x}\
+           \big(x^2+y^2\big)
+</me>
+</p>
+
+</example>
+</p>
+
+<p><example>
+<p>xml:id="eg_moment_cone"
+Find the moment of inertia of a right circular cone
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+of radius <m>a</m>,
+</li>
+<li>
+of height <m>h</m>, and
+</li>
+<li>
+of constant density with mass <m>M</m>
+</li>
+</ul>
+about an axis through the vertex (i.e. the tip of the cone)
+and parallel to the base.
+</p>
+
+<p>\soln
+Here is a sketch of the cone.
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/cone"/>
+</sidebyside>
+Let's pick a coordinate system with
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+the vertex at the origin,
+</li>
+<li>
+the cone symmetric about the <m>z</m>-axis and
+</li>
+<li>
+the axis of rotation being the <m>y</m>-axis.
+</li>
+</ul>
+and call the cone <m>\cV</m>.
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/coneZ"/>
+</sidebyside>
+</p>
+
+<p>The Definition <xref ref="def_moment_of_inertia"/> of the moment of inertia
+was restricted to two dimensions. However, as was pointed out at the time,
+the same analysis extends naturally to the definition
+\begin{impeqn}xml:id="eqn_mom_of_inertia_3d"
+<me>
+I_\cA=\tripInt_\cV D(x,y,z)^2\,\rho(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z}
+</me>
+\end{impeqn}
+of the moment of inertia of a solid <m>\cV</m> in three dimensions. Here
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+<m>\rho(x,y,z)</m> is the mass density of the solid at the point <m>(x,y,z)</m> and
+</li>
+<li>
+<m>D(x,y,z)</m> is the distance from <m>(x,y,z)</m> to the axis of rotation.
+</li>
+</ul>
+In the current problem, the axis of rotation is the <m>y</m>-axis. The point on the
+<m>y</m>-axis that is closest to <m>(x,y,z)</m> is <m>(0,y,0)</m> so that the distance from <m>(x,y,z)</m> to the axis is just
+<me>
+D(x,y,z) = \sqrt{x^2+z^2}
+</me>
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/cart6"/>
+</sidebyside>
+Our solid has constant density and mass <m>M</m>, so
+<me>
+\rho(x,y,z) = \frac{M}{\text{Volume}(\cV)}
+</me>
+The formula
+<me>
+\text{Volume}(\cV)= \frac{1}{3} \pi a^2 h
+</me>
+for the volume of a cone was derived in Example \eref{CLP101}{eg:VOLa}
+of the CLP-2 text and in Appendix B.5.2 of the CLP-1 text.
+However because of the similarity between
+the integral
+<m>\text{Volume}(\cV)=\tripInt_\cV \dee{x}\,\dee{y}\,\dee{z}</m>
+and the integral
+<m>\tripInt_\cV (x^2+z^2)\ \dee{x}\,\dee{y}\,\dee{z}</m>, that we need for our
+computation of <m>I_\cA</m>, it is easy to rederive the volume formula and we
+shall do so.
+</p>
+
+<p>We'll evaluate both of the integrals above using cylindrical coordinates.
+<ul>
+<li>
+Start by slicing the cone into horizontal plates by inserting many planes of
+constant <m>z</m>, with the various values of <m>z</m> differing by <m>\dee{z}</m>.
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/coneP.pdf"/>
+</sidebyside>
+Each plate
+\vspace{-\topsep}
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+is a circular disk of thickness <m>\dee{z}</m>.
+</li>
+<li>
+By similar triangles, as in the figure on the right below,
+the disk at height <m>z</m> has radius <m>R</m> obeying
+<me>
+\frac{R}{z} = \frac{a}{h}
+\implies R =\frac{a}{h}z
+</me>
+</p>
+
+<p><sidebyside>
+<image source="problems/figs/coneX.pdf"/>\qquad
+    <image source="problems/figs/coneT.pdf"/>
+</sidebyside>
+</li>
+<li>
+So the disk at height <m>z</m> has the
+cylindrical coordinates <m>r</m> running from <m>0</m> to <m>\frac{a}{h}z</m>
+and <m>\theta</m> running from <m>0</m> to <m>2\pi</m>.
+</li>
+<li>
+The bottom plate has, essentially, <m>z=0</m> and the top plate has, essentially,
+<m>z=h</m>.
+</li>
+</ul>
+\vspace{-\topsep}
+</li>
+<li>
+Now concentrate on any one plate. Subdivide it into wedges
+by inserting many planes of constant <m>\theta</m>, with the various
+values of <m>\theta</m> differing by <m>\dee{\theta}</m>.
+\vspace{-\topsep}
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+The first wedge has, essentially <m>\theta=0</m> and the last wedge has,
+essentially, <m>\theta=2\pi</m>.
+</li>
+</ul>
+\vspace{-\topsep}
+</li>
+<li>
+Concentrate on any one wedge. Subdivide it into tiny approximate
+cubes
+<fn>Again they are wonky cubes, but we can bound the error
+and show that it goes to zero in the limit <m>\dee{r</fn>
+,\dee{\theta},\dee{z}
+\rightarrow 0</m>. }
+by inserting many surfaces of constant <m>r</m>, with the various values of <m>r</m> differing by <m>\dee{r}</m>.  Each cube
+\vspace{-\topsep}
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>
+has volume <m>r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>, by <xref ref="eq_dV_cylindrical"/>.
+</li>
+<li>
+The first cube has, essentially, <m>r=0</m> and the last cube has,
+essentially, <m>r=\frac{a}{h}z</m>.
+</li>
+</ul>
+\vspace{-\topsep}
+</li>
+</ul>
+So the two integrals of interest are
+<md>
+<mrow>
+\tripInt_\cV \dee{x}\,\dee{y}\,\dee{z}
+&amp;=\int_0^h\dee{z}\int_0^{2\pi}\dee{\theta}\int_0^{\frac{a}{h}z}\dee{r}\ r
+</mrow><mrow>
+&amp;=\int_0^h\dee{z}\int_0^{2\pi}\dee{\theta}\
+                   \frac{1}{2}\left(\frac{a}{h}z\right)^2
+=\frac{a^2\pi}{h^2}\int_0^h\dee{z}\ z^2
+</mrow><mrow>
+&amp;=\frac{1}{3}\pi a^2 h
+</mrow>
+</md>
+as expected, and
+<md>
+<mrow>
+\tripInt_\cV (x^2+z^2)\ \dee{x}\,\dee{y}\,\dee{z}
+&amp;=\int_0^h\dee{z}\int_0^{2\pi}\dee{\theta}\int_0^{\frac{a}{h}z}\dee{r}\ r
+   \overbrace{\big(r^2\cos^2\theta+z^2\big)}^{x^2+z^2}
+</mrow><mrow>
+&amp;=\int_0^h\dee{z}\int_0^{2\pi}\dee{\theta}\left[
+      \frac{1}{4}\left(\frac{a}{h}z\right)^4\cos^2\theta
+       +\frac{1}{2}\left(\frac{a}{h}z\right)^2z^2\right]
+</mrow><mrow>
+&amp;\hskip1in\text{since <m>\int_0^{2\pi}\cos^2\theta\ \dee{\theta}=\pi</m>
+                 by Remark <xref ref="rem_sneaky"/>}
+</mrow><mrow>
+&amp;=\int_0^h\dee{z}\left[
+      \frac{1}{4}\frac{a^4}{h^4}
+       +\frac{a^2}{h^2}\right]\pi z^4
+</mrow><mrow>
+&amp;=\frac{1}{5}\left[
+      \frac{1}{4}\frac{a^4}{h^4}
+       +\frac{a^2}{h^2}\right]\pi h^5
+</mrow>
+</md>
+Putting everything together, the moment of inertia is
+<md>
+<mrow>
+I_\cA
+</p>
+
+<p>&amp;=\tripInt_\cV \overbrace{(x^2+z^2)}^{D(x,y,z)^2}
+              \overbrace{\frac{M}{\frac{1}{3}\pi a^2h}}^{\rho(x,y,z)}
+             \ \dee{x}\,\dee{y}\,\dee{z}
+</mrow><mrow>
+&amp;=3\frac{M}{\pi a^2h} \ \frac{1}{5}\left[
+      \frac{1}{4}\frac{a^4}{h^4}
+       +\frac{a^2}{h^2}\right]\pi h^5
+</mrow><mrow>
+&amp;=\frac{3}{20} M\big(a^2+4h^2\big)
+</mrow>
+</md>
+</p>
+
+</example>
+</p>
+
+</section>
