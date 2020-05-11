@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_polars">
 
 <!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<title></title>
-<p>\section{Double Integrals in Polar Coordinates} xml:id="sec_polars"
-</p>
+<title>Double Integrals in Polar Coordinates</title>
 
 <p>So far, in setting up integrals, we have always cut up the
 domain of integration into tiny rectangle by drawing in many lines
@@ -162,7 +160,7 @@ of all points with <m>\theta=0</m>, <m>r \gt 0</m>. That's the positive <m>x</m>
 sketched in gray in the leftmost figure below. Then we put in a dot on that line
 a distance <m>2</m> from the origin. That's the red dot in the leftmost figure below.
 </li>
-<li>
+<li><p>
 Now increase <m>\theta</m> a bit (to another easy place to evaluate),
 say to <m>\theta=\frac{\pi}{6}</m>.
 As we do so <m>r=1+\cos\theta</m> decreases to
@@ -174,7 +172,7 @@ Then we put in a dot on that line a distance <m>1.87</m> from the origin.
 That's the upper red dot in the second figure below.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/cardioid1.pdf"/>\qquad\qquad
     <image source="problems/figs/cardioid2.pdf"/>\qquad\qquad
     <image source="problems/figs/cardioid3.pdf"/>
@@ -210,28 +208,28 @@ Then we put in a dot on each <m>\theta</m>-line a distance <m>r=1+\cos\theta</m>
 from the origin. Those are the red dots on the gray lines in the
 figure on the right above.
 </li>
-<li>
+<li><p>
 We could continue the above procedure for <m>\pi\le\theta\le 2\pi</m>.
 Or we can look at the graph of <m>\cos\theta</m> above and notice that
 the graph of <m>\cos\theta</m> for <m>\pi\le\theta\le 2\pi</m>
 is exactly the mirror image, about <m>\theta=\pi</m>, of the graph of <m>\cos\theta</m>
 for <m>0\le\theta\le \pi</m>.
-\vadjust{
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/cosGraphR.pdf"/>
 </sidebyside>
-}
+
+<p>
 That is, <m>\cos(\pi+\theta) =\cos(\pi-\theta)</m>
 so that <m>r(\pi+\theta) = r(\pi-\theta)</m>. So we get the figure.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/cardiod4.pdf"/>
 </sidebyside>
 </li>
-<li>
+<li><p>
 Finally, we fill in a smooth curve through the dots and we get the
 graph below. This curve is called a <em>cardiod</em> because it looks
 like a heart
@@ -241,16 +239,16 @@ comes from the Greek word <m>\kappa \alpha \rho \delta \iota \alpha</m>
 .
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/cardiodF.pdf"/>
 </sidebyside>
 </li>
 </ul>
 </p></example>
-</p>
 
-<p><example><title>The Three Petal Rose</title>
-<p>xml:id="eg_rose"
+
+<example xml:id="eg_rose"><title>The Three Petal Rose</title>
+<p>
 Now we'll use the same procedure as in the last example to sketch
 the graph of
 <me>
@@ -260,16 +258,16 @@ Again it will be useful to remember
 what the graph of <m>\sin(3\theta)</m> looks like for <m>0\le\theta\le 2\pi</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/sin3Graph.pdf"/>
 </sidebyside>
+
+<p>
 <ul>
-<li>
+<li><p>
 We'll first consider <m>0\le\theta\le\frac{\pi}{3}</m>, so that
 <m>0\le 3\theta \le \pi</m>. On this interval <m>r(\theta)=\sin(3\theta)</m>
-   <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
+<ul>
 <li>
           starts with <m>r(0)=0</m>, and then
 </li>
@@ -293,55 +291,40 @@ Here is a table giving a few values of <m>r(\theta)</m> for
 <m>\theta</m> for which <m>\sin(3\theta)</m> is easy to compute.
 </p>
 
-<p>\renewcommand{\arraystretch}{1.3}
-     <tabular>
+<sidebyside>
+<tabular>
 <row>
-<cell>{ | c | c | c |}
-     \hline
-     <m>\theta</m> </cell><cell> <m>3\theta</m> </cell><cell> <m>r(\theta)</m> </cell>
+<cell><m>\theta</m> </cell><cell> <m>3\theta</m> </cell><cell> <m>r(\theta)</m> </cell>
 </row><row>
-<cell>
-      \hline
-      0        </cell><cell>     0     </cell><cell>    0      </cell>
+<cell>0        </cell><cell>     0     </cell><cell>    0      </cell>
 </row><row>
-<cell>
-      \hline
-      <m>\frac{\pi}{12}</m>  </cell><cell> <m>\frac{\pi}{4}</m>  </cell><cell>
+<cell><m>\frac{\pi}{12}</m>  </cell><cell> <m>\frac{\pi}{4}</m>  </cell><cell>
                   <m>\frac{1}{\sqrt{2}}\approx  0.71</m>   </cell>
 </row><row>
-<cell>
-     \hline
-      <m>\frac{2 \pi}{12}</m>  </cell><cell> <m>\frac{\pi}{2}</m>  </cell><cell>  <m>1</m>   </cell>
+<cell><m>\frac{2 \pi}{12}</m>  </cell><cell> <m>\frac{\pi}{2}</m>  </cell><cell>  <m>1</m>   </cell>
 </row><row>
-<cell>
-      \hline
-      <m>\frac{3 \pi}{12}</m>  </cell><cell> <m>\frac{3\pi}{4}</m>  </cell><cell>
+<cell><m>\frac{3 \pi}{12}</m>  </cell><cell> <m>\frac{3\pi}{4}</m>  </cell><cell>
                   <m>\frac{1}{\sqrt{2}}\approx  0.71</m>   </cell>
 </row><row>
-<cell>
-     \hline
-      <m>\frac{4 \pi}{12}</m>  </cell><cell> <m>\pi</m>  </cell><cell>  <m>0</m>   </cell>
-</row><row>
-<cell>
-     \hline
-     </row>
+<cell><m>\frac{4 \pi}{12}</m>  </cell><cell> <m>\pi</m>  </cell><cell>  <m>0</m>   </cell>
+</row>
 </tabular>
-     \renewcommand{\arraystretch}{1.0}
+</sidebyside>
+
+<p>
 and here is a sketch exhibiting those values and another sketch of the
 part of the curve with <m>0\le \theta\le\frac{\pi}{3}</m>.
 </p>
-
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/rose1.pdf"/>\qquad\qquad
     <image source="problems/figs/rose1b.pdf"/>
 </sidebyside>
+
 </li>
-<li>
+<li><p>
 Next consider <m>\frac{\pi}{3}\le\theta\le\frac{2\pi}{3}</m>, so that
 <m>\pi\le 3\theta \le 2\pi</m>. On this interval <m>r(\theta)=\sin(3\theta)</m>
-   <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
+ <ul>
 <li>
           starts with <m>r\big(\frac{\pi}{3}\big)=0</m>, and then
 </li>
@@ -365,9 +348,7 @@ The figure on the left below contains, for each of
 <m>\theta = \frac{4\pi}{12}=\frac{\pi}{3}</m>, <m>\frac{5\pi}{12}</m>,
 <m>\ \frac{6\pi}{12}=\frac{\pi}{2}</m>, <m>\ \frac{7\pi}{12}</m> and
 <m>\ \frac{8\pi}{12}=\frac{2\pi}{3}</m>
-   <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
+<ul>
 <li>
           the (dashed) half-line consisting of all points with that
            <m>\theta</m> and <m>r \lt 0</m> and
@@ -381,20 +362,19 @@ part of the curve <m>r=\sin(3\theta)</m> with
 <m>\frac{\pi}{3}\le \theta\le \frac{2\pi}{3}</m>.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/rose2.pdf"/>\qquad\qquad
-    <image source="problems/figs/rose2b.pdf"/>
+<sidebyside>
+<image source="problems/figs/rose2.pdf"/>
+<image source="problems/figs/rose2b.pdf"/>
 </sidebyside>
+
 </li>
-<li>
+<li><p>
 Finally consider <m>\frac{2\pi}{3}\le\theta\le\pi</m> (because
 <m>r(\theta+\pi) = \sin (3\theta+3\pi) = -\sin(3\theta)=-r(\theta)</m>,
 the part of the curve with <m>\pi\le\theta\le 2\pi</m> just retraces
 the part with <m>0\le\theta\le \pi</m>), so that
 <m>2\pi\le 3\theta \le 3\pi</m>. On this interval <m>r(\theta)=\sin(3\theta)</m>
-   <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
+<ul>
 <li>
           starts with <m>r\big(\frac{2\pi}{3}\big)=0</m>, and then
 </li>
@@ -417,9 +397,7 @@ The figure on the left below contains, for each of
 <m>\theta = \frac{8\pi}{12}=\frac{2\pi}{3}</m>, <m>\frac{9\pi}{12}</m>,
 <m>\ \frac{10\pi}{12}</m>, <m>\ \frac{11\pi}{12}</m> and
 <m>\ \frac{12\pi}{12}=\pi</m>
-   <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
+<ul>
 <li>
           the (solid) half-line consisting of all points with that
            <m>\theta</m> and <m>r\ge 0</m> and
@@ -433,9 +411,9 @@ part of the curve <m>r=\sin(3\theta)</m> with
 <m>\frac{2\pi}{3}\le \theta\le \pi</m>.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/rose3.pdf"/>\qquad\qquad
-    <image source="problems/figs/rose3b.pdf"/>
+<sidebyside>
+<image source="problems/figs/rose3.pdf"/>
+<image source="problems/figs/rose3b.pdf"/>
 </sidebyside>
 </li>
 </ul>
@@ -738,16 +716,16 @@ We follow our standard divide and sum up strategy. We will cut the
 base region <m>\cR_1</m> into small pieces and sum up the volumes that
 lie above each small piece.
 <ul>
-<li>
+<li><p>
 Divide <m>\cR_1</m> into wedges by drawing in many lines of constant
 <m>\theta</m>, with the various values of <m>\theta</m> differing by a tiny
 amount <m>\dee{\theta}</m>. The figure on the left below shows one such wedge,
 outlined in blue.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/appleCore1.pdf"/>\quad
-    <image source="problems/figs/appleCore2.pdf"/>
+<sidebyside>
+<image source="problems/figs/appleCore1.pdf"/>
+<image source="problems/figs/appleCore2.pdf"/>
 </sidebyside>
 </li>
 <li>
@@ -756,14 +734,14 @@ approximate rectangles by drawing in many circles of constant <m>r</m>,
 with the various values of <m>r</m> differing by a tiny amount <m>\dee{r}</m>.
 The figure on the right above shows one such approximate rectangle, in black.
 </li>
-<li>
+<li><p>
 Concentrate on one such rectangle. Let's say that it contains the point
 with polar coordinates <m>r</m> and <m>\theta</m>. As we saw in <xref ref="eq_dA_polar"/> above,
 <ul>
 <li>
 the area of that rectangle is essentially <m>\dee{A} =  r\,\dee{r}\,\dee{\theta}</m>.
 </li>
-<li>
+<li><p>
 The part of <m>\cV_1</m> that is above that rectangle is like an office
 tower whose height is essentially
            <m>\sqrt{a^2-r^2}</m>,
@@ -771,16 +749,16 @@ and whose base has area <m>\dee{A} =  r\,\dee{r}\,\dee{\theta}</m>. It is
 outlined in black in the figure below.
 So the volume of the part of <m>\cV_1 </m> that is above the rectangle
 is essentially
-         <m>\sqrt{a^2-r^2}\,r\,\dee{r}\,\dee{\theta}</m>.
+<m>\sqrt{a^2-r^2}\,r\,\dee{r}\,\dee{\theta}</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/appleCore3.pdf"/>
 </sidebyside>
 </li>
-</ul>
+</ul></p>
 </li>
-<li>
+<li><p>
 To get the volume of the part of <m>\cV_1</m> above any one wedge (outlined
 in blue in the figure below),  say the wedge whose polar angle runs
 from <m>\theta</m> to <m>\theta+\dee{\theta}</m>,
@@ -804,7 +782,7 @@ for a moment, you can see that this is a consequence of the fact that
 our solid is invariant under rotations about the <m>z</m>-axis.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/appleCore4.pdf"/>
 </sidebyside>
 </li>
@@ -1091,10 +1069,7 @@ We can now slice up <m>\cR</m> using polar coordinates.
 Divide <m>\cR</m> into wedges by drawing in many lines of constant
 <m>\theta</m>, with the various values of <m>\theta</m> differing by a tiny
 amount <m>\dee{\theta}</m>. The figure on the right above shows one such wedge.
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 The first wedge has <m>\theta=0</m>.
 </li>
@@ -1102,7 +1077,6 @@ The first wedge has <m>\theta=0</m>.
 The last wedge has <m>\theta=\frac{\pi}{4}</m>.
 </li>
 </ul>
-\vspace{-\topsep}
 </li>
 <li>
 Concentrate on any one wedge. Subdivide the wedge further into
@@ -1179,10 +1153,10 @@ Jacob Karl Franz Sturm (1803--1855).</fn>
 <p>The integrand <m>e^{-x^2}</m> does not have an antiderivative that can
 be expressed in terms of elementary functions
 <fn>On the other hand it is the core of the function
-<m>\text{erf</fn>
+<m>\text{erf}
 (z)=\frac{2}{\sqrt{\pi}}\int_0^z e^{-t^2}\ \dee{t}</m>, which
 gives Gaussian (i.e. bell curve) probabilities.
-<q>erf</q> stands for <q>error function</q>.}.
+<q>erf</q> stands for <q>error function</q>.</fn>.
 So we cannot evaluate this integral using the usual Calculus II methods.
 However we can evaluate it's square
 <md>
@@ -1597,7 +1571,5 @@ A=\frac{1}{2}\int_a^b R(\theta)^2\,d\theta
 </me>
 exactly, as desired.
 </p>
-
-<p>\goodbreak
 
 </section>

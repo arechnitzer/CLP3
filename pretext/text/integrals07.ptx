@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_spherical">
 
 <!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<title></title>
-<p>\section{Triple Integrals in Spherical Coordinates} xml:id="sec_spherical"
-</p>
+<title>Triple Integrals in Spherical Coordinates</title>
 
 <p>\subsection{Spherical Coordinates} xml:id="sec_spherical_coords"
 </p>
@@ -102,34 +100,34 @@ a surface of constant <m>\varphi</m>, i.e. a surface
 <fn>You know the drill.</fn>
  by
 <ul>
-<li>
+<li><p>
 first slicing it into segments (like segments of an orange) by
 using planes of constant <m>\theta</m>, say with the difference between
 successive <m>\theta</m>'s being <m>\dee{\theta}</m>,
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/sphereSph1.pdf"/>
 </sidebyside>
 </li>
-<li>
+<li><p>
 and then subdividing the segments into <q>searchlights</q> (like the
 searchlight outlined in blue in the figure below) using surfaces of
 constant <m>\varphi</m>, say with the difference between successive
 <m>\varphi</m>'s being <m>\dee{\varphi}</m>,
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/sphereSph2.pdf"/>
 </sidebyside>
 </li>
-<li>
+<li><p>
 and then subdividing the searchlights into approximate cubes using surfaces
 of  constant <m>\rho</m>, say with the difference between successive <m>\rho</m>'s
 being <m>\dee{\rho}</m>,
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/sphereSph3.pdf"/>
 </sidebyside>
 </li>
@@ -137,9 +135,10 @@ being <m>\dee{\rho}</m>,
 we end up with approximate cubes that look like
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/spher5b.pdf"/>
 </sidebyside>
+<p>
 The dimensions of the approximate <q>cube</q> in spherical coordinates are
 (essentially) <m>\dee{\rho}</m> by <m>\rho\dee{\varphi}</m> by
 <m>\rho\sin\varphi\,\dee{\theta}</m>. (These dimensions are derived in more detail
@@ -158,7 +157,7 @@ in the next section.) So the approximate cube has volume (essentially)
 Each of the 12 edges of the cube is formed by holding two of the three
 coordinates <m>\rho</m>, <m>\theta</m>, <m>\varphi</m> fixed and varying the third.
 <ul>
-<li>
+<li><p>
 Four of the cube edges are formed by holding <m>\theta</m> and <m>\varphi</m>
 fixed and varying <m>\rho</m>. The intersection of a plane of fixed <m>\theta</m>
 with a cone of fixed <m>\varphi</m> is a straight line emanating from the origin.
@@ -167,13 +166,13 @@ the difference between the successive <m>\rho</m>'s was <m>\dee{\rho}</m>, so
 those edges of the cube each have length <m>\dee{\rho}</m>.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/sphereTh.pdf"/>\quad
-     <image source="problems/figs/spherePhi.pdf"/>\quad
+<sidebyside>
+<image source="problems/figs/sphereTh.pdf"/>
+     <image source="problems/figs/spherePhi.pdf"/>
      <image source="problems/figs/sphereThPhiA.pdf"/>
 </sidebyside>
 </li>
-<li>
+<li><p>
 Four of the cube edges are formed by holding <m>\theta</m> and <m>\rho</m>
 fixed and varying <m>\varphi</m>. The intersection of a plane of fixed <m>\theta</m>
 (which contains the origin) with a sphere of fixed <m>\rho</m>
@@ -188,24 +187,23 @@ Edmund Halley (of Halley's comet) and Robert Hooke (of Hooke's law).
 .
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/sphereRho.pdf"/>\quad
-     <image source="problems/figs/sphereTh.pdf"/>\quad
+<sidebyside>
+<image source="problems/figs/sphereRho.pdf"/>
+     <image source="problems/figs/sphereTh.pdf"/>
      <image source="problems/figs/sphereRhoThB.pdf"/>
 </sidebyside>
+<p>
 When we introduced searchlights using surfaces of constant <m>\varphi</m>,
 the difference between the successive <m>\varphi</m>'s was <m>\dee{\varphi}</m>.
 Thus those four edges of the cube are circular arcs of radius
 essentially <m>\rho</m> that subtend an angle <m>\dee{\varphi}</m>, and so have length <m>\rho\,\dee{\varphi}</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/../figs_coord/spher9.pdf"/>
-</p>
-
-<p></sidebyside>
+</sidebyside>
 </li>
-<li>
+<li><p>
 Four of the cube edges are formed by holding <m>\varphi</m> and <m>\rho</m>
 fixed and varying <m>\theta</m>. The intersection of a cone of fixed <m>\varphi</m>
 with a sphere of fixed <m>\rho</m> is a circle. As both <m>\rho</m> and <m>\varphi</m>
@@ -215,13 +213,13 @@ The circle has radius <m>\rho\sin\varphi</m> and is centred
 on <m>\big(0,0, \rho\cos\varphi\big)</m>.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/sphereRho.pdf"/>\quad
-     <image source="problems/figs/spherePhi.pdf"/>\quad
-     <image source="problems/figs/sphereRhoPhi.pdf"/>
-</p>
+<sidebyside>
+<image source="problems/figs/sphereRho.pdf"/>
+ <image source="problems/figs/spherePhi.pdf"/>
+ <image source="problems/figs/sphereRhoPhi.pdf"/>
+</sidebyside>
 
-<p></sidebyside>
+<p>
 When we introduced segments using surfaces of constant <m>\theta</m>,
 the difference between the successive <m>\theta</m>'s was <m>\dee{\theta}</m>.
 Thus these four edge of the cube are circular arcs of radius
@@ -229,11 +227,9 @@ essentially <m>\rho\sin\varphi</m> that subtend an angle <m>\dee{\theta}</m>, an
 have length <m>\rho\sin\varphi\,\dee{\theta}</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/../figs_coord/spher10.pdf"/>
-</p>
-
-<p></sidebyside>
+</sidebyside>
 </li>
 </ul>
 </p>
@@ -241,11 +237,10 @@ have length <m>\rho\sin\varphi\,\dee{\theta}</m>.
 <p>\subsection{Sample Integrals in Spherical Coordinates} xml:id="sec_spherical_eg"
 </p>
 
-<p><example><title>Ice Cream Cone</title>
+<example><title>Ice Cream Cone</title>
 <p>xml:id="eg_ice_cream_cone"
 Find the volume of the ice cream
-<fn>A very mathematical ice cream.
-Rocky-rho'd? Choculus?</fn>
+<fn>A very mathematical ice cream. Rocky-rho'd? Choculus?</fn>
  cone that consists of the part of the interior
 of the sphere <m>x^2+y^2+z^2=a^2</m> that is above the <m>xy</m>-plane and that
 is inside the cone <m>x^2+y^2=b^2 z^2</m>. Here <m>a</m> and <m>b</m> are any two
@@ -266,22 +261,21 @@ part of the ice cream cone in the first octant. The volume of the full ice
 cream cone will be four times the volume of the part in the first octant.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/iceCream.pdf"/>
 </sidebyside>
+
+<p>
 We shall cut the first octant part of the ice cream cone into tiny pieces using
 spherical coordinates. That is, we shall cut it up using planes of
 constant <m>\theta</m>, cones of constant <m>\varphi</m>, and spheres of constant <m>\rho</m>.
 <ul>
-<li>
+<li><p>
 First slice the (the first octant part of the) ice cream cone into segments
 by inserting many planes of constant <m>\theta</m>, with the various values of
 <m>\theta</m> differing by <m>\dee{\theta}</m>.
 The figure on the left below shows one segment outlined in red. Each segment
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has <m>\theta</m> essentially constant on the segment, and
 </li>
@@ -296,22 +290,19 @@ right below.
 </ul>
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/iceCream1.pdf"/>\qquad
-    <image source="problems/figs/iceCream1a.pdf"/>
+<sidebyside>
+<image source="problems/figs/iceCream1.pdf"/>
+<image source="problems/figs/iceCream1a.pdf"/>
 </sidebyside>
-\vspace{-\topsep}
 </li>
-<li>
+
+<li><p>
 Concentrate on any one segment. A side view of the segment is sketched
 in the figure on the left below. Subdivide it into long thin searchlights
 by inserting many cones of constant <m>\varphi</m>, with the various values of
 <m>\varphi</m> differing by <m>\dee{\varphi}</m>. The figure on the left below shows
 one searchlight outlined in blue. Each searchlight
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has <m>\theta</m>  and <m>\varphi</m> essentially constant on the searchlight, and
 </li>
@@ -323,22 +314,18 @@ rightmost searchlight has, essentially, <m>\varphi=\beta</m>.  See the figure
 on the right below.
 </li>
 </ul>
-\vspace{-\topsep}
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/iceCream2.pdf"/>\qquad
-    <image source="problems/figs/iceCream2b.pdf"/>
+<sidebyside>
+<image source="problems/figs/iceCream2.pdf"/>
+<image source="problems/figs/iceCream2b.pdf"/>
 </sidebyside>
 </li>
-<li>
+<li><p>
 Concentrate on any one searchlight. Subdivide it into tiny approximate
 cubes by inserting many spheres of constant <m>\rho</m>, with the various values of <m>\rho</m> differing by <m>\dee{\rho}</m>. The figure on the left below shows the
 side view of one approximate cube in black. Each cube
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has <m>\rho</m>, <m>\theta</m> and <m>\varphi</m> all essentially constant on the cube and
 </li>
@@ -351,12 +338,11 @@ The first cube has, essentially, <m>\rho=0</m> and the last cube has,
 essentially, <m>\rho=a</m>.  See the figure on the right below.
 </li>
 </ul>
-\vspace{-\topsep}
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/iceCream3.pdf"/>\qquad
-    <image source="problems/figs/iceCream3b.pdf"/>
+<sidebyside>
+<image source="problems/figs/iceCream3.pdf"/>
+<image source="problems/figs/iceCream3b.pdf"/>
 </sidebyside>
 </li>
 </ul>
@@ -460,10 +446,9 @@ the hemisphere, which is <m>\frac{1}{2}\times\frac{4}{3}\pi a^3</m>.
 </p>
 
 </example>
-</p>
 
-<p><example><title>Cored Apple</title>
-<p>xml:id="eg_cored_apple"
+<example xml:id="eg_cored_apple"><title>Cored Apple</title>
+<p>
 A cylindrical hole of radius <m>b</m> is drilled symmetrically through a
 perfectly spherical apple of radius <m>a\ge b</m>. Find the volume of apple that
 remains.
@@ -483,14 +468,11 @@ hole following the <m>z</m>-axis. Here is a sketch of the apple that remains
 in the first octant. It is outlined in red. By symmetry
 the total amount of apple remaining will be eight times the amount
 from the first octant.
-\vadjust{
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/appleCoreB.pdf"/>
 </sidebyside>
-}
-</p>
 
 <p><ul>
 <li>
@@ -498,21 +480,20 @@ First slice the first octant part of the remaining apple into segments
 by inserting many planes of constant <m>\theta</m>, with the various values of
 <m>\theta</m> differing by <m>\dee{\theta}</m>. The leftmost segment has, essentially, <m>\theta=0</m> and the rightmost segment has, essentially, <m>\theta=\frac{\pi}{2}</m>.
 </li>
-<li>
+<li><p>
 Each segment, viewed from the side, looks like
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/appleCoreB2.pdf"/>
 </sidebyside>
+
+<p>
 Subdivide it into long thin searchlights
 by inserting many cones of constant <m>\varphi</m>, with the various values of
 <m>\varphi</m> differing by <m>\dee{\varphi}</m>. The figure on below shows
 one searchlight outlined in blue. Each searchlight
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has <m>\theta</m>  and <m>\varphi</m> essentially constant on the searchlight.
 </li>
@@ -520,21 +501,17 @@ has <m>\theta</m>  and <m>\varphi</m> essentially constant on the searchlight.
 and the bottom searchlight has, essentially, <m>\varphi=\frac{\pi}{2}</m>.
 </li>
 </ul>
-\vspace{-\topsep}
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/appleCoreB3.pdf"/>\qquad
 </sidebyside>
 </li>
-<li>
+<li><p>
 Concentrate on any one searchlight. Subdivide it into tiny approximate
 cubes by inserting many spheres of constant <m>\rho</m>, with the various values of <m>\rho</m> differing by <m>\dee{\rho}</m>. The figure on the left below shows the
 side view of one approximate cube in black. Each cube
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has <m>\rho</m>, <m>\theta</m> and <m>\varphi</m> all essentially constant on the cube and
 </li>
@@ -549,12 +526,11 @@ From it, we see (after a little trig) that the first cube has, essentially,
 (the radius of the apple).
 </li>
 </ul>
-\vspace{-\topsep}
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/appleCoreB3b.pdf"/>\qquad
-    <image source="problems/figs/appleCoreB3c.pdf"/>
+<sidebyside>
+<image source="problems/figs/appleCoreB3b.pdf"/>
+<image source="problems/figs/appleCoreB3c.pdf"/>
 </sidebyside>
 </li>
 </ul>
@@ -613,7 +589,7 @@ first octant is thus
 </mrow>
 </md>
 </li>
-<li>
+<li><p>
 Now we just have to integrate
 <md>
 <mrow>
@@ -650,9 +626,11 @@ From the triangle below, we have
 <m>\cos\al =\frac{\sqrt{a^2-b^2}}{a} </m> and <m>\cot\al=\frac{\sqrt{a^2-b^2}}{b}</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/triangleApple.pdf"/>
 </sidebyside>
+
+<p>
 So<md>
 <mrow>
 \text{Volume}(\cV_1)
@@ -661,6 +639,7 @@ So<md>
 =\frac{\pi}{6}\big[a^2-b^2\big]^{3/2}
 </mrow>
 </md>
+</p>
 </li>
 </ul>
 The full (eight octant) volume of the remaining apple is thus
@@ -686,7 +665,7 @@ volume <m>0</m>. Again, our answer gives this.
 As a final check note that the sum of the answer to
 Example <xref ref="eg_polar_volume"/> and the answer to this Example
 is <m>\frac{4}{3}\pi a^3</m>, as it should be.
-</p></example>
 </p>
+</example>
 
 </section>

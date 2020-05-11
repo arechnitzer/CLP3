@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_3d_integrals">
 
 <!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<title></title>
-<p>\section{Triple Integrals}xml:id="sec_3d_integrals"
-</p>
+<title>Triple Integrals</title>
 
 <p>Triple integrals, that is integrals over three dimensional regions,
 are just like double integrals, only more so. We decompose the
@@ -40,16 +38,13 @@ which we recall look like
     <image source="problems/figs/../figs_coord/cart3.pdf"/>
 </sidebyside>
 <ul>
-<li>
+<li><p>
 First slice the (the first octant part of the) sphere into horizontal
 plates by inserting many planes of
 constant <m>z</m>, with the various values of <m>z</m> differing by <m>\dee{z}</m>.
 The figure on the left below shows the part of one plate in the first octant
 outlined in red. Each plate
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has thickness <m>\dee{z}</m>,
 </li>
@@ -66,20 +61,17 @@ The bottom plate starts at <m>z=0</m> and the top plate ends at
 </ul>
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/sphereMass1.pdf"/>\qquad
     <image source="problems/figs/sphereMass1a.pdf"/>
 </sidebyside>
-\vspace{-\topsep}
+
 </li>
-<li>
+<li><p>
 Concentrate on any one plate. Subdivide it into long thin <q>square</q> beams
 by inserting many planes of constant <m>y</m>, with the various values of <m>y</m> differing by <m>\dee{y}</m>. The figure on the left below shows the part
 of one beam in the first octant outlined in blue. Each beam
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has cross-sectional area  <m>\dee{y}\,\dee{z}</m>,
 </li>
@@ -93,22 +85,18 @@ has <m>x</m> running over <m>0\le x\le \sqrt{1-y^2-z^2}</m>.
 essentially, <m>y=\sqrt{1-z^2}</m>.  See the figure on the right below.
 </li>
 </ul>
-\vspace{-\topsep}
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/sphereMass2.pdf"/>\quad
     <image source="problems/figs/sphereMass2a.pdf"/>
 </sidebyside>
 </li>
-<li>
+<li><p>
 Concentrate on any one beam. Subdivide it into tiny approximate cubes
 by inserting many planes of constant <m>x</m>, with the various values of <m>x</m> differing by <m>\dee{x}</m>. The figure on the left below shows the top of one
 approximate cube in black. Each cube
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has volume <m>\dee{x}\,\dee{y}\,\dee{z}</m>, and
 </li>
@@ -118,13 +106,11 @@ has <m>x</m>, <m>y</m> and <m>z</m> all essentially constant throughout the cube
 <li> The first cube has, essentially, <m>x=0</m> and the last cube has,
 essentially, <m>x=\sqrt{1-y^2-z^2}</m>.  See the figure on the right below.
 </li>
-</ul>
-\vspace{-\topsep}
-</p>
+</ul></p>
 
-<p><sidebyside>
-<image source="problems/figs/sphereMass3.pdf"/>\qquad
-    <image source="problems/figs/sphereMass3a.pdf"/>
+<sidebyside>
+<image source="problems/figs/sphereMass3.pdf"/>
+<image source="problems/figs/sphereMass3a.pdf"/>
 </sidebyside>
 </li>
 </ul>
@@ -157,9 +143,7 @@ the beam, namely <m>0</m>, to its largest value on the beam, namely
 <md>
 <mrow>
 \dee{y}\,\dee{z} \int_0^{\sqrt{1-y^2-z^2}}  \dee{x}\,xyz
-</p>
-
-<p></mrow>
+</mrow>
 </md>
 </li>
 <li>
@@ -280,8 +264,8 @@ That's
 
 <p>\noindent
 <em>The iterated integral
-   <m>\tripInt_\cV f(x, y, z)\ \dee{z</em>\,\dee{y} \,\dee{x}
-     =\int\left(\int\left(\int f(x, y, z)\ \dee{z}\right)\dee{y}\right)\dee{x} </m>:}\ \ \
+   <m>\tripInt_\cV f(x, y, z)\ \dee{z}\,\dee{y} \,\dee{x}
+     =\int\left(\int\left(\int f(x, y, z)\ \dee{z}\right)\dee{y}\right)\dee{x} </m>:</em>\ \ \
 For this iterated integral, the outside integral is with respect to
 <m>x</m>, so we first slice up <m>\cV</m> using planes of constant <m>x</m>,
 as in the figure below.
@@ -316,8 +300,8 @@ So
 
 <p>\goodbreak\noindent
 <em>The iterated integral
-   <m>\tripInt_\cV f(x, y, z)\ \dee{y</em>\,\dee{x} \,\dee{z}
-   =\int\left(\int\left(\int f(x, y, z)\ \dee{y}\right)\dee{x} \right)\dee{z}</m>:}
+   <m>\tripInt_\cV f(x, y, z)\ \dee{y}\,\dee{x} \,\dee{z}
+   =\int\left(\int\left(\int f(x, y, z)\ \dee{y}\right)\dee{x} \right)\dee{z}</m>:</em>}
     \ \ \
 For this iterated integral, the outside integral is with respect to
 <m>z</m>, so we first slice up <m>\cV</m> using planes of constant <m>z</m>,

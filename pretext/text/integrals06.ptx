@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_cylindrical">
 
 <!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<title></title>
-<p>\section{Triple Integrals in Cylindrical Coordinates} xml:id="sec_cylindrical"
-</p>
+<title>Triple Integrals in Cylindrical Coordinates</title>
 
 <p>Many problems possess natural symmetries. We can make our work easier
 by using coordinate systems, like  polar coordinates, that are
@@ -99,31 +97,31 @@ that <m>\dee{V} =r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>.
 
 <p>If we cut up a solid by
 <ul>
-<li>
+<li><p>
 first slicing it into horizontal plates of thickness <m>\dee{z}</m>
 by using planes of constant <m>z</m>,
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/sphereCyl1.pdf"/>
 </sidebyside>
 </li>
-<li>
+<li><p>
 and then subdividing the plates into wedges using surfaces of  constant <m>\theta</m>,
 say with the difference between successive <m>\theta</m>'s being <m>\dee{\theta}</m>,
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/sphereCyl2.pdf"/>
 </sidebyside>
 </li>
-<li>
+<li><p>
 and then subdividing the wedges into approximate cubes using surfaces
 of  constant <m>r</m>, say with the difference between successive <m>r</m>'s
 being <m>\dee{r}</m>,
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/sphereCyl3.pdf"/>
 </sidebyside>
 </li>
@@ -151,10 +149,9 @@ the difference between the successive <m>\theta</m>'s was <m>\dee{\theta}</m>, s
 the remaining edges of the cube are circular arcs of radius
 essentially
 <fn>The inner edge has radius <m>r</m>,
-but the outer edge has radius <m>r+\dee{r</fn>
-</m>. However the
-error that this generates goes to zero in the limit <m>\dee{r}</m>, <m>\dee{\theta}</m>,
-<m>\dee{z}</m> <m>\rightarrow 0</m>.} <m>r</m> that subtend an angle <m>\theta</m>, and
+but the outer edge has radius <m>r+\dee{r}
+</m>. However the error that this generates goes to zero in the limit <m>\dee{r}</m>, <m>\dee{\theta}</m>, <m>\dee{z}</m> <m>\rightarrow 0</m>.</fn>
+<m>r</m> that subtend an angle <m>\theta</m>, and
 so have length <m>r\,\dee{\theta}</m>. See the derivation of equation
 <xref ref="eq_dA_polar"/>.
 </li>
@@ -162,9 +159,9 @@ so have length <m>r\,\dee{\theta}</m>. See the derivation of equation
 So the volume of the approximate cube in cylindrical coordinates is
 (essentially
 <fn>By <q>essentially</q>, we mean that the formula for
-<m>\dee{V</fn>
+<m>\dee{V}
 </m> works perfectly when we take the limit <m>\dee{r},\dee{\theta},
-\dee{z}\rightarrow 0</m> of Riemann sums.})
+\dee{z}\rightarrow 0</m> of Riemann sums.</fn>)
 \begin{impeqn}xml:id="eq_dV_cylindrical"
 <me>
 \dee{V} = r\,\dee{r}\,\dee{\theta}\,\dee{z}
@@ -183,8 +180,8 @@ evaluate when the integrand is invariant under rotations about the <m>z</m>-axis
 or when the domain of integration is cylindrical.
 </p>
 
-<p><example>
-<p>xml:id="eg_sphere_mass_B"
+<example xml:id="eg_sphere_mass_B">
+<p>
 Find the mass inside the sphere <m>x^2+y^2+z^2=1</m> if the density
 is <m>\rho(x,y,z) = x^2+y^2</m> (which is the square of the
 distance from the <m>z</m>-axis).
@@ -202,16 +199,13 @@ of the sphere into tiny pieces using  cylindrical coordinates. That is,
 we shall cut it up using planes of constant <m>z</m>, planes of constant <m>\theta</m>,
 and surfaces of constant <m>r</m>.
 <ul>
-<li>
+<li><p>
 First slice the (the first octant part of the) sphere into horizontal
 plates by inserting many planes of
 constant <m>z</m>, with the various values of <m>z</m> differing by <m>\dee{z}</m>.
 The figure on the left below shows the part of one plate in the first octant
 outlined in red. Each plate
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has thickness <m>\dee{z}</m>,
 </li>
@@ -230,22 +224,21 @@ The bottom plate has, essentially, <m>z=0</m> and the top plate has, essentially
 </ul>
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/sphereCyl1a.pdf"/>\qquad
-    <image source="problems/figs/sphereCyl1b.pdf"/>
+<sidebyside>
+<image source="problems/figs/sphereCyl1a.pdf"/>
+<image source="problems/figs/sphereCyl1b.pdf"/>
 </sidebyside>
-\vspace{-\topsep}
+
+<p>
 So far, this looks just like what we did in Example <xref ref="eg_sphere_mass_A"/>.
+</p>
 </li>
-<li>
+<li><p>
 Concentrate on any one plate. Subdivide it into wedges
 by inserting many planes of constant <m>\theta</m>, with the various
 values of <m>\theta</m> differing by <m>\dee{\theta}</m>. The figure on the
 left below shows one such wedge outlined in blue. Each wedge
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has <m>z</m>  and <m>\theta</m> essentially constant on the wedge, and
 </li>
@@ -257,22 +250,18 @@ wedge has, essentially, <m>\theta=\frac{\pi}{2}</m>.  See the figure
 on the right below.
 </li>
 </ul>
-\vspace{-\topsep}
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/sphereCyl2a.pdf"/>\quad
-    <image source="problems/figs/sphereCyl2b.pdf"/>
+<sidebyside>
+<image source="problems/figs/sphereCyl2a.pdf"/>
+<image source="problems/figs/sphereCyl2b.pdf"/>
 </sidebyside>
 </li>
-<li>
+<li><p>
 Concentrate on any one wedge. Subdivide it into tiny approximate cubes
 by inserting many surfaces of constant <m>r</m>, with the various values of <m>r</m> differing by <m>\dee{r}</m>. The figure on the left below shows the top of one
 approximate cube in black. Each cube
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has volume <m>r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>, by <xref ref="eq_dV_cylindrical"/>
 and
@@ -284,12 +273,11 @@ has <m>r</m>, <m>\theta</m> and <m>z</m> all essentially constant on the cube.
 essentially, <m>r=\sqrt{1-z^2}</m>.  See the figure on the right below.
 </li>
 </ul>
-\vspace{-\topsep}
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/sphereCyl3a.pdf"/>\qquad\qquad
-    <image source="problems/figs/sphereCyl3b.pdf"/>
+<sidebyside>
+<image source="problems/figs/sphereCyl3a.pdf"/>
+<image source="problems/figs/sphereCyl3b.pdf"/>
 </sidebyside>
 </li>
 </ul>
@@ -374,10 +362,10 @@ of integration in Example <xref ref="eg_sphere_mass_A"/>.)
 </p>
 
 </example>
-</p>
 
-<p><example>
-<p>xml:id="eg_moment_cone"
+
+<example xml:id="eg_moment_cone">
+<p>
 Find the moment of inertia of a right circular cone
 <ul>
 <li>sep1pt \parskip0pt \parsep0pt
@@ -475,23 +463,21 @@ shall do so.
 
 <p>We'll evaluate both of the integrals above using cylindrical coordinates.
 <ul>
-<li>
+<li><p>
 Start by slicing the cone into horizontal plates by inserting many planes of
 constant <m>z</m>, with the various values of <m>z</m> differing by <m>\dee{z}</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/coneP.pdf"/>
 </sidebyside>
+<p>
 Each plate
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 is a circular disk of thickness <m>\dee{z}</m>.
 </li>
-<li>
+<li><p>
 By similar triangles, as in the figure on the right below,
 the disk at height <m>z</m> has radius <m>R</m> obeying
 <me>
@@ -500,9 +486,9 @@ the disk at height <m>z</m> has radius <m>R</m> obeying
 </me>
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/coneX.pdf"/>\qquad
-    <image source="problems/figs/coneT.pdf"/>
+<sidebyside>
+<image source="problems/figs/coneX.pdf"/>
+<image source="problems/figs/coneT.pdf"/>
 </sidebyside>
 </li>
 <li>
@@ -514,36 +500,27 @@ and <m>\theta</m> running from <m>0</m> to <m>2\pi</m>.
 The bottom plate has, essentially, <m>z=0</m> and the top plate has, essentially,
 <m>z=h</m>.
 </li>
-</ul>
-\vspace{-\topsep}
+</ul></p>
 </li>
-<li>
+<li><p>
 Now concentrate on any one plate. Subdivide it into wedges
 by inserting many planes of constant <m>\theta</m>, with the various
 values of <m>\theta</m> differing by <m>\dee{\theta}</m>.
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 The first wedge has, essentially <m>\theta=0</m> and the last wedge has,
 essentially, <m>\theta=2\pi</m>.
 </li>
-</ul>
-\vspace{-\topsep}
+</ul></p>
 </li>
-<li>
+<li><p>
 Concentrate on any one wedge. Subdivide it into tiny approximate
 cubes
 <fn>Again they are wonky cubes, but we can bound the error
-and show that it goes to zero in the limit <m>\dee{r</fn>
-,\dee{\theta},\dee{z}
-\rightarrow 0</m>. }
+and show that it goes to zero in the limit <m>\dee{r}
+,\dee{\theta},\dee{z} \rightarrow 0</m>. </fn>
 by inserting many surfaces of constant <m>r</m>, with the various values of <m>r</m> differing by <m>\dee{r}</m>.  Each cube
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has volume <m>r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>, by <xref ref="eq_dV_cylindrical"/>.
 </li>
@@ -551,8 +528,7 @@ has volume <m>r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>, by <xref ref="eq_dV_cylindr
 The first cube has, essentially, <m>r=0</m> and the last cube has,
 essentially, <m>r=\frac{a}{h}z</m>.
 </li>
-</ul>
-\vspace{-\topsep}
+</ul></p>
 </li>
 </ul>
 So the two integrals of interest are
@@ -595,9 +571,8 @@ Putting everything together, the moment of inertia is
 <md>
 <mrow>
 I_\cA
-</p>
 
-<p>&amp;=\tripInt_\cV \overbrace{(x^2+z^2)}^{D(x,y,z)^2}
+&amp;=\tripInt_\cV \overbrace{(x^2+z^2)}^{D(x,y,z)^2}
               \overbrace{\frac{M}{\frac{1}{3}\pi a^2h}}^{\rho(x,y,z)}
              \ \dee{x}\,\dee{y}\,\dee{z}
 </mrow><mrow>
@@ -611,6 +586,5 @@ I_\cA
 </p>
 
 </example>
-</p>
 
 </section>

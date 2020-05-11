@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_int_2d_applications">
 
 <!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<title></title>
-\section{Applications of Double Integrals}
-xml:id="sec_int_2d_applications"
-</p>
+<title>Applications of Double Integrals</title>
 
 <p>Double integrals are useful for more than just computing
 areas and volumes. Here are a few other applications that
@@ -91,12 +88,12 @@ Let <m>f(x,y)</m> be an integrable function defined on region <m>\cR</m> in the
 </definition>
 </p>
 
-<p><example><title>Average</title>
-<p>xml:id="eg_dblInt_G"
+<example xml:id="eg_dblInt_G"><title>Average</title>
+<p>
 Let <m>a \gt 0</m>. A mountain, call it Half Dome
 <fn>There is a real Half-Dome
-mountain in Yosemite National Park. It has <m>a=1445\,\text{m</fn>
-</m>. }, has height
+mountain in Yosemite National Park. It has <m>a=1445\,\text{m}
+</m>. </fn>, has height
 <m>z(x,y)=\sqrt{a^2-x^2-y^2}</m> above each point <m>(x,y)</m>
 in the base region <m>\cR=§et{(x,y)}{x^2+y^2\le a^2, x\le 0}</m>.
 Find its average height.
@@ -150,10 +147,9 @@ which is <m>a</m>. That makes sense.
 </p>
 
 </example>
-</p>
 
-<p><example><title>Example <xref ref="eg_dblInt_G"/>, the hard way</title>
-<p>xml:id="eg_dblInt_H"
+<example xml:id="eg_dblInt_H"><title>Example <xref ref="eg_dblInt_G"/>, the hard way</title>
+<p>
 This last example was relatively easy because we could reinterpret the integrals
 as geometric quantities. For practice, let's go back and
 evaluate the numerator
@@ -235,16 +231,19 @@ just as we saw in Example <xref ref="eg_dblInt_G"/>.
 </p>
 
 </example>
-</p>
 
-<p>\begin{remark}xml:id="rem_sneaky"
+<remark xml:id="rem_sneaky">
+<p>
 We remark that there is an efficient, sneaky, way to evaluate
 definite integrals like <m>\int_{-\pi/2}^0 \cos^2\theta\ \dee{\theta}</m>.
 Looking at the figures
-\begin{mfig}
-<image source="problems/figs/cos2graph.pdf"/>\qquad
-    <image source="problems/figs/sin2graph.pdf"/>
-\end{mfig}
+</p>
+<sidebyside>
+<image source="problems/figs/cos2graph.pdf"/>
+<image source="problems/figs/sin2graph.pdf"/>
+</sidebyside>
+
+<p>
 we see that
 <me>
 \int_{-\pi/2}^0 \cos^2\theta\ \dee{\theta}
@@ -261,9 +260,8 @@ Thus
 </mrow>
 </md>
 </p>
+</remark>
 
-<p>\end{remark}
-</p>
 
 <p>It is not at all unusual to want to find the average value of
 some function <m>f(x,y)</m> with <m>(x,y)</m> running over some region
@@ -318,8 +316,8 @@ is the point  <m>(\bar x, \bar y)</m> where
        &amp;=\frac{\dblInt_\cR x\ \rho(x,y)\, \dee{x}\,\dee{y}}
                       {\dblInt_\cR \ \rho(x,y)\, \dee{x}\,\dee{y}}
         =\frac{\dblInt_\cR x\ \rho(x,y)\, \dee{x}\,\dee{y}}
-                            {\text{Mass}(\cR)} \<me>
-0.1in]
+                            {\text{Mass}(\cR)}
+</mrow><mrow>
 \bar y &amp; = \text{the weighted average of <m>y</m> over <m>\cR</m>}
 </mrow><mrow>
        &amp;=\frac{\dblInt_\cR y\ \rho(x,y)\, \dee{x}\,\dee{y}}
@@ -338,8 +336,8 @@ In this case
 \bar x &amp;=\frac{\dblInt_\cR x\ \dee{x}\,\dee{y}}
                       {\dblInt_\cR  \dee{x}\,\dee{y}}
         =\frac{\dblInt_\cR x\ \dee{x}\,\dee{y}}
-                            {\text{Area}(\cR)} \<me>
-0.1in]
+                            {\text{Area}(\cR)}
+</mrow><mrow>
 \bar y &amp;=\frac{\dblInt_\cR y\ \dee{x}\,\dee{y}}
                      {\dblInt_\cR \  \dee{x}\,\dee{y}}
         =\frac{\dblInt_\cR y\  \dee{x}\,\dee{y}}
@@ -617,9 +615,7 @@ and, all together,
   &amp;= \frac{2\left(\frac{4\pi}{3}-2\sqrt{3}\right)}{\frac{4\pi}{3}-\sqrt{3}}
   = \frac{\frac{8\pi}{3}-4\sqrt{3}}{\frac{4\pi}{3}-\sqrt{3}}
   \approx 0.59
-</p>
-
-<p></mrow>
+</mrow>
 </md>
 As a check, note that <m>0\le x\le 1</m> on <m>\cR</m> and more of <m>\cR</m> is closer
 to <m>x=1</m> than to <m>x=0</m>. So it makes sense that <m>\bar x</m> is between
@@ -1000,12 +996,8 @@ Now
                         \frac{1+\cos(2\theta)}{2}
 </mrow><mrow>
      &amp;=\frac{1}{2}\times\frac{\pi}{4}
-</p>
-
-<p></mrow><mrow>
-</p>
-
-<p>\int_0^{2\pi}\dee{\theta}\ \cos\theta\ \sin^2\theta
+</mrow><mrow>
+\int_0^{2\pi}\dee{\theta}\ \cos\theta\ \sin^2\theta
      &amp;\eqover{u=\sin\theta} \int_0^0\dee{u}\ u^2
      =0
 </mrow><mrow>

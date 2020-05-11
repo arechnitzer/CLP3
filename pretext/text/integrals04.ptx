@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_surface_area">
 
 <!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<title></title>
-<p>\section{Surface Area}xml:id="sec_surface_area"
+<title>Surface Area</title>
+<p>
 Suppose that we wish to find the area of part, <m>S</m>, of the surface <m>z=f(x,y)</m>. We start by cutting <m>S</m> up into tiny pieces. To do so,
 <ul>
 <li>
@@ -22,16 +22,18 @@ the plane <m>y=y_0</m> for some constant <m>y_0</m>.
 </ul>
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/sphericaldSxy.pdf"/>
 </sidebyside>
+<p>
 Concentrate on any one the tiny pieces. Here is a greatly magnified
 sketch of it, looking at it from above.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/dSfxy.pdf"/>
 </sidebyside>
+<p>
 We wish to compute its area, which we'll call <m>\dee{S}</m>.
 Now this little piece of surface need not be parallel to the <m>xy</m>-plane,
 and indeed need not even be flat. But if the piece is really tiny, it's
@@ -71,9 +73,7 @@ P_2&amp;=(x_0+\dee{x})\,\hi+y_0\,\hj + f(x_0+\dee{x},y_0)\,\hk
 Now, for any small constants <m>\dee{X}</m> and <m>\dee{Y}</m>, we have the linear
 approximation
 <fn>Recall <xref ref="eqn_lin_approx_2d"/>.</fn>
-</p>
-
-<p><md>
+<md>
 <mrow>
 f(x_0+\dee{X},y_0+\dee{Y})
 &amp;\approx f(x_0\,,\,y_0)
@@ -86,10 +86,8 @@ once with <m>\dee{X}=0</m>, <m>\dee{Y}=\dee{y}</m> (to approximate <m>P_1</m>),
 once with <m>\dee{X}=\dee{x}</m>, <m>\dee{Y}=0</m> (to approximate <m>P_2</m>),
 and once with  <m>\dee{X}=\dee{x}</m>, <m>\dee{Y}=\dee{y}</m> (to approximate <m>P_3</m>),
 <md alignment="alignat">
-<mrow>{3}
-</p>
-
-<p>P_1&amp;\approx P_0 \phantom{\ +\ \dee{x}\,\hi}
+<mrow>
+P_1&amp;\approx P_0 \phantom{\ +\ \dee{x}\,\hi}
    \ +\ \dee{y}\,\hj\ \ +\   \pdiff{f}{y}(x_0\,,\,y_0)\,\dee{y}\,\hk
 </mrow><mrow>
 P_2&amp;\approx P_0
@@ -131,9 +129,9 @@ has length <m>\big|\overrightarrow{P_0P_1}\big|</m>, and the height of the
 parallelogram is <m>\big|\overrightarrow{P_0P_2}\big|\,\sin\theta</m>.
 So the area of the parallelogram is
 <fn>As we mentioned above,
-the approximation below becomes exact when the limit <m>\dee{x</fn>
+the approximation below becomes exact when the limit <m>\dee{x}
 ,\dee{y}\rightarrow 0</m> is taken in the definition of the integral.
-See §\eref{CLP317}{sec:hoterms} in the CLP-4 text.}, by
+See §\eref{CLP317}{sec:hoterms} in the CLP-4 text.</fn>, by
 Theorem <xref ref="thm_crossPppties"/>,
 <md>
 <mrow>
@@ -152,13 +150,11 @@ The cross product is easily evaluated:
 \left(\hj\ +\   \pdiff{f}{y}(x_0\,,\,y_0)\,\hk\right)\times
               \left(\hi\ +\   \pdiff{f}{x}(x_0\,,\,y_0)\,\hk\right)
 &amp;=\det\left[\begin{matrix}
-           \hi &amp; \hj &amp; \hk
-</mrow><mrow>
-           0 &amp; 1 &amp; \frac{\partial f}{\partial y}(x_0,y_0) \<me>
-0.05in]
+           \hi &amp; \hj &amp; \hk \\
+           0 &amp; 1 &amp; \frac{\partial f}{\partial y}(x_0,y_0) \\
            1 &amp; 0 &amp; \frac{\partial f}{\partial x}(x_0,y_0)
-           \end{matrix}\right] \<me>
-0.05in]
+           \end{matrix}\right]
+</mrow><mrow>
 &amp;= f_x(x_0,y_0)\,\hi + f_y(x_0,y_0)\,\hj - \hk
 </mrow>
 </md>
@@ -482,9 +478,7 @@ To evaluate this integral, we switch to polar coordinates, substituting
 =\int_0^a\dee{r}\ r\int_0^{2\pi}\dee{\theta}\  \frac{a}{\sqrt{a^2-r^2}}
 </mrow><mrow>
 &amp;=2\pi a \int_0^a\dee{r}\ \frac{r}{\sqrt{a^2-r^2}}
-</p>
-
-<p></mrow><mrow>
+</mrow><mrow>
 &amp;=2\pi a\int_{a^2}^0 \frac{-\dee{u}/2}{\sqrt{u}}
 \qquad\text{with <m>u=a^2-r^2,\ \dee{u} = -2r\,\dee{r}</m>}
 </mrow><mrow>
