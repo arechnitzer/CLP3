@@ -46,10 +46,17 @@ If <m>S</m> and <m>T</m> are sets, then <m>f:S\rightarrow T</m> means that
 The set <m>S</m> is called the domain of <m>f</m>.
 </li>
 <li>
- <m>[a,b]=\Set{x\in\bbbr}{a\le x\le b}</m> \qquad
- <m>(a,b]=\Set{x\in\bbbr}{a \lt  x\le b}</m> \\
- <m>[a,b)=\Set{x\in\bbbr}{a\le x \lt  b}</m> \qquad
- <m>\!(a,b)=\Set{x\in\bbbr}{a \lt  x \lt  b}</m>
+  <p>
+<md>
+  <mrow>
+ [a,b]=\Set{x\in\bbbr}{a\le x\le b} \amp\amp
+ (a,b]=\Set{x\in\bbbr}{a \lt  x\le b}
+ </mrow><mrow>
+ [a,b)=\Set{x\in\bbbr}{a\le x \lt  b}\amp\amp
+ (a,b)=\Set{x\in\bbbr}{a \lt  x \lt  b}
+ </mrow>
+ </md>
+</p>
 </li>
 </ul>
 </p></statement>
@@ -73,25 +80,23 @@ if <m>f(\vx)</m> approaches  <m>\vL</m> whenever <m>\vx</m> approaches <m>\va</m
 Here is a more careful definition of limit.
 </p>
 
-<definition><title>Limit</title>
-<statement><p>xml:id="def_limit"
+<definition xml:id="def_limit"><title>Limit</title>
+<statement><p>
 Let
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
-<li>[<m>\circ</m>]
+<li>
 <m>m</m>, <m>n</m> be natural numbers
 </li>
-<li>[<m>\circ</m>]
+<li>
 <m>D</m> be a subset of <m>\bbbr^m</m>
 </li>
-<li>[<m>\circ</m>]
+<li>
 <m>\va\in D</m>
 </li>
-<li>[<m>\circ</m>]
+<li>
 <m>f:D\setminus\{\va\}\rightarrow\bbbr^n</m>
 </li>
-<li>[<m>\circ</m>]
+<li>
 <m>\vL\in\bbbr^n</m>
 </li>
 </ul>
@@ -242,26 +247,35 @@ Assume that
 Then
 <ol label="a">
 <li>
+  <p>
 <m>\lim\limits_{\vx\rightarrow \va}\big[f(\vx)+g(\vx)\big]
-         =F+G</m>\\
-\null\qquad<m>\lim\limits_{\vx\rightarrow \va}\big[f(\vx)-g(\vx)\big]
-         =F-G</m>
+         =F+G</m>
+       </p>
+       <p>
+<m>\lim\limits_{\vx\rightarrow \va}\big[f(\vx)-g(\vx)\big]
+         =F-G
+         </m>
+     </p>
 </li>
-<li>\qquad
+<li>
+<p>
 <m>\lim\limits_{\vx\rightarrow \va} f(\vx)\,g(\vx)
-         =FG</m>\\
-\null\qquad<m>\lim\limits_{\vx\rightarrow \va} cf(\vx)
+         =FG</m>
+       </p>
+       <p>
+<m>\lim\limits_{\vx\rightarrow \va} cf(\vx)
          =cF</m>
+       </p>
 </li>
-<li>\qquad
+<li><p>
 <m>\lim\limits_{\vx\rightarrow \va} \frac{f(\vx)}{g(\vx)}
-         =\frac{F}{G}</m> if <m>G\ne 0</m>
+         =\frac{F}{G} </m>  if <m>G\ne 0</m></p>
 </li>
-<li>\qquad
+<li><p>
 <m>\lim\limits_{\vy\rightarrow \vb} f\big(\vX(\vy)\big)
-         =F</m>
+         =F</m></p>
 </li>
-<li>\qquad
+<li>
 <m>\lim\limits_{\vx\rightarrow \va} \ga\big(f(\vx)\big)
          =\ga(F)</m>
 </li>
@@ -372,7 +386,7 @@ careful.
 when <m>(x,y)</m> is close to <m>(0,0)</m> is to switch to the polar coordinates,
 <m>r,\theta</m>, that are defined by
 </p>
-<sidebyside width="">
+<sidebyside width="40%">
 <p><md>
 <mrow>
 x&amp;=r\cos\theta
@@ -407,8 +421,8 @@ As <m>\big|r\cos^2\theta\sin\theta\big|\le r\rightarrow 0</m> when <m>r\rightarr
 </me>
 </p></example>
 
-<example>
-<p>xml:id="ex_LIMtwodC"
+<example xml:id="ex_LIMtwodC">
+<p>
 As a third example, we consider
 <m>\lim\limits_{(x,y)\rightarrow (0,0)}\frac{x^2-y^2}{x^2+y^2}</m>.
 Once again, the best way to see the behaviour of

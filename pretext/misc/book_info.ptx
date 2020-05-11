@@ -13,6 +13,7 @@
 <macros>
   \newcommand{\dee}[1]{\mathrm{d}#1}
   \newcommand{\half}{ \frac{1}{2} }
+  \newcommand{\veps}{\varepsilon}
   \newcommand{\ds}{\displaystyle}
   \newcommand{\ts}{\textstyle}
   \newcommand{\es}{ {\varnothing}}

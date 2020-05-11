@@ -6,9 +6,7 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <title>Partial Derivatives</title>
-<p>\section{Partial Derivatives}xml:id="sec_partials"
-</p>
-
+<introduction>
 <p>We are now ready to define derivatives of functions of more than one variable.
 First, recall how we defined the derivative, <m>f'(a)</m>, of a function
 of one variable, <m>f(x)</m>. We imagined that we were walking along the <m>x</m>-axis,
@@ -40,17 +38,15 @@ variable <m>B(x) = f(x,b)</m> and we will observe the rate of change of temperat
 This is called the <q>partial derivative <m>f</m> with respect to <m>x</m> at <m>(a,b)</m></q>
 and is denoted <m>\pdiff{f}{x}(a,b)</m>. Here
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
-<li>[<m>\circ</m>]
+<li>
 the symbol <m>\partial</m>, which is read <q>partial</q>, indicates that
 we are dealing with a function of more than one variable, and
 </li>
-<li>[<m>\circ</m>]
+<li>
 the <m>x</m> in <m>{\pdiff{f}{x}}</m> indicates that we are differentiating
 with respect to <m>x</m>, while <m>y</m> is being held fixed, i.e. being treated as a constant.
 </li>
-<li>[<m>\circ</m>]
+<li>
 <m>{\pdiff{f}{x}}</m> is read <q> partial dee <m>f</m> dee <m>x</m></q>.
 </li>
 </ul>
@@ -77,15 +73,18 @@ and is denoted <m>\pdiff{f}{y}(a,b)</m>.
 it is common to treat the partial derivatives of <m>f(x,y)</m> as functions
 of <m>(x,y)</m> simply by evaluating the partial derivatives at <m>(x,y)</m> rather
 than at <m>(a,b)</m>.
-<definition><title>Partial Derivatives</title>
-<statement><p>xml:id="def_partials"
+</p>
+
+<definition xml:id="def_partials"><title>Partial Derivatives</title>
+<statement><p>
 The <m>x</m>- and <m>y</m>-partial derivatives of the function <m>f(x,y)</m>
 are
 <md>
 <mrow>
 \pdiff{f}{x}(x,y)
-  &amp;= \lim_{h\rightarrow 0}\frac{f(x+h,y) - f(x,y)}{h} \<me>
-0.05in]
+  &amp;= \lim_{h\rightarrow 0}\frac{f(x+h,y) - f(x,y)}{h}
+</mrow>
+<mrow>
 \pdiff{f}{y}(x,y)
   &amp;= \lim_{h\rightarrow 0}\frac{f(x,y+h) - f(x,y)}{h}
 </mrow>
@@ -94,11 +93,12 @@ respectively. The partial derivatives of functions of more than two variables
 are defined analogously.
 </p></statement>
 </definition>
-</p>
 
-<p>Partial derivatives are used a lot. And there many notations for them.
-<definition>
-<statement><p>xml:id="notn_partial"
+
+<p>Partial derivatives are used a lot. And there many notations for them.</p>
+
+<definition xml:id="notn_partial">
+<statement><p>
 The partial derivative <m>\pdiff{f}{x}(x,y)</m> of a function <m>f(x,y)</m> is also denoted
 <me>
 \pdiff{f}{x}\qquad
@@ -118,24 +118,18 @@ with the subscript <m>(a,b)</m> indicating that <m>\pdiff{f}{x}</m> is being eva
 at <m>(x,y)=(a,b)</m>.
 </p>
 
-<p>\medskip
+<p>
 The notation <m>{\left(\pdiff{f}{x}\right)}_{\!y}</m> is used to make explicit
 that the variable <m>y</m> is being held.
-<fn>There are applications in which there are several variables that cannot be varied independently. For example,
-the pressure, volume and temperature of an ideal gas are related by the equation of state <m>PV= \text{(constant)</fn>
-T</m>. In those applications, it may not
-be clear from the context which variables are being held fixed.}
+<fn>
+  There are applications in which there are several variables that cannot be varied independently. For example, the pressure, volume and temperature of an ideal gas are related by the equation of state <m>PV= \text{(constant)} T</m>. In those applications, it may not be clear from the context which variables are being held fixed.</fn>
 </p>
-
 </statement>
 </definition>
-</p>
 
-<p>\begin{remark}[The Geometric Interpretation of Partial Derivatives]
-     xml:id="rem_geom_interp"
-</p>
 
-<p>\ \ \
+<remark xml:id="rem_geom_interp"><title>The Geometric Interpretation of Partial Derivatives</title>
+<p>
 We'll now develop a geometric interpretation of the partial derivative
 <me>
 \pdiff{f}{x}(a,b)  = \lim_{h\rightarrow 0}\frac{f(a+h,b) - f(a,b)}{h}
@@ -154,19 +148,21 @@ The two blue vertical line segments in the figure have heights <m>f(a,b)</m> and
 of <m>\frac{f(a+h,b) - f(a,b)}{h}</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/xderiv.pdf"/>
 </sidebyside>
+
+<p>
 A side view of the curve (looking from the left side of the <m>y</m>-axis)
 is sketched in the figure below.
-\vadjust{
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/xderivSide.pdf"/>
 </sidebyside>
-}
- Again, the two blue vertical line segments
+
+<p>
+  Again, the two blue vertical line segments
 in the figure have heights <m>f(a,b)</m> and <m>f(a+h,b)</m>, which are the two
 numbers in the numerator of <m>\frac{f(a+h,b) - f(a,b)}{h}</m>. So
 the numerator <m>f(a+h,b) - f(a,b)</m> and denominator <m>h</m> are the rise and run,
@@ -178,16 +174,19 @@ In the same way
 <m>\pdiff{f}{y}(a,b)</m> is exactly
 <em>the slope of (the tangent to) the curve of intersection of the surface
 <m>z=f(x,y)</m> and the plane <m>x=a</m> at the point <m>\big(a,b, f(a,b)\big)</m>.</em>
-\end{remark}
 </p>
+</remark>
 
-<p>\subsubsection{Evaluation of Partial Derivatives}xml:id="sec_eval_partials"
+
+</introduction>
+<subsection xml:id="sec_eval_partials">
+  <title>Evaluation of Partial Derivatives</title>
+
+<p>
 From the above discussion, we see that we can readily compute partial
 derivatives <m>\pdiff{}{x}</m> by using what we already know about ordinary
 derivatives <m>\diff{}{x}</m>. More precisely,
-</p>
-
-<p><ul>
+<ul>
 <li>
 to evaluate <m>\pdiff{f}{x}(x,y)</m>, treat the <m>y</m> in <m>f(x,y)</m> as a constant
 and differentiate the resulting function of <m>x</m> with respect to <m>x</m>.
@@ -207,12 +206,11 @@ and differentiate the resulting function of <m>y</m> with respect to <m>y</m>.
 Then evaluate the result at <m>x=a</m>, <m>y=b</m>.
 </li>
 </ul>
-\noindent
 Now for some examples.
 </p>
 
-<p><example>
-<p>xml:id="eg_partials_A"
+<example xml:id="eg_partials_A">
+<p>
 Let
 <me>
 f(x,y) = x^3+y^2+ 4xy^2
@@ -241,17 +239,17 @@ and, since <m>\pdiff{}{y}</m> treats <m>x</m> as a constant,
 </md>
 In particular, at <m>(x,y)=(1,0)</m> these partial derivatives take the values
 <md alignment="alignat">
-<mrow>{3}
-\pdiff{f}{x}(1,0) &amp;= 3(1)^2 +4(0)^2&amp;=3 \<me>
-0.05in]
+<mrow>
+\pdiff{f}{x}(1,0) &amp;= 3(1)^2 +4(0)^2&amp;=3
+</mrow><mrow>
 \pdiff{f}{y}(1,0) &amp;= 2(0) +8(1)(0)\ &amp;=0
 </mrow>
 </md>
-</p></example>\goodbreak
-</p>
+</p></example>
 
-<p><example>
-<p>xml:id="eg_partials_B"
+
+<example xml:id="eg_partials_B">
+<p>
 Let
 <me>
 f(x,y) = y\cos x + xe^{xy}
@@ -264,18 +262,22 @@ Then, since <m>\pdiff{}{x}</m> treats <m>y</m> as a constant,
                          +x\pdiff{}{x}\big(e^{xy}\big)
                          \qquad\text{(by the product rule)}
 </mrow><mrow>
-                  &amp;= -y\sin x + e^{xy} +xye^{xy} \<me>
-0.05in]
+                  &amp;= -y\sin x + e^{xy} +xye^{xy}
+                  </mrow><mrow>
 \pdiff{f}{y}(x,y) &amp;= \cos x\pdiff{}{y}(y) + x\pdiff{}{y}\big(e^{xy}\big)
 </mrow><mrow>
                   &amp;= \cos x + x^2e^{xy}
 </mrow>
 </md>
-</p></example>
+</p>
+</example>
+
+<p>
 Let's move up to a function of four variables. Things generalize
 in a quite straight forward way.
-<example>
-<p>xml:id="eg_partials_C"
+</p>
+<example xml:id="eg_partials_C">
+<p>
 Let
 <me>
 f(x,y,z,t) = x\sin(y+2z) +t^2e^{3y}\ln z
@@ -283,26 +285,31 @@ f(x,y,z,t) = x\sin(y+2z) +t^2e^{3y}\ln z
 Then
 <md>
 <mrow>
-\pdiff{f}{x}(x,y,z,t) &amp;= \sin(y+2z)  \<me>
-0.05in]
-\pdiff{f}{y}(x,y,z,t) &amp;= x\cos(y+2z) +3t^2e^{3y}\ln z \<me>
-0.05in]
-\pdiff{f}{z}(x,y,z,t) &amp;= 2x\cos(y+2z) +t^2e^{3y}/z \<me>
-0.05in]
+\pdiff{f}{x}(x,y,z,t) &amp;= \sin(y+2z)
+</mrow><mrow>
+\pdiff{f}{y}(x,y,z,t) &amp;= x\cos(y+2z) +3t^2e^{3y}\ln z
+</mrow><mrow>
+\pdiff{f}{z}(x,y,z,t) &amp;= 2x\cos(y+2z) +t^2e^{3y}/z
+</mrow><mrow>
 \pdiff{f}{t}(x,y,z,t) &amp;= 2te^{3y}\ln z
 </mrow>
 </md>
-</p></example>
+</p>
+</example>
+
+<p>
 Now here is a more complicated example <mdash/> our function takes a special
 value at <m>(0,0)</m>. To compute derivatives there we have to revert to
 the definition.
-<example>
-<p>xml:id="eg_partials_D"
+</p>
+
+<example xml:id="eg_partials_D">
+<p>
 Set
 <me>
 f(x,y)=\begin{cases}
-             \frac{\cos x-\cos y}{x-y}&amp;\text{if <m>x\ne y</m>}\\
-                    0&amp;\text{if <m>x=y</m>}
+             \frac{\cos x-\cos y}{x-y}&amp;\text{if } x\ne y \\
+                    0&amp;\text{if } x=y
         \end{cases}
 </me>
 If <m>b\ne a</m>, then for all <m>(x,y)</m> sufficiently close to <m>(a,b)</m>,
@@ -312,8 +319,8 @@ differentiation. However that is not the case for <m>(a,b)=(0,0)</m>.
 To evaluate <m>f_x(0,0)</m>, we need to set <m>y=0</m> and find the derivative of
 <me>
 f(x,0) = \begin{cases}
-             \frac{\cos x-1}{x}&amp;\text{if <m>x\ne 0</m>}\\
-                    0&amp;\text{if <m>x=0</m>}
+             \frac{\cos x-1}{x}&amp;\text{if } x\ne 0 \
+                    0&amp;\text{if } x=0
         \end{cases}
 </me>
 with respect to <m>x</m> at <m>x=0</m>. To do so, we basically have to apply the
@@ -323,7 +330,7 @@ definition
 f_x(0,0) &amp;= \lim_{h\rightarrow 0}\frac{f(h,0)-f(0,0)}{h}
 </mrow><mrow>
          &amp;= \lim_{h\rightarrow 0}\frac{\frac{\cos h-1}{h}-0}{h}
-         &amp;\qquad\text{(Recall that <m>h\ne 0</m> in the limit.)}
+         &amp;\qquad\text{(Recall that $h\ne 0$ in the limit.)}
 </mrow><mrow>
          &amp;= \lim_{h\rightarrow 0}\frac{\cos h-1}{h^2}
 </mrow><mrow>
@@ -344,23 +351,20 @@ by substituting in the Taylor expansion
 </p>
 
 </example>
-</p>
 
-<p><example>
-<p>xml:id="eg_partials_DD"
+<example xml:id="eg_partials_DD">
+<p>
 Again set
 <me>
 f(x,y)=\begin{cases}
-             \frac{\cos x-\cos y}{x-y}&amp;\text{if <m>x\ne y</m>}\\
-                    0&amp;\text{if <m>x=y</m>}
+             \frac{\cos x-\cos y}{x-y}&amp;\text{if } x\ne y \\
+                    0&amp;\text{if } x=y
         \end{cases}
 </me>
 We'll now compute <m>f_y(x,y)</m> for all <m>(x,y)</m>.
 </p>
 
-<p>\medskip
-\noindent
-<em>The case <m>y\ne x</m>:\ \ \ </em>
+<p> <em>The case <m>y\ne x</m>:</em>
 When <m>y\ne x</m>,
 <md>
 <mrow>
@@ -376,9 +380,7 @@ f_y(x,y) &amp; = \pdiff{}{y}\frac{\cos x-\cos y}{x-y}
 </md>
 </p>
 
-<p>\medskip
-\noindent
-<em>The case <m>y= x</m>:\ \ \ </em>
+<p><em>The case <m>y= x</m>:</em>
 When <m>y = x</m>,
 <md>
 <mrow>
@@ -387,12 +389,12 @@ f_y(x,y) &amp;= \lim_{h\rightarrow 0}\frac{f(x,y+h)-f(x,y)}{h}
           \hidewidth
 </mrow><mrow>
          &amp;= \lim_{h\rightarrow 0}\frac{\frac{\cos x-\cos(x+h)}{x-(x+h)}-0}{h}
-         &amp;\qquad\text{(Recall that <m>h\ne 0</m> in the limit.)}
+         &amp;\qquad\text{(Recall that $h\ne 0$ in the limit.)}
 </mrow><mrow>
          &amp;= \lim_{h\rightarrow 0}\frac{\cos(x+h)-\cos x}{h^2}
 </mrow>
 </md>
-Now we apply L'H\^opital's rule twice, remembering that, in this limit,
+Now we apply L'Hôpital's rule twice, remembering that, in this limit,
 <m>x</m> is a constant and <m>h</m> is the variable <mdash/> so we differentiate with respect to <m>h</m>.
 <md>
 <mrow>
@@ -405,24 +407,24 @@ f_y(x,y)  &amp;= \lim_{h\rightarrow 0}\frac{-\sin(x+h)}{2h}
 </md>
 </p>
 
-<p>\medskip
-\noindent
-<em>The conclusion:\ \ \ </em>
+<p><em>The conclusion:</em>
 <me>
 f_y(x,y)=\begin{cases}
              \frac{(x-y)\sin y
-                  + \cos x-\cos y }{(x-y)^2}&amp;\text{if <m>x\ne y</m>}\\
-                    -\frac{\cos x}{2}&amp;\text{if <m>x=y</m>}
+                  + \cos x-\cos y }{(x-y)^2}&amp;\text{if } x\ne y \\
+                    -\frac{\cos x}{2}&amp;\text{if } x=y
         \end{cases}
 </me>
-</p></example>
-<example><title>Optional <mdash/> A Little Weirdness</title>
-<p>xml:id="eg_partials_DDD"
+</p>
+</example>
+
+<example xml:id="eg_partials_DDD"><title>Optional <mdash/> A Little Weirdness</title>
+<p>
 In this example, we will see that the function
 <me>
 f(x,y)=\begin{cases}
-             \frac{x^2}{x-y}&amp;\text{if <m>x\ne y</m>}\\
-                    0&amp;\text{if <m>x=y</m>}
+             \frac{x^2}{x-y}&amp;\text{if } x\ne y \\
+                    0&amp;\text{if } x=y
         \end{cases}
 </me>
 is <em>not</em> continuous at <m>(0,0)</m> and yet has both partial derivatives
@@ -467,9 +469,13 @@ differentiable, function. On the other hand, the bad behaviour of <m>f(x,y)</m> 
 </p>
 
 </example>
-Our next example uses implicit differentiation.
-<example>
-<p>xml:id="eg_partials_E"
+
+<p>
+  Our next example uses implicit differentiation.
+</p>
+
+<example xml:id="eg_partials_E">
+<p>
 The equation
 <me>
 z^5 + y^2 e^z +e^{2x}=0
@@ -513,12 +519,15 @@ As we already know that <m>z(0,0)=-1</m>,
 <me>
 \pdiff{z}{x}(0,0) = -\frac{2}{5z(0,0)^4} =-\frac{2}{5}
 </me>
-</p></example>
+</p>
+</example>
+
+<p>
 Next we have a partial derivative disguised as a limit.
 </p>
 
-<p><example>
-<p>xml:id="eg_partials_F"
+<example xml:id="eg_partials_F">
+<p>
 In this example we are going to evaluate the limit
 <me>
 \lim_{z\rightarrow 0}\frac{(x+y+z)^3-(x+y)^3}{(x+y)z}
@@ -560,25 +569,28 @@ we are evaluating the derivative of a function of the form
 </p>
 
 </example>
-</p>
+
 
 <p>The next example highlights a potentially dangerous difference between
 ordinary and partial derivatives.
 </p>
 
-<p><example>
-<p>xml:id="eg_partials_G"
+<example xml:id="eg_partials_G">
+<p>
 In this example we are going to see that, in contrast to the ordinary
 derivative case, <m>\pdiff{r}{x}</m> is not, in general, the same as
 <m>\big(\pdiff{x}{r}\big)^{-1}</m>.
 </p>
 
-<p>Recall that Cartesian and polar coordinates (for <m>(x,y)\ne (0,0)</m> and <m>r \gt 0</m>)
+<p>
+  Recall that Cartesian and polar coordinates (for <m>(x,y)\ne (0,0)</m> and <m>r \gt 0</m>)
 are related by
+</p>
+<sidebyside width="40%">
+<p>
 <md>
 <mrow>
-\hskip1in x&amp;=r\cos\theta\hskip1in
-  \smash{\raisebox{-1.0\height}{<image source="problems/figs/polar.pdf"/>}}
+x&amp;=r\cos\theta
 </mrow><mrow>
 y&amp;=r\sin\theta
 </mrow><mrow>
@@ -587,6 +599,11 @@ r&amp;=\sqrt{x^2+y^2}
 \tan\theta&amp;=\frac{y}{x}
 </mrow>
 </md>
+</p>
+<image source="problems/figs/polar.pdf"/>
+</sidebyside>
+
+<p>
 We will use the functions
 <me>
 x(r,\theta) = r\cos\theta\qquad
@@ -640,10 +657,12 @@ In the figure on the left below, <m>\dee{r}</m> is the length of the orange
 line segment and <m>\dee{x}</m> is the length of the blue line segment.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/dxdrdrdx1"/>\qquad\qquad
-   <image source="problems/figs/dxdrdrdx2"/>\qquad
+<sidebyside>
+<image source="problems/figs/dxdrdrdx1"/>
+<image source="problems/figs/dxdrdrdx2"/>
 </sidebyside>
+
+<p>
 On the other hand, in computing <m>\pdiff{r}{x}</m>, <m>y</m> is held fixed,
 <m>x</m> is changed by a small amount <m>\dee{x}</m> and the resulting
 <m>\dee{r}=r(x_0+\dee{x},y_0) - r(x_0,y_0)</m>  is computed. In the figure on
@@ -658,14 +677,14 @@ be the same in both computations, the two <m>\dee{x}</m>'s have to be different
 <m>\pdiff{x}{r}(r_0,\theta_0)\ne \big(\pdiff{r}{x}(x_0,y_0)\big)^{-1}</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/dxdrdrdx3"/>
 </sidebyside>
-</p></example>
-</p>
+</example>
 
-<p><example><title>Optional <mdash/> Example <xref ref="eg_partials_G"/>, continued</title>
-<p>xml:id="eg_partials_GG"
+
+<example xml:id="eg_partials_GG"><title>Optional <mdash/> Example <xref ref="eg_partials_G"/>, continued</title>
+<p>
 The inverse function theorem, for functions of one variable, says that,
 if <m>y(x)</m> and <m>x(y)</m> are inverse functions, meaning that <m>y\big(x(y)\big)=y</m>
 and <m>x\big(y(x)\big)=x</m>, and are differentiable with <m>\diff{y}{x}\ne 0</m>, then
@@ -683,33 +702,37 @@ in the CLP-1 text).
 
 <p>We have just seen, in Example <xref ref="eg_partials_G"/>, that we can't be too naive in extending the single variable inverse function theorem to functions of two (or more) variables. On the other hand, there is such an extension, which we will now illustrate, using Cartesian and polar coordinates. For simplicity, we'll restrict our attention to <m>x \gt 0</m>, <m>y \gt 0</m>, or equivalently, <m>r \gt 0</m>, <m>0 \lt \theta \lt \frac{\pi}{2}</m>.
 The functions which convert between Cartesian and polar coordinates are
+</p>
+
+<sidebyside width="40%">
+<p>
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 x(r,\theta)&amp;=r\cos\theta\qquad&amp;
                    r(x,y)&amp;=\sqrt{x^2+y^2}
-\qquad\qquad\smash{\raisebox{-0.63\height}{<image source="problems/figs/polar.pdf"/>}}
 </mrow><mrow>
 y(r,\theta)&amp;=r\sin\theta&amp;
                   \theta(x,y)&amp;=\arctan\left(\frac{y}{x}\right)
 </mrow>
 </md>
-The two functions on the left convert from polar to Cartesian coordinates and the two functions on the right convert from Cartesian to polar coordinates.
+</p>
+<image source="problems/figs/polar.pdf"/>
+</sidebyside>
+
+<p>
+  The two functions on the left convert from polar to Cartesian coordinates and the two functions on the right convert from Cartesian to polar coordinates.
 The inverse function theorem (for functions of two variables) says that,
 <ul>
-<li>sep0pt \parskip0pt \parsep0pt
-</li>
 <li>
 if you form the first order partial derivatives of the left hand functions
 into the matrix
 <me>
 \left[\begin{matrix}
-      \pdiff{x}{r}(r,\theta) &amp; \pdiff{x}{\theta}(r,\theta) \<me>
-0.05in]
+      \pdiff{x}{r}(r,\theta) &amp; \pdiff{x}{\theta}(r,\theta) \\
       \pdiff{y}{r}(r,\theta) &amp; \pdiff{y}{\theta}(r,\theta)
       \end{matrix}\right]
 =\left[\begin{matrix}
-      \cos\theta &amp; -r\sin\theta \<me>
-0.05in]
+      \cos\theta &amp; -r\sin\theta \\
       \sin\theta &amp;  r\cos\theta
       \end{matrix}\right]
 </me>
@@ -719,19 +742,16 @@ and you form the first order partial derivatives of the right hand functions
 into the matrix
 <me>
 \left[\begin{matrix}
-      \pdiff{r}{x}(x,y) &amp; \pdiff{r}{y}(x,y) \<me>
-0.05in]
+      \pdiff{r}{x}(x,y) &amp; \pdiff{r}{y}(x,y) \\
       \pdiff{\theta}{x}(x,y) &amp; \pdiff{\theta}{y}(x,y)
       \end{matrix}\right]
 =\left[\begin{matrix}
-      \frac{x}{\sqrt{x^2+y^2}} &amp; \frac{y}{\sqrt{x^2+y^2}} \<me>
-0.1in]
+      \frac{x}{\sqrt{x^2+y^2}} &amp; \frac{y}{\sqrt{x^2+y^2}} \\
       \frac{-\frac{y}{x^2}}{1+(\frac{y}{x})^2} &amp;
                          \frac{\frac{1}{x}}{1+(\frac{y}{x})^2}
       \end{matrix}\right]
 =\left[\begin{matrix}
-      \frac{x}{\sqrt{x^2+y^2}} &amp; \frac{y}{\sqrt{x^2+y^2}} \<me>
-0.1in]
+      \frac{x}{\sqrt{x^2+y^2}} &amp; \frac{y}{\sqrt{x^2+y^2}} \\
       \frac{-y}{x^2+y^2} &amp;  \frac{x}{x^2+y^2}
       \end{matrix}\right]
 </me>
@@ -741,14 +761,12 @@ and if you evaluate the second matrix at <m>x=x(r,\theta)</m>, <m>y=y(r,\theta)<
 <me>
 \left[\begin{matrix}
       \pdiff{r}{x}\big(x(r,\theta),y(r,\theta)\big) &amp;
-                     \pdiff{r}{y}\big(x(r,\theta),y(r,\theta)\big) \<me>
-0.05in]
+                     \pdiff{r}{y}\big(x(r,\theta),y(r,\theta)\big) \\
       \pdiff{\theta}{x}\big(x(r,\theta),y(r,\theta)\big) &amp;
                       \pdiff{\theta}{y}\big(x(r,\theta),y(r,\theta)\big)
       \end{matrix}\right]
 =\left[\begin{matrix}
-      \cos\theta &amp; \sin\theta \<me>
-0.05in]
+      \cos\theta &amp; \sin\theta \\
       -\frac{\sin\theta}{r} &amp; \frac{\cos\theta}{r}
       \end{matrix}\right]
 </me>
@@ -760,34 +778,29 @@ and if you multiply
 <md>
 <mrow>
 &amp;\left[\begin{matrix}
-      \pdiff{r}{x}(x,y) &amp; \pdiff{r}{y}(x,y) \<me>
-0.05in]
+      \pdiff{r}{x}(x,y) &amp; \pdiff{r}{y}(x,y) \\
       \pdiff{\theta}{x}(x,y) &amp; \pdiff{\theta}{y}(x,y)
-      \end{matrix}\right]\
+      \end{matrix}\right]
 \left[\begin{matrix}
       \pdiff{r}{x}\big(x(r,\theta),y(r,\theta)\big) &amp;
-                     \pdiff{r}{y}\big(x(r,\theta),y(r,\theta)\big) \<me>
-0.05in]
+                     \pdiff{r}{y}\big(x(r,\theta),y(r,\theta)\big) \\
       \pdiff{\theta}{x}\big(x(r,\theta),y(r,\theta)\big) &amp;
                       \pdiff{\theta}{y}\big(x(r,\theta),y(r,\theta)\big)
       \end{matrix}\right]
 </mrow><mrow>
-&amp;\hskip0.5in=\left[\begin{matrix}
-      \cos\theta &amp; -r\sin\theta \<me>
-0.05in]
+&amp;=\left[\begin{matrix}
+      \cos\theta &amp; -r\sin\theta \\
       \sin\theta &amp;  r\cos\theta
       \end{matrix}\right]\
 \left[\begin{matrix}
-      \cos\theta &amp; \sin\theta \<me>
-0.1in]
+      \cos\theta &amp; \sin\theta \\
       -\frac{\sin\theta}{r} &amp; \frac{\cos\theta}{r}
       \end{matrix}\right]
 </mrow><mrow>
-&amp;\hskip0.5in=\left[\begin{matrix}
+&amp;=\left[\begin{matrix}
       (\cos\theta)(\cos\theta) + (-r\sin\theta)(-\frac{\sin\theta}{r})
             &amp;(\cos\theta)(\sin\theta)+(-r\sin\theta)(\frac{\cos\theta}{r})
-                                                              \<me>
-0.05in]
+                                                              \\
       (\sin\theta)(\cos\theta)+(r\cos\theta)(-\frac{\sin\theta}{r}) &amp;
          (\sin\theta)(\sin\theta) + (r\cos\theta)(\frac{\cos\theta}{r})
       \end{matrix}\right]
@@ -808,7 +821,7 @@ and indeed it is!
 </p>
 
 </example>
-</p>
 
+</subsection>
 
 </section>

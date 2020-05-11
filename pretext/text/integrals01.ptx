@@ -186,7 +186,7 @@ for obvious reasons.
 <p>
 Note that
 <ul>
-<li>
+<li><p>
 to evaluate the integral
 <m>\displaystyle\int_a^b \int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\,\dee{x}</m>,
 <ul>
@@ -204,9 +204,9 @@ to evaluate the integral
    integral is evaluated using standard single variable integration
    techniques.
 </li>
-</ul>
+</ul></p>
 </li>
-<li>
+<li><p>
 To evaluate the integral
 <m>\displaystyle\int_a^b \dee{x} \int_{B(x)}^{T(x)} \dee{y}\, f\big(x,y\big)</m>,
 <ul>
@@ -225,7 +225,7 @@ To evaluate the integral
    whose integrand is the answer to the inside integral and whose limits
    of integration are directly beside the <m>\dee{x}</m>.
 </li>
-</ul>
+</ul></p>
 </li>
 </ul>
 </p>
@@ -291,7 +291,7 @@ approximate the area of slice <m>i</m> by <m>\big[R(x_i^*)-L(x_i^*)\big]\De y</m
 which is the area of the rectangle with width <m>\big[R(x_i^*)-L(x_i^*)\big]</m>
 and height <m>\De y</m>.
 </li>
-<li>
+<li><p>
 To get the mass, just as we did above with vertical slices, we
 <ul>
 <li>
@@ -352,8 +352,7 @@ F(y) = \int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}
 Observe that, as <m>x</m> has been integrated out, <m>F(y)</m> is a function of <m>y</m>
 only, not of <m>x</m> and <m>y</m>.
 </li>
-</ul>
-</li>
+</ul></p></li>
 <li>
 Finally taking the limit as <m>n \to \infty</m> (i.e. taking the limit as the slice
 width goes to zero), we get
@@ -398,7 +397,7 @@ apply to this integral.
 <p>
 Note that
 <ul>
-<li>
+<li><p>
 to evaluate the integral
 <m>\displaystyle\int_c^d \int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}\,\dee{y}</m>,
 <ul>
@@ -412,9 +411,9 @@ to evaluate the integral
    Then evaluate the outside integral <m>\int_c^d F(y)\,\dee{y}</m>,
    whose integrand is the answer to the inside integral.
 </li>
-</ul>
+</ul></p>
 </li>
-<li>
+<li><p>
 To evaluate the integral
 <m>\displaystyle\int_c^d \dee{y} \int_{L(y)}^{R(y)} \dee{x}\, f\big(x,y\big)</m>,
 <ul>
@@ -435,7 +434,7 @@ To evaluate the integral
    whose integrand is the answer to the inside integral and whose limits
    of integration are directly beside the <m>\dee{y}</m>.
 </li>
-</ul>
+</ul></p>
 </li>
 </ul>
 </p>
@@ -684,7 +683,7 @@ then</intertext>
 </mrow>
 </md>
 </p>
-<sidebyside width="">
+<sidebyside width="40%">
 <image source="problems/figs/union"/>
 <image source="problems/figs/unionB"/>
 </sidebyside>
@@ -861,7 +860,9 @@ is the thickness of the slice of bread. The factor
 </ul>
 </p>
 
-<p>\begin{impeqn}xml:id="eqn_Volume_y_slice"
+<fact xml:id="eqn_Volume_y_slice">
+<statement>
+<p>
 If
 <me>
 \cV = \big\{\ (x,y,z)\ \big|\ (x,y)\in\cR,\  0\le z\le f(x,y)\ \big\}
@@ -875,10 +876,18 @@ then
     \text{Volume}(\cV)
         =\int_c^d \dee{y}\int_{L(y)}^{R(y)} \dee{x}\ f(x,y)
 </me>
-\end{impeqn}
+</p>
+</statement>
+</fact>
+
+<p>
 Similarly
- \begin{impeqn}xml:id="eqn_Volume_x_slice"
-If
+</p>
+
+<fact xml:id="eqn_Volume_x_slice">
+<statement>
+  <p>
+    If
 <me>
 \cV = \big\{\ (x,y,z)\ \big|\ (x,y)\in\cR,\  0\le z\le f(x,y)\ \big\}
 </me>
@@ -891,8 +900,9 @@ then
     \text{Volume}(\cV)
         =\int_a^b \dee{x}\int_{B(x)}^{T(x)} \dee{y}\ f(x,y)
 </me>
-\end{impeqn}
 </p>
+</statement>
+</fact>
 
 </subsection>
 
@@ -1467,7 +1477,7 @@ definite integrals like <m>\int_0^{\pi/2} \cos^2\theta\ \dee{\theta}</m>.
 Looking at the figures
 </p>
 
-<sidebyside width="">
+<sidebyside width="40%">
 <image source="problems/figs/cos2Agraph.pdf"/>
 <image source="problems/figs/sin2Agraph.pdf"/>
 </sidebyside>
@@ -1819,7 +1829,6 @@ Again note that the sum runs over all of the rectangles in <m>\cR</m>,
 not just those  in one particular row or column.
 </li>
 </ul>
-\noindent
 Now repeat this construction over and over again, using finer and
 finer grids. If, as the size
 <fn>For example, let <m>p_i</m> be the perimeter
@@ -1934,8 +1943,8 @@ depends on the choice of points <m>(x_i^*,y_i^*)</m>. So the integral
 <fn>For mathematicians, <q>pathological</q> is a synonym for <q>cool</q>.</fn>
  example.
 </p>
-<example>
-<p>xml:id="eg_bad_Fubini"
+<example xml:id="eg_bad_Fubini">
+<p>
 In this example, we relax
 exactly one of the hypotheses of Fubini's Theorem, namely the continuity
 of <m>f</m>, and construct an example in which both of the integrals in
@@ -1966,7 +1975,7 @@ and
 </ul>
 There are many such functions. For example
 </p>
-<sidebyside width="">
+<sidebyside width="40%">
 <p>
 <me>
 g_n(t)=\frac{2}{\de_n-\de_{n+1}}\begin{cases}
