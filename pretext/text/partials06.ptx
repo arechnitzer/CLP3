@@ -358,7 +358,7 @@ angle <m>35^\circ</m>. Approximate the area of the triangle.
 </p>
 
 <sidebyside>
-<image source="problems/figs/triangleError.pdf"/>
+<image source="figs/triangleError"/>
 </sidebyside>
 </statement>
 

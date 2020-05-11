@@ -31,7 +31,7 @@ at the origin is the <m>xy</m>-plane, <m>z=0</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereTanPlane.pdf"/>
+<image source="figs/sphereTanPlane"/>
 </sidebyside>
 
 <p>We are now going to determine, as our first application of partial derivatives,
@@ -48,7 +48,7 @@ figure shows the side view of the tangent plane (in black) and normal line
 </p>
 
 <sidebyside>
-<image source="problems/figs/tanPlaneNormalLine.pdf"/>
+<image source="figs/tanPlaneNormalLine"/>
 </sidebyside>
 
 <p> Recall, from <xref ref="eqn_of_plane"/>, that to specify any plane, we need
@@ -95,7 +95,7 @@ below. It is the intersection of our surface <m>z=f(x,y)</m>
 </p>
 
 <sidebyside>
-<image source="problems/figs/tanPlaneAA.pdf"/>
+<image source="figs/tanPlaneAA"/>
 </sidebyside>
 
 <p>
@@ -103,7 +103,7 @@ with the plane <m>y=y_0</m>. Here is a side view of the red curve.
 </p>
 
 <sidebyside>
-<image source="problems/figs/tanPlaneAAside.pdf"/>
+<image source="figs/tanPlaneAAside"/>
 </sidebyside>
 
 <p>
@@ -147,7 +147,7 @@ Here is a front view of the blue curve.
 </p>
 
 <sidebyside>
-<image source="problems/figs/tanPlaneBBside.pdf"/>
+<image source="figs/tanPlaneBBside"/>
 </sidebyside>
 
 <p>
@@ -306,8 +306,8 @@ particular, the angles between these lines and the surface.
 </p>
 
 <sidebyside>
-<image source="problems/figs/distanceBB.pdf"/>
-<image source="problems/figs/distanceB.pdf"/>
+<image source="figs/distanceBB"/>
+<image source="figs/distanceB"/>
 </sidebyside>
 
 <p>
@@ -430,7 +430,7 @@ at <m>\big(a,b,f(a,b)\big)</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/distanceSide.pdf"/>
+<image source="figs/distanceSide"/>
 </sidebyside>
 
 <p>Consider a general point <m>\big(x,y,f(x,y)\big)</m> on the surface and
@@ -539,7 +539,7 @@ you are at the point <m>\big(x_0\,,\,y_0\,,\,z_0\big)</m>. Let <m>\vr(t)
 </p>
 
 <sidebyside>
-<image source="problems/figs/tanPlaneG.pdf"/>
+<image source="figs/tanPlaneG"/>
 </sidebyside>
 
 <p>
@@ -883,7 +883,7 @@ obvious, proving it is beyond the scope of this text.</fn>
 </p>
 
 <sidebyside>
-<image source="problems/figs/highLowB.pdf"/>
+<image source="figs/highLowB"/>
 </sidebyside>
 
 <p>
@@ -931,7 +931,7 @@ following sketch.
 </p>
 
 <sidebyside>
-<image source="problems/figs/bigSmall.pdf"/>
+<image source="figs/bigSmall"/>
 </sidebyside>
 
 <p>
@@ -1068,7 +1068,7 @@ which is <m>\sqrt{14}</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/distanceSideC.pdf"/>
+<image source="figs/distanceSideC"/>
 </sidebyside>
 
 </solution>

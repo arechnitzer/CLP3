@@ -363,9 +363,9 @@ types of approach.  One can even spiral in to a point. See the
 middle and right hand figures below.
 </p>
 <sidebyside>
-<image source="problems/figs/room1.pdf"/>
-<image source="problems/figs/room2.pdf"/>
-<image source="problems/figs/room3.pdf"/>
+<image source="figs/room1"/>
+<image source="figs/room2"/>
+<image source="figs/room3"/>
 </sidebyside>
 
 
@@ -395,7 +395,7 @@ y&amp;=r\sin\theta
 </mrow><mrow>
 </mrow>
 </md></p>
-<image source="problems/figs/polar.pdf"/>
+<image source="figs/polar"/>
 </sidebyside>
 
 <p>
@@ -437,7 +437,7 @@ Note that, this time, <m>f</m> is independent of <m>r</m> but does depend on <m>
 Here is a greatly magnified sketch of a number of level curves for <m>f(x,y)</m>.
 </p>
 <sidebyside>
-<image source="problems/figs/polarD.pdf"/>
+<image source="figs/polarD"/>
 </sidebyside>
 <p>
 Observe that
@@ -498,14 +498,14 @@ as <m>(x,y)\rightarrow (0,0)</m>.
 Here is a graph of the level curve, <m>f(x,y)=-3</m>, for this function.
 </p>
 <sidebyside>
-<image source="problems/figs/noLimS.pdf"/>
+<image source="figs/noLimS"/>
 </sidebyside>
 <p>
 Here is a larger graph of level curves, <m>f(x,y)=c</m>, for
 various values of the constant <m>c</m>.
 </p>
 <sidebyside>
-<image source="problems/figs/noLim.pdf"/>
+<image source="figs/noLim"/>
 </sidebyside>
 <p>
 As before, it helps to convert to polar coordinates <mdash/> it is a good
@@ -532,7 +532,7 @@ and <m>\theta=\frac{3}{16}\pi</m> superimposed.
 \vadjust{
 </p>
 <sidebyside>
-<image source="problems/figs/noLimA.pdf"/>
+<image source="figs/noLimA"/>
 </sidebyside>
 <p>
 }
@@ -558,7 +558,7 @@ the circle.
 \vadjust{
 </p>
 <sidebyside>
-<image source="problems/figs/noLimB.pdf"/>
+<image source="figs/noLimB"/>
 </sidebyside>
 <p>
 }

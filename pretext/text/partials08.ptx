@@ -6,6 +6,7 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <title>Optional <mdash/> Solving the Wave Equation</title>
+<introduction>
 
 <p>
 Many phenomena are modelled by equations that relate the rates of
@@ -70,16 +71,17 @@ Recall that one of our implications following Definition
 perpendicular to the level curves of <m>w</m>.
 </li>
 <li>
+<p>
 So the level curves of <m>w(x,t)</m> are always perpendicular to the
 constant vector <m>\big \lt  1\,,\,c\big \gt </m>. They must be straight lines
 with equations of the form
 <me>
 \llt 1\,,\,c\rgt\cdot\llt x-x_0\,,\,t-t_0\rgt =0\qquad\text{or}\qquad
-x+ct=u\quad\text{with <m>u</m> a constant}
+x+ct=u\quad\text{with $u$ a constant}
 </me>
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/level.pdf"/>
 </sidebyside>
 </li>
@@ -88,7 +90,7 @@ That is, for each constant <m>u</m>, <m>w(x,t)</m> takes the same value at each 
 of the straight line <m>x+ct=u</m>. Call that value <m>U(u)</m>. So
 <m>w(x,t)=U(u)=U(x+ct)</m> for some function <m>U</m>.
 </li>
-</ul>\noindent
+</ul>
 This solution represents a wave packet moving to the left with speed <m>c</m>.
 You can see this by observing that all points <m>(x,t)</m> in space-time for
 which <m>x+ct</m> takes the same fixed value, say <m>z</m>, have the same value
@@ -101,10 +103,9 @@ The figure below illustrates this. It contains the graphs of <m>U(x)</m>, <m>U(x
 <m>x</m>-axis was chosen so that so that <m>U(z)=\max_x U(x)</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/bumpLeft.pdf"/>
 </sidebyside>
-</p>
 
 <p>The above argument that lead to the solution <m>w(x,t)=U(x+ct)</m>
 was somewhat handwavy. But we can easily turn it into
@@ -153,19 +154,22 @@ the first equation gives
 So
 <md>
 <mrow>
-&amp;\text{<m>w(x,t)</m> obeys the equation
-<m>\pdiff{w}{x}(x,t)-\frac{1}{c}\pdiff{w}{t}(x,t)=0</m> for all <m>x</m> and <m>t</m>}
+&amp; w(x,t) \text{ obeys the equation }
+\pdiff{w}{x}(x,t)-\frac{1}{c}\pdiff{w}{t}(x,t)=0 \text{ for all } x,r
 </mrow><mrow>
 </mrow>
-<intertext>if and only if </intertext><mrow>
-&amp;\text{<m>W(u,v)</m> obeys the equation  <m>\pdiff{W}{v}(x+ct\,,\,x-ct)=0</m>
-for all <m>x</m> and <m>t</m>,}
+<intertext>if and only if </intertext>
+<mrow>
+&amp;W(u,v) \text{ obeys the equation } \pdiff{W}{v}(x+ct\,,\,x-ct)=0
+\text{ for all } x,t,
 </mrow><mrow>
 </mrow>
-<intertext>which, substituting in <m>x=\frac{u+v</intertext><mrow>{2}</m> and <m>t=\frac{u-v}{2c}</m>,
-                  is the case if and only if}
-&amp;\text{<m>W(u,v)</m> obeys the equation  <m>\pdiff{W}{v}(u\,,\,v)=0</m>
-for all <m>u</m> and <m>v</m>}
+<intertext>which, substituting in <m>x=\frac{u+v}{2}</m> and <m>t=\frac{u-v}{2c}</m>,
+                  is the case if and only if
+</intertext>
+<mrow>
+&amp;W(u,v)\text{ obeys the equation } \pdiff{W}{v}(u\,,\,v)=0
+\text{ for all } u,v
 </mrow>
 </md>
 The equation <m>\pdiff{W}{v}(u\,,\,v)=0</m> means that <m>W(u,v)</m> is independent of
@@ -180,7 +184,7 @@ w(x,t) = W(x+ct\,,\,x-ct) = U(x+ct)
 wave equation.
 </p>
 
-<p><example><title>Wave Equation</title>
+<example><title>Wave Equation</title>
 <p>
 We'll now expand the above argument to find the general solution
 to
@@ -223,7 +227,7 @@ so that
 </md>
 Using the chain rule again
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 \frac{\partial^2 w}{\partial x^2}(x,t)
 &amp;=\pdiff{}{x}\left[\pdiff{w}{x}(x,t)\right]
 </mrow><mrow>
@@ -240,9 +244,7 @@ Using the chain rule again
    &amp;&amp;+ \frac{\partial^2\ W}{\partial u\ \partial v}
      \ +\  \frac{\partial^2 W}{\partial v^2}
 </mrow><mrow>
-</p>
-
-<p>\frac{\partial^2 w}{\partial t^2}(x,t)
+\frac{\partial^2 w}{\partial t^2}(x,t)
 &amp;=\pdiff{}{t}\left[\pdiff{w}{t}(x,t)\right]
 </mrow><mrow>
 &amp;=c\pdiff{}{t}\left[W_1(x+ct\,,\,x-ct)\right]
@@ -276,9 +278,7 @@ for all <m>x</m> and <m>t</m> if and only if
 \frac{\partial^2 W}{\partial u\partial v}(u\,,\,v)=0
 </me>
 for all <m>u</m> and <m>v</m>.
-</p>
-
-<p><ul>
+<ul>
 <li>
 This tells us that the <m>u</m>-derivative of <m>\pdiff{W}{v}</m> is zero,
 so that <m>\pdiff{W}{v}</m> is independent of <m>u</m>.
@@ -299,20 +299,16 @@ That is, <m>W(u,v) = \int \tilde V(v)\,\dee{v} +U</m>,
 with <m>U</m> being an arbitrary constant. As <m>u</m> is being thought of as
 a constant, <m>U</m> is allowed to depend on <m>u</m>.
 </li>
-</ul>\noindent
+</ul>
 So, denoting by <m>V</m> any antiderivative of <m>\tilde V</m>, we can write
 our solution in a very neat form.
 <me>
 W(u,v) = U(u) + V(v)
 </me>
 and the function we want is
-<fn>This is known as d'Alembert's form
-of the solution. It is named after Jean le Rond d'Alembert, 1717--1783,
-who was a French mathematician, physicist, philosopher and music
+<fn>This is known as d'Alembert's form of the solution. It is named after Jean le Rond d'Alembert, 1717--1783, who was a French mathematician, physicist, philosopher and music
 theorist.</fn>
-</p>
-
-<p><me>
+<me>
 w(x,t) = W(x+ct\,,\,x-ct)
        = U(x+ct) + V(x-ct)
 </me>
@@ -331,11 +327,10 @@ require a good understanding of multivariable calculus. A good reason to keep on
 </p>
 
 </example>
-</p>
+</introduction>
 
-<p>\subsection{Really Optional <mdash/> Derivation of the Wave Equation}
-      xml:id="sec_wave_deriv"
-</p>
+<subsection xml:id="sec_wave_deriv">
+  <title>Really Optional <mdash/> Derivation of the Wave Equation</title>
 
 <p>In this section we derive the wave equation
 <me>
@@ -347,22 +342,24 @@ string, and conclude that small amplitude transverse vibrations of the
 string obey the wave equation.
 </p>
 
-<p>Here is a sketch of a tiny element of the string.
+<p>Here is a sketch of a tiny element of the string.</p>
 <sidebyside>
      <image source="problems/figs/string_elmnt.pdf"/>
 </sidebyside>
+
+<p>
 The basic notation that we will use (most of which appears in the sketch) is
 <md>
 <mrow>
-w(x,t) &amp;= \text{vertical displacement of the string from the <m>x</m> axis at
-position <m>x</m> and time <m>t</m>}
+w(x,t) &amp;= \text{vertical displacement of the string from the $x$ axis at
+position $x$ and time $t$}
 </mrow><mrow>
 \theta(x,t) &amp;= \text{angle between the string and a horizontal line at
-position <m>x</m> and time <m>t</m>}
+position $x$ and time $t$}
 </mrow><mrow>
-T(x,t) &amp;= \text{tension in the string at position <m>x</m> and time <m>t</m>}
+T(x,t) &amp;= \text{tension in the string at position $x$ and time $t$}
 </mrow><mrow>
-\rho(x) &amp;= \text{mass density (per unit length) of the string at position <m>x</m>}
+\rho(x) &amp;= \text{mass density (per unit length) of the string at position $x$}
 </mrow>
 </md>
 The forces acting on the tiny element of string at time <m>t</m> are
@@ -396,7 +393,7 @@ Dividing by <m>\De x</m> and taking the limit as <m>\De x\rightarrow 0</m> gives
 <mrow>
 \rho(x)\,\sqrt{1+\left(\frac{\partial w}{\partial x}\right)^2}\,
 \frac{\partial^2 w}{\partial\, t^2}(x,t)
-&amp;=\frac{\partial \hfill}{\partial x}\big[T(x,t)\sin\theta(x,t)\big]+F(x,t)
+&amp;=\frac{\partial }{\partial x}\big[T(x,t)\sin\theta(x,t)\big]+F(x,t)
 </mrow><mrow>
 &amp;=\frac{\partial T}{\partial x}(x,t)\sin\theta(x,t)
 +T(x,t)\cos\theta(x,t)\,\frac{\partial \theta}{\partial x}(x,t)
@@ -409,13 +406,16 @@ We can dispose of all the <m>\theta</m>'s by observing from the figure above tha
 =\frac{\partial w}{\partial x}(x,t)
 </me>
 which implies, using the figure on the right below, that
+</p>
+
+<sidebyside widths="55% 40%">
+<p>
 <md>
 <mrow>
 \sin \theta(x,t)&amp;= \frac{\frac{\partial w}{\partial x}(x,t)}
 {\sqrt{1+\big(\frac{\partial w}{\partial x}(x,t)\big)^2}} &amp;
 \cos \theta(x,t)&amp;= \frac{1}
 {\sqrt{1+\big(\frac{\partial w}{\partial x}(x,t)\big)^2}} &amp;
-\raisebox{-1.3\height}[0pt][0pt]{<image source="problems/figs/triangleString.pdf"/>}
 </mrow><mrow>
 \theta(x,t)&amp;=\arctan\frac{\partial w}{\partial x}(x,t) &amp;
 \frac{\partial \theta}{\partial x}(x,t)
@@ -424,6 +424,8 @@ which implies, using the figure on the right below, that
 </mrow>
 </md>
 </p>
+<image source="problems/figs/triangleString.pdf"/>
+</sidebyside>
 
 <p>Substituting these formulae into (E1) give a horrendous mess. However,
 we can get considerable simplification by looking only at small vibrations.
@@ -459,7 +461,7 @@ T(x+\De x,t)\cos\theta(x+\De x,t)-T(x,t)\cos\theta(x,t)=0
 </me>
 Dividing by <m>\De x</m> and taking the limit as <m>\De x</m> tends to zero gives
 <me>
-\frac{\partial \hfill}{\partial x}\big[T(x,t)\cos\theta(x,t)\big]=0
+\frac{\partial }{\partial x}\big[T(x,t)\cos\theta(x,t)\big]=0
 </me>
 Thus <m>T(x,t)\cos\theta(x,t)</m> is independent of <m>x</m>.
 For small amplitude vibrations, <m>\cos\theta</m> is very close to one, for all
@@ -491,5 +493,5 @@ seen what those approximations are, and we can get some idea as to when they
 are applicable.
 </p>
 
-
+</subsection>
 </section>

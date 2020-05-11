@@ -387,8 +387,8 @@ curve of <m>f</m> through <m>(a,b)</m>, which is the curve <m>f(x,y)=f(a,b)</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/dderivB.pdf"/>
-<image source="problems/figs/dderivC.pdf"/>
+<image source="figs/dderivB"/>
+<image source="figs/dderivC"/>
 </sidebyside>
 
 </example>

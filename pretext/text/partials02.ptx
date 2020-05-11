@@ -149,7 +149,7 @@ of <m>\frac{f(a+h,b) - f(a,b)}{h}</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/xderiv.pdf"/>
+<image source="figs/xderiv"/>
 </sidebyside>
 
 <p>
@@ -158,7 +158,7 @@ is sketched in the figure below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/xderivSide.pdf"/>
+<image source="figs/xderivSide"/>
 </sidebyside>
 
 <p>
@@ -600,7 +600,7 @@ r&amp;=\sqrt{x^2+y^2}
 </mrow>
 </md>
 </p>
-<image source="problems/figs/polar.pdf"/>
+<image source="figs/polar"/>
 </sidebyside>
 
 <p>
@@ -658,8 +658,8 @@ line segment and <m>\dee{x}</m> is the length of the blue line segment.
 </p>
 
 <sidebyside>
-<image source="problems/figs/dxdrdrdx1"/>
-<image source="problems/figs/dxdrdrdx2"/>
+<image source="figs/dxdrdrdx1"/>
+<image source="figs/dxdrdrdx2"/>
 </sidebyside>
 
 <p>
@@ -678,7 +678,7 @@ be the same in both computations, the two <m>\dee{x}</m>'s have to be different
 </p>
 
 <sidebyside>
-<image source="problems/figs/dxdrdrdx3"/>
+<image source="figs/dxdrdrdx3"/>
 </sidebyside>
 </example>
 
@@ -716,7 +716,7 @@ y(r,\theta)&amp;=r\sin\theta&amp;
 </mrow>
 </md>
 </p>
-<image source="problems/figs/polar.pdf"/>
+<image source="figs/polar"/>
 </sidebyside>
 
 <p>
