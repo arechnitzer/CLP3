@@ -29,6 +29,8 @@
   \newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
   \newcommand{\difftwo}[2]{ \frac{\mathrm{d^2}#1}{\mathrm{d}{#2}^2}}
 
+  \newcommand{\eqf}[1]{{\buildrel \rm #1 \over =}}
+
   \renewcommand{\neg}{ {\sim} }
   \newcommand{\limp}{ {\;\Rightarrow\;} }
   \newcommand{\nimp}{ {\;\not\Rightarrow\;} }

@@ -33,8 +33,8 @@
 </introduction>
 <xi:include href="./partials01.ptx" />
 <xi:include href="./partials02.ptx" />
-<!--
 <xi:include href="./partials03.ptx" />
+<!--
 <xi:include href="./partials04.ptx" />
 <xi:include href="./partials05.ptx" />
 <xi:include href="./partials06.ptx" />
