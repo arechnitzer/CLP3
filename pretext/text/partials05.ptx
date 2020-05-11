@@ -6,8 +6,8 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <title>Tangent Planes and Normal Lines</title>
-<p>\section{Tangent Planes and Normal Lines}xml:id="sec_tangent_planes"
-</p>
+
+<introduction>
 
 <p>The tangent line to the curve <m>y=f(x)</m> at the point <m>\big(x_0,f(x_0)\big)</m>
 is the straight line that fits the curve best
@@ -25,15 +25,14 @@ The tangent plane to a surface <m>S</m> at a point  <m>(x_0,y_0,z_0)</m> is the 
 that fits <m>S</m> best at <m>(x_0,y_0,z_0)</m>. For example, the tangent plane
 to the hemisphere
 <me>
-S=§et{(x,y,z)}{x^2+y^2+(z-1)^2=1,\ 0\le z\le 1}
+S=\Set{(x,y,z)}{x^2+y^2+(z-1)^2=1,\ 0\le z\le 1}
 </me>
 at the origin is the <m>xy</m>-plane, <m>z=0</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/sphereTanPlane.pdf"/>
 </sidebyside>
-</p>
 
 <p>We are now going to determine, as our first application of partial derivatives,
 the tangent plane to a general surface <m>S</m> at a general point <m>(x_0,y_0,z_0)</m>
@@ -48,30 +47,25 @@ figure shows the side view of the tangent plane (in black) and normal line
 (in blue) to the surface <m>z=x^2+y^2</m> (in red) at the point <m>(0,1,1)</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/tanPlaneNormalLine.pdf"/>
 </sidebyside>
-</p>
 
 <p> Recall, from <xref ref="eqn_of_plane"/>, that to specify any plane, we need
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
-<li>[<m>\circ</m>]
+<li>
 one point on the plane and
 </li>
-<li>[<m>\circ</m>]
+<li>
 a vector perpendicular to the plane, i.e. a normal vector,
 </li>
 </ul>
 and recall, from <xref ref="par_eqn_of_line"/>, that to specify any line, we need
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
-<li>[<m>\circ</m>]
+<li>
 one point on the line and
 </li>
-<li>[<m>\circ</m>]
+<li>
 a direction vector for the line.
 </li>
 </ul>
@@ -87,8 +81,10 @@ form <m>z=f(x,y)</m> and then, more generally, for surfaces of the form
 <m>G(x,y,z)=0</m>.
 </p>
 
-<p>\subsection{Surfaces of the Form <m>z=f(x,y)</m>.}
-</p>
+</introduction>
+
+<subsection>
+  <title>Surfaces of the Form <m>z=f(x,y)</m></title>
 
 <p>We construct a vector perpendicular to the surface <m>z=f(x,y)</m> at
 <m>\big(x_0\,,\,y_0\,,\,f(x_0,y_0)\big)</m>
@@ -96,23 +92,21 @@ by, first, constructing two tangent vectors to the specified surface at
 the specified point, and, second, taking the cross product
 of those two tangent vectors. Consider the red curve in the figure
 below. It is the intersection of our surface <m>z=f(x,y)</m>
-\vadjust{
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/tanPlaneAA.pdf"/>\qquad\qquad
-</p>
+<sidebyside>
+<image source="problems/figs/tanPlaneAA.pdf"/>
+</sidebyside>
 
-<p></sidebyside>
-}
+<p>
 with the plane <m>y=y_0</m>. Here is a side view of the red curve.
-\vadjust{
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/tanPlaneAAside.pdf"/>
 </sidebyside>
-}
+
+<p>
 The vector from the point <m>\big(x_0\,,\,y_0\,,\,f(x_0,y_0)\big)</m>, on the
 red curve, to the point <m>\big(x_0+h\,,\,y_0\,,\,f(x_0+h,y_0)\big)</m>,
 also on the red curve, is almost tangent to the red curve, if
@@ -152,9 +146,11 @@ with the plane <m>x=x_0</m>.
 Here is a front view of the blue curve.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/tanPlaneBBside.pdf"/>
 </sidebyside>
+
+<p>
 When <m>h</m> is very small, the vector
 <me>
 \frac{1}{h} \llt 0\,,\, h\,,\, f(x_0,y_0+h)-f(x_0,y_0)  \rgt
@@ -182,12 +178,10 @@ the tangent plane by taking their cross product. Their cross product is
 <md>
 <mrow>
 \llt 1\,,\, 0\,,\, f_x(x_0,y_0)\rgt\times\llt 0\,,\, 1\,,\, f_y(x_0,y_0)\rgt
-&amp;=\det\left[\begin{matrix}\hi&amp; \hj &amp;\hk
+&amp;=\det\left[\begin{matrix}\hi&amp; \hj &amp;\hk \\
+                   1 &amp; 0 &amp; f_x(x_0,y_0) \\
+                   0 &amp; 1 &amp; f_y(x_0,y_0)\end{matrix}\right]
 </mrow><mrow>
-                   1 &amp; 0 &amp; f_x(x_0,y_0)
-</mrow><mrow>
-                   0 &amp; 1 &amp; f_y(x_0,y_0)\end{matrix}\right] \<me>
-0.05in]
 &amp;=-f_x(x_0,y_0)\,\hi - f_y(x_0,y_0)\,\hj +\hk
 </mrow>
 </md>
@@ -216,8 +210,10 @@ is straightforward. Writing it in parametric form,
                  +t\llt -f_x(x_0,y_0)\,,\, - f_y(x_0,y_0)\,,\, 1 \rgt
 </me>
 By way of summary
-<theorem><title>Tangent Plane and Normal Line</title>
-<statement><p>xml:id="thm_tan_plane_f"
+</p>
+
+<theorem xml:id="thm_tan_plane_f"><title>Tangent Plane and Normal Line</title>
+<statement><p>
 <ol label="a">
 <li> The vector
 <me>
@@ -251,10 +247,9 @@ z= f(x_0,y_0) + t
 </ol>
 </p></statement>
 </theorem>
-</p>
 
-<p><example>
-<p>xml:id="eg_tan_plane_A"
+<example xml:id="eg_tan_plane_A">
+<p>
 As a warm-up example, we'll find the tangent plane and normal line
 to the surface <m>z=x^2+y^2</m> at the point <m>(1,0,1)</m>. To do so, we just apply
 Theorem <xref ref="thm_tan_plane_f"/> with <m>x_0=1</m>, <m>y_0=0</m> and
@@ -288,28 +283,34 @@ and the normal line is
 </mrow>
 </md>
 </p></example>
+
+<p>
 That was pretty simple <mdash/> find the partial derivatives and substitute
 in the coordinates. Let's do something a bit more challenging.
 </p>
 
-<p><example><title>Optional</title>
-<p>xml:id="eg_tan_plane_B"
+
+<example xml:id="eg_tan_plane_B"><title>Optional</title>
+<statement>
+<p>
 Find the distance from <m>(0,3,0)</m>
 to the surface <m>z=x^2+y^2</m>.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 Write <m>f(x,y)=x^2+y^2</m>. Let's denote  by <m>\big(a,b,f(a,b)\big)</m> the point on <m>z=f(x,y)</m> that is nearest <m>(0,3,0)</m>.
 Before we really get into the problem, let's make a simple sketch and think about what the lines from <m>(0,3,0)</m> to the surface look like and, in
 particular, the angles between these lines and the surface.
-\vadjust{
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/distanceBB.pdf"/>\qquad
-   <image source="problems/figs/distanceB.pdf"/>
+<sidebyside>
+<image source="problems/figs/distanceBB.pdf"/>
+<image source="problems/figs/distanceB.pdf"/>
 </sidebyside>
-}
+
+<p>
 The line from <m>(0,3,0)</m> to <m>\big(a,b,f(a,b)\big)</m>,
 the point on <m>z=f(x,y)</m> nearest <m>(0,3,0)</m>,
 is distinguished from the other lines from <m>(0,3,0)</m> to the
@@ -325,13 +326,13 @@ with <m>x_0=a</m> and <m>y_0=b</m>, the vector
 <me>
 -f_x(a,b)\,\hi - f_y(a,b)\,\hj +\hk
 =-2a\,\hi -2b\,\hj +\hk
-\tag{<m>*</m>}</me>
+\tag{$*$}</me>
 is normal to the surface <m>z=f(x,y)</m> at <m>\big(a,b,f(a,b)\big)</m>.
 So the vector from <m>(0,3,0)</m> to <m>\big(a,b,f(a,b)\big)</m>, namely
 <me>
 a\,\hi + (b-3)\,\hj + f(a,b)\,\hk
 =a\,\hi + (b-3)\,\hj + (a^2+b^2)\,\hk
-\tag{<m>**</m>}</me>
+\tag{$**$}</me>
 must be parallel to <m>(*)</m>. This does not force the vector <m>(*)</m> to
 equal <m>(**)</m>, but it does force the existence of some number <m>t</m> obeying
 <me>
@@ -373,13 +374,12 @@ polynomials of degree 5 and higher. This is the famous Abel-Ruffini theorem.</fn
 .
 But, in this case,
 we can guess one solution
-<fn>See Appendix \eref{CLP101</fn>
-{ap:roots} in the
+<fn>See Appendix \eref{CLP101{ap:roots} in the
 CLP-2 text. There it is shown that any integer root of a polynomial with
 integer coefficients must divide the constant term exactly. So in this case
 only <m>\pm 1</m> and <m>\pm 3</m> could be integer roots. So it good to check to
 see if any of these are solutions before moving on to more sophisticated
-techniques.}, namely <m>b=1</m>. So <m>(b-1)</m>
+techniques.</fn>, namely <m>b=1</m>. So <m>(b-1)</m>
 must be a factor of <m>2b^3+b-3</m> and a little division then gives us
 <me>
 0=2b^3+b-3
@@ -397,8 +397,6 @@ is <m>b=1</m>.
 
 <p>In summary,
 <ul>
-<li>indent 15pt
-</li>
 <li>
 <m>a=0</m>, <m>b=1</m> and
 </li>
@@ -422,7 +420,8 @@ a point is beyond the scope of this text.</fn>
   <m>(0,3,0)</m>, the vector
 from <m>(0,3,0)</m> to <m>\big(a,b,f(a,b)\big)</m> must be perpendicular to the
 surface <m>z=f(x,y)</m> at <m>\big(a,b,f(a,b)\big)</m>.
-\intremark{
+
+<!-- \intremark{
 We'll give two justifications. The first is geometric and the second
 uses Calculus. Here is the geometric argument.
 Look at the following figure. It shows a side view
@@ -430,10 +429,9 @@ of the surface <m>z=f(x,y)</m> as well as the tangent plane to <m>z=f(x,y)</m>
 at <m>\big(a,b,f(a,b)\big)</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/distanceSide.pdf"/>
 </sidebyside>
-</p>
 
 <p>Consider a general point <m>\big(x,y,f(x,y)\big)</m> on the surface and
 denote by <m>(x',y',z')</m> the point of intersection of the tangent plane
@@ -459,7 +457,7 @@ whose other sides is the line segment <m>(0,3,0)</m> to <m>\big(a,b,f(a,b)\big)<
 <m>\big(a,b,f(a,b)\big)</m> is the point on <m>z=f(x,y)</m> that is nearest
 <m>(0,3,0)</m>, the vector from <m>(0,3,0)</m> to <m>\big(a,b,f(a,b)\big)</m>
 must be perpendicular to the surface <m>z=f(x,y)</m> at <m>\big(a,b,f(a,b)\big)</m>.
-}
+} -->
 Note that the square of the distance from <m>(0,3,0)</m> to a general point
 <m>\big(x,y,f(x,y)\big)</m> on <m>z=f(x,y)</m> is
 <me>
@@ -473,9 +471,7 @@ If <m>x=a</m>, <m>y=b</m> minimizes <m>D(x,y)</m> then, in particular,
   <md>
 <mrow>
     0 &amp;= g'(a) =\pdiff{}{x}\Big[x^2 + (b-3)^2 +f(x,b)^2\Big]\bigg|_{x=a}
-</p>
-
-<p>       =2a +2 f(a,b)\ f_x(a,b)
+        =2a +2 f(a,b)\ f_x(a,b)
 </mrow><mrow>
       &amp;=2 \llt a\,,\,b-3\,,\, f(a,b)\rgt\cdot\llt 1\,,\,0\,,\, f_x(a,b)\rgt
   </mrow>
@@ -488,9 +484,7 @@ If <m>x=a</m>, <m>y=b</m> minimizes <m>D(x,y)</m> then, in particular,
   <md>
 <mrow>
     0 &amp;= h'(b) =\pdiff{}{y}\Big[a^2 + (y-3)^2 +f(a,y)^2\Big]\bigg|_{y=b}
-</p>
-
-<p>       =2 (b-3) +2 f(a,b)\ f_y(a,b)
+       =2 (b-3) +2 f(a,b)\ f_y(a,b)
 </mrow><mrow>
       &amp;=2 \llt a\,,\,b-3\,,\, f(a,b)\rgt\cdot\llt 0\,,\,1\,,\, f_y(a,b)\rgt
   </mrow>
@@ -501,13 +495,11 @@ We have expressed the final right hand sides of both of the above bullets
 as the dot product of the vector <m>\llt a\,,\,b-3\,,\, f(a,b)\rgt</m>
 with something because
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
-<li>[<m>\circ</m>]
+<li>
 <m>\llt a\,,\,b-3\,,\, f(a,b)\rgt</m> is the vector from <m>(0,3,0)</m>
 to the point <m>(a\,,\,b\,,\, f(a,b)\big)</m> on the surface and
 </li>
-<li>[<m>\circ</m>] the vanishing of the dot product of two vectors
+<li> the vanishing of the dot product of two vectors
 implies that the two vectors are perpendicular.
 </li>
 </ul>
@@ -530,25 +522,27 @@ which we already know is a normal vector to the surface <m>z=f(x,y)</m> at
 to <m>(0,3,0)</m> is joined to <m>(0,3,0)</m> by a line that is parallel to the
 normal vector <mdash/> just as we require.
 </p>
-
+</solution>
 </example>
-</p>
 
-<p>\subsection{Surfaces of the Form <m>G(x,y,z)=0</m>.}
-</p>
+
+</subsection>
+
+<subsection>
+  <title>Surfaces of the Form <m>G(x,y,z)=0</m></title>
 
 <p>We now use  a little trickery to construct a vector perpendicular to
 the surface <m>G(x,y,z)=0</m> at the point <m>\big(x_0\,,\,y_0\,,\,z_0\big)</m>.
 Imagine that you are walking on the surface and that at time <m>0</m>
 you are at the point <m>\big(x_0\,,\,y_0\,,\,z_0\big)</m>. Let <m>\vr(t)
 =\big(x(t)\,,\,y(t)\,,\,z(t)\big)</m> denote your position at time <m>t</m>.
-\vadjust{
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/tanPlaneG.pdf"/>
 </sidebyside>
-}
+
+<p>
 Because you are walking along the surface, we know that <m>\vr(t)</m> always
 lies on the surface and so
 <me>
@@ -573,11 +567,13 @@ statement about vectors.
 \llt \pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\,,\,
      \pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\,,\,
      \pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\rgt \cdot \vr'(0) = 0
-\tag{<m>*</m>}</me>
+\tag{$*$}</me>
 The first vector in this dot product is sufficiently important that it is
 given its own name.
-<definition><title>Gradient</title>
-<statement><p>xml:id="def_gradient"
+</p>
+
+<definition xml:id="def_gradient"><title>Gradient</title>
+<statement><p>
 The gradient
 <fn>The gradient will also play a big role in
 Section <xref ref="sec_directional_derivatives"/>.</fn>
@@ -590,7 +586,9 @@ Section <xref ref="sec_directional_derivatives"/>.</fn>
 </me>
 It is denoted <m>\vnabla G(x_0,y_0,z_0)</m>.
 </p></statement>
-</definition>\noindent
+</definition>
+
+<p>
 So <m>(*)</m> tells us that the gradient
 <m>\vnabla G(x_0,y_0,z_0)</m>, is perpendicular to the vector <m>\vr'(0)</m>.
 </p>
@@ -617,8 +615,9 @@ and replace <m>G</m> by <m>G-K</m> in the above argument.</fn>
 <p><m>G(x,y,z)=K</m>, for any constant <m>K</m>. So we have
 </p>
 
-<p><theorem><title>Tangent Plane and Normal Line</title>
-<statement><p>xml:id="thm_tan_plane_G"
+
+<theorem xml:id="thm_tan_plane_G"><title>Tangent Plane and Normal Line</title>
+<statement><p>
 Let <m>K</m> be a constant and <m>(x_0,y_0,z_0)</m> be a point on the surface
 <m>G(x,y,z)=K</m>. Assume that the gradient
 <me>
@@ -651,9 +650,9 @@ at <m>(x_0,y_0,z_0)</m> is
 </ol>
 </p></statement>
 </theorem>
-</p>
 
-<p>\begin{remark}xml:id="rem_tan_plane"
+<remark xml:id="rem_tan_plane">
+<p>
 Theorem <xref ref="thm_tan_plane_f"/> about the tangent planes and normal lines
 to the surface <m>z=f(x,y)</m> is actually a very simple consequence of
 Theorem <xref ref="thm_tan_plane_G"/> about the tangent planes and normal lines
@@ -668,25 +667,26 @@ Theorem <xref ref="thm_tan_plane_G"/> then gives
 Theorem <xref ref="thm_tan_plane_f"/> as a corollary of Theorem <xref ref="thm_tan_plane_G"/>.
 But in a textbook one tries to start with the concrete and move to the more
 general.</fn>
+Theorem <xref ref="thm_tan_plane_f"/>.
+</p>
+</remark>
+
+<p>
+  Here are a couple of routine examples.
 </p>
 
-<p>Theorem <xref ref="thm_tan_plane_f"/>.
-\end{remark}
-</p>
-
-<p>Here are a couple of routine examples.
-<example>
-<p>xml:id="eg_tan_plane_C"
-\noindent\textit{Problem}:
+<example xml:id="eg_tan_plane_C">
+<statement>
+<p>
 Find the tangent plane and the normal line to the surface
 <me>
 z= x^2+5xy-2y^2
 </me>
 at the point <m>(1,2,3)</m>.
 </p>
-
-<p>\medskip
-\noindent\textit{Solution}.
+</statement>
+<solution>
+<p>
 As a preliminary check, note that
 <me>
 1^2+5\times 1\times 2-2(2)^2=3
@@ -727,28 +727,28 @@ The normal line is
 =t\,\vn = t\llt 12\,,\,-3\,,\, -1\rgt
 \quad\text{or}\quad
 \frac{x-1}{12} = \frac{y-2}{-3} = \frac{z-3}{-1}\quad
-  \textcolor{gray}{\Big(=t\Big)}
+  \color{gray}{\Big(=t\Big)}
 </me>
 </p>
-
+</solution>
 </example>
-</p>
 
 <p>Another warm-up example. This time the surface is a hyperboloid of one sheet.
 </p>
 
-<p><example>
-<p>xml:id="eg_tan_plane_D"
-\noindent\textit{Problem}:
+<example xml:id="eg_tan_plane_D">
+<statement>
+<p>
 Find the tangent plane and the normal line to the surface
 <me>
 x^2+y^2-z^2 = 4
 </me>
 at the point <m>(2,-3,3)</m>.
 </p>
+</statement>
 
-<p>\medskip
-\noindent\textit{Solution}.
+<solution>
+<p>
 As a preliminary check, note that the point <m>(2,-3,3)</m> is indeed on the surface:
 <me>
 2^2+(-3)^2-(3)^2=4
@@ -786,28 +786,27 @@ the plane:
 =t\,\vn = t\llt 2\,,\,-3\,,\, -3\rgt
 \quad\text{or}\quad
 \frac{x-2}{2} = \frac{y+3}{-3} = \frac{z-3}{-3}\quad
-  \textcolor{gray}{\Big(=t\Big)}
+  \color{gray}{\Big(=t\Big)}
 </me>
 </p>
-
+</solution>
 </example>
-</p>
 
-<p>\begin{warning}xml:id="warn_tan_plane"
-<em>The vector <m>\vnabla G(x,y,z)</m> is not a normal vector to the surface
+<warning xml:id="warn_tan_plane">
+<p>
+The vector <m>\vnabla G(x,y,z)</m> is not a normal vector to the surface
 <m>G(x,y,z)\!=\!K</m> at <m>(x_0,y_0,z_0)</m>. The vector  <m>\vnabla G(x_0,y_0,z_0)</m> is
 a normal vector to <m>G(x,y,z)\!=\!K</m> at <m>(x_0,y_0,z_0)</m>
-(provided <m>G(x_0,y_0,z_0)=K</m>).</em>
-</p>
-
-<p>\medskip
+(provided <m>G(x_0,y_0,z_0)=K</m>).
 </p>
 
 <p>As an example of the consequences of failing to evaluate
 <m>\vnabla G(x,y,z)</m> at the point <m>(x_0,y_0,z_0)</m>, consider the problem
 <me>
-\text{Find the tangent plane to the surface
-<m>x^2+y^2+z^2=1</m> at the point <m>(0,0,1)</m>.}
+\text{Find the tangent plane to the surface }
+x^2+y^2+z^2=1
+\text{ at the point }
+(0,0,1).
 </me>
  In this case,
 the surface is <m>G(x,y,z)=x^2+y^2+z^2=1</m>. The gradient of <m>G</m> is
@@ -825,7 +824,7 @@ This is of course correct <mdash/> the tangent plane to the unit sphere at the n
 pole is indeed horizontal.
 </p>
 
-<p>\medskip
+<p>
 But if we were to incorrectly apply part (b) of Theorem <xref ref="thm_tan_plane_G"/>
 by failing to evaluate <m>\vnabla G(x,y,z)</m> at <m>(0,0,1)</m>, we would find that
 the <q>tangent plane</q> is
@@ -841,15 +840,14 @@ the <q>tangent plane</q> is
 This is horribly wrong. It is not even a plane, as any plane has
 an equation of the form <m>ax+by+cz=d</m>, with <m>a</m>, <m>b</m>, <m>c</m> and <m>d</m> constants.
 </p>
+</warning>
 
-<p>\end{warning}
-</p>
 
 <p>Now we'll move on to some more involved examples.
 </p>
 
-<p><example>
-<p>xml:id="eg_tan_plane_E"
+<example xml:id="eg_tan_plane_E">
+<p>
 Suppose that we wish to find the highest and lowest points on the
 surface <m>G(x,y,z) = x^2-2x +y^2-4y + z^2-6z = 2</m>. That is, we wish
 to find the points on the surface with the maximum value of <m>z</m>
@@ -884,9 +882,11 @@ obvious, proving it is beyond the scope of this text.</fn>
  such points.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/highLowB.pdf"/>
 </sidebyside>
+
+<p>
 The gradient is
 <me>
 \vnabla G(x,y,z) = (2x-2)\,\hi + (2y-4)\,\hj + (2z-6)\,\hk
@@ -910,13 +910,15 @@ on <m>G=2</m>)
 The highest point is <m>(1,2,7)</m> and the lowest point is <m>(1,2,-1)</m>,
 as expected.
 </p></example>
+
+<p>
 We could have short-cut the last example by using that the surface was
 a sphere. Here is an example in the same spirit for which we don't have
 an easy short-cut.
 </p>
 
-<p><example>
-<p>xml:id="eg_tan_plane_F"
+<example xml:id="eg_tan_plane_F">
+<p>
 In the last example, we found the points on a specified surface
 having the largest and smallest values of <m>z</m>. We'll now ramp up the
 level of difficulty a bit and find the points on the surface
@@ -926,13 +928,13 @@ level of difficulty a bit and find the points on the surface
 
 <p>To develop a strategy for tackling this problem, consider the
 following sketch.
-\vadjust{
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/bigSmall.pdf"/>
 </sidebyside>
-}
+
+<p>
 The red ellipse in the sketch is intended to represent (schematically)
 our surface
 <me>
@@ -985,7 +987,7 @@ these two conditions are, in equations,
 a^2+ 2b^2 +3c^2 &amp;= 72
 </mrow><mrow>
 \llt a\,,\,2b\,,\,3c\rgt &amp;=t \llt 1,1,3\rgt\qquad
-\text{for some number <m>t</m>}
+\text{for some number } t
 </mrow>
 </md>
 The second equation says that <m>a=t</m>, <m>b=\frac{t}{2}</m> and <m>c=t</m>.
@@ -1017,17 +1019,17 @@ The point on the surface  <m>x^2+ 2y^2 +3z^2 = 72</m> at which
 </li>
 </ul>
 </p></example>
-</p>
 
-<p><example>
-<p>xml:id="eg_tan_plane_G"
-\noindent\textit{Problem}:
+<example xml:id="eg_tan_plane_G">
+<statement>
+<p>
 Find the distance from the point <m>(1,1,1)</m> to the plane
 <m>x+2y+3z=20</m>.
 </p>
+</statement>
 
-<p>\medskip
-\noindent\textit{Solution 1}.
+<solution>
+<p>
 First note that the point <m>(1,1,1)</m> is not itself on the plane
 <m>x+2y+3z=20</m> because
 <me>
@@ -1065,13 +1067,14 @@ is the length of the vector
 which is <m>\sqrt{14}</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/distanceSideC.pdf"/>
 </sidebyside>
-</p>
 
-<p>\medskip
-\noindent\textit{Solution 2}.
+</solution>
+
+<solution>
+<p>
 Denote by <m>P=(a,b,c)</m> the point on the plane <m>x+2y+3z=20</m> that
 is nearest the point <m>Q=(1,1,1)</m>. Pick any other point on the plane
 and call it <m>R</m>. For example
@@ -1106,40 +1109,36 @@ so that, finally,
 </mrow>
 </md>
 </p>
-
+</solution>
 </example>
-</p>
 
-<p><example>
-<p>xml:id="eg_tan_plane_H"
-\noindent\textit{Problem}:
+<example xml:id="eg_tan_plane_H">
+<statement>
+<p>
 Let <m>F(x,y,z)=0</m> and <m>G(x,y,z)=0</m> be two surfaces. These two surfaces
 intersect along a curve.
 Find a tangent vector to this curve at the point <m>(x_0,y_0,z_0)</m>.
 </p>
+</statement>
 
-<p>\medskip
-\noindent\textit{Solution}.
+<solution>
+<p>
 Call the tangent vector <m>\vT</m>. Then <m>\vT</m> has to be
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
-<li>[<m>\circ</m>]
+<li>
 tangent to the surface  <m>F(x,y,z)=0</m> at <m>(x_0,y_0,z_0)</m> and
 </li>
-<li>[<m>\circ</m>]
+<li>
 tangent to the surface  <m>G(x,y,z)=0</m> at <m>(x_0,y_0,z_0)</m>.
 </li>
 </ul>
 Consequently <m>\vT</m> has to be
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
-<li>[<m>\circ</m>]
+<li>
 perpendicular to the vector <m>\vnabla F(x_0,y_0,z_0)</m>, which is
 normal to  <m>F(x,y,z)=0</m> at <m>(x_0,y_0,z_0)</m>, and at the same time has to be
 </li>
-<li>[<m>\circ</m>]
+<li>
 perpendicular to the vector <m>\vnabla G(x_0,y_0,z_0)</m>, which is
 normal to  <m>G(x,y,z)=0</m> at <m>(x_0,y_0,z_0)</m>.
 </li>
@@ -1150,10 +1149,8 @@ two other vectors is to take their cross product. So we take
 <mrow>
 \vT &amp;= \vnabla F(x_0,y_0,z_0)\times \vnabla G(x_0,y_0,z_0)
     =\det\left[\begin{matrix}
-                 \hi &amp; \hj &amp; \hk
-</mrow><mrow>
-                 F_x &amp; F_y &amp; F_z
-</mrow><mrow>
+                 \hi &amp; \hj &amp; \hk \\
+                 F_x &amp; F_y &amp; F_z \\
                  G_x &amp; G_y &amp; G_z \end{matrix}\right]
 </mrow><mrow>
 &amp; =\big(F_yG_z-F_z G_y\big)\,\hi + \big(F_zG_x-F_x G_z\big)\,\hj
@@ -1162,16 +1159,15 @@ two other vectors is to take their cross product. So we take
 </md>
 where all partial derivatives are evaluated at <m>(x,y,z)=(x_0,y_0,z_0)</m>.
 </p>
-
+</solution>
 </example>
-</p>
 
 <p>Let's put Example <xref ref="eg_tan_plane_H"/> into action.
 </p>
 
-<p><example>
-<p>xml:id="eg_tan_plane_I"
-\noindent\textit{Problem}:
+<example xml:id="eg_tan_plane_I">
+<statement>
+<p>
 Consider the curve that is the intersection of the surfaces
 <me>
 x^2+y^2+z^2=5\qquad\text{and}\qquad
@@ -1180,9 +1176,10 @@ x^2+y^2=4z
 Find a tangent vector to this curve
 at the point <m>\big(\sqrt{3}\,,\,1\,,\,1\big)</m>.
 </p>
+</statement>
 
-<p>\medskip
-\noindent\textit{Solution}.
+<solution>
+<p>
 As a preliminary check, we verify that the point <m>\big(\sqrt{3}\,,\,1\,,\,1\big)</m> really is on the curve. To do so,
 we check that <m>\big(\sqrt{3}\,,\,1\,,\,1\big)</m> satisfies both equations:
 <me>
@@ -1196,9 +1193,7 @@ Example <xref ref="eg_tan_plane_H"/>.
 <p>Write <m>F(x,y,z) = x^2+y^2+z^2</m>
 and <m>G(x,y,z) = x^2+y^2-4z</m>. Then
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
-<li>[<m>\circ</m>]
+<li>
 the vector
 <me>
 \vnabla F(\sqrt{3},1,1)
@@ -1208,7 +1203,7 @@ the vector
 is normal to the surface <m>F(x,y,z)</m> at <m>\big(\sqrt{3}\,,\,1\,,\,1\big)</m>,
 and
 </li>
-<li>[<m>\circ</m>]
+<li>
 the vector
 <me>
 \vnabla G(\sqrt{3},1,1)
@@ -1223,10 +1218,8 @@ So a tangent vector is
 <mrow>
 \llt \sqrt{3}\,,\,1\,,\,1 \rgt\times \llt \sqrt{3}\,,\,1\,,\,-2 \rgt
     &amp;=\det\left[\begin{matrix}
-                 \hi &amp; \hj &amp; \hk
-</mrow><mrow>
-            \sqrt{3} &amp;  1  &amp; 1
-</mrow><mrow>
+                 \hi &amp; \hj &amp; \hk \\
+            \sqrt{3} &amp;  1  &amp; 1 \\
             \sqrt{3} &amp;  1  &amp; -2 \end{matrix}\right]
 </mrow><mrow>
 &amp; =\big(-2-1\big)\,\hi + \big(\sqrt{3}+2\sqrt{3}\big)\,\hj
@@ -1238,8 +1231,9 @@ So a tangent vector is
 There is an easy common factor of <m>3</m> in both components. So
 we can create a slightly neater tangent vector by dividing the length
 of <m>-3\,\hi + 3\sqrt{3}\,\hj</m> by <m>3</m>, giving  <m>\llt -1\,,\,\sqrt{3}\,,\,0\rgt</m>.
-</p></example>
 </p>
+</solution>
+</example>
 
 <p>Tangent planes, in addition to being geometric objects, provide a
 simple but powerful tool for approximating functions of two variables
@@ -1247,5 +1241,5 @@ near a specified point. We saw something very similar in the CLP-1 text
 where we approximated functions of one variable by their tangent lines.
 This brings us to our next topic <mdash/> approximating functions.
 </p>
-
+</subsection>
 </section>

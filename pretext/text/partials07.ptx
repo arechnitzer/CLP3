@@ -6,8 +6,7 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <title>Directional Derivatives and the Gradient</title>
-<p>\section{Directional Derivatives and the Gradient}xml:id="sec_directional_derivatives"
-</p>
+<!--
 
 <p>The principal interpretation of <m>\diff{f}{x}(a)</m> is the rate of change of
 <m>f(x)</m>, per unit change of <m>x</m>, at <m>x=a</m>. The natural analog of this
@@ -733,5 +732,5 @@ f_r\big(r(x,y),\theta(x,y)\big)\ \llt\cos\theta(x,y)\,,\,\sin\theta(x,y)\rgt
 </mrow>
 </md>
 </p></example>
-
+ -->
 </section>
