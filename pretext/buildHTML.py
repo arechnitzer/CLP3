@@ -42,13 +42,12 @@ myTags = [
 
 # These ["foo", "bar"] does replacement of <foo> with <bar>
 # Joel - you might want these when hacking the pretext image sizes, and then comment out to do a proper compile.
+# I had these set so that I could see all parts of exercises on page.
+# breaks validation, but really helps debugging.
 myRep = [
-    [
-        "hint",
-        "statement",
-    ],  # I had these set so that I could see all parts of exercises on page.
-    ["answer", "statement"],  # breaks validation, but really helps debugging.
-    ["solution", "statement"],
+    # ["hint", "statement",],
+    # ["answer", "statement"],
+    # ["solution", "statement"],
 ]
 
 # ["foo", pretextStuff] replaces <foo/> with pretextStuff
