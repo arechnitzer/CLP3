@@ -12,7 +12,7 @@
 whose direction is parallel to the line.
 </p>
 
-<sidebyside width="50%">
+<sidebyside width="40%">
 <image source="figs/twodLine.svg"/>
 </sidebyside>
 
@@ -79,7 +79,7 @@ which is called the symmetric equation for the line.
 direction is  perpendicular to that of the line.
 </p>
 
-<sidebyside width="50%">
+<sidebyside width="40%">
 <image source="figs/twodLineNormal.svg"/>
 </sidebyside>
 
@@ -154,7 +154,7 @@ on <m>L</m>.
 </ul>
 </p>
 
-<sidebyside width="40%">
+<sidebyside width="35%">
 <image source="figs/closestA.svg"/>
 <image source="figs/closestB.svg"/>
 </sidebyside>
@@ -172,7 +172,7 @@ right above.
   Let's use <m>N</m> to denote the line which passes through <m>(7,5)</m> and which is perpendicular to <m>L</m>.
 </p>
 
-<sidebyside width="40%">
+<sidebyside width="35%">
 <image source="figs/closest.svg"/>
 </sidebyside>
 

@@ -61,11 +61,12 @@ are <m>(r, \theta, z)</m>, and spherical coordinates are <m>(\rho, \theta, \varp
 <md>
 <mrow>
 \varphi=\frac{\pi}{3}
-\iff
+&amp;\iff
 \tan\varphi =\frac{\sqrt{3}}{2}
 \iff
 \rho\sin\varphi =\frac{\sqrt{3}}{2}\rho\cos\varphi
-\iff
+</mrow><mrow>
+&amp;\iff
 \sqrt{x^2+y^2}=\frac{\sqrt{3}}{2} z
 </mrow>
 </md>
@@ -76,11 +77,12 @@ So the picture that corresponds to (a) is (C).
 <md>
 <mrow>
 r=2\cos\theta
-\iff
+&amp;\iff
 r^2=2 r\cos\theta
 \iff
 x^2+y^2 = 2x
-\iff
+</mrow><mrow>
+&amp;\iff
 (x-1)^2+y^2=1
 </mrow>
 </md>
@@ -112,11 +114,12 @@ The picture that corresponds to (d) is (B).
 <md>
 <mrow>
 \rho=2\cos\varphi
-\iff
+&amp;\iff
 \rho^2=2\rho\cos\varphi
 \iff
 x^2+y^2+z^2=2z
-\iff
+</mrow><mrow>
+&amp;\iff
 x^2+y^2 + (z-1)^2=1
 </mrow>
 </md>
@@ -198,7 +201,7 @@ first octant, just by <q>filling in the gaps in the second sketch</q>.
 Sketch a few level curves for the function <m>f(x,y)</m> whose graph <m>z=f(x,y)</m>
 is sketched below.
 </p>
-<sidebyside width="">
+<sidebyside width="40%">
 <image source="pfigs/hyperCylinderGraph.svg"/>
 </sidebyside>
 </statement>
@@ -208,7 +211,7 @@ Draw in the plane <m>z=C</m> for several values of <m>C</m>.
 </p></hint>
 
 <answer>
-  <sidebyside width="">
+  <sidebyside width="50%">
     <image source="pfigs/hyperCylinderLevel.svg"/>
 </sidebyside>
 </answer>
@@ -217,7 +220,7 @@ Draw in the plane <m>z=C</m> for several values of <m>C</m>.
 We first add into the sketch of the graph the horizontal planes <m>z=C</m>,
 for <m>C=3</m>, <m>2</m>, <m>1</m>, <m>0.5</m>, <m>0.25</m>.
 </p>
-<sidebyside width="">
+<sidebyside width="40%">
   <image source="pfigs/hyperCylinderGraphB.svg"/>
 </sidebyside>
 
@@ -243,7 +246,7 @@ Drawing this line (which is parallel to the <m>x</m>-axis) in the <m>xy</m>-plan
 rather than in the plane <m>z=C</m>, gives a level curve. Doing this for each of
 <m>C=3</m>, <m>2</m>, <m>1</m>, <m>0.5</m>, <m>0.25</m> gives five level curves.
 </p>
-<sidebyside width="">
+<sidebyside width="45%">
   <image source="pfigs/hyperCylinderLevel.svg"/>
 </sidebyside>
 </solution>
@@ -289,7 +292,7 @@ centred on the origin with <m>x</m> semi axis <m>\sqrt{c}</m> and
 <m>y</m> semi axis <m>\sqrt{c/2}</m>. If <m>c=0</m>,  the level curve <m>x^2+2y^2=c=0</m>
 is the single point <m>(0,0)</m>.
 </p>
-<sidebyside width="">
+<sidebyside width="50%">
   <image source="pfigs/levelEllipse.svg"/>
 </sidebyside>
 
@@ -304,7 +307,7 @@ So the hyperbola is contained in the second and fourth quadrants.
 If <m>c=0</m>,  the level curve <m>xy=c=0</m>
 is the single point <m>(0,0)</m>.
 </p>
-<sidebyside width="">
+<sidebyside width="45%">
   <image source="pfigs/levelHyperbola.svg"/>
 </sidebyside>
 <p>
@@ -337,7 +340,7 @@ and for <m>c \lt 0</m>, the curve
 If <m>c=0</m>,  the level curve <m>xe^{-y}=c=0</m>
 is the <m>y</m>-axis, <m>x=0</m>.
 </p>
-<sidebyside width="">
+<sidebyside width="50%">
   <image source="pfigs/levelLog.svg"/>
 </sidebyside>
 </solution>
@@ -349,7 +352,7 @@ Sketch the level curves of <m>f(x,y)=\frac{2y}{x^2+y^2}</m>.
 </p></statement>
 
 <answer>
-  <sidebyside width="">
+  <sidebyside width="35%">
     <image source="pfigs/OE10D_1.svg"/>
 </sidebyside>
 </answer>
@@ -366,7 +369,7 @@ which is the equation of the circle of radius <m>\frac{1}{|C|}</m> centred on
 <m>\left(0\,,\,\frac{1}{C}\right)</m>.
 </p>
 
-<sidebyside width="">
+<sidebyside width="35%">
   <image source="pfigs/OE10D_1.svg"/>
 </sidebyside>
 
@@ -390,7 +393,7 @@ Draw a <q>contour map</q> of <m>f(x, y) = e^{-x^2 +4y^2}</m> , showing all types
 </p></statement>
 
 <answer>
-  <sidebyside width="">
+  <sidebyside width="66%">
     <image source="pfigs/OE11D_1.svg"/>
 </sidebyside>
 </answer>
@@ -411,7 +414,7 @@ If <m>C \lt 0</m>, then <m>-x^2+4y^2=C \lt 0</m> is the hyperbola <m>x=\pm\sqrt{
 </ul>
 </p>
 
-<sidebyside width="">
+<sidebyside width="66%">
   <image source="pfigs/OE11D_1.svg"/>
 </sidebyside>
 </solution>
@@ -438,7 +441,7 @@ Draw a rough sketch of the surface.
 <p>(a)</p>
 <image source="pfigs/OE253_11D_1a.svg"/>
 </sidebyside>
-<sidebyside widths="10% 30% 30%">
+<sidebyside widths="10% 40% 25%">
 <p>(b)</p>
 <image source="pfigs/OE253_11D_1bl.svg"/>
 <image source="pfigs/OE253_11D_1br.svg"/>
@@ -458,7 +461,7 @@ That radius is <m>0</m> when <m>z=0,2</m> and increases as <m>z</m> moves away f
 <m>z=0,2</m>. For very large <m>|z|</m>, the radius increases roughly linearly with
 <m>|z|</m>. Here is a sketch of some level curves.
 </p>
-<sidebyside width="">
+<sidebyside width="45%">
   <image source="pfigs/OE253_11D_1a.svg"/>
 </sidebyside>
 <p>
@@ -473,7 +476,7 @@ sketchs. The sketch on the left is of the part of the surface in the
 first octant. The sketch on the right of the full surface.
 </p>
 
-<sidebyside width="40%">
+<sidebyside widths="40% 25%" valign="middle">
   <image source="pfigs/OE253_11D_1bl.svg"/>
   <image source="pfigs/OE253_11D_1br.svg"/>
 </sidebyside>
@@ -486,7 +489,7 @@ Sketch the hyperboloid <m>z^2=4x^2+y^2-1</m>.
 </p></statement>
 
 <answer>
-<sidebyside width="40%">
+<sidebyside widths="40% 25%" valign="middle">
   <image source="pfigs/OE226_09A_l.svg"/>
   <image source="pfigs/OE226_09A_r.svg"/>
  </sidebyside>
@@ -502,7 +505,7 @@ the <m>yz</m>-pane (i.e. with the plane <m>x=0</m>) is the hyperbola <m>y^2-z^2=
 Here are two sketches of the surface. The sketch on the left only shows
 the part of the surface in the first octant  (with axes).
 </p>
-<sidebyside width="40%">
+<sidebyside widths="40% 25%" valign="middle">
   <image source="pfigs/OE226_09A_l.svg"/>
   <image source="pfigs/OE226_09A_r.svg"/>
  </sidebyside>
@@ -583,15 +586,15 @@ Sketch the graphs of
 
 <answer>
 <sbsgroup>
-<sidebyside widths="10% 50%">
+<sidebyside widths="10% 40%"  valign="middle">
   <p>(a)</p>
   <image source="pfigs/sinGraph.svg"/>
 </sidebyside>
-<sidebyside widths="10% 50%">
+<sidebyside widths="10% 50%"  valign="middle">
 <p>(b)</p>
 <image source="pfigs/coneGraph.svg"/>
 </sidebyside>
-<sidebyside widths="10% 40% 40%">
+<sidebyside widths="10% 28% 28%" valign="middle">
 <p>(c)</p>
 <image source="pfigs/pmidGraph.svg"/>
 <image source="pfigs/pmidGraphB.svg"/>
@@ -607,7 +610,7 @@ same sin graph <m>z=\sin x</m> with <m>x</m> running from <m>0</m> to <m>2\pi</m
 graph is just a bunch of 2-d sin graphs stacked side-by-side. This gives
 the graph on the left below.
 </p>
-<sidebyside width="40%">
+<sidebyside widths="40% 50%" valign="middle">
   <image source="pfigs/sinGraph.svg"/>
   <image source="pfigs/coneGraph.svg"/>
  </sidebyside>
@@ -631,7 +634,7 @@ It is an upside down four-sided pyramid. The part of the pyramid in the
 first octant (that is, <m>x,y,z\ge 0</m>) is the sketch below.
 </p>
 
-<sidebyside width="40%">
+<sidebyside widths="28% 28%" valign="middle">
     <image source="pfigs/pmidGraph.svg"/>
     <image source="pfigs/pmidGraphB.svg"/>
  </sidebyside>
@@ -676,7 +679,7 @@ Sketch and describe the following surfaces.
 (a) This is an elliptic cylinder parallel to the <m>z</m>-axis.
 Here is a sketch of the part of the surface above the <m>xy</m>--plane.
 </p>
-<sidebyside width="50%">
+<sidebyside width="60%">
   <image source="pfigs/elliptical_cylinder"/>
 </sidebyside>
 <p>
@@ -684,14 +687,14 @@ Here is a sketch of the part of the surface above the <m>xy</m>--plane.
 This is a plane through <m>(4,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,2)</m>.
 Here is a sketch of the part of the plane in the first octant.
 </p>
-<sidebyside width="50%">
+<sidebyside width="55%">
   <image source="pfigs/plane.svg"/>
 </sidebyside>
 <p>
 (c)
 This is a hyperboloid of one sheet with axis the <m>x</m>-axis.
 </p>
-<sidebyside width="40%">
+<sidebyside widths="50% 40%" valign="middle">
   <image source="pfigs/hyperboloidX_l.svg"/>
 <image source="pfigs/hyperboloidX_r.svg"/>
 </sidebyside>
@@ -700,7 +703,7 @@ This is a hyperboloid of one sheet with axis the <m>x</m>-axis.
 This is a circular cone centred
 on the <m>y</m>-axis.
 </p>
-<sidebyside width="50%">
+<sidebyside width="60%">
   <image source="pfigs/coneYY_r.svg"/>
 </sidebyside>
 
@@ -708,7 +711,7 @@ on the <m>y</m>-axis.
 This is an ellipsoid centered on the origin with semiaxes <m>3</m>,
 <m>\sqrt{12}=2\sqrt{3}</m> and <m>3</m> along the <m>x</m>, <m>y</m> and <m>z</m>-axes, respectively.
 </p>
-<sidebyside width="40%">
+<sidebyside widths="40% 60%" valign="middle">
   <image source="pfigs/ellipsoid_l.svg"/>
      <image source="pfigs/ellipsoid_r.svg"/>
 </sidebyside>
@@ -717,14 +720,14 @@ This is an ellipsoid centered on the origin with semiaxes <m>3</m>,
 This is a sphere of radius <m>r_b=\frac{1}{2}\sqrt{b^2+4b+97}</m> centered on
 <m>\frac{1}{2}(-4,b,-9)</m>.
 </p>
-<sidebyside width="50%">
+<sidebyside width="90%">
   <image source="pfigs/shiftSphere.svg"/>
 </sidebyside>
 <p>
 (g)
 This is an elliptic paraboloid with axis the <m>x</m>-axis.
 </p>
-<sidebyside width="40%">
+<sidebyside widths="50% 25%" valign="middle">
 <image source="pfigs/paraboloidX_l.svg"/>
      <image source="pfigs/paraboloidX_r.svg"/>
    </sidebyside>
@@ -745,7 +748,7 @@ one semiaxis of length 2 along the <m>x</m>-axis and one semiaxis of length
 4 along the <m>y</m>-axis. So this is an elliptic cylinder parallel to the <m>z</m>-axis.
 Here is a sketch of the part of the surface above the <m>xy</m>--plane.
 </p>
-<sidebyside width="50%">
+<sidebyside width="60%">
   <image source="pfigs/elliptical_cylinder.svg"/>
 </sidebyside>
 <p>
@@ -753,7 +756,7 @@ Here is a sketch of the part of the surface above the <m>xy</m>--plane.
 This is a plane through <m>(4,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,2)</m>.
 Here is a sketch of the part of the plane in the first octant.
 </p>
-<sidebyside width="50%">
+<sidebyside width="55%">
 <image source="pfigs/plane.svg"/>
 </sidebyside>
 <p>
@@ -767,7 +770,7 @@ at a rate proportional to <m>\sqrt{1+\frac{x^2}{16}}</m>, which for large <m>x</
 is approximately <m>\frac{|x|}{4}</m>.
 This is called a hyperboloid of one sheet. Its
 </p>
-<sidebyside width="40%">
+<sidebyside widths="50% 40%" valign="middle">
 <image source="pfigs/hyperboloidX_l.svg"/>
      <image source="pfigs/hyperboloidX_r.svg"/>
    </sidebyside>
@@ -780,7 +783,7 @@ i.e. as <m>|y_0|</m> increases, the radius grows linearly. The full surface
 consists of a bunch of these circles stacked sideways. This is a
 circular cone centred on the <m>y</m>-axis.
 </p>
-<sidebyside width="50%">
+<sidebyside width="60%">
 <image source="pfigs/coneYY_r.svg"/>
 </sidebyside>
 
@@ -789,7 +792,7 @@ circular cone centred on the <m>y</m>-axis.
 This is an ellipsoid centered on the origin with semiaxes <m>3</m>,
 <m>\sqrt{12}=2\sqrt{3}</m> and <m>3</m> along the <m>x</m>, <m>y</m> and <m>z</m>-axes, respectively.
 </p>
-<sidebyside width="40%">
+<sidebyside widths="40% 60%" valign="middle">
 <image source="pfigs/ellipsoid_l.svg"/>
      <image source="pfigs/ellipsoid_r.svg"/>
 </sidebyside>
@@ -802,7 +805,7 @@ Completing three squares, we have that
 This is a sphere of radius <m>r_b=\frac{1}{2}\sqrt{b^2+4b+97}</m> centered on
 <m>\frac{1}{2}(-4,b,-9)</m>.
 </p>
-<sidebyside width="50%">
+<sidebyside width="90%">
 <image source="pfigs/shiftSphere.svg"/>
 </sidebyside>
 <p>
@@ -815,7 +818,7 @@ direction.  As you increase <m>x_0</m>, i.e. move out along the <m>x</m>-axis,
 the ellipses grow at a rate proportional to <m>\sqrt{x_0}</m>. This is
 an elliptic paraboloid  with axis the <m>x</m>-axis.
 </p>
-<sidebyside width="40%">
+<sidebyside widths="50% 25%" valign="middle">
 <image source="pfigs/paraboloidX_l.svg"/>
  <image source="pfigs/paraboloidX_r.svg"/>
 </sidebyside>
@@ -837,7 +840,7 @@ opening parabola <m>z=x^2</m> which has vertex on the <m>y</m>-axis.
 <exercise>
 <statement><p>
 The surface below has circular level curves, centred along the <m>z</m>-axis. The lines given are the intersection of the surface with the right half of the <m>yz</m>-plane. Give an equation for the surface.
-</p><sidebyside>
+</p><sidebyside width="50%">
 <image><latex-image>\begin{tikzpicture}
 \draw (0,0)--(0,3)node[above]{$z$};
 \draw (0,0)--(3,0) node[right]{$y$};
@@ -870,7 +873,7 @@ x^2+y^2=g(z),</me>
 (when <m>z\ge0</m>) and <m>z=-3(-y-1)=3(y+1)</m> (when <m>z \lt 0</m>). Below is the intersection of our surface with the <m>yz</m> plane.
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image><latex-image>\begin{tikzpicture}
 \draw (0,-3)--(0,3)node[above]{$z$};
 \draw (-3,0)--(3,0) node[right]{$y$};

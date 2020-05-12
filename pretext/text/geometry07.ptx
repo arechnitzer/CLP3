@@ -35,7 +35,7 @@ Here are some examples.
   <p>We'll start by fixing any number <m>z_0</m> and sketching the part of
   the surface that lies in the horizontal plane <m>z=z_0</m>.
 </p>
-  <sidebyside>
+  <sidebyside width="33%">
   <image source="figs/zedzeroPlane.svg"/>
   </sidebyside>
   <p>
@@ -44,10 +44,10 @@ Here are some examples.
   satisfies both
   <md>
   <mrow>
-  &amp;z=z_0\text{\ \ and\ \ }4x^2+y^2-z^2=1
+  &amp;z=z_0\ \ \text{and}\ \ 4x^2+y^2-z^2=1
   </mrow><mrow>
   \iff
-  &amp;z=z_0\text{\  \ and\ \ }4x^2+y^2=1+z_0^2
+  &amp;z=z_0\ \ \text{and}\ \ 4x^2+y^2=1+z_0^2
   </mrow>
   </md>
   Think of <m>z_0</m> as a constant.
@@ -62,7 +62,7 @@ Here are some examples.
   <m>x</m> semi-axis <m>\frac{1}{2}\sqrt{1+z_0^2}</m> and <m>y</m> semi-axis
   <m>\sqrt{1+z_0^2}</m>. It's easy to sketch.
 </p>
-  <sidebyside>
+  <sidebyside width="55%">
   <image source="figs/ellipse.svg"/>
   </sidebyside>
 <p>
@@ -74,7 +74,7 @@ Here are some examples.
   dimensional sketch at height <m>z_0</m>.
   This gives a single horizontal ellipse in 3d, as in the figure below.
 </p>
-  <sidebyside>
+  <sidebyside width="50%">
   <image source="figs/hyperboloidZX.svg"/>
   </sidebyside>
 <p>
@@ -85,7 +85,7 @@ Here are some examples.
   (i.e. the part of three dimensions that has <m>x\ge 0</m>, <m>y\ge 0</m> and <m>z\ge 0</m>).
 </p>
 
-  <sidebyside>
+  <sidebyside width="45%">
   <image source="figs/hyperboloidZXB.svg"/>
   </sidebyside>
 
@@ -115,21 +115,25 @@ Here are some examples.
   do it now. We'll first sketch them in 2d. Since
   <md alignment="alignat">
   <mrow>
-  y^2&amp;=1+z^2 &amp;\quad\implies\quad
-     &amp;|y|\ge 1\quad\text{ and }\quad
-      y=\pm 1\text{ when }z=0\quad
-      \text{ and\quad for large } z, }y\approx\pm z
+  y^2&amp;=1+z^2 &amp;
+      \quad\implies\quad &amp;|y|\ge 1
+    </mrow><mrow>
+      &amp;&amp;&amp;\text{ and }\quad y=\pm 1\text{ when }z=0
+     </mrow><mrow>
+      &amp;&amp;&amp;\text{ and }\quad\text{for large } z,\ y\approx\pm z
   </mrow><mrow>
-  4x^2&amp;=1+z^2 &amp; \quad\implies\quad
-     &amp;|x|\ge \tfrac{1}{2}\quad\text{ and }\quad
-     x=\pm\tfrac{1}{2}\text{ when }z=0\quad
-     \text{and\quad for large } z, }x\approx\pm \tfrac{1}{2}z
+  4x^2&amp;=1+z^2 &amp; 
+           \quad\implies\quad &amp;|x|\ge \tfrac{1}{2}
+      </mrow><mrow>
+     &amp;&amp;&amp;\text{ and }\quad x=\pm\tfrac{1}{2}\text{ when }z=0
+      </mrow><mrow>
+     &amp;&amp;&amp;\text{ and }\quad\text{for large } z,\ x\approx\pm \tfrac{1}{2}z
   </mrow>
   </md>
   the sketches are
 </p>
 
-  <sidebyside>
+  <sidebyside widths="40% 40%" valign="middle">
   <image source="figs/hyperbolaXa.svg"/>
      <image source="figs/hyperbolaYa.svg"/>
   </sidebyside>
@@ -141,7 +145,7 @@ Here are some examples.
   that you are looking at this on a colour screen).
   </p>
 
-  <sidebyside>
+  <sidebyside width="40%">
   <image source="figs/hyperboloidBa.svg"/>
   </sidebyside>
 
@@ -151,7 +155,7 @@ Here are some examples.
   possibilities.
 </p>
 
-  <sidebyside>
+  <sidebyside  widths="40% 30%" valign="middle">
   <image source="figs/hyperboloidC.svg"/>
    <image source="figs/hyperboloidD.svg"/>
   </sidebyside>
@@ -178,7 +182,7 @@ Here are some examples.
   plane <m>z=z_0</m>. The intersection of our surface with that horizontal plane is
   <md>
   <mrow>
-  &amp;z=z_0\text{\  \ and\ \ }4x^2+y^2=z_0^2-1
+  &amp;z=z_0\ \ \text{and}\ \ 4x^2+y^2=z_0^2-1
   </mrow>
   </md>
   Think of <m>z_0</m> as a constant.
@@ -201,7 +205,7 @@ Here are some examples.
   are drawn in the figure below.
 </p>
 
-  <sidebyside>
+  <sidebyside width="45%">
   <image source="figs/hyperboloidZXBB.svg"/>
   </sidebyside>
 
@@ -214,7 +218,7 @@ Here are some examples.
   </me>
 </p>
 
-  <sidebyside>
+  <sidebyside width="45%">
   <image source="figs/hyperboloidBaa.svg"/>
   </sidebyside>
 
@@ -222,7 +226,7 @@ Here are some examples.
   Now that we have a pretty good idea of what the surface looks like
   we clean up and simplify the sketch.
 </p>
-  <sidebyside>
+  <sidebyside  widths="40% 30%" valign="middle">
   <image source="figs/hyperboloidCC.svg"/>
   <image source="figs/hyperboloidDD.svg"/>
   </sidebyside>
@@ -256,34 +260,34 @@ Here are some examples.
 
   <p>We'll start with a sketch of the hyperbola <m>yz=1</m> in two dimensions.
 </p>
-  <sidebyside>
+  <sidebyside width="40%">
   <image source="figs/hyperbola3.svg"/>
   </sidebyside>
 <p>
   Next we'll move this 2d sketch into the <m>yz</m>-plane, i.e. the plane <m>x=0</m>,
   in 3d, except that we'll only draw in the part in the first octant.
 </p>
-  <sidebyside>
+  <sidebyside width="40%">
   <image source="figs/hyperbolicCylinderA.svg"/>
   </sidebyside>
   <p>
   The we'll draw in <m>x=x_0</m> cross-sections for a couple of more values of
   <m>x_0</m>
 </p>
-  <sidebyside>
+  <sidebyside width="40%">
   <image source="figs/hyperbolicCylinderB.svg"/>
   </sidebyside>
 <p>
   and clean up the sketch a bit
 </p>
-  <sidebyside>
+  <sidebyside width="40%">
   <image source="figs/hyperbolicCylinderC.svg"/>
   </sidebyside>
 
 </solution>
 </example>
 
-<example xml:id="eg_xyz"><title><m>xyz=1</m></title>
+<example xml:id="eg_xyz"><title><m>xyz=4</m></title>
 <statement>
   <p>
   Sketch the surface <m>xyz=4</m>.
@@ -305,7 +309,7 @@ Here are some examples.
   the hyperbola
   <md>
   <mrow>
-  &amp;z=z_0\text{\  \ and\ \ }xy=\frac{1}{z_0}
+  &amp;z=z_0\ \ \text{and}\ \ xy=\frac{1}{z_0}
   </mrow>
   </md>
   Note that <m>x\rightarrow\infty</m> as <m>y\rightarrow 0</m> and that
@@ -315,7 +319,7 @@ Here are some examples.
   (namely, <m>z_0=4</m>, <m>z_0=2</m> and <m>z_0=\frac{1}{2}</m>)
   are drawn in the figure below.
 </p>
-  <sidebyside>
+  <sidebyside width="45%">
   <image source="figs/seatB.svg"/>
   </sidebyside>
 <p>
@@ -329,13 +333,13 @@ Here are some examples.
   instead. They are again hyperbolae.
 </p>
 
-  <sidebyside>
+  <sidebyside width="45%">
   <image source="figs/seatC.svg"/>
   </sidebyside>
 <p>
   Finally, we clean up and simplify the sketch.
 </p>
-  <sidebyside>
+  <sidebyside width="45%">
   <image source="figs/seatA.svg"/>
   </sidebyside>
 
@@ -390,7 +394,7 @@ Here are a couple of examples.
   Here is a sketch of some representative level curves of
   <m>f(x,y) = x^2+4y^2-2x+2</m>.
 </p>
-  <sidebyside>
+  <sidebyside width="90%">
   <image source="figs/ellipseLevelB.svg"/>
   </sidebyside>
 <p>
@@ -434,7 +438,7 @@ Here are a couple of examples.
   Here is a sketch of some level curves.
   </p>
 
-  <sidebyside>
+  <sidebyside width="60%">
   <image source="figs/planeLevel.svg"/>
   </sidebyside>
 
@@ -460,7 +464,7 @@ the value <m>C</m>.
   that are in the first octant.
   </p>
 
-  <sidebyside>
+  <sidebyside width="60%">
   <image source="figs/spherA.svg"/>
   </sidebyside>
   </example>
@@ -475,7 +479,7 @@ the value <m>C</m>.
   one such circle.
   </p>
 
-  <sidebyside>
+  <sidebyside width="40%">
   <image source="figs/cylB.svg"/>
   </sidebyside>
 
@@ -490,7 +494,7 @@ the value <m>C</m>.
   that are in the first octant.
   </p>
 
-  <sidebyside>
+  <sidebyside width="40%">
   <image source="figs/cylA.svg"/>
   </sidebyside>
 
@@ -515,7 +519,7 @@ the value <m>C</m>.
   that are in the first octant.
   </p>
 
-  <sidebyside>
+  <sidebyside width="60%">
   <image source="figs/rampABC.svg"/>
   </sidebyside>
 

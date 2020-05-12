@@ -12,7 +12,7 @@
   to rotate about <m>\vd</m>. On the other hand, giving one point
 </p>
 
-<sidebyside width="45%">
+<sidebyside widths="36% 45%" valign="middle">
 <image source="figs/threedPlane.svg"/>
 <image source="figs/threedPlane2.svg"/>
 </sidebyside>
@@ -134,7 +134,7 @@
   That's it.
   </p>
 
-<sidebyside width="50%">
+<sidebyside width="40%">
   <image source="figs/planeSketch.svg"/>
   </sidebyside>
 </example>
@@ -170,7 +170,7 @@
   </li>
   </ul>
 </p>
-<sidebyside width="66%">
+<sidebyside width="45%">
 <image source="figs/pointDist.svg"/>
 </sidebyside>
 <p>
@@ -239,7 +239,7 @@
   </ul>
 </p>
 
-<sidebyside width="66%">
+<sidebyside width="45%">
 <image source="figs/pointDistProj.svg"/>
 </sidebyside>
 
@@ -320,7 +320,7 @@
   </li>
   </ul>
 </p>
-  <sidebyside width="66%">
+  <sidebyside width="45%">
   <image source="figs/planeDist.svg"/>
   </sidebyside>
 <p>

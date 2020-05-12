@@ -21,7 +21,7 @@ an arrow from the point <m>(0,0,0)</m> to the point <m>(a,b,c)</m>.
 
 
 
-<sidebyside width="40%">
+<sidebyside width="33%">
 <image source="figs/vector2d.svg"/>
 <image source="figs/vector3d.svg"/>
 </sidebyside>
@@ -42,7 +42,7 @@ the particle is at the origin. The sketch below shows a moving particle
 and its velocity vector at two different times.
 </p>
 
-  <sidebyside width="50%">
+  <sidebyside width="29%">
   <image source="figs/movingParticle.svg"/>
   </sidebyside>
 
@@ -56,7 +56,7 @@ All three forces are acting on the bob. So it is natural to draw all three
 arrows representing the forces with their tails at the ball.
 </p>
 
-<sidebyside width="50%">
+<sidebyside width="20%">
 <image source="figs/pendulum.svg"/>
 </sidebyside>
 
@@ -96,7 +96,7 @@ head <mdash/> usually round brackets are used for both. It is up to you to
 keep straight which is being referred to.
 </p>
 
-<sidebyside>
+<sidebyside width="60%">
   <image source="figs/positions.svg"/>
 </sidebyside>
 
@@ -175,7 +175,7 @@ if <m>s \lt 0</m>, reversing the arrow's direction,
 </ul>
 as in the other two figures below.
 </p>
-<sidebyside>
+<sidebyside widths="33% 25% 25%" valign="middle">
   <image source="figs/addvec.svg"/>
   <image source="figs/scalmul.svg"/>
   <image source="figs/negmul.svg"/>
@@ -196,7 +196,7 @@ are zero.
   That is, <m>\va-\vb</m> is the vector you must add to <m>\vb</m> in order to get <m>\va</m>.
 </p>
 
-<sidebyside width="50%">
+<sidebyside width="40%">
   <image source="figs/subtract.svg"/>
 </sidebyside>
 
@@ -301,7 +301,7 @@ The standard basis vectors in two dimensions are
 \hi = \llt 1,0\rgt \qquad\qquad\hj =\llt 0,1\rgt
 </me>
 </p>
-<sidebyside width="20%">
+<sidebyside width="15%">
   <image source="figs/basis2d.svg"/>
 </sidebyside>
 <p>
@@ -311,7 +311,7 @@ The standard basis vectors in three dimensions are
 \qquad\qquad\hk =\llt 0,0,1\rgt
 </me>
 </p>
-<sidebyside width="30%">
+<sidebyside width="25%">
 <image source="figs/basis3d.svg"/>
 </sidebyside>
 </statement>
@@ -389,7 +389,7 @@ one third of the way.
 </li>
 </ul>
 </p>
-    <sidebyside widths="40% 25%">
+    <sidebyside widths="50% 20%" valign="middle">
     <image source="figs/addSubtractMult.svg"/>
     <image source="figs/triangleWalk.svg"/>
     </sidebyside>
@@ -573,7 +573,7 @@ cosine law, we'll derive it right now! Start by applying Pythagoras to the
 shaded triangle in the right hand figure of
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="85%">
   <image source="figs/cosineB.svg"/>
 </sidebyside>
 
@@ -691,7 +691,7 @@ tells us that the angle, <m>\theta</m>, between <m>\va</m> and <m>\vb</m> obeys
 </md>
 </p>
 
-<sidebyside width="50%">
+<sidebyside width="40%">
 <image source="figs/dotProd.svg"/>
 </sidebyside>
 
@@ -712,7 +712,7 @@ By definition, the projection of the vector <m>\va</m>
 on the vector <m>\vb</m> is the vector from the tail of <m>\vb</m> to the point
 on the line where the perpendicular hits.
 </p>
-  <sidebyside width="33%">
+  <sidebyside  widths="23% 33%" valign="middle">
   <image source="figs/projA.svg"/>
   <image source="figs/projB.svg"/>
   </sidebyside>
@@ -780,7 +780,7 @@ In this example, we will find the projection of the vector <m>\llt 0,3\rgt</m>
 on the vector <m>\llt 1,1\rgt</m>, as in the figure
 </p>
 
-      <sidebyside width="50%">
+      <sidebyside width="40%">
       <image source="figs/projEg.svg"/>
       </sidebyside>
 <p>
@@ -832,7 +832,7 @@ We'll call the constant of proportionality <m>\beta</m>.
 </ul>
 </p>
 
-      <sidebyside width="50%">
+      <sidebyside width="45%">
       <image source="figs/pendulum3.svg"/>
       </sidebyside>
 
@@ -1031,7 +1031,8 @@ and the left hand side
 &amp;
 =\left[\gamma^2-\omega^2-\frac{\beta}{m}\gamma+\frac{g}{\ell}\right]
                          Ae^{-\gamma t}\sin(\omega t-\delta)
-+\left[-2\gamma\omega+\frac{\beta}{m}\omega\right]
+</mrow><mrow>
+&amp;\hskip0.5in+\left[-2\gamma\omega+\frac{\beta}{m}\omega\right]
                          Ae^{-\gamma t}\cos(\omega t-\delta)
 </mrow>
 </md>
@@ -1175,7 +1176,7 @@ minus the product of the off-diagonal entries.
 <m>\vc=\llt c_1,c_2,c_3\rgt </m> in three dimensions
 </p>
 
-<sidebyside width="33%">
+<sidebyside width="20%">
 <image source="figs/piped"/>
 </sidebyside>
 
@@ -1270,7 +1271,7 @@ We shall see that such a vector can be easily constructed by taking the cross pr
 the sides of the parallelogram.
 </p>
 
-<sidebyside width="40%">
+<sidebyside width="35%">
 <image source="figs/pgramCross.svg"/>
 </sidebyside>
 </li>
@@ -1284,7 +1285,7 @@ is the cross product
 (again, definition coming shortly) of the vector <m>\Om\hat\va</m> with the vector
 <m>\vr</m> from any point on the axis of rotation to <m>P</m>.
 </p>
-<sidebyside width="40%">
+<sidebyside width="33%">
 <image source="figs/rigidBB"/>
 </sidebyside>
 </li>
@@ -1322,7 +1323,7 @@ The index <m>j</m> of the first <m>b</m> is just before <m>k</m> in the list.
 For example, for component number <m>k=3</m>,
 <md>
 <mrow>
-\left.{\text{``just after 3'' is 1}}\atop{\text{``just before 3'' is 2}}\right\}
+\left.{\text{''just after 3'' is 1}}\atop{\text{''just before 3'' is 2}}\right\}
 \implies (\va\times\vb)_3= a_1b_2-a_2b_1
 </mrow>
 </md>
@@ -1452,7 +1453,7 @@ The computation showing that <m>\vb\cdot(\va\times \vb)=0</m> is similar.
   <mrow> \amp = \text{the area of the parallelogram with sides } \va, \vb</mrow>
 </md>
 </p>
-<sidebyside width="33%">
+<sidebyside width="20%">
 <image source="figs/area.svg"/>
 </sidebyside>
 </li>
@@ -1495,7 +1496,7 @@ is given by the length of its base times its height. Think of <m>\va</m> as the
 base of the parallelogram. Then <m>|\va|</m> is the length of the base
 and <m>|\vb|\sin\theta</m> is the height.
 </p>
-      <sidebyside width="40%">
+      <sidebyside width="22%">
       <image source="figs/areaB.svg"/>
       </sidebyside>
 </proof>
@@ -1507,7 +1508,7 @@ plane containing <m>\va</m> and <m>\vb</m>.
 There are precisely two vectors on this line that have the length given by property 2.
 In the left hand figure of
 </p>
-      <sidebyside width="30%">
+      <sidebyside  widths="25% 22% 20%" valign="middle">
       <image source="figs/crossLL.svg"/>
       <image source="figs/crossRR.svg"/>
       <image source="figs/RHR.svg"/>
@@ -1541,7 +1542,7 @@ obey the right hand rule.  Combining properties 1, 2 and the right hand
 rule give the geometric definition of <m>\va\times\vb</m>. To remember
 these three special cases, just remember this figure.
 </p>
-      <sidebyside width="33%">
+      <sidebyside width="25%">
       <image source="figs/cp_circle.svg"/>
       </sidebyside>
 <p>
@@ -1625,7 +1626,7 @@ for helping do computations with cross products.
     <mrow> \amp = \text{the area of the parallelogram with sides } \va, \vb</mrow>
   </md>
   </p>
-  <sidebyside width="33%">
+  <sidebyside width="25%">
   <image source="figs/area.svg"/>
   </sidebyside>
   </li>
@@ -1699,19 +1700,19 @@ The left hand side is
 <mrow>
 \va\cdot(\vb\times\vc)
 &amp;=\llt a_1,a_2,a_3\rgt\cdot
-      \llt b_2c_3-b_3c_2\,,\, b_3c_1-b_1c_3\,,\, b_1c_2-b_2c_1\rgt
+      \llt b_2c_3\!-\!b_3c_2\,,\, b_3c_1\!-\!b_1c_3\,,\, b_1c_2\!-\!b_2c_1\rgt
 </mrow><mrow>
-&amp;=a_1b_2c_3 - a_1b_3c_2 + a_2b_3c_1 - a_2b_1c_3 + a_3b_1c_2 - a_3b_2c_1
+&amp;=a_1b_2c_3 \!-\! a_1b_3c_2 \!+\! a_2b_3c_1 \!-\! a_2b_1c_3 \!+\! a_3b_1c_2 \!-\! a_3b_2c_1
 </mrow>
 </md>
 The right hand side is
 <md>
 <mrow>
 (\va\times\vb)\cdot\vc
-&amp;=\llt a_2b_3-a_3b_2\,,\, a_3b_1-a_1b_3\,,\, a_1b_2-a_2b_1\rgt\cdot
+&amp;=\llt a_2b_3\!-\!a_3b_2\,,\, a_3b_1\!-\!a_1b_3\,,\, a_1b_2\!-\!a_2b_1\rgt\cdot
        \llt c_1,c_2,c_3\rgt
 </mrow><mrow>
-&amp;=a_2b_3c_1 - a_3b_2c_1 + a_3b_1c_2 - a_1b_3c_2 + a_1b_2c_3 - a_2b_1c_3
+&amp;=a_2b_3c_1 \!-\! a_3b_2c_1 \!+\! a_3b_1c_2 \!-\! a_1b_3c_2 \!+\! a_1b_2c_3 \!-\! a_2b_1c_3
 </mrow>
 </md>
 The left and right hand sides are the same.
@@ -1748,23 +1749,24 @@ b_2c_3-b_3c_2&amp;-b_1c_3+b_3c_1&amp;b_1c_2-b_2c_1
 The right hand side is
 <md>
 <mrow>
-(\va\cdot\vc)\vb-(\va\cdot\vb)\vc
-&amp;=(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
+&amp;(\va\cdot\vc)\vb-(\va\cdot\vb)\vc
 </mrow><mrow>
-     &amp;\hskip1in -(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
+&amp;\hskip0.1in=(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
 </mrow><mrow>
-&amp;=\phantom{-}
+     &amp;\hskip1.1in -(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
+</mrow><mrow>
+&amp;\hskip0.1in=\phantom{-}
 \hi[a_1b_1c_1+a_2b_1c_2+a_3b_1c_3-a_1b_1c_1-a_2b_2c_1-a_3b_3c_1]
 </mrow><mrow>
-&amp;\phantom{=}+\hj[a_1b_2c_1+a_2b_2c_2+a_3b_2c_3-a_1b_1c_2-a_2b_2c_2-a_3b_3c_2]
+&amp;\hskip0.1in\phantom{=}+\hj[a_1b_2c_1+a_2b_2c_2+a_3b_2c_3-a_1b_1c_2-a_2b_2c_2-a_3b_3c_2]
 </mrow><mrow>
-&amp;\phantom{=}+\hk[a_1b_3c_1+a_2b_3c_2+a_3b_3c_3-a_1b_1c_3-a_2b_2c_3-a_3b_3c_3]
+&amp;\hskip0.1in\phantom{=}+\hk[a_1b_3c_1+a_2b_3c_2+a_3b_3c_3-a_1b_1c_3-a_2b_2c_3-a_3b_3c_3]
 </mrow><mrow>
-&amp;=\phantom{-} \hi[a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]
+&amp;\hskip0.1in=\phantom{-} \hi[a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]
 </mrow><mrow>
- &amp;\phantom{=} +\hj[a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
+ &amp;\hskip0.1in\phantom{=} +\hj[a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
 </mrow><mrow>
- &amp;\phantom{=} +\hk[a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
+ &amp;\hskip0.1in\phantom{=} +\hk[a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
 </mrow>
 </md>
 </p>
@@ -2052,7 +2054,8 @@ On the other hand, the right hand side
 <mrow>
 (\va\cdot\vc)\vb-(\va\cdot\vb)\vc
 \ =\ &amp;(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
--(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)\cr
+</mrow><mrow>
+&amp;\hskip0.5in-(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)\cr
 =\ &amp;
 \hi\ \big[\color{blue}{a_1b_1c_1}
          +a_2b_1c_2+a_3b_1c_3-
@@ -2188,7 +2191,7 @@ The vector <m>\vOmega = \Omega \hk</m>, whose length is the rate of rotation and
 whose direction is the axis of rotation, is called the angular velocity.
 </p>
 
-<sidebyside width="33%">
+<sidebyside widths="25% 20%" valign="middle">
 <image source="figs/merry.svg"/>
 <image source="figs/merryB.svg"/>
 </sidebyside>
@@ -2240,7 +2243,7 @@ and <m>x</m>-axis after <m>t</m> seconds is <m>\Omega t</m>, and
 </mrow>
 </md>
 </p>
-<sidebyside width="33%">
+<sidebyside width="30%">
   <image source="figs/merryC.svg"/>
 </sidebyside>
 <p>
@@ -2280,7 +2283,8 @@ So
 \vV(t)&amp;= \Big(\diff{x}{t}\!(t)\ \hi(t)
                          + \diff{y}{t}\!(t)\ \hj(t)
                          + \diff{z}{t}\!(t)\ \hk(t)\Big)
-                     +\vOmega\times\Big(x(t)\ \hi(t)
+</mrow><mrow>
+&amp;\hskip0.5in           +\vOmega\times\Big(x(t)\ \hi(t)
                                   +y(t)\ \hj(t)
                                   +z(t)\ \hk(t)\Big)
 </mrow>
@@ -2376,7 +2380,7 @@ at <m>t=0</m>, <m>\vr=\hi</m> and
 </li>
 </ul>
 </p>
-<sidebyside width="40%">
+<sidebyside widths="22% 22%" valign="middle">
 <image source="figs/merryD.svg"/>
 <image source="figs/merryE.svg"/>
 </sidebyside>

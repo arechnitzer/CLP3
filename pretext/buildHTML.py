@@ -42,6 +42,8 @@ myTags = [
 
 # These ["foo", "bar"] does replacement of <foo> with <bar>
 # Joel - you might want these when hacking the pretext image sizes, and then comment out to do a proper compile.
+# I had these set so that I could see all parts of exercises on page.
+# breaks validation, but really helps debugging.
 myRep = [
     # I had these set so that I could see all parts of exercises on page.
     # breaks validation, but really helps debugging.
@@ -166,6 +168,7 @@ except Exception as err:
     exit(1)
 
 # all passed so now build
+os.makedirs("site", exist_ok=True)
 
 # read in the pretext xslt magic
 print("Read in xsl file")
