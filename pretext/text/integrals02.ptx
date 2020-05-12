@@ -6,15 +6,18 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <title>Double Integrals in Polar Coordinates</title>
+<introduction>
 
 <p>So far, in setting up integrals, we have always cut up the
 domain of integration into tiny rectangle by drawing in many lines
 of constant <m>x</m> and many lines of constant <m>y</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/intDecomp3.pdf"/>
 </sidebyside>
+
+<p>
 There is no law that says that we must cut up our domains of integration
 into tiny pieces in that way. Indeed, when the objects of interest
 are sort of round and centered on the origin, it is often
@@ -23,20 +26,21 @@ advantageous
 and as the law of the instrument) refers to a tendency to always use
 the same tool, even when it isn't the best tool for the job.
 It is just as bad in mathematics as it is in carpentry.</fn>
+to use polar coordinates, rather than Cartesian coordinates.
 </p>
 
-<p>to use polar coordinates, rather than Cartesian coordinates.
-</p>
+</introduction>
 
-<p>\subsection{Polar Coordinates} xml:id="sec_polar_coords"
-</p>
+<subsection xml:id="sec_polar_coords">
+  <title>Polar Coordinates</title>
+
 
 <p>It may have been a while since you did anything in polar coordinates.
 So let's review before we resume integrating.
 </p>
 
-<p><definition>
-<statement><p>xml:id="def_polars"
+<definition xml:id="def_polars">
+<statement><p>
 The polar coordinates
 <fn>In the mathematical literature,
 the angular coordinate is usually denoted <m>\theta</m>, as we do here.
@@ -50,20 +54,27 @@ that <m>\varphi</m> should be used in the natural sciences and in technology.</f
 <mrow>
 r&amp;=\text{ the distance from }(0,0)\text{ to }(x,y)
 </mrow><mrow>
-\theta&amp;=\text{ the (counter-clockwise) angle between the <m>x</m> axis
-               and the line joining <m>(x,y)</m> to <m>(0,0)</m>}
+\theta&amp;=\text{ the (counter-clockwise) angle between the $x$-axis }
+</mrow><mrow>
+      &amp; \qquad \text{ and the line joining $(x,y)$ to $(0,0)$}
 </mrow>
 </md>
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/polar.pdf"/>
 </sidebyside>
-</p></statement>
+</statement>
 </definition>
-Cartesian and polar coordinates are related, via a quick bit
+
+<p>
+  Cartesian and polar coordinates are related, via a quick bit
 of trigonometry, by
-\begin{impeqn}xml:id="eqn_polars"
+</p>
+
+<fact xml:id="eqn_polars">
+  <statement>
+    <p>
 <md>
 <mrow>
 x&amp;=r\cos\theta &amp;
@@ -73,16 +84,20 @@ y&amp;=r\sin\theta
     \theta&amp;=\arctan\frac{y}{x}
 </mrow>
 </md>
-\end{impeqn}
+</p>
+</statement>
+</fact>
+
+<p>
 The following two figures show a number of lines of constant <m>\theta</m>,
 on the left, and curves of constant <m>r</m>, on the right.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/polarTh.pdf"/>\qquad\qquad
-    <image source="problems/figs/polarR.pdf"/>
+<sidebyside>
+<image source="problems/figs/polarTh.pdf"/>
+<image source="problems/figs/polarR.pdf"/>
 </sidebyside>
-</p>
+
 
 <p>Note that the polar angle <m>\theta</m> is only defined up to integer multiples
 of <m>2\pi</m>. For example, the point <m>(1,0)</m> on the <m>x</m>-axis could have
@@ -100,36 +115,41 @@ southern hemisphere.</fn>
 <p>angle <m>\theta</m> refers to the clockwise angle <m>|\theta|</m>. For example,
 the point <m>(0,-1)</m> on the negative <m>y</m>-axis can have <m>\theta=-\frac{\pi}{2}</m>
 and can also have <m>\theta=\frac{3\pi}{2}</m>.
+</p>
+
 <sidebyside>
 <image source="problems/figs/polarNegTh.pdf"/>
 </sidebyside>
-</p>
+
 
 <p>It is also sometimes convenient to extend the above definitions by saying that
 <m>x=r\cos\theta</m> and <m>y=r\sin\theta</m> even when <m>r</m> is negative. For example,
 the following figure shows <m>(x,y)</m> for <m>r=1</m>, <m>\theta=\frac{\pi}{4}</m>
 and for <m>r=-1</m>, <m>\theta=\frac{\pi}{4}</m>.
-\vadjust{
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/polarNeg.pdf"/>
 </sidebyside>
-}
+
+<p>
 Both points lie on the  line through the origin that makes an angle of
 <m>45^\circ</m> with the <m>x</m>-axis and both are a distance one from the origin.
 But they are on opposite sides of the the origin.
 </p>
 
-<p>\subsection{Polar Curves} xml:id="sec_polar_curves"
-</p>
+</subsection>
+
+<subsection xml:id="sec_polar_curves">
+  <title>Polar Curves</title>
+
 
 <p>Here are a couple of examples in which we sketch curves specified
 by equations in terms of polar coordinates.
 </p>
 
-<p><example><title>The Cardioid</title>
-<p>xml:id="eg_cardioid"
+<example xml:id="eg_cardioid"><title>The Cardioid</title>
+<p>
 Let's sketch the curve
 <me>
 r= 1+\cos\theta
@@ -139,15 +159,17 @@ So it will be helpful to
 remember what the graph of <m>\cos\theta</m> looks like for <m>0\le\theta\le 2\pi</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/cosGraph.pdf"/>
 </sidebyside>
+<p>
 From this we see that the graph of <m>y=1+\cos\theta</m> is
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/cosGraphP1.pdf"/>
 </sidebyside>
+<p>
 Now let's pick some easy <m>\theta</m> values, find the corresponding <m>r</m>'s
 and sketch them.
 </p>
@@ -173,16 +195,14 @@ That's the upper red dot in the second figure below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/cardioid1.pdf"/>\qquad\qquad
-    <image source="problems/figs/cardioid2.pdf"/>\qquad\qquad
+<image source="problems/figs/cardioid1.pdf"/>
+    <image source="problems/figs/cardioid2.pdf"/>
     <image source="problems/figs/cardioid3.pdf"/>
 </sidebyside>
 </li>
-<li>
+<li><p>
 Now increase <m>\theta</m> still more, say to
-    <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
+<ul>
 <li>
           <m>\theta=\frac{2\pi}{6}=\frac{\pi}{3}</m>,
 </li>
@@ -207,6 +227,7 @@ Those are the five gray lines in the figure on the right above.
 Then we put in a dot on each <m>\theta</m>-line a distance <m>r=1+\cos\theta</m>
 from the origin. Those are the red dots on the gray lines in the
 figure on the right above.
+</p>
 </li>
 <li><p>
 We could continue the above procedure for <m>\pi\le\theta\le 2\pi</m>.
@@ -315,9 +336,10 @@ Here is a table giving a few values of <m>r(\theta)</m> for
 and here is a sketch exhibiting those values and another sketch of the
 part of the curve with <m>0\le \theta\le\frac{\pi}{3}</m>.
 </p>
+
 <sidebyside>
-<image source="problems/figs/rose1.pdf"/>\qquad\qquad
-    <image source="problems/figs/rose1b.pdf"/>
+<image source="problems/figs/rose1.pdf"/>
+<image source="problems/figs/rose1b.pdf"/>
 </sidebyside>
 
 </li>
@@ -421,11 +443,12 @@ Putting the three lobes together gives the full curve, which is called
 the <q>three petal rose</q>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/rose3F.pdf"/>
 </sidebyside>
-There is an infinite family of similar rose curves (also called
-rhodonea
+
+<p>
+There is an infinite family of similar rose curves (also called rhodonea
 <fn>The name rhodenea first appeared in the 1728 publication
 <em>Flores geometrici</em> of the Italian monk, theologian, mathematician
 and engineer, Guido Grandi (1671--1742).</fn>
@@ -433,10 +456,11 @@ and engineer, Guido Grandi (1671--1742).</fn>
 </p>
 
 </example>
-</p>
 
-<p>\subsection{Integrals in Polar Coordinates} xml:id="sec_polar_integrals"
-</p>
+</subsection>
+<subsection xml:id="sec_polar_integrals">
+  <title>Integrals in Polar Coordinates</title>
+
 
 <p>We now return to the problem of using polar coordinates to set up
 double integrals. So far, we have used Cartesian coordinates, in the sense
@@ -447,15 +471,19 @@ we instead draw in both lines of constant <m>\theta</m> and curves of constant <
 This cuts the <m>xy</m>-plane up into approximate rectangles.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/polarRTh.pdf"/>
 </sidebyside>
+
+<p>
 Here is an enlarged sketch of one such approximate rectangle.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/polarA.pdf"/>
 </sidebyside>
+
+<p>
 One side has length <m>\dee{r}</m>, the spacing between the curves of constant <m>r</m>.
 The other side is a portion of a circle of radius <m>r</m> that subtends,
 at the origin, an angle <m>\dee{\theta}</m>, the angle between the lines
@@ -467,11 +495,18 @@ this to be true.</fn>
 , the other side of the approximate rectangle has length
 <m>\frac{\dee{\theta}}{2\pi}2\pi r = r\dee{\theta}</m>. So the shaded
 region has area approximately
-\begin{impeqn}xml:id="eq_dA_polar"
+</p>
+
+<fact xml:id="eq_dA_polar">
+  <statement>
+    <p>
 <me>
 \dee{A} = r\,\dee{r}\,\dee{\theta}
 </me>
-\end{impeqn}\noindent
+</p>
+</statement>
+</fact>
+<p>
 By way of comparison, using Cartesian coordinates we had <m>\dee{A}
 =\dee{x}\,\dee{y}</m>.
 </p>
@@ -492,30 +527,32 @@ in which we see the error going to zero in the limit <m>n\rightarrow\infty</m>,
 is provided in the (optional) section §<xref ref="sec_integral_error"/>.
 </p>
 
-<p><example><title>Mass</title>
-<p>xml:id="eg_polar_mass"
+<example xml:id="eg_polar_mass"><title>Mass</title>
+<statement>
+<p>
 Let <m>0\le a \lt b\le 2\pi</m> be constants and let <m>\cR</m> be the region
 <me>
-\cR=§et{(r\cos\theta,r\sin\theta)}{a\le\theta\le b,
+\cR=\Set{(r\cos\theta,r\sin\theta)}{a\le\theta\le b,
                B(\theta)\le r\le T(\theta)}
 </me>
 where the functions <m>T(\theta)</m> and <m>B(\theta)</m> are continuous and obey
 <m>B(\theta)\le T(\theta)</m> for all <m>a\le\theta\le b</m>.
 Find the mass of <m>\cR</m> if it has density <m>f(x,y)</m>.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 The figure on the left below is a sketch of <m>\cR</m>. Notice that <m>r=T(\theta)</m>
 is the outer curve while <m>r=B(\theta)</m> is the inner curve.
-\vadjust{
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/polarMass.pdf"/>\qquad
-    <image source="problems/figs/polarMass2.pdf"/>
+<sidebyside>
+<image source="problems/figs/polarMass.pdf"/>
+<image source="problems/figs/polarMass2.pdf"/>
 </sidebyside>
-}
-Divide <m>\cR</m> into wedges (as in wedges of pie
+
+<p>Divide <m>\cR</m> into wedges (as in wedges of pie
 <fn>There is a pie/pi/pye
 pun in there somewhere.</fn>
  or wedges of cheese)
@@ -528,14 +565,12 @@ The figure on the right above shows one such wedge, outlined in blue.
 approximate rectangles by drawing in many circles of constant <m>r</m>,
 with the various values of <m>r</m> differing by a tiny amount <m>\dee{r}</m>.
 The figure below shows one such approximate rectangle, in black.
-\vadjust{
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/polarMass3.pdf"/>
 </sidebyside>
-}
-</p>
+
 
 <p>Now concentrate on one such rectangle. Let's say that it contains the point
 with polar coordinates <m>r</m> and <m>\theta</m>. As we saw in <xref ref="eq_dA_polar"/> above,
@@ -567,37 +602,51 @@ namely <m>a</m>, to its largest value on <m>\cR</m>, namely <m>b</m>.
 </li>
 </ul>
 In conclusion,
-\begin{impeqn}xml:id="eq_polar_mass"
+</p>
+
+<fact xml:id="eq_polar_mass">
+<statement>
+<p>
 <me>
 \text{Mass}(\cR) = \int_a^b  \dee{\theta}
              \int_{B(\theta)}^{T(\theta)}  \dee{r}\,r\,
                    f\big(r\cos\theta\,,\,r\sin\theta\big)
 </me>
-\end{impeqn}
+</p>
+</statement>
+</fact>
+
+<p>
 We have repeatedly used the word <q>essentially</q> above to avoid getting
 into the nitty-gritty details required to prove things rigorously.
 The mathematically correct proof of <xref ref="eq_polar_mass"/> follows
 the same intuition, but requires some more careful error bounds,
 as in the optional §<xref ref="sec_integral_error"/> below.
-</p></example>
 </p>
+</solution>
+
+</example>
+
 
 <p>We can immediately adapt the last example to calculate areas <mdash/> all we have to
 do is set the density to <m>1</m>.
 </p>
 
-<p><example><title>Polar Area</title>
-<p>xml:id="eg_polar_area"
+<example xml:id="eg_polar_area"><title>Polar Area</title>
+<statement>
+<p>
 Let <m>0\le a \lt b\le 2\pi</m> be constants. Find the area of the
 region
 <me>
-\cR=§et{(r\cos\theta,r\sin\theta)}{a\le\theta\le b,
+\cR=\Set{(r\cos\theta,r\sin\theta)}{a\le\theta\le b,
               0\le r\le B(\theta)}
 </me>
 where the function  <m>R(\theta)\ge 0</m> is continuous.
 </p>
+</statement>
 
-<p>\soln To get the area of <m>\cR</m> we just need to assign it a density
+<solution>
+<p> To get the area of <m>\cR</m> we just need to assign it a density
 one and find the resulting mass. So, by <xref ref="eq_polar_mass"/>,
 with <m>f(x,y)=1</m>, <m>B(\theta)=0</m> and <m>T(\theta)=R(\theta)</m>,
 <md>
@@ -607,23 +656,31 @@ with <m>f(x,y)=1</m>, <m>B(\theta)=0</m> and <m>T(\theta)=R(\theta)</m>,
 </mrow>
 </md>
 In this case we can easily do the inner <m>r</m> integral, giving
-\begin{impeqn}xml:id="eq_polar_area"
+</p>
+
+<fact xml:id="eq_polar_area">
+<statement>
+<p>
 <me>
 \text{Area}(\cR) =\frac{1}{2} \int_a^b R(\theta)^2\  \dee{\theta}
 </me>
-\end{impeqn}
+</p>
+</statement>
+</fact>
+
+<p>
 The expression <m>\frac{1}{2} R(\theta)^2\ \dee{\theta}</m> in
 <xref ref="eq_polar_area"/> has a geometric interpretation. It is just
 the area of a wedge of a circular disk of radius <m>R(\theta)</m>
 (with <m>R(\theta)</m> treated as a constant) that subtends the
 angle <m>\dee{\theta}</m>.
-\vadjust{
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/polarArea3.pdf"/>
 </sidebyside>
-}
+
+<p>
 To see this, note that area of the wedge
 is the fraction <m>\frac{\dee{\theta}}{2\pi}</m>
 of the area of the entire disk, which is <m>\pi R(\theta)^2</m>.
@@ -631,20 +688,22 @@ So <xref ref="eq_polar_area"/> just says that the area of <m>\cR</m> can be comp
 by cutting <m>\cR</m> up into tiny wedges and adding up the areas of all of the
 tiny wedges.
 </p>
-
+</solution>
 </example>
-</p>
 
-<p><example><title>Polar Area</title>
-<p>xml:id="eg_area_rose"
+<example xml:id="eg_area_rose"><title>Polar Area</title>
+<statement>
+<p>
 Find the area of one petal of the three petal rose
 <m>r=\sin(3\theta)</m>.
 </p>
+</statement>
 
-<p>\soln Looking at the last figure in Example <xref ref="eg_rose"/>,
+<solution>
+<p>Looking at the last figure in Example <xref ref="eg_rose"/>,
 we see that we want the area of
 <me>
-\cR=§et{(r\cos\theta,r\sin\theta)}{0\le\theta\le \frac{\pi}{3},\
+\cR=\Set{(r\cos\theta,r\sin\theta)}{0\le\theta\le \frac{\pi}{3},\
               0\le r\le \sin(3\theta)}
 </me>
 So, by <xref ref="eq_polar_area"/> with <m>a=0</m>, <m>b=\frac{\pi}{3}</m>,
@@ -666,17 +725,22 @@ and <m>R(\theta) =\sin(3\theta)</m>,
 In the first step we used the double angle formula
 <m>\cos(2\phi) = 1-2\sin^2(\phi)</m>. Unsurprisingly, trig identities
 show up a lot when polar coordinates are used.
-</p></example>
 </p>
+</solution>
+</example>
 
-<p><example><title>Volumes Using Polar Coordinates</title>
-<p>xml:id="eg_polar_volume"
+
+<example xml:id="eg_polar_volume"><title>Volumes Using Polar Coordinates</title>
+<statement>
+<p>
 A cylindrical hole of radius <m>b</m> is drilled symmetrically (i.e. along
 a diameter) through a metal sphere of radius <m>a\ge b</m>. Find
 the volume of metal removed.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 Let's use a coordinate system with the sphere centred on <m>(0,0,0)</m>
 and with the centre of the drill hole following the <m>z</m>-axis.
 In particular, the sphere is <m>x^2+y^2+z^2\le a^2</m>.
@@ -686,29 +750,29 @@ In particular, the sphere is <m>x^2+y^2+z^2\le a^2</m>.
 The hole in the sphere made by the drill is outlined in red. By symmetry
 the total amount of metal removed will be eight times the amount
 from the first octant.
-\vadjust{
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/appleCore.pdf"/>
 </sidebyside>
-}
+
+<p>
 That is, the volume of metal removed will be eight times the volume of
 the solid
 <me>
-\cV_1 = §et{(x,y,z)}{(x,y)\in\cR_1,\ 0\le z\le\sqrt{a^2-x^2-y^2}}
+\cV_1 = \Set{(x,y,z)}{(x,y)\in\cR_1,\ 0\le z\le\sqrt{a^2-x^2-y^2}}
 </me>
 where the base region
 <me>
-\cR_1 = §et{(x,y)}{x^2+y^2\le b^2,\ x\ge 0,\ y\ge 0}
+\cR_1 = \Set{(x,y)}{x^2+y^2\le b^2,\ x\ge 0,\ y\ge 0}
 </me>
 In polar coordinates
 <md>
 <mrow>
-\cV_1 &amp;= §et{(r\cos\theta,r\sin\theta,z)}{(r\cos\theta,r\sin\theta)\in\cR_1,\
+\cV_1 &amp;= \Set{(r\cos\theta,r\sin\theta,z)}{(r\cos\theta,r\sin\theta)\in\cR_1,\
                    0\le z\le\sqrt{a^2-r^2}}
 </mrow><mrow>
-\cR_1 &amp;= §et{(r\cos\theta,r\sin\theta)}{0\le r\le b,\
+\cR_1 &amp;= \Set{(r\cos\theta,r\sin\theta)}{0\le r\le b,\
                     0\le\theta\le\frac{\pi}{2}}
 </mrow>
 </md>
@@ -834,8 +898,9 @@ are measured in units of meters, then the remaining volume
 has units <m>\text{meters}^3</m>, as it should.
 </li>
 </ul>
-</p></example>
 </p>
+</solution>
+</example>
 
 <p>The previous two problems were given to us (or nearly given to us)
 in polar coordinates. We'll now get a little practice converting
@@ -843,13 +908,16 @@ integrals into polar coordinates, and recognising when it is helpful
 to do so.
 </p>
 
-<p><example><title>Changing to Polar Coordinates</title>
-<p>xml:id="eg_change_to_polar"
+<example xml:id="eg_change_to_polar"><title>Changing to Polar Coordinates</title>
+<statement>
+<p>
 Convert the integral <m>\int_0^1\int_0^x y\sqrt{x^2+y^2}\ \dee{y}\,\dee{x}</m>
 to polar coordinates and evaluate the result.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 First recall that in polar coordinates <m>x=r\cos\theta</m>, <m>y=r\sin\theta</m>
 and <m>\dee{x}\,\dee{y}=\dee{A}=r\,\dee{r}\,\dee{\theta}</m> so that the
 integrand (and <m>\dee{A}</m>)
@@ -881,16 +949,18 @@ for each fixed <m>0\le x\le 1</m>, <m>y</m> runs from <m>0</m> to <m>x</m>.
 </ul>
 So the domain of integration is
 <me>
-\cD=§et{(x,y)}{0\le x\le 1,\ 0\le y\le x}
+\cD=\Set{(x,y)}{0\le x\le 1,\ 0\le y\le x}
 </me>
 which is sketched in the figure on the left below.
 It is a right angled triangle.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/convPolarA.pdf"/>\qquad
-    <image source="problems/figs/convPolarC.pdf"/>
+<sidebyside>
+<image source="problems/figs/convPolarA.pdf"/>
+<image source="problems/figs/convPolarC.pdf"/>
 </sidebyside>
+
+<p>
 Next we express the domain of integration in terms of polar coordinates,
 by expressing the equations of each of the boundary lines in terms of
 polar coordinates.
@@ -923,32 +993,25 @@ So, in polar coordinates, we can write the domain of integration as
 </me>
 We can now slice up <m>\cR</m> using polar coordinates.
 <ul>
-<li>
+<li><p>
 Divide <m>\cR</m> into wedges by drawing in many lines of constant
 <m>\theta</m>, with the various values of <m>\theta</m> differing by a tiny
 amount <m>\dee{\theta}</m>. The figure on the right above shows one such wedge.
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 The first wedge has <m>\theta=0</m>.
 </li>
 <li>
 The last wedge has <m>\theta=\frac{\pi}{4}</m>.
 </li>
-</ul>
-\vspace{-\topsep}
+</ul></p>
 </li>
-<li>
+<li><p>
 Concentrate on any one wedge. Subdivide the wedge further into
 approximate rectangles by drawing in many circles of constant <m>r</m>,
 with the various values of <m>r</m> differing by a tiny amount <m>\dee{r}</m>.
 The figure on the right above shows one such approximate rectangle, in black.
-\vspace{-\topsep}
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 The rectangle that contains the point with polar coordinates <m>r</m> and
 <m>\theta</m> has area (essentially) <m>r\,\dee{r}\,\dee{\theta}</m>.
@@ -959,8 +1022,7 @@ The first rectangle has <m>r=0</m>.
 <li>
 The last rectangle has <m>r=\frac{1}{\cos\theta}</m>.
 </li>
-</ul>
-\vspace{-\topsep}
+</ul></p>
 </li>
 </ul>
 So our integral is
@@ -997,10 +1059,12 @@ When <m>\theta=0</m>, <m>u=\cos\theta=1</m> and when <m>\theta=\frac{\pi}{4}</m>
 =\frac{1}{12}\left[2\sqrt{2}-1\right]
 </mrow>
 </md>
-</p></example>
 </p>
+</solution>
+</example>
 
-<p>\intremark{
+
+<!-- <p>\intremark{
 <example><title>Changing to Polar Coordinates</title>
 <p>xml:id="eg_change_to_polar"
 Convert the integral <m>\int_0^1\int_0^x y\ \dee{y}\,\dee{x}</m> to polar
@@ -1024,7 +1088,7 @@ for each fixed <m>0\le x\le 1</m>, <m>y</m> runs from <m>0</m> to <m>x</m>.
 </ul>
 So the domain of integration is
 <me>
-\cD=§et{(x,y)}{0\le x\le 1,\ 0\le y\le x}
+\cD=\Set{(x,y)}{0\le x\le 1,\ 0\le y\le x}
 </me>
 which is sketched in the figure on the left below.
 </p>
@@ -1133,14 +1197,17 @@ When <m>\theta=0</m>, <m>u=\cos\theta=1</m> and when <m>\theta=\frac{\pi}{4}</m>
 
 </example>
 }
-</p>
+</p> -->
 
-<p><example><title>Changing to Polar Coordinates</title>
-<p>xml:id="eg_change_to_polar_B"
+<example xml:id="eg_change_to_polar_B"><title>Changing to Polar Coordinates</title>
+<statement>
+<p>
 Evaluate <m>\displaystyle\int_0^\infty e^{-x^2}\ \dee{x}</m>.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 This is actually a trick question. In fact it is a famous trick
 question
 <fn>The solution is attributed to the French Mathematician
@@ -1169,10 +1236,10 @@ However we can evaluate it's square
 precisely because this double integral can be easily
 evaluated just by changing to polar coordinates!
 The domain of integration is the first quadrant
-<m>§et{(x,y)}{x\ge 0,\ y\ge 0}</m>. In polar coordinates,
+<m>\Set{(x,y)}{x\ge 0,\ y\ge 0}</m>. In polar coordinates,
 <m>\dee{x}\dee{y} = r\,\dee{r}\dee{\theta}</m> and the first  quadrant is
 <me>
-§et{(r\cos\theta\,,\,r\sin\theta)}{r\ge 0,\ 0\le\theta\le \frac{\pi}{2}}
+\Set{(r\cos\theta\,,\,r\sin\theta)}{r\ge 0,\ 0\le\theta\le \frac{\pi}{2}}
 </me>
 So
 <md>
@@ -1210,18 +1277,19 @@ and so we get the famous result
 </mrow>
 </md>
 </p>
-
+</solution>
 </example>
-</p>
 
-<p>\goodbreak
-<example>
-<p>xml:id="eg_area_polar"
+<example xml:id="eg_area_polar">
+<statement>
+<p>
 Find the area of the region that is inside the circle
 <m>r=4\cos\theta</m> and to the left of the line <m>x=1</m>.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 First, let's check that <m>r=4\cos\theta</m> really is a circle and figure out
 what circle it is. To do so, we'll convert the equation <m>r=4\cos\theta</m>
 into Cartesian coordinates. Multiplying both sides by <m>r</m> gives
@@ -1250,25 +1318,26 @@ r\cos\theta=1,\ r=4\cos\theta
 Here is a sketch of the region of interest, which we'll call <m>\cR</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/comPolarA.pdf"/>
 </sidebyside>
-</p>
+
 
 <p>We could figure out the area of <m>\cR</m> by using some high school geometry,
 because <m>\cR</m> is a circular wedge with a triangle removed.
 (See Example <xref ref="eg_area_polar_HS"/>, below.)
-\vadjust{
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/comPolarAA.pdf"/>
 </sidebyside>
-}
+
+<p>
 Instead, we'll treat its computation as an exercise in integration
 using polar coordinates.
 </p>
 
+<!--
 <p>\intremark{
 <md>
 <mrow>
@@ -1290,7 +1359,7 @@ using polar coordinates.
 </p>
 
 <p>}
-</p>
+ -->
 
 <p>As <m>\cR</m> is symmetric about the <m>x</m>-axis, the area of <m>\cR</m> is
 twice the area of the part that is above the <m>x</m>-axis.
@@ -1299,9 +1368,10 @@ we can write the equation <m>x=1</m> in polar coordinates as
 <m>r=\frac{1}{\cos\theta}</m>. Here is a sketch of <m>\cR_1</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/comPolarB.pdf"/>
 </sidebyside>
+<p>
 Observe that, on <m>\cR_1</m>, for any fixed <m>\theta</m> between
 <m>0</m> and <m>\frac{\pi}{2}</m>,
 <ul>
@@ -1346,28 +1416,28 @@ and
 \text{Area}(\cR)=2\text{Area}(\cR_1) = \frac{4\pi}{3}-\sqrt{3}
 </mrow>
 </md>
-</p></example>
 </p>
+</solution>
+</example>
 
-<p><example><title>Optional <mdash/> Example <xref ref="eg_area_polar"/> by high school geometry</title>
-<p>xml:id="eg_area_polar_HS"
+
+<example xml:id="eg_area_polar_HS"><title>Optional <mdash/> Example <xref ref="eg_area_polar"/> by high school geometry</title>
+<p>
 We'll now again compute the area of the region <m>\cR</m> that is
 inside the circle <m>r=4\cos\theta</m> and to the left of the line <m>x=1</m>.
 That was the region of interest in Example <xref ref="eg_area_polar"/>.
 This time we'll just use some geometry. Think of <m>\cR</m> as being
 the wedge <m>\cW</m>, of the figure on the left below, with the triangle
 <m>\cT</m>, of the figure on the right below, removed.
-\vadjust{
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/comPolarC.pdf"/>\quad
-    <image source="problems/figs/comPolarD.pdf"/>
+<sidebyside>
+<image source="problems/figs/comPolarC.pdf"/>
+<image source="problems/figs/comPolarD.pdf"/>
 </sidebyside>
-}
-</p>
 
-<p><ul>
+<p>
+<ul>
 <li>
 First we'll get the area of <m>\cW</m>. The cosine of the angle between the
 <m>x</m> axis and the radius vector from <m>C</m> to <m>A</m> is <m>\frac{1}{2}</m>. So that
@@ -1394,15 +1464,16 @@ All together
 </p>
 
 </example>
-</p>
 
 <p>We used some hand waving in deriving the area formula <xref ref="eq_polar_area"/>:
 the word <q>essentially</q> appeared quite a few times. Here is
 how do that derivation more rigorously.
 </p>
 
-<p>\subsection{Optional<mdash/> Error Control for the Polar Area Formula} xml:id="sec_integral_error"
-</p>
+</subsection>
+
+<subsection xml:id="sec_integral_error">
+  <title>Optional<mdash/> Error Control for the Polar Area Formula></title>
 
 <p>Let <m>0\le a \lt b\le 2\pi</m>. In Examples <xref ref="eg_polar_mass"/>
 and <xref ref="eg_polar_area"/> we derived the formula
@@ -1411,16 +1482,17 @@ A=\frac{1}{2}\int_a^b R(\theta)^2\,d\theta
 </me>
 for the area of the region
 <me>
-\cR=§et{\big(r\cos\theta,r\sin\theta\big)}
+\cR=\Set{\big(r\cos\theta,r\sin\theta\big)}
      {a\le\theta\le b,\ 0\le r\le R(\theta)}
 </me>
 In the course of that derivation we approximated the area of the
 shaded region in
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/polarA.pdf"/>
 </sidebyside>
+<p>
 by <m>\dee{A} = r\,\dee{r}\,\dee{\theta}</m>.
 </p>
 
@@ -1447,7 +1519,7 @@ R(\theta)-R(\theta_i^*)  = R'(c) (\theta-\theta_i^*)
 for some <m>c</m> between <m>\theta</m> and <m>\theta_i^*</m>. Because <m>|R'(\theta)|\le L</m>
 <me>
 \big|R(\theta)-R(\theta_i^*)\big|  \le L \big|\theta-\theta_i^*\big|
-\tag{<m>*</m>}
+\tag{$*$}
 </me>
 This tells us that the difference between <m>R(\theta)</m> and <m>R(\theta_i^*)</m>
 can't be too big compared to <m>\big|\theta-\theta_i^*\big|</m>.
@@ -1461,28 +1533,30 @@ By <m>(*)</m>, all of these values of <m>R(\theta)</m> lie between
 Consequently the part of <m>\cR</m> having <m>\theta</m> in the <m>i^{\rm th}</m>
 subinterval, namely,
 <me>
-\cR_i=§et{\big(r\cos\theta,r\sin\theta\big)}
+\cR_i=\Set{\big(r\cos\theta,r\sin\theta\big)}
      {\theta_i^*-\half\De\theta\le\theta\le \theta_i^*+\half\De\theta,
            \ 0\le r\le R(\theta)}
 </me>
 must contain all of the circular sector
 <me>
-§et{\big(r\cos\theta,r\sin\theta\big)}
+\Set{\big(r\cos\theta,r\sin\theta\big)}
      {\theta_i^*-\half\De\theta\le\theta\le \theta_i^*+\half\De\theta,
            \ 0\le r\le r_i}
 </me>
 and must be completely contained inside the circular sector
 <me>
-§et{\big(r\cos\theta,r\sin\theta\big)}
+\Set{\big(r\cos\theta,r\sin\theta\big)}
      {\theta_i^*-\half\De\theta\le\theta\le \theta_i^*+\half\De\theta,
            \ 0\le r\le R_i}
 </me>
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/polarArea.pdf"/>\qquad\qquad
-    <image source="problems/figs/polarArea2.pdf"/>
+<sidebyside>
+<image source="problems/figs/polarArea.pdf"/>
+<image source="problems/figs/polarArea2.pdf"/>
 </sidebyside>
+
+<p>
 That is, we have found one circular sector that is bigger than the one
 we are approximating, and one circular sector that is smaller.
 The area of a circular disk of radius <m>\rho</m> is <m>\pi\rho^2</m>.
@@ -1491,9 +1565,11 @@ is the fraction <m>\frac{\De\theta}{2\pi}</m> of the full disk and so has
 the area <m>\frac{\De\theta}{2\pi}\pi\rho^2 = \frac{\De\theta}{2}\rho^2</m>.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/sectorArea.pdf"/>\qquad
+<sidebyside>
+<image source="problems/figs/sectorArea.pdf"/>
 </sidebyside>
+
+<p>
 So the area of <m>\cR_i</m> must lie between
 <me>
 \frac{1}{2}\De\theta\, r_i^2
@@ -1562,7 +1638,7 @@ Now take the limit as <m>n\rightarrow\infty</m>. Since
 +\lim_{n\rightarrow\infty}\frac{L^2}{8} \frac{(b-a)^3}{n^2}
 </mrow><mrow>
 &amp;\hskip1in=\frac{1}{2}\int_a^b R(\theta)^2\,d\theta \qquad
-\text{(since <m>L</m>, <m>M</m>, <m>a</m> and <m>b</m> are all constants)}
+\text{(since $L, M, a$ and $b$ are all constants)}
 </mrow>
 </md>
 we have that
@@ -1571,5 +1647,5 @@ A=\frac{1}{2}\int_a^b R(\theta)^2\,d\theta
 </me>
 exactly, as desired.
 </p>
-
+</subsection>
 </section>

@@ -14,4 +14,5 @@
   </p>
 </introduction>
 <xi:include href="./integrals01.ptx" />
+<xi:include href="./integrals02.ptx" />
  </chapter>
