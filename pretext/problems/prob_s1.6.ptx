@@ -6,11 +6,14 @@
 
 <exercises>
 <exercisegroup>
-<introduction><conceptual/></introduction>
+<introduction>
+  <conceptual/>
 
-<introduction><p>Questions <xref ref="prob_s1_0first"/> through <xref ref="prob_s1_0last"/> provide practice with curve parametrization. Being comfortable with the
+<p>Questions <xref ref="prob_s1_0first"/> through <xref ref="prob_s1_0last"/> provide practice with curve parametrization. Being comfortable with the
 algebra and interpretation of these descriptions are essential ingredients
-in working effectively with parametrizations.</p></introduction>
+in working effectively with parametrizations.</p>
+</introduction>
+
 
 <exercise xml:id="prob_s1_0first">
 <statement><p>
@@ -873,7 +876,7 @@ the arclength from <m>t = 0</m> to <m>t = \frac{\pi}{2}</m> is
 	\int_0^{\pi/2} \diff{s}{t}(t)\,\dee{t}
 	&amp;=\int_0^{\pi/2} \sin t\cos t \sqrt{1+ 9\sin^2 t}\,\dee{t}
 </mrow><mrow>
-	&amp;=\frac{1}{18}\int_1^{10} \sqrt{u}\ \dee{u} 
+	&amp;=\frac{1}{18}\int_1^{10} \sqrt{u}\ \dee{u}
 </mrow><mrow>
 	&amp;\hskip0.5in\text{with } u = 1+ 9\sin^2 t,\ \dee{u}  = 18\sin t\cos t\,\dee{t}
 </mrow><mrow>
