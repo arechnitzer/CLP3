@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_partials">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title>Partial Derivatives</title>
+<introduction>
+<p>We are now ready to define derivatives of functions of more than one variable.
+First, recall how we defined the derivative, <m>f'(a)</m>, of a function
+of one variable, <m>f(x)</m>. We imagined that we were walking along the <m>x</m>-axis,
+in the positive direction, measuring, for example, the temperature
+along the way. We denoted by <m>f(x)</m> the temperature at <m>x</m>. The instantaneous rate of change of temperature that we observed as we passed through <m>x=a</m> was
+<me>
+\diff{f}{x}(a) =\lim_{h\rightarrow 0}\frac{f(a+h) - f(a)}{h}
+      =\lim_{x\rightarrow a}\frac{f(x) - f(a)}{x-a}
+</me>
+</p>
+
+<p>Next suppose that we are walking in the <m>xy</m>-plane and that the temperature
+at <m>(x,y)</m> is <m>f(x,y)</m>. We can pass through the point <m>(x,y)=(a,b)</m> moving
+in many different directions, and we cannot expect the measured rate of
+change of temperature if we walk parallel to the <m>x</m>-axis, in the
+direction of increasing <m>x</m>, to be the same as the measured rate of change of temperature if we walk parallel to the <m>y</m>-axis in the direction of increasing <m>y</m>. We'll start by considering just those two directions. We'll consider
+other directions (like walking parallel to the line <m>y=x</m>) later.
+</p>
+
+<p>Suppose that we are passing through the point <m>(x,y)=(a,b)</m> and that
+we are walking parallel to the <m>x</m>-axis (in the positive direction).
+Then our <m>y</m>-coordinate will be constant, always taking the value <m>y=b</m>.
+So we can think of the measured temperature as the function of one
+variable <m>B(x) = f(x,b)</m> and we will observe the rate of change of temperature
+<me>
+\diff{B}{x}(a) = \lim_{h\rightarrow 0}\frac{B(a+h) - B(a)}{h}
+      = \lim_{h\rightarrow 0}\frac{f(a+h,b) - f(a,b)}{h}
+</me>
+This is called the <q>partial derivative <m>f</m> with respect to <m>x</m> at <m>(a,b)</m></q>
+and is denoted <m>\pdiff{f}{x}(a,b)</m>. Here
+<ul>
+<li>
+the symbol <m>\partial</m>, which is read <q>partial</q>, indicates that
+we are dealing with a function of more than one variable, and
+</li>
+<li>
+the <m>x</m> in <m>{\pdiff{f}{x}}</m> indicates that we are differentiating
+with respect to <m>x</m>, while <m>y</m> is being held fixed, i.e. being treated as a constant.
+</li>
+<li>
+<m>{\pdiff{f}{x}}</m> is read <q> partial dee <m>f</m> dee <m>x</m></q>.
+</li>
+</ul>
+Do not write <m>\diff{}{x}</m> when <m>\pdiff{}{x}</m> is appropriate.
+We shall later encounter situations when <m>\diff{}{x}f</m> and
+<m>\pdiff{}{x}f</m> are both defined and have different meanings.
+</p>
+
+<p>If, instead, we are passing through the point <m>(x,y)=(a,b)</m> and
+are walking parallel to the <m>y</m>-axis (in the positive direction),
+then our <m>x</m>-coordinate will be constant, always taking the value <m>x=a</m>.
+So we can think of the measured temperature as the function of one
+variable <m>A(y) = f(a,y)</m> and we will observe the rate of change of temperature
+<me>
+\diff{A}{y}(b) = \lim_{h\rightarrow 0}\frac{A(b+h) - A(b)}{h}
+      = \lim_{h\rightarrow 0}\frac{f(a,b+h) - f(a,b)}{h}
+</me>
+This is called the <q>partial derivative <m>f</m> with respect to <m>y</m> at <m>(a,b)</m></q>
+and is denoted <m>\pdiff{f}{y}(a,b)</m>.
+</p>
+
+<p>Just as was the case for the ordinary derivative <m>\diff{f}{x}(x)</m>
+(see Definition \eref{CLP100}{def:DIFFderivFunc} in the CLP-1 text),
+it is common to treat the partial derivatives of <m>f(x,y)</m> as functions
+of <m>(x,y)</m> simply by evaluating the partial derivatives at <m>(x,y)</m> rather
+than at <m>(a,b)</m>.
+</p>
+
+<definition xml:id="def_partials"><title>Partial Derivatives</title>
+<statement><p>
+The <m>x</m>- and <m>y</m>-partial derivatives of the function <m>f(x,y)</m>
+are
+<md>
+<mrow>
+\pdiff{f}{x}(x,y)
+  &amp;= \lim_{h\rightarrow 0}\frac{f(x+h,y) - f(x,y)}{h}
+</mrow>
+<mrow>
+\pdiff{f}{y}(x,y)
+  &amp;= \lim_{h\rightarrow 0}\frac{f(x,y+h) - f(x,y)}{h}
+</mrow>
+</md>
+respectively. The partial derivatives of functions of more than two variables
+are defined analogously.
+</p></statement>
+</definition>
+
+
+<p>Partial derivatives are used a lot. And there many notations for them.</p>
+
+<definition xml:id="notn_partial">
+<statement><p>
+The partial derivative <m>\pdiff{f}{x}(x,y)</m> of a function <m>f(x,y)</m> is also denoted
+<me>
+\pdiff{f}{x}\qquad
+f_x(x,y)\qquad
+f_x\qquad
+D_xf(x,y)\qquad
+D_xf\qquad
+D_1 f(x,y)\qquad
+D_1 f
+</me>
+The subscript <m>1</m> on <m>D_1 f</m> indicates that <m>f</m> is being differentiated with respect to its first variable.
+The partial derivative <m>\pdiff{f}{x}(a,b)</m> is also denoted
+<me>
+\pdiff{f}{x}\bigg|_{(a,b)}
+</me>
+with the subscript <m>(a,b)</m> indicating that <m>\pdiff{f}{x}</m> is being evaluated
+at <m>(x,y)=(a,b)</m>.
+</p>
+
+<p>
+The notation <m>{\left(\pdiff{f}{x}\right)}_{\!y}</m> is used to make explicit
+that the variable <m>y</m> is being held.
+<fn>
+  There are applications in which there are several variables that cannot be varied independently. For example, the pressure, volume and temperature of an ideal gas are related by the equation of state <m>PV= \text{(constant)} T</m>. In those applications, it may not be clear from the context which variables are being held fixed.</fn>
+</p>
+</statement>
+</definition>
+
+
+<remark xml:id="rem_geom_interp"><title>The Geometric Interpretation of Partial Derivatives</title>
+<p>
+We'll now develop a geometric interpretation of the partial derivative
+<me>
+\pdiff{f}{x}(a,b)  = \lim_{h\rightarrow 0}\frac{f(a+h,b) - f(a,b)}{h}
+</me>
+in terms of the shape of the graph <m>z=f(x,y)</m> of the function <m>f(x,y)</m>.
+That graph appears in the figure below. It looks like the part of
+a deformed sphere that is in the first octant.
+</p>
+
+<p>The definition of <m>\pdiff{f}{x}(a,b)</m> concerns
+only points on the graph that have <m>y=b</m>.
+In other words, the curve of intersection of the
+surface <m>z=f(x,y)</m> with the plane <m>y=b</m>. That is the red curve in the figure.
+The two blue vertical line segments in the figure have heights <m>f(a,b)</m> and
+<m>f(a+h,b)</m>, which are the two numbers in the numerator
+of <m>\frac{f(a+h,b) - f(a,b)}{h}</m>.
+</p>
+
+<sidebyside>
+<image source="figs/xderiv"/>
+</sidebyside>
+
+<p>
+A side view of the curve (looking from the left side of the <m>y</m>-axis)
+is sketched in the figure below.
+</p>
+
+<sidebyside>
+<image source="figs/xderivSide"/>
+</sidebyside>
+
+<p>
+  Again, the two blue vertical line segments
+in the figure have heights <m>f(a,b)</m> and <m>f(a+h,b)</m>, which are the two
+numbers in the numerator of <m>\frac{f(a+h,b) - f(a,b)}{h}</m>. So
+the numerator <m>f(a+h,b) - f(a,b)</m> and denominator <m>h</m> are the rise and run,
+respectively, of the curve <m>z=f(x,b)</m> from <m>x=a</m> to <m>x=a+h</m>. Thus
+<m>\pdiff{f}{x}(a,b)</m> is exactly
+<em>the slope of (the tangent to) the curve of intersection of the surface
+<m>z=f(x,y)</m> and the plane <m>y=b</m> at the point <m>\big(a,b, f(a,b)\big)</m>.</em>
+In the same way
+<m>\pdiff{f}{y}(a,b)</m> is exactly
+<em>the slope of (the tangent to) the curve of intersection of the surface
+<m>z=f(x,y)</m> and the plane <m>x=a</m> at the point <m>\big(a,b, f(a,b)\big)</m>.</em>
+</p>
+</remark>
+
+
+</introduction>
+<subsection xml:id="sec_eval_partials">
+  <title>Evaluation of Partial Derivatives</title>
+
+<p>
+From the above discussion, we see that we can readily compute partial
+derivatives <m>\pdiff{}{x}</m> by using what we already know about ordinary
+derivatives <m>\diff{}{x}</m>. More precisely,
+<ul>
+<li>
+to evaluate <m>\pdiff{f}{x}(x,y)</m>, treat the <m>y</m> in <m>f(x,y)</m> as a constant
+and differentiate the resulting function of <m>x</m> with respect to <m>x</m>.
+</li>
+<li>
+To evaluate <m>\pdiff{f}{y}(x,y)</m>, treat the <m>x</m> in <m>f(x,y)</m> as a constant
+and differentiate the resulting function of <m>y</m> with respect to <m>y</m>.
+</li>
+<li>
+To evaluate <m>\pdiff{f}{x}(a,b)</m>, treat the <m>y</m> in <m>f(x,y)</m> as a constant
+and differentiate the resulting function of <m>x</m> with respect to <m>x</m>.
+Then evaluate the result at <m>x=a</m>, <m>y=b</m>.
+</li>
+<li>
+To evaluate <m>\pdiff{f}{y}(a,b)</m>, treat the <m>x</m> in <m>f(x,y)</m> as a constant
+and differentiate the resulting function of <m>y</m> with respect to <m>y</m>.
+Then evaluate the result at <m>x=a</m>, <m>y=b</m>.
+</li>
+</ul>
+Now for some examples.
+</p>
+
+<example xml:id="eg_partials_A">
+<p>
+Let
+<me>
+f(x,y) = x^3+y^2+ 4xy^2
+</me>
+Then, since <m>\pdiff{}{x}</m> treats <m>y</m> as a constant,
+<md>
+<mrow>
+\pdiff{f}{x}
+&amp;= \pdiff{}{x}(x^3) + \pdiff{}{x}(y^2) +\pdiff{}{x}(4xy^2)
+</mrow><mrow>
+&amp;= 3x^2+0 + 4y^2\pdiff{}{x}(x)
+</mrow><mrow>
+&amp;= 3x^2 +4y^2
+</mrow>
+</md>
+and, since <m>\pdiff{}{y}</m> treats <m>x</m> as a constant,
+<md>
+<mrow>
+\pdiff{f}{y}
+&amp;= \pdiff{}{y}(x^3) + \pdiff{}{y}(y^2) +\pdiff{}{y}(4xy^2)
+</mrow><mrow>
+&amp;= 0 + 2y + 4x\pdiff{}{y}(y^2)
+</mrow><mrow>
+&amp;= 2y+8xy
+</mrow>
+</md>
+In particular, at <m>(x,y)=(1,0)</m> these partial derivatives take the values
+<md alignment="alignat">
+<mrow>
+\pdiff{f}{x}(1,0) &amp;= 3(1)^2 +4(0)^2&amp;=3
+</mrow><mrow>
+\pdiff{f}{y}(1,0) &amp;= 2(0) +8(1)(0)\ &amp;=0
+</mrow>
+</md>
+</p></example>
+
+
+<example xml:id="eg_partials_B">
+<p>
+Let
+<me>
+f(x,y) = y\cos x + xe^{xy}
+</me>
+Then, since <m>\pdiff{}{x}</m> treats <m>y</m> as a constant,
+<m>\pdiff{}{x} e^{yx}=y e^{yx}</m> and
+<md>
+<mrow>
+\pdiff{f}{x}(x,y) &amp;= y\pdiff{}{x}(\cos x) + e^{xy}\pdiff{}{x}(x)
+                         +x\pdiff{}{x}\big(e^{xy}\big)
+                         \qquad\text{(by the product rule)}
+</mrow><mrow>
+                  &amp;= -y\sin x + e^{xy} +xye^{xy}
+                  </mrow><mrow>
+\pdiff{f}{y}(x,y) &amp;= \cos x\pdiff{}{y}(y) + x\pdiff{}{y}\big(e^{xy}\big)
+</mrow><mrow>
+                  &amp;= \cos x + x^2e^{xy}
+</mrow>
+</md>
+</p>
+</example>
+
+<p>
+Let's move up to a function of four variables. Things generalize
+in a quite straight forward way.
+</p>
+<example xml:id="eg_partials_C">
+<p>
+Let
+<me>
+f(x,y,z,t) = x\sin(y+2z) +t^2e^{3y}\ln z
+</me>
+Then
+<md>
+<mrow>
+\pdiff{f}{x}(x,y,z,t) &amp;= \sin(y+2z)
+</mrow><mrow>
+\pdiff{f}{y}(x,y,z,t) &amp;= x\cos(y+2z) +3t^2e^{3y}\ln z
+</mrow><mrow>
+\pdiff{f}{z}(x,y,z,t) &amp;= 2x\cos(y+2z) +t^2e^{3y}/z
+</mrow><mrow>
+\pdiff{f}{t}(x,y,z,t) &amp;= 2te^{3y}\ln z
+</mrow>
+</md>
+</p>
+</example>
+
+<p>
+Now here is a more complicated example <mdash/> our function takes a special
+value at <m>(0,0)</m>. To compute derivatives there we have to revert to
+the definition.
+</p>
+
+<example xml:id="eg_partials_D">
+<p>
+Set
+<me>
+f(x,y)=\begin{cases}
+             \frac{\cos x-\cos y}{x-y}&amp;\text{if } x\ne y \\
+                    0&amp;\text{if } x=y
+        \end{cases}
+</me>
+If <m>b\ne a</m>, then for all <m>(x,y)</m> sufficiently close to <m>(a,b)</m>,
+<m>f(x,y) = \frac{\cos x-\cos y}{x-y}</m> and we can compute the
+partial derivatives of <m>f</m> at <m>(a,b)</m> using the familiar rules of
+differentiation. However that is not the case for <m>(a,b)=(0,0)</m>.
+To evaluate <m>f_x(0,0)</m>, we need to set <m>y=0</m> and find the derivative of
+<me>
+f(x,0) = \begin{cases}
+             \frac{\cos x-1}{x}&amp;\text{if } x\ne 0 \
+                    0&amp;\text{if } x=0
+        \end{cases}
+</me>
+with respect to <m>x</m> at <m>x=0</m>. To do so, we basically have to apply the
+definition
+<md>
+<mrow>
+f_x(0,0) &amp;= \lim_{h\rightarrow 0}\frac{f(h,0)-f(0,0)}{h}
+</mrow><mrow>
+         &amp;= \lim_{h\rightarrow 0}\frac{\frac{\cos h-1}{h}-0}{h}
+         &amp;\qquad\text{(Recall that $h\ne 0$ in the limit.)}
+</mrow><mrow>
+         &amp;= \lim_{h\rightarrow 0}\frac{\cos h-1}{h^2}
+</mrow><mrow>
+         &amp;= \lim_{h\rightarrow 0}\frac{-\sin h}{2h}
+         &amp;\qquad\text{(By l'H\^opital's rule.)}
+</mrow><mrow>
+         &amp;= \lim_{h\rightarrow 0}\frac{-\cos h}{2}
+         &amp;\qquad\text{(By l'H\^opital again.)}
+</mrow><mrow>
+         &amp;=-\frac{1}{2}
+</mrow>
+</md>
+We could also evaluate the limit of <m>\frac{\cos h-1}{h^2} </m>
+by substituting in the Taylor expansion
+<me>
+\cos h = 1 -\frac{h^2}{2}+\frac{h^4}{4!} -\cdots
+</me>
+</p>
+
+</example>
+
+<example xml:id="eg_partials_DD">
+<p>
+Again set
+<me>
+f(x,y)=\begin{cases}
+             \frac{\cos x-\cos y}{x-y}&amp;\text{if } x\ne y \\
+                    0&amp;\text{if } x=y
+        \end{cases}
+</me>
+We'll now compute <m>f_y(x,y)</m> for all <m>(x,y)</m>.
+</p>
+
+<p> <em>The case <m>y\ne x</m>:</em>
+When <m>y\ne x</m>,
+<md>
+<mrow>
+f_y(x,y) &amp; = \pdiff{}{y}\frac{\cos x-\cos y}{x-y}
+</mrow><mrow>
+         &amp;=\frac{(x-y)\pdiff{}{y}(\cos x-\cos y)
+                  - (\cos x-\cos y)\pdiff{}{y}(x-y) }{(x-y)^2}
+       \quad\text{by the quotient rule}
+</mrow><mrow>
+         &amp;=\frac{(x-y)\sin y
+                  + \cos x-\cos y }{(x-y)^2}
+</mrow>
+</md>
+</p>
+
+<p><em>The case <m>y= x</m>:</em>
+When <m>y = x</m>,
+<md>
+<mrow>
+f_y(x,y) &amp;= \lim_{h\rightarrow 0}\frac{f(x,y+h)-f(x,y)}{h}
+          = \lim_{h\rightarrow 0}\frac{f(x,x+h)-f(x,x)}{h}
+          \hidewidth
+</mrow><mrow>
+         &amp;= \lim_{h\rightarrow 0}\frac{\frac{\cos x-\cos(x+h)}{x-(x+h)}-0}{h}
+         &amp;\qquad\text{(Recall that $h\ne 0$ in the limit.)}
+</mrow><mrow>
+         &amp;= \lim_{h\rightarrow 0}\frac{\cos(x+h)-\cos x}{h^2}
+</mrow>
+</md>
+Now we apply L'Hôpital's rule twice, remembering that, in this limit,
+<m>x</m> is a constant and <m>h</m> is the variable <mdash/> so we differentiate with respect to <m>h</m>.
+<md>
+<mrow>
+f_y(x,y)  &amp;= \lim_{h\rightarrow 0}\frac{-\sin(x+h)}{2h}
+</mrow><mrow>
+         &amp;= \lim_{h\rightarrow 0}\frac{-\cos(x+h)}{2}
+</mrow><mrow>
+         &amp;=-\frac{\cos x}{2}
+</mrow>
+</md>
+</p>
+
+<p><em>The conclusion:</em>
+<me>
+f_y(x,y)=\begin{cases}
+             \frac{(x-y)\sin y
+                  + \cos x-\cos y }{(x-y)^2}&amp;\text{if } x\ne y \\
+                    -\frac{\cos x}{2}&amp;\text{if } x=y
+        \end{cases}
+</me>
+</p>
+</example>
+
+<example xml:id="eg_partials_DDD"><title>Optional <mdash/> A Little Weirdness</title>
+<p>
+In this example, we will see that the function
+<me>
+f(x,y)=\begin{cases}
+             \frac{x^2}{x-y}&amp;\text{if } x\ne y \\
+                    0&amp;\text{if } x=y
+        \end{cases}
+</me>
+is <em>not</em> continuous at <m>(0,0)</m> and yet has both partial derivatives
+<m>f_x(0,0)</m> and <m>f_y(0,0)</m> perfectly well defined. We'll also see how that is possible. First let's compute the partial derivatives. By definition,
+<md>
+<mrow>
+f_x(0,0)&amp;=\lim_{h\rightarrow 0}\frac{f(0+h,0)-f(0,0)}{h}
+         =\lim_{h\rightarrow 0}\frac{\overbrace{\tfrac{h^2}{h-0}}^{h}-\,0}{h}
+         =\lim_{h\rightarrow 0}1
+</mrow><mrow>
+         &amp;=1
+</mrow><mrow>
+f_y(0,0)&amp;=\lim_{h\rightarrow 0}\frac{f(0,0+h)-f(0,0)}{h}
+         =\lim_{h\rightarrow 0}\frac{\frac{0^2}{0-h}-0}{h}
+         =\lim_{h\rightarrow 0}0
+</mrow><mrow>
+         &amp;=0
+</mrow>
+</md>
+So the first order partial derivatives <m>f_x(0,0)</m> and <m>f_y(0,0)</m> are perfectly well defined.
+</p>
+
+<p>To see that, nonetheless, <m>f(x,y)</m> is not continuous at <m>(0,0)</m>, we take the limit of <m>f(x,y)</m> as <m>(x,y)</m> approaches <m>(0,0)</m> along the curve <m>y=x-x^3</m>.
+The limit is
+<md>
+<mrow>
+\lim_{x\rightarrow 0} f\big(x,x-x^3\big)
+=\lim_{x\rightarrow 0} \frac{x^2}{x-(x-x^3)}
+=\lim_{x\rightarrow 0} \frac{1}{x}
+</mrow>
+</md>
+which does not exist. Indeed as <m>x</m> approoaches <m>0</m> through positive numbers,
+<m>\frac{1}{x}</m> approaches <m>+\infty</m>, and as <m>x</m> approoaches <m>0</m> through negative
+numbers, <m>\frac{1}{x}</m> approaches <m>-\infty</m>.
+</p>
+
+<p>So how is this possible? The answer is that <m>f_x(0,0)</m> only involves values of <m>f(x,y)</m> with <m>y=0</m>. As <m>f(x,0)=x</m>, for all values of <m>x</m>, we have that
+<m>f(x,0)</m> is a continuous, and indeed a differentiable, function. Similarly,
+<m>f_y(0,0)</m> only involves values of <m>f(x,y)</m> with <m>x=0</m>. As <m>f(0,y)=0</m>, for all values of <m>y</m>, we have that <m>f(0,y)</m> is a continuous, and indeed a
+differentiable, function. On the other hand, the bad behaviour of <m>f(x,y)</m> for <m>(x,y)</m> near
+<m>(0,0)</m> only happens for <m>x</m> and <m>y</m> both nonzero.
+</p>
+
+</example>
+
+<p>
+  Our next example uses implicit differentiation.
+</p>
+
+<example xml:id="eg_partials_E">
+<p>
+The equation
+<me>
+z^5 + y^2 e^z +e^{2x}=0
+</me>
+implicitly determines <m>z</m> as a function of <m>x</m> and <m>y</m>.
+That is, the function <m>z(x,y)</m> obeys
+<me>
+z(x,y)^5 + y^2 e^{z(x,y)} +e^{2x}=0
+</me>
+For example, when <m>x=y=0</m>, the equation reduces to
+<me>
+z(0,0)^5=-1
+</me>
+which forces
+<fn>The only real number <m>z</m> which obeys <m>z^5=-1</m>
+is <m>z=-1</m>. However there are four other complex numbers which also obey
+<m>z^5=-1</m>.</fn>
+ <m>z(0,0)=-1</m>. Let's find the partial derivative <m>\pdiff{z}{x}(0,0)</m>.
+</p>
+
+<p>We are not going to be able to explicitly solve the equation for <m>z(x,y)</m>.
+All we know is that
+<me>
+z(x,y)^5 + y^2 e^{z(x,y)} + e^{2x} =0
+</me>
+for all <m>x</m> and <m>y</m>. We can turn this into an equation for <m>\pdiff{z}{x}(0,0)</m>
+by differentiating
+<fn>You should have already seen this technique,
+called implicit differentiation, in your first Calculus course. It is covered
+in Section 2.11 in the CLP-1 text.</fn>
+ the whole equation with respect to <m>x</m>,
+giving
+<me>
+5z(x,y)^4\ \pdiff{z}{x}(x,y) + y^2 e^{z(x,y)}\ \pdiff{z}{x}(x,y) +2e^{2x}  =0
+</me>
+and then setting <m>x=y=0</m>, giving
+<me>
+5z(0,0)^4\ \pdiff{z}{x}(0,0) +2  =0
+</me>
+As we already know that <m>z(0,0)=-1</m>,
+<me>
+\pdiff{z}{x}(0,0) = -\frac{2}{5z(0,0)^4} =-\frac{2}{5}
+</me>
+</p>
+</example>
+
+<p>
+Next we have a partial derivative disguised as a limit.
+</p>
+
+<example xml:id="eg_partials_F">
+<p>
+In this example we are going to evaluate the limit
+<me>
+\lim_{z\rightarrow 0}\frac{(x+y+z)^3-(x+y)^3}{(x+y)z}
+</me>
+The critical observation is that, in taking the limit <m>z\rightarrow 0</m>,
+<m>x</m> and <m>y</m> are fixed. They do not change as <m>z</m> is getting smaller and
+smaller. Furthermore this limit is exactly of the form of the limits
+in the Definition <xref ref="def_partials"/> of partial derivative, disguised by some
+obfuscating changes of notation.
+</p>
+
+<p>Set
+<me>
+f(x,y,z) = \frac{(x+y+z)^3}{(x+y)}
+</me>
+Then
+<md>
+<mrow>
+\lim_{z\rightarrow 0}\frac{(x+y+z)^3-(x+y)^3}{(x+y)z}
+&amp;=\lim_{z\rightarrow 0}\frac{f(x,y,z)-f(x,y,0)}{z}
+=\lim_{h\rightarrow 0}\frac{f(x,y,0+h)-f(x,y,0)}{h}
+</mrow><mrow>
+&amp;=\pdiff{f}{z}(x,y,0)
+</mrow><mrow>
+&amp;={\left[\pdiff{}{z}\frac{(x+y+z)^3}{x+y}\right]}_{z=0}
+</mrow>
+</md>
+Recalling that <m>\pdiff{}{z}</m> treats <m>x</m> and <m>y</m> as constants,
+we are evaluating the derivative of a function of the form
+<m>\frac{({\rm const}+z)^3}{\rm const}</m>. So
+<md>
+<mrow>
+\lim_{z\rightarrow 0}\frac{(x+y+z)^3-(x+y)^3}{(x+y)z}
+&amp;={\left.3\frac{(x+y+z)^2}{x+y}\right|}_{z=0}
+</mrow><mrow>
+&amp;=3(x+y)
+</mrow>
+</md>
+</p>
+
+</example>
+
+
+<p>The next example highlights a potentially dangerous difference between
+ordinary and partial derivatives.
+</p>
+
+<example xml:id="eg_partials_G">
+<p>
+In this example we are going to see that, in contrast to the ordinary
+derivative case, <m>\pdiff{r}{x}</m> is not, in general, the same as
+<m>\big(\pdiff{x}{r}\big)^{-1}</m>.
+</p>
+
+<p>
+  Recall that Cartesian and polar coordinates (for <m>(x,y)\ne (0,0)</m> and <m>r \gt 0</m>)
+are related by
+</p>
+<sidebyside width="40%">
+<p>
+<md>
+<mrow>
+x&amp;=r\cos\theta
+</mrow><mrow>
+y&amp;=r\sin\theta
+</mrow><mrow>
+r&amp;=\sqrt{x^2+y^2}
+</mrow><mrow>
+\tan\theta&amp;=\frac{y}{x}
+</mrow>
+</md>
+</p>
+<image source="figs/polar"/>
+</sidebyside>
+
+<p>
+We will use the functions
+<me>
+x(r,\theta) = r\cos\theta\qquad
+\text{and}\qquad
+r(x,y) = \sqrt{x^2+y^2}
+</me>
+Fix any point <m>(x_0,y_0)\ne (0,0)</m> and let
+<m>(r_0,\theta_0)</m>, <m>0\le\theta_0 \lt 2\pi</m>, be the corresponding polar coordinates.
+Then
+<md>
+<mrow>
+\pdiff{x}{r}(r,\theta) = \cos\theta\qquad
+\pdiff{r}{x}(x,y) = \frac{x}{\sqrt{x^2+y^2}}
+</mrow>
+</md>
+so that
+<md>
+<mrow>
+\pdiff{x}{r}(r_0,\theta_0)=\left(\pdiff{r}{x}(x_0,y_0)\right)^{-1}
+&amp;\iff \cos\theta_0= \bigg(\frac{x_0}{\sqrt{x_0^2+y_0^2}}\bigg)^{-1}
+                  = \left(\cos\theta_0\right)^{-1}
+</mrow><mrow>
+&amp;\iff \cos^2\theta_0= 1
+</mrow><mrow>
+&amp;\iff \theta_0=0,\pi
+</mrow>
+</md>
+</p>
+
+<p>We can also see pictorially why this happens.
+By definition, the partial derivatives
+<md>
+<mrow>
+\pdiff{x}{r}(r_0,\theta_0)
+  &amp;= \lim_{\dee{r}\rightarrow 0}
+         \frac{x(r_0+\dee{r},\theta_0) - x(r_0,\theta_0)}{\dee{r}}
+</mrow><mrow>
+\pdiff{r}{x}(x_0,y_0)
+  &amp;= \lim_{\dee{x}\rightarrow 0}
+         \frac{r(x_0+\dee{x},y_0) - r(x_0,y_0)}{\dee{x}}
+</mrow>
+</md>
+Here we have just renamed the <m>h</m> of Definition <xref ref="def_partials"/>
+to <m>\dee{r}</m> and to <m>\dee{x}</m> in the two definitions.
+</p>
+
+<p>In computing <m>\pdiff{x}{r}(r_0,\theta_0)</m>, <m>\theta_0</m> is held
+fixed, <m>r</m> is changed by a small amount <m>\dee{r}</m> and the resulting
+<m>\dee{x}=x(r_0+\dee{r},\theta_0) - x(r_0,\theta_0)</m> is computed.
+In the figure on the left below, <m>\dee{r}</m> is the length of the orange
+line segment and <m>\dee{x}</m> is the length of the blue line segment.
+</p>
+
+<sidebyside>
+<image source="figs/dxdrdrdx1"/>
+<image source="figs/dxdrdrdx2"/>
+</sidebyside>
+
+<p>
+On the other hand, in computing <m>\pdiff{r}{x}</m>, <m>y</m> is held fixed,
+<m>x</m> is changed by a small amount <m>\dee{x}</m> and the resulting
+<m>\dee{r}=r(x_0+\dee{x},y_0) - r(x_0,y_0)</m>  is computed. In the figure on
+the right above, <m>\dee{x}</m> is the length of the pink line segment and
+<m>\dee{r}</m> is the length of the orange line segment.
+</p>
+
+<p>Here are the two figures combined together. We have arranged that the same
+<m>\dee{r}</m> is used in both computations. In order for the <m>\dee{r}</m>'s to
+be the same in both computations, the two <m>\dee{x}</m>'s have to be different
+(unless <m>\theta_0=0,\pi</m>). So, in general,
+<m>\pdiff{x}{r}(r_0,\theta_0)\ne \big(\pdiff{r}{x}(x_0,y_0)\big)^{-1}</m>.
+</p>
+
+<sidebyside>
+<image source="figs/dxdrdrdx3"/>
+</sidebyside>
+</example>
+
+
+<example xml:id="eg_partials_GG"><title>Optional <mdash/> Example <xref ref="eg_partials_G"/>, continued</title>
+<p>
+The inverse function theorem, for functions of one variable, says that,
+if <m>y(x)</m> and <m>x(y)</m> are inverse functions, meaning that <m>y\big(x(y)\big)=y</m>
+and <m>x\big(y(x)\big)=x</m>, and are differentiable with <m>\diff{y}{x}\ne 0</m>, then
+<me>
+\diff{x}{y}(y) = \frac{1}{\diff{y}{x}\big(x(y)\big)}
+</me>
+To see this, just apply <m>\diff{}{y}</m> to both sides of <m>y\big(x(y)\big)=y</m>
+to get <m>\diff{y}{x}\big(x(y)\big)\ \diff{x}{y}(y)=1</m>, by the chain rule
+(see Theorem \eref{CLP100}{thm:DIFFchainRuleV2} in the CLP-1 text).
+In the CLP-1 text, we used this to compute the derivatives of the logarithm
+(see Theorem \eref{CLP100}{thm diff log} in the CLP-1 text) and
+of the inverse trig functions (see Theorem \eref{CLP100}{thm:DIFFinvtrigderiv}
+in the CLP-1 text).
+</p>
+
+<p>We have just seen, in Example <xref ref="eg_partials_G"/>, that we can't be too naive in extending the single variable inverse function theorem to functions of two (or more) variables. On the other hand, there is such an extension, which we will now illustrate, using Cartesian and polar coordinates. For simplicity, we'll restrict our attention to <m>x \gt 0</m>, <m>y \gt 0</m>, or equivalently, <m>r \gt 0</m>, <m>0 \lt \theta \lt \frac{\pi}{2}</m>.
+The functions which convert between Cartesian and polar coordinates are
+</p>
+
+<sidebyside width="40%">
+<p>
+<md alignment="alignat">
+<mrow>
+x(r,\theta)&amp;=r\cos\theta\qquad&amp;
+                   r(x,y)&amp;=\sqrt{x^2+y^2}
+</mrow><mrow>
+y(r,\theta)&amp;=r\sin\theta&amp;
+                  \theta(x,y)&amp;=\arctan\left(\frac{y}{x}\right)
+</mrow>
+</md>
+</p>
+<image source="figs/polar"/>
+</sidebyside>
+
+<p>
+  The two functions on the left convert from polar to Cartesian coordinates and the two functions on the right convert from Cartesian to polar coordinates.
+The inverse function theorem (for functions of two variables) says that,
+<ul>
+<li>
+if you form the first order partial derivatives of the left hand functions
+into the matrix
+<me>
+\left[\begin{matrix}
+      \pdiff{x}{r}(r,\theta) &amp; \pdiff{x}{\theta}(r,\theta) \\
+      \pdiff{y}{r}(r,\theta) &amp; \pdiff{y}{\theta}(r,\theta)
+      \end{matrix}\right]
+=\left[\begin{matrix}
+      \cos\theta &amp; -r\sin\theta \\
+      \sin\theta &amp;  r\cos\theta
+      \end{matrix}\right]
+</me>
+</li>
+<li>
+and you form the first order partial derivatives of the right hand functions
+into the matrix
+<me>
+\left[\begin{matrix}
+      \pdiff{r}{x}(x,y) &amp; \pdiff{r}{y}(x,y) \\
+      \pdiff{\theta}{x}(x,y) &amp; \pdiff{\theta}{y}(x,y)
+      \end{matrix}\right]
+=\left[\begin{matrix}
+      \frac{x}{\sqrt{x^2+y^2}} &amp; \frac{y}{\sqrt{x^2+y^2}} \\
+      \frac{-\frac{y}{x^2}}{1+(\frac{y}{x})^2} &amp;
+                         \frac{\frac{1}{x}}{1+(\frac{y}{x})^2}
+      \end{matrix}\right]
+=\left[\begin{matrix}
+      \frac{x}{\sqrt{x^2+y^2}} &amp; \frac{y}{\sqrt{x^2+y^2}} \\
+      \frac{-y}{x^2+y^2} &amp;  \frac{x}{x^2+y^2}
+      \end{matrix}\right]
+</me>
+</li>
+<li>
+and if you evaluate the second matrix at <m>x=x(r,\theta)</m>, <m>y=y(r,\theta)</m>,
+<me>
+\left[\begin{matrix}
+      \pdiff{r}{x}\big(x(r,\theta),y(r,\theta)\big) &amp;
+                     \pdiff{r}{y}\big(x(r,\theta),y(r,\theta)\big) \\
+      \pdiff{\theta}{x}\big(x(r,\theta),y(r,\theta)\big) &amp;
+                      \pdiff{\theta}{y}\big(x(r,\theta),y(r,\theta)\big)
+      \end{matrix}\right]
+=\left[\begin{matrix}
+      \cos\theta &amp; \sin\theta \\
+      -\frac{\sin\theta}{r} &amp; \frac{\cos\theta}{r}
+      \end{matrix}\right]
+</me>
+</li>
+<li>
+and if you multiply
+<fn>Matrix multiplication is usually covered in courses on linear algebra, which you may or may not have taken. That's why this example is optional.</fn>
+ the two matrices together
+<md>
+<mrow>
+&amp;\left[\begin{matrix}
+      \pdiff{r}{x}(x,y) &amp; \pdiff{r}{y}(x,y) \\
+      \pdiff{\theta}{x}(x,y) &amp; \pdiff{\theta}{y}(x,y)
+      \end{matrix}\right]
+\left[\begin{matrix}
+      \pdiff{r}{x}\big(x(r,\theta),y(r,\theta)\big) &amp;
+                     \pdiff{r}{y}\big(x(r,\theta),y(r,\theta)\big) \\
+      \pdiff{\theta}{x}\big(x(r,\theta),y(r,\theta)\big) &amp;
+                      \pdiff{\theta}{y}\big(x(r,\theta),y(r,\theta)\big)
+      \end{matrix}\right]
+</mrow><mrow>
+&amp;=\left[\begin{matrix}
+      \cos\theta &amp; -r\sin\theta \\
+      \sin\theta &amp;  r\cos\theta
+      \end{matrix}\right]\
+\left[\begin{matrix}
+      \cos\theta &amp; \sin\theta \\
+      -\frac{\sin\theta}{r} &amp; \frac{\cos\theta}{r}
+      \end{matrix}\right]
+</mrow><mrow>
+&amp;=\left[\begin{matrix}
+      (\cos\theta)(\cos\theta) + (-r\sin\theta)(-\frac{\sin\theta}{r})
+            &amp;(\cos\theta)(\sin\theta)+(-r\sin\theta)(\frac{\cos\theta}{r})
+                                                              \\
+      (\sin\theta)(\cos\theta)+(r\cos\theta)(-\frac{\sin\theta}{r}) &amp;
+         (\sin\theta)(\sin\theta) + (r\cos\theta)(\frac{\cos\theta}{r})
+      \end{matrix}\right]
+</mrow>
+</md>
+</li>
+<li>
+then the result is the identity matrix
+<me>
+\left[\begin{matrix}
+      1 &amp; 0 \\
+      0 &amp; 1
+      \end{matrix}\right]
+</me>
+and indeed it is!
+</li>
+</ul>
+</p>
+
+</example>
+
+</subsection>
+
+</section>

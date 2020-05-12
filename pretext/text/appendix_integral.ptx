@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="app_integral">
+<title>Table of Integrals</title>
+
+<p>Throughout this table, <m>a</m> and <m>b</m> are given constants, independent of <m>x</m>
+and <m>C</m> is an arbitrary constant.
+</p>
+
+<sidebyside width="">
+<tabular left="minor" right="minor" bottom="minor" top="minor">
+<row>
+<cell><m>f(x)</m> </cell><cell> <m> F(x)=\int f(x)\ \dee{x}</m> </cell>
+</row><row>
+<cell><m>af(x)+bg(x)</m> </cell><cell> <m>a\int f(x)\ \dee{x}+b\int g(x)\ \dee{x}\ +\ C</m> </cell>
+</row><row>
+<cell><m>f(x)+g(x)</m> </cell><cell> <m>\int f(x)\ \dee{x}+\int g(x)\ \dee{x}\ +\ C</m> </cell>
+</row><row>
+<cell>
+<m>f(x)-g(x)</m> </cell><cell> <m>\int f(x)\ \dee{x}-\int g(x)\ \dee{x}\ +\ C</m> </cell>
+</row><row>
+<cell>
+<m>af(x)</m> </cell><cell> <m>a\int f(x)\ \dee{x}\ +\ C</m> </cell>
+</row><row>
+<cell><m>u(x)v'(x)</m> </cell><cell> <m> u(x)v(x)-\int u'(x)v(x)\ \dee{x}\ +\ C</m> </cell>
+</row><row>
+<cell><m>f\big(y(x)\big)y'(x)</m> </cell><cell> <m> F\big(y(x)\big)\hbox{ where }F(y)=\int f(y)\ \dee{y}</m> </cell>
+</row><row>
+<cell><m>a</m> </cell><cell> <m>ax+C</m> </cell>
+</row><row>
+<cell><m>x^a</m> </cell><cell> <m>\frac{x^{a+1}}{a+1}+C\hbox{ if }a\ne-1</m> </cell>
+</row><row>
+<cell>
+<m>\frac{1}{x}</m> </cell><cell> <m>\ln|x|+C</m> </cell>
+</row><row>
+<cell>
+<m>g(x)^ag'(x)</m> </cell><cell> <m>\frac{g(x)^{a+1}}{a+1}+C\hbox{ if }a\ne -1</m> </cell>
+</row>
+</tabular>
+</sidebyside>
+
+<sidebyside width="">
+<tabular left="minor" right="minor" bottom="minor" top="minor">
+<row>
+<cell><m>f(x)</m> </cell><cell> <m> F(x)=\int f(x)\ \dee{x}</m> </cell>
+</row><row>
+<cell><m>\sin x</m> </cell><cell> <m>-\cos x+C</m> </cell>
+</row><row>
+<cell>
+<m>g'(x)\sin g(x)</m> </cell><cell> <m>-\cos g(x)+C</m> </cell>
+</row><row>
+<cell>
+<m>\cos x</m> </cell><cell> <m>\sin x+C</m> </cell>
+</row><row>
+<cell>
+<m>\tan x</m> </cell><cell> <m>\ln|\sec x|+C</m> </cell>
+</row><row>
+<cell>
+<m>\csc x</m> </cell><cell> <m>\ln |\csc x-\cot x|+C</m> </cell>
+</row><row>
+<cell>
+<m>\sec x</m> </cell><cell> <m>\ln |\sec x+\tan x|+C</m> </cell>
+</row><row>
+<cell>
+<m>\cot x</m> </cell><cell> <m>\ln|\sin x|+C</m> </cell>
+</row><row>
+<cell>
+<m>\sec^2 x</m> </cell><cell> <m>\tan x+C</m> </cell>
+</row><row>
+<cell>
+<m>\csc^2 x</m> </cell><cell> <m>-\cot x+C</m> </cell>
+</row><row>
+<cell>
+<m>\sec x\tan x</m> </cell><cell> <m>\sec x+C</m> </cell>
+</row><row>
+<cell>
+<m>\csc x\cot x</m> </cell><cell> <m>-\csc x+C</m> </cell>
+</row>
+</tabular>
+</sidebyside>
+
+
+<sidebyside width="">
+<tabular left="minor" right="minor" bottom="minor" top="minor">
+<row>
+<cell>  <m>f(x)</m> </cell><cell> <m> F(x)=\int f(x)\ \dee{x}</m> </cell>
+</row><row>
+<cell> <m>e^x</m> </cell><cell> <m>e^x+C</m> </cell>
+</row><row>
+<cell>
+<m>e^{g(x)}g'(x)</m> </cell><cell> <m>e^{g(x)}+C</m> </cell>
+</row><row>
+<cell>
+<m>e^{ax}</m> </cell><cell> <m>\frac{1}{a}\ e^{ax}+C</m> </cell>
+</row><row>
+<cell>
+<m>a^x</m> </cell><cell> <m>\frac{1}{\ln a}\ a^x+C</m> </cell>
+</row><row>
+<cell> <m>\ln x</m> </cell><cell> <m>x\ln x -x+C</m> </cell>
+</row><row>
+<cell><m>\frac{1}{\sqrt{1-x^2}}</m> </cell><cell> <m>\arcsin x+C</m> </cell>
+</row><row>
+<cell>
+<m>\frac{g'(x)}{\sqrt{1-g(x)^2}}</m> </cell><cell> <m>\arcsin g(x)+C</m> </cell>
+</row><row>
+<cell>
+<m>\frac{1}{\sqrt{a^2-x^2}}</m> </cell><cell> <m>\arcsin \frac{x}{a}+C</m> </cell>
+</row><row>
+<cell>
+<m>\frac{1}{1+x^2}</m> </cell><cell> <m>\arctan x+C</m> </cell>
+</row><row>
+<cell>
+<m>\frac{g'(x)}{1+g(x)^2}</m> </cell><cell> <m>\arctan g(x)+C</m> </cell>
+</row><row>
+<cell>
+<m>\frac{1}{a^2+x^2}</m> </cell><cell> <m>\frac{1}{a}\arctan \frac{x}{a}+C</m> </cell>
+</row><row>
+<cell>
+<m>\frac{1}{x\sqrt{x^2-1}}</m> </cell><cell> <m>\arcsec x+C</m> \quad(<m>x \gt 1</m>)</cell>
+</row>
+</tabular>
+</sidebyside>
+</section>

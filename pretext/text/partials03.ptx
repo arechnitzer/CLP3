@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_higher_order">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title>Higher Order Derivatives</title>
+
+<introduction>
+<p>You have already observed, in your first Calculus course,
+that if <m>f(x)</m> is a function of <m>x</m>, then its derivative, <m>\diff{f}{x}(x)</m>,
+is also a function of <m>x</m>, and can be differentiated to give the
+second order derivative <m>\difftwo{f}{x}(x)</m>, which can in turn
+be differentiated yet again to give the third order derivative,
+<m>f^{(3)}(x)</m>, and so on.
+</p>
+
+<p>We can do the same for functions of more than one variable.
+If <m>f(x,y)</m> is a function of <m>x</m> and <m>y</m>, then both of its partial
+derivatives, <m>\pdiff{f}{x}(x,y)</m> and <m>\pdiff{f}{y}(x,y)</m>
+are also functions of <m>x</m> and <m>y</m>. They can both be differentiated with
+respect to <m>x</m> and they can both be differentiated with respect to <m>y</m>. So
+there are four possible second order derivatives. Here they are, together
+with various alternate notations.
+<md alignment="alignat">
+<mrow>
+\pdiff{}{x}\left(\pdiff{f}{x}\right)(x,y)
+   &amp;=\frac{\partial^2 f}{\partial x^2}(x,y) &amp;= f_{xx}(x,y)
+</mrow><mrow>
+\pdiff{}{y}\left(\pdiff{f}{x}\right)(x,y)
+   &amp;=\frac{\partial^2\ f}{\partial y\partial x}(x,y) &amp;= f_{xy}(x,y)
+</mrow><mrow>
+\pdiff{}{x}\left(\pdiff{f}{y}\right)(x,y)
+   &amp;=\frac{\partial^2\ f}{\partial x\partial y}(x,y) &amp;= f_{yx}(x,y)
+</mrow><mrow>
+\pdiff{}{y}\left(\pdiff{f}{y}\right)(x,y)
+   &amp;=\frac{\partial^2 f}{\partial y^2}(x,y) &amp;= f_{yy}(x,y)
+</mrow>
+</md>
+In <m>\frac{\partial^2\ f}{\partial y\,\partial x}
+=\frac{\partial^2}{\partial y\,\partial x}f</m>, the derivative closest
+to <m>f</m>, in this case <m>\pdiff{}{x}</m>, is applied first.
+</p>
+<p>
+In <m>f_{xy}</m>, the derivative with respect to the variable closest
+to <m>f</m>, in this case <m>x</m>, is applied first.
+</p>
+
+<example xml:id="eg_higher_order_A">
+<p>
+Let <m>f(x,y) = e^{my}\cos(nx)</m>. Then
+<md>
+<mrow>
+f_x &amp;=  -n e^{my}\sin(nx) &amp;
+f_y &amp;=   m e^{my}\cos(nx)
+</mrow><mrow>
+f_{xx}  &amp;=   -n^2 e^{my}\cos(nx) &amp;
+f_{yx} &amp;=   -m n e^{my}\sin(nx)
+</mrow><mrow>
+f_{xy}  &amp;=   -m n e^{my}\sin(nx) &amp;
+f_{yy} &amp;=   m^2 e^{my}\cos(nx)
+</mrow>
+</md>
+</p></example>
+
+
+<example xml:id="eg_higher_order_B">
+<p>
+Let <m>f(x,y) = e^{\al x+\be y}</m>. Then
+<md>
+<mrow>
+f_x &amp;=  \al e^{\al x+\be y} &amp;
+f_y &amp;=  \be e^{\al x+\be y}
+</mrow><mrow>
+f_{xx}  &amp;= \al^2  e^{\al x+\be y} &amp;
+f_{yx} &amp;=   \be \al e^{\al x+\be y}
+</mrow><mrow>
+f_{xy}  &amp;=  \al \be  e^{\al x+\be y} &amp;
+f_{yy} &amp;=  \be^2 e^{\al x+\be y}
+</mrow>
+</md>
+More generally, for any integers <m>m,n\ge 0</m>,
+<me>
+\frac{\partial^{m+n} f}{\partial x^m\, \partial y^n}
+     = \al^m\be^n e^{\al x+\be y}
+</me>
+</p></example>
+
+<example xml:id="eg_higher_order_C">
+<p>
+If <m>f(x_1,x_2,x_3,x_4) = x_1^4\, x_2^3\, x_3^2\, x_4</m>, then
+<md>
+<mrow>
+\frac{\partial^4\  f}
+          {\partial x_1\, \partial x_2\,\partial x_3\,\partial x_4}
+   &amp;=  \frac{\partial^3 \ }
+          {\partial x_1\, \partial x_2\,\partial x_3}
+                         \left( x_1^4\, x_2^3\, x_3^2\right)
+</mrow><mrow>
+   &amp;=  \frac{\partial^2 \ }
+          {\partial x_1\, \partial x_2}
+                         \left( 2\ x_1^4\, x_2^3\, x_3\right)
+</mrow><mrow>
+   &amp;=  \pdiff{}{x_1}
+                         \left( 6\ x_1^4\, x_2^2\, x_3\right)
+</mrow><mrow>
+   &amp;=   24\ x_1^3\, x_2^2\, x_3
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\frac{\partial^4\ f}
+          {\partial x_4\, \partial x_3\,\partial x_2\,\partial x_1}
+   &amp;=  \frac{\partial^3 \ }
+          {\partial x_4\, \partial x_3\,\partial x_2}
+                         \left( 4 x_1^3\, x_2^3\, x_3^2\,x_4\right)
+</mrow><mrow>
+   &amp;=  \frac{\partial^2 \ }
+          {\partial x_4\, \partial x_3}
+                         \left( 12\ x_1^3\, x_2^2\, x_3^2\,x_4\right)
+</mrow><mrow>
+   &amp;=  \pdiff{}{x_4}
+                         \left( 24\ x_1^3\, x_2^2\, x_3\,x_4\right)
+</mrow><mrow>
+   &amp;=   24\ x_1^3\, x_2^2\, x_3
+</mrow>
+</md>
+</p></example>
+
+<p>
+Notice that in Example <xref ref="eg_higher_order_A"/>,
+<me>
+f_{xy}= f_{yx} = -m n e^{my}\sin(nx)
+</me>
+and in Example <xref ref="eg_higher_order_B"/>
+<me>
+f_{xy}= f_{yx} = \al \be  e^{\al x+\be y}
+</me>
+and in Example <xref ref="eg_higher_order_C"/>
+<me>
+\frac{\partial^4\  f}
+          {\partial x_1\, \partial x_2\,\partial x_3\,\partial x_4}
+= \frac{\partial^4\ f}
+          {\partial x_4\, \partial x_3\,\partial x_2\,\partial x_1}
+= 24\ x_1^3\, x_2^2\, x_3
+</me>
+In all of these examples, it didn't matter what order we took the derivatives
+in. The following theorem
+<fn>The history of this important theorem is pretty convoluted. See
+<q>A note on the history of mixed partial derivatives</q>
+by Thomas James Higgins which was published in Scripta Mathematica <alert>7</alert> (1940), 59-62.
+The Theorem is named for Alexis Clairaut (1713--1765), a French mathematician, astronomer, and geophysicist, and Hermann Schwarz (1843--1921), a German mathematician.
+ </fn>
+ shows that this was no accident.
+</p>
+
+<theorem xml:id="thm_mixed_partials"> <title>Clairaut's Theorem or Schwarz's Theorem
+</title>
+<statement><p>
+If the partial derivatives
+<m>\frac{\partial^2  f }{\partial x\partial y}</m> and
+<m>\frac{\partial^2 f}{\partial y\partial x}</m> exist
+and are continuous at <m>(x_0,y_0)</m>, then
+<me>
+\frac{\partial^2 f}{\partial x\partial y}(x_0,y_0)
+=\frac{\partial^2 f}{\partial y\partial x}(x_0,y_0)
+</me>
+</p></statement>
+</theorem>
+
+
+</introduction>
+
+<subsection xml:id="subsec_mixed_partial_proof">
+  <title>Optional <mdash/> The Proof of Theorem <xref ref="thm_mixed_partials"/></title>
+<subsubsection>
+  <title>Outline</title>
+
+<p>
+Here is an outline of the proof of Theorem <xref ref="thm_mixed_partials"/>.
+The (numbered) details are in the subsection below.
+Fix real numbers <m>x_0</m> and <m>y_0</m> and define
+<me>
+F(h,k)
+=\frac{1}{hk}\big[f(x_0+h,y_0+k)-f(x_0,y_0+k)-f(x_0+h,y_0)+f(x_0,y_0)\big]
+</me>
+We define <m>F(h,k)</m> in this way because both partial derivatives
+<m>\frac{\partial^2 f}{\partial x\partial y}(x_0,y_0)</m> and
+<m>\frac{\partial^2 f}{\partial y\partial x}(x_0,y_0)</m> are
+limits of <m>F(h,k)</m> as <m>h,k\rightarrow 0</m>. Precisely, we show in item (1)
+in the details below that
+<md>
+<mrow>
+\pdiff{}{y}
+\pdiff{f}{x}(x_0,y_0)
+     &amp;= \lim_{k\rightarrow 0}\lim_{h\rightarrow 0}F(h,k)
+</mrow><mrow>
+\pdiff{}{x}
+\pdiff{f}{y}(x_0,y_0)
+&amp;= \lim_{h\rightarrow 0}\lim_{k\rightarrow 0}F(h,k)
+</mrow>
+</md>
+Note that the two right hand sides here are identical except for the
+order in which the limits are taken.
+</p>
+
+<p>Now, by the mean value theorem (six times),
+<md>
+<mrow>
+F(h,k)\ &amp;\eqf{(2)}\ \frac{1}{h}
+\left[\pdiff{f}{y}(x_0+h,y_0+\theta_1k)
+-\pdiff{f}{y}(x_0,y_0+\theta_1k)\right]\cr
+\ &amp;\eqf{(3)}\ \pdiff{}{x}
+\pdiff{f}{y}(x_0+\theta_2 h,y_0+\theta_1k)\cr
+F(h,k)\ &amp;\eqf{(4)}\ \frac{1}{k}
+\left[\pdiff{f}{x}(x_0+\theta_3h,y_0+k)
+-\pdiff{f}{x}(x_0+\theta_3h,y_0)\right]\cr
+\ &amp;\eqf{(5)}\ \pdiff{}{y}
+\pdiff{f}{x}(x_0+\theta_3 h,y_0+\theta_4k)\cr
+</mrow>
+</md>
+for some numbers <m>0 \lt \theta_1,\theta_2,\theta_3,\theta_4 \lt 1</m>.
+All of the numbers <m>\theta_1,\theta_2,\theta_3,\theta_4</m> depend
+on <m>x_0,y_0,h,k</m>. Hence
+<me>
+\pdiff{}{x}
+\pdiff{f}{y}(x_0+\theta_2 h,y_0+\theta_1k)
+=\pdiff{}{y}
+\pdiff{f}{x}(x_0+\theta_3 h,y_0+\theta_4k)
+</me>
+for all <m>h</m> and <m>k</m>. Taking the limit <m>(h,k)\rightarrow(0,0)</m> and using
+the assumed continuity of both partial derivatives at <m>(x_0,y_0)</m> gives
+<me>
+\lim_{(h,k)\rightarrow (0,0)} F(h,k)
+=\pdiff{}{x}
+\pdiff{f}{y}(x_0,y_0)
+=\pdiff{}{y}
+\pdiff{f}{x}(x_0,y_0)
+</me>
+as desired. To complete the proof we just have to justify the details
+(1), (2), (3), (4) and (5).
+</p>
+</subsubsection>
+
+<subsubsection><title>The Details</title>
+<p>
+<ol label="(1)">
+<li>
+By definition,
+<md>
+<mrow>
+\pdiff{}{y}
+\pdiff{f}{x}(x_0,y_0)
+&amp;=\lim_{k\rightarrow 0}\frac{1}{k}
+\left[\pdiff{f}{x}(x_0,y_0+k)
+-\pdiff{f}{x}(x_0,y_0)\right]\cr
+&amp;=\lim_{k\rightarrow 0}\frac{1}{k}
+\left[\lim_{h\rightarrow 0}\frac{f(x_0+h,y_0+k)-f(x_0,y_0+k)}{h}
+-\lim_{h\rightarrow 0}\frac{f(x_0+h,y_0)-f(x_0,y_0)}{h}\right]\cr
+&amp;=\lim_{k\rightarrow 0}\lim_{h\rightarrow 0}
+\frac{f(x_0+h,y_0+k)-f(x_0,y_0+k)-f(x_0+h,y_0)+f(x_0,y_0)}{hk}\cr
+&amp;= \lim_{k\rightarrow 0}\lim_{h\rightarrow 0}F(h,k)
+</mrow>
+</md>
+Similarly,
+<md>
+<mrow>
+\pdiff{}{x}
+\pdiff{f}{y}(x_0,y_0)
+&amp;=\lim_{h\rightarrow 0}\frac{1}{h}
+\left[\pdiff{f}{y}(x_0+h,y_0)
+-\pdiff{f}{y}(x_0,y_0)\right]\cr
+&amp;=\lim_{h\rightarrow 0}\frac{1}{h}
+\left[\lim_{k\rightarrow 0}\frac{f(x_0+h,y_0+k)-f(x_0+h,y_0)}{k}
+-\lim_{k\rightarrow 0}\frac{f(x_0,y_0+k)-f(x_0,y_0)}{k}\right]\cr
+&amp;=\lim_{h\rightarrow 0}\lim_{k\rightarrow 0}
+\frac{f(x_0+h,y_0+k)-f(x_0+h,y_0)-f(x_0,y_0+k)+f(x_0,y_0)}{hk}\cr
+&amp;= \lim_{h\rightarrow 0}\lim_{k\rightarrow 0}F(h,k)
+</mrow>
+</md>
+</li>
+<li><p>
+The mean value theorem (Theorem \eref{CLP100}{thm:DIFFmvt} in the CLP-1 text)
+says that, for any differentiable function <m>\varphi(x)</m>,
+<ul>
+<li> the slope of the line joining the
+points <m>\big(x_0,\varphi(x_0)\big)</m> and <m>\big(x_0+k,\varphi(x_0+k)\big)</m> on
+the graph of <m>\varphi</m>
+</li>
+</ul>
+is the same as
+<ul>
+<li>
+the slope of the tangent to the graph
+at some point between <m>x_0</m> and <m>x_0+k</m>.
+</li>
+</ul>
+That is, there is some <m>0 \lt \theta_1 \lt 1</m> such that
+<me>
+\frac{\varphi(x_0+k)-\varphi(x_0)}{k}=\frac{d\varphi}{dx}(x_0+\theta_1 k)
+</me>
+</p>
+
+<sidebyside>
+<image source="figs/mvt"/>
+</sidebyside>
+
+<p>
+Applying this with <m>x</m> replaced by <m>y</m> and <m>\varphi</m> replaced by <m>G(y)=f(x_0+h,y)-f(x_0,y)</m> gives
+<md>
+<mrow>
+\frac{G(y_0+k)-G(y_0)}{k}
+&amp;=\diff{G}{y}(y_0+\theta_1 k)
+\qquad\text{for some } 0 \lt \theta_1 \lt 1
+</mrow><mrow>
+&amp;=\pdiff{f}{y}(x_0+h,y_0+\theta_1k)
+-\pdiff{f}{y}(x_0,y_0+\theta_1k)
+</mrow>
+</md>
+Hence, for some <m>0 \lt \theta_1 \lt 1</m>,
+<md>
+<mrow>
+F(h,k)\ &amp;=\ \frac{1}{h}
+\left[\frac{G(y_0+k)-G(y_0)}{k}\right]
+=\frac{1}{h}
+\left[\pdiff{f}{y}(x_0+h,y_0+\theta_1k)
+-\pdiff{f}{y}(x_0,y_0+\theta_1k)\right]
+</mrow>
+</md></p>
+</li>
+<li>
+Define <m>H(x)=\pdiff{f}{y}(x,y_0+\theta_1k)</m>. By the mean value theorem,
+<md>
+<mrow>
+F(h,k)\ &amp;=\ \frac{1}{h}\left[H(x_0+h)-H(x_0)\right]
+</mrow>
+<mrow>
+&amp;=\ \diff{H}{x}(x_0+\theta_2 h)
+\qquad\text{for some } 0 \lt \theta_2 \lt 1
+</mrow><mrow>
+&amp;=\pdiff{}{x}
+\pdiff{f}{y}(x_0+\theta_2 h,y_0+\theta_1k)
+</mrow>
+</md>
+</li>
+<li>
+Define <m>A(x)=f(x,y_0+k)-f(x,y_0)</m>. By the mean value theorem,
+<md>
+<mrow>
+F(h,k)\ &amp;=\ \frac{1}{k} \left[\frac{A(x_0+h)-A(x_0)}{h}\right]
+</mrow><mrow>
+&amp;=\ \frac{1}{k}\diff{A}{x}(x_0+\theta_3 h)
+\qquad\text{for some } 0 \lt \theta_3 \lt 1
+</mrow><mrow>
+&amp;=\frac{1}{k}
+\left[\pdiff{f}{x}(x_0+\theta_3h,y_0+k)
+-\pdiff{f}{x}(x_0+\theta_3h,y_0)\right]
+</mrow>
+</md>
+</li>
+<li>
+Define <m>B(y)=\pdiff{f}{x}(x_0+\theta_3h,y)</m>. By the mean value theorem
+<md>
+<mrow>
+F(h,k)\ &amp;=\ \frac{1}{k}\left[B(y_0+k)-B(y_0)\right]
+</mrow><mrow>
+&amp;=\ \diff{B}{y}(y_0+\theta_4 k)
+\qquad\text{for some } 0 \lt \theta_4 \lt 1
+</mrow><mrow>
+&amp;=\pdiff{}{y}
+\pdiff{f}{x}(x_0+\theta_3 h,y_0+\theta_4k)
+</mrow>
+</md>
+</li>
+</ol>
+This completes the proof of Theorem <xref ref="thm_mixed_partials"/>.
+</p>
+</subsubsection>
+
+</subsection>
+<subsection xml:id="subsec_mixed_partials_counterexample"><title>
+  Optional <mdash/> An Example of
+  <m>\frac{\partial^2\ f}{\partial x\partial y}(x_0,y_0)
+  \ne\frac{\partial^2\ f}{\partial y\partial x}(x_0,y_0)</m>
+</title>
+
+<p>In Theorem <xref ref="thm_mixed_partials"/>, we showed that
+<m>
+\frac{\partial^2 f }{\partial x\partial y}(x_0,y_0)
+=\frac{\partial^2 f }{\partial y\partial x}(x_0,y_0)
+</m>
+<alert>if</alert> the partial derivatives
+<m>\frac{\partial^2 f }{\partial x\partial y}</m> and
+<m>\frac{\partial^2 f }{\partial y\partial x}</m> exist
+and are continuous at <m>(x_0,y_0)</m>. Here is an example which shows that
+if the partial derivatives
+<m>\frac{\partial^2 f }{\partial x\partial y}</m> and
+<m>\frac{\partial^2 f }{\partial y\partial x}</m>
+are not continuous at <m>(x_0,y_0)</m>, then it is possible that
+<m>
+\frac{\partial^2 f }{\partial x\partial y}(x_0,y_0)
+\ne\frac{\partial^2 f }{\partial y\partial x}(x_0,y_0)</m>.
+</p>
+
+<p>Define
+<me>
+f(x,y)=\begin{cases}
+        xy\frac{x^2-y^2}{x^2+y^2} &amp; \text{if } (x,y)\ne (0,0) \\
+              0                   &amp; \text{if } (x,y)=(0,0)
+       \end{cases}
+</me>
+This function is continuous everywhere. Note that <m>f(x,0)=0</m> for all <m>x</m> and
+<m>f(0,y)=0</m> for all <m>y</m>. We now compute the first order
+partial derivatives. For <m>(x,y)\ne (0,0)</m>,
+<md alignment="alignat">
+<mrow>{3}
+\pdiff{f}{x}(x,y)
+  &amp;= y\frac{x^2-y^2}{x^2+y^2} +xy\frac{2x}{x^2+y^2}
+      - xy\frac{2x(x^2-y^2)}{{(x^2+y^2)}^2}
+  &amp;\ = y\frac{x^2-y^2}{x^2+y^2}  + xy\frac{4xy^2}{{(x^2+y^2)}^2}\cr
+\pdiff{f}{y}(x,y)
+  &amp;= x\frac{x^2-y^2}{x^2+y^2} -xy\frac{2y}{x^2+y^2}
+      - xy\frac{2y(x^2-y^2)}{{(x^2+y^2)}^2}
+  &amp;\ = x\frac{x^2-y^2}{x^2+y^2}  - xy\frac{4yx^2}{{(x^2+y^2)}^2}
+</mrow>
+</md>
+For <m>(x,y)= (0,0)</m>,
+<md alignment="alignat">
+<mrow>{5}
+\pdiff{f}{x}(0,0)
+  &amp;= \left[\diff{}{x}f(x,0)\right]_{x=0}
+  &amp;= \left[\diff{}{x} 0\right]_{x=0}
+  &amp;=0
+</mrow><mrow>
+\pdiff{f}{y}(0,0)
+  &amp;= \left[\diff{}{y}f(0,y)\right]_{y=0}
+  &amp;= \left[\diff{}{y} 0\right]_{y=0}
+  &amp;=0
+</mrow>
+</md>
+By way of summary, the two first order partial derivatives are
+<md>
+<mrow>
+f_x(x,y)&amp;=\begin{cases}
+         y\frac{x^2-y^2}{x^2+y^2}  + \frac{4x^2y^3}{{(x^2+y^2)}^2}
+                                         &amp; \text{if } (x,y)\ne (0,0)\\
+              0                          &amp; \text{if } (x,y)=(0,0)
+          \end{cases}
+</mrow>
+<mrow>
+f_y(x,y)&amp;=\begin{cases}
+          x\frac{x^2-y^2}{x^2+y^2}  - \frac{4x^3y^2}{{(x^2+y^2)}^2}
+                                         &amp; \text{if } (x,y)\ne (0,0)\\
+              0                          &amp; \text{if } (x,y)=(0,0)
+           \end{cases}
+</mrow>
+</md>
+Both <m>\pdiff{f}{x}(x,y)</m> and  <m>\pdiff{f}{y}(x,y)</m> are continuous.
+Finally, we compute
+<md alignment="alignat">
+<mrow>
+\frac{\partial^2\ f}{\partial x\partial y}(0,0)
+&amp;=\left[\diff{}{x} f_y(x,0)\right]_{x=0}
+&amp;=\lim_{h\rightarrow 0}\frac{1}{h}\left[f_y(h,0)-f_y(0,0)\right]
+&amp;=\lim_{h\rightarrow 0}\frac{1}{h}\left[h\frac{h^2-0^2}{h^2+0^2}-0\right]
+&amp;=1
+</mrow>
+<mrow>
+\frac{\partial^2\ f}{\partial y\partial x}(0,0)
+&amp;=\left[\diff{}{y} f_x(0,y)\right]_{y=0}
+&amp;=\lim_{k\rightarrow 0}\frac{1}{k}\left[f_x(0,k)-f_x(0,0)\right]
+&amp;=\lim_{k\rightarrow 0}\frac{1}{k}\left[k\frac{0^2-k^2}{0^2+k^2}-0\right]
+&amp;=-1
+</mrow>
+</md>
+</p>
+</subsection>
+
+</section>

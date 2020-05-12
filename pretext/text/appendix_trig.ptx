@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="app_trig">
+<title>Trigonometry</title>
+
+<subsection xml:id="app_sec_trig_graphs">
+  <title>Trigonometry <mdash/> Graphs</title>
+
+<sbsgroup width="31%">
+<sidebyside>
+<p><me>\sin \theta</me> </p>
+<p><me>\cos \theta</me> </p>
+<p><me>\tan \theta</me></p>
+</sidebyside>
+<sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\begin{axis}[
+  axis x line=center, axis y line=center,
+  ymax=1.1,ymin=-1.1, ytick={-1,1},
+  xtick={-3.141592654,-1.570796327,1.570796327,3.141592654,4.71238898,6.283185307},
+  xticklabels={$-\pi$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$,$2\pi$}
+  ]
+\addplot[blue,domain=-1.1*pi:2.1*pi,samples=100] {sin(deg(x))};
+\end{axis}
+\end{tikzpicture}</latex-image></image>
+<image><latex-image>\begin{tikzpicture}
+\begin{axis}[
+  axis x line=center, axis y line=center,
+  ymax=1.1,ymin=-1.1, ytick={-1,1},
+  xtick={-3.141592654,-1.570796327,1.570796327,3.141592654,4.71238898,6.283185307},
+  xticklabels={$-\pi$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$,$2\pi$}
+  ]
+\addplot[blue,domain=-1.1*pi:2.1*pi,samples=100] {cos(deg(x))};
+\end{axis}
+\end{tikzpicture}</latex-image></image>
+<image><latex-image>\begin{tikzpicture}
+\begin{axis}[
+  axis x line=center, axis y line=center,
+  ymax=4.1,ymin=-4.1, ymajorticks=false,
+  xtick={-3.141592654,-1.570796327,1.570796327,3.141592654,4.71238898,6.283185307},
+  xticklabels={$-\pi$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$,$2\pi$}
+  ]
+\addplot[blue,domain=-1.1*pi:2.1*pi,samples=100] {tan(deg(x))};
+\addplot[line width=1pt,red] coordinates {(-1.570796327,4.15) (-1.570796327,-4.15)};
+\addplot[line width=1pt,red] coordinates {(1.570796327,4.15) (1.570796327,-4.15)};
+\addplot[line width=1pt,red] coordinates {(4.71238898,4.15) (4.71238898,-4.15)};
+\end{axis}
+\end{tikzpicture}</latex-image></image>
+</sidebyside>
+</sbsgroup>
+
+</subsection>
+<subsection>
+  <title>Trigonometry <mdash/> Special Triangles</title>
+
+<sidebyside width="80%">
+  <image source="figs/special_triangles"/>
+</sidebyside>
+
+<p>
+From the above pair of special triangles we have
+<md>
+<mrow>
+  \sin \frac{\pi}{4} &amp;= \frac{1}{\sqrt{2}} &amp;  \sin \frac{\pi}{6} &amp;= \frac{1}{2} &amp; \sin \frac{\pi}{3} &amp;= \frac{\sqrt{3}}{2}
+</mrow><mrow>
+  \cos \frac{\pi}{4} &amp;= \frac{1}{\sqrt{2}} &amp;  \cos \frac{\pi}{6} &amp;= \frac{\sqrt{3}}{2} &amp; \cos \frac{\pi}{3} &amp;= \frac{1}{2}
+</mrow><mrow>
+  \tan \frac{\pi}{4} &amp;= 1 &amp;  \tan \frac{\pi}{6} &amp;= \frac{1}{\sqrt{3}} &amp; \tan
+\frac{\pi}{3} &amp;= \sqrt{3}
+</mrow>
+</md>
+</p>
+
+</subsection>
+
+<subsection>
+  <title>Trigonometry <mdash/> Simple Identities</title>
+<p>
+<ul>
+<li> Periodicity
+<md>
+<mrow>
+  \sin(\theta+2\pi) &amp;= \sin(\theta) &amp;
+  \cos(\theta+2\pi) &amp;= \cos(\theta)
+</mrow>
+</md>
+</li>
+<li> Reflection
+<md>
+<mrow>
+  \sin(-\theta)&amp;=-\sin(\theta) &amp; \cos(-\theta) &amp;=\cos(\theta)
+</mrow>
+</md>
+</li>
+<li> Reflection around <m>\pi/4</m>
+<md>
+<mrow>
+\sin\left(\tfrac{\pi}{2}-\theta\right)&amp;=\cos\theta &amp;
+\cos\left(\tfrac{\pi}{2}-\theta\right)&amp;=\sin\theta
+</mrow>
+</md>
+</li>
+<li> Reflection around <m>\pi/2</m>
+<md>
+<mrow>
+\sin\left(\pi-\theta\right)&amp;=\sin\theta &amp;
+\cos\left(\pi-\theta\right)&amp;=-\cos\theta
+</mrow>
+</md>
+</li>
+<li> Rotation by <m>\pi</m>
+<md>
+<mrow>
+\sin\left(\theta+\pi\right)&amp;=-\sin\theta &amp;
+\cos\left(\theta+\pi\right)&amp;=-\cos\theta
+</mrow>
+</md>
+</li>
+<li> Pythagoras
+<md>
+<mrow>
+\sin^2\theta + \cos^2 \theta &amp;=1
+</mrow><mrow>
+\tan^2\theta + 1  &amp;= \sec^2\theta
+</mrow><mrow>
+1 + \cot^2 \theta &amp;=\csc^2\theta
+</mrow>
+</md>
+</li>
+<li> <m>\sin</m> and <m>\cos</m> building blocks
+<md>
+<mrow>
+\tan\theta=\frac{\sin\theta}{\cos\theta}\qquad
+\csc\theta=\frac{1}{\sin\theta}\qquad
+\sec\theta=\frac{1}{\cos\theta}\qquad
+\cot\theta=\frac{\cos\theta}{\sin\theta}=\frac{1}{\tan\theta}
+</mrow>
+</md>
+</li>
+</ul>
+</p>
+
+</subsection>
+
+<subsection xml:id="sec_trig_add">
+  <title>Trigonometry <mdash/> Add and Subtract Angles</title>
+  <p>
+<ul>
+<li> Sine
+<md>
+<mrow>
+  \sin(\alpha \pm \beta) &amp;= \sin(\alpha)\cos(\beta) \pm \cos(\alpha)\sin(\beta)
+  </mrow>
+</md>
+</li>
+<li> Cosine
+<md>
+<mrow>
+  \cos(\alpha \pm \beta) &amp;= \cos(\alpha)\cos(\beta) \mp \sin(\alpha)\sin(\beta)
+</mrow>
+</md>
+</li>
+<li> Tangent
+<md>
+<mrow>
+\tan(\alpha+\beta)&amp;=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}
+</mrow><mrow>
+\tan(\alpha-\beta)&amp;=\frac{\tan\alpha-\tan\beta}{1+\tan\alpha\tan\beta}
+</mrow>
+</md>
+</li>
+<li> Double angle
+<md>
+<mrow>
+  \sin(2\theta) &amp;= 2\sin(\theta)\cos(\theta)
+</mrow><mrow>
+  \cos(2\theta) &amp;= \cos^2(\theta) - \sin^2(\theta)
+</mrow><mrow>
+  &amp;= 2\cos^2(\theta) - 1
+</mrow><mrow>
+  &amp;= 1 - 2\sin^2(\theta)
+</mrow><mrow>
+  \tan(2\theta) &amp;= \frac{2\tan(\theta)}{1-\tan^2\theta}
+</mrow><mrow>
+\cos^2\theta&amp;=\frac{1+\cos(2\theta)}{2}
+</mrow><mrow>
+\sin^2\theta&amp;=\frac{1-\cos(2\theta)}{2}
+</mrow><mrow>
+\tan^2\theta&amp;=\frac{1-\cos(2\theta)}{1+\cos(2\theta)}
+</mrow>
+</md>
+</li>
+<li> Products to sums
+<md>
+<mrow>
+\sin(\alpha)\cos(\beta)&amp;= \frac{\sin(\alpha+\beta) +  \sin(\alpha-\beta)}{2}
+</mrow><mrow>
+\sin(\alpha)\sin(\beta)&amp;= \frac{\cos(\alpha-\beta) - \cos(\alpha+\beta)}{2}
+</mrow><mrow>
+\cos(\alpha)\cos(\beta)&amp;= \frac{\cos(\alpha-\beta) + \cos(\alpha+\beta)}{2}
+</mrow>
+</md>
+</li>
+<li> Sums to products
+<md>
+<mrow>
+\sin\alpha+\sin\beta
+           &amp;= 2 \sin\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}
+</mrow><mrow>
+\sin\alpha-\sin\beta
+           &amp;= 2 \cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}
+</mrow><mrow>
+\cos\alpha+\cos\beta
+           &amp;= 2 \cos\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}
+</mrow><mrow>
+\cos\alpha-\cos\beta
+           &amp;= -2 \sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}
+</mrow>
+</md>
+</li>
+</ul>
+</p>
+
+</subsection>
+
+
+<subsection xml:id="sec_inv_trig">
+  <title>Inverse Trigonometric Functions</title>
+
+
+<sbsgroup width="31%">
+<sidebyside>
+<p><me>\arcsin x</me></p>
+<p> <me>\arccos x</me></p>
+<p> <m>\arctan x</m></p>
+</sidebyside>
+<sidebyside>
+<p>Domain: <m>-1 \leq x \leq 1</m></p>
+<p>Domain: <m>-1 \leq x \leq 1</m></p>
+<p>Domain: all real numbers</p>
+</sidebyside>
+<sidebyside>
+<p>Range: <m>-\frac{\pi}{2} \leq \arcsin x \leq \frac{\pi}{2}</m></p>
+<p>Range: <m>0 \leq \arccos x \leq \pi</m></p>
+<p>Range: <m>-\frac{\pi}{2}  \lt  \arctan x  \lt  \frac{\pi}{2}</m></p>
+</sidebyside>
+<sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\begin{axis}[
+  legend pos = north west,
+  axis x line=center, axis y line=center,
+  xmax=1.1,xmin=-1.1, xtick={-1,1},
+  ymin=-2, ymax=2,
+  ytick={-1.570796327,1.570796327},
+  yticklabels={$-\frac{\pi}{2}$, $\frac{\pi}{2}$}
+  ]
+\addplot[blue, line width=1pt, domain=-1:1,samples=100] {asin(x)/180*pi};
+\end{axis}
+\end{tikzpicture}</latex-image>
+</image>
+
+<image><latex-image>\begin{tikzpicture}
+\useasboundingbox (0,0) rectangle (5,4.2);
+\begin{axis}[
+  axis x line=center, axis y line=center,
+  xmax=1.1,xmin=-1.1, xtick={-1,1},
+  ymin=-0.3,ymax=3.4,
+  ytick={0,1.570796327,3.141592654},
+  yticklabels={0,$\frac{\pi}{2}$, $\pi$}
+  ]
+ \addplot[blue, line width=1pt, domain=-1:1,samples=100] {acos(x)/180*pi};
+ \end{axis}
+\end{tikzpicture}</latex-image>
+</image>
+<image><latex-image>\begin{tikzpicture}
+\begin{axis}[
+  legend pos = north west,
+  axis x line=center, axis y line=center,
+  xmax=4.3,xmin=-4.3, xmajorticks=false,
+  ymin=-2,ymax=2,
+  ytick={-1.570796327,1.570796327},
+  yticklabels={$-\frac{\pi}{2}$, $\frac{\pi}{2}$}
+  ]
+\addplot[blue, line width=1pt, domain=-4.3:4.3,samples=100] {atan(x)/180*pi};
+\addplot[line width=1pt,red] coordinates {(4.3,-1.570796327) (-0.3,-1.570796327)};
+\addplot[line width=1pt,red] coordinates {(-1.4,-1.570796327) (-4.3,-1.570796327)};
+\addplot[line width=1pt,red] coordinates {(4.3,1.570796327) (-0.3,1.570796327)};
+\addplot[line width=1pt,red] coordinates {(-0.9,1.570796327) (-4.3,1.570796327)};
+\end{axis}
+\end{tikzpicture}</latex-image></image>
+</sidebyside>
+</sbsgroup>
+
+<p>
+Since these functions are inverses of each other we have
+<md>
+<mrow>
+  \arcsin(\sin \theta) &amp;= \theta &amp; -\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}
+</mrow><mrow>
+  \arccos(\cos \theta) &amp;= \theta &amp; 0 \leq \theta \leq \pi
+</mrow><mrow>
+  \arctan(\tan \theta) &amp;= \theta &amp; -\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}
+</mrow>
+</md>
+and also
+<md>
+<mrow>
+  \sin(\arcsin x) &amp;= x &amp; -1 \leq x \leq 1
+</mrow><mrow>
+  \cos(\arccos x) &amp;= x &amp; -1 \leq x \leq 1
+</mrow><mrow>
+  \tan(\arctan x) &amp;= x &amp; \text{any real } x
+</mrow>
+</md>
+</p>
+
+
+<sbsgroup width="31%">
+<sidebyside>
+<p><me>\arccsc x</me></p>
+<p><me>\arcsec x</me></p>
+<p><me>\arccot x</me></p>
+</sidebyside>
+<sidebyside>
+<p>Domain: <m>|x|\ge 1</m></p>
+<p>Domain: <m>|x|\ge 1</m></p>
+<p>Domain: all real numbers</p>
+</sidebyside>
+<sidebyside>
+<p>Range: <m>-\frac{\pi}{2} \leq \arccsc x \leq \frac{\pi}{2}</m></p>
+<p>Range: <m>0 \leq \arcsec x \leq \pi</m></p>
+<p>Range: <m>0  \lt  \arccot x  \lt  \pi</m></p>
+</sidebyside>
+<sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\begin{axis}[
+  legend pos = north west,
+  axis x line=center, axis y line=center,
+  xmax=4.3,xmin=-4.3, xtick={-1,1},
+  ymin=-2, ymax=2,
+  ytick={-1.570796327,1.570796327},
+  yticklabels={$-\frac{\pi}{2}\!\!\!$, $\frac{\pi}{2}$}
+  ]
+\addplot[blue, line width=1pt, domain=1:4.3,samples=50] {asin(1/x)/180*pi};
+\addplot[blue, line width=1pt, domain=-4.3:-1,samples=50] {asin(1/x)/180*pi};
+\end{axis}
+\end{tikzpicture}</latex-image></image>
+
+<image><latex-image>\begin{tikzpicture}
+\useasboundingbox (0,0) rectangle (5,4.2);
+\begin{axis}[
+  axis x line=center, axis y line=center,
+  xmax=4.3,xmin=-4.3, xtick={-1,1},
+  ymin=-0.3,ymax=3.4,
+  ytick={0,1.570796327,3.141592654},
+  yticklabels={0,$\frac{\pi}{2}$, $\pi$}
+  ]
+ \addplot[blue, line width=1pt, domain=1:4.3,samples=100] {acos(1/x)/180*pi};
+ \addplot[blue, line width=1pt, domain=-4.3:-1,samples=100] {acos(1/x)/180*pi};
+\end{axis}
+\end{tikzpicture}</latex-image></image>
+<image><latex-image>\begin{tikzpicture}
+\begin{axis}[
+  legend pos = north west,
+  axis x line=center, axis y line=center,
+  xmax=4.3,xmin=-4.3, xmajorticks=false,
+  ymin=-0.3,ymax=3.4,
+  ytick={0,1.570796327,3.141592654},
+  yticklabels={0,$\frac{\pi}{2}$, $\pi$}
+  ]
+\addplot[blue, line width=1pt, domain=-4.3:-0.01,samples=100] {atan(1/x)/180*pi + pi};
+\addplot[blue, line width=1pt, domain=0.01:4.3,samples=100] {atan(1/x)/180*pi};
+\addplot[line width=1pt,red] coordinates {(4.3,3.141592654) (-0.3,3.141592654)};
+\addplot[line width=1pt,red] coordinates {(-0.9,3.141592654) (-4.3,3.141592654)};
+\end{axis}
+\end{tikzpicture}</latex-image></image>
+</sidebyside>
+<sidebyside>
+<p><me>\arccsc x \ne 0</me> </p>
+<p><me>\arcsec x \ne \frac{\pi}{2}</me></p>
+<p></p>
+</sidebyside>
+</sbsgroup>
+
+<p>
+Again
+<md>
+<mrow>
+  \arccsc(\csc \theta) &amp;= \theta &amp; -\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2},\ \theta\ne 0
+</mrow><mrow>
+  \arcsec(\sec \theta) &amp;= \theta &amp; 0 \leq \theta \leq \pi,\ \theta\ne \frac{\pi}{2}
+</mrow><mrow>
+  \arccot(\cot \theta) &amp;= \theta &amp; 0  \lt  \theta  \lt  \pi
+</mrow>
+</md>
+and
+<md>
+<mrow>
+  \csc(\arccsc x) &amp;= x &amp; |x|\ge 1
+</mrow><mrow>
+  \sec(\arcsec x) &amp;= x &amp; |x|\ge 1
+</mrow><mrow>
+  \cot(\arccot x) &amp;= x &amp; \text{any real} x
+</mrow>
+</md>
+</p>
+</subsection>
+</section>

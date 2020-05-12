@@ -1,0 +1,1330 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_lin_approx">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title>Linear Approximations and Error</title>
+
+<introduction>
+  <p>A frequently used, and effective, strategy for building an understanding
+of the behaviour of a complicated function near a point is to
+approximate it by a simple function. The following suite of such
+approximations is standard fare in Calculus I courses.
+See, for example, §\eref{CLP100}{sec:DIFFTaylor} in the CLP-1 text.
+<md>
+<mrow>
+g(t_0+\De t) &amp;\approx g(t_0)
+                   &amp;&amp;\text{constant approximation}
+</mrow><mrow>
+g(t_0+\De t) &amp;\approx g(t_0) +g'(t_0)\,\De t
+                    &amp;&amp;\text{linear, or tangent line, approximation}
+</mrow><mrow>
+g(t_0+\De t) &amp;\approx g(t_0) +g'(t_0)\,\De t +\tfrac{1}{2} g'(t_0)\,\De t^2
+                    &amp;&amp;\text{quadratic approximation}
+</mrow>
+</md>
+More generally, for any natural number <m>n</m>, the  approximation
+<md>
+<mrow>
+g(t_0+\De t) &amp;\approx g(t_0) +g'(t_0)\,\De t + \tfrac{1}{2} g'(t_0)\,\De t^2
+                    +\cdots+ \tfrac{1}{n!} g^{(n)}(t_0)\,\De t^n
+</mrow>
+</md>
+is known as the Taylor polynomial of degree <m>n</m>.
+You may have also found a formula for the error introduced in making this
+approximation. The error <m>E_n(\De t)</m> is defined by
+<md>
+<mrow>
+g(t_0+\De t)
+&amp;=
+g(t_0)+g'(t_0)\De t+\tfrac{1}{2!}g'(t_0)\De t^2
++\cdots
++\tfrac{1}{n!}g^{(n)}(t_0) \De t^n +E_n(\De t)
+</mrow>
+</md>
+and obeys
+<fn>You may have seen it written as
+<m>E_n(x)=\tfrac{1}{(n+1)!}g^{(n+1)}(c) (x-a)^{n+1}</m>
+</fn>
+<me>
+E_n(\De t)=
+\tfrac{1}{(n+1)!}g^{(n+1)}(t_0+c\De t) \De t^{n+1}
+</me>
+for some (unknown) <m>0\le c\le 1</m>.
+</p>
+
+<p>It is a simple matter to use these one dimensional approximations
+to generate the analogous multidimensional approximations. To introduce
+the ideas, we'll generate the linear approximation to a function,
+<m>f(x,y)</m>, of two variables, near the point <m>(x_0,y_0)</m>. Define
+<me>
+g(t) = f\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
+</me>
+We have defined <m>g(t)</m> so that
+<me>
+g(0) = f\big(x_0\,,\,y_0\big)\qquad\text{and}\qquad
+g(1) = f\big(x_0 + \De x\,,\,y_0+\De y\big)
+</me>
+Consequently, setting <m>t_0=0</m> and <m>\De t=1</m>,
+</p>
+
+<p><md>
+<mrow>
+f\big(x_0+\De x\,,\,y_0+\De y\big)
+&amp;=g(1) = g(t_0+\De t)
+</mrow><mrow>
+&amp;\approx g(t_0) + g'(t_0)\,\De t
+</mrow><mrow>
+&amp;= g(0) + g'(0)
+</mrow>
+</md>
+We can now compute <m>g'(0)</m> using the multivariable chain rule of
+<xref ref="eqn_chain_rule_A"/>:
+<me>
+g'(t) = \pdiff{f}{x}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\,\De x
+       + \pdiff{f}{y}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\,\De y
+</me>
+so that,
+</p>
+<fact xml:id="eqn_lin_approx_2d">
+  <statement>
+    <p>
+      <md>
+<mrow>
+f\big(x_0+\De x\,,\,y_0+\De y\big)
+&amp;\approx f\big(x_0\,,\,y_0\big)
+       + \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\De x
+       + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\De y
+</mrow>
+</md>
+</p>
+</statement>
+</fact>
+
+<p>Of course exactly the same procedure works for functions of three or
+more variables. In particular
+</p>
+
+<fact xml:id="eqn_lin_approx_3d">
+  <statement>
+    <p>
+<md>
+<mrow>
+&amp;f\big(x_0+\De x\,,\,y_0+\De y\,,\,z_0 + \De z\big)
+</mrow><mrow>
+&amp;\hskip0.25in\approx f\big(x_0\,,\,y_0\,,\,z_0\big)
+       + \pdiff{f}{x}\big(x_0\,,\,y_0\,,\,z_0\big)\,\De x
+       + \pdiff{f}{y}\big(x_0\,,\,y_0\,,\,z_0\big)\,\De y
+       + \pdiff{f}{z}\big(x_0\,,\,y_0\,,\,z_0\big)\,\De z
+</mrow>
+</md>
+</p>
+</statement>
+</fact>
+
+<p>
+While these linear approximations are quite simple, they tend to be
+pretty decent provided <m>\De x</m> and <m>\De y</m> are small. See the
+optional §<xref ref="sec_error"/> for a more precise statement.
+</p>
+
+<remark xml:id="rmk_lin_approx_tan_plane">
+<p>
+Applying <xref ref="eqn_lin_approx_2d"/>, with <m>\De x=x-x_0</m> and <m>\De y = y-y_0</m>.
+gives
+<md>
+<mrow>
+f\big(x\,,\,y\big)
+&amp;\approx f\big(x_0\,,\,y_0\big)
+       + \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,(x-x_0)
+       + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,(y-y_0)
+</mrow>
+</md>
+Looking at part (b) of Theorem <xref ref="thm_tan_plane_f"/>,
+we see that this just says that the tangent plane to the surface
+<m>z=f(x,y)</m> at the point <m>\big(x_0\,,\,y_0\,,\,f(x_0,y_0)\big)</m>
+remains close to the surface when <m>(x,y)</m> is close to <m>(x_0,y_0)</m>.
+</p>
+</remark>
+
+<example xml:id="eg_approx_AA">
+<p>
+Let
+<me>
+f(x,y) = \sqrt{x^2+y^2}
+</me>
+Then
+<md>
+<mrow>
+\pdiff{f}{x}(x,y)&amp;=\frac{1}{2}\,\frac{2x}{\sqrt{x^2+y^2}} &amp;
+    f_x(x_0,y_0)&amp;=\frac{x_0}{\sqrt{x_0^2+y_0^2}}
+</mrow><mrow>
+\pdiff{f}{y}(x,y)&amp;=\frac{1}{2}\,\frac{2y}{\sqrt{x^2+y^2}} &amp;
+    f_y(x_0,y_0)&amp;=\frac{y_0}{\sqrt{x_0^2+y_0^2}}
+</mrow>
+</md>
+so that the linear approximation to <m>f(x,y)</m> at <m>(x_0,y_0)</m> is
+<md>
+<mrow>
+f\big(x_0+\De x\,,\,y_0+\De y\big)
+&amp;\approx f\big(x_0\,,\,y_0\big)
+       + f_x\big(x_0\,,\,y_0\big)\,\De x
+       + f_y\big(x_0\,,\,y_0\big)\,\De y
+</mrow><mrow>
+&amp;=\sqrt{x_0^2+y_0^2}
+       + \frac{x_0}{\sqrt{x_0^2+y_0^2}}\,\De x
+       + \frac{y_0}{\sqrt{x_0^2+y_0^2}}\,\De y
+</mrow>
+</md>
+</p>
+
+</example>
+
+<definition xml:id="notn_approx">
+<statement><p>
+People often write <m>\De f</m> for the change
+<m>f\big(x_0+\De x\,,\,y_0+\De y\big)
+  - f\big(x_0\,,\,y_0\big)</m> in the value of <m>f</m>.
+Then the linear approximation <xref ref="eqn_lin_approx_2d"/> becomes
+<md>
+<mrow>
+\De f
+&amp;\approx  \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\De x
+       + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\De y
+</mrow>
+</md>
+If they want to emphasize that that <m>\De x</m>, <m>\De y</m> and <m>\De f</m>
+are really small (they may even say <q>infinitesimal</q>), they'll
+write
+<fn>Don't take the notation <m>\dee{x}</m> or the terminology
+<q>infinitesimal</q> too seriously. It is just intended to signal <q>very small</q>.</fn> <m>\dee{x}</m>, <m>\dee{y}</m> and <m>\dee{f}</m> instead. In this notation
+<md>
+<mrow>
+\dee{f}
+&amp;\approx  \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\dee{x}
+       + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\dee{y}
+</mrow>
+</md>
+</p></statement>
+</definition>
+
+<definition xml:id="def_error">
+<statement><p>
+Suppose that we wish to approximate a quantity <m>Q</m> and that the
+approximation turns out to be <m>Q+\De Q</m>. Then
+<ul>
+<li>
+the absolute error in the approximation is <m>|\De Q|</m> and
+</li>
+<li>
+the relative error in the approximation is <m>\left|\frac{\De Q}{Q}\right|</m> and
+</li>
+<li>
+the percentage error in the approximation is
+<m>100\left|\frac{\De Q}{Q}\right|</m>
+</li>
+</ul>
+</p></statement>
+</definition>
+
+<p>In Example 3.4.5 of the CLP-1 text we found an approximate
+value for the number <m>\sqrt{4.1}</m> by using a linear approximation
+to the single variable function <m>f(x)=\sqrt{x}</m>. We can make similar use
+of linear approximations to multivariable functions.
+</p>
+
+<example xml:id="eg_approx_A">
+<statement>
+<p>
+Find an approximate value for <m>\frac{(0.998)^3}{1.003}</m>.
+</p>
+</statement>
+
+<solution>
+<p>
+Set <m>f(x,y) = \dfrac{x^3}{y}</m>. We are to find (approximately)
+<m>f(0.998\,,\,1.003)</m>. We can easily find
+<md>
+<mrow>
+f(1,1) &amp;= \frac{1^3}{1}=1
+</mrow>
+</md>
+and since
+<me>
+\pdiff{f}{x}=\frac{3x^2}{y}\qquad \text{and}\qquad
+\pdiff{f}{y}=-\frac{x^3}{y^2}
+</me>
+we can also easily find
+<md>
+<mrow>
+\pdiff{f}{x}(1,1) &amp;= 3\frac{1^2}{1}=3
+</mrow><mrow>
+\pdiff{f}{y}(1,1) &amp;= 1\frac{1^3}{1^2}=-1
+</mrow>
+</md>
+So, setting <m>\De x=-0.002</m> and <m>\De y=0.003</m>, we have
+<md>
+<mrow>
+\frac{0.998^3}{1.003}
+&amp;=f(0.998\,,\,1.003)
+=f(1+\De x\,,\,1+\De y)
+\approx f\big(1,1\big)
+       + \pdiff{f}{x}\big(1,1\big)\,\De x
+       + \pdiff{f}{y}\big(1,1\big)\,\De y
+</mrow><mrow>
+&amp;\approx 1 +3(-0.002)-1(0.003)
+=0.991
+</mrow>
+</md>
+By way of comparison, the exact answer is <m>0.9910389</m> to seven decimal places.
+</p>
+</solution>
+</example>
+
+<example xml:id="eg_approx_B">
+<statement>
+<p>
+Find an approximate value for <m>(4.2)^{1/2} + (26.7)^{1/3} + (256.4)^{1/4}</m>.
+</p>
+</statement>
+
+<solution>
+<p>
+Set <m>f(x,y,z) = x^{1/2} + y^{1/3} + z^{1/4}</m>. We are to find (approximately)
+<m>f(4.2\,,\,26.7\,,\,256.4)</m>. We can easily find
+<md>
+<mrow>
+f(4,27,256) &amp;= (4)^{1/2} + (27)^{1/3} + (256)^{1/4} = 2+3+4 =9
+</mrow>
+</md>
+and since
+<me>
+\pdiff{f}{x}=\frac{1}{2x^{1/2}}\qquad
+\pdiff{f}{y}=\frac{1}{3y^{2/3}}\qquad
+\pdiff{f}{z}=\frac{1}{4z^{3/4}}
+</me>
+we can also easily find
+<md>
+<mrow>
+\pdiff{f}{x}(4,27,256) &amp;= \frac{1}{2(4)^{1/2}} =\frac{1}{2}\times\frac{1}{2}
+</mrow><mrow>
+\pdiff{f}{y}(4,27,256) &amp;= \frac{1}{3(27)^{2/3}}=\frac{1}{3}\times\frac{1}{9}
+</mrow><mrow>
+\pdiff{f}{z}(4,27,256) &amp;= \frac{1}{4(256)^{3/4}}=\frac{1}{4}\times\frac{1}{64}
+</mrow>
+</md>
+So, setting <m>\De x=0.2</m>, <m>\De y=-0.3</m>, and <m>\De z=0.4</m>, we have
+<md>
+<mrow>
+&amp;(4.2)^{1/2} + (26.7)^{1/3} + (256.4)^{1/4}
+=f(4.2\,,\,26.7\,,\,256.4)
+=f(4+\De x\,,\,27+\De y\,,\,256+\De z)
+</mrow><mrow>
+&amp;\hskip1in\approx f\big(4,27,256\big)
+       + \pdiff{f}{x}\big(4,27,256\big)\,\De x
+       + \pdiff{f}{y}\big(4,27,256\big)\,\De y
+       + \pdiff{f}{z}\big(4,27,256\big)\,\De z
+</mrow><mrow>
+&amp;\hskip1in\approx 9 +\frac{0.2}{2\times2}-\frac{0.3}{3\times9}
+            +\frac{0.4}{4\times64}
+ = 9+\frac{1}{20}-\frac{1}{90}+\frac{1}{640}
+=9.0405
+</mrow>
+</md>
+to four decimal places.
+The exact answer is <m>9.03980</m> to five decimal places.
+</p>
+
+<p>That's a difference of about
+<me>
+100\frac{9.0405-9.0398}{9}\%
+=0.008\%
+</me>
+Note that we could have used the single variable approximation techniques
+in the CLP-1 text to separately approximate
+<m>(4.2)^{1/2}</m>, <m>(26.7)^{1/3}</m>  and <m>(256.4)^{1/4}</m> and then added
+the results together. Indeed what we have done here is equivalent.
+</p>
+</solution>
+</example>
+
+<example xml:id="eg_error_C">
+<statement>
+<p>
+A triangle has sides <m>a=10.1</m>cm and <m>b=19.8</m>cm which include an
+angle <m>35^\circ</m>. Approximate the area of the triangle.
+</p>
+
+<sidebyside>
+<image source="figs/triangleError"/>
+</sidebyside>
+</statement>
+
+<solution>
+<p>
+The triangle has height <m>h=a\sin\theta</m> and hence has area
+<me>
+A(a,b,\theta) = \frac{1}{2} bh =\frac{1}{2} ab\sin\theta
+</me>
+The <m>\sin\theta</m> in this formula hides a booby trap built into this problem.
+In preparing the linear approximation we will need to use the derivative
+of <m>\sin\theta</m>. But the standard derivative <m>\diff{}{\theta}\sin\theta
+=\cos\theta</m> only applies when <m>\theta</m> is expressed in radians <mdash/> not in
+degrees. See Warning \eref{CLP100}{warning:radians} in the CLP-1 text.
+</p>
+
+<p>So we are obliged to convert <m>35^\circ</m> into
+<me>
+35^\circ = (30+5) \frac{\pi}{180}\ \text{radians}
+         =\Big(\frac{\pi}{6} + \frac{\pi}{36}\Big)\ \text{radians}
+</me>
+We need to compute (approximately)
+<m>A(10.1\,,\,19.8\,,\,\frac{\pi}{6}+\frac{\pi}{36}\big)</m>.
+We will, of course
+<fn>There are other choices possible.
+For example, we could write <m>35^\circ=45^\circ-10^\circ</m>. To get a good
+approximation we try to make <m>\De\theta</m> as small as possible, while
+keeping the arithmetic reasonably simple.</fn>
+, choose
+<md>
+<mrow>
+a_0&amp;=10    &amp;  b_0&amp;=20    &amp; \theta_0&amp;=\frac{\pi}{6}
+</mrow><mrow>
+\De a&amp;=0.1 &amp; \De b&amp;=-0.2 &amp; \De\theta&amp;=\frac{\pi}{36}
+</mrow>
+</md>
+By way of preparation, we evaluate
+<md>
+<mrow>
+A\big(a_0,b_0,\theta_0\big)
+&amp;=\frac{1}{2}a_0b_0\sin\theta_0 =\frac{1}{2}(10)(20)\frac{1}{2}=50
+</mrow><mrow>
+\pdiff{A}{a}\big(a_0,b_0,\theta_0\big)
+&amp;=\frac{1}{2}b_0\sin\theta_0 =\frac{1}{2}(20)\frac{1}{2} =5
+</mrow><mrow>
+\pdiff{A}{b}\big(a_0,b_0,\theta_0\big)
+&amp;=\frac{1}{2}a_0\sin\theta_0 =\frac{1}{2}(10)\frac{1}{2} =\frac{5}{2}
+</mrow><mrow>
+\pdiff{A}{\theta}\big(a_0,b_0,\theta_0\big)
+&amp;=\frac{1}{2}a_0b_0\cos\theta_0 =\frac{1}{2}(10)(20)\frac{\sqrt{3}}{2}
+ = 50\,\sqrt{3}
+</mrow>
+</md>
+So the linear approximation gives
+<md>
+<mrow>
+\text{Area} &amp; = A(10.1\,,\,19.8\,,\,\frac{\pi}{6}+\frac{\pi}{36}\big)
+              = A(a_0+\De a\,,\,b_0+\De b\,,\,\theta_0+\De\theta\big)
+</mrow><mrow>
+&amp;\approx A\big(a_0,b_0,\theta_0\big)
+    + \pdiff{A}{a}\big(a_0,b_0,\theta_0\big)\De a
+    + \pdiff{A}{b}\big(a_0,b_0,\theta_0\big)\De b
+    + \pdiff{A}{\theta}\big(a_0,b_0,\theta_0\big)\De\theta
+</mrow><mrow>
+&amp;=50 +5\times 0.1  +\frac{5}{2}\times (-0.2) +50\sqrt{3}\frac{\pi}{36}
+</mrow><mrow>
+&amp;=50 +\frac{5}{10}  -\frac{5}{10} +50\sqrt{3}\frac{\pi}{36}
+</mrow><mrow>
+&amp;=50\left(1+\sqrt{3}\frac{\pi}{36}\right)
+</mrow><mrow>
+&amp;\approx 57.56
+</mrow>
+</md>
+to two decimal places. The exact answer is
+<m>57.35</m> to two decimal places. Our
+approximation has an error of about
+<me>
+100\ \frac{57.56-57.35}{57.35}\%
+=0.37\%
+</me>
+</p>
+</solution>
+</example>
+
+<p>Another practical use of these linear approximations is to quantify
+how errors made in measured quantities propagate in computations
+using those measured quantities. Let's explore this idea a little
+by recycling the last example.
+</p>
+
+<example xml:id="eg_error_D"><title>Example <xref ref="eg_error_C"/>, continued</title>
+<p>
+Suppose, that, as in Example <xref ref="eg_error_C"/>, we are attempting
+to determine the area of a triangle by measuring the lengths of two of its
+sides together with the angle between them and then using the formula
+<me>
+A(a,b,\theta) = \frac{1}{2} ab\sin\theta
+</me>
+Of course, in the real world
+<fn>Of course in our <q>real world</q> everyone uses calculus.</fn>
+, we cannot measure lengths and angles exactly. So if we need
+to know the area to within 1%,  the question becomes: <q>How accurately
+do we have to measure the side lengths
+and included angle if we want the area that we compute to have
+an error of no more than about 1%?</q>
+</p>
+
+<p>Let's call the exact side lengths and included angle <m>a_0</m>, <m>b_0</m> and
+<m>\theta_0</m>, respectively, and the measured side lengths and included
+angle <m>a_0+\De a</m>, <m>b_0+\De b</m> and <m>\theta_0+\De\theta</m>.
+So <m>\De a</m>, <m>\De b</m> and <m>\De\theta</m> represent the errors in our
+measurements. Then, by <xref ref="eqn_lin_approx_3d"/>, the
+error in our computed area will be approximately
+<md>
+<mrow>
+\De A &amp;\approx \pdiff{A}{a}\big(a_0,b_0,\theta_0\big)\,\De a
+    + \pdiff{A}{b}\big(a_0,b_0,\theta_0\big)\,\De b
+    + \pdiff{A}{\theta}\big(a_0,b_0,\theta_0\big)\,\De\theta
+</mrow><mrow>
+&amp;=\frac{\De a}{2} b_0\sin\theta_0
+   +\frac{\De b}{2} a_0\sin\theta_0
+   +\frac{\De \theta}{2} a_0b_0\cos\theta_0
+</mrow>
+</md>
+and the percentage error in our computed area will be
+<md>
+<mrow>
+100\frac{|\De A|}{A(a_0,b_0,\theta_0)}
+&amp;\approx \left|  100\frac{\De a}{a_0} + 100\frac{\De b}{b_0}
+                  +100\De\theta\frac{\cos\theta_0}{\sin\theta_0} \right|
+</mrow>
+</md>
+By the triangle inequality, <m>|u+v|\le |u|+|v|</m>, and the fact that
+<m>|uv|=|u|\ |v|</m>,
+<md>
+<mrow>
+\left|  100\frac{\De a}{a_0} + 100\frac{\De b}{b_0}
+                  +100\De\theta\frac{\cos\theta_0}{\sin\theta_0} \right|
+&amp;\le 100\left|\frac{\De a}{a_0}\right| + 100\left|\frac{\De b}{b_0} \right|
+             +100|\De\theta|\ \left|\frac{\cos\theta_0}{\sin\theta_0} \right|
+</mrow>
+</md>
+We want this to be less than <m>1</m>.
+</p>
+
+<p>Of course we do not know exactly what <m>a_0</m>, <m>b_0</m> and <m>\theta_0</m> are.
+But suppose that we are confident that <m>a_0\ge 10</m>, <m>b_0\ge 10</m>
+and <m>\frac{\pi}{6}\le \theta_0 \le \frac{\pi}{2}</m> so that
+<m>\cot\theta_0\le \sqrt{3}\le 2</m>. Then
+<md>
+<mrow>
+100\left|\frac{\De a}{a_0}\right|&amp;\le 100\left|\frac{\De a}{10}\right|
+                                 = 10\,|\De a|
+</mrow><mrow>
+ 100\left|\frac{\De b}{b_0} \right|&amp;\le  100\left|\frac{\De b}{10} \right|
+                                = 10\,|\De b|
+</mrow><mrow>
+100|\De\theta|\ \left|\frac{\cos\theta_0}{\sin\theta_0} \right|
+       &amp;\le 100|\De\theta|\ 2
+       =200\,|\De\theta|
+</mrow>
+</md>
+and
+<md>
+<mrow>
+100\frac{|\De A|}{A(a_0,b_0,\theta_0)}
+\lesssim 10\,|\De a| + 10\,|\De b| +200\,|\De\theta|
+</mrow>
+</md>
+So it will suffice to have
+measurement errors <m>|\De a|</m>, <m>|\De b|</m> and <m>|\De\theta|</m> obey
+<me>
+10\,|\De a| + 10\,|\De b| +200\,|\De\theta| \lt 1
+</me>
+</p></example>
+
+<example xml:id="eg_errors_in_measurement">
+<statement>
+<p>
+  <em>A Question</em>
+</p>
+
+<p>Suppose that three variables are measured with percentage
+error <m>\veps_1,\ \veps_2</m> and <m>\veps_3</m> respectively. In other words,
+if the exact value of  variable number <m>i</m> is <m>x_i</m> and measured value
+of variable  number <m>i</m> is <m>x_i+\De x_i</m> then
+<me>
+100\ \left|\frac{\De x_i}{x_i}\right|=\veps_i
+</me>
+Suppose further that a quantity <m>P</m> is then computed by taking the
+product of the three variables. So the exact value of <m>P</m> is
+<me>
+P(x_1,x_2,x_3)=x_1x_2x_3
+</me>
+and the measured value is <m>P(x_1+\De x_1\,,\,x_2+\De x_2\,,\,x_3+\De x_3)</m>.
+What is the percentage error in this measured value of <m>P</m>?
+</p>
+</statement>
+
+<solution>
+<p>The percentage error in the measured value
+<m>P(x_1+\De x_1\,,\,x_2+\De x_2\,,\,x_3+\De x_3)</m> is
+<me>
+100\ \left|\frac{P(x_1+\De x_1\,,\,x_2+\De x_2\,,\,x_3+\De x_3)-P(x_1,x_2,x_3)}
+               {P(x_1,x_2,x_3)}\right|
+</me>
+We can get a much simpler approximate expression for this percentage error,
+which is good enough for virtually all applications, by applying
+<md>
+<mrow>
+P(x_1+\De &amp;x_1\,,\,x_2+\De x_2\,,\,x_3+\De x_3)
+</mrow><mrow>
+&amp;\approx P(x_1,x_2,x_3) +P_{x_1}(x_1,x_2,x_3)\,\De x_1
++P_{x_2}(x_1,x_2,x_3)\,\De x_2+P_{x_3}(x_1,x_2,x_3)\,\De x_3
+</mrow>
+</md>
+The three partial derivatives are
+<md alignment="alignat">
+<mrow>{3}
+P_{x_1}(x_1,x_2,x_3)&amp;=\pdiff{}{x_1}\big[x_1x_2x_3\big]
+&amp;=x_2x_3\cr
+P_{x_2}(x_1,x_2,x_3)&amp;=\pdiff{}{x_2}\big[x_1x_2x_3\big]
+&amp;=x_1x_3\cr
+P_{x_3}(x_1,x_2,x_3)&amp;=\pdiff{}{x_3}\big[x_1x_2x_3\big]
+&amp;=x_1x_2
+</mrow>
+</md>
+So
+<me>
+P(x_1+\De x_1\,,\,x_2+\De x_2\,,\,x_3+\De x_3)
+\approx P(x_1,x_2,x_3) +x_2x_3\,\De x_1+x_1x_3\,\De x_2+x_1x_2\,\De x_3
+</me>
+and the (approximate) percentage error in <m>P</m> is
+<md>
+<mrow>
+&amp;100\ \left|
+  \frac{P(x_1+\De x_1,x_2+\De x_2,x_3+\De x_3)-P(x_1,x_2,x_3)}{P(x_1,x_2,x_3)}
+   \right|
+</mrow><mrow>
+&amp;
+\approx
+       100\ \left|
+         \frac{x_2x_3\De x_1+x_1x_3\De x_2+x_1x_2\De x_3}{P(x_1,x_2,x_3)}
+       \right|
+</mrow><mrow>
+&amp;
+=100\  \left|\frac{x_2x_3\De x_1+x_1x_3\De x_2+x_1x_2\De x_3}{x_1x_2x_3}\right|
+</mrow><mrow>
+&amp;\hskip2in=\left|100\frac{\De x_1}{x_1}+100\frac{\De x_2}{x_2}
+         +100\frac{\De x_3}{x_3}\right|
+</mrow><mrow>
+&amp;\hskip2in\le \veps_1+\veps_2+\veps_3
+</mrow>
+</md>
+More generally, if we take a product of <m>n</m>, rather than three,  variables
+the percentage error in the product becomes at most (approximately)
+<m>\
+\smsum\limits_{i=1}^n\veps_i.
+\ </m>
+This is the basis of the experimentalist's rule of thumb that when you
+take products, percentage errors add.
+</p>
+
+<p>Still more generally, if we take a <q>product</q>
+  <m>\prod_{i=1}^n x_i^{m_i}</m>, the percentage error in the <q>product</q> becomes at most (approximately)
+<m>\
+\smsum\limits_{i=1}^n|m_i|\veps_i.
+\ </m>
+</p>
+</solution>
+</example>
+
+</introduction>
+
+<subsection xml:id="sec_error">
+  <title>Quadratic Approximation and Error Bounds</title>
+
+<p>
+Recall that, in the CLP-1 text, we started with the constant approximation,
+then improved it to the linear approximation by adding in degree one terms,
+then improved that to the quadratic approximation by adding in degree two
+terms, and so on. We can do the same thing here.
+Once again, set
+<me>
+g(t) = f\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
+</me>
+and recall that
+<me>
+g(0) = f\big(x_0\,,\,y_0\big)\qquad\text{and}\qquad
+g(1) = f\big(x_0 + \De x\,,\,y_0+\De y\big)
+</me>
+We'll now see what the quadratic approximation
+<me>
+g(t_0+\De t) \approx g(t_0) +g'(t_0)\,\De t +\tfrac{1}{2} g'(t_0)\,\De t^2
+</me>
+and the corresponding exact formula (see (\eref{CLP100}{eq:taylorErrorQ})
+in the CLP-1 text)
+<me>
+g(t_0+\De t) = g(t_0) +g'(t_0)\,\De t +\tfrac{1}{2} g'(t_0+c\De t)\,\De t^2
+                    \qquad\text{for some } 0\le c\le 1
+</me>
+tells us about <m>f</m>. We have already found, using the chain rule, that
+<me>
+g'(t) = \pdiff{f}{x}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\,\De x
+       + \pdiff{f}{y}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\,\De y
+</me>
+We now need to evaluate <m>g'(t)</m>. Temporarily write <m>f_1=\pdiff{f}{x}</m>
+and <m>f_2=\pdiff{f}{y}</m> so that
+<me>
+g'(t) = f_1\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\,\De x
+       + f_2\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\,\De y
+</me>
+Then we have, again using the chain rule,
+<md>
+<mrow>
+&amp;\diff{}{t}\left[f_1\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\right]
+=\frac{\partial f_1}{\partial x}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
+                                                                  \,\De x
+ +\frac{\partial f_1}{\partial y}
+              \big(x_0+t\,\De x\,,\,y_0+t\,\De y\big) \,\De y
+</mrow><mrow>
+&amp;\hskip1in
+=\frac{\partial^2 f}{\partial x^2}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
+                                                                  \,\De x
+ +\frac{\partial^2\ f}{\partial y\partial x}
+              \big(x_0+t\,\De x\,,\,y_0+t\,\De y\big) \,\De y
+\tag{$*$}</mrow>
+</md>
+and
+<md>
+<mrow>
+&amp;\diff{}{t}\left[f_2\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\right]
+=\frac{\partial f_2}{\partial x}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
+                                                                  \,\De x
+ +\frac{\partial f_2}{\partial y}
+              \big(x_0+t\,\De x\,,\,y_0+t\,\De y\big) \,\De y
+</mrow><mrow>
+&amp;\hskip1in
+=\frac{\partial^2\ f}{\partial x\partial y}
+           \big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)  \,\De x
+ +\frac{\partial^2 f}{\partial y^2}
+              \big(x_0+t\,\De x\,,\,y_0+t\,\De y\big) \,\De y
+\tag{$**$}</mrow>
+</md>
+Adding <m>\De x</m> times <m>(*)</m> to <m>\De y</m> times <m>(**)</m>
+and recalling that
+<m>\frac{\partial^2\ f}{\partial y\partial x}
+                    =\frac{\partial^2\ f}{\partial x\partial y}</m>,
+gives
+<md>
+<mrow>
+g'(t) &amp;=
+ \frac{\partial^2 f}{\partial x^2}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
+                                                                  \,\De x^2
+ +2\frac{\partial^2\ f}{\partial x\partial y}
+              \big(x_0+t\,\De x\,,\,y_0+t\,\De y\big) \,\De x\De y
+</mrow><mrow>
+&amp;\ \ + \frac{\partial^2 f}{\partial y^2}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
+                                                                  \,\De y^2
+</mrow>
+</md>
+Now setting <m>t_0=0</m> and <m>\De t=1</m>, the quadratic approximation
+<md>
+<mrow>
+f\big(x_0 + \De x\,,\,y_0+\De y\big)
+&amp;=g(1)\approx g(0) +g'(0) +\tfrac{1}{2} g'(0)
+</mrow><mrow>
+</mrow>
+</md>
+is
+</p>
+
+<fact xml:id="eqn_quadratic_approx">
+  <statement>
+    <p>
+<md>
+<mrow>
+f\big(x_0 + \De x\,,\,y_0+\De y\big)
+&amp;\approx f\big(x_0\,,\,y_0\big)
+       + \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\De x
+       + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\De y
+</mrow><mrow>
+&amp;  +\frac{1}{2}\left\{
+        \frac{\partial^2 f}{\partial x^2}\big(x_0,y_0\big)\,\De x^2
+       +2\frac{\partial^2\ f}{\partial x\partial y}
+                                     \big(x_0,y_0\big) \,\De x\De y
+       + \frac{\partial^2 f}{\partial y^2}\big(x_0,y_0\big)\,\De y^2
+\right\}
+</mrow>
+</md>
+</p>
+</statement>
+</fact>
+<p>
+and the corresponding exact formula
+<md>
+<mrow>
+f\big(x_0 + \De x\,,\,y_0+\De y\big)
+&amp;=g(1) = g(0) +g'(0) +\tfrac{1}{2} g'(c)
+</mrow><mrow>
+</mrow>
+</md>
+is
+</p>
+
+<fact xml:id="eqn_quadratic_exact">
+  <statement>
+    <p>
+<md>
+<mrow>
+f\big(x_0 + \De x\,,\,y_0+\De y\big)
+&amp;= f\big(x_0\,,\,y_0\big)
+       + \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\De x
+       + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\De y
+</mrow><mrow>
+&amp; +\frac{1}{2}\left\{
+        \frac{\partial^2 f}{\partial x^2}\big(\vr(c)\big)\,\De x^2
+       +2\frac{\partial^2\ f}{\partial x\partial y}
+                                     \big(\vr(c)\big) \,\De x\De y
+       + \frac{\partial^2 f}{\partial y^2}\big(\vr(c)\big)\,\De y^2
+\right\}
+</mrow>
+</md>
+where <m>\vr(c) = \big(x_0+c\,\De x\,,\,y_0+c\,\De y\big)</m> and <m>c</m>
+is some (unknown) number satisfying <m>0\le c\le 1</m>.
+</p>
+</statement>
+</fact>
+
+<fact xml:id="eqn_linear_bound">
+  <statement>
+    <p>
+If we can bound the second derivatives
+<me>
+\left|\frac{\partial^2 f}{\partial x^2}\big(\vr(c)\big)\right|\ ,\
+\left|\frac{\partial^2\ f}{\partial x\partial y}
+                                     \big(\vr(c)\big)\right|\ ,\
+\left|\frac{\partial^2 f}{\partial y^2}\big(\vr(c)\big)\right|\le M
+</me>
+we can massage <xref ref="eqn_quadratic_exact"/> into the form
+<md>
+<mrow>
+&amp;\left|f\big(x_0 + \De x\,,\,y_0+\De y\big)
+-\Big\{f\big(x_0\,,\,y_0\big)
+       + \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\De x
+       + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\De y\Big\}\right|
+</mrow><mrow>
+&amp;\hskip 3.5in
+      \le \frac{M}{2}\big(|\De x|^2 +2|\De x|\,|\De y| +|\De y|^2\big)
+</mrow>
+</md>
+</p>
+</statement>
+</fact>
+
+
+<p>
+Why might we want to do this? The left hand side of <xref ref="eqn_linear_bound"/>
+is exactly the error in the linear approximation <xref ref="eqn_lin_approx_2d"/>.
+So the right hand side is a rigorous bound on the error in the linear
+approximation.
+</p>
+
+<example xml:id="eg_error">
+  <title>Example <xref ref="eg_approx_A"/>, continued</title>
+<p>
+Suppose that we approximate
+<m>\frac{(0.998)^3}{1.003}</m> as in Example <xref ref="eg_approx_A"/>
+ and we want a rigorous
+bound on the approximation. We can get such a rigorous bound by
+applying <xref ref="eqn_quadratic_exact"/>. Set
+<me>
+f(x,y)=\frac{x^3}{y}
+</me>
+and
+<me>
+x_0=1\qquad
+\De x=-0.002\qquad
+y_0=1\qquad
+\De y=0.003
+</me>
+Then the exact answer is <m>f\big(x_0 + \De x\,,\,y_0+\De y\big)</m>
+and the approximate answer is <m>f\big(x_0\,,\,y_0\big)
+       + \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\De x
+       + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\De y</m>,
+so that, by <xref ref="eqn_quadratic_exact"/>, the error in the
+approximation is exactly
+<md>
+<mrow>
+\frac{1}{2}\left|
+        \frac{\partial^2 f}{\partial x^2}\big(\vr(c)\big)\,\De x^2
+       +2\frac{\partial^2\ f}{\partial x\partial y}
+                                     \big(\vr(c)\big) \,\De x\De y
+       + \frac{\partial^2 f}{\partial y^2}\big(\vr(c)\big)\,\De y^2
+       \right|
+</mrow>
+</md>
+with
+   <m>\vr(c) = \big(1-0.002 c\,,\,1+0.0003 c\big)</m>
+for some, unknown, <m>0\le c\le 1</m>. For our function <m>f</m>
+<md>
+<mrow>
+f(x,y)&amp;=\frac{x^3}{y} &amp;
+\pdiff{f}{x}(x,y)&amp;=\frac{3 x^2}{y} &amp;
+\pdiff{f}{y}(x,y)&amp;=-\frac{x^3}{y^2}
+</mrow><mrow>
+\frac{\partial^2 f}{\partial x^2}(x,y)&amp;=\frac{6 x}{y} &amp;
+\frac{\partial^2 f}{\partial x\partial y}(x,y)&amp;=-\frac{3 x^2}{y^2} &amp;
+\frac{\partial^2 f}{\partial y^2}(x,y)&amp;=\frac{2 x^3}{y^3}
+</mrow>
+</md>
+We don't know what <m>\vr(c)=\big(1-0.002 c\,,\,1+0.0003 c\big)</m> is.
+But we know that <m>0\le c\le 1</m>, so we definitely know that the <m>x</m> component
+of <m>\vr(c)</m> is smaller that <m>1</m> and the <m>y</m> component of <m>\vr(c)</m> is bigger
+than <m>1</m>. So
+<md>
+<mrow>
+\left|\frac{\partial^2 f}{\partial x^2}\big(\vr(c)\big)\right|&amp;\le 6 &amp;
+\left|\frac{\partial^2 f}{\partial x\partial y}\big(\vr(c)\big)\right|&amp;\le 3 &amp;
+\left|\frac{\partial^2 f}{\partial y^2}\big(\vr(c)\big)\right|&amp;\le 2
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\text{error}
+&amp;\le \frac{1}{2}\left[6\De x^2  +2\times 3 |\De x\,\De y| +2\De y^2\right]
+</mrow><mrow>
+&amp;\le 3(0.002)^2 + 3(0.002)(0.003) +(0.003)^2
+</mrow><mrow>
+&amp;= 0.000039
+</mrow>
+</md>
+By way of comparison, the exact error is 0.0000389, to seven decimal places.
+</p></example>
+
+<example xml:id="eg_approx_C">
+<p>
+In this example, we find the quadratic approximation of
+<m>f(x,y)=\sqrt{1+4x^2+y^2}</m> at <m>(x_0,y_0)=(1,2)</m> and use it to compute
+approximately <m>f(1.1\,,\,2.05)</m>. We know that we will need all
+partial derivatives up to order 2, so we first compute them
+and evaluate them at <m>(x_0,y_0)=(1,2)</m>.
+<md>
+<mrow>
+f(x,y)&amp;=\sqrt{1+4x^2+y^2} &amp;
+      f(x_0,y_0)&amp;=3
+</mrow><mrow>
+f_x(x,y)&amp;=\frac{4x}{\sqrt{1+4x^2+y^2}} &amp;
+      f_x(x_0,y_0)&amp;=\frac{4}{3}
+</mrow><mrow>
+f_y(x,y)&amp;=\frac{y}{\sqrt{1+4x^2+y^2}} &amp;
+      f_y(x_0,y_0)&amp;=\frac{2}{3}
+</mrow><mrow>
+f_{xx}(x,y)&amp;=\frac{4}{\sqrt{1+4x^2+y^2}} -\frac{16x^2}{[1+4x^2+y^2]^{3/2}} &amp;
+      f_{xx}(x_0,y_0)&amp;=\frac{4}{3} -\frac{16}{27}=\frac{20}{27}
+</mrow><mrow>
+f_{xy}(x,y)&amp;=-\frac{4xy}{[1+4x^2+y^2]^{3/2}} &amp;
+      f_{xy}(x_0,y_0)&amp;= -\frac{8}{27}
+</mrow><mrow>
+f_{yy}(x,y)&amp;=\frac{1}{\sqrt{1+4x^2+y^2}} -\frac{y^2}{[1+4x^2+y^2]^{3/2}} &amp;
+      f_{yy}(x_0,y_0)&amp;=\frac{1}{3} -\frac{4}{27}=\frac{5}{27}
+</mrow>
+</md>
+We now just substitute them into <xref ref="eqn_quadratic_approx"/> to get
+that the quadratic approximation to <m>f</m> about <m>(x_0,y_0)</m> is
+<md>
+<mrow>
+f\big(x_0+\De x\,,\,y_0+\De y\big)
+&amp; \approx f(x_0, y_0)
+        +f_x(x_0, y_0)\De x+f_y(x_0, y_0)\De y \cr &amp;\hskip0.5in
+    +\frac{1}{2}\bigg[f_{xx}(x_0, y_0)\De x^2
+              +2f_{xy}(x_0, y_0)\De x\De y
+               +f_{yy}(x_0, y_0)\De y^2\bigg] \cr
+&amp; = 3 +\frac{4}{3} \De x+\frac{2}{3}\De y
+    +\frac{10}{27}\De x^2 -\frac{8}{27}\De x\De y+\frac{5}{54}\De y^2 \cr
+</mrow>
+</md>
+In particular, with <m>\De x=0.1</m> and <m>\De y=0.05</m>,
+<me>
+f(1.1\,,\,2.05)\approx 3 +\frac{4}{3} (0.1)+\frac{2}{3}(0.05)
+    +\frac{10}{27}(0.01) -\frac{8}{27}(0.005)+\frac{5}{54}(0.0025)
+=3.1691
+</me>
+The actual value, to four decimal places, is <m>3.1690</m>.
+The percentage error is about 0.004\%.
+</p>
+
+</example>
+
+<example xml:id="eg_approx_D">
+<p>
+In this example, we find the quadratic approximation of
+<m>f(x,y)=e^{2x}\sin(3y)</m> about <m>(x_0,y_0)=(0,0)</m> in two different ways.
+</p>
+
+<p>The first way uses the canned formula <xref ref="eqn_quadratic_approx"/>.
+We compute all partial derivatives up to order 2 at <m>(x_0,y_0)</m>.
+<md>
+<mrow>
+f(x,y)&amp;= e^{2x}\sin(3y) &amp;
+      f(x_0,y_0)&amp;=0
+</mrow><mrow>
+f_x(x,y)&amp;= 2e^{2x}\sin(3y) &amp;
+      f_x(x_0,y_0)&amp;=0
+</mrow><mrow>
+f_y(x,y)&amp;= 3e^{2x}\cos(3y) &amp;
+      f_y(x_0,y_0)&amp;=3
+</mrow><mrow>
+f_{xx}(x,y)&amp;=4e^{2x}\sin(3y) &amp;
+      f_{xx}(x_0,y_0)&amp;=0
+</mrow><mrow>
+f_{xy}(x,y)&amp;=6e^{2x}\cos(3y) &amp;
+      f_{xy}(x_0,y_0)&amp;= 6
+</mrow><mrow>
+f_{yy}(x,y)&amp;=-9e^{2x}\sin(3y) &amp;\qquad
+      f_{yy}(x_0,y_0)&amp;=0
+</mrow>
+</md>
+So the quadratic approximation to <m>f</m> about <m>(0,0)</m> is
+<md>
+<mrow>
+f\big(x\,,\,y\big)
+&amp; \approx f(x, y)
+        +f_x(x, y) x+f_y(0, 0)y
++\frac{1}{2}\bigg[f_{xx}(0, 0)x^2
+              +2f_{xy}(0, 0) x y
+               +f_{yy}(0, 0) y^2\bigg]
+</mrow><mrow>
+&amp;=3y+6xy
+</mrow>
+</md>
+That's pretty simple <mdash/> just compute a bunch of partial derivatives
+and substitute into the formula <xref ref="eqn_quadratic_approx"/>.
+</p>
+
+<p>But there is also a sneakier, and often computationally more efficient,
+method to get the same result. It exploits the single variable
+Taylor expansions
+<md>
+<mrow>
+e^{x}&amp;=1+x+\frac{1}{2!}x^2+\cdots
+</mrow><mrow>
+\sin y &amp;=y - \frac{1}{3!}y^3+\cdots
+</mrow>
+</md>
+Replacing <m>x</m> by <m>2x</m> in the first and <m>y</m> by <m>3y</m> in the second
+and multiplying the two together, keeping track only of terms of degree
+at most two, gives
+<md>
+<mrow>
+f(x,y)&amp;= e^{2x}\sin(3y)\cr
+&amp;= \Big[1+(2x)+\frac{1}{2!}(2x)^2+\cdots\Big]
+   \Big[(3y) - \frac{1}{3!}(3y)^3+\cdots\Big]
+</mrow><mrow>
+&amp;= \Big[1+2x+2x^2+\cdots\Big]
+   \Big[3y - \frac{9}{2}y^3+\cdots\Big]
+</mrow><mrow>
+&amp;= 3y+6xy+6x^2y+\cdots
+   - \frac{9}{2}y^3- 9xy^3- 9x^2y^3+\cdots
+</mrow><mrow>
+&amp;=3y + 6xy + \cdots
+</mrow>
+</md>
+just as in the first computation.
+</p></example>
+
+</subsection>
+
+<subsection xml:id="sec_taylor">
+  <title> Optional <mdash/> Taylor Polynomials </title>
+<p>
+We have just found linear and quadratic approximations
+to the function <m>f(x,y)</m>, for <m>(x,y)</m> near the point <m>(x_0,y_0)</m>.
+In CLP-1, we found not only linear and quadratic approximations,
+but in fact a whole hierarchy of approximations. For each
+integer <m>n\ge 0</m>, the <m>n^\mathrm{th}</m> degree Taylor polynomial
+for <m>f(x)</m> about <m>x=a</m> was defined, in Definition 3.4.11 of the CLP-1 text,
+to be
+<md>
+<mrow>
+    \sum_{k=0}^n \frac{1}{k!} f^{(k)}(a) \cdot (x-a)^k
+</mrow>
+</md>
+</p>
+
+<p>We'll now define, and find, the Taylor polynomial of degree <m>n</m>
+for the function <m>f(x,y)</m> about <m>(x,y)=(x_0,y_0)</m>. It is going
+to be a polynomial of degree <m>n</m> in <m>\De x</m> and <m>\De y</m>. The most
+general such polynomial is
+<me>
+T_n(\De x,\De y)
+  =\sum_{\Atop{\ell,m\ge 0}{\ell+m\le n}}  a_{\ell,m}\  (\De x)^\ell (\De y)^m
+</me>
+with all of the coefficients <m>a_{\ell,m}</m> being constants. The
+specific coefficients for the Taylor polynomial are determined by the
+requirement that all partial derivatives of <m>T_n(\De x,\De y)</m>
+at <m>\De x=\De y=0</m> are the same as the corresponding partial derivatives of
+<m>f\big(x_0 + \De x\,,\,y_0+\De y\big)</m> at <m>\De x=\De y=0</m>.
+</p>
+
+<p>By way of preparation for our computation of the derivatives of
+<m>T_n(\De x,\De y)</m>, consider
+<md>
+<mrow>
+\diff{}{t}t^4&amp;=4t^3 &amp;
+\difftwo{}{t}t^4&amp;=(4)(3)t^2 &amp;
+\frac{\dee{}^3}{\dee{t}^3}t^4&amp;=(4)(3)(2)t
+</mrow><mrow>
+\frac{\dee{}^4}{\dee{t}^4}t^4&amp;=(4)(3)(2)(1)=4! &amp;
+\frac{\dee{}^5}{\dee{t}^5}t^4&amp;=0 &amp;
+\frac{\dee{}^6}{\dee{t}^6}t^4&amp;=0
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\left.\diff{}{t}t^4\right|_{t=0}&amp;=0 &amp;
+\left.\difftwo{}{t}t^4\right|_{t=0}&amp;=0 &amp;
+\left.\frac{\dee{}^3}{\dee{t}^3}t^4\right|_{t=0}&amp;=0
+</mrow>
+<mrow>
+\left.\frac{\dee{}^4}{\dee{t}^4}t^4\right|_{t=0}&amp;=4! &amp;
+\left.\frac{\dee{}^5}{\dee{t}^5}t^4\right|_{t=0}&amp;=0 &amp;
+\left.\frac{\dee{}^6}{\dee{t}^6}t^4\right|_{t=0}&amp;=0
+</mrow>
+</md>
+More generally, for any natural numbers <m>p</m>, <m>m</m>,
+<me>
+\frac{\dee{}^p}{\dee{t}^p} t^m =
+   \begin{cases}
+      m(m-1)\cdots(m-p+1) t^{m-p} &amp;\text {if } p\le m \\
+      0 &amp;\text{if }p \gt m
+   \end{cases}
+</me>
+so that
+<me>
+\left.\frac{\dee{}^p}{\dee{t}^p} t^m\right|_{t=0} =
+   \begin{cases}
+      m! &amp;\text {if } p = m \\
+      0 &amp;\text{if } p\ne m
+   \end{cases}
+</me>
+Consequently
+<me>
+\left.\frac{\partial^p}{\partial (\De x)^p}\frac{\partial^q}{\partial (\De y)^q}
+            (\De x)^\ell (\De y)^m\right|_{\De x=\De y=0}
+=\begin{cases}
+      \ell!\,m! &amp;\text {if $p = \ell$ and $q=m$}  \\
+      0 &amp;\text{if $p\ne\ell$ or $q\ne m$}
+   \end{cases}
+</me>
+and
+<md>
+<mrow>
+\frac{\partial^{p+q}\ \ T_n}{\partial (\De x)^p\, \partial (\De y)^q}(0,0)
+&amp;=\sum_{\Atop{\ell,m\ge 0}{\ell+m\le n}}  a_{\ell,m}\
+\left.\frac{\partial^p}{\partial (\De x)^p}\frac{\partial^q}{\partial (\De y)^q}
+            (\De x)^\ell (\De y)^m\right|_{\De x=\De y=0}
+</mrow><mrow>
+&amp;=\begin{cases}
+      p!\,q!\,a_{p,q} &amp;\text {if } p+q\le n \\
+      0 &amp;\text{if } p+q  \gt  n
+   \end{cases}
+</mrow>
+</md>
+Our requirement that the derivatives of <m>f</m> and <m>T_n</m> match is the
+requirement that, for all <m>p+q\le n</m>,
+<me>
+\frac{\partial^{p+q}\ \ T_n}{\partial (\De x)^p\, \partial (\De y)^q}(0,0)
+=\frac{\partial^{p+q}\ }{\partial (\De x)^p\, \partial (\De y)^q}
+      f\big(x_0 + \De x\,,\,y_0+\De y\big)\Big|_{\De x=\De y=0}
+=\frac{\partial^{p+q}\ f}{\partial x^p\, \partial y^q}(x_0,y_0)
+</me>
+This requirement gives
+<me>
+p!\,q!\,a_{p,q} = \frac{\partial^{p+q}\ f}{\partial x^p\, \partial y^q}(x_0,y_0)
+</me>
+</p>
+
+<!--
+<p>\intremark{
+We'll use the same strategy that we used to get the linear and
+quadratic approximations for <m>f(x,y)</m> to generate Taylor polynomials of all
+degrees. Fix any integer <m>n\ge 0</m> and any point <m>(x_0,y_0)</m>.
+Set, as we did in the previous sections,
+<me>
+         g(t) = f(x_0 + t\De x , y_0 + t\De y)
+</me>
+The <m>n^\mathrm{th}</m> degree Taylor polynomial for <m>g(t)</m> about <m>t=0</m>
+is
+<md>
+<mrow>
+    \sum_{k=0}^n \frac{1}{k!} g^{(k)}(0)\,t^k
+</mrow>
+</md>
+As <m>g(0) = f(x_0, y_0)</m> and <m>g(1) = f(x_0 + \De x , y_0 + \De y)</m>,
+setting <m>t=1</m> gives the <m>n^\mathrm{th}</m> degree Taylor polynomial for <m>f(x,y)</m>
+about <m>(x,y)=(x_0,y_0)</m>. The catch is that we still have to write out
+<md>
+<mrow>
+    \sum_{k=0}^n \frac{1}{k!} g^{(k)}(0)
+</mrow>
+</md>
+in terms of <m>f</m>. In particular, we need to express each derivative
+<m>g^{(k)}(0)</m> in terms of <m>f</m>.
+</p>
+
+<p>To do so, observe that for any function <m>h(x,y)</m>, the chain rule gives that
+<md>
+<mrow>
+\diff{}{t}\big[h(x_0 + t\De x , y_0 + t\De y)\big]
+   &amp;= \De x\pdiff{h}{x}(x_0 + t\De x , y_0 + t\De y)
+      + \De y\pdiff{h}{y}(x_0 + t\De x , y_0 + t\De y)
+</mrow><mrow>
+   &amp;=\left[\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right) h(x,y)\right]_{
+                 \Atop{x =  x_0 + t\De x}{y= y_0 + t\De y}}
+   \tag{$*$}
+</mrow>
+</md>
+You have probably not seen the notation in the last line before.
+It means
+<ul>
+<li>
+find <m>\De x\,\pdiff{h}{x}(x,y)</m> and <m>\De y\,\pdiff{h}{y}(x,y)</m> and then
+</li>
+<li>
+add them together and then
+</li>
+<li>
+evaluate the result at <m>x =  x_0 + t\De x</m> and <m>y= y_0 + t\De y</m>.
+</li>
+</ul>
+The advantage to this notation is that we can use it to easily and compactly
+write out higher order derivatives. For example,
+<md>
+<mrow>
+\difftwo{}{t}\big[h(x_0 + t\De x , y_0 + t\De y)\big]
+ &amp;= \diff{}{t}\left[\diff{}{t}\big[h(x_0 + t\De x , y_0 + t\De y)\big]\right]
+</mrow><mrow>
+ &amp;= \diff{}{t}
+    \left[\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right) h(x,y)\right]_{
+                 \Atop{x =  x_0 + t\De x}{y= y_0 + t\De y}}
+</mrow><mrow>
+ &amp;=\left[\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)^2 h(x,y)\right]_{
+                 \Atop{x =  x_0 + t\De x}{y= y_0 + t\De y}}
+ \tag{$**$}
+</mrow>
+</md>
+To get from the second line to the third line, we just applied <m>(*)</m>
+with the function <m>h(x,y)</m> replaced by the new function
+<m>H(x,y) = \left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right) h(x,y)</m>
+and then wrote
+<me>
+\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)
+             \left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)h
+            =\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)^2h
+</me>
+The notation in <m>(**)</m> means
+<ul>
+<li>
+multiply out <m>\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)^2
+=(\De x)^2\frac{\partial^2}{\partial x^2}
+   +2(\De x)(\De y)\frac{\partial^2}{\partial x\partial y}
+   +(\De y)^2\frac{\partial^2}{\partial y^2}</m>
+(using that <m>\frac{\partial^2\ h}{\partial x\partial y}
+             =\frac{\partial^2\ h}{\partial y\partial x}</m>)
+and then
+</li>
+<li>
+find <m>(\De x)^2\frac{\partial^2 h}{\partial x^2}(x,y)</m> and
+   <m>2(\De x)(\De y)\frac{\partial^2\ h}{\partial x\partial y}(x,y)</m> and
+   <m>(\De y)^2\frac{\partial^2 h}{\partial y^2}(x,y)</m> and then
+</li>
+<li>
+add them together and then
+</li>
+<li>
+evaluate the result at <m>x =  x_0 + t\De x</m> and <m>y= y_0 + t\De y</m>.
+</li>
+</ul>
+So, by applying <m>(*)</m> <m>k</m> times, we get
+<md>
+<mrow>
+g^{(k)}(0)
+&amp;=\left[\frac{\dee{}^k}{\dee{t}^k} \big[f(x_0 + t\De x , y_0 + t\De y)\big]
+     \right]_{t=0}
+</mrow><mrow>
+&amp;=\left[\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)^k f(x,y)\right]_{
+                 \Atop{x =  x_0}{y= y_0}}
+</mrow>
+</md>
+and we're almost done. We just need to multiply the <m>k^{\rm th}</m> power out,
+which we can do by applying the binomial theorem.
+<me>
+(a+b)^k = \sum_{\ell=0}^{k} \binom{k}{\ell} a^\ell b^{k-\ell}
+</me>
+Here the binomial coefficient
+<me>
+\binom{k}{\ell} =\frac{k!}{\ell!\ (k-\ell)!}
+</me>
+where, <m>0!=1</m> and, for any natural number <m>m</m>,
+   <m>m! =1\times 2\times 3\times \cdots\times m</m>.
+So
+<me>
+\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)^k
+=\sum_{\ell=0}^{k} \binom{k}{\ell} (\De x)^\ell (\De y)^{k-\ell}
+         \frac{\partial^k\ }{\partial x^\ell\,\partial y^{k-\ell}}
+</me>
+and the Taylor polynomial of degree <m>n</m> is the right hand side of
+<md>
+<mrow>
+f\big(x_0 + \De x\,,\,y_0+\De y\big)
+&amp;\approx \sum_{k=0}^n\ \frac{1}{k!}
+    \sum_{\ell=0}^{k} \binom{k}{\ell}
+         \frac{\partial^k\ f}{\partial x^\ell\,\partial y^{k-\ell}}(x_0,y_0)
+         \ (\De x)^\ell (\De y)^{k-\ell}
+</mrow>
+</md>
+Using that
+<me>
+\frac{1}{k!} \binom{k}{\ell}
+=\frac{1}{k!}\ \frac{k!}{\ell!\ (k-\ell)!}
+=\frac{1}{\ell!\ (k-\ell)!}
+</me>
+and renaming <m>k-\ell</m> to <m>m</m>, we get the slightly more compact form
+}
+</p>
+ -->
+
+<p>So the Taylor polynomial of degree <m>n</m> for the function <m>f(x,y)</m>
+about <m>(x,y)=(x_0,y_0)</m> is the right hand side of
+</p>
+
+<fact xml:id="eqn_Taylor_n_2d">
+<statement>
+<p>
+<md>
+<mrow>
+f\big(x_0 + \De x\,,\,y_0+\De y\big)
+&amp;\approx
+    \sum_{\Atop{\ell,m\ge 0}{\ell+m\le n}}  \frac{1}{\ell!\ m!}\
+         \frac{\partial^{\ell+m}\ f}{\partial x^\ell\,\partial y^m}(x_0,y_0)\
+         (\De x)^\ell (\De y)^m
+</mrow>
+</md>
+</p>
+</statement>
+</fact>
+
+<p>
+This is for functions, <m>f(x,y)</m>, of two variables. There are natural
+extensions of this for functions of any (finite) number of variables.
+For example, the Taylor polynomial of degree <m>n</m> for a function, <m>f(x,y,z)</m>,
+of three variables is the right hand side of
+<md>
+<mrow>
+f\big(x_0 + \De x\,,\,y_0+\De y\,,\,z_0+\De z\big)
+&amp;\approx
+    \sum_{\Atop{k,\ell,m\ge 0}{k+\ell+m\le n}}  \frac{1}{k!\ \ell!\ m!}\
+         \frac{\partial^{k+\ell+m}\ f}
+                 {\partial x^k\,\partial y^\ell\,\partial z^m}(x_0,y_0,z_0)\
+         (\De x)^k (\De y)^\ell (\De z)^m
+</mrow>
+</md>
+</p>
+
+</subsection>
+</section>

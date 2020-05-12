@@ -1,0 +1,2108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_2d_integrals">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title>Double Integrals</title>
+<subsection>
+  <title>Vertical Slices</title>
+
+<p>Suppose that you want to compute the mass of a plate that
+fills the region <m>\cR</m> in the <m>xy</m>-plane. Suppose further that the
+density of the plate, say in kilograms per square meter, depends
+on position. Call the density <m>f(x,y)</m>. For simplicity we'll assume that
+<m>\cR</m> is the region between the bottom curve <m>y=B(x)</m> and the top
+curve <m>y=T(x)</m> with <m>x</m> running from <m>a</m> to <m>b</m>. That is,
+<md>
+<mrow>
+\cR=\big\{\ (x,y)\ \big|\ a\le x\le b,\ B(x)\le y\le T(x)\ \big\}
+</mrow>
+</md>
+</p>
+<sidebyside>
+<image source="figs/vSliceA"/>
+</sidebyside>
+
+<p>
+We'll shortly express that mass
+as a two dimensional integral. As a warmup, recall the procedure that
+we used  to set up a (one dimensional) integral representing the area
+of <m>\cR</m> in Example \eref{CLP101}{eg areabetween riemann} of the CLP-2 text.
+<ul>
+<li>
+Pick a natural number <m>n</m> (that we will later send to infinity), and then
+</li>
+<li>
+<p>
+subdivide <m>\cR</m> into <m>n</m> narrow vertical slices, each of width
+<m>\De x=\frac{b-a}{n}</m>. Denote by <m>x_i = a + i\,\De x</m> the <m>x</m>-coordinate
+of the right hand edge of slice number <m>i</m>.
+</p>
+
+<sidebyside>
+<image source="figs/vSliceB"/>
+</sidebyside>
+</li>
+<li>
+<p>
+For each <m>i=1,2,\dots,n</m>, slice number <m>i</m> has <m>x</m> running from <m>x_{i-1}</m>
+to <m>x_i</m>. We approximate its area by the area of a rectangle.
+We pick a number <m>x_i^*</m> between <m>x_{i-1}</m> and <m>x_i</m> and approximate the
+slice by a rectangle whose top is at <m>y=T(x_i^*)</m>
+and whose bottom is at <m>y=B(x_i^*)</m>. The rectangle is outlined in blue in the
+figure below.
+</p>
+<sidebyside>
+<image source="figs/vSliceC"/>
+</sidebyside>
+</li>
+<li>
+Thus the area of slice <m>i</m> is approximately <m>\big[T(x_i^*)-B(x_i^*)\big]\De x</m>.
+</li>
+<li>
+So the Riemann sum approximation of the area of <m>\cR</m> is
+<md>
+<mrow>
+  \text{Area} &amp;\approx \sum_{i=1}^n  \big[T(x_i^*)-B(x_i^*)\big]\De x
+</mrow>
+</md>
+</li>
+<li>
+By taking the limit as <m>n \to \infty</m> (i.e. taking the limit as the width of the rectangles goes to zero), we convert the Riemann sum into a definite integral (see
+Definition<nbsp/>\eref{CLP101}{def:INTintegral} in the CLP-2 text) and at the
+same time our approximation of the area becomes the exact area:
+<md>
+<mrow>
+\text{Area}
+=\lim_{n\rightarrow\infty}\sum_{i=1}^n  \big[T(x_i^*)-B(x_i^*)\big]\De x
+=\int_a^b \big[T(x)-B(x)\big]\dee{x}
+</mrow>
+</md>
+</li>
+</ul>
+Now we can expand that procedure to yield the mass of <m>\cR</m> rather
+than the area of <m>\cR</m>. We just have to replace our approximation
+<m>\big[T(x_i^*)-B(x_i^*)\big]\De x</m> of the area of slice <m>i</m> by an
+approximation to the mass of slice <m>i</m>. To do so, we
+<ul>
+<li>
+Pick a natural number <m>m</m> (that we will later send to infinity), and then
+</li>
+<li><p>
+  subdivide slice number <m>i</m> into <m>m</m> tiny rectangles, each of width <m>\De x</m>
+and of height <m>\De y=\frac{1}{m}\big[T(x_i^*)-B(x_i^*)\big]</m>. Denote by
+<m>y_j = B(x_i^*) + j\,\De y</m> the <m>y</m>-coordinate
+of the top of rectangle number <m>j</m>.
+</p>
+
+<sidebyside>
+<image source="figs/vSliceD"/>
+</sidebyside>
+</li>
+<li>
+At this point we approximate the density inside each rectangle by a constant.
+For each <m>j=1,2,\dots,m</m>, rectangle number <m>j</m> has <m>y</m> running from <m>y_{j-1}</m>
+to <m>y_j</m>.  We pick a number <m>y_j^*</m> between <m>y_{j-1}</m> and <m>y_j</m> and
+approximate the density on rectangle number <m>j</m> in slice number <m>i</m>
+by the constant <m>f\big(x_i^*,y_j^*\big)</m>.
+</li>
+<li>
+Thus the mass of rectangle number <m>j</m> in slice number <m>i</m> is approximately <m>f\big(x_i^*,y_j^*\big)\,\De x\,\De y</m>.
+</li>
+<li>
+So the Riemann sum approximation of the mass of slice number <m>i</m> is
+<md>
+<mrow>
+  \text{Mass of slice } i
+          &amp;\approx \sum_{j=1}^m  f\big(x_i^*,y_j^*\big)\,\De x\,\De y
+</mrow>
+</md>
+Note that the <m>y_j^*</m>'s depend on <m>i</m> and <m>m</m>.
+</li>
+<li>
+By taking the limit as <m>m \to \infty</m> (i.e. taking the limit as the height
+of the rectangles goes to zero), we convert the Riemann sum into a definite integral:
+<md>
+<mrow>
+  \text{Mass of slice } i
+          &amp;\approx \De x \int_{B(x_i^*)}^{T(x_i^*)} f\big(x_i^*,y\big)\,\dee{y}
+          = F(x_i^*)\,\De x
+</mrow>
+</md>
+where
+<me>
+F(x) = \int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}
+</me>
+Notice that, while we started with the density <m>f(x,y)</m> being a function of
+both <m>x</m> and <m>y</m>, by taking the limit of this Riemann sum,
+we have <q>integrated out</q> the dependence on <m>y</m>.
+As a result, <m>F(x)</m> is a function of <m>x</m> only, not of <m>x</m> and <m>y</m>.
+</li>
+<li>
+Finally taking the limit as <m>n \to \infty</m> (i.e. taking the limit as the slice
+width goes to zero), we get
+<md>
+<mrow>
+\text{Mass}
+&amp;=\lim_{n\rightarrow\infty}\sum_{i=1}^n
+\De x \int_{B(x_i^*)}^{T(x_i^*)} f\big(x_i^*,y\big)\,\dee{y}
+= \lim_{n\rightarrow\infty}\sum_{i=1}^n  F(x_i^*)\,\De x
+</mrow>
+</md>
+Now we are back in familiar 1-variable territory. The sum
+<m>\sum\limits_{i=1}^n  F(x_i^*)\,\De x</m> is a Riemann sum approximation
+to the integral <m> \int_a^b F(x)\,\dee{x}</m>. So
+<md>
+<mrow>
+\text{Mass}
+&amp;= \int_a^b F(x)\,\dee{x}
+=\int_a^b \left[\int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\right]\dee{x}
+</mrow>
+</md>
+</li>
+</ul>
+This is our first double integral. There are a couple of different standard
+notations for this integral.
+</p>
+
+<definition xml:id="notn_dbl_int">
+<statement><p>
+<md>
+<mrow>
+\dblInt_\cR f\big(x,y\big)\,\dee{x}\,\dee{y}
+&amp;= \int_a^b \left[\int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\right]\dee{x}
+</mrow><mrow>
+&amp;=\int_a^b \int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\,\dee{x}
+=\int_a^b \dee{x} \int_{B(x)}^{T(x)} \dee{y}\, f\big(x,y\big)
+</mrow>
+</md>
+The last three integrals here are called iterated integrals,
+for obvious reasons.
+</p></statement>
+</definition>
+
+<p>
+Note that
+<ul>
+<li><p>
+to evaluate the integral
+<m>\displaystyle\int_a^b \int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\,\dee{x}</m>,
+<ul>
+<li>
+  first evaluate the inside integral
+  <m>\int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}</m> using the inside
+  limits of integration, and by treating <m>x</m> as a constant and using
+  standard single variable integration techniques, such as those in the
+  CLP-2 text. The result of the
+  inside integral is a function of <m>x</m> only.  Call it <m>F(x)</m>.
+</li>
+<li>
+   Then evaluate the outside integral <m>\int_a^b F(x)\,\dee{x}</m>,
+   whose integrand is the answer to the inside integral. Again, this
+   integral is evaluated using standard single variable integration
+   techniques.
+</li>
+</ul></p>
+</li>
+<li><p>
+To evaluate the integral
+<m>\displaystyle\int_a^b \dee{x} \int_{B(x)}^{T(x)} \dee{y}\, f\big(x,y\big)</m>,
+<ul>
+<li>
+  first evaluate the inside integral
+  <m>\int_{B(x)}^{T(x)} \dee{y}\, f\big(x,y\big)</m> using the limits of
+  integration that are directly beside the <m>\dee{y}</m>. Indeed the <m>\dee{y}</m>
+  is written directly beside <m>\int_{B(x)}^{T(x)}</m> to make it clear that
+  the limits of integration <m>B(x)</m> and <m>T(x)</m> are for the <m>y</m>-integral.
+  In the past you probably wrote this integral as
+  <m>\int_{B(x)}^{T(x)} f\big(x,y\big)\ \dee{y}</m>. The result of
+  the inside integral is again a function of <m>x</m> only.  Call it <m>F(x)</m>.
+</li>
+<li>
+   Then evaluate the outside integral <m>\int_a^b \dee{x}\,F(x)</m>,
+   whose integrand is the answer to the inside integral and whose limits
+   of integration are directly beside the <m>\dee{x}</m>.
+</li>
+</ul></p>
+</li>
+</ul>
+</p>
+
+<p>At this point you may be wondering <q>Do we always have to use vertical
+slices?</q> and <q>Do we always have to integrate with respect to <m>y</m> first?</q>
+The answer is <q>no</q>. This brings us to consider <q>horizontal slices</q>.
+</p>
+</subsection>
+
+<subsection>
+  <title>Horizontal Slices</title>
+
+<p>
+We found, when computing areas of regions in the <m>xy</m>-plane, that
+it is often advantageous to use horizontal slices, rather than vertical
+slices. See, for example,
+Example \eref{CLP101}{eg:AREAb} in the CLP-2 text.
+The same is true when setting up multidimensional integrals. So we now repeat
+the setup procedure of the last section, but starting with horizontal slices,
+rather than vertical slices. This procedure will be useful when
+dealing with regions of the form
+<me>
+\cR = \big\{\ (x,y)\ \big|\ c\le y\le d,\ L(y)\le x\le R(y)\ \big\}
+</me>
+</p>
+
+<sidebyside>
+<image source="figs/hSliceA"/>
+</sidebyside>
+
+<p>
+Here <m>L(y)</m> (<q><m>L</m></q> stands for <q>left</q>) is the smallest
+<fn>
+By the <q>smallest </q> <m>x</m> we mean the <m>x</m> farthest to the left along
+the number line, not the <m>x</m> closest to <m>0</m>.</fn>
+ allowed
+value of <m>x</m>, when the <m>y</m>-coordinate is <m>y</m>, and
+<m>R(y)</m> (<q><m>R</m></q> stands for <q>right</q>) is the largest allowed value
+of <m>x</m>, when the <m>y</m>-coordinate is <m>y</m>.
+Suppose that we wish to evaluate the mass of a plate that
+fills the region <m>\cR</m>, and that the density of the plate is <m>f(x,y)</m>.
+We follow essentially the same the procedure as we used
+with vertical slices, but with the roles of <m>x</m> and <m>y</m> swapped.
+<ul>
+<li>
+Pick a natural number <m>n</m> (that we will later send to infinity). Then
+</li>
+<li>
+subdivide the interval <m>c\le y\le d</m> into <m>n</m> narrow subintervals, each
+of width <m>\De y=\frac{d-c}{n}</m>. Each subinterval cuts a thin horizontal
+slice from the region (see the figure below).
+</li>
+<li> We approximate slice number <m>i</m> by a thin horizontal rectangle (indicated by the long darker gray rectangle in the figure below). On this
+slice, the <m>y</m>-coordinate runs over a very narrow range.
+We pick a number <m>y_i^*</m>, somewhere in that range. We approximate slice
+<m>i</m> by a rectangle whose left side is at <m>x=L(y_i^*)</m> and whose right side
+is at <m>x=R(y_i^*)</m>.
+</li>
+<li>
+If we were computing the area of <m>\cR</m>, we would now
+approximate the area of slice <m>i</m> by <m>\big[R(x_i^*)-L(x_i^*)\big]\De y</m>,
+which is the area of the rectangle with width <m>\big[R(x_i^*)-L(x_i^*)\big]</m>
+and height <m>\De y</m>.
+</li>
+<li><p>
+To get the mass, just as we did above with vertical slices, we
+<ul>
+<li>
+   pick another natural number <m>m</m> (that we will later send to infinity),
+   and then
+</li>
+<li>
+   subdivide slice number <m>i</m> into <m>m</m> tiny rectangles, each of height <m>\De y</m>
+and of width <m>\De x=\frac{1}{m}\big[R(y_i^*)-L(y_i^*)\big]</m>.
+</li>
+<li>
+<p>
+For each <m>j=1,2,\dots,m</m>, rectangle number <m>j</m> has <m>x</m> running over a very narrow range.  We pick a number <m>x_j^*</m> somewhere in that range.
+See the small black rectangle in the figure below.
+</p>
+
+<sidebyside>
+<image source="figs/hSliceB"/>
+</sidebyside>
+
+<p>
+Here is a magnified sketch of slice number <m>i</m>
+</p>
+
+<sidebyside>
+<image source="figs/hSliceBB"/>
+</sidebyside>
+</li>
+<li>
+On rectangle number <m>j</m> in slice number <m>i</m>, we approximate the density
+by <m>f\big(x_j^*,y_i^*\big)</m>, giving us that
+the mass of rectangle number <m>j</m> in slice number <m>i</m> is approximately <m>f\big(x_j^*,y_i^*\big)\,\De x\,\De y</m>.
+</li>
+<li>
+So the Riemann sum approximation of the mass of (horizontal) slice number
+<m>i</m> is
+<md>
+<mrow>
+  \text{Mass of slice } i
+          &amp;\approx \sum_{j=1}^m  f\big(x_j^*,y_i^*\big)\,\De x\,\De y
+</mrow>
+</md>
+</li>
+<li>
+By taking the limit as <m>m \to \infty</m> (i.e. taking the limit as the width
+of the rectangles goes to zero), we convert the Riemann sum into a definite integral:
+<md>
+<mrow>
+  \text{Mass of slice }i
+          &amp;\approx \De y \int_{L(y_i^*)}^{R(y_i^*)} f\big(x,y_i^*\big)\,\dee{x}
+          = F(y_i^*)\,\De y
+</mrow>
+</md>
+where
+<me>
+F(y) = \int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}
+</me>
+Observe that, as <m>x</m> has been integrated out, <m>F(y)</m> is a function of <m>y</m>
+only, not of <m>x</m> and <m>y</m>.
+</li>
+</ul></p></li>
+<li>
+Finally taking the limit as <m>n \to \infty</m> (i.e. taking the limit as the slice
+width goes to zero), we get
+<md>
+<mrow>
+\text{Mass}
+&amp;=\lim_{n\rightarrow\infty}\sum_{i=1}^n
+\De y \int_{L(y_i^*)}^{R(y_i^*)} f\big(x,y_i^*\big)\,\dee{x}
+= \lim_{n\rightarrow\infty}\sum_{i=1}^n  F(y_i^*)\,\De y
+</mrow>
+</md>
+Now <m>\sum\limits_{i=1}^n  F(y_i^*)\,\De y</m> is a Riemann sum approximation
+to the integral <m> \int_c^d F(y)\,\dee{y}</m>. So
+<md>
+<mrow>
+\text{Mass}
+&amp;= \int_c^d F(y)\,\dee{y}
+=\int_c^d \left[\int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}\right]\dee{y}
+</mrow>
+</md>
+</li>
+</ul>
+The standard notations of Notation <xref ref="notn_dbl_int"/> also
+apply to this integral.
+</p>
+
+
+<definition xml:id="notn_dbl_int_again">
+<statement><p>
+<md>
+<mrow>
+\dblInt_\cR f\big(x,y\big)\,\dee{x}\,\dee{y}
+&amp;=\int_c^d \left[\int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}\right]\dee{y}
+</mrow><mrow>
+&amp;=\int_c^d \int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}\,\dee{y}
+=\int_c^d \dee{y} \int_{L(y)}^{R(y)} \dee{x}\, f\big(x,y\big)
+</mrow>
+</md>
+</p></statement>
+</definition>
+
+<p>
+Note that
+<ul>
+<li><p>
+to evaluate the integral
+<m>\displaystyle\int_c^d \int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}\,\dee{y}</m>,
+<ul>
+<li>
+  first evaluate the inside integral
+  <m>\int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}</m> using the inside
+  limits of integration. The result of the inside integral is a function
+  of <m>y</m> only.  Call it <m>F(y)</m>.
+</li>
+<li>
+   Then evaluate the outside integral <m>\int_c^d F(y)\,\dee{y}</m>,
+   whose integrand is the answer to the inside integral.
+</li>
+</ul></p>
+</li>
+<li><p>
+To evaluate the integral
+<m>\displaystyle\int_c^d \dee{y} \int_{L(y)}^{R(y)} \dee{x}\, f\big(x,y\big)</m>,
+<ul>
+<li>
+  first evaluate the inside integral
+  <m>\int_{L(y)}^{R(y)} \dee{x}\, f\big(x,y\big)</m> using the limits of
+  integration that are directly beside the <m>\dee{x}</m>.
+  Again, the <m>\dee{x}</m>
+  is written directly beside <m>\int_{L(y)}^{R(y)}</m> to make it clear that
+  the limits of integration <m>L(y)</m> and <m>R(y)</m> are for the <m>x</m>-integral.
+  In the past you probably wrote this integral as
+  <m>\int_{L(y)}^{R(y)} f\big(x,y\big)\ \dee{x}</m>.
+  The result of the inside integral is again a function of <m>y</m> only.
+  Call it <m>F(y)</m>.
+</li>
+<li>
+   Then evaluate the outside integral <m>\int_c^d \dee{y}\,F(y)</m>,
+   whose integrand is the answer to the inside integral and whose limits
+   of integration are directly beside the <m>\dee{y}</m>.
+</li>
+</ul></p>
+</li>
+</ul>
+</p>
+
+<p>By way of summary, we now have two integral representations
+for the mass of regions in the <m>xy</m>-plane.
+</p>
+
+<theorem xml:id="thm_xy_mass">
+<statement><p>
+Let <m>\cR</m> be a region in the <m>xy</m>-plane and let the function
+<m>f(x,y)</m> be defined and continuous on <m>\cR</m>.
+<ol label="a">
+<li> If
+<md>
+<mrow>
+\cR=\big\{\ (x,y)\ \big|\ a\le x\le b,\ B(x)\le y\le T(x)\ \big\}
+</mrow>
+</md>
+with <m>B(x)</m> and <m>T(x)</m> being continuous, and if the mass density in <m>\cR</m>
+is <m>f(x,y)</m>, then the mass of <m>\cR</m>
+is
+<me>
+\int_a^b \left[\int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\right]\dee{x}
+=\int_a^b \int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\,\dee{x}
+=\int_a^b \dee{x} \int_{B(x)}^{T(x)} \dee{y}\, f\big(x,y\big)
+</me>
+</li>
+<li> If
+<me>
+\cR = \big\{\ (x,y)\ \big|\ c\le y\le d,\ L(y)\le x\le R(y)\ \big\}
+</me>
+with <m>L(y)</m> and <m>R(y)</m> being continuous,
+and if the mass density in <m>\cR</m> is <m>f(x,y)</m>, then the mass of <m>\cR</m>
+is
+<me>
+\int_c^d \left[\int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}\right]\dee{y}
+=\int_c^d \int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}\,\dee{y}
+=\int_c^d \dee{y} \int_{L(y)}^{R(y)} \dee{x}\, f\big(x,y\big)
+</me>
+</li>
+</ol>
+</p></statement>
+</theorem>
+
+<p>
+Implicit in Theorem  <xref ref="thm_xy_mass"/> is the statement that, if
+<md>
+<mrow>
+&amp;\big\{\ (x,y)\ \big|\ a\le x\le b,\ B(x)\le y\le T(x)\ \big\}
+</mrow><mrow>
+   =&amp; \big\{\ (x,y)\ \big|\ c\le y\le d,\ L(y)\le x\le R(y)\ \big\}
+</mrow>
+</md>
+and if <m>f(x,y)</m> is continuous, then
+<me>
+\int_a^b \int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\,\dee{x}
+=\int_c^d \int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}\,\dee{y}
+</me>
+This is called Fubini's theorem
+<fn>This theorem is named after the Italian mathematician Guido Fubini (1879--1943).
+</fn>. It will be discussed more in the
+optional §<xref ref="sec_def_int_more"/>.
+</p>
+
+<definition xml:id="notn_double_integral_yet_again">
+<statement><p>
+The integrals of Theorem <xref ref="thm_xy_mass"/> are often denoted
+<me>
+\dblInt_\cR f(x,y)\,\dee{x}\dee{y} \qquad\text{or}\qquad
+\dblInt_\cR f(x,y)\,\dee{A}
+</me>
+The symbol <m>\dee{A}</m> represents the area of an <q>infinitesimal</q> piece
+of <m>\cR</m>.
+</p></statement>
+</definition>
+
+<p>Here is a simple example. We'll do some more complicated examples in
+§<xref ref="sec_int_examples"/>.
+</p>
+
+<example xml:id="eg_dblInt_0">
+<p>
+Let <m>\cR</m> be the triangular region above the <m>x</m>-axis, to the right of
+the <m>y</m>-axis and to the left of the line <m>x+y=1</m>.
+Find the mass of <m>\cR</m> if it has density <m>f(x,y)=y</m>.
+</p>
+
+<p>\soln We'll do this problem twice <mdash/> once using vertical strips and
+once using horizontal strips. First, here is a sketch of <m>\cR</m>.
+</p>
+
+<sidebyside>
+<image source="figs/dblInt0a"/>
+</sidebyside>
+
+
+<p><em>Solution using vertical strips.</em>
+We'll now set up a double integral for the mass using vertical strips.
+Note, from the figure
+</p>
+<sidebyside>
+<image source="figs/dblInt0b"/>
+</sidebyside>
+
+<p>
+that
+<ul>
+<li>
+the leftmost points in <m>\cR</m> have <m>x=0</m> and the rightmost point
+in <m>\cR</m> has <m>x=1</m> and
+</li>
+<li>
+for each fixed <m>x</m> between <m>0</m> and <m>1</m>, the point <m>(x,y)</m> in <m>\cR</m>
+with the smallest <m>y</m> has <m>y=0</m> and the point <m>(x,y)</m> in <m>\cR</m>
+with the largest <m>y</m> has <m>y=1-x</m>.
+</li>
+</ul>
+Thus
+<me>
+\cR=\Set{(x,y)}{0=a\le x\le b=1,\
+        0= B(x)\le y\le T(x) = 1-x}
+</me>
+and, by part (a) of Theorem  <xref ref="thm_xy_mass"/>
+<md>
+<mrow>
+\text{Mass} &amp;= \int_a^b \dee{x} \int_{B(x)}^{T(x)} \dee{y}\, f\big(x,y\big)
+        = \int_0^1 \dee{x} \int_0^{1-x} \dee{y}\, y
+</mrow>
+</md>
+Now the inside integral is
+<md>
+<mrow>
+\int_0^{1-x}  y \ \dee{y}
+=\left[ \frac{y^2}{2} \right]_0^{1-x}
+=\frac{1}{2}(1-x)^2
+</mrow>
+</md>
+so that the
+<md>
+<mrow>
+\text{Mass} &amp;= \int_0^1 \dee{x}\  \frac{(1-x)^2}{2}
+        =\left[-\frac{(1-x)^3}{6}\right]_0^1
+        = \frac{1}{6}
+</mrow>
+</md>
+</p>
+
+<p>\medskip\noindent<em>Solution using horizontal strips.</em>\ \ \
+This time we'll set up a double integral for the mass using horizontal strips.
+Note, from the figure
+</p>
+
+<sidebyside>
+<image source="figs/dblInt0c"/>
+</sidebyside>
+
+<p>
+  that
+<ul>
+<li>
+the lowest points in <m>\cR</m> have <m>y=0</m> and the topmost point
+in <m>\cR</m> has <m>y=1</m> and
+</li>
+<li>
+for each fixed <m>y</m> between <m>0</m> and <m>1</m>, the point <m>(x,y)</m> in <m>\cR</m>
+with the smallest <m>x</m> has <m>x=0</m> and the point <m>(x,y)</m> in <m>\cR</m>
+with the largest <m>x</m> has <m>x=1-y</m>.
+</li>
+</ul>
+Thus
+<me>
+\cR=\Set{(x,y)}{0=c\le y\le d=1,\
+        0= L(y)\le x\le R(y) = 1-y}
+</me>
+and, by part (b) of Theorem  <xref ref="thm_xy_mass"/>
+<md>
+<mrow>
+\text{Mass} &amp;= \int_c^d \dee{y} \int_{L(y)}^{R(y)} \dee{x}\, f\big(x,y\big)
+        = \int_0^1 \dee{y} \int_0^{1-y} \dee{x}\, y
+</mrow>
+</md>
+Now the inside integral is
+<md>
+<mrow>
+\int_0^{1-y}  y \ \dee{x}
+=\left[ xy \right]_0^{1-y}
+=y-y^2
+</mrow>
+</md>
+since the <m>y</m> integral treats <m>x</m> as a constant.
+So the
+<md>
+<mrow>
+\text{Mass} &amp;= \int_0^1 \dee{y}\  \big[y-y^2\big]
+        =\left[\frac{y^2}{2}-\frac{y^3}{3}\right]_0^1
+        = \frac{1}{2}-\frac{1}{3}
+        =\frac{1}{6}
+</mrow>
+</md>
+</p></example>
+
+
+<p>Double integrals share the usual basic properties that we are used to from
+integrals of functions of one variable. See, for example,
+Theorem \eref{CLP101}{thm:Intarith} and Theorem \eref{CLP101}{thm:INTineq}
+in the CLP-2 text. Indeed the following theorems follow from them.
+</p>
+
+<theorem xml:id="thm_Int2darith"><title>Arithmetic of Integration</title>
+<statement><p>
+Let <m>A,B,C</m> be real numbers. Under the hypotheses of
+Theorem <xref ref="thm_xy_mass"/>,
+<md>
+<mrow>
+\text{(a)}&amp;&amp; \dblInt_\cR \left( f(x,y) + g(x,y) \right)\,\dee{x}\dee{y}
+&amp;= \dblInt_\cR f(x,y)\,\dee{x}\dee{y} + \dblInt_\cR g(x,y)\,\dee{x}\dee{y}
+</mrow><mrow>
+\text{(b)}&amp;&amp;
+\dblInt_\cR\left(f(x,y)-g(x,y)\right)\,\dee{x}\dee{y}
+&amp;= \dblInt_\cR f(x,y)\,\dee{x}\dee{y} - \dblInt_\cR g(x,y)\,\dee{x}\dee{y}
+</mrow><mrow>
+\text{(c)}&amp;&amp; \dblInt_\cR C f(x,y)\,\dee{x}\dee{y}
+&amp;= C\,\dblInt_\cR f(x,y)\,\dee{x}\dee{y}
+</mrow>
+</md>
+</p>
+<p>
+Combining these three rules we have
+<md>
+<mrow>
+\text{(d)}&amp;&amp; \dblInt_\cR\left( Af(x,y) + Bg(x,y) \right)\,\dee{x}\dee{y}
+&amp;= A\dblInt_\cR f(x,y)\,\dee{x}\dee{y}
+            + B\dblInt_\cR g(x,y)\,\dee{x}\dee{y}
+</mrow>
+<intertext>That is, integrals depend linearly on the integrand.</intertext>
+<mrow>
+\text{(e)}&amp;&amp; \dblInt_\cR \,\dee{x}\dee{y} &amp;= \text{Area}(\cR)
+</mrow><mrow>
+</mrow>
+<intertext>If the region <m>\cR</m> in the <m>xy</m>-plane is the union of regions <m>\cR_1</m> and <m>\cR_2</m> that do not overlap (except possibly on their boundaries),
+then</intertext>
+<mrow>
+\text{(f)}&amp;&amp; \dblInt_\cR f(x,y)\,\dee{x}\dee{y}
+                  &amp;= \dblInt_{\cR_1} f(x,y)\,\dee{x}\dee{y}
+                    +\dblInt_{\cR_2} f(x,y)\,\dee{x}\dee{y}
+</mrow>
+</md>
+</p>
+<sidebyside width="40%">
+<image source="figs/union"/>
+<image source="figs/unionB"/>
+</sidebyside>
+</statement>
+</theorem>
+
+<p>In the very special (but not that uncommon) case that <m>\cR</m> is the
+rectangle
+<me>
+\cR=\Set{(x,y)}{a\le x\le b,\ c\le y\le d}
+</me>
+and the integrand is the product <m>f(x,y)=g(x)h(y)</m>,
+<md>
+<mrow>
+\dblInt_\cR f(x,y)\,\dee{x}\dee{y}
+&amp;=\int_a^b\dee{x} \int_c^d\dee{y}\ g(x) h(y)
+</mrow><mrow>
+&amp;=\int_a^b\dee{x}\ g(x) \int_c^d\dee{y}\  h(y)
+</mrow><mrow>
+&amp;\hskip0.5in\text{since $g(x)$ is a constant as far as the $y$-integral is concerned}
+</mrow><mrow>
+&amp;=\left[ \int_a^b\dee{x}\ g(x)\right]\ \left[\int_c^d\dee{y}\  h(y)\right]
+</mrow>
+</md>
+since <m>\int_c^d\dee{y}\  h(y)</m> is a constant as far as the $x$-integral is concerned.
+</p>
+<p>
+This is worth stating as a theorem
+</p>
+
+<theorem xml:id="thm_factorize">
+<statement><p>
+If the domain of integration
+<me>
+\cR=\Set{(x,y)}{a\le x\le b,\ c\le y\le d}
+</me>
+is a rectangle and the integrand is the product <m>f(x,y)=g(x)h(y)</m>, then
+<me>
+\dblInt_\cR f(x,y)\,\dee{x}\dee{y}
+=\left[ \int_a^b\dee{x}\ g(x)\right]\ \left[\int_c^d\dee{y}\  h(y)\right]
+</me>
+</p></statement>
+</theorem>
+
+<p>Just as was the case for single variable integrals, sometimes we don't
+actually need to know the value of a double integral exactly. We are
+instead interested in bounds on its value.
+The following theorem provides some simple tools for generating such bounds.
+They are the multivariable analogs of the single variable tools in
+Theorem \eref{CLP101}{thm:INTineq} of the CLP-2 text.
+</p>
+
+<theorem xml:id="thm_INT2dineq"><title>Inequalities for Integrals</title>
+<statement><p>
+Under the hypotheses of Theorem <xref ref="thm_xy_mass"/>,
+<ol label="a">
+<li>
+If <m>f(x,y)\ge 0</m> for all <m>(x,y)</m> in <m>\cR</m>, then
+<md>
+<mrow>
+\dblInt_\cR f(x,y)\,\dee{x}\dee{y} \ge 0
+</mrow>
+</md>
+</li>
+<li>
+If there are constants <m>m</m> and <m>M</m> such that  <m>m\le f(x,y)\le M</m>
+for all <m>(x,y)</m> in <m>\cR</m>, then
+<md>
+<mrow>
+m\,\text{Area}(\cR)\le \dblInt_\cR f(x,y)\,\dee{x}\dee{y}
+                                   \le M\,\text{Area}(\cR)
+</mrow>
+</md>
+</li>
+<li> If <m>f(x,y)\le g(x,y)</m> for all <m>(x,y)</m> in <m>\cR</m>, then
+<md>
+<mrow>
+\dblInt_\cR f(x,y)\,\dee{x}\dee{y} \le \dblInt_\cR g(x,y)\,\dee{x}\dee{y}
+</mrow>
+</md>
+</li>
+<li> We have
+<md>
+<mrow>
+\left|\dblInt_\cR f(x,y)\,\dee{x}\dee{y}\right|
+          \le \dblInt_\cR |f(x,y)|\,\dee{x}\dee{y}
+</mrow>
+</md>
+</li>
+</ol>
+</p></statement>
+</theorem>
+</subsection>
+
+<subsection>
+  <title>Volumes</title>
+
+<p>Now that we have defined double integrals, we should start putting them to use.
+One of the most immediate applications arises from interpreting <m>f(x,y)</m>,
+not as a density, but rather as the height of the part of a solid above the
+point <m>(x,y)</m> in the <m>xy</m>-plane. Then Theorem <xref ref="thm_xy_mass"/> gives
+the volume between the <m>xy</m>-plane and the surface <m>z=f(x,y)</m>.
+</p>
+
+<p>We'll now see how this goes in the case of part (b)
+of Theorem <xref ref="thm_xy_mass"/>. The case of part (a) works in the same way.
+So we assume that the solid <m>\cV</m> lies above the base region
+<me>
+\cR = \big\{\ (x,y)\ \big|\ c\le y\le d,\ L(y)\le x\le R(y)\ \big\}
+</me>
+and that
+<me>
+\cV = \big\{\ (x,y,z)\ \big|\ (x,y)\in\cR,\  0\le z\le f(x,y)\ \big\}
+</me>
+The base region <m>\cR</m> (which is also the top view of <m>\cV</m>)
+is sketched in the figure on the left below and
+the part of <m>\cV</m> in the first octant is sketched in the figure on the right below.
+</p>
+
+<sidebyside>
+<image source="figs/volSliceB"/>
+<image source="figs/volSliceA"/>
+</sidebyside>
+
+<p>
+To find the volume of <m>\cV</m> we shall
+<ul>
+<li>
+Pick a natural number <m>n</m> and slice <m>\cR</m> into strips of width
+<m>\De y=\frac{d-c}{n}</m>.
+</li>
+<li>
+  Subdivide slice number <m>i</m> into <m>m</m> tiny rectangles, each of height <m>\De y</m>
+and of width <m>\De x=\frac{1}{m}\cdots</m>.
+</li>
+<li>
+  Compute, approximately, the volume of the part of <m>\cV</m> that is above
+  each rectangle.
+</li>
+<li>
+ Take the limit <m>m\rightarrow\infty</m> and then the limit <m>n\rightarrow\infty</m>.
+</li>
+</ul>
+We have just been through this type of argument twice. So we'll
+abbreviate the argument and just say
+<ul>
+<li>
+   slice the base region <m>\cR</m> into long <q>infinitesimally</q> thin strips of width <m>\dee{y}</m>.
+</li>
+<li>
+   Subdivide each strip into <q>infinitesimal</q> rectangles each of
+height <m>\dee{y}</m> and of width <m>\dee{x}</m>. See the figure on the left above.
+</li>
+<li>
+  The volume of the part of <m>\cV</m> that is above the rectangle centred on <m>(x,y)</m>
+        is essentially <m>f(x,y)\,\dee{x}\,\dee{y}</m>. See the figure on
+        the right above.
+</li>
+<li>
+   So the volume of the part of <m>\cV</m> that is above the strip centred on <m>y</m>
+        is essentially
+<fn>Think of the part of <m>\cV</m> that is above the strip as being a thin slice of bread.
+        Then the factor <m>\dee{y}</m> in <m>\dee{y}\int_{L(y)}^{R(y)}\dee{x}\ f(x,y)</m>
+is the thickness of the slice of bread. The factor
+             <m>\int_{L(y)}^{R(y)}\dee{x}\ f(x,y)</m> is the surface area
+             of the constant <m>y</m> cross-section
+             <m>\Set{(x,z)}{L(y)\le x\le R(y),\ 0\le z\le f(x,y)}</m>, i.e.
+             the surface area of the slice of bread.
+</fn>
+ <m>\dee{y}\int_{L(y)}^{R(y)}\dee{x}\ f(x,y)</m> and
+</li>
+<li>
+   we arrive at the following conclusion.
+</li>
+</ul>
+</p>
+
+<fact xml:id="eqn_Volume_y_slice">
+<statement>
+<p>
+If
+<me>
+\cV = \big\{\ (x,y,z)\ \big|\ (x,y)\in\cR,\  0\le z\le f(x,y)\ \big\}
+</me>
+where
+<me>
+\cR = \big\{\ (x,y)\ \big|\ c\le y\le d,\ L(y)\le x\le R(y)\ \big\}
+</me>
+then
+<me>
+    \text{Volume}(\cV)
+        =\int_c^d \dee{y}\int_{L(y)}^{R(y)} \dee{x}\ f(x,y)
+</me>
+</p>
+</statement>
+</fact>
+
+<p>
+Similarly
+</p>
+
+<fact xml:id="eqn_Volume_x_slice">
+<statement>
+  <p>
+    If
+<me>
+\cV = \big\{\ (x,y,z)\ \big|\ (x,y)\in\cR,\  0\le z\le f(x,y)\ \big\}
+</me>
+where
+<me>
+\cR = \big\{\ (x,y)\ \big|\ a\le x\le b,\ B(x)\le y\le T(x)\ \big\}
+</me>
+then
+<me>
+    \text{Volume}(\cV)
+        =\int_a^b \dee{x}\int_{B(x)}^{T(x)} \dee{y}\ f(x,y)
+</me>
+</p>
+</statement>
+</fact>
+
+</subsection>
+
+<subsection xml:id="sec_int_examples"><title>Examples</title>
+
+<p>Oof <mdash/> we have had lots of equations and theory. It's time to put
+all of this to work. Let's start with a mass example and then move on to
+a volume example. You will notice that the mathematics is really very
+similar. Just the interpretation changes.
+</p>
+
+<example xml:id="eg_dblInt_A"><title>Mass</title>
+<p>
+Let <m>\nu \gt 0</m> be a constant and let <m>\cR</m> be the region above the curve
+<m>x^2=4\nu y</m> and to the right of the curve <m>y^2=\frac{1}{2}\nu x</m>.
+Find the mass of <m>\cR</m> if it has density <m>f(x,y)=xy</m>.
+</p>
+
+<p>\soln For practice, we'll do this problem twice <mdash/> once using vertical
+strips and once using horizontal strips. We'll start by sketching <m>\cR</m>.
+First note that, since <m>y\ge\frac{x^2}{4\nu}</m> and <m>x\ge \frac{2y^2}{\nu}</m>,
+both <m>x</m> and <m>y</m> are positive throughout <m>\cR</m>.
+The two curves intersect at points <m>(x,y)</m> that satisfy both
+<md>
+<mrow>
+x = \frac{2y^2}{\nu}\text{ and }y=\frac{x^2}{4\nu}
+\quad\implies\quad x  = \frac{2y^2}{\nu} = \frac{2}{\nu}\left(\frac{x^2}{4\nu}\right)^2
+                 = \frac{x^4}{8\nu^3}
+\quad\iff\quad \left(\frac{x^3}{8\nu^3}-1\right)x=0
+</mrow>
+</md>
+This equation has only two real
+<fn>It also has two complex solutions that
+play no role here.</fn>
+ solutions <mdash/> <m>x=0</m> and <m>x=2\nu</m>.
+So the upward opening parabola <m>y = \frac{x^2}{4\nu}</m> and the
+rightward opening parabola <m>x=\frac{2y^2}{\nu}</m>  intersect at <m>(0,0)</m> and <m>(2\nu,\nu)</m>.
+</p>
+
+<sidebyside>
+<image source="figs/dblIntAa"/>
+</sidebyside>
+
+
+<p><em>Solution using vertical strips.</em>
+We'll now set up a double integral for the mass using vertical strips
+and using the abbreviated argument of the end of the last section
+(on volumes).  Note, from the figure above, that
+<me>
+\cR=\bigg\{(x,y)\ \bigg|\ 0=a\le x\le b=2\nu,\
+        \frac{x^2}{4\nu}= B(x)\le y\le T(x) = \sqrt{\frac{\nu x}{2}}\ \bigg\}
+</me>
+<ul>
+<li>
+   Slice <m>\cR</m> into long <q>infinitesimally</q> thin
+   vertical strips of width <m>\dee{x}</m>.
+</li>
+<li>
+<p>
+   Subdivide each strip into <q>infinitesimal</q> rectangles each of
+   height <m>\dee{y}</m> and of width <m>\dee{x}</m>. See the figure below.
+</p>
+<sidebyside>
+<image source="figs/dblIntAb"/>
+</sidebyside>
+</li>
+<li>
+  The mass of the rectangle centred on <m>(x,y)</m>
+        is essentially <m>f(x,y)\,\dee{x}\,\dee{y}=xy\,\dee{x}\,\dee{y}</m>.
+</li>
+<li>
+   So the mass of the strip centred on <m>x</m> is
+         essentially <m>\ \dee{x}\, \int_{B(x)}^{T(x)}\dee{y}\ f(x,y) </m>
+   (the integral over <m>y</m> adds up the masses of all of the different rectangles     on the single vertical strip in question) and
+</li>
+<li>
+<p>
+   we conclude that the
+<md>
+<mrow>
+    \text{Mass}(\cR)
+        &amp;=\int_a^b \dee{x}\int_{B(x)}^{T(x)} \dee{y}\ f(x,y)
+         =\int_0^{2\nu} \dee{x}\int_{x^2/(4\nu)}^{\sqrt{\nu x/2}} \dee{y}\ xy
+</mrow>
+</md>
+Here the integral over <m>x</m> adds up the masses of all of the different strips.
+</p>
+
+<p>Recall that, when integrating <m>y</m>, <m>x</m> is held constant, so we may factor the
+constant <m>x</m> out of the inner <m>y</m> integral.
+<md>
+<mrow>
+\int_{x^2/(4\nu)}^{\sqrt{\nu x/2}} \dee{y}\ xy
+&amp;= x\int_{x^2/(4\nu)}^{\sqrt{\nu x/2}} \dee{y}\ y
+</mrow><mrow>
+&amp;= x\left[\frac{y^2}{2}\right]_{x^2/(4\nu)}^{\sqrt{\nu x/2}}
+</mrow><mrow>
+&amp;=\frac{\nu x^2}{4}-\frac{x^5}{32\nu^2}
+</mrow>
+</md>
+and the
+<md>
+<mrow>
+\text{Mass}(\cR)
+        &amp;=\int_0^{2\nu} \dee{x}\
+             \left[\frac{\nu x^2}{4}-\frac{x^5}{32\nu^2}\right]
+</mrow><mrow>
+        &amp;= \frac{\nu (2\nu)^3}{3\times 4}-\frac{(2\nu)^6}{6\times 32\nu^2}
+         =\frac{\nu^4}{3}
+</mrow>
+</md>
+</p>
+</li>
+</ul>
+</p>
+
+<p>
+  <em>Solution using horizontal strips.</em>
+We'll now set up a double integral for the mass using horizontal strips,
+again using the abbreviated argument of the end of the last section
+(on volumes).  Note, from the figure at the beginning of this example, that
+<me>
+\cR=\bigg\{(x,y)\ \bigg|\ 0=c\le y\le d=\nu,\
+       \frac{2 y^2}{\nu} = L(y)\le x\le R(y) = \sqrt{4\nu y} \ \bigg\}
+</me>
+<ul>
+<li>
+   Slice <m>\cR</m> into long <q>infinitesimally</q> thin
+   horizontal strips of width <m>\dee{y}</m>.
+</li>
+<li>
+<p>
+   Subdivide each strip into <q>infinitesimal</q> rectangles each of
+   height <m>\dee{y}</m> and of width <m>\dee{x}</m>. See the figure below.
+</p>
+
+<sidebyside>
+<image source="figs/dblIntAc"/>
+</sidebyside>
+</li>
+<li>
+  The mass of the rectangle centred on <m>(x,y)</m>
+        is essentially <m>f(x,y)\,\dee{x}\,\dee{y}=xy\,\dee{x}\,\dee{y}</m>.
+</li>
+<li>
+   So the mass of the strip centred on <m>y</m> is
+         essentially <m>\ \dee{y}\, \int_{L(y)}^{R(y)}\dee{x}\ f(x,y) </m>
+   (the integral over <m>x</m> adds up the masses of all of the different rectangles     on the single horizontal strip in question) and
+</li>
+<li>
+   we conclude that the
+<md>
+<mrow>
+    \text{Mass}(\cR)
+        &amp;=\int_c^d \dee{y}\int_{L(y)}^{R(y)} \dee{x}\ f(x,y)
+         =\int_0^{\nu} \dee{y}\int_{2y^2/\nu}^{\sqrt{4\nu y}} \dee{x}\ xy
+</mrow>
+</md>
+Here the integral over <m>y</m> adds up the masses of all of the different strips.
+Recalling that, when integrating <m>x</m>, <m>y</m> is held constant
+<md>
+<mrow>
+\text{Mass}(\cR)
+        &amp;=\int_0^{\nu} \dee{y}\  y\left[
+                 \int_{2y^2/\nu}^{\sqrt{4\nu y}} \dee{x}\ x\right]
+</mrow><mrow>
+        &amp;=\int_0^{\nu} \dee{y}\  y\left[\frac{x^2}{2}\right]
+                                     _{2y^2/\nu}^{\sqrt{4\nu y}}
+</mrow><mrow>
+        &amp;=\int_0^{\nu} \dee{y}\
+             \left[2\nu y^2-\frac{2y^5}{\nu^2}\right]
+</mrow><mrow>
+        &amp;= \frac{2\nu (\nu)^3}{3}-\frac{2\nu^6}{6\nu^2}
+         =\frac{\nu^4}{3}
+</mrow>
+</md>
+</li>
+</ul>
+</p>
+</example>
+
+
+<example xml:id="eg_dblInt_V0"><title>Volume</title>
+<p>
+Let <m>\cR</m> be the part of the <m>xy</m>-plane above the <m>x</m>-axis and below
+the parabola <m>y=1-x^2</m>. Find the volume between <m>\cR</m> and the surface
+<m>z=x^2\sqrt{1-y}</m>.
+</p>
+
+<p>\soln
+Yet again, for practice, we'll do this problem twice <mdash/> once using
+vertical strips and once using horizontal strips. First, here is a
+sketch of <m>\cR</m>.
+</p>
+
+<sidebyside>
+<image source="figs/dblIntV0a"/>
+</sidebyside>
+
+
+<p> <em>Solution using vertical strips.</em>
+We'll now set up a double integral for the volume using vertical strips.
+Note, from the figure
+</p>
+
+<sidebyside>
+<image source="figs/dblIntV0b"/>
+</sidebyside>
+
+<p>
+that
+<ul>
+<li>
+the leftmost point in <m>\cR</m> has <m>x=-1</m> and the rightmost point
+in <m>\cR</m> has <m>x=1</m> and
+</li>
+<li>
+for each fixed <m>x</m> between <m>-1</m> and <m>1</m>, the point <m>(x,y)</m> in <m>\cR</m>
+with the smallest <m>y</m> has <m>y=0</m> and the point <m>(x,y)</m> in <m>\cR</m>
+with the largest <m>y</m> has <m>y=1-x^2</m>.
+</li>
+</ul>
+Thus
+<me>
+\cR=\Set{(x,y)}{-1=a\le x\le b=1,\
+        0= B(x)\le y\le T(x) = 1-x^2}
+</me>
+and, by <xref ref="eqn_Volume_x_slice"/>
+<md>
+<mrow>
+\text{Volume} &amp;= \int_a^b \dee{x} \int_{B(x)}^{T(x)} \dee{y}\, f\big(x,y\big)
+        = \int_{-1}^1 \dee{x} \int_0^{1-x^2} \dee{y}\  x^2\sqrt{1-y}
+</mrow><mrow>
+&amp;=2\int_0^1 \dee{x} \int_0^{1-x^2} \dee{y}\  x^2\sqrt{1-y}
+</mrow>
+</md>
+since the inside integral <m>F(x) =  \int_0^{1-x^2} \dee{y}\  x^2\sqrt{1-y}</m>
+is an even function of <m>x</m>.
+Now, for <m>x\ge 0</m>, the inside integral is
+<md>
+<mrow>
+\int_0^{1-x^2}  x^2\sqrt{1-y} \ \dee{y}
+= x^2 \int_0^{1-x^2}  \sqrt{1-y} \ \dee{y}
+=x^2 \left[ -\frac{2}{3}(1-y)^{3/2} \right]_0^{1-x^2}
+=\frac{2}{3}x^2\big(1-x^3\big)
+</mrow>
+</md>
+so that the
+<md>
+<mrow>
+\text{Volume} &amp;= 2\int_0^1 \dee{x}\ \frac{2}{3}x^2\big(1-x^3\big)
+=\frac{4}{3}\left[\frac{x^3}{3}-\frac{x^6}{6}\right]_0^1
+=\frac{2}{9}
+</mrow>
+</md>
+</p>
+
+<p><em>Solution using horizontal strips.</em>
+This time we'll set up a double integral for the volume using horizontal strips.
+Note, from the figure
+</p>
+
+<sidebyside>
+<image source="figs/dblIntV0c"/>
+</sidebyside>
+
+<p>
+that
+<ul>
+<li>
+the lowest points in <m>\cR</m> have <m>y=0</m> and the topmost point
+in <m>\cR</m> has <m>y=1</m> and
+</li>
+<li>
+for each fixed <m>y</m> between <m>0</m> and <m>1</m>, the point <m>(x,y)</m> in <m>\cR</m>
+with the leftmost <m>x</m> has <m>x=-\sqrt{1-y}</m> and the point <m>(x,y)</m> in <m>\cR</m>
+with the rightmost <m>x</m> has <m>x=\sqrt{1-y}</m>.
+</li>
+</ul>
+Thus
+<me>
+\cR=\Set{(x,y)}{0=c\le y\le d=1,\
+        -\sqrt{1-y}= L(y)\le x\le R(y) = \sqrt{1-y}}
+</me>
+and, by <xref ref="eqn_Volume_y_slice"/>
+<md>
+<mrow>
+\text{Volume} &amp;= \int_c^d \dee{y} \int_{L(y)}^{R(y)} \dee{x}\, f\big(x,y\big)
+    = \int_0^1 \dee{y} \int_{-\sqrt{1-y}}^{\sqrt{1-y}} \dee{x}\, x^2\sqrt{1-y}
+</mrow>
+</md>
+Now the inside integral has an even integrand (in <m>x</m>) and so is
+<md>
+<mrow>
+\int_{-\sqrt{1-y}}^{\sqrt{1-y}} \dee{x}\, x^2\sqrt{1-y}
+=2\sqrt{1-y}\int_0^{\sqrt{1-y}} x^2\ \dee{x}
+=2\sqrt{1-y} \left[ \frac{x^3}{3} \right]_0^{\sqrt{1-y}}
+=\frac{2}{3}(1-y)^2
+</mrow>
+</md>
+So the
+<md>
+<mrow>
+\text{Volume} &amp;= \frac{2}{3}\int_0^1 \dee{y}\  (1-y)^2
+        =\frac{2}{3}\left[-\frac{(1-y)^3}{3}\right]_0^1
+        =\frac{2}{9}
+</mrow>
+</md>
+</p></example>
+
+
+<example xml:id="eg_dblInt_B"><title>Volume</title>
+<p>
+Find the volume common to the two cylinders <m>x^2+y^2=a^2</m> and
+<m>x^2+z^2=a^2</m>.
+</p>
+
+<p>\soln
+Our first job is figure out what the specified solid looks like.
+Note that
+<ul>
+<li>
+The variable <m>z</m> does not appear in the equation <m>x^2+y^2=a^2</m>.
+So, for every value of the constant <m>z_0</m> the part of the cylinder
+<m>x^2+y^2=a^2</m> in the plane <m>z=z_0</m>, is the circle <m>x^2+y^2=a^2</m>, <m>z=z_0</m>.
+So the cylinder <m>x^2+y^2=a^2</m> consists of many circles stacked
+vertically, one on top of the other. The part of the cylinder
+<m>x^2+y^2=a^2</m> that lies above the <m>xy</m>-plane is sketched in the
+figure on the left below.
+</li>
+<li>
+<p>
+The variable <m>y</m> does not appear in the equation <m>x^2+z^2=a^2</m>.
+So, for every value of the constant <m>y_0</m> the part of the cylinder
+<m>x^2+z^2=a^2</m> in the plane <m>y=y_0</m>, is the circle <m>x^2+z^2=a^2</m>, <m>y=y_0</m>.
+So the cylinder <m>x^2+z^2=a^2</m> consists of many circles stacked
+horizontally, one beside the other. The part of the cylinder
+<m>x^2+z^2=a^2</m> that lies to the right of the <m>xz</m>-plane is sketched in the
+figure on the right below.
+</p>
+
+<sidebyside>
+<image source="figs/cylinderA"/>
+<image source="figs/cylinderB"/>
+</sidebyside>
+</li>
+</ul>
+\noindent
+We have to compute the volume common to these two intersecting cylinders.
+</p>
+
+<p><ul>
+<li>
+The equations <m>x^2+y^2=a^2</m> and <m>x^2+z^2=a^2</m> do not change at all
+if <m>x</m> is replaced by <m>-x</m>. Consequently both cylinders, and hence our solid,
+is symmetric about the <m>yz</m>-plane. In particular the volume of the
+part of the solid in the octant <m>x\le 0</m>, <m>y\ge 0</m>, <m>z\ge 0</m>
+is the same as the volume in the first octant <m>x\ge 0</m>, <m>y\ge 0</m>, <m>z\ge 0</m>.
+Similarly, the equations do not change at all
+if <m>y</m> is replaced by <m>-y</m> or if <m>z</m> is replaced by <m>-z</m>. Our solid is
+also symmetric about both the <m>xz</m>-plane and the <m>xy</m>-plane.
+Hence the volume of the part of our solid in each of the eight octants
+is the same.
+</li>
+<li> So we will compute the volume of the part of
+the solid in the first octant, i.e. with <m>x\ge 0</m>, <m>y\ge 0</m>, <m>z\ge 0</m>.
+The total volume of the solid is eight times that.
+</li>
+</ul>
+The part of the solid in the first octant is sketched in the figure
+on the left below. A point <m>(x,y,z)</m> lies in the first cylinder
+if and only if <m>x^2+y^2\le a^2</m>.
+</p>
+
+<sidebyside>
+<image source="figs/cylinderC"/>
+<image source="figs/cylinderD"/>
+</sidebyside>
+<p>
+It lies in the second cylinder if and only if <m>x^2+z^2\le a^2</m>.
+So the part of the solid in the first octant is
+<md>
+<mrow>
+\cV_1&amp;=\Set{(x,y,z)}{x\ge 0,\ y\ge 0,\ z\ge 0,\ x^2+y^2\le a^2,\ x^2+z^2\le a^2}
+</mrow>
+</md>
+Notice that, in <m>\cV_1</m>, <m>z^2\le a^2-x^2</m> so that <m>z\le\sqrt{a^2-x^2}</m> and
+<md>
+<mrow>
+\cV_1
+&amp;=\Set{(x,y,z)}{x\ge 0,\ y\ge 0,\ x^2+y^2\le a^2,\ 0\le z\le \sqrt{a^2-x^2}}
+</mrow>
+</md>
+The top view of the part of the solid in the first octant is sketched
+in the figure on the right above. In that top view, <m>x</m> runs from <m>0</m>
+to <m>a</m>. For each fixed <m>x</m>, <m>y</m> runs from <m>0</m> to <m>\sqrt{a^2-x^2}</m>.
+So we may rewrite
+<md>
+<mrow>
+\cV_1=\Set{(x,y,z)}{(x,y)\in\cR,\ 0\le z\le f(x,y)}
+</mrow>
+</md>
+where
+<me>
+\cR=\Big\{\ (x,y)\ \Big|\ 0\le x\le a,\ 0\le y\le \sqrt{a^2-x^2}\ \Big\}
+\qquad\text{and}\qquad f(x,y) = \sqrt{a^2-x^2}
+</me>
+and <q><m>(x,y)\in\cR</m></q> is read <q><m>(x,y)</m> is an element of <m>\cR</m>.</q>.
+Note that <m>f(x,y)</m> is actually independent of <m>y</m>. This will make things
+a bit easier below.
+</p>
+
+<p>We can now compute the volume of <m>\cV_1</m> using our usual abbreviated
+protocol.
+<ul>
+<li>
+   Slice <m>\cR</m> into long <q>infinitesimally</q> thin
+   horizontal strips of height <m>\dee{x}</m>.
+</li>
+<li>
+<p>
+   Subdivide each strip into <q>infinitesimal</q> rectangles each of
+   width <m>\dee{y}</m> and of height <m>\dee{x}</m>. See the figure below.
+</p>
+
+<sidebyside>
+<image source="figs/cylinderE"/>
+</sidebyside>
+</li>
+<li>
+  The volume of the part of <m>\cV_1</m> above rectangle centred on <m>(x,y)</m>
+        is essentially
+   <me>
+       f(x,y)\,\dee{x}\,\dee{y}=\sqrt{a^2-x^2}\ \dee{x}\,\dee{y}
+   </me>
+</li>
+<li>
+   So the volume of the part of <m>\cV_1</m> above the strip centred on <m>x</m> is
+         essentially
+       <me>
+         \dee{x}\, \int_0^{\sqrt{a^2-x^2}} \sqrt{a^2-x^2}\ \dee{y}
+       </me>
+   (the integral over <m>y</m> adds up the volumes over all of the
+       different rectangles on the single horizontal strip in question) and
+</li>
+<li>
+   we conclude that the
+<md>
+<mrow>
+    \text{Volume}(\cV_1)
+        &amp;=\int_0^a \dee{x}\, \int_0^{\sqrt{a^2-x^2}}\dee{y}\ \sqrt{a^2-x^2}
+</mrow>
+</md>
+Here the integral over <m>x</m> adds up the volumes over all
+of the different strips.
+Recalling that, when integrating <m>y</m>, <m>x</m> is held constant
+<md>
+<mrow>
+\text{Volume}(\cV_1)
+        &amp;=\int_0^a \dee{x}\  \sqrt{a^2-x^2}\left[
+                 \int_0^{\sqrt{a^2-x^2}} \dee{y} \right]
+</mrow><mrow>
+        &amp;=\int_0^a \dee{x}\  \big(a^2-x^2\big)
+</mrow><mrow>
+        &amp;=\left[a^2x-\frac{x^3}{3}\right]_0^a
+</mrow><mrow>
+        &amp;=\frac{2a^3}{3}
+</mrow>
+</md>
+and the total volume of the solid in question is
+<me>
+\text{Volume}(\cV)
+=8\,\text{Volume}(\cV_1)
+=\frac{16a^3}{3}
+</me>
+</li>
+</ul>
+</p>
+
+</example>
+
+<example xml:id="eg_dblInt_C"><title>Geometric Interpretation</title>
+<p>
+Evaluate <m>\displaystyle\int_0^2\int_0^a \sqrt{a^2-x^2}\ \dee{x}\,\dee{y}</m>.
+</p>
+
+<p>\soln This integral represents the volume of a simple geometric figure
+and so can be evaluated without using any calculus at all.
+The domain of integration is
+<me>
+\cR=\Set{(x,y)}{0\le y\le 2,\  0\le x\le a}
+</me>
+and the integrand is <m>f(x,y) = \sqrt{a^2-x^2}</m>, so the integral
+represents the volume between the <m>xy</m>-plane and the surface
+<m>z=\sqrt{a^2-x^2}</m>, with <m>(x,y)</m> running over <m>\cR</m>. We can rewrite
+the equation of the surface as <m>x^2+z^2=a^2</m>, which, as in
+Example <xref ref="eg_dblInt_B"/>, we recognize as the
+equation of a cylinder of radius <m>a</m> centred on the <m>y</m>-axis.
+We want the volume of the part of this cylinder that lies above
+<m>\cR</m>. It is sketched in the figure below.
+</p>
+
+<sidebyside>
+<image source="figs/qCylinder"/>
+</sidebyside>
+
+<p>The constant <m>y</m> cross-sections of this volume are quarter
+circles of radius <m>a</m> and hence of area <m>\frac{1}{4}\pi a^2</m>.
+As <m>y</m> runs from <m>0</m> to <m>2</m>
+<me>
+\int_0^2\int_0^a \sqrt{a^2-x^2}\ \dee{x}\,\dee{y}
+=\frac{1}{4}\pi a^2\times 2
+=\frac{\pi a^2}{2}
+</me>
+</p>
+</example>
+
+<example xml:id="eg_dblInt_CC"><title>Example <xref ref="eg_dblInt_C"/>, the hard way</title>
+<p>
+It is possible, but very tedious, to evaluate the integral
+<m>\int_0^2\int_0^a \sqrt{a^2-x^2}\ \dee{x}\,\dee{y}</m>
+of Example <xref ref="eg_dblInt_C"/>, using single variable calculus
+techniques. We do so now as a review of a couple of those
+techniques.
+</p>
+
+<p>The inside integral is <m>\int_0^a \sqrt{a^2-x^2}\ \dee{x}</m>.
+The standard procedure for eliminating square roots like <m>\sqrt{a^2-x^2}</m>
+from integrands is the method of trigonometric substitution, that was
+covered in §\eref{CLP101}{sec trigsub} of the CLP-2 text. In this
+case, the appropriate substitution is
+<me>
+x=a\sin\theta\qquad \dee{x}=a\cos\theta\ \dee{\theta}
+</me>
+The lower limit of integration <m>x=0</m>, i.e. <m>a\sin\theta=0</m>,
+corresponds to <m>\theta=0</m>, and the upper limit  <m>x=a</m>, i.e. <m>a\sin\theta=a</m>,
+corresponds to <m>\theta=\frac{\pi}{2}</m>, so that
+<md>
+<mrow>
+\int_0^a \sqrt{a^2-x^2}\ \dee{x}
+&amp;=\int_0^{\pi/2} \sqrt{\underbrace{a^2-a^2\sin^2\theta}_{a^2\cos^2\theta}}
+        \ a\cos\theta\ \dee{\theta}
+=a^2\int_0^{\pi2} \cos^2\theta\ \dee{\theta}
+</mrow>
+</md>
+</p>
+
+<p>The orthodox procedure for evaluating the resulting trigonometric integral
+<m>\int_0^{\pi2} \cos^2\theta\ \dee{\theta}</m>, covered in
+§\eref{CLP101}{sec trigint} of the CLP-2 text, uses the trigonometric
+double angle formula
+<me>
+\cos(2\theta) = 2\cos^2\theta -1\qquad\text{to write}\qquad
+\cos^2\theta =\frac{1+\cos(2\theta)}{2}
+</me>
+and then
+<md>
+<mrow>
+\int_0^a \sqrt{a^2-x^2}\ \dee{x}
+&amp;=a^2\int_0^{\pi2} \cos^2\theta\ \dee{\theta}
+=\frac{a^2}{2} \int_0^{\pi/2} \big[1+\cos(2\theta)\big]\ \dee{\theta}
+</mrow><mrow>
+&amp;=\frac{a^2}{2}\left[\theta+\frac{\sin(2\theta)}{2}\right]_0^{\pi/2}
+</mrow><mrow>
+&amp;=\frac{\pi a^2}{4}
+</mrow>
+</md>
+</p>
+
+<p>However we remark that there is also an efficient, sneaky, way to evaluate
+definite integrals like <m>\int_0^{\pi/2} \cos^2\theta\ \dee{\theta}</m>.
+Looking at the figures
+</p>
+
+<sidebyside width="40%">
+<image source="figs/cos2Agraph"/>
+<image source="figs/sin2Agraph"/>
+</sidebyside>
+<p>
+we see that
+<me>
+\int_0^{\pi/2} \cos^2\theta\ \dee{\theta}
+=\int_0^{\pi/2} \sin^2\theta\ \dee{\theta}
+</me>
+Thus
+<md>
+<mrow>
+\int_0^{\pi/2} \cos^2\theta\ \dee{\theta}
+=\int_0^{\pi/2} \sin^2\theta\ \dee{\theta}
+=\int_0^{\pi/2} \frac{1}{2}\big[\sin^2\theta+\cos^2\theta\big]\,\dee{\theta}
+=\frac{1}{2}\int_0^{\pi/2} \dee{\theta}
+=\frac{\pi}{4}
+</mrow>
+</md>
+</p>
+
+<p>In any event, the inside integral
+<me>
+\int_0^a \sqrt{a^2-x^2}\ \dee{x}
+=\frac{\pi a^2}{4}
+</me>
+and the full integral
+<me>
+\int_0^2\int_0^a \sqrt{a^2-x^2}\ \dee{x}\,\dee{y}
+=\frac{\pi a^2}{4}\int_0^2\dee{y}
+=\frac{\pi a^2}{2}
+</me>
+just as we saw in Example <xref ref="eg_dblInt_C"/>.
+</p>
+</example>
+
+<example xml:id="eg_dblInt_D"><title> Order of Integration</title>
+<p>
+The integral <m>\displaystyle\int_{-1}^2\int_{x^2}^{x+2}\dee{y}\,\dee{x}</m>
+represents the area of a region in the <m>xy</m>-plane. Express the same area
+as a double integral with the order on integration reversed.
+</p>
+
+<p>\soln The critical step in reversing the order of integration is
+to sketch the region in the <m>xy</m>-plane. Rewrite the given integral as
+<me>
+\int_{-1}^2\int_{x^2}^{x+2}\dee{y}\,\dee{x}
+=\int_{-1}^2\left[\int_{x^2}^{x+2}\dee{y}\right]\,\dee{x}
+</me>
+From this we see that, on the domain of integration,
+<ul>
+<li>
+<m>x</m> runs from <m>-1</m> to <m>2</m> and
+</li>
+<li>
+for each fixed <m>x</m>, <m>y</m> runs from the parabola <m>y=x^2</m> to the straight line <m>y=x+2</m>.
+</li>
+</ul>
+The given iterated integral corresponds to the (vertical) slicing in the figure
+on the left below.
+</p>
+
+<sidebyside>
+<image source="figs/reverseA"/>
+ <image source="figs/reverseB"/>
+</sidebyside>
+<p>
+To reverse the order of integration we have to switch to horizontal
+slices as in the figure on the right above.
+</p>
+
+<p>There we see a new wrinkle:
+the formula giving the value of <m>x</m> at the left hand end of a slice
+depends on whether the <m>y</m> coordinate of the slice is bigger than, or smaller
+than <m>y=1</m>. Looking at the figure on the right, we see that,
+on the domain of integration,
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>4</m> and
+</li>
+<li>
+for each fixed <m>0\le y\le 1</m>, <m>x</m> runs from <m>x=-\sqrt{y}</m> to <m>x=+\sqrt{y}</m>.
+</li>
+<li>
+for each fixed <m>1\le y\le 4</m>, <m>x</m> runs from <m>x=y-2</m> to <m>x=+\sqrt{y}</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+\int_{-1}^2\dee{x}\int_{x^2}^{x+2}\dee{y}
+=\int_0^1\dee{y}\int_{-\sqrt{y}}^{\sqrt{y}}\dee{x}
+  + \int_1^4\dee{y}\int_{y-2}^{\sqrt{y}}\dee{x}
+</mrow>
+</md>
+</p></example>
+
+
+<p>There was a moral to the last example. Just because both orders of integration
+have to give the same answer doesn't mean that they are equally easy to evaluate. Here is an extreme example illustrating that moral.
+</p>
+
+<example xml:id="eg_dblInt_E">
+<p>
+Evaluate the integral of <m>\frac{\sin x}{x}</m> over the region in the
+<m>xy</m>-plane that is above the <m>x</m>-axis, to the right of the line
+<m>y=x</m> and to the left of the line <m>x=1</m>.
+</p>
+
+<p>\soln Here is a sketch of the specified domain.
+</p>
+
+<sidebyside>
+<image source="figs/reverse2A"/>
+</sidebyside>
+<p>
+  We'll try to evaluate the specified integral twice <mdash/> once using
+horizontal strips (the impossibly hard way) and once using
+vertical strips (the easy way).
+</p>
+
+<p><em>Solution using horizontal strips.</em>
+To set up the integral using horizontal strips, as in the figure on
+the left below, we observe that, on the domain of integration,
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each fixed <m>y</m>, <m>x</m> runs from <m>x=y</m> to <m>1</m>.
+</li>
+</ul>
+So the iterated integral is
+<me>
+\int_0^1\dee{y}\int_y^1\dee{x}\ \frac{\sin x}{x}
+</me>
+And we have a problem. The integrand <m>\frac{\sin x}{x}</m> does not have
+an antiderivative that can be expressed in terms of elementary
+functions
+<fn>Perhaps the best known function whose antiderivative
+cannot be expressed in terms of elementary functions is <m>e^{-x^2}
+</m>.
+It is the integrand of the error function
+<m>
+\erf(x) =\frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}\ dt
+</m>
+that is used in computing <q>bell curve</q> probabilities. See Example
+\eref{CLP101}{eg:erf} in the CLP-2 text.</fn>
+It is impossible to evaluate <m>\int_y^1\dee{x}\ \frac{\sin x}{x}</m> without
+resorting to, for example, numerical methods or
+infinite series
+<fn>See, for example, Example \eref{CLP101}{eg:erf} in the CLP-2 text.</fn>.
+</p>
+
+<sidebyside>
+<image source="figs/reverse2B"/>
+<image source="figs/reverse2C"/>
+</sidebyside>
+
+
+<p><em>Solution using vertical strips.</em>
+To set up the integral using vertical strips, as in the figure on
+the right above, we observe that, on the domain of integration,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each fixed <m>x</m>, <m>y</m> runs from <m>0</m> to <m>y=x</m>.
+</li>
+</ul>
+So the iterated integral is
+<me>
+\int_0^1\dee{x}\int_0^x\dee{y}\ \frac{\sin x}{x}
+</me>
+This time, because <m>x</m> is treated as a constant in the inner integral,
+it is trivial to evaluate the iterated integral.
+<md>
+<mrow>
+\int_0^1\dee{x}\int_0^x\dee{y}\ \frac{\sin x}{x}
+&amp;=\int_0^1\dee{x}\ \frac{\sin x}{x}\int_0^x\dee{y}
+=\int_0^1\dee{x}\ \sin x
+=1-\cos 1
+</mrow>
+</md>
+</p></example>
+
+
+<p>Here is an example which is included as an excuse to review
+some integration technique from CLP-2.
+</p>
+<example xml:id="eg_dblInt_F">
+<p>
+Find the volume under the surface <m>z=1-3x^2-2y^2</m> and above the <m>xy</m>-plane.
+</p>
+
+<p>\soln
+Before leaping into integration, we should try to understand what the surface
+and volume look like.
+For each constant <m>z_0</m>, the part of the surface <m>z=1-3x^2-2y^2</m>
+that lies in the horizontal plane <m>z=z_0</m> is the ellipse
+<m>3x^2+2y^2=1-z_0</m>. The biggest of these ellipses is that in the
+<m>xy</m>-plane, where <m>z_0=0</m>. It is the ellipse <m>3x^2+2y^2=1</m>.
+As <m>z_0</m> increases the ellipse shrinks, degenerating to a single
+point, namely <m>(0,0,1)</m>, when <m>z_0=1</m>. So the surface consists
+of a stack of ellipses and our solid is
+<me>
+\cV =\Set{(x,y,z)}{3x^2+2y^2\le 1,\ 0\le z\le 1-3x^2-2y^2}
+</me>
+This is sketched in the figure below
+</p>
+
+<sidebyside>
+<image source="figs/egDblIntEa"/>
+</sidebyside>
+
+<p>
+The top view of the base region
+<me>
+\cR=\Set{(x,y)}{3x^2+2y^2\le 1}
+</me>
+is sketched in the figure below.
+</p>
+
+<sidebyside>
+<image source="figs/egDblIntEb"/>
+</sidebyside>
+
+<p>Considering that the <m>x</m>-dependence in <m>z=1-3x^2-2y^2</m>
+is almost identical to the <m>y</m>-dependence in <m>z=1-3x^2-2y^2</m>
+(only the coefficients <m>2</m> and <m>3</m> are interchanged), using
+vertical slices is likely to lead to exactly the same level of difficulty
+as using horizontal slices. So we'll just pick one <mdash/> say vertical
+slices.
+</p>
+
+<p>The fattest part of <m>\cR</m> is on the <m>y</m>-axis. The intersection
+points of the ellipse with the <m>y</m>-axis have <m>x=0</m> and <m>y</m>
+obeying <m>3(0)^2+2y^2 =1 </m> or <m>y=\pm\frac{1}{\sqrt{2}}</m>. So
+in <m>\cR</m>, <m>-\frac{1}{\sqrt{2}}\le y\le \frac{1}{\sqrt{2}}</m>
+and, for each such <m>y</m>, <m>3x^2\le 1-2y^2</m> or
+<m>-\sqrt{\frac{1-2y^2}{3}}\le x\le \sqrt{\frac{1-2y^2}{3}}</m>.
+So using vertical strips as in the figure above
+<md>
+<mrow>
+\text{Volume}(\cV) &amp;=\dblInt_\cR \big(1-3x^2-2y^2\big)\,\dee{x}\,\dee{y}
+</mrow><mrow>
+   &amp;=\int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}}\dee{y}
+     \int_{-\sqrt{\frac{1-2y^2}{3}}}^{\sqrt{\frac{1-2y^2}{3}}}\dee{x}\
+             \big(1-3x^2-2y^2\big)
+</mrow><mrow>
+   &amp;=4\int_0^{\frac{1}{\sqrt{2}}}\dee{y}
+      \int_0^{\sqrt{\frac{1-2y^2}{3}}}\dee{x}\
+             \big(1-3x^2-2y^2\big)
+</mrow><mrow>
+   &amp;=4\int_0^{\frac{1}{\sqrt{2}}}\dee{y}\
+             \Big[(1-2y^2)x-x^3\Big]_0^{\sqrt{\frac{1-2y^2}{3}}}
+</mrow><mrow>
+   &amp;=4\int_0^{\frac{1}{\sqrt{2}}}\dee{y}\
+             \sqrt{\frac{1-2y^2}{3}}\ \Big[(1-2y^2)-\frac{1-2y^2}{3}\Big]
+</mrow><mrow>
+   &amp;=8\int_0^{\frac{1}{\sqrt{2}}}\dee{y}\
+             \left[\frac{1-2y^2}{3}\right]^{3/2}
+</mrow>
+</md>
+To evaluate this integral, we use the trig
+substitution
+<fn>See §\eref{CLP101</fn>
+{sec trigsub} in the CLP-2 text
+for a general discussion of trigonometric substitution.}
+<m>2y^2=\sin^2\theta</m>, or
+<me>
+y=\frac{\sin\theta}{\sqrt{2}}\qquad
+\dee{y}=\frac{\cos\theta}{\sqrt{2}}\,\dee{\theta}
+</me>
+to give
+<md>
+<mrow>
+\text{Volume}(\cV) &amp;= 8\int_0^{\frac{\pi}{2}}
+          \overbrace{\dee{\theta}\ \frac{\cos\theta}{\sqrt{2}} }^{\dee{y}}
+           \left[\frac{\cos^2\theta}{3}\right]^{3/2}
+    =\frac{8}{\sqrt{54}}\int_0^{\frac{\pi}{2}}\dee{\theta}\
+                      \cos^4\theta
+</mrow>
+</md>
+Then to integrate <m>\cos^4\theta</m>, we use the double angle
+formula
+<fn>We weren't joking about his being a good review of
+single variable integration techniques. See Example \eref{CLP101</fn>
+{eg:TRGINTc}
+in the CLP-2 text.}
+<md>
+<mrow>
+\cos^2\theta &amp;=\frac{\cos(2\theta)+1}{2}
+</mrow><mrow>
+\implies \cos^4\theta &amp;= \frac{\big(\cos(2\theta)+1\big)^2}{4}
+    =\frac{\cos^2(2\theta)+2\cos(2\theta)+1}{4}
+    =\frac{\frac{\cos(4\theta)+1}{2}+2\cos(2\theta)+1}{4}
+</mrow><mrow>
+   &amp;=\frac{3}{8} +\frac{1}{2}\cos(2\theta) +\frac{1}{8}\cos(4\theta)
+</mrow>
+</md>
+Finally, since <m>\int_0^{\frac{\pi}{2}} \cos(4\theta)\,\dee{\theta}
+               =\int_0^{\frac{\pi}{2}} \cos(2\theta)\,\dee{\theta}
+               =0</m>,
+<md>
+<mrow>
+\text{Volume}(\cV) = \frac{8}{\sqrt{54}}\ \frac{3}{8}\ \frac{\pi}{2}
+  =\frac{\pi}{2\sqrt{6}}
+</mrow>
+</md>
+</p>
+
+</example>
+
+</subsection>
+
+<subsection xml:id="sec_def_int_more">
+  <title> Optional <mdash/> More about the Definition of <m>\ \dblInt_\cR f(x,y)\ \dee{x}\dee{y}</m> </title>
+
+<p>Technically, the integral <m>\dblInt_\cR f(x,y)\ \dee{x}\,\dee{y}</m>, where
+<m>\cR</m> is a bounded region in <m>\bbbr^2</m>, is defined as follows.
+</p>
+
+<p><ul>
+<li>
+<p>
+  Subdivide <m>\cR</m> by drawing lines parallel to the <m>x</m> and <m>y</m> axes.
+</p>
+
+<sidebyside>
+<image source="figs/intDecomp2"/>
+</sidebyside>
+</li>
+<li>
+Number the resulting rectangles contained in <m>\cR</m>, <m>1</m> through <m>n</m>.
+Notice that we are numbering all of the rectangles in <m>\cR</m>, not just those
+in one particular row or column.
+</li>
+<li>
+Denote by <m>\De A_i</m> the area of rectangle <m>\# i</m>.
+</li>
+<li>
+Select an arbitrary point <m>(x_i^*,y_i^*)</m> in rectangle <m>\# i</m>.
+</li>
+<li>
+Form the sum <m>\sum\limits_{i=1}^n f(x_i^*,y_i^*) \De A_i </m>.
+Again note that the sum runs over all of the rectangles in <m>\cR</m>,
+not just those  in one particular row or column.
+</li>
+</ul>
+Now repeat this construction over and over again, using finer and
+finer grids. If, as the size
+<fn>For example, let <m>p_i</m> be the perimeter
+of rectangle number <m>i</m> and require that <m>\max_{1\le i\le n}
+ p_i</m> tends to zero. This way both the heights and widths of all rectangles
+also tend to zero.</fn> of the rectangles approaches zero,
+this sum approaches a unique limit (independent of the choice
+of parallel lines and of points <m>(x_i^*,y_i^*)</m>),  then we define
+<me>
+\dblInt_\cR f(x,y)\ \dee{x}\,\dee{y}
+   =\lim \sum_{i=1}^n f(x_i^*,y_i^*)\,\De A_i
+</me>
+</p>
+
+<theorem>
+<statement><p>
+If <m>f(x,y)</m> is continuous in a region <m>\cR</m> described by
+<md alignment="alignat">
+<mrow>{3}
+a&amp;\le x&amp;&amp;\le b
+</mrow><mrow>
+B(x)&amp;\le y&amp;&amp;\le T(x)
+</mrow>
+</md>
+for continuous functions <m>B(x)</m>, <m>T(x)</m>, then
+<me>
+\dblInt_\cR f(x,y)\ \dee{x}\,\dee{y}\qquad\text{and}\qquad
+\int_a^b \dee{x} \bigg[\int_{B(x)}^{T(x)}\dee{y}\  f(x,y)\bigg]
+</me>
+both exist and are equal.
+Similarly, if <m>\cR</m> is described by
+<md alignment="alignat">
+<mrow>{3}
+c&amp;\le y&amp;&amp;\le d
+</mrow><mrow>
+L(y)&amp;\le x&amp;&amp;\le R(y)
+</mrow>
+</md>
+for continuous functions <m>L(y)</m>, <m>R(y)</m>, then
+<me>
+\dblInt_R f(x,y)\ \dee{x}\,\dee{y}\qquad\text{and}\qquad
+\int_c^d \dee{y} \bigg[\int_{L(y)}^{R(y)}\dee{x}\  f(x,y)\bigg]
+</me>
+both exist and are equal.
+</p></statement>
+</theorem>
+
+
+<p>The proof of this theorem is not particularly difficult, but is still
+beyond the scope of this text. The main ideas in the proof can already
+be seen in section \eref{CLP101}{ssec careful defn} of the CLP-2 text.
+An important consequence of this theorem is
+</p>
+
+<theorem><title>Fubini</title>
+<statement><p>
+If <m>f(x,y)</m> is continuous in a region <m>\cR</m> described by both
+<me>
+\left\{\begin{aligned}
+   a&amp;\le x\le b \\
+B(x)&amp;\le y\le T(x)
+\end{aligned}\right\}
+\qquad\text{and}\qquad
+\left\{
+\begin{aligned}
+c&amp;\le y\le d\\
+L(y)&amp;\le x\le R(y)
+\end{aligned}
+\right\}
+</me>
+for continuous functions <m>B(x)</m>, <m>T(x)</m>, <m>L(y)</m>, <m>R(y)</m>, then
+both
+<me>
+\int_a^b \dee{x} \bigg[\int_{B(x)}^{T(x)}\dee{y}\  f(x,y)\bigg]
+\qquad\text{and}\qquad
+\int_c^d \dee{y} \bigg[\int_{L(y)}^{R(y)}\dee{x}\  f(x,y)\bigg]
+</me>
+exist and are equal.
+</p></statement>
+</theorem>
+
+<p>The hypotheses of both of these theorems can be relaxed a bit, but not
+too much. For example, if
+<me>
+\cR=\Set{(x,y)}{0\le x\le 1,\ 0\le y\le 1}\qquad
+f(x,y)=\begin{cases}
+           1&amp;\text{if } x,y \text{ are both rational numbers} \\
+           0&amp;\text{otherwise}
+      \end{cases}
+</me>
+then the integral <m>\dblInt_\cR f(x,y)\ \dee{x}\,\dee{y}</m> does not exist. This
+is easy to see. If all of the <m>x_i^*</m>'s and <m>y_i^*</m>'s are chosen to be rational
+numbers, then
+<me>
+\sum_{i=1}^n f(x_i^*,y_i^*)\,\De A_i
+=\sum_{i=1}^n \,\De A_i
+=\text{Area}(\cR)
+</me>
+But if we choose all  the <m>x_i^*</m>'s and <m>y_i^*</m>'s to be irrational numbers, then
+<me>
+\sum_{i=1}^n f(x_i^*,y_i^*)\,\De A_i
+=\sum_{i=1}^n 0\,\De A_i
+=0
+</me>
+So the limit of <m>\sum\limits_{i=1}^n f(x_i^*,y_i^*)\,\De A_i</m>,
+as the maximum diagonal of the rectangles approaches zero,
+depends on the choice of points <m>(x_i^*,y_i^*)</m>. So the integral
+<m>\dblInt_\cR f(x,y)\ \dee{x}\,\dee{y}</m> does not exist.
+</p>
+
+<p>Here is an even more pathological
+<fn>For mathematicians, <q>pathological</q> is a synonym for <q>cool</q>.</fn>
+ example.
+</p>
+<example xml:id="eg_bad_Fubini">
+<p>
+In this example, we relax
+exactly one of the hypotheses of Fubini's Theorem, namely the continuity
+of <m>f</m>, and construct an example in which both of the integrals in
+Fubini's Theorem exist, but are <alert>not equal</alert>. In fact,
+we choose <m>\cR=\Set{(x,y)}{0\le x\le 1,\ 0\le y\le 1}</m> and we use a function
+<m>f(x,y)</m> that is continuous on <m>\cR</m>, except at exactly one point <mdash/>
+the origin.
+</p>
+
+<p>First, let <m>\de_1,\de_2,\de_3,\ \cdots</m> be any sequence of real numbers
+obeying
+<me>
+1=\de_1 \gt \de_2 \gt \de_3,\ \cdots,\ \de_n\rightarrow 0
+</me>
+For example <m>\de_n=\frac{1}{n}</m> or <m>\de_n=\frac{1}{2^{n-1}}</m> are both
+acceptable.
+For each positive integer <m>n</m>, let
+<m>I_n=(\de_{n+1},\de_n]=\Set{t}{\de_{n+1} \lt t\le \de_n}</m> and
+let <m>g_n(t)</m> be any nonnegative continuous function obeying
+<ul>
+<li>
+<m>g_n(t)=0</m> if <m>t</m> is not in <m>I_n</m>
+and
+</li>
+<li>
+<m>\int_{I_n}g(t)\,dt=1</m>
+</li>
+</ul>
+There are many such functions. For example
+</p>
+<sidebyside width="40%">
+<p>
+<me>
+g_n(t)=\frac{2}{\de_n-\de_{n+1}}\begin{cases}
+   \de_n-t&amp; \text{if } \half(\de_{n+1}+\de_n)\le t\le \de_n\\
+   t-\de_{n+1}&amp; \text{if }\de_{n+1}\le t\le \half(\de_{n+1}+\de_n)\\
+   0&amp; \text{otherwise}
+   \end{cases}
+</me>
+</p>
+<image source="figs/g_n"/>
+</sidebyside>
+<p>
+Here is a summary of what we have done so far.
+<ul>
+<li>
+We subdivided the interval <m>0 \lt  x\le 1</m> into infinitely many subintervals
+<m>I_n</m>. As <m>n</m> increases, the subinterval <m>I_n</m> gets smaller and smaller and
+also gets closer and closer to zero.
+</li>
+<li>
+We defined, for each <m>n</m>, a nonnegative continuous function <m>g_n</m>
+that is zero everywhere outside of <m>I_n</m> and whose integral over <m>I_n</m> is one.
+</li>
+</ul>
+</p>
+
+<p>Now we define the integrand <m>f(x,y)</m> in terms of these subintervals <m>I_n</m>
+and functions <m>g_n</m>.
+<me>
+f(x,y)=\begin{cases}
+   0&amp; \text{if } x=0 \\
+   0&amp; \text{if } y=0 \\
+   g_m(x)g_n(y)&amp; \text{if } x\in I_m,\ y\in I_n \text{ with } m=n\\
+   -g_m(x)g_n(y)&amp; \text{if } x\in I_m,\ y\in I_n \text{ with } m=n+1\\
+   0&amp; \text{otherwise}
+   \end{cases}
+</me>
+You should think of <m>(0,1]\times(0,1]</m> as a union of a bunch of
+small rectangles <m>I_m\times I_n</m>, as in the figure below. On most
+of these rectangles, <m>f(x,y)</m> is just zero. The exceptions are the
+darkly shaded rectangles <m>I_n\times I_n</m> on the <q>diagonal</q> of the figure
+and the lightly shaded rectangles <m>I_{n+1}\times I_n</m> just to the left
+of the <q>diagonal</q>.
+</p>
+
+<p>On each darkly shaded rectangle, <m>f(x,y)\ge 0</m> and the graph of <m>f(x,y)</m>
+is the graph of <m>g_n(x)g_n(y)</m> which looks like a pyramid. On each
+lightly shaded rectangle, <m>f(x,y)\le 0</m> and the graph of <m>f(x,y)</m> is
+the graph of <m>-g_{n+1}(x)g_n(y)</m> which looks like a pyramidal hole
+in the ground.
+</p>
+
+<sidebyside>
+<image source="figs/fubini"/>
+</sidebyside>
+
+<p>Now fix any <m>0\le y\le 1</m> and let's compute <m>\int_0^1 f(x,y)\ \dee{x}</m>.
+That is, we are integrating <m>f</m> along a line that is parallel to the <m>x</m>-axis.
+If <m>y=0</m>, then <m>f(x,y)=0</m> for all <m>x</m>, so <m>\int_0^1 f(x,y)\,\dee{x} = 0</m>.
+If <m>0 \lt y\le 1</m>, then there is exactly one positive integer <m>n</m> with
+<m>y\in I_n</m> and <m>f(x,y)</m> is zero, except for <m>x</m> in <m>I_n</m> or <m>I_{n+1}</m>.
+So for <m>y\in I_n</m>
+<md>
+<mrow>
+\int_0^1 f(x,y)\,\dee{x}&amp;=\sum_{m=n,n+1}\int_{I_m} f(x,y)\,\dee{x}
+=\int_{I_n} g_n(x)g_n(y)\,\dee{x}-\int_{I_{n+1}} g_{n+1}(x)g_n(y)\,\dee{x}
+</mrow><mrow>
+&amp;=g_n(y)\int_{I_n} g_n(x)\,\dee{x}-g_n(y)\int_{I_{n+1}} g_{n+1}(x)\,\dee{x}
+</mrow><mrow>
+&amp;=g_n(y)-g_n(y)=0
+</mrow>
+</md>
+Here we have twice used that <m>\int_{I_m}g(t)\,dt=1</m> for all <m>m</m>. Thus
+<m>\int_0^1 f(x,y)\,\dee{x}=0</m> for all <m>y</m> and hence <m>\int_0^1\dee{y}\Big[\int_0^1
+\dee{x}\ f(x,y)\Big]=0</m>.
+</p>
+
+<p>Finally, fix any <m>0\le x\le 1</m> and let's compute <m>\int_0^1 f(x,y)\ \dee{y}</m>.
+That is, we are integrating <m>f</m> along a line that is parallel to the <m>y</m>-axis.
+If <m>x=0</m>, then <m>f(x,y)=0</m> for all <m>y</m>, so <m>\int_0^1 f(x,y)\,\dee{y} = 0</m>.
+If <m>0 \lt x\le 1</m>, then there is exactly one positive integer <m>m</m> with
+<m>x\in I_m</m>. If <m>m\ge 2</m>, then <m>f(x,y)</m> is zero, except for <m>y</m> in <m>I_m</m> and
+<m>I_{m-1}</m>. But, if <m>m=1</m>, then <m>f(x,y)</m> is zero, except for <m>y</m> in <m>I_1</m>.
+(Take another look at the figure above.)
+So for <m>x\in I_m</m>, with <m>m\ge 2</m>,
+<md>
+<mrow>
+\int_0^1 f(x,y)\,\dee{y}&amp;=\sum_{n=m,m-1}\int_{I_n} f(x,y)\,\dee{y}
+=\int_{I_m} g_m(x)g_m(y)\,\dee{y}-\int_{I_{m-1}} g_{m}(x)g_{m-1}(y)\,\dee{y}
+</mrow><mrow>
+&amp;=g_m(x)\int_{I_m} g_m(y)\,\dee{y}-g_m(x)\int_{I_{m-1}} g_{m-1}(y)\,\dee{y}
+</mrow><mrow>
+&amp;=g_m(x)-g_m(x)=0
+</mrow>
+</md>
+But for <m>x\in I_1</m>,
+<md>
+<mrow>
+\int_0^1 f(x,y)\,\dee{y}&amp;=\int_{I_1} f(x,y)\,\dee{y}
+=\int_{I_1} g_1(x)g_1(y)\,\dee{y}
+=g_1(x)\int_{I_1} g_1(y)\,\dee{y}
+=g_1(x)
+</mrow>
+</md>
+ Thus
+<me>
+\int_0^1 f(x,y)\,\dee{y}=\begin{cases}
+                          0&amp;\text{if } x\le \de_2 \\
+                         g_1(x)&amp;\text{if }  x\in I_1
+                          \end{cases}
+</me>
+and hence
+<me>
+\int_0^1\dee{x}\bigg[\int_0^1 \dee{y}\ f(x,y)\bigg]
+=\int_{I_1}g_1(x)\,\dee{x}=1
+</me>
+The conclusion is that for the <m>f(x,y)</m> above, which is defined
+for all <m>0\le x\le 1</m>, <m>0\le y\le 1</m> and is continuous except at <m>(0,0)</m>,
+<me>
+\int_0^1\dee{y}\bigg[\int_0^1 \dee{x}\ f(x,y)\bigg]=0
+\qquad
+\int_0^1\dee{x}\bigg[\int_0^1 \dee{y}\ f(x,y)\bigg]=1
+</me>
+</p></example>
+
+</subsection>
+
+</section>

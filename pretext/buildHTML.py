@@ -45,6 +45,8 @@ myTags = [
 # I had these set so that I could see all parts of exercises on page.
 # breaks validation, but really helps debugging.
 myRep = [
+    # I had these set so that I could see all parts of exercises on page.
+    # breaks validation, but really helps debugging.
     # ["hint", "statement",],
     # ["answer", "statement"],
     # ["solution", "statement"],

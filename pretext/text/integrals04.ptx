@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_surface_area">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title>Surface Area</title>
+<p>
+Suppose that we wish to find the area of part, <m>S</m>, of the surface <m>z=f(x,y)</m>. We start by cutting <m>S</m> up into tiny pieces. To do so,
+<ul>
+<li>
+we draw a bunch of curves of constant <m>x</m> (the blue curves in the
+figure below). Each such curve is the intersection of <m>S</m> with
+the plane <m>x=x_0</m> for some constant <m>x_0</m>.  And we also
+</li>
+<li>
+draw a bunch of curves of constant <m>y</m> (the red curves in the
+figure below). Each such curve is the intersection of <m>S</m> with
+the plane <m>y=y_0</m> for some constant <m>y_0</m>.
+</li>
+</ul>
+</p>
+
+<sidebyside>
+<image source="figs/sphericaldSxy"/>
+</sidebyside>
+<p>
+Concentrate on any one the tiny pieces. Here is a greatly magnified
+sketch of it, looking at it from above.
+</p>
+
+<sidebyside>
+<image source="figs/dSfxy"/>
+</sidebyside>
+<p>
+We wish to compute its area, which we'll call <m>\dee{S}</m>.
+Now this little piece of surface need not be parallel to the <m>xy</m>-plane,
+and indeed need not even be flat. But if the piece is really tiny, it's
+almost flat. We'll now approximate it by something that is flat,
+and whose area we know. To start, we'll determine the corners of the piece.
+To do so, we first determine the bounding curves of the piece.
+Look at the figure above, and recall that, on the surface <m>z=f(x,y)</m>.
+<ul>
+<li>
+The  upper blue curve was constructed by holding <m>x</m> fixed
+at the value <m>x_0</m>, and sketching the curve swept out by
+<m>x_0\,\hi+y\,\hj + f(x_0,y)\,\hk</m> as <m>y</m> varied, and
+</li>
+<li>
+the  lower blue curve was constructed by holding <m>x</m> fixed
+at the slightly larger value <m>x_0+\dee{x}</m>, and sketching the
+curve swept out by  <m>(x_0+\dee{x})\,\hi+y\,\hj + f(x_0+\dee{x},y)\,\hk</m> as
+<m>y</m> varied.
+</li>
+<li>
+The red curves were constructed similarly, by holding <m>y</m> fixed
+and varying <m>x</m>.
+</li>
+</ul>
+So the four intersection points in the figure are
+<md alignment="alignat">
+<mrow>{3}
+P_0&amp;=x_0\,\hi+y_0\,\hj + f(x_0,y_0)\,\hk
+</mrow><mrow>
+   P_1&amp;=x_0\,\hi+(y_0+\dee{y})\,\hj + f(x_0,y_0+\dee{y})\,\hk
+</mrow><mrow>
+P_2&amp;=(x_0+\dee{x})\,\hi+y_0\,\hj + f(x_0+\dee{x},y_0)\,\hk
+</mrow><mrow>
+   P_3&amp;=(x_0+\dee{x})\,\hi+(y_0+\dee{y})\,\hj + f(x_0+\dee{x},y_0+\dee{y})\,\hk
+</mrow>
+</md>
+Now, for any small constants <m>\dee{X}</m> and <m>\dee{Y}</m>, we have the linear
+approximation
+<fn>Recall <xref ref="eqn_lin_approx_2d"/>.</fn>
+<md>
+<mrow>
+f(x_0+\dee{X},y_0+\dee{Y})
+&amp;\approx f(x_0\,,\,y_0)
+   +\pdiff{f}{x}(x_0\,,\,y_0)\,\dee{X}
+   +\pdiff{f}{y}(x_0\,,\,y_0)\,\dee{Y}
+</mrow>
+</md>
+Applying this three times,
+once with <m>\dee{X}=0</m>, <m>\dee{Y}=\dee{y}</m> (to approximate <m>P_1</m>),
+once with <m>\dee{X}=\dee{x}</m>, <m>\dee{Y}=0</m> (to approximate <m>P_2</m>),
+and once with  <m>\dee{X}=\dee{x}</m>, <m>\dee{Y}=\dee{y}</m> (to approximate <m>P_3</m>),
+<md alignment="alignat">
+<mrow>
+P_1&amp;\approx P_0 \phantom{\ +\ \dee{x}\,\hi}
+   \ +\ \dee{y}\,\hj\ \ +\   \pdiff{f}{y}(x_0\,,\,y_0)\,\dee{y}\,\hk
+</mrow><mrow>
+P_2&amp;\approx P_0
+   \ +\ \dee{x}\,\hi  \phantom{\ +\  \dee{y}\,\hj}
+   \ \ +\  \pdiff{f}{x}(x_0\,,\,y_0)\,\dee{x}\,\hk
+</mrow><mrow>
+P_3&amp;\approx P_0
+   \ +\ \dee{x}\,\hi\ +\ \dee{y}\,\hj \ +\
+           \Big[ \pdiff{f}{x}(x_0\,,\,y_0)\,\dee{x}
+                               +  \pdiff{f}{y}(x_0\,,\,y_0)\,\dee{y}\Big]\,\hk
+</mrow>
+</md>
+Of course we have only approximated the positions of the corners and
+so have introduced errors. However, with more work, one can bound
+those errors (like we in the optional §<xref ref="sec_integral_error"/>)
+and show that in the limit <m>\dee{x},\dee{y}\rightarrow 0</m>, all of the
+error terms that we dropped contribute exactly <m>0</m> to the integral.
+</p>
+
+<p>The small piece of our
+surface with corners <m>P_0</m>, <m>P_1</m>, <m>P_2</m>, <m>P_3</m>  is approximately a parallelogram with sides
+</p>
+
+<sidebyside >
+<p>
+<md>
+<mrow>
+\overrightarrow{P_0P_1}
+\approx \overrightarrow{P_2P_3}
+&amp;\approx \dee{y}\,\hj\ +\   \pdiff{f}{y}(x_0\,,\,y_0)\,\dee{y}\,\hk
+</mrow><mrow>
+\overrightarrow{P_0P_2}
+\approx \overrightarrow{P_1P_3}
+&amp;\approx \dee{x}\,\hi\ +\  \pdiff{f}{x}(x_0\,,\,y_0)\,\dee{x}\,\hk
+\qquad\qquad
+</mrow>
+</md>
+</p>
+<image source="figs/dS2fxy"/>
+</sidebyside>
+
+<p>
+Denote by <m>\theta</m> the angle between the vectors
+<m>\overrightarrow{P_0P_1}</m> and <m>\overrightarrow{P_0P_2}</m>.
+The base of the parallelogram, <m>\overrightarrow{P_0P_1}</m>,
+has length <m>\big|\overrightarrow{P_0P_1}\big|</m>, and the height of the
+parallelogram is <m>\big|\overrightarrow{P_0P_2}\big|\,\sin\theta</m>.
+So the area of the parallelogram is
+<fn>As we mentioned above,
+the approximation below becomes exact when the limit <m>\dee{x}
+,\dee{y}\rightarrow 0</m> is taken in the definition of the integral.
+See §\eref{CLP317}{sec:hoterms} in the CLP-4 text.</fn>, by
+Theorem <xref ref="thm_crossPppties"/>,
+<md>
+<mrow>
+\dee{S}
+=|\overrightarrow{P_0P_1}|\ |\overrightarrow{P_0P_2}| \ \sin\theta
+&amp;= \big|\overrightarrow{P_0P_1}\times\overrightarrow{P_0P_2}\big|
+</mrow><mrow>
+&amp;\approx \bigg|\left(\hj\ +\   \pdiff{f}{y}(x_0\,,\,y_0)\,\hk\right)\times
+              \left(\hi\ +\   \pdiff{f}{x}(x_0\,,\,y_0)\,\hk\right)\bigg|
+          \dee{x}\dee{y}
+</mrow>
+</md>
+The cross product is easily evaluated:
+<md>
+<mrow>
+\left(\hj\ +\   \pdiff{f}{y}(x_0\,,\,y_0)\,\hk\right)\times
+              \left(\hi\ +\   \pdiff{f}{x}(x_0\,,\,y_0)\,\hk\right)
+&amp;=\det\left[\begin{matrix}
+           \hi &amp; \hj &amp; \hk \\
+           0 &amp; 1 &amp; \frac{\partial f}{\partial y}(x_0,y_0) \\
+           1 &amp; 0 &amp; \frac{\partial f}{\partial x}(x_0,y_0)
+           \end{matrix}\right]
+</mrow><mrow>
+&amp;= f_x(x_0,y_0)\,\hi + f_y(x_0,y_0)\,\hj - \hk
+</mrow>
+</md>
+as is its length:
+<md>
+<mrow>
+\left|\left(\hj\ +\   \pdiff{f}{y}(x_0\,,\,y_0)\,\hk\right)\times
+              \left(\hi\ +\   \pdiff{f}{x}(x_0\,,\,y_0)\,\hk\right)\right|
+&amp;= \sqrt{1 + f_x(x_0,y_0)^2 + f_y(x_0,y_0)^2}
+</mrow>
+</md>
+Throughout this computation, <m>x_0</m> and <m>y_0</m> were arbitrary.
+So we have found the area of each tiny piece of the surface <m>S</m>.
+</p>
+
+
+<fact xml:id="eq_dSgraph">
+<statement>
+<p>
+For the surface <m>z=f(x,y)</m>,
+<md>
+<mrow>
+\dee{S}&amp;= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\
+          \dee{x}\dee{y}
+</mrow>
+</md>
+Similarly, for the surface <m>x=g(y,z)</m>,
+<md>
+<mrow>
+\dee{S}&amp;= \sqrt{1 + g_y(y,z)^2 + g_z(y,z)^2}\
+          \dee{y}\dee{z}
+</mrow>
+</md>
+and for the surface <m>y=h(x,z)</m>,
+<md>
+<mrow>
+\dee{S}&amp;= \sqrt{1 + h_x(x,z)^2 + h_z(x,z)^2}\
+          \dee{x}\dee{z}
+</mrow>
+</md>
+</p>
+</statement>
+</fact>
+
+<p>
+Consequently, we have
+</p>
+
+
+<theorem xml:id="thm_surface_area">
+<statement><p>
+<ol label="a">
+<li>
+The area of the part of the surface <m>z=f(x,y)</m> with <m>(x,y)</m> running over the
+region <m>\cD</m> in the <m>xy</m>-plane is
+<me>
+\dblInt_\cD \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\
+          \dee{x}\dee{y}
+</me>
+</li>
+<li>
+The area of the part of the surface <m>x=g(y,z)</m> with <m>(y,z)</m> running over the
+region <m>\cD</m> in the <m>yz</m>-plane is
+<me>
+\dblInt_\cD \sqrt{1 + g_y(y,z)^2 + g_z(y,z)^2}\
+          \dee{y}\dee{z}
+</me>
+</li>
+<li>
+The area of the part of the surface <m>y=h(x,z)</m> with <m>(x,z)</m> running over the
+region <m>\cD</m> in the <m>xz</m>-plane is
+<me>
+\dblInt_\cD \sqrt{1 + h_x(x,z)^2 + h_z(x,z)^2}\
+          \dee{x}\dee{z}
+</me>
+</li>
+</ol>
+</p></statement>
+</theorem>
+
+<!--
+\intremark{
+The formulae like
+<m>\dee{S}= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\ \dee{x}\dee{y}</m>
+in <xref ref="eq_dSgraph"/> have geometric interpretations. The red
+parallelogram in the sketch
+</p>
+
+<sidebyside>
+<image source="figs/surfaceProj"/>
+</sidebyside>
+represents a little piece of our surface. It has area
+<m>\dee{S}= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\ \dee{x}\dee{y}</m>.
+The blue parallelogram in the same sketch represents the projection
+of the red parallelogram onto the <m>xy</m>-plane. It has area <m>\dee{x}\dee{y}</m>.
+The vector <m>\hn</m> in the sketch is a unit normal for the red parallelogram.
+We have seen that it is parallel to
+<me>
+\frac{\partial\vr}{\partial x}\times
+              \frac{\partial\vr}{\partial y}
+= -f_x(x,y)\,\hi - f_y(x,y)\,\hj + \hk
+</me>
+so that the angle <m>\theta</m> between <m>\hn</m> and <m>\hk</m> obeys
+<md>
+<mrow>
+\cos\theta &amp;= \frac{(-f_x(x,y)\,\hi - f_y(x,y)\,\hj + \hk)\cdot\hk}
+                 {\big|-f_x(x,y)\,\hi - f_y(x,y)\,\hj + \hk\big|\,|\hk|}
+</mrow><mrow>
+&amp;=\frac{1}{\sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}}
+</mrow>
+</md>
+The geometric interpretation of
+<m>\dee{S}= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\ \dee{x}\dee{y}</m>
+is that the area <m>\dee{S}</m> of a little piece of surface is the
+area of its projection on the <m>xy</m>-plane times the factor
+<m>\frac{1}{\cos\theta}</m> where <m>\theta</m> is the angle between <m>\hn</m>
+(which is perpendicular to the surface) and <m>\hk</m> (which is
+perpendicular to the <m>xy</m>-plane). Notice that
+<ul>
+<li>sep1pt \parskip0pt \parsep0pt
+</li>
+<li>[<m>\circ</m>]
+when <m>\theta</m> is close to zero, which corresponds the <m>f</m> being almost constant
+and our surface being almost parallel to the <m>xy</m>-plane, <m>\dee{S}</m>
+reduces to almost <m>\dee{x}\dee{y}</m>.
+</li>
+<li>[<m>\circ</m>]
+On the other hand, in the limit <m>\theta\rightarrow\frac{\pi}{2}</m>, which
+corresponds to <m>f_x</m> and/or <m>f_y</m> becoming infinite
+and our surface becoming perpendicular to the <m>xy</m>-plane,
+<m>\dee{S}</m> becomes <q>infinity times</q> <m>\dee{x}\dee{y}</m>. In this case,
+we should represent our surface either in the form <m>x=g(y,z)</m>
+or in the form <m>y=h(x,z)</m>, rather than in the form <m>z=f(x,y)</m>.
+</li>
+</ul>
+}
+ -->
+
+<example xml:id="eg_area_cone"><title>Area of a cone</title>
+<p>
+As a first example, we compute the area of the part of the
+cone
+<me>
+z=\sqrt{x^2+y^2}
+</me>
+with <m>0\le z\le a</m> or, equivalently, with <m>x^2+y^2\le a^2</m>.
+</p>
+
+<sidebyside>
+<image source="figs/cone"/>
+</sidebyside>
+<p>
+Note that <m>z=\sqrt{x^2+y^2}</m> is the side of the cone. It does not include the top.
+</p>
+
+<p>To find its area, we will apply <xref ref="eq_dSgraph"/> to
+<me>
+z=f(x,y) = \sqrt{x^2+y^2}
+\qquad\text{with $(x,y)$ running over } x^2+y^2\le a^2
+</me>
+That forces us to compute the first order partial derivatives
+<md>
+<mrow>
+f_x(x,y) &amp; = \frac{x}{\sqrt{x^2+y^2}}
+</mrow><mrow>
+f_y(x,y) &amp; = \frac{y}{\sqrt{x^2+y^2}}
+</mrow><mrow>
+</mrow>
+</md>
+Substituting them into the first formula in <xref ref="eq_dSgraph"/> yields
+<md>
+<mrow>
+\dee{S}&amp;= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\  \dee{x}\,\dee{y}
+</mrow><mrow>
+   &amp;=\sqrt{1+\Big(\frac{x}{\sqrt{x^2+y^2}}\Big)^2
+            +\Big(\frac{y}{\sqrt{x^2+y^2}}\Big)^2} \ \dee{x}\,\dee{y}
+</mrow><mrow>
+   &amp;=\sqrt{1+\frac{x^2+y^2}{x^2+y^2}} \ \dee{x}\,\dee{y}
+</mrow><mrow>
+   &amp;=\sqrt{2} \ \dee{x}\,\dee{y}
+</mrow>
+</md>
+So
+<md>
+<mrow>
+\text{Area}
+&amp;= \dblInt_{x^2+y^2\le a^2} \sqrt{2}\ \dee{x}\,\dee{y}
+= \sqrt{2} \dblInt_{x^2+y^2\le a^2} \dee{x}\,\dee{y}
+= \sqrt{2} \pi a^2
+</mrow>
+</md>
+because <m>\dblInt_{x^2+y^2\le a^2} \dee{x}\,\dee{y}</m> is exactly
+the area of a circular disk of radius <m>a</m>.
+</p></example>
+
+<example xml:id="eg_area_cylinder"><title>Area of a cylinder</title>
+<statement>
+<p>
+Let <m>a,b \gt 0</m>. Find the surface area of
+<me>
+\cS = \Set{(x,y,z)}{x^2+z^2=a^2,\ 0\le y\le b}
+</me>
+</p>
+</statement>
+
+<solution>
+<p>
+The intersection of <m>x^2+z^2=a^2</m> with any plane of constant <m>y</m>
+is the circle of radius <m>a</m> centred on <m>x=z=0</m>. So <m>\cS</m> is a
+bunch of circles stacked sideways. It is a cylinder on its side (with both
+ends open).
+By symmetry, the area of <m>\cS</m> is four times the area of the part of <m>\cS</m>
+that is in the first octanct, which is
+<me>
+\cS_1 = \Big\{(x,y,z)\ \Big|\ z=f(x,y)=\sqrt{a^2-x^2},\ 0\le x\le a,\
+                               0\le y\le b\Big\}
+</me>
+</p>
+
+<sidebyside>
+<image source="figs/cylinderF"/>
+<image source="figs/cylinderG"/>
+</sidebyside>
+
+<p>
+Since
+<me>
+f_x(x,y)=-\frac{x}{\sqrt{a^2-x^2}}\qquad
+f_y(x,y)=0
+</me>
+the first formula in <xref ref="eq_dSgraph"/> yields
+<md>
+<mrow>
+\dee{S}&amp;= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\  \dee{x}\,\dee{y}
+</mrow><mrow>
+   &amp;=\sqrt{1+\Big(-\frac{x}{\sqrt{a^2-x^2}}\Big)^2} \ \dee{x}\,\dee{y}
+</mrow><mrow>
+   &amp;=\sqrt{1+\frac{x^2}{a^2-x^2}} \ \dee{x}\dee{y}
+</mrow><mrow>
+   &amp;=\frac{a}{\sqrt{a^2-x^2}} \ \dee{x}\dee{y}
+</mrow>
+</md>
+So
+<md>
+<mrow>
+\text{Area}(\cS_1)
+&amp;= \int_0^a\dee{x}\int_0^b\dee{y}\ \frac{a}{\sqrt{a^2-x^2}}
+=ab \int_0^a\dee{x} \frac{1}{\sqrt{a^2-x^2}}
+</mrow>
+</md>
+The indefinite integral of <m>\frac{1}{\sqrt{a^2-x^2}}</m>
+is <m>\arcsin\frac{x}{a}+C</m>. (See the table of integrals in Appendix
+<xref ref="app_integral"/>. Alternatively, use the trig substitution <m>x=a\sin\theta</m>.)
+So
+<md>
+<mrow>
+\text{Area}(\cS_1)
+= ab\left[\arcsin\frac{x}{a}\right]_0^a
+= ab\big[\arcsin 1 -\arcsin 0\big]
+=\frac{\pi}{2} ab
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\text{Area}(\cS)
+=4\text{Area}(\cS_1)
+=2\pi ab
+</mrow>
+</md>
+</p>
+
+<p>We could have also come to this conclusion by using a little geometry,
+rather than using calculus. Cut open the cylinder by cutting
+along a line parallel to the <m>y</m>-axis, and then flatten out the
+cylinder. This gives a rectangle. One side of the rectangle is just
+a circle of radius <m>a</m>, straightened out. So the rectangle has sides
+of lengths <m>2\pi a</m> and <m>b</m> and has area <m>2\pi ab</m>.
+</p>
+</solution>
+</example>
+
+<example xml:id="eg_area_hemisphere"><title>Area of a hemisphere</title>
+<p>
+This time we compute the surface area of the hemisphere
+<me>
+x^2+y^2+z^2=a^2\qquad z\ge 0
+</me>
+(with <m>a \gt 0</m>).
+You probably know, from high school, that the answer is
+<m>\frac{1}{2}\times 4\pi a^2=2\pi a^2</m>. But you have probably
+not seen a derivation
+<fn>There is a pun hidden here, because
+you can (with a little thought) also get the surface area by differentiating
+the volume with respect to the radius.</fn>
+ of this answer.
+Note that, since <m>x^2+y^2 = a^2-z^2</m> on the hemisphere, the set
+of <m>(x,y)</m>'s for which there is a <m>z</m> with <m>(x,y,z)</m> on the  hemisphere
+is exactly <m>\Set{(x,y)\in\bbbr^2}{x^2+y^2\le a^2}</m>.
+So the hemisphere is
+<md>
+<mrow>
+S &amp;= \Big\{(x,y,z)\ \Big|\ z=\sqrt{a^2-x^2-y^2},\ x^2+y^2\le a^2\Big\}
+</mrow>
+</md>
+We will compute the area of <m>S</m> by applying <xref ref="eq_dSgraph"/> to
+<me>
+z=f(x,y) = \sqrt{a^2-x^2-y^2}
+\qquad\text{with $(x,y)$ running over } x^2+y^2\le a^2
+</me>
+The first formula in <xref ref="eq_dSgraph"/> yields
+<md>
+<mrow>
+\dee{S}&amp;= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\  \dee{x}\dee{y}
+</mrow><mrow>
+   &amp;=\sqrt{1+\Big(\frac{-x}{\sqrt{a^2-x^2-y^2}}\Big)^2
+            +\Big(\frac{-y}{\sqrt{a^2-x^2-y^2}}\Big)^2} \ \dee{x}\dee{y}
+</mrow><mrow>
+   &amp;=\sqrt{1+\frac{x^2+y^2}{a^2-x^2-y^2}} \ \dee{x}\dee{y}
+</mrow><mrow>
+   &amp;=\sqrt{\frac{a^2}{a^2-x^2-y^2}} \ \dee{x}\dee{y}
+</mrow>
+</md>
+So the area is
+<m>
+\dblInt_{x^2+y^2\le a^2}\frac{a}{\sqrt{a^2-x^2-y^2}}
+            \ \dee{x}\dee{y}
+</m>.
+To evaluate this integral, we switch to polar coordinates, substituting
+<m>x=r\cos\theta</m>, <m>y=r\sin\theta</m>. This gives
+<md>
+<mrow>
+\text{area}
+&amp;=\dblInt_{x^2+y^2\le a^2}\frac{a}{\sqrt{a^2-x^2-y^2}}
+            \ \dee{x}\dee{y}
+=\int_0^a\dee{r}\ r\int_0^{2\pi}\dee{\theta}\  \frac{a}{\sqrt{a^2-r^2}}
+</mrow><mrow>
+&amp;=2\pi a \int_0^a\dee{r}\ \frac{r}{\sqrt{a^2-r^2}}
+</mrow><mrow>
+&amp;=2\pi a\int_{a^2}^0 \frac{-\dee{u}/2}{\sqrt{u}}
+\qquad\text{with } u=a^2-r^2,\ \dee{u} = -2r\,\dee{r}
+</mrow><mrow>
+&amp;=2\pi a\Big[-\sqrt{u}\Big]_{a^2}^0
+</mrow><mrow>
+&amp;=2\pi a^2
+</mrow>
+</md>
+as it should be.
+</p>
+
+</example>
+
+<example xml:id="eg_area_paraboloid">
+<statement>
+<p>
+Find the surface area of the part of the paraboloid <m>z=2-x^2-y^2</m>
+lying above the <m>xy</m>-plane.
+</p>
+</statement>
+
+<solution>
+<p>
+The equation of the surface is of the form <m>x=f(x,y)</m> with <m>f(x,y)=2-x^2-y^2</m>.
+So
+<md>
+<mrow>
+f_x(x,y) =-2x\qquad
+f_y(x,y) =-2y
+</mrow>
+</md>
+and, by the first part of <xref ref="eq_dSgraph"/>,
+<md>
+<mrow>
+\dee{S} &amp;= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\  \dee{x}\dee{y}
+</mrow><mrow>
+   &amp;=\sqrt{1+4x^2+4y^2} \ \dee{x}\dee{y}
+</mrow>
+</md>
+The point <m>(x,y,z)</m>, with <m>z=2-x^2-y^2</m>, lies above the <m>xy</m>-plane if and only
+if <m>z\ge 0</m>, or, equivalently, <m>2-x^2-y^2\ge 0</m>. So the domain of
+integration is <m>\Set{(x,y)}{x^2+y^2\le 2}</m> and
+<me>
+\text{Surface Area} = \dblInt_{x^2+y^2\le 2}\ \sqrt{1+4x^2+4y^2} \ \dee{x}\dee{y}
+</me>
+Switching to polar coordinates,
+<md>
+<mrow>
+\text{Surface Area}
+&amp;=\int_0^{2\pi}\int_0^{\sqrt{2}}\sqrt{1+4r^2}\  r\,\dee{r}\, \dee{\theta}
+</mrow><mrow>
+&amp;=2\pi\left[\frac{1}{12}{\big(1+4r^2\big)}^{3/2}\right]_0^{\sqrt{2}}
+=\frac{\pi}{6}[27-1]
+</mrow><mrow>
+&amp;=\frac{13}{3}\pi
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+
+</section>

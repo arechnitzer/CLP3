@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_chain_rule">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title>The Chain Rule</title>
+<introduction>
+  <p>You already routinely use the one dimensional chain
+rule
+<me>
+\diff{}{t}f\big(x(t)\big)
+= \diff{f}{x}\big(x(t)\big)\ \diff{x}{t}(t)
+</me>
+in doing computations like
+<me>
+\diff{}{t}\sin(t^2) = \cos(t^2)\ 2t
+</me>
+In this example, <m>f(x)=\sin(x)</m> and <m>x(t)=t^2</m>.
+</p>
+
+<p>We now generalize the chain rule to functions of more than one variable.
+For concreteness, we concentrate on the case in which all functions
+are functions of two variables. That is, we find the partial derivatives
+<m>\pdiff{F}{s}</m> and <m>\pdiff{F}{t}</m> of a function <m>F(s,t)</m> that is defined
+as a composition
+<me>
+  F(s,t)=f\big(x(s,t)\,,\,y(s,t)\big)
+</me>
+We are using the name <m>F</m> for the new function <m>F(s,t)</m> as a reminder that
+it is closely related to, though not the same as, the function <m>f(x,y)</m>.
+The partial derivative <m>\pdiff{F}{s}</m> is the rate of change of <m>F</m> when <m>s</m> is varied with <m>t</m> held constant. When <m>s</m> is varied, both the <m>x</m>-argument,
+<m>x(s,t)</m>, and the <m>y</m>-argument, <m>y(s,t)</m>, in <m>f\big(x(s,t)\,,\,y(s,t)\big)</m>
+vary. Consequently, the chain rule for <m>f\big(x(s,t)\,,\,y(s,t)\big)</m>
+is a sum of two terms <mdash/> one resulting from the variation
+of the <m>x</m>-argument and the other resulting from the variation of
+the <m>y</m>-argument.
+</p>
+
+<theorem xml:id="thm_chainRule"><title>The Chain Rule</title>
+<statement><p>
+Assume that all first order partial derivatives of <m>f(x,y)</m>, <m>x(s,t)</m>
+and <m>y(s,t)</m> exist and are continuous. Then the same is true for <m>F(s,t)=f\big(x(s,t)\,,\,y(s,t)\big)</m> and
+<md>
+<mrow>
+\pdiff{F}{s}(s,t)
+&amp;=  \pdiff{f}{x}\big(x(s,t)\,,\,y(s,t)\big)\, \pdiff{x}{s}(s,t)
+   +\pdiff{f}{y}\big(x(s,t)\,,\,y(s,t)\big)\, \pdiff{y}{s}(s,t)
+</mrow><mrow>
+\pdiff{F}{t}(s,t)
+&amp;=  \pdiff{f}{x}\big(x(s,t)\,,\,y(s,t)\big)\, \pdiff{x}{t}(s,t)
+   +\pdiff{f}{y}\big(x(s,t)\,,\,y(s,t)\big)\, \pdiff{y}{t}(s,t)
+</mrow>
+</md>
+</p></statement>
+</theorem>
+
+<p>
+We will give the proof of this theorem in §<xref ref="subsec_higher_d_chain_rule"/>,
+below. It is common to state this chain rule as
+<md>
+<mrow>
+\pdiff{F}{s}
+&amp;=  \pdiff{f}{x}\, \pdiff{x}{s}
+   +\pdiff{f}{y}\, \pdiff{y}{s}
+</mrow><mrow>
+\pdiff{F}{t}
+&amp;=  \pdiff{f}{x}\, \pdiff{x}{t}
+   +\pdiff{f}{y}\, \pdiff{y}{t}
+</mrow>
+</md>
+That is, it is common to suppress the function arguments. But you
+should make sure that
+you understand what the arguments are before doing so.
+</p>
+
+<p>Theorem <xref ref="thm_chainRule"/> is given for the case that <m>F</m> is the
+composition of a function of two variables, <m>f(x,y)</m>, with two functions,
+<m>x(s,t)</m> and <m>y(s,t)</m>,  of two variables each. There is nothing magical about
+the number two. There are obvious variants for any numbers of variables.
+For example,
+</p>
+<fact xml:id="eqn_chain_rule_A">
+  <statement>
+    <p>
+If <m>F(t) = f\big(x(t),y(t),z(t)\big)</m>, then
+<md>
+<mrow>
+\diff{F}{t}(t) &amp;= \pdiff{f}{x}\big(x(t)\,,\,y(t)\,,\,z(t)\big)\, \diff{x}{t}(t)
+           +\pdiff{f}{y}\big(x(t)\,,\,y(t)\,,\,z(t)\big)\, \diff{y}{t}(t)
+</mrow><mrow>
+     &amp;\hskip1in   +\pdiff{f}{z}\big(x(t)\,,\,y(t)\,,\,z(t)\big)\, \diff{z}{t}(t)
+</mrow>
+</md>
+</p>
+</statement>
+</fact>
+<p>
+  and
+</p>
+<fact xml:id="eqn_chain_rule_B">
+  <statement>
+    <p>
+if <m>F(s,t) = f\big(x(s,t)\big)</m>, then
+<md>
+<mrow>
+\pdiff{F}{t}(s,t) &amp;= \diff{f}{x}\big(x(s,t)\big)\, \pdiff{x}{t}(s,t)
+</mrow>
+</md>
+</p>
+</statement>
+</fact>
+
+
+
+<p>There will be a large number of examples shortly. First, here is a
+memory aid.
+</p>
+
+</introduction>
+<subsection xml:id="subsec_memory_aid">
+  <title>Memory Aids for the Chain Rule</title>
+
+
+<p>We recommend strongly that you use the following procedure, without leaving
+out any steps, the first couple of dozen times that you use the chain rule.
+<ul>
+<li>Step 1:
+List <alert>explicitly</alert> all the functions involved and specify the
+arguments of each function. Ensure that all different functions have different
+names. Invent new names for some of the functions if necessary. In the
+case of the chain rule in Theorem  <xref ref="thm_chainRule"/>, the list would be
+<me>
+f(x,y)\qquad\qquad
+x(s,t)\qquad\qquad
+y(s,t)\qquad\qquad
+F(s,t)=f\big(x(s,t),y(s,t)\big)
+</me>
+While the functions <m>f</m> and <m>F</m> are closely related, they are not the same.
+One is a function of <m>x</m> and <m>y</m> while the other is a function of <m>s</m> and
+<m>t</m>.
+</li>
+<li><p>Step 2:
+Write down the template
+<me>
+\pdiff{F}{s}=\frac{\partial f}{ }\frac{ }{\partial s}
+</me>
+Note that
+<ul>
+<li>
+The function <m>F</m> appears once in the numerator on the left.
+The function <m>f</m>, from which <m>F</m> is constructed by a change of variables,
+appears once in the numerator on the right.
+</li>
+<li>
+The variable in the denominator on the left appears once in the
+denominator on the right.
+</li>
+</ul></p>
+</li>
+<li>Step 3:
+Fill in the blanks with every variable that makes sense. In
+particular, since <m>f</m> is a function of <m>x</m> and <m>y</m>, it may only be
+differentiated with respect to <m>x</m> and <m>y</m>. So we add together
+two copies of our template <mdash/> one for <m>x</m> and one for <m>y</m>:
+<me>
+\pdiff{F}{s}
+=\pdiff{f}{x }\pdiff{x }{s}
++\pdiff{f}{y }\pdiff{y }{s}
+</me>
+Note that <m>x</m> and <m>y</m> are functions of <m>s</m> so that the derivatives
+<m>\pdiff{x }{s}</m> and <m>\pdiff{y }{s}</m> make sense.
+The first term, <m>\pdiff{f}{x }\pdiff{x }{s}</m>, arises from the variation
+of <m>x</m> with respect to <m>s</m> and the second term, <m>\pdiff{f}{y }\pdiff{y }{s}</m>,
+arises from the variation of <m>y</m> with respect to <m>s</m>.
+</li>
+<li>Step 4:
+Put in the functional dependence <alert>explicitly</alert>. Fortunately,
+there is only one functional dependence that makes sense.
+The left hand side is a function of <m>s</m> and <m>t</m>. Hence the
+ right hand side must also be a function of <m>s</m> and <m>t</m>. As <m>f</m> is a
+ function of <m>x</m> and <m>y</m>, this is achieved by evaluating <m>f</m> at <m>x=x(s,t)</m>
+ and <m>y=y(s,t)</m>.
+<me>
+\pdiff{F}{s}(s,t)=
+  \pdiff{f}{x}\big(x(s,t),y(s,t)\big)
+  \pdiff{x}{s}(s,t)
+  +\pdiff{f}{y}\big(x(s,t),y(s,t)\big)
+  \pdiff{y}{s}(s,t)
+</me>
+If you fail to put in the arguments, or at least if you fail to remember
+what the arguments are, you may forget that <m>\pdiff{f}{x}</m> and <m>\pdiff{f}{y}</m>
+depend on <m>s</m> and <m>t</m>. Then, if you have to compute a second derivative of <m>F</m>,
+you will probably fail to differentiate the factors  <m>\pdiff{f}{x}\big(x(s,t),y(s,t)\big)</m> and
+<m>\pdiff{f}{y}\big(x(s,t),y(s,t)\big)</m>.
+</li>
+</ul>
+</p>
+
+<p>To help remember the formulae of Theorem <xref ref="thm_chainRule"/>, it is sometimes
+also useful to pretend that our variables are physical quantities with
+<m>f,F</m> having units of grams, <m>x,y</m> having units of meters and <m>s,t</m> having units of seconds. Note that
+<ul>
+<li>
+the left hand side, <m>\pdiff{F}{s}</m>, has units grams per second.
+</li>
+<li>
+Each term on the right hand side
+contains the partial derivative of <m>f</m> with respect to a different
+ independent variable. That independent variable appears once in the
+ denominator and once in the numerator, so that its units (in this case meters)
+cancel out. Thus both of the terms <m>\pdiff{f}{x }\pdiff{x }{s}</m>
+and <m>\pdiff{f}{y }\pdiff{y }{s}</m> on the right hand side also have
+the units grams per second.
+</li>
+<li>
+Hence both sides of the equation have the same units.
+</li>
+</ul>
+</p>
+
+<p>Here is a pictorial procedure that uses a <em>tree diagram</em> to help remember
+the chain rule
+<m>
+\pdiff{}{s}f\big(x(s,t),y(s,t)\big)=
+  \pdiff{f}{x}
+  \pdiff{x}{s}
+  +\pdiff{f}{y}
+  \pdiff{y}{s}
+</m>.
+As in the figure on the left below,
+<ul>
+<li>
+write, on the top row, <q><m>f</m></q>.
+</li>
+<li>
+Write, on the middle row, each of the variables that the function <m>f(x,y)</m>
+depends on, namely<q><m>x</m></q> and <q><m>y</m></q>.
+</li>
+<li><p>
+Write, on the bottom row,
+<ul>
+<li> below <m>x</m>, each of the variables that the function <m>x(s,t)</m>
+                   depends on, namely <q><m>s</m></q> and <q><m>t</m></q>, and
+</li>
+<li> below <m>y</m>, each of the variables that the function <m>y(s,t)</m>
+                   depends on, namely <q><m>s</m></q> and <q><m>t</m></q>.
+</li>
+</ul></p>
+</li>
+<li>
+Draw a line joining each function with each of the variables that it depends
+on.
+</li>
+<li><p>
+Then, as in the figure on the right below, write beside each line, the partial
+derivative of the function at the top of the line with respect to the variable at the bottom of the line.
+</p>
+
+<sidebyside>
+<image source="figs/decTreeA"/>
+<image source="figs/decTreeB"/>
+</sidebyside>
+</li>
+<li><p>
+Finally
+<ul>
+<li> observe, from the figure below, that there are two paths
+               from <m>f</m>, on the top, to <m>s</m>, on the bottom. One path goes from
+               <m>f</m> at the top, through <m>x</m> in the middle to <m>s</m> at the
+               bottom.  The other path goes from
+               <m>f</m> at the top, through <m>y</m> in the middle to <m>s</m> at the
+               bottom.
+</li>
+<li> For each such path, multiply together the partial derivatives
+               beside the lines of the path. In this example, the two products
+               are <m>\pdiff{f}{x}\,\pdiff{x}{s}</m>, for the first path, and
+               <m>\pdiff{f}{y}\,\pdiff{y}{s}</m>, for the second path.
+</li>
+<li> Then add together those products, giving, in this example,
+              <m>\pdiff{f}{x}\,\pdiff{x}{s}+\pdiff{f}{y}\,\pdiff{y}{s}</m>.
+</li>
+<li> Put in the arguments, as in Step 4, above.
+</li>
+</ul></p>
+</li>
+<li>
+<p>
+That's it. We have
+<me>
+\pdiff{}{s}f\big(x(s,t),y(s,t)\big)=
+  \pdiff{f}{x}\big(x(s,t),y(s,t)\big)
+  \pdiff{x}{s}(s,t)
+  +\pdiff{f}{y}\big(x(s,t),y(s,t)\big)
+  \pdiff{y}{s}(s,t)
+</me>
+</p>
+
+<sidebyside>
+<image source="figs/decTreeS"/>
+</sidebyside>
+</li>
+</ul>
+</p>
+
+<example xml:id="eg_decTree">
+<p>
+The right hand side of the chain rule
+<md>
+<mrow>
+\diff{}{t}f\big(x(t)\,,\,y(t)\,,\,z(t)\big) &amp;= \pdiff{f}{x}\big(x(t)\,,\,y(t)\,,\,z(t)\big)\, \diff{x}{t}(t)
+           +\pdiff{f}{y}\big(x(t)\,,\,y(t)\,,\,z(t)\big)\, \diff{y}{t}(t)
+</mrow><mrow>
+     &amp;\hskip1in   +\pdiff{f}{z}\big(x(t)\,,\,y(t)\,,\,z(t)\big)\, \diff{z}{t}(t)
+</mrow>
+</md>
+of Equation <xref ref="eqn_chain_rule_A"/>, without arguments, is
+     <m>\pdiff{f}{x}\, \diff{x}{t}
+     +\pdiff{f}{y}\, \diff{y}{t}
+     +\pdiff{f}{z}\, \diff{z}{t}</m>.
+The corresponding tree diagram is
+</p>
+
+<sidebyside>
+<image source="figs/decTreeTT"/>
+</sidebyside>
+
+<p>
+  Because <m>x(t)</m>, <m>y(t)</m> and <m>z(t)</m> are each functions of just one variable, the
+derivatives beside the lower lines in the tree are ordinary, rather
+than partial, derivatives.
+</p></example>
+
+</subsection>
+<subsection xml:id="subsec_chain_rule_examples">
+<title>Chain Rule Examples</title>
+
+
+<p>Let's do some routine examples first and work our way to some trickier
+ones.
+</p>
+
+<example xml:id="eg_chainRuleAA"><title><m>\pdiff{}{s}f\big(x(s,t),y(s,t)\big)</m></title>
+<p>
+In this example we find <m>\pdiff{}{s}f\big(x(s,t),y(s,t)\big)</m> for
+<me>
+f(x,y)=e^{xy}\qquad x(s,t)=s \qquad y(s,t)=\cos t
+</me>
+Define <m>F(s,t)=f\big(x(s,t)\,,\,y(s,t)\big)</m>. The appropriate chain rule for this
+example is the upper equation of Theorem <xref ref="thm_chainRule"/>.
+<me>
+\pdiff{F}{s}(s,t)
+=  \pdiff{f}{x}\big(x(s,t)\,,\,y(s,t)\big)\, \pdiff{x}{s}(s,t)
+   +\pdiff{f}{y}\big(x(s,t)\,,\,y(s,t)\big)\, \pdiff{y}{s}(s,t)
+</me>
+For the given functions
+<md>
+<mrow>
+f(x,y)&amp;=e^{xy}
+</mrow><mrow>
+\pdiff{f}{x}(x,y)&amp;= ye^{xy}  &amp;
+\pdiff{f}{x}\big(x(s,t),y(s,t)\big)&amp;= y(s,t) e^{x(s,t)\,y(s,t)}
+                                    = \cos t\ e^{s\cos t}
+</mrow><mrow>
+\pdiff{f}{y}(x,y)&amp;= xe^{xy}  &amp;
+\pdiff{f}{y}\big(x(s,t),y(s,t)\big)&amp;= x(s,t) e^{x(s,t)\,y(s,t)}
+                                    = s\ e^{s\cos t}
+</mrow><mrow>
+\pdiff{x}{s}&amp;=1 &amp;
+\pdiff{y}{s}&amp;=0
+</mrow>
+</md>
+so that
+<me>
+\pdiff{F}{s}(s,t)=\overbrace{\left\{\cos t\ e^{s\cos t}\right\}}^{\pdiff{f}{x}}
+                  \overbrace{(1) }^{\pdiff{x}{s}}
+                  +\overbrace{\left\{s\ e^{s\cos t}\right\}}^{\pdiff{f}{y}}
+                    \overbrace{(0) }^{\pdiff{y}{s}}
+                 = \cos t\ e^{s\cos t}
+</me>
+</p>
+
+</example>
+
+<example xml:id="eg_chainRuleA"><title><m>\diff{}{t}f\big(x(t),y(t)\big)</m></title>
+<p>
+In this example we find <m>\diff{}{t}f\big(x(t),y(t)\big)</m>
+for
+<me>
+f(x,y)=x^2-y^2\qquad x(t)=\cos t \qquad y(t)=\sin t
+</me>
+</p>
+
+<p>Define <m>F(t)=f\big(x(t),y(t)\big)</m>. Since <m>F(t)</m> is a function of one
+variable its derivative is denoted <m>\diff{F}{t}</m> rather than <m>\pdiff{F}{t}</m>.
+The appropriate chain rule for this example (see <xref ref="eqn_chain_rule_A"/>)
+is
+<me>
+\diff{F}{t}(t)=
+  \pdiff{f}{x}\big(x(t),y(t)\big) \diff{x}{t}(t)
+  +\pdiff{f}{y}\big(x(t),y(t)\big) \diff{y}{t}(t)
+</me>
+For the given functions
+<md>
+<mrow>
+f(x,y)&amp;=x^2-y^2
+</mrow><mrow>
+\pdiff{f}{x}(x,y)&amp;= 2x  &amp;
+\pdiff{f}{x}\big(x(t),y(t)\big)&amp;= \phantom{-}2x(t) =\phantom{-}2\cos t
+</mrow><mrow>
+\pdiff{f}{y}(x,y)&amp;= -2y  &amp;
+\pdiff{f}{y}\big(x(t),y(t)\big)&amp;= -2y(t)  =-2\sin t
+</mrow><mrow>
+\diff{x}{t}&amp;=-\sin t &amp;
+\diff{y}{t}&amp;=\cos t
+</mrow>
+</md>
+so that
+<me>
+\diff{F}{t}(t)=(2\cos t)(-\sin t) +(-2\sin t)(\cos t) = -4\sin t\cos t
+</me>
+Of course, in this example we can compute <m>F(t)</m> explicitly
+<me>
+F(t)=f\big(x(t),y(t)\big)=x(t)^2-y(t)^2=\cos^2t-\sin^2t
+</me>
+and then differentiate
+<me>
+F'(t)=2(\cos t)(-\sin t)-2(\sin t)(\cos t) = -4 \sin t\cos t
+</me>
+</p></example>
+
+<example xml:id="eg_chainRuleB"><title><m>\pdiff{}{t}f(x+ct)</m></title>
+<p>
+ Define
+<m>u(x,t)=x+ct</m> and <m>w(x,t)=f(x+ct)=f\big(u(x,t)\big)</m>. Then
+<me>
+\pdiff{}{t}f(x+ct)
+=\pdiff{w}{t}(x,t)
+=\diff{f}{u}\big(u(x,t)\big)  \pdiff{u}{t}(x,t)
+=c\, f'(x+ct)
+</me>
+</p>
+</example>
+
+<example xml:id="eg_chainRuleC"><title><m>\frac{\partial^2}{\partial t^2}f(x+ct)</m></title>
+<p>
+ Define  <m>w(x,t)=f(x+ct)</m> and
+<m>W(x,t)=\pdiff{w}{t}(x,t)=cf'(x+ct)=F\big(u(x,t)\big)</m>
+where <m>F(u)=cf'(u)</m> and <m>u(x,t)=x+ct</m>. Then
+<me>
+\frac{\partial^2}{\partial t^2}f(x+ct)
+=\pdiff{W}{t}(x,t)
+=\diff{F}{u}\big(u(x,t)\big)  \pdiff{u}{t}(x,t)
+=c\,f'(x+ct)\,c
+=c^2\,f'(x+ct)
+</me>
+</p>
+</example>
+
+
+<example xml:id="eg_chainRuleD"><title>Equation of state</title>
+<p>
+Suppose that we are told that <m>F(P,V,T)=0</m> and
+that we are to find  <m>\pdiff{P}{T}</m>.
+</p>
+
+<p>Before we can find <m>\pdiff{P}{T}</m>, we first have to decide what it means.
+This happens regularly in applications. In fact, this particular problem
+comes from thermodynamics. The variables <m>P,\ V,\ T</m> are the pressure,
+volume and temperature, respectively, of some gas. These three variables
+are not independent. They are related by an equation of state, here denoted
+<m>F(P,V,T)=0</m>. Given values for any two of <m>P,\ V,\ T</m>, the third can be
+found by solving <m>F(P,V,T)=0</m>. We are being asked to find
+<m>\pdiff{P}{T}</m>. This implicitly instructs us to treat
+<m>P</m>, in this problem, as the dependent variable. So a careful wording of
+this problem (which you will never encounter in the <q>real world</q>) would
+be the following. The function <m>P(V,T)</m> is defined by <m>F\big(P(V,T),V,T)=0</m>.
+Find <m>\big(\pdiff{P}{T}\big)_V</m>. That is, find the rate of change of
+pressure as the temperature is varied, while holding the volume fixed.
+</p>
+
+<p>Since we are not told explicitly what <m>F</m> is, we cannot solve explicitly
+for <m>P(V,T)</m>. So, instead we differentiate both sides of
+<me>
+F\big(P(V,T),V,T\big)=0
+</me>
+with respect to <m>T</m>, while holding <m>V</m> fixed. Think of the left hand side,
+<m>F\big(P(V,T),V,T\big)</m>, as being <m>F\big(P(V,T),Q(V,T),R(V,T)\big)</m>
+with <m>Q(V,T)=V</m> and <m>R(V,T)=T</m>. By the chain rule,
+<me>
+\pdiff{}{T}F\big(P(V,T),Q(V,T),R(V,T)\big)
+=F_1\pdiff{P}{T}
++F_2\pdiff{Q}{T}
++F_3\pdiff{R}{T}=0
+</me>
+with <m>F_j</m> referring to the partial derivative of <m>F</m> with respect to its
+<m>j^{\rm th}</m> argument.
+Experienced chain rule users never introduce <m>Q</m> and <m>R</m>. Instead,
+they just write
+<me>
+\pdiff{F}{P}\pdiff{P}{T}
++\pdiff{F}{V}\pdiff{V}{T}
++\pdiff{F}{T}\pdiff{T}{T}=0
+</me>
+Recalling that <m>V</m> and <m>T</m> are the independent variables and that, in computing
+<m>\pdiff{}{T}</m>, <m>V</m> is to be treated as a constant,
+<me>
+\pdiff{V}{T}=0\qquad\qquad \pdiff{T}{T} = 1
+</me>
+Now putting in the functional dependence
+<me>
+\pdiff{F}{P}\big(P(V,T),V,T\big)
+\pdiff{P}{T}(V,T)
++\pdiff{F}{T}\big(P(V,T),V,T\big)=0
+</me>
+and solving
+<me>
+\pdiff{P}{T}(V,T)
+=-\frac{\pdiff{F}{T}\big(P(V,T),V,T\big)}
+{\pdiff{F}{P}\big(P(V,T),V,T\big)}
+</me>
+</p></example>
+
+<example xml:id="eg_chainRuleE">
+<p>
+Suppose that <m>f(x,y)=0</m> and that we are to find <m>\difftwo{y}{x}</m>.
+</p>
+
+<p>Once again, <m>x</m> and <m>y</m> are not independent variables. Given a value for
+either <m>x</m> or <m>y</m>, the other is determined by solving <m>f(x,y)=0</m>. Since
+we are asked to find <m>\difftwo{y}{x}</m>, it is <m>y</m> that is to be viewed
+as a function of <m>x</m>, rather than the other way around. So <m>f(x,y)=0</m> really
+means that, in this problem, <m>f\big(x,y(x)\big)=0</m> for all <m>x</m>.
+Differentiating both sides of this equation with respect to <m>x</m>,
+<md>
+<mrow>
+&amp;\phantom{\implies a} f\big(x,y(x)\big) = 0\qquad\text{for all }x
+</mrow><mrow>
+&amp;\implies \diff{}{x}f\big(x,y(x)\big) = 0
+</mrow>
+</md>
+</p>
+
+<p>Note that <m>\diff{}{x}f\big(x,y(x)\big)</m> is not the same as
+<m>f_x\big(x,y(x)\big)</m>. The former is, by definition, the rate of change with
+respect to <m>x</m> of <m>g(x)=f\big(x,y(x)\big)</m>. Precisely,
+<md>
+<mrow>
+\diff{g}{x}&amp;=\lim_{\De x\rightarrow 0}\frac{g(x+\De x)-g(x)}{\De x}\notag
+</mrow><mrow>
+&amp;=\lim_{\De x\rightarrow 0}\frac{f\big(x+\De x\,,\,y(x+\De x)\big)
+-f\big(x\,,\,y(x)\big)}{\De x}
+\tag{$*$}
+</mrow>
+</md>
+On the other hand, by definition,
+<md>
+<mrow>
+f_x(x,y)&amp;=\lim_{\De x\rightarrow 0}\frac{f(x+\De x,y)-f(x,y)}{\De x}\notag
+</mrow><mrow>
+\implies f_x\big(x,y(x)\big)
+&amp;=\lim_{\De x\rightarrow 0}\frac{f\big(x+\De x\,,\,y(x)\big)
+                              -f\big(x\,,\,y(x)\big)}
+{\De x}
+\tag{$**$}
+</mrow>
+</md>
+The right hand sides of <m>(*)</m> and <m>(**)</m> are not the same.
+In <m>\diff{g}{x}</m>, as <m>\De x</m> varies the value of <m>y</m> that is substituted
+into the  first <m>f(\cdots)</m> on the right hand side, namely <m>y(x+\De x)</m>,
+changes as <m>\De x</m> changes. That is, we are computing the rate of change
+of <m>f</m> along the (curved) path <m>y=y(x)</m>.
+ In <m>(**)</m>, the corresponding value of <m>y</m> is <m>y(x)</m> and is independent of
+<m>\De x</m>. That is, we are computing the rate of change of <m>f</m> along a
+horizontal straight line. As a concrete example,
+suppose that <m>f(x,y)=x+y</m>. Then, <m>0=f\big(x\,,\,y(x)\big)=x+y(x)</m> gives
+<m>y(x)=-x</m> so that
+<me>
+\diff{}{x}f\big(x,y(x)\big)
+=\diff{}{x}f(x,-x)
+=\diff{}{x}[x+(-x)]
+=\diff{}{x}0 =0
+</me>
+But <m>f(x,y)=x+y</m> implies that <m>f_x(x,y)=1</m> for all <m>x</m> and <m>y</m> so that
+<me>
+f_x(x,y(x))=f_x(x,y)\Big|_{y=-x}=1\Big|_{y=-x}=1
+</me>
+</p>
+
+<p>Now back to
+<md>
+<mrow>
+\amp \phantom{\implies a} f\big(x,y(x)\big) = 0\qquad\text{for all }x
+</mrow><mrow>
+\amp \implies \diff{}{x}f\big(x,y(x)\big) = 0
+</mrow><mrow>
+\amp \implies f_x\big(x,y(x)\big)\diff{x}{x}
++f_y\big(x,y(x)\big)\diff{y}{x}(x) = 0\qquad\text{by the chain rule}
+</mrow><mrow>
+\amp \implies \diff{y}{x}(x) = -\frac{f_x\big(x,y(x)\big)}{f_y\big(x,y(x)\big)}
+</mrow><mrow>
+\amp \implies \difftwo{y }{x}(x) = -\diff{}{x}\left[\frac{f_x\big(x,y(x)\big)}{f_y\big(x,y(x)\big)}\right]
+</mrow><mrow>
+\amp \phantom{a \difftwo{y }{x}(x)}= -\frac{f_y\big(x,y(x)\big)\diff{}{x}[f_x\big(x,y(x)\big)]
+-f_x\big(x,y(x)\big)\diff{}{x}[f_y\big(x,y(x)\big)]}
+{f_y\big(x,y(x)\big)^2}
+\tag{$\dagger$}
+</mrow>
+</md>
+by the quotient rule. Now it suffices to substitute in
+ <m>\diff{}{x}\big[f_x\big(x,y(x)\big)\big]</m> and
+<m>\diff{}{x}\big[f_y\big(x,y(x)\big)\big]</m>. For the former apply
+the chain rule to <m>h(x) = u\big(x,y(x)\big)</m> with <m>u(x,y)=f_x\big(x,y\big)</m>.
+<md>
+<mrow>
+\diff{}{x}\big[f_x\big(x,y(x)\big)\big]&amp;=\diff{h}{x}(x)\cr
+&amp;=u_x\big(x,y(x)\big)\diff{x}{x}
++u_y\big(x,y(x)\big)\diff{y}{x}(x)\cr
+&amp;=f_{xx}\big(x,y(x)\big)\diff{x}{x}
++f_{xy}\big(x,y(x)\big)\diff{y}{x}(x)\cr
+&amp;=f_{xx}\big(x,y(x)\big)
+-f_{xy}\big(x,y(x)\big)
+\left[\frac{f_x\big(x,y(x)\big)}{f_y\big(x,y(x)\big)}\right]
+</mrow>
+</md>
+Substituting this and
+<md>
+<mrow>
+\diff{}{x}\big[f_y\big(x,y(x)\big)\big]
+&amp;=f_{yx}\big(x,y(x)\big)\diff{x}{x}
++f_{yy}\big(x,y(x)\big)\diff{y}{x}(x)\cr
+&amp;=f_{yx}\big(x,y(x)\big)
+-f_{yy}\big(x,y(x)\big)
+\left[\frac{f_x\big(x,y(x)\big)}{f_y\big(x,y(x)\big)}\right]
+</mrow>
+</md>
+into the right hand side of <m>(\dagger)</m> gives the final answer.
+<md>
+<mrow>
+\difftwo{y}{x}(x)
+= -\frac{
+                                 f_y f_{xx}
+                             -  f_y f_{xy} \frac{f_x}{f_y}
+                             - f_x f_{yx}
+                             + f_x f_{yy}\frac{f_x}{f_y}}
+                         {f_y^2}
+= -\frac{
+                                 f_y^2 f_{xx}
+                             - 2 f_x f_y f_{xy}
+                               + f_x^2 f_{yy}}
+                         {f_y^3}
+</mrow>
+</md>
+with all of <m>f_x</m>, <m>f_y</m>, <m>f_{xx}</m>, <m>f_{xy}</m>, <m>f_{yy}</m> having arguments
+<m>\big(x\,,\,y(x)\big)</m>.
+</p>
+
+</example>
+
+
+<p>We now move on to the proof of Theorem <xref ref="thm_chainRule"/>.
+To give you an idea of how the proof will go, we first review
+the proof of the familiar one dimensional chain rule.
+</p>
+
+</subsection>
+
+<subsection xml:id="subsec_1d_chain_rule"><title>Review of the Proof of
+     <m>\diff{}{t}f\big(x(t)\big)  = \diff{f}{x}\big(x(t)\big)\ \diff{x}{t}(t)</m></title>
+
+<p>As a warm up, let's review the proof of the one dimensional chain rule
+<me>
+    \diff{}{t}f\big(x(t)\big) = \diff{f}{x}\big(x(t)\big)\ \diff{x}{t}(t)
+</me>
+assuming that <m>\diff{x}{t}</m> exists and that <m>\diff{f}{x}</m> is continuous.
+We wish to find the derivative of <m>F(t) = f\big(x(t)\big)</m>.
+By definition
+<md>
+<mrow>
+F'(t) &amp;= \lim_{h\rightarrow 0}\frac{F(t+h)-F(t)}{h}
+</mrow><mrow>
+      &amp;= \lim_{h\rightarrow 0}\frac{f\big(x(t+h)\big)-f\big(x(t)\big)}{h}
+</mrow>
+</md>
+Notice that the numerator is the difference of <m>f(x)</m> evaluated at two nearby
+values of <m>x</m>, namely <m>x_1=x(t+h)</m> and <m>x_0=x(t)</m>. The mean value theorem is
+a good tool for studying the difference in the values of <m>f(x)</m> at two
+nearby points. Recall that the mean value theorem says that, for any
+given <m>x_0</m> and  <m>x_1</m>, there exists an (in general unknown) <m>c</m> between
+them so that
+<me>
+f(x_1) - f(x_0) = f'(c)\ (x_1-x_0)
+</me>
+For this proof, we choose <m>x_0=x(t)</m> and <m>x_1=x(t+h)</m>. The the mean value theorem tells us that there exists a <m>c_h</m> so that
+<md>
+<mrow>
+f\big(x(t+h)\big)-f\big(x(t)\big)
+&amp;= f(x_1)-f(x_0)
+ = f'(c_h)\ \big[x(t+h)-x(t)\big]
+</mrow>
+</md>
+We have put the subscript <m>h</m> on <m>c_h</m> to emphasise that
+<m>c_h</m>, which is between <m>x_0=x(t)</m> and <m>x_1=x(t+h)</m>, may depend on <m>h</m>.
+Now since  <m>c_h</m> is trapped between <m>x(t)</m> and <m>x(t+h)</m> and since
+<m>x(t+h)\rightarrow x(t)</m> as <m>h\rightarrow 0</m>, we have that <m>c_h</m> must
+also tend to <m>x(t)</m> as <m>h\rightarrow 0</m>. Plugging this into the definition of <m>F'(t)</m>,
+<md>
+<mrow>
+F'(t)  &amp;= \lim_{h\rightarrow 0}\frac{f\big(x(t+h)\big)-f\big(x(t)\big)}{h}
+</mrow><mrow>
+&amp;= \lim_{h\rightarrow 0}\frac{f'(c_h)\ \big[x(t+h)-x(t)\big]}{h}
+</mrow><mrow>
+&amp;= \lim_{h\rightarrow 0}f'(c_h)\
+    \lim_{h\rightarrow 0}\frac{x(t+h)-x(t)}{h}
+</mrow><mrow>
+&amp;= f'\big(x(t)\big)\ x'(t)
+</mrow>
+</md>
+as desired.
+</p>
+
+</subsection>
+
+<subsection xml:id="subsec_higher_d_chain_rule">
+<title>
+Proof of Theorem <xref ref="thm_chainRule"/>
+</title>
+
+
+<p>We'll now prove the formula for <m>\pdiff{}{s} f\big( x(s,t)\,,\,y(s,t)\big)</m>
+that is given in Theorem <xref ref="thm_chainRule"/>. The proof uses the same ideas
+as the proof of the one variable chain rule, that we have just reviewed.
+</p>
+
+<p>We wish to find the partial derivative with respect to <m>s</m> of
+<m>F(s,t)=f\big(x(s,t)\,,\,y(s,t)\big)</m>. By definition
+<md>
+<mrow>
+\pdiff{F}{s}(s,t)
+&amp;=\lim_{h\rightarrow 0}\frac{F(s+h,t)-F(s,t)}{h}
+</mrow><mrow>
+&amp;=\lim_{h\rightarrow 0}\frac{f\big(x(s+h,t)\,,\,y(s+h,t)\big)
+                       -f\big(x(s,t)\,,\,y(s,t)\big)}{h}
+</mrow>
+</md>
+The numerator is the difference of <m>f(x,y)</m> evaluated at two nearby
+values of <m>(x,y)</m>, namely <m>(x_1,y_1)=\big(x(s+h,t)\,,\,y(s+h,t)\big)</m> and
+<m>(x_0,y_0)=\big(x(s,t)\,,\,y(s,t)\big)</m>. In going from <m>(x_0,y_0)</m>
+to <m>(x_1,y_1)</m>, both the <m>x</m> and <m>y</m>-coordinates change. By adding
+and subtracting we can separate the change in the <m>x</m>-coordinate from the
+change in the <m>y</m>-coordinate.
+<md>
+<mrow>
+f(x_1,y_1) - f(x_0,y_0)
+=\big\{f(x_1,y_1) - f(x_0,y_1)\big\}  + \big\{f(x_0,y_1) - f(x_0,y_0)\big\}
+</mrow>
+</md>
+The first half, <m>\big\{f(x_1,y_1) - f(x_0,y_1)\big\}</m>, has the same <m>y</m> argument
+in both terms and so is the difference of the
+function of one variable <m>g(x) = f(x,y_1)</m> (viewing <m>y_1</m> just as a constant)
+evaluated at the two nearby values, <m>x_0</m>, <m>x_1</m>, of <m>x</m>. Consequently,
+we can make use of the mean value theorem as we did in
+§<xref ref="subsec_1d_chain_rule"/> above.
+There is a <m>c_{x,h}</m> between <m>x_0=x(s,t)</m> and <m>x_1=x(s+h,t)</m> such that
+<md>
+<mrow>
+f(x_1,y_1) - f(x_0,y_1)
+&amp;=g(x_1) - g(x_0)
+=g'(c_{x,h}) [x_1-x_0]
+=\pdiff{f}{x}(c_{x,h},y_1)\,[x_1-x_0]
+</mrow><mrow>
+&amp;=\pdiff{f}{x}\big(c_{x,h}\,,\,y(s+h,t)\big)\,\big[x(s+h,t)-x(s,t)\big]
+</mrow>
+</md>
+We have introduced the two subscripts in <m>c_{x,h}</m> to remind ourselves that
+it may depend on <m>h</m> and that it lies between the two <m>x</m>-values
+<m>x_0</m> and <m>x_1</m>.
+</p>
+
+<p>Similarly, the second half, <m>\big\{f(x_0,y_1) - f(x_0,y_0)\big\}</m>,
+is the difference of the function of one variable  <m>h(y) = f(x_0,y)</m>
+(viewing <m>x_0</m> just as a constant)
+evaluated at the two nearby values, <m>y_0</m>, <m>y_1</m>, of <m>y</m>. So, by the mean
+value theorem,
+<md>
+<mrow>
+f(x_0,y_1) - f(x_0,y_0)
+&amp;=h(y_1) - h(y_0)
+=h'(c_{y,h}) [y_1-y_0]
+=\pdiff{f}{y}(x_0,c_{y,h})\,[y_1-y_0]
+</mrow><mrow>
+&amp;=\pdiff{f}{y}\big(x(s,t)\,,\,c_{y,h}\big)\,\big[y(s+h,t)-y(s,t)\big]
+</mrow>
+</md>
+for some (unknown) <m>c_{y,h}</m> between <m>y_0=y(s,t)</m> and <m>y_1=y(s+h,t)</m>.
+Again, the two subscripts in <m>c_{y,h}</m> remind ourselves that
+it may depend on <m>h</m> and that it lies between the two <m>y</m>-values
+<m>y_0</m> and <m>y_1</m>.
+So, noting that, as <m>h</m> tends to zero, <m>c_{x,h}</m>, which is trapped
+between <m>x(s,t)</m> and <m>x(s+h,t)</m>, must tend to <m>x(s,t)</m>, and
+<m>c_{y,h}</m>, which is trapped between <m>y(s,t)</m> and <m>y(s+h,t)</m>, must tend to <m>y(s,t)</m>,
+<md>
+<mrow>
+\pdiff{F}{s}(s,t))
+&amp;= \lim_{h\rightarrow 0}\frac{f\big(x(s+h,t)\,,\,y(s+h,t)\big)
+                       -f\big(x(s,t)\,,\,y(s,t)\big)}{h}
+</mrow><mrow>
+&amp;= \lim_{h\rightarrow 0}\frac{
+      \pdiff{f}{x}\big(c_{x,h}\,,\,y(s+h,t)\big)\,\big[x(s+h,t)-x(s,t)\big]
+       }{h}
+</mrow><mrow>
+&amp;\hskip0.75in+ \lim_{h\rightarrow 0}\frac{
+      \pdiff{f}{y}\big(x(s,t)\,,\,c_{y,h}\big)\,\big[y(s+h,t)-y(s,t)\big] }{h}
+</mrow><mrow>
+&amp;= \lim_{h\rightarrow 0}
+      \pdiff{f}{x}\big(c_{x,h}\,,\,y(s+h,t)\big)\
+    \lim_{h\rightarrow 0}\frac{x(s+h,t)-x(s,t)}{h}
+</mrow><mrow>
+&amp;\hskip0.75in+ \lim_{h\rightarrow 0}
+      \pdiff{f}{y}\big(x(s,t)\,,\,c_{y,h}\big)
+     \lim_{h\rightarrow 0}\frac{y(s+h,t)-y(s,t) }{h}
+</mrow><mrow>
+&amp;=  \pdiff{f}{x}\big(x(s,t)\,,\,y(s,t)\big)\, \pdiff{x}{s}(s,t)
+   +\pdiff{f}{y}\big(x(s,t)\,,\,y(s,t)\big)\, \pdiff{y}{s}(s,t)
+</mrow>
+</md>
+We can of course follow the same procedure to evaluate the partial derivative
+with respect to <m>t</m>. This concludes the proof of Theorem <xref ref="thm_chainRule"/>.
+</p>
+
+</subsection>
+</section>

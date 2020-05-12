@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="app_power_log">
+<title>Powers and Logarithms</title>
+
+<subsection xml:id="sec_powers">
+  <title>Powers</title>
+
+<p>
+In the following, <m>x</m> and <m>y</m> are arbitrary real numbers,
+<m>q</m> is an arbitrary constant that is strictly bigger
+than zero and <m>e</m> is 2.7182818284, to ten decimal places.
+<ul>
+<li>
+     <m>e^0=1,\quad q^0=1</m>
+</li>
+<li>
+         <m>
+          e^{x+y}=e^xe^y,
+          \quad e^{x-y}=\frac{e^x}{e^y},
+          \quad q^{x+y}=q^xq^y,
+          \quad q^{x-y}=\frac{q^x}{q^y}</m>
+</li>
+<li>
+   <m>e^{-x}=\frac{1}{e^x},
+   \quad q^{-x}=\frac{1}{q^x}</m>
+</li>
+<li>
+    <m>\big(e^x\big)^y=e^{xy},
+    \quad \big(q^x\big)^y=q^{xy}</m>
+</li>
+<li>
+    <m>\diff{}{x}e^x=e^x,
+    \quad \diff{}{x}e^{g(x)}=g'(x)e^{g(x)},
+    \quad \diff{}{x}q^x=(\ln q)\ q^x</m>
+</li>
+<li>
+    <m>\int e^x\ \dee{x}=e^x+C,
+    \quad \int e^{ax}\ \dee{x}=\frac{1}{a}e^{ax}+C</m> if <m>a\ne 0</m>
+</li>
+<li>
+     <m>e^x =\sum\limits_{n=0}^\infty\frac{x^n}{n!}</m>
+</li>
+<li><p>
+    <m>\lim\limits_{x\rightarrow\infty}e^x=\infty,
+    \quad \lim\limits_{x\rightarrow-\infty}e^x=0</m>
+  </p><p>
+    <m>\lim\limits_{x\rightarrow\infty}q^x=\infty,
+    \quad \lim\limits_{x\rightarrow-\infty}q^x=0</m> if <m>q \gt 1</m>
+  </p><p>
+    <m>\lim\limits_{x\rightarrow\infty}q^x=0,
+    \quad \lim\limits_{x\rightarrow-\infty}q^x=\infty</m> if <m>0 \lt q \lt 1</m>
+  </p>
+</li>
+<li><p>  The graph of <m>2^x</m> is given below. The graph of  <m>q^x</m>,
+for any <m>q \gt 1</m>, is similar.
+</p>
+<sidebyside width="75%">
+  <image source="figs/expGraph2"/>
+</sidebyside>
+</li>
+</ul>
+</p>
+
+</subsection>
+
+<subsection xml:id="sec_logs">
+  <title>Logarithms</title>
+
+
+<p>In the following, <m>x</m> and <m>y</m> are arbitrary real numbers that
+are strictly bigger than 0 (except where otherwise specified),
+<m>p</m> and <m>q</m> are arbitrary constants that are strictly bigger
+than one, and <m>e</m> is 2.7182818284, to ten decimal places.
+The notation <m>\ln x</m> means <m>\log_e x</m>. Some people use <m>\log x</m>
+to mean <m>\log_{10} x</m>, others use it to mean <m>\log_e x</m> and still
+others use it to mean <m>\log_2 x</m>.
+</p>
+
+<p><ul>
+<li>
+       <m>e^{\ln x}=x,\quad q^{\log_q x}=x</m>
+</li>
+<li>
+       <m>\ln \big(e^x\big)=x,\quad \log_q \big(q^x\big)=x\quad</m> for all <m>-\infty \lt x \lt \infty</m>
+</li>
+<li>
+        <m>\log_q x=\frac{\ln x}{\ln q},
+        \quad \ln x=\frac{\log_p x}{\log_p e},
+        \quad \log_q x=\frac{\log_p x}{\log_p q}</m>
+</li>
+<li><p>
+          <m>\ln 1=0,\quad \ln e=1</m>
+    </p><p>
+          <m>\log_q 1=0,\quad \log_q q=1</m>
+    </p>
+</li>
+<li>
+      <m>\ln(xy)=\ln x+\ln y,
+      \quad \log_q(xy)=\log_q x+\log_q y</m>
+</li>
+<li>
+     <m>\ln\big(\frac{x}{y}\big)=\ln x-\ln y,
+     \quad \log_q\big(\frac{x}{y}\big)=\log_q x-\log_q y</m>
+</li>
+<li>
+     <m>\ln\big(\frac{1}{y}\big)=-\ln y,
+     \quad \log_q\big(\frac{1}{y}\big)=-\log_q y</m>
+</li>
+<li>
+     <m>\ln(x^y)=y\ln x,
+     \quad \log_q(x^y)=y\log_q x</m>
+</li>
+<li>
+    <m>\diff{}{x}\ln x = \frac{1}{x},
+    \quad \diff{}{x}\log_q x = \frac{1}{x\ln q}</m>
+</li>
+<li>
+    <m>\int \ln x\ \dee{x}= x\ln x-x +C,
+    \quad \int \log_q x\ \dee{x}= x\log_q x-\frac{x}{\ln q} +C</m>,\quad
+</li>
+<li><p>
+    <m>\lim\limits_{x\rightarrow\infty}\ln x=\infty,
+    \quad \lim\limits_{x\rightarrow0}\ln x=-\infty</m>
+         </p><p>
+    <m>\lim\limits_{x\rightarrow\infty}\log_q x=\infty,
+    \quad \lim\limits_{x\rightarrow0}\log_q x=-\infty</m>
+         </p>
+</li>
+<li><p>
+  The graph of <m>\log_{10} x</m> is given below. The graph of  <m>\log_q x</m>,
+for any <m>q \gt 1</m>, is similar.
+</p>
+
+<sidebyside width="75%">
+  <image source="figs/logGraph10"/>
+</sidebyside>
+</li>
+</ul>
+
+</p>
+</subsection>
+</section>

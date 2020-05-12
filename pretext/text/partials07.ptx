@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_directional_derivatives">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title>Directional Derivatives and the Gradient</title>
+
+<subsection><title>Directional Derivatives and the Gradient</title>
+<introduction>
+<p>The principal interpretation of <m>\diff{f}{x}(a)</m> is the rate of change of
+<m>f(x)</m>, per unit change of <m>x</m>, at <m>x=a</m>. The natural analog of this
+interpretation for multivariable functions is the directional derivative,
+which we now introduce through a question.
+</p>
+</introduction>
+<subsubsection><title>A Question</title>
+<p>
+Suppose that you are standing at <m>(a,b)</m> near a campfire.
+The temperature you feel at <m>(x,y)</m> is <m>f(x,y)</m>. You start
+to move with velocity <m>\vv=\llt v_1,v_2\rgt </m>. What rate of change of temperature do you feel?
+</p>
+</subsubsection>
+
+<subsubsection><title>The Answer</title>
+<p>
+Let's set the beginning of time, <m>t=0</m>, to the time at which you leave
+<m>(a,b)</m>. Then
+<ul>
+<li>
+at time <m>0</m> you are at <m>(a, b)</m> and feel the
+temperature <m>f(a, b)</m> and
+</li>
+<li>
+at time <m>t</m> you are at <m>(a+v_1t\,,\, b+v_2t)</m> and feel the
+temperature <m>f(a+v_1t\,,\, b+v_2t)</m>.  So
+</li>
+<li>
+the change in temperature between time <m>0</m> and time <m>t</m> is
+<m>f(a+v_1t\,,\, b+v_2t)-f(a,b)</m>,
+</li>
+<li>
+the average rate of change of temperature, per unit time, between
+time <m>0</m> and time <m>t</m> is <m>\frac{f(a+v_1t\,,\, b+v_2t)-f(a,b)}{t}</m> and the
+</li>
+<li>
+instantaneous rate of change of temperature per unit time as you leave
+<m>(a,b)</m> is
+<m>
+\lim\limits_{t\rightarrow 0}\frac{f(a+v_1t\,,\, b+v_2t)-f(a,b)}{t}
+</m>.
+</li>
+</ul>
+Concentrate on the <m>t</m> dependence in this limit by
+writing <m>f(a+v_1t\,,\, b+v_2t)=g(t)</m>.  Then
+<md>
+<mrow>
+\lim_{t\rightarrow 0}\frac{f(a+v_1t\,,\, b+v_2t)-f(a,b)}{t}
+&amp;=\lim_{t\rightarrow 0}\frac{g(t)-g(0)}{t}
+</mrow><mrow>
+&amp;=\diff{g}{t}(0)
+</mrow><mrow>
+&amp;=\diff{}{t}\big[f(a+v_1t\,,\, b+v_2t)\big]\Big|_{t=0}
+</mrow>
+</md>
+By the chain rule, we can write the right hand side in terms of
+partial derivatives of <m>f</m>.
+<me>
+\diff{}{t}\big[f(a+v_1t\,,\, b+v_2t)\big]
+  =f_x(a+v_1t\,,\, b+v_2t)\,v_1 + f_y(a+v_1t\,,\, b+v_2t)\,v_2
+</me>
+So, setting <m>t=0</m>,
+<md>
+<mrow>
+\lim_{t\rightarrow 0}\frac{f(a+v_1t\,,\, b+v_2t)-f(a,b)}{t}
+&amp;=\big[f_x(a+v_1t\,,\, b+v_2t)\,v_1 + f_y(a+v_1t\,,\, b+v_2t)\,v_2
+                           \big]\Big|_{t=0}
+</mrow><mrow>
+&amp;=f_x(a,b)\,v_1+f_y(a,b)\,v_2
+</mrow><mrow>
+&amp;=\llt f_x(a,b)\,,\,f_y(a,b)\rgt \cdot\llt v_1,v_2\rgt
+</mrow>
+</md>
+Notice that we have expressed the rate of change as the dot product
+of the velocity vector with a vector of partial derivatives of <m>f</m>.
+We have seen such a vector of partial derivatives of <m>f</m> before;
+in Definition <xref ref="def_gradient"/>, we defined the
+gradient of the three variable function <m>G(x,y,z)</m> at the point
+<m>\big( x_0\,,\,y_0\,,\,z_0\big)</m> to be
+<m>
+\llt G_x\big( x_0\,,\,y_0\,,\,z_0\big)\,,\,
+     G_y\big( x_0\,,\,y_0\,,\,z_0\big)\,,\,
+     G_z\big( x_0\,,\,y_0\,,\,z_0\big)\rgt
+</m>.
+Here we see the natural two dimensional analog.
+</p>
+
+<definition xml:id="def_gradient_2d">
+<statement><p>
+The vector <m>\llt f_x(a,b)\,,\,f_y(a,b)\rgt </m> is denoted <m>\vnabla f(a,b)</m> and is
+called <q>the <alert>gradient</alert> of the function <m>f</m> at the point <m>(a,b)</m></q>.
+</p></statement>
+</definition>
+
+<p>
+In general, the gradient of <m>f</m> is a vector with one component
+for each variable of <m>f</m>. The <m>j^{\rm th}</m> component is the partial
+derivative of <m>f</m> with respect to the <m>j^{\rm th}</m> variable.
+</p>
+
+<p>Now because the dot product <m>\vnabla f(a,b)\cdot\vv</m> appears frequently,
+we introduce some handy notation.
+</p>
+
+<definition xml:id="def_dir_deriv">
+<statement><p>
+Given any vector <m>\vv=\llt v_1,v_2\rgt</m>,
+the expression
+<me>
+\llt f_x(a,b),f_y(a,b)\rgt \cdot\llt v_1,v_2\rgt  =\vnabla f(a,b)\cdot\vv
+</me>
+is denoted <m>D_{\vv}f(a,b)</m>.
+</p></statement>
+</definition>
+
+<p>
+Armed with this useful notation we can answer our question very succinctly.
+</p>
+
+<fact xml:id="eqn_dir_deriv_time">
+  <statement>
+    <p>
+The rate of change of <m>f</m> per unit
+time as you leave <m>(a,b)</m> moving with velocity <m>\vv</m> is
+<me>
+D_{\vv}f(a,b)=\vnabla f(a,b)\cdot\vv
+</me>
+</p>
+</statement>
+</fact>
+
+<p>We can compute the rate of change of temperature per unit distance
+(as opposed to per unit time) in a similar way.  The change in
+temperature between
+time <m>0</m> and time <m>t</m> is <m>f(a+v_1t, b+v_2t)-f(a,b)</m>.
+Between time <m>0</m> and time <m>t</m>, you have travelled a distance <m>|\vv|t</m>.
+So the instantaneous rate of change of temperature per unit distance as you
+leave <m>(a,b)</m> is
+<md>
+<mrow>
+\lim_{t\rightarrow 0}\frac{f(a+v_1t, b+v_2t)-f(a,b)}{t|\vv|}
+</mrow>
+</md>
+This is exactly <m>\frac{1}{|\vv|}</m> times
+<m>\lim\limits_{t\rightarrow 0}\frac{f(a+v_1t, b+v_2t)-f(a,b)}{t}</m>
+which we computed above to be <m>D_{\vv}f(a,b)</m>. So
+</p>
+
+<fact xml:id="eqn_dir_deriv_space">
+  <statement>
+    <p>
+Given any nonzero vector <m>\vv</m>, the rate of change of <m>f</m> per unit
+distance as you leave <m>(a,b)</m> moving in direction <m>\vv</m> is
+<me>
+\vnabla f(a,b)\cdot\frac{\vv}{|\vv|}
+       =D_{\frac{\vv}{|\vv|}}\ f(a,b)
+</me>
+</p>
+</statement>
+</fact>
+
+<definition xml:id="def_dri_deriv">
+<statement><p>
+<m>D_{\frac{\vv}{|\vv|}}\ f(a,b)</m> is called the <em>directional derivative</em>
+of the function <m>f(x,y)</m> at the point <m>(a,b)</m> in the
+direction
+<fn>Some people require direction vectors to have unit
+length. We don't. </fn>
+ <m>\vv</m>.
+</p></statement>
+</definition>
+</subsubsection>
+
+<subsubsection><title>The Implications</title>
+<p>
+We have just seen that the instantaneous rate of change of <m>f</m> per unit
+distance as we leave <m>(a,b)</m> moving in direction <m>\vv</m> is a dot product,
+which we can write as
+<me>
+\vnabla f(a,b)\cdot\frac{\vv}{|\vv|}
+       =|\vnabla f(a,b)| \cos \theta
+</me>
+where <m>\theta</m> is the angle between the gradient vector <m>\vnabla f(a,b)</m>
+and the direction vector <m>\vv</m>. Writing it in this way allows us to make
+some useful observations.
+Since <m>\cos \theta</m> is always between <m>-1</m>
+and <m>+1</m>
+<ul>
+<li>
+the direction of maximum rate of increase is that having
+<m>\theta=0</m>. So to get maximum rate of increase per unit distance, as you
+leave <m>(a,b)</m>, you should move in the same direction as the gradient
+<m>\vnabla f(a,b)</m>. Then the rate of increase per unit distance is
+<m>|\vnabla f(a,b)|</m>.
+</li>
+<li>
+The direction of minimum (i.e. most negative) rate of increase  is that having
+<m>\theta=180^\circ</m>. To get minimum rate of increase per unit distance you
+should move in the direction opposite  <m>\vnabla f(a,b)</m>. Then the
+rate of increase per unit distance is <m>-|\vnabla f(a,b)|</m>.
+</li>
+<li>
+The directions giving zero rate of increase are those
+perpendicular to <m>\vnabla f(a,b)</m>. If you move in a direction
+perpendicular to <m>\vnabla f(a,b)</m>, then <m>f(x,y)</m> remains constant as
+you leave <m>(a,b)</m>. At that instant, you are moving so that <m>f(x,y)</m>
+remains constant and consequently you are moving along the level
+curve <m>f(x,y)=f(a,b)</m>.  So <m>\vnabla f(a,b)</m> is perpendicular to the
+level curve <m>f(x,y)=f(a,b)</m> at <m>(a,b)</m>. The corresponding statement
+in three dimensions is that <m>\vnabla F(a,b,c)</m> is perpendicular to the
+level surface <m>F(x,y,z)=F(a,b,c)</m> at <m>(a,b,c)</m>. Hence a good way to find a
+vector normal to the surface <m>F(x,y,z)=0</m> at the point <m>(a,b,c</m>) is to compute the gradient <m>\vnabla F(a,b,c)</m>. This is precisely what we saw back in
+Theorem <xref ref="thm_tan_plane_G"/>.
+</li>
+</ul>
+</p>
+
+<p>Now that we have defined the directional derivative, here are some examples.
+</p>
+
+<example xml:id="eg_dir_deriv_A">
+<statement>
+<p>
+Find the directional derivative of the function <m>f(x,y)=e^{x+y^2}</m>
+at the point <m>(0,1)</m> in the direction <m>-\hi + \hj</m>.
+</p>
+</statement>
+
+<solution>
+<p>
+To compute the directional derivative, we need the gradient.
+To compute the gradient, we need some partial derivatives.
+So we start with the partial derivatives of <m>f</m> at <m>(0,1)</m>:
+<md alignment="alignat">
+<mrow>
+f_x(0,1) &amp;= e^{x+y^2}\Big|_{x=0\atop y=1} &amp;&amp;=e
+</mrow><mrow>
+f_y(0,1) &amp;= 2ye^{x+y^2}\Big|_{x=0\atop y=1} &amp;&amp;=2e
+</mrow>
+</md>
+So the gradient of <m>f</m> at <m>(0,1)</m> is
+<me>
+\vnabla f(0,1) = f_x(0,1)\,\hi + f_y(0,1)\,\hj
+               = e\,\hi + 2e\,\hj
+</me>
+and the direction derivative in the direction <m>-\hi + \hj</m> is
+<me>
+D_{\frac{-\hi+\hj}{|-\hi+\hj|}} f(0,1)
+   = \vnabla f(0,1)\cdot\frac{-\hi+\hj}{|-\hi+\hj|}
+   = \big(e\,\hi + 2e\,\hj\big)\cdot \frac{-\hi+\hj}{\sqrt{2}}
+   = \frac{e}{\sqrt{2}}
+</me>
+</p>
+</solution>
+</example>
+
+<example xml:id="eg_dir_deriv_B">
+  <statement>
+<p>
+Find the directional derivative of the function <m>w(x,y,z)=xyz +\ln(xz)</m>
+at the point <m>(1,3,1)</m> in the direction <m>\llt 1\,,\,0\,,\,1\rgt</m>.
+In what directions is the directional derivative zero?
+</p>
+</statement>
+
+<solution>
+<p>
+First, the partial derivatives of <m>w</m> at <m>(1,3,1)</m> are
+<md alignment="alignat">
+<mrow>
+w_x(1,3,1) &amp;= \left[yz+\frac{1}{x}\right]\bigg|_{(1,3,1)}
+             &amp;&amp;=3\times 1+\frac{1}{1}&amp;&amp;=4
+</mrow><mrow>
+w_y(1,3,1) &amp;= xz\bigg|_{(1,3,1)} &amp;&amp;=1\times 1&amp;&amp;=1
+</mrow><mrow>
+w_z(1,3,1) &amp;= \left[xy+\frac{1}{z}\right]\bigg|_{(1,3,1)} &amp;&amp;=1\times 3 +\frac{1}{1} &amp;&amp;=4
+</mrow>
+</md>
+so the gradient of <m>w</m> at <m>(1,3,1)</m> is
+<me>
+\vnabla w(1,3,1) = \llt w_x(1,3,1)\,,\,w_y(1,3,1)\,,\,w_z(1,3,1)\rgt
+               = \llt 4\,,\,1\,,\,4\rgt
+</me>
+and the direction derivative in the direction <m>\llt 1\,,\,0\,,\,1\rgt</m> is
+<me>
+D_{\frac{\llt 1\,,\,0\,,\,1\rgt}{|\llt 1\,,\,0\,,\,1\rgt|}} w(1,3,1)
+   = \vnabla w(1,3,1)\cdot
+              \frac{\llt 1\,,\,0\,,\,1\rgt}{|\llt 1\,,\,0\,,\,1\rgt|}
+   = \llt 4\,,\,1\,,\,4\rgt\cdot \frac{\llt 1\,,\,0\,,\,1\rgt}{\sqrt{2}}
+   = \frac{8}{\sqrt{2}}=4\sqrt{2}
+</me>
+The directional derivative of <m>w</m> at <m>(1,3,1)</m> in the direction <m>\vt\ne\vZero</m>
+is zero if and only if
+<me>
+0 = D_{\frac{\vt}{|\vt|}} w(1,3,1)
+   = \vnabla w(1,3,1)\cdot\frac{\vt}{|\vt|}
+   = \llt 4\,,\,1\,,\,4\rgt\cdot \frac{\vt}{|\vt|}
+</me>
+which is the case if and only if <m>\vt</m> is perpendicular to
+<m>\llt 4\,,\,1\,,\,4\rgt</m>. So if we walk in the direction of any vector
+in the plane, <m>4x+y+4z=0</m> (which has normal vector <m>\llt 4\,,\,1\,,\,4\rgt</m>)
+then the directional derivative is zero.
+</p>
+</solution>
+</example>
+
+<example xml:id="eg_dir_deriv_C">
+<p>
+Let
+<me>
+f(x,y)=5-x^2-2y^2\qquad
+(a,b)=\big(-1,-1\big)
+</me>
+In this example, we'll explore the behaviour of the function <m>f(x,y)</m>
+near the point <m>(a,b)</m>.
+</p>
+
+<p>Note that for any fixed <m>f_0 \lt 5</m>, <m>f(x,y)=f_0</m> is the ellipse
+<m>x^2+2y^2=5-f_0</m>. So the graph <m>z=f(x,y)</m>
+consists of a bunch of horizontal ellipses stacked one on top of
+each other.
+<ul>
+<li><p>
+Since the  ellipse <m>x^2+2y^2=5-f_0</m>  has <m>x</m>-semi-axis <m>\sqrt{5-f_0}</m>
+and <m>y</m>-semi-axis <m>\sqrt{\frac{5-f_0}{2}}</m>,
+<ul>
+<li>
+    the ellipses start with a point on the <m>z</m> axis when <m>f_0=5</m> and
+</li>
+<li>
+    increase in size as <m>f_0</m> decreases.
+</li>
+</ul></p>
+</li>
+<li>
+The part of the graph <m>z=f(x,y)</m> in the first octant is sketched in
+the top figure below.
+</li>
+<li>
+Several level curves, <m>f(x,y)=f_0</m>, are sketched in the bottom figure below.
+</li>
+<li>
+The gradient vector
+<me>
+\vnabla f(a,b)=\llt -2x,-4y\rgt \big|_{(-1,-1)}=\llt 2,4\rgt
+     =2\llt 1,2\rgt
+</me>
+at <m>(-1,-1)</m> is also illustrated in the bottom sketch.
+</li>
+</ul>
+We have that, at <m>(a,b)=(-1,-1)</m>,
+<ul>
+<li>
+the unit vector giving the direction of maximum rate of increase is
+the unit vector in the direction of the gradient vector <m>2\llt 1,2\rgt</m>,
+which is <m>\frac{1}{\sqrt{5}}\llt 1,2\rgt</m>.
+The maximum rate of  increase is  <m>|\llt 2,4\rgt |=2\sqrt{5}</m>.
+</li>
+<li>
+The unit vector giving the direction of minimum rate of increase is
+<m>-\frac{1}{\sqrt{5}}\llt 1,2\rgt </m> and that minimum rate is
+<m>-|\llt 2,4\rgt |=-2\sqrt{5}</m>.
+</li>
+<li><p>
+The directions giving zero rate of increase are perpendicular
+to <m>\vnabla f(a,b)</m>. One vector perpendicular
+<fn>
+  Check this by taking the dot product of <m>\llt 1,2\rgt</m> and <m>\llt 2,-1\rgt</m>.
+</fn>
+to <m>\llt 1,2\rgt</m> is <m>\llt 2,-1\rgt</m>.  So the unit vectors giving the
+direction of zero rate of increase are the  <m>\pm\frac{1}{\sqrt{5}}(2,-1)</m>.
+These are the directions of the tangent vector at <m>(a,b)</m> to the level
+curve of <m>f</m> through <m>(a,b)</m>, which is the curve <m>f(x,y)=f(a,b)</m>.
+</p></li>
+</ul>
+</p>
+
+<sidebyside>
+<image source="figs/dderivB"/>
+<image source="figs/dderivC"/>
+</sidebyside>
+
+</example>
+
+<example xml:id="eg_dir_deriv_D">
+<statement>
+<p>
+What is the rate of change of <m>f(x,y,z)=x^2+y^2+z^2</m> at <m>(3,5,4)</m> moving
+in the positive <m>x</m>-direction along the curve of intersection of
+the surfaces <m>G(x,y,z)=25</m> and <m>H(x,y,z)=0</m> where
+<me>
+G(x,y,z)=2x^2-y^2+2z^2 \qquad\text{and}\qquad
+H(x,y,z)=x^2-y^2+z^2
+</me>
+</p>
+</statement>
+
+<solution>
+<p>
+As a first check note that <m>(3,5,4)</m>
+really does lie on both surfaces because
+<md alignment="alignat">
+<mrow>
+G(3,5,4)&amp;= 2\big(3^2\big)-5^2+2\big(4^2\big) &amp;&amp;= 18-25+32=25
+</mrow><mrow>
+H(3,5,4)&amp;=\phantom{2*\ }3^2-5^2+\phantom{2*}4^2&amp;&amp;=\phantom{1}9-25+16 =0
+</mrow>
+</md>
+We compute gradients to get the normal vectors to the surfaces
+<m>G(x,y,z)=25</m> and <m>H(x,y,z)=0</m> at <m>(3,5,4)</m>.
+<md alignment="alignat">
+<mrow>
+\vnabla G(3,5,4) &amp;=\Big[4x\,\hi-2y\,\hj+4z\,\hk\Big]_{(3,5,4)}
+                 &amp;&amp;= 12\,\hi-10\,\hj+16\,\hk
+                 &amp;&amp;= 2\big(6\,\hi-5\,\hj+8\,\hk\big)
+</mrow><mrow>
+\vnabla H(3,5,4) &amp;=\Big[2x\,\hi-2y\,\hj+2z\,\hk\Big]_{(3,5,4)}
+                 &amp;&amp;= 6\,\hi-10\,\hj+8\,\hk
+                 &amp;&amp;= 2\big(3\,\hi-5\,\hj+4\,\hk\big)
+</mrow>
+</md>
+The direction of interest is tangent to the curve of intersection.
+So the direction of interest is tangent to both surfaces and hence is
+perpendicular to both gradients. Consequently one tangent vector to the
+curve at <m>(3,5,4)</m> is
+<md>
+<mrow>
+\vnabla G(3,5,4)\,\times  \vnabla H(3,5,4)
+&amp;=4\big(6\,\hi-5\,\hj+8\,\hk\big)\times\big(3\,\hi-5\,\hj+4\,\hk\big)
+</mrow><mrow>
+&amp;=4\ \det\left[\begin{matrix}
+             \hi &amp; \hj &amp; \hk \\
+             6   &amp; -5  &amp; 8 \\
+             3   &amp; -5  &amp; 4 \\
+           \end{matrix}\right]
+</mrow><mrow>
+&amp;= 4\ \big(20\,\hi -15\,\hk\big)
+= 20\ \big(4\,\hi -3\,\hk\big)
+</mrow>
+</md>
+and the unit tangent vector to the curve at <m>(3,5,4)</m> that has
+positive <m>x</m> component is
+<me>
+\frac{4\,\hi -3\,\hk}{|4\,\hi -3\,\hk|}
+=\frac{4}{5}\,\hi -\frac{3}{5}\,\hk
+</me>
+The desired rate of change is
+<md>
+<mrow>
+D_{\frac{4}{5}\,\hi -\frac{3}{5}\,\hj} f(3,5,4)
+   &amp;= \vnabla f(3,5,4)\cdot\left(\frac{4}{5}\,\hi -\frac{3}{5}\,\hk\right)
+   = \overbrace{\big( 6\,\hi +10\, \hj + 8\,\hk\big)}^
+              {[2x\,\hi+2y\,\hj+2z\,\hk]_{(x,y,z)=(3,5,4)}}\hskip-0.15in\cdot\,
+         \left(\frac{4}{5}\,\hi -\frac{3}{5}\,\hk\right)
+</mrow><mrow>
+  &amp;=0
+</mrow>
+</md>
+Actually, we could have known that the rate of change would be zero.
+<ul>
+<li>indent=-0.1in
+</li>
+<li>
+Any point <m>(x,y,z)</m> on the curve obeys both <m>y^2=x^2+z^2</m>
+      and <m>2x^2-y^2+2z^2=25</m>.
+</li>
+<li>
+Substituting <m>y^2=x^2+z^2</m> into <m>2x^2-y^2+2z^2=25</m> gives <m>x^2+z^2=25</m>.
+</li>
+<li>
+So, at any point on the curve, <m>x^2+z^2=25</m> and <m>y^2=x^2+z^2=25</m> so
+that <m>x^2+y^2+z^2=50</m>.
+</li>
+<li>
+That is, <m>f(x,y,z)=x^2+y^2+z^2</m> takes the value 50 at every point of the curve.
+</li>
+<li>
+So of course the rate of change of <m>f</m> along the curve is <m>0</m>.
+</li>
+</ul>
+</p>
+</solution>
+</example>
+
+<p>Let's change things up a little. In the next example, we are told the rates of change in two different directions. From this we are to determine the rate of change in a third direction.
+</p>
+
+<example xml:id="eg_dir_deriv_E">
+<statement>
+<p>
+The rate of change of a given function <m>f(x,y)</m> at the point <m>P_0=(1,2)</m>
+in the direction towards <m>P_1=(2,3)</m> is <m>2\sqrt{2}</m> and in the direction
+towards <m>P_2=(1,0)</m> is <m>-3</m>. What is the rate of change of <m>f</m> at <m>P_0</m>
+towards the origin <m>P_3=(0,0)</m>?
+</p>
+</statement>
+
+<solution>
+<p>
+We can easily determine the rate of change of <m>f</m> at the point <m>P_0</m>
+in any direction once we know the gradient <m>\vnabla f(1,2) =a\,\hi+b\,\hj</m>.
+So we will first use the two given rates of change to determine <m>a</m> and <m>b</m>,
+and then we determine the rate of change towards <m>(0,0)</m>.
+</p>
+
+<p>The two rates of change that we are given are those in the directions
+of the vectors
+<md>
+<mrow>
+\overrightarrow{P_0P_1} = \llt 1,1\rgt \qquad
+\overrightarrow{P_0P_2} = \llt 0,-2\rgt
+</mrow>
+</md>
+As you might guess, the notation <m>\overrightarrow{PQ}</m> means the
+vector whose tail is at <m>P</m> and whose head is at <m>Q</m>.
+So the given rates of change tell us that
+<md alignment="alignat">
+<mrow>
+2\sqrt{2}&amp;=D_{\frac{\llt 1,1\rgt}{|\llt 1,1\rgt|}} f(1,2)
+   &amp;&amp;= \vnabla f(1,2)\cdot\frac{\llt 1,1\rgt}{|\llt 1,1\rgt|}
+   &amp;&amp;= \llt a,b\rgt\cdot\frac{\llt 1,1\rgt}{\sqrt{2}}
+   &amp;&amp;=\frac{a}{\sqrt{2}} +\frac{b}{\sqrt{2}}
+</mrow><mrow>
+-3&amp;=D_{\frac{\llt 0,-2\rgt}{|\llt 0,-2\rgt|}} f(1,2)
+   &amp;&amp;= \vnabla f(1,2)\cdot\frac{\llt 0,-2\rgt}{|\llt 0,-2\rgt|}
+   &amp;&amp;= \llt a,b\rgt\cdot\frac{\llt 0,-2\rgt}{2}
+   &amp;&amp;=-b
+</mrow>
+</md>
+These two lines give us two linear equations in the two unknowns <m>a</m> and <m>b</m>.
+The second equation directly gives us <m>b=3</m>. Substituting <m>b=3</m> into
+the first equation gives
+<md>
+<mrow>
+\frac{a}{\sqrt{2}} +\frac{3}{\sqrt{2}} = 2\sqrt{2} \implies
+a+3=4 \implies
+a=1
+</mrow>
+</md>
+A direction vector from <m>P_0=(1,2)</m> towards <m>P_3=(0,0)</m> is
+<me>
+\overrightarrow{P_0P_3} = \llt -1,-2\rgt
+</me>
+and the rate of change (per unit distance) in that direction is
+<md>
+<mrow>
+D_{\frac{\llt -1,-2\rgt}{|\llt -1,-2\rgt|}} f(1,2)
+   &amp;= \vnabla f(1,2)\cdot\frac{\llt -1,-2\rgt}{|\llt -1,-2\rgt|}
+    = \llt a,b\rgt\cdot\frac{\llt -1,-2\rgt}{\sqrt{5}}
+    = \llt 1,3\rgt\cdot\frac{\llt -1,-2\rgt}{\sqrt{5}}
+=-\frac{7}{\sqrt{5}}
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+
+<example xml:id="eg_dir_deriv_F"><title>Optional</title>
+<statement>
+<p>
+Find all points <m>(a,b,c)</m> for which the spheres
+<m>(x-a)^2+(y-b)^2+(z-c)^2 =1</m> and <m>x^2+y^2+z^2=1</m> intersect
+orthogonally. That is, the tangent planes to the two spheres are
+to be perpendicular at each point of intersection.
+</p>
+</statement>
+
+<solution>
+<p>
+Let <m>(x_0,y_0,z_0)</m> be a point of intersection. That is
+<md>
+<mrow>
+(x_0-a)^2+(y_0-b)^2+(z_0-c)^2 &amp; = 1
+</mrow><mrow>
+x_0^2+y_0^2+z_0^2&amp;=1
+</mrow>
+</md>
+A normal vector to <m>G(x,y,z)=(x-a)^2+(y-b)^2+(z-c)^2 =1</m> at <m>(x_0,y_0,z_0)</m>
+is
+<me>
+\vN = \vnabla G(x_0,y_0,z_0)
+     = \llt 2(x_0-a)\,\hi\,,\,2(y_0-b)\,\hj\,,\,2(z_0-c)\,\hk\rgt
+</me>
+A normal vector to <m>g(x,y,z)=x^2+y^2+z^2 =1</m> at <m>(x_0,y_0,z_0)</m>
+is
+<me>
+\vn = \vnabla g(x_0,y_0,z_0)
+     = \llt 2x_0\,\hi\,,\,2y_0\,\hj\,,\,2z_0\,\hk\rgt
+</me>
+The two tangent planes are perpendicular if and only if <m>\hN</m> and <m>\hn</m>
+are perpendicular, which is the case if and only if
+<me>
+0=\hN\cdot\hn = 4x_0(x_0-a) + 4y_0(y_0-b) +4z_0(z_0-c)
+</me>
+or, dividing the equation by <m>4</m>,
+<me>
+x_0(x_0-a) + y_0(y_0-b) +z_0(z_0-c)=0
+</me>
+</p>
+
+<p>Let's pause to take stock.
+We need to find all <m>(a,b,c)</m>'s such that the statement
+<me>
+(x_0,y_0,z_0)\text{ is a point of intersection of the two spheres}
+\tag{S1}</me>
+implies the statement
+<me>
+\text{the normal vectors $\hN$ and $\hn$ are perpendicular}
+\tag{S2}</me>
+In equations, we need to find all <m>(a,b,c)</m>'s such that the statement
+<me>
+(x_0,y_0,z_0)\quad\text{obeys}\quad
+x_0^2+y_0^2+z_0^2 = 1\text{ and }(x_0-a)^2+(y_0-b)^2+(z_0-c)^2 = 1
+\tag{S1}
+</me>
+implies the statement
+<me>
+(x_0,y_0,z_0)\quad\text{obeys}\quad
+x_0(x_0-a) + y_0(y_0-b) +z_0(z_0-c)=0
+\tag{S2}
+</me>
+Now if we expand (S2) then we can, with a little care, massage it into something that looks more like (S1).
+<md>
+<mrow>
+&amp;x_0(x_0-a) + y_0(y_0-b) +z_0(z_0-c)
+=x_0^2+y_0^2+z_0^2 -ax_0 -by_0 - cz_0
+</mrow><mrow>
+&amp;\hskip1in=\frac{1}{2}\left\{\big[x_0^2+y_0^2+z_0^2\big]
+     +\big[(x_0-a)^2+(y_0-b)^2+(z_0-c)^2\big]
+     -a^2-b^2-c^2\right\}
+</mrow>
+</md>
+If (S1) is true, then <m>\big[x_0^2+y_0^2+z_0^2\big]=1</m>
+and <m>\big[(x_0-a)^2+(y_0-b)^2+(z_0-c)^2\big]=1</m> so that
+<me>
+x_0(x_0-a) + y_0(y_0-b) +z_0(z_0-c)
+=\frac{1}{2}\left\{1 \ +\  1\  -a^2-b^2-c^2 \right\}
+</me>
+and statement (S2) is true if and only if
+<me>
+a^2+b^2+c^2=2
+</me>
+</p>
+
+<p>Our conclusion is that the set of allowed points <m>(a,b,c)</m> is the
+sphere of radius <m>\sqrt{2}</m> centred on the origin.
+</p>
+</solution>
+</example>
+
+<example xml:id="eg_chainRuleF"><title>Optional <mdash/> The gradient in polar coordinates</title>
+<statement>
+<p>
+What is the gradient of a function in polar coordinates?
+</p>
+</statement>
+
+
+<solution>
+<p>
+As was the case in Examples <xref ref="eg_chainRuleD"/> and <xref ref="eg_chainRuleE"/>, figuring
+out what the question is asking is half the battle. By Definition
+<xref ref="def_gradient"/>, the gradient of a function <m>g(x,y)</m>
+is the vector <m>\llt g_x(x,y),g_y(x,y)\rgt</m>. In this question we are told
+that we are given some function <m>f(r,\theta)</m> of the polar
+coordinates
+<fn>Polar coordinates were defined in
+Example <xref ref="ex_LIMtwodB"/>.</fn>
+ <m>r</m> and <m>\theta</m>. We are supposed to convert
+this function to Cartesian  coordinates.
+</p>
+
+<p>This means that we are to consider the function
+<me>
+g(x,y)=f\big(r(x,y),\theta(x,y)\big)
+</me>
+with
+<md>
+<mrow>
+r(x,y)&amp;=\sqrt{x^2+y^2}\cr
+\theta(x,y)&amp;= \arctan\,\frac{y}{x}
+</mrow>
+</md>
+Then we are to compute the gradient of <m>g(x,y)</m> and express the answer
+in terms of <m>r</m> and <m>\theta</m>. By the chain rule,
+<md>
+<mrow>
+\pdiff{g}{x}
+&amp;=\pdiff{f}{r}\ \pdiff{r}{x}
+           +\pdiff{f}{\theta}\  \pdiff{\theta}{x}
+</mrow><mrow>
+&amp;=\pdiff{f}{r}\ \frac{1}{2}\frac{2x}{\sqrt{x^2+y^2}}
+        +\pdiff{f}{\theta}\ \frac{-y/x^2}{1+(y/x)^2}
+</mrow><mrow>
+&amp;=\pdiff{f}{r}\ \frac{x}{\sqrt{x^2+y^2}}
+        -\pdiff{f}{\theta}\ \frac{y}{x^2+y^2}
+</mrow><mrow>
+&amp;=\pdiff{f}{r}\ \frac{r\cos\theta}{r}
+       -\pdiff{f}{\theta}\ \frac{r\sin\theta}{r^2}
+</mrow><mrow>
+</mrow>
+<intertext>since <m>x=r\cos\theta</m> and <m>y=r\sin\theta</m></intertext><mrow>
+&amp;=\pdiff{f}{r}\ \cos\theta
+           -\pdiff{f}{\theta}\ \frac{\sin\theta}{r}
+</mrow>
+</md>
+Similarly
+<md>
+<mrow>
+\pdiff{g}{y}
+&amp;=\pdiff{f}{r}\ \pdiff{r}{y}
+           +\pdiff{f}{\theta}\ \pdiff{\theta}{y}
+</mrow><mrow>
+&amp;=\pdiff{f}{r}\ \frac{1}{2}\frac{2y}{\sqrt{x^2+y^2}}
+         +\pdiff{f}{\theta}\ \frac{1/x}{1+(y/x)^2}
+</mrow><mrow>
+&amp;=\pdiff{f}{r}\ \frac{y}{\sqrt{x^2+y^2}}
+           +\pdiff{f}{\theta}\ \frac{x}{x^2+y^2}
+</mrow><mrow>
+&amp;=\pdiff{f}{r}\ \sin\theta
+     +\pdiff{f}{\theta}\ \frac{\cos\theta}{r}
+</mrow>
+</md>
+So
+<me>
+\llt g_x,g_y\rgt= f_r\ \llt\cos\theta,\sin\theta\rgt
+           +\frac{f_\theta}{r}\llt-\sin\theta,\cos\theta\rgt
+</me>
+or, with all the arguments written explicitly,
+<md>
+<mrow>
+\llt g_x(x,y),g_y(x,y)\rgt
+&amp;=
+f_r\big(r(x,y),\theta(x,y)\big)\ \llt\cos\theta(x,y)\,,\,\sin\theta(x,y)\rgt
+</mrow><mrow>
+&amp;\ \ +\frac{1}{r(x,y)}f_\theta\big(r(x,y),\theta(x,y)\big)\
+\llt-\sin\theta(x,y)\,,\,\cos\theta(x,y)\rgt
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+</subsubsection>
+</subsection>
+</section>

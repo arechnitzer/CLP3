@@ -13,6 +13,7 @@
 <macros>
   \newcommand{\dee}[1]{\mathrm{d}#1}
   \newcommand{\half}{ \frac{1}{2} }
+  \newcommand{\veps}{\varepsilon}
   \newcommand{\ds}{\displaystyle}
   \newcommand{\ts}{\textstyle}
   \newcommand{\es}{ {\varnothing}}
@@ -28,6 +29,8 @@
   \newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
   \newcommand{\difftwo}[2]{ \frac{\mathrm{d^2}#1}{\mathrm{d}{#2}^2}}
 
+  \newcommand{\eqf}[1]{{\buildrel \rm #1 \over =}}
+
   \renewcommand{\neg}{ {\sim} }
   \newcommand{\limp}{ {\;\Rightarrow\;} }
   \newcommand{\nimp}{ {\;\not\Rightarrow\;} }
@@ -37,6 +40,7 @@
   \newcommand{\bbbn}{\mathbb{N}}
   \newcommand{\bbbr}{\mathbb{R}}
   \newcommand{\bbbp}{\mathbb{P}}
+  \newcommand{\cD}{\mathcal{D}}
   \newcommand{\cI}{\mathcal{I}}
   \newcommand{\Si}{\Sigma}
 
@@ -180,6 +184,10 @@
 \usetikzlibrary{shapes, patterns, snakes}
 \tikzstyle{vertex}=[shape=circle, minimum size=2mm, inner sep=0, fill]
 \tikzstyle{opendot}=[shape=circle, minimum size=2mm, inner sep=0, fill=white, draw]
+
+\usepackage{pgfplots}
+\pgfplotsset{width=65mm,compat=1.9, tick label style={font=\scriptsize}}
+
 </latex-image-preamble>
 
 <!-- to make referencing like latex referencing - just the number -->

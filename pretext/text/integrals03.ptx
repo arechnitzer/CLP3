@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_int_2d_applications">
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<title>Applications of Double Integrals</title>
+<introduction>
+<p>Double integrals are useful for more than just computing
+areas and volumes. Here are a few other applications that
+lead to double integrals.
+</p>
+</introduction>
+
+<subsection>
+  <title>Averages</title>
+
+
+<p>In Section \eref{CLP101}{sec avg} of the CLP-2 text, we defined
+the average value of a function of one variable. We'll now extend that
+discussion to functions of two variables. First, we recall the
+definition of the average of a finite set of numbers.
+</p>
+
+<definition xml:id="def_avg">
+<statement><p>
+ The average (mean) of a set of <m>n</m> numbers <m>f_1</m>, <m>f_2</m>, <m>\cdots</m>, <m>f_n</m> is
+<md>
+<mrow>
+\bar f = \llt f\rgt =\frac{f_1+f_2+\cdots+f_n}{n}
+</mrow>
+</md>
+The notations <m>\bar f</m> and <m>\llt f\rgt</m> are both commonly used
+to represent the average.
+</p></statement>
+</definition>
+
+<p>Now suppose that we want to take the average of a function <m>f(x,y)</m> with
+<m>(x,y)</m> running continuously over some region <m>\cR</m> in the <m>xy</m>-plane.
+A natural approach to defining what we mean by the average value of <m>f</m>
+over <m>\cR</m> is to
+<ul>
+<li>
+First fix any natural number <m>n</m>.
+</li>
+<li>
+Subdivide the region <m>\cR</m> into tiny (approximate) squares
+each of width <m>\De x=\frac{1}{n}</m> and height <m>\De y =\frac{1}{n}</m>.
+This can be done by, for example, subdividing vertical strips into
+tiny squares, like in Example <xref ref="eg_dblInt_A"/>.
+</li>
+<li>
+Name the squares (in any fixed order) <m>R_1</m>, <m>R_2</m>, <m>\cdots</m>, <m>R_N</m>,
+where <m>N</m> is the total number of squares.
+</li>
+<li>
+Select, for each <m>1\le i\le N</m>, one point in square number <m>i</m> and
+call it <m>(x_i^*,y_i^*)</m>. So <m>(x_i^*,y_i^*)\in R_i</m>.
+</li>
+<li>
+The average value of <m>f</m> at the selected points is
+<md>
+<mrow>
+\frac{1}{N}\sum_{i=1}^N f(x_i^*,y_i^*)
+=\frac{\sum_{i=1}^N f(x_i^*,y_i^*)}{{\sum_{i=1}^N 1 }}
+=\frac{\sum_{i=1}^N f(x_i^*,y_i^*)\, \De x\,\De y}{{\sum_{i=1}^N  \De x\,\De y}}
+</mrow>
+</md>
+We have transformed the average into a ratio of Riemann sums.
+</li>
+</ul>
+Once we have the Riemann sums it is clear what to do next.
+Taking the limit <m>n\rightarrow\infty</m>,
+we get exactly <m>\frac{\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}}
+                    {\dblInt_\cR \dee{x}\,\dee{y}}</m>. That's why we define
+</p>
+
+<definition xml:id="def_AVaverage">
+<statement><p>
+Let <m>f(x,y)</m> be an integrable function defined on region <m>\cR</m> in the
+<m>xy</m>-plane. The average value of <m>f</m> on <m>\cR</m> is
+<md>
+<mrow>
+\bar f=\llt f\rgt
+=\frac{\displaystyle\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}}
+                       {\displaystyle\dblInt_\cR \dee{x}\,\dee{y}}
+</mrow>
+</md>
+</p></statement>
+</definition>
+
+<example xml:id="eg_dblInt_G"><title>Average</title>
+<statement>
+<p>
+Let <m>a \gt 0</m>. A mountain, call it Half Dome
+<fn>There is a real Half-Dome
+mountain in Yosemite National Park. It has <m>a=1445\,\text{m}
+</m>. </fn>, has height
+<m>z(x,y)=\sqrt{a^2-x^2-y^2}</m> above each point <m>(x,y)</m>
+in the base region <m>\cR=\Set{(x,y)}{x^2+y^2\le a^2, x\le 0}</m>.
+Find its average height.
+</p>
+
+<sidebyside>
+<image source="figs/halfDomeA"/>
+</sidebyside>
+</statement>
+
+<solution>
+<p>
+By Definition <xref ref="def_AVaverage"/> the average height is
+<me>
+\bar z
+=\frac{\dblInt_\cR z(x,y)\,\dee{x}\,\dee{y}}
+                       {\dblInt_\cR \dee{x}\,\dee{y}}
+=\frac{\dblInt_\cR \sqrt{a^2-x^2-y^2}\,\dee{x}\,\dee{y}}
+                       {\dblInt_\cR \dee{x}\,\dee{y}}
+</me>
+The integrals in both the numerator and denominator
+are easily evaluated by interpreting them geometrically.
+<ul>
+<li>
+The numerator <m>\dblInt_\cR z(x,y)\,\dee{x}\,\dee{y}
+                =\dblInt_\cR \sqrt{a^2-x^2-y^2}\,\dee{x}\,\dee{y}</m>
+can be interpreted as the volume of
+<md>
+<mrow>
+&amp;\Big\{\ (x,y,z)\ \Big|\ x^2+y^2\le a^2,\ x\le 0,\
+             0\le z\le  \sqrt{a^2-x^2-y^2}\ \Big\}
+</mrow><mrow>
+&amp;=\Set{(x,y,z)}{x^2+y^2+z^2\le a^2,\ x\le 0,\ z\ge 0}
+</mrow>
+</md>
+which is one quarter of the interior of a sphere of radius <m>a</m>.
+So the numerator is <m>\frac{1}{3}\pi a^3</m>.
+</li>
+<li>
+The denominator <m>\dblInt_\cR \dee{x}\,\dee{y}</m> is the area of
+one half of a circular disk of radius <m>a</m>. So the denominator
+is <m>\frac{1}{2} \pi a^2</m>.
+</li>
+</ul>
+All together, the average height is
+<me>
+\bar z = \frac{\frac{1}{3}\pi a^3}{\frac{1}{2} \pi a^2}
+=\frac{2}{3}\, a
+</me>
+Notice this this number is bigger than zero and less than the maximum height,
+which is <m>a</m>. That makes sense.
+</p>
+</solution>
+</example>
+
+<example xml:id="eg_dblInt_H"><title>Example <xref ref="eg_dblInt_G"/>, the hard way</title>
+<p>
+This last example was relatively easy because we could reinterpret the integrals
+as geometric quantities. For practice, let's go back and
+evaluate the numerator
+<m>\dblInt_\cR \sqrt{a^2-x^2-y^2}\,\dee{x}\,\dee{y}</m> of
+Example <xref ref="eg_dblInt_G"/> as an iterated integral.
+</p>
+
+<p>Here is a sketch of the top view of the base region <m>\cR</m>.
+</p>
+
+<sidebyside>
+<image source="figs/halfDomeB"/>
+</sidebyside>
+
+<p>
+Using the slicing in the figure
+<md>
+<mrow>
+\dblInt_\cR \sqrt{a^2-x^2-y^2}\,\dee{x}\,\dee{y}
+&amp;= \int_{-a}^a \dee{y} \int_{-\sqrt{a^2-y^2}}^0\dee{x}\
+             \sqrt{a^2-x^2-y^2}
+</mrow>
+</md>
+Note that, in the inside integral
+<m>\displaystyle \int_{-\sqrt{a^2-y^2}}^0\dee{x}\
+             \sqrt{a^2-x^2-y^2}</m>,
+the variable <m>y</m> is treated as a constant, so that the integrand
+<m>
+\sqrt{a^2-y^2-x^2} = \sqrt{C^2-x^2}
+</m>
+with <m>C</m> being the constant <m>\sqrt{a^2-y^2}</m>. The standard protocol
+for evaluating this integral uses the trigonometric substitution
+<md>
+<mrow>
+x &amp;= C\sin\theta\qquad\text{with } -\frac{\pi}{2}\le\theta\le\frac{\pi}{2}
+</mrow><mrow>
+\dee{x} &amp;= C\cos\theta\,\dee{\theta}
+</mrow>
+</md>
+Trigonometric substitution was discussed in detail in
+Section \eref{CLP101}{sec trigsub} in the CLP-2 text.
+Since
+<md>
+<mrow>
+x&amp;=0 &amp; \implies C\sin\theta&amp;=0 &amp;\implies \theta&amp;=0
+</mrow><mrow>
+x&amp;=-\sqrt{a^2-y^2}=-C &amp;\implies C\sin\theta&amp;=-C
+                      &amp;\implies \theta&amp;=-\frac{\pi}{2}
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\sqrt{a^2-x^2-y^2}&amp;=\sqrt{C^2-C^2\sin^2\theta}=C\cos\theta
+</mrow>
+</md>
+the inner integral
+<md>
+<mrow>
+\int_{-\sqrt{a^2-y^2}}^0\dee{x}\   \sqrt{a^2-x^2-y^2}
+&amp;=\int_{-\pi/2}^0 C^2\cos^2\theta\ \dee{\theta}
+</mrow><mrow>
+&amp;=C^2\int_{-\pi/2}^0\frac{1+\cos(2\theta)}{2}\ \dee{\theta}
+=C^2\left[\frac{\theta+\frac{\sin(2\theta)}{2}}{2}\right]_{-\pi/2}^0
+</mrow><mrow>
+&amp;=\frac{\pi C^2}{4} =\frac{\pi}{4}\big(a^2-y^2\big)
+</mrow>
+</md>
+and the full integral
+<md>
+<mrow>
+\dblInt_\cR \sqrt{a^2-x^2-y^2}\,\dee{x}\,\dee{y}
+&amp;=\frac{\pi}{4} \int_{-a}^a \big(a^2-y^2\big)\  \dee{y}
+=\frac{\pi}{2} \int_0^a \big(a^2-y^2\big)\  \dee{y}
+=\frac{\pi}{2}\left[a^3-\frac{a^3}{3}\right]
+</mrow><mrow>
+&amp;=\frac{1}{3}\pi a^3
+</mrow>
+</md>
+just as we saw in Example <xref ref="eg_dblInt_G"/>.
+</p>
+
+</example>
+
+<remark xml:id="rem_sneaky">
+<p>
+We remark that there is an efficient, sneaky, way to evaluate
+definite integrals like <m>\int_{-\pi/2}^0 \cos^2\theta\ \dee{\theta}</m>.
+Looking at the figures
+</p>
+<sidebyside>
+<image source="figs/cos2graph"/>
+<image source="figs/sin2graph"/>
+</sidebyside>
+
+<p>
+we see that
+<me>
+\int_{-\pi/2}^0 \cos^2\theta\ \dee{\theta}
+=\int_{-\pi/2}^0 \sin^2\theta\ \dee{\theta}
+</me>
+Thus
+<md>
+<mrow>
+\int_{-\pi/2}^0 \cos^2\theta\ \dee{\theta}
+=\int_{-\pi/2}^0 \sin^2\theta\ \dee{\theta}
+=\int_{-\pi/2}^0 \frac{1}{2}\big[\sin^2\theta+\cos^2\theta\big]\,\dee{\theta}
+=\frac{1}{2}\int_{-\pi/2}^0 \dee{\theta}
+=\frac{\pi}{4}
+</mrow>
+</md>
+</p>
+</remark>
+
+
+<p>It is not at all unusual to want to find the average value of
+some function <m>f(x,y)</m> with <m>(x,y)</m> running over some region
+<m>\cR</m>,  but to also want some <m>(x,y)</m>'s to play a greater role
+in determining the average than other <m>(x,y)</m>'s. One common way to
+do so is to create a <q>weight function</q> <m>w(x,y) \gt 0</m> with
+<m>\frac{w(x_1,y_1)}{w(x_2,y_2)}</m> giving the relative importance of
+<m>(x_1,y_1)</m> and <m>(x_2,y_2)</m>. That is, <m>(x_1,y_1)</m> is
+<m>\frac{w(x_1,y_1)}{w(x_2,y_2)}</m> times as important as <m>(x_2,y_2)</m>.
+This leads to the definition
+</p>
+
+<definition xml:id="def_WTaverage">
+<statement><p>
+<md>
+<mrow>
+\frac{\dblInt_\cR f(x,y)\,w(x,y)\,\dee{x}\,\dee{y}}
+                       {\dblInt_\cR w(x,y)\,\dee{x}\,\dee{y}}
+</mrow>
+</md>
+is called the weighted average of <m>f</m> over <m>\cR</m> with weight
+<m>w(x,y)</m>.
+</p></statement>
+</definition>
+
+<p>
+Note that if <m>f(x,y)=F</m>, a constant, then the weighted average of <m>f</m>
+is just <m>F</m>, just as you would want.
+</p>
+
+</subsection>
+
+<subsection>
+  <title>Centre of Mass</title>
+
+
+<p>One important example of a weighted average is the centre of mass.
+If you support a body at its centre of mass (in a uniform gravitational
+field) it balances perfectly. That's the definition of the centre of mass
+of the body. In Section \eref{CLP101}{sec com} of the CLP-2 text, we found
+that the centre of mass of a body that consists of mass distributed
+continuously along a straight line, with mass density <m>\rho(x)</m>kg/m and
+with <m>x</m> running from <m>a</m> to <m>b</m>, is at
+<me>
+\bar x = \frac{\int_a^b x\ \rho(x)\,\dee{x}}{\int_a^b \rho(x)\,\dee{x}}
+</me>
+That is, the centre of mass is at the average of the <m>x</m>-coordinate
+weighted by the mass density.
+</p>
+
+<p>In two dimensions, the centre of mass of a plate that covers the
+region <m>\cR</m> in the <m>xy</m>-plane and that has mass density <m>\rho(x,y)</m>
+is the point  <m>(\bar x, \bar y)</m> where
+</p>
+
+<fact xml:id="eq_cofm"><title>Centre of Mass</title>
+  <statement>
+    <p>
+<md>
+<mrow>
+\bar x &amp; = \text{the weighted average of $x$ over $\cR$}
+</mrow><mrow>
+       &amp;=\frac{\dblInt_\cR x\ \rho(x,y)\, \dee{x}\,\dee{y}}
+                      {\dblInt_\cR \ \rho(x,y)\, \dee{x}\,\dee{y}}
+        =\frac{\dblInt_\cR x\ \rho(x,y)\, \dee{x}\,\dee{y}}
+                            {\text{Mass}(\cR)}
+</mrow><mrow>
+\bar y &amp; = \text{the weighted average of $y$ over $\cR$}
+</mrow><mrow>
+       &amp;=\frac{\dblInt_\cR y\ \rho(x,y)\, \dee{x}\,\dee{y}}
+                     {\dblInt_\cR \ \rho(x,y)\, \dee{x}\,\dee{y}}
+        =\frac{\dblInt_\cR y\ \rho(x,y)\, \dee{x}\,\dee{y}}
+                        {\text{Mass}(\cR)}
+</mrow>
+</md>
+</p>
+</statement>
+</fact>
+
+<p>
+If the mass density is a constant, the centre of mass is also
+called the centroid, and is the geometric centre of <m>\cR</m>.
+In this case
+</p>
+
+<fact xml:id="eq_centroid"><title>Centroid</title>
+<statement><p>
+<md>
+<mrow>
+\bar x &amp;=\frac{\dblInt_\cR x\ \dee{x}\,\dee{y}}
+                      {\dblInt_\cR  \dee{x}\,\dee{y}}
+        =\frac{\dblInt_\cR x\ \dee{x}\,\dee{y}}
+                            {\text{Area}(\cR)}
+</mrow><mrow>
+\bar y &amp;=\frac{\dblInt_\cR y\ \dee{x}\,\dee{y}}
+                     {\dblInt_\cR \  \dee{x}\,\dee{y}}
+        =\frac{\dblInt_\cR y\  \dee{x}\,\dee{y}}
+                        {\text{Area}(\cR)}
+</mrow>
+</md>
+</p></statement>
+</fact>
+
+<example xml:id="eg_dblInt_I"><title>Centre of Mass</title>
+<p>
+In Section \eref{CLP101}{sec com} of the CLP-2 text, we did not
+have access to multivariable integrals, so we used some physical intuition
+to derive that the centroid of a body that fills the
+region
+<me>
+\cR=\big\{\ (x,y)\ \big|\ a\le x\le b,\ B(x)\le y\le T(x)\ \big\}
+</me>
+in the <m>xy</m>-plane is <m>(\bar x,\bar y)</m> where
+<md>
+<mrow>
+\bar x &amp;= \frac{\int_a^b x [T(x)-B(x)]\,\dee{x}}{A}
+</mrow><mrow>
+\bar y &amp;= \frac{\int_a^b\, [T(x)^2-B(x)^2]\,\dee{x}}{2A}
+</mrow>
+</md>
+and <m>A=\int_a^b [T(x)-B(x)]\,\dee{x}</m> is the area of <m>\cR</m>. Now that we
+do have access to multivariable integrals, we can derive these
+formulae directly from <xref ref="eq_centroid"/>. Using vertical slices,
+as in this figure,
+</p>
+
+<sidebyside>
+<image source="figs/centroidXY"/>
+</sidebyside>
+
+<p>
+we see that the area of <m>\cR</m> is
+<md>
+<mrow>
+A= \dblInt_\cR\dee{x}\,\dee{y}
+ =\int_a^b\dee{x}\int_{B(x)}^{T(x)}\dee{y}
+ =\int_a^b\dee{x}\ \big[T(x)-B(x)\big]
+</mrow>
+</md>
+and that <xref ref="eq_centroid"/> gives
+<md>
+<mrow>
+\bar x&amp;= \frac{1}{A} \dblInt_\cR x\ \dee{x}\,\dee{y}
+      = \frac{1}{A} \int_a^b\dee{x}\int_{B(x)}^{T(x)}\dee{y}\ x
+      =\frac{1}{A}\int_a^b\dee{x}\ x\big[T(x)-B(x)\big]
+</mrow><mrow>
+\bar y&amp;= \frac{1}{A} \dblInt_\cR y\ \dee{x}\,\dee{y}
+      = \frac{1}{A} \int_a^b\dee{x}\int_{B(x)}^{T(x)}\dee{y}\ y
+      =\frac{1}{A}\int_a^b\dee{x}\
+             \left[\frac{T(x)^2}{2}-\frac{B(x)^2}{2}\right]
+</mrow>
+</md>
+just as desired.
+</p></example>
+
+<p>We'll start with a simple mechanical example.
+</p>
+
+<example xml:id="eg_dblInt_Iqc"><title>Quarter Circle</title>
+<p>
+In Example \eref{CLP101}{eg:TRQcentroidBa} of the CLP-2 text,
+we found the centroid of the quarter circular disk
+<me>
+D=\Set{(x,y)}{x\ge 0,\ y\ge 0,\ x^2+y^2\le r^2}
+</me>
+by using the formulae of the last example. We'll now find it again using
+<xref ref="eq_centroid"/>.
+</p>
+
+<p>Since the area of <m>D</m> is <m>\frac{1}{4}\pi r^2</m>, we have
+<md>
+<mrow>
+\bar x =\frac{\dblInt_D x\ \dee{x}\,\dee{y}}
+                      {\frac{1}{4}\pi r^2}
+\qquad
+\bar y &amp;=\frac{\dblInt_D y\ \dee{x}\,\dee{y}}
+                     {\frac{1}{4}\pi r^2}
+</mrow>
+</md>
+We'll evaluate <m>\dblInt_D x\ \dee{x}\,\dee{y}</m> by using horizontal
+slices, as in the figure on the left below.
+</p>
+
+<sidebyside>
+<image source="figs/centroidQuarterCircleh"/>
+<image source="figs/centroidQuarterCirclev"/>
+</sidebyside>
+
+<p>
+Looking at that figure, we see that
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>r</m> and
+</li>
+<li>
+for each <m>y</m> in that range, <m>x</m> runs from <m>0</m> to <m>\sqrt{r^2-y^2}</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+\dblInt_D x\ \dee{x}\,\dee{y}
+&amp;= \int_0^r\dee{y}\int_0^{\sqrt{r^2-y^2}}\dee{x} \ x
+= \int_0^r\dee{y}\ \left[\frac{x^2}{2}\right]_0^{\sqrt{r^2-y^2}}
+=\frac{1}{2} \int_0^r\dee{y}\ \big[r^2-y^2\big]
+</mrow><mrow>
+&amp;=\frac{1}{2}\left[r^3-\frac{r^3}{3}\right]
+= \frac{r^3}{3}
+</mrow>
+</md>
+and
+<me>
+\bar x
+= \frac{4}{\pi r^2}\left[\frac{r^3}{3}\right]
+=\frac{4r}{3\pi}
+</me>
+This is the same answer as we got in Example \eref{CLP101}{eg:TRQcentroidBa}
+of the CLP-2 text. But because we were able to use horizontal slices,
+the integral in this example was a little easier to evaluate than the
+integral in CLP-2. Had we used vertical slices, we would have ended up
+with exactly the integral of CLP-2.
+</p>
+
+<p>By symmetry, we should have <m>\bar y=\bar x</m>. We'll check that
+by evaluating <m>\dblInt_D y\ \dee{x}\,\dee{y}</m> by using vertical slices
+slices, as in the figure on the right above.
+From that figure, we see that
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>r</m> and
+</li>
+<li>
+for each <m>x</m> in that range, <m>y</m> runs from <m>0</m> to <m>\sqrt{r^2-x^2}</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+\dblInt_D y\ \dee{x}\,\dee{y}
+&amp;= \int_0^r\dee{x}\int_0^{\sqrt{r^2-x^2}}\dee{y} \ y
+= \frac{1}{2}\int_0^r\dee{x}\  \big[r^2-x^2\big]
+</mrow>
+</md>
+This is exactly the  integral <m>\frac{1}{2} \int_0^r\dee{y}\ \big[r^2-y^2\big]</m>
+that we evaluated above,  with <m>y</m> renamed to <m>x</m>.
+So <m>\dblInt_D y\ \dee{x}\,\dee{y}=\frac{r^3}{3}</m>
+too and
+<me>
+\bar y
+= \frac{4}{\pi r^2}\left[\frac{r^3}{3}\right]
+=\frac{4r}{3\pi}
+=\bar x
+</me>
+as expected.
+</p></example>
+
+<example xml:id="eg_cofm_polar"><title>Example <xref ref="eg_area_polar"/>, continued</title>
+<statement>
+<p>
+Find the centroid of the region that is inside the circle
+<m>r=4\cos\theta</m> and to the left of the line <m>x=1</m>.
+</p>
+</statement>
+
+<solution>
+<p>
+Recall that we saw in Example <xref ref="eg_area_polar"/>
+that <m>r=4\cos\theta</m> was indeed a circle, and in fact is the
+circle <m>(x-2)^2+y^2=4</m>.
+Here is a sketch of that circle and of the region of interest, <m>\cR</m>.
+</p>
+
+<sidebyside>
+<image source="figs/comPolarA"/>
+</sidebyside>
+
+<p>
+From the sketch, we see that <m>\cR</m>
+is symmetric about  the <m>x</m>-axis. So we expect that its centroid,
+<m>(\bar x,\bar y)</m>, has <m>\bar y=0</m>. To see this from the integral definition,
+note that the integral <m>\dblInt_\cR y\  \dee{x}\,\dee{y}</m>
+<ul>
+<li>
+has domain of integration, namely <m>\cR</m>,  invariant
+under <m>y\rightarrow -y</m> (i.e. under reflection in the <m>x</m>-axis), and
+</li>
+<li>
+has integrand, namely <m>y</m>, that is odd under <m>y\rightarrow -y</m>.
+</li>
+</ul>
+So <m>\dblInt_\cR y\  \dee{x}\,\dee{y}=0</m> and consequently <m>\bar y=0</m>.
+</p>
+
+<p>We now just have to find <m>\bar x</m>:
+<md>
+<mrow>
+\bar x =\frac{\dblInt_\cR x\  \dee{x}\,\dee{y}}
+                      {\dblInt_\cR \dee{x}\,\dee{y}}
+</mrow>
+</md>
+We have already found, in Example <xref ref="eg_area_polar"/>, that
+<md>
+<mrow>
+\dblInt_\cR \dee{x}\,\dee{y} = \frac{4\pi}{3}-\sqrt{3}
+</mrow>
+</md>
+So we just have to compute <m>\dblInt_\cR x\ \dee{x}\,\dee{y}</m>.
+Using <m>\cR_1</m> to denote the top half of <m>\cR</m>, and using polar coordinates,
+like we did in Example <xref ref="eg_area_polar"/>,
+<md>
+<mrow>
+\dblInt_{\cR_1} x\ \dee{x}\,\dee{y}
+&amp;=\int_0^{\pi/3}\dee{\theta}\int_0^{1/\cos\theta}\dee{r}\ r
+              \overbrace{(r\cos\theta)}^{x}
+     +\int_{\pi/3}^{\pi/2}\dee{\theta}\int_0^{4\cos\theta}\dee{r}\ r
+             \overbrace{(r\cos\theta)}^{x}
+</mrow><mrow>
+&amp;=\int_0^{\pi/3}\dee{\theta}\ \cos\theta\int_0^{1/\cos\theta}\dee{r}\ r^2
+  +\int_{\pi/3}^{\pi/2}\dee{\theta}\ \cos\theta
+                         \int_0^{4\cos\theta}\dee{r}\ r^2
+</mrow><mrow>
+&amp;=\int_0^{\pi/3}\dee{\theta}\ \frac{\sec^2\theta}{3}
+   +\int_{\pi/3}^{\pi/2}\dee{\theta}\ \frac{64}{3}\cos^4\theta
+</mrow>
+</md>
+The first integral is easy, provided we remember that <m>\tan\theta</m>
+is an antiderivative for <m>\sec^2\theta</m>. For the second integral,
+we'll need the double angle formula <m>\cos^2\theta=\frac{1+\cos(2\theta)}{2}</m>:
+<md>
+<mrow>
+\cos^4\theta =\big(\cos^2\theta\big)^2
+  &amp;=\left[\frac{1+\cos(2\theta)}{2}\right]^2
+   =\frac{1}{4}\left[1+2\cos(2\theta)+\cos^2(2\theta)\right]
+</mrow><mrow>
+   &amp;=\frac{1}{4}\left[1+2\cos(2\theta)+\frac{1+\cos(4\theta)}{2}\right]
+</mrow><mrow>
+   &amp;=\frac{3}{8} +\frac{\cos(2\theta)}{2} + \frac{\cos(4\theta)}{8}
+</mrow>
+</md>
+so
+<md>
+<mrow>
+\dblInt_{\cR_1} x\ \dee{x}\,\dee{y}
+&amp;=\frac{1}{3}\tan\theta\Big|_0^{\pi/3}
+    +\frac{64}{3}\left[\frac{3\theta}{8}
+    +\frac{\sin(2\theta)}{4}+\frac{\sin(4\theta)}{32}\right]_{\pi/3}^{\pi/2}
+</mrow><mrow>
+&amp;=\frac{1}{3}\times\sqrt{3}
+   +\frac{64}{3}\left[\frac{3}{8}\times\frac{\pi}{6}
+                      -\frac{\sqrt{3}}{4\times 2}
+                      +\frac{\sqrt{3}}{32\times 2}\right]
+</mrow><mrow>
+&amp;=\frac{4\pi}{3}-2\sqrt{3}
+</mrow>
+</md>
+The integral we want, namely <m>\dblInt_\cR x\  \dee{x}\,\dee{y}</m>,
+<ul>
+<li>
+has domain of integration, namely <m>\cR</m>,  invariant
+under <m>y\rightarrow -y</m> (i.e. under reflection in the <m>x</m>-axis), and
+</li>
+<li>
+has integrand, namely <m>x</m>, that is even under <m>y\rightarrow -y</m>.
+</li>
+</ul>
+So <m>\dblInt_\cR x\  \dee{x}\,\dee{y}
+  =2\dblInt_{\cR_1} x\  \dee{x}\,\dee{y}</m>
+and, all together,
+<md>
+<mrow>
+\bar x
+  &amp;= \frac{2\left(\frac{4\pi}{3}-2\sqrt{3}\right)}{\frac{4\pi}{3}-\sqrt{3}}
+  = \frac{\frac{8\pi}{3}-4\sqrt{3}}{\frac{4\pi}{3}-\sqrt{3}}
+  \approx 0.59
+</mrow>
+</md>
+As a check, note that <m>0\le x\le 1</m> on <m>\cR</m> and more of <m>\cR</m> is closer
+to <m>x=1</m> than to <m>x=0</m>. So it makes sense that <m>\bar x</m> is between
+<m>\frac{1}{2}</m> and <m>1</m>.
+</p>
+</solution>
+</example>
+
+<example xml:id="eg_dblInt_J"><title>Reverse Centre of Mass</title>
+<statement>
+<p>
+Evaluate <m>\displaystyle\int_0^2\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}
+                                 \big(2x+3y\big)\dee{y}\,\dee{x}</m>.
+</p>
+</statement>
+
+<solution>
+<p>
+This is another integral that can be evaluated without using any
+calculus at all. This time by relating it to a centre of mass.
+By <xref ref="eq_centroid"/>,
+<md>
+<mrow>
+\dblInt_\cR x\ \dee{x}\,\dee{y}
+  &amp;=\bar x\ \text{Area}(\cR)
+</mrow><mrow>
+\dblInt_\cR y\ \dee{x}\,\dee{y}
+  &amp;=\bar y\ \text{Area}(\cR)
+</mrow>
+</md>
+so that we can easily evaluate <m>\dblInt_\cR x\ \dee{x}\,\dee{y}</m>
+and <m>\dblInt_\cR y\ \dee{x}\,\dee{y}</m> provided <m>\cR</m> is sufficiently
+simple and symmetric that we can easily determine its area and its
+centroid.
+</p>
+
+<p>That is the case for the integral in this example. Rewrite
+<me>
+\int_0^2\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}
+                                 \big(2x+3y\big)\dee{y}\,\dee{x}
+=2\int_0^2\dee{x}\left[\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}\dee{y}\ x\right]
+ +3\int_0^2\dee{x}\left[\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}\dee{y}\ y\right]
+</me>
+On the domain of integration
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>2</m> and
+</li>
+<li>
+for each fixed <m>0\le x\le 2</m>, <m>y</m> runs from <m>-\sqrt{2x-x^2}</m> to
+<m>+\sqrt{2x-x^2}</m>
+</li>
+</ul>
+Observe that <m>y=\pm \sqrt{2x-x^2}</m> is equivalent to
+<me>
+y^2 = 2x-x^2 = 1-(x-1)^2 \iff
+(x-1)^2 + y^2 =1
+</me>
+Our domain of integration is exactly the disk
+<me>
+\cR = \Set{(x,y)}{(x-1)^2 + y^2 \le 1}
+</me>
+of radius <m>1</m> centred on <m>(1,0)</m>.
+</p>
+
+<sidebyside>
+<image source="figs/cofm"/>
+</sidebyside>
+
+<p>
+So <m>\cR</m> has area <m>\pi</m> and centre of mass <m>(\bar x,\bar y)=(1,0)</m> and
+<md>
+<mrow>
+\int_0^2\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}
+                                 \big(2x+3y\big)\dee{y}\,\dee{x}
+&amp;=2\dblInt_\cR x\ \dee{x}\,\dee{y}
+ +3\dblInt_\cR y\ \dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;=2\,\bar x\, \text{Area}(\cR) +3\,\bar y\, \text{Area}(\cR)
+=2\pi
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+
+</subsection>
+
+<subsection>
+  <title>Moment of Inertia</title>
+
+<p>
+Consider a plate that fills the region <m>\cR</m> in the <m>xy</m>-plane,
+that has mass density <m>\rho(x,y)\,\text{kg}/\text{m}^2</m>, and that is
+rotating at <m>\om\,\text{rad}/\text{s}</m>  about some axis.
+Let's call the axis of rotation <m>\cA</m>.
+We are now going to determine the kinetic energy of that plate.
+Recall
+<fn>If you don't recall, don't worry. We wouldn't lie to you.
+Or check it on Wikipedia. They wouldn't lie to you either.
+</fn>
+</p>
+
+<p>that, by definition, the kinetic energy of a point particle of
+mass <m>m</m> that is moving with speed <m>v</m> is <m>\frac{1}{2}mv^2</m>.
+</p>
+
+<p>To get the kinetic energy of the entire plate, cut it up into tiny
+rectangles
+<fn>The relatively small number of <q>rectangles</q>
+around the boundary of <m>\cR</m> won't actually be rectangles. But, as we have seen
+in the optional §<xref ref="sec_integral_error"/>, one can still make things
+rigorous despite the rectangles being a bit squishy around the edges.</fn>
+,
+say of size <m>\dee{x}\times\dee{y}</m>. Think of
+each rectangle as being (essentially) a point particle. If the  point
+<m>(x,y)</m> on the plate is a distance <m>D(x,y)</m> from the axis of rotation
+<m>\cA</m>, then as the plate rotates, the point <m>(x,y)</m> sweeps out a circle of
+radius <m>D(x,y)</m>. The figure on the right below shows that circle as seen
+from high up on the axis of rotation.
+</p>
+
+<sidebyside>
+<image source="figs/momInertia"/>
+<image source="figs/momInertiaB"/>
+</sidebyside>
+
+<p>
+The circular arc that the point <m>(x,y)</m> sweeps out in one second
+subtends the angle <m>\om</m> radians, which is the fraction <m>\frac{\om}{2\pi}</m>
+of a full circle and so has length
+<m>\frac{\om}{2\pi}\big(2\pi D(x,y)\big)=\om\,D(x,y)</m>.
+Consequently the rectangle that contains the point <m>(x,y)</m>
+<ul>
+<li>
+has speed <m>\om\,D(x,y)</m>, and
+</li>
+<li>
+has area <m>\dee{x}\,\dee{y}</m>, and so
+</li>
+<li>
+has mass <m>\rho(x,y)\ \dee{x}\,\dee{y}</m>, and
+</li>
+<li>
+has kinetic energy
+<me>
+\frac{1}{2}\overbrace{\big(\rho(x,y)\,\dee{x}\,\dee{y}\big)}^{m}
+                \overbrace{(\om\,D(x,y))^2}^{v^2}
+ =\frac{1}{2}\om^2\ D(x,y)\,^2\rho(x,y)\ \dee{x}\,\dee{y}
+</me>
+</li>
+</ul>
+So (via our usual Riemann sum limit procedure)
+the kinetic energy of <m>\cR</m> is
+<me>
+\dblInt_\cR \frac{1}{2}\om^2\ D(x,y)^2\,\rho(x,y)\,\dee{x}\,\dee{y}
+=\frac{1}{2}\om^2 \dblInt_\cR \ D(x,y)^2\,\rho(x,y)\,\dee{x}\,\dee{y}
+=\frac{1}{2} I_\cA\,\om^2
+</me>
+where
+</p>
+
+<definition xml:id="def_moment_of_inertia"><title>Moment of Inertia</title>
+<statement><p>
+<me>
+I_\cA=\dblInt_\cR D(x,y)^2\rho(x,y)\ \dee{x}\,\dee{y}
+</me>
+is called the <em>moment of inertial</em> of <m>\cR</m> about the axis <m>\cA</m>.
+In particular the moment of inertia of <m>\cR</m> about the <m>y</m>-axis is
+<me>
+I_y=\dblInt_\cR x^2\,\rho(x,y)\ \dee{x}\,\dee{y}
+</me>
+and the moment of inertia of <m>\cR</m> about the <m>x</m>-axis is
+<me>
+I_x=\dblInt_\cR y^2\,\rho(x,y)\ \dee{x}\,\dee{y}
+</me>
+</p>
+
+</statement>
+</definition>
+
+<p>
+Notice that the expression <m>\frac{1}{2} I_\cA\,\om^2</m> for the kinetic
+energy has  a very similar form
+to <m>\frac{1}{2} m v^2</m>, just with the velocity <m>v</m> replaced by the angular
+velocity <m>\om</m>, and with the mass <m>m</m> replaced by <m>I_\cA</m>, which can be thought
+of as being a bit like a mass.
+</p>
+
+<p>So far, we have been assuming that the rotation was taking place in the
+<m>xy</m>-plane <mdash/> a two dimensional world. Our analysis extends naturally
+to three dimensions, though the resulting integral formulae for the
+moment of inertia will then be triple integrals, which we have not yet
+dealt with. We shall soon do so, but let's first do an example in two
+dimensions.
+</p>
+
+<example xml:id="eg_moment_disk"><title>Disk</title>
+<statement>
+<p>
+Find the moment of inertia of the interior, <m>\cR</m>,
+of the circle <m>x^2+y^2=a^2</m> about the <m>x</m>-axis.
+Assume that it has density one.
+</p>
+</statement>
+
+<solution>
+<p>
+The distance from any point <m>(x,y)</m> inside the disk to the axis of
+</p>
+
+<sidebyside>
+<image source="figs/diskI"/>
+</sidebyside>
+
+<p>
+rotation (i.e. the <m>x</m>-axis) is <m>|y|</m>.
+So the moment of inertia of
+the interior of the disk about the <m>x</m>-axis is
+<me>
+I_x = \dblInt_\cR y^2\ \dee{x}\dee{y}
+</me>
+Switching to polar coordinates
+<fn>See how handy they are!</fn>
+,
+<md>
+<mrow>
+I_x &amp;= \int_0^{2\pi}\dee{\theta}\int_0^{a}\dee{r}\ r
+       \overbrace{(r\sin\theta)^2}^{y^2}
+= \int_0^{2\pi}\dee{\theta}\ \sin^2\theta\int_0^a\dee{r}\ r^3
+</mrow><mrow>
+&amp;=\frac{a^4}{4}\int_0^{2\pi}\dee{\theta}\ \sin^2\theta
+=\frac{a^4}{4} \int_0^{2\pi}\dee{\theta}\ \frac{1-\cos(2\theta)}{2}
+</mrow><mrow>
+&amp;=\frac{a^4}{8} \left[\theta-\frac{\sin(2\theta)}{2}\right]_0^{2\pi}
+</mrow><mrow>
+&amp;=\frac{1}{4}\pi a^4
+</mrow>
+</md>
+For an efficient, sneaky, way to evaluate
+<m> \int_0^{2\pi} \sin^2\theta\ \dee{\theta}</m>, see
+Remark <xref ref="rem_sneaky"/>.
+</p>
+</solution>
+</example>
+
+<example xml:id="eg_moment_cardiod"><title>Cardioid</title>
+<statement>
+<p>
+Find the moment of inertia of the interior, <m>\cR</m>,
+of the cardiod <m>r=a(1+\cos\theta)</m> about the <m>z</m>-axis.
+Assume that the cardiod lies in the <m>xy</m>-plane and  has density one.
+</p>
+</statement>
+
+<solution>
+<p>
+  We sketched the cardiod (with <m>a=1</m>) in Example <xref ref="eg_cardioid"/>.
+</p>
+
+<sidebyside>
+<image source="figs/cardioidIZ"/>
+</sidebyside>
+
+<p>
+As we said above, the formula for <m>I_\cA</m> in Definition
+<xref ref="def_moment_of_inertia"/> is valid even when the axis of
+rotation is not contained in the <m>xy</m>-plane. We just have to
+be sure that our <m>D(x,y)</m> really is the distance from <m>(x,y)</m> to
+the axis of rotation. In this example the axis of rotation is the
+<m>z</m>-axis so that <m>D(x,y)=\sqrt{x^2+y^2}</m> and that the moment of
+inertia is
+<me>
+I_\cA = \dblInt_\cR (x^2+y^2)\ \dee{x}\dee{y}
+</me>
+Switching to polar coordinates,
+<md>
+<mrow>
+I_\cA &amp;= \int_0^{2\pi}\dee{\theta}\int_0^{a(1+\cos\theta)}\dee{r}\ r\times r^2
+      = \int_0^{2\pi}\dee{\theta}\ \int_0^{a(1+\cos\theta)}\dee{r}\ r^3
+</mrow><mrow>
+&amp;=\frac{a^4}{4}\int_0^{2\pi}\dee{\theta}\
+          \big(1+\cos\theta\big)^4
+</mrow><mrow>
+&amp;=\frac{a^4}{4}\int_0^{2\pi}\dee{\theta}\
+          \big(1+4\cos\theta+6\cos^2\theta+4\cos^3\theta+\cos^4\theta\big)
+</mrow>
+</md>
+Now
+<md>
+<mrow>
+\int_0^{2\pi}\dee{\theta}\ \cos\theta
+     &amp;= \sin\theta\Big|_0^{2\pi}
+     =0
+</mrow><mrow>
+\int_0^{2\pi}\dee{\theta}\ \cos^2\theta
+     &amp;= \int_0^{2\pi}\dee{\theta}\ \frac{1+\cos(2\theta)}{2}
+     = \frac{1}{2}\left[\theta+\frac{\sin(2\theta)}{2}\right]_0^{2\pi}
+     =\pi
+</mrow><mrow>
+\int_0^{2\pi}\dee{\theta}\ \cos^3\theta
+     &amp;= \int_0^{2\pi}\dee{\theta}\ \cos\theta\big[1-\sin^2\theta\big]
+      \eqover{u=\sin\theta} \int_0^0\dee{u}\ (1-u^2)
+     =0
+</mrow>
+</md>
+To integrate <m>\cos^4\theta</m>, we use the double angle formula
+<md>
+<mrow>
+\cos^2\theta &amp;=\frac{\cos(2\theta)+1}{2}
+</mrow><mrow>
+\implies \cos^4\theta &amp;= \frac{\big(\cos(2\theta)+1\big)^2}{4}
+    =\frac{\cos^2(2\theta)+2\cos(2\theta)+1}{4}
+    =\frac{\frac{\cos(4\theta)+1}{2}+2\cos(2\theta)+1}{4}
+</mrow><mrow>
+   &amp;=\frac{3}{8} +\frac{1}{2}\cos(2\theta) +\frac{1}{8}\cos(4\theta)
+</mrow>
+</md>
+to give
+<md>
+<mrow>
+\int_0^{2\pi}\dee{\theta}\ \cos^4\theta
+=\int_0^{2\pi}\dee{\theta}\ \left[\frac{3}{8}
+         +\frac{1}{2}\cos(2\theta) +\frac{1}{8}\cos(4\theta)\right]
+=\frac{3}{8} \times 2\pi +\frac{1}{2}\times 0 +\frac{1}{8}\times 0
+=\frac{3}{4}\pi
+</mrow>
+</md>
+All together
+<md>
+<mrow>
+I_\cA&amp;= \frac{a^4}{4}\left[2\pi + 4\times 0 +6\pi+4\times 0
+                        +\frac{3}{4}\pi\right]
+</mrow><mrow>
+   &amp;=\frac{35}{16}\pi a^4
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+
+<!--
+<p>\intremark{
+<example><title>Cardoid</title>
+<p>xml:id="eg_moment_cardiod_B"
+Find the moment of inertia of the interior, <m>\cR</m>,
+of the cardiod <m>r=a(1+\cos\theta)</m>
+about the <m>x</m>-axis. Assume that it has density one.
+</p>
+
+<p>\soln We sketched the cardiod (with <m>a=1</m>) in Example <xref ref="eg_cardioid"/>.
+\vadjust{
+</p>
+
+<p><sidebyside>
+<image source="figs/cardioidI"/>
+</sidebyside>
+}
+
+The distance from any point <m>(x,y)</m> inside the cardioid to the axis of
+rotation (i.e. the <m>x</m>-axis) is <m>|y|</m>. So the moment of inertia of
+the interior of the cardioid about the <m>x</m>-axis is
+<me>
+I_x = \dblInt_\cR y^2\ \dee{x}\dee{y}
+</me>
+Switching to polar coordinates,
+<md>
+<mrow>
+I_x &amp;= \int_0^{2\pi}\dee{\theta}\int_0^{a(1+\cos\theta)}\dee{r}\ r
+       \overbrace{(r\sin\theta)^2}^{y^2}
+= \int_0^{2\pi}\dee{\theta}\ \sin^2\theta\int_0^{a(1+\cos\theta)}\dee{r}\ r^3
+</mrow><mrow>
+&amp;=\frac{a^4}{4}\int_0^{2\pi}\dee{\theta}\ \sin^2\theta
+          \big(1+\cos\theta\big)^4
+</mrow><mrow>
+&amp;=\frac{a^4}{4}\int_0^{2\pi}\dee{\theta}\ \sin^2\theta
+          \big(1+4\cos\theta+6\cos^2\theta+4\cos^3\theta+\cos^4\theta\big)
+</mrow><mrow>
+</mrow>
+</md>
+Now
+<md>
+<mrow>
+\int_0^{2\pi}\dee{\theta}\ \sin^2\theta
+     &amp;= \int_0^{2\pi}\dee{\theta}\ \frac{1-\cos(2\theta)}{2}
+     = \frac{1}{2}\left[\theta-\frac{\sin(2\theta)}{2}\right]_0^{2\pi}
+     =\pi
+</mrow><mrow>
+\int_0^{2\pi}\dee{\theta}\ \sin^2\theta\,\cos^2\theta
+     &amp;= \frac{1}{4}\int_0^{2\pi}\dee{\theta}\ \sin^2(2\theta)
+     = \frac{1}{4}\int_0^{2\pi}\dee{\theta}\ \frac{1-\cos(4\theta)}{2}
+     = \frac{1}{8}\left[\theta-\frac{\sin(4\theta)}{4}\right]_0^{2\pi}
+     =\frac{\pi}{4}
+</mrow><mrow>
+\int_0^{2\pi}\dee{\theta}\ \sin^2\theta\,\cos^4\theta
+     &amp;= \frac{1}{4}\int_0^{2\pi}\dee{\theta}\ \sin^2(2\theta)\cos^2\theta
+      = \frac{1}{4}\int_0^{2\pi}\dee{\theta}\ \sin^2(2\theta)
+                        \frac{1+\cos(2\theta)}{2}
+</mrow><mrow>
+     &amp;=\frac{1}{2}\times\frac{\pi}{4}
+</mrow><mrow>
+\int_0^{2\pi}\dee{\theta}\ \cos\theta\ \sin^2\theta
+     &amp;\eqover{u=\sin\theta} \int_0^0\dee{u}\ u^2
+     =0
+</mrow><mrow>
+\int_0^{2\pi}\dee{\theta}\ \sin^2\theta\ \cos^3\theta
+     &amp;\eqover{u=\sin\theta} \int_0^0\dee{u}\ u^2(1-u^2)
+     =0
+</mrow><mrow>
+</mrow>
+</md>
+so that
+<md>
+<mrow>
+I_x&amp;= \frac{a^4}{4}\left[\pi + 4\times 0 +6\times \frac{\pi}{4}+4\times 0
+                        +\frac{\pi}{8}\right]
+</mrow><mrow>
+   &amp;=\frac{21}{32}\pi a^4
+</mrow>
+</md>
+</p>
+
+</example>
+</p>
+-->
+
+</subsection>
+
+</section>

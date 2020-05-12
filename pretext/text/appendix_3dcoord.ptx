@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="ap_3dcoord">
+<title>3d Coordinate Systems</title>
+
+<subsection xml:id="ap_cartCoord">
+  <title>Cartesian Coordinates</title>
+
+<p>
+Here is a figure showing the definitions of the
+three Cartesian coordinates <m>(x,y,z)</m>
+</p>
+
+<sidebyside>
+<image source="figs/cart1"/>
+</sidebyside>
+
+<p>
+and here are three figures showing a surface of constant <m>x</m>,
+a surface of constant <m>x</m>, and a surface of constant <m>z</m>.
+</p>
+
+<sidebyside>
+<image source="figs/cart3"/>
+<image source="figs/cart4"/>
+<image source="figs/cart2"/>
+</sidebyside>
+
+<p>
+Finally here is a figure showing the volume element <m>\dee{V}</m> in
+cartesian coordinates.
+</p>
+
+<sidebyside>
+<image source="figs/cart5"/>
+</sidebyside>
+</subsection>
+
+<subsection xml:id="ap_cylCoord">
+
+<title> Cylindrical Coordinates</title>
+
+<p>Here is a figure showing the definitions of the
+three cylindrical coordinates
+<md>
+<mrow>
+r&amp;=\text{ distance from }(0,0,0)\text{ to }(x,y,0)
+</mrow><mrow>
+\theta&amp;=\text{ angle between the the $x$ axis and the line joining $(x,y,0)$ to $(0,0,0)$}
+</mrow><mrow>
+z&amp;=\text{ signed distance from }(x,y,z)
+\text{ to the $xy$-plane}
+</mrow>
+</md>
+</p>
+
+<sidebyside>
+<image source="figs/cyl1"/>
+</sidebyside>
+
+<p>
+The cartesian and cylindrical coordinates are related by
+<md>
+<mrow>
+x&amp;=r\cos\theta &amp;
+y&amp;=r\sin\theta &amp;
+z&amp;=z
+</mrow><mrow>
+    r&amp;=\sqrt{x^2+y^2} &amp;
+    \theta&amp;=\arctan\frac{y}{x} &amp;
+    z&amp;=z
+</mrow>
+</md>
+Here are three figures showing a surface of constant <m>r</m>,
+a surface of constant <m>\theta</m>, and a surface of constant <m>z</m>.
+</p>
+
+<sidebyside>
+<image source="figs/cyl3"/>
+<image source="figs/cyl4"/>
+<image source="figs/cyl2"/>
+</sidebyside>
+
+<p>
+Finally here is a figure showing the volume element <m>\dee{V}</m> in
+cylindrical coordinates.
+</p>
+
+<sidebyside>
+<image source="figs/cyl5"/>
+</sidebyside>
+
+</subsection>
+
+<subsection xml:id="ap_spherCoord">
+<title>Spherical Coordinates</title>
+
+<p>Here is a figure showing the definitions of the
+three spherical coordinates
+<md>
+<mrow>
+\rho&amp;=\text{ distance from }(0,0,0)\text{ to }(x,y,z)
+</mrow><mrow>
+\varphi&amp;=\text{ angle between the $z$ axis and the line joining $(x,y,z)$ to $(0,0,0)$}
+</mrow><mrow>
+\theta&amp;=\text{ angle between the $x$ axis and the line joining $(x,y,0)$ to $(0,0,0)$}
+</mrow>
+</md>
+</p>
+
+<sidebyside>
+<image source="figs/spherical"/>
+</sidebyside>
+<p>
+and here are two more figures giving the side and top views of the
+previous figure.
+</p>
+
+<sidebyside>
+<image source="figs/sphericalSide"/>
+<image source="figs/sphericalTop"/>
+</sidebyside>
+
+<p>
+The cartesian and spherical coordinates
+are related by
+<md>
+<mrow>
+x&amp;=\rho\sin\varphi\cos\theta &amp;
+y&amp;=\rho\sin\varphi\sin\theta &amp;
+z&amp;=\rho\cos\varphi
+</mrow><mrow>
+ \rho&amp;=\sqrt{x^2+y^2+z^2} &amp;
+ \theta&amp;=\arctan\frac{y}{x} &amp;
+ \varphi&amp;=\arctan\frac{\sqrt{x^2+y^2}}{z}
+</mrow>
+</md>
+Here are three figures showing a surface of constant <m>\rho</m>,
+a surface of constant <m>\theta</m>, and a surface of constant <m>\varphi</m>.
+</p>
+
+<sidebyside>
+<image source="figs/spher2"/>
+<image source="figs/spher3"/>
+<image source="figs/spher4"/>
+</sidebyside>
+
+
+<p>
+Here is a figure showing the surface element <m>\dee{S}</m> in
+spherical coordinates
+</p>
+
+<sidebyside>
+<image source="figs/spher11"/>
+</sidebyside>
+<p>
+and two extracts of the above figure to make it easier to see
+how the factors <m>\rho\ \dee{\varphi}</m> and
+<m>\rho\sin\varphi\ \dee{\theta}</m> arise.
+</p>
+
+<sidebyside>
+<image source="figs/spher9"/>
+<image source="figs/spher10"/>
+</sidebyside>
+
+<p>
+Finally, here is a figure showing the volume element <m>\dee{V}</m> in
+spherical coordinates
+</p>
+<sidebyside>
+<image source="figs/spher5"/>
+</sidebyside>
+
+</subsection>
+</section>
