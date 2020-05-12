@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="app_deriv">
+<title>Table of Derivatives</title>
+
+<p>Throughout this table, <m>a</m> and <m>b</m> are constants, independent of <m>x</m>.
+</p>
+
+<sidebyside width="">
+<tabular left="minor" right="minor" bottom="minor" top="minor">
+<row>
+<cell> <m>F(x)</m> </cell><cell> <m>F'(x)=\diff{F}{x}</m> </cell>
+</row><row>
+<cell>
+<m>af(x)+bg(x)</m> </cell><cell> <m>af'(x)+bg'(x)</m> </cell>
+</row><row>
+<cell> <m>f(x)+g(x)</m> </cell><cell> <m>f'(x)+g'(x)</m> </cell>
+</row><row>
+<cell> <m>f(x)-g(x)</m> </cell><cell> <m>f'(x)-g'(x)</m> </cell>
+</row><row>
+<cell>  <m>af(x)</m> </cell><cell> <m>af'(x)</m> </cell>
+</row><row>
+<cell> <m>f(x)g(x)</m> </cell><cell> <m>f'(x)g(x)+f(x)g'(x)</m> </cell>
+</row><row>
+<cell> <m>f(x)g(x)h(x)</m> </cell><cell><m>f'(x)g(x)h(x)+f(x)g'(x)h(x)+f(x)g(x)h'(x)</m> </cell>
+</row><row>
+<cell>  <m>\frac{f(x)}{g(x)}</m> </cell><cell> <m>\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}</m> </cell>
+</row><row>
+<cell>  <m>\frac{1}{g(x)}</m> </cell><cell> <m>-\frac{g'(x)}{g(x)^2}</m> </cell>
+</row><row>
+<cell> <m>f\big(g(x)\big)</m> </cell><cell> <m>f'\big(g(x)\big)g'(x)</m> </cell>
+</row>
+</tabular>
+</sidebyside>
+
+<sidebyside>
+<tabular left="minor" right="minor" bottom="minor" top="minor">
+<row>
+<cell><m>F(x)</m> </cell><cell> <m>F'(x)=\diff{F}{x}</m> </cell>
+</row><row>
+<cell><m>a</m> </cell><cell> <m>0</m> </cell>
+</row><row>
+<cell><m>x^a</m> </cell><cell> <m>ax^{a-1}</m> </cell>
+</row><row>
+<cell>  <m>g(x)^a</m> </cell><cell> <m>ag(x)^{a-1}g'(x)</m> </cell>
+</row><row>
+<cell> <m>\sin x</m> </cell><cell> <m>\cos x</m> </cell>
+</row><row>
+<cell><m>\sin g(x)</m> </cell><cell> <m>g'(x)\cos g(x)</m> </cell>
+</row><row>
+<cell> <m>\cos x</m> </cell><cell> <m>-\sin x</m> </cell>
+</row><row>
+<cell> <m>\cos g(x)</m> </cell><cell> <m>-g'(x)\sin g(x)</m> </cell>
+</row><row>
+<cell>  <m>\tan x</m> </cell><cell> <m>\sec^2 x</m> </cell>
+</row><row>
+<cell>  <m>\csc x</m> </cell><cell> <m>-\csc x\cot x</m> </cell>
+</row><row>
+<cell> <m>\sec x</m> </cell><cell> <m>\sec x\tan x</m> </cell>
+</row><row>
+<cell> <m>\cot x</m> </cell><cell> <m>-\csc^2 x</m> </cell>
+</row><row>
+<cell> <m>e^x</m> </cell><cell> <m>e^x</m> </cell>
+</row><row>
+<cell>  <m>e^{g(x)}</m> </cell><cell> <m>g'(x)e^{g(x)}</m> </cell>
+</row><row>
+<cell>  <m>a^x</m> </cell><cell> <m>(\ln a)\ a^x</m> </cell>
+</row>
+</tabular>
+</sidebyside>
+
+
+<sidebyside>
+<tabular  left="minor" right="minor" bottom="minor" top="minor">
+<row>
+<cell><m>F(x)</m> </cell><cell> <m>F'(x)=\diff{F}{x}</m> </cell>
+</row><row>
+<cell> <m>\ln x</m> </cell><cell> <m>\frac{1}{x}</m> </cell>
+</row><row>
+<cell>  <m>\ln g(x)</m> </cell><cell> <m>\frac{g'(x)}{g(x)}</m> </cell>
+</row><row>
+<cell> <m>\log_a x</m> </cell><cell> <m>\frac{1}{x\ln a}</m> </cell>
+</row><row>
+<cell> <m>\arcsin x</m> </cell><cell> <m>\frac{1}{\sqrt{1-x^2}}</m> </cell>
+</row><row>
+<cell>  <m>\arcsin g(x)</m> </cell><cell> <m>\frac{g'(x)}{\sqrt{1-g(x)^2}}</m> </cell>
+</row><row>
+<cell>  <m>\arccos x</m> </cell><cell> <m>-\frac{1}{\sqrt{1-x^2}}</m> </cell>
+</row><row>
+<cell> <m>\arctan x</m> </cell><cell> <m>\frac{1}{1+x^2}</m> </cell>
+</row><row>
+<cell>  <m>\arctan g(x)</m> </cell><cell> <m>\frac{g'(x)}{1+g(x)^2}</m> </cell>
+</row><row>
+<cell> <m>\arccsc x</m> </cell><cell> <m>-\frac{1}{|x|\sqrt{x^2-1}}</m> </cell>
+</row><row>
+<cell> <m>\arcsec x</m> </cell><cell> <m>\frac{1}{|x|\sqrt{x^2-1}}</m> </cell>
+</row><row>
+<cell>  <m>\arccot x</m> </cell><cell> <m>-\frac{1}{1+x^2}</m> </cell>
+</row>
+</tabular>
+</sidebyside>
+
+</section>

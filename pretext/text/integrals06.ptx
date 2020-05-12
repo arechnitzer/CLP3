@@ -6,6 +6,7 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <title>Triple Integrals in Cylindrical Coordinates</title>
+<introduction>
 
 <p>Many problems possess natural symmetries. We can make our work easier
 by using coordinate systems, like  polar coordinates, that are
@@ -13,8 +14,11 @@ tailored to those symmetries. In this section we will look at two
 more such coordinate systems <mdash/> cylindrical and spherical coordinates.
 </p>
 
-<p>\subsection{Cylindrical Coordinates} xml:id="sec_cylindrical_coords"
-</p>
+</introduction>
+
+<subsection xml:id="sec_cylindrical_coords">
+  <title>Cylindrical Coordinates</title>
+
 
 <p>In the event that we wish to compute, for example, the mass
 of an object that is invariant under rotations about the
@@ -24,8 +28,10 @@ of an object that is invariant under rotations about the
 it is advantageous to use a natural generalization of polar coordinates
 to three dimensions. The coordinate system is called <em>cylindrical
 coordinates</em>.
-<definition>
-<statement><p>xml:id="def_cylindrical"
+</p>
+
+<definition xml:id="def_cylindrical">
+<statement><p>
 Cylindrical coordinates are denoted
 <fn>We are using the
 standard mathematics conventions for the cylindrical coordinates.
@@ -37,24 +43,28 @@ Under the ISO conventions they are <m>(\rho,\varphi,z)</m>.</fn>
 <mrow>
 r&amp;=\text{ the distance from }(x,y,0)\text{ to }(0,0,0)
 </mrow><mrow>
- &amp;=\text{ the distance from }(x,y,z)\text{ to the <m>z</m>-axis}
+ &amp;=\text{ the distance from }(x,y,z)\text{ to the $z$-axis}
 </mrow><mrow>
-\theta&amp;=\text{ the angle between the positive <m>x</m> axis and the
-            line joining <m>(x,y,0)</m> to <m>(0,0,0)</m>}
+\theta&amp;=\text{ the angle between the positive $x$ axis and}
+</mrow><mrow>
+  &amp; \qquad\qquad \text{the line joining $(x,y,0)$ to $(0,0,0)$}
 </mrow><mrow>
 z&amp;=\text{ the signed distance from }(x,y,z)
-\text{ to the <m>xy</m>-plane}
+\text{ to the $xy$-plane}
 </mrow>
 </md>
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/../figs_coord/cyl1.pdf"/>
 </sidebyside>
+<p>
 That is, <m>r</m> and <m>\theta</m> are the usual polar coordinates and <m>z</m> is the
 usual <m>z</m>.
 </p></statement>
 </definition>
+
+<p>
  The Cartesian and cylindrical coordinates
 are related by
 <fn>As was the case for polar coordinates, it is
@@ -62,7 +72,9 @@ sometimes convenient to extend these definitions by saying that
 <m>x = r\cos\theta</m> and <m>y = r\sin\theta</m> even when r is negative. See the end of Section <xref ref="sec_polar_coords"/>.</fn>
 </p>
 
-<p>\begin{impeqn}xml:id="eqn_cylindrical"
+<fact xml:id="eqn_cylindrical">
+  <statement>
+    <p>
 <md>
 <mrow>
 x&amp;=r\cos\theta &amp;
@@ -74,19 +86,25 @@ z&amp;=z
     z&amp;=z
 </mrow>
 </md>
-\end{impeqn}
+</p>
+</statement>
+</fact>
+
+<p>
 Here are sketches of surfaces of constant <m>r</m>, constant <m>\theta</m>, and constant <m>z</m>.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/../figs_coord/cyl3.pdf"/>\qquad
-    <image source="problems/figs/../figs_coord/cyl4.pdf"/>\qquad
-    <image source="problems/figs/../figs_coord/cyl2.pdf"/>
+<sidebyside>
+<image source="problems/figs/../figs_coord/cyl3.pdf"/>
+<image source="problems/figs/../figs_coord/cyl4.pdf"/>
+<image source="problems/figs/../figs_coord/cyl2.pdf"/>
 </sidebyside>
-</p>
 
-<p>\subsection{The Volume Element in Cylindrical Coordinates} xml:id="sec_cylindrical_vol"
-</p>
+</subsection>
+
+<subsection xml:id="sec_cylindrical_vol">
+  <title>The Volume Element in Cylindrical Coordinates</title>
+
 
 <p> Before we can start integrating using these coordinates
 we need to determine the volume element. Recall that before integrating
@@ -129,9 +147,10 @@ being <m>\dee{r}</m>,
 we end up with approximate cubes that look like
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/cylCube.pdf"/>
 </sidebyside>
+<p>
 <ul>
 <li>
 When we introduced slices using surfaces of constant <m>r</m>,
@@ -162,15 +181,23 @@ So the volume of the approximate cube in cylindrical coordinates is
 <m>\dee{V}
 </m> works perfectly when we take the limit <m>\dee{r},\dee{\theta},
 \dee{z}\rightarrow 0</m> of Riemann sums.</fn>)
-\begin{impeqn}xml:id="eq_dV_cylindrical"
+</p>
+
+<fact xml:id="eq_dV_cylindrical">
+  <statement>
+    <p>
 <me>
 \dee{V} = r\,\dee{r}\,\dee{\theta}\,\dee{z}
 </me>
-\end{impeqn}
 </p>
+</statement>
+</fact>
 
-<p>\subsection{Sample Integrals in Cylindrical Coordinates} xml:id="sec_cylindrical_eg"
-</p>
+</subsection>
+
+<subsection xml:id="sec_cylindrical_eg">
+  <title>Sample Integrals in Cylindrical Coordinates</title>
+
 
 <p>Now we can use <xref ref="eq_dV_cylindrical"/> to handle a variant of
 Example <xref ref="eg_sphere_mass_A"/>
@@ -181,13 +208,16 @@ or when the domain of integration is cylindrical.
 </p>
 
 <example xml:id="eg_sphere_mass_B">
+<statement>
 <p>
 Find the mass inside the sphere <m>x^2+y^2+z^2=1</m> if the density
 is <m>\rho(x,y,z) = x^2+y^2</m> (which is the square of the
 distance from the <m>z</m>-axis).
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 Before we get started, note that both the integrand, <m>x^2+y^2</m>,
 and the domain of integration, <m>x^2+y^2+z^2\le 1</m>, are invariant under rotations about the <m>z</m>-axis. That makes this
 integral a good candidate for cylindrical coordinates.
@@ -285,7 +315,7 @@ essentially, <m>r=\sqrt{1-z^2}</m>.  See the figure on the right below.
 
 <p>Now we can build up the mass.
 <ul>
-<li>
+<li><p>
 Concentrate on one approximate cube. Let's say that it contains the point
 with cylindrical coordinates <m>r</m>, <m>\theta</m> and <m>z</m>.
 <ul>
@@ -301,7 +331,7 @@ and so
 essentially has mass <m>r^3\,\dee{r}\,\dee{\theta}\,\dee{z}</m>.
 (See how nice the right coordinate system can be!)
 </li>
-</ul>
+</ul></p>
 </li>
 <li>
 To get the mass any one wedge, say the wedge whose <m>\theta</m> coordinate runs
@@ -351,7 +381,7 @@ So the mass of the total (eight octant) sphere is <m>8\times\frac{1}{15}\pi=\fra
 </ul>
 </p>
 
-<p>\noindent
+<p>
 Just by way of comparison, here is the integral in Cartesian
 coordinates that gives the mass in the first octant. (We found the limits
 of integration in Example <xref ref="eg_sphere_mass_A"/>.)
@@ -360,16 +390,15 @@ of integration in Example <xref ref="eg_sphere_mass_A"/>.)
            \big(x^2+y^2\big)
 </me>
 </p>
-
+</solution>
 </example>
 
 
 <example xml:id="eg_moment_cone">
+<statement>
 <p>
 Find the moment of inertia of a right circular cone
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 of radius <m>a</m>,
 </li>
@@ -383,18 +412,20 @@ of constant density with mass <m>M</m>
 about an axis through the vertex (i.e. the tip of the cone)
 and parallel to the base.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 Here is a sketch of the cone.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/cone"/>
 </sidebyside>
+
+<p>
 Let's pick a coordinate system with
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 the vertex at the origin,
 </li>
@@ -408,23 +439,27 @@ the axis of rotation being the <m>y</m>-axis.
 and call the cone <m>\cV</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/coneZ"/>
 </sidebyside>
-</p>
 
 <p>The Definition <xref ref="def_moment_of_inertia"/> of the moment of inertia
 was restricted to two dimensions. However, as was pointed out at the time,
 the same analysis extends naturally to the definition
-\begin{impeqn}xml:id="eqn_mom_of_inertia_3d"
-<me>
+</p>
+
+<fact xml:id="eqn_mom_of_inertia_3d">
+  <statement>
+    <p>
+      <me>
 I_\cA=\tripInt_\cV D(x,y,z)^2\,\rho(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z}
 </me>
-\end{impeqn}
+</p>
+</statement>
+</fact>
+<p>
 of the moment of inertia of a solid <m>\cV</m> in three dimensions. Here
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 <m>\rho(x,y,z)</m> is the mass density of the solid at the point <m>(x,y,z)</m> and
 </li>
@@ -439,9 +474,10 @@ D(x,y,z) = \sqrt{x^2+z^2}
 </me>
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/cart6"/>
 </sidebyside>
+<p>
 Our solid has constant density and mass <m>M</m>, so
 <me>
 \rho(x,y,z) = \frac{M}{\text{Volume}(\cV)}
@@ -555,8 +591,8 @@ as expected, and
       \frac{1}{4}\left(\frac{a}{h}z\right)^4\cos^2\theta
        +\frac{1}{2}\left(\frac{a}{h}z\right)^2z^2\right]
 </mrow><mrow>
-&amp;\hskip1in\text{since <m>\int_0^{2\pi}\cos^2\theta\ \dee{\theta}=\pi</m>
-                 by Remark <xref ref="rem_sneaky"/>}
+&amp;\hskip1in\text{since } \int_0^{2\pi}\cos^2\theta\ \dee{\theta}=\pi
+                 \text{by Remark } <xref ref="rem_sneaky"/>
 </mrow><mrow>
 &amp;=\int_0^h\dee{z}\left[
       \frac{1}{4}\frac{a^4}{h^4}
@@ -584,7 +620,10 @@ I_\cA
 </mrow>
 </md>
 </p>
+</solution>
 
 </example>
+
+</subsection>
 
 </section>

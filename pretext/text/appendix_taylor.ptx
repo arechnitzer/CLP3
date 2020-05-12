@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="app_taylor">
+<title>Table of Taylor Expansions</title>
+
+<p>Let <m>n\ge </m> be an integer. Then if the function <m>f</m> has <m>n+1</m> derivatives on an interval that contains both <m>x_0</m> and <m>x</m>, we have the Taylor expansion
+<md>
+<mrow>
+f(x)&amp;=f(x_0)+f'(x_0)\,(x-x_0)+\dfrac{1}{2!}f'(x_0)\,(x-x_0)^2+\cdots
++\dfrac{1}{n!}f^{(n)}(x_0)\,(x-x_0)^n
+</mrow><mrow> &amp;\hskip0.5in
++\dfrac{1}{(n+1)!}f^{(n+1)}(c)\,(x-x_0)^{n+1}\qquad\hbox{for some $c$ between
+$x_0$ and $x$}
+</mrow>
+</md>
+The limit as <m>n\rightarrow\infty</m> gives the Taylor series
+<md>
+<mrow>
+f(x)&amp;=\sum_{n=0}^\infty\dfrac{f^{(n)}(x_0)}{n!}(x-x_0)^n
+</mrow>
+</md>
+for <m>f</m>. When <m>x_0=0</m> this is also called the Maclaurin series for <m>f</m>.
+Here are Taylor series expansions of some important functions.
+<md>
+<mrow>
+e^x&amp;=\sum_{n=0}^\infty \dfrac{1}{n!}x^n
+                       &amp;&amp;\text{for } -\infty \lt x \lt \infty
+</mrow><mrow>
+&amp;=1+x+\dfrac{1}{2}x^2+\dfrac{1}{3!}x^3+\cdots+\dfrac{1}{n!}x^n+\cdots
+</mrow><mrow>
+\sin x&amp;=\sum_{n=0}^\infty\dfrac{(-1)^n}{(2n+1)!}x^{2n+1}
+                        &amp;&amp;\text{for } -\infty \lt x \lt \infty
+</mrow><mrow>
+      &amp;=x-\dfrac{1}{3!}x^3+\dfrac{1}{5!}x^5-\cdots
+        +\dfrac{(-1)^n}{(2n+1)!}x^{2n+1}+\cdots
+</mrow><mrow>
+\cos x&amp;=\sum_{n=0}^\infty\dfrac{(-1)^n}{(2n)!}x^{2n}
+                      &amp;&amp;\text{for } -\infty \lt x \lt \infty
+</mrow><mrow>
+        &amp;=1-\dfrac{1}{2!}x^2+\dfrac{1}{4!}x^4-\cdots
+        +\dfrac{(-1)^n}{(2n)!}x^{2n}+\cdots
+</mrow><mrow>
+\dfrac{1}{1-x}&amp;=\sum_{n=0}^\infty x^n
+                  &amp;&amp;\text{for } -1\le x \lt 1
+</mrow><mrow>
+              &amp;=1+x+x^2+x^3+\cdots+x^n+\cdots
+</mrow><mrow>
+\dfrac{1}{1+x}&amp;=\sum_{n=0}^\infty(-1)^n x^n
+                   &amp;&amp;\text{for } -1 \lt x\le 1
+</mrow><mrow>
+              &amp;=1-x+x^2-x^3+\cdots+(-1)^nx^n+\cdots
+</mrow><mrow>
+\ln(1-x)&amp;=-\sum_{n=1}^\infty\dfrac{1}{n}x^n
+                 &amp;&amp;\text{for } -1\le x \lt  1
+</mrow><mrow>
+        &amp;=-x-\half x^2-\dfrac{1}{3}x^3-\cdots-\dfrac{1}{n}x^n-\cdots
+</mrow><mrow>
+\ln(1+x)&amp;=-\sum_{n=1}^\infty\dfrac{(-1)^n}{n}x^n
+                    &amp;&amp;\text{for } -1 \lt x\le 1
+</mrow><mrow>
+        &amp;=x-\half x^2+\dfrac{1}{3}x^3-\cdots-\dfrac{(-1)^n}{n}x^n-\cdots
+</mrow><mrow>
+(1+x)^p&amp;=1+px+\dfrac{p(p-1)}{2}x^2+\dfrac{p(p-1)(p-2)}{3!}x^3+\cdots
+</mrow><mrow>
+           &amp;\hskip0.5in+
+           \dfrac{p(p-1)(p-2)\cdots(p-n+1)}{n!}x^n+\cdots
+</mrow>
+</md>
+</p>
+</section>

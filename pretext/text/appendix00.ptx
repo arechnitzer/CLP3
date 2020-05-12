@@ -9,6 +9,12 @@
 <introduction>
   <p></p>
 </introduction>
+<xi:include href="./appendix_trig.ptx" />
+<xi:include href="./appendix_powerlog.ptx" />
+<xi:include href="./appendix_deriv.ptx" />
+<xi:include href="./appendix_integral.ptx" />
+<xi:include href="./appendix_taylor.ptx" />
+<xi:include href="./appendix_3dcoord.ptx" />
 <xi:include href="./appendix_quad.ptx" />
 
 </appendix>

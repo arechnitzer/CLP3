@@ -15,13 +15,16 @@ to add up all of the different pieces. We'll go through the
 details now by means of a number of examples.
 </p>
 
-<p><example>
-<p>xml:id="eg_sphere_mass_A"
+<example xml:id="eg_sphere_mass_A">
+<statement>
+<p>
 Find the mass inside the sphere <m>x^2+y^2+z^2=1</m> if the density
 is <m>\rho(x,y,z) = |xyz|</m>.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 The absolute values can complicate the computations. We can avoid
 those complications by exploiting the fact that,
 by symmetry, the total mass of the sphere will be eight times the mass
@@ -32,11 +35,13 @@ constant <m>z</m>, planes of constant <m>y</m>, and planes of constant <m>x</m>,
 which we recall look like
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/../figs_coord/cart2.pdf"/>\qquad
-    <image source="problems/figs/../figs_coord/cart4.pdf"/>\qquad
-    <image source="problems/figs/../figs_coord/cart3.pdf"/>
+<sidebyside>
+<image source="problems/figs/../figs_coord/cart2.pdf"/>
+<image source="problems/figs/../figs_coord/cart4.pdf"/>
+<image source="problems/figs/../figs_coord/cart3.pdf"/>
 </sidebyside>
+
+<p>
 <ul>
 <li><p>
 First slice the (the first octant part of the) sphere into horizontal
@@ -62,8 +67,8 @@ The bottom plate starts at <m>z=0</m> and the top plate ends at
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereMass1.pdf"/>\qquad
-    <image source="problems/figs/sphereMass1a.pdf"/>
+<image source="problems/figs/sphereMass1.pdf"/>
+<image source="problems/figs/sphereMass1a.pdf"/>
 </sidebyside>
 
 </li>
@@ -88,8 +93,8 @@ essentially, <m>y=\sqrt{1-z^2}</m>.  See the figure on the right below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereMass2.pdf"/>\quad
-    <image source="problems/figs/sphereMass2a.pdf"/>
+<image source="problems/figs/sphereMass2.pdf"/>
+<image source="problems/figs/sphereMass2a.pdf"/>
 </sidebyside>
 </li>
 <li><p>
@@ -118,7 +123,7 @@ essentially, <m>x=\sqrt{1-y^2-z^2}</m>.  See the figure on the right below.
 
 <p>Now we can build up the mass.
 <ul>
-<li>
+<li><p>
 Concentrate on one approximate cube. Let's say that it contains the point
 <m>(x,y,z)</m>.
 <ul>
@@ -132,7 +137,7 @@ essentially has density <m>\rho(x,y,z) = xyz</m> and so
 <li>
 essentially has mass <m>xyz\,\dee{x}\,\dee{y}\,\dee{z}</m>.
 </li>
-</ul>
+</ul></p>
 </li>
 <li>
 To get the mass of any one beam, say the beam whose <m>y</m> coordinate runs
@@ -188,9 +193,9 @@ So the mass of the total (eight octant) sphere is <m>8\times\frac{1}{48}=\frac{1
 </li>
 </ul>
 </p>
-
+</solution>
 </example>
-</p>
+
 
 <p>Consider, for example, the limits of integration for the integral
 <md>
@@ -219,8 +224,8 @@ Finally, when we are integrating over <m>z</m>, we have already integrated out
 </ul>
 </p>
 
-<p><example>
-<p>xml:id="eg_3d_limits_of_integration"
+<example xml:id="eg_3d_limits_of_integration">
+<p>
 In practice, often the hardest part of dealing with
 a triple integral is setting up the limits of integration.
 In this example, we'll concentrate on exactly that.
@@ -249,31 +254,32 @@ continues to the right)
 the part of the first octant with both <m>y\le 4-x</m> and  <m>z \le 4 - x^2</m>.
 That's
 <me>
-\cV=§et{(x,y,z)}{x\ge 0, y\ge 0,\  z\ge 0,\ x+y\le 4,\ z\le 4-x^2}
+\cV=\Set{(x,y,z)}{x\ge 0, y\ge 0,\  z\ge 0,\ x+y\le 4,\ z\le 4-x^2}
 </me>
 </li>
 </ul>
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/limits3dA.pdf"/>\qquad
-    <image source="problems/figs/limits3dB.pdf"/>\qquad
-    <image source="problems/figs/limits3dC.pdf"/>
+<sidebyside>
+<image source="problems/figs/limits3dA.pdf"/>
+<image source="problems/figs/limits3dB.pdf"/>
+<image source="problems/figs/limits3dC.pdf"/>
 </sidebyside>
-</p>
 
-<p>\noindent
+<p>
 <em>The iterated integral
    <m>\tripInt_\cV f(x, y, z)\ \dee{z}\,\dee{y} \,\dee{x}
-     =\int\left(\int\left(\int f(x, y, z)\ \dee{z}\right)\dee{y}\right)\dee{x} </m>:</em>\ \ \
+     =\int\left(\int\left(\int f(x, y, z)\ \dee{z}\right)\dee{y}\right)\dee{x} </m>:</em>
 For this iterated integral, the outside integral is with respect to
 <m>x</m>, so we first slice up <m>\cV</m> using planes of constant <m>x</m>,
 as in the figure below.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/limits3dD.pdf"/>
 </sidebyside>
+
+<p>
 Observe from that figure that, on <m>\cV</m>,
 <ul>
 <li>
@@ -298,23 +304,22 @@ So
 </md>
 </p>
 
-<p>\goodbreak\noindent
+<p>
 <em>The iterated integral
    <m>\tripInt_\cV f(x, y, z)\ \dee{y}\,\dee{x} \,\dee{z}
-   =\int\left(\int\left(\int f(x, y, z)\ \dee{y}\right)\dee{x} \right)\dee{z}</m>:</em>}
-    \ \ \
+   =\int\left(\int\left(\int f(x, y, z)\ \dee{y}\right)\dee{x} \right)\dee{z}</m>:</em>
 For this iterated integral, the outside integral is with respect to
 <m>z</m>, so we first slice up <m>\cV</m> using planes of constant <m>z</m>,
 as in the figure below.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/limits3dE.pdf"/>
 </sidebyside>
+
+<p>
 Observe from that figure that, on <m>\cV</m>,
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 <m>z</m> runs from <m>0</m> to <m>4</m>, and
 </li>
@@ -339,17 +344,16 @@ So
 </p>
 
 </example>
-</p>
 
-<p><example>
-<p>xml:id="eg_3d_integrals_exchange_of_order"
+<example xml:id="eg_3d_integrals_exchange_of_order">
+<p>
 As was said in the last example, in practice, often the hardest parts of
 dealing with a triple integral concern the limits of integration.
 In this example, we'll again concentrate on exactly that. This time, we will consider the integral
 <me>
 I=\int_0^2\dee{y}\int_0^{2-y}\dee{z}\int_0^{\frac{2-y}{2}}\dee{x}\ f(x,y,z)
 </me>
-and we will reexpress <m>I</m> with the outside integral being over <m>z</m>. We will
+and we will re-express <m>I</m> with the outside integral being over <m>z</m>. We will
 figure out the limits of integration for both the order
 <m>\int\dee{z}\int\dee{x}\int\dee{y}\ f(x,y,z)</m> and for the order
 <m>\int\dee{z}\int\dee{y}\int\dee{x}\ f(x,y,z)</m>.
@@ -372,10 +376,10 @@ the inside integral says that, for each <m>(y,z)</m> as above,
 </ul>
 So the domain of integration is
 <me>
-V=§et{(x,y,z)}{ 0\le y\le 2,\
+V=\Set{(x,y,z)}{ 0\le y\le 2,\
                  0\le z\le 2-y,\
                  0\le x\le \tfrac{2-y}{2}}
-\tag{<m>*</m>}</me>
+\tag{$*$}</me>
 We'll sketch <m>V</m> shortly. Because it is generally easier to make 2d sketches than it is to make 3d sketches, we'll first make a 2d sketch of the part of <m>V</m> that lies in the vertical plane <m>y=Y</m>. Here <m>Y</m> is any constant between
 <m>0</m> and <m>2</m>. Looking at the definition of <m>V</m>, we see that the point <m>(x,Y,z)</m>
 lies in <m>V</m> if and only if
@@ -388,10 +392,12 @@ Here, on the left, is a (2d) sketch of all <m>(x,z)</m>'s that obey those
 inequalities, and, on the right, is a (3d) sketch of all <m>(x,Y,z)</m>'s that obey those inequalities.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/figs_integration/xchange2.pdf"/>\qquad\qquad
-    <image source="problems/figs/figs_integration/xchange5.pdf"/>
+<sidebyside>
+<image source="problems/figs/figs_integration/xchange2.pdf"/>
+<image source="problems/figs/figs_integration/xchange5.pdf"/>
 </sidebyside>
+
+<p>
 So our solid <m>V</m> consists of a bunch of vertical rectangles stacked sideways along the <m>y</m>-axis. The rectangle in the plane <m>y=Y</m> has side lengths
 <m>\frac{2-Y}{2}</m> and <m>2-Y</m>. As we move from the plane <m>y=Y=0</m>, i.e. the <m>xz</m>-plane, to the plane <m>y=Y=2</m>, the rectangle decreases in size linearly
 from a one by two rectangle, when <m>Y=0</m>, to a zero by zero rectangle,
@@ -399,10 +405,12 @@ i.e. a point, when <m>Y=2</m>.
 Here is a sketch of <m>V</m> together with a typical <m>y=Y</m> rectangle.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/figs_integration/xchange4.pdf"/>
 </sidebyside>
-To reepress the given integral with the outside integral being with respect to <m>z</m>, we have to slice up <m>V</m> into horizontal plates by inserting planes
+
+<p>
+To re-express the given integral with the outside integral being with respect to <m>z</m>, we have to slice up <m>V</m> into horizontal plates by inserting planes
 of constant <m>z</m>. So we have to figure out what the part of <m>V</m> that lies in
 the horizontal plane <m>z=Z</m> looks like. From the figure above, we see that, in <m>V</m>, the smallest value of <m>z</m> is <m>0</m> and the biggest value of <m>z</m> is <m>2</m>.
 So <m>Z</m> is any constant between <m>0</m> and <m>2</m>. Again looking at the definition of <m>V</m> in <m>(*)</m> above, we see that the point <m>(x,y,Z)</m> lies in <m>V</m> if and only if
@@ -418,21 +426,23 @@ Here, on the left, is a (2d) sketch showing the top view of all <m>(x,y)</m>'s
 that obey those inequalities, and, on the right, is a (3d) sketch of all <m>(x,y,Z)</m>'s that obey those inequalities.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/figs_integration/xchange3.pdf"/>\qquad
-    <image source="problems/figs/figs_integration/xchange6.pdf"/>
+<sidebyside>
+<image source="problems/figs/figs_integration/xchange3.pdf"/>
+<image source="problems/figs/figs_integration/xchange6.pdf"/>
 </sidebyside>
+
+<p>
 To express <m>I</m> as an integral with the order of integration
 <m>\int\dee{z}\int\dee{y}\int\dee{x}\ f(x,y,z)</m>, we subdivide the plate at height <m>z</m> into vertical strips as in the figure
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/figs_integration/xchange3v.pdf"/>
 </sidebyside>
+
+<p>
 Since
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 <m>y</m> is essentially constant on each strip with the leftmost strip having <m>y=0</m>
 and the rightmost strip having <m>y=2-z</m> and
@@ -449,13 +459,13 @@ Alternatively, to express <m>I</m> as an integral with the order of integration
 <m>\int\dee{z}\int\dee{x}\int\dee{y}\ f(x,y,z)</m>, we subdivide the plate at height <m>z</m> into horizontal strips as in the figure
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/figs_integration/xchange3h.pdf"/>
 </sidebyside>
-Since
+
+<p>
+  Since
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 <m>x</m> is essentially constant on each strip with the first strip having <m>x=0</m>
 and the last strip having <m>x=1</m> and
@@ -472,9 +482,8 @@ we have
 I=\int_0^2\dee{z}\int_0^{z/2}\dee{x}\int_0^{2-z}\dee{y}\ f(x,y,z)
 +\int_0^2\dee{z}\int_{z/2}^{1}\dee{x}\int_0^{2-2x}\dee{y}\ f(x,y,z)
 </me>
-</p></example>
 </p>
-
+</example>
 
 
 </section>

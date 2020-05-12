@@ -500,8 +500,8 @@ This is called Fubini's theorem
 optional §<xref ref="sec_def_int_more"/>.
 </p>
 
-<definition>
-<statement><p>xml:id="notn_double_integral_yet_again"
+<definition xml:id="notn_double_integral_yet_again">
+<statement><p>
 The integrals of Theorem <xref ref="thm_xy_mass"/> are often denoted
 <me>
 \dblInt_\cR f(x,y)\,\dee{x}\dee{y} \qquad\text{or}\qquad
@@ -670,7 +670,8 @@ Combining these three rules we have
 &amp;= A\dblInt_\cR f(x,y)\,\dee{x}\dee{y}
             + B\dblInt_\cR g(x,y)\,\dee{x}\dee{y}
 </mrow>
-<intertext>That is, integrals depend linearly on the integrand.</intertext><mrow>
+<intertext>That is, integrals depend linearly on the integrand.</intertext>
+<mrow>
 \text{(e)}&amp;&amp; \dblInt_\cR \,\dee{x}\dee{y} &amp;= \text{Area}(\cR)
 </mrow><mrow>
 </mrow>
@@ -706,10 +707,11 @@ and the integrand is the product <m>f(x,y)=g(x)h(y)</m>,
 &amp;\hskip0.5in\text{since $g(x)$ is a constant as far as the $y$-integral is concerned}
 </mrow><mrow>
 &amp;=\left[ \int_a^b\dee{x}\ g(x)\right]\ \left[\int_c^d\dee{y}\  h(y)\right]
-</mrow><mrow>
-&amp;\hskip0.5in\text{since $\int_c^d\dee{y}\  h(y)$ is a constant as far as the $x$-integral is concerned}
 </mrow>
 </md>
+since <m>\int_c^d\dee{y}\  h(y)</m> is a constant as far as the $x$-integral is concerned.
+</p>
+<p>
 This is worth stating as a theorem
 </p>
 
@@ -735,8 +737,8 @@ They are the multivariable analogs of the single variable tools in
 Theorem \eref{CLP101}{thm:INTineq} of the CLP-2 text.
 </p>
 
-<theorem><title>Inequalities for Integrals</title>
-<statement><p>xml:id="thm_INT2dineq"
+<theorem xml:id="thm_INT2dineq"><title>Inequalities for Integrals</title>
+<statement><p>
 Under the hypotheses of Theorem <xref ref="thm_xy_mass"/>,
 <ol label="a">
 <li>
@@ -914,8 +916,8 @@ a volume example. You will notice that the mathematics is really very
 similar. Just the interpretation changes.
 </p>
 
-<example><title>Mass</title>
-<p>xml:id="eg_dblInt_A"
+<example xml:id="eg_dblInt_A"><title>Mass</title>
+<p>
 Let <m>\nu \gt 0</m> be a constant and let <m>\cR</m> be the region above the curve
 <m>x^2=4\nu y</m> and to the right of the curve <m>y^2=\frac{1}{2}\nu x</m>.
 Find the mass of <m>\cR</m> if it has density <m>f(x,y)=xy</m>.

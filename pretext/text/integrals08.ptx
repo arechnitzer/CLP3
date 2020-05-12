@@ -7,15 +7,24 @@
 
 <title>Optional<mdash/> Integrals in General Coordinates</title>
 
+<introduction>
+
 <p>One of the most important tools used in dealing with single variable
 integrals is the change of variable (substitution) rule
-\begin{impeqn}xml:id="eq_1d_substitution"
-<me>
+</p>
+
+<fact xml:id="eq_1d_substitution">
+  <statement>
+    <p>
+      <me>
 x=f(u)\qquad
 \dee{x} = f'(u)\,\dee{u}
 </me>
-\end{impeqn}
-\noindent
+</p>
+</statement>
+</fact>
+
+<p>
 See Theorems \eref{CLP101}{thm subs indef} and \eref{CLP101}{thm subs def}
 in the CLP-2 text.
 Expressing multivariable integrals using polar or cylindrical or
@@ -77,11 +86,10 @@ the angle <m>v</m> with the <m>x</m>-axis), while, if we hold
 centred on the origin).
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/polarU.pdf"/>\qquad
-    <image source="problems/figs/polarV.pdf"/>
+<sidebyside>
+<image source="problems/figs/polarU.pdf"/>
+<image source="problems/figs/polarV.pdf"/>
 </sidebyside>
-</p>
 
 <p>We start by cutting <m>\cR</m> (the shaded region in the figure below)
 up into small pieces by drawing a bunch of curves of constant <m>u</m>
@@ -89,16 +97,20 @@ up into small pieces by drawing a bunch of curves of constant <m>u</m>
 constant <m>v</m> (the red curves in the figure below).
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/RSlice.pdf"/>
 </sidebyside>
+
+<p>
 Concentrate on any one the small pieces. Here is a greatly magnified
 sketch.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/dA.pdf"/>
 </sidebyside>
+
+<p>
 For example, the  lower red curve was constructed by holding <m>v</m> fixed
 at the value <m>v_0</m>, varying <m>u</m> and sketching <m>\vr(u,v_0)</m>, and
 the  upper red curve was constructed by holding <m>v</m> fixed
@@ -132,7 +144,7 @@ once with <m>\dee{U}=\dee{u}</m>, <m>\dee{V}=0</m> (to approximate <m>P_1</m>),
 once with <m>\dee{U}=0</m>, <m>\dee{V}=\dee{v}</m> (to approximate <m>P_2</m>),
 and once with  <m>\dee{U}=\dee{u}</m>, <m>\dee{V}=\dee{v}</m> (to approximate <m>P_3</m>),
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 P_0&amp;=\vr(u_0\,,\,v_0)
 </mrow><mrow>
 P_1&amp;=\vr(u_0+\dee{u}, v_0)
@@ -159,7 +171,9 @@ We shall not prove this. But we shall show, in the optional
 
 <p>The small piece of <m>\cR</m> surface with corners <m>P_0</m>, <m>P_1</m>, <m>P_2</m>, <m>P_3</m>
 is approximately a parallelogram with sides
-<md>
+</p>
+<sidebyside>
+<p><md>
 <mrow>
 \overrightarrow{P_0P_1}
 \approx \overrightarrow{P_2P_3}
@@ -173,19 +187,26 @@ is approximately a parallelogram with sides
 =\llt\pdiff{x}{v}(u_0,v_0)\,,\,
      \pdiff{y}{v}(u_0,v_0) \rgt \dee{v}
 \qquad
-\raisebox{-15pt}[20pt][10pt]{\smash{<image source="problems/figs/dA2.pdf"/>}}
 </mrow>
-</md>
+</md></p>
+<image source="problems/figs/dA2.pdf"/>
+</sidebyside>
+
+<p>
 Here the notation, for example, <m>\overrightarrow{P_0P_1}</m> refers to the vector
 whose tail is at the point <m>P_0</m> and whose head is at the point <m>P_1</m>.
 Recall, from <xref ref="eq_pgram_area"/> that
 <me>
-\text{area of parallelogram with sides <m>\llt a,b\rgt </m> and <m>\llt c,d\rgt</m>} =
+\text{area of parallelogram with sides $\llt a,b\rgt$ and $\llt c,d\rgt$} =
 \left|\det\left[\begin{matrix}a&amp;b\\ c&amp;d\end{matrix}\right]\right|
 =\big|ad-bc\big|
 </me>
 So the area of our small piece of <m>\cR</m> is essentially
-\begin{impeqn}xml:id="eq_dA"
+</p>
+
+<fact xml:id="eq_dA">
+  <statement>
+    <p>
 <md>
 <mrow>
 \dee{A}
@@ -194,8 +215,12 @@ So the area of our small piece of <m>\cR</m> is essentially
        \end{matrix}\right]\right| \dee{u}\,\dee{v}
 </mrow>
 </md>
-\end{impeqn}
-\noindent Recall that <m>\det M</m> denotes the determinant of the matrix <m>M</m>.
+</p>
+</statement>
+</fact>
+
+<p>
+Recall that <m>\det M</m> denotes the determinant of the matrix <m>M</m>.
 Also recall that we don't really need determinants for this text, though it
 does make for nice compact notation.
 </p>
@@ -205,8 +230,8 @@ us how to translate an integral in one coordinate system into an
 integral in another coordinate system.
 </p>
 
-<theorem>
-<statement><p>xml:id="thm_2d_sub"
+<theorem xml:id="thm_2d_sub">
+<statement><p>
 Let the functions <m>x(u,v)</m> and <m>y(u,v)</m> have continuous first partial
 derivatives and let the function <m>f(x,y)</m> be continuous. Assume that
 <m>x=x(u,v)</m>, <m>y=y(u,v)</m> provides a one-to-one correspondence
@@ -240,12 +265,12 @@ the Jacobian
 movement of the French revolution. It is not named after the Jacobite rebellions that took place in Great Britain and Ireland between 1688 and 1746.
 It is not named after the Jacobean era of English and Scottish history.
 It is named after the German mathematician Carl Gustav Jacob Jacobi
-(1804--1851). He died from smallpox.</fn>
+(1804 <ndash /> 1851). He died from smallpox.</fn>
 .
 </p>
 
-<example><title><m>\dee{A}</m> for <m>x\leftrightarrow y</m></title>
-<p>xml:id="eg_exchange_dA"
+<example xml:id="eg_exchange_dA"><title><m>\dee{A}</m> for <m>x\leftrightarrow y</m></title>
+<p>
 We'll start with a pretty trivial example in which we simply rename
 <m>x</m> to <m>Y</m> and <m>y</m> to <m>X</m>. That is
 <md>
@@ -279,8 +304,8 @@ which should really not be a shock.
 
 </example>
 
-<example><title><m>\dee{A}</m> for Polar Coordinates</title>
-<p>xml:id="eg_polar_dA"
+<example xml:id="eg_polar_dA"><title><m>\dee{A}</m> for Polar Coordinates</title>
+<p>
 Polar coordinates have
 <md>
 <mrow>
@@ -313,8 +338,8 @@ gives
 which is exactly what we found in <xref ref="eq_dA_polar"/>.
 </p></example>
 
-<example><title><m>\dee{A}</m> for Parabolic Coordinates</title>
-<p>xml:id="eg_parabolic_dA"
+<example xml:id="eg_parabolic_dA"><title><m>\dee{A}</m> for Parabolic Coordinates</title>
+<p>
 Parabolic
 <fn>The name comes from the fact that both the curves of constant <m>u</m> and the curves of constant <m>v</m> are parabolas.</fn>
  coordinates are defined by
@@ -352,15 +377,18 @@ be quite tricky. Here is just one simple (and rigged) example.
 </p>
 
 <example xml:id="eg_2d_sub">
+<statement>
 <p>
 Evaluate
 <me>
 \dblInt_\cR\frac{y}{1+x}\ \dee{x}\,\dee{y}\qquad\text{where }
-\cR=§et{(x,y)}{0\le x\le 1,\ 1+x\le y\le 2+2x}
+\cR=\Set{(x,y)}{0\le x\le 1,\ 1+x\le y\le 2+2x}
 </me>
 </p>
+</statement>
 
-<p>\soln We can simplify the integrand considerably by making the
+<solution>
+<p> We can simplify the integrand considerably by making the
 change of variables
 <md>
 <mrow>
@@ -379,7 +407,7 @@ applying Theorem <xref ref="thm_2d_sub"/> we also need to know
 </ul>
 </p>
 
-<p>\noindent
+<p>
 By <xref ref="eq_dA"/>, recalling that <m>x(s,t)=s</m> and <m>y(s,t)=t(1+s)</m>,
 <md>
 <mrow>
@@ -401,13 +429,13 @@ in terms of the new coordinates <m>s</m> and <m>t</m>. Here is the sketch of <m>
 in the original coordinates <m>(x,y)</m>.
 </p>
 
-<p><sidebyside>
-      <image source="problems/figs/genSub.pdf"/>
-      </sidebyside>
+<sidebyside>
+<image source="problems/figs/genSub.pdf"/>
+</sidebyside>
+
+<p>
 The region <m>\cR</m> is a quadrilateral. It has four sides.
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 The left side is part of the line <m>x=0</m>. Recall that <m>x=s</m>.
 So, in terms of <m>s</m> and <m>t</m>, this line is <m>s=0</m>.
@@ -430,13 +458,15 @@ Here is another copy of the sketch of <m>\cR</m>. But this time
 the equations of its four sides are expressed in terms of <m>s</m> and <m>t</m>.
 </p>
 
-<p><sidebyside>
-      <image source="problems/figs/genSubB.pdf"/>
-      </sidebyside>
+<sidebyside>
+<image source="problems/figs/genSubB.pdf"/>
+</sidebyside>
+
+<p>
 So, expressed in terms of <m>s</m> and <m>t</m>, the domain of integration <m>\cR</m> is
 much simpler:
 <me>
-§et{(s,t)}{0\le s\le 1,\ 1\le t\le 2}
+\Set{(s,t)}{0\le s\le 1,\ 1\le t\le 2}
 </me>
 As <m>\dee{x}\,\dee{y} = (1+s)\,\dee{s}\,\dee{t}</m> and the integrand
 <m>\frac{y}{1+x}=t</m>, the integral is, by Theorem <xref ref="thm_2d_sub"/>,
@@ -452,7 +482,7 @@ As <m>\dee{x}\,\dee{y} = (1+s)\,\dee{s}\,\dee{t}</m> and the integrand
 </mrow>
 </md>
 </p>
-
+</solution>
 </example>
 
 <p>There are natural generalizations of <xref ref="eq_dA"/> and
@@ -473,20 +503,24 @@ determined by the three vectors
 <m>\vc=\llt c_1,c_2,c_3\rgt </m> is given by the formula
 <md>
 <mrow>
-\text{volume of parallelepiped with edges <m>\va,\ \vb,\ \vc\
-=\ \left|
+\text{volume of parallelepiped with edges } \va, \vb, \vc
+&amp;= \left|
 \det\left[\begin{matrix}a_1&amp;a_2&amp;a_3 \\
  b_1&amp;b_2&amp;b_3\\
  c_1&amp;c_2&amp;c_3\end{matrix}\right]
-\right|</m>}
+\right|
 </mrow>
 </md>
 where the determinant of a <m>3\times 3</m> matrix can be defined in terms
 of some <m>2\times 2</m> determinants by
 </p>
 
-<p>      <image source="problems/figs/../figs_geometry/det2"/>
-      If we use
+<sidebyside width="">
+  <image source="problems/figs/../figs_geometry/det2"/>
+</sidebyside>
+
+<p>
+If we use
 <md>
 <mrow>
 x&amp;=x(u,v,w)
@@ -498,7 +532,11 @@ z&amp;=z(u,v,w)
 </md>
 to change from old coordinates <m>x,y,z</m> to new coordinates <m>u,v,w</m>,
 then
-\begin{impeqn}xml:id="eq_dV"
+</p>
+
+<fact xml:id="eq_dV">
+  <statement>
+    <p>
 <md>
 <mrow>
 \dee{V}
@@ -509,11 +547,12 @@ then
        \end{matrix}\right]\right| \dee{u}\,\dee{v}\,\dee{w}
 </mrow>
 </md>
-\end{impeqn}
 </p>
+</statement>
+</fact>
 
-<example><title><m>\dee{V}</m> for Cylindrical Coordinates</title>
-<p>xml:id="eg_cylindrical_dV"
+<example xml:id="eg_cylindrical_dV"><title><m>\dee{V}</m> for Cylindrical Coordinates</title>
+<p>
 Cylindrical coordinates have
 <md>
 <mrow>
@@ -567,8 +606,8 @@ gives
 which is exactly what we found in <xref ref="eq_dV_cylindrical"/>.
 </p></example>
 
-<example><title><m>\dee{V}</m> for Spherical Coordinates</title>
-<p>xml:id="eg_spherical_dV"
+<example xml:id="eg_spherical_dV"><title><m>\dee{V}</m> for Spherical Coordinates</title>
+<p>
 Spherical coordinates have
 <md>
 <mrow>
@@ -642,8 +681,11 @@ and <m>w</m> renamed to <m>\varphi</m>, gives
 which is exactly what we found in <xref ref="eq_dV_spherical"/>.
 </p></example>
 
-<p>\subsection{Optional <mdash/> Dropping Higher Order Terms in <m>\dee{u},\dee{v}</m>}xml:id="sec_hoterms"
-</p>
+</introduction>
+
+<subsection xml:id="sec_hoterms">
+  <title>Optional <mdash/> Dropping Higher Order Terms in <m>\dee{u},\dee{v}</m></title>
+
 
 <p>In the course of deriving <xref ref="eq_dA"/>, that is,
 the <m>\dee{A}</m> formula for
@@ -735,4 +777,6 @@ the Riemann sums, this error converges to exactly <m>0</m>. As a consequence,
 it was safe for us to ignore the error terms when we established the change
 of variables formulae.
 </p>
+
+</subsection>
 </section>

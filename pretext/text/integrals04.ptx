@@ -176,6 +176,8 @@ as is its length:
 </md>
 Throughout this computation, <m>x_0</m> and <m>y_0</m> were arbitrary.
 So we have found the area of each tiny piece of the surface <m>S</m>.
+</p>
+
 
 <fact xml:id="eq_dSgraph">
 <statement>

@@ -7,53 +7,62 @@
 
 <title>Triple Integrals in Spherical Coordinates</title>
 
-<p>\subsection{Spherical Coordinates} xml:id="sec_spherical_coords"
-</p>
+<subsection xml:id="sec_spherical_coords">
+  <title>Spherical Coordinates</title>
+
 
 <p>In the event that we wish to compute, for example, the mass
 of an object that is invariant under rotations about the origin,
 it is advantageous to use another generalization of polar coordinates
 to three dimensions. The coordinate system is called <em>spherical
 coordinates</em>.
-<definition>
-<statement><p>xml:id="def_spherical"
+</p>
+
+<definition xml:id="def_spherical">
+<statement><p>
 Spherical coordinates are denoted
 <fn>We are using the
 standard mathematics conventions for the spherical coordinates.
 Under the ISO conventions they are <m>(r,\varphi,\theta)</m>.</fn>
-</p>
-
-<p><m>\rho</m>, <m>\theta</m> and <m>\varphi</m> and are defined by
+<m>\rho</m>, <m>\theta</m> and <m>\varphi</m> and are defined by
 <md>
 <mrow>
 \rho&amp;=\text{ the distance from }(0,0,0)\text{ to }(x,y,z)
 </mrow><mrow>
-\varphi&amp;=\text{ the angle between the <m>z</m> axis and the line joining <m>(x,y,z)</m> to <m>(0,0,0)</m>}
+\varphi&amp;=\text{ the angle between the $z$ axis and the line joining $(x,y,z)$ to $(0,0,0)$}
 </mrow><mrow>
-\theta&amp;=\text{ the angle between the <m>x</m> axis and the line joining <m>(x,y,0)</m> to <m>(0,0,0)</m>}
+\theta&amp;=\text{ the angle between the $x$ axis and the line joining $(x,y,0)$ to $(0,0,0)$}
 </mrow>
 </md>
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/../figs_coord/spherical.pdf"/>
 </sidebyside>
-</p></statement>
+</statement>
 </definition>
+
+<p>
 Here are two more figures giving the side and top views of the
 previous figure.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/../figs_coord/sphericalSide.pdf"/>\qquad
-    <image source="problems/figs/../figs_coord/sphericalTop.pdf"/>\qquad
+<sidebyside>
+<image source="problems/figs/../figs_coord/sphericalSide.pdf"/>
+<image source="problems/figs/../figs_coord/sphericalTop.pdf"/>
 </sidebyside>
+
+<p>
 The spherical coordinate <m>\theta</m> is the same as the cylindrical coordinate
 <m>\theta</m>. The spherical coordinate <m>\varphi</m> is new. It runs from <m>0</m>
 (on the positive <m>z</m>-axis) to <m>\pi</m> (on the negative <m>z</m>-axis).
 The Cartesian and spherical coordinates
 are related by
-\begin{impeqn}xml:id="eqn_spherical"
+</p>
+
+<fact xml:id="eqn_spherical">
+  <statement>
+    <p>
 <md>
 <mrow>
 x&amp;=\rho\sin\varphi\cos\theta &amp;
@@ -65,7 +74,11 @@ z&amp;=\rho\cos\varphi
  \varphi&amp;=\arctan\frac{\sqrt{x^2+y^2}}{z}
 </mrow>
 </md>
-\end{impeqn}
+</p>
+</statement>
+</fact>
+
+<p>
 Here are three figures showing
 <ul>
 <li>
@@ -86,15 +99,17 @@ a surface of constant <m>\varphi</m>, i.e. a surface
 </ul>
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/spher2.pdf"/>\qquad
-    <image source="problems/figs/spher3.pdf"/>\qquad
-    <image source="problems/figs/spher4.pdf"/>
+<sidebyside>
+<image source="problems/figs/spher2.pdf"/>
+<image source="problems/figs/spher3.pdf"/>
+<image source="problems/figs/spher4.pdf"/>
 </sidebyside>
-</p>
 
-<p>\subsection{The Volume Element in Spherical Coordinates} xml:id="sec_spherical_vol"
-</p>
+</subsection>
+
+<subsection xml:id="sec_spherical_vol">
+  <title>The Volume Element in Spherical Coordinates</title>
+
 
 <p>If we cut up a solid
 <fn>You know the drill.</fn>
@@ -143,15 +158,22 @@ The dimensions of the approximate <q>cube</q> in spherical coordinates are
 (essentially) <m>\dee{\rho}</m> by <m>\rho\dee{\varphi}</m> by
 <m>\rho\sin\varphi\,\dee{\theta}</m>. (These dimensions are derived in more detail
 in the next section.) So the approximate cube has volume (essentially)
-\begin{impeqn}xml:id="eq_dV_spherical"
+</p>
+
+<fact xml:id="eq_dV_spherical">
+  <statement>
+    <p>
 <me>
 \dee{V} = \rho^2\sin\varphi\,\dee{\rho}\,\dee{\theta}\,\dee{\varphi}
 </me>
-\end{impeqn}
 </p>
+</statement>
+</fact>
 
-<p>\subsubsection{The Details} xml:id="sec_spherical_vol_details"
-</p>
+</subsection>
+
+<subsection xml:id="sec_spherical_vol_details">
+  <title>The Details</title>
 
 <p>Here is an explanation of the edge lengths given in the above figure.
 Each of the 12 edges of the cube is formed by holding two of the three
@@ -234,11 +256,14 @@ have length <m>\rho\sin\varphi\,\dee{\theta}</m>.
 </ul>
 </p>
 
-<p>\subsection{Sample Integrals in Spherical Coordinates} xml:id="sec_spherical_eg"
-</p>
+</subsection>
 
-<example><title>Ice Cream Cone</title>
-<p>xml:id="eg_ice_cream_cone"
+<subsection xml:id="sec_spherical_eg">
+  <title>Sample Integrals in Spherical Coordinates</title>
+
+<example xml:id="eg_ice_cream_cone"><title>Ice Cream Cone</title>
+<statement>
+<p>
 Find the volume of the ice cream
 <fn>A very mathematical ice cream. Rocky-rho'd? Choculus?</fn>
  cone that consists of the part of the interior
@@ -246,8 +271,10 @@ of the sphere <m>x^2+y^2+z^2=a^2</m> that is above the <m>xy</m>-plane and that
 is inside the cone <m>x^2+y^2=b^2 z^2</m>. Here <m>a</m> and <m>b</m> are any two
 strictly positive constants.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 Note that, in spherical coordinates
 <me>
 x^2+y^2=\rho^2\sin^2\varphi\qquad
@@ -419,9 +446,11 @@ original problem) in terms of <m>b</m> (which was in the statement of the
 original problem), just by looking at the triangle
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/triangleIceCream.pdf"/>
 </sidebyside>
+
+<p>
 The right hand and bottom sides of the triangle have been chosen so that
 <m>\tan\be=b</m>, which was the definition of <m>\beta</m>. So
 <m>\cos\beta=\frac{1}{\sqrt{1+b^2}}</m> and the volume of the ice cream cone is
@@ -444,17 +473,20 @@ the hemisphere, which is <m>\frac{1}{2}\times\frac{4}{3}\pi a^3</m>.
 </li>
 </ul>
 </p>
-
+</solution>
 </example>
 
 <example xml:id="eg_cored_apple"><title>Cored Apple</title>
+<statement>
 <p>
 A cylindrical hole of radius <m>b</m> is drilled symmetrically through a
 perfectly spherical apple of radius <m>a\ge b</m>. Find the volume of apple that
 remains.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 In Example <xref ref="eg_polar_volume"/> we computed the volume removed, basically using cylindrical coordinates. So we could get the answer to this question
 just by subtracting the answer of Example <xref ref="eg_polar_volume"/> from
 <m>\frac{4}{3}\pi a^3</m>. Instead, we will evaluate the volume remaining
@@ -504,7 +536,7 @@ and the bottom searchlight has, essentially, <m>\varphi=\frac{\pi}{2}</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/appleCoreB3.pdf"/>\qquad
+<image source="problems/figs/appleCoreB3.pdf"/>
 </sidebyside>
 </li>
 <li><p>
@@ -605,8 +637,9 @@ Now we just have to integrate
 &amp;=\frac{1}{3}\int_0^{\pi/2}\dee{\theta}\
             \left[-a^3 \cos\varphi + b^3\cot\varphi\right]
                         _{\arcsin\frac{b}{a}}^{\frac{\pi}{2}}
-</mrow><mrow>
-&amp;\hskip1in\text{since <m>\int \csc^2\varphi\ \dee{\varphi} =\cot\varphi+C</m>}
+</mrow>
+<mrow>
+&amp;\hskip1in\text{since } \int \csc^2\varphi\ \dee{\varphi} =\cot\varphi+C
 </mrow><mrow>
 &amp;=\frac{\pi}{6}
             \left[-a^3 \cos\varphi + b^3\cot\varphi\right]
@@ -666,6 +699,8 @@ As a final check note that the sum of the answer to
 Example <xref ref="eg_polar_volume"/> and the answer to this Example
 is <m>\frac{4}{3}\pi a^3</m>, as it should be.
 </p>
+</solution>
 </example>
 
+</subsection>
 </section>
