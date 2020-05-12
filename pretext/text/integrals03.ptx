@@ -6,14 +6,16 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <title>Applications of Double Integrals</title>
-
+<introduction>
 <p>Double integrals are useful for more than just computing
 areas and volumes. Here are a few other applications that
 lead to double integrals.
 </p>
+</introduction>
 
-<p>\subsubsection{Averages}
-</p>
+<subsection>
+  <title>Averages</title>
+
 
 <p>In Section \eref{CLP101}{sec avg} of the CLP-2 text, we defined
 the average value of a function of one variable. We'll now extend that
@@ -21,8 +23,8 @@ discussion to functions of two variables. First, we recall the
 definition of the average of a finite set of numbers.
 </p>
 
-<p><definition>
-<statement><p>xml:id="def_avg"
+<definition xml:id="def_avg">
+<statement><p>
  The average (mean) of a set of <m>n</m> numbers <m>f_1</m>, <m>f_2</m>, <m>\cdots</m>, <m>f_n</m> is
 <md>
 <mrow>
@@ -33,7 +35,6 @@ The notations <m>\bar f</m> and <m>\llt f\rgt</m> are both commonly used
 to represent the average.
 </p></statement>
 </definition>
-</p>
 
 <p>Now suppose that we want to take the average of a function <m>f(x,y)</m> with
 <m>(x,y)</m> running continuously over some region <m>\cR</m> in the <m>xy</m>-plane.
@@ -73,8 +74,10 @@ Once we have the Riemann sums it is clear what to do next.
 Taking the limit <m>n\rightarrow\infty</m>,
 we get exactly <m>\frac{\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}}
                     {\dblInt_\cR \dee{x}\,\dee{y}}</m>. That's why we define
-<definition>
-<statement><p>xml:id="def_AVaverage"
+</p>
+
+<definition xml:id="def_AVaverage">
+<statement><p>
 Let <m>f(x,y)</m> be an integrable function defined on region <m>\cR</m> in the
 <m>xy</m>-plane. The average value of <m>f</m> on <m>\cR</m> is
 <md>
@@ -86,25 +89,26 @@ Let <m>f(x,y)</m> be an integrable function defined on region <m>\cR</m> in the
 </md>
 </p></statement>
 </definition>
-</p>
 
 <example xml:id="eg_dblInt_G"><title>Average</title>
+<statement>
 <p>
 Let <m>a \gt 0</m>. A mountain, call it Half Dome
 <fn>There is a real Half-Dome
 mountain in Yosemite National Park. It has <m>a=1445\,\text{m}
 </m>. </fn>, has height
 <m>z(x,y)=\sqrt{a^2-x^2-y^2}</m> above each point <m>(x,y)</m>
-in the base region <m>\cR=§et{(x,y)}{x^2+y^2\le a^2, x\le 0}</m>.
+in the base region <m>\cR=\Set{(x,y)}{x^2+y^2\le a^2, x\le 0}</m>.
 Find its average height.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/halfDomeA.pdf"/>
 </sidebyside>
-</p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 By Definition <xref ref="def_AVaverage"/> the average height is
 <me>
 \bar z
@@ -125,7 +129,7 @@ can be interpreted as the volume of
 &amp;\Big\{\ (x,y,z)\ \Big|\ x^2+y^2\le a^2,\ x\le 0,\
              0\le z\le  \sqrt{a^2-x^2-y^2}\ \Big\}
 </mrow><mrow>
-&amp;=§et{(x,y,z)}{x^2+y^2+z^2\le a^2,\ x\le 0,\ z\ge 0}
+&amp;=\Set{(x,y,z)}{x^2+y^2+z^2\le a^2,\ x\le 0,\ z\ge 0}
 </mrow>
 </md>
 which is one quarter of the interior of a sphere of radius <m>a</m>.
@@ -145,7 +149,7 @@ All together, the average height is
 Notice this this number is bigger than zero and less than the maximum height,
 which is <m>a</m>. That makes sense.
 </p>
-
+</solution>
 </example>
 
 <example xml:id="eg_dblInt_H"><title>Example <xref ref="eg_dblInt_G"/>, the hard way</title>
@@ -160,9 +164,11 @@ Example <xref ref="eg_dblInt_G"/> as an iterated integral.
 <p>Here is a sketch of the top view of the base region <m>\cR</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/halfDomeB.pdf"/>
 </sidebyside>
+
+<p>
 Using the slicing in the figure
 <md>
 <mrow>
@@ -272,8 +278,10 @@ do so is to create a <q>weight function</q> <m>w(x,y) \gt 0</m> with
 <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m>. That is, <m>(x_1,y_1)</m> is
 <m>\frac{w(x_1,y_1)}{w(x_2,y_2)}</m> times as important as <m>(x_2,y_2)</m>.
 This leads to the definition
-<definition>
-<statement><p>xml:id="def_WTaverage"
+</p>
+
+<definition xml:id="def_WTaverage">
+<statement><p>
 <md>
 <mrow>
 \frac{\dblInt_\cR f(x,y)\,w(x,y)\,\dee{x}\,\dee{y}}
@@ -283,13 +291,18 @@ This leads to the definition
 is called the weighted average of <m>f</m> over <m>\cR</m> with weight
 <m>w(x,y)</m>.
 </p></statement>
-</definition>\noindent
+</definition>
+
+<p>
 Note that if <m>f(x,y)=F</m>, a constant, then the weighted average of <m>f</m>
 is just <m>F</m>, just as you would want.
 </p>
 
-<p>\subsubsection{Centre of Mass}
-</p>
+</subsection>
+
+<subsection>
+  <title>Centre of Mass</title>
+
 
 <p>One important example of a weighted average is the centre of mass.
 If you support a body at its centre of mass (in a uniform gravitational
@@ -308,17 +321,21 @@ weighted by the mass density.
 <p>In two dimensions, the centre of mass of a plate that covers the
 region <m>\cR</m> in the <m>xy</m>-plane and that has mass density <m>\rho(x,y)</m>
 is the point  <m>(\bar x, \bar y)</m> where
-\begin{impeqn}[Centre of Mass]xml:id="eq_cofm"
+</p>
+
+<fact xml:id="eq_cofm"><title>Centre of Mass</title>
+  <statement>
+    <p>
 <md>
 <mrow>
-\bar x &amp; = \text{the weighted average of <m>x</m> over <m>\cR</m>}
+\bar x &amp; = \text{the weighted average of $x$ over $\cR$}
 </mrow><mrow>
        &amp;=\frac{\dblInt_\cR x\ \rho(x,y)\, \dee{x}\,\dee{y}}
                       {\dblInt_\cR \ \rho(x,y)\, \dee{x}\,\dee{y}}
         =\frac{\dblInt_\cR x\ \rho(x,y)\, \dee{x}\,\dee{y}}
                             {\text{Mass}(\cR)}
 </mrow><mrow>
-\bar y &amp; = \text{the weighted average of <m>y</m> over <m>\cR</m>}
+\bar y &amp; = \text{the weighted average of $y$ over $\cR$}
 </mrow><mrow>
        &amp;=\frac{\dblInt_\cR y\ \rho(x,y)\, \dee{x}\,\dee{y}}
                      {\dblInt_\cR \ \rho(x,y)\, \dee{x}\,\dee{y}}
@@ -326,11 +343,18 @@ is the point  <m>(\bar x, \bar y)</m> where
                         {\text{Mass}(\cR)}
 </mrow>
 </md>
-\end{impeqn}
+</p>
+</statement>
+</fact>
+
+<p>
 If the mass density is a constant, the centre of mass is also
 called the centroid, and is the geometric centre of <m>\cR</m>.
 In this case
-\begin{impeqn}[Centroid]xml:id="eq_centroid"
+</p>
+
+<fact xml:id="eq_centroid"><title>Centroid</title>
+<statement><p>
 <md>
 <mrow>
 \bar x &amp;=\frac{\dblInt_\cR x\ \dee{x}\,\dee{y}}
@@ -344,11 +368,11 @@ In this case
                         {\text{Area}(\cR)}
 </mrow>
 </md>
-\end{impeqn}
-</p>
+</p></statement>
+</fact>
 
-<p><example><title>Centre of Mass</title>
-<p>xml:id="eg_dblInt_I"
+<example xml:id="eg_dblInt_I"><title>Centre of Mass</title>
+<p>
 In Section \eref{CLP101}{sec com} of the CLP-2 text, we did not
 have access to multivariable integrals, so we used some physical intuition
 to derive that the centroid of a body that fills the
@@ -370,9 +394,11 @@ formulae directly from <xref ref="eq_centroid"/>. Using vertical slices,
 as in this figure,
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/centroidXY.pdf"/>\qquad\qquad
+<sidebyside>
+<image source="problems/figs/centroidXY.pdf"/>
 </sidebyside>
+
+<p>
 we see that the area of <m>\cR</m> is
 <md>
 <mrow>
@@ -396,17 +422,16 @@ and that <xref ref="eq_centroid"/> gives
 </md>
 just as desired.
 </p></example>
-</p>
 
 <p>We'll start with a simple mechanical example.
 </p>
 
-<p><example><title>Quarter Circle</title>
-<p>xml:id="eg_dblInt_Iqc"
+<example xml:id="eg_dblInt_Iqc"><title>Quarter Circle</title>
+<p>
 In Example \eref{CLP101}{eg:TRQcentroidBa} of the CLP-2 text,
 we found the centroid of the quarter circular disk
 <me>
-D=§et{(x,y)}{x\ge 0,\ y\ge 0,\ x^2+y^2\le r^2}
+D=\Set{(x,y)}{x\ge 0,\ y\ge 0,\ x^2+y^2\le r^2}
 </me>
 by using the formulae of the last example. We'll now find it again using
 <xref ref="eq_centroid"/>.
@@ -426,10 +451,12 @@ We'll evaluate <m>\dblInt_D x\ \dee{x}\,\dee{y}</m> by using horizontal
 slices, as in the figure on the left below.
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/centroidQuarterCircleh"/>\qquad
-    <image source="problems/figs/centroidQuarterCirclev"/>
+<sidebyside>
+<image source="problems/figs/centroidQuarterCircleh"/>
+<image source="problems/figs/centroidQuarterCirclev"/>
 </sidebyside>
+
+<p>
 Looking at that figure, we see that
 <ul>
 <li>
@@ -496,31 +523,33 @@ too and
 </me>
 as expected.
 </p></example>
-</p>
 
-<p><example><title>Example <xref ref="eg_area_polar"/>, continued</title>
-<p>xml:id="eg_cofm_polar"
+<example xml:id="eg_cofm_polar"><title>Example <xref ref="eg_area_polar"/>, continued</title>
+<statement>
+<p>
 Find the centroid of the region that is inside the circle
 <m>r=4\cos\theta</m> and to the left of the line <m>x=1</m>.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 Recall that we saw in Example <xref ref="eg_area_polar"/>
 that <m>r=4\cos\theta</m> was indeed a circle, and in fact is the
 circle <m>(x-2)^2+y^2=4</m>.
 Here is a sketch of that circle and of the region of interest, <m>\cR</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/comPolarA.pdf"/>
-</sidebyside>\noindent
+</sidebyside>
+
+<p>
 From the sketch, we see that <m>\cR</m>
 is symmetric about  the <m>x</m>-axis. So we expect that its centroid,
 <m>(\bar x,\bar y)</m>, has <m>\bar y=0</m>. To see this from the integral definition,
 note that the integral <m>\dblInt_\cR y\  \dee{x}\,\dee{y}</m>
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has domain of integration, namely <m>\cR</m>,  invariant
 under <m>y\rightarrow -y</m> (i.e. under reflection in the <m>x</m>-axis), and
@@ -596,8 +625,6 @@ so
 </md>
 The integral we want, namely <m>\dblInt_\cR x\  \dee{x}\,\dee{y}</m>,
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has domain of integration, namely <m>\cR</m>,  invariant
 under <m>y\rightarrow -y</m> (i.e. under reflection in the <m>x</m>-axis), and
@@ -620,16 +647,20 @@ and, all together,
 As a check, note that <m>0\le x\le 1</m> on <m>\cR</m> and more of <m>\cR</m> is closer
 to <m>x=1</m> than to <m>x=0</m>. So it makes sense that <m>\bar x</m> is between
 <m>\frac{1}{2}</m> and <m>1</m>.
-</p></example>
 </p>
+</solution>
+</example>
 
-<p><example><title>Reverse Centre of Mass</title>
-<p>xml:id="eg_dblInt_J"
+<example xml:id="eg_dblInt_J"><title>Reverse Centre of Mass</title>
+<statement>
+<p>
 Evaluate <m>\displaystyle\int_0^2\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}
                                  \big(2x+3y\big)\dee{y}\,\dee{x}</m>.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 This is another integral that can be evaluated without using any
 calculus at all. This time by relating it to a centre of mass.
 By <xref ref="eq_centroid"/>,
@@ -672,16 +703,16 @@ y^2 = 2x-x^2 = 1-(x-1)^2 \iff
 </me>
 Our domain of integration is exactly the disk
 <me>
-\cR = §et{(x,y)}{(x-1)^2 + y^2 \le 1}
+\cR = \Set{(x,y)}{(x-1)^2 + y^2 \le 1}
 </me>
 of radius <m>1</m> centred on <m>(1,0)</m>.
-\vadjust{
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/cofm.pdf"/>\qquad\qquad
+<sidebyside>
+<image source="problems/figs/cofm.pdf"/>
 </sidebyside>
-}
+
+<p>
 So <m>\cR</m> has area <m>\pi</m> and centre of mass <m>(\bar x,\bar y)=(1,0)</m> and
 <md>
 <mrow>
@@ -694,10 +725,16 @@ So <m>\cR</m> has area <m>\pi</m> and centre of mass <m>(\bar x,\bar y)=(1,0)</m
 =2\pi
 </mrow>
 </md>
-</p></example>
 </p>
+</solution>
+</example>
 
-<p>\subsubsection{Moment of Inertia}
+</subsection>
+
+<subsection>
+  <title>Moment of Inertia</title>
+
+<p>
 Consider a plate that fills the region <m>\cR</m> in the <m>xy</m>-plane,
 that has mass density <m>\rho(x,y)\,\text{kg}/\text{m}^2</m>, and that is
 rotating at <m>\om\,\text{rad}/\text{s}</m>  about some axis.
@@ -726,22 +763,20 @@ each rectangle as being (essentially) a point particle. If the  point
 <m>\cA</m>, then as the plate rotates, the point <m>(x,y)</m> sweeps out a circle of
 radius <m>D(x,y)</m>. The figure on the right below shows that circle as seen
 from high up on the axis of rotation.
-\vadjust{
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/momInertia.pdf"/>\qquad\qquad
-    \raisebox{0.15\height}{<image source="problems/figs/momInertiaB.pdf"/>}
+<sidebyside>
+<image source="problems/figs/momInertia.pdf"/>
+<image source="problems/figs/momInertiaB.pdf"/>
 </sidebyside>
-}
+
+<p>
 The circular arc that the point <m>(x,y)</m> sweeps out in one second
 subtends the angle <m>\om</m> radians, which is the fraction <m>\frac{\om}{2\pi}</m>
 of a full circle and so has length
 <m>\frac{\om}{2\pi}\big(2\pi D(x,y)\big)=\om\,D(x,y)</m>.
 Consequently the rectangle that contains the point <m>(x,y)</m>
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 has speed <m>\om\,D(x,y)</m>, and
 </li>
@@ -768,8 +803,10 @@ the kinetic energy of <m>\cR</m> is
 =\frac{1}{2} I_\cA\,\om^2
 </me>
 where
-<definition><title>Moment of Inertia</title>
-<statement><p>xml:id="def_moment_of_inertia"
+</p>
+
+<definition xml:id="def_moment_of_inertia"><title>Moment of Inertia</title>
+<statement><p>
 <me>
 I_\cA=\dblInt_\cR D(x,y)^2\rho(x,y)\ \dee{x}\,\dee{y}
 </me>
@@ -786,7 +823,8 @@ I_x=\dblInt_\cR y^2\,\rho(x,y)\ \dee{x}\,\dee{y}
 
 </statement>
 </definition>
-\noindent
+
+<p>
 Notice that the expression <m>\frac{1}{2} I_\cA\,\om^2</m> for the kinetic
 energy has  a very similar form
 to <m>\frac{1}{2} m v^2</m>, just with the velocity <m>v</m> replaced by the angular
@@ -802,22 +840,25 @@ dealt with. We shall soon do so, but let's first do an example in two
 dimensions.
 </p>
 
-<p><example><title>Disk</title>
-<p>xml:id="eg_moment_disk"
+<example xml:id="eg_moment_disk"><title>Disk</title>
+<statement>
+<p>
 Find the moment of inertia of the interior, <m>\cR</m>,
 of the circle <m>x^2+y^2=a^2</m> about the <m>x</m>-axis.
 Assume that it has density one.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 The distance from any point <m>(x,y)</m> inside the disk to the axis of
-\vadjust{
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/diskI.pdf"/>
 </sidebyside>
-}
+
+<p>
 rotation (i.e. the <m>x</m>-axis) is <m>|y|</m>.
 So the moment of inertia of
 the interior of the disk about the <m>x</m>-axis is
@@ -844,24 +885,29 @@ I_x &amp;= \int_0^{2\pi}\dee{\theta}\int_0^{a}\dee{r}\ r
 For an efficient, sneaky, way to evaluate
 <m> \int_0^{2\pi} \sin^2\theta\ \dee{\theta}</m>, see
 Remark <xref ref="rem_sneaky"/>.
-</p></example>
 </p>
+</solution>
+</example>
 
-<p><example><title>Cardioid</title>
-<p>xml:id="eg_moment_cardiod"
+<example xml:id="eg_moment_cardiod"><title>Cardioid</title>
+<statement>
+<p>
 Find the moment of inertia of the interior, <m>\cR</m>,
 of the cardiod <m>r=a(1+\cos\theta)</m> about the <m>z</m>-axis.
 Assume that the cardiod lies in the <m>xy</m>-plane and  has density one.
 </p>
+</statement>
 
-<p>\soln We sketched the cardiod (with <m>a=1</m>) in Example <xref ref="eg_cardioid"/>.
-\vadjust{
+<solution>
+<p>
+  We sketched the cardiod (with <m>a=1</m>) in Example <xref ref="eg_cardioid"/>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/cardioidIZ.pdf"/>
 </sidebyside>
-}
+
+<p>
 As we said above, the formula for <m>I_\cA</m> in Definition
 <xref ref="def_moment_of_inertia"/> is valid even when the axis of
 rotation is not contained in the <m>xy</m>-plane. We just have to
@@ -935,10 +981,10 @@ I_\cA&amp;= \frac{a^4}{4}\left[2\pi + 4\times 0 +6\pi+4\times 0
 </mrow>
 </md>
 </p>
-
+</solution>
 </example>
-</p>
 
+<!--
 <p>\intremark{
 <example><title>Cardoid</title>
 <p>xml:id="eg_moment_cardiod_B"
@@ -955,6 +1001,7 @@ about the <m>x</m>-axis. Assume that it has density one.
 <image source="problems/figs/cardioidI.pdf"/>
 </sidebyside>
 }
+
 The distance from any point <m>(x,y)</m> inside the cardioid to the axis of
 rotation (i.e. the <m>x</m>-axis) is <m>|y|</m>. So the moment of inertia of
 the interior of the cardioid about the <m>x</m>-axis is
@@ -1019,9 +1066,9 @@ I_x&amp;= \frac{a^4}{4}\left[\pi + 4\times 0 +6\times \frac{\pi}{4}+4\times 0
 </p>
 
 </example>
-}
 </p>
+-->
 
-
+</subsection>
 
 </section>
