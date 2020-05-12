@@ -31,6 +31,7 @@ to use polar coordinates, rather than Cartesian coordinates.
 
 </introduction>
 
+
 <subsection xml:id="sec_polar_coords">
   <title>Polar Coordinates</title>
 
@@ -45,7 +46,7 @@ The polar coordinates
 <fn>In the mathematical literature,
 the angular coordinate is usually denoted <m>\theta</m>, as we do here.
 The symbol <m>\varphi</m> is also often used for the angular coordinate.
-In fact there is an ISO standard (\#31--11) which specifies
+In fact there is an ISO standard (\#31 <ndash/> 11) which specifies
 that <m>\varphi</m> should be used in the natural sciences and in technology.</fn>
 </p>
 
@@ -139,6 +140,7 @@ But they are on opposite sides of the the origin.
 </p>
 
 </subsection>
+
 
 <subsection xml:id="sec_polar_curves">
   <title>Polar Curves</title>
@@ -451,15 +453,15 @@ the <q>three petal rose</q>.
 There is an infinite family of similar rose curves (also called rhodonea
 <fn>The name rhodenea first appeared in the 1728 publication
 <em>Flores geometrici</em> of the Italian monk, theologian, mathematician
-and engineer, Guido Grandi (1671--1742).</fn>
+and engineer, Guido Grandi (1671<ndash/> 1742).</fn>
  curves).
 </p>
 
 </example>
 
 </subsection>
-<subsection xml:id="sec_polar_integrals">
-  <title>Integrals in Polar Coordinates</title>
+
+<subsection xml:id="sec_polar_integrals"><title>Integrals in Polar Coordinates</title>
 
 
 <p>We now return to the problem of using polar coordinates to set up
@@ -498,8 +500,8 @@ region has area approximately
 </p>
 
 <fact xml:id="eq_dA_polar">
-  <statement>
-    <p>
+<statement>
+<p>
 <me>
 \dee{A} = r\,\dee{r}\,\dee{\theta}
 </me>
@@ -527,7 +529,8 @@ in which we see the error going to zero in the limit <m>n\rightarrow\infty</m>,
 is provided in the (optional) section §<xref ref="sec_integral_error"/>.
 </p>
 
-<example xml:id="eg_polar_mass"><title>Mass</title>
+<example xml:id="eg_polar_mass">
+  <title>Mass</title>
 <statement>
 <p>
 Let <m>0\le a \lt b\le 2\pi</m> be constants and let <m>\cR</m> be the region
@@ -631,6 +634,7 @@ as in the optional §<xref ref="sec_integral_error"/> below.
 <p>We can immediately adapt the last example to calculate areas <mdash/> all we have to
 do is set the density to <m>1</m>.
 </p>
+
 
 <example xml:id="eg_polar_area"><title>Polar Area</title>
 <statement>
@@ -907,6 +911,7 @@ in polar coordinates. We'll now get a little practice converting
 integrals into polar coordinates, and recognising when it is helpful
 to do so.
 </p>
+
 
 <example xml:id="eg_change_to_polar"><title>Changing to Polar Coordinates</title>
 <statement>
@@ -1199,6 +1204,7 @@ When <m>\theta=0</m>, <m>u=\cos\theta=1</m> and when <m>\theta=\frac{\pi}{4}</m>
 }
 </p> -->
 
+
 <example xml:id="eg_change_to_polar_B"><title>Changing to Polar Coordinates</title>
 <statement>
 <p>
@@ -1211,9 +1217,9 @@ Evaluate <m>\displaystyle\int_0^\infty e^{-x^2}\ \dee{x}</m>.
 This is actually a trick question. In fact it is a famous trick
 question
 <fn>The solution is attributed to the French Mathematician
-Sim\'eon Denis Poisson (1781--840) and was published in the textbook
+Sim\'eon Denis Poisson (1781 <ndash/> 840) and was published in the textbook
 <em>Cours d'Analyse de l'\'ecole polytechnique</em> by
-Jacob Karl Franz Sturm (1803--1855).</fn>
+Jacob Karl Franz Sturm (1803 <ndash/> 1855).</fn>
 .
 </p>
 
@@ -1279,6 +1285,7 @@ and so we get the famous result
 </p>
 </solution>
 </example>
+
 
 <example xml:id="eg_area_polar">
 <statement>
@@ -1420,8 +1427,8 @@ and
 </solution>
 </example>
 
-
-<example xml:id="eg_area_polar_HS"><title>Optional <mdash/> Example <xref ref="eg_area_polar"/> by high school geometry</title>
+<example xml:id="eg_area_polar_HS">
+  <title>Optional <mdash/> Example <xref ref="eg_area_polar"/> by high school geometry</title>
 <p>
 We'll now again compute the area of the region <m>\cR</m> that is
 inside the circle <m>r=4\cos\theta</m> and to the left of the line <m>x=1</m>.
@@ -1471,6 +1478,7 @@ how do that derivation more rigorously.
 </p>
 
 </subsection>
+
 
 <subsection xml:id="sec_integral_error">
   <title>Optional<mdash/> Error Control for the Polar Area Formula></title>
@@ -1648,4 +1656,5 @@ A=\frac{1}{2}\int_a^b R(\theta)^2\,d\theta
 exactly, as desired.
 </p>
 </subsection>
+
 </section>

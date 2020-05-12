@@ -13,6 +13,8 @@
   integrals.
   </p>
 </introduction>
-<xi:include href="./integrals01.ptx" />
+<!-- <xi:include href="./integrals01.ptx" /> -->
 <xi:include href="./integrals02.ptx" />
+<!-- <xi:include href="./integrals03.ptx" /> -->
+<!-- <xi:include href="./integrals04.ptx" /> -->
  </chapter>

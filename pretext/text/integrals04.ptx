@@ -109,6 +109,10 @@ error terms that we dropped contribute exactly <m>0</m> to the integral.
 
 <p>The small piece of our
 surface with corners <m>P_0</m>, <m>P_1</m>, <m>P_2</m>, <m>P_3</m>  is approximately a parallelogram with sides
+</p>
+
+<sidebyside >
+<p>
 <md>
 <mrow>
 \overrightarrow{P_0P_1}
@@ -119,9 +123,13 @@ surface with corners <m>P_0</m>, <m>P_1</m>, <m>P_2</m>, <m>P_3</m>  is approxim
 \approx \overrightarrow{P_1P_3}
 &amp;\approx \dee{x}\,\hi\ +\  \pdiff{f}{x}(x_0\,,\,y_0)\,\dee{x}\,\hk
 \qquad\qquad
-\raisebox{-15pt}[20pt][10pt]{\smash{<image source="problems/figs/dS2fxy.pdf"/>}}
 </mrow>
 </md>
+</p>
+<image source="problems/figs/dS2fxy.pdf"/>
+</sidebyside>
+
+<p>
 Denote by <m>\theta</m> the angle between the vectors
 <m>\overrightarrow{P_0P_1}</m> and <m>\overrightarrow{P_0P_2}</m>.
 The base of the parallelogram, <m>\overrightarrow{P_0P_1}</m>,
@@ -168,7 +176,10 @@ as is its length:
 </md>
 Throughout this computation, <m>x_0</m> and <m>y_0</m> were arbitrary.
 So we have found the area of each tiny piece of the surface <m>S</m>.
-\begin{impeqn}xml:id="eq_dSgraph"
+
+<fact xml:id="eq_dSgraph">
+<statement>
+<p>
 For the surface <m>z=f(x,y)</m>,
 <md>
 <mrow>
@@ -190,10 +201,17 @@ and for the surface <m>y=h(x,z)</m>,
           \dee{x}\dee{z}
 </mrow>
 </md>
-\end{impeqn}
+</p>
+</statement>
+</fact>
+
+<p>
 Consequently, we have
-<theorem>
-<statement><p>xml:id="thm_surface_area"
+</p>
+
+
+<theorem xml:id="thm_surface_area">
+<statement><p>
 <ol label="a">
 <li>
 The area of the part of the surface <m>z=f(x,y)</m> with <m>(x,y)</m> running over the
@@ -222,6 +240,8 @@ region <m>\cD</m> in the <m>xz</m>-plane is
 </ol>
 </p></statement>
 </theorem>
+
+<!--
 \intremark{
 The formulae like
 <m>\dee{S}= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\ \dee{x}\dee{y}</m>
@@ -229,7 +249,7 @@ in <xref ref="eq_dSgraph"/> have geometric interpretations. The red
 parallelogram in the sketch
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/surfaceProj.pdf"/>
 </sidebyside>
 represents a little piece of our surface. It has area
@@ -277,11 +297,10 @@ or in the form <m>y=h(x,z)</m>, rather than in the form <m>z=f(x,y)</m>.
 </li>
 </ul>
 }
-</p>
+ -->
 
-<p><example><title>Area of a cone</title>
+<example xml:id="eg_area_cone"><title>Area of a cone</title>
 <p>
-       xml:id="eg_area_cone"
 As a first example, we compute the area of the part of the
 cone
 <me>
@@ -290,16 +309,17 @@ z=\sqrt{x^2+y^2}
 with <m>0\le z\le a</m> or, equivalently, with <m>x^2+y^2\le a^2</m>.
 </p>
 
-<p><sidebyside>
+<sidebyside>
 <image source="problems/figs/cone"/>
 </sidebyside>
+<p>
 Note that <m>z=\sqrt{x^2+y^2}</m> is the side of the cone. It does not include the top.
 </p>
 
 <p>To find its area, we will apply <xref ref="eq_dSgraph"/> to
 <me>
 z=f(x,y) = \sqrt{x^2+y^2}
-\qquad\text{with <m>(x,y)</m> running over <m>x^2+y^2\le a^2</m>}
+\qquad\text{with $(x,y)$ running over } x^2+y^2\le a^2
 </me>
 That forces us to compute the first order partial derivatives
 <md>
@@ -335,18 +355,19 @@ So
 because <m>\dblInt_{x^2+y^2\le a^2} \dee{x}\,\dee{y}</m> is exactly
 the area of a circular disk of radius <m>a</m>.
 </p></example>
-</p>
 
-<p><example><title>Area of a cylinder</title>
+<example xml:id="eg_area_cylinder"><title>Area of a cylinder</title>
+<statement>
 <p>
-       xml:id="eg_area_cylinder"
 Let <m>a,b \gt 0</m>. Find the surface area of
 <me>
-\cS = §et{(x,y,z)}{x^2+z^2=a^2,\ 0\le y\le b}
+\cS = \Set{(x,y,z)}{x^2+z^2=a^2,\ 0\le y\le b}
 </me>
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 The intersection of <m>x^2+z^2=a^2</m> with any plane of constant <m>y</m>
 is the circle of radius <m>a</m> centred on <m>x=z=0</m>. So <m>\cS</m> is a
 bunch of circles stacked sideways. It is a cylinder on its side (with both
@@ -359,10 +380,12 @@ that is in the first octanct, which is
 </me>
 </p>
 
-<p><sidebyside>
-<image source="problems/figs/cylinderF.pdf"/>\qquad
-   <image source="problems/figs/cylinderG.pdf"/>
+<sidebyside>
+<image source="problems/figs/cylinderF.pdf"/>
+<image source="problems/figs/cylinderG.pdf"/>
 </sidebyside>
+
+<p>
 Since
 <me>
 f_x(x,y)=-\frac{x}{\sqrt{a^2-x^2}}\qquad
@@ -417,13 +440,11 @@ cylinder. This gives a rectangle. One side of the rectangle is just
 a circle of radius <m>a</m>, straightened out. So the rectangle has sides
 of lengths <m>2\pi a</m> and <m>b</m> and has area <m>2\pi ab</m>.
 </p>
-
+</solution>
 </example>
-</p>
 
-<p><example><title>Area of a hemisphere</title>
+<example xml:id="eg_area_hemisphere"><title>Area of a hemisphere</title>
 <p>
-       xml:id="eg_area_hemisphere"
 This time we compute the surface area of the hemisphere
 <me>
 x^2+y^2+z^2=a^2\qquad z\ge 0
@@ -438,7 +459,7 @@ the volume with respect to the radius.</fn>
  of this answer.
 Note that, since <m>x^2+y^2 = a^2-z^2</m> on the hemisphere, the set
 of <m>(x,y)</m>'s for which there is a <m>z</m> with <m>(x,y,z)</m> on the  hemisphere
-is exactly <m>§et{(x,y)\in\bbbr^2}{x^2+y^2\le a^2}</m>.
+is exactly <m>\Set{(x,y)\in\bbbr^2}{x^2+y^2\le a^2}</m>.
 So the hemisphere is
 <md>
 <mrow>
@@ -448,7 +469,7 @@ S &amp;= \Big\{(x,y,z)\ \Big|\ z=\sqrt{a^2-x^2-y^2},\ x^2+y^2\le a^2\Big\}
 We will compute the area of <m>S</m> by applying <xref ref="eq_dSgraph"/> to
 <me>
 z=f(x,y) = \sqrt{a^2-x^2-y^2}
-\qquad\text{with <m>(x,y)</m> running over <m>x^2+y^2\le a^2</m>}
+\qquad\text{with $(x,y)$ running over } x^2+y^2\le a^2
 </me>
 The first formula in <xref ref="eq_dSgraph"/> yields
 <md>
@@ -480,7 +501,7 @@ To evaluate this integral, we switch to polar coordinates, substituting
 &amp;=2\pi a \int_0^a\dee{r}\ \frac{r}{\sqrt{a^2-r^2}}
 </mrow><mrow>
 &amp;=2\pi a\int_{a^2}^0 \frac{-\dee{u}/2}{\sqrt{u}}
-\qquad\text{with <m>u=a^2-r^2,\ \dee{u} = -2r\,\dee{r}</m>}
+\qquad\text{with } u=a^2-r^2,\ \dee{u} = -2r\,\dee{r}
 </mrow><mrow>
 &amp;=2\pi a\Big[-\sqrt{u}\Big]_{a^2}^0
 </mrow><mrow>
@@ -491,15 +512,17 @@ as it should be.
 </p>
 
 </example>
-</p>
 
-<p><example>
-<p>xml:id="eg_area_paraboloid"
+<example xml:id="eg_area_paraboloid">
+<statement>
+<p>
 Find the surface area of the part of the paraboloid <m>z=2-x^2-y^2</m>
 lying above the <m>xy</m>-plane.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 The equation of the surface is of the form <m>x=f(x,y)</m> with <m>f(x,y)=2-x^2-y^2</m>.
 So
 <md>
@@ -518,7 +541,7 @@ and, by the first part of <xref ref="eq_dSgraph"/>,
 </md>
 The point <m>(x,y,z)</m>, with <m>z=2-x^2-y^2</m>, lies above the <m>xy</m>-plane if and only
 if <m>z\ge 0</m>, or, equivalently, <m>2-x^2-y^2\ge 0</m>. So the domain of
-integration is <m>§et{(x,y)}{x^2+y^2\le 2}</m> and
+integration is <m>\Set{(x,y)}{x^2+y^2\le 2}</m> and
 <me>
 \text{Surface Area} = \dblInt_{x^2+y^2\le 2}\ \sqrt{1+4x^2+4y^2} \ \dee{x}\dee{y}
 </me>
@@ -534,7 +557,8 @@ Switching to polar coordinates,
 &amp;=\frac{13}{3}\pi
 </mrow>
 </md>
-</p></example>
 </p>
+</solution>
+</example>
 
 </section>
