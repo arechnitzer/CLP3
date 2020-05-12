@@ -103,7 +103,7 @@ Find its average height.
 </p>
 
 <sidebyside>
-<image source="problems/figs/halfDomeA.pdf"/>
+<image source="figs/halfDomeA"/>
 </sidebyside>
 </statement>
 
@@ -165,7 +165,7 @@ Example <xref ref="eg_dblInt_G"/> as an iterated integral.
 </p>
 
 <sidebyside>
-<image source="problems/figs/halfDomeB.pdf"/>
+<image source="figs/halfDomeB"/>
 </sidebyside>
 
 <p>
@@ -245,8 +245,8 @@ definite integrals like <m>\int_{-\pi/2}^0 \cos^2\theta\ \dee{\theta}</m>.
 Looking at the figures
 </p>
 <sidebyside>
-<image source="problems/figs/cos2graph.pdf"/>
-<image source="problems/figs/sin2graph.pdf"/>
+<image source="figs/cos2graph"/>
+<image source="figs/sin2graph"/>
 </sidebyside>
 
 <p>
@@ -395,7 +395,7 @@ as in this figure,
 </p>
 
 <sidebyside>
-<image source="problems/figs/centroidXY.pdf"/>
+<image source="figs/centroidXY"/>
 </sidebyside>
 
 <p>
@@ -452,8 +452,8 @@ slices, as in the figure on the left below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/centroidQuarterCircleh"/>
-<image source="problems/figs/centroidQuarterCirclev"/>
+<image source="figs/centroidQuarterCircleh"/>
+<image source="figs/centroidQuarterCirclev"/>
 </sidebyside>
 
 <p>
@@ -541,7 +541,7 @@ Here is a sketch of that circle and of the region of interest, <m>\cR</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/comPolarA.pdf"/>
+<image source="figs/comPolarA"/>
 </sidebyside>
 
 <p>
@@ -709,7 +709,7 @@ of radius <m>1</m> centred on <m>(1,0)</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/cofm.pdf"/>
+<image source="figs/cofm"/>
 </sidebyside>
 
 <p>
@@ -766,8 +766,8 @@ from high up on the axis of rotation.
 </p>
 
 <sidebyside>
-<image source="problems/figs/momInertia.pdf"/>
-<image source="problems/figs/momInertiaB.pdf"/>
+<image source="figs/momInertia"/>
+<image source="figs/momInertiaB"/>
 </sidebyside>
 
 <p>
@@ -855,7 +855,7 @@ The distance from any point <m>(x,y)</m> inside the disk to the axis of
 </p>
 
 <sidebyside>
-<image source="problems/figs/diskI.pdf"/>
+<image source="figs/diskI"/>
 </sidebyside>
 
 <p>
@@ -904,7 +904,7 @@ Assume that the cardiod lies in the <m>xy</m>-plane and  has density one.
 </p>
 
 <sidebyside>
-<image source="problems/figs/cardioidIZ.pdf"/>
+<image source="figs/cardioidIZ"/>
 </sidebyside>
 
 <p>
@@ -998,7 +998,7 @@ about the <m>x</m>-axis. Assume that it has density one.
 </p>
 
 <p><sidebyside>
-<image source="problems/figs/cardioidI.pdf"/>
+<image source="figs/cardioidI"/>
 </sidebyside>
 }
 

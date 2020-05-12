@@ -76,7 +76,7 @@ and <m>f</m> is differentiable at <m>a</m>, then <m>f'(a)=0</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/localMaxA.pdf"/>
+<image source="figs/localMaxA"/>
 </sidebyside>
 
 <p>
@@ -126,7 +126,7 @@ See the figure below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/max.pdf"/>
+<image source="figs/max"/>
 </sidebyside>
 
 <p>
@@ -582,7 +582,7 @@ is the largest possible area for such an enclosure?
 </p>
 
 <sidebyside>
-<image source="problems/figs/fenceA.pdf"/>
+<image source="figs/fenceA"/>
 </sidebyside>
 </statement>
 
@@ -594,8 +594,8 @@ variable names.
 </p>
 
 <sidebyside>
-<image source="problems/figs/fence.pdf"/>
-   <image source="problems/figs/fenceB.pdf"/>
+<image source="figs/fence"/>
+   <image source="figs/fenceB"/>
 </sidebyside>
 
 <p>
@@ -672,7 +672,7 @@ We wish to find the straight line <m>\ y=mx+b\ </m> which <q>best</q> fits the d
 </p>
 
 <sidebyside>
-<image source="problems/figs/regression.pdf"/>
+<image source="figs/regression"/>
 </sidebyside>
 
 <p>
@@ -949,8 +949,8 @@ Here are some figures showing the graph of <m>f</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/hyperbolic_paraboloid"/>
-  <image source="problems/figs/hypPara"/>
+<image source="figs/hyperbolic_paraboloid"/>
+  <image source="figs/hypPara"/>
 </sidebyside>
 
 <p>
@@ -967,7 +967,7 @@ curves that
 </p>
 
 <sidebyside>
-<image source="problems/figs/hypParaLevel"/>
+<image source="figs/hypParaLevel"/>
 </sidebyside>
 
 </example>
@@ -1069,7 +1069,7 @@ That is, whenever <m>\De x=\De y\ne 0</m>,  then
 </p>
 
 <sidebyside>
-<image source="problems/figs/saddle.pdf"/>
+<image source="figs/saddle"/>
 </sidebyside>
 
 <p>
@@ -1289,12 +1289,12 @@ its maximum there. The third and fourth have a saddle point there.
 
 <sbsgroup>
 <sidebyside>
-<image source="problems/figs/f1Level.pdf"/>
-<image source="problems/figs/f2Level.pdf"/>
+<image source="figs/f1Level"/>
+<image source="figs/f2Level"/>
 </sidebyside>
 <sidebyside>
-<image source="problems/figs/f3Level.pdf"/>
-<image source="problems/figs/f4Level.pdf"/>
+<image source="figs/f3Level"/>
+<image source="figs/f4Level"/>
 </sidebyside>
 </sbsgroup>
 
@@ -1360,7 +1360,7 @@ Here is a sketch of some level curves of our <m>f(x,y)</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/fALevel.pdf"/>
+<image source="figs/fALevel"/>
 </sidebyside>
 
 <p>
@@ -1434,7 +1434,7 @@ in the shaded regions and <m>f</m> is positive in the unshaded regions.
 </p>
 
 <sidebyside>
-<image source="problems/figs/fBLevel.pdf"/>
+<image source="figs/fBLevel"/>
 </sidebyside>
 
 <p>
@@ -1525,7 +1525,7 @@ of the box.
 </p>
 
 <sidebyside>
-<image source="problems/figs/box.pdf"/>
+<image source="figs/box"/>
 </sidebyside>
 
 <p>
@@ -1643,7 +1643,7 @@ is never zero, so that <m>f</m> has no critical points.
 </p>
 
 <sidebyside>
-<image source="problems/figs/absMaxMin"/>
+<image source="figs/absMaxMin"/>
 </sidebyside>
 
 <p>
@@ -1779,7 +1779,7 @@ As all <m>t</m>'s are allowed, this function takes its max and min at zeroes of
 </p>
 
 <sidebyside>
-<image source="problems/figs/optExampleAa"/>
+<image source="figs/optExampleAa"/>
 </sidebyside>
 
 <p>
@@ -1835,7 +1835,7 @@ point that is outside of the allowed region.
 </p>
 
 <sidebyside>
-<image source="problems/figs/optExampleA"/>
+<image source="figs/optExampleA"/>
 </sidebyside>
 </solution>
 </example>
@@ -1941,7 +1941,7 @@ Here is a sketch showing all of the points that we have identified.
 </p>
 
 <sidebyside>
-<image source="problems/figs/optExampleB"/>
+<image source="figs/optExampleB"/>
 </sidebyside>
 
 <p>
@@ -2122,7 +2122,7 @@ max and min indicated.
 </sidebyside>
 
 <sidebyside>
-<image source="problems/figs/optExampleC"/>
+<image source="figs/optExampleC"/>
 </sidebyside>
 </solution>
 </example>
@@ -2136,7 +2136,7 @@ runs over the triangular region with vertices <m>(0,0)</m>, <m>(1,0)</m> and
 </p>
 
 <sidebyside>
-<image source="problems/figs/optExampleCCa"/>
+<image source="figs/optExampleCCa"/>
 </sidebyside>
 
 </statement>
@@ -2198,7 +2198,7 @@ runs from <m>(0,2)</m> to <m>(1,0)</m> is <m>y=2-2x</m> with <m>0\le x\le 1</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/optExampleCCc"/>
+<image source="figs/optExampleCCc"/>
 </sidebyside>
 </li>
 <li>
@@ -2278,7 +2278,7 @@ max and min indicated.
 </sidebyside>
 
 <sidebyside>
-<image source="problems/figs/optExampleCCb"/>
+<image source="figs/optExampleCCb"/>
 </sidebyside>
 </solution>
 </example>

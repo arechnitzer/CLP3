@@ -36,9 +36,9 @@ which we recall look like
 </p>
 
 <sidebyside>
-<image source="problems/figs/../figs_coord/cart2.pdf"/>
-<image source="problems/figs/../figs_coord/cart4.pdf"/>
-<image source="problems/figs/../figs_coord/cart3.pdf"/>
+<image source="figs/../figs_coord/cart2"/>
+<image source="figs/../figs_coord/cart4"/>
+<image source="figs/../figs_coord/cart3"/>
 </sidebyside>
 
 <p>
@@ -67,8 +67,8 @@ The bottom plate starts at <m>z=0</m> and the top plate ends at
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereMass1.pdf"/>
-<image source="problems/figs/sphereMass1a.pdf"/>
+<image source="figs/sphereMass1"/>
+<image source="figs/sphereMass1a"/>
 </sidebyside>
 
 </li>
@@ -93,8 +93,8 @@ essentially, <m>y=\sqrt{1-z^2}</m>.  See the figure on the right below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereMass2.pdf"/>
-<image source="problems/figs/sphereMass2a.pdf"/>
+<image source="figs/sphereMass2"/>
+<image source="figs/sphereMass2a"/>
 </sidebyside>
 </li>
 <li><p>
@@ -114,8 +114,8 @@ essentially, <m>x=\sqrt{1-y^2-z^2}</m>.  See the figure on the right below.
 </ul></p>
 
 <sidebyside>
-<image source="problems/figs/sphereMass3.pdf"/>
-<image source="problems/figs/sphereMass3a.pdf"/>
+<image source="figs/sphereMass3"/>
+<image source="figs/sphereMass3a"/>
 </sidebyside>
 </li>
 </ul>
@@ -261,9 +261,9 @@ That's
 </p>
 
 <sidebyside>
-<image source="problems/figs/limits3dA.pdf"/>
-<image source="problems/figs/limits3dB.pdf"/>
-<image source="problems/figs/limits3dC.pdf"/>
+<image source="figs/limits3dA"/>
+<image source="figs/limits3dB"/>
+<image source="figs/limits3dC"/>
 </sidebyside>
 
 <p>
@@ -276,7 +276,7 @@ as in the figure below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/limits3dD.pdf"/>
+<image source="figs/limits3dD"/>
 </sidebyside>
 
 <p>
@@ -314,7 +314,7 @@ as in the figure below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/limits3dE.pdf"/>
+<image source="figs/limits3dE"/>
 </sidebyside>
 
 <p>
@@ -393,8 +393,8 @@ inequalities, and, on the right, is a (3d) sketch of all <m>(x,Y,z)</m>'s that o
 </p>
 
 <sidebyside>
-<image source="problems/figs/figs_integration/xchange2.pdf"/>
-<image source="problems/figs/figs_integration/xchange5.pdf"/>
+<image source="figs/figs_integration/xchange2"/>
+<image source="figs/figs_integration/xchange5"/>
 </sidebyside>
 
 <p>
@@ -406,7 +406,7 @@ Here is a sketch of <m>V</m> together with a typical <m>y=Y</m> rectangle.
 </p>
 
 <sidebyside>
-<image source="problems/figs/figs_integration/xchange4.pdf"/>
+<image source="figs/figs_integration/xchange4"/>
 </sidebyside>
 
 <p>
@@ -427,8 +427,8 @@ that obey those inequalities, and, on the right, is a (3d) sketch of all <m>(x,y
 </p>
 
 <sidebyside>
-<image source="problems/figs/figs_integration/xchange3.pdf"/>
-<image source="problems/figs/figs_integration/xchange6.pdf"/>
+<image source="figs/figs_integration/xchange3"/>
+<image source="figs/figs_integration/xchange6"/>
 </sidebyside>
 
 <p>
@@ -437,7 +437,7 @@ To express <m>I</m> as an integral with the order of integration
 </p>
 
 <sidebyside>
-<image source="problems/figs/figs_integration/xchange3v.pdf"/>
+<image source="figs/figs_integration/xchange3v"/>
 </sidebyside>
 
 <p>
@@ -460,7 +460,7 @@ Alternatively, to express <m>I</m> as an integral with the order of integration
 </p>
 
 <sidebyside>
-<image source="problems/figs/figs_integration/xchange3h.pdf"/>
+<image source="figs/figs_integration/xchange3h"/>
 </sidebyside>
 
 <p>

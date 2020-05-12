@@ -87,8 +87,8 @@ centred on the origin).
 </p>
 
 <sidebyside>
-<image source="problems/figs/polarU.pdf"/>
-<image source="problems/figs/polarV.pdf"/>
+<image source="figs/polarU"/>
+<image source="figs/polarV"/>
 </sidebyside>
 
 <p>We start by cutting <m>\cR</m> (the shaded region in the figure below)
@@ -98,7 +98,7 @@ constant <m>v</m> (the red curves in the figure below).
 </p>
 
 <sidebyside>
-<image source="problems/figs/RSlice.pdf"/>
+<image source="figs/RSlice"/>
 </sidebyside>
 
 <p>
@@ -107,7 +107,7 @@ sketch.
 </p>
 
 <sidebyside>
-<image source="problems/figs/dA.pdf"/>
+<image source="figs/dA"/>
 </sidebyside>
 
 <p>
@@ -189,7 +189,7 @@ is approximately a parallelogram with sides
 \qquad
 </mrow>
 </md></p>
-<image source="problems/figs/dA2.pdf"/>
+<image source="figs/dA2"/>
 </sidebyside>
 
 <p>
@@ -430,7 +430,7 @@ in the original coordinates <m>(x,y)</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/genSub.pdf"/>
+<image source="figs/genSub"/>
 </sidebyside>
 
 <p>
@@ -459,7 +459,7 @@ the equations of its four sides are expressed in terms of <m>s</m> and <m>t</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/genSubB.pdf"/>
+<image source="figs/genSubB"/>
 </sidebyside>
 
 <p>
@@ -494,7 +494,7 @@ the volume of the parallelepiped (three dimensional parallelogram)
 </p>
 
 <sidebyside>
-<image source="problems/figs/../figs_geometry/piped.pdf"/>
+<image source="figs/../figs_geometry/piped"/>
 </sidebyside>
 
 <p>
@@ -516,7 +516,7 @@ of some <m>2\times 2</m> determinants by
 </p>
 
 <sidebyside width="">
-  <image source="problems/figs/../figs_geometry/det2"/>
+  <image source="figs/../figs_geometry/det2"/>
 </sidebyside>
 
 <p>
@@ -692,7 +692,7 @@ the <m>\dee{A}</m> formula for
 </p>
 
 <sidebyside>
-<image source="problems/figs/dA.pdf"/>
+<image source="figs/dA"/>
 </sidebyside>
 
 <p>
@@ -749,7 +749,7 @@ in a rectangle of width <m>W</m> and height <m>H</m>, as in the figure below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/slicing.pdf"/>
+<image source="figs/slicing"/>
 </sidebyside>
 
 <p>

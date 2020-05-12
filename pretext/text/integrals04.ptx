@@ -23,7 +23,7 @@ the plane <m>y=y_0</m> for some constant <m>y_0</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphericaldSxy.pdf"/>
+<image source="figs/sphericaldSxy"/>
 </sidebyside>
 <p>
 Concentrate on any one the tiny pieces. Here is a greatly magnified
@@ -31,7 +31,7 @@ sketch of it, looking at it from above.
 </p>
 
 <sidebyside>
-<image source="problems/figs/dSfxy.pdf"/>
+<image source="figs/dSfxy"/>
 </sidebyside>
 <p>
 We wish to compute its area, which we'll call <m>\dee{S}</m>.
@@ -126,7 +126,7 @@ surface with corners <m>P_0</m>, <m>P_1</m>, <m>P_2</m>, <m>P_3</m>  is approxim
 </mrow>
 </md>
 </p>
-<image source="problems/figs/dS2fxy.pdf"/>
+<image source="figs/dS2fxy"/>
 </sidebyside>
 
 <p>
@@ -252,7 +252,7 @@ parallelogram in the sketch
 </p>
 
 <sidebyside>
-<image source="problems/figs/surfaceProj.pdf"/>
+<image source="figs/surfaceProj"/>
 </sidebyside>
 represents a little piece of our surface. It has area
 <m>\dee{S}= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\ \dee{x}\dee{y}</m>.
@@ -312,7 +312,7 @@ with <m>0\le z\le a</m> or, equivalently, with <m>x^2+y^2\le a^2</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/cone"/>
+<image source="figs/cone"/>
 </sidebyside>
 <p>
 Note that <m>z=\sqrt{x^2+y^2}</m> is the side of the cone. It does not include the top.
@@ -383,8 +383,8 @@ that is in the first octanct, which is
 </p>
 
 <sidebyside>
-<image source="problems/figs/cylinderF.pdf"/>
-<image source="problems/figs/cylinderG.pdf"/>
+<image source="figs/cylinderF"/>
+<image source="figs/cylinderG"/>
 </sidebyside>
 
 <p>

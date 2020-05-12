@@ -56,7 +56,7 @@ z&amp;=\text{ the signed distance from }(x,y,z)
 </p>
 
 <sidebyside>
-<image source="problems/figs/../figs_coord/cyl1.pdf"/>
+<image source="figs/../figs_coord/cyl1"/>
 </sidebyside>
 <p>
 That is, <m>r</m> and <m>\theta</m> are the usual polar coordinates and <m>z</m> is the
@@ -95,9 +95,9 @@ Here are sketches of surfaces of constant <m>r</m>, constant <m>\theta</m>, and 
 </p>
 
 <sidebyside>
-<image source="problems/figs/../figs_coord/cyl3.pdf"/>
-<image source="problems/figs/../figs_coord/cyl4.pdf"/>
-<image source="problems/figs/../figs_coord/cyl2.pdf"/>
+<image source="figs/../figs_coord/cyl3"/>
+<image source="figs/../figs_coord/cyl4"/>
+<image source="figs/../figs_coord/cyl2"/>
 </sidebyside>
 
 </subsection>
@@ -121,7 +121,7 @@ by using planes of constant <m>z</m>,
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereCyl1.pdf"/>
+<image source="figs/sphereCyl1"/>
 </sidebyside>
 </li>
 <li><p>
@@ -130,7 +130,7 @@ say with the difference between successive <m>\theta</m>'s being <m>\dee{\theta}
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereCyl2.pdf"/>
+<image source="figs/sphereCyl2"/>
 </sidebyside>
 </li>
 <li><p>
@@ -140,7 +140,7 @@ being <m>\dee{r}</m>,
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereCyl3.pdf"/>
+<image source="figs/sphereCyl3"/>
 </sidebyside>
 </li>
 </ul>
@@ -148,7 +148,7 @@ we end up with approximate cubes that look like
 </p>
 
 <sidebyside>
-<image source="problems/figs/cylCube.pdf"/>
+<image source="figs/cylCube"/>
 </sidebyside>
 <p>
 <ul>
@@ -255,8 +255,8 @@ The bottom plate has, essentially, <m>z=0</m> and the top plate has, essentially
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereCyl1a.pdf"/>
-<image source="problems/figs/sphereCyl1b.pdf"/>
+<image source="figs/sphereCyl1a"/>
+<image source="figs/sphereCyl1b"/>
 </sidebyside>
 
 <p>
@@ -283,8 +283,8 @@ on the right below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereCyl2a.pdf"/>
-<image source="problems/figs/sphereCyl2b.pdf"/>
+<image source="figs/sphereCyl2a"/>
+<image source="figs/sphereCyl2b"/>
 </sidebyside>
 </li>
 <li><p>
@@ -306,8 +306,8 @@ essentially, <m>r=\sqrt{1-z^2}</m>.  See the figure on the right below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereCyl3a.pdf"/>
-<image source="problems/figs/sphereCyl3b.pdf"/>
+<image source="figs/sphereCyl3a"/>
+<image source="figs/sphereCyl3b"/>
 </sidebyside>
 </li>
 </ul>
@@ -420,7 +420,7 @@ Here is a sketch of the cone.
 </p>
 
 <sidebyside>
-<image source="problems/figs/cone"/>
+<image source="figs/cone"/>
 </sidebyside>
 
 <p>
@@ -440,7 +440,7 @@ and call the cone <m>\cV</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/coneZ"/>
+<image source="figs/coneZ"/>
 </sidebyside>
 
 <p>The Definition <xref ref="def_moment_of_inertia"/> of the moment of inertia
@@ -475,7 +475,7 @@ D(x,y,z) = \sqrt{x^2+z^2}
 </p>
 
 <sidebyside>
-<image source="problems/figs/cart6"/>
+<image source="figs/cart6"/>
 </sidebyside>
 <p>
 Our solid has constant density and mass <m>M</m>, so
@@ -505,7 +505,7 @@ constant <m>z</m>, with the various values of <m>z</m> differing by <m>\dee{z}</
 </p>
 
 <sidebyside>
-<image source="problems/figs/coneP.pdf"/>
+<image source="figs/coneP"/>
 </sidebyside>
 <p>
 Each plate
@@ -523,8 +523,8 @@ the disk at height <m>z</m> has radius <m>R</m> obeying
 </p>
 
 <sidebyside>
-<image source="problems/figs/coneX.pdf"/>
-<image source="problems/figs/coneT.pdf"/>
+<image source="figs/coneX"/>
+<image source="figs/coneT"/>
 </sidebyside>
 </li>
 <li>

@@ -37,7 +37,7 @@ Under the ISO conventions they are <m>(r,\varphi,\theta)</m>.</fn>
 </p>
 
 <sidebyside>
-<image source="problems/figs/../figs_coord/spherical.pdf"/>
+<image source="figs/../figs_coord/spherical"/>
 </sidebyside>
 </statement>
 </definition>
@@ -48,8 +48,8 @@ previous figure.
 </p>
 
 <sidebyside>
-<image source="problems/figs/../figs_coord/sphericalSide.pdf"/>
-<image source="problems/figs/../figs_coord/sphericalTop.pdf"/>
+<image source="figs/../figs_coord/sphericalSide"/>
+<image source="figs/../figs_coord/sphericalTop"/>
 </sidebyside>
 
 <p>
@@ -100,9 +100,9 @@ a surface of constant <m>\varphi</m>, i.e. a surface
 </p>
 
 <sidebyside>
-<image source="problems/figs/spher2.pdf"/>
-<image source="problems/figs/spher3.pdf"/>
-<image source="problems/figs/spher4.pdf"/>
+<image source="figs/spher2"/>
+<image source="figs/spher3"/>
+<image source="figs/spher4"/>
 </sidebyside>
 
 </subsection>
@@ -122,7 +122,7 @@ successive <m>\theta</m>'s being <m>\dee{\theta}</m>,
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereSph1.pdf"/>
+<image source="figs/sphereSph1"/>
 </sidebyside>
 </li>
 <li><p>
@@ -133,7 +133,7 @@ constant <m>\varphi</m>, say with the difference between successive
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereSph2.pdf"/>
+<image source="figs/sphereSph2"/>
 </sidebyside>
 </li>
 <li><p>
@@ -143,7 +143,7 @@ being <m>\dee{\rho}</m>,
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereSph3.pdf"/>
+<image source="figs/sphereSph3"/>
 </sidebyside>
 </li>
 </ul>
@@ -151,7 +151,7 @@ we end up with approximate cubes that look like
 </p>
 
 <sidebyside>
-<image source="problems/figs/spher5b.pdf"/>
+<image source="figs/spher5b"/>
 </sidebyside>
 <p>
 The dimensions of the approximate <q>cube</q> in spherical coordinates are
@@ -189,9 +189,9 @@ those edges of the cube each have length <m>\dee{\rho}</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereTh.pdf"/>
-     <image source="problems/figs/spherePhi.pdf"/>
-     <image source="problems/figs/sphereThPhiA.pdf"/>
+<image source="figs/sphereTh"/>
+     <image source="figs/spherePhi"/>
+     <image source="figs/sphereThPhiA"/>
 </sidebyside>
 </li>
 <li><p>
@@ -210,9 +210,9 @@ Edmund Halley (of Halley's comet) and Robert Hooke (of Hooke's law).
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereRho.pdf"/>
-     <image source="problems/figs/sphereTh.pdf"/>
-     <image source="problems/figs/sphereRhoThB.pdf"/>
+<image source="figs/sphereRho"/>
+     <image source="figs/sphereTh"/>
+     <image source="figs/sphereRhoThB"/>
 </sidebyside>
 <p>
 When we introduced searchlights using surfaces of constant <m>\varphi</m>,
@@ -222,7 +222,7 @@ essentially <m>\rho</m> that subtend an angle <m>\dee{\varphi}</m>, and so have 
 </p>
 
 <sidebyside>
-<image source="problems/figs/../figs_coord/spher9.pdf"/>
+<image source="figs/../figs_coord/spher9"/>
 </sidebyside>
 </li>
 <li><p>
@@ -236,9 +236,9 @@ on <m>\big(0,0, \rho\cos\varphi\big)</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/sphereRho.pdf"/>
- <image source="problems/figs/spherePhi.pdf"/>
- <image source="problems/figs/sphereRhoPhi.pdf"/>
+<image source="figs/sphereRho"/>
+ <image source="figs/spherePhi"/>
+ <image source="figs/sphereRhoPhi"/>
 </sidebyside>
 
 <p>
@@ -250,7 +250,7 @@ have length <m>\rho\sin\varphi\,\dee{\theta}</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/../figs_coord/spher10.pdf"/>
+<image source="figs/../figs_coord/spher10"/>
 </sidebyside>
 </li>
 </ul>
@@ -289,7 +289,7 @@ cream cone will be four times the volume of the part in the first octant.
 </p>
 
 <sidebyside>
-<image source="problems/figs/iceCream.pdf"/>
+<image source="figs/iceCream"/>
 </sidebyside>
 
 <p>
@@ -318,8 +318,8 @@ right below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/iceCream1.pdf"/>
-<image source="problems/figs/iceCream1a.pdf"/>
+<image source="figs/iceCream1"/>
+<image source="figs/iceCream1a"/>
 </sidebyside>
 </li>
 
@@ -344,8 +344,8 @@ on the right below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/iceCream2.pdf"/>
-<image source="problems/figs/iceCream2b.pdf"/>
+<image source="figs/iceCream2"/>
+<image source="figs/iceCream2b"/>
 </sidebyside>
 </li>
 <li><p>
@@ -368,8 +368,8 @@ essentially, <m>\rho=a</m>.  See the figure on the right below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/iceCream3.pdf"/>
-<image source="problems/figs/iceCream3b.pdf"/>
+<image source="figs/iceCream3"/>
+<image source="figs/iceCream3b"/>
 </sidebyside>
 </li>
 </ul>
@@ -447,7 +447,7 @@ original problem), just by looking at the triangle
 </p>
 
 <sidebyside>
-<image source="problems/figs/triangleIceCream.pdf"/>
+<image source="figs/triangleIceCream"/>
 </sidebyside>
 
 <p>
@@ -503,7 +503,7 @@ from the first octant.
 </p>
 
 <sidebyside>
-<image source="problems/figs/appleCoreB.pdf"/>
+<image source="figs/appleCoreB"/>
 </sidebyside>
 
 <p><ul>
@@ -517,7 +517,7 @@ Each segment, viewed from the side, looks like
 </p>
 
 <sidebyside>
-<image source="problems/figs/appleCoreB2.pdf"/>
+<image source="figs/appleCoreB2"/>
 </sidebyside>
 
 <p>
@@ -536,7 +536,7 @@ and the bottom searchlight has, essentially, <m>\varphi=\frac{\pi}{2}</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/appleCoreB3.pdf"/>
+<image source="figs/appleCoreB3"/>
 </sidebyside>
 </li>
 <li><p>
@@ -561,8 +561,8 @@ From it, we see (after a little trig) that the first cube has, essentially,
 </p>
 
 <sidebyside>
-<image source="problems/figs/appleCoreB3b.pdf"/>
-<image source="problems/figs/appleCoreB3c.pdf"/>
+<image source="figs/appleCoreB3b"/>
+<image source="figs/appleCoreB3c"/>
 </sidebyside>
 </li>
 </ul>
@@ -660,7 +660,7 @@ From the triangle below, we have
 </p>
 
 <sidebyside>
-<image source="problems/figs/triangleApple.pdf"/>
+<image source="figs/triangleApple"/>
 </sidebyside>
 
 <p>

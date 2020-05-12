@@ -22,7 +22,7 @@ curve <m>y=T(x)</m> with <m>x</m> running from <m>a</m> to <m>b</m>. That is,
 </md>
 </p>
 <sidebyside>
-<image source="problems/figs/vSliceA.pdf"/>
+<image source="figs/vSliceA"/>
 </sidebyside>
 
 <p>
@@ -42,7 +42,7 @@ of the right hand edge of slice number <m>i</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/vSliceB.pdf"/>
+<image source="figs/vSliceB"/>
 </sidebyside>
 </li>
 <li>
@@ -55,7 +55,7 @@ and whose bottom is at <m>y=B(x_i^*)</m>. The rectangle is outlined in blue in t
 figure below.
 </p>
 <sidebyside>
-<image source="problems/figs/vSliceC.pdf"/>
+<image source="figs/vSliceC"/>
 </sidebyside>
 </li>
 <li>
@@ -98,7 +98,7 @@ of the top of rectangle number <m>j</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/vSliceD.pdf"/>
+<image source="figs/vSliceD"/>
 </sidebyside>
 </li>
 <li>
@@ -254,7 +254,7 @@ dealing with regions of the form
 </p>
 
 <sidebyside>
-<image source="problems/figs/hSliceA.pdf"/>
+<image source="figs/hSliceA"/>
 </sidebyside>
 
 <p>
@@ -309,7 +309,7 @@ See the small black rectangle in the figure below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/hSliceB.pdf"/>
+<image source="figs/hSliceB"/>
 </sidebyside>
 
 <p>
@@ -317,7 +317,7 @@ Here is a magnified sketch of slice number <m>i</m>
 </p>
 
 <sidebyside>
-<image source="problems/figs/hSliceBB.pdf"/>
+<image source="figs/hSliceBB"/>
 </sidebyside>
 </li>
 <li>
@@ -528,7 +528,7 @@ once using horizontal strips. First, here is a sketch of <m>\cR</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/dblInt0a.pdf"/>
+<image source="figs/dblInt0a"/>
 </sidebyside>
 
 
@@ -537,7 +537,7 @@ We'll now set up a double integral for the mass using vertical strips.
 Note, from the figure
 </p>
 <sidebyside>
-<image source="problems/figs/dblInt0b.pdf"/>
+<image source="figs/dblInt0b"/>
 </sidebyside>
 
 <p>
@@ -589,7 +589,7 @@ Note, from the figure
 </p>
 
 <sidebyside>
-<image source="problems/figs/dblInt0c.pdf"/>
+<image source="figs/dblInt0c"/>
 </sidebyside>
 
 <p>
@@ -685,8 +685,8 @@ then</intertext>
 </md>
 </p>
 <sidebyside width="40%">
-<image source="problems/figs/union"/>
-<image source="problems/figs/unionB"/>
+<image source="figs/union"/>
+<image source="figs/unionB"/>
 </sidebyside>
 </statement>
 </theorem>
@@ -805,8 +805,8 @@ the part of <m>\cV</m> in the first octant is sketched in the figure on the righ
 </p>
 
 <sidebyside>
-<image source="problems/figs/volSliceB.pdf"/>
-<image source="problems/figs/volSliceA.pdf"/>
+<image source="figs/volSliceB"/>
+<image source="figs/volSliceA"/>
 </sidebyside>
 
 <p>
@@ -945,7 +945,7 @@ rightward opening parabola <m>x=\frac{2y^2}{\nu}</m>  intersect at <m>(0,0)</m> 
 </p>
 
 <sidebyside>
-<image source="problems/figs/dblIntAa.pdf"/>
+<image source="figs/dblIntAa"/>
 </sidebyside>
 
 
@@ -968,7 +968,7 @@ and using the abbreviated argument of the end of the last section
    height <m>\dee{y}</m> and of width <m>\dee{x}</m>. See the figure below.
 </p>
 <sidebyside>
-<image source="problems/figs/dblIntAb.pdf"/>
+<image source="figs/dblIntAb"/>
 </sidebyside>
 </li>
 <li>
@@ -1042,7 +1042,7 @@ again using the abbreviated argument of the end of the last section
 </p>
 
 <sidebyside>
-<image source="problems/figs/dblIntAc.pdf"/>
+<image source="figs/dblIntAc"/>
 </sidebyside>
 </li>
 <li>
@@ -1101,7 +1101,7 @@ sketch of <m>\cR</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/dblIntV0a.pdf"/>
+<image source="figs/dblIntV0a"/>
 </sidebyside>
 
 
@@ -1111,7 +1111,7 @@ Note, from the figure
 </p>
 
 <sidebyside>
-<image source="problems/figs/dblIntV0b.pdf"/>
+<image source="figs/dblIntV0b"/>
 </sidebyside>
 
 <p>
@@ -1168,7 +1168,7 @@ Note, from the figure
 </p>
 
 <sidebyside>
-<image source="problems/figs/dblIntV0c.pdf"/>
+<image source="figs/dblIntV0c"/>
 </sidebyside>
 
 <p>
@@ -1247,8 +1247,8 @@ figure on the right below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/cylinderA.pdf"/>
-<image source="problems/figs/cylinderB.pdf"/>
+<image source="figs/cylinderA"/>
+<image source="figs/cylinderB"/>
 </sidebyside>
 </li>
 </ul>
@@ -1280,8 +1280,8 @@ if and only if <m>x^2+y^2\le a^2</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/cylinderC.pdf"/>
-<image source="problems/figs/cylinderD.pdf"/>
+<image source="figs/cylinderC"/>
+<image source="figs/cylinderD"/>
 </sidebyside>
 <p>
 It lies in the second cylinder if and only if <m>x^2+z^2\le a^2</m>.
@@ -1331,7 +1331,7 @@ protocol.
 </p>
 
 <sidebyside>
-<image source="problems/figs/cylinderE.pdf"/>
+<image source="figs/cylinderE"/>
 </sidebyside>
 </li>
 <li>
@@ -1408,7 +1408,7 @@ We want the volume of the part of this cylinder that lies above
 </p>
 
 <sidebyside>
-<image source="problems/figs/qCylinder.pdf"/>
+<image source="figs/qCylinder"/>
 </sidebyside>
 
 <p>The constant <m>y</m> cross-sections of this volume are quarter
@@ -1480,8 +1480,8 @@ Looking at the figures
 </p>
 
 <sidebyside width="40%">
-<image source="problems/figs/cos2Agraph.pdf"/>
-<image source="problems/figs/sin2Agraph.pdf"/>
+<image source="figs/cos2Agraph"/>
+<image source="figs/sin2Agraph"/>
 </sidebyside>
 <p>
 we see that
@@ -1543,8 +1543,8 @@ on the left below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/reverseA.pdf"/>
- <image source="problems/figs/reverseB.pdf"/>
+<image source="figs/reverseA"/>
+ <image source="figs/reverseB"/>
 </sidebyside>
 <p>
 To reverse the order of integration we have to switch to horizontal
@@ -1593,7 +1593,7 @@ Evaluate the integral of <m>\frac{\sin x}{x}</m> over the region in the
 </p>
 
 <sidebyside>
-<image source="problems/figs/reverse2A.pdf"/>
+<image source="figs/reverse2A"/>
 </sidebyside>
 <p>
   We'll try to evaluate the specified integral twice <mdash/> once using
@@ -1635,8 +1635,8 @@ infinite series
 </p>
 
 <sidebyside>
-<image source="problems/figs/reverse2B.pdf"/>
-<image source="problems/figs/reverse2C.pdf"/>
+<image source="figs/reverse2B"/>
+<image source="figs/reverse2C"/>
 </sidebyside>
 
 
@@ -1693,7 +1693,7 @@ This is sketched in the figure below
 </p>
 
 <sidebyside>
-<image source="problems/figs/egDblIntEa.pdf"/>
+<image source="figs/egDblIntEa"/>
 </sidebyside>
 
 <p>
@@ -1705,7 +1705,7 @@ is sketched in the figure below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/egDblIntEb.pdf"/>
+<image source="figs/egDblIntEb"/>
 </sidebyside>
 
 <p>Considering that the <m>x</m>-dependence in <m>z=1-3x^2-2y^2</m>
@@ -1811,7 +1811,7 @@ Finally, since <m>\int_0^{\frac{\pi}{2}} \cos(4\theta)\,\dee{\theta}
 </p>
 
 <sidebyside>
-<image source="problems/figs/intDecomp2.pdf"/>
+<image source="figs/intDecomp2"/>
 </sidebyside>
 </li>
 <li>
@@ -1987,7 +1987,7 @@ g_n(t)=\frac{2}{\de_n-\de_{n+1}}\begin{cases}
    \end{cases}
 </me>
 </p>
-<image source="problems/figs/g_n"/>
+<image source="figs/g_n"/>
 </sidebyside>
 <p>
 Here is a summary of what we have done so far.
@@ -2031,7 +2031,7 @@ in the ground.
 </p>
 
 <sidebyside>
-<image source="problems/figs/fubini.pdf"/>
+<image source="figs/fubini"/>
 </sidebyside>
 
 <p>Now fix any <m>0\le y\le 1</m> and let's compute <m>\int_0^1 f(x,y)\ \dee{x}</m>.

@@ -82,7 +82,7 @@ x+ct=u\quad\text{with $u$ a constant}
 </p>
 
 <sidebyside>
-<image source="problems/figs/level.pdf"/>
+<image source="figs/level"/>
 </sidebyside>
 </li>
 <li>
@@ -104,7 +104,7 @@ The figure below illustrates this. It contains the graphs of <m>U(x)</m>, <m>U(x
 </p>
 
 <sidebyside>
-<image source="problems/figs/bumpLeft.pdf"/>
+<image source="figs/bumpLeft"/>
 </sidebyside>
 
 <p>The above argument that lead to the solution <m>w(x,t)=U(x+ct)</m>
@@ -344,7 +344,7 @@ string obey the wave equation.
 
 <p>Here is a sketch of a tiny element of the string.</p>
 <sidebyside>
-     <image source="problems/figs/string_elmnt.pdf"/>
+     <image source="figs/string_elmnt"/>
 </sidebyside>
 
 <p>
@@ -424,7 +424,7 @@ which implies, using the figure on the right below, that
 </mrow>
 </md>
 </p>
-<image source="problems/figs/triangleString.pdf"/>
+<image source="figs/triangleString"/>
 </sidebyside>
 
 <p>Substituting these formulae into (E1) give a horrendous mess. However,

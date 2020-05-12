@@ -300,7 +300,7 @@ and the minimum value is <m>-24</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/lagrangeA"/>
+<image source="figs/lagrangeA"/>
 </sidebyside>
 
 </solution>
@@ -326,7 +326,7 @@ picture.
 </p>
 
 <sidebyside>
-<image source="problems/figs/lagrangeB"/>
+<image source="figs/lagrangeB"/>
 </sidebyside>
 
 <p>Call the coordinates of the upper right corner of the rectangle
@@ -548,8 +548,8 @@ matter
 </p>
 
 <sidebyside>
-<image source="problems/figs/lagrangeCC"/>
-<image source="problems/figs/lagrangeC"/>
+<image source="figs/lagrangeCC"/>
+<image source="figs/lagrangeC"/>
 </sidebyside>
 
 </solution>
@@ -785,7 +785,7 @@ line in the schematic figure below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/dblLagrangeB.pdf"/>
+<image source="figs/dblLagrangeB"/>
 </sidebyside>
 
 <p>

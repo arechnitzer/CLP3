@@ -14,7 +14,7 @@ of constant <m>x</m> and many lines of constant <m>y</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/intDecomp3.pdf"/>
+<image source="figs/intDecomp3"/>
 </sidebyside>
 
 <p>
@@ -63,7 +63,7 @@ r&amp;=\text{ the distance from }(0,0)\text{ to }(x,y)
 </p>
 
 <sidebyside>
-<image source="problems/figs/polar.pdf"/>
+<image source="figs/polar"/>
 </sidebyside>
 </statement>
 </definition>
@@ -95,8 +95,8 @@ on the left, and curves of constant <m>r</m>, on the right.
 </p>
 
 <sidebyside>
-<image source="problems/figs/polarTh.pdf"/>
-<image source="problems/figs/polarR.pdf"/>
+<image source="figs/polarTh"/>
+<image source="figs/polarR"/>
 </sidebyside>
 
 
@@ -119,7 +119,7 @@ and can also have <m>\theta=\frac{3\pi}{2}</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/polarNegTh.pdf"/>
+<image source="figs/polarNegTh"/>
 </sidebyside>
 
 
@@ -130,7 +130,7 @@ and for <m>r=-1</m>, <m>\theta=\frac{\pi}{4}</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/polarNeg.pdf"/>
+<image source="figs/polarNeg"/>
 </sidebyside>
 
 <p>
@@ -162,14 +162,14 @@ remember what the graph of <m>\cos\theta</m> looks like for <m>0\le\theta\le 2\p
 </p>
 
 <sidebyside>
-<image source="problems/figs/cosGraph.pdf"/>
+<image source="figs/cosGraph"/>
 </sidebyside>
 <p>
 From this we see that the graph of <m>y=1+\cos\theta</m> is
 </p>
 
 <sidebyside>
-<image source="problems/figs/cosGraphP1.pdf"/>
+<image source="figs/cosGraphP1"/>
 </sidebyside>
 <p>
 Now let's pick some easy <m>\theta</m> values, find the corresponding <m>r</m>'s
@@ -197,9 +197,9 @@ That's the upper red dot in the second figure below.
 </p>
 
 <sidebyside>
-<image source="problems/figs/cardioid1.pdf"/>
-    <image source="problems/figs/cardioid2.pdf"/>
-    <image source="problems/figs/cardioid3.pdf"/>
+<image source="figs/cardioid1"/>
+    <image source="figs/cardioid2"/>
+    <image source="figs/cardioid3"/>
 </sidebyside>
 </li>
 <li><p>
@@ -240,7 +240,7 @@ for <m>0\le\theta\le \pi</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/cosGraphR.pdf"/>
+<image source="figs/cosGraphR"/>
 </sidebyside>
 
 <p>
@@ -249,7 +249,7 @@ so that <m>r(\pi+\theta) = r(\pi-\theta)</m>. So we get the figure.
 </p>
 
 <sidebyside>
-<image source="problems/figs/cardiod4.pdf"/>
+<image source="figs/cardiod4"/>
 </sidebyside>
 </li>
 <li><p>
@@ -263,7 +263,7 @@ comes from the Greek word <m>\kappa \alpha \rho \delta \iota \alpha</m>
 </p>
 
 <sidebyside>
-<image source="problems/figs/cardiodF.pdf"/>
+<image source="figs/cardiodF"/>
 </sidebyside>
 </li>
 </ul>
@@ -282,7 +282,7 @@ what the graph of <m>\sin(3\theta)</m> looks like for <m>0\le\theta\le 2\pi</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/sin3Graph.pdf"/>
+<image source="figs/sin3Graph"/>
 </sidebyside>
 
 <p>
@@ -340,8 +340,8 @@ part of the curve with <m>0\le \theta\le\frac{\pi}{3}</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/rose1.pdf"/>
-<image source="problems/figs/rose1b.pdf"/>
+<image source="figs/rose1"/>
+<image source="figs/rose1b"/>
 </sidebyside>
 
 </li>
@@ -387,8 +387,8 @@ part of the curve <m>r=\sin(3\theta)</m> with
 </p>
 
 <sidebyside>
-<image source="problems/figs/rose2.pdf"/>
-<image source="problems/figs/rose2b.pdf"/>
+<image source="figs/rose2"/>
+<image source="figs/rose2b"/>
 </sidebyside>
 
 </li>
@@ -436,8 +436,8 @@ part of the curve <m>r=\sin(3\theta)</m> with
 </p>
 
 <sidebyside>
-<image source="problems/figs/rose3.pdf"/>
-<image source="problems/figs/rose3b.pdf"/>
+<image source="figs/rose3"/>
+<image source="figs/rose3b"/>
 </sidebyside>
 </li>
 </ul>
@@ -446,7 +446,7 @@ the <q>three petal rose</q>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/rose3F.pdf"/>
+<image source="figs/rose3F"/>
 </sidebyside>
 
 <p>
@@ -474,7 +474,7 @@ This cuts the <m>xy</m>-plane up into approximate rectangles.
 </p>
 
 <sidebyside>
-<image source="problems/figs/polarRTh.pdf"/>
+<image source="figs/polarRTh"/>
 </sidebyside>
 
 <p>
@@ -482,7 +482,7 @@ Here is an enlarged sketch of one such approximate rectangle.
 </p>
 
 <sidebyside>
-<image source="problems/figs/polarA.pdf"/>
+<image source="figs/polarA"/>
 </sidebyside>
 
 <p>
@@ -551,8 +551,8 @@ is the outer curve while <m>r=B(\theta)</m> is the inner curve.
 </p>
 
 <sidebyside>
-<image source="problems/figs/polarMass.pdf"/>
-<image source="problems/figs/polarMass2.pdf"/>
+<image source="figs/polarMass"/>
+<image source="figs/polarMass2"/>
 </sidebyside>
 
 <p>Divide <m>\cR</m> into wedges (as in wedges of pie
@@ -571,7 +571,7 @@ The figure below shows one such approximate rectangle, in black.
 </p>
 
 <sidebyside>
-<image source="problems/figs/polarMass3.pdf"/>
+<image source="figs/polarMass3"/>
 </sidebyside>
 
 
@@ -681,7 +681,7 @@ angle <m>\dee{\theta}</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/polarArea3.pdf"/>
+<image source="figs/polarArea3"/>
 </sidebyside>
 
 <p>
@@ -757,7 +757,7 @@ from the first octant.
 </p>
 
 <sidebyside>
-<image source="problems/figs/appleCore.pdf"/>
+<image source="figs/appleCore"/>
 </sidebyside>
 
 <p>
@@ -792,8 +792,8 @@ outlined in blue.
 </p>
 
 <sidebyside>
-<image source="problems/figs/appleCore1.pdf"/>
-<image source="problems/figs/appleCore2.pdf"/>
+<image source="figs/appleCore1"/>
+<image source="figs/appleCore2"/>
 </sidebyside>
 </li>
 <li>
@@ -821,7 +821,7 @@ is essentially
 </p>
 
 <sidebyside>
-<image source="problems/figs/appleCore3.pdf"/>
+<image source="figs/appleCore3"/>
 </sidebyside>
 </li>
 </ul></p>
@@ -851,7 +851,7 @@ our solid is invariant under rotations about the <m>z</m>-axis.
 </p>
 
 <sidebyside>
-<image source="problems/figs/appleCore4.pdf"/>
+<image source="figs/appleCore4"/>
 </sidebyside>
 </li>
 <li>
@@ -961,8 +961,8 @@ It is a right angled triangle.
 </p>
 
 <sidebyside>
-<image source="problems/figs/convPolarA.pdf"/>
-<image source="problems/figs/convPolarC.pdf"/>
+<image source="figs/convPolarA"/>
+<image source="figs/convPolarC"/>
 </sidebyside>
 
 <p>
@@ -1099,8 +1099,8 @@ which is sketched in the figure on the left below.
 </p>
 
 <p><sidebyside>
-<image source="problems/figs/convPolarA.pdf"/>\qquad
-    <image source="problems/figs/convPolarB.pdf"/>
+<image source="figs/convPolarA"/>\qquad
+    <image source="figs/convPolarB"/>
 </sidebyside>
 Next we express the domain of integration in terms of polar coordinates,
 by expressing the equations of each of the boundary lines in terms of
@@ -1326,7 +1326,7 @@ Here is a sketch of the region of interest, which we'll call <m>\cR</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/comPolarA.pdf"/>
+<image source="figs/comPolarA"/>
 </sidebyside>
 
 
@@ -1336,7 +1336,7 @@ because <m>\cR</m> is a circular wedge with a triangle removed.
 </p>
 
 <sidebyside>
-<image source="problems/figs/comPolarAA.pdf"/>
+<image source="figs/comPolarAA"/>
 </sidebyside>
 
 <p>
@@ -1376,7 +1376,7 @@ we can write the equation <m>x=1</m> in polar coordinates as
 </p>
 
 <sidebyside>
-<image source="problems/figs/comPolarB.pdf"/>
+<image source="figs/comPolarB"/>
 </sidebyside>
 <p>
 Observe that, on <m>\cR_1</m>, for any fixed <m>\theta</m> between
@@ -1439,8 +1439,8 @@ the wedge <m>\cW</m>, of the figure on the left below, with the triangle
 </p>
 
 <sidebyside>
-<image source="problems/figs/comPolarC.pdf"/>
-<image source="problems/figs/comPolarD.pdf"/>
+<image source="figs/comPolarC"/>
+<image source="figs/comPolarD"/>
 </sidebyside>
 
 <p>
@@ -1498,7 +1498,7 @@ shaded region in
 </p>
 
 <sidebyside>
-<image source="problems/figs/polarA.pdf"/>
+<image source="figs/polarA"/>
 </sidebyside>
 <p>
 by <m>\dee{A} = r\,\dee{r}\,\dee{\theta}</m>.
@@ -1560,8 +1560,8 @@ and must be completely contained inside the circular sector
 </p>
 
 <sidebyside>
-<image source="problems/figs/polarArea.pdf"/>
-<image source="problems/figs/polarArea2.pdf"/>
+<image source="figs/polarArea"/>
+<image source="figs/polarArea2"/>
 </sidebyside>
 
 <p>
@@ -1574,7 +1574,7 @@ the area <m>\frac{\De\theta}{2\pi}\pi\rho^2 = \frac{\De\theta}{2}\rho^2</m>.
 </p>
 
 <sidebyside>
-<image source="problems/figs/sectorArea.pdf"/>
+<image source="figs/sectorArea"/>
 </sidebyside>
 
 <p>
