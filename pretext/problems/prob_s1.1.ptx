@@ -151,12 +151,15 @@ It is sketched in the figure on the right above.
 </li>
 <li>
 <p>As in part (d),
-<me>
+<md>
+<mrow>
 x^2+y^2 \lt 2y
-\iff x^2+y^2-2y \lt 0
+&amp; \iff x^2+y^2-2y \lt 0
 \iff x^2+y^2-2y+1 \lt 1
-\iff x^2+(y-1)^2 \lt 1
-</me>
+</mrow><mrow>
+&amp;\iff x^2+(y-1)^2 \lt 1
+</mrow>
+</md>
 As <m>x^2+(y-1)^2</m> is the square of the distance from <m>(0,1)</m> to <m>(x,y)</m>,
 <m>x^2+(y-1)^2 \lt 1</m> is the set of points whose distance from <m>(0,1)</m> is
 strictly less than <m>1</m>. That is, it is the set of points strictly inside

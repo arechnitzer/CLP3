@@ -587,7 +587,7 @@ P(x_1+\De &amp;x_1\,,\,x_2+\De x_2\,,\,x_3+\De x_3)
 </md>
 The three partial derivatives are
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 P_{x_1}(x_1,x_2,x_3)&amp;=\pdiff{}{x_1}\big[x_1x_2x_3\big]
 &amp;=x_2x_3\cr
 P_{x_2}(x_1,x_2,x_3)&amp;=\pdiff{}{x_2}\big[x_1x_2x_3\big]
