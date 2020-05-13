@@ -258,7 +258,7 @@ Then, as in the figure on the right below, write beside each line, the partial
 derivative of the function at the top of the line with respect to the variable at the bottom of the line.
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 40%" valign="middle">
 <image source="figs/decTreeA"/>
 <image source="figs/decTreeB"/>
 </sidebyside>
@@ -288,16 +288,19 @@ Finally
 <li>
 <p>
 That's it. We have
-<me>
-\pdiff{}{s}f\big(x(s,t),y(s,t)\big)=
-  \pdiff{f}{x}\big(x(s,t),y(s,t)\big)
+<md>
+<mrow>
+\pdiff{}{s}f\big(x(s,t),y(s,t)\big)
+&amp;=  \pdiff{f}{x}\big(x(s,t),y(s,t)\big)
   \pdiff{x}{s}(s,t)
-  +\pdiff{f}{y}\big(x(s,t),y(s,t)\big)
+</mrow><mrow>
+&amp;\hskip0.5in  +\pdiff{f}{y}\big(x(s,t),y(s,t)\big)
   \pdiff{y}{s}(s,t)
-</me>
+</mrow>
+</md>
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/decTreeS"/>
 </sidebyside>
 </li>
@@ -322,7 +325,7 @@ of Equation <xref ref="eqn_chain_rule_A"/>, without arguments, is
 The corresponding tree diagram is
 </p>
 
-<sidebyside>
+<sidebyside width="35%">
 <image source="figs/decTreeTT"/>
 </sidebyside>
 
@@ -448,13 +451,16 @@ F'(t)=2(\cos t)(-\sin t)-2(\sin t)(\cos t) = -4 \sin t\cos t
  Define  <m>w(x,t)=f(x+ct)</m> and
 <m>W(x,t)=\pdiff{w}{t}(x,t)=cf'(x+ct)=F\big(u(x,t)\big)</m>
 where <m>F(u)=cf'(u)</m> and <m>u(x,t)=x+ct</m>. Then
-<me>
+<md>
+<mrow>
 \frac{\partial^2}{\partial t^2}f(x+ct)
-=\pdiff{W}{t}(x,t)
+&amp;=\pdiff{W}{t}(x,t)
 =\diff{F}{u}\big(u(x,t)\big)  \pdiff{u}{t}(x,t)
 =c\,f'(x+ct)\,c
-=c^2\,f'(x+ct)
-</me>
+</mrow><mrow>
+&amp;=c^2\,f'(x+ct)
+</mrow>
+</md>
 </p>
 </example>
 
@@ -602,7 +608,7 @@ f_x(x,y(x))=f_x(x,y)\Big|_{y=-x}=1\Big|_{y=-x}=1
 </mrow><mrow>
 \amp \implies \difftwo{y }{x}(x) = -\diff{}{x}\left[\frac{f_x\big(x,y(x)\big)}{f_y\big(x,y(x)\big)}\right]
 </mrow><mrow>
-\amp \phantom{a \difftwo{y }{x}(x)}= -\frac{f_y\big(x,y(x)\big)\diff{}{x}[f_x\big(x,y(x)\big)]
+\amp \phantom{\implies}\qquad= -\frac{f_y\big(x,y(x)\big)\diff{}{x}[f_x\big(x,y(x)\big)]
 -f_x\big(x,y(x)\big)\diff{}{x}[f_y\big(x,y(x)\big)]}
 {f_y\big(x,y(x)\big)^2}
 \tag{$\dagger$}
@@ -639,13 +645,14 @@ into the right hand side of <m>(\dagger)</m> gives the final answer.
 <md>
 <mrow>
 \difftwo{y}{x}(x)
-= -\frac{
+&amp;= -\frac{
                                  f_y f_{xx}
                              -  f_y f_{xy} \frac{f_x}{f_y}
                              - f_x f_{yx}
                              + f_x f_{yy}\frac{f_x}{f_y}}
                          {f_y^2}
-= -\frac{
+</mrow><mrow>
+&amp;= -\frac{
                                  f_y^2 f_{xx}
                              - 2 f_x f_y f_{xy}
                                + f_x^2 f_{yy}}

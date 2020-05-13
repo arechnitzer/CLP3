@@ -251,9 +251,9 @@ as desired. To complete the proof we just have to justify the details
 By definition,
 <md>
 <mrow>
-\pdiff{}{y}
+&amp;\pdiff{}{y}
 \pdiff{f}{x}(x_0,y_0)
-&amp;=\lim_{k\rightarrow 0}\frac{1}{k}
+=\lim_{k\rightarrow 0}\frac{1}{k}
 \left[\pdiff{f}{x}(x_0,y_0+k)
 -\pdiff{f}{x}(x_0,y_0)\right]\cr
 &amp;=\lim_{k\rightarrow 0}\frac{1}{k}
@@ -267,9 +267,9 @@ By definition,
 Similarly,
 <md>
 <mrow>
-\pdiff{}{x}
+&amp;\pdiff{}{x}
 \pdiff{f}{y}(x_0,y_0)
-&amp;=\lim_{h\rightarrow 0}\frac{1}{h}
+=\lim_{h\rightarrow 0}\frac{1}{h}
 \left[\pdiff{f}{y}(x_0+h,y_0)
 -\pdiff{f}{y}(x_0,y_0)\right]\cr
 &amp;=\lim_{h\rightarrow 0}\frac{1}{h}
@@ -282,7 +282,7 @@ Similarly,
 </md>
 </li>
 <li><p>
-The mean value theorem (Theorem \eref{CLP100}{thm:DIFFmvt} in the CLP-1 text)
+The mean value theorem (Theorem 2.13.4 in the CLP-1 text)
 says that, for any differentiable function <m>\varphi(x)</m>,
 <ul>
 <li> the slope of the line joining the
@@ -303,7 +303,7 @@ That is, there is some <m>0 \lt \theta_1 \lt 1</m> such that
 </me>
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/mvt"/>
 </sidebyside>
 
@@ -324,7 +324,8 @@ Hence, for some <m>0 \lt \theta_1 \lt 1</m>,
 <mrow>
 F(h,k)\ &amp;=\ \frac{1}{h}
 \left[\frac{G(y_0+k)-G(y_0)}{k}\right]
-=\frac{1}{h}
+</mrow><mrow>
+&amp;=\frac{1}{h}
 \left[\pdiff{f}{y}(x_0+h,y_0+\theta_1k)
 -\pdiff{f}{y}(x_0,y_0+\theta_1k)\right]
 </mrow>
@@ -414,21 +415,24 @@ f(x,y)=\begin{cases}
 This function is continuous everywhere. Note that <m>f(x,0)=0</m> for all <m>x</m> and
 <m>f(0,y)=0</m> for all <m>y</m>. We now compute the first order
 partial derivatives. For <m>(x,y)\ne (0,0)</m>,
-<md alignment="alignat">
-<mrow>{3}
+<md>
+<mrow>
 \pdiff{f}{x}(x,y)
   &amp;= y\frac{x^2-y^2}{x^2+y^2} +xy\frac{2x}{x^2+y^2}
       - xy\frac{2x(x^2-y^2)}{{(x^2+y^2)}^2}
-  &amp;\ = y\frac{x^2-y^2}{x^2+y^2}  + xy\frac{4xy^2}{{(x^2+y^2)}^2}\cr
+</mrow><mrow>
+  &amp;\ = y\frac{x^2-y^2}{x^2+y^2}  + xy\frac{4xy^2}{{(x^2+y^2)}^2}
+</mrow><mrow>
 \pdiff{f}{y}(x,y)
   &amp;= x\frac{x^2-y^2}{x^2+y^2} -xy\frac{2y}{x^2+y^2}
       - xy\frac{2y(x^2-y^2)}{{(x^2+y^2)}^2}
+</mrow><mrow>
   &amp;\ = x\frac{x^2-y^2}{x^2+y^2}  - xy\frac{4yx^2}{{(x^2+y^2)}^2}
 </mrow>
 </md>
 For <m>(x,y)= (0,0)</m>,
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 \pdiff{f}{x}(0,0)
   &amp;= \left[\diff{}{x}f(x,0)\right]_{x=0}
   &amp;= \left[\diff{}{x} 0\right]_{x=0}
@@ -459,20 +463,22 @@ f_y(x,y)&amp;=\begin{cases}
 </md>
 Both <m>\pdiff{f}{x}(x,y)</m> and  <m>\pdiff{f}{y}(x,y)</m> are continuous.
 Finally, we compute
-<md alignment="alignat">
+<md>
 <mrow>
 \frac{\partial^2\ f}{\partial x\partial y}(0,0)
 &amp;=\left[\diff{}{x} f_y(x,0)\right]_{x=0}
-&amp;=\lim_{h\rightarrow 0}\frac{1}{h}\left[f_y(h,0)-f_y(0,0)\right]
+=\lim_{h\rightarrow 0}\frac{1}{h}\left[f_y(h,0)-f_y(0,0)\right]
+</mrow><mrow>
 &amp;=\lim_{h\rightarrow 0}\frac{1}{h}\left[h\frac{h^2-0^2}{h^2+0^2}-0\right]
-&amp;=1
+=1
 </mrow>
 <mrow>
 \frac{\partial^2\ f}{\partial y\partial x}(0,0)
 &amp;=\left[\diff{}{y} f_x(0,y)\right]_{y=0}
-&amp;=\lim_{k\rightarrow 0}\frac{1}{k}\left[f_x(0,k)-f_x(0,0)\right]
+=\lim_{k\rightarrow 0}\frac{1}{k}\left[f_x(0,k)-f_x(0,0)\right]
+</mrow><mrow>
 &amp;=\lim_{k\rightarrow 0}\frac{1}{k}\left[k\frac{0^2-k^2}{0^2+k^2}-0\right]
-&amp;=-1
+=-1
 </mrow>
 </md>
 </p>
