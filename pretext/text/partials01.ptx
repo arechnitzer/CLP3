@@ -409,8 +409,8 @@ For our current example
 =r\cos^2\theta\sin\theta
 </mrow>
 </md>
-As <m>\big|r\cos^2\theta\sin\theta\big|\le r\rightarrow 0</m> when <m>r\rightarrow 0</m>
-(regardless of what <m>\theta</m> does as <m>r\rightarrow 0</m>) we have
+As <m>\big|r\cos^2\theta\sin\theta\big|\le r</m> tends to <m>0</m> as <m>r</m> tends to <m>0</m>
+(regardless of what <m>\theta</m> does as <m>r</m> tends to <m>0</m>) we have
 <me>
 \lim\limits_{(x,y)\rightarrow (0,0)}\frac{x^2y}{x^2+y^2}=0
 </me>
