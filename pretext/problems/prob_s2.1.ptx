@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise>
+<statement><p>
+Suppose <m>f(x,y)</m> is a function such that
+         <m>\lim\limits_{(x,y)\to(0,0)}f(x,y)=10</m>.
+</p>
+
+<p>True or false: <m>|f(0.1,0.1)-10| \lt |f(0.2,0.2)-10|</m>
+</p></statement>
+<hint><p>
+How does the behaviour of a function far away from <m>(0,0)</m> affect its limit at <m>(0,0)</m>?
+</p></hint>
+<answer><p>
+in general, false.
+</p></answer>
+<solution><p>
+In general, this is false. Consider <m>f(x,y)=12-(1-10x)^2-(1-10y)^2</m>.
+<ul>
+<li> <m>\lim\limits_{(x,y)\to(0,0)}f(x,y)=12-1-1=10</m> (the function is continuous)
+</li>
+<li> <m>f(0.1,0.1)=12-(1-1)^2-(1-1)^2=12</m>
+</li>
+<li> <m>f(0.2,0.2)=12-(1-2)^2-(1-2)^2=10</m>
+</li>
+</ul>
+</p>
+
+<p>We often (somewhat lazily) interpret the limit <q><m>\lim\limits_{(x,y)\to(0,0)}f(x,y)=10</m></q>  to mean that, as <m>(x,y)</m> gets
+closer and closer to the origin, <m>f(x,y)</m> gets closer and closer to 10. This
+isn't exactly what the definition means, though. The definition tells us that,
+we can guarantee that <m>f(x,y)</m> be very close to 10 by choosing
+<m>(x,y)</m> very close to <m>(0,0)</m>.
+</p>
+
+<p>The function <m>f(x,y)</m> can also be very close to 10 for some <m>(x,y)</m>'s that are not close to <m>(0,0)</m>. Moreover, we don't know <em>how close</em> to <m>(0,0)</m>
+we have to be in order for <m>f(x,y)</m> to be <q>very close</q> to 10.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+A millstone pounds wheat into flour. The wheat sits in a basin, and the millstone pounds up and down.
+</p>
+
+<p>Samples of wheat are taken from various places along the basin. Their diameters are measured and their position on the basin is recorded.
+</p>
+
+<p>Consider this claim: <q>As the particles get very close to the millstone, the diameters of the particles approach 50 <m>\mu</m>m.</q>
+In this context, describe the variables below from Definition<nbsp/><xref ref="def_limit"/> in the CLP-3 text.
+</p>
+
+<p><ol label="a">
+<li> <m>\mathbf x</m>
+</li>
+<li> <m>\mathbf a</m>
+</li>
+<li> <m>\mathbf L</m>
+</li>
+</ol>
+</p></statement>
+<hint><p>
+In this analogy, <m>f(x,y)</m> is the diameter of a particle taken from the position <m>(x,y)</m> in the basin.
+</p></hint>
+<answer><p>
+(a) the position of the particle in the basin
+</p><p>
+(b) the position in the basin that the millstone hits
+</p><p>
+(c) 50 <m>\mu</m>m
+</p></answer>
+<solution>
+
+<p><ol label="a">
+<li> The function we're taking the limit of has its input as the position of the particle, and its output the size of the particle. So, <m>f(x,y)</m> gives the size of particles found at position <m>(x,y)</m>. In the definition, we write <m>\mathbf x = (x,y)</m>. So, <m>\mathbf x</m> is the position in the basin the particle was taken from.
+</li>
+<li> Our claim deals with particles very close to where the millstone hits the basin, so <m>\mathbf a</m> is the position in the basinfwhere the millstone hits.
+</li>
+<li> <m>\mathbf L</m> is the limit of the function: in this case, 50 <m>\mu</m>m.
+</li>
+</ol>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>f(x,y)=\dfrac{x^2}{x^2+y^2}</m>.
+<ol label="a">
+<li> Find a ray approaching the origin along which <m>f(x,y)=1</m>.
+</li>
+<li> Find a ray approaching the origin along which <m>f(x,y)=0</m>.
+</li>
+<li> What does the above work show about a limit of <m>f(x,y)</m>?
+</li>
+</ol>
+</p></statement>
+<hint><p>
+You can probably solve (a) and (b) by just staring at <m>f(x,y)</m>.
+</p></hint>
+<answer><p>
+(a) along the <m>x</m>-axis
+</p><p>
+(b) along the <m>y</m>-axis
+</p><p>
+(c) <m>\lim\limits_{(x,y)\to(0,0)}f(x,y)</m> does not exist
+</p></answer>
+<solution><p>
+<ol label="a">
+<li> By inspection, when <m>y=0</m>, then <m>f(x,y)=1</m> as long as <m>x \neq 0</m>. So, if we follow the <m>x</m>-axis in towards the origin, <m>f(x,y)=1</m> along this route.
+</li>
+<li> Also by inspection, when <m>x=0</m>, then <m>f(x,y)=0</m> as long as <m>y \neq 0</m>. So, if we follow the <m>y</m>-axis in towards the origin, <m>f(x,y)=0</m> along this route.
+</li>
+<li><p>
+  Since two different directions give us different values as we approach the origin,  <m>\lim\limits_{(x,y)\to(0,0)}f(x,y)</m> does not exist.
+</p>
+
+<sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\YEaxis{1.5}{1.5}
+\draw[very thick, \lt -,dashed] (0,.2)--(0,1) node[above left]{$f=0$};
+\draw[very thick, \lt -,dashed] (0,-.2)--(0,-1) node[below right]{$f=0$};
+\draw[thick, \lt -] (.2,0)--(1,0) node[above right]{$f=1$};
+\draw[thick, \lt -] (-0.2,0)--(-1,0) node[below left]{$f=1$};
+\end{tikzpicture}</latex-image></image>
+</sidebyside>
+</li>
+</ol>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>f(x,y)=x^2-y^2</m>
+<ol label="a">
+<li> Express the function in terms of the polar coordinates <m>r</m> and <m>\theta</m>, and simplify.
+</li>
+<li> Suppose <m>(x,y)</m> is a distance of 1 from the origin.
+What are the largest and smallest values of <m>f(x,y)</m>?
+</li>
+<li> Let <m>r \gt 0</m>. Suppose <m>(x,y)</m> is a distance of <m>r</m> from the origin.
+What are the largest and smallest values of <m>f(x,y)</m>?
+</li>
+<li> Let <m>\epsilon \gt 0</m>. Find a positive value of <m>r</m> that guarantees <m>|f(x,y)| \lt \epsilon</m> whenever <m>(x,y)</m> is at most <m>r</m> units from the origin.
+</li>
+<li> What did you just show?
+</li>
+</ol>
+</p></statement>
+<hint><p>
+Recall <m>\cos^2\theta-\sin^2\theta=\cos(2\theta)</m>
+</p></hint>
+<answer><p>
+(a) <m>r^2\cos(2\theta)</m></p><p>
+(b) <m>\text{min}=-1,\ \text{max}=1</m></p><p>
+(c) <m>\text{min}=-r^2,\ \text{max}=r^2</m></p><p>
+(d) <m>r \lt \sqrt\epsilon</m>
+</p>
+
+<p>(e) <m>\lim\limits_{(x,y)\to(0,0)}f(x,y)=0</m>
+</p>
+
+</answer>
+<solution><p>
+<ol label="a">
+<li> Since <m>x=r\cos\theta</m> and <m>y=r\sin\theta</m>, we have that
+<me>
+f=x^2-y^2=r^2\cos^2\theta-r^2\sin^2\theta=r^2\cos(2\theta)
+</me>
+</li>
+<li>
+When <m>r=1</m>, <m>f=\cos(2\theta)</m>. So, <m>f(x,y)</m> runs between <m>-1</m> and <m>1</m>.
+It smallest value is <m>-1</m> and its largest value is <m>+1</m>.
+</li>
+<li>
+The distance from <m>(x,y)</m> to the origin is <m>r</m> (for <m>r\ge0)</m>. So, at a distance <m>r</m>, our function is <m>r^2\cos(2\theta)</m>. Then <m>f(x,y)</m> runs over the interval <m>[-r^2,r^2]</m>. It smallest value is <m>-r^2</m> and its largest value is <m>+r^2</m>.
+</li>
+<li>
+Using our answer to the last part, we have that <m>|f|\le r^2</m>. So for <m>0 \lt r \lt \sqrt\epsilon</m>, we necessarily have that <m>|f(x,y)| \lt \epsilon</m>
+whenever the distance from <m>(x,y)</m> to the origin is at most <m>r</m>.
+</li>
+<li>
+For every <m>\epsilon \gt 0</m>, if we choose <m>(x,y)</m> to be sufficiently close to <m>(0,0)</m> (in particular, within a distance <m>r \lt \sqrt\epsilon</m>), then <m>f(x,y)</m> is
+within distance <m>\epsilon</m> of <m>0</m>. By Definition<nbsp/><xref ref="def_limit"/>
+in the CLP-3 text, we have that <m>\lim\limits_{(x,y)\to(0,0)}f(x,y)=0</m>.
+</li>
+</ol>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Suppose <m>f(x,y)</m> is a polynomial. Evaluate <m>\lim\limits_{(x,y)\to(a,b)}f(x,y)</m>, where <m>(a,b)\in\mathbb R^2</m>.
+</p></statement>
+<hint><p>
+Theorem<nbsp/><xref ref="thm_one_d_continuity"/>
+in the CLP-3 text
+</p></hint>
+<answer><p>
+<m>f(a,b)</m>
+</p></answer>
+<solution><p>
+By Theorem<nbsp/><xref ref="thm_one_d_continuity"/>,
+<m>f(x,y)</m> is continuous over its domain. The domain of a polynomial is everywhere; in this case, <m>\mathbb R^2</m>. So, <m>f(x,y)</m> is continuous at <m>(a,b)</m>. By the definition of continuity, <m>\lim\limits_{(x,y)\to(a,b)}f(x,y)=f(a,b)</m>.
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise>
+<statement><p>
+Evaluate, if possible,
+<ol label="a">
+<li> <m>\ds\lim_{(x,y)\rightarrow(2,-1)}\ \big(xy+x^2\big)</m>
+</li>
+<li> <m>\ds\lim_{(x,y)\rightarrow(0,0)}\ \frac{x}{x^2+y^2}</m>
+</li>
+<li> <m>\ds\lim_{(x,y)\rightarrow(0,0)}\ \frac{x^2}{x^2+y^2}</m>
+</li>
+<li> <m>\ds\lim_{(x,y)\rightarrow(0,0)}\ \frac{x^3}{x^2+y^2}</m>
+</li>
+<li> <m>\ds\lim_{(x,y)\rightarrow(0,0)}\ \frac{x^2y^2}{x^2+y^4}</m>
+</li>
+<li> <m>\ds\lim_{(x,y)\rightarrow (0,0)}\
+                        \frac{(\sin x)\left(e^y-1\right)}{xy}</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+For parts (b), (c), (d), (e), switch to polar coordinates.
+For part (f),
+<me>
+\lim_{(x,y)\rightarrow (0,0)}\
+                        \frac{(\sin x)\left(e^y-1\right)}{xy}
+=\left[\lim_{x\rightarrow 0}\
+                        \frac{\sin x}{x}\right]\
+ \left[\lim_{y\rightarrow 0}\
+                        \frac{e^y-1}{y}\right]
+</me>
+</p></hint>
+
+<answer><p>
+(a) <m>2</m> </p><p>
+(b) undefined</p><p>
+(c) undefined</p><p>
+(d) <m>0</m></p><p>
+(e) <m>0</m> </p><p>
+(f) <m>1</m>
+</p></answer>
+
+<solution><p>
+(a) <m>\ds\lim_{(x,y)\rightarrow(2,-1)}\ \big(xy+x^2\big)=2(-1)+2^2=2</m>
+</p>
+
+<p>(b) Switching to polar coordinates,
+<md>
+<mrow>
+\lim_{(x,y)\rightarrow(0,0)}\ \frac{x}{x^2+y^2}
+    &amp;=\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ \frac{r\cos\theta}{r^2}
+     =\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ \frac{\cos\theta}{r}
+    =\text{undefined}
+</mrow>
+</md>
+since, for example,
+<ul>
+<li>
+if <m>\theta=0</m>, then
+<me>
+\lim_{\Atop{r\rightarrow0^+}{\theta=0}}\ \frac{\cos\theta}{r}
+=\lim_{r\rightarrow0^+}\ \frac{1}{r}
+=+\infty
+</me>
+</li>
+<li>
+while if <m>\theta=\pi</m>, then
+<me>
+\lim_{\Atop{r\rightarrow0^+}{\theta=\pi}}\ \frac{\cos\theta}{r}
+=\lim_{r\rightarrow0^+}\ \frac{-1}{r}
+=-\infty
+</me>
+</li>
+</ul>
+</p>
+
+<p>(c) Switching to polar coordinates,
+<md>
+<mrow>
+\lim_{(x,y)\rightarrow(0,0)}\ \frac{x^2}{x^2+y^2}
+  &amp;=\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ \frac{r^2\cos^2\theta}{r^2}
+     =\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ \cos^2\theta
+    =\text{undefined}
+</mrow>
+</md>
+since, for example,
+<ul>
+<li>
+if <m>\theta=0</m>, then
+<me>
+\lim_{\Atop{r\rightarrow0^+}{\theta=0}}\ \cos^2\theta
+=\lim_{r\rightarrow0^+}\ 1
+= 1
+</me>
+</li>
+<li>
+while if <m>\theta=\frac{\pi}{2}</m>, then
+<me>
+\lim_{\Atop{r\rightarrow0^+}{\theta=\pi/2}}\ \cos^2\theta
+=\lim_{r\rightarrow0^+}\ 0
+=0
+</me>
+</li>
+</ul>
+</p>
+
+<p>(d) Switching to polar coordinates,
+<md>
+<mrow>
+\lim_{(x,y)\rightarrow(0,0)}\ \frac{x^3}{x^2+y^2}
+   &amp;=\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ \frac{r^3\cos^3\theta}{r^2}
+     =\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ r\cos^3\theta
+    =0
+</mrow>
+</md>
+since <m>|\cos\theta|\le 1</m> for all <m>\theta</m>.
+</p>
+
+<p>(e) Switching to polar coordinates,
+<md>
+<mrow>
+    \lim_{(x,y)\rightarrow(0,0)}\ \frac{x^2y^2}{x^2+y^4}
+    &amp;=\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\
+                                \frac{r^2\cos^2\theta\ r^2\sin^2\theta}
+                                      {r^2\cos^2\theta+r^4\sin^4\theta}
+   =\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ r^2\sin^2\theta
+                  \frac{\cos^2\theta}{\cos^2\theta+r^2\sin^4\theta}
+</mrow><mrow>
+   &amp;=  0
+</mrow>
+</md>
+Here, we used that
+<me>
+\left|\sin^2\theta\frac{\cos^2\theta} {\cos^2\theta+r^2\sin^4\theta}\right|
+\le \left|\frac{\cos^2\theta} {\cos^2\theta+r^2\sin^4\theta}\right|
+\le \left|\frac{\cos^2\theta} {\cos^2\theta}\right|\le 1
+</me>
+for all <m>r \gt 0</m>.
+</p>
+
+<p>(f) To start, observe that
+<md>
+<mrow>
+\lim_{(x,y)\rightarrow (0,0)}\
+                  \frac{(\sin x)\left(e^y-1\right)}{xy}
+          =\left[\lim_{x\rightarrow 0}\
+                  \frac{\sin x}{x}\right]
+            \left[\lim_{y\rightarrow 0}\
+                  \frac{e^y-1}{y}\right]
+</mrow>
+</md>
+We may evaluate  <m>\ds\left[\lim_{x\rightarrow 0}\
+                  \frac{\sin x}{x}\right]</m>
+by l'Hôpital's rule or by using the definition of the derivative to give
+<me>
+\lim_{x\rightarrow 0}\ \frac{\sin x}{x}
+=\lim_{x\rightarrow 0}\ \frac{\sin x-\sin 0}{x-0}
+=\diff{}{x}\sin x\bigg|_{x=0}
+=\cos x\Big|_{x=0}=1
+</me>
+Similarly, we may evaluate  <m>\ds\left[\lim_{y\rightarrow 0}\
+                  \frac{e^y-1}{y}\right]</m>
+by l'Hôpital's rule or by using the definition of the derivative to give
+<me>
+\lim_{y\rightarrow 0}\ \frac{e^y-1}{y}
+=\lim_{y\rightarrow 0}\ \frac{e^y-e^0}{y-0}
+=\diff{}{y}e^y\bigg|_{y=0}
+=e^y\Big|_{y=0}=1
+</me>
+So all together
+<md>
+<mrow>
+\lim_{(x,y)\rightarrow (0,0)}\
+                  \frac{(\sin x)\left(e^y-1\right)}{xy}
+          =\left[\lim_{x\rightarrow 0}\
+                  \frac{\sin x}{x}\right]
+            \left[\lim_{y\rightarrow 0}\
+                  \frac{e^y-1}{y}\right]
+          =[1]\ [1]=1
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M253 2009D</fromexam></title>
+<statement><p>
+<ol label="a">
+<li>
+Find the limit: <m>\ds \lim_{(x,y)\to(0,0)}\frac{x^8+y^8}{x^4+y^4}</m>.
+</li>
+<li>
+Prove that the following limit does not exist:
+  <m>\ds \lim_{(x,y)\to(0,0)}\frac{xy^5}{x^8+y^{10}}</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Switch to polar coordinates.
+</p></hint>
+
+<answer><p>
+(a) <m>0</m>
+</p><p>
+(b) See the solution.
+</p></answer>
+
+<solution><p>
+(a)
+In polar coordinates, <m>x=r\cos\theta</m>, <m>y=r\sin\theta</m>, so that
+<md>
+<mrow>
+\frac{x^8+y^8}{x^4+y^4}
+&amp;=\frac{r^8\cos^8\theta+r^8\sin^8\theta}{r^4\cos^4\theta+r^4\sin^4\theta}
+=r^4\frac{\cos^8\theta+\sin^8\theta}{\cos^4\theta+\sin^4\theta}
+</mrow>
+</md>
+As
+<md>
+<mrow>
+\frac{\cos^8\theta+\sin^8\theta}{\cos^4\theta+\sin^4\theta}
+&amp;\le \frac{\cos^8\theta+2\cos^4\theta\sin^4\theta+\sin^8\theta}
+             {\cos^4\theta+\sin^4\theta}
+=\frac{\big(\cos^4\theta+\sin^4\theta\big)^2}{\cos^4\theta+\sin^4\theta}
+</mrow><mrow>
+&amp;=\cos^4\theta+\sin^4\theta
+\le 2
+</mrow>
+</md>
+we have
+<me>
+0\le \frac{x^8+y^8}{x^4+y^4}\le 2r^4
+</me>
+As <m>\ds\lim_{(x,y)\to (0,0)}2r^4=0</m>, the squeeze theorem yields
+ <m>\ds\lim_{(x,y)\to(0,0)}\frac{x^8+y^8}{x^4+y^4}=0</m>.
+</p>
+
+<p>(b)
+In polar coordinates
+<md>
+<mrow>
+\frac{xy^5}{x^8+y^{10}}
+&amp;=\frac{r^6\cos\theta\,\sin^5\theta}{r^8\cos^8\theta+r^{10}\sin^{10}\theta}
+=\frac{1}{r^2}\frac{\cos\theta\,\sin^5\theta}{\cos^8\theta+r^2\sin^{10}\theta}
+</mrow>
+</md>
+As <m>(x,y)\to (0,0)</m> the first fraction <m>\frac{1}{r^2}\to\infty</m> but the second
+factor can take many different values. For example, if we send <m>(x,y)</m>
+towards the origin along the <m>y</m>--axis, i.e. with
+<m>\theta=\pm\frac{\pi}{2}</m>,
+<md>
+<mrow>
+\lim_{\Atop {(x,y)\to(0,0)}{x=0}}\frac{xy^5}{x^8+y^{10}}
+=\lim_{y\to 0} \frac{0}{y^{10}}=0
+</mrow>
+</md>
+but if we send <m>(x,y)</m> towards the origin along the line <m>y=x</m>,
+i.e. with  <m>\theta=\frac{\pi}{4},\frac{5\pi}{4}</m>,
+<md>
+<mrow>
+\lim_{\Atop {(x,y)\to(0,0)}{y=x} }\frac{xy^5}{x^8+y^{10}}
+=\lim_{x\to 0} \frac{x^6}{x^8+x^{10}}
+=\lim_{x\to 0} \frac{1}{x^2}\frac{1}{1+x^2}
+=+\infty
+</mrow>
+</md>
+and if we send <m>(x,y)</m> towards the origin along the line <m>y=-x</m>,
+i.e. with  <m>\theta=-\frac{\pi}{4},\frac{3\pi}{4}</m>,
+<md>
+<mrow>
+\lim_{\Atop {(x,y)\to(0,0)}{y=-x} }\frac{xy^5}{x^8+y^{10}}
+=\lim_{x\to 0} \frac{-x^6}{x^8+x^{10}}
+=\lim_{x\to 0}- \frac{1}{x^2}\frac{1}{1+x^2}
+=-\infty
+</mrow>
+</md>
+So <m>\frac{xy^5}{x^8+y^{10}}</m> does not approach a single value as
+<m>(x,y)\to(0,0)</m> and the limit does not exist.
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M2226 2009D</fromexam></title>
+<statement><p>
+Evaluate each of the following limits or show that it does not exist.
+<ol label="a">
+<li>
+<m>\ds\lim_{(x,y)\rightarrow (0,0)}\frac{x^3-y^3}{x^2+y^2}</m>
+</li>
+<li>
+<m>\ds\lim_{(x,y)\rightarrow (0,0)}\frac{x^2-y^4}{x^2+y^4}</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+(a) Switch to polar coordinates.
+</p>
+
+<p>(b) What are the limits when (i) <m>x=0</m> and <m>y\rightarrow 0</m> and when
+(ii) <m>y=0</m> and <m>x\rightarrow 0</m>?
+</p></hint>
+
+<answer><p>
+(a) <m>0</m>
+</p>
+
+<p>(b) The limit does not exist since the limits (i) <m>x=0</m>,
+<m>y\rightarrow 0</m> and (ii) <m>y=0</m>, <m>x\rightarrow 0</m> are different.
+</p></answer>
+
+<solution><p>
+(a) In polar coordinates
+<me>
+\frac{x^3-y^3}{x^2+y^2}=\frac{r^3\cos^3\theta-r^3\sin^3\theta}{r^2}
+=r\cos^3\theta-r\sin^3\theta
+</me>
+Since
+<me>
+\big|r\cos^3\theta-r\sin^3\theta\big|\le 2r
+</me>
+and <m>2r\rightarrow 0</m> as <m>r\rightarrow 0</m>, the limit exists and is <m>0</m>.
+</p>
+
+<p>(b)
+The limit as we approach <m>(0,0)</m> along the <m>x</m>-axis is
+<md>
+<mrow>
+\lim_{t\rightarrow 0}\frac{x^2-y^4}{x^2+y^4}\bigg|_{(x,y)=(t,0)}
+=\lim_{t\rightarrow 0}\frac{t^2-0^4}{t^2+0^4}
+=1
+</mrow>
+</md>
+On the other hand the limit as we approach <m>(0,0)</m> along the <m>y</m>-axis is
+<md>
+<mrow>
+\lim_{t\rightarrow 0}\frac{x^2-y^4}{x^2+y^4}\bigg|_{(x,y)=(0,t)}
+=\lim_{t\rightarrow 0}\frac{0^2-t^4}{0^2+t^4}
+=-1
+</mrow>
+</md>
+These are different, so the limit as <m>(x,y)\rightarrow 0</m> does not exist.
+</p>
+
+<p>We can gain a more detailed understanding of the behaviour of
+<m>\frac{x^2-y^4}{x^2+y^4}</m> near the origin by switching to polar coordinates.
+<me>
+\frac{x^2-y^4}{x^2+y^4}
+=\frac{r^2\cos^2\theta-r^4\sin^4\theta}{r^2\cos^2\theta+r^4\sin^4\theta}
+=\frac{\cos^2\theta-r^2\sin^4\theta}{\cos^2\theta+r^2\sin^4\theta}
+</me>
+Now fix any <m>\theta</m> and let <m>r\rightarrow 0</m> (so that we are approaching the origin along the ray that makes an angle <m>\theta</m> with the positive <m>x</m>-axis).
+If <m>\cos\theta\ne 0</m> (i.e. the ray is not part of the <m>y</m>-axis)
+<md>
+<mrow>
+\lim_{r\rightarrow 0}
+     \frac{\cos^2\theta-r^2\sin^4\theta}{\cos^2\theta+r^2\sin^4\theta}
+=\frac{\cos^2\theta}{\cos^2\theta}
+=1
+</mrow>
+</md>
+But if <m>\cos\theta= 0</m> (i.e. the ray is part of the <m>y</m>-axis)
+<md>
+<mrow>
+\lim_{r\rightarrow 0}
+     \frac{\cos^2\theta-r^2\sin^4\theta}{\cos^2\theta+r^2\sin^4\theta}
+=\lim_{r\rightarrow 0}
+     \frac{-r^2\sin^4\theta}{r^2\sin^4\theta}
+=\frac{-\sin^4\theta}{\sin^4\theta}
+=-1
+</mrow>
+</md>
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise><title><fromexam>M226 2010D</fromexam></title>
+<statement><p>
+Evaluate each of the following limits or show that it does not exist.
+<ol label="a">
+<li>
+<m>\ds\lim_{(x,y)\rightarrow (0,0)}\frac{2x^2 + x^2y - y^2x + 2y^2}{x^2 + y^2}</m>
+</li>
+<li>
+<m>\ds\lim_{(x,y)\rightarrow(0,1)} \frac{x^2y^2 -2 x^2y + x^2}
+                                       {(x^2 + y^2-2y+1)^2}</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+For part (a) switch to polar coordinates.
+For part (b), switch to polar coordinates
+centred on <m>(0,1)</m>. That is, make the change of variables
+<m>x=r\cos\theta</m>, <m>y=1+r\sin\theta</m>.
+</p></hint>
+
+<answer><p>
+(a) <m>2</m></p><p>
+(b) The limit does not exist. See the solution.
+</p></answer>
+
+<solution><p>
+(a) In polar coordinates <m>x=r\cos\theta</m>, <m>y=r\sin\theta</m>
+<md>
+<mrow>
+\frac{2x^2 + x^2y - y^2x + 2y^2}{x^2 + y^2}
+&amp;=\frac{2r^2\cos^2\theta + r^3\cos^2\theta\sin\theta - r^3\cos\theta\sin^2\theta
+                 + 2r^2\sin^2\theta}{r^2}
+</mrow><mrow>
+&amp;=2+ r\big[\cos^2\theta\sin\theta - \sin^2\theta\cos\theta \big]
+</mrow>
+</md>
+As
+<me>
+r\big|\cos^2\theta\sin\theta - \sin^2\theta\cos\theta \big|
+\le 2r
+\rightarrow 0\text{ as }r\rightarrow 0
+</me>
+we have
+<me>
+\lim_{(x,y)\rightarrow(0,0)} \frac{2x^2 + x^2y - y^2x + 2y^2}{x^2 + y^2}=2
+</me>
+</p>
+
+<p>(b)
+Since
+<md>
+<mrow>
+\frac{x^2y^2 -2 x^2y + x^2} {(x^2 + y^2-2y+1)^2}
+=\frac{x^2(y-1)^2} {\big[x^2 + (y-1)^2\big]^2}
+</mrow>
+</md>
+and, in polar coordinates centred on <m>(0,1)</m>,
+<m>x=r\cos\theta</m>, <m>y=1+r\sin\theta</m>,
+<me>
+\frac{x^2(y-1)^2} {\big[x^2 + (y-1)^2\big]^2}
+=\frac{r^4\cos^2\theta\sin^2\theta}{r^4}
+=\cos^2\theta\sin^2\theta
+</me>
+we have that the limit does not exist. For example, if we send <m>(x,y)</m>
+to <m>(0,1)</m> along the line <m>y=1</m>, so that <m>\theta=0</m>, we get the limit <m>0</m>,
+while if we send <m>(x,y)</m> to <m>(0,1)</m> along the line <m>y=x+1</m>, so that
+<m>\theta=\frac{\pi}{4}</m>, we get the limit <m>\frac{1}{4}</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Define, for all <m>(x,y)\ne(0,0)</m>, <m>f(x,y)=\frac{x^2y}{x^4+y^2}</m>.
+<ol label="a">
+<li>
+Let <m>0\le \theta \lt 2\pi</m>. Compute
+<m>\ds\lim_{r\rightarrow 0^+}f(r\cos\theta,r\sin\theta)</m>.
+</li>
+<li>
+Compute <m>\ds\lim_{x\rightarrow 0}f(x,x^2)</m>.
+</li>
+<li>
+Does <m>\ds\lim_{(x,y)\rightarrow (0,0)}f(x,y)</m> exist?
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+For part (c), does there exist a single number, <m>L</m>, with the property that
+<m>f(x,y)</m> is really close to <m>L</m> for all <m>(x,y)</m> that are really close to
+<m>(0,0)</m>?
+</p></hint>
+
+<answer><p>
+(a) <m>0</m></p><p>
+(b) <m>\frac{1}{2}</m> </p><p>
+(c) No.
+</p></answer>
+
+<solution><p>
+(a) We have
+<md>
+<mrow>
+\lim_{r\rightarrow 0^+}f(r\cos\theta,r\sin\theta)
+&amp;=\lim_{r\rightarrow 0^+}
+\frac{(r\cos\theta)^2(r\sin\theta)}{(r\cos\theta)^4+(r\sin\theta)^2}
+</mrow><mrow>
+&amp;=\lim_{r\rightarrow 0^+}r\ \frac{\cos^2\theta\sin\theta}{r^2\cos^4\theta+\sin^2\theta}
+</mrow><mrow>
+&amp;=\lim_{r\rightarrow 0^+}r\
+\lim_{r\rightarrow 0^+}\frac{\cos^2\theta\sin\theta}
+                         {r^2\cos^4\theta+\sin^2\theta}
+</mrow>
+</md>
+Observe that, if <m>\sin\theta=0</m>, then
+<me>
+\frac{\cos^2\theta\sin\theta}{r^2\cos^4\theta+\sin^2\theta}=0
+</me>
+for all <m>r\ne 0</m>. If <m>\sin\theta\ne 0</m>,
+<md>
+<mrow>
+\lim_{r\rightarrow 0^+}
+     \frac{\cos^2\theta\sin\theta}{r^2\cos^4\theta+\sin^2\theta}
+&amp;=\frac{\cos^2\theta\sin\theta}{\sin^2\theta}
+=\frac{\cos^2\theta}{\sin\theta}
+</mrow>
+</md>
+So the limit
+<m>\ds\lim_{r\rightarrow 0^+}
+\frac{\cos^2\theta\sin\theta}{r^2\cos^4\theta+\sin^2\theta}</m>
+exists (and is finite) for all fixed <m>\theta</m> and
+<me>
+\lim\limits_{r\rightarrow 0^+}f(r\cos\theta,r\sin\theta)=0
+</me>
+</p>
+
+<p>(b) We have
+<me>
+\lim_{x\rightarrow 0}f(x,x^2)
+=\lim_{x\rightarrow 0}\frac{x^2x^2}{x^4+{(x^2)}^2}
+=\lim_{x\rightarrow 0}\frac{x^4}{2x^4}
+=\frac{1}{2}
+</me>
+</p>
+
+<p>(c)
+Note that in part (a) we showed that as <m>(x,y)</m> approaches <m>(0,0)</m> along
+any straight line, <m>f(x,y)</m> approaches the limit zero.
+In part (b) we have just shown that as <m>(x,y)</m> approaches <m>(0,0)</m> along
+the parabola <m>y=x^2</m>, <m>f(x,y)</m> approaches the limit <m>\half</m>, <em>not</em> zero.
+So <m>f(x,y)</m> takes values very close to <m>0</m>, for some <m>(x,y)</m>'s
+that are  really near <m>(0,0)</m> and also takes values very close to
+<m>\frac{1}{2}</m>, for other <m>(x,y)</m>'s that are  really near <m>(0,0)</m>.
+There is no single number, <m>L</m>, with the property that
+<m>f(x,y)</m> is really close to <m>L</m> for all <m>(x,y)</m> that are really
+close to <m>(0,0)</m>. So the limit does not exist.
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M226 2007D</fromexam></title>
+<statement><p>
+Compute the following limits or explain why they do not exist.
+<ol label="a">
+<li> <m>\ds\lim_{(x,y)\rightarrow(0,0)}\frac{xy}{x^2+y^2}</m>
+</li>
+<li> <m>\ds\lim_{(x,y)\rightarrow(0,0)}\frac{\sin(xy)}{x^2+y^2}</m>
+</li>
+<li> <m>\ds\lim_{(x,y)\rightarrow(-1,1)}\frac{x^2+2xy^2+y^4}{1+y^4}</m>
+</li>
+<li> <m>\ds\lim_{(x,y)\rightarrow(0,0)}|y|^x</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+For part (b), consider the ratio of <m>\frac{\sin(xy)}{x^2+y^2}</m>
+(from part (b)) and <m>\frac{xy}{x^2+y^2}</m> (from part (a)), and recall that
+<m>\ds\lim_{t\rightarrow 0}\tfrac{\sin t}{t}=1</m>.
+</p>
+
+<p>For part (d) consider the limits along the positive <m>x</m>- and <m>y</m>-axes.
+</p></hint>
+
+<answer><p>
+(a), (b), (d) Do not exist. See the solutions.</p><p>
+(c) <m>0</m>
+</p></answer>
+
+<solution><p>
+(a) Since, in polar coordinates,
+<me>
+\frac{xy}{x^2+y^2}=\frac{r^2\cos\theta\sin\theta}{r^2}
+=\cos\theta\sin\theta
+</me>
+we have that the limit does not exist. For example,
+<ul>
+<li> if we send <m>(x,y)</m>
+to <m>(0,0)</m> along the positive <m>x</m>-axis, so that <m>\theta=0</m>,
+we get the limit <m>\sin\theta\cos\theta\big|_{\theta=0}=0</m>,
+</li>
+<li>
+while if we send <m>(x,y)</m> to <m>(0,0)</m> along the line <m>y=x</m> in the first quadrant,
+so that  <m>\theta=\frac{\pi}{4}</m>, we get the limit <m>\sin\theta\cos\theta\big|_{\theta=\pi/4}=\frac{1}{2}</m>.
+</li>
+</ul>
+</p>
+
+<p>(b) This limit does not exist, since if it were to exist the limit
+<me>
+\lim_{(x,y)\rightarrow(0,0)}\frac{xy}{x^2+y^2}
+=\lim_{(x,y)\rightarrow(0,0)}\frac{xy}{\sin(xy)}\ \frac{\sin(xy)}{x^2+y^2}
+=\lim_{(x,y)\rightarrow(0,0)}\frac{xy}{\sin(xy)}\
+\lim_{(x,y)\rightarrow(0,0)}\frac{\sin(xy)}{x^2+y^2}
+</me>
+would also exist. (Recall that <m>\ds\lim_{t\rightarrow 0}\tfrac{\sin t}{t}
+=1</m>.)
+</p>
+
+<p>(c) Since
+<md>
+<mrow>
+\lim_{(x,y)\rightarrow(-1,1)}\big[x^2+2xy^2+y^4\big]
+&amp;=(-1)^2+2(-1)(1)^2+(1)^4=0
+</mrow><mrow>
+\lim_{(x,y)\rightarrow(-1,1)}\big[1+y^4\big]
+&amp;=1+(1)^4=2
+</mrow>
+</md>
+and the second limit is nonzero,
+<me>
+\lim_{(x,y)\rightarrow(-1,1)}\frac{x^2+2xy^2+y^4}{1+y^4}=\frac{0}{2}=0
+</me>
+</p>
+
+<p>(d)  Since the limit along the positive <m>x</m>-axis
+<me>
+\lim_{\Atop{t\rightarrow 0}{t \gt 0}}|y|^x\Big|_{(x,y)=(t,0)}
+=\lim_{\Atop{t\rightarrow 0}{t \gt 0}}0^t
+=\lim_{\Atop{t\rightarrow 0}{t \gt 0}}0
+=0
+</me>
+and the limit along the <m>y</m>-axis
+<me>
+\lim_{t\rightarrow 0}|y|^x\Big|_{(x,y)=(0,t)}
+=\lim_{t\rightarrow 0}|t|^0
+=\lim_{t\rightarrow 0}1
+=1
+</me>
+are different, the limit as <m>(x,y)\rightarrow 0</m> does not exist.
+</p></solution>
+</exercise></exercisegroup>
+
+</exercises>

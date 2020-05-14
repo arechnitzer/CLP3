@@ -1242,4 +1242,6 @@ where we approximated functions of one variable by their tangent lines.
 This brings us to our next topic <mdash/> approximating functions.
 </p>
 </subsection>
+
+<xi:include href="../problems/prob_s2.5.ptx" />
 </section>

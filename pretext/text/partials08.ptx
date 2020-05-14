@@ -202,7 +202,7 @@ w(x,t) = W(x+ct\,,\,x-ct)
 </me>
 By the chain rule, we still have
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 \pdiff{w}{x}(x,t)
 &amp;=\pdiff{}{x}\big[W(x+ct\,,\,x-ct) \big]
 &amp;&amp;= \pdiff{W}{u}(x+ct\,,\,x-ct) + \pdiff{W}{v}(x+ct\,,\,x-ct)
@@ -494,4 +494,5 @@ are applicable.
 </p>
 
 </subsection>
+
 </section>
