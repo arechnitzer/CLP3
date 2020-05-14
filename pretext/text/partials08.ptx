@@ -13,7 +13,7 @@ Many phenomena are modelled by equations that relate the rates of
 change of various quantities. As rates of change are given by derivatives
 the resulting equations contain derivatives and so are called
 differential equations. We saw a number of such differential equations
-in §\eref{CLP101}{sec sep de} of the CLP-1 text.
+in §2.4 of the CLP-1 text.
 </p>
 
 <p>In this section we consider
@@ -81,7 +81,7 @@ x+ct=u\quad\text{with $u$ a constant}
 </me>
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image source="figs/level"/>
 </sidebyside>
 </li>
@@ -103,7 +103,7 @@ The figure below illustrates this. It contains the graphs of <m>U(x)</m>, <m>U(x
 <m>x</m>-axis was chosen so that so that <m>U(z)=\max_x U(x)</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image source="figs/bumpLeft"/>
 </sidebyside>
 
@@ -201,15 +201,17 @@ the function <m>W(u,v)</m> by
 w(x,t) = W(x+ct\,,\,x-ct)
 </me>
 By the chain rule, we still have
-<md alignment="alignat">
+<md>
 <mrow>
 \pdiff{w}{x}(x,t)
 &amp;=\pdiff{}{x}\big[W(x+ct\,,\,x-ct) \big]
-&amp;&amp;= \pdiff{W}{u}(x+ct\,,\,x-ct) + \pdiff{W}{v}(x+ct\,,\,x-ct)
+</mrow><mrow>
+&amp;= \pdiff{W}{u}(x+ct\,,\,x-ct) + \pdiff{W}{v}(x+ct\,,\,x-ct)
 </mrow><mrow>
 \pdiff{w}{t}(x,t)
 &amp;=\pdiff{}{t}\big[W(x+ct\,,\,x-ct) \big]
-&amp;&amp;= \pdiff{W}{u}(x+ct\,,\,x-ct)\times c
+</mrow><mrow>
+&amp;= \pdiff{W}{u}(x+ct\,,\,x-ct)\times c
              + \pdiff{W}{v}(x+ct\,,\,x-ct)\times(-c)
 </mrow>
 </md>
@@ -343,7 +345,7 @@ string obey the wave equation.
 </p>
 
 <p>Here is a sketch of a tiny element of the string.</p>
-<sidebyside>
+<sidebyside width="60%">
      <image source="figs/string_elmnt"/>
 </sidebyside>
 
@@ -351,11 +353,14 @@ string obey the wave equation.
 The basic notation that we will use (most of which appears in the sketch) is
 <md>
 <mrow>
-w(x,t) &amp;= \text{vertical displacement of the string from the $x$ axis at
-position $x$ and time $t$}
+w(x,t) &amp;= \text{vertical displacement of the string from the }x 
+                 \text{ axis}
 </mrow><mrow>
-\theta(x,t) &amp;= \text{angle between the string and a horizontal line at
-position $x$ and time $t$}
+&amp;\hskip0.25in\text{at position }x\text{ and time }t
+</mrow><mrow>
+\theta(x,t) &amp;= \text{angle between the string and a horizontal line}
+</mrow><mrow>
+&amp;\hskip0.25in\text{at position }x\text{ and time }t
 </mrow><mrow>
 T(x,t) &amp;= \text{tension in the string at position $x$ and time $t$}
 </mrow><mrow>
@@ -383,19 +388,22 @@ The length of the element of string is essentially <m>\sqrt{\De x^2+\De w^2}</m>
 so that the mass of the element of string is essentially
 <m>\rho(x)\sqrt{\De x^2+\De w^2}</m> and the
 vertical component of Newton's law <m>\vF =m\va</m> says that
-<me>
-\rho(x)\,\sqrt{\De x^2+\De w^2}\,
+<md>
+<mrow>
+&amp;\rho(x)\,\sqrt{\De x^2+\De w^2}\,
 \frac{\partial^2 w}{\partial\, t^2}(x,t)
-=T(x+\De x,t)\sin\theta(x+\De x,t)-T(x,t)\sin\theta(x,t)+F(x,t)\De x
-</me>
+</mrow><mrow>
+&amp;\hsip0.5in=T(x+\De x,t)\sin\theta(x+\De x,t)-T(x,t)\sin\theta(x,t)+F(x,t)\De x
+</mrow>
+</md>
 Dividing by <m>\De x</m> and taking the limit as <m>\De x\rightarrow 0</m> gives
 <md>
 <mrow>
-\rho(x)\,\sqrt{1+\left(\frac{\partial w}{\partial x}\right)^2}\,
+&amp;\rho(x)\,\sqrt{1+\left(\frac{\partial w}{\partial x}\right)^2}\,
 \frac{\partial^2 w}{\partial\, t^2}(x,t)
-&amp;=\frac{\partial }{\partial x}\big[T(x,t)\sin\theta(x,t)\big]+F(x,t)
+=\frac{\partial }{\partial x}\big[T(x,t)\sin\theta(x,t)\big]+F(x,t)
 </mrow><mrow>
-&amp;=\frac{\partial T}{\partial x}(x,t)\sin\theta(x,t)
+&amp;\hskip0.5in=\frac{\partial T}{\partial x}(x,t)\sin\theta(x,t)
 +T(x,t)\cos\theta(x,t)\,\frac{\partial \theta}{\partial x}(x,t)
 +F(x,t)
 \tag{E1}</mrow>
@@ -405,11 +413,7 @@ We can dispose of all the <m>\theta</m>'s by observing from the figure above tha
 \tan\theta(x,t)=\lim_{\De x\rightarrow 0}\frac{\De w}{\De x}
 =\frac{\partial w}{\partial x}(x,t)
 </me>
-which implies, using the figure on the right below, that
-</p>
-
-<sidebyside widths="55% 40%">
-<p>
+which implies, using the figure below, that
 <md>
 <mrow>
 \sin \theta(x,t)&amp;= \frac{\frac{\partial w}{\partial x}(x,t)}
@@ -424,6 +428,8 @@ which implies, using the figure on the right below, that
 </mrow>
 </md>
 </p>
+
+<sidebyside width="28%">
 <image source="figs/triangleString"/>
 </sidebyside>
 
@@ -432,13 +438,17 @@ we can get considerable simplification by looking only at small vibrations.
 By a small vibration, we mean that <m>|\theta(x,t)|\ll 1</m> for all <m>x</m> and <m>t</m>.
 This implies that <m>|\tan\theta(x,t)|\ll 1</m>, hence that
 <m>\big|\frac{\partial w}{\partial x}(x,t)\big|\ll 1</m> and hence that
-<me>
-\sqrt{1+\left(\frac{\partial w}{\partial x}\right)^2}\approx 1\qquad
-\sin \theta(x,t)\approx \frac{\partial w}{\partial x}(x,t) \qquad
-\cos \theta(x,t)\approx 1 \qquad
+<md>
+<mrow>
+\sqrt{1+\left(\frac{\partial w}{\partial x}\right)^2}&amp;\approx 1&amp;
+\sin \theta(x,t)&amp;\approx \frac{\partial w}{\partial x}(x,t) 
+</mrow><mrow>
+\cos \theta(x,t)&amp;\approx 1 &amp;
 \frac{\partial \theta}{\partial x}(x,t)
-\approx\frac{\partial^2 w}{\partial x^2}(x,t)
-\tag{E2}</me>
+&amp;\approx\frac{\partial^2 w}{\partial x^2}(x,t)
+\tag{E2}
+</mrow>
+</md>
 Substituting these into equation (E1) give
 <me>
 \rho(x)\frac{\partial^2 w}{\partial\, t^2}(x,t)
@@ -494,5 +504,4 @@ are applicable.
 </p>
 
 </subsection>
-
 </section>

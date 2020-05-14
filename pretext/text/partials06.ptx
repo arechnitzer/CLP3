@@ -12,7 +12,7 @@
 of the behaviour of a complicated function near a point is to
 approximate it by a simple function. The following suite of such
 approximations is standard fare in Calculus I courses.
-See, for example, §\eref{CLP100}{sec:DIFFTaylor} in the CLP-1 text.
+See, for example, §3.4 in the CLP-1 text.
 <md>
 <mrow>
 g(t_0+\De t) &amp;\approx g(t_0)
@@ -117,6 +117,8 @@ more variables. In particular
 &amp;\hskip0.25in\approx f\big(x_0\,,\,y_0\,,\,z_0\big)
        + \pdiff{f}{x}\big(x_0\,,\,y_0\,,\,z_0\big)\,\De x
        + \pdiff{f}{y}\big(x_0\,,\,y_0\,,\,z_0\big)\,\De y
+</mrow><mrow>
+&amp;\hskip2in
        + \pdiff{f}{z}\big(x_0\,,\,y_0\,,\,z_0\big)\,\De z
 </mrow>
 </md>
@@ -270,7 +272,8 @@ So, setting <m>\De x=-0.002</m> and <m>\De y=0.003</m>, we have
 \frac{0.998^3}{1.003}
 &amp;=f(0.998\,,\,1.003)
 =f(1+\De x\,,\,1+\De y)
-\approx f\big(1,1\big)
+</mrow><mrow>
+&amp;\approx f\big(1,1\big)
        + \pdiff{f}{x}\big(1,1\big)\,\De x
        + \pdiff{f}{y}\big(1,1\big)\,\De y
 </mrow><mrow>
@@ -320,17 +323,20 @@ So, setting <m>\De x=0.2</m>, <m>\De y=-0.3</m>, and <m>\De z=0.4</m>, we have
 <mrow>
 &amp;(4.2)^{1/2} + (26.7)^{1/3} + (256.4)^{1/4}
 =f(4.2\,,\,26.7\,,\,256.4)
-=f(4+\De x\,,\,27+\De y\,,\,256+\De z)
 </mrow><mrow>
-&amp;\hskip1in\approx f\big(4,27,256\big)
+&amp;\hskip0.5in=f(4+\De x\,,\,27+\De y\,,\,256+\De z)
+</mrow><mrow>
+&amp;\hskip0.5in\approx f\big(4,27,256\big)
        + \pdiff{f}{x}\big(4,27,256\big)\,\De x
        + \pdiff{f}{y}\big(4,27,256\big)\,\De y
-       + \pdiff{f}{z}\big(4,27,256\big)\,\De z
 </mrow><mrow>
-&amp;\hskip1in\approx 9 +\frac{0.2}{2\times2}-\frac{0.3}{3\times9}
+&amp;\hskip1in  + \pdiff{f}{z}\big(4,27,256\big)\,\De z
+</mrow><mrow>
+&amp;\hskip0.5in\approx 9 +\frac{0.2}{2\times2}-\frac{0.3}{3\times9}
             +\frac{0.4}{4\times64}
  = 9+\frac{1}{20}-\frac{1}{90}+\frac{1}{640}
-=9.0405
+</mrow><mrow>
+&amp;\hskip0.5in=9.0405
 </mrow>
 </md>
 to four decimal places.
@@ -357,7 +363,7 @@ A triangle has sides <m>a=10.1</m>cm and <m>b=19.8</m>cm which include an
 angle <m>35^\circ</m>. Approximate the area of the triangle.
 </p>
 
-<sidebyside>
+<sidebyside width="28%">
 <image source="figs/triangleError"/>
 </sidebyside>
 </statement>
@@ -372,7 +378,7 @@ The <m>\sin\theta</m> in this formula hides a booby trap built into this problem
 In preparing the linear approximation we will need to use the derivative
 of <m>\sin\theta</m>. But the standard derivative <m>\diff{}{\theta}\sin\theta
 =\cos\theta</m> only applies when <m>\theta</m> is expressed in radians <mdash/> not in
-degrees. See Warning \eref{CLP100}{warning:radians} in the CLP-1 text.
+degrees. See Warning 3.4.23 in the CLP-1 text.
 </p>
 
 <p>So we are obliged to convert <m>35^\circ</m> into
@@ -421,7 +427,8 @@ So the linear approximation gives
 &amp;\approx A\big(a_0,b_0,\theta_0\big)
     + \pdiff{A}{a}\big(a_0,b_0,\theta_0\big)\De a
     + \pdiff{A}{b}\big(a_0,b_0,\theta_0\big)\De b
-    + \pdiff{A}{\theta}\big(a_0,b_0,\theta_0\big)\De\theta
+</mrow><mrow>
+&amp;\hskip1in + \pdiff{A}{\theta}\big(a_0,b_0,\theta_0\big)\De\theta
 </mrow><mrow>
 &amp;=50 +5\times 0.1  +\frac{5}{2}\times (-0.2) +50\sqrt{3}\frac{\pi}{36}
 </mrow><mrow>
@@ -495,9 +502,10 @@ By the triangle inequality, <m>|u+v|\le |u|+|v|</m>, and the fact that
 <m>|uv|=|u|\ |v|</m>,
 <md>
 <mrow>
-\left|  100\frac{\De a}{a_0} + 100\frac{\De b}{b_0}
+&amp;\left|  100\frac{\De a}{a_0} + 100\frac{\De b}{b_0}
                   +100\De\theta\frac{\cos\theta_0}{\sin\theta_0} \right|
-&amp;\le 100\left|\frac{\De a}{a_0}\right| + 100\left|\frac{\De b}{b_0} \right|
+</mrow><mrow>
+&amp;\hskip1in\le 100\left|\frac{\De a}{a_0}\right| + 100\left|\frac{\De b}{b_0} \right|
              +100|\De\theta|\ \left|\frac{\cos\theta_0}{\sin\theta_0} \right|
 </mrow>
 </md>
@@ -572,7 +580,9 @@ which is good enough for virtually all applications, by applying
 P(x_1+\De &amp;x_1\,,\,x_2+\De x_2\,,\,x_3+\De x_3)
 </mrow><mrow>
 &amp;\approx P(x_1,x_2,x_3) +P_{x_1}(x_1,x_2,x_3)\,\De x_1
-+P_{x_2}(x_1,x_2,x_3)\,\De x_2+P_{x_3}(x_1,x_2,x_3)\,\De x_3
++P_{x_2}(x_1,x_2,x_3)\,\De x_2
+</mrow><mrow>
+&amp;\hskip1in+P_{x_3}(x_1,x_2,x_3)\,\De x_3
 </mrow>
 </md>
 The three partial derivatives are
@@ -587,10 +597,13 @@ P_{x_3}(x_1,x_2,x_3)&amp;=\pdiff{}{x_3}\big[x_1x_2x_3\big]
 </mrow>
 </md>
 So
-<me>
-P(x_1+\De x_1\,,\,x_2+\De x_2\,,\,x_3+\De x_3)
-\approx P(x_1,x_2,x_3) +x_2x_3\,\De x_1+x_1x_3\,\De x_2+x_1x_2\,\De x_3
-</me>
+<md>
+<mrow>
+&amp;P(x_1+\De x_1\,,\,x_2+\De x_2\,,\,x_3+\De x_3)
+</mrow><mrow>
+&amp;\hskip1in\approx P(x_1,x_2,x_3) +x_2x_3\,\De x_1+x_1x_3\,\De x_2+x_1x_2\,\De x_3
+</mrow>
+</md>
 and the (approximate) percentage error in <m>P</m> is
 <md>
 <mrow>
@@ -598,19 +611,19 @@ and the (approximate) percentage error in <m>P</m> is
   \frac{P(x_1+\De x_1,x_2+\De x_2,x_3+\De x_3)-P(x_1,x_2,x_3)}{P(x_1,x_2,x_3)}
    \right|
 </mrow><mrow>
-&amp;
+&amp;\hskip0.5in
 \approx
        100\ \left|
          \frac{x_2x_3\De x_1+x_1x_3\De x_2+x_1x_2\De x_3}{P(x_1,x_2,x_3)}
        \right|
 </mrow><mrow>
-&amp;
+&amp;\hskip0.5in
 =100\  \left|\frac{x_2x_3\De x_1+x_1x_3\De x_2+x_1x_2\De x_3}{x_1x_2x_3}\right|
 </mrow><mrow>
-&amp;\hskip2in=\left|100\frac{\De x_1}{x_1}+100\frac{\De x_2}{x_2}
+&amp;\hskip0.5in=\left|100\frac{\De x_1}{x_1}+100\frac{\De x_2}{x_2}
          +100\frac{\De x_3}{x_3}\right|
 </mrow><mrow>
-&amp;\hskip2in\le \veps_1+\veps_2+\veps_3
+&amp;\hskip0.5in\le \veps_1+\veps_2+\veps_3
 </mrow>
 </md>
 More generally, if we take a product of <m>n</m>, rather than three,  variables
@@ -654,8 +667,7 @@ We'll now see what the quadratic approximation
 <me>
 g(t_0+\De t) \approx g(t_0) +g'(t_0)\,\De t +\tfrac{1}{2} g'(t_0)\,\De t^2
 </me>
-and the corresponding exact formula (see (\eref{CLP100}{eq:taylorErrorQ})
-in the CLP-1 text)
+and the corresponding exact formula (see (3.4.32) in the CLP-1 text)
 <me>
 g(t_0+\De t) = g(t_0) +g'(t_0)\,\De t +\tfrac{1}{2} g'(t_0+c\De t)\,\De t^2
                     \qquad\text{for some } 0\le c\le 1
@@ -675,12 +687,13 @@ Then we have, again using the chain rule,
 <md>
 <mrow>
 &amp;\diff{}{t}\left[f_1\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\right]
-=\frac{\partial f_1}{\partial x}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
+</mrow><mrow>
+&amp;=\frac{\partial f_1}{\partial x}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
                                                                   \,\De x
  +\frac{\partial f_1}{\partial y}
               \big(x_0+t\,\De x\,,\,y_0+t\,\De y\big) \,\De y
 </mrow><mrow>
-&amp;\hskip1in
+&amp;
 =\frac{\partial^2 f}{\partial x^2}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
                                                                   \,\De x
  +\frac{\partial^2\ f}{\partial y\partial x}
@@ -691,12 +704,13 @@ and
 <md>
 <mrow>
 &amp;\diff{}{t}\left[f_2\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\right]
-=\frac{\partial f_2}{\partial x}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
+</mrow><mrow>
+&amp;=\frac{\partial f_2}{\partial x}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
                                                                   \,\De x
  +\frac{\partial f_2}{\partial y}
               \big(x_0+t\,\De x\,,\,y_0+t\,\De y\big) \,\De y
 </mrow><mrow>
-&amp;\hskip1in
+&amp;
 =\frac{\partial^2\ f}{\partial x\partial y}
            \big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)  \,\De x
  +\frac{\partial^2 f}{\partial y^2}
@@ -713,10 +727,11 @@ gives
 g'(t) &amp;=
  \frac{\partial^2 f}{\partial x^2}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
                                                                   \,\De x^2
- +2\frac{\partial^2\ f}{\partial x\partial y}
+</mrow><mrow>
+&amp;\hskip0.5in +2\frac{\partial^2\ f}{\partial x\partial y}
               \big(x_0+t\,\De x\,,\,y_0+t\,\De y\big) \,\De x\De y
 </mrow><mrow>
-&amp;\ \ + \frac{\partial^2 f}{\partial y^2}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
+&amp;\hskip1in+ \frac{\partial^2 f}{\partial y^2}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
                                                                   \,\De y^2
 </mrow>
 </md>
@@ -736,12 +751,13 @@ is
     <p>
 <md>
 <mrow>
-f\big(x_0 + \De x\,,\,y_0+\De y\big)
-&amp;\approx f\big(x_0\,,\,y_0\big)
+&amp;f\big(x_0 + \De x\,,\,y_0+\De y\big)
+</mrow><mrow>
+&amp;\hskip0.25in\approx f\big(x_0\,,\,y_0\big)
        + \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\De x
        + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\De y
 </mrow><mrow>
-&amp;  +\frac{1}{2}\left\{
+&amp;\hskip0.5in  +\frac{1}{2}\left\{
         \frac{\partial^2 f}{\partial x^2}\big(x_0,y_0\big)\,\De x^2
        +2\frac{\partial^2\ f}{\partial x\partial y}
                                      \big(x_0,y_0\big) \,\De x\De y
@@ -769,12 +785,13 @@ is
     <p>
 <md>
 <mrow>
-f\big(x_0 + \De x\,,\,y_0+\De y\big)
-&amp;= f\big(x_0\,,\,y_0\big)
+&amp;f\big(x_0 + \De x\,,\,y_0+\De y\big)
+</mrow><mrow>
+&amp;\hskip0.25in= f\big(x_0\,,\,y_0\big)
        + \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\De x
        + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\De y
 </mrow><mrow>
-&amp; +\frac{1}{2}\left\{
+&amp;\hskip0.5in +\frac{1}{2}\left\{
         \frac{\partial^2 f}{\partial x^2}\big(\vr(c)\big)\,\De x^2
        +2\frac{\partial^2\ f}{\partial x\partial y}
                                      \big(\vr(c)\big) \,\De x\De y
@@ -806,7 +823,7 @@ we can massage <xref ref="eqn_quadratic_exact"/> into the form
        + \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\De x
        + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\De y\Big\}\right|
 </mrow><mrow>
-&amp;\hskip 3.5in
+&amp;\hskip 3.2in
       \le \frac{M}{2}\big(|\De x|^2 +2|\De x|\,|\De y| +|\De y|^2\big)
 </mrow>
 </md>
@@ -914,35 +931,43 @@ f_y(x,y)&amp;=\frac{y}{\sqrt{1+4x^2+y^2}} &amp;
       f_y(x_0,y_0)&amp;=\frac{2}{3}
 </mrow><mrow>
 f_{xx}(x,y)&amp;=\frac{4}{\sqrt{1+4x^2+y^2}} -\frac{16x^2}{[1+4x^2+y^2]^{3/2}} &amp;
-      f_{xx}(x_0,y_0)&amp;=\frac{4}{3} -\frac{16}{27}=\frac{20}{27}
+      f_{xx}(x_0,y_0)&amp;=\frac{4}{3} -\frac{16}{27}
+</mrow><mrow>
+  &amp;&amp;&amp;=\frac{20}{27}
 </mrow><mrow>
 f_{xy}(x,y)&amp;=-\frac{4xy}{[1+4x^2+y^2]^{3/2}} &amp;
       f_{xy}(x_0,y_0)&amp;= -\frac{8}{27}
 </mrow><mrow>
 f_{yy}(x,y)&amp;=\frac{1}{\sqrt{1+4x^2+y^2}} -\frac{y^2}{[1+4x^2+y^2]^{3/2}} &amp;
-      f_{yy}(x_0,y_0)&amp;=\frac{1}{3} -\frac{4}{27}=\frac{5}{27}
+      f_{yy}(x_0,y_0)&amp;=\frac{1}{3} -\frac{4}{27}
+</mrow><mrow>
+&amp;&amp;&amp;=\frac{5}{27}
 </mrow>
 </md>
 We now just substitute them into <xref ref="eqn_quadratic_approx"/> to get
 that the quadratic approximation to <m>f</m> about <m>(x_0,y_0)</m> is
 <md>
 <mrow>
-f\big(x_0+\De x\,,\,y_0+\De y\big)
-&amp; \approx f(x_0, y_0)
-        +f_x(x_0, y_0)\De x+f_y(x_0, y_0)\De y \cr &amp;\hskip0.5in
+&amp;f\big(x_0+\De x\,,\,y_0+\De y\big)
+</mrow><mrow>
+&amp;\hskip0.5in \approx f(x_0, y_0)
+        +f_x(x_0, y_0)\De x+f_y(x_0, y_0)\De y \cr &amp;\hskip1.0in
     +\frac{1}{2}\bigg[f_{xx}(x_0, y_0)\De x^2
               +2f_{xy}(x_0, y_0)\De x\De y
                +f_{yy}(x_0, y_0)\De y^2\bigg] \cr
-&amp; = 3 +\frac{4}{3} \De x+\frac{2}{3}\De y
-    +\frac{10}{27}\De x^2 -\frac{8}{27}\De x\De y+\frac{5}{54}\De y^2 \cr
+&amp;\hskip0.5in= 3+\frac{4}{3} \De x+\frac{2}{3}\De y
+    +\frac{10}{27}\De x^2 -\frac{8}{27}\De x\De y+\frac{5}{54}\De y^2 
 </mrow>
 </md>
 In particular, with <m>\De x=0.1</m> and <m>\De y=0.05</m>,
-<me>
-f(1.1\,,\,2.05)\approx 3 +\frac{4}{3} (0.1)+\frac{2}{3}(0.05)
-    +\frac{10}{27}(0.01) -\frac{8}{27}(0.005)+\frac{5}{54}(0.0025)
-=3.1691
-</me>
+<md>
+<mrow>
+f(1.1\,,\,2.05)&amp;\approx 3 \!+\!\frac{4}{3} (0.1)\!+\!\frac{2}{3}(0.05)
+    \!+\!\frac{10}{27}(0.01) \!-\!\frac{8}{27}(0.005)\!+\!\frac{5}{54}(0.0025)
+</mrow><mrow>
+&amp;=3.1691
+</mrow>
+</md>
 The actual value, to four decimal places, is <m>3.1690</m>.
 The percentage error is about 0.004\%.
 </p>
@@ -984,7 +1009,8 @@ So the quadratic approximation to <m>f</m> about <m>(0,0)</m> is
 f\big(x\,,\,y\big)
 &amp; \approx f(x, y)
         +f_x(x, y) x+f_y(0, 0)y
-+\frac{1}{2}\bigg[f_{xx}(0, 0)x^2
+</mrow><mrow>
+&amp;\hskip1in+\frac{1}{2}\bigg[f_{xx}(0, 0)x^2
               +2f_{xy}(0, 0) x y
                +f_{yy}(0, 0) y^2\bigg]
 </mrow><mrow>
@@ -1127,167 +1153,21 @@ and
 </md>
 Our requirement that the derivatives of <m>f</m> and <m>T_n</m> match is the
 requirement that, for all <m>p+q\le n</m>,
-<me>
+<md>
+<mrow>
 \frac{\partial^{p+q}\ \ T_n}{\partial (\De x)^p\, \partial (\De y)^q}(0,0)
-=\frac{\partial^{p+q}\ }{\partial (\De x)^p\, \partial (\De y)^q}
+&amp;=\frac{\partial^{p+q}\ }{\partial (\De x)^p\, \partial (\De y)^q}
       f\big(x_0 + \De x\,,\,y_0+\De y\big)\Big|_{\De x=\De y=0}
-=\frac{\partial^{p+q}\ f}{\partial x^p\, \partial y^q}(x_0,y_0)
-</me>
+</mrow><mrow>
+&amp;=\frac{\partial^{p+q}\ f}{\partial x^p\, \partial y^q}(x_0,y_0)
+</mrow>
+</md>
 This requirement gives
 <me>
 p!\,q!\,a_{p,q} = \frac{\partial^{p+q}\ f}{\partial x^p\, \partial y^q}(x_0,y_0)
 </me>
 </p>
 
-<!--
-<p>\intremark{
-We'll use the same strategy that we used to get the linear and
-quadratic approximations for <m>f(x,y)</m> to generate Taylor polynomials of all
-degrees. Fix any integer <m>n\ge 0</m> and any point <m>(x_0,y_0)</m>.
-Set, as we did in the previous sections,
-<me>
-         g(t) = f(x_0 + t\De x , y_0 + t\De y)
-</me>
-The <m>n^\mathrm{th}</m> degree Taylor polynomial for <m>g(t)</m> about <m>t=0</m>
-is
-<md>
-<mrow>
-    \sum_{k=0}^n \frac{1}{k!} g^{(k)}(0)\,t^k
-</mrow>
-</md>
-As <m>g(0) = f(x_0, y_0)</m> and <m>g(1) = f(x_0 + \De x , y_0 + \De y)</m>,
-setting <m>t=1</m> gives the <m>n^\mathrm{th}</m> degree Taylor polynomial for <m>f(x,y)</m>
-about <m>(x,y)=(x_0,y_0)</m>. The catch is that we still have to write out
-<md>
-<mrow>
-    \sum_{k=0}^n \frac{1}{k!} g^{(k)}(0)
-</mrow>
-</md>
-in terms of <m>f</m>. In particular, we need to express each derivative
-<m>g^{(k)}(0)</m> in terms of <m>f</m>.
-</p>
-
-<p>To do so, observe that for any function <m>h(x,y)</m>, the chain rule gives that
-<md>
-<mrow>
-\diff{}{t}\big[h(x_0 + t\De x , y_0 + t\De y)\big]
-   &amp;= \De x\pdiff{h}{x}(x_0 + t\De x , y_0 + t\De y)
-      + \De y\pdiff{h}{y}(x_0 + t\De x , y_0 + t\De y)
-</mrow><mrow>
-   &amp;=\left[\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right) h(x,y)\right]_{
-                 \Atop{x =  x_0 + t\De x}{y= y_0 + t\De y}}
-   \tag{$*$}
-</mrow>
-</md>
-You have probably not seen the notation in the last line before.
-It means
-<ul>
-<li>
-find <m>\De x\,\pdiff{h}{x}(x,y)</m> and <m>\De y\,\pdiff{h}{y}(x,y)</m> and then
-</li>
-<li>
-add them together and then
-</li>
-<li>
-evaluate the result at <m>x =  x_0 + t\De x</m> and <m>y= y_0 + t\De y</m>.
-</li>
-</ul>
-The advantage to this notation is that we can use it to easily and compactly
-write out higher order derivatives. For example,
-<md>
-<mrow>
-\difftwo{}{t}\big[h(x_0 + t\De x , y_0 + t\De y)\big]
- &amp;= \diff{}{t}\left[\diff{}{t}\big[h(x_0 + t\De x , y_0 + t\De y)\big]\right]
-</mrow><mrow>
- &amp;= \diff{}{t}
-    \left[\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right) h(x,y)\right]_{
-                 \Atop{x =  x_0 + t\De x}{y= y_0 + t\De y}}
-</mrow><mrow>
- &amp;=\left[\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)^2 h(x,y)\right]_{
-                 \Atop{x =  x_0 + t\De x}{y= y_0 + t\De y}}
- \tag{$**$}
-</mrow>
-</md>
-To get from the second line to the third line, we just applied <m>(*)</m>
-with the function <m>h(x,y)</m> replaced by the new function
-<m>H(x,y) = \left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right) h(x,y)</m>
-and then wrote
-<me>
-\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)
-             \left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)h
-            =\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)^2h
-</me>
-The notation in <m>(**)</m> means
-<ul>
-<li>
-multiply out <m>\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)^2
-=(\De x)^2\frac{\partial^2}{\partial x^2}
-   +2(\De x)(\De y)\frac{\partial^2}{\partial x\partial y}
-   +(\De y)^2\frac{\partial^2}{\partial y^2}</m>
-(using that <m>\frac{\partial^2\ h}{\partial x\partial y}
-             =\frac{\partial^2\ h}{\partial y\partial x}</m>)
-and then
-</li>
-<li>
-find <m>(\De x)^2\frac{\partial^2 h}{\partial x^2}(x,y)</m> and
-   <m>2(\De x)(\De y)\frac{\partial^2\ h}{\partial x\partial y}(x,y)</m> and
-   <m>(\De y)^2\frac{\partial^2 h}{\partial y^2}(x,y)</m> and then
-</li>
-<li>
-add them together and then
-</li>
-<li>
-evaluate the result at <m>x =  x_0 + t\De x</m> and <m>y= y_0 + t\De y</m>.
-</li>
-</ul>
-So, by applying <m>(*)</m> <m>k</m> times, we get
-<md>
-<mrow>
-g^{(k)}(0)
-&amp;=\left[\frac{\dee{}^k}{\dee{t}^k} \big[f(x_0 + t\De x , y_0 + t\De y)\big]
-     \right]_{t=0}
-</mrow><mrow>
-&amp;=\left[\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)^k f(x,y)\right]_{
-                 \Atop{x =  x_0}{y= y_0}}
-</mrow>
-</md>
-and we're almost done. We just need to multiply the <m>k^{\rm th}</m> power out,
-which we can do by applying the binomial theorem.
-<me>
-(a+b)^k = \sum_{\ell=0}^{k} \binom{k}{\ell} a^\ell b^{k-\ell}
-</me>
-Here the binomial coefficient
-<me>
-\binom{k}{\ell} =\frac{k!}{\ell!\ (k-\ell)!}
-</me>
-where, <m>0!=1</m> and, for any natural number <m>m</m>,
-   <m>m! =1\times 2\times 3\times \cdots\times m</m>.
-So
-<me>
-\left(\De x\pdiff{}{x} +\De y\pdiff{}{y}\right)^k
-=\sum_{\ell=0}^{k} \binom{k}{\ell} (\De x)^\ell (\De y)^{k-\ell}
-         \frac{\partial^k\ }{\partial x^\ell\,\partial y^{k-\ell}}
-</me>
-and the Taylor polynomial of degree <m>n</m> is the right hand side of
-<md>
-<mrow>
-f\big(x_0 + \De x\,,\,y_0+\De y\big)
-&amp;\approx \sum_{k=0}^n\ \frac{1}{k!}
-    \sum_{\ell=0}^{k} \binom{k}{\ell}
-         \frac{\partial^k\ f}{\partial x^\ell\,\partial y^{k-\ell}}(x_0,y_0)
-         \ (\De x)^\ell (\De y)^{k-\ell}
-</mrow>
-</md>
-Using that
-<me>
-\frac{1}{k!} \binom{k}{\ell}
-=\frac{1}{k!}\ \frac{k!}{\ell!\ (k-\ell)!}
-=\frac{1}{\ell!\ (k-\ell)!}
-</me>
-and renaming <m>k-\ell</m> to <m>m</m>, we get the slightly more compact form
-}
-</p>
- -->
 
 <p>So the Taylor polynomial of degree <m>n</m> for the function <m>f(x,y)</m>
 about <m>(x,y)=(x_0,y_0)</m> is the right hand side of
@@ -1316,8 +1196,9 @@ For example, the Taylor polynomial of degree <m>n</m> for a function, <m>f(x,y,z
 of three variables is the right hand side of
 <md>
 <mrow>
-f\big(x_0 + \De x\,,\,y_0+\De y\,,\,z_0+\De z\big)
-&amp;\approx
+&amp;f\big(x_0 + \De x\,,\,y_0+\De y\,,\,z_0+\De z\big)
+</mrow><mrow>
+&amp;\hskip1in\approx
     \sum_{\Atop{k,\ell,m\ge 0}{k+\ell+m\le n}}  \frac{1}{k!\ \ell!\ m!}\
          \frac{\partial^{k+\ell+m}\ f}
                  {\partial x^k\,\partial y^\ell\,\partial z^m}(x_0,y_0,z_0)\
@@ -1327,6 +1208,7 @@ f\big(x_0 + \De x\,,\,y_0+\De y\,,\,z_0+\De z\big)
 </p>
 
 </subsection>
+
 <xi:include href="../problems/prob_s2.6.ptx" />
 
 </section>

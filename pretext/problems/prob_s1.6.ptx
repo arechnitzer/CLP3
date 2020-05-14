@@ -313,7 +313,7 @@ To determine whether the particle is rising or falling, we only need to consider
 <statement><p>
 Below is the graph of the parametrized function <m>\vr(t)</m>. Let <m>s(t)</m> be the arclength along the curve from <m>\vr(0)</m> to <m>\vr(t)</m>.
 </p>
-<sidebyside width="50">
+<sidebyside width="50%">
 <image><latex-image>\begin{tikzpicture}
 \draw[thick] plot[domain=-4.5:1]({4-\x*\x/4},\x);
 \draw (4-1/16,-.5) node[vertex, label=right: $\vr(t+h)$](th){};

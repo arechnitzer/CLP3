@@ -19,7 +19,7 @@ but beyond the scope of this text, to give a precise meaning to
 <p>at that point.
 Finding tangent lines was probably one of the first applications
 of derivatives that you saw. See, for example,
-Theorem \eref{CLP100}{thm:DIFFtangentLine} in the CLP-1 text.
+Theorem 2.3.2 in the CLP-1 text.
 The analog of the tangent line one dimension up is the tangent plane.
 The tangent plane to a surface <m>S</m> at a point  <m>(x_0,y_0,z_0)</m> is the plane
 that fits <m>S</m> best at <m>(x_0,y_0,z_0)</m>. For example, the tangent plane
@@ -30,7 +30,7 @@ S=\Set{(x,y,z)}{x^2+y^2+(z-1)^2=1,\ 0\le z\le 1}
 at the origin is the <m>xy</m>-plane, <m>z=0</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/sphereTanPlane"/>
 </sidebyside>
 
@@ -47,7 +47,7 @@ figure shows the side view of the tangent plane (in black) and normal line
 (in blue) to the surface <m>z=x^2+y^2</m> (in red) at the point <m>(0,1,1)</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image source="figs/tanPlaneNormalLine"/>
 </sidebyside>
 
@@ -94,7 +94,7 @@ of those two tangent vectors. Consider the red curve in the figure
 below. It is the intersection of our surface <m>z=f(x,y)</m>
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image source="figs/tanPlaneAA"/>
 </sidebyside>
 
@@ -102,7 +102,7 @@ below. It is the intersection of our surface <m>z=f(x,y)</m>
 with the plane <m>y=y_0</m>. Here is a side view of the red curve.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/tanPlaneAAside"/>
 </sidebyside>
 
@@ -146,7 +146,7 @@ with the plane <m>x=x_0</m>.
 Here is a front view of the blue curve.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/tanPlaneBBside"/>
 </sidebyside>
 
@@ -266,7 +266,8 @@ So the tangent plane is
 <md>
 <mrow>
 z&amp;=f(x_0,y_0) + f_x(x_0,y_0)\,(x-x_0) + f_y(x_0,y_0)\,(y-y_0)
- = 1 +2(x-1) +0(y-0)
+</mrow><mrow>
+&amp; = 1 +2(x-1) +0(y-0)
 </mrow><mrow>
  &amp;= -1+2x
 </mrow>
@@ -276,7 +277,8 @@ and the normal line is
 <mrow>
 \llt x,y,z \rgt &amp;=  \llt x_0,y_0,f(x_0,y_0) \rgt
                  +t\llt -f_x(x_0,y_0)\,,\, - f_y(x_0,y_0)\,,\, 1 \rgt
-=  \llt 1,0,1 \rgt
+</mrow><mrow>
+&amp;=  \llt 1,0,1 \rgt
                  +t\llt -2\,,\, 0\,,\, 1 \rgt
 </mrow><mrow>
 &amp;=  \llt 1-2t\,,\,0\,,\,1+t \rgt
@@ -305,7 +307,7 @@ Before we really get into the problem, let's make a simple sketch and think abou
 particular, the angles between these lines and the surface.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/distanceBB"/>
 <image source="figs/distanceB"/>
 </sidebyside>
@@ -337,8 +339,10 @@ must be parallel to <m>(*)</m>. This does not force the vector <m>(*)</m> to
 equal <m>(**)</m>, but it does force the existence of some number <m>t</m> obeying
 <me>
 a\,\hi + (b-3)\,\hj + (a^2+b^2)\,\hk
-=t\big(-2a\,\hi -2b\,\hj +\hk\big)\
-\text{or equivalently}\
+=t\big(-2a\,\hi -2b\,\hj +\hk\big)
+</me>
+or equivalently
+<me>
 \left\{\begin{aligned}
 a&amp;=-2a\,t\\
 b-3 &amp;= -2b\,t\\
@@ -374,7 +378,7 @@ polynomials of degree 5 and higher. This is the famous Abel-Ruffini theorem.</fn
 .
 But, in this case,
 we can guess one solution
-<fn>See Appendix \eref{CLP101{ap:roots} in the
+<fn>See Appendix A.16 in the
 CLP-2 text. There it is shown that any integer root of a polynomial with
 integer coefficients must divide the constant term exactly. So in this case
 only <m>\pm 1</m> and <m>\pm 3</m> could be integer roots. So it good to check to
@@ -421,43 +425,6 @@ a point is beyond the scope of this text.</fn>
 from <m>(0,3,0)</m> to <m>\big(a,b,f(a,b)\big)</m> must be perpendicular to the
 surface <m>z=f(x,y)</m> at <m>\big(a,b,f(a,b)\big)</m>.
 
-<!-- \intremark{
-We'll give two justifications. The first is geometric and the second
-uses Calculus. Here is the geometric argument.
-Look at the following figure. It shows a side view
-of the surface <m>z=f(x,y)</m> as well as the tangent plane to <m>z=f(x,y)</m>
-at <m>\big(a,b,f(a,b)\big)</m>.
-</p>
-
-<sidebyside>
-<image source="figs/distanceSide"/>
-</sidebyside>
-
-<p>Consider a general point <m>\big(x,y,f(x,y)\big)</m> on the surface and
-denote by <m>(x',y',z')</m> the point of intersection of the tangent plane
-with the line segment from <m>(0,3,0)</m> to <m>\big(x,y,f(x,y)\big)</m>.
-<ul>
-<li>
-If <m>x=a</m> and <m>y=b</m>, then <m>(x',y',z')=\big(x,y,f(x,y)\big)=\big(a,b,f(a,b)\big)</m>
-and, in particular, the distance from <m>(0,3,0)</m> to <m>(x',y',z')</m>
-is the same as the distance from <m>(0,3,0)</m> to <m>\big(a,b,f(a,b)\big)</m>.
-</li>
-<li>
-As the point <m>\big(x,y,f(x,y)\big)</m> moves away from <m>\big(a,b,f(a,b)\big)</m>,
-the distance from <m>(0,3,0)</m> to <m>\big(x',y',z'\big)</m> (which is smaller than
-the distance from <m>(0,3,0)</m> to <m>\big(x,y,f(x,y)\big)</m>)
-increases by Pythagoras <mdash/> the line segment from
-<m>(0,3,0)</m> to <m>\big(x',y',z'\big)</m> is the hypotenuse of a triangle, one of
-whose other sides is the line segment <m>(0,3,0)</m> to <m>\big(a,b,f(a,b)\big)</m>.
-</li>
-</ul>
-</p>
-
-<p>Here is a Calculus justification to the claim that, because
-<m>\big(a,b,f(a,b)\big)</m> is the point on <m>z=f(x,y)</m> that is nearest
-<m>(0,3,0)</m>, the vector from <m>(0,3,0)</m> to <m>\big(a,b,f(a,b)\big)</m>
-must be perpendicular to the surface <m>z=f(x,y)</m> at <m>\big(a,b,f(a,b)\big)</m>.
-} -->
 Note that the square of the distance from <m>(0,3,0)</m> to a general point
 <m>\big(x,y,f(x,y)\big)</m> on <m>z=f(x,y)</m> is
 <me>
@@ -471,7 +438,8 @@ If <m>x=a</m>, <m>y=b</m> minimizes <m>D(x,y)</m> then, in particular,
   <md>
 <mrow>
     0 &amp;= g'(a) =\pdiff{}{x}\Big[x^2 + (b-3)^2 +f(x,b)^2\Big]\bigg|_{x=a}
-        =2a +2 f(a,b)\ f_x(a,b)
+</mrow><mrow>
+      &amp;=2a +2 f(a,b)\ f_x(a,b)
 </mrow><mrow>
       &amp;=2 \llt a\,,\,b-3\,,\, f(a,b)\rgt\cdot\llt 1\,,\,0\,,\, f_x(a,b)\rgt
   </mrow>
@@ -484,7 +452,8 @@ If <m>x=a</m>, <m>y=b</m> minimizes <m>D(x,y)</m> then, in particular,
   <md>
 <mrow>
     0 &amp;= h'(b) =\pdiff{}{y}\Big[a^2 + (y-3)^2 +f(a,y)^2\Big]\bigg|_{y=b}
-       =2 (b-3) +2 f(a,b)\ f_y(a,b)
+</mrow><mrow>
+      &amp;=2 (b-3) +2 f(a,b)\ f_y(a,b)
 </mrow><mrow>
       &amp;=2 \llt a\,,\,b-3\,,\, f(a,b)\rgt\cdot\llt 0\,,\,1\,,\, f_y(a,b)\rgt
   </mrow>
@@ -504,11 +473,14 @@ implies that the two vectors are perpendicular.
 </li>
 </ul>
 Thus, that
-<me>
+<md>
+<mrow>
 \llt a\,,\,b-3\,,\, f(a,b)\rgt\cdot\llt 1\,,\,0\,,\, f_x(a,b)\rgt
-=\llt a\,,\,b-3\,,\, f(a,b)\rgt\cdot\llt 0\,,\,1\,,\, f_y(a,b)\rgt
-=0
-</me>
+&amp;=\llt a\,,\,b-3\,,\, f(a,b)\rgt\cdot\llt 0\,,\,1\,,\, f_y(a,b)\rgt
+</mrow><mrow>
+&amp;=0
+</mrow>
+</md>
  tells us that the vector <m>\llt a\,,\,b-3\,,\, f(a,b)\rgt</m>
 from <m>(0,3,0)</m> to <m>\big(a,b,f(a,b)\big)</m> is perpendicular to both
 <m>\llt 1\,,\,0\,,\, f_x(a,b)\rgt</m> and <m>\llt 0\,,\,1\,,\, f_y(a,b)\rgt</m>
@@ -538,7 +510,7 @@ you are at the point <m>\big(x_0\,,\,y_0\,,\,z_0\big)</m>. Let <m>\vr(t)
 =\big(x(t)\,,\,y(t)\,,\,z(t)\big)</m> denote your position at time <m>t</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/tanPlaneG"/>
 </sidebyside>
 
@@ -550,11 +522,14 @@ G\big( x(t)\,,\,y(t)\,,\,z(t)\big)=0
 </me>
 for all <m>t</m>. Differentiating this equation with respect to <m>t</m> gives,
 by the chain rule,
-<me>
+<md>
+<mrow>
 \pdiff{G}{x}\big( x(t)\,,\,y(t)\,,\,z(t)\big)\ x'(t)
-+\pdiff{G}{y}\big( x(t)\,,\,y(t)\,,\,z(t)\big)\ y'(t)
-+\pdiff{G}{z}\big( x(t)\,,\,y(t)\,,\,z(t)\big)\ z'(t) = 0
-</me>
+&amp;+\pdiff{G}{y}\big( x(t)\,,\,y(t)\,,\,z(t)\big)\ y'(t)
+</mrow><mrow>
+&amp;+\pdiff{G}{z}\big( x(t)\,,\,y(t)\,,\,z(t)\big)\ z'(t) = 0
+</mrow>
+</md>
 Then setting <m>t=0</m> gives
 <me>
 \pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\ x'(0)
@@ -714,7 +689,10 @@ the tangent plane.
 <me>
 \vn\cdot\llt x-1\,,\,y-2\,,\,z-3 \rgt
 =\llt 12\,,\,-3\,,\, -1\rgt\cdot\llt x-1\,,\,y-2\,,\,z-3 \rgt
-=0\quad\text{or}\quad
+=0
+</me>
+or
+<me>
 12x -3y -z = 3
 </me>
 We can quickly check that the point <m>(1,2,3)</m> does indeed lie on the plane:
@@ -725,7 +703,9 @@ The normal line is
 <me>
 \llt x-1\,,\,y-2\,,\,z-3 \rgt
 =t\,\vn = t\llt 12\,,\,-3\,,\, -1\rgt
-\quad\text{or}\quad
+</me>
+or
+<me>
 \frac{x-1}{12} = \frac{y-2}{-3} = \frac{z-3}{-1}\quad
   \color{gray}{\Big(=t\Big)}
 </me>
@@ -772,7 +752,10 @@ is a normal vector to the surface at <m>(2,-3,3)</m>. The tangent plane is
 <me>
 \vn\cdot\llt x-2\,,\,y+3\,,\,z-3 \rgt
 =\llt 2\,,\,-3\,,\, -3\rgt\cdot\llt x-2\,,\,y+3\,,\,z-3 \rgt
-=0\quad\text{or}\quad
+=0
+</me>
+or
+<me>
 2x -3y -3z = 4
 </me>
 Again, as a check, we can verify that our point <m>(2,-3,3)</m> is indeed on
@@ -784,7 +767,9 @@ the plane:
 <me>
 \llt x-2\,,\,y+3\,,\,z-3 \rgt
 =t\,\vn = t\llt 2\,,\,-3\,,\, -3\rgt
-\quad\text{or}\quad
+</me>
+or
+<me>
 \frac{x-2}{2} = \frac{y+3}{-3} = \frac{z-3}{-3}\quad
   \color{gray}{\Big(=t\Big)}
 </me>
@@ -858,10 +843,13 @@ negative, not the closest to zero.</fn>
 </p>
 
 <p>Completing three squares,
-<me>
-G(x,y,z) = x^2-2x +y^2-4y + z^2-6z
-         =(x-1)^2 +(y-2)^2 +(z-3)^2 - 14.
-</me>
+<md>
+<mrow>
+G(x,y,z) &amp;= x^2-2x +y^2-4y + z^2-6z
+</mrow><mrow>
+        &amp;=(x-1)^2 +(y-2)^2 +(z-3)^2 - 14.
+</mrow>
+</md>
 So the surface <m>G(x,y,z)=2</m> is a sphere, whose highest point is
 the north pole and whose lowest point is the south pole. But let's
 pretend that <m>G(x,y,z)=2</m> is some complicated surface that we can't
@@ -882,7 +870,7 @@ obvious, proving it is beyond the scope of this text.</fn>
  such points.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/highLowB"/>
 </sidebyside>
 
@@ -930,7 +918,7 @@ level of difficulty a bit and find the points on the surface
 following sketch.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/bigSmall"/>
 </sidebyside>
 
@@ -1048,7 +1036,12 @@ must be parallel to <m>\llt 1\,,\,2\,,\,3\rgt</m>. So there must be some
 number <m>t</m> so that
 <md>
 <mrow>
-\llt a-1\,,\,b-1\,,\,c-1\rgt = t \llt 1\,,\,2\,,\,3\rgt\qquad\text{or}\qquad
+\llt a-1\,,\,b-1\,,\,c-1\rgt = t \llt 1\,,\,2\,,\,3\rgt
+</mrow>
+</md>
+or
+<md>
+<mrow>
 a = t+1,\ b=2t+1,\ c=3t+1
 </mrow>
 </md>
@@ -1067,7 +1060,7 @@ is the length of the vector
 which is <m>\sqrt{14}</m>.
 </p>
 
-<sidebyside>
+<sidebyside  width="75%">
 <image source="figs/distanceSideC"/>
 </sidebyside>
 
@@ -1099,7 +1092,8 @@ normal to the plane and hence parallel to the side <m>QP</m> is
  \llt 19,-1,-1\rgt\cdot \llt 1,2,3\rgt &amp;=14
 </mrow><mrow>
    &amp;= |\llt 19,-1,-1\rgt|\  |\llt 1,2,3\rgt|\ \cos\theta
-   = |QR|\  \sqrt{14}\ \cos\theta
+</mrow><mrow>
+   &amp;= |QR|\  \sqrt{14}\ \cos\theta
 </mrow>
 </md>
 so that, finally,
@@ -1216,16 +1210,16 @@ is normal to the surface <m>G(x,y,z)</m> at <m>\big(\sqrt{3}\,,\,1\,,\,1\big)</m
 So a tangent vector is
 <md>
 <mrow>
-\llt \sqrt{3}\,,\,1\,,\,1 \rgt\times \llt \sqrt{3}\,,\,1\,,\,-2 \rgt
-    &amp;=\det\left[\begin{matrix}
+&amp;\llt \sqrt{3}\,,\,1\,,\,1 \rgt\times \llt \sqrt{3}\,,\,1\,,\,-2 \rgt
+    =\det\left[\begin{matrix}
                  \hi &amp; \hj &amp; \hk \\
             \sqrt{3} &amp;  1  &amp; 1 \\
             \sqrt{3} &amp;  1  &amp; -2 \end{matrix}\right]
 </mrow><mrow>
-&amp; =\big(-2-1\big)\,\hi + \big(\sqrt{3}+2\sqrt{3}\big)\,\hj
+&amp;\hskip0.5in =\big(-2-1\big)\,\hi + \big(\sqrt{3}+2\sqrt{3}\big)\,\hj
     +\big(\sqrt{3}-\sqrt{3}\big)\,\hk
 </mrow><mrow>
-&amp;= -3\,\hi + 3\sqrt{3}\,\hj
+&amp;\hskip0.5in= -3\,\hi + 3\sqrt{3}\,\hj
 </mrow>
 </md>
 There is an easy common factor of <m>3</m> in both components. So
@@ -1244,4 +1238,5 @@ This brings us to our next topic <mdash/> approximating functions.
 </subsection>
 
 <xi:include href="../problems/prob_s2.5.ptx" />
+
 </section>
