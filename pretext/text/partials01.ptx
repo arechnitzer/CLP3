@@ -599,7 +599,4 @@ proves that <m>f(x,y)</m> does not have a limit as <m>(x,y)\rightarrow (0,0)</m>
 </p></example>
 
 </subsection>
-
-<xi:include href="../problems/prob_s2.1.ptx" />
-
 </section>

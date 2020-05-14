@@ -1455,7 +1455,7 @@ Hence (multiplying by <m>\frac{\De\theta}{2}</m> to turn them into areas)
 </mrow>
 </md>
 and the total area <m>A</m> obeys the bounds
-<md alignment="alignat">
+<md>
 <mrow>
 \sum_{i=1}^n\left[ \frac{1}{2} R(\theta_i^*)^2\De\theta
     - \frac{1}{2} L M\De\theta^2 +\frac{1}{8} L^2\De\theta^3\right]\hskip2in

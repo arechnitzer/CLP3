@@ -201,7 +201,7 @@ the function <m>W(u,v)</m> by
 w(x,t) = W(x+ct\,,\,x-ct)
 </me>
 By the chain rule, we still have
-<md alignment="alignat">
+<md>
 <mrow>
 \pdiff{w}{x}(x,t)
 &amp;=\pdiff{}{x}\big[W(x+ct\,,\,x-ct) \big]
@@ -504,5 +504,4 @@ are applicable.
 </p>
 
 </subsection>
-
 </section>

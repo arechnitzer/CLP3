@@ -60,7 +60,7 @@ and varying <m>x</m>.
 </ul>
 So the four intersection points in the figure are
 <md alignment="alignat">
-<mrow>
+<mrow>{3}
 P_0&amp;=x_0\,\hi+y_0\,\hj + f(x_0,y_0)\,\hk
 </mrow><mrow>
    P_1&amp;=x_0\,\hi+(y_0+\dee{y})\,\hj + f(x_0,y_0+\dee{y})\,\hk
