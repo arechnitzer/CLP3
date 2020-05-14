@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise>
+<statement><p>
+You are traversing an undulating landscape. Take the <m>z</m>-axis to be straight up towards the sky, the positive <m>x</m>-axis to be due south, and the positive <m>y</m>-axis to be due east. Then the landscape near you is described by the equation <m>z=f(x,y)</m>, with you at the point <m>(0,0,f(0,0))</m>. The function <m>f(x,y)</m> is differentiable.
+</p>
+
+<p>Suppose <m>f_y(0,0) \lt 0</m>. Is it possible that you are at a summit? Explain.
+</p>
+
+</statement>
+<hint><p>
+What happens if you move <q>backwards,</q> in the negative <m>y</m> direction?
+</p></hint>
+<answer><p>
+No: you can go higher by moving in the negative <m>y</m> direction.
+</p></answer>
+<solution>
+
+<p>If <m>f_y(0,0) \lt 0</m>, then <m>f(0,y)</m> decreases as <m>y</m> increases from <m>0</m>.
+Thus moving in the positive <m>y</m> direction takes you downhill. This means
+you aren't at the lowest point in a valley, since you can still move downhill.
+On the other hand, as <m>f_y(0,0) \lt 0</m>, <m>f(0,y)</m> also decreases as <m>y</m>
+increases towards <m>0</m> from slightly negative values. Thus if you move in the <em>negative</em> <m>y</m>-direction from <m>y=0</m>, your height <m>z</m> will <em>increase</em>.
+So you are not at a locally highest point<mdash/>you're not at a summit.
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M226 2009D</fromexam></title>
+<statement><p>
+Let
+<me>
+f(x,y)=\begin{cases}\frac{x^2y}{x^2+y^2}&amp; \text{if } (x,y)\ne (0,0)\\
+                0 &amp; \text{if } (x,y)=(0,0)
+       \end{cases}
+</me>
+Compute, directly from the definitions,
+<ol label="a">
+<li>
+<m>\pdiff{f}{x}(0,0)</m>
+</li>
+<li>
+<m>\pdiff{f}{y}(0,0)</m>
+</li>
+<li>
+<m>\diff{}{t} f(t,t)\Big|_{t=0}</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+For (a) and (b), remember <m>\pdiff{f}{x}(x,y)=\lim\limits_{h\to0}\frac{f(x+h,y)-f(x,y)}{h}</m> and
+<m>\pdiff{f}{y}(x,y)=\lim\limits_{h\to0}\frac{f(x,y+h)-f(x,y)}{h}</m>. For (c), you're finding the derivative of a function of one variable, say <m>g(t)</m>, where <me>
+g(t)=f(t,t)=\begin{cases}
+                  \frac{t^2t}{t^2+t^2} &amp; \text{if } t\ne 0 \\
+                  0                    &amp; \text{if } t= 0
+                 \end{cases}
+</me>
+</p></hint>
+
+<answer><p>
+(a) <m>0</m></p><p>
+(b) <m>0</m></p><p>
+(c) <m>\frac{1}{2}</m>
+</p></answer>
+
+<solution><p>
+(a) By definition
+<md>
+<mrow>
+\pdiff{f}{x}(0,0)
+&amp;=\lim_{\De x\rightarrow 0}\frac{f(\De x,0)-f(0,0)}{\De x}
+</mrow><mrow>
+&amp;=\lim_{\De x\rightarrow 0}\frac{\frac{(\De x^2)(0)}{\De x^2+0^2}-0}{\De x}
+</mrow><mrow>
+&amp;=0
+</mrow>
+</md>
+</p>
+
+<p>(b) By definition
+<md>
+<mrow>
+\pdiff{f}{y}(0,0)
+&amp;=\lim_{\De y\rightarrow 0}\frac{f(0,\De y)-f(0,0)}{\De y}
+</mrow><mrow>
+&amp;=\lim_{\De y\rightarrow 0}\frac{\frac{(0^2)(\De y)}{0^2+\De y^2}-0}{\De y}
+</mrow><mrow>
+&amp;=0
+</mrow>
+</md>
+</p>
+
+<p>(c) By definition
+<md>
+<mrow>
+\diff{}{t} f(t,t)\Big|_{t=0}
+&amp;=\lim_{t\rightarrow 0}\frac{f(t,t)-f(0,0)}{t}
+</mrow><mrow>
+&amp;=\lim_{h\rightarrow 0}\frac{\frac{(t^2)(t)}{t^2+t^2}-0}{t}
+</mrow><mrow>
+&amp;=\lim_{t\rightarrow 0}\frac{t/2}{t}
+</mrow><mrow>
+&amp;=\frac{1}{2}
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise>
+<statement><p>
+Find all first partial derivatives of the following functions
+and evaluate them at the given point.
+<ol label="a">
+<li>
+<m>f(x,y,z)=x^3y^4z^5\qquad (0,-1,-1)</m>
+</li>
+<li>
+<m>w(x,y,z)=\ln\left(1+e^{xyz}\right)\qquad (2,0,-1)</m>
+</li>
+<li>
+<m>f(x,y)=\frac{1}{\sqrt{x^2+y^2}}\qquad (-3,4)</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a)
+<md>
+<mrow>
+f_x(x,y,z)&amp;=3x^2y^4z^5 &amp; f_x(0,-1,-1)&amp;=0
+</mrow><mrow>
+f_y(x,y,z)&amp;=4x^3y^3z^5 &amp; f_y(0,-1,-1)&amp;=0
+</mrow><mrow>
+f_z(x,y,z)&amp;=5x^3y^4z^4 &amp; f_z(0,-1,-1)&amp;=0
+</mrow>
+</md>
+</p>
+
+<p>(b)
+<md>
+<mrow>
+w_x(x,y,z)&amp;=\frac{yz e^{xyz}}{1+e^{xyz}} &amp; w_x(2,0,-1)&amp;=0
+</mrow><mrow>
+w_y(x,y,z)&amp;=\frac{xz e^{xyz}}{1+e^{xyz}} &amp; w_y(2,0,-1)&amp;=-1
+</mrow><mrow>
+w_z(x,y,z)&amp;=\frac{xy e^{xyz}}{1+e^{xyz}} &amp; w_z(2,0,-1)&amp;=0
+</mrow>
+</md>
+</p>
+
+<p>(c)
+<md>
+<mrow>
+f_x(x,y)&amp;=-\frac{x}{(x^2+y^2)^{3/2}} &amp; f_x(-3,4)&amp;=\frac{3}{125}
+</mrow><mrow>
+f_y(x,y)&amp;=-\frac{y}{(x^2+y^2)^{3/2}} &amp; f_y(-3,4)&amp;=-\frac{4}{125}
+</mrow>
+</md>
+</p></answer>
+
+<solution><p>
+(a)
+<md>
+<mrow>
+f_x(x,y,z)&amp;=3x^2y^4z^5 &amp; f_x(0,-1,-1)&amp;=0
+</mrow><mrow>
+f_y(x,y,z)&amp;=4x^3y^3z^5 &amp; f_y(0,-1,-1)&amp;=0
+</mrow><mrow>
+f_z(x,y,z)&amp;=5x^3y^4z^4 &amp; f_z(0,-1,-1)&amp;=0
+</mrow>
+</md>
+</p>
+
+<p>(b)
+<md>
+<mrow>
+w_x(x,y,z)&amp;=\frac{yz e^{xyz}}{1+e^{xyz}} &amp; w_x(2,0,-1)&amp;=0
+</mrow><mrow>
+w_y(x,y,z)&amp;=\frac{xz e^{xyz}}{1+e^{xyz}} &amp; w_y(2,0,-1)&amp;=-1
+</mrow><mrow>
+w_z(x,y,z)&amp;=\frac{xy e^{xyz}}{1+e^{xyz}} &amp; w_z(2,0,-1)&amp;=0
+</mrow>
+</md>
+</p>
+
+<p>(c)
+<md>
+<mrow>
+f_x(x,y)&amp;=-\frac{x}{(x^2+y^2)^{3/2}} &amp; f_x(-3,4)&amp;=\frac{3}{125}
+</mrow><mrow>
+f_y(x,y)&amp;=-\frac{y}{(x^2+y^2)^{3/2}} &amp; f_y(-3,4)&amp;=-\frac{4}{125}
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Show that the function <m>z(x,y)=\frac{x+y}{x-y}</m> obeys
+<me>
+x\pdiff{z}{x}(x,y)+y\pdiff{z}{y}(x,y) = 0
+</me>
+</p></statement>
+
+<hint><p>
+Just evaluate <m>x\pdiff{z}{x}(x,y)+y\pdiff{z}{y}(x,y)</m>.
+</p></hint>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+By the quotient rule
+<md alignment="alignat">
+<mrow>
+\pdiff{z}{x}(x,y)
+&amp;=\frac{(1)(x-y)-(x+y)(1)}{(x-y)^2}
+&amp;&amp;=\frac{-2y}{(x-y)^2}
+</mrow><mrow>
+\pdiff{z}{y}(x,y)
+&amp;=\frac{(1)(x-y)-(x+y)(-1)}{(x-y)^2}
+&amp;&amp;=\frac{2x}{(x-y)^2}
+</mrow>
+</md>
+Hence
+<me>
+x\pdiff{z}{x}(x,y)+y\pdiff{z}{y}(x,y)
+=\frac{-2xy+2yx}{(x-y)^2}
+=0
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2010A</fromexam></title>
+<statement><p>
+A surface <m>z(x, y)</m> is defined by <m>zy - y + x = \ln(xyz)</m>.
+<ol label="a">
+<li>
+Compute <m>\pdiff{z}{x}</m>, <m>\pdiff{z}{y}</m> in terms of <m>x</m>, <m>y</m>, <m>z</m>.
+</li>
+<li>
+Evaluate <m>\pdiff{z}{x}</m> and <m>\pdiff{z}{y}</m> at <m>(x, y, z) = (-1, -2, 1/2)</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a)
+<m>\pdiff{z}{x} = \frac{z(1-x)}{x(yz-1)}</m>,</p><p>
+<m>\pdiff{z}{y} = \frac{z(1+y-yz)}{y(yz-1)}</m>
+</p>
+
+<p>(b)
+<m>\pdiff{z}{x}(-1,-2) =\frac{1}{2}</m>,</p><p>
+<m>\pdiff{z}{y}(-1,-2) =0</m>.
+</p></answer>
+
+<solution><p>
+(a) We are told that <m>z(x,y)</m> obeys
+<md>
+<mrow>
+z(x,y)\, y - y + x = \ln\big(xy\,z(x,y)\big)
+\tag{$*$}</mrow>
+</md>
+for all <m>(x,y)</m> (near <m>(-1,-2)</m>).  Differentiating <m>(*)</m> with respect to <m>x</m>
+gives
+<md>
+<mrow>
+y\,\pdiff{z}{x}(x,y) + 1 = \frac{1}{x} + \frac{\pdiff{z}{x}(x,y)}{z(x,y)}
+\implies \pdiff{z}{x}(x,y) = \frac{\frac{1}{x}-1}{y-\frac{1}{z(x,y)}}
+</mrow>
+</md>
+or, dropping the arguments <m>(x,y)</m> and multiplying both the numerator and denominator by <m>xz</m>,
+<md>
+<mrow>
+\pdiff{z}{x} = \frac{z-xz}{xyz-x} = \frac{z(1-x)}{x(yz-1)}
+</mrow>
+</md>
+Differentiating <m>(*)</m> with respect to <m>y</m>
+gives
+<md>
+<mrow>
+z(x,y)+y\,\pdiff{z}{y}(x,y) - 1 = \frac{1}{y} + \frac{\pdiff{z}{y}(x,y)}{z(x,y)}
+\implies \pdiff{z}{y}(x,y) = \frac{\frac{1}{y}+1-z(x,y)}{y-\frac{1}{z(x,y)}}
+</mrow>
+</md>
+or, dropping the arguments <m>(x,y)</m> and multiplying both the numerator and denominator by <m>yz</m>,
+<md>
+<mrow>
+\pdiff{z}{y} = \frac{z+yz-yz^2}{y^2z-y} = \frac{z(1+y-yz)}{y(yz-1)}
+</mrow>
+</md>
+</p>
+
+<p>(b)  When <m>(x,y,z) = (-1, -2, 1/2)</m>,
+<md>
+<mrow>
+\pdiff{z}{x}(-1,-2)
+  &amp;= \left.\frac{\frac{1}{x}-1}{y-\frac{1}{z}}
+                         \right|_{(x,y,z) = (-1, -2, 1/2)}
+   =\frac{\frac{1}{-1}-1}{-2-2}
+   =\frac{1}{2}
+</mrow><mrow>
+\pdiff{z}{y}(-1,-2)  &amp;= \left.\frac{\frac{1}{y}+1-z}{y-\frac{1}{z}}
+                         \right|_{(x,y,z) = (-1, -2, 1/2)}
+         =\frac{\frac{1}{-2}+1-\frac{1}{2}}{-2-2}
+         =0
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2010D</fromexam></title>
+<statement><p>
+Find  <m>\pdiff{U}{T}</m> and <m>\pdiff{T}{V}</m> at <m>(1, 1, 2, 4)</m> if <m>(T, U, V, W)</m> are related by
+<me>
+(TU-V)^2 \ln(W-UV) = \ln 2
+</me>
+</p></statement>
+
+<answer><p>
+<m>\pdiff{U}{T}(1,2,4) = -\frac{2\ln(2)}{1+2\ln(2)}</m></p><p>
+<m>\pdiff{T}{V}(1,2,4) = 1 -\frac{1}{4\ln(2)}</m>
+</p></answer>
+
+<solution><p>
+We are told that the four variables <m>T</m>, <m>U</m>, <m>V</m>, <m>W</m> obey the
+the single equation <m>(TU-V)^2 \ln(W-UV) = \ln 2</m>. So they are not all
+independent variables. Roughly speaking, we can treat any three of them
+as independent variables and solve the given equation for the fourth
+as a function of the three chosen independent variables.
+</p>
+
+<p>We are first asked to find <m>\pdiff{U}{T}</m>. This implicitly tells to
+treat <m>T</m>, <m>V</m> and <m>W</m> as independent variables and to view <m>U</m>
+as a function <m>U(T,V,W)</m> that obeys
+<me>
+\big(T\, U(T,V,W)-V\big)^2 \ln\big(W-U(T,V,W)\,V\big) = \ln 2
+\tag{E1}</me>
+for all <m>(T, U, V, W)</m> sufficiently near <m>(1, 1, 2, 4)</m>.
+Differentiating (E1) with respect to <m>T</m> gives
+<md>
+<mrow>
+&amp;2\big(T\, U(T,V,W)-V\big)
+         \left[ U(T,V,W) +T\ \pdiff{U}{T}(T,V,W)\right]
+            \ln\big(W-U(T,V,W)\,V\big)
+</mrow><mrow>
+&amp;\hskip1in
+  -\big(T\, U(T,V,W)-V\big)^2 \frac{1}{W-U(T,V,W)\,V}\pdiff{U}{T}(T,V,W)\,V = 0
+</mrow>
+</md>
+In particular, for <m>(T, U, V, W)=(1, 1, 2, 4)</m>,
+<md>
+<mrow>
+&amp;2\big((1)(1)-2\big)
+         \left[ 1 +(1)\pdiff{U}{T}(1,2,4)\right]
+            \ln\big(4-(1)(2)\big)
+</mrow><mrow>
+&amp;\hskip1in
+  -\big((1)(1)-2\big)^2 \frac{1}{4-(1)(2)}\pdiff{U}{T}(1,2,4)\,(2) = 0
+</mrow>
+</md>
+This simplifies to
+<md>
+<mrow>
+-2\left[ 1 +\pdiff{U}{T}(1,2,4)\right] \ln(2)
+                        -\pdiff{U}{T}(1,2,4)=0
+\implies
+\pdiff{U}{T}(1,2,4) = -\frac{2\ln(2)}{1+2\ln(2)}
+</mrow>
+</md>
+</p>
+
+
+<p>We are then asked to find <m>\pdiff{T}{V}</m>. This implicitly tells to
+treat <m>U</m>, <m>V</m> and <m>W</m> as independent variables and to view <m>T</m>
+as a function <m>T(U,V,W)</m> that obeys
+<me>
+\big(T(U,V,W)\, U-V\big)^2 \ln\big(W-U\,V\big) = \ln 2
+\tag{E2}</me>
+for all <m>(T, U, V, W)</m> sufficiently near <m>(1, 1, 2, 4)</m>.
+Differentiating (E2) with respect to <m>V</m> gives
+<md>
+<mrow>
+&amp;2\big(T(U,V,W)\, U-V\big)\ \left[\pdiff{T}{V}(U,V,W)\ U-1\right]
+            \ln\big(W-U\,V\big)
+</mrow><mrow>
+&amp;\hskip2.5in
+  -\big(T(U,V,W)\, U-V\big)^2 \frac{U}{W-U\,V} = 0
+</mrow>
+</md>
+In particular, for <m>(T, U, V, W)=(1, 1, 2, 4)</m>,
+<md>
+<mrow>
+&amp;2\big((1)(1)-2\big)
+         \left[ (1)\pdiff{T}{V}(1,2,4)-1\right]
+            \ln\big(4-(1)(2)\big)
+</mrow><mrow>
+&amp;\hskip2.5in
+  -\big((1)(1)-2\big)^2 \frac{1}{4-(1)(2)} = 0
+</mrow>
+</md>
+This simplifies to
+<md>
+<mrow>
+-2\left[\pdiff{T}{V}(1,2,4)-1\right] \ln(2) -\frac{1}{2}=0
+\implies
+\pdiff{T}{V}(1,2,4) = 1 -\frac{1}{4\ln(2)}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2013D</fromexam></title>
+<statement><p>
+Suppose that <m>u = x^2 + yz</m>, <m>x = \rho r \cos(\theta)</m>,
+<m>y = \rho r \sin(\theta)</m> and <m>z = \rho r</m>. Find <m>\pdiff{u}{r}</m>
+at the point <m>(\rho_0 , r_0 , \theta_0) = (2, 3, \pi/2)</m>.
+</p></statement>
+
+<answer><p>
+<m>24</m>
+</p></answer>
+
+<solution><p>
+The function
+<md>
+<mrow>
+u(\rho, r,\theta) &amp;= \big[\rho r\cos\theta\big]^2
+                      +\big[\rho r\sin\theta\big] \rho r
+</mrow><mrow>
+&amp;=\rho^2 r^2\cos^2\theta +\rho^2 r^2\sin\theta
+</mrow>
+</md>
+So
+<md>
+<mrow>
+\pdiff{u}{r}(\rho, r,\theta)
+&amp;=2 \rho^2 r\cos^2\theta +2 \rho^2 r\sin\theta
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\pdiff{u}{r}(2, 3,\pi/2)
+&amp;=2 (2^2) (3) (0)^2 +2 (2^2) (3) (1)
+=24
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Use the definition of the derivative to evaluate <m>f_x(0,0)</m> and <m>f_y(0,0)</m> for
+<me>
+f(x,y)=\begin{cases}
+                \frac{x^2-2y^2}{x-y}&amp;\text{if } x\ne y\\
+                0&amp;\text{if } x=y
+              \end{cases}
+</me>
+</p></statement>
+
+<answer><p>
+<m>f_x(0,0)=1</m>,</p><p>
+<m>f_y(0,0)=2</m>
+</p></answer>
+
+<solution><p>
+By definition
+<md>
+<mrow>
+f_x(x_0,y_0) \amp =\lim_{\De x\rightarrow 0}\frac{f(x_0+\De x,y_0)-f(x_0,y_0)}{\De x}
+</mrow><mrow>
+f_y(x_0,y_0) \amp =\lim_{\De y\rightarrow 0}\frac{f(x_0,y_0+\De y)-f(x_0,y_0)}{\De y}
+</mrow>
+</md>
+Setting <m>x_0=y_0=0</m>,
+<md alignment="alignat">
+<mrow>
+f_x(0,0)&amp;=\lim_{\De x\rightarrow 0}\frac{f(\De x,0)-f(0,0)}{\De x}
+&amp;=\lim_{\De x\rightarrow 0}\frac{f(\De x,0)}{\De x}
+&amp;=\lim_{\De x\rightarrow 0}\frac{((\De x)^2-2\times0^2)/(\De x-0)}{\De x}
+</mrow><mrow>
+&amp;=\lim_{\De x\rightarrow 0}1
+=1
+</mrow><mrow>
+f_y(0,0)&amp;=\lim_{\De y\rightarrow 0}\frac{f(0,\De y)-f(0,0)}{\De y}
+&amp;=\lim_{\De y\rightarrow 0}\frac{f(0,\De y)}{\De y}
+&amp;=\lim_{\De y\rightarrow 0}\frac{(0^2-2(\De y)^2)/(0-\De y)}{\De y}
+</mrow><mrow>
+&amp;=\lim_{\De y\rightarrow 0}2
+=2
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise>
+<statement><p>
+Let <m>f</m> be any differentiable function of one variable. Define
+<m>z(x,y)=f(x^2+y^2)</m>. Is the equation
+<me>
+y\pdiff{z}{x}(x,y)-x\pdiff{z}{y}(x,y) = 0
+</me>
+necessarily satisfied?
+</p></statement>
+
+<hint><p>
+Just evaluate <m>y\pdiff{z}{x}(x,y)</m> and <m>x\pdiff{z}{y}(x,y)</m>.
+</p></hint>
+
+<answer><p>
+Yes.
+</p></answer>
+
+<solution><p>
+As <m>z(x,y)=f(x^2+y^2)</m>
+<md>
+<mrow>
+\pdiff{z}{x}(x,y)&amp;=2xf'(x^2+y^2)
+</mrow><mrow>
+\pdiff{z}{y}(x,y)&amp;=2yf'(x^2+y^2)
+</mrow>
+</md>
+by the (ordinary single variable) chain rule.
+So
+<me>
+y\pdiff{z}{x}-x\pdiff{z}{y}
+=y(2x)f'(x^2+y^2)-x(2y)f'(x^2+y^2)=0
+</me>
+and the differential equation is always satisfied, assuming that
+<m>f</m> is differentiable, so that the chain rule applies.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Define the function
+<me>
+f(x,y)=\begin{cases}\frac{(x+2y)^2}{x+y}&amp; \text{if } x+y\ne 0 \\
+                        0 &amp;\text{if } x+y=0
+       \end{cases}
+</me>
+<ol label="a">
+<li>
+Evaluate, if possible, <m>\pdiff{f}{x}(0,0)</m> and
+<m>\pdiff{f}{y}(0,0)</m>.
+</li>
+<li>
+ Is <m>f(x,y)</m> continuous at <m>(0,0)</m>?
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\pdiff{f}{x}(0,0)=1</m>, <m>\pdiff{f}{y}(0,0)=4</m></p><p>
+(b) Nope.
+</p></answer>
+
+<solution><p>
+By definition
+<md>
+<mrow>
+\pdiff{f}{x}(0,0)
+&amp;=\lim_{\De x\rightarrow 0}\frac{f(\De x,0)-f(0,0)}{\De x}
+</mrow><mrow>
+&amp;=\lim_{\De x\rightarrow 0}\frac{\frac{(\De x+2\times 0)^2}{\De x+0}-0}{\De x}
+</mrow><mrow>
+&amp;=\lim_{\De x\rightarrow 0}\frac{\De x}{\De x}
+</mrow><mrow>
+&amp;=1
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\pdiff{f}{y}(0,0)
+&amp;=\lim_{\De y\rightarrow 0}\frac{f(0,\De y)-f(0,0)}{\De y}
+</mrow><mrow>
+&amp;=\lim_{\De y\rightarrow 0}\frac{\frac{(0+2\De y)^2}{0+\De y}-0}{\De y}
+</mrow><mrow>
+&amp;=\lim_{\De y\rightarrow 0}\frac{4\De y}{\De y}
+</mrow><mrow>
+&amp;=4
+</mrow>
+</md>
+</p>
+
+<p>(b) <m>f(x,y)</m> is <em>not continuous</em> at <m>(0,0)</m>, even though both partial
+derivatives exist there. To see this, make a change of coordinates from
+<m>(x,y)</m> to <m>(X,y)</m> with <m>X=x+y</m> (the denominator). Of course,
+<m>(x,y)\rightarrow (0,0)</m> if and only if <m>(X,y)\rightarrow (0,0)</m>.
+Now watch what happens when <m>(X,y)\rightarrow(0,0)</m> with <m>X</m> a lot smaller
+than <m>y</m>. For example, <m>X=ay^2</m>. Then
+<md>
+<mrow>
+\frac{(x+2y)^2}{x+y}=\frac{(X+y)^2}{X}=\frac{(ay^2+y)^2}{ay^2}
+=\frac{(1+ay)^2}{a}\rightarrow\frac{1}{a}
+</mrow>
+</md>
+This depends on <m>a</m>. So approaching <m>(0,0)</m> along different paths gives
+different limits. (You can see the same effect without changing coordinates
+by sending <m>(x,y)\rightarrow (0,0)</m> with <m>x=-y+ay^2</m>.) Even more dramatically,
+watch what happens when <m>(X,y)\rightarrow(0,0)</m> with  <m>X=y^3</m>. Then
+<me>
+\frac{(x+2y)^2}{x+y}=\frac{(X+y)^2}{X}=\frac{(y^3+y)^2}{y^3}
+=\frac{{(1+y^2)}^2}{y}\rightarrow\pm\infty
+</me>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Consider the cylinder whose base is the radius-1 circle in the <m>xy</m>-plane
+centred at <m>(0,0)</m>, and which slopes parallel to the line in the <m>yz</m>-plane
+given by <m>z=y</m>.
+</p>
+<sidebyside>
+<image><latex-image>\begin{tikzpicture}
+\draw[thin, gray] (0,0)--(1,0) (0,0)--(0,1) (0,0)--(-.2,-.2);
+\draw (0,1)--(0,2) (1,0)--(3,0) (-.2,-.2)--(-1,-1);
+\draw (2,2) node[shape=ellipse, minimum width=2cm, minimum height=.4cm,draw,fill=gray,fill opacity=0.3]{};
+\draw[thick,blue] (-3,-2)--(1,2) (-1,-2)--(3,2);
+\draw[thick,blue] (-1,0) arc (180:360:1cm and .2cm);
+\draw[dotted,thick](-1,0) arc (180:0:1cm and .2cm);
+\draw[thick,blue] (-3,-2) arc (180:360:1cm and .2cm);
+\draw[dotted,thick](-3,-2) arc (180:0:1cm and .2cm);
+\end{tikzpicture}</latex-image></image>
+</sidebyside><p>
+When you stand at the point <m>(0,-1,0)</m>, what is the slope of the surface if you look in the positive <m>y</m> direction? The positive <m>x</m> direction?
+</p></statement>
+<hint><p>
+You can find an equation for the surface, or just look at the diagram.
+</p></hint>
+<answer><p>
+1 resp. 0
+</p></answer>
+<solution>
+<p>
+Let's start by finding an equation for this surface. Every level curve
+is a horizontal circle of radius one, so the equation should be of the form
+<me>
+(x-f_1)^2+(y-f_2)^2=1
+</me>
+where <m>f_1</m> and <m>f_2</m> are functions depending only on <m>z</m>. Since the centre of the circle at height <m>z</m> is at position <m>x=0</m>, <m>y=z</m>, we see that the equation of our surface is
+<me>
+x^2+(y-z)^2=1
+</me>
+The height of the surface at the point <m>(x,y)</m> is the <m>z(x,y)</m> found by solving
+that equation. That is,
+<me>
+x^2+\big(y-z(x,y)\big)^2=1
+\tag{$*$}
+</me>
+We differentiate this equation implicitly to find <m>z_x(x,y)</m> and <m>z_y(x,y)</m> at the desired point <m>(x,y)= (0,-1)</m>. First, differentiating <m>(*)</m> with respect
+to <m>y</m> gives
+<md>
+<mrow>
+0+2\big(y-z(x,y)\big)\big(1- z_y(x,y)\big)&amp;=0
+</mrow><mrow>
+2(-1-0)\big(1-z_y(0,-1)\big)&amp;=0&amp; &amp; \mbox{ at } (0,-1,0)
+</mrow>
+</md>
+so that the slope looking in the positive <m>y</m> direction is <m>z_y(0,-1)=1</m>.
+Similarly, differentiating <m>(*)</m> with respect to <m>x</m> gives
+<md>
+<mrow>
+2x+2\big(y-z(x,y)\big)\cdot\big(0-z_x(x,y)\big)&amp;=0
+</mrow><mrow>
+2x&amp;=2\big(y-z(x,y)\big)\cdot z_x(x,y)
+</mrow><mrow>
+z_x(x,y)&amp;=\frac{x}{y-z(x,y)}
+</mrow><mrow>
+z_x(0,-1)&amp;=0 &amp;\mbox{ at } (0,-1,0)
+</mrow>
+</md>
+The slope looking in the positive <m>x</m> direction is <m>z_x(0,-1)=0</m>.
+</p>
+</solution>
+
+<solution>
+<p>
+Standing at <m>(0,-1,0)</m> and looking in the positive <m>y</m> direction,
+the surface follows the straight line that
+<ul>
+<li>
+passes through the point <m>(0,-1,0)</m>, and
+</li>
+<li>
+is parallel to the central line <m>z=y, x=0</m> of the cylinder.
+</li>
+</ul>
+Shifting the central line one unit in the <m>y</m>-direction, we get the line <m>z=y+1</m>, <m>x=0</m>. (As a check, notice that <m>(0,-1,0)</m> is indeed on <m>z=y+1</m>,
+<m>x=0</m>.) The slope of this line is 1.
+</p>
+
+<p>Standing at <m>(0,-1,0)</m> and looking in the positive <m>x</m> direction,
+the surface follows the circle <m>x^2+y^2=1</m>, <m>z=0</m>, which is the intersection
+of the cylinder with the <m>xy</m>-plane. As we move along that circle our <m>z</m> coordinate stays fixed at <m>0</m>. So the slope in that direction is 0.
+</p>
+
+</solution>
+
+</exercise>
+</exercisegroup>
+
+</exercises>

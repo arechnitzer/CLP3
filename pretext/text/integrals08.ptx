@@ -118,7 +118,7 @@ at the slightly larger value <m>v_0+\dee{v}</m>, varying <m>u</m> and
 sketching <m>\vr(u,v_0+\dee{v})</m>. So the four intersection points in
 the figure are
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 P_2&amp;=\vr(u_0, v_0+\dee{v}) &amp;\qquad
    P_3&amp;=\vr(u_0+\dee{u}, v_0+\dee{v})
 </mrow><mrow>
