@@ -13,7 +13,7 @@ domain of integration into tiny rectangle by drawing in many lines
 of constant <m>x</m> and many lines of constant <m>y</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="28%">
 <image source="figs/intDecomp3"/>
 </sidebyside>
 
@@ -62,7 +62,7 @@ r&amp;=\text{ the distance from }(0,0)\text{ to }(x,y)
 </md>
 </p>
 
-<sidebyside>
+<sidebyside width="25%">
 <image source="figs/polar"/>
 </sidebyside>
 </statement>
@@ -94,7 +94,7 @@ The following two figures show a number of lines of constant <m>\theta</m>,
 on the left, and curves of constant <m>r</m>, on the right.
 </p>
 
-<sidebyside>
+<sidebyside width="30%">
 <image source="figs/polarTh"/>
 <image source="figs/polarR"/>
 </sidebyside>
@@ -111,14 +111,12 @@ lists its frequency of usage as between 0.01 and 0.1 times
 per million words. Of course both <q>counter-clockwise</q>
 and <q>anti-clockwise</q> assume that your clock is not a sundial in the
 southern hemisphere.</fn>
-</p>
-
-<p>angle <m>\theta</m> refers to the clockwise angle <m>|\theta|</m>. For example,
+angle <m>\theta</m> refers to the clockwise angle <m>|\theta|</m>. For example,
 the point <m>(0,-1)</m> on the negative <m>y</m>-axis can have <m>\theta=-\frac{\pi}{2}</m>
 and can also have <m>\theta=\frac{3\pi}{2}</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/polarNegTh"/>
 </sidebyside>
 
@@ -129,7 +127,7 @@ the following figure shows <m>(x,y)</m> for <m>r=1</m>, <m>\theta=\frac{\pi}{4}<
 and for <m>r=-1</m>, <m>\theta=\frac{\pi}{4}</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image source="figs/polarNeg"/>
 </sidebyside>
 
@@ -161,14 +159,14 @@ So it will be helpful to
 remember what the graph of <m>\cos\theta</m> looks like for <m>0\le\theta\le 2\pi</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/cosGraph"/>
 </sidebyside>
 <p>
 From this we see that the graph of <m>y=1+\cos\theta</m> is
 </p>
 
-<sidebyside>
+<sidebyside width="55%">
 <image source="figs/cosGraphP1"/>
 </sidebyside>
 <p>
@@ -182,7 +180,7 @@ When <m>\theta=0</m>, we have <m>r=1+\cos 0 = 1+1=2</m>. To sketch the
 point with <m>\theta=0</m> and <m>r=2</m>, we first draw in the half-line consisting
 of all points with <m>\theta=0</m>, <m>r \gt 0</m>. That's the positive <m>x</m>-axis,
 sketched in gray in the leftmost figure below. Then we put in a dot on that line
-a distance <m>2</m> from the origin. That's the red dot in the leftmost figure below.
+a distance <m>2</m> from the origin. That's the red dot in the first figure below.
 </li>
 <li><p>
 Now increase <m>\theta</m> a bit (to another easy place to evaluate),
@@ -196,9 +194,12 @@ Then we put in a dot on that line a distance <m>1.87</m> from the origin.
 That's the upper red dot in the second figure below.
 </p>
 
-<sidebyside>
-<image source="figs/cardioid1"/>
+<sidebyside widths="28% 28%">
+    <image source="figs/cardioid1"/>
     <image source="figs/cardioid2"/>
+</sidebyside>
+
+<sidebyside width="40%">
     <image source="figs/cardioid3"/>
 </sidebyside>
 </li>
@@ -239,7 +240,7 @@ is exactly the mirror image, about <m>\theta=\pi</m>, of the graph of <m>\cos\th
 for <m>0\le\theta\le \pi</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="55%">
 <image source="figs/cosGraphR"/>
 </sidebyside>
 
@@ -248,7 +249,7 @@ That is, <m>\cos(\pi+\theta) =\cos(\pi-\theta)</m>
 so that <m>r(\pi+\theta) = r(\pi-\theta)</m>. So we get the figure.
 </p>
 
-<sidebyside>
+<sidebyside width="28%">
 <image source="figs/cardiod4"/>
 </sidebyside>
 </li>
@@ -262,7 +263,7 @@ comes from the Greek word <m>\kappa \alpha \rho \delta \iota \alpha</m>
 .
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/cardiodF"/>
 </sidebyside>
 </li>
@@ -281,7 +282,7 @@ Again it will be useful to remember
 what the graph of <m>\sin(3\theta)</m> looks like for <m>0\le\theta\le 2\pi</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="60%">
 <image source="figs/sin3Graph"/>
 </sidebyside>
 
@@ -315,7 +316,7 @@ Here is a table giving a few values of <m>r(\theta)</m> for
 </p>
 
 <sidebyside>
-<tabular>
+<tabular halign="center" bottom="minor" right="minor" left="minor" top="minor">
 <row>
 <cell><m>\theta</m> </cell><cell> <m>3\theta</m> </cell><cell> <m>r(\theta)</m> </cell>
 </row><row>
@@ -339,7 +340,7 @@ and here is a sketch exhibiting those values and another sketch of the
 part of the curve with <m>0\le \theta\le\frac{\pi}{3}</m>.
 </p>
 
-<sidebyside>
+<sidebyside widths="43% 40%" valign="middle">
 <image source="figs/rose1"/>
 <image source="figs/rose1b"/>
 </sidebyside>
@@ -386,7 +387,7 @@ part of the curve <m>r=\sin(3\theta)</m> with
 <m>\frac{\pi}{3}\le \theta\le \frac{2\pi}{3}</m>.
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 40%">
 <image source="figs/rose2"/>
 <image source="figs/rose2b"/>
 </sidebyside>
@@ -435,7 +436,7 @@ part of the curve <m>r=\sin(3\theta)</m> with
 <m>\frac{2\pi}{3}\le \theta\le \pi</m>.
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 40%">
 <image source="figs/rose3"/>
 <image source="figs/rose3b"/>
 </sidebyside>
@@ -445,7 +446,7 @@ Putting the three lobes together gives the full curve, which is called
 the <q>three petal rose</q>.
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/rose3F"/>
 </sidebyside>
 
@@ -473,7 +474,7 @@ we instead draw in both lines of constant <m>\theta</m> and curves of constant <
 This cuts the <m>xy</m>-plane up into approximate rectangles.
 </p>
 
-<sidebyside>
+<sidebyside width="35%">
 <image source="figs/polarRTh"/>
 </sidebyside>
 
@@ -481,7 +482,7 @@ This cuts the <m>xy</m>-plane up into approximate rectangles.
 Here is an enlarged sketch of one such approximate rectangle.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/polarA"/>
 </sidebyside>
 
@@ -570,7 +571,7 @@ with the various values of <m>r</m> differing by a tiny amount <m>\dee{r}</m>.
 The figure below shows one such approximate rectangle, in black.
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/polarMass3"/>
 </sidebyside>
 
@@ -680,7 +681,7 @@ the area of a wedge of a circular disk of radius <m>R(\theta)</m>
 angle <m>\dee{\theta}</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/polarArea3"/>
 </sidebyside>
 
@@ -756,7 +757,7 @@ the total amount of metal removed will be eight times the amount
 from the first octant.
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image source="figs/appleCore"/>
 </sidebyside>
 
@@ -820,7 +821,7 @@ is essentially
 <m>\sqrt{a^2-r^2}\,r\,\dee{r}\,\dee{\theta}</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/appleCore3"/>
 </sidebyside>
 </li>
@@ -837,8 +838,9 @@ the wedge is thus
 <md>
 <mrow>
 \dee{\theta} \int_0^b  \dee{r}\,r\, \sqrt{a^2-r^2}
-&amp;= \dee{\theta} \int_{a^2}^{a^2-b^2}  \frac{\dee{u}}{-2}\, \sqrt{u}\qquad
-   \text{where } u= a^2-r^2,\ \dee{u} =-2r\,\dee{r}
+&amp;= \dee{\theta} \int_{a^2}^{a^2-b^2}  \frac{\dee{u}}{-2}\, \sqrt{u}
+</mrow><mrow>
+&amp;\hskip0.5in   \text{where } u= a^2-r^2,\ \dee{u} =-2r\,\dee{r}
 </mrow><mrow>
 &amp;=  \dee{\theta}\left[\frac{u^{3/2}}{-3}\right]_{a^2}^{a^2-b^2}
 </mrow><mrow>
@@ -850,7 +852,7 @@ for a moment, you can see that this is a consequence of the fact that
 our solid is invariant under rotations about the <m>z</m>-axis.
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image source="figs/appleCore4"/>
 </sidebyside>
 </li>
@@ -960,7 +962,7 @@ which is sketched in the figure on the left below.
 It is a right angled triangle.
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 40%">
 <image source="figs/convPolarA"/>
 <image source="figs/convPolarC"/>
 </sidebyside>
@@ -1067,143 +1069,6 @@ When <m>\theta=0</m>, <m>u=\cos\theta=1</m> and when <m>\theta=\frac{\pi}{4}</m>
 </p>
 </solution>
 </example>
-
-
-<!-- <p>\intremark{
-<example><title>Changing to Polar Coordinates</title>
-<p>xml:id="eg_change_to_polar"
-Convert the integral <m>\int_0^1\int_0^x y\ \dee{y}\,\dee{x}</m> to polar
-coordinates and evaluate the result.
-</p>
-
-<p>\soln
-Our first task is to sketch the domain of integration.
-To prepare for the sketch, note that in the integral
-<me>
-\int_0^1\int_0^x y\ \dee{y}\,\dee{x}
-=\int_0^1\dee{x}  \left[\int_0^x \dee{y}\ y\right]
-</me>
-<ul>
-<li>
-the variable <m>x</m> runs from <m>0</m> to <m>1</m> and
-</li>
-<li>
-for each fixed <m>0\le x\le 1</m>, <m>y</m> runs from <m>0</m> to <m>x</m>.
-</li>
-</ul>
-So the domain of integration is
-<me>
-\cD=\Set{(x,y)}{0\le x\le 1,\ 0\le y\le x}
-</me>
-which is sketched in the figure on the left below.
-</p>
-
-<p><sidebyside>
-<image source="figs/convPolarA"/>\qquad
-    <image source="figs/convPolarB"/>
-</sidebyside>
-Next we express the domain of integration in terms of polar coordinates,
-by expressing the equations of each of the boundary lines in terms of
-polar coordinates.
-<ul>
-<li>
-The <m>x</m>-axis, i.e. <m>y=r\sin\theta=0</m>, is <m>\theta=0</m>.
-</li>
-<li>
-The line <m>x=1</m> is <m>r\cos\theta=1</m> or <m>r=\frac{1}{\cos\theta}</m>.
-</li>
-<li>
-Finally, (in the first quadrant)  the line
-<md>
-<mrow>
-y=x
-\iff
-r\sin\theta = r\cos\theta
-\iff
-\tan\theta=\frac{\sin\theta}{\cos\theta}=1
-\iff
-\theta=\frac{\pi}{4}
-</mrow>
-</md>
-</li>
-</ul>
-So, in polar coordinates, we can write the domain of integration as
-<me>
-\cR=\Big\{(r,\theta)\ \Big|\ 0\le\theta\le\frac{\pi}{4},\
-             0\le r\le \frac{1}{\cos\theta}\Big\}
-</me>
-We can now slice up <m>\cR</m> using polar coordinates.
-<ul>
-<li>
-Divide <m>\cR</m> into wedges by drawing in many lines of constant
-<m>\theta</m>, with the various values of <m>\theta</m> differing by a tiny
-amount <m>\dee{\theta}</m>. The figure on the right above shows one such wedge.
-<ul>
-<li>
-The first wedge has <m>\theta=0</m>.
-</li>
-<li>
-The last wedge has <m>\theta=\frac{\pi}{4}</m>.
-</li>
-</ul>
-</li>
-<li>
-Concentrate on any one wedge. Subdivide the wedge further into
-approximate rectangles by drawing in many circles of constant <m>r</m>,
-with the various values of <m>r</m> differing by a tiny amount <m>\dee{r}</m>.
-The figure on the right above shows one such approximate rectangle, in black.
-\vspace{-\topsep}
-<ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
-<li>
-The rectangle that contains the point with polar coordinates <m>r</m> and
-<m>\theta</m> has area (essentially) <m>r\,\dee{r}\,\dee{\theta}</m>.
-</li>
-<li>
-The first rectangle has <m>r=0</m>.
-</li>
-<li>
-The last rectangle has <m>r=\frac{1}{\cos\theta}</m>.
-</li>
-</ul>
-\vspace{-\topsep}
-</li>
-</ul>
-So our integral is
-<md>
-<mrow>
-\int_0^1\int_0^x y\ \dee{y}\,\dee{x}
-&amp;=\int_0^{\pi/4}\dee{\theta}\int_0^{\frac{1}{\cos\theta}}\dee{r}\
-     r\overbrace{(r\sin\theta)}^{y}
-=\int_0^{\pi/4}\dee{\theta}\ \sin\theta\int_0^{\frac{1}{\cos\theta}}\dee{r}\
-     r^2
-</mrow><mrow>
-&amp;=\frac{1}{3}\int_0^{\pi/4}\dee{\theta}\ \sin\theta\frac{1}{\cos^3\theta}
-</mrow>
-</md>
-Make the substitution
-<me>
-u=\cos\theta,\ \dee{u}=-\sin\theta\ \dee{\theta}
-</me>
-When <m>\theta=0</m>, <m>u=\cos\theta=1</m> and when <m>\theta=\frac{\pi}{4}</m>,
-<m>u=\cos\theta=\frac{1}{\sqrt{2}}</m>. So
-<md>
-<mrow>
-\int_0^1\int_0^x y\ \dee{y}\,\dee{x}
-&amp;=\frac{1}{3}\int_1^{1/\sqrt{2}} (-\dee{u})\frac{1}{u^3}
-=-\frac{1}{3}\left[\frac{u^{-2}}{-2}\right]_1^{1/\sqrt{2}}
-=\frac{1}{6}\left[2-1\right]
-</mrow><mrow>
-&amp;=\frac{1}{6}
-</mrow>
-</md>
-</p>
-
-</example>
-}
-</p> -->
-
 
 <example xml:id="eg_change_to_polar_B"><title>Changing to Polar Coordinates</title>
 <statement>
@@ -1325,7 +1190,7 @@ r\cos\theta=1,\ r=4\cos\theta
 Here is a sketch of the region of interest, which we'll call <m>\cR</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/comPolarA"/>
 </sidebyside>
 
@@ -1335,7 +1200,7 @@ because <m>\cR</m> is a circular wedge with a triangle removed.
 (See Example <xref ref="eg_area_polar_HS"/>, below.)
 </p>
 
-<sidebyside>
+<sidebyside width="28%">
 <image source="figs/comPolarAA"/>
 </sidebyside>
 
@@ -1344,29 +1209,6 @@ Instead, we'll treat its computation as an exercise in integration
 using polar coordinates.
 </p>
 
-<!--
-<p>\intremark{
-<md>
-<mrow>
-\text{angle subtended in wedge} &amp;= \frac{2\pi}{3}
-</mrow><mrow>
-\text{Area of wedge} &amp;= \frac{\frac{2\pi}{3}}{2\pi}\times 2^2
-                        = \frac{4\pi}{3}
-</mrow><mrow>
-\text{triangle hypotenuse} &amp; = 2
-</mrow><mrow>
-\text{triangle sides} &amp;= 1,\ \sqrt{3}
-</mrow><mrow>
-\text{triangle area} &amp;= 2\times\frac{1}{2}\times 1\times\sqrt{3}
-                      = \sqrt{3}
-</mrow><mrow>
-\text{Area}(\cR) &amp; = \frac{4\pi}{3} -\sqrt{3}
-</mrow>
-</md>
-</p>
-
-<p>}
- -->
 
 <p>As <m>\cR</m> is symmetric about the <m>x</m>-axis, the area of <m>\cR</m> is
 twice the area of the part that is above the <m>x</m>-axis.
@@ -1375,7 +1217,7 @@ we can write the equation <m>x=1</m> in polar coordinates as
 <m>r=\frac{1}{\cos\theta}</m>. Here is a sketch of <m>\cR_1</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="60%">
 <image source="figs/comPolarB"/>
 </sidebyside>
 <p>
@@ -1497,7 +1339,7 @@ In the course of that derivation we approximated the area of the
 shaded region in
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/polarA"/>
 </sidebyside>
 <p>
@@ -1559,7 +1401,7 @@ and must be completely contained inside the circular sector
 </me>
 </p>
 
-<sidebyside>
+<sidebyside widths="33% 33%">
 <image source="figs/polarArea"/>
 <image source="figs/polarArea2"/>
 </sidebyside>
@@ -1573,7 +1415,7 @@ is the fraction <m>\frac{\De\theta}{2\pi}</m> of the full disk and so has
 the area <m>\frac{\De\theta}{2\pi}\pi\rho^2 = \frac{\De\theta}{2}\rho^2</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="33%">
 <image source="figs/sectorArea"/>
 </sidebyside>
 
@@ -1592,32 +1434,47 @@ Observe that
 =R(\theta_i^*)^2 \pm L R(\theta_i^*)\De\theta +\frac{1}{4} L^2\De\theta^2
 </me>
 implies that, since <m>0\le R(\theta)\le M</m>,
-<me>
-R(\theta_i^*)^2 - L M\De\theta +\frac{1}{4} L^2\De\theta^2
-\le \left[R(\theta_i^*)\pm \frac{1}{2} L\De\theta\right]^2
-\le R(\theta_i^*)^2 + L M\De\theta +\frac{1}{4} L^2\De\theta^2
-</me>
-Hence (multiplying by <m>\frac{\De\theta}{2}</m> to turn them into areas)
-<me>
-\frac{1}{2} R(\theta_i^*)^2\De\theta - \frac{1}{2} L M\De\theta^2
-           +\frac{1}{8} L^2\De\theta^3
-\le\text{Area}(\cR_i)
-\le \frac{1}{2} R(\theta_i^*)^2\De\theta
-        + \frac{1}{2} L M\De\theta^2 +\frac{1}{8} L^2\De\theta^3
-</me>
-and the total area <m>A</m> obeys the bounds
-<md alignment="alignat">
-<mrow>{3}
-\sum_{i=1}^n\left[ \frac{1}{2} R(\theta_i^*)^2\De\theta
-    - \frac{1}{2} L M\De\theta^2 +\frac{1}{8} L^2\De\theta^3\right]
-&amp;\le A
-&amp;\le \sum_{i=1}^n\left[\frac{1}{2} R(\theta_i^*)^2\De\theta
-       + \frac{1}{2} L M\De\theta^2 +\frac{1}{8} L^2\De\theta^3\right]
+<md>
+<mrow>
+R(\theta_i^*)^2 - L M\De\theta +\frac{1}{4} L^2\De\theta^2\hskip2in
 </mrow><mrow>
+\le \left[R(\theta_i^*)\pm \frac{1}{2} L\De\theta\right]^2\le
+</mrow><mrow> 
+\hskip2in R(\theta_i^*)^2 + L M\De\theta +\frac{1}{4} L^2\De\theta^2
+</mrow>
+</md>
+Hence (multiplying by <m>\frac{\De\theta}{2}</m> to turn them into areas)
+<md>
+<mrow>
+\frac{1}{2} R(\theta_i^*)^2\De\theta - \frac{1}{2} L M\De\theta^2
+           +\frac{1}{8} L^2\De\theta^3\hskip2in
+</mrow><mrow>\le\text{Area}(\cR_i)\le 
+</mrow><mrow>
+\hskip2in\frac{1}{2} R(\theta_i^*)^2\De\theta
+        + \frac{1}{2} L M\De\theta^2 +\frac{1}{8} L^2\De\theta^3
+</mrow>
+</md>
+and the total area <m>A</m> obeys the bounds
+<md>
+<mrow>
+\sum_{i=1}^n\left[ \frac{1}{2} R(\theta_i^*)^2\De\theta
+    - \frac{1}{2} L M\De\theta^2 +\frac{1}{8} L^2\De\theta^3\right]\hskip2in
+</mrow><mrow>
+\le A\le 
+</mrow><mrow>
+\hskip2in\sum_{i=1}^n\left[\frac{1}{2} R(\theta_i^*)^2\De\theta
+       + \frac{1}{2} L M\De\theta^2 +\frac{1}{8} L^2\De\theta^3\right]
+</mrow>
+</md>
+and
+<md>
+<mrow>
 \frac{1}{2}\sum_{i=1}^n R(\theta_i^*)^2\De\theta
-  - \frac{1}{2}  n L M\De\theta^2 +\frac{1}{8} n L^2\De\theta^3
-&amp;\le A
-&amp;\le \sum_{i=1}^n\frac{1}{2} R(\theta_i^*)^2\De\theta + \frac{1}{2} n L M\De\theta^2 +\frac{1}{8}
+  - \frac{1}{2}  n L M\De\theta^2 +\frac{1}{8} n L^2\De\theta^3\hskip2in
+</mrow><mrow>
+\le A\le 
+</mrow><mrow>
+\hskip2in\sum_{i=1}^n\frac{1}{2} R(\theta_i^*)^2\De\theta + \frac{1}{2} n L M\De\theta^2 +\frac{1}{8}
 nL^2\De\theta^3
 </mrow>
 </md>
@@ -1626,9 +1483,11 @@ Since <m>\De \theta=\frac{b-a}{n}</m>,
 <mrow>
 \frac{1}{2}\sum_{i=1}^n R(\theta_i^*)^2\De\theta
 \!-\! \frac{ L M}{2}\frac{(b\!-\!a)^2}{n}
-\!+\!\frac{L^2}{8} \frac{(b\!-\!a)^3}{n^2}
-\le A
-\le \frac{1}{2}\sum_{i=1}^n R(\theta_i^*)^2\De\theta
+\!+\!\frac{L^2}{8} \frac{(b\!-\!a)^3}{n^2}\hskip2in
+</mrow><mrow>
+\le A\le 
+</mrow><mrow>
+\hskip2in\frac{1}{2}\sum_{i=1}^n R(\theta_i^*)^2\De\theta
    \!+\! \frac{ L M}{2}\frac{(b\!-\!a)^2}{n}
    \!+\! \frac{L^2}{8} \frac{(b\!-\!a)^3}{n^2}
 </mrow>
