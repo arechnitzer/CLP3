@@ -73,13 +73,14 @@ partial derivatives of <m>f</m>.
 So, setting <m>t=0</m>,
 <md>
 <mrow>
-\lim_{t\rightarrow 0}\frac{f(a+v_1t\,,\, b+v_2t)-f(a,b)}{t}
-&amp;=\big[f_x(a+v_1t\,,\, b+v_2t)\,v_1 + f_y(a+v_1t\,,\, b+v_2t)\,v_2
+&amp;\lim_{t\rightarrow 0}\frac{f(a+v_1t\,,\, b+v_2t)-f(a,b)}{t}
+</mrow><mrow>
+&amp;\hskip0.5in=\big[f_x(a+v_1t\,,\, b+v_2t)\,v_1 + f_y(a+v_1t\,,\, b+v_2t)\,v_2
                            \big]\Big|_{t=0}
 </mrow><mrow>
-&amp;=f_x(a,b)\,v_1+f_y(a,b)\,v_2
+&amp;\hskip0.5in=f_x(a,b)\,v_1+f_y(a,b)\,v_2
 </mrow><mrow>
-&amp;=\llt f_x(a,b)\,,\,f_y(a,b)\rgt \cdot\llt v_1,v_2\rgt
+&amp;\hskip0.5in=\llt f_x(a,b)\,,\,f_y(a,b)\rgt \cdot\llt v_1,v_2\rgt
 </mrow>
 </md>
 Notice that we have expressed the rate of change as the dot product
@@ -293,13 +294,16 @@ so the gradient of <m>w</m> at <m>(1,3,1)</m> is
                = \llt 4\,,\,1\,,\,4\rgt
 </me>
 and the direction derivative in the direction <m>\llt 1\,,\,0\,,\,1\rgt</m> is
-<me>
+<md>
+<mrow>
 D_{\frac{\llt 1\,,\,0\,,\,1\rgt}{|\llt 1\,,\,0\,,\,1\rgt|}} w(1,3,1)
-   = \vnabla w(1,3,1)\cdot
+   &amp;= \vnabla w(1,3,1)\cdot
               \frac{\llt 1\,,\,0\,,\,1\rgt}{|\llt 1\,,\,0\,,\,1\rgt|}
    = \llt 4\,,\,1\,,\,4\rgt\cdot \frac{\llt 1\,,\,0\,,\,1\rgt}{\sqrt{2}}
-   = \frac{8}{\sqrt{2}}=4\sqrt{2}
-</me>
+</mrow><mrow>
+  &amp;= \frac{8}{\sqrt{2}}=4\sqrt{2}
+</mrow>
+</md>
 The directional derivative of <m>w</m> at <m>(1,3,1)</m> in the direction <m>\vt\ne\vZero</m>
 is zero if and only if
 <me>
@@ -345,10 +349,10 @@ and <m>y</m>-semi-axis <m>\sqrt{\frac{5-f_0}{2}}</m>,
 </li>
 <li>
 The part of the graph <m>z=f(x,y)</m> in the first octant is sketched in
-the top figure below.
+the left hand figure below.
 </li>
 <li>
-Several level curves, <m>f(x,y)=f_0</m>, are sketched in the bottom figure below.
+Several level curves, <m>f(x,y)=f_0</m>, are sketched in the right hand figure below.
 </li>
 <li>
 The gradient vector
@@ -356,7 +360,7 @@ The gradient vector
 \vnabla f(a,b)=\llt -2x,-4y\rgt \big|_{(-1,-1)}=\llt 2,4\rgt
      =2\llt 1,2\rgt
 </me>
-at <m>(-1,-1)</m> is also illustrated in the bottom sketch.
+at <m>(-1,-1)</m> is also illustrated in the righ hand sketch.
 </li>
 </ul>
 We have that, at <m>(a,b)=(-1,-1)</m>,
@@ -386,7 +390,7 @@ curve of <m>f</m> through <m>(a,b)</m>, which is the curve <m>f(x,y)=f(a,b)</m>.
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside widths="30% 50%" valign="middle">
 <image source="figs/dderivB"/>
 <image source="figs/dderivC"/>
 </sidebyside>
@@ -419,15 +423,15 @@ H(3,5,4)&amp;=\phantom{2*\ }3^2-5^2+\phantom{2*}4^2&amp;&amp;=\phantom{1}9-25+16
 </md>
 We compute gradients to get the normal vectors to the surfaces
 <m>G(x,y,z)=25</m> and <m>H(x,y,z)=0</m> at <m>(3,5,4)</m>.
-<md alignment="alignat">
+<md>
 <mrow>
 \vnabla G(3,5,4) &amp;=\Big[4x\,\hi-2y\,\hj+4z\,\hk\Big]_{(3,5,4)}
-                 &amp;&amp;= 12\,\hi-10\,\hj+16\,\hk
-                 &amp;&amp;= 2\big(6\,\hi-5\,\hj+8\,\hk\big)
+</mrow><mrow>    &amp;= 12\,\hi-10\,\hj+16\,\hk
+                 = 2\big(6\,\hi-5\,\hj+8\,\hk\big)
 </mrow><mrow>
 \vnabla H(3,5,4) &amp;=\Big[2x\,\hi-2y\,\hj+2z\,\hk\Big]_{(3,5,4)}
-                 &amp;&amp;= 6\,\hi-10\,\hj+8\,\hk
-                 &amp;&amp;= 2\big(3\,\hi-5\,\hj+4\,\hk\big)
+</mrow><mrow>    &amp;= 6\,\hi-10\,\hj+8\,\hk
+                 = 2\big(3\,\hi-5\,\hj+4\,\hk\big)
 </mrow>
 </md>
 The direction of interest is tangent to the curve of intersection.
@@ -460,7 +464,8 @@ The desired rate of change is
 <mrow>
 D_{\frac{4}{5}\,\hi -\frac{3}{5}\,\hj} f(3,5,4)
    &amp;= \vnabla f(3,5,4)\cdot\left(\frac{4}{5}\,\hi -\frac{3}{5}\,\hk\right)
-   = \overbrace{\big( 6\,\hi +10\, \hj + 8\,\hk\big)}^
+</mrow><mrow>
+   &amp;= \overbrace{\big( 6\,\hi +10\, \hj + 8\,\hk\big)}^
               {[2x\,\hi+2y\,\hj+2z\,\hk]_{(x,y,z)=(3,5,4)}}\hskip-0.15in\cdot\,
          \left(\frac{4}{5}\,\hi -\frac{3}{5}\,\hk\right)
 </mrow><mrow>
@@ -527,15 +532,17 @@ vector whose tail is at <m>P</m> and whose head is at <m>Q</m>.
 So the given rates of change tell us that
 <md alignment="alignat">
 <mrow>
-2\sqrt{2}&amp;=D_{\frac{\llt 1,1\rgt}{|\llt 1,1\rgt|}} f(1,2)
+\sqrt{2}&amp;=D_{\frac{\llt 1,1\rgt}{|\llt 1,1\rgt|}} f(1,2)
    &amp;&amp;= \vnabla f(1,2)\cdot\frac{\llt 1,1\rgt}{|\llt 1,1\rgt|}
    &amp;&amp;= \llt a,b\rgt\cdot\frac{\llt 1,1\rgt}{\sqrt{2}}
-   &amp;&amp;=\frac{a}{\sqrt{2}} +\frac{b}{\sqrt{2}}
+</mrow><mrow>
+   &amp;=\frac{a}{\sqrt{2}} +\frac{b}{\sqrt{2}}
 </mrow><mrow>
 -3&amp;=D_{\frac{\llt 0,-2\rgt}{|\llt 0,-2\rgt|}} f(1,2)
    &amp;&amp;= \vnabla f(1,2)\cdot\frac{\llt 0,-2\rgt}{|\llt 0,-2\rgt|}
    &amp;&amp;= \llt a,b\rgt\cdot\frac{\llt 0,-2\rgt}{2}
-   &amp;&amp;=-b
+</mrow><mrow>
+   &amp;=-b
 </mrow>
 </md>
 These two lines give us two linear equations in the two unknowns <m>a</m> and <m>b</m>.
@@ -558,7 +565,8 @@ and the rate of change (per unit distance) in that direction is
 D_{\frac{\llt -1,-2\rgt}{|\llt -1,-2\rgt|}} f(1,2)
    &amp;= \vnabla f(1,2)\cdot\frac{\llt -1,-2\rgt}{|\llt -1,-2\rgt|}
     = \llt a,b\rgt\cdot\frac{\llt -1,-2\rgt}{\sqrt{5}}
-    = \llt 1,3\rgt\cdot\frac{\llt -1,-2\rgt}{\sqrt{5}}
+</mrow><mrow>
+    &amp;= \llt 1,3\rgt\cdot\frac{\llt -1,-2\rgt}{\sqrt{5}}
 =-\frac{7}{\sqrt{5}}
 </mrow>
 </md>
@@ -619,11 +627,15 @@ implies the statement
 \text{the normal vectors $\hN$ and $\hn$ are perpendicular}
 \tag{S2}</me>
 In equations, we need to find all <m>(a,b,c)</m>'s such that the statement
-<me>
+<md>
+<mrow>
 (x_0,y_0,z_0)\quad\text{obeys}\quad
-x_0^2+y_0^2+z_0^2 = 1\text{ and }(x_0-a)^2+(y_0-b)^2+(z_0-c)^2 = 1
+&amp;x_0^2+y_0^2+z_0^2 = 1
+</mrow><mrow>
+&amp;\text{ and }(x_0-a)^2+(y_0-b)^2+(z_0-c)^2 = 1
 \tag{S1}
-</me>
+</mrow>
+</md>
 implies the statement
 <me>
 (x_0,y_0,z_0)\quad\text{obeys}\quad
@@ -636,7 +648,7 @@ Now if we expand (S2) then we can, with a little care, massage it into something
 &amp;x_0(x_0-a) + y_0(y_0-b) +z_0(z_0-c)
 =x_0^2+y_0^2+z_0^2 -ax_0 -by_0 - cz_0
 </mrow><mrow>
-&amp;\hskip1in=\frac{1}{2}\left\{\big[x_0^2+y_0^2+z_0^2\big]
+&amp;=\frac{1}{2}\left\{\big[x_0^2+y_0^2+z_0^2\big]
      +\big[(x_0-a)^2+(y_0-b)^2+(z_0-c)^2\big]
      -a^2-b^2-c^2\right\}
 </mrow>
@@ -753,4 +765,7 @@ f_r\big(r(x,y),\theta(x,y)\big)\ \llt\cos\theta(x,y)\,,\,\sin\theta(x,y)\rgt
 </example>
 </subsubsection>
 </subsection>
+
+<xi:include href="../problems/prob_s2.7.ptx" />
+
 </section>

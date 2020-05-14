@@ -75,7 +75,7 @@ and <m>f</m> is differentiable at <m>a</m>, then <m>f'(a)=0</m>.
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/localMaxA"/>
 </sidebyside>
 
@@ -83,16 +83,16 @@ and <m>f</m> is differentiable at <m>a</m>, then <m>f'(a)=0</m>.
 Let's recall why that's true. Suppose that the largest value of <m>f(x)</m>
 is <m>f(a)</m>. Then for all <m>h \gt 0</m>,
 <me>
-f(a+h)\le f(a)
-\implies f(a+h)-f(a)\le 0
-\implies \frac{f(a+h)-f(a)}{h}\le 0\quad\text{if } h \gt 0
+f(a\!+\!h)\le f(a)
+\implies f(a\!+\!h)-f(a)\le 0
+\implies \frac{f(a\!+\!h)-f(a)}{h}\le 0\quad\text{if } h \gt 0
 </me>
 Taking the limit <m>h\rightarrow 0</m> tells us that <m>f'(a)\le 0</m>.
 Similarly,  for all <m>h \lt 0</m>,
 <me>
-f(a+h)\le f(a)
-\implies f(a+h)-f(a)\le 0
-\implies \frac{f(a+h)-f(a)}{h}\ge 0\quad\text{if } h \lt 0
+f(a\!+\!h)\le f(a)
+\implies f(a\!+\!h)-f(a)\le 0
+\implies \frac{f(a\!+\!h)-f(a)}{h}\ge 0\quad\text{if } h \lt 0
 </me>
 Taking the limit <m>h\rightarrow 0</m> now tells us that <m>f'(a)\ge 0</m>.
 So we have both <m>f'(a)\ge 0</m> and <m>f'(a)\le 0</m> which forces <m>f'(a)=0</m>.
@@ -125,7 +125,7 @@ subset <m>R</m> of <m>\bbbr^2</m>, that <m>(a,b)</m> is point of <m>R</m> that i
 See the figure below.
 </p>
 
-<sidebyside>
+<sidebyside width="60%">
 <image source="figs/max"/>
 </sidebyside>
 
@@ -348,7 +348,8 @@ giving
 -6x+2y+4 = 0
 &amp;\iff -6x+2x^2+4 = 0
 \iff x^2-3x+2=0
-\iff (x-1)(x-2)=0
+</mrow><mrow>
+&amp;\iff (x-1)(x-2)=0
 </mrow><mrow>
 &amp;\iff x=1\text{ or }2
 </mrow>
@@ -386,11 +387,13 @@ The first order partial derivatives of <m>f(x,y)=xy(5x+y-15)</m> are
 f_x(x,y)
 &amp;\ =\ y(5x+y-15)+xy(5)
 &amp;&amp;\ =\ y(5x+y-15)+y(5x)
+</mrow><mrow>
 &amp;\ =\  y(10x+y-15)
 </mrow><mrow>
 f_y(x,y)
 &amp;\ =\ x(5x+y-15)+xy(1)
 &amp;&amp;\ =\ x(5x+y-15)+ x(y)
+</mrow><mrow>
 &amp;\ =\ x(5x+2y-15)
 </mrow>
 </md>
@@ -461,27 +464,29 @@ In conclusion, the critical points are <m>(0,0)</m>, <m>(3,0)</m>, <m>(0,15)</m>
 <p>A more compact way to write what we have just done is
 <md alignment="alignat">
 <mrow>
-&amp;           &amp;f_x(x,y)=0\quad\qquad
-            &amp; \text{and}\qquad
-            &amp; f_y(x,y)=0\quad
+            &amp;f_x(x,y)=0\hskip6.75em
+             \text{and}\hskip1.5em
+             f_y(x,y)=0
 </mrow><mrow>
-&amp; \iff\qquad          &amp;y(10x+y-15)=0\quad\qquad
-            &amp; \text{and}\qquad
-            &amp; x(5x+2y-15)=0\quad
+\iff\qquad  &amp;y(10x+y-15)=0\hskip3.25em
+             \text{and}\hskip1.5em
+              x(5x+2y-15)=0
 </mrow><mrow>
-&amp;\iff\qquad &amp; \big\{y=0\text{  or  }10x+y=15\big\}\qquad
-            &amp; \text{and}\qquad
-            &amp;\big\{x=0\text{ or }5x+2y=15\big\}
+\iff\qquad &amp; \big\{y=0\text{  or  }10x+y=15\big\}\hskip1.5em
+            \text{and}\hskip1.5em
+            \big\{x=0\text{ or }5x+2y=15\big\}
 </mrow><mrow>
-&amp;\iff\qquad &amp; \big\{y=0,\ x=0\big\}\text{ or }
-       \big\{y=0,\ 5x+2y=15\big\}\text{ or }
-       \big\{10x+y=15,\ x=0\big\}\text{ or }
+\iff\qquad &amp; \big\{y=0,\ x=0\big\}\text{ or }
+       \big\{y=0,\ 5x+2y=15\big\}
+</mrow><mrow>
+       &amp;\text{ or }\big\{10x+y=15,\ x=0\big\}\text{ or }
        \big\{10x+y=15,\ 5x+2y=15\big\}
 </mrow><mrow>
-&amp;\iff\qquad &amp; \big\{x=y=0\big\}\text{ or }
-       \big\{y=0,\ x=3\big\}\text{ or }
-       \big\{x=0,\ y=15\big\}\text{ or }
-       \big\{x=1,\ y=5\big\}\hskip-2.9in
+\iff\qquad &amp; \big\{x=y=0\big\}\text{ or }
+       \big\{y=0,\ x=3\big\}
+   </mrow><mrow>
+       &amp;\text{ or }\big\{x=0,\ y=15\big\}\text{ or }
+       \big\{x=1,\ y=5\big\}
 </mrow>
 </md>
 </p>
@@ -581,7 +586,7 @@ along an existing wall to make an enclosure of trapezoidal shape. What
 is the largest possible area for such an enclosure?
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/fenceA"/>
 </sidebyside>
 </statement>
@@ -593,7 +598,7 @@ and as such we should start by drawing a sketch and introducing some
 variable names.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/fence"/>
    <image source="figs/fenceB"/>
 </sidebyside>
@@ -671,7 +676,7 @@ An experiment yields <m>n</m> data points <m>\ (x_i,y_i),\ i=1,2,\cdots,n.</m>
 We wish to find the straight line <m>\ y=mx+b\ </m> which <q>best</q> fits the data.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/regression"/>
 </sidebyside>
 
@@ -911,7 +916,7 @@ for <m>f</m>.
 
 <p>You have already encountered single variable functions
 that have a critical point which is neither a local max nor a local min.
-See Example \eref{CLP100}{eg:localMinMaxB} in the CLP-1 text.
+See Example 3.5.9 in the CLP-1 text.
 Here are a couple of examples which show that this can also
 happen for functions of two variables.
 We'll start with the simplest possible such example.
@@ -948,7 +953,7 @@ definition of <q>saddle point</q> is given immediately after this example.)
 Here are some figures showing the graph of <m>f</m>.
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 40%" valign="middle">
 <image source="figs/hyperbolic_paraboloid"/>
   <image source="figs/hypPara"/>
 </sidebyside>
@@ -966,7 +971,7 @@ curves that
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside width="70%">
 <image source="figs/hypParaLevel"/>
 </sidebyside>
 
@@ -1034,10 +1039,10 @@ y=1+\De y
 to give
 <md>
 <mrow>
-f\big(1+\De x\,,\,1+\De y\big)
-&amp;=(1+\De x)^2-2(1+\De x)(1+\De y)-(1+\De y)^2 + 4(1+\De y)-2
+&amp;f\big(1+\De x\,,\,1+\De y\big)
+</mrow><mrow>&amp;\hskip0.5in=(1+\De x)^2-2(1+\De x)(1+\De y)-(1+\De y)^2 + 4(1+\De y)-2
 </mrow><mrow>
-&amp;= (\De x)^2 -2\De x\,\De y-(\De y)^2
+&amp;\hskip0.5in= (\De x)^2 -2\De x\,\De y-(\De y)^2
 </mrow>
 </md>
 Completing the square,
@@ -1068,7 +1073,7 @@ That is, whenever <m>\De x=\De y\ne 0</m>,  then
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/saddle"/>
 </sidebyside>
 
@@ -1103,15 +1108,15 @@ For <m>\De x</m> and <m>\De y</m> small, the
 quadratic approximation <xref ref="eqn_quadratic_approx"/> gives
 <me>
 \begin{split}
-f\big(a + \De x\,,\,b+\De y\big)
-&amp;\approx f\big(a\,,\,b\big)
+&amp;f\big(a + \De x\,,\,b+\De y\big) \\
+&amp;\hskip0.25in\approx f\big(a\,,\,b\big)
        + f_x\big(a\,,\,b\big)\,\De x
        + f_y\big(a\,,\,b\big)\,\De y \\
-&amp;\hskip0.5in +\frac{1}{2}\left\{
+&amp;\hskip0.75in +\frac{1}{2}\left\{
         f_{xx}\big(a,b\big)\,\De x^2
        +2f_{xy}\big(a,b\big) \,\De x\De y
        + f_{yy}\big(a,b\big)\,\De y^2 \right\}\\
-&amp;= f\big(a\,,\,b\big)
+&amp;\hskip0.25in= f\big(a\,,\,b\big)
         +\frac{1}{2}\left\{
         f_{xx}\big(a,b\big)\,\De x^2
        +2f_{xy}\big(a,b\big) \,\De x\De y
@@ -1168,24 +1173,26 @@ Let's temporarily suppress the arguments <m>(a,b)</m>.
 If <m>f_{xx}(a,b)\ne 0</m>, then by completing the square we can write
 <md>
 <mrow>
-f_{xx}\,\De x^2
+&amp;f_{xx}\,\De x^2
        +2f_{xy}\,\De x\De y
        + f_{yy}\,\De y^2
-&amp;=f_{xx}\left(\De x
+</mrow><mrow>
+&amp;\hskip0.5in=f_{xx}\left(\De x
        +\frac{f_{xy}}{f_{xx}}\De y\right)^2
        +\left(f_{yy}-\frac{f_{xy}^2}{f_{xx}}\right)\,\De y^2
 </mrow><mrow>
-&amp;=\frac{1}{f_{xx}}\left\{\big(f_{xx}\,\De x+f_{xy}\,\De y\big)^2
+&amp;\hskip0.5in=\frac{1}{f_{xx}}\left\{\big(f_{xx}\,\De x+f_{xy}\,\De y\big)^2
                          +\big(f_{xx}f_{yy}-f_{xy}^2\big)\,\De y^2\right\}
 </mrow>
 </md>
 Similarly, if <m>f_{yy}(a,b)\ne 0</m>,
 <md>
 <mrow>
-f_{xx}\,\De x^2
+&amp;f_{xx}\,\De x^2
        +2f_{xy}\,\De x\De y
        + f_{yy}\,\De y^2
-&amp;=\frac{1}{f_{yy}}\left\{\big(f_{xy}\,\De x+f_{yy}\,\De y\big)^2
+</mrow><mrow>
+&amp;\hskip0.5in=\frac{1}{f_{yy}}\left\{\big(f_{xy}\,\De x+f_{yy}\,\De y\big)^2
                          +\big(f_{xx}f_{yy}-f_{xy}^2\big)\,\De x^2\right\}
 </mrow>
 </md>
@@ -1272,12 +1279,15 @@ If this is not the case, for example when the terms in <m>f(x,y)</m> that are
 of degree two in  <m>(x-a)</m>, <m>(y-b)</m> all have coefficients that are exactly
 zero, the analysis will certainly break down. That's exactly what happens
 when <m>D(a,b)=0</m>. Here are some examples. The functions
-<me>
-f_1(x,y)=x^4+y^4\qquad
-f_2(x,y)=-x^4-y^4\qquad
-f_3(x,y)=x^3+y^3\qquad
+<md>
+<mrow>
+f_1(x,y)&amp;=x^4+y^4&amp;
+f_2(x,y)&amp;=-x^4-y^4
+</mrow><mrow>
+f_3(x,y)&amp;=x^3+y^3&amp;
 f_4(x,y)=x^4-y^4
-</me>
+</mrow>
+</md>
 all have <m>(0,0)</m> as the only critical point and all have <m>D(0,0)=0</m>.
 The first, <m>f_1</m> has its minimum there. The second, <m>f_2</m>, has
 its maximum there. The third and fourth have a saddle point there.
@@ -1288,11 +1298,11 @@ its maximum there. The third and fourth have a saddle point there.
 </p>
 
 <sbsgroup>
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/f1Level"/>
 <image source="figs/f2Level"/>
 </sidebyside>
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/f3Level"/>
 <image source="figs/f4Level"/>
 </sidebyside>
@@ -1313,7 +1323,7 @@ gradient and to apply the second derivative test of
 Theorem <xref ref="thm_second_deriv_test"/> we will need all second order partial derivatives. So we need all partial derivatives of order up to two.
 Here they are.
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f&amp;=2x^3 - 6xy + y^2 +4y
 </mrow><mrow>
 f_x&amp;=6x^2-6y   &amp; f_{xx}&amp;=12x \qquad &amp; f_{xy}&amp;= -6
@@ -1359,7 +1369,7 @@ was enough to ensure that <m>(1,1)</m> was a saddle point.
 Here is a sketch of some level curves of our <m>f(x,y)</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/fALevel"/>
 </sidebyside>
 
@@ -1524,7 +1534,7 @@ Denote by <m>x</m>, <m>y</m> and <m>z</m>, the length, width and height, respect
 of the box.
 </p>
 
-<sidebyside>
+<sidebyside width="33%">
 <image source="figs/box"/>
 </sidebyside>
 
@@ -1570,8 +1580,7 @@ x^3 = 2V \implies  x = \root{3}\of{2V}\quad\text{and}\quad
                    y = \frac{2V}{(2V)^{2/3}} = \root{3}\of{2V}
 </me>
 As there is only one critical point, we would expect it to give the
-minimum
-<fn>Indeed one can use the facts that <m>0 \lt x \lt \infty</m>, that
+minimum<fn>Indeed one can use the facts that <m>0 \lt x \lt \infty</m>, that
 <m>0 \lt y \lt \infty</m>, and that <m>S\rightarrow\infty</m> as <m>x\rightarrow 0</m> and
 as <m>y\rightarrow 0</m> and as <m>x\rightarrow \infty</m> and as
 <m>y\rightarrow\infty</m> to prove that the single critical point gives the
@@ -1596,8 +1605,9 @@ So
 S_{xx}\big(\root{3}\of{2V}\,,\,\root{3}\of{2V}\big)\
 S_{yy}\big(\root{3}\of{2V}\,,\,\root{3}\of{2V}\big)
 -S_{xy}\big(\root{3}\of{2V}\,,\,\root{3}\of{2V}\big)^2
-=3 \gt 0\qquad
-S_{xx}\big(\root{3}\of{2V}\,,\,\root{3}\of{2V}\big)=2 \gt 0
+&amp;=3 \gt 0
+</mrow><mrow>
+S_{xx}\big(\root{3}\of{2V}\,,\,\root{3}\of{2V}\big)&amp;=2 \gt 0
 </mrow>
 </md>
 and, by Theorem <xref ref="thm_second_deriv_test"/>.b,
@@ -1642,7 +1652,7 @@ the interval <m>0\le x\le 1</m> is <m>1</m> and is attained at <m>x=1</m>, but <
 is never zero, so that <m>f</m> has no critical points.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/absMaxMin"/>
 </sidebyside>
 
@@ -1778,7 +1788,7 @@ T = (\cos t+\sin t)e^{-\cos^2 t -\sin^2 t}
 As all <m>t</m>'s are allowed, this function takes its max and min at zeroes of
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/optExampleAa"/>
 </sidebyside>
 
@@ -1834,7 +1844,7 @@ to make such a sketch so that you don't accidentally include a critical
 point that is outside of the allowed region.
 </p>
 
-<sidebyside>
+<sidebyside width="60%">
 <image source="figs/optExampleA"/>
 </sidebyside>
 </solution>
@@ -1940,7 +1950,7 @@ The max and min of <m>x+x^2</m> for <m>-1\le x\le 1</m> must occur either
 Here is a sketch showing all of the points that we have identified.
 </p>
 
-<sidebyside>
+<sidebyside width="60%">
 <image source="figs/optExampleB"/>
 </sidebyside>
 
@@ -2121,7 +2131,7 @@ max and min indicated.
 </tabular>
 </sidebyside>
 
-<sidebyside>
+<sidebyside width="33%">
 <image source="figs/optExampleC"/>
 </sidebyside>
 </solution>
@@ -2135,7 +2145,7 @@ runs over the triangular region with vertices <m>(0,0)</m>, <m>(1,0)</m> and
 <m>(0,2)</m>. The triangular region is sketched in
 </p>
 
-<sidebyside>
+<sidebyside width="33%">
 <image source="figs/optExampleCCa"/>
 </sidebyside>
 
@@ -2197,7 +2207,7 @@ In this case, the line crosses the <m>y</m> axis at <m>y=2</m> and so has <m>y</
 runs from <m>(0,2)</m> to <m>(1,0)</m> is <m>y=2-2x</m> with <m>0\le x\le 1</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/optExampleCCc"/>
 </sidebyside>
 </li>
@@ -2277,7 +2287,7 @@ max and min indicated.
 </tabular>
 </sidebyside>
 
-<sidebyside>
+<sidebyside width="35%">
 <image source="figs/optExampleCCb"/>
 </sidebyside>
 </solution>
@@ -2358,4 +2368,7 @@ nonzero at all four corners.
 </example>
 
 </subsection>
+
+<xi:include href="../problems/prob_s2.9.ptx" />
+
 </section>

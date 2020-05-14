@@ -21,7 +21,7 @@ curve <m>y=T(x)</m> with <m>x</m> running from <m>a</m> to <m>b</m>. That is,
 </mrow>
 </md>
 </p>
-<sidebyside>
+<sidebyside width="70%">
 <image source="figs/vSliceA"/>
 </sidebyside>
 
@@ -29,7 +29,7 @@ curve <m>y=T(x)</m> with <m>x</m> running from <m>a</m> to <m>b</m>. That is,
 We'll shortly express that mass
 as a two dimensional integral. As a warmup, recall the procedure that
 we used  to set up a (one dimensional) integral representing the area
-of <m>\cR</m> in Example \eref{CLP101}{eg areabetween riemann} of the CLP-2 text.
+of <m>\cR</m> in Example 1.5.1 of the CLP-2 text.
 <ul>
 <li>
 Pick a natural number <m>n</m> (that we will later send to infinity), and then
@@ -41,7 +41,7 @@ subdivide <m>\cR</m> into <m>n</m> narrow vertical slices, each of width
 of the right hand edge of slice number <m>i</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/vSliceB"/>
 </sidebyside>
 </li>
@@ -54,7 +54,7 @@ slice by a rectangle whose top is at <m>y=T(x_i^*)</m>
 and whose bottom is at <m>y=B(x_i^*)</m>. The rectangle is outlined in blue in the
 figure below.
 </p>
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/vSliceC"/>
 </sidebyside>
 </li>
@@ -71,7 +71,7 @@ So the Riemann sum approximation of the area of <m>\cR</m> is
 </li>
 <li>
 By taking the limit as <m>n \to \infty</m> (i.e. taking the limit as the width of the rectangles goes to zero), we convert the Riemann sum into a definite integral (see
-Definition<nbsp/>\eref{CLP101}{def:INTintegral} in the CLP-2 text) and at the
+Definition<nbsp/>1.1.9 in the CLP-2 text) and at the
 same time our approximation of the area becomes the exact area:
 <md>
 <mrow>
@@ -97,7 +97,7 @@ and of height <m>\De y=\frac{1}{m}\big[T(x_i^*)-B(x_i^*)\big]</m>. Denote by
 of the top of rectangle number <m>j</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/vSliceD"/>
 </sidebyside>
 </li>
@@ -243,7 +243,7 @@ The answer is <q>no</q>. This brings us to consider <q>horizontal slices</q>.
 We found, when computing areas of regions in the <m>xy</m>-plane, that
 it is often advantageous to use horizontal slices, rather than vertical
 slices. See, for example,
-Example \eref{CLP101}{eg:AREAb} in the CLP-2 text.
+Example 1.5.4 in the CLP-2 text.
 The same is true when setting up multidimensional integrals. So we now repeat
 the setup procedure of the last section, but starting with horizontal slices,
 rather than vertical slices. This procedure will be useful when
@@ -253,7 +253,7 @@ dealing with regions of the form
 </me>
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image source="figs/hSliceA"/>
 </sidebyside>
 
@@ -308,7 +308,7 @@ For each <m>j=1,2,\dots,m</m>, rectangle number <m>j</m> has <m>x</m> running ov
 See the small black rectangle in the figure below.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/hSliceB"/>
 </sidebyside>
 
@@ -457,11 +457,14 @@ Let <m>\cR</m> be a region in the <m>xy</m>-plane and let the function
 with <m>B(x)</m> and <m>T(x)</m> being continuous, and if the mass density in <m>\cR</m>
 is <m>f(x,y)</m>, then the mass of <m>\cR</m>
 is
-<me>
+<md>
+<mrow>
 \int_a^b \left[\int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\right]\dee{x}
-=\int_a^b \int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\,\dee{x}
-=\int_a^b \dee{x} \int_{B(x)}^{T(x)} \dee{y}\, f\big(x,y\big)
-</me>
+&amp;=\int_a^b \int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\,\dee{x}
+</mrow><mrow>
+&amp;=\int_a^b \dee{x} \int_{B(x)}^{T(x)} \dee{y}\, f\big(x,y\big)
+</mrow>
+</md>
 </li>
 <li> If
 <me>
@@ -470,11 +473,14 @@ is
 with <m>L(y)</m> and <m>R(y)</m> being continuous,
 and if the mass density in <m>\cR</m> is <m>f(x,y)</m>, then the mass of <m>\cR</m>
 is
-<me>
+<md>
+<mrow>
 \int_c^d \left[\int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}\right]\dee{y}
-=\int_c^d \int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}\,\dee{y}
-=\int_c^d \dee{y} \int_{L(y)}^{R(y)} \dee{x}\, f\big(x,y\big)
-</me>
+&amp;=\int_c^d \int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;=\int_c^d \dee{y} \int_{L(y)}^{R(y)} \dee{x}\, f\big(x,y\big)
+</mrow>
+</md>
 </li>
 </ol>
 </p></statement>
@@ -517,26 +523,29 @@ of <m>\cR</m>.
 </p>
 
 <example xml:id="eg_dblInt_0">
+<statement>
 <p>
 Let <m>\cR</m> be the triangular region above the <m>x</m>-axis, to the right of
 the <m>y</m>-axis and to the left of the line <m>x+y=1</m>.
 Find the mass of <m>\cR</m> if it has density <m>f(x,y)=y</m>.
 </p>
+</statement>
 
-<p>\soln We'll do this problem twice <mdash/> once using vertical strips and
+<solution>
+<p>We'll do this problem twice <mdash/> once using vertical strips and
 once using horizontal strips. First, here is a sketch of <m>\cR</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/dblInt0a"/>
 </sidebyside>
 
 
-<p><em>Solution using vertical strips.</em>
+<p><em>Solution using vertical strips.</em><m>\ \ \ </m>
 We'll now set up a double integral for the mass using vertical strips.
 Note, from the figure
 </p>
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/dblInt0b"/>
 </sidebyside>
 
@@ -583,12 +592,12 @@ so that the
 </md>
 </p>
 
-<p>\medskip\noindent<em>Solution using horizontal strips.</em>\ \ \
+<p><em>Solution using horizontal strips.</em><m>\ \ \ </m>
 This time we'll set up a double integral for the mass using horizontal strips.
 Note, from the figure
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/dblInt0c"/>
 </sidebyside>
 
@@ -635,12 +644,14 @@ So the
         =\frac{1}{6}
 </mrow>
 </md>
-</p></example>
+</p>
+</solution>
+</example>
 
 
 <p>Double integrals share the usual basic properties that we are used to from
 integrals of functions of one variable. See, for example,
-Theorem \eref{CLP101}{thm:Intarith} and Theorem \eref{CLP101}{thm:INTineq}
+Theorem 1.2.1 and Theorem 1.2.12
 in the CLP-2 text. Indeed the following theorems follow from them.
 </p>
 
@@ -650,41 +661,42 @@ Let <m>A,B,C</m> be real numbers. Under the hypotheses of
 Theorem <xref ref="thm_xy_mass"/>,
 <md>
 <mrow>
-\text{(a)}&amp;&amp; \dblInt_\cR \left( f(x,y) + g(x,y) \right)\,\dee{x}\dee{y}
+\dblInt_\cR \left( f(x,y) + g(x,y) \right)\,\dee{x}\dee{y}
 &amp;= \dblInt_\cR f(x,y)\,\dee{x}\dee{y} + \dblInt_\cR g(x,y)\,\dee{x}\dee{y}
-</mrow><mrow>
-\text{(b)}&amp;&amp;
+\tag{a}</mrow><mrow>
 \dblInt_\cR\left(f(x,y)-g(x,y)\right)\,\dee{x}\dee{y}
 &amp;= \dblInt_\cR f(x,y)\,\dee{x}\dee{y} - \dblInt_\cR g(x,y)\,\dee{x}\dee{y}
-</mrow><mrow>
-\text{(c)}&amp;&amp; \dblInt_\cR C f(x,y)\,\dee{x}\dee{y}
+\tag{b}</mrow><mrow>
+\dblInt_\cR C f(x,y)\,\dee{x}\dee{y}
 &amp;= C\,\dblInt_\cR f(x,y)\,\dee{x}\dee{y}
-</mrow>
+\tag{c}</mrow>
 </md>
-</p>
-<p>
 Combining these three rules we have
 <md>
 <mrow>
-\text{(d)}&amp;&amp; \dblInt_\cR\left( Af(x,y) + Bg(x,y) \right)\,\dee{x}\dee{y}
+\dblInt_\cR\left( Af(x,y) + Bg(x,y) \right)\,\dee{x}\dee{y}
 &amp;= A\dblInt_\cR f(x,y)\,\dee{x}\dee{y}
-            + B\dblInt_\cR g(x,y)\,\dee{x}\dee{y}
-</mrow>
-<intertext>That is, integrals depend linearly on the integrand.</intertext>
-<mrow>
-\text{(e)}&amp;&amp; \dblInt_\cR \,\dee{x}\dee{y} &amp;= \text{Area}(\cR)
 </mrow><mrow>
-</mrow>
-<intertext>If the region <m>\cR</m> in the <m>xy</m>-plane is the union of regions <m>\cR_1</m> and <m>\cR_2</m> that do not overlap (except possibly on their boundaries),
-then</intertext>
+          &amp;\hskip0.25in  + B\dblInt_\cR g(x,y)\,\dee{x}\dee{y}
+\tag{d}</mrow>
+</md>
+That is, integrals depend linearly on the integrand.
+<md>
 <mrow>
-\text{(f)}&amp;&amp; \dblInt_\cR f(x,y)\,\dee{x}\dee{y}
+\dblInt_\cR \,\dee{x}\dee{y} &amp;= \text{Area}(\cR)
+\tag{e}</mrow>
+</md>
+If the region <m>\cR</m> in the <m>xy</m>-plane is the union of regions <m>\cR_1</m> and <m>\cR_2</m> that do not overlap (except possibly on their boundaries),
+then
+<md>
+<mrow>
+\dblInt_\cR f(x,y)\,\dee{x}\dee{y}
                   &amp;= \dblInt_{\cR_1} f(x,y)\,\dee{x}\dee{y}
                     +\dblInt_{\cR_2} f(x,y)\,\dee{x}\dee{y}
-</mrow>
+\tag{f}</mrow>
 </md>
 </p>
-<sidebyside width="40%">
+<sidebyside widths="33% 40%" valign="middle">
 <image source="figs/union"/>
 <image source="figs/unionB"/>
 </sidebyside>
@@ -704,7 +716,7 @@ and the integrand is the product <m>f(x,y)=g(x)h(y)</m>,
 </mrow><mrow>
 &amp;=\int_a^b\dee{x}\ g(x) \int_c^d\dee{y}\  h(y)
 </mrow><mrow>
-&amp;\hskip0.5in\text{since $g(x)$ is a constant as far as the $y$-integral is concerned}
+&amp;\hskip0.25in\text{since $g(x)$ is a constant as far as the $y$-integral is concerned}
 </mrow><mrow>
 &amp;=\left[ \int_a^b\dee{x}\ g(x)\right]\ \left[\int_c^d\dee{y}\  h(y)\right]
 </mrow>
@@ -734,7 +746,7 @@ actually need to know the value of a double integral exactly. We are
 instead interested in bounds on its value.
 The following theorem provides some simple tools for generating such bounds.
 They are the multivariable analogs of the single variable tools in
-Theorem \eref{CLP101}{thm:INTineq} of the CLP-2 text.
+Theorem 1.2.12 of the CLP-2 text.
 </p>
 
 <theorem xml:id="thm_INT2dineq"><title>Inequalities for Integrals</title>
@@ -804,7 +816,7 @@ is sketched in the figure on the left below and
 the part of <m>\cV</m> in the first octant is sketched in the figure on the right below.
 </p>
 
-<sidebyside>
+<sidebyside widths="50% 40%" valign="middle">
 <image source="figs/volSliceB"/>
 <image source="figs/volSliceA"/>
 </sidebyside>
@@ -917,13 +929,16 @@ similar. Just the interpretation changes.
 </p>
 
 <example xml:id="eg_dblInt_A"><title>Mass</title>
+<statement>
 <p>
 Let <m>\nu \gt 0</m> be a constant and let <m>\cR</m> be the region above the curve
 <m>x^2=4\nu y</m> and to the right of the curve <m>y^2=\frac{1}{2}\nu x</m>.
 Find the mass of <m>\cR</m> if it has density <m>f(x,y)=xy</m>.
 </p>
+</statement>
 
-<p>\soln For practice, we'll do this problem twice <mdash/> once using vertical
+<solution>
+<p>For practice, we'll do this problem twice <mdash/> once using vertical
 strips and once using horizontal strips. We'll start by sketching <m>\cR</m>.
 First note that, since <m>y\ge\frac{x^2}{4\nu}</m> and <m>x\ge \frac{2y^2}{\nu}</m>,
 both <m>x</m> and <m>y</m> are positive throughout <m>\cR</m>.
@@ -931,9 +946,10 @@ The two curves intersect at points <m>(x,y)</m> that satisfy both
 <md>
 <mrow>
 x = \frac{2y^2}{\nu}\text{ and }y=\frac{x^2}{4\nu}
-\quad\implies\quad x  = \frac{2y^2}{\nu} = \frac{2}{\nu}\left(\frac{x^2}{4\nu}\right)^2
+&amp;\implies\quad x  = \frac{2y^2}{\nu} = \frac{2}{\nu}\left(\frac{x^2}{4\nu}\right)^2
                  = \frac{x^4}{8\nu^3}
-\quad\iff\quad \left(\frac{x^3}{8\nu^3}-1\right)x=0
+</mrow><mrow>
+&amp;\iff\quad \left(\frac{x^3}{8\nu^3}-1\right)x=0
 </mrow>
 </md>
 This equation has only two real
@@ -944,12 +960,12 @@ So the upward opening parabola <m>y = \frac{x^2}{4\nu}</m> and the
 rightward opening parabola <m>x=\frac{2y^2}{\nu}</m>  intersect at <m>(0,0)</m> and <m>(2\nu,\nu)</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/dblIntAa"/>
 </sidebyside>
 
 
-<p><em>Solution using vertical strips.</em>
+<p><em>Solution using vertical strips.</em><m>\ \ \ </m>
 We'll now set up a double integral for the mass using vertical strips
 and using the abbreviated argument of the end of the last section
 (on volumes).  Note, from the figure above, that
@@ -967,7 +983,7 @@ and using the abbreviated argument of the end of the last section
    Subdivide each strip into <q>infinitesimal</q> rectangles each of
    height <m>\dee{y}</m> and of width <m>\dee{x}</m>. See the figure below.
 </p>
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/dblIntAb"/>
 </sidebyside>
 </li>
@@ -1022,7 +1038,7 @@ and the
 </p>
 
 <p>
-  <em>Solution using horizontal strips.</em>
+  <em>Solution using horizontal strips.</em><m>\ \ \ </m>
 We'll now set up a double integral for the mass using horizontal strips,
 again using the abbreviated argument of the end of the last section
 (on volumes).  Note, from the figure at the beginning of this example, that
@@ -1041,7 +1057,7 @@ again using the abbreviated argument of the end of the last section
    height <m>\dee{y}</m> and of width <m>\dee{x}</m>. See the figure below.
 </p>
 
-<sidebyside>
+<sidebyside width="90%">
 <image source="figs/dblIntAc"/>
 </sidebyside>
 </li>
@@ -1084,33 +1100,37 @@ Recalling that, when integrating <m>x</m>, <m>y</m> is held constant
 </li>
 </ul>
 </p>
+</solution>
 </example>
 
 
 <example xml:id="eg_dblInt_V0"><title>Volume</title>
+<statement>
 <p>
 Let <m>\cR</m> be the part of the <m>xy</m>-plane above the <m>x</m>-axis and below
 the parabola <m>y=1-x^2</m>. Find the volume between <m>\cR</m> and the surface
 <m>z=x^2\sqrt{1-y}</m>.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 Yet again, for practice, we'll do this problem twice <mdash/> once using
 vertical strips and once using horizontal strips. First, here is a
 sketch of <m>\cR</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="60%">
 <image source="figs/dblIntV0a"/>
 </sidebyside>
 
 
-<p> <em>Solution using vertical strips.</em>
+<p> <em>Solution using vertical strips.</em><m>\ \ \ </m>
 We'll now set up a double integral for the volume using vertical strips.
 Note, from the figure
 </p>
 
-<sidebyside>
+<sidebyside width="60%">
 <image source="figs/dblIntV0b"/>
 </sidebyside>
 
@@ -1147,9 +1167,10 @@ Now, for <m>x\ge 0</m>, the inside integral is
 <md>
 <mrow>
 \int_0^{1-x^2}  x^2\sqrt{1-y} \ \dee{y}
-= x^2 \int_0^{1-x^2}  \sqrt{1-y} \ \dee{y}
+&amp;= x^2 \int_0^{1-x^2}  \sqrt{1-y} \ \dee{y}
 =x^2 \left[ -\frac{2}{3}(1-y)^{3/2} \right]_0^{1-x^2}
-=\frac{2}{3}x^2\big(1-x^3\big)
+</mrow><mrow>
+&amp;=\frac{2}{3}x^2\big(1-x^3\big)
 </mrow>
 </md>
 so that the
@@ -1162,12 +1183,12 @@ so that the
 </md>
 </p>
 
-<p><em>Solution using horizontal strips.</em>
+<p><em>Solution using horizontal strips.</em><m>\ \ \ </m>
 This time we'll set up a double integral for the volume using horizontal strips.
 Note, from the figure
 </p>
 
-<sidebyside>
+<sidebyside width="90%">
 <image source="figs/dblIntV0c"/>
 </sidebyside>
 
@@ -1200,9 +1221,10 @@ Now the inside integral has an even integrand (in <m>x</m>) and so is
 <md>
 <mrow>
 \int_{-\sqrt{1-y}}^{\sqrt{1-y}} \dee{x}\, x^2\sqrt{1-y}
-=2\sqrt{1-y}\int_0^{\sqrt{1-y}} x^2\ \dee{x}
+&amp;=2\sqrt{1-y}\int_0^{\sqrt{1-y}} x^2\ \dee{x}
 =2\sqrt{1-y} \left[ \frac{x^3}{3} \right]_0^{\sqrt{1-y}}
-=\frac{2}{3}(1-y)^2
+</mrow><mrow>
+&amp;=\frac{2}{3}(1-y)^2
 </mrow>
 </md>
 So the
@@ -1213,16 +1235,20 @@ So the
         =\frac{2}{9}
 </mrow>
 </md>
-</p></example>
+</p>
+</solution>
+</example>
 
 
 <example xml:id="eg_dblInt_B"><title>Volume</title>
-<p>
+<statement><p>
 Find the volume common to the two cylinders <m>x^2+y^2=a^2</m> and
 <m>x^2+z^2=a^2</m>.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 Our first job is figure out what the specified solid looks like.
 Note that
 <ul>
@@ -1246,13 +1272,12 @@ horizontally, one beside the other. The part of the cylinder
 figure on the right below.
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 45%" valign="middle">
 <image source="figs/cylinderA"/>
 <image source="figs/cylinderB"/>
 </sidebyside>
 </li>
 </ul>
-\noindent
 We have to compute the volume common to these two intersecting cylinders.
 </p>
 
@@ -1279,7 +1304,7 @@ on the left below. A point <m>(x,y,z)</m> lies in the first cylinder
 if and only if <m>x^2+y^2\le a^2</m>.
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 60%" valign="middle">
 <image source="figs/cylinderC"/>
 <image source="figs/cylinderD"/>
 </sidebyside>
@@ -1310,7 +1335,7 @@ So we may rewrite
 where
 <me>
 \cR=\Big\{\ (x,y)\ \Big|\ 0\le x\le a,\ 0\le y\le \sqrt{a^2-x^2}\ \Big\}
-\qquad\text{and}\qquad f(x,y) = \sqrt{a^2-x^2}
+\quad\text{and}\quad f(x,y) = \sqrt{a^2-x^2}
 </me>
 and <q><m>(x,y)\in\cR</m></q> is read <q><m>(x,y)</m> is an element of <m>\cR</m>.</q>.
 Note that <m>f(x,y)</m> is actually independent of <m>y</m>. This will make things
@@ -1330,7 +1355,7 @@ protocol.
    width <m>\dee{y}</m> and of height <m>\dee{x}</m>. See the figure below.
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image source="figs/cylinderE"/>
 </sidebyside>
 </li>
@@ -1383,15 +1408,18 @@ and the total volume of the solid in question is
 </li>
 </ul>
 </p>
-
+</solution>
 </example>
 
 <example xml:id="eg_dblInt_C"><title>Geometric Interpretation</title>
+<statement>
 <p>
 Evaluate <m>\displaystyle\int_0^2\int_0^a \sqrt{a^2-x^2}\ \dee{x}\,\dee{y}</m>.
 </p>
+</statement>
 
-<p>\soln This integral represents the volume of a simple geometric figure
+<solution>
+<p> This integral represents the volume of a simple geometric figure
 and so can be evaluated without using any calculus at all.
 The domain of integration is
 <me>
@@ -1407,7 +1435,7 @@ We want the volume of the part of this cylinder that lies above
 <m>\cR</m>. It is sketched in the figure below.
 </p>
 
-<sidebyside>
+<sidebyside width="60%">
 <image source="figs/qCylinder"/>
 </sidebyside>
 
@@ -1420,6 +1448,7 @@ As <m>y</m> runs from <m>0</m> to <m>2</m>
 =\frac{\pi a^2}{2}
 </me>
 </p>
+</solution>
 </example>
 
 <example xml:id="eg_dblInt_CC"><title>Example <xref ref="eg_dblInt_C"/>, the hard way</title>
@@ -1434,7 +1463,7 @@ techniques.
 <p>The inside integral is <m>\int_0^a \sqrt{a^2-x^2}\ \dee{x}</m>.
 The standard procedure for eliminating square roots like <m>\sqrt{a^2-x^2}</m>
 from integrands is the method of trigonometric substitution, that was
-covered in §\eref{CLP101}{sec trigsub} of the CLP-2 text. In this
+covered in §1.9 of the CLP-2 text. In this
 case, the appropriate substitution is
 <me>
 x=a\sin\theta\qquad \dee{x}=a\cos\theta\ \dee{\theta}
@@ -1454,7 +1483,7 @@ corresponds to <m>\theta=\frac{\pi}{2}</m>, so that
 
 <p>The orthodox procedure for evaluating the resulting trigonometric integral
 <m>\int_0^{\pi2} \cos^2\theta\ \dee{\theta}</m>, covered in
-§\eref{CLP101}{sec trigint} of the CLP-2 text, uses the trigonometric
+§1.8 of the CLP-2 text, uses the trigonometric
 double angle formula
 <me>
 \cos(2\theta) = 2\cos^2\theta -1\qquad\text{to write}\qquad
@@ -1479,7 +1508,7 @@ definite integrals like <m>\int_0^{\pi/2} \cos^2\theta\ \dee{\theta}</m>.
 Looking at the figures
 </p>
 
-<sidebyside width="40%">
+<sidebyside width="50%">
 <image source="figs/cos2Agraph"/>
 <image source="figs/sin2Agraph"/>
 </sidebyside>
@@ -1493,9 +1522,10 @@ Thus
 <md>
 <mrow>
 \int_0^{\pi/2} \cos^2\theta\ \dee{\theta}
-=\int_0^{\pi/2} \sin^2\theta\ \dee{\theta}
+&amp;=\int_0^{\pi/2} \sin^2\theta\ \dee{\theta}
 =\int_0^{\pi/2} \frac{1}{2}\big[\sin^2\theta+\cos^2\theta\big]\,\dee{\theta}
-=\frac{1}{2}\int_0^{\pi/2} \dee{\theta}
+</mrow><mrow>
+&amp;=\frac{1}{2}\int_0^{\pi/2} \dee{\theta}
 =\frac{\pi}{4}
 </mrow>
 </md>
@@ -1583,16 +1613,20 @@ have to give the same answer doesn't mean that they are equally easy to evaluate
 </p>
 
 <example xml:id="eg_dblInt_E">
+<statement>
 <p>
 Evaluate the integral of <m>\frac{\sin x}{x}</m> over the region in the
 <m>xy</m>-plane that is above the <m>x</m>-axis, to the right of the line
 <m>y=x</m> and to the left of the line <m>x=1</m>.
 </p>
+</statement>
 
-<p>\soln Here is a sketch of the specified domain.
+<solution>
+<p>
+Here is a sketch of the specified domain.
 </p>
 
-<sidebyside>
+<sidebyside width="35%">
 <image source="figs/reverse2A"/>
 </sidebyside>
 <p>
@@ -1601,7 +1635,7 @@ horizontal strips (the impossibly hard way) and once using
 vertical strips (the easy way).
 </p>
 
-<p><em>Solution using horizontal strips.</em>
+<p><em>Solution using horizontal strips.</em><m>\ \ \ </m>
 To set up the integral using horizontal strips, as in the figure on
 the left below, we observe that, on the domain of integration,
 <ul>
@@ -1627,20 +1661,20 @@ It is the integrand of the error function
 \erf(x) =\frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}\ dt
 </m>
 that is used in computing <q>bell curve</q> probabilities. See Example
-\eref{CLP101}{eg:erf} in the CLP-2 text.</fn>
+3.6.10 in the CLP-2 text.</fn>
 It is impossible to evaluate <m>\int_y^1\dee{x}\ \frac{\sin x}{x}</m> without
 resorting to, for example, numerical methods or
 infinite series
-<fn>See, for example, Example \eref{CLP101}{eg:erf} in the CLP-2 text.</fn>.
+<fn>See, for example, Example 3.6.10 in the CLP-2 text.</fn>.
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 40%">
 <image source="figs/reverse2B"/>
 <image source="figs/reverse2C"/>
 </sidebyside>
 
 
-<p><em>Solution using vertical strips.</em>
+<p><em>Solution using vertical strips.</em><m>\ \ \ </m>
 To set up the integral using vertical strips, as in the figure on
 the right above, we observe that, on the domain of integration,
 <ul>
@@ -1665,18 +1699,23 @@ it is trivial to evaluate the iterated integral.
 =1-\cos 1
 </mrow>
 </md>
-</p></example>
+</p>
+</solution>
+</example>
 
 
 <p>Here is an example which is included as an excuse to review
 some integration technique from CLP-2.
 </p>
 <example xml:id="eg_dblInt_F">
+<statement>
 <p>
 Find the volume under the surface <m>z=1-3x^2-2y^2</m> and above the <m>xy</m>-plane.
 </p>
+</statement>
 
-<p>\soln
+<solution>
+<p>
 Before leaping into integration, we should try to understand what the surface
 and volume look like.
 For each constant <m>z_0</m>, the part of the surface <m>z=1-3x^2-2y^2</m>
@@ -1692,7 +1731,7 @@ of a stack of ellipses and our solid is
 This is sketched in the figure below
 </p>
 
-<sidebyside>
+<sidebyside width="60%">
 <image source="figs/egDblIntEa"/>
 </sidebyside>
 
@@ -1704,7 +1743,7 @@ The top view of the base region
 is sketched in the figure below.
 </p>
 
-<sidebyside>
+<sidebyside width="60%">
 <image source="figs/egDblIntEb"/>
 </sidebyside>
 
@@ -1747,9 +1786,8 @@ So using vertical strips as in the figure above
 </md>
 To evaluate this integral, we use the trig
 substitution
-<fn>See §\eref{CLP101</fn>
-{sec trigsub} in the CLP-2 text
-for a general discussion of trigonometric substitution.}
+<fn>See §1.9 in the CLP-2 text for a general discussion of trigonometric 
+substitution.</fn>
 <m>2y^2=\sin^2\theta</m>, or
 <me>
 y=\frac{\sin\theta}{\sqrt{2}}\qquad
@@ -1768,16 +1806,15 @@ to give
 Then to integrate <m>\cos^4\theta</m>, we use the double angle
 formula
 <fn>We weren't joking about his being a good review of
-single variable integration techniques. See Example \eref{CLP101</fn>
-{eg:TRGINTc}
-in the CLP-2 text.}
+single variable integration techniques. See Example 1.8.8 in the CLP-2 text.</fn>
 <md>
 <mrow>
 \cos^2\theta &amp;=\frac{\cos(2\theta)+1}{2}
 </mrow><mrow>
 \implies \cos^4\theta &amp;= \frac{\big(\cos(2\theta)+1\big)^2}{4}
     =\frac{\cos^2(2\theta)+2\cos(2\theta)+1}{4}
-    =\frac{\frac{\cos(4\theta)+1}{2}+2\cos(2\theta)+1}{4}
+</mrow><mrow>
+   &amp;=\frac{\frac{\cos(4\theta)+1}{2}+2\cos(2\theta)+1}{4}
 </mrow><mrow>
    &amp;=\frac{3}{8} +\frac{1}{2}\cos(2\theta) +\frac{1}{8}\cos(4\theta)
 </mrow>
@@ -1792,7 +1829,7 @@ Finally, since <m>\int_0^{\frac{\pi}{2}} \cos(4\theta)\,\dee{\theta}
 </mrow>
 </md>
 </p>
-
+</solution>
 </example>
 
 </subsection>
@@ -1810,7 +1847,7 @@ Finally, since <m>\int_0^{\frac{\pi}{2}} \cos(4\theta)\,\dee{\theta}
   Subdivide <m>\cR</m> by drawing lines parallel to the <m>x</m> and <m>y</m> axes.
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/intDecomp2"/>
 </sidebyside>
 </li>
@@ -1849,7 +1886,7 @@ of parallel lines and of points <m>(x_i^*,y_i^*)</m>),  then we define
 <statement><p>
 If <m>f(x,y)</m> is continuous in a region <m>\cR</m> described by
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 a&amp;\le x&amp;&amp;\le b
 </mrow><mrow>
 B(x)&amp;\le y&amp;&amp;\le T(x)
@@ -1863,7 +1900,7 @@ for continuous functions <m>B(x)</m>, <m>T(x)</m>, then
 both exist and are equal.
 Similarly, if <m>\cR</m> is described by
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 c&amp;\le y&amp;&amp;\le d
 </mrow><mrow>
 L(y)&amp;\le x&amp;&amp;\le R(y)
@@ -1881,7 +1918,7 @@ both exist and are equal.
 
 <p>The proof of this theorem is not particularly difficult, but is still
 beyond the scope of this text. The main ideas in the proof can already
-be seen in section \eref{CLP101}{ssec careful defn} of the CLP-2 text.
+be seen in §1.1.6 of the CLP-2 text.
 An important consequence of this theorem is
 </p>
 
@@ -1914,13 +1951,16 @@ exist and are equal.
 
 <p>The hypotheses of both of these theorems can be relaxed a bit, but not
 too much. For example, if
-<me>
-\cR=\Set{(x,y)}{0\le x\le 1,\ 0\le y\le 1}\qquad
-f(x,y)=\begin{cases}
+<md>
+<mrow>
+\cR&amp;=\Set{(x,y)}{0\le x\le 1,\ 0\le y\le 1}
+</mrow><mrow>
+f(x,y)&amp;=\begin{cases}
            1&amp;\text{if } x,y \text{ are both rational numbers} \\
            0&amp;\text{otherwise}
       \end{cases}
-</me>
+</mrow>
+</md>
 then the integral <m>\dblInt_\cR f(x,y)\ \dee{x}\,\dee{y}</m> does not exist. This
 is easy to see. If all of the <m>x_i^*</m>'s and <m>y_i^*</m>'s are chosen to be rational
 numbers, then
@@ -1976,9 +2016,6 @@ and
 </li>
 </ul>
 There are many such functions. For example
-</p>
-<sidebyside width="40%">
-<p>
 <me>
 g_n(t)=\frac{2}{\de_n-\de_{n+1}}\begin{cases}
    \de_n-t&amp; \text{if } \half(\de_{n+1}+\de_n)\le t\le \de_n\\
@@ -1987,6 +2024,7 @@ g_n(t)=\frac{2}{\de_n-\de_{n+1}}\begin{cases}
    \end{cases}
 </me>
 </p>
+<sidebyside width="50%">
 <image source="figs/g_n"/>
 </sidebyside>
 <p>
@@ -2030,7 +2068,7 @@ the graph of <m>-g_{n+1}(x)g_n(y)</m> which looks like a pyramidal hole
 in the ground.
 </p>
 
-<sidebyside>
+<sidebyside width="90%">
 <image source="figs/fubini"/>
 </sidebyside>
 
@@ -2043,7 +2081,8 @@ So for <m>y\in I_n</m>
 <md>
 <mrow>
 \int_0^1 f(x,y)\,\dee{x}&amp;=\sum_{m=n,n+1}\int_{I_m} f(x,y)\,\dee{x}
-=\int_{I_n} g_n(x)g_n(y)\,\dee{x}-\int_{I_{n+1}} g_{n+1}(x)g_n(y)\,\dee{x}
+</mrow><mrow>
+&amp;=\int_{I_n} g_n(x)g_n(y)\,\dee{x}-\int_{I_{n+1}} g_{n+1}(x)g_n(y)\,\dee{x}
 </mrow><mrow>
 &amp;=g_n(y)\int_{I_n} g_n(x)\,\dee{x}-g_n(y)\int_{I_{n+1}} g_{n+1}(x)\,\dee{x}
 </mrow><mrow>
@@ -2066,7 +2105,8 @@ So for <m>x\in I_m</m>, with <m>m\ge 2</m>,
 <md>
 <mrow>
 \int_0^1 f(x,y)\,\dee{y}&amp;=\sum_{n=m,m-1}\int_{I_n} f(x,y)\,\dee{y}
-=\int_{I_m} g_m(x)g_m(y)\,\dee{y}-\int_{I_{m-1}} g_{m}(x)g_{m-1}(y)\,\dee{y}
+</mrow><mrow>
+&amp;=\int_{I_m} g_m(x)g_m(y)\,\dee{y}-\int_{I_{m-1}} g_{m}(x)g_{m-1}(y)\,\dee{y}
 </mrow><mrow>
 &amp;=g_m(x)\int_{I_m} g_m(y)\,\dee{y}-g_m(x)\int_{I_{m-1}} g_{m-1}(y)\,\dee{y}
 </mrow><mrow>
@@ -2079,7 +2119,8 @@ But for <m>x\in I_1</m>,
 \int_0^1 f(x,y)\,\dee{y}&amp;=\int_{I_1} f(x,y)\,\dee{y}
 =\int_{I_1} g_1(x)g_1(y)\,\dee{y}
 =g_1(x)\int_{I_1} g_1(y)\,\dee{y}
-=g_1(x)
+</mrow><mrow>
+&amp;=g_1(x)
 </mrow>
 </md>
  Thus

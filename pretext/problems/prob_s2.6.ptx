@@ -1,0 +1,1853 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise>
+<statement><p>
+Let <m>x_0</m> and <m>y_0</m> be constants and let <m>m</m> and <m>n</m> be integers.
+If <m>m \lt 0</m> assume that <m>x_0\ne 0</m>, and if <m>n \lt 0</m> assume that <m>y_0\ne 0</m>.
+Define <m>P(x,y) = x^m y^n</m>.
+<ol label="a">
+<li>
+Find the linear approximation to <m>P(x_0+\De x,y_0+\De y)</m>.
+</li>
+<li>
+Denote by
+<me>
+P_\% = 100\left|\frac{P(x_0+\De x,y_0+\De y)-P(x_0,y_0)}{P(x_0,y_0)}\right|
+\qquad
+x_\% = 100\left|\frac{\De x}{x_0}\right|
+\qquad
+y_\% = 100\left|\frac{\De y}{y_0}\right|
+</me>
+the percentage errors in <m>P</m>, <m>x</m> and <m>y</m> respectively. Use the linear approximation to find an (approximate) upper bound on <m>P_\%</m> in terms of
+<m>m</m>, <m>n</m>, <m>x_\%</m> and <m>y_\%</m>.
+</li>
+</ol>
+</p>
+
+</statement>
+
+<hint><p>
+Review Example <xref ref="eg_errors_in_measurement"/> in the CLP-3 text.
+Be careful when taking absolute values.
+</p></hint>
+
+<answer><p>
+(a) <m>P(x_0+\De x,y_0+\De y)
+       \approx P(x_0,y_0) + mx_0^{m-1}y_0^n\,\De x  + nx_0^m y_0^{n-1}\,\De y</m>
+</p>
+
+<p>(b) <m>P_\% \le |m|\,x_\% + |n|\,y_\%</m>
+</p></answer>
+
+<solution><p>
+(a) The first order partial derivatives of <m>P(x,y)</m> at <m>x=x_0</m> and <m>y=y_0</m> are
+<me>
+P_x(x_0,y_0) = m x_0^{m-1} y_0^n\qquad
+P_y(x_0,y_0) = n x_0^m y_0^{n-1}
+</me>
+So, by (<xref ref="eqn_lin_approx_2d"/>) in the CLP-3 text, the
+linear approximation is
+<md>
+<mrow>
+P(x_0+\De x,y_0+\De y)
+       &amp;\approx P(x_0,y_0) + P_x(x_0,y_0)\,\De x  + P_y(x_0,y_0)\,\De y
+</mrow><mrow>
+       &amp;\approx P(x_0,y_0) + mx_0^{m-1}y_0^n\,\De x  + nx_0^m y_0^{n-1}\,\De y
+</mrow>
+</md>
+</p>
+
+<p>(b) By part (a)
+<md>
+<mrow>
+\frac{P(x_0+\De x,y_0+\De y)-P(x_0,y_0)}{P(x_0,y_0)}
+&amp;\approx \frac{mx_0^{m-1}y_0^n\,\De x  + nx_0^m y_0^{n-1}\,\De y}{x_0^my_0^n}
+ =m\frac{\De x}{x_0} + n\frac{\De y}{y_0}
+</mrow>
+</md>
+Hence
+<md>
+<mrow>
+P_\% &amp;\approx 100\left|m\frac{\De x}{x_0} + n\frac{\De y}{y_0}\right|
+</mrow><mrow>
+     &amp;\le |m| 100\left|\frac{\De x}{x_0}\right|
+         + |n| 100\left|\frac{\De y}{y_0}\right|
+</mrow><mrow>
+     &amp;\le |m| x_\% + |n| y_\%
+</mrow>
+</md>
+</p>
+
+<p><em>Warning.</em> The answer <m>m\,x_\% +n\,y_\%</m>, without absolute values on <m>m</m>
+and <m>n</m>, can be seriously wrong. As an example, suppose that <m>m=1</m>, <m>n=-1</m>,
+<m>x_0=y_0=1</m>, <m>\De x = 0.05</m> and <m>\De y=-0.05</m>. Then
+<md>
+<mrow>
+P_\%  &amp;\approx 100\left|m\frac{\De x}{x_0} + n\frac{\De y}{y_0}\right|
+</mrow><mrow>
+      &amp;= 100\left|(1)\frac{0.05}{1} + (-1)\frac{-0.05}{1}\right|
+</mrow><mrow>
+      &amp; = 10\%
+</mrow>
+</md>
+while
+<md>
+<mrow>
+m\,x_\% +n\,y_\% &amp;= m\, 100\left|\frac{\De x}{x_0}\right|
+         + n\, 100\left|\frac{\De y}{y_0}\right|
+</mrow><mrow>
+               &amp;=  (1) 100\left|\frac{0.05}{1}\right|
+         + (-1) 100\left|\frac{-0.05}{1}\right|
+</mrow><mrow>
+              &amp;= 0
+</mrow>
+</md>
+The point is that <m>m</m> and <m>n</m> being of opposite sign does not guarantee that
+there is a cancelation between the two terms of
+<m>m\frac{\De x}{x_0} + n\frac{\De y}{y_0}</m>, because <m>\frac{\De x}{x_0}</m> and
+<m>\frac{\De y}{y_0}</m> can also be of opposite sign.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Consider the following work.
+</p>
+
+<p><em>
+We compute, approximately, the <m>y</m>-coordinate of the point whose polar coordinates are <m>r=0.9</m> and <m>\theta=2^\circ</m>. In general, the
+<m>y</m>-coordinate of the point whose polar coordinates are <m>r</m> and <m>\theta</m>
+is <m>Y(r,\theta) = r\sin\theta</m>. The partial derivatives
+</em>
+<me>
+Y_r(r,\theta)=\sin\theta\qquad Y_\theta(r,\theta) = r\cos\theta
+</me>
+<em>
+So the linear approximation to <m>Y(r_0+\De r,\theta_0+\De\theta)</m> with <m>r_0=1</m>
+and <m>\theta_0=0</m> is
+</em>
+<md>
+<mrow>
+Y(1+\De r,0+\De\theta)
+&amp;\approx Y(1,0) + Y_r(1,0)\,\De r + Y_\theta(1,0)\,\De\theta
+</mrow><mrow>
+&amp;= 0\ +\ (0)\,\De r\ +\ (1)\De\theta
+</mrow>
+</md>
+<em>
+Applying this with <m>\De r=-0.1</m> and <m>\De\theta=2</m> gives the (approximate)
+<m>y</m>-coordinate</em>
+<md>
+<mrow>
+Y(0.9,2) = Y(1-0.1\,,\, 0+2)\approx 0\ +\ (0)\,(-0.1)\ +\ (1)(2)
+         =2
+</mrow>
+</md>
+</p>
+
+
+<p>
+This conclusion is ridiculous. We're saying that the <m>y</m>-coordinate is
+more than twice the distance from the point to the origin. What was the
+mistake?
+</p>
+
+</statement>
+
+<hint><p>
+Units!
+</p></hint>
+
+<answer><p>
+We used that <m>\diff{}{\theta}\sin\theta = \cos\theta</m>. That is true only if <m>\theta</m> is given in radians, not degrees.
+</p></answer>
+
+<solution><p>
+We used that <m>\diff{}{\theta}\sin\theta = \cos\theta</m>. That is true only if <m>\theta</m> is given in radians, not degrees.
+(See Lemma \eref{CLP100}{lem DIFFsincos} and
+Warning \eref{CLP100}{warning:radians} in the CLP-1 text.)
+So we have to convert <m>2^\circ</m>
+to radians, which is <m>2\times\frac{\pi}{180}=\frac{\pi}{90}</m>.
+The correct computation is
+<md>
+<mrow>
+Y\big(0.9,\tfrac{\pi}{90}\big) = Y\big(1-0.1\,,\, 0+\tfrac{\pi}{90}\big)
+   \approx 0\ +\ (0)\,(-0.1)\ +\ (1)\big(\tfrac{\pi}{90}\big)
+         =\tfrac{\pi}{90}
+   \approx 0.035
+</mrow>
+</md>
+Just out of general interest,
+<m>
+0.9\sin\tfrac{\pi}{90} =0.0314
+</m>
+to four decimal places.
+</p>
+
+</solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise>
+<statement><p>
+Find an approximate value for <m>f(x,y)=\sin(\pi xy+\ln y)</m> at <m>(0.01,1.05)</m>
+without using a calculator or computer.
+</p></statement>
+
+<answer><p>
+<m>0.01\,\pi + 0.05 \approx 0.0814</m>
+</p></answer>
+
+<solution><p>
+Apply the linear approximation
+<m>f(0.01,1.05)\approx f(0,1)+f_x(0,1)(0.01)+f_y(0,1)(0.05)</m>,
+with
+<md>
+<mrow>
+f(x,y)&amp;=\sin(\pi xy+\ln y) &amp; f(0,1)&amp;=\sin 0=0
+</mrow><mrow>
+f_x(x,y)&amp;=\pi y\cos(\pi xy+\ln y) &amp; f_x(0,1)&amp;=\pi\cos 0=\pi
+</mrow><mrow>
+f_y(x,y)&amp;=\left(\pi x+\frac{1}{y}\right)\cos(\pi xy+\ln y) &amp;
+             f_y(0,1)&amp;=\cos 0=1
+</mrow>
+</md>
+This gives
+<md>
+<mrow>
+f(0.01,1.05)&amp;\approx f(0,1)+f_x(0,1)(0.01)+f_y(0,1)(0.05)
+=0+\pi(0.01)+1(0.05)
+</mrow><mrow>
+&amp;=0.01\,\pi + 0.05
+\approx 0.0814
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2009A</fromexam></title>
+<statement><p>
+Let <m>\displaystyle f(x,y)=\frac{x^2y}{x^4+2y^2}</m>.
+Find an approximate value for <m>f (-0.9\,,\, 1.1)</m>
+without using a calculator or computer.
+</p></statement>
+
+<answer><p>
+<m>0.3</m>
+</p></answer>
+
+<solution><p>
+We are going to need
+the first order derivatives of <m>f(x,y)</m> at <m>(x,y)=(-1,1)</m>.
+So we find them first.
+<md alignment="alignat">
+<mrow>
+f_x(x,y)&amp;=\frac{2xy}{x^4+2y^2}-\frac{x^2y(4x^3)}{{(x^4+2y^2)}^2}\qquad &amp;
+f_x(-1,1)&amp;=-\frac{2}{3} +\frac{4}{3^2}=-\frac{2}{9}
+</mrow><mrow>
+f_y(x,y)&amp;=\frac{x^2}{x^4+2y^2}-\frac{x^2y(4y)}{{(x^4+2y^2)}^2}\qquad &amp;
+f_y(-1,1)&amp;=\frac{1}{3} -\frac{4}{3^2}=-\frac{1}{9}
+</mrow>
+</md>
+</p>
+
+<p>The linear approximation to <m>f(x,y)</m> about <m>(-1,1)</m> is
+<md>
+<mrow>
+f(x,y)\approx=f(-1,1) + f_x(-1,1)\,(x+1) + f_y(-1,1)\,(y-1)
+ =\frac{1}{3} -\frac{2}{9}\,(x+1) -\frac{1}{9}\,(y-1)
+</mrow>
+</md>
+In particular
+<md>
+<mrow>
+f(-0.9,1.1)\approx \frac{1}{3} -\frac{2}{9}\,(0.1) -\frac{1}{9}\,(0.1)
+=\frac{27}{90}=0.3
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Four numbers, each at least zero and each at most 50, are rounded to
+the first decimal place and then multiplied together. Estimate the maximum
+possible error in the computed product.
+</p></statement>
+
+<hint><p>
+Let the four numbers be <m>x_1</m>, <m>x_2</m>, <m>x_3</m> and <m>x_4</m>.
+Let the four rounded numbers be <m>x_1+\veps_1</m>, <m>x_2+\veps_2</m>, <m>x_3+\veps_3</m>
+and <m>x_4+\veps_4</m>. If
+<m>P(x_1,x_2,x_3,x_4)=x_1x_2x_3x_4</m>, then the error in the product
+introduced by rounding is
+<m>\big|P(x_1+\veps_1,x_2+\veps_2,x_3+\veps_3,x_4+\veps_4)
+-P(x_1,x_2,x_3,x_4)\big|</m>.
+</p></hint>
+
+<answer><p>
+<m>25000</m>
+</p></answer>
+
+<solution><p>
+Let the four numbers be <m>x_1</m>, <m>x_2</m>, <m>x_3</m> and <m>x_4</m>.
+Let the four rounded numbers be <m>x_1+\veps_1</m>, <m>x_2+\veps_2</m>, <m>x_3+\veps_3</m>
+and <m>x_4+\veps_4</m>. Then <m>0\le x_1,x_2,x_3,x_4\le 50</m> and
+<m>|\veps_1|,|\veps_2|,|\veps_3|,|\veps_4|\le 0.05</m>. If
+<m>P(x_1,x_2,x_3,x_4)=x_1x_2x_3x_4</m>, then the error in the product
+introduced by rounding is, using the four variable variant of the
+linear approximation (<xref ref="eqn_lin_approx_3d"/>) of the CLP-3 text,
+<md>
+<mrow>
+&amp;\big|P(x_1+\veps_1,x_2+\veps_2,x_3+\veps_3,x_4+\veps_4)-P(x_1,x_2,x_3,x_4)\big|
+</mrow><mrow>
+&amp;\approx\big|\pdiff{P}{x_1}(x_1,x_2,x_3,x_4)\veps_1
++\pdiff{P}{x_2}(x_1,x_2,x_3,x_4)\veps_2
++\pdiff{P}{x_3}(x_1,x_2,x_3,x_4)\veps_3
++\pdiff{P}{x_4}(x_1,x_2,x_3,x_4)\veps_4\big|
+</mrow><mrow>
+&amp;=\big|x_2x_3x_4\veps_1
++x_1x_3x_4\veps_2
++x_1x_2x_4\veps_3
++x_1x_2x_3\veps_4\big|
+</mrow><mrow>
+&amp;\le 4\times 50\times 50\times 50\times 0.05
+=25000
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2005D</fromexam></title>
+<statement><p>
+One side of a right triangle is measured to be <m>3</m> with a maximum
+possible error of <m>\pm 0.1</m>, and the other side is measured to be
+<m>4</m> with a maximum possible error of <m>\pm 0.2</m>.
+Use the linear approximation to estimate the maximum possible error
+in calculating the length of the hypotenuse of the right triangle.
+</p></statement>
+
+<hint><p>
+Use Pythagoras to express the length of the hypotenuse
+in terms of the lengths of the other two sides.
+</p></hint>
+
+<answer><p>
+<m>0.22</m>
+</p></answer>
+
+<solution><p>
+Denote by <m>x</m> and <m>y</m> the lengths of sides with <m>x=3\pm 0.1</m>
+and <m>y=4\pm 0.2</m>. Then the length of the hypotenuse is
+<m>f(x,y)=\sqrt{x^2+y^2}</m>. Note that
+<md alignment="alignat">
+<mrow>
+f(x,y)&amp;=\sqrt{x^2+y^2} &amp;
+         f(3,4)&amp;=5
+</mrow><mrow>
+f_x(x,y)&amp;=\frac{x}{\sqrt{x^2+y^2}}\qquad &amp;
+         f_x(3,4)&amp;=\frac{3}{5}
+</mrow><mrow>
+f_y(x,y)&amp;=\frac{y}{\sqrt{x^2+y^2}} &amp;
+         f_y(3,4)&amp;=\frac{4}{5}
+</mrow>
+</md>
+By the linear approximation
+<md>
+<mrow>
+f(x,y)\approx f(3,4) + f_x(3,4)\,(x-3) + f_y(3,4)\,(y-4)
+      =5 +\frac{3}{5}\,(x-3)  +\frac{4}{5}\,(y-4)
+</mrow>
+</md>
+So the approximate maximum error in calculating the length of the hypotenuse
+is
+<md>
+<mrow>
+\frac{3}{5}\,(0.1)  +\frac{4}{5}\,(0.2)
+=\frac{1.1}{5} = 0.22
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2006A</fromexam></title>
+<statement><p>
+If two resistors of resistance <m>R_1</m> and <m>R_2</m> are wired in parallel,
+then the resulting resistance R satisfies the equation
+<m>\frac{1}{R} =\frac{1}{R_1}+\frac{1}{R_2}</m>. Use the linear
+approximation to estimate the change in <m>R</m> if <m>R_1</m> decreases from
+<m>2</m> to <m>1.9</m> ohms and <m>R_2</m> increases from 8 to 8.1 ohms.
+</p></statement>
+
+<answer><p>
+<m>-0.06</m>
+</p></answer>
+
+<solution><p>
+The function <m>R(R_1,R_2)</m> is defined implictly by
+<me>
+\frac{1}{R(R_1,R_2)} =\frac{1}{R_1}+\frac{1}{R_2}
+\tag{$*$}</me>
+In particular
+<me>
+\frac{1}{R(2,8)} = \frac{1}{2}+\frac{1}{8} = \frac{5}{8}
+\implies R(2,8) = \frac{8}{5}
+</me>
+</p>
+
+<p>We wish to use the linear approximation
+<me>
+R(R_1,R_2) \approx R(2,8) + \pdiff{R}{R_1}(2,8)\,(R_1-2)
+                          + \pdiff{R}{R_2}(2,8)\,(R_2-8)
+</me>
+To do so, we need the partial derivatives <m>\pdiff{R}{R_1}(2,8)</m>
+and <m>\pdiff{R}{R_2}(2,8)</m>. To find them, we differentiate <m>(*)</m> with respect to
+<m>R_1</m> and <m>R_2</m>:
+<md>
+<mrow>
+-\frac{1}{R(R_1,R_2)^2}\pdiff{R}{R_1}(R_1,R_2)
+                 &amp;= -\frac{1}{R_1^2}
+</mrow><mrow>
+-\frac{1}{R(R_1,R_2)^2}\pdiff{R}{R_2}(R_1,R_2)
+                 &amp;= -\frac{1}{R_2^2}
+</mrow><mrow>
+</mrow>
+</md>
+Setting <m>R_1=2</m> and <m>R_2=8</m> gives
+<md alignment="alignat">
+<mrow>
+-\frac{1}{(8/5)^2}\pdiff{R}{R_1}(2,8)
+                 &amp;= -\frac{1}{4} &amp;\quad\implies\quad &amp;
+         &amp;\pdiff{R}{R_1}(2,8) &amp;=\frac{16}{25}
+</mrow><mrow>
+-\frac{1}{(8/5)^2}\pdiff{R}{R_2}(2,8)
+                 &amp;= -\frac{1}{64}  &amp;\quad\implies\quad &amp;
+         &amp;\pdiff{R}{R_2}(2,8) &amp;=\frac{1}{25}
+</mrow>
+</md>
+So the specified change in <m>R</m> is
+<md>
+<mrow>
+R(1.9,8.1)-R(2,8) \approx  \frac{16}{25} (-0.1) + \frac{1}{25}(0.1)
+=-\frac{15}{250} = -0.06
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+The total resistance <m>R</m> of three resistors, <m>R_1</m>, <m>R_2</m>, <m>R_3</m>, connected
+in parallel is determined by
+<me>
+\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}
+</me>
+If the resistances, measured in Ohms, are <m>R_1=25\Om</m>, <m>R_2=40\Om</m> and
+<m>R_3=50\Om</m>, with a possible error of 0.5\% in each case, estimate the
+maximum error in the calculated value of <m>R</m>.
+</p></statement>
+
+<hint><p>
+Review the relationship between absolute error and percentage error
+given in Definition <xref ref="def_error"/> in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+<m>\frac{1}{17}\approx 0.059</m>
+</p>
+
+</answer>
+
+<solution><p>
+First, we compute the values of the partial derivatives of
+<m>R(R_1,R_2,R_3)</m> at the measured values of <m>R_1</m>, <m>R_2</m>, <m>R_3</m>. Applying
+<m>\pdiff{}{R_i}</m>, with <m>i=1,2,3</m> to both sides of
+the defining equation
+<me>
+\frac{1}{R(R_1,R_2,R_3)}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}
+</me>
+for <m>R(R_1,R_2,R_3)</m> gives
+<md>
+<mrow>
+-\frac{1}{R(R_1,R_2,R_3)^2}\ \pdiff{R}{R_1}(R_1,R_2,R_3)
+&amp;=-\frac{1}{R_1^2}
+</mrow><mrow>
+-\frac{1}{R(R_1,R_2,R_3)^2}\ \pdiff{R}{R_2}(R_1,R_2,R_3)
+&amp;=-\frac{1}{R_2^2}
+</mrow><mrow>
+-\frac{1}{R(R_1,R_2,R_3)^2}\ \pdiff{R}{R_3}(R_1,R_2,R_3)
+&amp;=-\frac{1}{R_3^2}
+</mrow>
+</md>
+When <m>R_1=25\Om</m>, <m>R_2=40\Om</m> and <m>R_3=50\Om</m>
+<me>
+\frac{1}{R(25,40,50)}=\frac{1}{25}+\frac{1}{40}+\frac{1}{50}
+=\frac{8+5+4}{200}\implies
+R(25,40,50)=\frac{200}{17}=11.765
+</me>
+Substituting in these values of <m>R_1</m>, <m>R_2</m>, <m>R_3</m> and <m>R</m>,
+<md alignment="alignat">
+<mrow>
+\pdiff{R}{R_1}(25,40,50)
+&amp;=\frac{R(25,40,50)^2}{25^2}&amp;=\frac{64}{17^2}&amp;=0.221
+</mrow><mrow>
+\pdiff{R}{R_2}(25,40,50)
+&amp;=\frac{R(25,40,50)^2}{40^2}&amp;=\frac{25}{17^2}&amp;=0.0865
+</mrow><mrow>
+\pdiff{R}{R_3}(25,40,50)
+&amp;=\frac{R(25,40,50)^2}{50^2}&amp;=\frac{16}{17^2}&amp;=0.0554
+</mrow>
+</md>
+If the absolute errors in measuring <m>R_1</m>, <m>R_2</m> and <m>R_3</m> are denoted
+<m>\veps_1</m>, <m>\veps_2</m> and <m>\veps_3</m>, respectively, then,
+, using the linear approximation (<xref ref="eqn_lin_approx_3d"/>)
+of the CLP-3 text, the corresponding error <m>E</m> in <m>R</m> is
+<md>
+<mrow>
+E &amp;= R(25+\veps_1,40+\veps_2,50+\veps_3)-R(25,40,50)
+</mrow><mrow>
+&amp;\approx \pdiff{R}{R_1}(25,40,50)\veps_1
+       +\pdiff{R}{R_2}(25,40,50)\veps_2
+       +\pdiff{R}{R_3}(25,40,50)\veps_3
+</mrow>
+</md>
+and obeys
+<md>
+<mrow>
+|E|&amp;\le \frac{64}{17^2}|\veps_1|+\frac{25}{17^2}|\veps_2|
+                +\frac{16}{17^2}|\veps_3|
+</mrow><mrow>
+\text{or}\quad|E|&amp;\le 0.221|\veps_1|+0.0865|\veps_2|+0.0554|\veps_3|
+</mrow>
+</md>
+We are told that the percentage error in each measurement is no more that
+<m>0.5\%</m>. So
+<me>
+|\veps_1|\le \frac{0.5}{100}25=\frac{1}{8}=0.125\qquad
+|\veps_2|\le \frac{0.5}{100}40=\frac{1}{5}=0.2\qquad
+|\veps_3|\le \frac{0.5}{100}50=\frac{1}{4}=0.25
+</me>
+so that
+<md>
+<mrow>
+|E|&amp;\le \frac{8}{17^2}+\frac{5}{17^2}+\frac{4}{17^2}
+=\frac{1}{17}
+</mrow><mrow>
+\text{or}\quad|E|&amp;\le 0.221\times0.125+0.0865\times0.2+0.0554\times0.25
+=0.059
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+The specific gravity <m>S</m> of an object is given by <m>\ S=\frac{A}{A-W}\ </m>
+where <m>A</m> is the weight of the object in air and <m>W</m> is the weight of the
+object in water. If <m>\ A=20\pm .01\ </m> and <m>\ W=12\pm.02\ </m> find the
+approximate percentage error in calculating <m>S</m> from the given measurements.
+</p></statement>
+
+<hint><p>
+Be very careful about signs. There is a trap hidden in this question.
+As an example of the trap, suppose you know that <m>|\veps_1|\le 0.2</m>
+and <m>|\veps_2|\le 0.1</m>. It does <em>not</em> follow from this
+that <m>\big|\veps_1-\veps_2|\le 0.2 -0.1 =0.1</m>. The reason is that
+it is possible to have <m>\veps_1=0.2</m> and <m>\veps_2=-0.1</m> and then
+<m>\veps_1-\veps_2=0.3</m>. The correct way to bound <m>\big|\veps_1-\veps_2|</m>
+is
+<me>
+\big|\veps_1-\veps_2| \le |\veps_1|+ |\veps_2|\le 0.2+0.1\le 0.3
+</me>
+</p></hint>
+
+<answer><p>
+<m>\frac{13}{40}\%=0.325\%</m>
+</p></answer>
+
+<solution><p>
+By the linear approximation
+<md>
+<mrow>
+\De S\approx \pdiff{S}{A}(20,12)\,\De A
++\pdiff{S}{W}(20,12)\,\De W
+</mrow>
+</md>
+with <m>S(A,W)=\frac{A}{A-W} =1+\frac{W}{A-W}</m>. So
+<md>
+<mrow>
+S(A,W)&amp;=\frac{A}{A-W} &amp; S(20,12)&amp;=\frac{20}{8}=\frac{5}{2}
+</mrow><mrow>
+S_A(A,W)&amp;=-\frac{W}{(A-W)^2} &amp; S_A(20,12)&amp;=-\frac{12}{8^2}=-\frac{3}{16}
+</mrow><mrow>
+S_W(A,W)&amp;=\frac{A}{(A-W)^2} &amp; S_W(20,12)&amp;=\frac{20}{8^2}=\frac{5}{16}
+</mrow>
+</md>
+For any given <m>\De A</m> and <m>\De W</m>, the percentage error is
+<me>
+\left|100\frac{\De S}{S}\right|
+=\left|100\frac{2}{5}\Big(-\frac{3}{16}\De A+\frac{5}{16}\De W\Big)\right|
+</me>
+We are told that <m>|\De A|\le 0.01</m> and <m>|\De W|\le 0.02</m>. To maximize
+<m>\big|100\frac{2}{5}\big(-\frac{3}{16}\De A+\frac{5}{16}\De W\big)\big|</m>
+take <m>\De A=- 0.01</m> and <m>\De W=+ 0.02</m>. So the maximum percentage error
+is
+<me>
+100\frac{2}{5}\left[-\frac{3}{16}(- 0.01)+\frac{5}{16}(0.02)\right]
+= \frac{2}{5}\times \frac{13}{16}
+=\frac{13}{40}=0.325\%
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2008D</fromexam></title>
+<statement><p>
+The pressure in a solid is given by
+<me>
+P(s,r) = sr(4s^2 - r^2 - 2)
+</me>
+where <m>s</m> is the specific heat and <m>r</m> is the density. We expect to measure
+<m>(s,r)</m> to be approximately <m>(2,2)</m> and would like to have the most
+accurate value for <m>P</m>.
+There are two different ways to measure <m>s</m> and <m>r</m>. Method <m>1</m>
+has an error in <m>s</m> of <m>\pm 0.01</m> and an error in <m>r</m> of <m>\pm 0.1</m>,
+while method 2 has an error of <m>\pm 0.02</m> for both <m>s</m> and <m>r</m>.
+</p>
+
+<p>Should we use method 1 or method 2? Explain your reasoning carefully.
+</p></statement>
+
+<answer><p>
+Method 1 is better.
+</p></answer>
+
+<solution><p>
+The linear approximation to <m>P(s,r)</m> at <m>(2,2)</m> is
+<md>
+<mrow>
+P(s,r)\approx P(2,2) +P_s(2,2)\,(s-2) + P_r(2,2)\,(r-2)
+</mrow>
+</md>
+As
+<md>
+<mrow>
+P(2,2) &amp;= (2)(2)\big[4(2)^2-(2)^2-2\big] = 40
+         \qquad\text{(which we don't actually need) }
+</mrow><mrow>
+P_s(2,2) &amp;= \Big[12s^2r-r^3-2r\Big]_{s=r=2} = 84
+</mrow><mrow>
+P_r(2,2) &amp;= \Big[4s^3-3sr^2-2s\Big]_{s=r=2} = 4
+</mrow>
+</md>
+the linear approximation is
+<md>
+<mrow>
+P(s,r)\approx 40 +84\,(s-2) + 4\,(r-2)
+</mrow>
+</md>
+Under method 1, the maximum error in <m>P</m> will have magnitude
+at most (approximately)
+<md>
+<mrow>
+84(0.01) + 4(0.1) = 1.24
+</mrow>
+</md>
+Under method 2, the maximum error in <m>P</m> will have magnitude
+at most (approximately)
+<md>
+<mrow>
+84(0.02) + 4(0.02) = 1.76
+</mrow>
+</md>
+Method 1 is better.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+A rectangular beam that is supported at its two ends and is subjected
+to a uniform load sags by an amount
+<me>
+S=C\frac{p\ell^4}{w h^3}
+</me>
+where <m>p={\rm load}</m>,
+      <m>\ell={\rm length}</m>,
+      <m>h={\rm height}</m>,
+      <m>w={\rm width}</m> and <m>C</m> is a constant.
+Suppose <m>p\approx 100</m>, <m>\ell\approx 4</m>, <m>w\approx .1</m> and <m>h\approx.2</m>.
+Will the sag of the beam be more sensitive to changes in the height of the
+beam or to changes in the width of the beam.
+</p></statement>
+
+<hint><p>
+Determine, approximately, the change in sag when the height changes by a small
+amount <m>\veps</m> and also when the width changes by a small amount <m>\veps</m>.
+Which is bigger?
+</p></hint>
+
+<answer><p>
+The sag will be more sensitive to changes in height.
+</p></answer>
+
+<solution><p>
+Using the four variable variant of the linear approximation
+(<xref ref="eqn_lin_approx_3d"/>) of the CLP-3 text,
+<me>
+\De S\approx \pdiff{S}{p}\De p
+       +\pdiff{S}{\ell}\De \ell
+       +\pdiff{S}{w}\De w
+       +\pdiff{S}{h}\De h
+   =C\frac{p\ell^4}{w h^3}\left[\frac{\De p}{p}+4\frac{\De\ell}{\ell}
+                -\frac{\De w}{w}-3\frac{\De h}{h}   \right]
+</me>
+When <m>w\approx0.1</m> and <m>h\approx0.2</m>,
+<me>
+\frac{\De w}{w}\approx 10\De w\qquad
+3\frac{\De h}{h}\approx 15\De h
+</me>
+So a change in height by <m>\De h=\veps</m> produces a change in sag of
+about <m>\De S = 15\veps</m> times <m>-C\frac{p\ell^4}{w h^3}</m>,
+while a change <m>\De w</m> in width by the same <m>\veps</m> produces a change in
+sag of about <m>\De S=10\veps</m> times the same <m>-C\frac{p\ell^4}{w h^3}</m>.
+The sag is more sensitive to <m>\De h</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2010D</fromexam></title>
+<statement><p>
+Let <m>z=f(x,y)=\frac{2y}{x^2+y^2}</m>.
+Find an approximate value for <m>f(-0.8,2.1)</m>.
+</p></statement>
+
+<answer><p>
+<m>0.84</m>
+</p></answer>
+
+<solution><p>
+The first order partial derivatives of <m>f</m> are
+<md alignment="alignat">
+<mrow>
+f_x(x,y) &amp; = -\frac{4xy}{{(x^2+y^2)}^2}\quad &amp;
+      f_x(-1,2) &amp; = \frac{8}{25}
+</mrow><mrow>
+f_y(x,y) &amp; = \frac{2}{x^2+y^2}-\frac{4y^2}{{(x^2+y^2)}^2}\quad &amp;
+      f_y(-1,2) &amp; = \frac{2}{5}-\frac{16}{25}
+                  =-\frac{6}{25}
+</mrow><mrow>
+</mrow>
+</md>
+The linear approximation of <m>f(x,y)</m> about <m>(-1,2)</m> is
+<md>
+<mrow>
+f(x,y)&amp;\approx f(-1,2) + f_x(-1,2)\,(x+1) + f_y(-1,2)\,(y-2)
+</mrow><mrow>
+      &amp;=\frac{4}{5} +\frac{8}{25}\,(x+1) - \frac{6}{25}\,(y-2)
+</mrow>
+</md>
+In particular, for <m>x=-0.8</m> and <m>y=2.1</m>,
+<md>
+<mrow>
+f(-0.8,2.1)&amp;\approx \frac{4}{5} +\frac{8}{25}\,(0.2) - \frac{6}{25}\,(0.1)
+</mrow><mrow>
+           &amp;=0.84
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2012D</fromexam></title>
+<statement><p>
+Suppose that a function <m>z = f (x, y)</m> is implicitly defined by an equation:
+<me>
+         xyz + x + y^2 + z^3 = 0
+</me>
+<ol label="a">
+<li>
+Find <m>\pdiff{z}{x}</m>.
+</li>
+<li>
+If <m>f(-1, 1)  \lt  0</m>, find the linear approximation of the function
+<m>z = f (x, y)</m> at <m>(-1, 1)</m>.
+</li>
+<li>
+If <m>f(-1, 1)  \lt  0</m>, use the linear approximation in (b) to approximate <m>f(-1.02, 0.97)</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>f_x(x,y) = -\frac{y\,f(x,y) +1}{3f(x,y)^2 +xy}</m></p><p>
+(b) <m>f(x,y) \approx  -1 -\frac{3}{2} (y-1)</m></p><p>
+(c) <m>-0.955</m>
+</p></answer>
+
+<solution><p>
+(a) The function <m>f(x,y)</m> obeys
+<me>
+xy\,f(x,y) + x + y^2 + f(x,y)^3 =0
+\tag{$*$}</me>
+for all <m>x</m> and <m>y</m> (sufficiently close to <m>(-1,1)</m>).
+Differentiating <m>(*)</m> with respect to <m>x</m> gives
+<md>
+<mrow>
+y\,f(x,y) +xy\,f_x(x,y) +  1  + 3f(x,y)^2 f_x(x,y) = 0
+\implies
+f_x(x,y) = -\frac{y\,f(x,y) +1}{3f(x,y)^2 +xy}
+</mrow>
+</md>
+Without knowing <m>f(x,y)</m> explicitly, there's not much that we can do with this.
+</p>
+
+<p>(b) <m>f(-1,1)</m> obeys
+<me>
+(-1)(1)\,f(-1,1) + (-1) + (1)^2 + f(-1,1)^3 =0
+\iff f(-1,1)^3 -f(-1,1) =0
+</me>
+Since <m>f(-1, 1)  \lt  0</m> we may divide this equation by <m>f(-1, 1)  \lt  0</m>,
+giving <m>f(-1,1)^2 - 1=0</m>. Since <m>f(-1, 1)  \lt  0</m>, we must have <m>f(-1, 1)=-1</m>.
+By part (a)
+<md>
+<mrow>
+f_x(-1, 1) = -\frac{(1)\,f(-1, 1) +1}{3f(-1, 1)^2 +(-1)(1)}
+           = 0
+</mrow>
+</md>
+To get the linear approximation, we still need <m>f_y(-1,1)</m>.
+Differentiating <m>(*)</m> with respect to <m>y</m> gives
+<me>
+x\,f(x,y) + xy\,f_y(x,y)  + 2y + 3f(x,y)^2 f_y(x,y) =0
+</me>
+Then setting <m>x=-1</m>, <m>y=1</m> and <m>f(-1,1)=-1</m> gives
+<me>
+(-1)\,(-1) + (-1)(1)\,f_y(-1,1)  + 2(1) + 3(-1)^2 f_y(-1,1) =0
+\implies f_y(-1,1) =-\frac{3}{2}
+</me>
+So the linear approximation is
+<me>
+f(x,y) \approx f(-1,1) + f_x(-1,1)\,(x+1) + f_y(-1,1)\,(y-1)
+           = -1 -\frac{3}{2} (y-1)
+</me>
+</p>
+
+<p>(c) By part (b),
+<md>
+<mrow>
+f(-1.02,0.97) \approx  -1 -\frac{3}{2} (0.97-1) =-0.955
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2014D</fromexam></title>
+<statement><p>
+Let <m>z = f(x,y)</m> be given implicitly by
+<me>
+  e^z + yz = x + y.
+</me>
+</p>
+
+<p><ol label="a">
+<li>
+Find the differential <m>\dee{z}</m>.
+</li>
+<li>
+Use linear approximation at the point <m>(1,0)</m> to approximate <m>f(0.99,0.01)</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) The differential at <m>x=a</m>, <m>y=b</m> is
+<m>
+\frac{\dee{x}}{e^{f(a,b)}+b} + \frac{1-f(a,b)}{e^{f(a,b)}+b} \,\dee{y}
+</m>
+</p><p>
+(b) <m>f\big(0.99\,,\,0.01\big) \approx 0</m>
+</p></answer>
+
+<solution><p>
+By definition, the differential at <m>x=a</m>, <m>y=b</m> is
+<me>
+f_x(a,b)\,\dee{x} + f_y(a,b)\,\dee{y}
+</me>
+so we have to determine the partial derivatives <m>f_x(a,b)</m> and <m>f_y(a,b)</m>.
+We are told that
+<me>
+e^{f(x,y)} + y\,f(x,y) = x + y
+</me>
+for all <m>x</m> and <m>y</m>.
+Differentiating this equation with respect to <m>x</m>
+and with respect to <m>y</m> gives, by the chain rule,
+<md>
+<mrow>
+e^{f(x,y)}f_x(x,y) + y\,f_x(x,y) = 1
+</mrow><mrow>
+e^{f(x,y)}f_y(x,y) + f(x,y) +y\,f_y(x,y) = 1
+</mrow>
+</md>
+Solving the first equation for <m>f_x</m> and the second for <m>f_y</m> gives
+<md>
+<mrow>
+f_x(x,y) &amp;=  \frac{1}{e^{f(x,y)}+y}
+</mrow><mrow>
+f_y(x,y) &amp;= \frac{1-f(x,y)}{e^{f(x,y)}+y}
+</mrow>
+</md>
+So the differential at <m>x=a</m>, <m>y=b</m> is
+<me>
+\frac{\dee{x}}{e^{f(a,b)}+b} + \frac{1-f(a,b)}{e^{f(a,b)}+b} \,\dee{y}
+</me>
+Since we can't solve explicitly for <m>f(a,b)</m> for general <m>a</m> and <m>b</m>.
+There's not much more that we can do with this.
+</p>
+
+<p>(b) In particular, when <m>a=1</m> and <m>b=0</m>, we have
+<me>
+e^{f(1,0)} + 0\,f(1,0) = 1 + 0
+\implies
+e^{f(1,0)}  = 1
+\implies
+f(1,0)=0
+</me>
+and the linear approximation simpifies to
+<me>
+f\big(1+\dee{x}\,,\,\dee{y}\big)
+  \approx f(1,0) + \frac{\dee{x}}{e^{f(1,0)}+0}
+        + \frac{1-f(1,0)}{e^{f(1,0)}+0}   \,\dee{y}
+  = \dee{x} +\dee{y}
+</me>
+Choosing <m>\dee{x} = -0.01</m> and <m>\dee{y} = 0.01</m>, we have
+<me>
+f\big(0.99\,,\,0.01\big)
+  \approx  -0.01 + 0.01
+  =0
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2004A</fromexam></title>
+<statement><p>
+Two sides and the enclosed angle of a triangle are measured to be
+<m>3\pm.1</m>m, <m>4\pm.1</m>m and <m>90\pm 1^\circ</m> respectively. The length of the
+third side is then computed using the cosine law <m>C^2=A^2+B^2-2AB\cos\theta</m>.
+What is the approximate maximum error in the computed value of <m>C</m>?
+</p></statement>
+
+<hint><p>
+<m>1^\circ = \frac{\pi}{180}</m> radians
+</p></hint>
+
+<answer><p>
+<m>\frac{\pi}{75}+0.14\approx 0.182</m>
+</p></answer>
+
+<solution><p>
+Let <m>C(A,B,\theta)=\sqrt{A^2+B^2-2AB\cos\theta}</m>. Then
+<m>C\big(3,4,\frac{\pi}{2}\big)=5</m>. Differentiating
+<m>C^2=A^2+B^2-2AB\cos\theta</m> gives
+<md alignment="alignat">
+<mrow>
+2C\frac{\partial C}{\partial A}(A,B,\theta)&amp;=2A-2B\cos\theta &amp;\quad&amp;\implies\quad &amp;
+10\frac{\partial C}{\partial A}\big(3,4,\tfrac{\pi}{2}\big)&amp;=6\cr
+2C\frac{\partial C}{\partial B}(A,B,\theta)&amp;=2B-2A\cos\theta &amp;  &amp;\implies &amp;
+10\frac{\partial C}{\partial B}\big(3,4,\tfrac{\pi}{2}\big)&amp;=8\cr
+2C\frac{\partial C}{\partial \theta}(A,B,\theta)&amp;=2AB\sin\theta &amp;  &amp;\implies &amp;
+10\frac{\partial C}{\partial \theta}\big(3,4,\tfrac{\pi}{2}\big)&amp;=24\cr
+</mrow>
+</md>
+Hence the approximate maximum error in the computed value of <m>C</m> is
+<md>
+<mrow>
+|\De C|&amp;\approx \left|
+\frac{\partial C}{\partial A}\big(3,4,\tfrac{\pi}{2}\big)\De A
++\frac{\partial C}{\partial B}\big(3,4,\tfrac{\pi}{2}\big)\De B
++\frac{\partial C}{\partial \theta}\big(3,4,\tfrac{\pi}{2}\big)\De\theta\right|
+</mrow><mrow>
+&amp;\le(0.6)(0.1)+(0.8)(0.1)+(2.4)\frac{\pi}{180}\cr
+&amp;=\frac{\pi}{75}+0.14\le 0.182
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2003D</fromexam></title>
+<statement><p>
+Use differentials to find a reasonable approximation to the
+value of <m>f(x,y)=xy\sqrt{x^2+y^2}</m> at <m>x=3.02</m>, <m>y=3.96</m>. Note that
+<m>3.02\approx 3</m> and <m>3.96\approx 4</m>.
+</p></statement>
+
+<answer><p>
+<m>59.560</m>
+</p></answer>
+
+<solution><p>
+Substituting <m>(x_0,y_0)=(3,4)</m> and <m>(x,y)=(3.02,3.96)</m> into
+<me>
+f(x,y)\approx f(x_0,y_0)+f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)
+</me>
+gives
+<md>
+<mrow>
+f(3.02,3.96)&amp;\approx f(3,4)+0.02f_x(3,4)-0.04f_y(3,4)
+</mrow><mrow>
+&amp;=60+0.02\left(20+\frac{36}{5}\right)-0.04\left(15+\frac{48}{5}\right)
+</mrow><mrow>
+&amp;=59.560
+</mrow>
+</md>
+since
+<me>
+f_x(x,y)=y\sqrt{x^2+y^2}+\frac{x^2y}{\sqrt{x^2+y^2}}\qquad
+f_y(x,y)=x\sqrt{x^2+y^2}+\frac{xy^2}{\sqrt{x^2+y^2}}
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2000D</fromexam></title>
+<statement><p>
+Use differentials to estimate the volume of metal in a closed
+metal can with diameter 8cm and height 12cm if the metal is 0.04cm thick.
+</p></statement>
+
+<answer><p>
+<m>\pi\times 128\times 0.04=
+5.12\pi\approx 16.1</m>cc
+</p></answer>
+
+<solution><p>
+The volume of a cylinder of diameter <m>d</m> and height <m>h</m>
+is <m>V(d,h)=\pi\big(\frac{d}{2}\big)^2h</m>. The wording of the question is
+a bit ambiguous in that it does not specify if the given dimensions are
+inside dimensions or outside dimensions. Assume that they are outside
+dimensions. Then the volume of the can, including the metal, is <m>V(8,12)</m>
+and the volume of the interior, excluding the metal, is
+<md>
+<mrow>
+V(8-2\times0.04\,,\,12-2\times 0.04)
+&amp;\approx  V(8,12)
++V_d(8,12)(-2\times 0.04)
++V_h(8,12)(-2\times 0.04)
+</mrow><mrow>
+&amp;=V(8,12)
++\frac{1}{2}\pi\times 8\times 12\times(-2\times 0.04)
++\pi\left(\frac{8}{2}\right)^2\!\!(-2\times 0.04)
+</mrow><mrow>
+&amp;=V(8,12)
+-\pi\times 128\times 0.04
+</mrow>
+</md>
+So the volume of metal is approximately <m>\pi\times 128\times 0.04=
+5.12\pi\approx 16.1</m>cc. (To this level of approximation, it doesn't matter
+whether the dimensions are inside or outside dimensions.)
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2000A</fromexam></title>
+<statement><p>
+Let <m>z</m> be a function of <m>x</m>, <m>y</m> such that
+<me>
+z^3 - z + 2xy - y^2 = 0,\qquad z(2, 4) = 1.
+</me>
+<ol label="a">
+<li>
+Find the linear approximation to <m>z</m> at the point <m>(2, 4)</m>.
+</li>
+<li>
+Use your answer in (a) to estimate the value of <m>z</m> at
+<m>(2.02, 3.96)</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>z(x,y)\approx 1-4x+2y</m>
+</p><p>
+(b) <m>0.84</m>
+</p></answer>
+
+<solution><p>
+(a) The function <m>z(x,y)</m> obeys
+<me>
+z(x,y)^3-z(x,y)+2xy-y^2=0
+</me>
+for all <m>(x,y)</m> near <m>(2,4)</m>. Differentiating with respect to <m>x</m> and <m>y</m>
+<md>
+<mrow>
+3z(x,y)^2\pdiff{z}{x}(x,y)
+       -\pdiff{z}{x}(x,y)+2y&amp;=0
+</mrow><mrow>
+3z(x,y)^2\pdiff{z}{y}(x,y)
+       -\pdiff{z}{y}(x,y)+2x-2y&amp;=0
+</mrow>
+</md>
+Substituting in <m>x=2</m>, <m>y=4</m> and <m>z(2,4)=1</m> gives
+<md alignment="alignat">
+<mrow>
+3\pdiff{z}{x}(2,4)
+       -\pdiff{z}{x}(2,4)+8&amp;=0 &amp;  &amp;\iff &amp;
+    \pdiff{z}{x}(2,4) &amp; = -4
+</mrow><mrow>
+3\pdiff{z}{y}(2,4)
+       -\pdiff{z}{y}(2,4)+4-8&amp;=0 &amp;  &amp;\iff &amp;
+    \pdiff{z}{y}(2,4) &amp; = 2
+</mrow>
+</md>
+The linear approximation is
+<md>
+<mrow>
+z(x,y)&amp;\approx z(2,4)+z_x(2,4)(x-2)+z_y(2,4)(y-4)= 1-4(x-2)+2(y-4)
+</mrow><mrow>
+&amp;=1-4x+2y
+</mrow>
+</md>
+</p>
+
+<p>(b) Substituting in <m>x=2.02</m> and <m>y=3.96</m> gives
+<md>
+<mrow>
+z(2.02,3.96)\approx 1-4\times0.02+2\times(-0.04)
+=0.84
+</mrow>
+</md>
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise><title><fromexam>M200 2006D</fromexam></title>
+<statement><p>
+Consider the surface given by:
+<me>
+z^3 - xyz^2 - 4x = 0.
+</me>
+<ol label="a">
+<li>
+Find expressions for <m>\pdiff{z}{x}</m>, <m>\pdiff{z}{y}</m> as functions of <m>x</m>, <m>y</m>,
+<m>z</m>.
+</li>
+<li>
+Evaluate <m>\pdiff{z}{x}</m>, <m>\pdiff{z}{y}</m> at <m>(1, 1, 2)</m>.
+</li>
+<li>
+Measurements are made with errors, so that <m>x = 1 \pm 0.03</m> and
+<m>y = 1 \pm 0.02</m>.
+Find the corresponding maximum error in measuring <m>z</m>.
+</li>
+<li>
+A particle moves over the surface along the path whose projection in the
+<m>xy</m>--plane is given in terms of the angle <m>\theta</m> as
+<me>
+x(\theta) = 1 + \cos\theta,\ y(\theta) = \sin\theta
+</me>
+from the point <m>A : x = 2,\ y = 0</m> to the point <m>B : x = 1,\ y = 1</m>.
+Find <m>\diff{z}{\theta}</m> at points <m>A</m> and <m>B</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\pdiff{z}{x} = \frac{4+yz^2}{3z^2-2xyz}</m>,
+    <m>\pdiff{z}{x} = \frac{xz^2}{3z^2-2xyz}</m></p><p>
+(b) <m>\pdiff{z}{x}(1,1) = 1</m>,
+    <m>\pdiff{z}{y}(1,1) = \frac{1}{2}</m></p><p>
+(c) <m>\pm 0.04</m></p><p>
+</p>
+
+<p>(d) At <m>A</m>, <m> \diff{z}{\theta} =\frac{2}{3}</m>.</p><p>
+At <m>B</m>, <m>\diff{z}{\theta}  = -1</m>.
+</p></answer>
+
+<solution><p>
+(a)  We are told that
+<me>
+z(x,y)^3 - xy\,z(x,y)^2 - 4x = 0
+</me>
+for all <m>(x,y)</m> (sufficiently near <m>(1,1)</m>).
+Differentiating this equation with respect to <m>x</m> gives
+<md>
+<mrow>
+&amp; 3z(x,y)^2\,\pdiff{z}{x}(x,y) -y\, z(x,y)^2 -2xy\,z(x,y)\pdiff{z}{x}(x,y) - 4=0
+</mrow><mrow> \implies
+&amp;\pdiff{z}{x} = \frac{4+yz^2}{3z^2-2xyz}
+</mrow>
+</md>
+and differentiating with respect to <m>y</m> gives
+<md>
+<mrow>
+&amp; 3z(x,y)^2\,\pdiff{z}{y}(x,y) -x\, z(x,y)^2 -2xy\,z(x,y)\pdiff{z}{y}(x,y) =0
+</mrow><mrow> \implies
+&amp;\pdiff{z}{y} = \frac{xz^2}{3z^2-2xyz}
+</mrow>
+</md>
+</p>
+
+<p>(b)
+When <m>(x,y,z)=(1,1,2)</m>,
+<md>
+<mrow>
+\pdiff{z}{x}(1,1) = \frac{4+(1)(2)^2}{3(2)^2-2(1)(1)(2)} = 1\qquad
+\pdiff{z}{y}(1,1) = \frac{(1)(2)^2}{3(2)^2-2(1)(1)(2)} = \frac{1}{2}
+</mrow>
+</md>
+</p>
+
+<p>(c) Under the linear approximation at <m>(1,1)</m>
+<me>
+z(x,y) \approx z(1,1) + z_x(1,1)\,(x-1) + z_y\,(1,1)\,(y-1)
+        = 2 + (x-1) +\frac{1}{2}(y-1)
+</me>
+So errors of <m>\pm 0.03</m> in <m>x</m> and <m>\pm 0.02</m> in <m>y</m> leads of errors
+of about
+<me>
+\pm\left[0.03 + \frac{1}{2}(0.02)\right]
+=\pm 0.04
+</me>
+in <m>z</m>.
+</p>
+
+<p>(d) By the chain rule
+<md>
+<mrow>
+\diff{}{\theta} z\big(x(\theta),y(\theta)\big)
+&amp;= z_x\big(x(\theta),y(\theta)\big)\,x'(\theta)
+  +z_y\big(x(\theta),y(\theta)\big)\,y'(\theta)
+</mrow><mrow>
+&amp;=-z_x\big(1 + \cos\theta,\sin\theta\big)\,\sin\theta
+  +z_y\big(1 + \cos\theta,\sin\theta\big)\,\cos\theta
+</mrow>
+</md>
+At <m>A</m>, <m>x=2</m>, <m>y=0</m>, <m>z=2</m> (since <m>z^3-(2)(0)z^2-4(2)=0</m>) and <m>\theta=0</m>,
+so that
+<md>
+<mrow>
+\pdiff{z}{x}(2,0) = \frac{4+(0)(2)^2}{3(2)^2-2(2)(0)(2)} = \frac{1}{3}\qquad
+\pdiff{z}{y}(2,0) = \frac{(2)(2)^2}{3(2)^2-2(2)(0)(2)} = \frac{2}{3}
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\diff{z}{\theta}
+&amp;=-\frac{1}{3}\sin(0) +\frac{2}{3}\cos(0) =\frac{2}{3}
+</mrow>
+</md>
+</p>
+
+<p>At <m>B</m>, <m>x=1</m>, <m>y=1</m>, <m>z=2</m> and <m>\theta=\frac{\pi}{2}</m>,
+so that, by part (b),
+<md>
+<mrow>
+\pdiff{z}{x}(1,1) = 1\qquad
+\pdiff{z}{y}(1,1) = \frac{1}{2}
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\diff{z}{\theta}
+&amp;=-\sin\frac{\pi}{2} +\frac{1}{2}\cos\frac{\pi}{2} = -1
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2007A</fromexam></title>
+<statement><p>
+Consider the function <m>f</m> that maps each point <m>(x, y)</m> in <m>\bbbr^2</m>
+to <m>ye^{-x}</m>.
+<ol label="a">
+<li>
+ Suppose that <m>x = 1</m> and <m>y = e</m>, but errors of size <m>0.1</m> are
+made in measuring each of <m>x</m> and <m>y</m>. Estimate the maximum error
+that this could cause in <m>f(x,y)</m>.
+</li>
+<li>
+ The graph of the function <m>f</m> sits in <m>\bbbr^3</m> , and the point <m>(1, e, 1)</m>
+lies on that graph. Find a nonzero vector that is perpendicular to that
+graph at that point.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+ (a) <m>\frac{1+e^{-1}}{10}</m></p><p>
+ (b) any nonzero constant times <m>\llt -1\,,\,e^{-1}\,,\,-1\rgt</m>
+</p></answer>
+
+<solution><p>
+We are going to need the first order partial derivatives of
+<m>f(x,y)=ye^{-x}</m> at <m>(x,y)=(1,e)</m>. Here they are.
+<md>
+<mrow>
+f_x(x,y)&amp;= -ye^{-x} &amp; f_x(1,e)&amp;=-e\,e^{-1}=-1
+</mrow><mrow>
+f_y(x,y)&amp;=e^{-x}    &amp; f_y(1,e)&amp;= e^{-1}
+</mrow>
+</md>
+</p>
+
+<p>(a) The linear approximation to <m>f(x,y)</m> at <m>(x,y)=(1,e)</m> is
+<md>
+<mrow>
+f(x,y) \approx f(1,e) + f_x(1,e)\,(x-1) +f_y(1,e)\,(y-e)
+       = 1 -(x-1) +e^{-1}(y-e)
+</mrow>
+</md>
+The maximum error is then approximately
+<md>
+<mrow>
+-1(-0.1) +e^{-1}(0.1) =\frac{1+e^{-1}}{10}
+</mrow>
+</md>
+</p>
+
+<p>(b) The equation of the graph is <m>g(x,y,z) = f(x,y) -z =0</m>.
+Any vector that is a nonzero constant times
+<md>
+<mrow>
+\vnabla g(1,e,1) =\llt f_x(1,e)\,,\,f_y(1,e)\,,\,-1\rgt
+                 =\llt -1\,,\,e^{-1}\,,\,-1\rgt
+</mrow>
+</md>
+is perpendicular to <m>g=0</m> at <m>(1,e,1)</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2009D</fromexam></title>
+<statement><p>
+A surface is defined implicitly by <m>z^4 - xy^2 z^2 + y = 0</m>.
+<ol label="a">
+<li>
+Compute <m>\pdiff{z}{x}</m>, <m>\pdiff{z}{y}</m> in terms of <m>x</m>, <m>y</m>, <m>z</m>.
+</li>
+<li>
+Evaluate <m>\pdiff{z}{x}</m> and <m>\pdiff{z}{y}</m> at <m>(x, y, z) = (2, -1/2, 1)</m>.
+</li>
+<li>
+If <m>x</m> decreases from <m>2</m> to <m>1.94</m>, and
+   <m>y</m> increases from <m>-0.5</m> to <m>-0.4</m>,
+find the approximate change in <m>z</m> from <m>1</m>.
+</li>
+<li>
+Find the equation of the tangent plane to the surface at the point
+<m>(2, -1/2, 1)</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\pdiff{z}{x} = \frac{y^2 z^2}{4z^3-2xy^2z}</m>,
+    <m>\pdiff{z}{y} = \frac{2xy\, z^2-1}{4z^3-2xy^2 z}</m>
+</p>
+
+<p>(b)
+<m>
+\pdiff{z}{x}(2,-1/2) =\frac{1}{12}
+</m>,
+<m>
+\pdiff{z}{y}(2,-1/2) =-1
+</m>
+</p>
+
+<p>(c) <m>f(1.94,-0.4) - 1  \approx -0.105</m>
+</p>
+
+<p>(d)  <m>\frac{x}{12} -y -z = -\frac{1}{3}</m>
+</p></answer>
+
+<solution><p>
+(a)
+We are told that for all <m>x,y</m> (with <m>(x,y,z)</m> near <m>(2,-1/2,1)</m>),
+the function <m>z(x,y)</m> obeys
+<md>
+<mrow>
+z(x,y)^4 -xy^2 z(x,y)^2 +y=0
+\tag{$*$}</mrow>
+</md>
+Differentiating <m>(*)</m> with respect to <m>x</m> gives
+<md>
+<mrow>
+&amp;4z(x,y)^3\pdiff{z}{x}(x,y) - y^2z(x,y)^2 -2xy^2z(x,y)\pdiff{z}{x}(x,y) =0
+</mrow><mrow>
+&amp;\implies
+\pdiff{z}{x}(x,y) = \frac{y^2 z(x,y)^2}{4z(x,y)^3-2xy^2z(x,y)}
+</mrow>
+</md>
+Similarly, differentiating this equation with respect to <m>x</m> gives
+<md>
+<mrow>
+&amp;4z(x,y)^3\pdiff{z}{y}(x,y) - 2xy\,z(x,y)^2 -2xy^2z(x,y)\pdiff{z}{y}(x,y) +1=0
+</mrow><mrow>
+&amp;\implies
+\pdiff{z}{y}(x,y) = \frac{2xy\, z(x,y)^2-1}{4z(x,y)^3-2xy^2z(x,y)}
+</mrow>
+</md>
+</p>
+
+<p>(b) Substituting <m>(x, y, z) = (2, -1/2, 1)</m> into the results of part (a)
+gives
+<md>
+<mrow>
+\pdiff{z}{x}(2,-1/2) &amp;= \frac{1/4}{4-1} =\frac{1}{12}
+</mrow><mrow>
+\pdiff{z}{y}(2,-1/2) &amp;= \frac{-2-1}{4-1}=-1
+</mrow>
+</md>
+</p>
+
+<p>(c) Under the linear approximation about <m>(2,-1/2)</m>,
+<md>
+<mrow>
+f(x,y) &amp;\approx f(2,-1/2) + f_x(2,-1/2)\,(x-2) + f_y(2,-1/2)\,(y+1/2)
+</mrow><mrow>
+       &amp;= 1 +\frac{1}{12}(x-2) - (y+0.5)
+</mrow>
+</md>
+In particular
+<md>
+<mrow>
+f(1.94,-0.4) \approx 1 -\frac{0.06}{12}-0.1
+</mrow>
+</md>
+so that
+<md>
+<mrow>
+f(1.94,-0.4) - 1  \approx -0.105
+</mrow>
+</md>
+</p>
+
+<p>(d) The tangent plane is
+<md>
+<mrow>
+z&amp;=f(2,-1/2) + f_x(2,-1/2)\,(x-2) + f_y(2,-1/2)\,(y+1/2)
+</mrow><mrow>
+ &amp;= 1 +\frac{1}{12}(x-2) - (y+0.5)
+</mrow>
+</md>
+or
+<md>
+<mrow>
+\frac{x}{12} -y -z = -\frac{1}{3}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2010A</fromexam></title>
+<statement><p>
+A surface <m>z = f (x, y)</m> has derivatives <m>\pdiff{f}{x}=3</m> and
+<m>\pdiff{f}{y}=-2</m> at <m>(x, y, z) = (1, 3, 1)</m>.
+<ol label="a">
+<li>
+If <m>x</m> increases from <m>1</m> to <m>1.2</m>, and <m>y</m> decreases from <m>3</m> to <m>2.6</m>,
+find the change in <m>z</m> using a linear approximation.
+</li>
+<li>
+Find the equation of the tangent plane to the surface at the point <m>(1, 3, 1)</m>.
+</li>
+</ol>
+</p>
+
+</statement>
+
+<answer><p>
+(a) <m>1.4</m></p><p>
+(b) <m>3x-2y-z = -4</m>
+</p></answer>
+
+<solution><p>
+(a) The linear approximation to <m>f(x,y)</m> at <m>(1,3)</m> is
+<md>
+<mrow>
+f(x,y) \approx f(1,3) + f_x(1,3)\,(x-1) +f_y(1,3)\,(y-3)
+      = 1 + 3(x-1) -2(y-3)
+</mrow>
+</md>
+So the change is <m>z</m> is approximately
+<md>
+<mrow>
+3(1.2-1) -2(2.6-3)
+= 1.4
+</mrow>
+</md>
+</p>
+
+<p>(b) The equation of the tangent plane is
+<md>
+<mrow>
+z = f(1,3) + f_x(1,3)\,(x-1) +f_y(1,3)\,(y-3) = 1 + 3(x-1) -2(y-3)
+</mrow>
+</md>
+or
+<me>
+3x-2y-z = -4
+</me>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2011A</fromexam></title>
+<statement><p>
+According to van der Waal's equation, a gas satisfies the equation
+<me>
+(pV^2 + 16)(V - 1) = T V^2 ,
+</me>
+where <m>p</m>, <m>V</m> and <m>T</m> denote pressure, volume and temperature respectively.
+Suppose the gas is now at pressure <m>1</m>, volume <m>2</m> and temperature <m>5</m>. Find the
+approximate change in its volume if <m>p</m> is increased by <m>0.2</m> and <m>T</m> is increased by <m>0.3</m>.
+</p></statement>
+
+<answer><p>
+<m>0.1</m>
+</p></answer>
+
+<solution><p>
+Think of the volume as being the function <m>V(p,T)</m> of pressure and temperature
+that is determined implicitly (at least for <m>p\approx 1</m>, <m>T\approx 5</m> and <m>V\approx 2</m>) by the equation
+<me>
+\big(pV(p,T)^2 + 16\big)\big(V(p,T) - 1\big) = T V(p,T)^2
+\tag{$*$}</me>
+To determine the approximate change in <m>V</m>, we will use the linear
+approximation to <m>V(p,T)</m> at <m>p=1</m>, <m>T=5</m>. So we will need the
+partial derivatives <m>V_p(1,5)</m> and <m>V_T(1,5)</m>. As the equation <m>(*)</m>
+is valid for all <m>p</m> near <m>1</m> and <m>T</m> near 5, we may differentiate <m>(*)</m>
+with respect to <m>p</m>, giving
+<md>
+<mrow>
+&amp;\big(V^2 +2 pV V_p\big)\big(V - 1\big)
++ \big(pV ^2 + 16\big)V_p = 2T V V_p
+</mrow>
+</md>
+and we may also differentiate <m>(*)</m> with respect to <m>T</m>, giving
+<md>
+<mrow>
+&amp;\big(2 pV V_T\big)\big(V - 1\big) + \big(pV ^2 + 16\big)V_T = V^2 + 2T V V_T
+</mrow>
+</md>
+In particular, when <m>p=1</m>, <m>V=2</m>, <m>T=5</m>,
+<md alignment="alignat">
+<mrow>
+\big(4 +4 V_p(1,5)\big)\big(2 - 1\big)
++ \big(4 + 16\big)V_p(1,5) &amp;= 20 V_p(1,5)
+&amp;\quad\implies
+V_p(1,5)&amp;=-1
+</mrow><mrow>
+4 V_T(1,5)\big(2 - 1\big) + \big(4 + 16\big)V_T(1,5) &amp;= 4 + 20 V_T(1,5)
+&amp;\quad\implies
+V_T(1,5)&amp;=1
+</mrow>
+</md>
+so that the change in <m>V</m> is
+<md>
+<mrow>
+V(1.2\,,\,5.3)-V(1,5) \approx  V_p(1,5)\,(0.2) + V_T(1,5)\,(0.3)
+                        = -0.2+0.3
+                        = 0.1
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2011D</fromexam></title>
+<statement><p>
+Consider the function <m>f(x, y) = e^{-x^2 +4y^2}</m>.
+<ol label="a">
+<li>
+Find the equation of the tangent plane to the graph <m>z = f (x,y)</m> at the
+point where <m>(x, y) = (2, 1)</m>.
+</li>
+<li>
+Find the tangent plane approximation to the value of <m>f(1.99, 1.01)</m> using the
+tangent plane from part (a).
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>z=1-4x+8y</m></p><p>
+(b) <m>1.12</m>
+</p></answer>
+
+<solution><p>
+Since
+<md>
+<mrow>
+f_x(2,1) &amp; = -2x e^{-x^2 +4y^2}\Big|_{(x,y)=(2,1)} = -4
+</mrow><mrow>
+f_y(2,1) &amp; = \phantom{-}8y e^{-x^2 +4y^2}\Big|_{(x,y)=(2,1)} = 8
+</mrow>
+</md>
+The tangent plane to <m>z=f(x,y)</m> at <m>(2,1)</m> is
+<md>
+<mrow>
+z &amp;= f(2,1) +f_x(2,1)\,(x-2) +f_y(2,1)\,(y-1)
+  = 1 -4 (x-2) +8(y-1)
+</mrow><mrow>
+ &amp;= 1-4x +8y
+</mrow>
+</md>
+and the tangent plane approximation to the value of <m>f(1.99, 1.01)</m> is
+<md>
+<mrow>
+f(1.99, 1.01) \approx 1 -4 (1.99-2) +8(1.01-1)
+                = 1.12
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2012a</fromexam></title>
+<statement><p>
+Let <m>z = f (x, y) = \ln(4x^2 + y^2)</m>.
+<ol label="a">
+<li>
+Use a linear approximation of the function <m>z = f (x, y)</m> at <m>(0, 1)</m> to estimate
+<m>f(0.1, 1.2)</m>.
+</li>
+<li>
+Find a point <m>P (a, b, c)</m> on the graph of <m>z = f(x, y)</m> such that
+the tangent plane to the graph of <m>z = f (x, y)</m> at the point <m>P</m> is parallel to the plane <m>2x + 2y - z = 3</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>f(0.1,1.2) \approx  0.4</m></p><p>
+(b) <m>\left(\frac{1}{5}\,,\,\frac{4}{5}\,,\,\ln\frac{4}{5}\right)</m>
+</p></answer>
+
+<solution><p>
+(a) The linear approximation to <m>f(x,y)</m> at <m>(a,b)</m> is
+<md>
+<mrow>
+f(x,y) &amp;\approx f(a,b)  + f_x(a,b)\,(x-a) + f_y(a,b)\,(y-b)
+</mrow><mrow>
+       &amp;= \ln(4a^2 + b^2) + \frac{8a}{4a^2+b^2}\, (x-a)
+                              + \frac{2b}{4a^2+b^2}\, (y-b)
+</mrow>
+</md>
+In particular, for <m>a=0</m> and <m>b=1</m>,
+<md>
+<mrow>
+f(x,y) &amp;\approx  2\, (y-1)
+</mrow>
+</md>
+and, for <m>x=0.1</m> and <m>y=1.2</m>,
+<md>
+<mrow>
+f(0.1,1.2) &amp;\approx  0.4
+</mrow>
+</md>
+</p>
+
+<p>(b)
+The point <m>(a,b,c)</m> is on the surface <m>z=f(x,y)</m> if and only if
+<me>
+c = f(a,b) = \ln(4a^2 + b^2)
+</me>
+Note that this forces <m>4a^2 + b^2</m> to be nonzero.
+The tangent plane to the surface <m>z = f (x, y)</m> at the point <m>(a,b,c)</m>
+is parallel to the plane <m>2x + 2y - z = 3</m> if and only if
+<m>\llt 2\,,\,2\,,\,-1\rgt</m> is a normal vector for the tangent plane.
+That is, there is a nonzero number <m>t</m> such that
+<md>
+<mrow>
+\llt 2\,,\,2\,,\,-1\rgt
+=t\llt f_x(a,b)\,,\,f_y(a,b)\,,\ -1\rgt
+=t\llt \frac{8a}{4a^2+b^2} \,,\, \frac{2b}{4a^2+b^2} \,,\,-1\rgt
+</mrow>
+</md>
+For the <m>z</m>--coordinates to be equal, <m>t</m> must be <m>1</m>.
+Then, for the <m>x</m>-- and <m>y</m>--coordinates to be equal, we need
+<md>
+<mrow>
+\frac{8a}{4a^2+b^2} &amp;= 2
+</mrow><mrow>
+\frac{2b}{4a^2+b^2} &amp;= 2
+</mrow>
+</md>
+Note that these equations force both <m>a</m> and <m>b</m> to be nonzero.
+Dividing these equations gives <m>\frac{8a}{2b}=1</m> and hence <m>b=4a</m>.
+Substituting <m>b=4a</m> into either of the two equations gives
+<md>
+<mrow>
+\frac{8a}{20a^2}=2 \implies a=\frac{1}{5}
+</mrow>
+</md>
+So <m>a=\frac{1}{5}</m>, <m>b=\frac{4}{5}</m> and
+<md>
+<mrow>
+c=\ln\left(\frac{4}{5^2}+\frac{4^2}{5^2}\right)
+ =\ln\frac{4}{5}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2013D</fromexam></title>
+<statement><p>
+<ol label="a">
+<li>
+Find the equation of the tangent plane to the surface
+<m>x^2 z^3 + y \sin(\pi x) = -y^2</m> at the point <m>P = (1,1,-1)</m>.
+</li>
+<li>
+Let <m>z</m> be defined implicitly by <m>x^2 z^3 + y \sin(\pi x) = -y^2</m>.
+Find <m>\pdiff{z}{x}</m> at the point  <m>P = (1,1,-1)</m>.
+</li>
+<li>
+Let <m>z</m> be the same implicit function as in part (ii), defined by
+the equation <m>x^2 z^3 + y \sin(\pi x) = -y^2</m>. Let <m>x = 0.97</m>, and <m>y = 1</m>.
+Find the approximate value of <m>z</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a)  <m>-(2+\pi)x +2y +3z = -\pi-3</m>
+</p>
+
+<p>(b)  <m>\pdiff{z}{x}(1,1) = \frac{\pi+2}{3}</m>
+</p>
+
+<p>(c)  <m>z(0.97,1) \approx -\frac{\pi+102}{100}</m>
+</p></answer>
+
+<solution><p>
+(a) The surface has equation <m>G(x,y,z) = x^2 z^3 + y \sin(\pi x) + y^2 =0</m>.
+So a normal vector to the surface at <m>(1,1-1)</m> is
+<md>
+<mrow>
+\vnabla G(1,1,-1)
+&amp;= \big[ \big(2x z^3 +\pi y\cos(\pi x)\big)\hi +\big(\sin(\pi x) +2y\big)\hj
+           +3z^2 x^2\,\hk\big]_{(x,y,z)=(1,1,-1)}
+</mrow><mrow>
+&amp;= \big(-2-\pi\big)\hi +2\,\hj +3\,\hk
+</mrow>
+</md>
+So the equation of the tangent plane is
+<md>
+<mrow>
+\big(-2-\pi\big)(x-1) + 2(y-1) +3 (z+1) =0\quad\text{or}\quad
+-(2+\pi)x +2y +3z = -\pi-3
+</mrow>
+</md>
+</p>
+
+<p>(b) The functions <m>z(x,y)</m> obeys
+<md>
+<mrow>
+x^2 z(x,y)^3 +y\sin(\pi x) +y^2 = 0
+</mrow>
+</md>
+for all <m>x</m> and <m>y</m>. Differentiating this equation with respect to <m>x</m> gives
+<md>
+<mrow>
+2x z(x,y)^3 + 3 x^2 z(x,y)^2 \pdiff{z}{x}(x,y) + \pi y \cos(\pi x) =0
+</mrow>
+</md>
+Evaluating at <m>(1,1,-1)</m> gives
+<md>
+<mrow>
+-2 + 3 \pdiff{z}{x}(1,1) -\pi =0
+\implies \pdiff{z}{x}(1,1) = \frac{\pi+2}{3}
+</mrow>
+</md>
+</p>
+
+<p>(c) Using the linear approximation about <m>(x,y)=(1,1)</m>,
+<md>
+<mrow>
+z(x,1) \approx z(1,1) +\pdiff{z}{x}(1,1)\ (x-1)
+</mrow>
+</md>
+gives
+<md>
+<mrow>
+z(0.97,1) \approx -1 +\frac{\pi+2}{3}\ (-0.03)
+          = -1 -\frac{\pi+2}{100}
+          =  -\frac{\pi+102}{100}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2001A</fromexam></title>
+<statement><p>
+The surface <m>x^4+y^4+z^4+xyz=17</m> passes through <m>(0,1,2)</m>,
+and near this point the surface determines <m>x</m> as a function, <m>x=F(y,z)</m>,
+of <m>y</m> and <m>z</m>.
+<ol label="a">
+<li>
+Find <m>F_y</m> and <m>F_z</m> at <m>(x,y,z)=(0,1,2)</m>.
+</li>
+<li>
+Use the tangent plane approximation (also known as linear,
+first order or differential approximation) to find the approximate value
+of <m>x</m> (near <m>0</m>) such that <m>(x,1.01, 1.98)</m> lies on the surface.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>F_y(1,2)=-2</m>,\ <m>F_z(1,2)=-16</m></p><p>
+(b) <m>0.3</m>
+</p></answer>
+
+<solution><p>
+(a) The function <m>F(y,z)</m> obeys <m>F(y,z)^4+y^4+z^4+F(y,z)yz=17</m> for all <m>y</m> and <m>z</m> near <m>y=1</m>, <m>z=2</m>.
+Applying the derivatives <m>\pdiff{}{y}</m> and <m>\pdiff{}{z}</m>
+to this equation gives
+<md>
+<mrow>
+4F(y,z)^3F_y(y,z)+4y^3+F_y(y,z)yz +F(y,z)z&amp;=0
+</mrow><mrow>
+4F(y,z)^3F_z(y,z)+4z^3+F_z(y,z)yz +F(y,z)y&amp;=0
+</mrow>
+</md>
+Substiututing <m>F(1,2)=0</m>, <m>y=1</m> and <m>z=2</m> gives
+<md alignment="alignat">
+<mrow>
+4+2F_y(1,2)&amp;=0 &amp; &amp;\ \implies\  &amp; &amp;F_y(1,2)=-2
+</mrow><mrow>
+32+2F_z(1,2)&amp;=0 &amp; &amp;\ \implies\  &amp; &amp; F_z(1,2)=-16
+</mrow>
+</md>
+</p>
+
+<p>(b) Using the tangent plane to <m>x=F(y,z)</m> at <m>y=1</m> and <m>z=2</m>, which is
+<me>
+x \approx F(1,2) +F_y(1,2)\,(y-1) +F_z(1,2)\,(z-2)
+</me>
+with <m>y=1.01</m> and <m>z=1.98</m> gives
+<md>
+<mrow>
+x=F(1.01, 1.98)
+&amp;\approx F(1,2)+F_y(1,2)(1.01-1)+F_z(1,2)(1.98-2)
+</mrow><mrow>
+&amp;=0-2(.01)-16(-0.02)
+=0.3
+</mrow>
+</md>
+</p></solution>
+</exercise></exercisegroup>
+
+</exercises>
