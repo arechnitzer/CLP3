@@ -1,0 +1,2422 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise>
+<statement><p>
+Consider the points
+<md>
+<mrow>
+(x_1,y_1) &amp;= (3,0) &amp;
+(x_2,y_2) &amp;= (1,1)  &amp;
+(x_3,y_3) &amp;= (0,1)
+</mrow><mrow>
+(x_4,y_4) &amp;= (-1,1) &amp;
+(x_5,y_5) &amp;= (-2,0)
+</mrow>
+</md>
+For each <m>1\le i\le 5</m>,
+<ul>
+<li>
+sketch, in the <m>xy</m>-plane, the point <m>(x_i,y_i)</m> and
+</li>
+<li>
+find the polar coordinates <m>r_i</m> and <m>\theta_i</m>,
+with <m>0\le\theta_i \lt 2\pi</m>, for the point <m>(x_i,y_i)</m>.
+</li>
+</ul>
+</p></statement>
+
+<answer><p>
+The left hand sketch below contains the points, <m>(x_1,y_1)</m>, <m>(x_3,y_3)</m>,
+<m>(x_5,y_5)</m>, that are on the axes. The right hand sketch below contains the
+points, <m>(x_2,y_2)</m>, <m>(x_4,y_4)</m>, that are not on the axes.
+</p>
+<sidebyside width="45%">
+  <image source="pfigs/polar3A"/>
+  <image source="pfigs/polar2A"/>
+</sidebyside>
+<p>
+<m>r_1 = 3</m>,        <m>\theta_1=0</m></p><p>
+    <m>r_2 = \sqrt{2}</m>, <m>\theta_2=\frac{\pi}{4}</m></p><p>
+    <m>r_3 = 1</m>,        <m>\theta_3=\frac{\pi}{2}</m></p><p>
+    <m>r_4 = \sqrt{2}</m>, <m>\theta_4=\frac{3\pi}{4}</m></p><p>
+    <m>r_5 = 2</m>,        <m>\theta_5=\pi</m>
+</p></answer>
+
+<solution><p>
+The left hand sketch below contains the points, <m>(x_1,y_1)</m>, <m>(x_3,y_3)</m>,
+<m>(x_5,y_5)</m>, that are on the axes. The right hand sketch below contains the
+points, <m>(x_2,y_2)</m>, <m>(x_4,y_4)</m>, that are not on the axes.
+</p>
+<sidebyside width="45%">
+  <image source="pfigs/polar3A"/>
+  <image source="pfigs/polar2A"/>
+</sidebyside>
+
+<p>
+Recall that the polar coordinates <m>r</m>, <m>\theta</m>
+are related to the cartesian coordinates <m>x</m>, <m>y</m>, by <m>x=r\cos\theta</m>,
+<m>y=r\sin\theta</m>. So <m>r=\sqrt{x^2+y^2}</m> and <m>\tan\theta=\frac{y}{x}</m>
+(assuming that <m>x\ne 0</m>) and
+<md alignment="alignat">
+<mrow>
+(x_1,y_1) &amp;= (3,0) &amp;&amp;\implies &amp;r_1=3,\ \tan\theta_1=0
+                   &amp;&amp;\implies \theta_1&amp;=0
+                   \text{ as $(x_1,y_1)$ is on the positive $x$-axis}
+</mrow><mrow>
+(x_2,y_2) &amp;= (1,1) &amp;&amp;\implies &amp;r_2=\sqrt{2},\ \tan\theta_2=1
+                   &amp;&amp;\implies \theta_2&amp;=\frac{\pi}{4}
+                   \text{ as $(x_2,y_2)$ is in the first octant}
+</mrow><mrow>
+(x_3,y_3) &amp;= (0,1) &amp;&amp;\implies &amp;r_3=1,\ \cos\theta_3=0
+                   &amp;&amp;\implies \theta_3&amp;=\frac{\pi}{2}
+                   \text{ as $(x_3,y_3)$ is on the positive $y$-axis}
+</mrow><mrow>
+(x_4,y_4) &amp;= (-1,1) &amp;&amp;\implies &amp;r_4=\sqrt{2},\ \tan\theta_4=-1
+                   &amp;&amp;\implies \theta_4&amp;=\frac{3\pi}{4}
+                   \text{ as $(x_4,y_4)$ is in the third octant}
+</mrow><mrow>
+(x_5,y_5) &amp;= (-2,0) &amp;&amp;\implies &amp;r_5=2,\ \tan\theta_5=0
+                   &amp;&amp;\implies \theta_5&amp;=\pi
+                   \text{ as $(x_5,y_5)$ is on the negative $x$-axis}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+<ol label="a">
+<li>
+Find <em>all</em> pairs <m>(r,\theta)</m> such that
+<me>
+(-2,0) = \big(r\cos\theta\,,\,r\sin\theta\big)
+</me>
+</li>
+<li>
+Find <em>all</em> pairs <m>(r,\theta)</m> such that
+<me>
+(1,1) = \big(r\cos\theta\,,\,r\sin\theta\big)
+</me>
+</li>
+<li>
+Find <em>all</em> pairs <m>(r,\theta)</m> such that
+<me>
+(-1,-1) = \big(r\cos\theta\,,\,r\sin\theta\big)
+</me>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+<m>r</m> is allowed to be negative.
+</p></hint>
+
+<answer><p>
+(a) <m>\big(r=2\,,\,\theta= n\pi,\ n\text{ odd integer }\big)</m> or
+    <m>\big(r=-2\,,\,\theta= n\pi,\ n\text{ even integer }\big)</m>
+</p>
+
+<p>(b) <m>\big(r=\sqrt{2}\,,\,\theta= \frac{\pi}{4} + 2n\pi\big)</m> or
+    <m>\big(r=-\sqrt{2}\,,\,\theta= \frac{5\pi}{4} + 2n\pi\big)</m>,
+    with <m>n</m> integer.
+</p>
+
+<p>(c) <m>\big(r=\sqrt{2}\,,\,\theta= \frac{5\pi}{4} + 2n\pi\big)</m> or
+    <m>\big(r=-\sqrt{2}\,,\,\theta= \frac{\pi}{4} + 2n\pi\big)</m>,
+    with <m>n</m> integer.
+</p></answer>
+
+<solution><p>
+Note that the distance from the point <m>\big(r\cos\theta\,,\,r\sin\theta\big)</m>
+to the origin is
+<me>
+\sqrt{r^2\cos^2\theta + r^2\sin^2\theta}
+=\sqrt{r^2}
+=|r|
+</me>
+Thus <m>r</m> can be either the distance to the origin or minus the distance to the
+origin.
+</p>
+
+<p>(a)
+The distance from <m>(-2,0)</m> to the origin is <m>2</m>. So either <m>r=2</m> or <m>r=-2</m>.
+<ul>
+<li> If <m>r=2</m>, then <m>\theta</m> must obey
+<md>
+<mrow>
+(-2,0) = \big(2\cos\theta\,,\,2\sin\theta\big)
+&amp;\iff \sin\theta=0,\ \cos\theta=-1
+</mrow><mrow>
+&amp;\iff \theta= n\pi,\ n\text{ integer },\ \cos\theta=-1
+</mrow><mrow>
+&amp;\iff \theta= n\pi,\ n\text{ odd integer }
+</mrow>
+</md>
+</li>
+<li> If <m>r=-2</m>, then <m>\theta</m> must obey
+<md>
+<mrow>
+(-2,0) = \big(-2\cos\theta\,,\,-2\sin\theta\big)
+&amp;\iff \sin\theta=0,\ \cos\theta=1
+</mrow><mrow>
+&amp;\iff \theta= n\pi,\ n\text{ integer },\ \cos\theta=1
+</mrow><mrow>
+&amp;\iff \theta= n\pi,\ n\text{ even integer }
+</mrow>
+</md>
+</li>
+</ul>
+In the figure on the left below, the blue half-line is the set of all points
+with polar coordinates <m>\theta=\pi</m>, <m>r \gt 0</m> and the pink half-line is the set
+of all points  with polar coordinates <m>\theta=\pi</m>, <m>r \lt 0</m>.
+In the figure on the right below, the blue half-line is the set of all points
+with polar coordinates <m>\theta=0</m>, <m>r \gt 0</m> and the pink half-line is the set
+of all points  with polar coordinates <m>\theta=0</m>, <m>r \lt 0</m>.
+</p>
+<sidebyside width="45%">
+<image source="pfigs/polar6B"/>
+<image source="pfigs/polar6A"/>
+</sidebyside>
+
+<p>
+(b)
+The distance from <m>(1,1)</m> to the origin is <m>\sqrt{2}</m>.
+So either <m>r=\sqrt{2}</m> or <m>r=-\sqrt{2}</m>.
+<ul>
+<li> If <m>r=\sqrt{2}</m>, then <m>\theta</m> must obey
+<md>
+<mrow>
+(1,1) = \big(\sqrt{2}\,\cos\theta\,,\,\sqrt{2}\,\sin\theta\big)
+&amp;\iff \sin\theta=\cos\theta=\frac{1}{\sqrt{2}}
+</mrow><mrow>
+&amp;\iff \theta= \frac{\pi}{4} + 2n\pi,\ n\text{ integer }
+</mrow>
+</md>
+</li>
+<li> If <m>r=-\sqrt{2}</m>, then <m>\theta</m> must obey
+<md>
+<mrow>
+(1,1) = \big(-\sqrt{2}\,\cos\theta\,,\,-\sqrt{2}\,\sin\theta\big)
+&amp;\iff \sin\theta=\cos\theta=-\frac{1}{\sqrt{2}}
+</mrow><mrow>
+&amp;\iff \theta= \frac{5\pi}{4} + 2n\pi,\ n\text{ integer }
+</mrow>
+</md>
+</li>
+</ul>
+In the figure on the left below, the blue half-line is the set of all points
+with polar coordinates <m>\theta=\frac{\pi}{4}</m>, <m>r \gt 0</m> and the pink half-line
+is the set of all points  with polar coordinates <m>\theta=\frac{\pi}{4}</m>, <m>r \lt 0</m>.
+In the figure on the right below, the blue half-line is the set of all points
+with polar coordinates <m>\theta=\frac{5\pi}{4}</m>, <m>r \gt 0</m> and the pink
+half-line is the set of all points  with polar coordinates
+<m>\theta=\frac{5\pi}{4}</m>, <m>r \lt 0</m>.
+</p>
+<sidebyside width="45%">
+  <image source="pfigs/polar4A"/>
+  <image source="pfigs/polar4B"/>
+</sidebyside>
+
+<p>
+(c)
+The distance from <m>(-1,-1)</m> to the origin is <m>\sqrt{2}</m>.
+So either <m>r=\sqrt{2}</m> or <m>r=-\sqrt{2}</m>.
+<ul>
+<li> If <m>r=\sqrt{2}</m>, then <m>\theta</m> must obey
+<md>
+<mrow>
+(-1,-1) = \big(\sqrt{2}\,\cos\theta\,,\,\sqrt{2}\,\sin\theta\big)
+&amp;\iff \sin\theta=\cos\theta=-\frac{1}{\sqrt{2}}
+</mrow><mrow>
+&amp;\iff \theta= \frac{5\pi}{4} + 2n\pi,\ n\text{ integer }
+</mrow>
+</md>
+</li>
+<li> If <m>r=-\sqrt{2}</m>, then <m>\theta</m> must obey
+<md>
+<mrow>
+(-1,-1) = \big(-\sqrt{2}\,\cos\theta\,,\,-\sqrt{2}\,\sin\theta\big)
+&amp;\iff \sin\theta=\cos\theta=\frac{1}{\sqrt{2}}
+</mrow><mrow>
+&amp;\iff \theta= \frac{\pi}{4} + 2n\pi,\ n\text{ integer }
+</mrow>
+</md>
+</li>
+</ul>
+In the figure on the left below, the blue half-line is the set of all points
+with polar coordinates <m>\theta=\frac{5\pi}{4}</m>, <m>r \gt 0</m> and the pink half-line
+is the set of all points  with polar coordinates
+<m>\theta=\frac{5\pi}{4}</m>, <m>r \lt 0</m>.
+In the figure on the right below, the blue half-line is the set of all points
+with polar coordinates <m>\theta=\frac{\pi}{4}</m>, <m>r \gt 0</m> and the pink
+half-line is the set of all points  with polar coordinates
+<m>\theta=\frac{\pi}{4}</m>, <m>r \lt 0</m>.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/polar5A"/>
+  <image source="pfigs/polar5B"/>
+</sidebyside>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>xml:id="prb_polar_vectors"
+Consider the points
+<md>
+<mrow>
+(x_1,y_1) &amp;= (3,0) &amp;
+(x_2,y_2) &amp;= (1,1)  &amp;
+(x_3,y_3) &amp;= (0,1)
+</mrow><mrow>
+(x_4,y_4) &amp;= (-1,1) &amp;
+(x_5,y_5) &amp;= (-2,0)
+</mrow>
+</md>
+Also define, for each angle <m>\theta</m>, the vectors
+<md>
+<mrow>
+\he_r(\theta)=\cos\theta\ \hi + \sin\theta\ \hj\qquad
+\he_\theta(\theta) = -\sin\theta\ \hi + \cos\theta\ \hj
+</mrow>
+</md>
+<ol label="a">
+<li>
+Determine, for each angle <m>\theta</m>, the lengths of the vectors
+<m>\he_r(\theta)</m> and <m>\he_\theta(\theta)</m> and the angle between
+the vectors <m>\he_r(\theta)</m> and <m>\he_\theta(\theta)</m>. Compute
+<m>\he_r(\theta)\times\he_\theta(\theta)</m> (viewing <m>\he_r(\theta)</m> and <m>\he_\theta(\theta)</m> as vectors in three dimensions with zero <m>\hk</m>
+components).
+</li>
+<li>
+For each <m>1\le i\le 5</m>, sketch, in the <m>xy</m>-plane, the point <m>(x_i,y_i)</m>
+and the vectors <m>\he_r(\theta_i)</m> and <m>\he_\theta(\theta_i)</m>. In your
+sketch of the vectors, place the tails of the vectors
+<m>\he_r(\theta_i)</m> and <m>\he_\theta(\theta_i)</m> at <m>(x_i,y_i)</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Compute, for each angle <m>\theta</m>, the dot product <m>\he_r(\theta)\cdot\he_\theta(\theta)</m>.
+</p></hint>
+
+<answer><p>
+(a) Both <m>\he_r(\theta)</m> and <m>\he_\theta(\theta)</m> have length 1.
+The angle between them is <m>\frac{\pi}{2}</m>. The cross product is
+<m>\he_r(\theta) \times \he_\theta(\theta)=\hk</m>.
+</p>
+
+<p>(b)
+Here is a sketch of <m>(x_i,y_i)</m>, <m>\he_r(\theta_i)</m>,
+<m>\he_\theta(\theta_i)</m> for <m>i =1,3,5</m> (the points on the axes)
+</p>
+<sidebyside width="60%">
+<image source="pfigs/polar3"/>
+</sidebyside>
+<p>
+and here is a sketch (to a different scale) of <m>(x_i,y_i)</m>, <m>\he_r(\theta_i)</m>,
+<m>\he_\theta(\theta_i)</m> for <m>i =2,4</m> (the points off the axes).
+</p>
+<sidebyside width="60%">
+<image source="pfigs/polar2"/>
+</sidebyside>
+</answer>
+
+<solution><p>
+(a) The lengths are
+<md>
+<mrow>
+|\he_r(\theta)| &amp;= \sqrt{\cos^2\theta+\sin^2\theta} = 1
+</mrow><mrow>
+|\he_\theta(\theta)| &amp;= \sqrt{(-\sin\theta)^2+\cos^2\theta} = 1
+</mrow>
+</md>
+As
+<me>
+\he_r(\theta) \cdot \he_\theta(\theta) = (\cos\theta)(-\sin\theta)
+                                        +(\sin\theta)(\cos\theta)=0
+</me>
+the two vectors are perpendicular and the angle between them is
+<m>\frac{\pi}{2}</m>. The cross product is
+<md>
+<mrow>
+\he_r(\theta) \times \he_\theta(\theta)
+&amp;=\det\left[\begin{matrix}
+                  \hi  &amp;  \hj        &amp; \hk
+</mrow><mrow>
+           \cos\theta  &amp; \sin\theta  &amp;  0
+</mrow><mrow>
+          -\sin\theta  &amp; \cos\theta  &amp;  0
+            \end{matrix}\right] =\hk
+</mrow>
+</md>
+</p>
+
+<p>(b) Note that for <m>\theta</m> determined by <m>x=r\cos\theta</m>, <m>y=r\sin\theta</m>,
+<ul>
+<li>
+the vector <m>\he_r(\theta)</m> is a unit vector in the same direction as the
+vector from <m>(0,0)</m> to <m>(x,y)</m> and
+</li>
+<li>
+the vector <m>\he_\theta(\theta)</m> is a unit vector that is perpendicular
+to <m>\he_r(\theta)</m>.
+</li>
+<li>
+The <m>y</m>-component of <m>\he_\theta(\theta)</m> has the same sign
+as the <m>x</m>-component of <m>\he_r(\theta)</m>.
+The <m>x</m>-component of <m>\he_\theta(\theta)</m> has opposite sign to that of the <m>y</m>-component  of <m>\he_r(\theta)</m>.
+</li>
+</ul>
+Here is a sketch of <m>(x_i,y_i)</m>, <m>\he_r(\theta_i)</m>,
+<m>\he_\theta(\theta_i)</m> for <m>i =1,3,5</m> (the points on the axes)
+</p>
+<sidebyside width="60%">
+<image source="pfigs/polar3"/>
+</sidebyside>
+<p>
+and here is a sketch (to a different scale) of <m>(x_i,y_i)</m>, <m>\he_r(\theta_i)</m>,
+<m>\he_\theta(\theta_i)</m> for <m>i =2,4</m> (the points off the axes).
+</p>
+<sidebyside width="60%">
+<image source="pfigs/polar2"/>
+</sidebyside>
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>\llt a, b\rgt</m> be a vector. Let <m>r</m> be the length of <m>\llt a, b\rgt</m>
+and <m>\theta</m> be the angle between <m>\llt a, b\rgt</m> and the <m>x</m>-axis.
+<ol label="a">
+<li>
+Express <m>a</m> and <m>b</m> in terms of <m>r</m> and <m>\theta</m>.
+</li>
+<li>
+Let <m>\llt A, B\rgt</m> be the vector gotten by rotating <m>\llt a, b\rgt</m>
+by an angle <m>\varphi</m> about its tail. Express <m>A</m> and <m>B</m> in terms of <m>a</m>,
+<m>b</m> and <m>\varphi</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Sketch <m>\llt a, b\rgt</m> and <m>\llt A, B\rgt</m>.
+The trigonometric addition formulas
+<md>
+<mrow>
+\sin(\theta+\varphi)
+       &amp;=\sin\theta\cos\varphi+\cos\theta\sin\varphi
+</mrow><mrow>
+\cos(\theta+\varphi)
+       &amp;=\cos\theta\cos\varphi-\sin\theta\sin\varphi
+</mrow>
+</md>
+will help.
+</p></hint>
+
+<answer><p>
+(a) <m>a=r\cos\theta</m>, <m>b=r\sin\theta</m>
+</p>
+
+<p>(b) <m>A=a\cos\varphi-b\sin\varphi</m>,
+    <m>B=b\cos\varphi+a\sin\varphi</m>
+</p></answer>
+
+<solution><p>
+Here is a sketch of <m>\llt a, b\rgt</m> and <m>\llt A, B\rgt</m>.
+</p>
+<sidebyside width="60%">
+<image source="pfigs/polar4"/>
+</sidebyside>
+<p>
+(a) From the sketch,
+<md>
+<mrow>
+a&amp;=r\cos\theta
+</mrow><mrow>
+b&amp;=r\sin\theta
+</mrow>
+</md>
+</p>
+
+<p>(b) The length of the vector <m>\llt A, B\rgt</m> is again <m>r</m>
+and the angle between <m>\llt A, B\rgt</m> and the <m>x</m>-axis is <m>\theta
++\varphi</m>. So
+<md alignment="alignat">
+<mrow>
+A&amp;=r\cos(\theta+\varphi)
+&amp;&amp;=r\cos\theta\cos\varphi-r\sin\theta\sin\varphi
+&amp;&amp;=a\cos\varphi-b\sin\varphi
+</mrow><mrow>
+B&amp;=r\sin(\theta+\varphi)
+&amp;&amp;=r\sin\theta\cos\varphi+r\cos\theta\sin\varphi
+&amp;&amp;=b\cos\varphi+a\sin\varphi
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+For each of the regions <m>\cR</m> sketched below, express
+<m>\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}</m> as an iterated integral in polar
+coordinates in two different ways.
+</p>
+
+<sbsgroup widths="5% 40% 5% 40%">
+  <sidebyside>
+  <p>(a)</p><image source="pfigs/polar5a1"/>
+  <p>(b)</p><image source="pfigs/polar5b1"/>
+  </sidebyside>
+  <sidebyside>
+  <p>(c)</p><image source="pfigs/polar5e1"/>
+  <p>(d)</p><image source="pfigs/polar5c1"/>
+  </sidebyside>
+</sbsgroup>
+</statement>
+
+<answer>
+
+<p>(a)
+<m>\displaystyle\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+=\int_0^{\frac{\pi}{4}}\dee{\theta}
+ \int_0^2\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
+=\int_0^2\dee{r}
+  \int_0^{\frac{\pi}{4}}\dee{\theta}
+ \ r\ f(r\cos\theta,r\sin\theta)</m>
+</p>
+
+<p>(b)
+<m>\displaystyle\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+=\int_0^{\frac{\pi}{2}}\dee{\theta}
+ \int_1^2\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
+=\int_1^2\dee{r}
+  \int_0^{\frac{\pi}{2}}\dee{\theta}
+ \ r\ f(r\cos\theta,r\sin\theta)</m>
+</p>
+
+<p>(c)
+<m>\displaystyle \dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+=\int_0^{\frac{\pi}{2}}\dee{\theta}
+ \int_0^{2\cos\theta}\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
+=\int_0^2\dee{r}
+  \int_0^{\arccos\frac{r}{2}}\dee{\theta}
+ \ r\ f(r\cos\theta,r\sin\theta)</m>
+</p>
+
+<p>(d)
+<md>
+<mrow>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+&amp;=\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\dee{\theta}
+ \int_0^{\frac{2}{\sin\theta}}\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
+</mrow><mrow>
+&amp;=\int_0^2\dee{r}
+  \int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\dee{\theta}
+ \ r\ f(r\cos\theta,r\sin\theta)
++\int_2^{2\sqrt{2}}\dee{r}
+  \int_{\frac{\pi}{4}}^{\arcsin\frac{2}{r}}\dee{\theta}
+ \ r\ f(r\cos\theta,r\sin\theta)
+</mrow>
+</md>
+</p>
+
+</answer>
+
+<solution><p>
+(a) The region
+<me>
+\cR=\Set{(x,y)}{0\le x^2+y^2\le 4,\ 0\le y\le x}
+</me>
+In polar coordinates,
+<ul>
+<li>
+the circle <m>x^2+y^2=4</m> becomes <m>r^2=4</m> or <m>r=2</m> and
+</li>
+<li>
+the line <m>y=x</m> becomes <m>r\sin\theta=r\cos\theta</m> or <m>\tan\theta=1</m>
+or <m>\theta=\frac{\pi}{4}</m>.
+</li>
+</ul>
+Thus the domain of integration is
+<me>
+\cR=\Set{(r\cos\theta,r\sin\theta)}{0\le r\le 2,\ 0\le\theta\le\tfrac{\pi}{4}}
+</me>
+On this domain,
+<ul>
+<li>
+<m>\theta</m> runs from <m>0</m> to <m>\frac{\pi}{4}</m>.
+</li>
+<li>
+For each fixed <m>\theta</m> in that range, <m>r</m> runs from <m>0</m> to <m>2</m>,
+as in the figure on the left below.
+</li>
+</ul>
+In polar coordinates <m>\dee{x}\,\dee{y} = r\,\dee{r}\,\dee{\theta}</m>, so that
+<me>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+=\int_0^{\frac{\pi}{4}}\dee{\theta}
+ \int_0^2\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
+</me>
+</p>
+<sidebyside width="45%">
+<image source="pfigs/polar5a2"/>
+<image source="pfigs/polar5a3"/>
+</sidebyside>
+<p>
+  Alternatively, on <m>\cR</m>,
+<ul>
+<li>
+<m>r</m> runs from <m>0</m> to <m>2</m>.
+</li>
+<li>
+For each fixed <m>r</m> in that range, <m>\theta</m> runs from <m>0</m> to <m>\frac{\pi}{4}</m>,
+as in the figure on the right above.
+</li>
+</ul>
+So
+<me>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+=\int_0^2\dee{r}
+  \int_0^{\frac{\pi}{4}}\dee{\theta}
+ \ r\ f(r\cos\theta,r\sin\theta)
+</me>
+</p>
+
+<p>(b) The region
+<me>
+\cR=\Set{(x,y)}{1\le x^2+y^2\le 4,\ x\ge 0,\ y\ge 0}
+</me>
+In polar coordinates,
+<ul>
+<li>
+the circle <m>x^2+y^2=1</m> becomes <m>r^2=1</m> or <m>r=1</m> and
+</li>
+<li>
+the circle <m>x^2+y^2=4</m> becomes <m>r^2=4</m> or <m>r=2</m> and
+</li>
+<li>
+the positive <m>x</m>-axis, <m>x\ge0</m>, <m>y=0</m>,  becomes <m>\theta=0</m> and
+</li>
+<li>
+the positive <m>y</m>-axis, <m>x=0</m>, <m>y\ge0</m>,  becomes <m>\theta=\frac{\pi}{2}</m>.
+</li>
+</ul>
+Thus the domain of integration is
+<me>
+\cR=\Set{(r\cos\theta,r\sin\theta)}{1\le r\le 2,\ 0\le\theta\le\tfrac{\pi}{2}}
+</me>
+On this domain,
+<ul>
+<li>
+<m>\theta</m> runs from <m>0</m> to <m>\frac{\pi}{2}</m>.
+</li>
+<li>
+For each fixed <m>\theta</m> in that range, <m>r</m> runs from <m>1</m> to <m>2</m>,
+as in the figure on the left below.
+</li>
+</ul>
+In polar coordinates <m>\dee{x}\,\dee{y} = r\,\dee{r}\,\dee{\theta}</m>, so that
+<me>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+=\int_0^{\frac{\pi}{2}}\dee{\theta}
+ \int_1^2\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
+</me>
+</p>
+
+<sidebyside width="45%">
+<image source="pfigs/polar5b2"/>
+<image source="pfigs/polar5b3"/>
+</sidebyside>
+<p>
+Alternatively, on <m>\cR</m>,
+<ul>
+<li>
+<m>r</m> runs from <m>1</m> to <m>2</m>.
+</li>
+<li>
+For each fixed <m>r</m> in that range, <m>\theta</m> runs from <m>0</m> to <m>\frac{\pi}{2}</m>,
+as in the figure on the right above.
+</li>
+</ul>
+So
+<me>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+=\int_1^2\dee{r}
+  \int_0^{\frac{\pi}{2}}\dee{\theta}
+ \ r\ f(r\cos\theta,r\sin\theta)
+</me>
+</p>
+
+<p>(c) The region
+<me>
+\cR=\Set{(x,y)}{(x-1)^2+y^2\le 1,\ y \ge 0}
+</me>
+In polar coordinates, the circle <m>(x-1)^2+y^2= 1</m>, or <m>x^2-2x+y^2=0</m>,
+is <m>r^2-2r\cos\theta=0</m> or <m>r=2\cos\theta</m>. Note that, on <m>r=2\cos\theta</m>,
+<ul>
+<li>
+when <m>\theta=0</m>, <m>r=2</m> and
+</li>
+<li>
+as <m>\theta</m> increases from <m>0</m> towards <m>\frac{\pi}{2}</m>, <m>r</m> decreases but remains strictly bigger than <m>0</m> (look at the figure below), until
+</li>
+<li>
+when <m>\theta=\frac{\pi}{2}</m>, <m>r=0</m>.
+</li>
+</ul>
+</p>
+<sidebyside width="75%">
+  <image source="pfigs/polar5e4"/>
+</sidebyside>
+
+<p>
+Thus the domain of integration is
+<me>
+\cR=\Set{(r\cos\theta,r\sin\theta)}{0\le\theta\le\tfrac{\pi}{2},\
+          0\le r\le 2\cos\theta}
+</me>
+On this domain,
+<ul>
+<li>
+<m>\theta</m> runs from <m>0</m> to <m>\frac{\pi}{2}</m>.
+</li>
+<li>
+For each fixed <m>\theta</m> in that range, <m>r</m> runs from <m>0</m> to <m>2\cos\theta</m>,
+as in the figure on the left below.
+</li>
+</ul>
+In polar coordinates <m>\dee{x}\,\dee{y} = r\,\dee{r}\,\dee{\theta}</m>, so that
+<me>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+=\int_0^{\frac{\pi}{2}}\dee{\theta}
+ \int_0^{2\cos\theta}\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
+</me>
+</p>
+<sidebyside width="45%">
+  <image source="pfigs/polar5e2"/>
+ <image source="pfigs/polar5e3"/>
+</sidebyside>
+<p>
+Alternatively, on <m>\cR</m>,
+<ul>
+<li>
+<m>r</m> runs from <m>0</m> (at the point <m>(0,0)</m>)
+to <m>2</m> (at the point <m>(2,0)</m>).
+</li>
+<li>
+For each fixed <m>r</m> in that range, <m>\theta</m> runs
+from <m>0</m> to <m>\arccos\frac{r}{2}</m> (which was gotten by solving
+<m>r=2\cos\theta</m> for <m>\theta</m> as a function of <m>r</m>), as in the figure
+on the right above.
+</li>
+</ul>
+So
+<me>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+=\int_0^2\dee{r}
+  \int_0^{\arccos\frac{r}{2}}\dee{\theta}
+ \ r\ f(r\cos\theta,r\sin\theta)
+</me>
+</p>
+
+<p>(d) The region
+<me>
+\cR=\Set{(x,y)}{0\le y\le 2,\ 0\le x\le y}
+</me>
+In polar coordinates,
+<ul>
+<li>
+the line <m>y=2</m> becomes <m>r\sin\theta=2</m> and
+</li>
+<li>
+the positive <m>y</m>-axis, <m>x=0</m>, <m>y\ge0</m>,  becomes <m>\theta=\frac{\pi}{2}</m> and
+</li>
+<li>
+the line <m>y=x</m> becomes <m>r\sin\theta=r\cos\theta</m> or <m>\tan\theta=1</m>
+or <m>\theta=\frac{\pi}{4}</m>.
+</li>
+</ul>
+Thus the domain of integration is
+<me>
+\cR=\Set{(r\cos\theta,r\sin\theta)}{\tfrac{\pi}{4}\le\theta\le\tfrac{\pi}{2},\
+          0\le r\sin\theta\le 2}
+</me>
+On this domain,
+<ul>
+<li>
+<m>\theta</m> runs from <m>\frac{\pi}{4}</m> to <m>\frac{\pi}{2}</m>.
+</li>
+<li>
+For each fixed <m>\theta</m> in that range, <m>r</m> runs from <m>0</m> to
+<m>\frac{2}{\sin\theta}</m>, as in the figure on the left below.
+</li>
+</ul>
+In polar coordinates <m>\dee{x}\,\dee{y} = r\,\dee{r}\,\dee{\theta}</m>, so that
+<me>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+=\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\dee{\theta}
+ \int_0^{\frac{2}{\sin\theta}}\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
+</me>
+</p>
+<sidebyside width="33%">
+<image source="pfigs/polar5c2"/>
+<image source="pfigs/polar5c4"/>
+<image source="pfigs/polar5c5"/>
+</sidebyside>
+
+<p>
+Alternatively, on <m>\cR</m>,
+<ul>
+<li>
+<m>r</m> runs from <m>0</m> (at the point <m>(0,0)</m>)
+to <m>2\sqrt{2}</m> (at the point <m>(2,2)</m>).
+</li>
+<li>
+For each fixed <m>r</m> between <m>0</m> and <m>2</m>, <m>\theta</m> runs from <m>\frac{\pi}{4}</m>
+to <m>\frac{\pi}{2}</m>, as in the central figure above.
+</li>
+<li>
+For each fixed <m>r</m> between <m>2</m> and <m>2\sqrt{2}</m>, <m>\theta</m> runs
+from <m>\frac{\pi}{4}</m> to <m>\arcsin\frac{2}{r}</m> (which was gotten by solving
+<m>r\sin\theta=2</m> for <m>\theta</m> as a function of <m>r</m>), as in the figure
+on the right above.
+</li>
+</ul>
+So
+<me>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+=\int_0^2\dee{r}
+  \int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\dee{\theta}
+ \ r\ f(r\cos\theta,r\sin\theta)
++\int_2^{2\sqrt{2}}\dee{r}
+  \int_{\frac{\pi}{4}}^{\arcsin\frac{2}{r}}\dee{\theta}
+ \ r\ f(r\cos\theta,r\sin\theta)
+</me>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Sketch the domain of integration in the <m>xy</m>-plane for each of the
+following polar coordinate integrals.
+<ol label="a">
+<li>
+<m>\displaystyle
+      \int_1^2\dee{r}
+     \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}\dee{\theta}
+     \ r\ f(r\cos\theta,r\sin\theta)</m>
+</li>
+<li>
+<m>\displaystyle
+     \int_0^{\frac{\pi}{4}}\dee{\theta}
+     \int_0^{\frac{2}{\sin\theta+\cos\theta}}\dee{r}
+     \ r\ f(r\cos\theta,r\sin\theta)</m>
+</li>
+<li>
+<m>\displaystyle
+     \int_0^{2\pi}\dee{\theta}
+     \int_0^{\frac{3}{\sqrt{\cos^2\theta+9\sin^2\theta}}}\dee{r}
+     \ r\ f(r\cos\theta,r\sin\theta)</m>
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sbsgroup widths="10% 60%">
+  <sidebyside>
+  <p>(a)</p>  <image source="pfigs/polar6a2"/>
+  </sidebyside>
+  <sidebyside>
+  <p>(b)</p>  <image source="pfigs/polar6b2"/>
+  </sidebyside>
+  <sidebyside>
+  <p>(c)</p>  <image source="pfigs/polar6c2"/>
+  </sidebyside>
+</sbsgroup>
+</answer>
+
+<solution><p>
+(a)
+Let <m>D</m> denote the domain of integration. The symbols
+<m>\displaystyle
+      \int_1^2\dee{r}
+     \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}\dee{\theta}</m>
+say that, on <m>D</m>,
+<ul>
+<li>
+<m>r</m> runs from <m>1</m> to <m>2</m> and
+</li>
+<li>
+for each <m>r</m> in that range,
+<m>\theta</m> runs from <m>-\frac{\pi}{4}</m> to <m>\frac{\pi}{4}</m>.
+</li>
+</ul>
+In Cartesian coordinates
+<ul>
+<li>
+<m>r=1</m> is the circle <m>x^2+y^2=1</m> and
+</li>
+<li>
+<m>r=2</m> is the circle <m>x^2+y^2=4</m> and
+</li>
+<li>
+<m>\theta=\frac{\pi}{4}</m> is the ray <m>y=x</m>, <m>x\ge 0</m> and
+</li>
+<li>
+<m>\theta=-\frac{\pi}{4}</m> is the ray <m>y=-x</m>, <m>x\ge 0</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+D=\Set{(x,y)}{1\le x^2+y^2\le 4,\ -x\le y\le x,\ x\ge 0}
+</mrow>
+</md>
+Here are two sketches. <m>D</m> is the shaded region in the sketch on the right.
+</p>
+
+<sidebyside width="45%">
+<image source="pfigs/polar6a1"/>
+<image source="pfigs/polar6a2"/>
+</sidebyside>
+
+<p>
+(b)
+Let <m>D</m> denote the domain of integration. The symbols
+<m>\int_0^{\frac{\pi}{4}}\dee{\theta}
+     \int_0^{\frac{2}{\sin\theta+\cos\theta}}\dee{r}</m>
+say that, on <m>D</m>,
+<ul>
+<li>
+<m>\theta</m> runs from <m>0</m> to <m>\frac{\pi}{4}</m> and
+</li>
+<li>
+for each <m>\theta</m> in that range,
+<m>r</m> runs from <m>0</m> to <m>\frac{2}{\sin\theta+\cos\theta}</m>.
+</li>
+</ul>
+In Cartesian coordinates
+<ul>
+<li>
+<m>\theta=0</m> is the positive <m>x</m>-axis and
+</li>
+<li>
+<m>\theta=\frac{\pi}{4}</m> is the ray <m>y=x</m>, <m>x\ge 0</m> and
+</li>
+<li>
+<m>r=\frac{2}{\sin\theta+\cos\theta}</m>, or equivalently
+<m>r\cos\theta+r\sin\theta=2</m>, is the line <m>x+y=2</m>.
+</li>
+</ul>
+Looking at the sketch on the left below, we see that,
+since the lines <m>y=x</m> and <m>x+y=2</m> cross at <m>(1,1)</m>,
+<md>
+<mrow>
+D=\Set{(x,y)}{0\le y\le 1,\ y\le x\le 2-y}
+</mrow>
+</md>
+<m>D</m> is the shaded region in the sketch on the right.
+</p>
+
+<sidebyside width="45%">
+<image source="pfigs/polar6b1"/>
+<image source="pfigs/polar6b2"/>
+</sidebyside>
+
+<p>
+(c)
+Let <m>D</m> denote the domain of integration. The symbols
+<m>\int_0^{2\pi}\dee{\theta}
+     \int_0^{\frac{3}{\sqrt{\cos^2\theta+9\sin^2\theta}}}\dee{r}</m>
+say that, on <m>D</m>,
+<ul>
+<li>
+<m>\theta</m> runs all the way from <m>0</m> to <m>2\pi</m> and
+</li>
+<li>
+for each <m>\theta</m>,
+<m>r</m> runs from <m>0</m> to <m>\frac{3}{\sqrt{\cos^2\theta+9\sin^2\theta}}</m>.
+</li>
+</ul>
+In Cartesian coordinates
+<ul>
+<li>
+<m>r=\frac{3}{\sqrt{\cos^2\theta+9\sin^2\theta}}</m>, or equivalently
+<m>r^2\cos^2\theta+9r^2\sin^2\theta=9</m>, is the ellipse <m>x^2+9y^2=9</m>.
+</li>
+</ul>
+So <m>D</m> is the interior of the ellipse <m>x^2+9y^2=9</m>
+and <m>D</m> is the shaded region in the sketch on the right.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/polar6c1"/>
+ <image source="pfigs/polar6c2"/>
+</sidebyside>
+</solution>
+</exercise>
+</exercisegroup>
+
+
+<exercisegroup><introduction><procedural/></introduction>
+
+
+<exercise>
+<statement><p>
+Use polar coordinates to evaluate each of the following integrals.
+<ol label="a">
+<li>
+<m>\displaystyle\dblInt_S (x+y)\dee{x}\,\dee{y}</m> where <m>S</m> is the region
+in the first quadrant lying inside the disc <m>x^2+y^2\le a^2</m> and under
+the line <m>y=\sqrt{3}x</m>.
+</li>
+<li>
+<m>\displaystyle\dblInt_Sx\ \dee{x}\,\dee{y}</m>, where <m>S</m>  is the disc segment
+<m>x^2+y^2\le 2,\ x\ge 1</m>.
+</li>
+<li>
+<m>\displaystyle\dblInt_T (x^2+y^2)\dee{x}\,\dee{y}</m> where <m>T</m> is the triangle
+with vertices <m>(0,0), (1,0)</m> and <m>(1,1)</m>.
+</li>
+<li>
+<m>\displaystyle\dblInt_{x^2+y^2\le 1} \ln(x^2+y^2)\,\dee{x}\,\dee{y}</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\frac{a^3}{6}\big[\sqrt{3}+1\big]</m></p><p>
+(b) <m>\frac{2}{3}</m>  </p><p>
+(c) <m>\frac{1}{3}</m> </p><p>
+(d) <m>-\pi</m>
+</p></answer>
+
+<solution><p>
+(a) In polar coordinates, the domain of integration,
+<m>x^2+y^2\le a^2</m>, <m>0\le y\le \sqrt{3}x</m>, becomes
+<me>
+r\le a,\ 0\le r\sin\theta\le\sqrt{3}r\cos\theta\qquad\text{ or }\qquad
+r\le a,\ 0\le\theta\le \arctan\sqrt{3}=\frac{\pi}{3}
+</me>
+The integral is
+<md>
+<mrow>
+\dblInt_S (x+y)\dee{x}\,\dee{y}
+&amp;=\int_0^a \dee{r}\int_0^{{\pi\over 3}}\dee{\theta}\ r\,(r\cos\theta+r\sin\theta)
+</mrow><mrow>
+&amp;=\int_0^a \dee{r}\ r^2\Big[\sin\theta-\cos\theta\Big]_0^{{\pi\over 3}}
+=\frac{a^3}{3}\left[\frac{\sqrt{3}}{2}-\frac{1}{2}+1\right]
+=\frac{a^3}{6}\big[\sqrt{3}+1\big]
+</mrow>
+</md>
+</p>
+
+<p>(b)
+In polar coordinates, the domain of integration,
+<m>x^2+y^2\le 2</m>, <m>x\ge 1</m>,
+</p>
+<sidebyside width="75%">
+  <image source="pfigs/domain1b"/>
+</sidebyside>
+
+<p>
+becomes
+<me>
+r\le \sqrt{2},\ r\cos\theta\ge 1\qquad\text{ or }\qquad
+  \frac{1}{\cos\theta}\le r\le\sqrt{2}
+</me>
+For <m>\frac{1}{\cos\theta}\le r\le\sqrt{2}</m> to be nonempty, we need
+<m>\cos\theta\le \frac{1}{\sqrt{2}}</m> or <m>|\theta|\le\frac{\pi}{4}</m>.
+By symmetry under <m>y\rightarrow -y</m>, the integral is
+<md>
+<mrow>
+\dblInt_Sx\ \dee{x}\,\dee{y}
+&amp;=2\int_0^{{\pi\over 4}}\dee{\theta}\int_{1\over\cos\theta}^{\sqrt{2}}
+\dee{r}\ r\,(r\cos\theta)
+</mrow><mrow>
+&amp;=2\int_0^{{\pi\over 4}}\dee{\theta}\ \cos\theta\
+\frac{r^3}{3}\bigg|_{1\over\cos\theta}^{\sqrt{2}}
+=\frac{2}{3}\int_0^{{\pi\over 4}}\dee{\theta}\
+\Big[2^{3/2}\cos\theta-\frac{1}{\cos^2\theta}\Big]
+</mrow><mrow>
+&amp;=\frac{2}{3} \Big[2^{3/2}\sin\theta-\tan\theta\Big]_0^{{\pi\over 4}}
+=\frac{2}{3} \big[2^{3/2}\frac{1}{\sqrt{2}}-1\big]
+=\frac{2}{3}
+</mrow>
+</md>
+</p>
+
+<p>(c) In polar coordinates, the triangle
+with vertices <m>(0,0), (1,0)</m> and <m>(1,1)</m> has sides <m>\theta=0</m>,
+<m>\theta=\frac{\pi}{4}</m> and <m>r=\frac{1}{\cos\theta}</m> (which is the polar
+coordinates version of <m>x=1</m>). The integral is
+<md>
+<mrow>
+\dblInt_T (x^2+y^2)\ \dee{x}\,\dee{y}
+&amp;=\int_0^{{\pi\over 4}}\dee{\theta}\int_0^{1\over\cos\theta}
+                                                  \dee{r}\ r(r^2)
+</mrow><mrow>
+&amp;=\int_0^{{\pi\over 4}}\dee{\theta}\
+\frac{r^4}{4}\bigg|_0^{1\over\cos\theta}
+=\frac{1}{4}\int_0^{{\pi\over 4}}\dee{\theta}\ \frac{1}{\cos^4\theta}
+=\frac{1}{4}\int_0^{{\pi\over 4}}\dee{\theta}\ \sec^4\theta
+</mrow><mrow>
+&amp;=\frac{1}{4}\int_0^{{\pi\over 4}}\dee{\theta}\ \sec^2\theta\big(1+\tan^2\theta\big)
+=\frac{1}{4}\int_0^1d t\ \big(1+t^2\big)\text{ where }t=\tan\theta
+</mrow><mrow>
+&amp;=\frac{1}{4}\left[t+\frac{t^3}{3}\right]_0^1
+=\frac{1}{4}\ \frac{4}{3}
+=\frac{1}{3}
+</mrow>
+</md>
+</p>
+
+<p>(d) In polar coordinates, the domain of integration,
+<m>x^2+y^2\le 1</m>, becomes <m>r\le 1</m>, <m>0\le\theta\le 2\pi</m>. So
+<md>
+<mrow>
+\dblInt_{x^2+y^2\le 1}\hskip-5pt \ln(x^2+y^2)\,\dee{x}\,\dee{y}
+&amp;=\int_0^{2\pi}\hskip-3pt \dee{\theta}\int_0^1\dee{r}\ r\ln r^2
+=2\pi\int_0^1\dee{r}\ r\ln r^2
+=\pi\int_0^1 \dee{s}\ \ln s\text{ where } s=r^2
+</mrow><mrow>
+&amp;=\pi\Big[s\ln s-s\Big]_0^1
+=-\pi
+</mrow>
+</md>
+To be picky, <m>\ln s</m> tends to <m>-\infty</m> as <m>s</m> tends to <m>0</m>.
+So <m>\int_0^1\dee{s}\,\ln s</m> is an improper integral. The careful way to
+evaluate it is
+<md>
+<mrow>
+\int_0^1 \dee{s}\ \ln s
+&amp;=\lim_{\veps\to 0^+}\int_\veps^1 \dee{s}\ \ln s
+=\lim_{\veps\to 0^+}\Big[s\ln s-s\Big]_\veps^1
+=\lim_{\veps\to 0^+}\Big[-1-\veps\ln\veps+\veps\Big]
+=-1
+</mrow>
+</md>
+That <m>\lim\limits_{\veps\to 0^+}\veps\ln\veps = 0</m> was shown in
+Example \eref{CLP100}{eg:hopitalJ} of the CLP-1 text.
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the volume lying inside the sphere <m>x^2+y^2+z^2=2</m>
+and above the paraboloid <m>z=x^2+y^2</m>.
+</p></statement>
+
+<answer><p>
+<m>\pi \left[\frac{4}{3}\sqrt{2}-\frac{7}{6}\right]
+\approx 2.26</m>
+</p></answer>
+
+<solution><p>
+The top surface <m>x^2+y^2+z^2=2</m> meets the bottom surface
+<m>z=x^2+y^2</m> when <m>z</m> obeys <m>x^2+y^2=z=2-z^2</m>. That is, when
+<m>0=z^2+z-2=(z-1)(z+2)</m>. The root <m>z=-2</m> is inconsistent with
+<m>z=x^2+y^2\ge 0</m>. So the top and bottom surfaces meet at the circle
+<m>z=1</m>, <m>x^2+y^2=1</m>.
+</p>
+
+<p>In polar coordinates, the top surface is <m>z^2=2-r^2</m>, or equivalently
+<m>z=\sqrt{2-r^2}</m>, and the bottom surface is <m>z=r^2</m>. So the height of the volume
+above the point with polar coordinates <m>(r,\theta)</m> is
+<m>\sqrt{2-r^2}-r^2</m> and
+<md>
+<mrow>
+\text{Volume}&amp;=\int_0^1\dee{r}\int_0^{2\pi} \dee{\theta}\ r\,\big[\sqrt{2-r^2}-r^2\big]
+=2\pi \int_0^1\dee{r}\ r\,\big[\sqrt{2-r^2}-r^2\big]
+</mrow><mrow>
+&amp;=2\pi \left[-\frac{1}{3}{(2-r^2)}^{3/2}-\frac{r^4}{4}\right]_0^1
+=2\pi \left[-\frac{1}{3}-\frac{1}{4}+\frac{1}{3}2^{3/2}\right]
+</mrow><mrow>
+&amp;=\pi \left[\frac{4}{3}\sqrt{2}-\frac{7}{6}\right]
+\approx 2.26
+</mrow>
+</md>
+In Cartesian coordinates
+<md>
+<mrow>
+\text{Volume}&amp;=4\int_0^1\dee{x}\int_0^{\sqrt{1-x^2}} \dee{y}\
+                       \big[\sqrt{2-x^2-y^2}-x^2-y^2\big]
+</mrow>
+</md>
+The <m>y</m> integral can be done using the substitution <m>y=\sqrt{2-x^2}\cos t</m>,
+but it is easier to use polar coordinates.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>a \gt 0</m>.
+Find the volume lying inside the cylinder <m>x^2+(y-a)^2=a^2</m>
+and between the upper and lower halves of the cone <m>z^2=x^2+y^2</m>.
+</p></statement>
+
+<answer><p>
+<m>\frac{64}{9}a^3</m>
+</p></answer>
+
+<solution><p>
+For this region <m>x</m> and <m>y</m> run over the interior of the
+cylinder <m>x^2+(y-a)^2=a^2</m>. For each <m>(x,y)</m> inside the
+cylinder, <m>z</m> runs from <m>-\sqrt{x^2+y^2}</m> to <m>\sqrt{x^2+y^2}</m>.
+As <m>x^2+(y-a)^2=a^2</m> if and only if <m>x^2+y^2-2ay=0</m>, the cylinder
+has equation <m>r^2=2ar\sin\theta</m>, or equivalently, <m>r=2a\sin\theta</m>,
+in polar coordinates.
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/domain2"/>
+</sidebyside>
+
+<p>
+Thus <m>(r,\theta)</m> runs over <m>0\le\theta\le\pi,\
+0\le r\le 2a\sin\theta</m> and for each <m>(r,\theta)</m> in this region <m>z</m> runs from
+<m>-r</m> to <m>r</m>. By symmetry under <m>x\rightarrow -x</m>,
+the volume is
+<md>
+<mrow>
+\text{Volume}
+&amp;=2\int_0^{{\pi\over 2}}\dee{\theta}\int_0^{2a\sin\theta}\dee{r}\
+                                             r\big[r-(-r)\big]
+=4\int_0^{{\pi\over 2}}\dee{\theta}\int_0^{2a\sin\theta}\dee{r}\ r^2
+=\frac{4}{3}\int_0^{{\pi\over 2}}\!\!\dee{\theta}\ (2a\sin\theta)^3
+</mrow><mrow>
+&amp;=\frac{32}{3}a^3\int_0^{{\pi\over 2}}\!\!\dee{\theta}\ \sin\theta(1-\cos^2\theta)
+=-\frac{32}{3}a^3\int_1^0 dt\ (1-t^2)\text{ where } t=\cos\theta
+</mrow><mrow>
+&amp;=-\frac{32}{3}a^3\left[t-\frac{t^3}{3}\right]_1^0
+=\frac{64}{9}a^3
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>a \gt 0</m>.
+Find the volume common to the cylinders <m>x^2+y^2\le 2ax</m> and
+<m>z^2\le 2ax</m>.
+</p></statement>
+
+<answer><p>
+<m>\frac{128}{15}a^3</m>
+</p></answer>
+
+<solution><p>
+The figure below shows the top view of the specified solid.
+<m>(x,y)</m> runs over the interior of the circle <m>x^2+y^2=2ax</m>. For each fixed
+<m>(x,y)</m> in this disk, <m>z</m> runs from <m>-\sqrt{2ax}</m> to <m>+\sqrt{2ax}</m>. In polar
+coordinates, the circle is <m>r^2=2ar\cos\theta</m> or <m>r=2a\cos\theta</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/domainTwoCylinder"/>
+</sidebyside>
+
+<p>
+The solid
+is symmetric under <m>y\rightarrow -y</m> and <m>z\rightarrow -z</m>, so we can restrict
+to <m>y\ge 0</m>, <m>z\ge 0</m> and multiply by 4. The volume is
+<md>
+<mrow>
+\text{Volume}
+&amp;=4\int_0^{\pi\over 2} \dee{\theta}\int_0^{2a\cos\theta} \dee{r}\
+                                                r\sqrt{2ar\cos\theta}
+
+</mrow><mrow>
+&amp;=4\int_0^{\pi\over 2} \dee{\theta}\ \sqrt{2a\cos\theta}\ \frac{2}{5}\
+                                 r^{5/2}\bigg|_0^{2a\cos\theta}
+
+</mrow><mrow>
+&amp;=\frac{8}{5}\int_0^{\pi\over 2} \dee{\theta}\ \big(2a\cos\theta\big)^3
+=\frac{64}{5}a^3\int_0^{\pi\over 2} \dee{\theta}\ \cos\theta\big(1-\sin^2\theta\big)
+</mrow><mrow>
+&amp;=\frac{64}{5}a^3\int_0^1 dt\ \big(1-t^2\big)
+\qquad\text{ where } t=\sin\theta
+</mrow><mrow>
+&amp;=\frac{64}{5}a^3\left[t-\frac{t^3}{3}\right]_0^1
+=\frac{128}{15}a^3
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2005D</fromexam></title>
+<statement><p>
+Consider  the region <m>E</m> in 3--dimensions specified by the inequalities
+<m>x^2 + y^2 \le 2y</m> and <m>0 \le z \le \sqrt{x^2 + y^2}</m>.
+<ol label="a">
+<li>
+  Draw a reasonably accurate picture of <m>E</m> in 3--dimensions.
+Be sure to show the units on the coordinate axes.
+</li>
+<li><p>
+  Use polar coordinates to find the volume of <m>E</m>. Note that you will
+  be <q>using polar coordinates</q> if you solve this problem
+ by means of cylindrical coordinates.
+</p>
+</li>
+</ol>
+</p>
+</statement>
+
+<hint>
+<p>    <me>\int \sin^n u\ \dee{u} =-\frac{1}{n}\sin^{n-1}u\ \cos u
+                 +\frac{n-1}{n}\int\sin^{n-2}u\ \dee{u}</me>
+</p>
+</hint>
+
+<answer>
+<sidebyside widths="10% 70%">
+<p>(a)</p>
+<image source="pfigs/OE05D_8"/>
+</sidebyside>
+<p>
+(b) <m>\frac{32}{9}</m>
+</p>
+</answer>
+
+<solution><p>
+(a)
+<ul>
+<li>
+The equation <m>x^2 + y^2 \le 2y</m> is equivalent to the
+equation <m>x^2 + (y-1)^2=1</m>, which is the equation of the cylinder whose
+<m>z=z_0</m> cross--section is the horizontal circle of radius <m>1</m>, centred on
+<m>x=0</m>, <m>y=1</m>, <m>z=z_0</m>. The part of this cylinder in the first octant is
+sketched in the figure on the left below.
+</li>
+<li>
+<m>z \le \sqrt{x^2 + y^2}</m> is the equation of the cone with vertex <m>(0,0,0)</m>,
+and axis the positive <m>z</m>--axis, whose radius at height <m>z=2</m> is <m>2</m>.
+The part of this cone in the first octant is sketched in the figure
+on the right below.
+</li>
+</ul>
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/OE05D_8a"/>
+ <image source="pfigs/OE05D_8b"/>
+</sidebyside>
+
+<p>
+   The region <m>E</m> is the part of the cylinder that is above the
+<m>xy</m>--plane (since <m>z\ge 0</m>) outside the cone (since <m>z\le\sqrt{x^2+y^2}</m>).
+The part of <m>E</m> that is in the first octant is outlined in red in the
+figure below. Both <m>x^2 + y^2 \le 2y</m> and <m>0 \le z \le \sqrt{x^2 + y^2}</m>
+are invariant under <m>x\rightarrow -x</m>. So <m>E</m> is also invariant
+under <m>x\rightarrow -x</m>. That is, <m>E</m> is symmetric about the <m>yz</m>--plane
+and contains, in the octant <m>x\le 0</m>, <m>y\ge 0</m>, <m>z\ge 0</m>, a mirror
+image of the first octant part of <m>E</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/OE05D_8"/>
+</sidebyside>
+
+<p>
+(b) In polar coordinates, <m>x^2 + y^2 \le 2y</m> becomes
+<me>
+r^2\le 2r\sin\theta
+\iff
+r\le 2\sin\theta
+</me>
+Let us denote by <m>D</m> the base region of the part of <m>E</m> in the first
+octant (i.e. the shaded region in the figure above). Think of <m>D</m> as being
+part of the <m>xy</m>--plane. In polar coordinates, on <m>D</m>
+<ul>
+<li>
+<m>\theta</m> runs from <m>0</m> to <m>\frac{\pi}{2}</m>. (Recall that <m>D</m> is
+contained in the first quadrant.)
+</li>
+<li>
+For each <m>\theta</m> in that range, <m>r</m> runs from <m>0</m> to <m>2\sin\theta</m>.
+</li>
+</ul>
+Because
+<ul>
+<li>
+in polar coordinates <m>\dee{A} = r\,\dee{r}\,\dee{\theta}</m>, and
+</li>
+<li>
+the height of <m>E</m> above each point <m>(x,y)</m> in <m>D</m> is <m>\sqrt{x^2+y^2}</m>,
+or, in polar coordinates, <m>r</m>, and
+</li>
+<li>
+the volume of <m>E</m> is twice the volume of the part of <m>E</m> in the first octant,
+</li>
+</ul>
+we have
+<md>
+<mrow>
+\text{Volume}(E)
+&amp;= 2\int_0^{\frac{\pi}{2}}\dee{\theta} \int_0^{2\sin\theta}\dee{r}\ r^2
+</mrow><mrow>
+&amp;=\frac{16}{3} \int_0^{\frac{\pi}{2}}\dee{\theta}\ \sin^3\theta
+=\frac{16}{3} \int_0^{\frac{\pi}{2}}\dee{\theta}\
+                  \sin\theta\ \big(1-\cos^2\theta\big)
+</mrow><mrow>
+&amp;=-\frac{16}{3} \int_1^0\dee{u}\ \big(1-u^2\big)\qquad
+\text{with }u=\cos\theta,\ \dee{u}=-\sin\theta\ \dee{\theta}
+</mrow><mrow>
+&amp;=\frac{16}{3}\left[1-\frac{1}{3}\right]
+</mrow><mrow>
+&amp;=\frac{32}{9}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2006A</fromexam></title>
+<statement><p>
+Evaluate the iterated double integral
+<me>
+\int_{x=0}^{x=2}\int_{y=0}^{y=\sqrt{4-x^2}} {(x^2+y^2)}^{\frac{3}{2}}\ \dee{y}\,\dee{x}
+</me>
+</p></statement>
+
+<answer><p>
+<m>\frac{16\pi}{5}</m>
+</p></answer>
+
+<solution><p>
+On the domain of integration
+<ul>
+<li>
+<m>x</m> runs for <m>0</m> to <m>2</m>, and
+</li>
+<li>
+for each fixed <m>x</m> in that range, <m>y</m> runs from <m>0</m> to <m>\sqrt{4-x^2}</m>.
+The equation <m>y=\sqrt{4-x^2}</m> is equivalent to <m>x^2+y^2=4</m>, <m>y\ge 0</m>.
+</li>
+</ul>
+This domain is sketched in the figure on the left below.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/OE06A_7v"/>
+   <image source="pfigs/OE06A_7p"/>
+</sidebyside>
+
+<p>
+Considering that
+<ul>
+<li>
+the integrand, <m>{(x^2+y^2)}^{\frac{3}{2}}</m>, is invariant under rotations
+about the origin and
+</li>
+<li>
+the outer curve, <m>x^2+y^2=4</m>, is invariant under rotations about the origin
+</li>
+</ul>
+we'll use polar coordinates.
+In polar coordinates,
+<ul>
+<li>
+the outer curve, <m>x^2+y^2=4</m>, is <m>r=2</m>, and
+</li>
+<li>
+the integrand, <m>{(x^2+y^2)}^{\frac{3}{2}}</m> is <m>r^3</m>, and
+</li>
+<li>
+<m>\dee{A}=r\,\dee{r}\,\dee{\theta}</m>
+</li>
+</ul>
+Looking at the figure on the right above, we see that the given integral
+is, in polar coordinates,
+<md>
+<mrow>
+\int_0^{\pi/2}\dee{\theta}\int_0^2\dee{r}\ r (r^3)
+&amp;=\frac{\pi}{2}\ \frac{2^5}{5}
+=\frac{16\pi}{5}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2006D</fromexam></title>
+<statement><p>
+<ol label="a">
+<li>
+Sketch the region <m>\cL</m> (in the first quadrant of the <m>xy</m>--plane)
+with boundary curves
+<me>
+x^2 + y^2 = 2,\
+x^2 + y^2 = 4,\
+y = x,\
+y = 0.
+</me>
+The mass of a thin lamina with a density function <m>\rho(x,y)</m> over
+the region <m>\cL</m> is given by
+<me>
+M =\dblInt_\cL \rho(x,y)\,\dee{A}
+</me>
+</li>
+<li>
+Find an expression for <m>M</m> as an integral in polar coordinates.
+</li>
+<li>
+Find M when
+<me>
+\rho(x,y) = \frac{2xy}{x^2+y^2}
+</me>
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="10% 70%">
+  <p>(a)</p>
+  <image source="pfigs/OE06D_5"/>
+</sidebyside>
+
+<p>
+(b) <m>M = \int_0^{\pi/4}\dee{\theta}\int_{\sqrt{2}}^2\dee{r}\ r\,
+         \rho(r\cos\theta\,,\,r\sin\theta)</m>
+</p><p>
+(c) <m>\frac{1}{2}</m>
+</p></answer>
+
+<solution><p>
+(a) The region <m>\cL</m> is sketched in the figure on the left below.
+</p>
+<sidebyside width="45%">
+<image source="pfigs/OE06D_5"/>
+<image source="pfigs/OE06D_5p"/>
+</sidebyside>
+
+<p>
+  (b) In polar coordinates
+<ul>
+<li>
+the circle <m>x^2+y^2=2</m> is <m>r^2=2</m> or <m>r=\sqrt{2}</m>, and
+</li>
+<li>
+the circle <m>x^2+y^2=4</m> is <m>r^2=4</m> or <m>r=2</m>, and
+</li>
+<li>
+the line <m>y=x</m> is <m>r\sin\theta = r\cos\theta</m>, or <m>\tan\theta =1 </m>,
+or (for the part in the first quadrant) <m>\theta=\frac{\pi}{4}</m>, and
+</li>
+<li>
+the positive <m>x</m>--axis (<m>y=0</m>, <m>x\ge 0</m>) is <m>\theta=0</m>
+</li>
+</ul>
+Looking at the figure on the right above, we see that, in <m>\cL</m>,
+<ul>
+<li>
+<m>\theta</m> runs from <m>0</m> to <m>\frac{\pi}{4}</m>, and
+</li>
+<li>
+for each fixed <m>\theta</m> in that range, <m>r</m> runs from <m>\sqrt{2}</m>
+to <m>2</m>.
+</li>
+<li>
+<m>\dee{A}</m> is <m>r\,\dee{r}\,\dee{\theta}</m>
+</li>
+</ul>
+So
+<md>
+<mrow>
+M = \int_0^{\pi/4}\dee{\theta}\int_{\sqrt{2}}^2\dee{r}\ r\,
+         \rho(r\cos\theta\,,\,r\sin\theta)
+</mrow>
+</md>
+</p>
+
+<p>(c) When
+<md>
+<mrow>
+\rho = \frac{2xy}{x^2+y^2} = \frac{2r^2\cos\theta\,\sin\theta}{r^2}
+     =\sin(2\theta)
+</mrow>
+</md>
+we have
+<md>
+<mrow>
+M &amp;= \int_0^{\pi/4}\dee{\theta}\int_{\sqrt{2}}^2\dee{r}\ r\,
+          \sin(2\theta)
+</mrow><mrow>
+&amp;=\left[\int_0^{\pi/4}\sin(2\theta)\ \dee{\theta}\right]
+ \left[\int_{\sqrt{2}}^2 r\ \dee{r}\right]
+</mrow><mrow>
+&amp;=\left[-\frac{1}{2}\cos(2\theta)\right]_0^{\pi/4}
+ \left[ \frac{r^2}{2}\right]_{\sqrt{2}}^2
+  =\frac{1}{2}\ \frac{4-2}{2}
+</mrow><mrow>
+&amp;=\frac{1}{2}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2009A</fromexam></title>
+<statement><p>
+Evaluate <m>\displaystyle \dblInt_{\bbbr^2} \frac{1}{{(1+x^2+y^2)}^2}\ \dee{A}</m>.
+</p></statement>
+
+<answer><p>
+<m>\pi</m>
+</p></answer>
+
+<solution><p>
+We'll use polar coordinates. The domain of integration is
+<me>
+\bbbr^2=\Set{(r\cos\theta\,,\,r\sin\theta)}{0\le r \lt \infty,\
+                       0\le\theta\le 2\pi}
+</me>
+The given integral is improper, so we'll start by integrating <m>r</m> from <m>0</m>
+to an arbitrary <m>R \gt 0</m>, and then we'll take the limit <m>R\rightarrow\infty</m>.
+In polar coordinates, the integrand
+<m>\frac{1}{{(1+x^2+y^2)}^2}=\frac{1}{{(1+r^2)}^2}</m>, and
+ <m>\dee{A}=r\,\dee{r}\,\dee{\theta}</m>, so
+<md>
+<mrow>
+\dblInt_{\bbbr^2} \frac{1}{{(1+x^2+y^2)}^2}\ \dee{A}
+&amp;=\lim_{R\rightarrow\infty} \int_0^{2\pi}\dee{\theta}\int_0^R\dee{r}
+                  \frac{r}{{(1+r^2)}^2}
+</mrow><mrow>
+&amp;=\lim_{R\rightarrow\infty} \int_0^{2\pi}\dee{\theta}\
+                      \left[-\frac{1}{2(1+r^2)}\right]_0^R
+</mrow><mrow>
+&amp;=\lim_{R\rightarrow\infty} 2\pi
+                      \left[\frac{1}{2}-\frac{1}{2(1+R^2)}\right]
+</mrow><mrow>
+&amp;=\pi
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2011D</fromexam></title>
+<statement><p>
+Evaluate the double integral
+<me>
+\dblInt_D y\sqrt{x^2+y^2}\,\dee{A}
+</me>
+over the region
+<m>D =\Set{(x,y)}{ x^2+y^2\le 2,\ 0\le y\le x}</m>.
+</p></statement>
+
+<answer><p>
+<m>1-\frac{1}{\sqrt{2}}</m>
+</p></answer>
+
+<solution><p>
+ Let's switch to polar coordinates. In polar coordinates,
+the circle <m>x^2+y^2=2</m> is <m>r=\sqrt{2}</m> and the line <m>y=x</m> is
+<m>\theta=\frac{\pi}{4}</m>.
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/OE11D_5bb"/>
+</sidebyside>
+
+<p>
+In polar coordinates <m>\dee{A} = r\,\dee{r}\,\dee{\theta}</m>, so the integral
+<md>
+<mrow>
+\dblInt_D y\sqrt{x^2+y^2}\,\dee{A}
+&amp;=\int_0^{\pi/4}\dee{\theta}\int_0^{\sqrt{2}}\dee{r}\ r\
+ \overbrace{r\sin\theta}^{y}\ \overbrace{r}^{\sqrt{x^2+y^2}}
+</mrow><mrow>
+&amp;=\int_0^{\pi/4}\dee{\theta}\ \sin\theta\
+     \left[\frac{r^4}{4}\right]_0^{\sqrt{2}}
+</mrow><mrow>
+&amp;=\Big[-\cos\theta\Big]_0^{\pi/4}
+</mrow><mrow>
+&amp;= 1-\frac{1}{\sqrt{2}}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2013D</fromexam></title>
+<statement><p>
+This question is about the integral
+<me>
+\int_0^1 \int_{\sqrt{3}y}^{\sqrt{4-y^2}} \ln\big(1+x^2+y^2)\
+                         \dee{x}\,\dee{y}
+</me>
+<ol label="a">
+<li>
+Sketch the domain of integration.
+</li>
+<li>
+Evaluate the integral by transforming to polar coordinates.
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="10% 70%">
+<p>(a)</p>
+  <image source="pfigs/OE13D_5a"/>
+</sidebyside>
+<p>
+(b) <m>\frac{\pi}{12}\big[5\ln(5)-4\big]</m>
+</p></answer>
+
+<solution><p>
+(a) On the domain of integration
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>1</m>. In inequalities, <m>0\le y\le 1</m>.
+</li>
+<li>
+For each fixed <m>y</m> in that range, <m>x</m> runs from <m>\sqrt{3}\,y</m> to
+<m>\sqrt{4-y^2}</m>. In inequalities, that is <m>\sqrt{3}\,y\le x\le \sqrt{4-y^2}</m>.
+Note that the inequalities <m>x\le \sqrt{4-y^2}</m>, <m>x\ge 0</m> are equivalent to
+<m>x^2+y^2\le 4</m>, <m>x\ge 0</m>.
+</li>
+</ul>
+Note that the line <m>x=\sqrt{3}\, y</m> and the circle <m>x^2+y^2\le 4</m>
+intersect when <m>3y^2+y^2=4</m>, i.e. <m>y=\pm 1</m>.
+Here is a sketch.
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/OE13D_5"/>
+</sidebyside>
+
+<p>
+(b)
+In polar coordinates, the circle <m>x^2+y^2= 4</m> is <m>r=2</m> and the
+line <m>x=\sqrt{3}\, y</m>, i.e. <m>\frac{y}{x} =\frac{1}{\sqrt{3}}</m>,
+is <m>\tan\theta=\frac{1}{\sqrt{3}}</m> or <m>\theta=\frac{\pi}{6}</m>.
+As <m>\dee{x}\,\dee{y} = r\,\dee{r}\,\dee{\theta}</m>,
+the domain of integration is
+<md>
+<mrow>
+\Set{(r\cos\theta,r\sin\theta)}{0\le \theta\le\frac{\pi}{6},\ 0\le r\le 2}
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\int_0^1 \int_{\sqrt{3}y}^{\sqrt{4-y^2}} \ln\big(1+x^2+y^2)\
+                         \dee{x}\,\dee{y}
+&amp;= \int_0^2\dee{r}\int_0^{\pi/6}\dee{\theta}\ r\,\ln(1+r^2)
+= \frac{\pi}{6}\int_0^2\dee{r}\ r\,\ln(1+r^2)
+</mrow><mrow>
+&amp;=\frac{\pi}{12}\int_1^5 \dee{u} \ln(u)
+        \qquad\text{with }u=1+r^2,\ \dee{u}=2r\,\dee{r}
+</mrow><mrow>
+&amp;=\frac{\pi}{12}\Big[u\ln(u)-u\Big]_1^5
+</mrow><mrow>
+&amp;=\frac{\pi}{12}\big[5\ln(5)-4\big]
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2014A</fromexam></title>
+<statement><p>
+Let <m>D</m> be the region in the <m>xy</m>--plane bounded on the left by the line
+<m>x = 2</m> and on the right by the circle <m>x^2 + y^2 = 16</m>. Evaluate
+<me>
+\dblInt_D\big(x^2+y^2\big)^{-3/2}\ \dee{A}
+</me>
+</p></statement>
+
+<answer><p>
+<m>\frac{\sqrt{3}}{2}-\frac{\pi}{6}</m>
+</p></answer>
+
+<solution><p>
+Here is a sketch of <m>D</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/OE14A_5"/>
+</sidebyside>
+
+<p>
+We'll use polar coordinates. In polar coordinates the circle <m>x^2+y^2=16</m>
+is <m>r=4</m> and the line <m>x=2</m> is <m>r\cos\theta =2</m>. So
+<md>
+<mrow>
+D = \left\{(r\cos\theta\,,\,r\sin\theta)\ \left|\
+           -\frac{\pi}{3}\le\theta\le\frac{\pi}{3},\
+           \frac{2}{\cos\theta}\le r\le 4\ \right.\right\}
+</mrow>
+</md>
+and, as <m>\dee{A} = r\,\dee{r}\,\dee{\theta}</m>, the specified integral is
+<md>
+<mrow>
+\dblInt_D\big(x^2+y^2\big)^{-3/2}\ \dee{A}
+&amp;= \int_{-\pi/3}^{\pi/3} \dee{\theta}\int_{2/\cos\theta}^4\dee{r}\
+           r\frac{1}{r^3}
+</mrow><mrow>
+&amp;= \int_{-\pi/3}^{\pi/3} \dee{\theta}\
+           \left[-\frac{1}{r}\right]_{2/\cos\theta}^4
+</mrow><mrow>
+&amp;= \int_{-\pi/3}^{\pi/3} \dee{\theta}\
+           \left[\frac{\cos\theta}{2}-\frac{1}{4}\right]
+</mrow><mrow>
+&amp;=  \left[\frac{\sin\theta}{2}-\frac{\theta}{4}\right]_{-\pi/3}^{\pi/3}
+</mrow><mrow>
+&amp;=\frac{\sqrt{3}}{2}-\frac{\pi}{6}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2014D</fromexam></title>
+<statement><p>
+In the <m>xy</m>--plane, the disk <m>x^2 + y^2 \le 2x</m> is cut into <m>2</m> pieces
+by the line <m>y = x</m>. Let <m>D</m> be the larger piece.
+<ol label="a">
+<li>
+Sketch <m>D</m> including an accurate description of the center and radius
+of the given disk. Then describe <m>D</m> in polar coordinates <m>(r, \theta)</m>.
+</li>
+<li>
+Find the volume of the solid below <m>z = \sqrt{x^2 + y^2}</m> and above <m>D</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>D = \Set{(r\cos\theta\,,\,r\sin\theta)}
+     {-\frac{\pi}{2}\le\theta\le\frac{\pi}{4},\ 0\le r\le 2\cos\theta}</m>
+</p>
+
+<p>(b) <m>\text{Volume}=\frac{40}{18\sqrt{2}} +\frac{16}{9}</m>
+</p></answer>
+
+<solution><p>
+(a) The inequality <m>x^2 + y^2 \le 2x</m> is equivalent to
+<m>(x-1)^2 + y^2 \le 1</m> and says that <m>(x,y)</m> is to be inside the disk of
+radius <m>1</m> centred on <m>(1,0)</m>. Here is a sketch.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/OE14D_6"/>
+</sidebyside>
+
+<p>
+In polar coordinates, <m>x=r\cos\theta</m>, <m>y=r\sin\theta</m> so that
+the line <m>y=x</m> is <m>\theta=\frac{\pi}{4}</m>
+and the circle <m>x^2+y^2=2x</m> is
+<me>
+r^2=2r\cos\theta \qquad\text{or}\qquad r=2\cos\theta
+</me>
+Consequently
+<me>
+D = \Set{(r\cos\theta\,,\,r\sin\theta)}
+     {-\frac{\pi}{2}\le\theta\le\frac{\pi}{4},\ 0\le r\le 2\cos\theta}
+</me>
+</p>
+
+<p>(b) The solid has height <m>z=r</m> above the point in <m>D</m> with polar coordinates
+     <m>r</m>, <m>\theta</m>. So the
+<md>
+<mrow>
+\text{Volume}
+&amp;= \dblInt_D r\ \dee{A}=\dblInt_D r^2\ \dee{r}\, \dee{\theta}
+=\int_{-\pi/2}^{\pi/4}\dee{\theta}\int_0^{2\cos\theta} \dee{r}\ r^2
+</mrow><mrow>
+&amp;= \frac{8}{3}\int_{-\pi/2}^{\pi/4}\dee{\theta}\ \cos^3\theta
+= \frac{8}{3}\int_{-\pi/2}^{\pi/4}\dee{\theta}\
+                         \cos\theta\big[1-\sin^2\theta\big]
+</mrow><mrow>
+&amp;=\frac{8}{3} \left[\sin\theta -\frac{\sin^3\theta}{3}\right]_{-\pi/2}^{\pi/4}
+</mrow><mrow>
+&amp;=\frac{8}{3}\left[\left(\frac{1}{\sqrt{2}} -\frac{1}{6\sqrt{2}}\right)
+                   -\left(-1 + \frac{1}{3}\right)  \right]
+</mrow><mrow>
+&amp;=\frac{40}{18\sqrt{2}} +\frac{16}{9}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2000A</fromexam></title>
+<statement><p>
+Let <m>D</m> be the shaded region in the diagram. Find the average
+distance of points in <m>D</m> from the origin. You may use that
+<m>\int\cos^n(x)\,dx = \frac{\cos^{n-1}(x)\sin(x)}{n}
+                        +\frac{n-1}{n}\int\cos^{n-2}(x)\,dx</m>
+for all natural numbers <m>n\ge 2</m>.
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/OE00AQ8"/>
+</sidebyside>
+</statement>
+
+<answer><p>
+<m>2\frac{\pi+44/9}{\pi+8}\approx 1.442</m>
+</p></answer>
+
+<solution><p>
+We'll use polar coordinates. In <m>D</m>
+<ul>
+<li>
+<m>\theta</m> runs from <m>0</m> to <m>\frac{\pi}{2}</m> and
+</li>
+<li>
+for each fixed <m>\theta</m> between <m>0</m> and <m>\frac{\pi}{2}</m>, <m>r</m> runs from
+<m>1</m> to <m>1+\cos(\theta)</m>.
+</li>
+</ul>
+So the area of <m>D</m> is
+<me>
+\text{area}=A=\int_0^{\pi/2} \dee{\theta}\int_1^{1+\cos\theta} \dee{r}\ r
+=\int_0^{\pi/2} \dee{\theta}\ \frac{1}{2} r^2\bigg|_1^{1+\cos\theta}
+=\int_0^{\pi/2} \dee{\theta}\ \left[\frac{1}{2} \cos^2\theta+\cos\theta\right]
+</me>
+We are interested in the average value of <m>r</m> on <m>D</m>, which is
+<md>
+<mrow>
+\text{ave dist}&amp;=\frac{1}{A}\int_0^{\pi/2} \dee{\theta}\int_1^{1+\cos\theta}
+                                    \dee{r}\ r^2
+=\frac{1}{A}\int_0^{\pi/2} \dee{\theta}\ \frac{1}{3} r^3\bigg|_1^{1+\cos\theta}
+</mrow><mrow>
+&amp;=\frac{1}{A}\int_0^{\pi/2} \dee{\theta}\ \left[\frac{1}{3} \cos^3\theta
+                +\cos^2\theta+\cos\theta\right]
+</mrow>
+</md>
+Now we evaluate the integrals of the various powers of cosine.
+<md>
+<mrow>
+\int_0^{\pi/2}\cos\theta\ \dee{\theta}&amp;=\sin\theta\,\bigg|_0^{\pi/2}=1
+</mrow><mrow>
+\int_0^{\pi/2}\cos^2\theta\ \dee{\theta}&amp;=\frac{\cos\theta\sin\theta}{2}\,\bigg|_0^{\pi/2}
++\frac{1}{2}\int _0^{\pi/2}\dee{\theta}=\frac{\pi}{4}
+</mrow><mrow>
+\int_0^{\pi/2}\cos^3\theta\ \dee{\theta}&amp;=\frac{\cos^2\theta\sin\theta}{3}\,\bigg|_0^{\pi/2}
++\frac{2}{3}\int _0^{\pi/2}\cos\theta\ \dee{\theta}=\frac{2}{3}
+</mrow><mrow>
+</mrow>
+</md>
+So <m>A=\frac{\pi}{8}+1</m> and
+<md>
+<mrow>
+\text{ave dist}=\frac{8}{\pi+8}\left[\frac{2}{9}+\frac{\pi}{4}+1\right]
+=2\frac{\pi+44/9}{\pi+8}\approx 1.442
+</mrow>
+</md>
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise><title><fromexam>M200 2010A</fromexam></title>
+<statement><p>
+Let <m>G</m> be the region in <m>\bbbr^2</m> given by
+<md>
+<mrow>
+x^2 + y^2 \le 1
+</mrow><mrow>
+0 \le x \le 2y
+</mrow><mrow>
+y \le 2x
+</mrow>
+</md>
+<ol label="a">
+<li>
+Sketch the region <m>G</m>.
+</li>
+<li>
+Express the integral <m>\dblInt_G f(x,y)\ \dee{A}</m>
+a sum of iterated integrals <m>\dblInt f(x, y)\ \dee{x}\dee{y}</m>.
+</li>
+<li>
+Express the integral <m>\dblInt_G f(x,y)\ \dee{A}</m>
+as an iterated integral in polar coordinates <m>(r, \theta)</m> where <m>x = r \cos(\theta)</m> and
+<m>y = r \sin(\theta)</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="10% 70%">
+  <p>(a)</p>
+  <image source="pfigs/OE10A_5"/>
+</sidebyside>
+
+<p>
+(b)
+<md>
+<mrow>
+\dblInt_G f(x,y)\ \dee{A}
+&amp;=\int_0^{\frac{1}{\sqrt{5}}}\dee{y}\int_{y/2}^{2y}\dee{x}\ f(x,y)
+ +\int_{\frac{1}{\sqrt{5}}}^{\frac{2}{\sqrt{5}}}\dee{y}\int_{y/2}^{\sqrt{1-y^2}}
+         \dee{x}\ f(x,y)
+</mrow>
+</md>
+</p>
+
+<p>(c)
+<md>
+<mrow>
+\dblInt_G f(x,y)\ \dee{A}
+&amp;=\int_{\arctan\frac{1}{2}}^{\arctan 2}\dee{\theta}
+       \int_0^1\dee{r}\ r\,f(r\cos\theta,r\sin\theta)
+</mrow>
+</md>
+</p></answer>
+
+<solution><p>
+(a) Observe that
+<ul>
+<li>
+the condition <m>x^2+y^2\le 1</m> restricts <m>G</m> to the interior of the
+circle of radius <m>1</m> centred on the origin, and
+</li>
+<li>
+the conditions <m>0\le x\le 2y</m> restricts <m>G</m> to <m>x\ge 0</m>, <m>y\ge 0</m>,
+i.e. to the first quadrant, and
+</li>
+<li>
+the conditions <m>x\le 2y</m> and <m>y\le 2x</m> restrict <m>\frac{x}{2}\le y\le 2x</m>.
+So <m>G</m> lies below the (steep) line <m>y=2x</m> and lies above the (not steep)
+line <m>y=\frac{x}{2}</m>.
+</li>
+</ul>
+Here is a sketch of <m>G</m>
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/OE10A_5"/>
+</sidebyside>
+
+<p>
+(b) Observe that the line <m>y=2x</m> crosses the circle <m>x^2+y^2=1</m> at
+a point <m>(x,y)</m> obeying
+<md>
+<mrow>
+x^2+(2x)^2=x^2+y^2=1
+\implies 5x^2=1
+</mrow>
+</md>
+and that the line <m>x=2y</m> crosses the circle <m>x^2+y^2=1</m> at
+a point <m>(x,y)</m> obeying
+<md>
+<mrow>
+(2y)^2+y^2=x^2+y^2=1
+\implies 5y^2=1
+</mrow>
+</md>
+So the intersection point of <m>y=2x</m> and <m>x^2+y^2=1</m> in the first octant
+is <m>\left(\frac{1}{\sqrt{5}}\,,\,\frac{2}{\sqrt{5}}\right)</m> and
+the intersection point of <m>x=2y</m> and <m>x^2+y^2=1</m> in the first octant
+is <m>\left(\frac{2}{\sqrt{5}}\,,\,\frac{1}{\sqrt{5}}\right)</m>.
+</p>
+
+<p>We'll set up the iterated integral using horizontal strips as in the
+sketch
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/OE10A_5xy"/>
+</sidebyside>
+
+<p>
+Looking at that sketch, we see that, on <m>G</m>,
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>\frac{2}{\sqrt{5}}</m>, and
+</li>
+<li>
+for each fixed <m>y</m> between <m>0</m> and <m>\frac{1}{\sqrt{5}}</m>,
+<m>x</m> runs from <m>\frac{y}{2}</m> to <m>2y</m>, and
+</li>
+<li>
+for each fixed <m>y</m> between <m>\frac{1}{\sqrt{5}}</m> and <m>\frac{2}{\sqrt{5}}</m>
+<m>x</m> runs from <m>\frac{y}{2}</m> to <m>\sqrt{1-y^2}</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+\dblInt_G f(x,y)\ \dee{A}
+&amp;=\int_0^{\frac{1}{\sqrt{5}}}\dee{y}\int_{y/2}^{2y}\dee{x}\ f(x,y)
+ +\int_{\frac{1}{\sqrt{5}}}^{\frac{2}{\sqrt{5}}}\dee{y}\int_{y/2}^{\sqrt{1-y^2}}
+         \dee{x}\ f(x,y)
+</mrow>
+</md>
+</p>
+
+<p>(b) In polar coordinates
+<ul>
+<li>
+the equation <m>x^2+y^2=1</m> becomes <m>r=1</m>, and
+</li>
+<li>
+the equation <m>y=x/2</m> becomes <m>r\sin\theta = \frac{r}{2}\cos\theta</m>
+or <m>\tan\theta =\frac{1}{2}</m>, and
+</li>
+<li>
+the equation <m>y=2x</m> becomes <m>r\sin\theta = 2r\cos\theta</m>
+or <m>\tan\theta =2</m>.
+</li>
+</ul>
+Looking at the sketch
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/OE10A_5p"/>
+</sidebyside>
+
+<p>
+we see that, on <m>G</m>,
+<ul>
+<li>
+<m>\theta</m> runs from <m>\arctan\frac{1}{2}</m> to <m>\arctan 2</m>, and
+</li>
+<li>
+for each fixed <m>\theta</m> in that range, <m>r</m> runs from <m>0</m>  to <m>1</m>.
+</li>
+</ul>
+As <m>\dee{A}=r\,\dee{r}\,\dee{\theta}</m>, and <m>x=r\cos\theta</m>, <m>y=r\sin\theta</m>,
+<md>
+<mrow>
+\dblInt_G f(x,y)\ \dee{A}
+&amp;=\int_{\arctan\frac{1}{2}}^{\arctan 2}\dee{\theta}
+       \int_0^1\dee{r}\ r\,f(r\cos\theta,r\sin\theta)
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2011A</fromexam></title>
+<statement><p>
+Consider
+<me>
+J = \int_0^{\sqrt{2}}  \int_y^{\sqrt{4-y^2}}  \frac{y}{x}  e^{x^2+y^2}\
+                                            \dee{x}\,\dee{y}
+</me>
+<ol label="a">
+<li>
+Sketch the region of integration.
+</li>
+<li>
+Reverse the order of integration.
+</li>
+<li>
+Evaluate <m>J</m> by using polar coordinates.
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="10% 70%">
+  <p>(a)</p>
+<image source="pfigs/OE11A_6"/>
+  </sidebyside>
+
+<p>
+(b) <m>J = \int_0^{\sqrt{2}}\int_0^x \frac{y}{x}  e^{x^2+y^2}\ \dee{y}\,\dee{x}
+   + \int_{\sqrt{2}}^2\int_0^{\sqrt{4-x^2}} \frac{y}{x}  e^{x^2+y^2}\
+                                                    \dee{y}\,\dee{x}
+    </m>
+</p>
+
+<p>(c) <m>\frac{1}{4}\left[e^4-1\right]\ln 2</m>
+</p></answer>
+
+<solution><p>
+(a)
+On the domain of integration
+<ul>
+<li>
+  <m>y</m> runs from <m>0</m> to <m>\sqrt{2}</m> and
+</li>
+<li>
+  for each <m>y</m> in that range, <m>x</m> runs from <m>y</m> to <m>\sqrt{4-y^2}</m>.
+  We can rewrite <m>x=\sqrt{4-y^2}</m> in the more familiar form <m>x^2+y^2=4</m>,
+  <m>x\ge 0</m>.
+</li>
+</ul>
+The figure on the left below provides a sketch of the domain of integration.
+It also shows the generic horizontal slice that was used to set up the given
+iterated integral.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/OE11A_6a"/>
+ <image source="pfigs/OE11A_6b"/>
+</sidebyside>
+
+<p>
+(b)
+To reverse the order of integration observe, we use vertical, rather than
+horizontal slices. From the figure on the
+right above that, on the domain of integration,
+<ul>
+<li>
+  <m>x</m> runs from <m>0</m> to <m>2</m> and
+</li>
+<li>
+  for each <m>x</m> in the range <m>0\le x\le\sqrt{2}</m>, <m>y</m> runs from <m>0</m>
+  to <m>x</m>.
+</li>
+<li>
+  for each <m>x</m> in the range <m>\sqrt{2}\le x\le 2</m>, <m>y</m> runs from <m>0</m>
+  to <m>\sqrt{4-x^2}</m>.
+</li>
+</ul>
+So the integral
+<me>
+J = \int_0^{\sqrt{2}}\int_0^x \frac{y}{x}  e^{x^2+y^2}\ \dee{y}\,\dee{x}
+   + \int_{\sqrt{2}}^2\int_0^{\sqrt{4-x^2}} \frac{y}{x}  e^{x^2+y^2}\ \dee{y}\,\dee{x}
+</me>
+</p>
+
+<p>(c) In polar coordinates, the line <m>y=x</m> is <m>\theta=\frac{\pi}{4}</m>,
+the circle <m>x^2+y^2=4</m> is <m>r=2</m>, and
+<m>\dee{x}\,\dee{y}=r\,\dee{r}\,\dee{\theta}</m>. So
+<md>
+<mrow>
+J&amp;=\int_0^{\pi/4}\dee{\theta}\int_0^2\dee{r}\ r
+         \overbrace{\frac{r\sin\theta}{r\cos\theta}}^{\frac{y}{x}}e^{r^2}
+</mrow><mrow>
+ &amp;=\int_0^{\pi/4}\dee{\theta}\ \frac{\sin\theta}{\cos\theta}
+           \left[\frac{1}{2} e^{r^2}\right]_0^2
+</mrow><mrow>
+ &amp;=-\frac{1}{2}\left[e^4-1\right] \int_1^{1/\sqrt{2}}\dee{u}\ \frac{1}{u}
+   \qquad\text{with }u=\cos\theta,\ \dee{u}=-\sin\theta\,\dee{\theta}
+</mrow><mrow>
+ &amp;=-\frac{1}{2}\left[e^4-1\right]\ \Big[\ln|u|\Big]_1^{1/\sqrt{2}}
+</mrow><mrow>
+ &amp;= \frac{1}{4}\left[e^4-1\right]\ln 2
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the volume of the region in the first octant below the
+paraboloid
+<me>
+z=1-\frac{x^2}{a^2}-\frac{y^2}{b^2}
+</me>
+</p></statement>
+
+<answer><p>
+<m>\frac{\pi}{8}ab</m>
+</p></answer>
+
+<solution><p>
+The paraboloid hits the <m>xy</m>--plane at <m>\frac{x^2}{a^2}
++\frac{y^2}{b^2}=1</m>.
+<md>
+<mrow>
+\text{Volume}
+&amp;=\int_0^a \dee{x}\int_0^{b\sqrt{1-{x^2\over a^2}}} \dee{y}\
+\left(1-\frac{x^2}{a^2}-\frac{y^2}{b^2}\right)
+</mrow><mrow>
+&amp;=b\int_0^a \dee{x}\int_0^{\sqrt{1-{x^2\over a^2}}} \dee{v}\
+\left(1-\frac{x^2}{a^2}-v^2\right) \qquad\text{ where } y=bv
+</mrow><mrow>
+</mrow>
+</md>
+Think of this integral as being of the form
+<me>
+\displaystyle b\int_0^a \dee{x}\ g(x)\quad \text{with}\quad
+\displaystyle g(x)=\int_0^{\sqrt{1-{x^2\over a^2}}} \dee{v}\
+                               \left(1-\frac{x^2}{a^2}-v^2\right)
+</me>
+Then, substituting <m>x=au</m>,
+<md>
+<mrow>
+\text{Volume}
+&amp;=ab\int_0^1 \dee{u}\int_0^{\sqrt{1-u^2}} \dee{v}\ \big(1-u^2-v^2\big)
+</mrow><mrow>
+&amp;=ab\dblInt_{u^2+v^2\le 1\atop u,v\ge 0} \dee{u}  \dee{v}\
+\big(1-u^2-v^2\big)
+</mrow>
+</md>
+Now switch to polar coordinates using <m>u=r\cos\theta</m>, <m>v=r\sin\theta</m>.
+<md>
+<mrow>
+\text{Volume}
+&amp;=ab\int_0^1 \dee{r}\int_0^{\pi\over 2} \dee{\theta}\ r\big(1-r^2\big)
+=ab\ \frac{\pi}{2}\ \left[\frac{r^2}{2}-\frac{r^4}{4}\right]_0^1
+=\frac{\pi}{8}ab
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+A symmetrical coffee percolator holds 24 cups when full. The interior has a circular cross-section which tapers from a radius of 3' at the centre to 2' at the base and top, which are 12' apart. The bounding surface is parabolic. Where should the mark indicating the 6 cup level be placed?
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/coffee"/>
+</sidebyside>
+
+</statement>
+
+<answer><p>
+About 3.5' above the bottom
+</p></answer>
+
+<solution><p>
+ Let <m>r(z)</m> be the radius of the urn at height <m>z</m> above its middle.
+Because the bounding surface of the urn is parabolic, <m>r(z)</m> must be a
+quadratic function of <m>z</m> that varies between <m>3</m> at <m>z=0</m> and <m>2</m> at <m>z=\pm
+6</m>. That is, <m>r(z)</m> must be of the form <m>r(z)=az^2+bz+c</m>.
+The condition that <m>r(0)=3</m> tells us that <m>c=3</m>. The conditions that
+<m>r(\pm 6)=2</m> tells us that
+<md>
+<mrow>
+6^2a + 6b + 3 &amp;=2
+</mrow><mrow>
+6^2a - 6b + 3 &amp;=2
+</mrow>
+</md>
+So <m>b=0</m> and <m>6^2a=-1</m> so that <m>a=-\frac{1}{6^2}</m>.
+All together <m>r(z)=3-\big(\frac{z}{6}\big)^2</m>.
+</p>
+
+<p>Slice
+the urn into horzontal slices, with the slice at height <m>z</m> a disk of radius
+<m>r(z)</m> and thickness <m>\dee{z}</m> and hence of volume <m>\pi r(z)^2\dee{z}</m>. The volume
+to height <m>z_0</m> is
+<md>
+<mrow>
+V(z)
+&amp;=\int_{-6}^{z_0} \dee{z}\ \pi r(z)^2
+=\int_{-6}^{z_0} \dee{z}\ \pi\left[3-\frac{z^2}{36}\right]^2
+=\pi\left[9z-\frac{z^3}{18}+\frac{z^5}{5\times36^2}\right]_{-6}^{z_0}
+</mrow>
+</md>
+We are told that the mark is to be at the 6 cup level and that the urn holds 24 cups. So the mark is to be at the height <m>z_0</m> for which the volume, <m>V(z_0)</m>,
+is one quarter of the total volume, <m>V(6)</m>.
+That is, we are to choose <m>z_0</m> so that <m>V(z_0)=\frac{1}{4} V(6)</m> or
+<me>
+\pi\left[9z-\frac{z^3}{18}+\frac{z^5}{5\times36^2}\right]_{-6}^{z_0}
+=\frac{\pi}{4}\left[9z-\frac{z^3}{18}+\frac{z^5}{5\times36^2}\right]_{-6}^{6}
+=\frac{\pi}{2}\left[9\times 6-\frac{6^3}{18}+\frac{6^5}{5\times36^2}\right]
+</me>
+or
+<me>
+9z_0-\frac{z_0^3}{18}+\frac{z_0^5}{5\times36^2}
+=-\frac{1}{2}\left[9\times 6-\frac{6^3}{18}+\frac{6^5}{5\times36^2}\right]
+=-21.60
+</me>
+Since <m>\Big[9z_0-\frac{z_0^3}{18}+\frac{z_0^5}{6480}\Big]_{z_0=-2.495}=-21.61</m>
+and <m>\Big[9z_0-\frac{z_0^3}{18}+\frac{z_0^5}{6480}\Big]_{z_0=-2.490}=-21.57</m>,
+there is a solution <m>z_0=-2.49</m> (to two decimal places). The mark should
+be about 3.5' above the bottom.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2003A</fromexam></title>
+<statement><p>
+Consider the surface <m>S</m> given by <m>z=e^{x^2+y^2}</m>.
+<ol label="a">
+<li>
+Compute the volume under <m>S</m> and above the disk <m>x^2+y^2\le 9</m>
+in the <m>xy</m>-plane.
+</li>
+<li>
+The volume under <m>S</m> and above a certain region <m>R</m> in the
+<m>xy</m>-plane is
+<me>
+\int_0^1\bigg(\int_0^y e^{x^2+y^2}\,\dee{x}\bigg)\dee{y}
++\int_1^2\bigg(\int_0^{2-y} e^{x^2+y^2}\,\dee{x}\bigg)\dee{y}
+</me>
+Sketch <m>R</m> and express the volume as a single iterated integral with the
+order of integration reversed. <em>Do not compute either integral in part
+(b).</em>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\pi\big(e^9-1\big)\approx 25,453</m>
+</p>
+
+<p>(b) <m>\int_0^1 \dee{x}\int_x^{2-x}\dee{y}\ e^{x^2+y^2}</m>
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/OE03AQ5a"/>
+</sidebyside>
+</answer>
+
+<solution><p>
+(a) In polar coordinates, the base region <m>x^2+y^2\le 9</m> is <m>r\le 3</m>,
+<m>0\le\theta\le 2\pi</m>. So the
+<md>
+<mrow>
+\text{Volume}
+&amp;=\dblInt_{x^2+y^2\le 9} e^{x^2+y^2}\ \dee{x}\dee{y}
+=\int_0^3 \dee{r}\int_0^{2\pi}\dee{\theta}\ r e^{r^2}
+=2\pi\int_0^3\dee{r}\ r e^{r^2}
+=\pi e^{r^2}\Big|_0^3
+</mrow><mrow>
+&amp;=\pi\big(e^9-1\big)\approx 25,453
+</mrow>
+</md>
+</p>
+
+<p>(b) The two integrals have domains
+<md>
+<mrow>
+\Set{(x,y)}{0\le y\le 1,\ 0\le x\le y}\qquad
+\Set{(x,y)}{1\le y\le 2,\ 0\le x\le 2-y}
+</mrow>
+</md>
+The union of those two domains (as well as horizontal strips that were used in
+setting up the two given integrals) is sketched in the figure on the left below.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/OE03AQ5"/>
+       <image source="pfigs/OE03AQ5b"/>
+</sidebyside>
+
+<p>
+To reverse the order of integration, we decompose the domain using vertical
+strips as in the figure on the right above. As
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each fixed <m>x</m> between <m>0</m> and <m>1</m>, <m>y</m> runs from <m>x</m> to <m>2-x</m>.
+</li>
+</ul>
+we have that the
+<me>
+\text{Volume}=\int_0^1 \dee{x}\int_x^{2-x}\dee{y}\ e^{x^2+y^2}
+</me>
+</p></solution>
+</exercise></exercisegroup>
+
+</exercises>

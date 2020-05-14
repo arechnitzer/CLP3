@@ -20,6 +20,6 @@
 <xi:include href="./integrals05.ptx" />
 <xi:include href="./integrals06.ptx" />
 <xi:include href="./integrals07.ptx" />
- <xi:include href="./integrals08.ptx" />
+<xi:include href="./integrals08.ptx" />
 
  </chapter>

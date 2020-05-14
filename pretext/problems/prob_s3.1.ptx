@@ -1,0 +1,2479 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise>
+<statement><p>
+For each of the following, evaluate the given double integral
+<em>without</em> using iteration. Instead, interpret the integral as, for
+example, an area or a volume.
+<ol label="a">
+<li>
+<m>\ds\int_{-1}^3\int_{-4}^1 \dee{y}\,\dee{x}</m>
+</li>
+<li>
+<m>\ds\int_0^2\int_0^{\sqrt{4-y^2}} \dee{x}\,\dee{y}</m>
+</li>
+<li>
+<m>\ds\int_{-3}^3\int_0^{\sqrt{9-y^2}}\sqrt{9-x^2-y^2}\ \dee{x}\,\dee{y}</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>20</m></p><p>
+(b) <m>\pi</m>  </p><p>
+(c) <m>9\pi</m>
+</p></answer>
+
+<solution><p>
+(a) The given double integral
+<m>\int_{-1}^3\int_{-4}^1 \dee{y}\,\dee{x}=\dblInt_R \dee{x}\,\dee{y}</m>
+where
+<me>
+R=\Set{(x,y)}{ -1\le x\le 3,\ -4\le y\le1}
+</me>
+and so the integral is the area of a rectangle with sides of lengths
+<m>4</m> and <m>5</m>.  Thus <m>\int_{-1}^3\int_{-4}^1 \dee{y}\,\dee{x}=4\times 5=20</m>.
+</p>
+
+<p>(b) The given double integral
+<m>\ds\int_0^2\int_0^{\sqrt{4-y^2}} \dee{x}\,\dee{y}
+     =\ds\dblInt_R \dee{x}\,\dee{y}</m>
+where
+<md>
+<mrow>
+R&amp;=\Set{(x,y)}{ 0\le y\le 2,\ 0\le x\le\sqrt{4-y^2}}
+</mrow><mrow>
+&amp;=\Set{(x,y)}{ x\ge 0,\ y\ge 0,\ y\le 2,\ x^2+y^2\le 4}
+</mrow>
+</md>
+So <m>R</m> is the first quadrant part of the circular disk of radius <m>2</m>
+centred on <m>(0,0)</m>. The area of the full disk is <m>\pi\,2^2=4\pi</m>.
+The given integral is one quarter of that, which is <m>\pi</m>.
+</p>
+
+<p>(c) The given double integral
+<m>\ds\int_{-3}^3\int_0^{\sqrt{9-y^2}}\sqrt{9-x^2-y^2}\ \dee{x}\,\dee{y}
+     =\ds\dblInt_{\cR} z(x,y)\ \dee{x}\,\dee{y}</m>
+where <m>z(x,y)=\sqrt{9-x^2-y^2}</m> and
+<md>
+<mrow>
+\cR&amp;=\Set{(x,y)}{ -3\le y\le 3,\ 0\le x\le\sqrt{9-y^2}}
+</mrow><mrow>
+&amp;=\Set{(x,y)}{ x\ge 0,\ -3\le y\le 3,\ \ x^2+y^2\le 9}
+</mrow>
+</md>
+So <m>\cR</m> is the right half of the circular disk of radius <m>3</m>
+centred on <m>(0,0)</m>. By Equation (<xref ref="eqn_Volume_y_slice"/>)
+in the CLP-3 text, the given integral is the volume of the solid
+<md>
+<mrow>
+\cV&amp;=\Big\{\,(x,y,z)\,\Big|\,(x,y)\in\cR,\ 0\le z\le \sqrt{9-x^2-y^2}\,\Big\}
+</mrow><mrow>
+&amp;=\Big\{\,(x,y,z)\,\Big|\,(x,y)\in\cR,\ z\ge 0,\ x^2+y^2+z^2\le 9\,\Big\}
+</mrow>
+</md>
+Thus <m>\cV</m> is the one quarter of the spherical ball of radius <m>3</m> and
+centre <m>(0,0,0)</m> with <m>x\ge 0</m> and <m>z\ge 0</m>. So
+<me>
+\int_{-3}^3\int_0^{\sqrt{9-y^2}}\sqrt{9-x^2-y^2}\ \dee{x}\,\dee{y}
+=\frac{1}{4}\Big(\frac{4}{3}\pi 3^3\Big)
+=9\pi
+</me>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>f(x,y)= 12 x^2y^3</m>. Evaluate
+<ol label="a">
+<li>
+<m>\ds\int_0^3 f(x,y)\,\dee{x}</m>
+</li>
+<li>
+<m>\ds\int_0^2 f(x,y)\,\dee{y}</m>
+</li>
+<li>
+<m>\ds\int_0^2\int_0^3 f(x,y)\,\dee{x}\,\dee{y}</m>
+</li>
+<li>
+<m>\ds\int_0^3\int_0^2 f(x,y)\,\dee{y}\,\dee{x}</m>
+</li>
+<li>
+<m>\ds\int_0^3\int_0^2 f(x,y)\,\dee{x}\,\dee{y}</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Be careful to match each integration variable with its own limits.
+Remember that the integral with respect to <m>x</m> treats <m>y</m> as a constant and
+the integral with respect to <m>y</m> treats <m>x</m> as a constant.
+</p></hint>
+
+<answer><p>
+(a) <m>108 y^3</m></p><p>
+(b) <m>48x^2</m></p><p>
+(c), (d) <m>432</m></p><p>
+(e) <m>648</m>
+</p></answer>
+
+<solution><p>
+(a) The integral with respect to <m>x</m> treats <m>y</m> as a constant. So
+<md>
+<mrow>
+\int_0^3 f(x,y)\,\dee{x}
+  &amp;= \int_0^3 12 x^2y^3\,\dee{x}
+   = \Big[4x^3y^3\Big]_{x=0}^{x=3}
+   = 108 y^3
+</mrow>
+</md>
+</p>
+
+<p>(b) The integral with respect to <m>y</m> treats <m>x</m> as a constant. So
+<md>
+<mrow>
+\int_0^2 f(x,y)\,\dee{y}
+  &amp;= \int_0^2 12 x^2y^3\,\dee{y}
+   = \Big[3x^2y^4\Big]_{y=0}^{y=2}
+   = 48x^2
+</mrow>
+</md>
+</p>
+
+<p>(c) By part (a)
+<md>
+<mrow>
+\int_0^2\int_0^3 f(x,y)\,\dee{x}\,\dee{y}
+&amp;=\int_0^2\left[\int_0^3 f(x,y)\,\dee{x}\right]\dee{y}
+ =\int_0^2 108y^3\,\dee{y}
+ =\Big[27y^4\Big]_{y=0}^{y=2}
+</mrow><mrow>
+&amp;=27\times 16
+= 432
+</mrow>
+</md>
+</p>
+
+<p>(d) By part (b)
+<md>
+<mrow>
+\int_0^3\int_0^2 f(x,y)\,\dee{y}\,\dee{x}
+&amp;=\int_0^3\left[\int_0^2 f(x,y)\,\dee{y}\right]\dee{x}
+ =\int_0^3 48x^2\,\dee{y}
+ =\Big[16x^3\Big]_{x=0}^{x=3}
+</mrow><mrow>
+&amp;=16\times 27
+= 432
+</mrow>
+</md>
+</p>
+
+<p>(e) This time
+<md>
+<mrow>
+\int_0^3\int_0^2 f(x,y)\,\dee{x}\,\dee{y}
+&amp;=\int_0^3\left[\int_0^2 12 x^2y^3\,\dee{x}\right]\dee{y}
+=\int_0^3\left[4 x^3y^3\right]_0^2\dee{y}
+=\int_0^3 32 y^3\dee{y}
+</mrow><mrow>
+&amp; =\Big[8y^4\Big]_0^3
+ =8\times 81
+ = 648
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+</exercisegroup>
+<exercisegroup><introduction><procedural/></introduction>
+
+<introduction><p>Questions<nbsp/><xref ref="prob_s3_1a"/> through <xref ref="prob_s3_1f"/> provide practice with limits of integration for double integrals in Cartesian coordinates.</p></introduction>
+
+<exercise xml:id="prob_s3_1a">
+<statement><p>
+For each of the following, evaluate the given double integral
+<em>using</em> iteration.
+<ol label="a">
+<li>
+<m>\displaystyle\dblInt_R (x^2+y^2)\,\dee{x}\,\dee{y}</m> where <m>R</m> is the rectangle
+<m>0\le x\le a,\ 0\le y\le b</m> where <m>a \gt 0</m> and <m>b \gt 0</m>.
+</li>
+<li>
+<m>\displaystyle\dblInt_T (x-3y)\,\dee{x}\,\dee{y}</m> where <m>T</m> is the triangle
+with vertices <m>(0,0),\ (a,0),\ (0,b)</m>.
+</li>
+<li>
+<m>\displaystyle\dblInt_R xy^2\,\dee{x}\,\dee{y}</m> where <m>R</m> is the finite
+region in the first quadrant bounded by the curves <m>y=x^2</m> and <m>x=y^2</m>.
+</li>
+<li>
+<m>\displaystyle\dblInt_D x\cos y\,\dee{x}\,\dee{y}</m> where <m>D</m> is
+the finite region in the first quadrant bounded by the coordinate axes
+and the curve <m>y=1-x^2</m>.
+</li>
+<li>
+<m>\displaystyle\dblInt_R {x\over y}e^y\,\dee{x}\,\dee{y}</m> where <m>R</m> is
+the region <m>0\le x\le 1,\ x^2\le y\le x</m>.
+</li>
+<li>
+<m>\displaystyle\dblInt_T {xy\over 1+x^4}\,\dee{x}\,\dee{y}</m>  where <m>T</m>
+is the triangle with vertices <m>(0,0),\ (0,1),\ (1,1)</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\frac{1}{3}\big(a^3b+ab^3\big)</m> </p><p>
+(b) <m>\frac{a^2b}{6}-\frac{ab^2}{2}</m>  </p><p>
+(c) <m>\frac{3}{56}</m> </p><p>
+(d) <m>\frac{1}{2}(1-\cos 1)</m> </p><p>
+(e) <m>\frac{1}{2}(e-2)</m>
+</p>
+
+<p>(f) <m>\frac{1}{4}\left(\frac{\pi}{4}-\frac{1}{2}\ln 2\right)</m>
+</p></answer>
+
+<solution><p>
+The following figures show the domains of integration for the
+integrals in this problem.
+</p>
+<sbsgroup widths="5% 40% 5% 40%">
+<sidebyside>
+  <p>(a)</p> <image source="pfigs/domain2a"/>
+  <p>(b)</p> <image source="pfigs/domain2b"/>
+</sidebyside>
+<sidebyside>
+  <p>(c)</p> <image source="pfigs/domain2c"/>
+  <p>(d)</p>  <image source="pfigs/domain2d"/>
+</sidebyside>
+<sidebyside>
+  <p>(e)</p> <image source="pfigs/domain2e"/>
+  <p>(f)</p>  <image source="pfigs/domain2f"/>
+</sidebyside>
+</sbsgroup>
+<p>
+<md>
+<mrow>
+\dblInt_R (x^2+y^2)\,\dee{x}\,\dee{y}
+&amp;=\int_0^a \dee{x}\int_0^b\dee{y}\ (x^2+y^2)
+=\int_0^a \dee{x}\,\left(x^2b+\frac{1}{3}b^3\right)
+\tag{a}
+</mrow><mrow>
+&amp;=\frac{1}{3}\big(a^3b+ab^3\big)
+\notag \displaybreak[0]
+</mrow><mrow>
+\dblInt_T (x-3y)\,\dee{x}\,\dee{y}
+&amp;=\int_0^a \dee{x}\int_0^{b(1-{x\over a})}\dee{y}\,(x-3y)
+\tag{b}
+</mrow><mrow>
+&amp;=\int_0^a \dee{x}\,\left[bx\left(1-\frac{x}{a}\right)
+     -\frac{3}{2}b^2\left(1-\frac{x}{a}\right)^2\right]
+\notag
+</mrow><mrow>
+&amp;=\left[\frac{b}{2}x^2-\frac{b}{3a}x^3
+     +\frac{a}{2}b^2\left(1-\frac{x}{a}\right)^3\right]_0^a
+\notag
+</mrow><mrow>
+&amp;=\frac{a^2b}{2}-\frac{a^2b}{3}-\frac{ab^2}{2}
+=\frac{a^2b}{6}-\frac{ab^2}{2}
+\notag \displaybreak[0]
+</mrow><mrow>
+\dblInt_R xy^2\,\dee{x}\,\dee{y}
+&amp;=\int_0^1 \dee{x}\int_{x^2}^{\sqrt{x}}\dee{y}\ xy^2
+=\frac{1}{3}\int_0^1 \dee{x}\ x\big(x^{3/2}-x^6 \big)
+=\frac{1}{3}\left(\frac{2}{7}-\frac{1}{8}\right)
+\tag{c}
+</mrow><mrow>
+&amp;=\frac{3}{56}
+\notag \displaybreak[0]
+</mrow><mrow>
+\dblInt_D x\cos y\,\dee{x}\,\dee{y}
+&amp;=\int_0^1 \dee{x}\int_{0}^{1-x^2}\dee{y}\ x\cos y
+=\int_0^1 \dee{x}\ x\sin(1-x^2)
+\tag{d}
+</mrow><mrow>
+&amp;=\frac{1}{2}\Big[\cos(1-x^2)\Big]_0^1
+=\frac{1}{2}(1-\cos 1)
+\notag \displaybreak[0]
+</mrow><mrow>
+\dblInt_R \frac{x}{y}e^y\,\dee{x}\,\dee{y}
+&amp;=\int_0^1 \dee{y}\int_{y}^{\sqrt{y}}\dee{x}\ \frac{x}{y}e^y
+=\int_0^1 \dee{y}\ \frac{y-y^2}{2y}e^y
+=\frac{1}{2}\int_0^1 \dee{y}\ (1-y)e^y
+\tag{e}
+</mrow><mrow>
+&amp;=\frac{1}{2}\Big[-ye^y+2e^y\Big]_0^1
+=\frac{1}{2}(e-2)
+\notag \displaybreak[0]
+</mrow><mrow>
+\dblInt_T \frac{xy}{1+x^4}\,\dee{x}\,\dee{y}
+&amp;=\int_0^1 \dee{x}\int_{x}^{1}\dee{y}\ \frac{xy}{1+x^4}
+=\frac{1}{2}\int_0^1 \dee{x}\ \frac{x(1-x^2)}{1+x^4}
+\tag{f}
+</mrow><mrow>
+&amp;=\frac{1}{4}\int_0^1 \dee{t}\ \frac{1-t}{1+t^2}\hbox{ where } t=x^2
+\notag
+</mrow><mrow>
+&amp;=\frac{1}{4}\left[\arctan t-\frac{1}{2}\ln(1+t^2)\right]_0^1
+=\frac{1}{4}\left(\frac{\pi}{4}-\frac{1}{2}\ln 2\right)
+\notag
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+For each of the following integrals (i) sketch the region of integration,
+(ii) write an equivalent double integral with the order of integration reversed and (iii) evaluate both double integrals.
+<ol label="a">
+<li>  <m>\displaystyle\int_0^2\dee{x}\int_1^{e^x}\dee{y}</m>
+</li>
+<li>  <m>\displaystyle\int_0^{\sqrt{2}}\dee{y}
+               \int_{-\sqrt{4-2y^2}}^{\sqrt{4-2y^2}}\dee{x}\ y</m>
+</li>
+<li>  <m>\displaystyle\int_{-2}^1 \dee{x}\int_{x^2+4x}^{3x+2}\dee{y}</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>e^2-3</m> </p><p>
+(b) <m>\frac{8}{3}</m> </p><p>
+(c) <m>\frac{9}{2}</m>
+</p></answer>
+
+<solution><p>
+The following figures show the domains of integration for the
+integrals in this problem.
+</p>
+
+<sbsgroup widths="10% 50%">
+<sidebyside>
+  <p>(a)</p> <image source="pfigs/domain4a"/>
+</sidebyside>
+<sidebyside>
+  <p>(b)</p> <image source="pfigs/domain4b"/>
+</sidebyside>
+<sidebyside>
+<p>(c)</p> <image source="pfigs/domain4c"/>
+</sidebyside>
+</sbsgroup>
+
+<p>
+<md>
+<mrow>
+\int_0^2 \dee{x}\int_1^{e^x} \dee{y}
+&amp;=\int_0^2 \dee{x}\ \big[e^x-1\big]
+=\big[e^x-x\big]_0^2
+=e^2-3
+\tag{a}
+</mrow><mrow>
+\int_0^{e^2} \dee{y}\int_{\ln y}^2 \dee{x}
+&amp;=\int_0^{e^2} \dee{y}\ \big[2-\ln y\big]
+=\big[2y-y\ln y+y\big]_1^{e^2}
+=e^2-3\notag \displaybreak[0]
+</mrow><mrow>
+\int_0^{\sqrt{2}}\dee{y}\int_{-\sqrt{4-2y^2}}^{\sqrt{4-2y^2}}\dee{x}\ y
+&amp;=\int_0^{\sqrt{2}}\dee{y}\ 2y\sqrt{4-2y^2}
+=-\frac{1}{3}\Big[{(4-2y^2)}^{3/2}\Big]_0^{\sqrt{2}}
+=\frac{8}{3}
+\tag{b}
+</mrow><mrow>
+\int_{-2}^{2} \dee{x}\int_0^{\sqrt{2-{x^2\over 2}}} \dee{y}\ y
+&amp;=\int_{-2}^{2} \dee{x}\ \left[1-\frac{x^2}{4}\right]
+=2\int_0^{2} \dee{x}\ \left[1-\frac{x^2}{4}\right]
+=2\left[x-\frac{x^3}{12}\right]_0^{2}
+=\frac{8}{3}\notag\displaybreak[0]
+</mrow><mrow>
+\int_{-2}^1 \dee{x}\int_{x^2+4x}^{3x+2}\dee{y}
+&amp;=\int_{-2}^1 \dee{x}\ \big[-x^2-x+2\big]
+=\left[-\frac{x^3}{3}-\frac{x^2}{2}+2x\right]_{-2}^1
+=\frac{9}{2}
+\tag{c}
+</mrow><mrow>
+\int_{-4}^{5} \dee{y}\int_{{y-2\over 3}}^{-2+\sqrt{4+y}} \dee{x}
+&amp;=\int_{-4}^{5} \dee{y}\ \left[\!-\frac{4}{3}-\frac{y}{3}+\sqrt{4+y}\right]
+=\left[-\frac{4y}{3}-\frac{y^2}{6}+\frac{2}{3}{(4+y)}^{3\over 2}\right]_{-4}^{5}
+\notag
+</mrow><mrow>
+&amp;=\frac{9}{2}\notag
+</mrow>
+</md>
+In part (c), we used that the equation <m>y=x^2+4x</m> is equivalent to
+<m>y+4=(x+2)^2</m> and hence to <m>x=-2\pm\sqrt{y+4}</m>.
+\reqnomode
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2006A</fromexam></title>
+<statement><p>
+Combine the sum of the two iterated double integrals
+<me>
+\int_{y=0}^{y=1}\int_{x=0}^{x=y} f(x,y)\ \dee{x}\,\dee{y}
++\int_{y=1}^{y=2}\int_{x=0}^{x=2-y} f(x,y)\ \dee{x}\,\dee{y}
+</me>
+into a single iterated double integral with the order of
+integration reversed.
+</p></statement>
+
+<answer><p>
+<m>\int_{x=0}^{x=1}\int_{y=x}^{y=2-x} f(x,y)\ \dee{y}\,\dee{x}</m>
+</p></answer>
+
+<solution><p>
+In the given integrals
+<ul>
+<li>
+<m>y</m> runs for <m>0</m> to <m>2</m>, and
+</li>
+<li>
+for each fixed <m>y</m> between <m>0</m> and <m>1</m>, <m>x</m> runs from <m>0</m> to <m>y</m>
+and
+</li>
+<li>
+for each fixed <m>y</m> between <m>1</m> and <m>2</m>, <m>x</m> runs from <m>0</m> to <m>2-y</m>
+</li>
+</ul>
+The figure on the left below contains a sketch of that region together
+with the generic horizontal slices that were used to set up the given
+integrals.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/OE06A_6h"/>
+   <image source="pfigs/OE06A_6v"/>
+</sidebyside>
+
+<p>
+To reverse the order of integration, we switch to vertical, rather
+than horizontal, slices, as in the figure on the right above.
+Looking at that figure, we see that
+<ul>
+<li>
+<m>x</m> runs for <m>0</m> to <m>1</m>, and
+</li>
+<li>
+for each fixed <m>x</m> in that range, <m>y</m> runs from <m>x</m> to <m>2-x</m>.
+</li>
+</ul>
+So the desired integral is
+<md>
+<mrow>
+\int_{x=0}^{x=1}\int_{y=x}^{y=2-x} f(x,y)\ \dee{y}\,\dee{x}
+</mrow>
+</md>
+</p>
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2004A</fromexam></title>
+<statement><p>
+Consider the integral
+<me>
+\int_0^1\int_x^1 e^{x/y}\ \dee{y}\ \dee{x}
+</me>
+<ol label="a">
+<li>
+Sketch the domain of integration.
+</li>
+<li>
+Evaluate the integral by reversing the order of integration.
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="10% 60%">
+  <p>
+  (a)
+  </p>
+  <image source="pfigs/OE04Q7a"/>
+</sidebyside>
+
+<p>
+(b) <m>\half(e-1)</m>
+</p></answer>
+
+<solution><p>
+(a) In the given integral
+<ul>
+<li>
+  <m>x</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+  for each fixed <m>x</m> between <m>0</m> and <m>1</m>, <m>y</m> runs from <m>x</m> to <m>1</m>
+</li>
+</ul>
+So the domain of integration is
+<me>
+D = \Set{(x,y)}{0\le x\le 1,\ x\le y\le 1}
+</me>
+It is sketched in the figure on the left below.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/OE04Q7a"/>
+ <image source="pfigs/OE04Q7"/>
+</sidebyside>
+<p>
+(b) The given integral decomposed the domain of integration into
+vertical strips like the blue strip in the figure on the right above.
+To reverse the order of integration, we instead use horizontal strips.
+Looking at the pink strip in the figure on the right above, we see that
+this entails
+<ul>
+<li>
+  having <m>y</m> run from <m>0</m> to <m>1</m> and
+</li>
+<li>
+  for each fixed <m>y</m> between <m>0</m> and <m>1</m>, having <m>x</m> run from <m>0</m> to <m>y</m>
+</li>
+</ul>
+This gives
+<me>
+\int_0^1\dee{y}\int_0^y \dee{x}\ e^{x/y}=\int_0^1\dee{y}\ \Big[ye^{x/y}\Big]_0^y
+=\int_0^1\dee{y}\ y(e-1)
+=\frac{1}{2} (e-1)
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2006D</fromexam></title>
+<statement><p>
+The integral <m>I</m> is defined as
+<me>
+I =\dblInt_R f(x,y)\ \dee{A}
+  = \int_1^{\sqrt{2}} \int_{1/y}^{\sqrt{y}} f(x,y)\,\dee{x}\,\dee{y}
+    +\int_{\sqrt{2}}^4 \int_{y/2}^{\sqrt{y}} f(x,y)\,\dee{x}\,\dee{y}
+</me>
+</p>
+
+<p><ol label="a">
+<li>
+ Sketch the region <m>R</m>.
+</li>
+<li>
+ Re--write the integral <m>I</m> by reversing the order of integration.
+</li>
+<li> Compute the integral <m>I</m> when <m>f(x,y)= x/y</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) The region <m>R</m> is the shaded region in the figure
+</p>
+<sidebyside width="50%">
+  <image source="pfigs/OE06D_4"/>
+</sidebyside>
+<p>
+(b) <m>I= \int_{1/\sqrt{2}}^1 \int_{1/x}^{2x} f(x,y)\,\dee{y}\,\dee{x}
+    +\int_1^2 \int_{x^2}^{2x} f(x,y)\,\dee{y}\,\dee{x}</m>
+  </p><p>
+(c) <m>\frac{1}{2}</m>
+</p></answer>
+
+<solution><p>
+(a) On <m>R</m>
+<ul>
+<li>
+<m>y</m> runs from <m>1</m> to <m>4</m> (from <m>1</m> to <m>\sqrt{2}</m> in the first integral and
+from <m>\sqrt{2}</m> to <m>4</m> in the second).
+</li>
+<li>
+For each fixed <m>y</m> between <m>1</m> and <m>\sqrt{2}</m>, <m>x</m> runs from <m>\frac{1}{y}</m>
+to <m>\sqrt{y}</m> and
+</li>
+<li>
+for each fixed <m>y</m> between <m>\sqrt{2}</m> and <m>4</m>, <m>x</m> runs from <m>\frac{y}{2}</m>
+to <m>\sqrt{y}</m>.
+</li>
+</ul>
+The figure on the left below is a sketch of <m>R</m>, together with
+generic horizontal strips as were used in setting up the integral.
+</p>
+<sidebyside width="40%">
+<image source="pfigs/OE06D_4h"/>
+<image source="pfigs/OE06D_4v"/>
+</sidebyside>
+<p>
+(b) To reverse the order of integration we use vertical strips as in
+the figure on the right above. Looking at that figure, we see that, on <m>R</m>,
+<ul>
+<li>
+<m>x</m> runs from <m>1/\sqrt{2}</m> to <m>2</m>.
+</li>
+<li>
+For each fixed <m>x</m> between <m>1/\sqrt{2}</m> and <m>1</m>, <m>y</m> runs from <m>\frac{1}{x}</m>
+to <m>2x</m> and
+</li>
+<li>
+for each fixed <m>x</m> between <m>1</m> and <m>2</m>, <m>y</m> runs from <m>x^2</m>
+to <m>2x</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+I= \int_{1/\sqrt{2}}^1 \int_{1/x}^{2x} f(x,y)\,\dee{y}\,\dee{x}
+    +\int_1^2 \int_{x^2}^{2x} f(x,y)\,\dee{y}\,\dee{x}
+</mrow>
+</md>
+</p>
+
+<p>(c) When <m>f(x,y)=\frac{x}{y}</m>,
+<md>
+<mrow>
+I &amp;= \int_1^{\sqrt{2}} \int_{1/y}^{\sqrt{y}} \frac{x}{y}\,\dee{x}\,\dee{y}
+    +\int_{\sqrt{2}}^4 \int_{y/2}^{\sqrt{y}} \frac{x}{y}\,\dee{x}\,\dee{y}
+</mrow><mrow>
+  &amp;=\int_1^{\sqrt{2}} \frac{1}{y}\left[\frac{y}{2}-\frac{1}{2y^2}\right]
+                                               \,\dee{y}
+    +\int_{\sqrt{2}}^4 \frac{1}{y}\left[\frac{y}{2}-\frac{y^2}{8}\right]
+                                               \,\dee{y}
+</mrow><mrow>
+  &amp;=\left[\frac{y}{2}+\frac{1}{4y^2}\right]_1^{\sqrt{2}}
+    +\left[\frac{y}{2}-\frac{y^2}{16}\right]_{\sqrt{2}}^4
+   =\frac{1}{\sqrt{2}} +\frac{1}{8}-\frac{1}{2}-\frac{1}{4}
+     +2 -1 -\frac{1}{\sqrt{2}} +\frac{1}{8}
+</mrow><mrow>
+  &amp;=\frac{1}{2}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise xml:id="prob_s3_1f"><title><fromexam>M200 2007A</fromexam></title>
+<statement><p>
+A region <m>E</m> in the <m>xy</m>--plane has the property that for all
+continuous functions f
+<me>
+\dblInt_E f(x,y)\,\dee{A}
+= \int_{x=-1}^{x=3}\left[\int_{y=x^2}^{y=2x+3} f(x,y) \dee{y}\right] \dee{x}
+</me>
+</p>
+
+<p><ol label="a">
+<li>
+ Compute <m>\dblInt_E x\,\dee{A}</m>.
+</li>
+<li>
+ Sketch the region E.
+</li>
+<li>
+ Set up <m>\dblInt_E x\,\dee{A}</m> as an integral or sum of integrals
+in the opposite order.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\frac{32}{3}</m>
+</p>
+
+<sidebyside widths="10% 60%">
+<p>(b)</p>
+  <image source="pfigs/OE07A_7"/>
+</sidebyside>
+<p>
+(c) <m>I = \int_0^1\dee{y} \int_{-\sqrt{y}}^{\sqrt{y}}\dee{x}\ x
+    +\int_1^9\dee{y} \int_{(y-3)/2}^{\sqrt{y}}\dee{x}\ x</m>
+</p></answer>
+
+<solution><p>
+(a) When <m>f(x,y)=x</m>,
+<md>
+<mrow>
+\int_{x=-1}^{x=3}\left[\int_{y=x^2}^{y=2x+3} x \dee{y}\right] \dee{x}
+&amp;= \int_{x=-1}^{x=3}\left[x(2x+3-x^2) \right] \dee{x}
+</mrow><mrow>
+&amp;=\left[\frac{2x^3}{3}+\frac{3x^2}{2}-\frac{x^4}{4}\right]_{-1}^3
+=18+\frac{27}{2}-\frac{81}{4} +\frac{2}{3}-\frac{3}{2}+\frac{1}{4}
+</mrow><mrow>
+&amp;=18+12-20+\frac{2}{3}
+=\frac{32}{3}
+</mrow>
+</md>
+</p>
+
+<p>(b) On the region <m>E</m>
+<ul>
+<li>
+ <m>x</m> runs from <m>-1</m> to <m>3</m> and
+</li>
+<li>
+ for each <m>x</m> in that range, <m>y</m> runs from <m>x^2</m> to <m>2x+3</m>
+</li>
+</ul>
+Here are two sketches of <m>E</m>, with the left one including a generic
+vertical strip as was used in setting up the given integral.
+</p>
+<sidebyside width="40%">
+  <image source="pfigs/OE07A_7v"/>
+ <image source="pfigs/OE07A_7h"/>
+</sidebyside>
+
+<p>
+(c) To reverse the order of integration we use horizontal strips
+as in the figure on the right above. Looking at that figure, we see that,
+on the region <m>E</m>,
+<ul>
+<li>
+ <m>y</m> runs from <m>0</m> to <m>9</m> and
+</li>
+<li>
+ for each <m>y</m> between <m>0</m> and <m>1</m>, <m>x</m> runs from <m>-\sqrt{y}</m> to <m>\sqrt{y}</m>
+</li>
+<li>
+ for each <m>y</m> between <m>1</m> and <m>9</m>, <m>x</m> runs from <m>(y-3)/2</m> to <m>\sqrt{y}</m>
+</li>
+</ul>
+So
+<md>
+<mrow>
+I = \int_0^1\dee{y} \int_{-\sqrt{y}}^{\sqrt{y}}\dee{x}\ x
+    +\int_1^9\dee{y} \int_{(y-3)/2}^{\sqrt{y}}\dee{x}\ x
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2008A</fromexam></title>
+<statement><p>
+Calculate the integral:
+<me>
+\dblInt_D \sin(y^2)\ \dee{A}
+</me>
+where <m>D</m> is the region bounded by <m>x + y = 0</m>, <m>2x - y = 0</m>, and <m>y = 4</m>.
+</p></statement>
+
+<hint><p>
+The antiderivative of the function <m>\sin(y^2)</m> cannot be expressed
+in terms of familiar functions. So we do not want the inside integral to
+be over <m>y</m>.
+</p></hint>
+
+<answer><p>
+<m>\frac{3}{4}\big[1-\cos(16)\big]</m>
+</p></answer>
+
+<solution><p>
+The antiderivative of the function <m>\sin(y^2)</m> cannot be expressed
+in terms of familiar functions. So we do not want the inside integral to
+be over <m>y</m>. So we'll use horizontal slices as in the figure
+</p>
+<sidebyside width="75%">
+<image source="pfigs/OE08A_2"/>
+</sidebyside>
+
+<p>
+On the domain of integration
+<ul>
+<li>
+   <m>y</m> runs from <m>0</m> to <m>4</m>, and
+</li>
+<li>
+   for each fixed <m>y</m> in that range, <m>x</m> runs from <m>-y</m> to <m>y/2</m>
+</li>
+</ul>
+The given integral
+<md>
+<mrow>
+\dblInt_D \sin(y^2)\ \dee{A}
+&amp;=\int_0^4\dee{y}\int_{-y}^{y/2}\dee{x}\ \sin(y^2)
+</mrow><mrow>
+&amp;=\int_0^4 \dee{y}\ \frac{3}{2}y\,\sin(y^2)
+</mrow><mrow>
+&amp;=\left[-\frac{3}{4}\cos(y^2)\right]_0^4
+</mrow><mrow>
+&amp;=\frac{3}{4}\big[1-\cos(16)\big]
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2008D</fromexam></title>
+<statement><p>
+Consider the integral
+<me>
+I = \int_0^1 \int_{\sqrt{y}}^1 \frac{\sin(\pi x^2)}{x}\ \dee{x}\,\dee{y}
+</me>
+</p>
+
+<p><ol label="a">
+<li>
+Sketch the region of integration.
+</li>
+<li>
+Evaluate I.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+The inside integral, <m>\int_{\sqrt{y}}^1 \frac{\sin(\pi x^2)}{x}\ \dee{x}</m>,
+in the given form of <m>I</m> looks really nasty.  So try exchanging
+the order of integration.
+</p></hint>
+
+<answer>
+<sidebyside widths="5% 60%">
+<p>(a)</p>
+<image source="pfigs/OE08D_6"/>
+</sidebyside>
+
+<p>
+(b) <m>\frac{1}{\pi}</m>
+</p>
+</answer>
+
+<solution><p>
+(a)
+On the domain of integration
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each fixed <m>y</m> in that range, <m>x</m> runs from <m>\sqrt{y}</m>
+to <m>1</m>.
+</li>
+</ul>
+The figure on the left below is a sketch of that domain, together with
+a generic horizontal strip as was used in setting up the integral.
+</p>
+
+<sidebyside width="40%">
+  <image source="pfigs/OE08D_6h"/>
+   <image source="pfigs/OE08D_6v"/>
+</sidebyside>
+
+<p>
+(b) The inside integral, <m>\int_{\sqrt{y}}^1 \frac{\sin(\pi x^2)}{x}\ \dee{x}</m>,
+in the given form of <m>I</m> looks really nasty.  So let's try exchanging
+the order of integration. Looking at the figure on the right above,
+we see that, on  the domain of integration,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each fixed <m>x</m> in that range, <m>y</m> runs from <m>0</m>
+to <m>x^2</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+I &amp;= \int_0^1\dee{x}\int_0^{x^2}\dee{y}\ \frac{\sin(\pi x^2)}{x}
+</mrow><mrow>
+  &amp;=\int_0^1\dee{x}\ x\sin(\pi x^2)
+</mrow><mrow>
+  &amp;=\left[-\frac{\cos(\pi x^2)}{2 \pi}\right]_0^1
+             \qquad\text{(Looks pretty rigged!)}
+</mrow><mrow>
+  &amp;=\frac{1}{\pi}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2009A</fromexam></title>
+<statement><p>
+Let <m>I</m> be the double integral of the function <m>f(x,y) = y^2 \sin xy</m>
+over the triangle with vertices <m>(0, 0)</m>, <m>(0, 1)</m> and <m>(1, 1)</m>
+in the <m>xy</m>--plane.
+</p>
+
+<p><ol label="a">
+<li>
+Write <m>I</m> as an iterated integral in two different ways.
+</li>
+<li>
+Evaluate <m>I</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>I=\int_0^1\dee{x}\int_x^1\dee{y}\ y^2\sin xy
+           =\int_0^1\dee{y}\int_0^y\dee{x}\ y^2\sin xy</m>
+</p>
+
+<p>(b) <m>\frac{1-\sin 1}{2}</m>
+</p></answer>
+
+<solution><p>
+(a) Let's call the triangle <m>\cT</m>.
+Here are two sketches of <m>\cT</m>, one including a generic vertical strip
+and one including a generic horizontal strip. Notice that the equation
+of the line through <m>(0,0)</m> and <m>(1,1)</m> is <m>y=x</m>.
+</p>
+
+<sidebyside width="40%">
+<image source="pfigs/OE09A_5v"/>
+<image source="pfigs/OE09A_5h"/>
+</sidebyside>
+
+<p>
+First, we'll set up the integral using vertical strips. Looking
+at the figure on the left above, we see that, on <m>\cT</m>,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each <m>x</m> in that range, <m>y</m> runs from <m>x</m> to <m>1</m>.
+</li>
+</ul>
+So the integral
+<md>
+<mrow>
+I=\int_0^1\dee{x}\int_x^1\dee{y}\ y^2\sin xy
+</mrow>
+</md>
+</p>
+
+<p>Next, we'll set up the integral using horizontal strips. Looking
+at the figure on the right above, we see that, on <m>\cT</m>,
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each <m>y</m> in that range, <m>x</m> runs from <m>0</m> to <m>y</m>.
+</li>
+</ul>
+So the integral
+<md>
+<mrow>
+I=\int_0^1\dee{y}\int_0^y\dee{x}\ y^2\sin xy
+</mrow>
+</md>
+</p>
+
+<p>(b) To evaluate the inside integral,  <m>\int_x^1\dee{y}\ y^2\sin xy</m>,
+of the vertical strip version, will require two integration by
+parts to get rid of the <m>y^2</m>. So we'll use the horizontal strip version.
+<md>
+<mrow>
+I&amp;=\int_0^1\dee{y}\int_0^y\dee{x}\ y^2\sin xy
+</mrow><mrow>
+&amp;=\int_0^1\dee{y}\ \Big[-y\cos xy\Big]_0^y
+</mrow><mrow>
+&amp;=\int_0^1\dee{y}\ \big[y-y\cos y^2\big]
+</mrow><mrow>
+&amp;=\left[\frac{y^2}{2}-\frac{\sin y^2}{2}\right]_0^1
+\qquad\text{(Look's pretty rigged!)}
+</mrow><mrow>
+&amp;= \frac{1-\sin 1}{2}
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2009D</fromexam></title>
+<statement><p>
+Find the volume <m>(V)</m> of the solid bounded above by the surface
+<me>
+z = f (x,y) = e^{-x^2},
+</me>
+below by the plane <m>z = 0</m> and over the triangle in the <m>xy</m>--plane
+formed by the lines <m>x = 1</m>, <m>y = 0</m> and <m>y = x</m>.
+</p>
+
+</statement>
+
+<answer><p>
+<m>\frac{1-e^{-1}}{2}</m>
+</p></answer>
+
+<solution><p>
+If we call the triangular base region <m>\cT</m>, then the volume is
+<md>
+<mrow>
+V=\dblInt_\cT f(x,y)\ \dee{A} = \dblInt_\cT e^{-x^2}\ \dee{x}\,\dee{y}
+</mrow>
+</md>
+If we set up the integral using horizontal slices, so that the inside integral
+is the <m>x</m>--integral, there will be a big problem <mdash/> the integrand
+<m>e^{-x^2}</m> does not have an obvious anti--derivative. (In fact its
+antiderivative cannot be expressed in terms of familiar functions.)
+So let's try vertical slices as in the sketch
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/OE09D_5"/>
+</sidebyside>
+
+<p>
+Looking at that sketch we see that
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m>, and
+</li>
+<li>
+for each <m>x</m> in that range, <m>y</m> runs from <m>0</m> to <m>x</m>.
+</li>
+</ul>
+So the integral is
+<md>
+<mrow>
+V&amp;=\int_0^1\dee{x}\int_0^x\dee{y}\ e^{-x^2}
+</mrow><mrow>
+&amp;=\int_0^1 \dee{x}\ xe^{-x^2}
+</mrow><mrow>
+&amp;=\left[-\frac{1}{2}e^{-x^2}\right]_0^1
+</mrow><mrow>
+&amp;=\frac{1-e^{-1}}{2}
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2009D</fromexam></title>
+<statement><p>
+Consider the integral
+   <m>\displaystyle I=\int_0^1 \int_y^{2-y}\frac{y}{x} \ \dee{x}\,\dee{y}</m>.
+</p>
+
+<p><ol label="a">
+<li>
+Sketch the region of integration.
+</li>
+<li>
+Interchange the order of integration.
+</li>
+<li>
+Evaluate <m>I</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="10% 60%">
+  <p>(a)</p>
+  <image source="pfigs/OE09D_6"/>
+</sidebyside>
+
+<p>
+(b) <m>I=\int_0^1\dee{x}\int_0^x\dee{y}\ \frac{y}{x}
+  +\int_1^2\dee{x}\int_0^{2-x}\dee{y}\ \frac{y}{x}</m></p><p>
+(c) <m>2\ln 2 -1</m>
+</p></answer>
+
+<solution><p>
+(a) On the domain of integration
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each <m>y</m> in that range <m>x</m> runs from <m>y</m> to <m>2-y</m>.
+So the left hand side of the domain is the line <m>x=y</m> and
+the right hand side of the domain is <m>x=2-y</m>.
+</li>
+</ul>
+The figure on the left below is a sketch of that domain, together with
+a generic horizontal strip as was used in setting up the integral.
+</p>
+
+<sidebyside width="40%">
+  <image source="pfigs/OE09D_6h"/>
+ <image source="pfigs/OE09D_6v"/>
+</sidebyside>
+
+<p>
+(b)
+To reverse the order of integration we use vertical, rather than horizontal, strips. Looking at the figure on the right above, we see that, in the
+domain of integration
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>2</m> and
+</li>
+<li>
+for each <m>x</m> between <m>0</m> and <m>1</m>, <m>y</m> runs from <m>0</m> to <m>x</m>, while
+</li>
+<li>
+for each <m>x</m> between <m>1</m> and <m>2</m>, <m>y</m> runs from <m>0</m> to <m>2-x</m>.
+</li>
+</ul>
+So the integral
+<md>
+<mrow>
+I=\int_0^1\dee{x}\int_0^x\dee{y}\ \frac{y}{x}
+  +\int_1^2\dee{x}\int_0^{2-x}\dee{y}\ \frac{y}{x}
+</mrow>
+</md>
+</p>
+
+<p>(c) Using the answer to part (b)
+<md>
+<mrow>
+I&amp;=\int_0^1\dee{x}\int_0^x\dee{y}\ \frac{y}{x}
+  +\int_1^2\dee{x}\int_0^{2-x}\dee{y}\ \frac{y}{x}
+</mrow><mrow>
+&amp;=\frac{1}{2}\int_0^1\dee{x}\ x
+    +\frac{1}{2}\int_1^2\dee{x}\ \frac{(2-x)^2}{x}
+</mrow><mrow>
+&amp;=\frac{1}{4} +\frac{1}{2}\int_1^2\dee{x}\ \left(\frac{4}{x}-4+x\right)
+</mrow><mrow>
+&amp;=\frac{1}{4} +\frac{1}{2}\left[4\ln 2 -4 + \frac{4-1}{2}\right]
+</mrow><mrow>
+&amp;=2\ln 2 -1
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2010A</fromexam></title>
+<statement><p>
+For the integral
+<me>
+I = \int_0^1 \int_{\sqrt{x}}^1 \sqrt{1+y^3}\ \dee{y}\,\dee{x}
+</me>
+<ol label="a">
+<li>
+Sketch the region of integration.
+</li>
+<li>
+Evaluate <m>I</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+The inside integral, <m>\int_{\sqrt{x}}^1 \sqrt{1+y^3}\ \dee{y}</m>,
+of the given integral looks pretty nasty. Try reversing the order of
+integration.
+</p></hint>
+
+<answer>
+<sidebyside widths="5% 60%">
+  <p>(a)</p>
+  <image source="pfigs/OE10A_6"/>
+</sidebyside>
+
+<p>
+(b) <m>\frac{2\big(2\sqrt{2}-1\big)}{9}</m>
+</p></answer>
+
+<solution><p>
+(a)
+On the domain of integration,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m>, and
+</li>
+<li>
+for each fixed <m>x</m> in that range,
+<m>y</m> runs from <m>\sqrt{x}</m> to <m>1</m>.
+We may rewrite <m>y=\sqrt{x}</m> as <m>x=y^2</m>, which is a rightward opening
+parabola.
+</li>
+</ul>
+Here are two sketches of the domain of integration, which we call <m>D</m>.
+The left hand sketch also shows a vertical slice, as was used in setting up
+the integral.
+</p>
+
+<sidebyside width="40%">
+  <image source="pfigs/OE10A_6v"/>
+  <image source="pfigs/OE10A_6h"/>
+</sidebyside>
+
+<p>
+(b) The inside integral, <m>\int_{\sqrt{x}}^1 \sqrt{1+y^3}\ \dee{y}</m>,
+of the given integral looks pretty nasty. So let's reverse the order of
+integration, by using horizontal, rather than vertical, slices.
+Looking at the figure on the right above, we see that
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>1</m>, and
+</li>
+<li>
+for each fixed <m>y</m> in that range
+<m>x</m> runs from <m>0</m> to <m>y^2</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+I &amp;= \int_0^1\dee{y} \int_0^{y^2}\dee{x}\ \sqrt{1+y^3}
+</mrow><mrow>
+&amp;=\int_0^1\dee{y} \ y^2\sqrt{1+y^3}
+</mrow><mrow>
+&amp;=\int_1^2\frac{\dee{u}}{3}\ \sqrt{u}
+\qquad\text{with } u=1+y^3,\ \dee{u}=3y^2\,\dee{y}. \text{ Looks pretty rigged!}
+</mrow><mrow>
+&amp;=\frac{1}{3} \left[\frac{u^{3/2}}{3/2}\right]_1^2
+</mrow><mrow>
+&amp;=\frac{2\big(2\sqrt{2}-1\big)}{9}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2010D</fromexam></title>
+<statement><p>
+<ol label="a">
+<li>
+<m>D</m> is the region bounded by the parabola <m>y^2 = x</m> and the line <m>y = x - 2</m>.
+Sketch <m>D</m> and evaluate <m>J</m> where
+<me>
+J = \dblInt_D 3y\ \dee{A}
+</me>
+</li>
+<li>
+Sketch the region of integration and then evaluate the integral <m>I</m> :
+<me>
+I = \int_0^4  \int_{\frac{1}{2}\sqrt{x}}^1  e^{y^3}\ \dee{y}\,\dee{x}
+</me>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+(b) The inside integral, <m>\int_{\frac{1}{2}\sqrt{x}}^1  e^{y^3}\ \dee{y}</m>,
+looks pretty nasty because <m>e^{y^3}</m> does not have an obvious antiderivative.
+Try reversing the order of integration.
+</p></hint>
+
+<answer><p>
+(a) <m>J=\frac{27}{4}</m>
+</p>
+<sidebyside width="75%">
+  <image source="pfigs/OE10D_5a"/>
+</sidebyside>
+
+<p>
+(b) <m>I=\frac{4}{3}\big[e-1\big]</m>
+</p>
+<sidebyside width="75%">
+<image source="pfigs/OE10D_5b"/>
+</sidebyside>
+</answer>
+
+<solution><p>
+(a) Observe that the parabola <m>y^2=x</m> and the line <m>y=x-2</m> meet
+when <m>x=y+2</m> and
+<me>
+y^2=y+2
+\iff y^2-y-2=0
+\iff (y-2)(y+1)=0
+</me>
+So the points of intersection of <m>x=y^2</m> and <m>y=x-2</m> are <m>(1,-1)</m>
+and <m>(4,2)</m>. Here is a sketch of <m>D</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/OE10D_5aa"/>
+</sidebyside>
+
+<p>
+To evaluate <m>J</m>, we'll use horizontal slices as in the figure above.
+(If we were to use vertical slices we would have to split the integral in two,
+with <m>0\le x\le 1</m> in one part and <m>1\le x\le 4</m> in the other.)
+From the figure, we see that, on <m>D</m>,
+<ul>
+<li>
+<m>y</m> runs from <m>-1</m> to <m>2</m> and
+</li>
+<li>
+for each fixed <m>y</m> in that range, <m>x</m> runs from <m>y^2</m> to <m>y+2</m>.
+</li>
+</ul>
+Hence
+<md>
+<mrow>
+J &amp;=\dblInt_D 3y\ \dee{A}
+  =\int_{-1}^2\dee{y}\int_{y^2}^{y+2}\dee{x}\ 3y
+</mrow><mrow>
+  &amp;=3\int_{-1}^2\dee{y}\ y(y+2-y^2)
+</mrow><mrow>
+  &amp;=3\left[\frac{y^3}{3}+y^2-\frac{y^4}{4}\right]_{-1}^2
+</mrow><mrow>
+  &amp;=3\left[\frac{8}{3}+4-4+\frac{1}{3}-1+\frac{1}{4}\right]
+</mrow><mrow>
+  &amp;=\frac{27}{4}
+</mrow>
+</md>
+</p>
+
+<p>(b)
+On the domain of integration,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>4</m> and
+</li>
+<li>
+for each fixed <m>x</m> in that range, <m>y</m> runs from <m>\frac{1}{2}\sqrt{x}</m> to <m>1</m>.
+</li>
+</ul>
+The figure on the left below is a sketch of that domain, together with
+a generic vertical strip as was used in setting up the integral.
+</p>
+
+<sidebyside width="40%">
+  <image source="pfigs/OE10D_5bv"/>
+ <image source="pfigs/OE10D_5bh"/>
+</sidebyside>
+<p>
+The inside integral, over <m>y</m>, looks pretty nasty because <m>e^{y^3}</m>
+does not have an obvious antiderivative. So let's reverse the order
+of integration. That is, let's use horizontal, rather than vertical,
+strips. From the figure on the right above, we see that, on the
+domain of integration
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each fixed <m>y</m> in that range, <m>x</m> runs from <m>0</m> to <m>4y^2</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+I &amp;= \int_0^1\dee{y}\int_0^{4y^2}\dee{x}\ e^{y^3}
+</mrow><mrow>
+  &amp;= \int_0^1\dee{y}\ 4y^2 e^{y^3}
+</mrow><mrow>
+  &amp;= \frac{4}{3}\int_0^1\dee{u}\ e^u \qquad\text{with }
+                 u=y^3,\ \dee{u}=3y^2\,\dee{y}\qquad
+                 \text{(Looks rigged!)}
+</mrow><mrow>
+  &amp;=\frac{4}{3}\big[e-1\big]
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2011D</fromexam></title>
+<statement><p>
+Consider the iterated integral
+<me>
+\int_{-4}^0\int_{\sqrt{-y}}^2 \cos(x^3)\,\dee{x}\,\dee{y}
+</me>
+<ol label="a">
+<li>
+Draw the region of integration.
+</li>
+<li>
+Evaluate the integral.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+(b) The inside integral, <m>\int_{\sqrt{-y}}^2 \cos(x^3)\,\dee{x}</m>
+looks nasty. Try reversing the order of integration.
+</p></hint>
+
+<answer>
+<sidebyside widths="5% 60%">
+  <p>(a)</p>
+  <image source="pfigs/OE11D_5"/>
+</sidebyside>
+
+<p>
+(b) <m>\frac{\sin(8)}{3}</m>
+</p></answer>
+
+<solution><p>
+(a)  On the domain of integration
+<ul>
+<li>
+  <m>y</m> runs from <m>-4</m> to <m>0</m> and
+</li>
+<li>
+  for each <m>y</m> in that range, <m>x</m> runs from <m>\sqrt{-y}</m> (when <m>y=-x^2</m>)
+  to <m>2</m>.
+</li>
+</ul>
+The figure on the left below provides a sketch of the domain of integration.
+It also shows the generic horizontal slice that was used to set up the given
+iterated integral.
+</p>
+
+<sidebyside width="40%">
+  <image source="pfigs/OE11D_5a"/>
+ <image source="pfigs/OE11D_5b"/>
+</sidebyside>
+
+<p>
+(b) The inside integral, <m>\int_{\sqrt{-y}}^2 \cos(x^3)\,\dee{x}</m>
+looks nasty. So let's reverse the order of integration and use vertical,
+rather than horizontal, slices. From the
+figure on the right above, on the domain of integration,
+<ul>
+<li>
+  <m>x</m> runs from <m>0</m> to <m>2</m> and
+</li>
+<li>
+  for each <m>x</m> in that range, <m>y</m> runs from <m>-x^2</m>
+  to <m>0</m>.
+</li>
+</ul>
+So the integral
+<md>
+<mrow>
+\int_{-4}^0\int_{\sqrt{-y}}^2 \cos(x^3)\,\dee{x}\,\dee{y}
+&amp;=\int_0^2\dee{x}\int_{-x^2}^0\dee{y}\ \cos(x^3)
+</mrow><mrow>
+&amp;=\int_0^2\dee{x}\ x^2\ \cos(x^3)
+=\left[\frac{\sin(x^3)}{3}\right]_0^2
+</mrow><mrow>
+&amp;=\frac{\sin(8)}{3}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2012A</fromexam></title>
+<statement><p>
+<ol label="a">
+<li>
+Combine the sum of the iterated integrals
+<me>
+I = \int_0^1\int_{-\sqrt{y}}^{\sqrt{y}} f(x,y)\ \dee{x}\,\dee{y}
+   + \int_1^4\int_{y-2}^{\sqrt{y}} f(x,y)\ \dee{x}\,\dee{y}
+</me>
+into a single iterated integral with the order of integration reversed.
+</li>
+<li>
+Evaluate <m>I</m> if <m>f(x,y)=\frac{e^x}{2-x}</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>I = \int_{-1}^2\int_{x^2}^{x+2} f(x,y)\ \dee{y}\,\dee{x}</m></p><p>
+(b) <m> 2e^2 + \frac{1}{e}</m>
+</p></answer>
+
+<solution><p>
+(a)  On the domain of integration
+<ul>
+<li>
+  <m>y</m> runs from <m>0</m> to <m>4</m> and
+</li>
+<li>
+  for each <m>y</m> in the range <m>0\le y\le 1</m>, <m>x</m> runs from <m>-\sqrt{y}</m>
+to <m>\sqrt{y}</m> and
+</li>
+<li>
+  for each <m>y</m> in the range <m>1\le y\le 4</m>, <m>x</m> runs from <m>y-2</m>
+to <m>\sqrt{y}</m>.
+</li>
+</ul>
+Both figures below provide sketches of the domain of integration.
+</p>
+
+<sidebyside width="45%">
+<image source="pfigs/OE12A_6a"/>
+<image source="pfigs/OE12A_6b"/>
+</sidebyside>
+
+<p>
+To reverse the order of integration observe, from the figure on the
+right above that, on the domain of integration,
+<ul>
+<li>
+  <m>x</m> runs from <m>-1</m> to <m>2</m> and
+</li>
+<li>
+  for each <m>x</m> in that range, <m>y</m> runs from <m>x^2</m>
+  to <m>x+2</m>.
+</li>
+</ul>
+So the integral
+<me>
+I = \int_{-1}^2\int_{x^2}^{x+2} f(x,y)\ \dee{y}\,\dee{x}
+</me>
+</p>
+
+<p>(b) We'll use the integral with the order of integration reversed
+that we found in part (a). When <m>f(x,y)=\frac{e^x}{2-x}</m>
+<md>
+<mrow>
+I &amp;= \int_{-1}^2\int_{x^2}^{x+2} \frac{e^x}{2-x}\ \dee{y}\,\dee{x}
+</mrow><mrow>
+  &amp;= \int_{-1}^2 (x+2-x^2)\frac{e^x}{2-x}\ \dee{x}
+   = -\int_{-1}^2 (x-2)(x+1)\frac{e^x}{2-x}\ \dee{x}
+</mrow><mrow>
+  &amp;= \int_{-1}^2 (x+1) e^x\ \dee{x}
+</mrow><mrow>
+  &amp;= \Big[xe^x\Big]_{-1}^2
+</mrow><mrow>
+  &amp;= 2e^2 + \frac{1}{e}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2012D</fromexam></title>
+<statement><p>
+Let
+<me>
+I=\int_0^4\int_{\sqrt{y}}^{\sqrt{8-y}} f(x,y)\,\dee{x}\,\dee{y}
+</me>
+<ol label="a">
+<li>
+Sketch the domain of integration.
+</li>
+<li>
+Reverse the order of integration.
+</li>
+<li>
+Evaluate the integral for <m>f(x,y)=\frac{1}{(1+y)^2}</m>.
+</li>
+</ol>
+</p>
+
+</statement>
+
+<hint><p>
+ <m>\frac{1}{9-x^2} =\frac{1}{6}\left(\frac{1}{x+3}-\frac{1}{x-3}\right)</m>.
+</p></hint>
+
+<answer>
+<sidebyside widths="5% 60%">
+  <p>(a)</p>
+  <image source="pfigs/OE12D_7aa"/>
+</sidebyside>
+
+<p>
+(b) <m>\int_0^2\int_0^{x^2} f(x,y)\,\dee{y}\,\dee{x}
++\int_2^{\sqrt{8}}\int_0^{8-x^2} f(x,y)\,\dee{y}\,\dee{x}</m></p><p>
+(c) <m>\sqrt{8}-\arctan 2 -\frac{1}{6}\left[\ln\frac{3+\sqrt{8}}{3-\sqrt{8}}
+                                       -\ln 5\right]</m>
+</p></answer>
+
+<solution><p>
+On the domain of integration
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>4</m>. In inequalities, <m>0\le y\le 4</m>.
+</li>
+<li>
+For each fixed <m>y</m> in that range, <m>x</m> runs from <m>\sqrt{y}</m> to
+<m>\sqrt{8-y}</m>. In inequalities, that is <m>\sqrt{y}\le x\le \sqrt{8-y}</m>,
+or <m>y\le x^2\le 8-y</m>.
+</li>
+</ul>
+Here are two sketchs of the domain of integration.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/OE12D_7a"/>
+ <image source="pfigs/OE12D_7b"/>
+</sidebyside>
+
+<p>
+(b) To reverse the order we observe, from the figure on the right above,
+that, on the domain of integration,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>\sqrt{8}</m>. In inequalities, <m>0\le x\le \sqrt{8}</m>.
+</li>
+<li>
+For each fixed <m>x</m> between <m>0</m> and <m>2</m>, <m>y</m> runs from <m>0</m> to
+<m>x^2</m>. In inequalities, that is <m>0\le y\le x^2</m>.
+</li>
+<li>
+For each fixed <m>x</m> between <m>2</m> and <m>\sqrt{8}</m>, <m>y</m> runs from <m>0</m> to
+<m>8-x^2</m>. In inequalities, that is <m>0\le y\le 8-x^2</m>.
+</li>
+</ul>
+So the integral is
+<me>
+\int_0^2\int_0^{x^2} f(x,y)\,\dee{y}\,\dee{x}
++\int_2^{\sqrt{8}}\int_0^{8-x^2} f(x,y)\,\dee{y}\,\dee{x}
+</me>
+</p>
+
+<p>(c) We'll use the form of part (b).
+<md>
+<mrow>
+&amp;\int_0^2\int_0^{x^2} \frac{1}{(1+y)^2}\,\dee{y}\,\dee{x}
++\int_2^{\sqrt{8}}\int_0^{8-x^2} \frac{1}{(1+y)^2}\,\dee{y}\,\dee{x}
+</mrow><mrow>
+&amp;=-\int_0^2 \left[\frac{1}{1+y}\right]_0^{x^2}\,\dee{x}
+-\int_2^{\sqrt{8}} \left[\frac{1}{1+y}\right]_0^{8-x^2}\,\dee{x}
+</mrow><mrow>
+&amp;=\int_0^2 \left[1-\frac{1}{1+x^2}\right]\,\dee{x}
++\int_2^{\sqrt{8}} \left[1-\frac{1}{9-x^2}\right]\,\dee{x}
+</mrow><mrow>
+&amp;=\sqrt{8}-\arctan x\bigg|_0^2
+  -\frac{1}{6}\int_2^{\sqrt{8}}
+         \left[\frac{1}{3+x}+\frac{1}{3-x}\right]\,\dee{x}
+</mrow><mrow>
+&amp;=\sqrt{8}-\arctan 2 -\frac{1}{6}\Big[\ln(3+x)-\ln(3-x)\Big]_2^{\sqrt{8}}
+</mrow><mrow>
+&amp;=\sqrt{8}-\arctan 2 -\frac{1}{6}\left[\ln\frac{3+\sqrt{8}}{3-\sqrt{8}}
+                                       -\ln 5\right]
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2013D</fromexam></title>
+<statement><p>
+Evaluate
+<me>
+\int_{-1}^0 \int_{-2}^{2x} e^{y^2}\ \dee{y}\,\dee{x}
+</me>
+</p></statement>
+
+<hint><p>
+The antiderivative of the function <m>e^{-y^2}</m> cannot be expressed
+in terms of elementary functions. So the inside integral
+<m>\int_{-2}^{2x} e^{y^2}\ \dee{y}</m> cannot be evaluated using
+standard calculus 2 techniques. Try reversing the order of integration.
+</p></hint>
+
+<answer><p>
+<m>\frac{1}{4}\big[e^4-1\big]</m>
+</p></answer>
+
+<solution><p>
+The antiderivative of the function <m>e^{-y^2}</m> cannot be expressed
+in terms of elementary functions. So the inside integral
+<m>\int_{-2}^{2x} e^{y^2}\ \dee{y}</m> cannot be evaluated using
+standard calculus 2 techniques. The trick for dealing with this
+integral is to reverse the order of integration.
+On the domain of integration
+<ul>
+<li>
+<m>x</m> runs from <m>-1</m> to <m>0</m>. In inequalities, <m>-1\le x\le 0</m>.
+</li>
+<li>
+For each fixed <m>x</m> in that range, <m>y</m> runs from <m>-2</m> to
+<m>2x</m>. In inequalities,  <m>-2\le y\le 2x</m>.
+</li>
+</ul>
+The domain of integration, namely
+<me>
+\Set{(x,y)}{-1\le x\le 0,\ -2\le y\le 2x}
+</me>
+is sketched in the figure on the left below.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/OE13D_6a"/>
+   <image source="pfigs/OE13D_6b"/>
+</sidebyside>
+
+<p>
+Looking at the figure on the right above, we see that we can also
+express the domain of integration as
+<me>
+\Set{(x,y)}{-2\le y\le 0,\ y/2\le x\le 0}
+</me>
+So the integral
+<md>
+<mrow>
+\int_{-1}^0 \int_{-2}^{2x} e^{y^2}\ \dee{y}\,\dee{x}
+&amp;=\int_{-2}^0 \int_{y/2}^{0} e^{y^2}\ \dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;=-\frac{1}{2}\int_{-2}^0  y e^{y^2}\ \dee{y}
+</mrow><mrow>
+&amp;=-\frac{1}{2}\left[\frac{1}{2}e^{y^2}\right]_{-2}^0
+</mrow><mrow>
+&amp;=\frac{1}{4}\big[e^4-1\big]
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2014A</fromexam></title>
+<statement><p>
+Let
+<me>
+I = \int_0^2 \int_0^x f(x,y)\ \dee{y}\,\dee{x}
+    + \int_2^6 \int_0^{\sqrt{6-x}} f(x,y)\ \dee{y}\,\dee{x}
+</me>
+Express <m>I</m> as an integral where we integrate first with respect to <m>x</m>.
+</p></statement>
+
+<answer><p>
+ <m>I = \int_0^2 \int_y^{6-y^2} f(x,y)\ \dee{x}\,\dee{y}</m>
+</p></answer>
+
+<solution><p>
+We first have to get a picture of the domain of integration.
+The first integral has domain of integration
+<me>
+\Set{(x,y)}{0\le x\le 2,\ 0\le y\le x}
+</me>
+and the second integral has domain of integration
+<me>
+\Set{(x,y)}{2\le x\le 6,\ 0\le y\le \sqrt{6-x}}
+</me>
+Here is a sketch. The domain of integration for the first integral
+is the shaded triangular region to the left of <m>x=2</m> and the domain
+of integration for the second integral is the shaded region to the right
+of <m>x=2</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/OE14A_6"/>
+</sidebyside>
+
+<p>
+To exchange the order of integration, we use horizontal slices as in the
+figure below.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/OE14A_6h"/>
+</sidebyside>
+
+<p>
+The bottom slice has <m>y=0</m> and the top slice has <m>y=2</m>.
+On the slice at height <m>y</m>, <m>x</m> runs from <m>y</m> to <m>6-y^2</m>. So
+<me>
+I = \int_0^2 \int_y^{6-y^2} f(x,y)\ \dee{x}\,\dee{y}
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2015D</fromexam></title>
+<statement><p>
+Consider the domain <m>D</m> above the <m>x</m>--axis and below parabola
+<m>y = 1-x^2</m> in the <m>xy</m>--plane.
+<ol label="a">
+<li>
+Sketch <m>D</m>.
+</li>
+<li>
+Express
+<me>
+\dblInt_D f(x,y)\ \dee{A}
+</me>
+as an iterated integral corresponding to the order <m>\dee{x}\,\dee{y}</m>.
+Then express this integral as an iterated integral corresponding to
+the order <m>\dee{y}\,\dee{x}</m>.
+</li>
+<li>
+Compute the integral in the case <m>f(x,y) = e^{x-(x^3/3)}</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="5% 65%">
+<p>(a)</p>
+<image source="pfigs/OE15D_6"/>
+</sidebyside>
+
+<p>
+(b) <m>\int_0^1 \int_{-\sqrt{1-y}}^{\sqrt{1-y}} f(x,y)\ \dee{x}\,\dee{y}</m>,
+    <m>\int_{-1}^1 \int_0^{1-x^2} f(x,y)\ \dee{y}\,\dee{x}</m>
+</p>
+
+<p>(c) <m>e^{2/3}-e^{-2/3}</m>
+</p></answer>
+
+<solution><p>
+(a), (b)
+Looking at the figure on the left below, we see that we can write
+the domain
+<me>
+D = \Set{(x,y)}{0\le y\le 1,\ -\sqrt{1-y}\le x\le\sqrt{1-y}}
+</me>
+So
+<me>
+\dblInt_D f(x,y)\ \dee{A}
+=\int_0^1\dee{y} \int_{-\sqrt{1-y}}^{\sqrt{1-y}}\dee{x}\ f(x,y)
+=\int_0^1 \int_{-\sqrt{1-y}}^{\sqrt{1-y}} f(x,y)\ \dee{x}\,\dee{y}
+</me>
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/OE15D_6B"/>
+  <image source="pfigs/OE15D_6A"/>
+</sidebyside>
+
+<p>
+Looking at the figure on the right above, we see that we can write
+the domain
+<me>
+D = \Set{(x,y)}{-1\le x\le 1,\ 0\le y\le 1-x^2}
+</me>
+So
+<me>
+\dblInt_D f(x,y)\ \dee{A}
+=\int_{-1}^1\dee{x} \int_0^{1-x^2}\dee{y}\ f(x,y)
+=\int_{-1}^1 \int_0^{1-x^2} f(x,y)\ \dee{y}\,\dee{x}
+</me>
+</p>
+
+<p>(c) Using the second form from part (b),
+<md>
+<mrow>
+\dblInt_D e^{x-(x^3/3)}\ \dee{A}
+&amp;=\int_{-1}^1\dee{x} \int_0^{1-x^2}\dee{y}\ e^{x-(x^3/3)}
+</mrow><mrow>
+&amp;=\int_{-1}^1 (1-x^2) e^{x-(x^3/3)}\ \dee{x}
+</mrow><mrow>
+&amp;=\int_{-2/3}^{2/3} e^u\ \dee{u} \qquad\text{with }
+   u=x -\frac{x^3}{3},\
+   \dee{u} = \big(1-x^2)\,\dee{x}
+</mrow><mrow>
+&amp;= e^{2/3}-e^{-2/3}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2016D</fromexam></title>
+<statement><p>
+Let <m>I=\int_0^1 \int_{x^2}^1 x^3\ \sin(y^3)\ \dee{y}\ \dee{x}</m>.
+<ol label="a">
+<li>
+Sketch the region of integration in the <m>xy</m>--plane. Label your
+sketch sufficiently well that one could use it to determine the
+limits of double integration.
+</li>
+<li>
+Evaluate <m>I</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+The inside integral, over <m>y</m>, looks pretty nasty
+because <m>\sin(y^3)</m> does not have an obvious antiderivative. So try
+reversing the order of integration.
+</p></hint>
+
+<answer>
+<sidebyside widths="5% 65%">
+  <p>(a)</p>
+  <image source="pfigs/OE16D_6"/>
+</sidebyside>
+
+<p>
+(b) <m>\frac{1-\cos(1)}{12}</m>
+</p></answer>
+
+<solution><p>
+ (a)
+On the domain of integration,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each fixed <m>x</m> in that range, <m>y</m> runs from <m>x^2</m> to <m>1</m>.
+</li>
+</ul>
+The figure on the left below is a sketch of that domain, together with
+a generic vertical strip as was used in setting up the integral.
+</p>
+
+<sidebyside width="4%">
+<image source="pfigs/OE16D_6v"/>
+<image source="pfigs/OE16D_6h"/>
+</sidebyside>
+
+<p>
+(b) As it stands, the inside integral, over <m>y</m>, looks pretty nasty
+because <m>\sin(y^3)</m> does not have an obvious antiderivative. So let's
+reverse the order of integration. The given integral was set up
+using vertical strips. So, to reverse the order of integration, we use
+horizontal strips as in the figure on the right above. Looking at that
+figure we see that, on the domain of integration,
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each fixed <m>y</m> in that range, <m>x</m> runs from <m>0</m> to <m>\sqrt{y}</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+I&amp;=\int_0^1\dee{y} \int_0^{\sqrt{y}}\dee{x}\  x^3\ \sin(y^3)
+</mrow><mrow>
+ &amp;=\int_0^1\dee{y}\ \sin(y^3)\left[\frac{x^4}{4}\right]_0^{\sqrt{y}}
+</mrow><mrow>
+ &amp;=\frac{1}{4}\int_0^1\dee{y}\ y^2\sin(y^3)
+</mrow><mrow>
+ &amp;=\frac{1}{4}\left[-\frac{\cos(y^3)}{3}\right]_0^1
+</mrow><mrow>
+ &amp;=\frac{1-\cos(1)}{12}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2003D</fromexam></title>
+<statement><p>
+Consider the solid under the surface <m>z=6-xy</m>, bounded by
+the five planes <m>x=0</m>, <m>x=3</m>, <m>y=0</m>, <m>y=3</m>, <m>z=0</m>. Note that no part of
+the solid lies below the <m>x</m>--<m>y</m> plane.
+<ol label="a">
+<li>
+Sketch the base of the solid in the <m>xy</m>--plane. Note that
+it is <em>not</em> a square!
+</li>
+<li>
+Compute the volume of the solid.
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="5% 60%">
+  <p>(a)</p>
+  <image source="pfigs/OE03DQ6a"/>
+</sidebyside>
+
+<p>
+(b)
+<m>27+18\ln\frac{3}{2}\approx 34.30</m>
+</p></answer>
+
+<solution><p>
+(a) The solid is the set of all <m>(x,y,z)</m> obeying
+<m>0\le x\le 3</m>, <m>0\le y\le 3</m> and <m>0\le z\le 6-xy</m>. The base of this region
+is the set of all <m>(x,y)</m> for which there is a <m>z</m> such that <m>(x,y,z)</m>
+is in the solid. So the base is the set of all <m>(x,y)</m> obeying
+<m>0\le x\le 3</m>, <m>0\le y\le 3</m> and <m>6-xy\ge 0</m>, i.e. <m>xy\le 6</m>.
+This region is sketched in the figure on the left below.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/OE03DQ6a"/>
+ <image source="pfigs/OE03DQ6"/>
+</sidebyside>
+
+<p>
+(b) We'll deompose the base region into vertical strips as in the
+figure on the right above.
+Observe that the line <m>y=3</m> intersects the curve <m>xy=6</m> at the point <m>(2,3)</m>
+and that on the base
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>3</m> and that
+</li>
+<li>
+for each fixed <m>x</m> between <m>0</m> and <m>2</m>, <m>y</m> runs from <m>0</m> to <m>3</m>, while
+</li>
+<li>
+for each fixed <m>x</m> between <m>2</m> and <m>3</m>, <m>y</m> runs from <m>0</m> to <m>6/x</m>
+</li>
+</ul>
+and that, for each <m>(x,y)</m> in the base, <m>z</m> runs from <m>0</m> to <m>6-xy</m>.
+So the
+<md>
+<mrow>
+\text{Volume}&amp;=\int_0^2\dee{x}\int_0^3\dee{y}\ (6-xy)+
+             \int_2^3\dee{x}\int_0^{6/x} \dee{y}\ (6-xy)
+</mrow><mrow>
+&amp;=\int_0^2\dee{x}\ \left[6y-\frac{1}{2} xy^2\right]_0^3
++\int_2^3\dee{x}\ \left[6y-\frac{1}{2} xy^2\right]_0^{6/x}
+</mrow><mrow>
+&amp;=\int_0^2\dee{x}\ \left[18-\frac{9}{2}x\right]
++\int_2^3\dee{x}\ \left[\frac{36}{x}-\frac{18}{x}\right]
+</mrow><mrow>
+&amp;=\left[18x-\frac{9}{4}x^2\right]_0^2+\Big[18\ln x\Big]_2^3
+=27+18\ln\frac{3}{2}\approx 34.30
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2002D</fromexam></title>
+<statement><p>
+Evaluate the following integral:
+<me>
+\int_{-2}^2\int_{x^2}^4\cos\big(y^{3/2}\big)\ \dee{y}\,\dee{x}
+</me>
+</p></statement>
+
+<hint><p>
+The inside integral, <m>\int_{x^2}^4\cos\big(y^{3/2}\big)\ \dee{y}</m>,
+in the given integral looks really nasty.  So try exchanging
+the order of integration.
+</p></hint>
+
+<answer><p>
+<m>\frac{4}{3}\sin 8\approx 1.319</m>
+</p></answer>
+
+<solution><p>
+In the given integral
+<ul>
+<li>
+<m>x</m> runs from <m>-2</m> to <m>2</m> and
+</li>
+<li>
+for each fixed <m>x</m> between <m>-2</m> and <m>2</m>, <m>y</m> runs from <m>x^2</m> to <m>4</m>
+</li>
+</ul>
+So the domain of integration is
+<me>
+D = \Set{(x,y)}{-2\le x\le 2,\  x^2\le y\le 4}
+</me>
+This is sketched below.
+</p>
+<sidebyside width="65%">
+  <image source="pfigs/OE02DQ6"/>
+
+</sidebyside>
+
+<p>
+The inside integral, <m>\int_{x^2}^4\cos\big(y^{3/2}\big)\ \dee{y}</m>,
+in the given integral looks really nasty.  So let's try exchanging
+the order of integration. The given integral was formed by decomposing
+the domain of integration <m>D</m> into horizontal strips, like the blue strip
+in the figure above. To exchange the order of integration we instead
+decompose the domain of integration <m>D</m> into vertical strips,
+like the pink strip in the figure above. To do so, we observe that, on <m>D</m>,
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>4</m> and
+</li>
+<li>
+for each fixed <m>y</m> between <m>0</m> and <m>4</m>, <m>x</m> runs from <m>-\sqrt{y}</m> to <m>\sqrt{y}</m>.
+</li>
+</ul>
+That is, we reexpress the domain of integration as
+<me>
+D = \Set{(x,y)}{0\le y\le 4,\  -\sqrt{y}\le x\le \sqrt{y}}
+</me>
+and the given integral as
+<md>
+<mrow>
+\int_{-2}^2\int_{x^2}^4\cos\big(y^{3/2}\big)\ \dee{y}\,\dee{x}
+&amp;=\int_0^4\dee{y} \int_{-\sqrt{y}}^{\sqrt{y}}\dee{x}\ \cos\big(y^{3/2}\big)\cr
+&amp;=\int_0^4\dee{y} \ 2\sqrt{y}\cos\big(y^{3/2}\big)\cr
+&amp;=\frac{4}{3}\int_0^8\dee{t}\ \cos t\quad\hbox{where }
+    t=y^{3/2},\ \dee{t}=\frac{3}{2}\sqrt{y}\ \dee{y}\cr
+&amp;=\frac{4}{3}\sin t\Big|_0^8
+=\frac{4}{3}\sin 8\approx 1.319
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2002A</fromexam></title>
+<statement><p>
+Consider the volume above the <m>xy</m>-plane that is inside
+the circular cylinder <m>x^2+y^2=2y</m> and underneath the surface <m>z=8+2xy</m>.
+<ol label="a">
+<li>
+ Express this volume as a double integral <m>I</m>, stating clearly
+the domain over which I is to be taken.
+</li>
+<li>
+Express in Cartesian coordinates, the double integral <m>I</m>
+as an iterated intergal in two different ways, indicating clearly the limits
+of integration in each case.
+</li>
+<li>
+How much is this volume?
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\ds I=\dblInt_D (8+2xy)\ \dee{x}\dee{y}</m> where
+    <m>D=\Set{(x,y)}{x^2+(y-1)^2\le 1}</m>
+</p>
+
+<p>(b) <m>\ds I
+  =\int_0^2 \dee{y}\int_{-\sqrt{2y-y^2}}^{\sqrt{2y-y^2}}\dee{x}\ (8+2xy)
+  =\int_{-1}^1 \dee{x}\int_{1-\sqrt{1-x^2}}^{1+\sqrt{1-x^2}}\dee{y}\ (8+2xy)</m>
+</p>
+
+<p>(c) <m>8\pi</m>
+</p></answer>
+
+<solution><p>
+(a) We may rewrite the equation <m>x^2+y^2=2y</m> of the cylinder as
+<m>x^2+(y-1)^2=1</m>. We are (in part (c)) to find the volume of the set
+<me>
+V=\Set{(x,y,z)}{x^2+(y-1)^2\le 1,\ 0\le z\le 8+2xy}
+</me>
+When we look at this solid from far above (so that we can't see <m>z</m>)
+we see the set of points <m>(x,y)</m> that
+obey <m>x^2+(y-1)^2\le 1</m> and <m>8+2xy\ge 0</m> (so that there is at least one allowed <m>z</m> for that <m>(x,y)</m>). All points in <m>x^2+(y-1)^2\le 1</m>
+have <m>-1\le x\le 1</m> and <m>0\le y\le 2</m> and hence <m>-2\le xy\le 2</m> and
+<m>8+2xy\ge 0</m>. So the domain of integration consists of the full disk
+<me>
+D = \Set{(x,y)}{x^2+(y-1)^2\le 1}
+</me>
+The volume is
+<me>
+I=\dblInt_D (8+2xy)\ \dee{x}\dee{y}
+</me>
+</p>
+
+<p>(b)
+We can express the double integral over <m>D</m> as iterated integrals by
+decomposing <m>D</m> into horizontal strips, like the pink strip in the
+figure below, and also by decomposing <m>D</m> into blue strips, like the
+blue strip in the figure below.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/OE02AQ7"/>
+
+</sidebyside>
+
+<p>
+For horizontal strips, we use that, on <m>D</m>
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>2</m> and,
+</li>
+<li>
+for each fixed <m>y</m> between <m>0</m> and <m>2</m>, <m>x</m> runs from <m>-\sqrt{2y-y^2}</m>
+to <m>\sqrt{2y-y^2}</m>
+</li>
+</ul>
+so that
+<me>
+D=\Set{(x,y)}{0\le y\le 2,\ -\sqrt{2y-y^2}\le x\le \sqrt{2y-y^2}}
+</me>
+For vertical strips, we use that, on <m>D</m>
+<ul>
+<li>
+<m>x</m> runs from <m>-1</m> to <m>1</m> and,
+</li>
+<li>
+for each fixed <m>x</m> between <m>-1</m> and <m>1</m>, <m>y</m> runs from <m>1-\sqrt{1-x^2}</m>
+to <m>1+\sqrt{1-x^2}</m>
+</li>
+</ul>
+so that
+<me>
+D=\Set{(x,y)}{-1\le x\le 1,\ 1-\sqrt{1-x^2}\le x\le 1+\sqrt{1-x^2}}
+</me>
+Thus
+<md>
+<mrow>
+I&amp;=\int_0^2 \dee{y}\int_{-\sqrt{2y-y^2}}^{\sqrt{2y-y^2}}\dee{x}\ (8+2xy)
+</mrow><mrow>
+ &amp;=\int_{-1}^1 \dee{x}\int_{1-\sqrt{1-x^2}}^{1+\sqrt{1-x^2}}\dee{y}\ (8+2xy)
+</mrow>
+</md>
+</p>
+
+<p>(c) Since <m>\dblInt_D 8\ \dee{x}\dee{y}</m> is just <m>8</m> times the area of <m>D</m>,
+which is <m>\pi</m>,
+<md>
+<mrow>
+\text{Volume}&amp;=8\pi+\int_0^2 \dee{y}\int_{-\sqrt{2y-y^2}}^{\sqrt{2y-y^2}}\dee{x}\ 2xy
+=8\pi+2\int_0^2 \dee{y}\ y\int_{-\sqrt{2y-y^2}}^{\sqrt{2y-y^2}}\dee{x}\ x
+</mrow><mrow>
+&amp;=8\pi
+</mrow>
+</md>
+because <m>\int_{-\sqrt{2y-y^2}}^{\sqrt{2y-y^2}}\dee{x}\ x=0</m> for all <m>y</m>,
+because the integrand is odd and the domain of integration is even.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2001D</fromexam></title>
+<statement><p>
+Evaluate the following integral:
+<me>
+\int_0^9\int_{\sqrt{y}}^3\sin(\pi x^3)\ \dee{x}\dee{y}
+</me>
+</p></statement>
+
+<hint><p>
+The inside integral, <m>\ds\int_{\sqrt{y}}^3\sin\big(\pi x^3\big)\ \dee{x}</m>,
+in the given integral looks really nasty.  So try exchanging
+the order of integration.
+</p></hint>
+
+<answer><p>
+<m>\frac{2}{3\pi}\approx 0.212</m>
+</p></answer>
+
+<solution><p>
+In the given integral
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>9</m> and
+</li>
+<li>
+for each fixed <m>y</m> between <m>0</m> and <m>9</m>, <m>x</m> runs from <m>\sqrt{y}</m> to <m>3</m>
+</li>
+</ul>
+So the domain of integration is
+<me>
+D = \Set{(x,y)}{0\le y\le 9,\  \sqrt{y}\le x\le 3}
+</me>
+This is sketched below.
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/OE01DQ6"/>
+</sidebyside>
+
+<p>
+The inside integral, <m>\int_{\sqrt{y}}^3\sin\big(\pi x^3\big)\ \dee{x}</m>,
+in the given integral looks really nasty.  So let's try exchanging
+the order of integration. The given integral was formed by decomposing
+the domain of integration <m>D</m> into horizontal strips, like the blue strip
+in the figure above. To exchange the order of integration we instead
+decompose the domain of integration <m>D</m> into vertical strips,
+like the pink strip in the figure above. To do so, we observe that, on <m>D</m>,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>3</m> and
+</li>
+<li>
+for each fixed <m>x</m> between <m>0</m> and <m>3</m>, <m>y</m> runs from <m>0</m> to <m>x^2</m>.
+</li>
+</ul>
+That is, we reexpress the domain of integration as
+<me>
+D = \Set{(x,y)}{0\le x\le 3,\  0\le y\le x^2}
+</me>
+and the given integral as
+<md>
+<mrow>
+\int_0^9\int_{\sqrt{y}}^3\sin(\pi x^3)\ \dee{x}\dee{y}
+&amp;=\int_0^3\dee{x} \int_0^{x^2}\dee{y}\ \sin(\pi x^3) \cr
+&amp;=\int_0^3\dee{x} \ x^2\sin(\pi x^3)\cr
+&amp;=\frac{1}{3\pi}\int_0^{27\pi}\dee{t}\ \sin t\quad\hbox{where }
+    t=\pi x^3,\ \dee{t}=3\pi x^2\,\dee{x}\cr
+&amp;=-\frac{1}{3\pi}\cos t\Big|_0^{27\pi}=-\frac{1}{3\pi}\cos t\Big|_0^\pi
+=\frac{2}{3\pi}\approx 0.212
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2000D</fromexam></title>
+<statement><p>
+The iterated integral
+<me>
+I=\int_0^1\bigg[\int_{-\sqrt{x}}^{\sqrt{x}} \sin\big(y^3-3y\big)\,\dee{y}\bigg]
+         \ \dee{x}
+</me>
+is equal to <m>\dblInt_R\sin\big(y^3-3y)\ dA</m> for a suitable region <m>R</m> in
+the <m>xy</m>-plane.
+<ol label="a">
+<li>
+Sketch the region <m>R</m>.
+</li>
+<li>
+Write the integral <m>I</m> with the orders of integration reversed,
+and with suitable limits of integration.
+</li>
+<li>
+Find <m>I</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="5% 75%">
+<p>(a)</p>
+<image source="pfigs/OE00DQ6"/>
+</sidebyside>
+
+<p>(b) <m>\ds\int_{-1}^1\bigg[\int_{y^2}^1 \sin\big(y^3-3y\big)\,\dee{x}\bigg]\ \dee{y}</m>
+</p><p>
+ (c) <m>0</m>
+</p></answer>
+
+<solution><p>
+(a) In the given integral
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m>, and
+</li>
+<li>
+for each fixed <m>x</m> between <m>0</m> and <m>1</m>,
+<m>y</m> runs from <m>-\sqrt{x}</m> to <m>\sqrt{x}</m>.
+</li>
+</ul>
+So the region
+<me>
+R=\Set{(x,y)}{0\le x\le 1,\ -\sqrt{x}\le y\le \sqrt{x}}
+</me>
+It is sketched below.
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/OE00DQ6"/>
+</sidebyside>
+
+<p>
+(b) The given integral was formed by decomposing
+the domain of integration <m>R</m> into vertical strips, like the pink strip
+in the figure above. To exchange the order of integration we instead
+decompose the domain of integration <m>R</m> into horizontal strips,
+like the blue strip in the figure above. To do so, we observe that, on <m>R</m>,
+<ul>
+<li>
+<m>y</m> runs from <m>-1</m> to <m>1</m>, and
+</li>
+<li>
+for each fixed <m>y</m> between <m>-1</m> and <m>1</m>, <m>x</m> runs from <m>y^2</m> to <m>1</m>.
+</li>
+</ul>
+So
+<me>
+I=\int_{-1}^1\bigg[\int_{y^2}^1 \sin\big(y^3-3y\big)\,\dee{x}\bigg]\ \dee{y}
+</me>
+</p>
+
+<p>(c) The easy way to evaluate <m>I</m> is to observe that, since
+<m>\sin\big(y^3-3y\big)</m> is odd under <m>y\rightarrow -y</m>, the integral
+<me>
+\int_{-\sqrt{x}}^{\sqrt{x}} \sin\big(y^3-3y\big)\,\dee{y}=0
+</me>
+for all <m>x</m>. Hence <m>I=0</m>. The hard way is
+<md>
+<mrow>
+I&amp;=\int_{-1}^1\bigg[\int_{y^2}^1 \sin\big(y^3-3y\big)\,\dee{x}\bigg]\ \dee{y}
+</mrow><mrow>
+&amp;=\int_{-1}^1 (1-y^2) \sin\big(y^3-3y\big)\ \dee{y}
+</mrow><mrow>
+&amp;=\int_2^{-2} \sin t\ \frac{\dee{t}}{-3}
+\qquad\hbox{ where }t=y^3-3y,\ \dee{t} =3(y^2-1)\,\dee{y}
+</mrow><mrow>
+&amp;=\frac{1}{3}\cos t\ \Big|_2^{-2}=0
+</mrow>
+</md>
+again, since <m>\cos</m> is even.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2000A</fromexam></title>
+<statement><p>
+Find the double integral of the function <m>f(x, y) = xy</m>
+ over the region bounded by <m>y = x - 1</m> and <m>y^2 = 2x + 6</m>.
+</p></statement>
+
+<answer><p>
+<m>36</m>
+</p></answer>
+
+<solution><p>
+The parabola <m>y^2=2x+6</m> and the line <m>y=x-1</m> meet when <m>x=y+1</m>
+with <m>y^2=2(y+1)+6</m> or <m>y^2-2y-8=(y-4)(y+2)=0</m>. So they meet at <m>(-1,-2)</m> and <m>(5,4)</m>.
+The domain of integration is sketched below.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/OE00AQ7"/>
+</sidebyside>
+
+<p>
+On this domain
+<ul>
+<li>
+<m>y</m> runs from <m>-2</m> to <m>4</m>, and
+</li>
+<li>
+for each fixed <m>y</m> between <m>-2</m> and <m>4</m>, <m>x</m> runs from <m>\frac{y^2}{2}-3</m>
+to <m>y+1</m>.
+</li>
+</ul>
+So the integral is
+<md>
+<mrow>
+\int_{-2}^4\dee{y}\int_{y^2/2-3}^{y+1}\dee{x}\ xy
+&amp;=\int_{-2}^4\dee{y}\ \frac{1}{2} x^2y\bigg|_{y^2/2-3}^{y+1}
+</mrow><mrow>
+&amp;=\frac{1}{2}\int_{-2}^4\dee{y}\
+                  \left[y^3+2y^2+y-\frac{1}{4}y^5+3y^3-9y\right]
+</mrow><mrow>
+&amp;=\frac{1}{2}\int_{-2}^4\dee{y}\ \left[-8y+2y^2+4y^3-\frac{1}{4}y^5\right]
+</mrow><mrow>
+&amp;=\left[-2y^2+\frac{1}{3}y^3+\frac{1}{2}y^4-\frac{1}{48}y^6\right]_{-2}^4
+</mrow><mrow>
+&amp;=-2(16-4)+\frac{1}{3}(64+8)+\frac{1}{2}(256-16)
+-\frac{1}{48}(4096-64)\cr
+&amp;=-24+24+120-84=36
+</mrow>
+</md>
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise>
+<statement><p>
+Find the volume of the solid inside the cylinder <m>x^2+2y^2=8</m>, above
+the plane <m>z=y-4</m> and below the plane <m>z=8-x</m>.
+</p></statement>
+
+<answer><p>
+<m>48\sqrt{2}\,\pi</m>
+</p></answer>
+
+<solution><p>
+Looking down from the top, we see the cylinder
+<m>x^2+2y^2\le 8</m>. That gives the base region. The top of the solid, above
+any fixed <m>(x,y)</m> in the base region, is at <m>z=8-x</m> (this is always positive
+because <m>x</m> never gets bigger than <m>\sqrt{8}</m>) . The bottom
+of the solid, below any fixed <m>(x,y)</m> in the base region, is at
+<m>z=y-4</m> (this is always negative because <m>y</m> is always smaller than <m>2</m>).
+So the height of the solid at any <m>(x,y)</m> is
+<me>
+z_{\rm top}-z_{\rm bottom}
+=(8-x)-(y-4)=12-x-y
+</me>
+The volume is
+<me>
+\int_{-2}^{2}\dee{y}\int_{-\sqrt{8-2y^2}}^{\sqrt{8-2y^2}}\dee{x}\ (12-x-y)
+</me>
+Recall, from Theorem \eref{CLP101}{thm:INTevenodd} in the CLP-2 text,
+that if <m>f(x)</m> is an odd function (meaning that
+<m>f(-x)=-f(x)</m> for all <m>x</m>), then <m>\int_{-a}^a f(x)\ \dee{x}=0</m> (because the
+two integrals <m>\int_0^a f(x)\ \dee{x}</m> and <m>\int_{-a}^0 f(x)\ \dee{x}</m> have the
+same magnitude but opposite signs). Applying this twice gives
+<me>
+\int_{-\sqrt{8-2y^2}}^{\sqrt{8-2y^2}}\dee{x}\ x=0\text{ and }
+\int_{-2}^{2}\dee{y}\int_{-\sqrt{8-2y^2}}^{\sqrt{8-2y^2}}\dee{x}\ y
+=\int_{-2}^{2}\dee{y}\ 2y\sqrt{8-2y^2}=0
+</me>
+since <m>x</m> and <m>y\sqrt{8-2y^2}</m> are both odd. Thus
+<me>
+\int_{-2}^{2}\dee{y}\int_{-\sqrt{8-2y^2}}^{\sqrt{8-2y^2}}\dee{x}\ (-x-y)=0
+\implies
+\text{Volume} = \int_{-2}^{2}\dee{y}\int_{-\sqrt{8-2y^2}}^{\sqrt{8-2y^2}}\dee{x}\
+12
+</me>
+so that the volume is just 12 times the area of the ellipse <m>x^2+2y^2=8</m>,
+which is
+<me>
+12\big(\pi\,\sqrt{8}\,2\big)= 48\sqrt{2}\,\pi
+</me>
+</p></solution>
+</exercise>
+</exercisegroup>
+
+</exercises>

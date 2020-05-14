@@ -1,0 +1,2167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise>
+<statement><p>
+Evaluate the integral
+<me>
+\dblInt_R \sqrt{b^2-y^2}\ \dee{x}\,\dee{y}
+\text{where $R$ is the rectangle  } 0\le x\le a,\ 0\le y\le b
+</me>
+<em>without</em> using iteration. Instead, interpret the integral
+geometrically.
+</p></statement>
+
+<answer><p>
+<m>\frac{1}{4}\pi ab^2</m>
+</p></answer>
+
+<solution><p>
+<m>\dblInt_R \sqrt{b^2-y^2}\,\dee{x}\,\dee{y}
+=\tripInt_V \dee{x}\,\dee{y}\,\dee{z}</m>, where
+<md>
+<mrow>
+V&amp;=\Set{(x,y,z)} {0\le z\le\sqrt{b^2-y^2},\  0\le x\le a,\  0\le y\le b}
+</mrow><mrow>
+ &amp;=\Set{(x,y,z)} {y^2+z^2\le b^2,\  0\le x\le a,\  y\ge 0,\ z\ge 0}
+</mrow>
+</md>
+Now <m>y^2+z^2\le b^2</m> is a cylinder of radius <m>b</m> centered on the <m>x</m>--axis and the part of <m>y^2+z^2\le b^2</m>, with <m>y\ge0,\ z\ge0</m> is one quarter of this cylinder.
+It has cross--sectional area <m>\frac{1}{4}\pi b^2</m>. <m>V</m> is the part of
+this quarter--cylinder with <m>0\le x\le a</m>. It has length <m>a</m> and
+cross--sectional area <m>\frac{1}{4}\pi b^2</m>. So,
+<m>\dblInt_R \sqrt{b^2-y^2}\,\dee{x}\,\dee{y}=\frac{1}{4}\pi ab^2</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2013D</fromexam></title>
+<statement><p>
+Find the total mass of the rectangular box
+<m>[0, 1] \times [0, 2] \times [0, 3]</m> (that is, the box
+defined by the inequalities <m>0 \le x \le 1</m>, <m>0 \le y \le 2</m>,
+<m>0 \le z \le 3</m>), with density function <m>h(x, y, z) = x</m>.
+</p></statement>
+
+<answer><p>
+<m>3</m>
+</p></answer>
+
+<solution><p>
+The mass is
+<md>
+<mrow>
+\int_0^1\dee{x} \int_0^2\dee{y}\int_0^3\dee{z}\ x
+&amp;= 6\int_0^1 \dee{x}\ x =3
+</mrow>
+</md>
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise>
+<statement><p>
+Evaluate <m>\ds\tripInt_R x\ \dee{V}</m> where <m>R</m> is the tetrahedron bounded
+by the coordinate planes and the plane
+<m>\frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1</m>.
+</p></statement>
+
+<answer><p>
+<m>\frac{a^2bc}{24}</m>
+</p></answer>
+
+<solution><p>
+The domain of integration is
+<me>
+V=\Set{(x,y,z)}{x,y,z\ge 0,\ \tfrac{x}{a}+\tfrac{y}{b}+\tfrac{z}{c}\le 1}
+</me>
+<ul>
+<li>
+In <m>V</m>, <m>\tfrac{z}{c}\le 1-\tfrac{x}{a}-\tfrac{y}{b}</m> and <m>x,y\ge0</m>, so
+the biggest value of <m>z</m> in <m>V</m> is achieved when <m>x=y=0</m> and is <m>c</m>.
+Thus, in <m>V</m>, <m>z</m> runs from <m>0</m> to <m>c</m>.
+</li>
+<li>
+For each fixed <m>0\le z\le c</m>, <m>(x,y)</m> takes all values in
+<me>
+D_z=\Set{(x,y)}{x,y\ge 0,\ \tfrac{x}{a}+\tfrac{y}{b}\le 1-\tfrac{z}{c}}
+</me>
+The biggest value of <m>y</m> on <m>D_z</m> is achieved when <m>x=0</m> and is <m>b\left(1-\tfrac{z}{c}\right)</m>. Thus, on <m>D_z</m>, <m>y</m> runs from <m>0</m> to
+<m>b\left(1-\tfrac{z}{c}\right)</m>.
+</li>
+<li>
+For each fixed <m>0\le z\le c</m> and
+ <m>0\le y \le b\left(1-\tfrac{z}{c}\right)</m>, <m>x</m> runs over
+<me>
+D_{y,z}=\Set{x}{0\le x \le a\left(1-\tfrac{y}{b}-\tfrac{z}{c}\right)}
+</me>
+This is pictured in the figure on the right below.
+</li>
+</ul>
+</p>
+
+<sidebyside width="45%">
+<image source="pfig/domainTetrahedron"/>
+<image source="pfig/domainTetrahedron2"/>
+</sidebyside>
+
+<p>
+So the specified integral is
+<md>
+<mrow>
+\tripInt_R x\ \dee{V}
+&amp;=\int_0^c \dee{z} \dblInt_{D_z} \dee{x}\,\dee{y}\ x
+ = \int_0^c \dee{z}\int_0^{b(1-{z\over c})}\dee{y}\int_{D_{y,z}}\dee{x}\ x
+</mrow><mrow>
+&amp;=\int_0^c \dee{z}\int_0^{b(1-{z\over c})}\dee{y}
+             \int_0^{a(1-{y\over b}-{z\over c})} \dee{x}\ x
+=\int_0^c \dee{z}\int_0^{b(1-{z\over c})} \dee{y}\ \frac{a^2}{2}
+\left(1-\frac{y}{b}-\frac{z}{c}\right)^2
+</mrow><mrow>
+&amp;=\int_0^c \dee{z}\ \left[-\frac{a^2b}{6}
+           \left(1-\frac{y}{b}-\frac{z}{c}\right)^3
+                                    \right]_0^{b(1-{z\over c})}
+=\int_0^c \dee{z}\ \frac{a^2b}{6}\left(1-\frac{z}{c}\right)^3
+</mrow><mrow>
+&amp;=\left[-\frac{a^2bc}{24}\left(1-\frac{z}{c}\right)^4  \right]_0^c
+=\frac{a^2bc}{24}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Evaluate <m>\ds\tripInt_R y\ \dee{V}</m> where <m>R</m> is the portion
+of the cube <m>0\le x,y,z\le 1</m> lying above the plane <m>y+z=1</m> and below the
+plane <m>x+y+z=2</m>.
+</p></statement>
+
+<answer><p>
+<m>\frac{5}{24}</m>
+</p></answer>
+
+<solution><p>
+The domain of integration is
+<me>
+R = \Set{(x,y,z)}{0\le x,y,z\le 1,\ z\ge 1-y,\ z\le2-x-y}
+</me>
+In the figure on the  below, the more darkly shaded region
+is part of <m>z=1-y</m> and the more lightly shaded region is part
+of <m>z=2-x-y</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/domainPartCube1"/>
+</sidebyside>
+
+<p>
+<ul>
+<li>
+In <m>R</m>, <m>z</m> runs from <m>0</m> (for example <m>(0,1,0)</m> is in <m>R</m>)
+to <m>1</m> (for example <m>(0,0,1)</m> is in <m>R</m>).
+</li>
+<li>
+  <p>
+For each fixed <m>0\le z\le 1</m>, <m>(x,y)</m> runs over
+<me>
+D_z = \Set{(x,y)}{0\le x,y\le 1,\ y\ge 1-z,\ x+y\le2-z}
+</me>
+Here is a sketch of a top view of <m>D_z</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/domainPartCube2"/>
+</sidebyside>
+
+<p>
+On <m>D_z</m>, <m>y</m> runs from <m>1-z</m> to <m>1</m>.
+</p>
+</li>
+<li>
+For each fixed <m>0\le z\le 1</m> and <m>1-z\le y\le 1</m>, <m>x</m> runs from <m>0</m>
+to <m>2-y-z</m>.
+</li>
+</ul>
+So the specified integral is
+<md>
+<mrow>
+\tripInt_R y\ \dee{V}
+&amp;=\int_0^1\dee{z}\dblInt_{D_z} \dee{x}\dee{y}\ y
+=\int_0^1 \dee{z}\int_{1-z}^1 \dee{y}\int_0^{2-y-z} \dee{x}\ y
+=\int_0^1 \dee{z}\int_{1-z}^1 \dee{y}\ y(2-y-z)\cr
+&amp;=-\int_0^1 \dee{z}\int_z^0 du\ (1-u)(1+u-z)\qquad\text{ where }  u=1-y
+</mrow><mrow>
+&amp;=\int_0^1 \dee{z}\int_0^z du\ (1-u^2-z+uz)
+=\int_0^1 \dee{z}\ \big(z-\frac{z^3}{3}-z^2+\frac{z^3}{2})
+</mrow><mrow>
+&amp;=\frac{1}{2}-\frac{1}{12}-\frac{1}{3}+\frac{1}{8}
+=\frac{5}{24}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+For each of the following, express the given iterated integral as an
+iterated integral in which the integrations are  performed in the order:
+first <m>z</m>, then <m>y</m>, then <m>x</m>.
+<ol label="a">
+<li>
+<m>\ds\int_0^1\dee{z}\int_0^{1-z}\dee{y}\int_0^{1-z} \dee{x}\ f(x,y,z)</m>
+</li>
+<li>
+<m>\ds\int_0^1\dee{z}\int_{\sqrt z}^1\dee{y}\int_0^y \dee{x}\ f(x,y,z)</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\ds\int_0^1\dee{x}\int_0^{x}\dee{y}\int_0^{1-x}\hskip-10pt \dee{z}\hskip3pt f(x,y,z)
++\int_0^1\dee{x}\int_x^{1}\dee{y}\int_0^{1-y}\hskip-10pt \dee{z}\hskip3pt f(x,y,z)</m>
+</p>
+
+<p>(b) <m>\ds\int_0^1\dee{x}\int_x^{1}\dee{y}\int_0^{y^2}\!\! \dee{z}\  f(x,y,z)</m>
+</p></answer>
+
+<solution><p>
+(a)
+ The domain of integration is
+<md>
+<mrow>
+V &amp;= \Set{(x,y,z)}{0\le z\le 1,\ 0\le y\le 1-z,\ 0\le x\le 1-z}
+</mrow><mrow>
+  &amp;= \Set{(x,y,z)}{ x,y,z\ge 0,\ x+z\le 1,\ y+z\le 1 }
+</mrow>
+</md>
+This is sketched in the figure below. The front face is <m>x+z=1</m> and the
+lightly shaded right face is <m>y+z=1</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/domainFivehedron1"/>
+</sidebyside>
+
+<p>
+In <m>V</m>,
+<ul>
+<li>
+<m>x</m> takes all values between <m>0</m> and <m>1</m>.
+</li>
+<li><p>
+For each fixed <m>0\le x\le 1</m>, <m>(y,z)</m> takes all values in
+<me>
+D_x=\Set{(y,z)}{y,z\ge 0,\ z\le 1-x,\ y+z\le 1}
+</me>
+Here is a sketch of <m>D_x</m>.
+</p>
+<sidebyside width="75%">
+  <image source="pfig/domainFivehedron2"/>
+</sidebyside>
+</li>
+<li><p>
+Looking at the sketch above, we see that, on <m>D_x</m>, <m>y</m> runs from <m>0</m> to <m>1</m>
+and
+<ul>
+<li>
+for each fixed <m>y</m> between <m>0</m> and <m>x</m>, <m>z</m> runs from <m>0</m> to <m>1-x</m> and
+</li>
+<li>
+for each fixed <m>y</m> between <m>x</m> and <m>1</m>, <m>z</m> runs from <m>0</m> to <m>1-y</m>
+</li>
+</ul></p>
+</li>
+</ul>
+So the integral is, in the new order,
+<md>
+<mrow>
+\tripInt_V f(x,y,z)\ \dee{V}
+&amp;= \int_0^1\dee{x}\dblInt_{D_x} \dee{y}\,\dee{z}\ f(x,y,z)
+</mrow><mrow>
+&amp;= \int_0^1\dee{x}\int_0^{x}\dee{y}\int_0^{1-x}\hskip-10pt \dee{z}\hskip3pt f(x,y,z)
++\int_0^1\dee{x}\int_x^{1}\dee{y}\int_0^{1-y}\hskip-10pt \dee{z}\hskip3pt f(x,y,z)
+</mrow>
+</md>
+</p>
+
+<p>(b) The domain of integration is
+<md>
+<mrow>
+V &amp;= \Set{(x,y,z)}{0\le z\le 1,\ \sqrt{z}\le y\le 1,\ 0\le x\le y}
+</mrow><mrow>
+  &amp;= \Set{(x,y,z)}{0\le z\le y^2,\ 0\le x\le y\le 1}
+</mrow>
+</md>
+In this region, <m>x</m> takes all values between <m>0</m> and <m>1</m>. For each fixed
+<m>x</m> between <m>0</m> and <m>1</m>, <m>(y,z)</m> takes all values in
+<me>
+D_x=\Set{(y,z)}{0\le z\le y^2,\ x\le y\le 1}
+</me>
+Here is a sketch of <m>D_x</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/domainSwitchb"/>
+</sidebyside>
+
+<p>
+In the new order, the integral is
+<me>
+\int_0^1\dee{x}\dblInt_{D_x} \dee{y}\,\dee{z}\ f(x,y,z)
+=\int_0^1\dee{x}\int_x^{1}\dee{y}\int_0^{y^2}\!\! \dee{z}\  f(x,y,z)
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2005D</fromexam></title>
+<statement><p>
+A triple integral <m>\ds\tripInt_E f\ \dee{V}</m> is given in
+iterated form by
+<me>
+\int_{y=-1}^{y=1} \int_{z=0}^{z=1-y^2} \int_{x=0}^{2-y-z} f(x,y,z)
+                                    \ \dee{x}\,\dee{z}\,\dee{y}
+</me>
+<ol label="a">
+<li>
+Draw a reasonably accurate picture of <m>E</m> in 3--dimensions. Be sure
+to show the units on the coordinate axes.
+</li>
+<li>
+Rewrite the triple integral <m>\tripInt_E f\ \dee{V}</m> as one or more
+iterated triple integrals in the order
+<me>
+\int_{y=}^{y=} \int_{x=}^{x=} \int_{z=}^{z=} f(x,y,z)
+                                    \ \dee{z}\,\dee{x}\,\dee{y}
+</me>
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="10% 70%">
+  <p>(a)</p>
+  <image source="pfig/OE05D_9c"/>
+</sidebyside>
+
+<p>
+(b)
+<md>
+<mrow>
+&amp;\int_{y=-1}^{y=1} \int_{x=0}^{x=1+y^2-y} \int_{z=0}^{z=1-y^2} f(x,y,z)
+                                    \ \dee{z}\,\dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;\hskip1in
++\int_{y=-1}^{y=1} \int_{x=1+y^2-y}^{x=2-y} \int_{z=0}^{z=2-x-y} f(x,y,z)
+                                    \ \dee{z}\,\dee{x}\,\dee{y}
+</mrow>
+</md>
+</p></answer>
+
+<solution><p>
+(a) In the domain of integration for the given integral
+<ul>
+<li>
+<m>y</m> runs from <m>-1</m> to <m>1</m>, and
+</li>
+<li>
+for each fixed <m>y</m> in that range <m>z</m> runs from <m>0</m> to <m>1-y^2</m>, and
+</li>
+<li>
+for each fixed <m>y</m> and <m>z</m> as above, <m>x</m> runs from <m>0</m> to <m>2-y-z</m>.
+</li>
+</ul>
+That is,
+<me>
+E = \Set{(x,y,z)}{-1\le y\le 1,\ 0\le z\le 1-y^2,\ 0\le x\le 2-y-z}
+</me>
+<ul>
+<li>
+Each constant <m>x</m> cross--section of the surface <m>z=1-y^2</m> is an upside
+down parabola. So the surface <m>z=1-y^2</m> consists of a bunch of copies of the
+parabola <m>z=1-y^2</m> stacked front to back. The figure of the left below
+provides a sketch of <m>z=1-y^2</m>.
+</li>
+<li>
+The surface <m>x = 2-y-z</m>, or equivalenty, <m>x+y+z=2</m> is a plane.
+It passes through the points  <m>(2,0,0)</m>, <m>(0,2,0)</m> and <m>(0,0,2)</m>.
+It is sketched in the figure on the right below. We know that our
+domain of integration extends to <m>y=-1</m>, so we have chosen to include
+in the sketch the part of the plane in <m>x\ge 0</m>, <m>y\ge-1</m>, <m>z\ge 0</m>.
+</li>
+</ul>
+</p>
+
+<sidebyside width="45%">
+<image source="pfig/OE05D_9a"/>
+<image source="pfig/OE05D_9b"/>
+</sidebyside>
+
+<p>
+The domain <m>E</m> is constructed by using the plane <m>x+y+z=2</m>
+to chop the front off of the <q>tunnel</q> <m>0\le z\le 1-y^2</m>.
+It is outlined in red in the figure below.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE05D_9c"/>
+</sidebyside>
+
+<p>
+(b) We are to change the order of integration so that the outside
+integral is over <m>y</m> (the same as the given integral),
+the middle integral is over <m>x</m>, and the inside integral is over
+over <m>z</m>.
+<ul>
+<li>
+We still have <m>y</m> running from <m>-1</m> to <m>1</m>.
+</li>
+<li>
+For each fixed <m>y</m> in that range, <m>(x,z)</m> runs over
+<me>
+E_y=\Set{(x,z)}{0\le z\le 1-y^2,\ 0\le x+z\le 2-y}
+</me>
+</li>
+<li>
+The biggest value of <m>x</m> in <m>E_y</m> is <m>2-y</m>. It is achieved
+when <m>z=0</m>. You can also see this in the figure below.
+The shaded region in that figure is <m>E_y</m>.
+</li>
+<li>
+For each fixed <m>x</m> and <m>y</m> as above,  <m>z</m> runs over
+<me>
+E_{x,y} = \Set{z}{0\le z\le 1-y^2,\ 0\le z\le 2-x-y}
+</me>
+That is, <m>z</m> runs from <m>0</m> to the smaller of
+<m>1-y^2</m> and <m>2-x-y</m>. Note that <m>1-y^2\le 2-x-y</m>
+if and only if <m>x\le 1+y^2-y</m>.
+</li>
+<li>
+So if <m>0\le x\le 1+y^2-y</m>, <m>z</m> runs from <m>0</m> to <m>1-y^2</m>
+and if <m>1+y^2-y\le x\le 2-y</m>, <m>z</m> runs from <m>0</m> to <m>2-x-y</m>.
+</li>
+</ul>
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE05D_9d"/>
+</sidebyside>
+
+<p>
+So the integral is
+<md>
+<mrow>
+&amp;\int_{y=-1}^{y=1} \int_{x=0}^{x=1+y^2-y} \int_{z=0}^{z=1-y^2} f(x,y,z)
+                                    \ \dee{z}\,\dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;\hskip1in
++\int_{y=-1}^{y=1} \int_{x=1+y^2-y}^{x=2-y} \int_{z=0}^{z=2-x-y} f(x,y,z)
+                                    \ \dee{z}\,\dee{x}\,\dee{y}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2006D</fromexam></title>
+<statement><p>
+A triple integral <m>\tripInt_E f(x,y,z)\ \dee{V}</m> is given in the
+iterated form
+<me>
+J = \int_0^1 \int_0^{1-\frac{x}{2}} \int_0^{4-2x-4z} f(x,y,z)
+                                    \ \dee{y}\,\dee{z}\,\dee{x}
+</me>
+<ol label="a">
+<li>
+Sketch the domain <m>E</m> in 3--dimensions. Be sure to show the units.
+</li>
+<li>
+Rewrite the integral as one or more iterated integrals in the form
+<me>
+J = \int_{y=}^{y=} \int_{x=}^{x=} \int_{z=}^{z=} f(x,y,z)
+                                    \ \dee{z}\,\dee{x}\,\dee{y}
+</me>
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="10% 70%">
+<p>(a)</p>
+<image source="pfig/OE06D_6a3"/>
+</sidebyside>
+
+<p>
+(b)
+<md>
+<mrow>
+J = \int_{y=0}^{y=2} \int_{x=0}^{x=1} \int_{z=0}^{z=\frac{4-2x-y}{4}}
+        \!\!\!\! f(x,y,z)  \ \dee{z}\,\dee{x}\,\dee{y}
++\int_{y=2}^{y=4} \int_{x=0}^{x=\frac{4-y}{2}} \int_{z=0}^{z=\frac{4-2x-y}{4}}
+        \!\!\!\!  f(x,y,z)\ \dee{z}\,\dee{x}\,\dee{y}
+</mrow>
+</md>
+</p>
+
+</answer>
+
+<solution><p>
+(a) In the given integral <m>J</m>,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m>,
+</li>
+<li>
+for each fixed <m>x</m> in that range, <m>z</m> runs from 0 to <m>1-\frac{x}{2}</m>, and
+</li>
+<li>
+for each fixed <m>x</m> and <m>z</m> as above, <m>y</m> runs from <m>0</m> to <m>4-2x-4z</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+E = \Set{(x,y,z)}{0\le x\le 1,\ 0\le z\le 1-\tfrac{x}{2},\
+            0 \le y\le 4-2x-4z}
+</mrow>
+</md>
+Notice that the condition <m>y\le 4-2x-4z</m> can be rewritten
+as <m>z\le 1-\frac{x}{2} -\frac{y}{4}</m>. When <m>y\ge 0</m>, this implies
+that <m>z\le 1-\frac{x}{2}</m>, so that we can drop the condition
+<m>z\le 1-\frac{x}{2}</m> from our description of <m>E</m>:
+<md>
+<mrow>
+E = \Set{(x,y,z)}{0\le x\le 1,\ 0 \le y\le 4-2x-4z,\ z\ge 0}
+</mrow>
+</md>
+</p>
+
+<p>First, we figure out what <m>E</m> looks like.
+The plane <m>2x+y+4z=4</m> intersects the <m>x</m>--, <m>y</m>-- and <m>z</m>--axes
+at <m>(2,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,1)</m>, respectively.
+That plane is shown in the sketch on the left below.
+The set of points <m>\Set{(x,y,z)}{x,y,z\ge 0,\  y\le 4-2x-4z}</m>
+is outlined with heavy lines.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfig/OE06D_6a2"/>
+ <image source="pfig/OE06D_6a1"/>
+</sidebyside>
+
+<p>
+So it only remains to impose the condtion <m>x\le 1</m>, which chops off
+the front bit of the tetrahedron. This is done in the sketch on the
+right above. Here is a cleaned up sketch of <m>E</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE06D_6a3"/>
+</sidebyside>
+
+<p>
+(b)
+We are to reorder the integration so that the outside integral
+is over <m>y</m>, the middle integral is over <m>x</m>, and the inside integral
+is over <m>z</m>. Looking at the figure below,
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE06D_6a4"/>
+</sidebyside>
+
+<p>
+we see that
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>4</m>, and
+</li>
+<li>
+for each fixed <m>y</m> in that range, <m>(x,z)</m> runs over
+<me>
+\Set{(x,z)}{0\le x\le 1,\ 2x+4z\le 4-y,\ z\ge 0}
+</me>
+</li>
+<li><p>
+for each fixed <m>y</m> between <m>0</m> and <m>2</m> (as in the left hand shaded bit in
+the figure above)
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m>, and then
+</li>
+<li>
+for each fixed <m>x</m> in that range, <m>z</m> runs from <m>0</m> to <m>\frac{4-2x-y}{4}</m>.
+</li>
+</ul></p>
+</li>
+<li><p>
+for each fixed <m>y</m> between <m>2</m> and <m>4</m> (as in the right hand shaded bit in
+the figure above)
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>\frac{4-y}{2}</m> (the line of intersection of the
+plane <m>2x+y+4z=4</m> and the <m>xy</m>--plane is <m>z=0</m>, <m>2x+y=4</m>), and then
+</li>
+<li>
+for each fixed <m>x</m> in that range, <m>z</m> runs from <m>0</m> to <m>\frac{4-2x-y}{4}</m>.
+</li>
+</ul></p>
+</li>
+</ul>
+So the integral
+<md>
+<mrow>
+J = \int_{y=0}^{y=2} \int_{x=0}^{x=1} \int_{z=0}^{z=\frac{4-2x-y}{4}}
+        \!\!\!\! f(x,y,z)  \ \dee{z}\,\dee{x}\,\dee{y}
++\int_{y=2}^{y=4} \int_{x=0}^{x=\frac{4-y}{2}} \int_{z=0}^{z=\frac{4-2x-y}{4}}
+        \!\!\!\!  f(x,y,z)\ \dee{z}\,\dee{x}\,\dee{y}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2008A</fromexam></title>
+<statement><p>
+Write the integral given below <m>5</m> other ways, each with a different
+order of integration.
+<me>
+I=\int_0^1 \int_{\sqrt{x}}^1 \int_0^{1-y} f(x,y,z)\,\dee{z}\,\dee{y}\,\dee{x}
+</me>
+</p></statement>
+
+<answer><p>
+<md alignment="alignat">
+<mrow>
+I&amp;= \int_0^1 \int_{\sqrt{x}}^1 \int_0^{1-y} f(x,y,z)\,\dee{z}\,\dee{y}\,\dee{x}
+&amp;&amp;=\int_0^1 \int_0^{1-\sqrt{x}} \int_{\sqrt{x}}^{1-z}
+                \ f(x,y,z)\  \dee{y}\,\dee{z}\,\dee{x}
+</mrow><mrow>
+&amp;=\int_0^1  \int_0^{y^2}\int_0^{1-y}f(x,y,z)\
+                   \dee{z}\,\dee{x}\, \dee{y}
+&amp;&amp;=\int_0^1  \int_0^{1-y} \int_0^{y^2} f(x,y,z)\
+                   \dee{x}\, \dee{z}\,\dee{y}
+</mrow><mrow>
+&amp;=\int_0^1  \int_0^{(1-z)^2} \int_{\sqrt{x}}^{1-z}f(x,y,z)\
+                   \dee{y}\,\dee{x}\, \dee{z}
+&amp;&amp;=\int_0^1  \int_0^{1-z} \int_0^{y^2} f(x,y,z)\
+                   \dee{x}\, \dee{y}\,\dee{z}
+</mrow>
+</md>
+</p></answer>
+
+<solution><p>
+Let's use <m>V</m> to denote the domain of integration for the given integral.
+On <m>V</m>
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m>, and
+</li>
+<li>
+for each fixed <m>x</m> in that range, <m>y</m> runs from <m>\sqrt{x}</m> to <m>1</m>.
+In particular <m>0\le y\le 1</m>.
+We can rewrite <m>y=\sqrt{x}</m> as <m>x=y^2</m> (with <m>y\ge 0</m>).
+</li>
+<li>
+For each fixed <m>x</m> and <m>y</m> as above, <m>z</m> runs from <m>0</m> to <m>1-y</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+V &amp;= \Set{(x,y,z)}{0\le x\le 1,\ \sqrt{x}\le y\le 1,\ 0\le z\le 1-y}
+</mrow><mrow>
+  &amp;=  \Set{(x,y,z)}{x,z\ge 0,\ x\le 1,\ y\ge \sqrt{x},\ y\le 1,\ z\le 1-y}
+</mrow>
+</md>
+</p>
+
+<p><em>Outside integral is with respect to <m>x</m></em>:
+We have already seen that <m>0\le x\le 1</m> and that, for each fixed <m>x</m> in
+that range, <m>(y,z)</m> runs over
+<me>
+V_x =\Set{(y,z)}{\sqrt{x}\le y\le 1,\ 0\le z\le 1-y}
+</me>
+Here are two sketches of <m>V_x</m>. The sketch on the left shows
+a vertical strip as was used in setting up the integral given in the statement
+of this problem.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE08A_8x"/>
+</sidebyside>
+
+<p>
+To reverse the order of the <m>y</m>-- and <m>z</m>--integrals we use
+horizontal strips as in the figure on the right above.
+Looking at that figure, we see that, on <m>V_x</m>,
+<ul>
+<li>
+<m>z</m> runs from <m>0</m> to <m>1-\sqrt{x}</m>, and
+</li>
+<li>
+for each fixed <m>z</m> in that range, <m>y</m> runs from <m>\sqrt{x}</m> to <m>1-z</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+I = \int_0^1\dee{x} \int_0^{1-\sqrt{x}}\dee{z} \int_{\sqrt{x}}^{1-z}\dee{y}
+                \ f(x,y,z)
+= \int_0^1 \int_0^{1-\sqrt{x}} \int_{\sqrt{x}}^{1-z}
+                \ f(x,y,z)\  \dee{y}\,\dee{z}\,\dee{x}
+</mrow>
+</md>
+</p>
+
+<p>
+<em>Outside integral is with respect to <m>y</m></em>:
+Looking at the figures above we see that, for each <m>0\le x\le 1</m>,
+<m>y</m> runs from <m>\sqrt{x}</m> to <m>1</m> on <m>V_x</m>. As <m>x</m> runs from <m>0</m> to <m>1</m> in <m>V</m>,
+we have that <m>\sqrt{x}</m> also runs from <m>0</m> to <m>1</m> on <m>V</m>, so that
+<m>y</m> runs from <m>0</m> to <m>1</m> on <m>V</m>. Reviewing the definition of
+<m>V</m>, we see that, for each fixed <m>0\le y\le 1</m>, <m>(x,z)</m> runs over
+<me>
+V_y= \Set{(x,z)}{0\le x\le y^2,\ 0\le z\le 1-y}
+</me>
+Here are two sketches of <m>V_y</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE08A_8y"/>
+</sidebyside>
+
+<p>
+Looking at the figure on the left (with the vertical strip), we see that,
+on <m>V_y</m>,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>y^2</m>, and
+</li>
+<li>
+for each fixed <m>x</m> in that range,
+<m>z</m> runs from <m>0</m> to <m>1-y</m>.
+</li>
+</ul>
+So
+<me>
+I = \int_0^1 \dee{y} \int_0^{y^2}\dee{x} \int_0^{1-y}\dee{z}\ f(x,y,z)
+  = \int_0^1  \int_0^{y^2}\int_0^{1-y}f(x,y,z)\
+                   \dee{z}\,\dee{x}\, \dee{y}
+</me>
+Looking at the figure on the right above (with the horizontal strip),
+we see that, on <m>V_y</m>,
+<ul>
+<li>
+<m>z</m> runs from <m>0</m> to <m>1-y</m>.
+</li>
+<li>
+for each fixed <m>z</m> in that range,
+<m>x</m> runs from <m>0</m> to <m>y^2</m>.
+</li>
+</ul>
+So
+<me>
+I = \int_0^1 \dee{y} \int_0^{1-y}\dee{z} \int_0^{y^2}\dee{x}\ f(x,y,z)
+  = \int_0^1  \int_0^{1-y} \int_0^{y^2} f(x,y,z)\
+                   \dee{x}\, \dee{z}\,\dee{y}
+</me>
+</p>
+
+<p><em>Outside integral is with respect to <m>z</m></em>:
+Looking at the sketches of <m>V_x</m> above we see that, for each <m>0\le x\le 1</m>,
+<m>z</m> runs from <m>0</m> to <m>1-\sqrt{x}</m> on <m>V_x</m>. As <m>x</m> runs from <m>0</m> to <m>1</m> in
+<m>V</m>, <m>1-\sqrt{x}</m> also runs between <m>0</m> to <m>1</m> on <m>V</m>, so that <m>z</m>
+runs from <m>0</m> to <m>1</m> on <m>V</m>.
+Reviewing the definition of <m>V</m>, we see that,
+for each fixed <m>0\le z\le 1</m>, <m>(x,y)</m> runs over
+<me>
+V_z= \Set{(x,y)}{0\le x\le y^2,\ \sqrt{x}\le y\le 1-z}
+</me>
+Here are two sketches of <m>V_z</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE08A_8z"/>
+</sidebyside>
+
+<p>
+Looking at the figure on the left (with the vertical strip), we see that,
+on <m>V_z</m>,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>(1-z)^2</m>, and
+</li>
+<li>
+for each fixed <m>x</m> in that range,
+<m>y</m> runs from <m>\sqrt{x}</m> to <m>1-z</m>.
+</li>
+</ul>
+So
+<me>
+I = \int_0^1 \dee{z} \int_0^{(1-z)^2}\dee{x} \int_{\sqrt{x}}^{1-z}\dee{y}\ f(x,y,z)
+  = \int_0^1  \int_0^{(1-z)^2} \int_{\sqrt{x}}^{1-z}f(x,y,z)\
+                   \dee{y}\,\dee{x}\, \dee{z}
+</me>
+Looking at the figure on the right above (with the horizontal strip),
+we see that, on <m>V_z</m>,
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>1-z</m>.
+</li>
+<li>
+for each fixed <m>y</m> in that range,
+<m>x</m> runs from <m>0</m> to <m>y^2</m>.
+</li>
+</ul>
+So
+<me>
+I = \int_0^1 \dee{z} \int_0^{1-z}\dee{y} \int_0^{y^2}\dee{x}\ f(x,y,z)
+  = \int_0^1  \int_0^{1-z} \int_0^{y^2} f(x,y,z)\
+                   \dee{x}\, \dee{y}\,\dee{z}
+</me>
+</p>
+
+<p><em>Summary:</em>
+We have found that
+<md alignment="alignat">
+<mrow>
+I&amp;= \int_0^1 \int_{\sqrt{x}}^1 \int_0^{1-y} f(x,y,z)\,\dee{z}\,\dee{y}\,\dee{x}
+&amp;&amp;=\int_0^1 \int_0^{1-\sqrt{x}} \int_{\sqrt{x}}^{1-z}
+                \ f(x,y,z)\  \dee{y}\,\dee{z}\,\dee{x}
+</mrow><mrow>
+&amp;=\int_0^1  \int_0^{y^2}\int_0^{1-y}f(x,y,z)\
+                   \dee{z}\,\dee{x}\, \dee{y}
+&amp;&amp;=\int_0^1  \int_0^{1-y} \int_0^{y^2} f(x,y,z)\
+                   \dee{x}\, \dee{z}\,\dee{y}
+</mrow><mrow>
+&amp;=\int_0^1  \int_0^{(1-z)^2} \int_{\sqrt{x}}^{1-z}f(x,y,z)\
+                   \dee{y}\,\dee{x}\, \dee{z}
+&amp;&amp;=\int_0^1  \int_0^{1-z} \int_0^{y^2} f(x,y,z)\
+                   \dee{x}\, \dee{y}\,\dee{z}
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2009A</fromexam></title>
+<statement><p>
+Let <m>\displaystyle I = \tripInt_E f(x,y,z)\ \dee{V}</m>
+where <m>E</m> is the tetrahedron with vertices <m>(-1, 0, 0)</m>,
+<m>(0, 0, 0)</m>, <m>(0, 0, 3)</m> and <m>(0, -2, 0)</m>.
+</p>
+
+<p><ol label="a">
+<li>
+Rewrite the integral I in the form
+<me>
+I = \int_{x=}^{x=}\int_{y=}^{y=}\int_{z=}^{z=} f(x,y,z)\
+                                      \dee{z}\,\dee{y}\,\dee{x}
+</me>
+</li>
+<li>
+Rewrite the integral I in the form
+<me>
+I = \int_{z=}^{z=}\int_{x=}^{x=}\int_{y=}^{y=} f(x,y,z)\
+                                      \dee{y}\,\dee{x}\,\dee{z}
+</me>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>I = \int_{x=-1}^{x=0}\int_{y=-2(1+x)}^{y=0}\int_{z=0}^{z=3(1+x+y/2)}
+            f(x,y,z)\ \dee{z}\,\dee{y}\,\dee{x}</m>
+</p>
+
+<p>(b) <m>I = \int_{z=0}^{z=3}\int_{x=-(1-z/3)}^{x=0}\int_{y=-2(1+x-z/3)}^{y=0}
+             f(x,y,z)\ \dee{y}\,\dee{x}\,\dee{z}</m>
+</p></answer>
+
+<solution><p>
+First we have to get some idea as to what <m>E</m> looks like.
+Here is a sketch.
+</p>
+
+<sidebyside width="75%">
+<image source="pfig/OE09A_8"/>
+</sidebyside>
+
+<p>
+We are going to need the equation of the plane that contains the
+points <m>(-1,0,0)</m>, <m>(0,-2,0)</m> and <m>(0,0,3)</m>. This plane does not contain
+the origin and so has an equation of the form <m>ax+by+cz=1</m>.
+<ul>
+<li>
+<m>(-1,0,0)</m> lies on the plane <m>ax+by+cz=1</m> if and only if
+<m>a(-1)+b(0)+c(0)=1</m>. So <m>a=-1</m>.
+</li>
+<li>
+<m>(0,-2,0)</m> lies on the plane <m>ax+by+cz=1</m> if and only if
+<m>a(0)+b(-2)+c(0)=1</m>. So <m>b=-\frac{1}{2}</m>.
+</li>
+<li>
+<m>(0,0,3)</m> lies on the plane <m>ax+by+cz=1</m> if and only if
+<m>a(0)+b(0)+c(3)=1</m>. So <m>c=\frac{1}{3}</m>.
+</li>
+</ul>
+So the plane that contains the points <m>(-1,0,0)</m>, <m>(0,-2,0)</m> and <m>(0,0,3)</m>
+is <m>-x-\frac{y}{2}+\frac{z}{3}=1</m>.
+</p>
+
+<p>We can now get a detailed mathematical description of <m>E</m>.
+A point <m>(x,y,z)</m> is in <m>E</m> if and only if
+<ul>
+<li>
+<m>(x,y,z)</m> lies above the <m>xy</m>--plane, i.e. <m>z\ge 0</m>, and
+</li>
+<li>
+<m>(x,y,z)</m> lies to the left of the <m>xz</m>--plane, i.e. <m>y\le 0</m>, and
+</li>
+<li>
+<m>(x,y,z)</m> lies behind the <m>yz</m>--plane, i.e. <m>x\le 0</m>, and
+</li>
+<li>
+<m>(x,y,z)</m> lies on the same side of the plane
+<m>-x-\frac{y}{2}+\frac{z}{3}=1</m> as the origin.
+That is  <m>-x-\frac{y}{2}+\frac{z}{3}\le 1</m>. (Go ahead and check
+that <m>(0,0,0)</m> obeys this inequality.)
+</li>
+</ul>
+So
+<me>
+E=\Set{(x,y,z)}{x\le 0,\ y\le 0,\ z\ge 0,\ -x-\tfrac{y}{2}+\tfrac{z}{3}\le 1}
+</me>
+</p>
+
+<p>(a) Note that we want the outside integral to be the <m>x</m>--integral.
+On <m>E</m>
+<ul>
+<li>
+<m>x</m> runs from <m>-1</m> to <m>0</m> and
+</li>
+<li><p>
+for each fixed <m>x</m> in that range <m>(y,z)</m> runs over
+<md>
+<mrow>
+E_x=\Set{(y,z)}{y\le 0,\ z\ge 0,\ -\tfrac{y}{2}+\tfrac{z}{3}\le 1+x}
+</mrow>
+</md>
+Here is a sketch of <m>E_x</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE09A_8a"/>
+</sidebyside>
+
+</li>
+<li>
+On <m>E_x</m>, <m>y</m> runs from <m>-2(1+x)</m> to <m>0</m> and
+</li>
+<li>
+for each fixed such <m>y</m>, <m>z</m> runs from <m>0</m> to <m>3(1+x+y/2)</m>
+</li>
+</ul>
+So
+<md>
+<mrow>
+I = \int_{x=-1}^{x=0}\int_{y=-2(1+x)}^{y=0}\int_{z=0}^{z=3(1+x+y/2)} f(x,y,z)\
+                                      \dee{z}\,\dee{y}\,\dee{x}
+</mrow>
+</md>
+</p>
+
+<p>(b) This time we want the outside integral to be the <m>z</m>--integral.
+Looking back at the sketch of <m>E</m>, we see that, on <m>E</m>,
+<ul>
+<li>
+<m>z</m> runs from <m>0</m> to <m>3</m> and
+</li>
+<li><p>
+for each fixed <m>z</m> in that range <m>(x,y)</m> runs over
+<md>
+<mrow>
+E_z=\Set{(x,y)}{x\le 0,\ y\le 0,\ -x-\tfrac{y}{2}\le 1-\tfrac{z}{3}}
+</mrow>
+</md>
+Here is a sketch of <m>E_z</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE09A_8b"/>
+</sidebyside>
+
+</li>
+<li>
+On <m>E_z</m>, <m>x</m> runs from <m>-(1-z/3)</m> to <m>0</m> and
+</li>
+<li>
+for each fixed such <m>x</m>, <m>y</m> runs from <m>-2(1+x-z/3)</m> to <m>0</m>
+</li>
+</ul>
+So
+<md>
+<mrow>
+I = \int_{z=0}^{z=3}\int_{x=-(1-z/3)}^{x=0}\int_{y=-2(1+x-z/3)}^{y=0} f(x,y,z)\
+                                      \dee{y}\,\dee{x}\,\dee{z}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2010D</fromexam></title>
+<statement><p>
+Let <m>T</m> denote the tetrahedron bounded by the coordinate planes <m>x = 0</m>, <m>y = 0</m>, <m>z = 0</m> and
+the plane <m>x + y + z = 1</m>. Compute
+<me>
+K = \tripInt_T \frac{1}{ (1 + x + y + z)^4}\ \dee{V}
+</me>
+</p></statement>
+
+<answer><p>
+<m>\frac{1}{48}</m>
+</p></answer>
+
+<solution><p>
+The plane <m>x+y+z=1</m> intersects the coordinate plane <m>z=0</m>
+along the line <m>x+y=1</m>, <m>z=0</m>. So
+<md>
+<mrow>
+T&amp;=\Set{(x,y,z)}{x\ge 0,\  y\ge0,\ x+y\le 1,\ 0\le z\le 1-x-y}
+</mrow><mrow>
+ &amp;=\Set{(x,y,z)}{0\le x\le 1,\  0\le y\le 1-x,\ 0\le z\le 1-x-y}
+</mrow>
+</md>
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE10D_7"/>
+</sidebyside>
+
+<p>
+and
+<md>
+<mrow>
+K&amp;=\int_0^1\dee{x}\int_0^{1-x}\dee{y}\int_0^{1-x-y}\dee{z}\
+           \frac{1}{ (1 + x + y + z)^4}
+</mrow><mrow>
+&amp;=\int_0^1\dee{x}\int_0^{1-x}\dee{y}\
+           \left[-\frac{1}{ 3(1 + x + y + z)^3}\right]_{z=0}^{z=1-x-y}
+           </mrow><mrow>
+&amp;=\frac{1}{3}\int_0^1\dee{x}\int_0^{1-x}\dee{y}\
+           \left[\frac{1}{(1 + x + y)^3} - \frac{1}{2^3}\right]
+           </mrow><mrow>
+&amp;=\frac{1}{3}\int_0^1\dee{x}\
+    \left[-\frac{1}{2(1 + x + y)^2} - \frac{y}{2(4)}\right]_{y=0}^{y=1-x}
+    </mrow><mrow>
+&amp;=\frac{1}{6}\int_0^1\dee{x}\
+    \left[\frac{1}{(1 + x)^2}-\frac{1}{2^2}- \frac{1-x}{4}\right]
+=\frac{1}{6}\int_0^1\dee{x}\
+    \left[\frac{1}{(1 + x)^2} -\frac{1}{2} + \frac{x}{4}\right]
+    </mrow><mrow>
+&amp;=\frac{1}{6}
+    \left[-\frac{1}{1 + x} -\frac{x}{2} + \frac{x^2}{8}\right]_{x=0}^{x=1}
+=\frac{1}{6}
+    \left[1-\frac{1}{2} -\frac{1}{2} + \frac{1}{8}\right]
+    </mrow><mrow>
+&amp;=\frac{1}{48}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2011A</fromexam></title>
+<statement><p>
+Let <m>E</m> be the portion of the first octant which is above the plane <m>z = x + y</m>
+and below the plane <m>z = 2</m>. The density in <m>E</m> is <m>\rho(x, y, z) = z</m>. Find the mass of <m>E</m>.
+</p></statement>
+
+<answer><p>
+<m>2</m>
+</p></answer>
+
+<solution><p>
+Note that the planes <m>z = x + y</m> and <m>z = 2</m> intersect along the line
+<m>x+y=2</m>, <m>z=2</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE11A_7"/>
+</sidebyside>
+
+<p>
+So
+<md>
+<mrow>
+E &amp;=\Set{(x,y,z)}{x\ge 0,\ y\ge 0,\ x+y\le 2,\ x+y\le z\le 2}
+</mrow><mrow>
+  &amp;= \Set{(x,y,z)}{0\le x\le 2,\ 0\le y\le 2-x,\ x+y\le z\le 2}
+</mrow>
+</md>
+and the mass of <m>E</m> is
+<md>
+<mrow>
+\tripInt_E \rho(x,y,z)\,\dee{V}
+&amp;=\int_0^2\dee{x} \int_0^{2-x}\dee{y} \int_{x+y}^2\dee{z}\ z
+</mrow><mrow>
+&amp;=\frac{1}{2}\int_0^2\dee{x} \int_0^{2-x}\dee{y} \ \big[4-(x+y)^2\big]
+</mrow><mrow>
+&amp;=\frac{1}{2}\int_0^2\dee{x}\
+              \left[4(2-x)-\frac{\big(x+(2-x)\big)^3-x^3}{3}\right]
+</mrow><mrow>
+&amp;=\frac{1}{2}  \left[4(2)(2)-2(2)^2 -\frac{8}{3}(2)+\frac{2^4}{12}
+              \right]
+=\frac{1}{2}  \left[8 -\frac{16}{3}+\frac{4}{3}
+              \right]
+</mrow><mrow>
+&amp;=2
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2011D</fromexam></title>
+<statement><p>
+Evaluate the triple integral <m>\tripInt_E x\ \dee{V}</m>, where <m>E</m> is
+the region in the first octant bounded by the parabolic cylinder <m>y = x^2</m>
+and the planes <m>y + z = 1</m>, <m>x = 0</m>, and <m>z = 0</m>.
+</p></statement>
+
+<answer><p>
+<m>\frac{1}{12}</m>
+</p></answer>
+
+<solution><p>
+First, we need to develop an understanding of what <m>E</m> looks like.
+Here are sketches of the parabolic cylinder <m>y=x^2</m>, on the left,
+and the plane <m>y+z=1</m>, on the right.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfig/OE11D_7b"/>
+   <image source="pfig/OE11D_7a"/>
+</sidebyside>
+
+<p>
+<m>E</m> is constructed by using the plane <m>y+z=1</m> to chop the top
+off of the parabolic cylinder <m>y=x^2</m>. Here is a sketch.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE11D_7c"/>
+</sidebyside>
+
+<p>
+So
+<me>
+E=\Set{(x,y,z)}{0\le x\le 1,\ x^2\le y\le 1,\ 0\le z\le 1-y}
+</me>
+and the integral
+<md>
+<mrow>
+\tripInt_E x\ \dee{V}
+&amp;=\int_0^1\dee{x}\int_{x^2}^1\dee{y}\int_0^{1-y}\dee{z}\ x
+</mrow><mrow>
+&amp;=\int_0^1\dee{x}\int_{x^2}^1\dee{y}\ x(1-y)
+</mrow><mrow>
+&amp;=\int_0^1\dee{x}\ x\left[y-\frac{y^2}{2}\right]_{x^2}^1
+</mrow><mrow>
+&amp;=\int_0^1\dee{x}\ \left[\frac{x}{2} -x^3+\frac{x^5}{2}\right]
+</mrow><mrow>
+&amp;=\frac{1}{4}-\frac{1}{4}+\frac{1}{12}
+</mrow><mrow>
+&amp;=\frac{1}{12}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2012A</fromexam></title>
+<statement><p>
+Let <m>E</m> be the region in the first octant bounded by the coordinate planes,
+the plane <m>x + y = 1</m> and the surface <m>z = y^2</m> .  Evaluate
+<m>\tripInt_E z\ \dee{V}</m> .
+</p></statement>
+
+<answer><p>
+<m>\frac{1}{60}</m>
+</p></answer>
+
+<solution><p>
+First, we need to develop an understanding of what <m>E</m> looks like.
+Here are sketches of the plane <m>x+y=1</m>, on the left, and of the <q>tower</q>
+bounded by the coordinate planes <m>x=0</m>, <m>y=0</m>, <m>z=0</m> and the
+plane <m>x+y=1</m>, on the right.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfig/OE12A_8a"/>
+   <image source="pfig/OE12A_8aa"/>
+</sidebyside>
+
+<p>
+Now here is the parabolic cylinder <m>z=y^2</m> on the left.
+<m>E</m> is constructed by using the parabolic cylinder <m>z=y^2</m> to chop the top
+off of the tower <m>x\ge 0</m>, <m>y\ge 0</m>, <m>z\ge 0</m>,  <m>x+y\le 1</m>. The figure
+on the right is a sketch.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfig/OE12A_8b"/>
+ <image source="pfig/OE12A_8c"/>
+</sidebyside>
+
+<p>
+So
+<me>
+E=\Set{(x,y,z)}{0\le x\le 1,\ 0\le y\le 1-x,\ 0\le z\le y^2}
+</me>
+and the integral
+<md>
+<mrow>
+\tripInt_E x\ \dee{V}
+&amp;=\int_0^1\dee{x}\int_0^{1-x}\dee{y}\int_0^{y^2}\dee{z}\ z
+</mrow><mrow>
+&amp;=\int_0^1\dee{x}\int_0^{1-x}\dee{y}\ \frac{y^4}{2}
+</mrow><mrow>
+&amp;=\int_0^1\dee{x}\ \frac{(1-x)^5}{10}
+</mrow><mrow>
+&amp;=\left[-\frac{(1-x)^6}{60}\right]_0^1
+</mrow><mrow>
+&amp;=\frac{1}{60}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2012D</fromexam></title>
+<statement><p>
+Evaluate  <m>\tripInt_R yz^2 e^{-xyz}\ \dee{V}</m> over the rectangular
+box
+<me>
+R=\Set{(x,y,z)}{0\le x\le 1,\ 0\le y\le 2,\  0\le z\le 3}
+</me>
+</p></statement>
+
+<answer><p>
+<m>\frac{13}{2}-\frac{e^{-6}}{2}</m>
+</p></answer>
+
+<solution><p>
+The integral
+<md>
+<mrow>
+\tripInt_R yz^2 e^{-xyz}\ \dee{V}
+&amp;=\int_0^3\dee{z}\int_0^2\dee{y}\int_0^1\dee{x}\ yz^2 e^{-xyz}
+</mrow><mrow>
+&amp;=\int_0^3\dee{z}\int_0^2\dee{y}\ \Big[-z e^{-xyz}\Big]_{x=0}^{x=1}
+  =\int_0^3\dee{z}\int_0^2\dee{y}\ \Big[z-z e^{-yz}\Big]
+</mrow><mrow>
+&amp;=\int_0^3\dee{z}\ \Big[zy+ e^{-yz}\Big]_{y=0}^{y=2}
+=\int_0^3\dee{z}\ \Big[2z+ e^{-2z}-1\Big]
+</mrow><mrow>
+&amp;=\left[z^2-\frac{1}{2} e^{-2z}-z\right]_0^3
+=\frac{13}{2}-\frac{e^{-6}}{2}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2013D</fromexam></title>
+<statement><p>
+<ol label="a">
+<li>
+Sketch the surface given by the equation <m>z = 1 - x^2</m>.
+</li>
+<li>
+Let <m>E</m> be the solid bounded by the plane <m>y = 0</m>, the cylinder
+<m>z = 1 - x^2</m>, and the plane <m>y = z</m>. Set up the integral
+<me>
+\tripInt_E f(x,y,z)\,\dee{V}
+</me>
+as an iterated integral.
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="10% 70%">
+  <p>(a)</p>
+  <image source="pfig/OE13D_8"/>
+</sidebyside>
+
+<p>
+(b) <m>\int_{-1}^1\dee{x}\int_0^{1-x^2}\dee{y}\int_y^{1-x^2}\dee{z}\ f(x,y,z)</m>
+</p></answer>
+
+<solution><p>
+(a)
+Each constant <m>y</m> cross section of <m>z=1-x^2</m> is an upside
+down parabola. So the surface is a bunch of upside down parabolas
+stacked side by side. The figure on the left below is a sketch of
+the part of the surface with <m>y\ge 0</m>
+and <m>z\ge 0</m> (both of which conditions will be required in part (b)).
+</p>
+
+<sidebyside width="45%">
+<image source="pfig/OE13D_8"/>
+ <image source="pfig/OE13D_8b1"/>
+</sidebyside>
+
+<p>
+(b)
+The figure on the right above is a sketch of the plane <m>y=z</m>.
+It intersects the surface <m>z=1-x^2</m> in the solid blue sloped parabolic
+curve in the figure below.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE13D_8b3"/>
+</sidebyside>
+
+<p>
+Observe that, on the curve <m>z=1-x^2</m>, <m>z=y</m>, we have
+<m>y=1-x^2</m>. So that when one looks at the solid <m>E</m> from high on the <m>z</m>--axis,
+one sees
+<me>
+\Set{(x,y)}{0\le y\le 1-x^2}
+</me>
+The <m>y=1-x^2</m> boundary of that region is the dashed blue line in the
+<m>xy</m>--plane in the figure above. So
+<me>
+E = \Set{(x,y,z)}{-1\le x\le 1,\ 0\le y\le 1-x^2,\ y\le z\le 1-x^2}
+</me>
+and the integral
+<me>
+\tripInt_E f(x,y,z)\,\dee{V}
+=\int_{-1}^1\dee{x}\int_0^{1-x^2}\dee{y}\int_y^{1-x^2}\dee{z}\ f(x,y,z)
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2014A</fromexam></title>
+<statement><p>
+Let
+<me>
+J=\int_0^1 \int_0^x\int_0^y f(x,y,z)\ \dee{z}\,\dee{y}\,\dee{x}
+</me>
+Express <m>J</m> as an integral where the integrations are to be performed
+in the order <m>x</m> first, then <m>y</m>, then <m>z</m>.
+</p></statement>
+
+<answer><p>
+<m>J = \int_0^1 \int_z^1\int_y^1 f(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z}</m>
+</p></answer>
+
+<solution><p>
+In the integral <m>J</m>,
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m>.
+In inequalities, <m>0\le x\le 1</m>.
+</li>
+<li>
+Then, for each fixed <m>x</m> in that range, <m>y</m> runs from <m>0</m> to <m>x</m>.
+In inequalities, <m>0\le y\le x</m>.
+</li>
+<li>
+Then, for each fixed <m>x</m> and <m>y</m> in those ranges, <m>z</m> runs from <m>0</m> to <m>y</m>.
+In inequalities, <m>0\le z\le y</m>.
+</li>
+</ul>
+These inequalties can be combined into
+<me>
+0\le z\le y\le x\le 1 \tag{$*$}
+</me>
+We wish to reverse the order of integration so that the <m>z</m>--integral
+is on the outside, the <m>y</m>--integral is in the middle and the <m>x</m>--integral
+is on the inside.
+<ul>
+<li>
+The smallest <m>z</m> compatible with <m>(*)</m> is <m>z=0</m>
+and the largest <m>z</m> compatible with <m>(*)</m> is <m>z=1</m> (when <m>x=y=z=1</m>).
+So <m>0\le z\le 1</m>.
+</li>
+<li>
+Then, for each fixed <m>z</m> in that range, <m>(x,y)</m> run over
+<m>z\le y\le x\le 1</m>. In particular, the smallest allowed <m>y</m> is <m>y=z</m>
+and the largest allowed <m>y</m> is <m>y=1</m> (when <m>x=y=1</m>).
+So <m>z\le y\le 1</m>.
+</li>
+<li>
+Then, for each fixed <m>y</m> and <m>z</m> in those ranges, <m>x</m> runs over
+<m>y\le x\le 1</m>.
+</li>
+</ul>
+So
+<me>
+J = \int_0^1 \int_z^1\int_y^1 f(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z}
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2014D</fromexam></title>
+<statement><p>
+Let <m>E</m> be the region bounded by <m>z = 2x</m>, <m>z = y^2</m>, and <m>x = 3</m>.
+The triple integral <m>\tripInt f(x,y,z)\,\dee{V}</m> can be expressed
+as an iterated integral in the following three orders
+of integration. Fill in the limits of integration in each case.
+No explanation required.
+<md>
+<mrow>
+&amp;\int_{y=}^{y=}\qquad\int_{x=}^{x=}\qquad\int_{z=}^{z=}\qquad
+                f(x,y,z)\ \dee{z}\,\dee{x}\,\dee{y}
+                </mrow><mrow>
+&amp;\int_{y=}^{y=}\qquad\int_{z=}^{z=}\qquad\int_{x=}^{x=}\qquad
+                f(x,y,z)\ \dee{x}\,\dee{z}\,\dee{y}
+                </mrow><mrow>
+&amp;\int_{z=}^{z=}\qquad\int_{x=}^{x=}\qquad\int_{y=}^{y=}\qquad
+                f(x,y,z)\ \dee{y}\,\dee{x}\,\dee{z}
+</mrow>
+</md>
+</p></statement>
+
+<answer><p>
+<m>\int_{y=-\sqrt{6}}^{y=\sqrt{6}}\int_{x=y^2/2}^{x=3}\int_{z=y^2}^{z=2x}
+                f(x,y,z)\ \dee{z}\,\dee{x}\,\dee{y}</m>
+</p>
+
+<p><m>\int_{y=-\sqrt{6}}^{y=\sqrt{6}}\int_{z=y^2}^{z=6}\int_{x=z/2}^{x=3}
+                f(x,y,z)\ \dee{x}\,\dee{z}\,\dee{y}</m>
+</p>
+
+<p><m>\int_{z=0}^{z=6}\int_{x=z/2}^{x=3}\int_{y=-\sqrt{z}}^{y=\sqrt{z}}
+                f(x,y,z)\ \dee{y}\,\dee{x}\,\dee{z}</m>
+</p></answer>
+
+<solution><p>
+The hard part of this problem is figuring out what <m>E</m> looks like.
+First here are separate sketches of the plane <m>x=3</m> and the plane
+<m>z=2x</m> followed by a sketch of the two planes together.
+</p>
+
+<sidebyside width="30%">
+  <image source="pfig/OE14D_9a"/>
+  <image source="pfig/OE14D_9b"/>
+  <image source="pfig/OE14D_9c"/>
+</sidebyside>
+
+<p>
+Next for the parabolic cylinder <m>z=y^2</m>.
+It is a bunch of parabolas <m>z=y^2</m> stacked side by side along the <m>x</m>--axis. Here is a sketch of the part of  <m>z=y^2</m> in the first octant.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE14D_9d"/>
+</sidebyside>
+
+<p>
+Finally, here is a sketch of the part of <m>E</m> in the first octant.
+<m>E</m> does have a second half gotten from the sketch by reflecting it
+in the <m>xz</m>--plane, i.e. by replacing <m>y\rightarrow-y</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE14D_9"/>
+</sidebyside>
+
+<p>
+So
+<fn>The question doesn't specify on which side of the three surfaces
+<m>E</m> lies. When in doubt take the finite region bounded by the given surfaces.
+That's what we have done.</fn>
+<me>
+E = \Set{(x,y,z)}{x\le 3,\ -\sqrt{6}\le y\le \sqrt{6},\ y^2\le z\le 2x}
+</me>
+</p>
+
+<p><em>Order <m>\dee{z}\,\dee{x}\,\dee{y}</m>:</em>
+On <m>E</m>, <m>y</m> runs from <m>-\sqrt{6}</m> to <m>\sqrt{6}</m>. For each fixed <m>y</m>
+in this range <m>(x,z)</m> runs over <m>E_y=\Set{(x,z)}{x\le 3,\ y^2\le z\le 2x}</m>.
+Here is a sketch of <m>E_y</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE14D_9e"/>
+</sidebyside>
+
+<p>
+From the sketch
+<me>
+E_y = \Set{(x,z)}{y^2/2\le x\le 3,\ y^2\le z\le 2x}
+</me>
+and the integral is
+<me>
+\int_{y=-\sqrt{6}}^{y=\sqrt{6}}\int_{x=y^2/2}^{x=3}\int_{z=y^2}^{z=2x}
+                f(x,y,z)\ \dee{z}\,\dee{x}\,\dee{y}
+</me>
+</p>
+
+<p><em>Order <m>\dee{x}\,\dee{z}\,\dee{y}</m>:</em>
+Also from the sketch of <m>E_y</m> above
+<me>
+E_y = \Set{(x,z)}{y^2\le z\le 6,\ z/2\le x\le 3}
+</me>
+and the integral is
+<me>
+\int_{y=-\sqrt{6}}^{y=\sqrt{6}}\int_{z=y^2}^{z=6}\int_{x=z/2}^{x=3}
+                f(x,y,z)\ \dee{x}\,\dee{z}\,\dee{y}
+</me>
+</p>
+
+<p><em>Order <m>\dee{y}\,\dee{x}\,\dee{z}</m>:</em>
+From the sketch of the part of <m>E</m> in the first octant, we see that,
+on <m>E</m>, <m>z</m> runs from <m>0</m> to <m>6</m>. For each fixed <m>z</m>
+in this range <m>(x,y)</m> runs over
+<md>
+<mrow>
+E_z&amp;=\Set{(x,y)}{x\le 3,\ -\sqrt{6}\le y\le \sqrt{6},\ y^2\le z\le 2x}
+</mrow><mrow>
+&amp;=\Set{(x,y)}{z/2\le x\le 3,\ y^2\le z}
+</mrow><mrow>
+&amp;=\Set{(x,y)}{z/2\le x\le 3,\ -\sqrt{z}\le y\le \sqrt{z} }
+</mrow>
+</md>
+So the integral is
+<me>
+\int_{z=0}^{z=6}\int_{x=z/2}^{x=3}\int_{y=-\sqrt{z}}^{y=\sqrt{z}}
+                f(x,y,z)\ \dee{y}\,\dee{x}\,\dee{z}
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2015D</fromexam></title>
+<statement><p>
+Let E be the region inside the cylinder <m>x^2 + y^2 = 1</m>,
+below the plane <m>z = y</m> and above the plane <m>z = -1</m>. Express
+the integral
+<me>
+\tripInt_E f(x,y,z)\ \dee{V}
+</me>
+as three different iterated integrals corresponding to the orders
+of integration: (a) <m>\dee{z}\, \dee{x}\, \dee{y}</m>,
+(b) <m>\dee{x}\, \dee{y}\, \dee{z}</m>, and (c) <m>\dee{y}\, \dee{z}\, \dee{x}</m>.
+</p></statement>
+
+<answer><p>
+(a) <m>\int_{-1}^1\int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}
+        \int_{-1}^y f(x,y,z)\ \dee{z}\,\dee{x}\,\dee{y} </m>
+</p>
+<p>
+(b) <m>\int_{-1}^1\int_z^1 \int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}
+              f(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z}</m>
+</p>
+
+<p>(c) <m>\int_{-1}^1 \int_{-1}^{-\sqrt{1-x^2}} \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}
+              f(x,y,z)\ \dee{y}\,\dee{z}\,\dee{x}
+       +\int_{-1}^1 \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}
+                    \int_z^{\sqrt{1-x^2}}  f(x,y,z)\ \dee{y}\,\dee{z}\,\dee{x}</m>
+</p></answer>
+
+<solution><p>
+(a)
+The region <m>E</m> is
+<md>
+<mrow>
+E &amp;= \Set{(x,y,z)}{x^2+y^2\le 1,\ -1\le z\le y}
+</mrow>
+</md>
+Here is are sketches, one without axes and one with axes,
+of the front half of <m>E</m>, outlined in red.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfig/OE15D_7A"/>
+  <image source="pfig/OE15D_7AA"/>
+</sidebyside>
+
+<p>
+The integral
+<md>
+<mrow>
+\tripInt_E f(x,y,z)\ \dee{V}
+&amp;=\int_{x^2+y^2\le 1}\dee{x}\,\dee{y}\int_{-1}^y\dee{z}\ f(x,y,z)
+</mrow><mrow>
+&amp;=\int_{-1}^1\dee{y}\int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}\dee{x}
+        \int_{-1}^y\dee{z}\ f(x,y,z)
+</mrow><mrow>
+&amp;=\int_{-1}^1\int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}
+        \int_{-1}^y f(x,y,z)\ \dee{z}\,\dee{x}\,\dee{y}
+</mrow>
+</md>
+</p>
+
+<p>(b)
+Here is a sketch of (the front half of) a constant <m>z</m>  slice of <m>E</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE15D_7B"/>
+</sidebyside>
+
+<p>
+Note that
+<ul>
+<li>
+  in <m>E</m>, <m>z</m> runs from <m>-1</m> to <m>1</m>.
+</li>
+<li>
+  Once <m>z</m> has been fixed, <m>x</m> and <m>y</m> must obey <m>x^2+y^2\le 1</m>,
+     <m>z\le y\le 1</m>
+</li>
+</ul>
+So
+<md>
+<mrow>
+E &amp;= \Set{(x,y,z)}{-1\le z\le 1,\ z\le y\le 1,\
+            -\sqrt{1-y^2}\le x\le\sqrt{1-y^2}}
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\tripInt_E f(x,y,z)\ \dee{V}
+&amp;=\int_{-1}^1\dee{z}\int_z^1\dee{y}
+         \int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}\dee{x}\ f(x,y,z)
+</mrow><mrow>
+&amp;=\int_{-1}^1\int_z^1 \int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}
+              f(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z}
+</mrow>
+</md>
+</p>
+
+<p>(c)
+Here is a sketch of a constant <m>x</m>  slice of <m>E</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE15D_7C"/>
+</sidebyside>
+
+<p>
+Note that
+<ul>
+<li>
+  in <m>E</m>, <m>x</m> runs from <m>-1</m> to <m>1</m>.
+</li>
+<li>
+  Once <m>x</m> has been fixed, <m>y</m> and <m>z</m> must obey
+   <me>
+       -\sqrt{1-x^2}\le y\le\sqrt{1-x^2}\qquad -1\le z\le y
+   </me>
+</li>
+</ul>
+Here is a sketch.
+</p>
+<sidebyside width="75%">
+  <image source="pfig/OE15D_7CC"/>
+</sidebyside>
+<p>
+Note that
+<ul>
+<li>
+    <m>z</m> runs from <m>-1</m> to  <m>\sqrt{1-x^2}</m>.
+</li>
+<li>
+    For each <m>z</m> between <m>-1</m> and <m>-\sqrt{1-x^2}</m>, <m>y</m> runs from
+    <m>-\sqrt{1-x^2}</m> to <m>\sqrt{1-x^2}</m>, while
+</li>
+<li>
+    for each <m>z</m> between <m>-\sqrt{1-x^2}</m> and <m>\sqrt{1-x^2}</m>, <m>y</m> runs from
+    <m>z</m> to <m>\sqrt{1-x^2}</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+\tripInt_E f(x,y,z)\ \dee{V}
+&amp;=\int_{-1}^1\dee{x} \int_{-1}^{-\sqrt{1-x^2}}\dee{z}
+                     \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}\dee{y}  \ f(x,y,z)
+</mrow><mrow>
+&amp;\hskip1in  +\int_{-1}^1\dee{x} \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}\dee{z}
+                    \int_z^{\sqrt{1-x^2}}\dee{y}  \ f(x,y,z)
+</mrow>
+</md>
+or
+<md>
+<mrow>
+\tripInt_E f(x,y,z)\ \dee{V}
+&amp;=\int_{-1}^1 \int_{-1}^{-\sqrt{1-x^2}} \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}
+              f(x,y,z)\ \dee{y}\,\dee{z}\,\dee{x}
+</mrow><mrow>
+&amp;\hskip1in  +\int_{-1}^1 \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}
+                    \int_z^{\sqrt{1-x^2}}  f(x,y,z)\ \dee{y}\,\dee{z}\,\dee{x}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2016D</fromexam></title>
+<statement><p>
+Let <m>E</m> be the region bounded by the planes <m>y=0</m>, <m>y=2</m>,
+<m>y+z=3</m> and the surface <m>z=x^2</m>. Consider the intergal
+<md>
+<mrow>
+I=\tripInt_E f(x,y,z)\ \dee{V}
+</mrow>
+</md>
+Fill in the blanks below. In each part below,
+you may need only one integral to express your answer. In that
+case, leave the other blank.
+</p>
+
+<p><ol label="a">
+<li>
+<m>\displaystyle I=\int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                        f(x,y,z)\ \dee{z}\,\dee{x}\,\dee{y} +
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                        f(x,y,z)\ \dee{z}\,\dee{x}\,\dee{y} </m>
+\medskip
+</li>
+<li>
+<m>\displaystyle I=\int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                        f(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z} +
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                        f(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z} </m>
+</li>
+<li>
+<m>\displaystyle I=\int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                        f(x,y,z)\ \dee{y}\,\dee{x}\,\dee{z} +
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                        f(x,y,z)\ \dee{y}\,\dee{x}\,\dee{z} </m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\int_0^2 \int_{-\sqrt{3-y}}^{\sqrt{3-y}} \int_{x^2}^{3-y}
+                 f(x,y,z)\ \dee{z}\,\dee{x}\,\dee{y}</m>
+</p>
+
+<p>(b) <m>\int_0^1 \int_0^2 \int_{-\sqrt{z}}^{\sqrt{z}} f(x,y,z)\
+                 \dee{x}\,\dee{y}\,\dee{z}
+     +\int_1^3 \int_0^{3-z} \int_{-\sqrt{z}}^{\sqrt{z}} f(x,y,z)\
+                 \dee{x}\,\dee{y}\,\dee{z}</m>
+</p>
+
+<p>(c) <m>\int_0^1  \int_{-\sqrt{z}}^{\sqrt{z}}\int_0^2 f(x,y,z)\
+                 \dee{y}\,\dee{x}\,\dee{z}
+    +\int_1^3 \int_{-\sqrt{z}}^{\sqrt{z}}  \int_0^{3-z} f(x,y,z)\
+                 \dee{y}\,\dee{x}\,\dee{z}</m>
+</p></answer>
+
+<solution><p>
+First, we need to develop an understanding of what <m>E</m> looks like.
+Note that all of the equations <m>y=0</m>, <m>y=2</m>, <m>y+z=3</m> and <m>z=x^2</m>
+are invariant under <m>x\rightarrow -x</m>. So <m>E</m> is invariant under
+<m>x\rightarrow -x</m>, i.e. is symmetric about the <m>yz</m>--plane. We'll sketch
+the first octant (i.e. <m>x,y,z\ge 0</m>) part of <m>E</m>. There is also a
+<m>x\le 0</m>, <m>y\ge 0</m>, <m>z\ge 0</m> part.
+</p>
+
+<p>Here are sketches of the plane <m>y=2</m>, on the left,
+the plane <m>y+z=3</m> in the centre and of the <q>tunnel</q>
+bounded by the coordinate planes <m>x=0</m>, <m>y=0</m>, <m>z=0</m> and the
+planes <m>y=2</m>, <m>y+z=3</m>, on the right.
+</p>
+
+<sidebyside width="30%">
+<image source="pfig/OE16D_8a"/>
+<image source="pfig/OE16D_8b"/>
+<image source="pfig/OE16D_8c"/>
+</sidebyside>
+
+<p>
+Now here is the parabolic cylinder <m>z=x^2</m> on the left.
+<m>E</m> is constructed by using the parabolic cylinder <m>z=x^2</m> to chop the front
+off of the tunnel <m>x\ge 0</m>, <m>0\le y\le 2</m>, <m>z\ge 0</m>,  <m>y+z\le 3</m>. The figure
+on the right is a sketch.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfig/OE16D_8d"/>
+ <image source="pfig/OE16D_8e"/>
+</sidebyside>
+
+<p>
+So
+<me>
+E=\Set{(x,y,z)}{0\le y\le 2,\ x^2\le z\le 3-y}
+</me>
+</p>
+
+<p>(a) On <m>E</m>
+<ul>
+<li>
+<m>y</m> runs from <m>0</m> to <m>2</m>.
+</li>
+<li>
+For each fixed <m>y</m> in that range, <m>(x,z)</m> runs over
+<m>\Set{(x,z)}{x^2\le z\le 3-y}</m>.
+</li>
+<li>
+In particular, the largest <m>x^2</m> is <m>3-y</m> (when <m>z=3-y</m>).
+So <m>x</m> runs from <m>-\sqrt{3-y}</m> to <m>\sqrt{3-y}</m>.
+</li>
+<li>
+For fixed <m>y</m> and <m>x</m> as above, <m>z</m> runs from <m>x^2</m> to <m>3-y</m>.
+</li>
+</ul>
+so that
+<md>
+<mrow>
+I=\tripInt_E f(x,y,z)\ \dee{V}
+= \int_0^2 \int_{-\sqrt{3-y}}^{\sqrt{3-y}} \int_{x^2}^{3-y} f(x,y,z)\ \dee{z}\,\dee{x}\,\dee{y}
+</mrow>
+</md>
+</p>
+
+<p>(b) On <m>E</m>
+<ul>
+<li>
+<m>z</m> runs from <m>0</m> to <m>3</m>.
+</li>
+<li>
+For each fixed <m>z</m> in that range, <m>(x,y)</m> runs over
+<me>
+\Set{(x,y)}{0\le y\le 2,\ x^2\le z\le 3-y}
+=\Set{(x,y)}{0\le y\le 2,\ y\le 3-z,\ x^2\le z}
+</me>
+In particular, <m>y</m> runs from <m>0</m> to the minimum of <m>2</m> and <m>3-z</m>.
+</li>
+<li>
+So if <m>0\le z\le 1</m> (so that <m>3-z\ge 2</m>),
+<m>(x,y)</m> runs over <m>\Set{(x,y)}{0\le y\le 2,\ x^2\le z}</m>, while
+</li>
+<li>
+if <m>1\le z\le 3</m>,
+(so that <m>3-z\le 2</m>),
+<m>(x,y)</m> runs over <m>\Set{(x,y)}{0\le y\le 3-z,\ x^2\le z}</m>,
+</li>
+</ul>
+so that
+<md>
+<mrow>
+I= \int_0^1 \int_0^2 \int_{-\sqrt{z}}^{\sqrt{z}} f(x,y,z)\
+                 \dee{x}\,\dee{y}\,\dee{z}
++\int_1^3 \int_0^{3-z} \int_{-\sqrt{z}}^{\sqrt{z}} f(x,y,z)\
+                 \dee{x}\,\dee{y}\,\dee{z}
+</mrow>
+</md>
+</p>
+
+<p>(c) On <m>E</m>
+<ul>
+<li>
+<m>z</m> runs from <m>0</m> to <m>3</m>.
+</li>
+<li>
+For each fixed <m>z</m> in that range, <m>(x,y)</m> runs over
+<me>
+\Set{(x,y)}{0\le y\le 2,\ x^2\le z\le 3-y}
+</me>
+In particular, <m>y</m> runs from <m>0</m> to the minimum of <m>2</m> and <m>3-z</m>.
+</li>
+<li>
+So if <m>0\le z\le 1</m> (so that <m>3-z\ge 2</m>),
+<m>(x,y)</m> runs over <m>\Set{(x,y)}{0\le y\le 2,\ x^2\le z}</m>, while
+</li>
+<li>
+if <m>1\le z\le 3</m>,
+(so that <m>3-z\le 2</m>),
+<m>(x,y)</m> runs over <m>\Set{(x,y)}{0\le y\le 3-z,\ x^2\le z}</m>,
+</li>
+</ul>
+so that
+<md>
+<mrow>
+I= \int_0^1  \int_{-\sqrt{z}}^{\sqrt{z}}\int_0^2 f(x,y,z)\
+                 \dee{y}\,\dee{x}\,\dee{z}
++\int_1^3 \int_{-\sqrt{z}}^{\sqrt{z}}  \int_0^{3-z} f(x,y,z)\
+                 \dee{y}\,\dee{x}\,\dee{z}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2002D</fromexam></title>
+<statement><p>
+Evaluate <m>\tripInt_E z\,\dee{V}</m>, where <m>E</m> is the region bounded
+by the planes <m>y=0</m>, <m>z=0</m> <m>x+y=2</m> and the cylinder <m>y^2+z^2=1</m> in the
+first octant.
+</p></statement>
+
+<hint><p>
+Sketch <m>E</m>. You can picture <m>E</m> by thinking of the region bounded by the
+planes <m>x=0</m>, <m>y=0</m>, <m>z=0</m> and <m>x+y=2</m> as a large wedge of cheese and thinking
+of the cylinder <m>y^2+z^2=1</m> as a drill hole in the wedge. Then to set up
+the limits of integration, first sketch a top view of <m>E</m>.
+</p></hint>
+
+<answer><p>
+<m>\frac{13}{24}\approx 0.5417</m>
+</p></answer>
+
+<solution><p>
+The cylinder <m>y^2+z^2=1</m> is centred on the <m>x</m> axis. The part of the cylinder
+in the first octant intersects the plane <m>z=0</m> in the line <m>y= 1</m>,
+intersects to plane <m>y=0</m> in the line <m>z=1</m> and intersects the plane
+<m>x=0</m> in the quarter circle <m>y^2+z^2=1</m>, <m>x=0</m>, <m>y,z\ge 0</m>. Here is a
+sketch of <m>E</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE02DQ8b"/>
+</sidebyside>
+
+<p>
+Viewed from above, the region
+<m>E</m> is bounded by the lines <m>x=0</m>, <m>y=0</m>, <m>x+y=2</m> and <m>y=1</m>. This base region is pictured below.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE02DQ8"/>
+</sidebyside>
+
+<p>
+To set up the domain of integration, let's decompose the base region into
+horizontal strips as in the figure above. On the base region
+<ul>
+<li>
+   <m>y</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+   for each fixed <m>y</m> between <m>0</m> and <m>1</m>, <m>x</m> runs from <m>0</m> to <m>2-y</m>.
+</li>
+<li>
+   For each fixed <m>(x,y)</m> in the base region <m>z</m> runs from <m>0</m>
+   to <m>\sqrt{1-y^2}</m>
+</li>
+</ul>
+So
+<me>
+E=\Set{(x,y,z)}{0\le y\le 1,\ 0\le x\le 2-y,\ 0\le z\le\sqrt{1-y^2} }
+</me>
+and
+<md>
+<mrow>
+\tripInt_E z\,\dee{V}&amp;=\int_0^1 \dee{y}\int_0^{2-y}\dee{x}\int_0^{\sqrt{1-y^2}}\dee{z}\ z
+</mrow><mrow>
+&amp;=\int_0^1 \dee{y}\int_0^{2-y}\dee{x}\ \frac{1}{2} z^2\Big|_0^{\sqrt{1-y^2}}
+</mrow><mrow>
+&amp;=\int_0^1 \dee{y}\int_0^{2-y}\dee{x}\ \frac{1}{2} (1-y^2)
+</mrow><mrow>
+&amp;=\int_0^1 \dee{y}\ \frac{1}{2} (1-y^2)(2-y)
+=\frac{1}{2}\int_0^1 \dee{y}\ \big(2-y-2y^2+y^3\big)
+</mrow><mrow>
+&amp;=\frac{1}{2}\left[2-\frac{1}{2}-\frac{2}{3}+\frac{1}{4}\right]
+=\frac{13}{24}\approx 0.5417
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2001D</fromexam></title>
+<statement><p>
+Find <m>\ds\tripInt_D x\,\dee{V}</m> where <m>D</m> is the tetrahedron bounded
+by the planes <m>x=1</m>, <m>y=1</m>, <m>z=1</m>, and <m>x+y+z=2</m>.
+</p></statement>
+
+<answer><p>
+<m>\frac{1}{8}=0.125</m>
+</p></answer>
+
+<solution><p>
+The planes <m>x=1</m>, <m>y=1</m>, <m>z=1</m>, and <m>x+y+z=2</m> and the region <m>D</m> are
+sketched below.
+</p>
+
+<sidebyside width="75%">
+<image source="pfig/OE01DQ8b"/>
+</sidebyside>
+
+<p>
+And here is a sketch of <m>D</m> without the planes cluttering up the figure.
+</p>
+
+<sidebyside width="75%">
+<image source="pfig/OE01DQ8c"/>
+</sidebyside>
+
+<p>
+On <m>D</m>
+<ul>
+<li>
+<m>z</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each fixed <m>z</m>, between 0 and 1, <m>(x,y)</m> runs over the
+triangle <m>T_z</m> bounded by <m>x=1</m>, <m>y=1</m> and <m>x+y=2-z</m>. Observe that when <m>z=0</m>,
+this triangle is just a point (the bottom vertex of the tetrahedron).
+As <m>z</m> increases, the triangle grows, reaching its maximum size when <m>z=1</m>.
+</li>
+</ul>
+Here is a sketch of <m>T_z</m>.
+</p>
+
+<sidebyside width="75%">
+<image source="pfig/OE01DQ8"/>
+</sidebyside>
+
+<p>
+In setting up the domain of integration, we'll decompose, for each
+<m>0\le z\le   1</m>, <m>T_z</m> into vertical strips as in the figure above.
+On <m>T_z</m>
+<ul>
+<li>
+<m>x</m> runs from <m>1-z</m> to <m>1</m> and
+</li>
+<li>
+for each fixed <m>x</m> between <m>1-z</m> and <m>1</m>, <m>y</m> runs from <m>2-x-z</m> to <m>1</m>
+</li>
+</ul>
+so that
+<md>
+<mrow>
+\tripInt_D x\,\dee{V}
+&amp;=\int_0^1\dee{z}\dblInt_{T_z}\dee{x}\,\dee{y}\ x
+=\int_0^1 \dee{z}\int_{1-z}^1 \dee{x}\int_{2-x-z}^1 \dee{y}\ x
+</mrow><mrow>
+&amp;=\int_0^1 \dee{z}\int_{1-z}^1 \dee{x}\ x(x+z-1)
+</mrow><mrow>
+&amp;=\int_0^1 \dee{z}\ \left[\frac{1}{3}x^3+\frac{1}{2} x^2(z-1)\right]_{1-z}^1
+</mrow><mrow>
+&amp;=\int_0^1 \dee{z}\ \left[\frac{1}{3}+\frac{1}{2} (z-1)-\frac{1}{3}(1-z)^3
+-\frac{1}{2}(1-z)^2(z-1)\right]
+</mrow><mrow>
+&amp;=\int_0^1 \dee{z}\ \left[\frac{1}{3}+\frac{1}{2} (z-1)
+                               -\frac{1}{6}(z-1)^3\right]
+</mrow><mrow>
+&amp;=\left[\frac{1}{3}z+\frac{1}{4} (z-1)^2-\frac{1}{24}(z-1)^4\right]_0^1
+=\frac{1}{3}-\frac{1}{4}+\frac{1}{24}=\frac{3}{24}
+</mrow><mrow>
+&amp;=\frac{1}{8}=0.125
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p> [M200 2001A]
+The solid region <m>T</m> is bounded by the planes <m>x=0</m>, <m>y=0</m>,
+<m>z=0</m>, and <m>x+y+z=2</m> and the surface <m>x^2+z=1</m>.
+<ol label="a">
+<li>
+Draw the region indicating coordinates of all corners.
+</li>
+<li>
+Calculate <m>\tripInt_T x\,\dee{V}</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a)
+Here is a 3d sketch of the region. The coordinates of the labelled corners are
+<me>
+a=(0,0,1)\quad
+b=(0,0,0)\quad
+c=(1,0,0)\quad
+d=(0,1,1)\quad
+f=(0,2,0)\quad
+g=(1,1,0)
+</me>
+</p>
+
+<sidebyside width="75%">
+<image source="pfig/OE01AQ8b"/>
+</sidebyside>
+
+<p>
+(b) <m>\frac{17}{60}</m>
+</p></answer>
+
+<solution><p>
+(a)
+Here is a 3d sketch of the region. The coordinates of the labelled corners are
+<me>
+a=(0,0,1)\quad
+b=(0,0,0)\quad
+c=(1,0,0)\quad
+d=(0,1,1)\quad
+f=(0,2,0)\quad
+g=(1,1,0)
+</me>
+</p>
+
+<sidebyside width="75%">
+<image source="pfig/OE01AQ8b"/>
+</sidebyside>
+
+<p>
+(b) Here is a sketch of the side view of <m>T</m>, looking down the <m>y</m> axis.
+</p>
+
+<sidebyside width="75%">
+<image source="pfig/OE01AQ8a"/>
+</sidebyside>
+
+<p>
+We'll set up the limits of integration by using it as the base region.
+We decompose the base region into vertical strips as in the figure above.
+On the base region
+<ul>
+<li>
+<m>x</m> runs from <m>0</m> to <m>1</m> and
+</li>
+<li>
+for each fixed <m>x</m> between <m>0</m> and <m>1</m>, <m>z</m> runs from <m>0</m> to <m>1-x^2</m>.
+</li>
+<li>
+In <m>T</m>, for each fixed <m>(x,y)</m> in the base region, <m>y</m> runs from <m>0</m> to
+<m>2-x-z</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+\tripInt_T x\,\dee{V}
+&amp;=\int_0^1\dee{x}\int_0^{1-x^2}\dee{z}\int_0^{2-x-z}\dee{y}\ x
+=\int_0^1\dee{x}\int_0^{1-x^2}\dee{z}\ (2-x-z)x\cr
+&amp;=\int_0^1 \dee{x}\ \left[x(2-x)(1-x^2)-\frac{1}{2} x{(1-x^2)}^2\right]
+</mrow><mrow>
+&amp;=\int_0^1 \dee{x}\ \left[2x-x^2-2x^3+x^4-\frac{1}{2} x+x^3
+             -\frac{1}{2} x^5\right]
+</mrow><mrow>
+&amp;=\int_0^1 \dee{x}\ \left[\frac{3}{2}x-x^2-x^3+x^4-\frac{1}{2} x^5\right]
+</mrow><mrow>
+&amp;=\left[\frac{3}{4}x^2-\frac{1}{3}x^3-\frac{1}{4}x^4+\frac{1}{5}x^5 -\frac{1}{12}x^6\right]_0^1
+</mrow><mrow>
+&amp;=\frac{3}{4}-\frac{1}{3}-\frac{1}{4}+\frac{1}{5}-\frac{1}{12}
+=\frac{17}{60}
+</mrow>
+</md>
+</p></solution>
+</exercise></exercisegroup>
+
+</exercises>

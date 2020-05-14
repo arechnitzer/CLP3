@@ -102,8 +102,10 @@
   \newcommand{\vTheta}{\mathbf{\Theta}}
   \newcommand{\cA}{\mathcal{A}}
   \newcommand{\cB}{\mathcal{B}}
+  \newcommand{\cL}{\mathcal{L}}
   \newcommand{\cM}{\mathcal{M}}
   \newcommand{\cO}{\mathcal{O}}
+  \newcommand{\cP}{\mathcal{P}}
   \newcommand{\cR}{\mathcal{R}}
   \newcommand{\cS}{\mathcal{S}}
   \newcommand{\cT}{\mathcal{T}}

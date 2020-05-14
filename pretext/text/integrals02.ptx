@@ -1456,7 +1456,7 @@ implies that, since <m>0\le R(\theta)\le M</m>,
 R(\theta_i^*)^2 - L M\De\theta +\frac{1}{4} L^2\De\theta^2\hskip2in
 </mrow><mrow>
 \le \left[R(\theta_i^*)\pm \frac{1}{2} L\De\theta\right]^2\le
-</mrow><mrow> 
+</mrow><mrow>
 \hskip2in R(\theta_i^*)^2 + L M\De\theta +\frac{1}{4} L^2\De\theta^2
 </mrow>
 </md>
@@ -1465,7 +1465,7 @@ Hence (multiplying by <m>\frac{\De\theta}{2}</m> to turn them into areas)
 <mrow>
 \frac{1}{2} R(\theta_i^*)^2\De\theta - \frac{1}{2} L M\De\theta^2
            +\frac{1}{8} L^2\De\theta^3\hskip2in
-</mrow><mrow>\le\text{Area}(\cR_i)\le 
+</mrow><mrow>\le\text{Area}(\cR_i)\le
 </mrow><mrow>
 \hskip2in\frac{1}{2} R(\theta_i^*)^2\De\theta
         + \frac{1}{2} L M\De\theta^2 +\frac{1}{8} L^2\De\theta^3
@@ -1477,7 +1477,7 @@ and the total area <m>A</m> obeys the bounds
 \sum_{i=1}^n\left[ \frac{1}{2} R(\theta_i^*)^2\De\theta
     - \frac{1}{2} L M\De\theta^2 +\frac{1}{8} L^2\De\theta^3\right]\hskip2in
 </mrow><mrow>
-\le A\le 
+\le A\le
 </mrow><mrow>
 \hskip2in\sum_{i=1}^n\left[\frac{1}{2} R(\theta_i^*)^2\De\theta
        + \frac{1}{2} L M\De\theta^2 +\frac{1}{8} L^2\De\theta^3\right]
@@ -1489,7 +1489,7 @@ and
 \frac{1}{2}\sum_{i=1}^n R(\theta_i^*)^2\De\theta
   - \frac{1}{2}  n L M\De\theta^2 +\frac{1}{8} n L^2\De\theta^3\hskip2in
 </mrow><mrow>
-\le A\le 
+\le A\le
 </mrow><mrow>
 \hskip2in\sum_{i=1}^n\frac{1}{2} R(\theta_i^*)^2\De\theta + \frac{1}{2} n L M\De\theta^2 +\frac{1}{8}
 nL^2\De\theta^3
@@ -1502,7 +1502,7 @@ Since <m>\De \theta=\frac{b-a}{n}</m>,
 \!-\! \frac{ L M}{2}\frac{(b\!-\!a)^2}{n}
 \!+\!\frac{L^2}{8} \frac{(b\!-\!a)^3}{n^2}\hskip2in
 </mrow><mrow>
-\le A\le 
+\le A\le
 </mrow><mrow>
 \hskip2in\frac{1}{2}\sum_{i=1}^n R(\theta_i^*)^2\De\theta
    \!+\! \frac{ L M}{2}\frac{(b\!-\!a)^2}{n}
@@ -1532,5 +1532,7 @@ A=\frac{1}{2}\int_a^b R(\theta)^2\,d\theta
 exactly, as desired.
 </p>
 </subsection>
+
+<xi:include href="../problems/prob_s3.2.ptx" />
 
 </section>
