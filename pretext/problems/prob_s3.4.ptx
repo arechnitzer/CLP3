@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise>
+<statement><p>
+Let <m>0 \lt \theta \lt \frac{\pi}{2}</m>, and <m>a,b \gt 0</m>. Denote by <m>S</m> the part of
+the surface <m>z=y\,\tan\theta</m> with <m>0\le x\le a</m>, <m>0\le y\le b</m>.
+<ol label="a">
+<li>
+Find the surface area of <m>S</m> without using any calculus.
+</li>
+<li>
+Find the surface area of <m>S</m> by using Theorem <xref ref="thm_surface_area"/>
+in the CLP-3 text.
+</li>
+</ol>
+</p>
+
+</statement>
+
+<hint><p>
+<m>S</m> is a very simple geometric object.
+</p></hint>
+
+<answer><p>
+<m>ab\sqrt{1+\tan^2\theta}=ab\sec\theta</m>
+</p></answer>
+
+<solution><p>
+(a) <m>S</m> is the part of the plane <m>z=y\,\tan\theta</m> that lies above the
+rectangle in the <m>xy</m>-plane with vertices <m>(0,0)</m>, <m>(a,0)</m>, <m>(0,b)</m>, <m>(a,b)</m>.
+So <m>S</m> is the rectangle with vertices <m>(0,0,0)</m>,
+<m>(a,0,0)</m>, <m>(0,b,b\tan\theta)</m>, <m>(a,b,b\tan\theta)</m>. So it has side lengths
+<md>
+<mrow>
+|\llt a,0,0\rgt -\llt 0,0,0\rgt| &amp;=a
+</mrow><mrow>
+|\llt 0,b,b\tan\theta\rgt -\llt 0,0,0\rgt| &amp;=  \sqrt{b^2+b^2\tan^2\theta}
+</mrow>
+</md>
+and hence area <m>ab\sqrt{1+\tan^2\theta}=ab\sec\theta</m>.
+</p>
+
+<p>(b) <m>S</m> is the part of the surface <m>z=f(x,y)</m> with <m>f(x,y) = y\,\tan\theta</m>
+and with <m>(x,y)</m> running over
+<me>
+\cD =\Set{(x,y)}{0\le x\le a,\ 0\le y\le b}
+</me>
+Hence by Theorem <xref ref="thm_surface_area"/> in the CLP-3 text
+<md>
+<mrow>
+\text{Area}(S)&amp;=\dblInt_\cD \sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\ \dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;=\int_0^a\dee{x}\int_0^b\dee{y}\ \sqrt{1+0^2+\tan^2\theta}
+</mrow><mrow>
+&amp;=ab\sqrt{1+\tan^2\theta}=ab\sec\theta
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>c  \gt  0</m>. Denote by <m>S</m> the part of
+the surface <m>ax+by+cz=d</m> with <m>(x,y)</m> running over the region <m>D</m> in the <m>xy</m>-plane.
+Find the surface area of <m>S</m>, in terms of <m>a</m>, <m>b</m>, <m>c</m>, <m>d</m> and <m>A(D)</m>,
+the area of the region <m>D</m>.
+</p></statement>
+
+<answer><p>
+<m>\frac{\sqrt{a^2+b^2+c^2}}{c} A(D)</m>
+</p></answer>
+
+<solution><p>
+ <m>S</m> is the part of the surface <m>z=f(x,y)</m> with <m>f(x,y) = \frac{d-ax-by}{c}</m>
+and with <m>(x,y)</m> running over <m>D</m>.
+Hence by Theorem <xref ref="thm_surface_area"/> in the CLP-3 text
+<md>
+<mrow>
+\text{Area}(S)&amp;=\dblInt_D \sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\ \dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;=\dblInt_D\ \sqrt{1+\frac{a^2}{c^2}+\frac{b^2}{c^2}}
+</mrow><mrow>
+&amp;=\frac{\sqrt{a^2+b^2+c^2}}{c} A(D)
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>a,b,c  \gt  0</m>. Denote by <m>S</m> the triangle with vertices <m>(a,0,0)</m>,
+<m>(0,b,0)</m> and <m>(0,0,c)</m>.
+<ol label="a">
+<li>
+Find the surface area of <m>S</m> in three different ways, each using
+Theorem <xref ref="thm_surface_area"/> in the CLP-3 text.
+</li>
+<li>
+Denote by <m>T_{xy}</m> the projection of <m>S</m> onto the <m>xy</m>-plane. (It is the
+triangle with vertices <m>(0,0,0)</m> <m>(a,0,0)</m> and <m>(0,b,0)</m>.) Similarly use
+<m>T_{xz}</m> to denote the projection of <m>S</m> onto the <m>xz</m>-plane and
+<m>T_{yz}</m> to denote the projection of <m>S</m> onto the <m>yz</m>-plane. Show that
+<me>
+\text{Area}(S) =\sqrt{\text{Area}(T_{xy})^2
+                     +\text{Area}(T_{xz})^2
+                     +\text{Area}(T_{yz})^2
+                     }
+</me>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+The triangle is part of the plane <m>\frac{x}{a}+\frac{y}{b} +\frac{z}{c}=1</m>.
+</p></hint>
+
+<answer><p>
+(a) <m>\frac{1}{2}\sqrt{a^2b^2+a^2c^2+b^2c^2}</m>
+</p>
+
+<p>(b) See the solution.
+</p></answer>
+
+<solution><p>
+Note that all three vertices <m>(a,0,0)</m>, <m>(0,b,0)</m> and <m>(0,0,c)</m> lie on
+the plane <m>\frac{x}{a}+\frac{y}{b} +\frac{z}{c}=1</m>. So the triangle is
+part of that plane.
+</p>
+
+<p><em>Method 1.</em>
+ <m>S</m> is the part of the surface <m>z=f(x,y)</m> with
+<m>f(x,y) = c\left(1-\frac{x}{a}-\frac{y}{b}\right)</m>
+and with <m>(x,y)</m> running over the triangle <m>T_{xy}</m> in the <m>xy</m>-plane
+with vertices <m>(0,0,0)</m> <m>(a,0,0)</m> and <m>(0,b,0)</m>.
+Hence by part a of Theorem <xref ref="thm_surface_area"/> in the CLP-3 text
+<md>
+<mrow>
+\text{Area}(S)&amp;=\dblInt_{T_{xy}} \sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\ \dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;=\dblInt_{T_{xy}}\ \sqrt{1+\frac{c^2}{a^2}+\frac{c^2}{b^2}}\
+\dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;=\sqrt{1+\frac{c^2}{a^2}+\frac{c^2}{b^2}}\ A(T_{xy})
+</mrow>
+</md>
+where <m>A(T_{xy})</m> is the area of <m>T_{xy}</m>. Since the triangle <m>T_{xy}</m>
+has base <m>a</m> and height <m>b</m> (see the figure below), it has
+area <m>\frac{1}{2}ab</m>. So
+<me>
+\text{Area}(S)=\frac{1}{2}\sqrt{1+\frac{c^2}{a^2}+\frac{c^2}{b^2}}\ ab
+ =\frac{1}{2}\sqrt{a^2b^2+a^2c^2+b^2c^2}
+</me>
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/triangleProjection"/>
+</sidebyside>
+
+<p>
+<em>Method 2.</em>
+ <m>S</m> is the part of the surface <m>x=g(y,z)</m> with
+<m>g(y,z) = a\left(1-\frac{y}{b}-\frac{z}{c}\right)</m>
+and with <m>(y,z)</m> running over the triangle <m>T_{yz}</m> in the <m>yz</m>-plane
+with vertices <m>(0,0,0)</m> <m>(0,b,0)</m> and <m>(0,0,c)</m>.
+Hence by part b of Theorem <xref ref="thm_surface_area"/> in the CLP-3 text
+<md>
+<mrow>
+\text{Area}(S)&amp;=\dblInt_{T_{yz}} \sqrt{1+g_y(y,z)^2+g_z(y,z)^2}\ \dee{y}\,\dee{z}
+</mrow><mrow>
+&amp;=\dblInt_{T_{yz}}\ \sqrt{1+\frac{a^2}{b^2}+\frac{a^2}{c^2}}\
+\dee{y}\,\dee{z}
+</mrow><mrow>
+&amp;=\sqrt{1+\frac{a^2}{b^2}+\frac{a^2}{c^2}}\ A(T_{yz})
+</mrow>
+</md>
+where <m>A(T_{yz})</m> is the area of <m>T_{yz}</m>. Since <m>T_{yz}</m> has base <m>b</m> and
+height <m>c</m>, it has area <m>\frac{1}{2}bc</m>. So
+<me>
+\text{Area}(S)=\frac{1}{2}\sqrt{1+\frac{a^2}{b^2}+\frac{a^2}{c^2}}\ bc
+ =\frac{1}{2}\sqrt{a^2b^2+a^2c^2+b^2c^2}
+</me>
+</p>
+
+<p><em>Method 3.</em>
+ <m>S</m> is the part of the surface <m>y=h(x,z)</m> with
+<m>h(x,z) = b\left(1-\frac{x}{a}-\frac{z}{c}\right)</m>
+and with <m>(x,z)</m> running over the triangle <m>T_{xz}</m> in the <m>xz</m>-plane
+with vertices <m>(0,0,0)</m> <m>(a,0,0)</m> and <m>(0,0,c)</m>.
+Hence by part c of Theorem <xref ref="thm_surface_area"/> in the CLP-3 text
+<md>
+<mrow>
+\text{Area}(S)&amp;=\dblInt_{T_{xz}} \sqrt{1+h_x(x,z)^2+h_z(x,z)^2}\ \dee{x}\,\dee{z}
+</mrow><mrow>
+&amp;=\dblInt_{T_{xz}}\ \sqrt{1+\frac{b^2}{a^2}+\frac{b^2}{c^2}}\
+\dee{x}\,\dee{z}
+</mrow><mrow>
+&amp;=\sqrt{1+\frac{b^2}{a^2}+\frac{b^2}{c^2}}\ A(T_{xz})
+</mrow>
+</md>
+where <m>A(T_{xz})</m> is the area of <m>T_{xz}</m>. Since <m>T_{xz}</m> has base <m>a</m> and
+height <m>c</m>, it has area <m>\frac{1}{2}ac</m>. So
+<me>
+\text{Area}(S)=\frac{1}{2}\sqrt{1+\frac{b^2}{a^2}+\frac{b^2}{c^2}}\ bc
+ =\frac{1}{2}\sqrt{a^2b^2+a^2c^2+b^2c^2}
+</me>
+</p>
+
+<p>(b) We have already seen in the solution to part (a) that
+<me>
+\text{Area}(T_{xy})=\frac{ab}{2}\qquad
+\text{Area}(T_{xz})=\frac{ac}{2}\qquad
+\text{Area}(T_{yz})=\frac{bc}{2}\qquad
+</me>
+Hence
+<md>
+<mrow>
+\text{Area}(S)
+&amp;=\sqrt{\frac{a^2b^2}{4}+\frac{a^2c^2}{4}+\frac{b^2c^2}{4}}
+</mrow><mrow>
+&amp;=\sqrt{\text{Area}(T_{xy})^2
+                     +\text{Area}(T_{xz})^2
+                     +\text{Area}(T_{yz})^2
+                     }
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise><title><fromexam>M317 2002A</fromexam></title>
+<statement><p>
+ Find the area of the part of the surface <m>z=y^{3/2}</m> that
+lies above <m>0\le x,y\le 1</m>.
+</p></statement>
+
+<answer><p>
+<m>\frac{8}{27}\left[\left(\frac{13}{4}\right)^{3/2}-1\right]</m>
+</p></answer>
+
+<solution><p>
+For the surface <m>z=f(x,y)=y^{3/2}</m>,
+<me>
+\dee{S}=\sqrt{1+f_x^2+f_y^2}\ \dee{x}\dee{y}
+=\sqrt{1+\Big(\frac{3}{2}\sqrt{y}\Big)^2}\ \dee{x}\dee{y}
+=\sqrt{1+\frac{9}{4}y}\ \dee{x}\dee{y}
+</me>
+by Theorem <xref ref="thm_surface_area"/>.a in the CLP-3 text,
+So the area is
+<md>
+<mrow>
+\int_0^1\dee{x}\int_0^1\dee{y}\ \sqrt{1+\frac{9}{4}y}
+&amp;=\int_0^1\dee{x}\ \frac{8}{27}\Big[\Big(1+\frac{9}{4}y\Big)^{3/2}\Big]_0^1
+=\int_0^1\dee{x}\ \frac{8}{27}\Big[\Big(\frac{13}{4}\Big)^{3/2}-1\Big]
+</mrow><mrow>
+&amp;=\frac{8}{27}\left[\left(\frac{13}{4}\right)^{3/2}-1\right]
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M253 2013D</fromexam></title>
+<statement><p>
+Find the surface area of the part of the paraboloid
+<m>z = a^2 - x^2 - y^2</m> which lies above the <m>xy</m>--plane.
+</p></statement>
+
+<answer><p>
+<m>\frac{\pi}{6}\big[{(1+4a^2)}^{3/2}-1\big]</m>
+</p></answer>
+
+<solution><p>
+First observe that any point <m>(x,y,z)</m> on the paraboliod lies above the <m>xy</m>-plane if and only if
+<me>
+0\le z = a^2-x^2-y^2
+\iff x^2+y^2\le a^2
+</me>
+That is, if and only if <m>(x,y)</m> lies in the circular disk of radius <m>a</m>
+centred on the origin. The equation of the paraboloid is of the form
+<m>z=f(x,y)</m> with <m>f(x,y)=a^2-x^2-y^2</m>. So, by
+Theorem <xref ref="thm_surface_area"/>.a in the CLP-3 text,
+<md>
+<mrow>
+\text{Surface area}
+&amp;= \dblInt_{x^2+y^2\le a^2}\sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\ \dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;= \dblInt_{x^2+y^2\le a^2}\sqrt{1+4x^2+4y^2}\ \dee{x}\,\dee{y}
+</mrow>
+</md>
+Switching to polar coordinates,
+<md>
+<mrow>
+\text{Surface area}
+&amp;= \int_0^a\dee{r}\int_0^{2\pi}\dee{\theta}\ r\sqrt{1+4r^2}
+</mrow><mrow>
+&amp;= 2\pi \int_0^a\dee{r}\ r\sqrt{1+4r^2}
+</mrow><mrow>
+&amp;= 2\pi \int_1^{1+4a^2}\frac{\dee{s}}{8}\ \sqrt{s}\qquad
+\text{with } s=1+4r^2, \dee{s}=8r\,\dee{r}
+</mrow><mrow>
+&amp;=\frac{\pi}{4}\ \frac{2}{3}s^{3/2}\bigg|_{s=1}^{s=1+4a^2}
+</mrow><mrow>
+&amp;=\frac{\pi}{6}\big[{(1+4a^2)}^{3/2}-1\big]
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M253 2014D</fromexam></title>
+<statement><p>
+Find the area of the portion of the cone <m>z^2 = x^2 + y^2</m>
+lying between the planes <m>z = 2</m> and <m>z = 3</m>.
+</p></statement>
+
+<answer><p>
+<m>5\sqrt{2}\pi</m>
+</p></answer>
+
+<solution><p>
+First observe that any point <m>(x,y,z)</m> on the cone lies between the
+planes <m>z=2</m> and <m>z=3</m> if and only if <m>4\le x^2+y^2\le 9</m>.
+</p>
+
+<p>The equation of the cone can be rewritten in the form
+<m>z=f(x,y)</m> with <m>f(x,y)=\sqrt{x^2+y^2}</m>. Note that
+<md>
+<mrow>
+f_x(x,y)=\frac{x}{\sqrt{x^2+y^2}}\qquad
+f_y(x,y)=\frac{y}{\sqrt{x^2+y^2}}
+</mrow>
+</md>
+So, by
+Theorem <xref ref="thm_surface_area"/>.a in the CLP-3 text,
+<md>
+<mrow>
+\text{Surface area}
+&amp;= \dblInt_{4\le x^2+y^2\le 9}\sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\ \dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;= \dblInt_{4\le x^2+y^2\le 9}
+    \sqrt{1+\frac{x^2}{x^2+y^2}+\frac{y^2}{x^2+y^2}}\ \dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;=\sqrt{2} \dblInt_{4\le x^2+y^2\le 9} \dee{x}\,\dee{y}
+</mrow>
+</md>
+Now the domain of integration is a circular washer with outside radius <m>3</m>
+and inside radius <m>2</m> and hence of area <m>\pi(3^2-2^2)=5\pi</m>. So the surface area is <m>5\sqrt{2}\pi</m>.
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M253 2015D</fromexam></title>
+<statement><p>
+Determine the surface area of the surface given by
+<m>z = \frac{2}{3}\big(x^{3/2} + y^{3/2}\big)</m>, over the square
+<m>0 \le  x \le  1</m>, <m>0 \le  y \le  1</m>.
+</p></statement>
+
+<answer><p>
+<m>\frac{4}{15}\big[9\sqrt{3}-8\sqrt{2}+1\big]</m>
+</p></answer>
+
+<solution><p>
+The equation of the surface is of the form
+<m>z=f(x,y)</m> with <m>f(x,y)=\frac{2}{3}\big(x^{3/2} + y^{3/2}\big)</m>. Note that
+<md>
+<mrow>
+f_x(x,y)=\sqrt{x}\qquad
+f_y(x,y)=\sqrt{y}
+</mrow>
+</md>
+So, by Theorem <xref ref="thm_surface_area"/>.a in the CLP-3 text,
+<md>
+<mrow>
+\text{Surface area}
+&amp;= \int_0^1\dee{x}\int_0^1\dee{y}\ \sqrt{1+f_x(x,y)^2+f_y(x,y)^2}
+</mrow><mrow>
+&amp;= \int_0^1\dee{x}\int_0^1\dee{y}\ \sqrt{1+x+y}
+</mrow><mrow>
+&amp;= \int_0^1\dee{x}\ \Big[\frac{2}{3}(1+x+y)^{3/2}\Big]_{y=0}^{y=1}
+</mrow><mrow>
+&amp;= \frac{2}{3}\int_0^1\dee{x}\ \big[(2+x)^{3/2}-(1+x)^{3/2}\big]
+</mrow><mrow>
+&amp;= \frac{2}{3}\ \frac{2}{5}\Big[(2+x)^{5/2}-(1+x)^{5/2}\Big]_{x=0}^{x=1}
+</mrow><mrow>
+&amp;= \frac{4}{15} \big[3^{5/2}-2^{5/2}-2^{5/2}+1^{5/2}\big]
+</mrow><mrow>
+&amp;= \frac{4}{15}\big[9\sqrt{3}-8\sqrt{2}+1\big]
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M253 2016D</fromexam></title>
+<statement><p>
+<ol label="a">
+<li>
+To find the surface area of the surface <m>z = f (x,y)</m> above the region <m>D</m>,
+we integrate <m>\dblInt_D F(x,y)\ \dee{A}</m>. What is <m>F(x,y)</m>?
+</li>
+<li>
+<p>
+Consider a <q>Death Star</q>,  a ball of radius <m>2</m> centred at the origin
+with another ball of radius <m>2</m> centred at <m>(0, 0, 2\sqrt{3})</m> cut out of it.
+The diagram below shows the slice where <m>y = 0</m>.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfig/OE253_16D_2"/>
+</sidebyside>
+<p>
+<ol label="(i)">
+<li>
+The Rebels want to paint part of the surface of Death Star hot pink; specifically, the concave part (indicated with a thick line in the diagram).
+To help them determine how much paint is needed, carefully fill in the
+missing parts of this integral:
+<me>
+\text{surface area} =
+\int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                 \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
+                        \underline{\ \ \ \ \ \ \ \ \ \ }\ \dee{r}\,\dee{\theta}
+</me>
+</li>
+<li>
+What is the total surface area of the Death Star?
+</li>
+</ol></p>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+The total surface area of (b) (ii) can be determined without evaluating
+any integrals.
+</p></hint>
+
+<answer><p>
+(a)  <m>F(x,y) = \sqrt{1+f_x(x,y)^2+f_y(x,y)^2}</m>
+</p><p>
+(b)-(i) <m>\int_0^{2\pi}\dee{\theta}\int_0^1\dee{r}\ \frac{2r}{\sqrt{4-r^2}}</m>
+</p><p>
+(b)-(ii) <m>16\pi</m>
+</p></answer>
+
+<solution><p>
+(a)
+By Theorem <xref ref="thm_surface_area"/>.a in the CLP-3 text,
+<m>F(x,y) = \sqrt{1+f_x(x,y)^2+f_y(x,y)^2}</m>.
+</p>
+
+<p>(b)  (i) The <q>dimple</q> to be painted is part of the upper sphere
+<m>x^2+y^2+\big(z-2\sqrt{3}\big)^2=4</m>. It is on the bottom half of the sphere
+and so has equation <m>z=f(x,y)=2\sqrt{3}-\sqrt{4-x^2-y^2}</m>. Note that
+<md>
+<mrow>
+f_x(x,y) = \frac{x}{\sqrt{4-x^2-y^2}}\qquad
+f_y(x,y) = \frac{y}{\sqrt{4-x^2-y^2}}
+</mrow>
+</md>
+The point on the dimple with the largest value of <m>x</m> is
+<m>(1,0,\sqrt{3})</m>. (It is marked by a dot in the figure above.) The dimple
+is invariant under rotations around the <m>z</m>--axis and so has <m>(x,y)</m>
+running over <m>x^2+y^2\le 1</m>. So, by
+Theorem <xref ref="thm_surface_area"/>.a in the CLP-3 text,
+<md>
+<mrow>
+\text{Surface area}
+&amp;= \dblInt_{x^2+y^2\le 1}\sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\ \dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;= \dblInt_{x^2+y^2\le 1}\sqrt{1+\frac{x^2}{4-x^2-y^2}
+                                +\frac{y^2}{4-x^2-y^2}}\ \dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;= \dblInt_{x^2+y^2\le 1}\frac{2}{\sqrt{4-x^2-y^2}}\ \dee{x}\,\dee{y}
+</mrow>
+</md>
+Switching to polar coordinates,
+<md>
+<mrow>
+\text{Surface area}
+&amp;= \int_0^{2\pi}\dee{\theta}\int_0^1\dee{r}\ \frac{2r}{\sqrt{4-r^2}}
+</mrow>
+</md>
+</p>
+
+<p>(b) (ii) Observe that if we flip the dimple up by reflecting it
+in the plane <m>z=\sqrt{3}</m>, as in the figure below, the <q>Death Star</q>
+becomes a perfect ball of radius <m>2</m>.
+</p>
+<sidebyside width="75%">
+  <image source="pfig/OE253_16D_2a"/>
+</sidebyside>
+<p>
+The area of the pink dimple in the figure above is identical to the area
+of the blue cap in that figure. So the total surface area of the
+Death Star is exactly the surface area of a sphere of radius <m>a=2</m> and so
+(see Example <xref ref="eg_area_hemisphere"/> in the CLP-3 text)
+is <m>4\pi a^2 = 4 \pi 2^2=16\pi</m>.
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p> [M200 2003A]
+Find the area of the cone <m>z^2=x^2+y^2</m> between <m>z=1</m> and <m>z=16</m>.
+</p></statement>
+
+<answer><p>
+<m>255\sqrt{2}\pi\approx 1132.9</m>
+</p></answer>
+
+<solution><p>
+On the upper half of the cone
+<me>
+z=f(x,y)=\sqrt{x^2+y^2}\qquad
+f_x(x,y)=\frac{x}{\sqrt{x^2+y^2}}\qquad
+f_y(x,y)=\frac{y}{\sqrt{x^2+y^2}}
+</me>
+so that
+<me>
+\dee{S}=\sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\,\dee{x}\,\dee{y}
+=\sqrt{1+\frac{x^2}{x^2+y^2}+\frac{y^2}{x^2+y^2}}\,\dee{x}\,\dee{y}
+=\sqrt{2}\,\dee{x}\,\dee{y}
+</me>
+and
+<md>
+<mrow>
+\text{Area}&amp;= \dblInt_{1\le x^2+y^2\le 16^2}\sqrt{2}\,\dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;=\sqrt{2}\,\Big[\text{area of }\Set{(x,y)}{x^2+y^2\le 16^2}-
+           \text{area of }\Set{(x,y)}{x^2+y^2\le 1}\Big]
+</mrow><mrow>
+&amp;=\sqrt{2}\,\big[\pi 16^2-\pi 1^2\big]
+=255\sqrt{2}\pi\approx 1132.9
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p> [M200 2001D]
+Find the surface area of that part of the hemisphere
+<m>z=\sqrt{a^2-x^2-y^2}</m> which lies within the cylinder <m>\big(x-\frac{a}{2}\big)^2+y^2=\big(\frac{a}{2}\big)^2</m>.
+</p></statement>
+
+<answer><p>
+<m>a^2[\pi-2]</m>
+</p></answer>
+
+<solution><p>
+We are to find the surface area of part of a hemisphere. On the hemisphere
+<md>
+<mrow>
+z=f(x,y)=\sqrt{a^2-x^2-y^2}\qquad
+f_x(x,y)=-\frac{x}{\sqrt{a^2-x^2-y^2}}\qquad
+f_y(x,y)=-\frac{y}{\sqrt{a^2-x^2-y^2}}
+</mrow>
+</md>
+so that
+<md>
+<mrow>
+\dee{S}&amp;=\sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\,\dee{x}\,\dee{y}
+=\sqrt{1+\frac{x^2}{a^2-x^2-y^2}+\frac{y^2}{a^2-x^2-y^2}}\,\dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;=\sqrt{\frac{a^2}{a^2-x^2-y^2}}\,\dee{x}\,\dee{y}
+</mrow>
+</md>
+In polar coordinates, this is <m>\dee{S}=\frac{a}{\sqrt{a^2-r^2}}\,r\,\dee{r}\,\dee{\theta}</m>.
+We are to find the surface area of the part of the hemisphere that is
+inside the cylinder, <m>x^2-ax+y^2=0</m>, which is polar coordinates is
+becomes <m>r^2-ar\cos\theta=0</m> or <m>r=a\cos\theta</m>. The top half of the domain of
+integration is sketched below.
+</p>
+<sidebyside width="75%">
+  <image source="pfig/OE01DQ7"/>
+</sidebyside>
+<p>
+So the
+<md>
+<mrow>
+{\rm Surface\ Area}
+&amp;= 2\int_0^{\pi/2}\dee{\theta}\int_0^{a\cos\theta}\dee{r}\ r
+                                      \frac{a}{\sqrt{a^2-r^2}}
+= 2a\int_0^{\pi/2}\dee{\theta}\ \Big[-\sqrt{a^2-r^2}\,\Big]_0^{a\cos\theta}
+</mrow><mrow>
+&amp;= 2a\int_0^{\pi/2}\dee{\theta}\ \big[a-a\sin\theta\big]
+</mrow><mrow>
+&amp;= 2a^2\Big[\theta+\cos\theta\Big]_0^{\pi/2}
+=a^2[\pi-2]
+</mrow>
+</md>
+</p></solution>
+</exercise></exercisegroup>
+
+</exercises>

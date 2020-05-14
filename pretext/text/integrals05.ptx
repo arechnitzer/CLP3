@@ -485,5 +485,6 @@ I=\int_0^2\dee{z}\int_0^{z/2}\dee{x}\int_0^{2-z}\dee{y}\ f(x,y,z)
 </p>
 </example>
 
+<xi:include href="../problems/prob_s3.5.ptx" />
 
 </section>
