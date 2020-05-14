@@ -606,8 +606,29 @@ namely <m>a</m>, to its largest value on <m>\cR</m>, namely <m>b</m>.
 </li>
 </ul>
 In conclusion,
+<me>
+\text{Mass}(\cR) = \int_a^b  \dee{\theta}
+             \int_{B(\theta)}^{T(\theta)}  \dee{r}\,r\,
+                   f\big(r\cos\theta\,,\,r\sin\theta\big)
+</me>
+We have repeatedly used the word <q>essentially</q> above to avoid getting
+into the nitty-gritty details required to prove things rigorously.
+The mathematically correct proof of <xref ref="eq_polar_mass"/> follows
+the same intuition, but requires some more careful error bounds,
+as in the optional §<xref ref="sec_integral_error"/> below.
 </p>
+</solution>
 
+</example>
+
+<p>In the last example, we derived the important formula that the mass 
+of the region
+<me>
+\cR=\Set{(r\cos\theta,r\sin\theta)}{a\le\theta\le b,
+               B(\theta)\le r\le T(\theta)}
+</me>
+with mass density <m>f(x,y)</m> is
+</p>
 <fact xml:id="eq_polar_mass">
 <statement>
 <p>
@@ -620,20 +641,26 @@ In conclusion,
 </statement>
 </fact>
 
-<p>
-We have repeatedly used the word <q>essentially</q> above to avoid getting
-into the nitty-gritty details required to prove things rigorously.
-The mathematically correct proof of <xref ref="eq_polar_mass"/> follows
-the same intuition, but requires some more careful error bounds,
-as in the optional §<xref ref="sec_integral_error"/> below.
+
+<p>We can immediately adapt that example to calculate areas and derive the formula
+that the area of the region
+<me>
+\cR=\Set{(r\cos\theta,r\sin\theta)}{a\le\theta\le b, 
+              0\le r\le R(\theta)}
+</me>
+is
 </p>
-</solution>
+<fact xml:id="eq_polar_area">
+<statement>
+<p>
+<me>
+\text{Area}(\cR) =\frac{1}{2} \int_a^b R(\theta)^2\  \dee{\theta}
+</me>
+</p>
+</statement>
+</fact>
 
-</example>
-
-
-<p>We can immediately adapt the last example to calculate areas <mdash/> all we have to
-do is set the density to <m>1</m>.
+<p> We just have set the density to <m>1</m>. We do so in the next example.
 </p>
 
 
@@ -661,19 +688,9 @@ with <m>f(x,y)=1</m>, <m>B(\theta)=0</m> and <m>T(\theta)=R(\theta)</m>,
 </mrow>
 </md>
 In this case we can easily do the inner <m>r</m> integral, giving
-</p>
-
-<fact xml:id="eq_polar_area">
-<statement>
-<p>
 <me>
 \text{Area}(\cR) =\frac{1}{2} \int_a^b R(\theta)^2\  \dee{\theta}
 </me>
-</p>
-</statement>
-</fact>
-
-<p>
 The expression <m>\frac{1}{2} R(\theta)^2\ \dee{\theta}</m> in
 <xref ref="eq_polar_area"/> has a geometric interpretation. It is just
 the area of a wedge of a circular disk of radius <m>R(\theta)</m>

@@ -393,6 +393,32 @@ of integration in Example <xref ref="eg_sphere_mass_A"/>.)
 </solution>
 </example>
 
+<p>In the next example, we compute the moment of inertia of a right circular cone. The Definition <xref ref="def_moment_of_inertia"/> of the moment of inertia
+was restricted to two dimensions. However, as was pointed out at the time,
+the same analysis extends naturally to the definition
+</p>
+
+<fact xml:id="eqn_mom_of_inertia_3d">
+  <statement>
+    <p>
+      <me>
+I_\cA=\tripInt_\cV D(x,y,z)^2\,\rho(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z}
+</me>
+</p>
+</statement>
+</fact>
+<p>
+of the moment of inertia of a solid <m>\cV</m> in three dimensions. Here
+<ul>
+<li>
+<m>\rho(x,y,z)</m> is the mass density of the solid at the point <m>(x,y,z)</m> and
+</li>
+<li>
+<m>D(x,y,z)</m> is the distance from <m>(x,y,z)</m> to the axis of rotation.
+</li>
+</ul>
+</p>
+
 
 <example xml:id="eg_moment_cone">
 <statement>
@@ -443,30 +469,8 @@ and call the cone <m>\cV</m>.
 <image source="figs/coneZ"/>
 </sidebyside>
 
-<p>The Definition <xref ref="def_moment_of_inertia"/> of the moment of inertia
-was restricted to two dimensions. However, as was pointed out at the time,
-the same analysis extends naturally to the definition
-</p>
-
-<fact xml:id="eqn_mom_of_inertia_3d">
-  <statement>
-    <p>
-      <me>
-I_\cA=\tripInt_\cV D(x,y,z)^2\,\rho(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z}
-</me>
-</p>
-</statement>
-</fact>
 <p>
-of the moment of inertia of a solid <m>\cV</m> in three dimensions. Here
-<ul>
-<li>
-<m>\rho(x,y,z)</m> is the mass density of the solid at the point <m>(x,y,z)</m> and
-</li>
-<li>
-<m>D(x,y,z)</m> is the distance from <m>(x,y,z)</m> to the axis of rotation.
-</li>
-</ul>
+We shall use <xref ref="eqn_mom_of_inertia_3d"/> to find the moment of inertia.
 In the current problem, the axis of rotation is the <m>y</m>-axis. The point on the
 <m>y</m>-axis that is closest to <m>(x,y,z)</m> is <m>(0,y,0)</m> so that the distance from <m>(x,y,z)</m> to the axis is just
 <me>
