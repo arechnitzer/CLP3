@@ -616,9 +616,9 @@ circle of radius <m>\frac{1}{2}</m> centred on <m>\left(\frac{1}{2},0\right)</m>
 Let's call the crescent <m>\cC</m> and write
 <md>
 <mrow>
-D &amp;= §et{(x,y)}{x^2+y^2\le 1}
+D &amp;= \Set{(x,y)}{x^2+y^2\le 1}
 </mrow><mrow>
-H &amp;= §et{(x,y)}{\left(x-\tfrac{1}{2}\right)^2+y^2\le\tfrac{1}{4}}
+H &amp;= \Set{(x,y)}{\left(x-\tfrac{1}{2}\right)^2+y^2\le\tfrac{1}{4}}
 </mrow>
 </md>
 so that
@@ -741,7 +741,7 @@ In polar coordinates <m>x^2+y^2=2</m> is <m>r=\sqrt{2}</m> and
 The two curves intersect when <m>r=\sqrt{2}</m> and<m>\sqrt{2}=2\sin\theta</m> so that
 <m>\theta=\frac{\pi}{4}</m> or <m>\frac{3}{4}\pi</m>. So
 <me>
-D=§et{(r\cos\theta,r\sin\theta)}{\tfrac{1}{4}\pi\le\theta\le\tfrac{3}{4}\pi,\
+D=\Set{(r\cos\theta,r\sin\theta)}{\tfrac{1}{4}\pi\le\theta\le\tfrac{3}{4}\pi,\
           \sqrt{2}\le r\le 2\sin\theta}
 </me>
 and, as the density is <m>\frac{2}{r}</m>,

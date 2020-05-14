@@ -1,0 +1,1404 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise>
+<statement><p>
+Use <m>(r,\theta,z)</m> to denote cylindrical coordinates.
+<ol label="a">
+<li>
+Draw <m>r=0</m>.
+</li>
+<li>
+Draw <m>r=1</m>.
+</li>
+<li>
+Draw <m>\theta=0</m>.
+</li>
+<li>
+Draw <m>\theta=\frac{\pi}{4}</m>.
+</li>
+</ol>
+</p>
+
+</statement>
+
+<answer>
+<sbsgroup widths="10% 40% 40%">
+<sidebyside>
+<p>(a), (b)</p>
+<image source="pfigs/cylR0"/>
+<image source="pfigs/cylR"/>
+</sidebyside>
+<sidebyside>
+<p>(c), (d)</p>
+<image source="pfigs/cylTh0"/>
+<image source="pfigs/cylTh"/>
+</sidebyside>
+</sbsgroup>
+</answer>
+
+<solution><p>
+(a), (b) Since the cylindrical coordinate <m>r(x,y,z)</m> of a point <m>(x,y,z)</m> is
+the distance, <m>\sqrt{x^2+y^2}</m>, from <m>(x,y,z)</m> to the <m>z</m>-axis, the sets
+<md>
+<mrow>
+\Set{(x,y,z)}{r(x,y,z)=0}
+&amp;=\Set{(x,y,z)}{x^2+y^2=0}
+=\Set{(x,y,z)}{x=y=0}
+</mrow><mrow>
+&amp;=\text{the $z$-axis}
+</mrow><mrow>
+\Set{(x,y,z)}{r(x,y,z)=1}
+&amp;=\Set{(x,y,z)}{x^2+y^2=1}
+</mrow><mrow>
+&amp;=\text{the cylinder of radius $1$ centred on the $z$-axis}
+</mrow>
+</md>
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/cylR0"/>
+  <image source="pfigs/cylR"/>
+</sidebyside>
+
+<p>
+(c), (d)
+Since the cylindrical coordinate <m>\theta(x,y,z)</m> of a point <m>(x,y,z)</m> is
+the angle between the positive <m>x</m>-axis and the line from <m>(0,0,0)</m>
+to <m>(x,y,0)</m>, the sets
+<md>
+<mrow>
+\Set{(x,y,z)}{\theta(x,y,z)=0}
+&amp;=\text{the half of the $xz$-plane with } x \gt 0
+</mrow><mrow>
+\Set{(x,y,z)}{\theta(x,y,z)=\frac{\pi}{4}}
+&amp;=\text{the half of the plane $y=x$ with } x \gt 0
+</mrow>
+</md>
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/cylTh0"/>
+  <image source="pfigs/cylTh"/>
+</sidebyside>
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Sketch the points with the specified cylindrical coordinates.
+<ol label="a">
+<li>
+<m>r=1</m>, <m>\theta=0</m>, <m>z=0</m>
+</li>
+<li>
+<m>r=1</m>, <m>\theta=\frac{\pi}{4}</m>, <m>z=0</m>
+</li>
+<li>
+<m>r=1</m>, <m>\theta=\frac{\pi}{2}</m>, <m>z=0</m>
+</li>
+<li>
+<m>r=0</m>, <m>\theta=\pi</m>, <m>z=1</m>
+</li>
+<li>
+<m>r=1</m>, <m>\theta=\frac{\pi}{4}</m>, <m>z=1</m>
+</li>
+</ol>
+</p>
+
+</statement>
+
+<answer>
+<sidebyside width="75%">
+<image source="pfigs/cylP1"/>
+</sidebyside>
+
+</answer>
+
+<solution><p>
+The sketch is below. To help build up this sketch, it is useful to
+recall the following facts.
+<ul>
+<li>
+The cylindrical coordinate <m>r</m> is the distance of the point from the <m>z</m>-axis.
+In particular all points with <m>r=0</m> lie on the <m>z</m>-axis (for all values of <m>\theta</m>).
+</li>
+<li>
+The cylindrical coordinate <m>z</m> is the distance of the point from the <m>xy</m>-plane.
+In particular all points with <m>z=0</m> lie on the <m>xy</m>-plane.
+</li>
+</ul>
+</p>
+<sidebyside width="75%">
+<image source="pfigs/cylP1"/>
+</sidebyside>
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Convert from cylindrical to Cartesian coordinates.
+<ol label="a">
+<li>
+<m>r=1</m>, <m>\theta=0</m>, <m>z=0</m>
+</li>
+<li>
+<m>r=1</m>, <m>\theta=\frac{\pi}{4}</m>, <m>z=0</m>
+</li>
+<li>
+<m>r=1</m>, <m>\theta=\frac{\pi}{2}</m>, <m>z=0</m>
+</li>
+<li>
+<m>r=0</m>, <m>\theta=\pi</m>, <m>z=1</m>
+</li>
+<li>
+<m>r=1</m>, <m>\theta=\frac{\pi}{4}</m>, <m>z=1</m>
+</li>
+</ol>
+</p>
+
+</statement>
+
+<answer><p>
+(a) <m>(1,0,0)</m></p><p>
+(b) <m>\left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}},0\right)</m></p><p>
+(c) <m>(0,1,0)</m></p><p>
+(d) <m>(0,0,1)</m></p><p>
+(e) <m>\left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}},1\right)</m>
+</p></answer>
+
+<solution><p>
+(a) When <m>\theta=0</m>,  <m>\sin\theta=0</m> and <m>\cos\theta=1</m>, so that
+the polar coordinates <m>r=1</m>, <m>\theta=0</m>, <m>z=0</m> correspond to the Cartesian
+coordinates
+<me>
+(x,y,z) = (r\cos\theta,r\sin\theta,z)
+        = (1\times\cos 0,\  1\times\sin 0,\ 0)
+        =(1,0,0)
+</me>
+</p>
+
+<p>(b) When <m>\theta=\frac{\pi}{4}</m>,  <m>\sin\theta=\cos\theta=\frac{1}{\sqrt{2}}</m>,
+so that the polar coordinates <m>r=1</m>, <m>\theta=\frac{\pi}{4}</m>, <m>z=0</m> correspond
+to the Cartesian coordinates
+<me>
+(x,y,z) = (r\cos\theta,r\sin\theta,z)
+  = \left(1\times\cos \frac{\pi}{4},\  1\times\sin \frac{\pi}{4},\ 0\right)
+  = \left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}},0\right)
+</me>
+</p>
+
+<p>(c) When <m>\theta=\frac{\pi}{2}</m>,  <m>\sin\theta=1</m> and <m>\cos\theta=0</m>,
+so that the polar coordinates <m>r=1</m>, <m>\theta=\frac{\pi}{2}</m>, <m>z=0</m> correspond
+to the Cartesian coordinates
+<me>
+(x,y,z) = (r\cos\theta,r\sin\theta,z)
+  = \left(1\times\cos \frac{\pi}{2},\  1\times\sin \frac{\pi}{2},\ 0\right)
+  = (0,1,0)
+</me>
+</p>
+
+<p>(d) When <m>\theta=\pi</m>,  <m>\sin\theta=0</m> and <m>\cos\theta=-1</m>,
+so that the polar coordinates <m>r=0</m>, <m>\theta=\pi</m>, <m>z=1</m> correspond
+to the Cartesian coordinates
+<me>
+(x,y,z) = (r\cos\theta,r\sin\theta,z)
+  = \left(0\times\cos\pi,\  0\times\sin\pi,\ 1\right)
+  = (0,0,1)
+</me>
+</p>
+
+<p>(e) When <m>\theta=\frac{\pi}{4}</m>,  <m>\sin\theta=\cos\theta=\frac{1}{\sqrt{2}}</m>,
+so that the polar coordinates <m>r=1</m>, <m>\theta=\frac{\pi}{4}</m>, <m>z=1</m> correspond
+to the Cartesian coordinates
+<me>
+(x,y,z) = (r\cos\theta,r\sin\theta,z)
+  = \left(1\times\cos \frac{\pi}{4},\  1\times\sin \frac{\pi}{4},\ 1\right)
+  = \left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}},1\right)
+</me>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Convert from Cartesian to cylindrical coordinates.
+<ol label="a">
+<li> <m>(1,1,2)</m>
+</li>
+<li> <m>(-1,-1,2)</m>
+</li>
+<li> <m>(-1,\sqrt{3}, 0)</m>
+</li>
+<li> <m>(0,0,1)</m>
+</li>
+</ol>
+</p>
+
+</statement>
+
+<answer><p>
+(a) <m>r=\sqrt{2}</m>, <m>z=2</m>, <m>\theta=\frac{\pi}{4}</m> (plus possibly
+any integer multiple of <m>2\pi</m>)
+</p>
+
+<p>(b) <m>r=\sqrt{2}</m>, <m>z=2</m>, <m>\theta=\frac{5\pi}{4}</m> (plus possibly
+any integer multiple of <m>2\pi</m>)
+</p>
+
+<p>(c) <m>r=2</m>, <m>z=0</m>, <m>\theta=\frac{2\pi}{3}</m> (plus possibly
+any integer multiple of <m>2\pi</m>)
+</p>
+
+<p>(d) <m>r=0</m>, <m>z=1</m>, <m>\theta=\text{arbitrary}</m>
+</p>
+
+</answer>
+
+<solution><p>
+(a) The cylindrical coordinates must obey
+<me>
+1=x=r\cos\theta\qquad
+1=y=r\sin\theta\qquad
+2=z
+</me>
+So <m>z=2</m>, <m>r=\sqrt{1^2+1^2}=\sqrt{2}</m> and <m>\tan\theta=\frac{y}{x}
+=\frac{1}{1}=1</m>. Recall that <m>\tan\left(\frac{\pi}{4}+k\pi\right)=1</m>
+for all integers <m>k</m>.  As <m>(x,y)=(1,1)</m> lies in the first quadrant,
+<m>0\le\theta\le\frac{\pi}{2}</m>. So <m>\theta=\frac{\pi}{4}</m> (plus possibly
+any integer multiple of <m>2\pi</m>).
+</p>
+
+<p>(b) The cylindrical coordinates must obey
+<me>
+-1=x=r\cos\theta\qquad
+-1=y=r\sin\theta\qquad
+2=z
+</me>
+So <m>z=2</m>, <m>r=\sqrt{(-1)^2+(-1)^2}=\sqrt{2}</m> and <m>\tan\theta=\frac{y}{x}
+=\frac{-1}{-1}=1</m>. Recall that <m>\tan\left(\frac{\pi}{4}+k\pi\right)=1</m>
+for all integers <m>k</m>. As <m>(x,y)=(-1,-1)</m> lies in the third quadrant,
+<m>\pi\le\theta\le\frac{3\pi}{2}</m>. So <m>\theta=\frac{5\pi}{4}</m> (plus possibly
+any integer multiple of <m>2\pi</m>).
+</p>
+
+<p>(c) The cylindrical coordinates must obey
+<me>
+-1=x=r\cos\theta\qquad
+\sqrt{3}=y=r\sin\theta\qquad
+0=z
+</me>
+So <m>z=0</m>, <m>r=\sqrt{(-1)^2+\big(\sqrt{3}\big)^2}=2</m> and
+<m>\tan\theta=\frac{y}{x} =\frac{\sqrt{3}}{-1}=-\sqrt{3}</m>.
+Recall that <m>\tan\left(\frac{2\pi}{3}+k\pi\right)=-\sqrt{3}</m>
+for all integers <m>k</m>.
+As <m>(x,y)=(-1,\sqrt{3})</m> lies in the second quadrant,
+<m>\frac{\pi}{2}\le\theta\le\pi</m>. So <m>\theta=\frac{2\pi}{3}</m> (plus possibly
+any integer multiple of <m>2\pi</m>).
+</p>
+
+<p>(d) The cylindrical coordinates must obey
+<me>
+0=x=r\cos\theta\qquad
+0=y=r\sin\theta\qquad
+1=z
+</me>
+So <m>z=0</m>, <m>r=\sqrt{0^2+0^2}=0</m> and
+<m>\theta</m> is completely arbitrary.
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Rewrite the following equations in cylindrical coordinates.
+<ol label="a">
+<li> <m>z=2xy</m>
+</li>
+<li> <m>x^2+y^2+z^2=1</m>
+</li>
+<li> <m>(x-1)^2 + y^2 =1</m>
+</li>
+</ol>
+</p>
+
+</statement>
+
+<answer><p>
+(a) <m>z=r^2\sin(2\theta)</m></p><p>
+(b) <m>r^2+z^2=1</m></p><p>
+(c) <m>r=2\cos\theta</m>
+</p>
+
+</answer>
+
+<solution><p>
+(a) As <m>x=r\cos\theta</m> and <m>y=r\sin\theta</m>,
+<me>
+z=2xy
+\iff z=2r^2\cos\theta\sin\theta = r^2\sin(2\theta)
+</me>
+</p>
+
+<p>(b) As <m>x=r\cos\theta</m> and <m>y=r\sin\theta</m>,
+<me>
+x^2+y^2+z^2=1
+\iff r^2\cos^2\theta+r^2\sin^2\theta + z^2 =1
+\iff r^2+z^2=1
+</me>
+</p>
+
+<p>(c) As <m>x=r\cos\theta</m> and <m>y=r\sin\theta</m>,
+<md>
+<mrow>
+(x-1)^2 + y^2 =1
+&amp;\iff (r\cos\theta-1)^2 + (r\sin\theta)^2 =1
+</mrow><mrow>
+&amp;\iff r^2\cos^2\theta -2r\cos\theta +1 + r^2\sin^2\theta = 1
+</mrow><mrow>
+&amp;\iff r^2=2r\cos\theta
+\iff r=2\cos\theta\text{ or }r=0
+</mrow><mrow>
+&amp;\iff r=2\cos\theta
+</mrow>
+</md>
+Note that the solution <m>r=0</m> is included in <m>r=2\cos\theta</m> <mdash/> just choose <m>\theta=\frac{\pi}{2}</m>.
+</p>
+
+</solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise>
+<statement><p>
+Use cylindrical coordinates to evaluate the volumes of each of the following
+regions.
+<ol label="a">
+<li>
+Above the <m>xy</m>--plane, inside the cone <m>z=2a-\sqrt{x^2+y^2}</m> and
+inside the cylinder <m>x^2+y^2=2ay</m>.
+</li>
+<li>
+Above the <m>xy</m>--plane, under the paraboloid <m>z=1-x^2-y^2</m> and
+in the wedge <m>-x\le y\le \sqrt{3}x</m>.
+</li>
+<li>
+Above the paraboloid <m>\ z=x^2+y^2\ </m> and below the plane <m>\ z=2y</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>a^3\big(2\pi-\frac{32}{9}\big)</m> </p><p>
+(b) <m>\frac{7}{48}\pi</m></p><p>
+(c) <m>\frac{\pi}{2}</m>
+</p></answer>
+
+<solution><p>
+ (a) In cylindrical coordinates, the cone <m>z=2a-\sqrt{x^2+y^2}</m> is <m>z=2a-r</m>
+and the cylinder <m>x^2+y^2=2ay</m> is <m>r^2=2ar\sin\theta</m> or <m>r=2a\sin\theta</m>.
+The figures below show the parts of the cone, the cylinder and
+the intersection, respectively, that are in the first octant.
+</p>
+
+<sidebyside width="30%">
+  <image source="pfigs/domainCylinderConea"/>
+  <image source="pfigs/domainCylinderConeb"/>
+  <image source="pfigs/domainCylinderCone"/>
+</sidebyside>
+
+<p>
+The specified region is
+<me>
+V=\Set{(r\cos\theta\,,\,r\sin\theta\,,\,z)}
+           {0\le\theta\le\pi,\ r\le 2a\sin\theta,\ 0\le z\le 2a-r}
+</me>
+By symmetry under <m>x\rightarrow -x</m>, the full volume is twice the
+volume in the first octant.
+</p>
+
+<p>So the
+<md>
+<mrow>
+\text{Volume}
+&amp;= 2\int_0^{{\pi\over 2}} \dee{\theta}\int_0^{2a\sin\theta}\dee{r}\ r
+           \int_0^{2a -r}\dee{z}
+</mrow><mrow>
+&amp;= 2\int_0^{{\pi\over 2}} \dee{\theta}\int_0^{2a\sin\theta}\dee{r}\ r(2a-r)
+
+</mrow><mrow>
+&amp;= 2\int_0^{{\pi\over 2}} \dee{\theta}\
+             \left[4a^3\sin^2\theta-\frac{8a^3}{3}\sin^3\theta\right]
+
+</mrow><mrow>
+&amp;= 8a^3\left[\int_0^{{\pi\over 2}} \dee{\theta}\ \frac{1-\cos(2\theta)}{2}
+             +\frac{2}{3}\int^0_1 \dee{t}\ \big(1-t^2\big)\right]
+\qquad\text{where } t=\cos\theta
+</mrow><mrow>
+&amp;= 8a^3\left[\frac{\pi}{4}-\frac{2}{3}\left(1-\frac{1}{3}\right)\right]
+=a^3\big(2\pi-\frac{32}{9}\big)
+</mrow>
+</md>
+For an efficient, sneaky, way to evaluate
+<m>\int_0^{{\pi\over 2}} \dee{\theta}\ \sin^2\theta</m>,
+see Remark <xref ref="rem_sneaky"/> in the CLP-3 text.
+</p>
+
+<p>(b) The domain of integration is
+<me>
+V = \Set{(x,y,z)}{-x\le y\le \sqrt{3}x,\ 0\le z \le 1-x^2-y^2}
+</me>
+Recall that in polar coordinates <m>\frac{y}{x}=\tan\theta</m>.
+So the boundaries of the wedge <m>-x\le y\le \sqrt{3}x</m>, or equivalently
+<m>-1\le\frac{y}{x}\le\sqrt{3}</m>, correspond, in polar coordinates,
+to <m>\theta=\tan^{-1}(-1)=-\frac{\pi}{4}</m> and <m>\theta=\tan^{-1}\sqrt{3}=\frac{\pi}{3}</m>. In cylindrical coordinates,
+the paraboloid <m>z=1-x^2-y^2</m> becomes <m>z=1-r^2</m>. There are <m>z</m>'s that obey
+<m>0\le z\le 1-r^2</m> if and only if <m>r\le 1</m>. So, in cylindrical coordinates,
+<me>
+V = \Set{(r\cos\theta,r\sin\theta,z)}
+              {-\tfrac{\pi}{4}\le \theta\le \tfrac{\pi}{3},\
+                  0\le r\le 1,\ 0\le z \le 1-r^2}
+</me>
+and
+<md>
+<mrow>
+\text{Volume}
+&amp;= \int_{-{\pi\over 4}}^{{\pi\over 3}} \dee{\theta}\int_0^1\dee{r}\ r
+             \int_0^{1 -r^2}\dee{z}
+= \left(\frac{\pi}{3}+\frac{\pi}{4}\right)\int_0^1\dee{r}\ r(1-r^2)
+= \frac{7}{12}\pi\left(\frac{1}{2}-\frac{1}{4}\right)
+= \frac{7}{48}\pi
+</mrow>
+</md>
+</p>
+
+<p>(c) The region is
+<me>
+V = \Set{(x,y,z)}{x^2+y^2\le z\le 2y}
+</me>
+There are <m>z</m>'s that obey <m>x^2+y^2\le z\le 2y</m> if and only if
+<md>
+<mrow>
+x^2+y^2\le 2y
+&amp;\iff x^2+y^2-2y \le 0
+ \iff x^2 + (y-1)^2 \le 1
+</mrow>
+</md>
+This disk is sketched in the figure
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/domain2bis"/>
+</sidebyside>
+
+<p>
+In cylindrical coordinates,
+<ul>
+<li>
+the bottom, <m>z=x^2+y^2</m>, is <m>z=r^2</m>,
+</li>
+<li>
+the top, <m>z=2y</m>, is <m>z=2r\sin\theta</m>, and
+</li>
+<li>
+the disk <m>x^2+y^2\le 2y</m> is <m>r^2\le 2r\sin\theta</m>, or equivalently <m>r\le2\sin\theta</m>,
+</li>
+</ul>
+so that, looking at the figure above,
+<me>
+V = \Set{(r\cos\theta,r\sin\theta,z)}{0\le\theta\le\pi,
+                \ 0\le r\le 2\sin\theta,\ r^2\le z\le 2r\sin\theta}
+</me>
+By symmetry under <m>x\rightarrow -x</m>,
+the full volume is twice the volume in the first octant so that
+<md>
+<mrow>
+\text{Volume}
+&amp;= 2\int_{0}^{{\pi\over 2}} \dee{\theta}\int_0^{2\sin\theta}\dee{r}\ r\int_{r^2}^{2r\sin\theta}\dee{z}
+= 2\int_{0}^{{\pi\over 2}} \dee{\theta}\int_0^{2\sin\theta}\dee{r}\ r(2r\sin\theta-r^2)\cr
+&amp;= 2\int_{0}^{{\pi\over 2}} \dee{\theta}\ \left(\frac{2^4}{3}-\frac{2^4}{4}\right)\sin^4\theta
+</mrow>
+</md>
+To integrate
+<fn>For a general discussion of trigonometric integrals see
+§\eref{CLP101</fn>
+{sec trigint} in the CLP-2 text. In particular the integral
+<m>\int \cos^4 x\ \dee{x}</m> is evaluated in Example \eref{CLP101}{eg:TRGINTc}
+in the CLP-2 text.}
+<m>\sin^4\theta</m>, we use the double angle formulae
+<m>\sin^2 x= \frac{1-\cos(2x)}{2}</m> and <m>\cos^2 x= \frac{1+\cos(2x)}{2}</m>
+to write
+<md>
+<mrow>
+  \sin^4\theta &amp;= \left[ \frac{1-\cos(2\theta)}{2} \right]^2
+</mrow><mrow>
+   &amp;= \frac{1}{4} - \frac{1}{2} \cos(2\theta) + \frac{1}{4}\cos^2(2\theta)
+</mrow><mrow>
+  &amp;= \frac{1}{4} - \frac{1}{2} \cos(2\theta) + \frac{1}{8}\left(1 + \cos(4\theta) \right)
+</mrow><mrow>
+  &amp;= \frac{3}{8} - \frac{1}{2} \cos(2\theta) + \frac{1}{8}\cos(4\theta)
+</mrow>
+</md>
+So
+<md>
+<mrow>
+\text{Volume}
+&amp;= 2\ \frac{2^4}{12} \left[
+   \frac{3}{8}\theta - \frac{1}{4} \sin(2\theta) + \frac{1}{32}\sin(4\theta)
+                                       \right]_0^{\pi\over 2}
+= 2\ \frac{2^4}{12}\ \frac{3}{16}\pi
+=\frac{\pi}{2}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2008A</fromexam></title>
+<statement><p>
+Let E be the region bounded between the parabolic surfaces
+<m>z = x^2 + y^2</m> and <m>z = 2 - x^2 - y^2</m> and within the cylinder
+<m>x^2 + y^2 \le 1</m>.  Calculate the integral of <m>f(x,y,z) = {(x^2 + y^2)}^{3/2}</m> over the region <m>E</m>.
+</p></statement>
+
+<answer><p>
+<m>\frac{8\pi}{35}</m>
+</p></answer>
+
+<solution><p>
+Note that the paraboloids <m>z=x^2+y^2</m> and <m>z=2-x^2-y^2</m>
+intersect when <m>z=x^2+y^2=1</m>.
+We'll use cylindrical coordinates. Then <m>x^2+y^2=r^2</m>,
+<m>\dee{V}=r \ \dee{r}\,\dee{\theta}\,\dee{z}</m>, and
+<me>
+E=\Set{(r\cos\theta\,,\,r\sin\theta\,,\,z))}{0\le r\le 1,\
+                    r^2\le z\le 2-r^2,\ 0\le\theta\le 2\pi}
+</me>
+so that
+<md>
+<mrow>
+\tripInt_E f(x,y,z)\ \dee{V}
+&amp;=\int_0^1\dee{r}\int_{r^2}^{2-r^2}\dee{z}\int_0^{2\pi}\dee{\theta}\
+        r\ \overbrace{r^3}^{f}
+</mrow><mrow>
+&amp;=2\pi \int_0^1\dee{r}\ r^4\big(2-r^2-r^2\big)
+</mrow><mrow>
+&amp;=2\pi \left[2\frac{1^5}{5}-2\frac{1^7}{7}\right]
+</mrow><mrow>
+&amp;=\frac{8\pi}{35}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2010D</fromexam></title>
+<statement><p>
+Let <m>E</m> be the region bounded above by the sphere <m>x^2 + y^2 + z^2 = 2</m> and below by the
+paraboloid <m>z = x^2 + y^2</m>. Find the centroid of <m>E</m>.
+</p></statement>
+
+<answer><p>
+<m>\big(0,0,\frac{7}{16\sqrt{2}-14}
+  \approx 0.811\big)</m>
+</p></answer>
+
+<solution><p>
+Observe that both the sphere <m>x^2+y^2+z^2=2</m>
+and the paraboloid <m>z=x^2+y^2</m>  are invariant under rotations
+around the <m>z</m>--axis. So <m>E</m> is invariant under rotations around the
+<m>z</m>--axis and the centroid (centre of mass) of <m>E</m> will lie on the
+<m>z</m>--axis. Thus <m>\bar x=\bar y=0</m> and we just have to find
+<md>
+<mrow>
+\bar z = \frac{\tripInt_E z\ \dee{V}}{\tripInt_E\dee{V}}
+</mrow>
+</md>
+The surfaces <m>z = x^2 + y^2</m> and <m>x^2 + y^2 + z^2 = 2</m>
+intersect when <m>z=x^2+y^2</m> and
+<me>
+z+z^2=2
+\iff z^2+z-2=0
+\iff(z+2)(z-1)=0
+</me>
+Since <m>z=x^2+y^2\ge 0</m>, the surfaces intersect on the circle <m>z=1</m>,
+<m>x^2+y^2=2</m>. So
+<me>
+E = \Set{(x,y,z)}{ x^2+y^2\le 1,\ x^2+y^2\le z\le \sqrt{2-x^2-y^2}}
+</me>
+Here is a sketch of the <m>y=0</m> cross section of E.
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/OE10D_6"/>
+</sidebyside>
+
+<p>
+Let's use cylindrical coordinates to do the two integrals.
+In cylindrical coordinates
+<ul>
+<li>
+<m>E = \Set{(r\cos\theta,r\sin\theta,z)}{ 0\le r\le 1,\ 0\le\theta\le 2\pi,\
+                                     r^2\le z\le \sqrt{2-r^2}}</m>, and
+</li>
+<li>
+<m>\dee{V}</m> is <m>r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>
+</li>
+</ul>
+so, for <m>n=0,1</m> (we'll try to do both integrals at the same time)
+<md>
+<mrow>
+\tripInt_E z^n\ \dee{V}
+&amp;=\int_0^1\dee{r} \int_0^{2\pi}\dee{\theta}
+   \int_{r^2}^{\sqrt{2-r^2}} \dee{z}\ r\ z^n
+</mrow><mrow>
+&amp;=2\pi\int_0^1\dee{r}  \ r\begin{cases}
+                  \sqrt{2-r^2}-r^2 &amp; \text{if }n=0
+</mrow><mrow>
+                  \frac{1}{2}\big(2-r^2-r^4\big) &amp; \text{if }n=1
+                  \end{cases}
+</mrow>
+</md>
+Since
+<md>
+<mrow>
+\int_0^1 \dee{r}\ r\sqrt{2-r^2}
+&amp;=\left[-\frac{1}{3}(2-r^2)^{3/2}\right]_0^1
+=\frac{1}{3}\big(2\sqrt{2}-1\big)
+</mrow>
+</md>
+we have
+<md>
+<mrow>
+\tripInt_E z^n\ \dee{V}
+=2\pi\left.\begin{cases}
+\frac{1}{3}(2\sqrt{2}-1)-\frac{1}{4} &amp;\text{if }n=0
+</mrow><mrow>
+\frac{1}{2}-\frac{1}{8}-\frac{1}{12} &amp;\text{if }n=1
+\end{cases}\right\}
+=2\pi\begin{cases}
+\frac{2}{3}\sqrt{2}-\frac{7}{12} &amp;\text{if }n=0
+</mrow><mrow>
+\frac{7}{24} &amp;\text{if }n=1
+\end{cases}
+</mrow>
+</md>
+and <m>\bar x=\bar y=0</m> and
+<md>
+<mrow>
+\bar z =\frac{\tripInt_E z\ \dee{V}}{\tripInt_E\dee{V}}
+  =\frac{\frac{7}{24}}{\frac{2}{3}\sqrt{2}-\frac{7}{12}}
+  =\frac{7}{16\sqrt{2}-14}
+  \approx 0.811
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2012A</fromexam></title>
+<statement><p>
+Let <m>E</m> be the smaller of the two solid regions bounded by the surfaces
+<m>z = x^2 + y^2</m> and <m>x^2 + y^2 + z^2 = 6</m>. Evaluate
+<m>\tripInt_E (x^2+y^2)\ \dee{V}</m> .
+</p></statement>
+
+<answer><p>
+<m>\pi\left[\frac{48}{5}\sqrt{6}-\frac{328}{15}\right]
+\approx 1.65\pi</m>
+</p></answer>
+
+<solution><p>
+Note that both surfaces are invariant under rotations about the
+<m>z</m>--axis. Here is a sketch of the <m>y=0</m> cross section of E.
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/OE12A_9"/>
+</sidebyside>
+
+<p>
+The surfaces <m>z = x^2 + y^2</m> and <m>x^2 + y^2 + z^2 = 6</m>
+intersect when <m>z=x^2+y^2</m> and
+<me>
+z+z^2=6
+\iff z^2+z-6=0
+\iff(z+3)(z-2)=0
+</me>
+Since <m>z=x^2+y^2\ge 0</m>, the surfaces intersect on the circle <m>z=2</m>,
+<m>x^2+y^2=2</m>. So
+<me>
+E = \Set{(x,y,z)}{ x^2+y^2\le 2,\ x^2+y^2\le z\le \sqrt{6-x^2-y^2}}
+</me>
+Let's use cylindrical coordinates to do the integral.
+In cylindrical coordinates
+<ul>
+<li>
+<m>E = \Set{(r\cos\theta,r\sin\theta,z)}{ r\le \sqrt{2},\ 0\le\theta\le 2\pi,\
+                                     r^2\le z\le \sqrt{6-r^2}}</m>, and
+</li>
+<li>
+<m>\dee{V}</m> is <m>r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>
+</li>
+</ul>
+so
+<md>
+<mrow>
+\tripInt_E (x^2+y^2)\ \dee{V}
+&amp;=\int_0^{\sqrt{2}}\dee{r} \int_0^{2\pi}\dee{\theta}
+   \int_{r^2}^{\sqrt{6-r^2}} \dee{z}\ r\ r^2
+</mrow><mrow>
+&amp;=2\pi\int_0^{\sqrt{2}}\dee{r}  \ r^3\big(\sqrt{6-r^2}-r^2\big)
+ =2\pi\int_0^{\sqrt{2}}\dee{r}\,r\ r^2\sqrt{6-r^2}
+   - 2\pi\int_0^{\sqrt{2}}\dee{r}  \ r^5
+</mrow><mrow>
+&amp;=2\pi\int_6^4\frac{\dee{u}}{-2}  \ (6-u)\sqrt{u} -2\pi\frac{2^3}{6}
+\qquad\text{with } u = 6-r^2,\ \dee{u} = -2r\,\dee{r}
+</mrow><mrow>
+&amp;=-\pi\left[6\frac{u^{3/2}}{3/2}-\frac{u^{5/2}}{5/2}\right]_6^4-\frac{8\pi}{3}
+</mrow><mrow>
+&amp;=-\pi\left[4\big(8-6\sqrt{6}\big)-\frac{2}{5}\big(32-36\sqrt{6}\big)\right]
+             -\frac{8\pi}{3}
+</mrow><mrow>
+&amp;=\pi\left[\frac{64}{5}-32-\frac{8}{3}
+         +\left(24-\frac{72}{5}\right)\sqrt{6}\right]
+</mrow><mrow>
+&amp;=\pi\left[\frac{48}{5}\sqrt{6}-\frac{328}{15}\right]
+\approx 1.65\pi
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2013D</fromexam></title>
+<statement><p>
+Let <m>a  \gt  0</m> be a fixed positive real number. Consider the solid inside
+both the cylinder <m>x^2 + y^2 = ax</m> and the sphere <m>x^2 + y^2 + z^2 = a^2</m>.
+Compute its volume.
+</p>
+
+<p>You may use that
+    <m>\int \sin^3(\theta) =\frac{1}{12}\cos(3\theta) -\frac{3}{4}\cos(\theta) +C</m>
+</p>
+
+</statement>
+
+<answer><p>
+<m>\frac{4a^3}{3}\left[\frac{\pi}{2}  - \frac{2}{3} \right]</m>
+</p></answer>
+
+<solution><p>
+We'll use cylindrical coordinates. In cylindrical coordinates
+<ul>
+<li>
+the sphere <m>x^2+y^2+z^2=a^2</m> becomes <m>r^2+z^2=a^2</m> and
+</li>
+<li>
+the circular cylinder  <m>x^2+y^2=ax</m> (or equivalently <m>(x-a/2)^2+ y^2=a^2/4</m>)
+becomes <m>r^2=ar\cos\theta</m> or <m>r=a\cos\theta</m>.
+</li>
+</ul>
+Here is a sketch of the top view of the solid.
+</p>
+
+<sidebyside width="75%">
+  <image source="pfigs/OE13D_7"/>
+</sidebyside>
+
+<p>
+The solid is
+<me>
+\Set{(r\cos\theta\,,\,r\sin\theta\,,\,z)}{
+        -\frac{\pi}{2}\le\theta\le\frac{\pi}{2}\,,\,
+        0\le r\le a\cos\theta\,,\,
+        -\sqrt{a^2-r^2}\le z\le \sqrt{a^2-r^2}}
+</me>
+By symmetry, the volume of the specified solid is four times
+the volume of the solid
+<me>
+\Set{(r\cos\theta\,,\,r\sin\theta\,,\,z)}{
+        0\le\theta\le\frac{\pi}{2}\,,\,
+        0\le r\le a\cos\theta\,,\,
+        0\le z\le \sqrt{a^2-r^2}}
+</me>
+Since <m>\dee{V} = r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>,
+ the volume of the solid is
+<md>
+<mrow>
+4\int_0^{\pi/2}\dee{\theta} \int_0^{a\cos\theta} \dee{r}
+   \int_0^{\sqrt{a^2-r^2}}\dee{z}\ r
+&amp;=4\int_0^{\pi/2}\dee{\theta} \int_0^{a\cos\theta} \dee{r}\
+        r\sqrt{a^2-r^2}
+</mrow><mrow>
+&amp;=-\frac{4}{3}\int_0^{\pi/2}\dee{\theta}\
+         \big(a^2-r^2\big)^{3/2}\Big|_0^{a\cos\theta}
+</mrow><mrow>
+&amp;=\frac{4}{3}\int_0^{\pi/2}\dee{\theta}\
+         \Big[a^3-\big(a^2-a^2\cos^2\theta\big)^{3/2}\Big]
+</mrow><mrow>
+&amp;=\frac{4a^3}{3}\int_0^{\pi/2}\dee{\theta}\
+         \big[1-\sin^3\theta\big]
+</mrow><mrow>
+&amp;=\frac{4a^3}{3}\left[\theta - \frac{1}{12}\cos(3\theta) + \frac{3}{4}\cos\theta
+           \right]_0^{\pi/2}
+</mrow><mrow>
+&amp;=\frac{4a^3}{3}\left[\frac{\pi}{2} + \frac{1}{12} - \frac{3}{4} \right]
+</mrow><mrow>
+&amp;=\frac{4a^3}{3}\left[\frac{\pi}{2}  - \frac{2}{3} \right]
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2014A</fromexam></title>
+<statement><p>
+Let <m>E</m> be the solid lying above the surface <m>z = y^2</m> and below
+the surface <m>z = 4 - x^2</m>. Evaluate
+<me>
+\tripInt_E y^2\ \dee{V}
+</me>
+You may use the half angle formulas:
+<me>
+\sin^2\theta = \frac{1-\cos(2\theta)}{2},\qquad
+\cos^2\theta = \frac{1+\cos(2\theta)}{2}
+</me>
+</p></statement>
+
+<answer><p>
+<m>\frac{16\pi}{3}</m>
+</p></answer>
+
+<solution><p>
+Note that the surfaces meet when <m>z=y^2=4-x^2</m> and then <m>(x,y)</m>
+runs over the circle <m>x^2+y^2=4</m>. So the domain of integration is
+<me>
+E = \Set{(x,y,z)}{x^2+y^2\le 4,\ y^2\le z\le 4-x^2}
+</me>
+Let's switch to cylindrical coordinates. Then
+<me>
+E = \Set{(r\cos\theta,r\sin\theta,z)}{0\le r\le 2,\ 0\le\theta\le 2\pi,
+            \ r^2\sin^2\theta\le z\le 4-r^2\cos^2\theta}
+</me>
+and, since <m>\dee{V} = r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>,
+<md>
+<mrow>
+\tripInt_E y^2\ \dee{V}
+&amp;=\int_0^2\dee{r} \int_0^{2\pi} \dee{\theta}
+         \int_{r^2\sin^2\theta}^{4-r^2\cos^2\theta}\dee{z}\ r\
+         \overbrace{r^2\sin^2\theta}^{y^2}
+</mrow><mrow>
+&amp;=\int_0^2\dee{r} \int_0^{2\pi} \dee{\theta}\
+             r^3\sin^2\theta\big[4-r^2\cos^2\theta - r^2\sin^2\theta\big]
+
+</mrow><mrow>
+&amp;=\int_0^2\dee{r}\ \big[4r^3-r^5\big] \int_0^{2\pi} \dee{\theta}\
+         \frac{1-\cos(2\theta)}{2}
+</mrow><mrow>
+&amp;=\frac{1}{2}\int_0^2\dee{r}\ \big[4r^3-r^5\big]\
+      \left[\theta-\frac{\sin(2\theta)}{2}\right]_0^{2\pi}
+</mrow><mrow>
+&amp;=\pi\left[r^4-\frac{r^6}{6}\right]_0^2
+</mrow><mrow>
+&amp;=\frac{16\pi}{3}
+</mrow>
+</md>
+For an efficient, sneaky, way to evaluate
+<m>\int_0^{2\pi}\sin^2\theta\ \dee{\theta}</m>,
+see Remark <xref ref="rem_sneaky"/> in the CLP-3 text.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+The centre of mass <m>(\bar x,\bar y, \bar z)</m> of a body <m>B</m> having
+density <m>\rho(x,y,z)</m> (units of mass per unit volume) at <m>(x,y,z)</m> is defined
+to be
+<me>
+\bar x=\frac{1}{M}\tripInt_B x\rho(x,y,z)\ \dee{V}\quad
+\bar y=\frac{1}{M}\tripInt_B y\rho(x,y,z)\ \dee{V}\quad
+\bar z=\frac{1}{M}\tripInt_B z\rho(x,y,z)\ \dee{V}
+</me>
+where
+<me>
+M=\tripInt_B \rho(x,y,z)\ \dee{V}
+</me>
+is the mass of the body. So, for example, <m>\bar x</m> is the weighted average
+of <m>x</m> over the body. Find the centre of mass of the part of the solid
+ball <m>x^2+y^2+z^2\le a^2</m> with <m>x\ge 0</m>, <m>y\ge 0</m> and <m>z\ge 0</m>, assuming
+that the density <m>\rho</m> is constant.
+</p></statement>
+
+<hint><p>
+Use cylindrical coordinates.
+</p></hint>
+
+<answer><p>
+<m>\bar x=\bar y=\bar z=\frac{3}{8}a</m>
+</p></answer>
+
+<solution><p>
+By symmetry, <m>\bar x=\bar y=\bar z</m>, so it suffices to compute,
+for example, <m>\bar z</m>.   The mass of the body is the density, <m>\rho</m>,
+times its volume, which is one eighth of the volume of a sphere. So
+<me>
+M=\frac{\rho}{8}\ \frac{4}{3}\pi a^3
+</me>
+In cylindrical coordinates, the equation of the spherical surface of the
+body is <m>r^2+z^2=a^2</m>. The part of the body at height <m>z</m> above the
+<m>xy</m>--plane is one quarter of a disk of radius <m>\sqrt{a^2-z^2}</m>. The numerator
+of <m>\bar z</m> is
+<md alignment="alignat">
+<mrow>
+\tripInt_B z\rho\ \dee{V}
+&amp;=\rho\int_0^a \dee{z}\int_0^{\pi/2}d\theta\int_0^{\sqrt{a^2-z^2}}dr\ r\ z
+&amp;&amp;=\rho\int_0^a \dee{z}\int_0^{\pi/2}d\theta\ z\ \frac{r^2}{2}
+                                   \bigg|_0^{\sqrt{a^2-z^2}}
+</mrow><mrow>
+&amp;=\frac{\rho}{2}\int_0^a \dee{z}\int_0^{\pi/2}d\theta\ z(a^2-z^2)
+&amp;&amp;=\frac{\pi}{4}\rho\int_0^a \dee{z}\ z(a^2-z^2)
+</mrow><mrow>
+&amp;=\frac{\pi}{4}\rho\left[a^2\frac{z^2}{2}-\frac{z^4}{4}\right]_0^a
+=\frac{\pi}{16}\rho a^4
+</mrow>
+</md>
+Dividing by <m>M=\frac{\pi}{6}\rho a^3</m> gives
+<m>\bar x=\bar y=\bar z=\frac{3}{8}a</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2003D</fromexam></title>
+<statement><p>
+A sphere of radius <m>2{\rm m}</m> centred on the origin has variable density
+<m>\frac{5}{\sqrt{3}}(z^2+1)</m>kg/<m>{\rm m}^3</m>. A hole of diameter 1m is drilled
+through the sphere along the <m>z</m>--axis.
+<ol label="a">
+<li>
+Set up a triple integral in cylindrical coordinates giving
+the mass of the sphere after the hole has been drilled.
+</li>
+<li>
+ Evaluate this integral.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\ds\text{mass} =
+\int_{1/2}^2 \dee{r} \int_{-\sqrt{4-r^2}}^{\sqrt{4-r^2}} \dee{z}\int_0^{2\pi}\dee{\theta}\
+\frac{5}{\sqrt{3}}(z^2+1)r</m>
+</p>
+
+<p>(b) <m>\frac{525}{24}\sqrt{5}\pi\approx 153.7\text{kg}</m>
+</p></answer>
+
+<solution><p>
+(a) In cylindrical coordinates the equation of a sphere of radius
+2 centred on the origin is <m>r^2+z^2=2^2</m>. Since
+<m>\dee{V}=r\, \dee{r}\, \dee{\theta}\, \dee{z}</m>
+and <m>\dee{m} =\frac{5}{\sqrt{3}}(z^2+1)r\, \dee{r}\, \dee{\theta}\, \dee{z}</m>
+and the hole has radius <m>1/2</m>, the integral is
+<md>
+<mrow>
+\text{mass} =
+\int_{1/2}^2 \dee{r} \int_{-\sqrt{4-r^2}}^{\sqrt{4-r^2}} \dee{z}\int_0^{2\pi}\dee{\theta}\
+\frac{5}{\sqrt{3}}(z^2+1)r
+</mrow>
+</md>
+</p>
+
+<p>(b)
+By part (a)
+<md>
+<mrow>
+\text{mass} =
+\int_{1/2}^2 \dee{r} \int_{-\sqrt{4-r^2}}^{\sqrt{4-r^2}} \dee{z}\int_0^{2\pi}\dee{\theta}\
+\frac{5}{\sqrt{3}}(z^2+1)r
+&amp;=4\pi\frac{5}{\sqrt{3}}\int_{1/2}^2\dee{r}\ r\int_0^{\sqrt{4-r^2}}\dee{z}\ (z^2+1)
+</mrow><mrow>
+&amp;=4\pi\frac{5}{\sqrt{3}}\int_{1/2}^2\dee{r}\
+                   r\left[\frac{z^3}{3}+z\right]_0^{\sqrt{4-r^2}}
+</mrow><mrow>
+&amp;=4\pi\frac{5}{\sqrt{3}}\int_{1/2}^2\dee{r}\
+           r\left[\frac{1}{3}{(4-r^2)}^{3/2}+{(4-r^2)}^{1/2}\right]
+</mrow>
+</md>
+Make the change of variables <m>s=4-r^2</m>, <m>\dee{s}=-2r\,\dee{r}</m>. This gives
+<md>
+<mrow>
+\text{mass} &amp;= 4\pi\frac{5}{\sqrt{3}}\int_{15/4}^0\frac{\dee{s}}{-2}\
+                         \left[\frac{1}{3}s^{3/2}+s^{1/2}\right]
+= -2\pi\frac{5}{\sqrt{3}}
+\left[\frac{2}{15}s^{5/2}+\frac{2}{3}s^{3/2} \right]_{15/4}^0
+</mrow><mrow>
+&amp;=
+2\pi\frac{5}{\sqrt{3}} \left[\frac{2}{15}\frac{15^{5/2}}{32}
++\frac{2}{3}\frac{15^{3/2}}{8}\right]
+</mrow><mrow>
+&amp;=2\pi\frac{5}{\sqrt{3}} \left[\frac{1}{16}+\frac{1}{12}\right]15^{3/2}
+=\frac{525}{24}\sqrt{5}\pi\approx 153.7\text{kg}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p> [M200 2001A]
+Consider the finite solid bounded by the three surfaces:
+<m>z=e^{-x^2-y^2}</m>, <m>z=0</m> and <m>x^2+y^2=4</m>.
+<ol label="a">
+<li>
+Set up (but do not evaluate) a triple integral in rectangular
+coordinates that describes the volume of the solid.
+</li>
+<li>
+Calculate the volume of the solid using any method.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\ds\int_{-2}^2 \dee{x}
+    \int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}}\dee{y}\int_0^{e^{-x^2-y^2}}\dee{z}</m>
+</p><p>
+(b) <m>\pi\big[1-e^{-4}\big]\approx 3.084</m>
+</p></answer>
+
+<solution><p>
+(a) The solid consists of all <m>(x,y,z)</m> with
+<ul>
+<li>
+<m>(x,y)</m> running over the disk <m>x^2+y^2\le 4</m> and
+</li>
+<li>
+for each fixed <m>(x,y)</m> obeying <m>x^2+y^2\le 4</m>, <m>z</m> running from
+<m>0</m> to <m>e^{-x^2-y^2}</m>
+</li>
+</ul>
+On the disk <m>x^2+y^2\le 4</m>,
+<ul>
+<li>
+<m>x</m> runs from <m>-2</m> to <m>2</m> and
+</li>
+<li>
+for each fixed <m>x</m> obeying <m>-2\le x\le 2</m>, <m>y</m> runs from
+<m>-\sqrt{4-x^2}</m> to <m>\sqrt{4-x^2}</m>
+</li>
+</ul>
+So
+<me>
+\text{Volume}=\int_{-2}^2 \dee{x}
+    \int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}}\dee{y}\int_0^{e^{-x^2-y^2}}\dee{z}
+</me>
+</p>
+
+<p>(b) Switching to cylindrical coordinates
+<md>
+<mrow>
+\text{Volume}&amp;=\int_0^2 \dee{r}\int_0^{2\pi}\dee{\theta} \int_0^{e^{-r^2}}\dee{z}\ r
+=\int_0^2 \dee{r}\int_0^{2\pi}\dee{\theta} \ r e^{-r^2}
+=\int_0^2 \dee{r}\ 2\pi\ r e^{-r^2}
+</mrow><mrow>
+&amp;=-\pi e^{-r^2}\Big|_0^2
+=\pi\big[1-e^{-4}\big]\approx 3.084
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p> [M200 2000A]
+Find the volume of the solid which is inside <m>x^2 + y^2 = 4</m>,
+above <m>z = 0</m> and below <m>2z = y</m>.
+</p></statement>
+
+<answer><p>
+<m>\frac{8}{3}</m>
+</p></answer>
+
+<solution><p>
+The solid consists of the set of all points <m>(x,y,z)</m> such
+that <m>x^2+y^2\le 4</m> and <m>0\le z\le\frac{y}{2}</m>. In particular <m>y\ge 0</m>.
+When we look at the solid from above, we see all <m>(x,y)</m> with
+<m>x^2+y^2\le 4</m> and <m>y\ge 0</m>. This is sketched in the figure on the left
+below.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/OE00AQ9a"/>
+  <image source="pfigs/OE00AQ9b"/>
+</sidebyside>
+
+<p>
+We'll use cylindrical coordinates. In the base region (the shaded region
+in the figure on the left above)
+<ul>
+<li>
+<m>\theta</m> runs from <m>0</m> to <m>\pi</m> and
+</li>
+<li>
+for each fixed <m>\theta</m> between <m>0</m> and <m>\pi</m>, <m>r</m> runs from <m>0</m> to <m>2</m>.
+</li>
+<li>
+For each fixed point <m>(x,y)=(r\cos\theta,r\sin\theta)</m> in the base
+region, <m>z</m> runs from <m>0</m>) to <m>\frac{y}{2}=\frac{r\sin\theta}{2}</m>.
+</li>
+</ul>
+So the volume is
+<md>
+<mrow>
+\int_0^\pi \dee{\theta}\int_0^2 \dee{r}\int_0^{r\sin\theta/2} dz\ r
+&amp;=\int_0^\pi \dee{\theta}\int_0^2 \dee{r}\ \frac{1}{2} r^2\sin\theta
+=\int_0^\pi \dee{\theta}\ \frac{r^3}{6}\sin\theta\,\bigg|_0^2
+=\frac{4}{3}\int_0^\pi \dee{\theta}\ \sin\theta
+</mrow><mrow>
+&amp;=-\frac{4}{3}\cos\theta\,\bigg|_0^\pi
+=\frac{8}{3}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise><title><fromexam>M200 2014D</fromexam></title>
+<statement><p>
+The density of hydrogen gas in a region of space is given by the formula
+<me>
+\rho(x,y,z) =\frac{z+2x^2}{1+x^2+y^2}
+</me>
+<ol label="a">
+<li>
+At <m>(1,0,-1)</m>, in which direction is the density of hydrogen increasing
+most rapidly?
+</li>
+<li><p>
+You are in a spacecraft at the origin. Suppose the spacecraft flies
+in the direction of <m>\llt 0,0,1\rgt</m>. It has a disc of radius <m>1</m>,
+centred on the spacecraft and deployed perpendicular to the direction
+of travel, to catch hydrogen. How much hydrogen has been collected
+by the time that the spacecraft has traveled a distance <m>2</m>?
+</p>
+
+<p>
+  You may use the fact that <m>\int_0^{2\pi}\cos^2\theta\ \dee{\theta}
+=\pi</m>.
+</p>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) The unit vector in the direction of maximum rate of increse is <m>\frac{1}{\sqrt{10}}(3,0,1)</m>.
+</p>
+<p>(b) <m>2\pi</m>
+</p></answer>
+
+<solution><p>
+(a) The direction of maximum rate of increase is <m>\vnabla\rho(1,0,-1)</m>.
+As
+<md>
+<mrow>
+\pdiff{\rho}{x}(x,y,z)
+      &amp;= \frac{4x}{1+x^2+y^2} -\frac{2x(z+2x^2)}{{(1+x^2+y^2)}^2} &amp;
+\pdiff{\rho}{x}(1,0,-1)
+      &amp;= \frac{4}{2} -\frac{2(-1+2)}{{(2)}^2} =\frac{3}{2}
+</mrow><mrow>
+\pdiff{\rho}{y}(x,y,z)
+      &amp;=  -\frac{2y(z+2x^2)}{{(1+x^2+y^2)}^2} &amp;
+\pdiff{\rho}{y}(1,0,-1)
+      &amp;=  0
+</mrow><mrow>
+\pdiff{\rho}{z}(x,y,z)
+      &amp;= \frac{1}{1+x^2+y^2} &amp;
+\pdiff{\rho}{z}(1,0,-1)
+      &amp;= \frac{1}{2}
+</mrow>
+</md>
+So <m>\vnabla\rho(1,0,-1) = \frac{1}{2}(3,0,1)</m>. The unit vector
+in this direction is <m>\frac{1}{\sqrt{10}}(3,0,1)</m>.
+</p>
+
+<p>(b) The region swept by the space craft is, in cylindrical coordinates,
+<me>
+   V=\Set{(r\cos\theta\,,\,r\sin\theta\,,\,z)}{0\le\theta\le 2\pi,\
+             0\le r\le 1,\
+              0\le z\le 2}
+</me>
+and the amount of hydrogen collected is
+<md>
+<mrow>
+\tripInt_V \rho\ \dee{V} &amp;=\tripInt_V\frac{z+2r^2\cos^2\theta}{1+r^2}r\dee{r}\,\dee{\theta}\,\dee{z}
+</mrow><mrow>
+&amp;=\int_0^2\dee{z} \int_0^{2\pi} \dee{\theta} \int_0^1\dee{r}\
+              \frac{zr+(2\cos^2\theta)r^3}{1+r^2}
+</mrow><mrow>
+&amp;=\int_0^2\dee{z} \int_0^{2\pi} \dee{\theta} \int_0^1\dee{r}\
+     \left[ z \frac{r}{1+r^2} +2r\cos^2\theta
+               -\cos^2\theta\frac{2r}{1+r^2}\right]
+</mrow><mrow>
+&amp;\hskip1.5in\text{since }\frac{r^3}{1+r^2} = \frac{r+r^3 - r}{1+r^2}
+                         =r-\frac{r}{1+r^2}
+</mrow><mrow>
+&amp;=\int_0^2\dee{z} \int_0^{2\pi} \dee{\theta}\
+              \left[\frac{z}{2}\ln(1+r^2)+r^2\cos^2\theta
+                     -\ln(1+r^2)\cos^2\theta\right]_0^1
+</mrow><mrow>
+&amp;=\int_0^2\dee{z} \int_0^{2\pi} \dee{\theta}\
+              \left[\frac{\ln 2}{2} z+ \cos^2\theta
+                     -\ln(2)\cos^2\theta\right]
+</mrow><mrow>
+&amp;=\int_0^2\dee{z} \ \left[(\pi\ln 2) z+ \pi-\pi\ln 2\right]
+</mrow><mrow>
+&amp;= 2\pi\ln 2 +2\pi -2\pi\ln 2
+</mrow><mrow>
+&amp;=2\pi
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+A torus of mass <m>M</m> is generated by rotating a circle of radius <m>a</m> about an axis in its plane at distance <m>b</m> from the centre <m>(b \gt a)</m>. The
+torus has constant density.
+Find the moment of inertia about the axis of rotation.
+By definition the moment of intertia is <m>\tripInt r^2 \dee{m}</m>
+where <m>\dee{m}</m> is the mass of an infinitesmal piece of the solid and <m>r</m> is
+its distance from the axis.
+</p></statement>
+
+<answer><p>
+<m>M\big(\frac{3}{4}a^2+b^2\big)</m>
+</p></answer>
+
+<solution><p>
+ We may choose our coordinate axes so that the torus is constructed by rotating the circle <m>(x-b)^2+z^2=a^2</m>
+(viewed as lying in the <m>xz</m>--plane) about the <m>z</m>--axis. On this circle,
+<m>x</m> runs from <m>b-a</m> to <m>b+a</m>.
+</p>
+
+<sidebyside width="75%">
+<image source="pfigs/torusSection"/>
+</sidebyside>
+
+<p>
+In cylindrical coordinates, the torus has equation <m>(r-b)^2+z^2=a^2</m>.
+(Recall that the cylindrical coordinate <m>r</m> of a point is its distance from the
+<m>z</m>--axis.)
+On this torus,
+<ul>
+<li> <m>r</m> runs from <m>b-a</m> to <m>b+a</m>.
+</li>
+<li> For each fixed <m>r</m>, <m>z</m> runs
+from <m>-\sqrt{a^2-(r-b)^2}</m> to <m>\sqrt{a^2-(r-b)^2}</m>.
+</li>
+</ul>
+As the torus
+is symmetric about the <m>xy</m>--plane, its volume is twice that of the volume
+of the part with <m>z\ge 0</m>.
+<md>
+<mrow>
+\text{Volume}
+&amp;= 2\int_{0}^{2\pi} d\theta\int_{b-a}^{b+a}\dee{r}\ r\int_{0}^{\sqrt{a^2-(r-b)^2}}\dee{z}
+</mrow><mrow>
+&amp;= 2\int_{0}^{2\pi} d\theta\int_{b-a}^{b+a}\dee{r}\ r\sqrt{a^2-(r-b)^2}
+</mrow><mrow>
+&amp;= 4\pi \int_{-a}^{a}\dee{s}\ (s+b)\sqrt{a^2-s^2}
+\qquad\text{ where } s=r-b
+</mrow>
+</md>
+As <m>s\sqrt{a^2-s^2}</m> is odd under <m>s\rightarrow -s</m>,
+<m>\int_{-a}^{a}\dee{s}\ s\sqrt{a^2-s^2}=0</m>. Also,  <m>\int_{-a}^{a}\dee{s}\ \sqrt{a^2-s^2}</m>
+is precisely the area of the top half of a circle of radius <m>a</m>. So
+<me>
+\text{Volume }= 4b\pi \int_{-a}^{a}\dee{s}\ \sqrt{a^2-s^2}
+=2\pi^2a^2b
+</me>
+So the mass density of the torus is <m>\frac{M}{2\pi^2a^2b}</m> and
+<m>\dee{m} = \frac{M}{2\pi^2a^2b}\,\dee{V}
+          =\frac{M}{2\pi^2a^2b}\,r\,\dee{r}\,d\theta\,\dee{z}</m>
+and
+<md>
+<mrow>
+\text{moment of inertia}
+&amp;= 2\int_{0}^{2\pi} d\theta\int_{b-a}^{b+a}\dee{r}\ r\int_{0}^{\sqrt{a^2-(r-b)^2}}\dee{z}\
+\frac{M}{2\pi^2a^2b} r^2
+</mrow><mrow>
+&amp;= \frac{M}{\pi^2a^2b}\int_{0}^{2\pi} d\theta\int_{b-a}^{b+a}\dee{r}\ r^3\sqrt{a^2-(r-b)^2}
+</mrow><mrow>
+&amp;= \frac{2M}{\pi a^2b} \int_{-a}^{a}\dee{s}\ (s+b)^3\sqrt{a^2-s^2}
+\qquad\text{ where } s=r-b
+</mrow><mrow>
+&amp;= \frac{2M}{\pi a^2b} \int_{-a}^{a}\dee{s}\ (s^3+3s^2b+3sb+b^3)\sqrt{a^2-s^2}
+</mrow>
+</md>
+Again, by oddness, the <m>s^3</m> and <m>3sb</m> integrals are zero. For the others,
+substitute in <m>s=a\sin t</m>, <m>\dee{s}=a\cos t</m>.
+<md>
+<mrow>
+\text{moment}
+&amp;= \frac{2M}{\pi a^2b} \int_{-{\pi\over 2}}^{{\pi\over 2}}(a\cos t\, \dee{t})
+\ (3a^2b\sin^2 t+b^3)a\cos t
+= \frac{2M}{\pi } \int_{-{\pi\over 2}}^{{\pi\over 2}}\dee{t}\
+(3a^2\sin^2 t+b^2)\cos^2 t
+</mrow><mrow>
+&amp;= \frac{4M}{\pi} \int_0^{{\pi\over 2}}\dee{t}\
+(3a^2\cos^2 t-3a^2\cos^4 t+b^2\cos^2 t)
+      \qquad\text{since } \sin^2t=1-\cos^2t
+</mrow>
+</md>
+To integrate
+<fn>For a general discussion of trigonometric integrals see
+§\eref{CLP101</fn>
+{sec trigint} in the CLP-2 text. In particular the integral
+<m>\int \cos^4 x\ \dee{x}</m> is evaluated in Example \eref{CLP101}{eg:TRGINTc}
+in the CLP-2 text. For an efficient, sneaky, way to evaluate
+<m>\int_0^{{\pi\over 2}} \cos^2 t\ \dee{t}</m>
+see Remark <xref ref="rem_sneaky"/> in the CLP-3 text.}
+<m>\cos^2t</m> and <m>\cos^4t</m>, we use the double angle formulae
+<m>\sin^2 x= \frac{1-\cos(2x)}{2}</m> and <m>\cos^2 x= \frac{1+\cos(2x)}{2}</m>
+to write
+<me>
+\cos^2 t= \frac{1+\cos(2t)}{2}
+</me>
+and
+<md>
+<mrow>
+  \cos^4 t &amp;= \left[ \frac{1+\cos(2t)}{2} \right]^2
+</mrow><mrow>
+   &amp;= \frac{1}{4} + \frac{1}{2} \cos(2t) + \frac{1}{4}\cos^2(2t)
+</mrow><mrow>
+  &amp;= \frac{1}{4} + \frac{1}{2} \cos(2t) + \frac{1}{8}\left(1 + \cos(4t)\right)
+</mrow><mrow>
+  &amp;= \frac{3}{8} + \frac{1}{2} \cos(2t) + \frac{1}{8}\cos(4t)
+</mrow>
+</md>
+So
+<md>
+<mrow>
+\text{moment}
+&amp;= \frac{4M}{\pi}
+\left[3a^2\left(\frac{t}{2}+\frac{\sin(2t)}{4}\right)
+    -3a^2\left(\frac{3t}{8} + \frac{1}{4} \sin(2t) + \frac{1}{32}\sin(4t)\right)
+    +b^2\left(\frac{t}{2}+\frac{\sin(2t)}{4}\right)\right]_0^{{\pi\over 2}}
+</mrow><mrow>
+&amp;= \frac{4M}{\pi}
+         \Big[3a^2\frac{\pi}{4}-3a^2\frac{3\pi}{16}+b^2\frac{\pi}{4}\Big]
+=M\left(\frac{3}{4}a^2+b^2\right)
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise></exercisegroup>
+
+</exercises>

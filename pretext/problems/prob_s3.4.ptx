@@ -51,7 +51,7 @@ and hence area <m>ab\sqrt{1+\tan^2\theta}=ab\sec\theta</m>.
 <p>(b) <m>S</m> is the part of the surface <m>z=f(x,y)</m> with <m>f(x,y) = y\,\tan\theta</m>
 and with <m>(x,y)</m> running over
 <me>
-\cD =§et{(x,y)}{0\le x\le a,\ 0\le y\le b}
+\cD =\Set{(x,y)}{0\le x\le a,\ 0\le y\le b}
 </me>
 Hence by Theorem <xref ref="thm_surface_area"/> in the CLP-3 text
 <md>
@@ -544,8 +544,8 @@ and
 <mrow>
 \text{Area}&amp;= \dblInt_{1\le x^2+y^2\le 16^2}\sqrt{2}\,\dee{x}\,\dee{y}
 </mrow><mrow>
-&amp;=\sqrt{2}\,\Big[\text{area of }§et{(x,y)}{x^2+y^2\le 16^2}-
-           \text{area of }§et{(x,y)}{x^2+y^2\le 1}\Big]
+&amp;=\sqrt{2}\,\Big[\text{area of }\Set{(x,y)}{x^2+y^2\le 16^2}-
+           \text{area of }\Set{(x,y)}{x^2+y^2\le 1}\Big]
 </mrow><mrow>
 &amp;=\sqrt{2}\,\big[\pi 16^2-\pi 1^2\big]
 =255\sqrt{2}\pi\approx 1132.9
