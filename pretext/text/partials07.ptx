@@ -753,4 +753,6 @@ f_r\big(r(x,y),\theta(x,y)\big)\ \llt\cos\theta(x,y)\,,\,\sin\theta(x,y)\rgt
 </example>
 </subsubsection>
 </subsection>
+<xi:include href="../problems/prob_s2.7.ptx" />
+
 </section>

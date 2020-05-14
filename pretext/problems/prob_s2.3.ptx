@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise>
+<statement><p>
+Let all of the third order partial derivatives of the function
+<m>f(x,y,z)</m> exist and be continuous. Show that
+<me>
+f_{xyz}(x,y,z)
+=f_{xzy}(x,y,z)
+=f_{yxz}(x,y,z)
+=f_{yzx}(x,y,z)
+=f_{zxy}(x,y,z)
+=f_{zyx}(x,y,z)
+</me>
+</p></statement>
+
+<hint><p>
+Repeatedly use (Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
+in the CLP-3 text.
+</p></hint>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+We have to derive a bunch of equalities.
+<ul>
+<li>
+Fix any real number <m>x</m> and set <m>g(y,z)=f_x(x,y,z)</m>. By
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+<m>g_{yz}(y,z)=g_{zy}(y,z)</m>, so
+<me>
+f_{xyz}(x,y,z) = g_{yz}(y,z) =g_{zy}(y,z) = f_{xzy}(x,y,z)
+</me>
+</li>
+<li>
+For every fixed real number <m>z</m>,
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+gives <m>f_{xy}(x,y,z)=f_{yx}(x,y,z)</m>. So
+<me>
+f_{xyz}(x,y,z) = \pdiff{}{z} f_{xy}(x,y,z)= \pdiff{}{z} f_{yx}(x,y,z)
+=f_{yxz}(x,y,z)
+</me>
+So far, we have
+<me>
+f_{xyz}(x,y,z) = f_{xzy}(x,y,z)=f_{yxz}(x,y,z)
+</me>
+</li>
+<li>
+Fix any real number <m>y</m> and set <m>g(x,z)=f_y(x,y,z)</m>. By
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+<m>g_{xz}(x,z)=g_{zx}(x,z)</m>. So
+<me>
+f_{yxz}(x,y,z) = g_{xz}(x,z) =g_{zx}(x,z) = f_{yzx}(x,y,z)
+</me>
+So far, we have
+<me>
+f_{xyz}(x,y,z) = f_{xzy}(x,y,z)=f_{yxz}(x,y,z)= f_{yzx}(x,y,z)
+</me>
+</li>
+<li>
+For every fixed real number <m>y</m>,
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+gives <m>f_{xz}(x,y,z)=f_{zx}(x,y,z)</m>. So
+<me>
+f_{xzy}(x,y,z) = \pdiff{}{y} f_{xz}(x,y,z)= \pdiff{}{y} f_{zx}(x,y,z)
+=f_{zxy}(x,y,z)
+</me>
+So far, we have
+<me>
+f_{xyz}(x,y,z) = f_{xzy}(x,y,z)=f_{yxz}(x,y,z)= f_{yzx}(x,y,z)=f_{zxy}(x,y,z)
+</me>
+</li>
+<li>
+Fix any real number <m>z</m> and set <m>g(x,y)=f_z(x,y,z)</m>. By
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+<m>g_{xy}(x,y)=g_{yx}(x,y)</m>. So
+<me>
+f_{zxy}(x,y,z) = g_{xy}(x,y) =g_{yx}(x,y) = f_{zxy}(x,y,z)
+</me>
+We now have all of
+<me>
+f_{xyz}(x,y,z) = f_{xzy}(x,y,z)=f_{yxz}(x,y,z)= f_{yzx}(x,y,z)=f_{zxy}(x,y,z)
+= f_{zxy}(x,y,z)
+</me>
+</li>
+</ul>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find, if possible, a function <m>f(x,y)</m> for which <m>f_x(x,y)=e^y</m> and
+<m>f_y(x,y)=e^x</m>.
+</p></statement>
+
+<hint><p>
+If <m>f(x,y)</m> obeying the specified conditions exists, then it is necessary
+that <m>f_{xy}(x,y)=f_{yx}(x,y)</m>.
+</p></hint>
+
+<answer><p>
+No such <m>f(x,y)</m> exists.
+</p></answer>
+
+<solution><p>
+No such <m>f(x,y)</m> exists, because if it were to exist, then we would have
+that <m>f_{xy}(x,y)=f_{yx}(x,y)</m>. But
+<md>
+<mrow>
+f_{xy}(x,y)&amp;=\pdiff{}{y}f_x(x,y)=\pdiff{}{y}e^y=e^y
+</mrow><mrow>
+f_{yx}(x,y)&amp;=\pdiff{}{x}f_y(x,y)=\pdiff{}{x}e^x=e^x
+</mrow>
+</md>
+are not equal.
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise>
+<statement><p>
+Find the specified partial derivatives.
+<ol label="a">
+<li>
+<m>f(x,y) = x^2y^3</m>;
+<m>f_{xx}(x,y)</m>, <m>f_{xyy}(x,y)</m>, <m>f_{yxy}(x,y)</m>
+</li>
+<li>
+<m>f(x,y) = e^{xy^2}</m>;
+<m>f_{xx}(x,y)</m>, <m>f_{xy}(x,y)</m>, <m>f_{xxy}(x,y)</m>, <m>f_{xyy}(x,y)</m>
+</li>
+<li>
+<m>\displaystyle f(u,v,w) = \frac{1}{u+2v+3w}\ </m>,
+   <m>\displaystyle \frac{\partial^3 f}{\partial u\partial v\partial w}(u,v,w)\ </m>,
+   <m>\displaystyle \frac{\partial^3 f}{\partial u\partial v\partial w}(3,2,1)</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>f_{xx}(x,y) = 2y^3</m></p><p>
+    <m>f_{yxy}(x,y) = f_{xyy}(x,y) = 12xy</m>
+</p>
+
+<p>(b) <m>f_{xx}(x,y)= y^4e^{xy^2}</m></p><p>
+    <m>f_{xy}(x,y)= \big(2y+2xy^3\big)e^{xy^2}</m></p><p>
+    <m>f_{xxy}(x,y)= \big(4y^3 + 2xy^5\big)e^{xy^2}</m></p><p>
+    <m>f_{xyy}(x,y) = \big(2+10xy^2+4x^2y^4\big)e^{xy^2}</m>
+</p>
+
+<p>(c) <m>\displaystyle\frac{\partial^3 f}{\partial u\,\partial v\,\partial w}(u,v,w)
+        = -\frac{36}{(u+2v+3w)^4}</m></p><p>
+    <m>\displaystyle\frac{\partial^3 f}{\partial u\,\partial v\,\partial w}(3,2,1)
+         = -0.0036
+         = -\frac{9}{2500}</m>
+</p>
+
+</answer>
+
+<solution><p>
+(a) We have
+<md>
+<mrow>
+f_x(x,y) &amp;= 2xy^3 &amp;
+f_{xx}(x,y) &amp;= 2y^3
+</mrow><mrow>
+ &amp; &amp;
+f_{xy}(x,y) &amp;= 6xy^2 &amp;
+f_{yxy}(x,y) = f_{xyy}(x,y) &amp;= 12xy
+</mrow>
+</md>
+</p>
+
+<p>(b) We have
+<md>
+<mrow>
+f_x(x,y) &amp;= y^2e^{xy^2} &amp;
+f_{xx}(x,y) &amp;= y^4e^{xy^2} &amp;
+f_{xxy}(x,y) &amp;= 4y^3e^{xy^2} + 2xy^5e^{xy^2}
+</mrow><mrow>
+ &amp; &amp;
+f_{xy}(x,y) &amp;= 2ye^{xy^2}+2xy^3e^{xy^2} &amp;
+f_{xyy}(x,y) &amp;= \big(2+4xy^2+6xy^2+4x^2y^4\big)e^{xy^2}
+</mrow><mrow>
+ &amp; &amp;
+ &amp; &amp;
+ &amp;= \big(2+10xy^2+4x^2y^4\big)e^{xy^2}
+</mrow>
+</md>
+</p>
+
+<p>(c) We have
+<md>
+<mrow>
+\pdiff{f}{u}(u,v,w) &amp;= -\frac{1}{(u+2v+3w)^2}
+</mrow><mrow>
+\frac{\partial^2 f}{\partial u\,\partial v}(u,v,w) &amp;= \frac{4}{(u+2v+3w)^3}
+</mrow><mrow>
+\frac{\partial^3 f}{\partial u\,\partial v\,\partial w}(u,v,w)
+        &amp;= -\frac{36}{(u+2v+3w)^4}
+</mrow>
+</md>
+In particular
+<md>
+<mrow>
+\frac{\partial^3 f}{\partial u\,\partial v\,\partial w}(3,2,1)
+        &amp;= -\frac{36}{(3+2\times 2+3\times 1)^4}
+         = -\frac{36}{10^4}
+         = -\frac{9}{2500}
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find all second partial derivatives of <m>f(x,y)=\sqrt{x^2+5y^2}</m>.
+</p></statement>
+
+<answer><p>
+<m>f_{xx}=\frac{5y^2}{(x^2+5y^2)^{3/2}}</m></p><p>
+<m>f_{xy}=f_{yx}=-\frac{5xy}{(x^2+5y^2)^{3/2}}</m></p><p>
+<m>f_{yy}=\frac{5x^2}{(x^2+5y^2)^{3/2}}</m>
+</p></answer>
+
+<solution><p>
+Let <m>f(x,y)=\sqrt{x^2+5y^2}</m>. Then
+<md>
+<mrow>
+f_x&amp;=\frac{x}{\sqrt{x^2+5y^2}} &amp;
+f_{xx}&amp;=\frac{1}{\sqrt{x^2+5y^2}}-\frac{1}{2}\frac{(x)(2x)}{(x^2+5y^2)^{3/2}} &amp;
+f_{xy}&amp;=-\frac{1}{2}\frac{(x)(10y)}{(x^2+5y^2)^{3/2}}
+\cr
+f_y&amp;=\frac{5y}{\sqrt{x^2+5y^2}} &amp;
+f_{yy}&amp;=\frac{5}{\sqrt{x^2+5y^2}}-\frac{1}{2}\frac{(5y)(10y)}{(x^2+5y^2)^{3/2}}&amp;
+f_{yx}&amp;=-\frac{1}{2}\frac{(5y)(2x)}{(x^2+5y^2)^{3/2}}
+</mrow>
+</md>
+Simplifying, and in particular using that <m>\frac{1}{\sqrt{x^2+5y^2}}
+=\frac{x^2+5y^2}{(x^2+5y^2)^{3/2}}</m>,
+<me>
+f_{xx}=\frac{5y^2}{(x^2+5y^2)^{3/2}}\qquad
+f_{xy}=f_{yx}=-\frac{5xy}{(x^2+5y^2)^{3/2}}\qquad
+f_{yy}=\frac{5x^2}{(x^2+5y^2)^{3/2}}
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find the specified partial derivatives.
+<ol label="a">
+<li>
+<m>f(x,y,z) = \arctan\big(e^{\sqrt{xy}}\big)</m>; <m>f_{xyz}(x,y,z)</m>
+</li>
+<li>
+<m>f(x,y,z) = \arctan\big(e^{\sqrt{xy}}\big)
+            +\arctan\big(e^{\sqrt{xz}}\big)
+            +\arctan\big(e^{\sqrt{yz}}\big)</m>; <m>f_{xyz}(x,y,z)</m>
+</li>
+<li>
+<m>f(x,y,z) = \arctan\big(e^{\sqrt{xyz}}\big)</m>; <m>f_{xx}(1,0,0)</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+(a) This higher order partial derivative can be evaluated extremely efficiently
+by carefully choosing the order of evaluation of the derivatives.
+</p>
+
+<p>(b) This higher order partial derivative can be evaluated extremely efficiently
+by carefully choosing a <em>different order of evaluation</em> of the derivatives
+for each of the three terms.
+</p>
+
+<p>(c) Set <m>g(x) = f(x,0,0)</m>. Then <m>f_{xx}(1,0,0)=g'(1)</m>.
+</p></hint>
+
+<answer><p>
+(a) <m>f_{xyz}(x,y,z)=0</m></p><p>
+(b) <m>f_{xyz}(x,y,z)=0</m></p><p>
+(c) <m>f_{xx}(1,0,0)=0</m>
+</p></answer>
+
+<solution><p>
+(a)
+As <m>f(x,y,z) = \arctan\big(e^{\sqrt{xy}}\big)</m> is independent of <m>z</m>,
+we have <m>f_z(x,y,z) = 0</m> and hence
+<me>
+f_{xyz}(x,y,z)
+=f_{zxy}(x,y,z)
+=0
+</me>
+</p>
+
+<p>(b) Write <m>u(x,y,z) = \arctan\big(e^{\sqrt{xy}}\big)</m>,
+          <m>v(x,y,z) = \arctan\big(e^{\sqrt{xz}}\big)</m> and
+          <m>w(x,y,z) = \arctan\big(e^{\sqrt{yz}}\big)</m>.
+Then
+<ul>
+<li>
+As <m>u(x,y,z) = \arctan\big(e^{\sqrt{xy}}\big)</m> is independent of <m>z</m>,
+we have <m>u_z(x,y,z) = 0</m> and hence
+<m>
+u_{xyz}(x,y,z)
+=u_{zxy}(x,y,z)
+=0
+</m>
+</li>
+<li>
+As <m>v(x,y,z) = \arctan\big(e^{\sqrt{xz}}\big)</m> is independent of <m>y</m>,
+we have <m>v_y(x,y,z) = 0</m> and hence
+<m>
+v_{xyz}(x,y,z)
+=v_{yxz}(x,y,z)
+=0
+</m>
+</li>
+<li>
+As <m>w(x,y,z) = \arctan\big(e^{\sqrt{yz}}\big)</m> is independent of <m>x</m>,
+we have <m>w_x(x,y,z) = 0</m> and hence
+<m>
+w_{xyz}(x,y,z)
+=0
+</m>
+</li>
+</ul>
+As <m>f(x,y,z)=u(x,y,z)+v(x,y,z)+w(x,y,z)</m>, we have
+<me>
+f_{xyz}(x,y,z)=u_{xyz}(x,y,z)+v_{xyz}(x,y,z)+w_{xyz}(x,y,z)=0
+</me>
+</p>
+
+<p>(c) In the course of evaluating <m>f_{xx}(x,0,0)</m>, both <m>y</m> and <m>z</m> are held fixed at <m>0</m>. Thus, if we set <m>g(x) = f(x,0,0)</m>, then  <m>f_{xx}(x,0,0)=g'(x)</m>.
+Now
+<me>
+g(x) = f(x,0,0) = \arctan\big(e^{\sqrt{xyz}}\big)\Big|_{y=z=0}
+                =\arctan(1)
+                =\frac{\pi}{4}
+</me>
+for all <m>x</m>. So <m>g'(x)=0</m> and <m>g'(x)=0</m> for all <m>x</m>. In particular,
+<me>
+f_{xx}(1,0,0) = g'(1) = 0
+</me>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2002A</fromexam></title>
+<statement><p>
+ Let <m>f(r,\theta)=r^m\cos m\theta</m> be a function of <m>r</m> and <m>\theta</m>,
+where <m>m</m> is a positive integer.
+<ol label="a">
+<li>
+ Find the second order partial derivatives <m>f_{rr}</m>, <m>f_{r\theta}</m>,
+<m>f_{\theta\theta}</m> and evaluate their respective values at <m>(r,\theta)=(1,0)</m>.
+</li>
+<li>
+ Determine the value of the real number <m>\la</m> so that <m>f(r,\theta)</m>
+satisfies the differential equation
+<me>
+f_{rr}+\frac{\la}{r}f_r+\frac{1}{r^2}f_{\theta\theta}=0
+</me>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>f_{rr}(1,0)=m(m-1),\
+f_{r\theta}(1,0)=0,\
+f_{\theta\theta}(1,0)=-m^2</m></p><p>
+(b) <m>\la=1</m>
+</p></answer>
+
+<solution><p>
+(a)
+The first order derivatives are
+<me>
+f_r(r,\theta)=mr^{m-1}\cos m\theta\qquad
+f_\theta(r,\theta)=-mr^m\sin m\theta
+</me>
+The second order derivatives are
+<me>
+f_{rr}(r,\theta)=m(m-1)r^{m-2}\cos m\theta \qquad
+f_{r\theta}(r,\theta)=-m^2r^{m-1}\sin m\theta \qquad
+f_{\theta\theta}(r,\theta)=-m^2r^m\cos m\theta
+</me>
+so that
+<me>
+f_{rr}(1,0)=m(m-1),\
+f_{r\theta}(1,0)=0,\
+f_{\theta\theta}(1,0)=-m^2
+</me>
+</p>
+
+<p>(b) By part (a), the expression
+<me>
+f_{rr}+\frac{\la}{r}f_r+\frac{1}{r^2}f_{\theta\theta}
+=m(m-1)r^{m-2}\cos m\theta+\la mr^{m-2}\cos m\theta-m^2r^{m-2}\cos m\theta
+</me>
+vanishes for all <m>r</m> and <m>\theta</m> if and only if
+<me>
+m(m-1)+\la m-m^2=0\iff m(\la-1)=0\iff \la=1
+</me>
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise>
+<statement><p>
+Let <m>\al \gt 0</m> be a constant.
+Show that <m>\displaystyle u(x,y,z,t) =\frac{1}{t^{3/2}}
+             e^{-(x^2+y^2+z^2)/(4\al t)}</m> satisfies the heat equation
+<me>
+u_t =  \al\big(u_{xx} + u_{yy} + u_{zz} \big)
+</me>
+for all <m>t \gt 0</m>
+</p></statement>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+As
+<md>
+<mrow>
+u_t(x,y,z,t)
+&amp;=-\frac{3}{2}\frac{1}{t^{5/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
+  +\frac{1}{4\al\,t^{7/2}}(x^2+y^2+z^2) e^{-(x^2+y^2+z^2)/(4\al t)}
+</mrow><mrow>
+u_x(x,y,z,t)
+&amp;=-\frac{x}{2\al\,t^{5/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
+</mrow><mrow>
+u_{xx}(x,y,z,t)
+&amp;=-\frac{1}{2\al\,t^{5/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
+  +\frac{x^2}{4\al^2\,t^{7/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
+</mrow><mrow>
+u_{yy}(x,y,z,t)
+&amp;=-\frac{1}{2\al\,t^{5/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
+  +\frac{y^2}{4\al^2\,t^{7/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
+</mrow><mrow>
+u_{zz}(x,y,z,t)
+&amp;=-\frac{1}{2\al\,t^{5/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
+  +\frac{z^2}{4\al^2\,t^{7/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
+</mrow>
+</md>
+we have
+<md>
+<mrow>
+\al\big(u_{xx} + u_{yy} + u_{zz} \big)
+&amp;=-\frac{3}{2\,t^{5/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
+  +\frac{x^2+y^2+z^2}{4\al\,t^{7/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
+=u_t
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+</exercisegroup>
+
+</exercises>

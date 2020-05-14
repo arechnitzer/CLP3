@@ -1,0 +1,2474 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise><title><fromexam>M200 2008A</fromexam></title>
+<statement><p>
+Find the directional derivative of <m>f(x,y,z) = e^{xyz}</m> in the <m>\llt 0,1,1\rgt</m>
+direction at the point <m>(0,1,1)</m>.
+</p></statement>
+
+<answer><p>
+<m>0</m>
+</p></answer>
+
+<solution><p>
+The partial derivatives, at a general point <m>(x,y,z)</m> and
+also at the point of interest <m>(0,1,1)</m>, are
+<md alignment="alignat">
+<mrow>{3}
+f_x(x,y,z)&amp;=yz e^{xyz}\qquad &amp;
+   f_x(0,1,1)&amp;= 1
+</mrow><mrow>
+f_y(x,y,z)&amp;=xz e^{xyz}\qquad &amp;
+   f_x(0,1,1)&amp;= 0
+</mrow><mrow>
+f_z(x,y,z)&amp;=xy e^{xyz}\qquad &amp;
+   f_z(0,1,1)&amp;= 0
+</mrow>
+</md>
+So <m>\vnabla f(0,1,1) =\llt 1,0,0\rgt</m> and the specified directional derivative
+is
+<md>
+<mrow>
+D_{\frac{\llt 0,1,1\rgt}{\sqrt{2}}}
+=\llt 1,0,0\rgt\cdot\frac{\llt 0,1,1\rgt}{\sqrt{2}}
+=0
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2008A</fromexam></title>
+<statement><p>
+Find <m>\vnabla\big(y^2 + \sin(xy)\big)</m>.
+</p></statement>
+
+<answer><p>
+<m>y\cos(xy)\,\hi +  [2y + x\cos(xy)]\,\hj</m>
+</p></answer>
+
+<solution><p>
+In two dimensions, write <m>g(x,y) = y^2+\sin(xy)</m>. Then
+<md>
+<mrow>
+\vnabla g =\llt g_x\,,\,g_y\rgt
+          =\llt y\cos(xy)\,,\, 2y + x\cos(xy) \rgt
+</mrow>
+</md>
+In three dimensions, write <m>g(x,y,z) = y^2+\sin(xy)</m>. Then
+<md>
+<mrow>
+\vnabla g =\llt g_x\,,\,g_y\,,\,g_z\rgt
+          =\llt y\cos(xy)\,,\, 2y + x\cos(xy)\,,\, 0 \rgt
+</mrow>
+</md>
+</p></solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise>
+<statement><p>
+Find the rate of change of the given function at the given point in
+the given direction.
+<ol label="a">
+<li>
+<m>f(x,y)=3x-4y</m> at the point <m>(0,2)</m> in the direction <m>-2\hi</m>.
+</li>
+<li>
+<m>f(x,y,z)=x^{-1}+y^{-1}+z^{-1}</m> at <m>(2,-3,4)</m> in the direction
+<m>\hi+\hj+\hk</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>-3</m></p><p>
+(b) <m>-\frac{61}{144\sqrt{3}}\approx-0.2446</m>
+</p></answer>
+
+<solution><p>
+(a)
+The gradient of <m>f</m> is <m>\vnabla f(x,y)=\llt 3,-4\rgt</m>. So the specified rate of change is
+<me>
+\llt 3,-4\rgt\cdot\frac{\llt -2,0\rgt}{|\llt -2,0\rgt|}=-3
+</me>
+</p>
+
+<p>(b)
+The gradient of <m>f</m> is
+  <m>\vnabla f(x,y,z)=\llt -x^{-2},-y^{-2},-z^{-2}\rgt</m>. In particular,
+the gradient of <m>f</m> at the point <m>(2,-3,4)</m> is
+<m>\vnabla f(2,-3,4)=\llt -\frac{1}{4},-\frac{1}{9},-\frac{1}{16}\rgt</m>.
+So the specified rate of change is
+<me>
+\llt -\frac{1}{4},-\frac{1}{9},-\frac{1}{16}\rgt\cdot
+        \frac{\llt 1,1,1\rgt}{\sqrt{3}}=
+        -\frac{61}{144\sqrt{3}}\approx-0.2446
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+ In what directions at the point <m>(2,0)</m> does the function <m>f(x,y)=xy</m>
+have the specified rates of change?
+<ol label="a">
+<li>
+<m>-1</m>
+</li>
+<li>
+<m>-2</m>
+</li>
+<li>
+<m>-3</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+The rate of change in the direction that makes angle <m>\theta</m> with
+respect to the <m>x</m>-axis, that is, in the direction
+<m>\llt \cos\theta,\sin\theta\rgt</m> is
+<m>
+\llt \cos\theta,\sin\theta\rgt \cdot\vnabla f(2,0)
+</m>.
+</p></hint>
+
+<answer><p>
+(a) <m>\llt\pm\frac{\sqrt{3}}{2} ,-\frac{1}{2} \rgt</m> </p><p>
+(b) <m>\llt 0 ,-1 \rgt</m> </p><p>
+(c) No direction works!
+</p>
+
+</answer>
+
+<solution><p>
+The gradient of <m>f(x,y)</m> is <m>\vnabla f(x,y)=\llt y,x\rgt</m>. In particular,
+the gradient of <m>f</m> at the point <m>(2,0)</m> is
+<m>\vnabla f(2,0)=\llt 0,2 \rgt</m>. So the rate of change in the direction
+that makes angle <m>\theta</m> with respect to the <m>x</m>-axis, that is,
+in the direction
+<m>\llt \cos\theta,\sin\theta\rgt</m> is
+<me>
+\llt \cos\theta,\sin\theta\rgt \cdot\vnabla f(2,0)
+=\llt \cos\theta,\sin\theta\rgt \cdot\llt 0, 2\rgt =2\sin\theta
+</me>
+</p>
+
+<p>(a) To get a rate <m>-1</m>, we need
+<me>
+ \sin\theta=-\frac{1}{2} \implies \theta=-30^\circ,\ -150^\circ
+</me>
+So the desired directions are
+<me>
+\llt \cos\theta,\sin\theta\rgt
+=\llt\pm\frac{\sqrt{3}}{2} ,-\frac{1}{2} \rgt
+</me>
+</p>
+
+<p>(b) To get a rate <m>-2</m>, we need
+<me>
+ \sin\theta=-1 \implies \theta=-90^\circ
+</me>
+So the desired direction is
+<me>
+\llt \cos\theta,\sin\theta\rgt
+=\llt 0 ,-1 \rgt
+</me>
+</p>
+
+<p>(c) To get a rate <m>-3</m>, we need
+<me>
+ \sin\theta=-\frac{3}{2}
+</me>
+No <m>\theta</m> obeys this, since <m>-1\le\sin\theta\le 1</m> for all <m>\theta</m>.
+So no direction works!
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Find <m>\vnabla f(a,b)</m> given the directional derivatives
+<me>
+D_{(\hi+\hj)/\sqrt{2}}f(a,b)=3\sqrt{2}\qquad
+D_{(3\hi-4\hj)/5}f(a,b)=5
+</me>
+</p></statement>
+
+<hint><p>
+Denote <m>\vnabla f(a,b)=\llt \al,\be\rgt</m>.
+</p></hint>
+
+<answer><p>
+<m>\vnabla f(a,b)=\llt 7,-1\rgt</m>
+</p></answer>
+
+<solution><p>
+ Denote <m>\vnabla f(a,b)=\llt \al,\be\rgt</m>. We are told that
+<md alignment="alignat">
+<mrow>{5}
+\llt\al,\be\rgt\cdot\llt\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\rgt&amp;=3\sqrt{2} &amp;
+&amp;\quad\text{or}\quad &amp;
+\al+\be&amp;=6
+</mrow><mrow>
+\llt\al,\be\rgt\cdot\llt\frac{3}{5},-\frac{4}{5}\rgt&amp;=5 &amp;
+&amp;\quad\text{or}\quad &amp;
+3\al-4\be&amp;=25
+</mrow>
+</md>
+Adding 4 times the first equation to the second equation gives <m>7\al=49</m>.
+Substituting <m>\al=7</m> into the first equation gives <m>\be=-1</m>. So
+<m>\vnabla f(a,b)=\llt 7,-1\rgt</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2005D</fromexam></title>
+<statement><p>
+You are standing at a location where the surface of the earth is smooth.
+The slope in the southern direction is <m>4</m> and the slope in the south--eastern direction is <m>\sqrt{2}</m>. Find the slope in the eastern direction.
+</p></statement>
+
+<hint><p>
+Use a coordinate system with the positive <m>y</m>--axis pointing
+north, with the positive <m>x</m>--axis pointing east and with our current
+location being <m>x=y=0</m>. Denote by <m>z(x,y)</m> the elevation of the
+earth's surface at <m>(x,y)</m>. Express the various slopes in terms of
+<m>\vnabla z(0,0)</m>.
+</p></hint>
+
+<answer><p>
+<m>-2</m>
+</p></answer>
+
+<solution><p>
+Use a coordinate system with the positive <m>y</m>--axis pointing
+north, with the positive <m>x</m>--axis pointing east and with our current
+location being <m>x=y=0</m>. Denote by <m>z(x,y)</m> the elevation of the
+earth's surface at <m>(x,y)</m>. We are told that
+<md>
+<mrow>
+\vnabla z(0,0)\cdot(-\hj) &amp;= 4
+</mrow><mrow>
+\vnabla z(0,0)\cdot\left(\frac{\hi-\hj}{\sqrt{2}}\right) &amp;= \sqrt{2}
+</mrow>
+</md>
+The first equation implies that <m>z_y(0,0)=-4</m> and the second equation
+implies that
+<md>
+<mrow>
+\frac{z_x(0,0)-z_y(0,0)}{\sqrt{2}}=\sqrt{2}
+\implies
+z_x(0,0)=z_y(0,0)+2 = -2
+</mrow>
+</md>
+So the slope in the eastern direction is
+<md>
+<mrow>
+\vnabla z(0,0)\cdot\hi = z_x(0,0) = -2
+</mrow>
+</md>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2006A</fromexam></title>
+<statement><p>
+Assume that the directional derivative of <m>w = f(x,y,z)</m> at a point <m>P</m>
+is a maximum in the direction of the vector <m>2\hi - \hj + \hk</m>, and
+the value of the directional derivative in that direction is <m>3\sqrt{6}</m>.
+<ol label="a">
+<li>
+Find the gradient vector of <m>w = f(x,y,z)</m> at <m>P</m>.
+</li>
+<li>
+Find the directional derivative of <m>w = f(x,y,z)</m> at <m>P</m> in the
+direction of the vector <m>\hi + \hj</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>6\hi - 3\hj + 3\hk</m></p><p>
+(b) <m>\frac{3}{\sqrt{2}}</m>
+</p></answer>
+
+<solution><p>
+(a)  Use <m>\vnabla f(P)</m> to denote the gradient vector of <m>f</m>
+at <m>P</m>. We are told that
+<ul>
+<li>
+directional derivative  of <m>f</m> at <m>P</m> is a maximum in the direction
+<m>2\hi - \hj + \hk</m>, which implies that <m>\vnabla f(P)</m> is parallel
+to <m>2\hi - \hj + \hk</m>, and
+</li>
+<li>
+the magnitude of the directional derivative in that direction is <m>3\sqrt{6}</m>,
+which implies that <m>|\vnabla f(P)|=3\sqrt{6}</m>.
+</li>
+</ul>
+So
+<md>
+<mrow>
+\vnabla f(P) = 3\sqrt{6} \frac{2\hi - \hj + \hk}{|2\hi - \hj + \hk|}
+             = 6\hi - 3\hj + 3\hk
+</mrow>
+</md>
+</p>
+
+<p>(b) The directional derivative of <m>f</m> at <m>P</m> in the direction <m>\hi+\hj</m> is
+<me>
+\vnabla f(P) \cdot\frac{\hi+\hj}{|\hi+\hj|}
+=\frac{1}{\sqrt{2}}\big(6\hi - 3\hj + 3\hk\big)\cdot\big(\hi+\hj\big)
+=\frac{3}{\sqrt{2}}
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2006D</fromexam></title>
+<statement><p>
+A hiker is walking on a mountain with height above the <m>z = 0</m> plane given by
+<me>
+z = f(x,y) = 6 - xy^2
+</me>
+The positive <m>x</m>--axis points east and the positive <m>y</m>--axis points north,
+and the hiker starts from the point <m>P(2, 1, 4)</m>.
+<ol label="a">
+<li>
+In what direction should the hiker proceed from <m>P</m> to ascend
+along the steepest path? What is the slope of the path?
+</li>
+<li>
+Walking north from <m>P</m>, will the hiker start to ascend or descend?
+What is the slope?
+</li>
+<li>
+In what direction should the hiker walk from <m>P</m> to remain at the same height?
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) The path of steepest ascent is in the direction
+<m>-\frac{1}{\sqrt{17}}\llt 1\,,\, 4\rgt</m>, which is a little
+west of south. The slope is
+<m>
+|\vnabla f(2,1)| = |\llt -1\,,\, -4\rgt| = \sqrt{17}
+</m>.
+</p>
+
+<p>(b) So the hiker descends with slope <m>4</m>.
+</p>
+
+<p>(c) <m>\pm\frac{1}{\sqrt{17}}\llt 4, -1\rgt</m>
+</p></answer>
+
+<solution><p>
+(a) The gradient of <m>f</m> at <m>(x,y)=(2,1)</m> is
+<md>
+<mrow>
+\vnabla f(2,1) = \llt -y^2\,,\,-2xy \rgt\Big|_{(x,y)=(2,1)}
+               = \llt -1\,,\, -4\rgt
+</mrow>
+</md>
+So the path of steepest ascent is in the direction
+<m>-\frac{1}{\sqrt{17}}\llt 1\,,\, 4\rgt</m>, which is a little
+west of south. The slope is
+<me>
+|\vnabla f(2,1)| = |\llt -1\,,\, -4\rgt| = \sqrt{17}
+</me>
+</p>
+
+<p>(b) The directional derivative in the north direction is
+<me>
+D_{\llt 0,1\rgt}f(2,1) = \vnabla f(2,1)\cdot\llt 0,1\rgt
+               = \llt -1\,,\, -4\rgt \cdot \llt 0,1\rgt = -4
+</me>
+So the hiker descends with slope <m>|-4|=4</m>.
+</p>
+
+<p>(c) To contour, i.e. remain at the same height, the hiker should walk
+in a direction perpendicular to <m>\vnabla f(2,1)= \llt -1\,,\, -4\rgt</m>.
+Two unit vectors perpendicular to <m>\llt -1\,,\, -4\rgt</m>
+are <m>\pm\frac{1}{\sqrt{17}}\llt 4, -1\rgt</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Two hikers are climbing a (small) mountain whose height is
+<m>\ z=1000-2x^2-3y^2.</m>
+They start at <m>\ (1,1,995)\ </m> and follow the path of steepest ascent. Their
+<m>(x,y)</m> coordinates obey <m>\ y=ax^b\ </m> for some constants <m>a, b</m>.
+Determine <m>a</m> and <m>b</m>.
+</p></statement>
+
+<hint><p>
+In order for <m>y=ax^b</m> to give the <m>(x,y)</m> coordinates of the
+path of steepest ascent,  the tangent vector to <m>y=ax^b</m> must be parallel
+to the height gradient <m>\vnabla h(x,y)</m> at all points on <m>y=ax^b</m>.
+Also, don't forget that <m>(1,1)</m> must be on <m>y=ax^b</m>.
+</p></hint>
+
+<answer><p>
+<m>a=1</m>, <m>b=\frac{3}{2}</m>
+</p></answer>
+
+<solution><p>
+ The gradient of <m>h(x,y)=1000-2x^2-3y^2</m> is
+<m>\vnabla h(x,y)=(-4x,-6y)</m>. This gradient (which points in the direction
+of steepest ascent) must be parallel to the tangent to <m>y=ax^b</m> at all
+points on <m>y=ax^b</m>. A tangent to <m>y=ax^b</m> is <m>\llt 1,\diff{y}{x}\rgt
+=\llt 1, abx^{b-1}\rgt</m>.
+<me>
+\llt -4x,-6y\rgt \parallel \llt 1, abx^{b-1}\rgt
+\implies \frac{abx^{b-1}}{1}=\frac{-6y}{-4x}
+\implies \frac{3}{2}y=abx^b
+</me>
+This is true at all points on <m>y=ax^b</m> if and only if <m>b=\frac{3}{2}</m>.
+As <m>(1,1)</m> must also be on <m>y=ax^b</m>, we need <m>1=a1^b</m>, which forces
+<m>a=1</m>, <m>b=\frac{3}{2}</m>. Here is a contour map showing the hiking trail.
+</p>
+<sidebyside width="60%">
+  <image source="pfigs/hiker"/>
+</sidebyside>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2007A</fromexam></title>
+<statement><p>
+A mosquito is at the location <m>(3, 2, 1)</m> in <m>\bbbr^3</m>.
+She knows that the temperature <m>T</m> near there is given by
+<m>T = 2x^2 + y^2 - z^2</m>.
+<ol label="a">
+<li>
+She wishes to stay at the same temperature, but must fly in some
+initial direction. Find a direction in which the initial rate of
+change of the temperature is <m>0</m>.
+</li>
+<li>
+ If you and another student both get correct answers in part (a),
+must the directions you give be the same? Why or why not?
+</li>
+<li>
+What initial direction or directions would suit the mosquito if
+she wanted to cool down as fast as possible?
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) Any nonzero <m>\llt a\,,\,b\,,\,c\rgt</m> that obeys <m>12a+4b-2c=0</m>
+is an allowed direction. Four allowed unit vectors are
+<m>\pm\frac{\llt 0\,,\,1\,,\,2\rgt}{\sqrt{5}}</m> and
+<m>\pm\frac{\llt 1\,,\,-3\,,\,0\rgt}{\sqrt{10}}</m>.
+</p>
+
+<p>(b) No they need not be the same. Four different explicit directions
+     were given in part (a).
+</p>
+
+<p>(c) <m>-\frac{\llt 6\,,\,2\,,\,-1\rgt}{\sqrt{41}}</m>
+</p></answer>
+
+<solution><p>
+(a) The temperature gradient at <m>(3,2,1)</m> is
+<md>
+<mrow>
+\vnabla T(3,2,1) = \llt 4x\,,\,2y\,,\,-2z\rgt\Big|_{(x,y,z)=(3,2,1)}
+                 = \llt 12\,,\,4\,,\,-2\rgt
+</mrow>
+</md>
+She wishes to fly in a direction that is perpendicular to <m>\vnabla T(3,2,1)</m>.
+That is, she wishes to fly in a direction <m>\llt a\,,\,b\,,\,c\rgt</m>
+that obeys
+<me>
+0 = \llt 12\,,\,4\,,\,-2\rgt\cdot \llt a\,,\,b\,,\,c\rgt
+  = 12a+4b-2c
+</me>
+Any nonzero <m>\llt a\,,\,b\,,\,c\rgt</m> that obeys <m>12a+4b-2c=0</m>
+is an allowed direction. Four allowed unit vectors are
+<m>\pm\frac{\llt 0\,,\,1\,,\,2\rgt}{\sqrt{5}}</m> and
+<m>\pm\frac{\llt 1\,,\,-3\,,\,0\rgt}{\sqrt{10}}</m>.
+</p>
+
+<p>(b) No they need not be the same. Four different explicit directions
+     were given in part (a).
+</p>
+
+<p>(c) To cool down as quickly as possible, she should move in the direction
+    opposite to the temperature gradient. A unit vector in that direction is
+    <m>-\frac{\llt 6\,,\,2\,,\,-1\rgt}{\sqrt{41}}</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2008D</fromexam></title>
+<statement><p>
+The air temperature <m>T(x,y,z)</m> at a location <m>(x,y,z)</m> is given by:
+<me>
+T(x,y,z) = 1 + x^2 + yz.
+</me>
+<ol label="a">
+<li>
+A bird passes through <m>(2,1,3)</m> travelling towards <m>(4,3,4)</m> with speed <m>2</m>.
+At what rate does the air temperature it experiences change at this instant?
+</li>
+<li>
+If instead the bird maintains constant altitude (<m>z = 3</m>) as it passes
+through <m>(2,1,3)</m> while also keeping at a fixed air temperature, <m>T = 8</m>,
+what are its two possible directions of travel?
+</li>
+</ol>
+</p>
+</statement>
+
+<answer><p>
+(a) <m>10</m></p><p>
+(b) <m>\pm \frac{1}{5}\llt 3\,,-4\,,0\rgt</m>
+</p></answer>
+
+<solution><p>
+The temperature gradient at <m>(2,1,3)</m> is
+<md>
+<mrow>
+\vnabla T(2,1,3) = \llt 2x\,,\,z\,,\,y \rgt\Big|_{(x,y,z)=(2,1,3)}
+                 = \llt 4\,,\,3\,,\,1 \rgt
+</mrow>
+</md>
+</p>
+
+<p>(a) The bird is flying in the direction <m>\llt 4-2\,,\,3-1\,,\,4-3 \rgt
+=\llt 2\,,\,2\,,\,1\rgt</m> at speed <m>2</m> and so has velocity
+<m>
+\vv=2\frac{\llt 2\,,\,2\,,\,1\rgt}{|\llt 2\,,\,2\,,\,1\rgt|}
+=\frac{2}{3} \llt 2\,,\,2\,,\,1\rgt
+</m>.
+The rate of change of air temperature experienced by the bird at that
+instant is
+<md>
+<mrow>
+\vnabla T(2,1,3) \cdot\vv
+=\frac{2}{3} \llt 4\,,\,3\,,\,1 \rgt \cdot \llt 2\,,\,2\,,\,1\rgt
+= 10
+</mrow>
+</md>
+</p>
+
+<p>(b) To maintain constant altitude (while not being stationary),
+the bird's direction of travel has to be
+of the form <m>\llt a\,,\,b\,,\,0\rgt</m>, for some constants <m>a</m> and <m>b</m>,
+not both zero. To keep the air temperature fixed, its direction of travel
+has to be perpendicular to <m>\vnabla T(2,1,3)= \llt 4\,,\,3\,,\,1 \rgt</m>.
+So <m>a</m> and <m>b</m> have to obey
+<md>
+<mrow>
+0 = \llt a\,,\,b\,,\,0\rgt \cdot \llt 4\,,\,3\,,\,1 \rgt
+  = 4a+3b
+\iff b=-\frac{4}{3}a
+</mrow>
+</md>
+and the direction of travel has to be a nonzero constant times
+<m>\llt 3\,,-4\,,0\rgt</m>. The two such unit vectors are
+<m>\pm \frac{1}{5}\llt 3\,,-4\,,0\rgt</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2009A</fromexam></title>
+<statement><p>
+Let <m>f(x,y) = 2x^2 + 3xy + y^2</m> be a function of <m>x</m> and <m>y</m>.
+</p>
+
+<p><ol label="a">
+<li>
+Find the maximum rate of change of <m>f(x,y)</m> at the point
+<m>P\left(1, -\frac{4}{3}\right)</m>.
+</li>
+<li>
+Find the directions in which the directional derivative of <m>f(x,y)</m>
+at the point <m>P\left(1, -\frac{4}{3}\right)</m> has the value <m>\frac{1}{5}</m>.
+</li>
+</ol>
+</p>
+
+</statement>
+
+<answer><p>
+(a) <m>\frac{1}{3}</m></p><p>
+(b) <m>\llt \pm\frac{4}{5}\,,\,\frac{3}{5}\rgt</m>
+</p></answer>
+
+<solution><p>
+We are going to need, in both parts of this question,
+the gradient of <m>f(x,y)</m> at <m>(x,y)=\left(1, -\frac{4}{3}\right)</m>.
+So we find it first.
+<md alignment="alignat">
+<mrow>
+f_x(x,y)&amp;=4x+3y\qquad &amp;
+f_x(1,-4/3)&amp;=0
+</mrow><mrow>
+f_y(x,y)&amp;=3x+2y\qquad &amp;
+f_y(1,-4/3)&amp;=\frac{1}{3}
+</mrow>
+</md>
+so <m>\vnabla f\left(1, -\frac{4}{3}\right) =\llt 0,\frac{1}{3}\rgt</m>.
+</p>
+
+<p>(a) The maximum rate of change of <m>f</m> at <m>P</m> is
+<md>
+<mrow>
+\left|\vnabla f\left(1, -\tfrac{4}{3}\right)\right|
+=\left|\llt 0,\tfrac{1}{3}\rgt\right|
+=\tfrac{1}{3}
+</mrow>
+</md>
+</p>
+
+<p>(b) If <m>\llt a,b\rgt</m> is a unit vector, the directional derivative of <m>f</m>
+at <m>P</m> in the direction <m>\llt a,b\rgt</m> is
+<md>
+<mrow>
+D_{\llt a,b\rgt}f\left(1, -\tfrac{4}{3}\right)
+=\vnabla f\left(1, -\tfrac{4}{3}\right)\cdot \llt a,b\rgt
+=\llt 0,\tfrac{1}{3}\rgt\cdot \llt a,b\rgt
+=\tfrac{b}{3}
+</mrow>
+</md>
+So we need <m>\frac{b}{3}=\frac{1}{5}</m> and hence <m>b=\frac{3}{5}</m>.
+For <m>\llt a,b\rgt</m> to be a unit vector, we also need
+<md>
+<mrow>
+a^2+b^2=1
+\iff
+a^2=1-b^2=1-\frac{3^2}{5^2}=\frac{16}{25}
+\iff
+a=\pm\frac{4}{5}
+</mrow>
+</md>
+So the allowed directions are <m>\llt \pm\frac{4}{5}\,,\,\frac{3}{5}\rgt</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2010A</fromexam></title>
+<statement><p>
+The temperature <m>T(x, y)</m> at a point of the <m>xy</m>--plane is given by
+<me>
+T(x, y) = ye^{x^2}
+</me>
+A bug travels from left to right along the curve <m>y = x^2</m> at a speed of <m>0.01</m>m/sec. The bug
+monitors <m>T(x, y)</m> continuously. What is the rate of change of <m>T</m> as the bug passes through
+the point <m>(1, 1)</m>?
+</p></statement>
+
+<answer><p>
+<m>\frac{0.04 e}{\sqrt{5}} </m>
+</p></answer>
+
+<solution><p>
+The slope of <m>y=x^2</m> at <m>(1,1)</m> is <m>\diff{}{x}x^2\Big|_{x=1}=2</m>.
+So a unit vector in the bug's direction of motion is
+<m>\frac{\llt 1,2\rgt}{\sqrt{5}}</m> and the bug's velocity vector is
+<m>\vv=0.01\frac{\llt 1,2\rgt}{\sqrt{5}}</m>.
+</p>
+
+<p>The temperature gradient at <m>(1,1)</m> is
+<md>
+<mrow>
+\vnabla T(1,1) = \llt 2xy e^{x^2}\,,\,e^{x^2}\rgt\Big|_{(x.y)=(1,1)}
+               =\llt 2e\,,\,e\rgt
+</mrow>
+</md>
+and the rate of change of <m>T</m> (per unit time) that the bug feels as it
+passes through the point <m>(1, 1)</m> is
+<md>
+<mrow>
+\vnabla T(1,1)\cdot \vv
+=\frac{0.01}{\sqrt{5}} \llt 2e\,,\,e\rgt\cdot \llt 1,2\rgt
+=\frac{0.04 e}{\sqrt{5}}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2010D</fromexam></title>
+<statement><p>
+Suppose the function <m>T=F(x,y,z)=3+xy-y^2+z^2-x</m> describes the temperature at
+a point <m>(x,y,z)</m> in space, with <m>F(3,2,1)=3</m>.
+<ol label="a">
+<li>
+Find the directional derivative of <m>T</m> at <m>(3, 2, 1)</m>, in the direction of the
+point <m>(0,1,2)</m>.
+</li>
+<li>
+At the point <m>(3, 2, 1)</m>, in what direction does the temperature
+<em>decrease</em>  most rapidly?
+</li>
+<li>
+Moving along the curve given by <m>x=3e^t</m>,  <m>y = 2 \cos t</m>, <m>z= \sqrt{1 + t}</m>,
+find <m>\diff{T}{t}</m>, the rate of change of temperature with respect to <m>t</m>, at <m>t = 0</m>.
+</li>
+<li>
+Suppose <m>\hi+5\hj+a\hk</m> is a vector that is tangent to the temperature level surface
+<m>T(x, y, z) = 3</m> at <m>(3, 2, 1)</m>. What is <m>a</m>?
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>0</m></p><p>
+(b) <m> \frac{1}{\sqrt{6}}\llt -1\,,\,1\,,\,-2 \rgt </m></p><p>
+(c) <m>4</m></p><p>
+(d) <m>a=2</m>
+</p></answer>
+
+<solution><p>
+(a)
+We are to find the directional derivative in the direction
+<me>
+\llt 0-3\,,\,1-2\,,\,2-1\rgt = \llt -3\,,\,-1\,,\,1\rgt
+</me>
+As the gradient of <m>F</m> is
+<md>
+<mrow>
+\vnabla F(x,y,z) = \llt y-1\,,\,x-2y\,,\,2z \rgt
+</mrow>
+</md>
+the directional derivative is
+<md>
+<mrow>
+D_{\frac{\llt -3\,,\,-1\,,\,1\rgt}{|\llt -3\,,\,-1\,,\,1\rgt|}}F(3,2,1)
+&amp;=\vnabla F(3,2,1)\cdot
+  \frac{\llt -3\,,\,-1\,,\,1\rgt}{|\llt -3\,,\,-1\,,\,1\rgt|}
+</mrow><mrow>
+&amp;= \llt 2-1\,,\,3-2(2)\,,\,2(1) \rgt
+\cdot   \frac{\llt -3\,,\,-1\,,\,1\rgt}{|\llt -3\,,\,-1\,,\,1\rgt|}
+=\llt 1\,,\,-1\,,\,2\rgt \cdot   \frac{\llt -3\,,\,-1\,,\,1\rgt}{\sqrt{11}}
+</mrow><mrow>
+&amp;=0
+</mrow>
+</md>
+</p>
+
+<p>(b) The temperature decreases most rapidly in the direction opposite the
+gradient. A unit vector in that direction is
+<md>
+<mrow>
+   -\frac{\vnabla F(3,2,1)}{|\vnabla F(3,2,1)|}
+=  -\frac{\llt 1\,,\,-1\,,\,2 \rgt}{|\llt 1\,,\,-1\,,\,2 \rgt|}
+= \frac{1}{\sqrt{6}}\llt -1\,,\,1\,,\,-2 \rgt
+</mrow>
+</md>
+</p>
+
+<p>(c) The velocity vector at time <m>0</m> is
+<md>
+<mrow>
+\vv=\llt x'(0)\,,\,y'(0)\,,\,z'(0)\rgt
+=\llt 3e^t\,,\,-2\sin t\,,\,\frac{1}{2\sqrt{1+t}}\rgt\Big|_{t=0}
+=\llt 3\,,\,0\,,\,\frac{1}{2}\rgt
+</mrow>
+</md>
+So the rate of change of temperature with respect to <m>t</m> at <m>t=0</m> is
+<md>
+<mrow>
+\vnabla F(3,2,1)\cdot \vv
+=\llt 1\,,\,-1\,,\,2 \rgt\cdot
+   \llt 3\,,\,0\,,\,\frac{1}{2}\rgt
+=4
+</mrow>
+</md>
+</p>
+
+<p>(d) For <m>\hi+5\hj+a\hk</m> to be tangent to the level surface
+<m>F(x, y, z) = 3</m> at <m>(3, 2, 1)</m>, <m>\hi+5\hj+a\hk</m> must be perpendicular
+to  <m>\vnabla F(3,2,1)</m>. So
+<md>
+<mrow>
+0=\llt 1\,,\,5\,,\,a \rgt \cdot \llt 1\,,\,-1\,,\,2 \rgt
+ = -4+2a
+</mrow>
+</md>
+So <m>a=2</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2011A</fromexam></title>
+<statement><p>
+Let
+<md>
+<mrow>
+f(x, y, z) &amp;= (2x + y)e^{-(x^2 +y^2 +z^2)}
+</mrow><mrow>
+g(x, y, z) &amp;= xz + y^2 + yz + z^2
+</mrow>
+</md>
+<ol label="a">
+<li>
+Find the gradients of <m>f</m> and <m>g</m> at <m>(0,1,-1)</m>.
+</li>
+<li>
+A bird at <m>(0,1,-1)</m> flies at speed <m>6</m> in the direction in which <m>f(x, y, z)</m> increases
+most rapidly. As it passes through <m>(0,1,-1)</m>, how quickly does <m>g(x, y, z)</m> appear (to the bird)
+to be changing?
+</li>
+<li>
+A bat at <m>(0,1,-1)</m> flies in the direction in which <m>f (x, y, z)</m> and <m>g(x, y, z)</m> do not change,
+but <m>z</m> increases. Find a vector in this direction.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\vnabla f(0,1,-1) =e^{-2}\llt 2,-1,2\rgt</m>,
+    <m>\vnabla g(0,1,-1) =\llt -1,1,-1\rgt</m></p><p>
+(b) <m>10</m>
+</p>
+
+<p>(c) Any vector which is a (strictly)
+positive constant times <m>\llt -1 \,,\, 0 \,,\, 1 \rgt</m> is fine.
+</p></answer>
+
+<solution><p>
+(a) The first order partial derivatives of <m>f</m> and <m>g</m> are
+<md alignment="alignat">
+<mrow>{3}
+\pdiff{f}{x}(x,y,z)&amp;=  2e^{-(x^2 +y^2 +z^2)} -2x(2x + y)e^{-(x^2 +y^2 +z^2)}
+&amp;\quad\implies \pdiff{f}{x}(0,1,-1)&amp;=2e^{-2}
+</mrow><mrow>
+\pdiff{f}{y}(x,y,z)&amp;=  e^{-(x^2 +y^2 +z^2)} -2y(2x + y)e^{-(x^2 +y^2 +z^2)}
+&amp;\quad\implies \pdiff{f}{y}(0,1,-1)&amp;=-e^{-2}
+</mrow><mrow>
+\pdiff{f}{z}(x,y,z)&amp;=  -2z(2x + y)e^{-(x^2 +y^2 +z^2)}
+&amp;\quad\implies \pdiff{f}{z}(0,1,-1)&amp;=2e^{-2}
+</mrow><mrow>
+\pdiff{g}{x}(x,y,z)&amp;=  z
+&amp;\quad\implies \pdiff{g}{x}(0,1,-1)&amp;=-1
+</mrow><mrow>
+\pdiff{g}{y}(x,y,z)&amp;=  2y+z
+&amp;\quad\implies \pdiff{g}{y}(0,1,-1)&amp;= 1
+</mrow><mrow>
+\pdiff{g}{z}(x,y,z)&amp;=  x+y+2z
+&amp;\quad\implies \pdiff{g}{z}(0,1,-1)&amp;=-1
+</mrow>
+</md>
+so that gradients are
+<me>
+\vnabla f(0,1,-1) =e^{-2}\llt 2,-1,2\rgt\qquad
+\vnabla g(0,1,-1) =\llt -1,1,-1\rgt
+</me>
+</p>
+
+<p>(b) The bird's velocity is the vector of length <m>6</m> in the direction of
+<m>\vnabla f(0,1,-1)</m>, which is
+<me>
+\vv= 6\frac{\llt 2,-1,2\rgt}{|\llt 2,-1,2\rgt|}
+=\llt 4,-2,4\rgt
+</me>
+The rate of change of <m>g</m> (per unit time) seen by the bird is
+<md>
+<mrow>
+\vnabla g(0,1,-1) \cdot \vv
+=\llt -1,1,-1\rgt \cdot \llt 4,-2,4\rgt
+= -10
+</mrow>
+</md>
+</p>
+
+<p>(c) The direction of flight for the bat has to be perpendicular to both
+<m>\vnabla f(0,1,-1) =e^{-2}\llt 2,-1,2\rgt</m> and
+<m>\vnabla g(0,1,-1) =\llt -1,1,-1\rgt</m>. Any vector which is a non zero constant
+times
+<md>
+<mrow>
+\llt 2,-1,2\rgt \times \llt -1,1,-1\rgt
+    =\det\left[\begin{matrix}
+            \hi  &amp;  \hj  &amp;  \hk
+</mrow><mrow>
+             2   &amp;  -1   &amp;   2
+</mrow><mrow>
+            -1   &amp;   1   &amp;  -1
+            \end{matrix}\right]
+=\llt -1 \,,\, 0 \,,\, 1 \rgt
+</mrow>
+</md>
+is perpendicular to both <m>\vnabla f(0,1,-1)</m> and
+<m>\vnabla g(0,1,-1)</m>. In addition, the direction of flight for the bat
+must have a positive <m>z</m>--component. So any vector which is a (strictly)
+positive constant times <m>\llt -1 \,,\, 0 \,,\, 1 \rgt</m> is fine.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2011D</fromexam></title>
+<statement><p>
+A bee is flying along the curve of intersection of the surfaces <m>3z + x^2 + y^2 = 2</m> and
+<m>z = x^2 - y^2</m> in the direction for which <m>z</m> is increasing. At time <m>t = 2</m>, the bee passes
+through the point <m>(1, 1, 0)</m> at speed <m>6</m>.
+<ol label="a">
+<li>
+Find the velocity (vector) of the bee at time <m>t = 2</m>.
+</li>
+<li>
+The temperature <m>T</m> at position <m>(x, y, z)</m> at time <m>t</m> is given by <m>T = xy - 3x+2yt+z</m>.
+Find the rate of change of temperature experienced by the bee at time <m>t = 2</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\vv = \llt -2 \,,\, -4 \,,\, 4 \rgt</m></p><p>
+(b) <m>-10</m>
+</p></answer>
+
+<solution><p>
+(a) Let's use <m>\vv</m> to denote the bee's velocity vector at time <m>t=2</m>.
+<ul>
+<li>
+The bee's direction of motion is tangent to the curve.
+That tangent is perpendicular to both the normal vector to
+<m>3z + x^2 + y^2 = 2</m> at <m>(1,1,0)</m>, which is
+<me>
+\llt 2x\,,\,2y\,,\,3\rgt\Big|_{(x,y,z)=(1,1,0)} = \llt 2\,,\,2\,,\,3\rgt
+</me>
+and the normal vector to <m>z = x^2 - y^2</m> at <m>(1,1,0)</m>, which is
+<me>
+\llt 2x\,,\,-2y\,,\,-1\rgt\Big|_{(x,y,z)=(1,1,0)} = \llt 2\,,\,-2\,,\,-1\rgt
+</me>
+So <m>\vv</m> has to be some constant times
+<md>
+<mrow>
+\llt 2\,,\,2\,,\,3\rgt \times \llt 2\,,\,-2\,,\,-1\rgt
+    =\det\left[\begin{matrix}
+            \hi  &amp;  \hj  &amp;  \hk
+</mrow><mrow>
+            2    &amp;   2   &amp;    3
+</mrow><mrow>
+            2    &amp;  -2   &amp;   -1
+            \end{matrix}\right]
+=\llt 4 \,,\, 8 \,,\, -8 \rgt
+</mrow>
+</md>
+or, equivalently, some constant times <m>\llt 1 \,,\, 2 \,,\, -2 \rgt</m>.
+</li>
+<li>
+Since the <m>z</m>--component of <m>\vv</m> has to be positive,
+<m>\vv</m> has to be a positive constant times
+<m>\llt -1 \,,\, -2 \,,\, 2 \rgt</m>.
+</li>
+<li>
+Since the speed has to be <m>6</m>,  <m>\vv</m> has to have length <m>6</m>.
+</li>
+</ul>
+As <m>|\llt -1 \,,\, -2 \,,\, 2 \rgt|=3</m>
+<me>
+\vv = 2\llt -1 \,,\, -2 \,,\, 2 \rgt
+    =\llt -2 \,,\, -4 \,,\, 4 \rgt
+</me>
+</p>
+
+<p>(b) <em>Solution 1</em>:
+Suppose that the bee is at <m>\big(x(t),y(t),z(t)\big)</m> at time <m>t</m>.
+Then the temperature that the bee feels at time <m>t</m> is
+<md>
+<mrow>
+T\big(x(t),y(t),z(t),t\big) = x(t) y(t) -3x(t) +2y(t) t +z(t)
+</mrow>
+</md>
+Then the rate of change of temperature (per unit time) felt by the bee at time
+<m>t=2</m> is
+<md>
+<mrow>
+\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
+&amp;=x'(2)y(2) + x(2)y'(2) -3x'(2) +2y'(2)2+2y(2) +z'(2)
+</mrow><mrow>
+</mrow>
+</md>
+Recalling that, at time <m>t=2</m>, the bee is at <m>(1,1,0)</m> and has velocity
+<m>\llt -2 \,,\, -4 \,,\, 4 \rgt</m>
+<md>
+<mrow>
+\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
+&amp;=(-2)(1) + (1)(-4) -3(-2) +2(-4)2+2(1) +4
+</mrow><mrow>
+&amp;=-10
+</mrow>
+</md>
+</p>
+
+<p>(b) <em>Solution 2</em>:
+Suppose that the bee is at <m>\big(x(t),y(t),z(t)\big)</m> at time <m>t</m>.
+Then the temperature that the bee feels at time <m>t</m> is
+<md>
+<mrow>
+T\big(x(t),y(t),z(t),t\big)
+</mrow>
+</md>
+By the chain rule, the rate of change of temperature (per unit time)
+felt by the bee at time <m>t=2</m> is
+<md>
+<mrow>
+\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
+&amp;=\bigg[\pdiff{T}{x}\big(x(t),y(t),z(t),t\big)\,x'(t)
+      +\pdiff{T}{y}\big(x(t),y(t),z(t),t\big)\,y'(t)
+</mrow><mrow>&amp;\hskip0.5in
+      +\pdiff{T}{z}\big(x(t),y(t),z(t),t\big)\,z'(t)
+      +\pdiff{T}{t}\big(x(t),y(t),z(t),t\big)\bigg]_{t=2}
+</mrow>
+</md>
+Recalling that <m>T = xy - 3x+2yt+z</m>, we have
+<md>
+<mrow>
+\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
+&amp;=[y(2)-3]x'(2) + [x(2)+2\times 2]y'(2) +z'(2) +2y(2)
+</mrow>
+</md>
+Also recalling that, at time <m>t=2</m>, the bee is at <m>(1,1,0)</m> and has velocity
+<m>\llt -2 \,,\, -4 \,,\, 4 \rgt</m>
+<md>
+<mrow>
+\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
+&amp;=[-2](-2) + [5](-4) +4  +2
+</mrow><mrow>
+&amp;=-10
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2012a</fromexam></title>
+<statement><p>
+The temperature at a point <m>(x, y, z)</m> is given by
+<m>T(x, y, z) = 5e^{-2x^2-y^2-3z^2}</m>,
+where <m>T</m> is measured in centigrade and <m>x</m>, <m>y</m>, <m>z</m> in meters.
+<ol label="a">
+<li>
+Find the rate of change of temperature at the point <m>P(1, 2, -1)</m> in the
+direction toward the point <m>(1, 1, 0)</m>.
+</li>
+<li>
+In which direction does the temperature decrease most rapidly?
+</li>
+<li>
+Find the maximum rate of decrease at <m>P</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>25\,\sqrt{2}\,e^{-9}</m></p><p>
+(b) <m>\frac{\llt 2,2,-3\rgt}{\sqrt{17}}</m></p><p>
+(c) <m>-10\sqrt{17} e^{-9}</m>
+</p></answer>
+
+<solution><p>
+(a) We are to find the rate of change of <m>T(x,y,z)</m> at <m>(1, 2, -1)</m>
+in the direction <m>\llt 1, 1, 0\rgt - \llt 1, 2, -1\rgt = \llt 0,-1,1 \rgt</m>.
+That rate of change (per unit distance) is the directional derivative
+<md>
+<mrow>
+D_{\frac{\llt 0,-1,1 \rgt}{\sqrt{2}}} T(1,2,-1)
+=\vnabla T(1,2,-1)\cdot \frac{\llt 0,-1,1 \rgt}{\sqrt{2}}
+</mrow>
+</md>
+As
+<md>
+<mrow>
+\pdiff{T}{x}(x,y,z)&amp;= -20 x\,e^{-2x^2-y^2-3z^2} &amp;
+   \pdiff{T}{x}(1,2,-1)&amp;= -20\, e^{-9}
+</mrow><mrow>
+\pdiff{T}{y}(x,y,z)&amp;= -10 y\,e^{-2x^2-y^2-3z^2} &amp;
+   \pdiff{T}{y}(1,2,-1)&amp;= -20\, e^{-9}
+</mrow><mrow>
+\pdiff{T}{z}(x,y,z)&amp;= -30 z\,e^{-2x^2-y^2-3z^2} &amp;
+   \pdiff{T}{z}(1,2,-1)&amp;= 30\, e^{-9}
+</mrow>
+</md>
+the directional derivative
+<md>
+<mrow>
+D_{\frac{\llt 0,-1,1 \rgt}{\sqrt{2}}} T(1,2,-1)
+=e^{-9}\llt -20,-20,30\rgt\cdot \frac{\llt 0,-1,1 \rgt}{\sqrt{2}}
+=\frac{50}{\sqrt{2}}e^{-9} =25\,\sqrt{2}\,e^{-9}
+</mrow>
+</md>
+</p>
+
+<p>(b) The direction of maximum rate of decrease is <m>-\vnabla T(1,2,-1)</m>.
+A unit vector in that direction is <m>\frac{\llt 2,2,-3\rgt}{\sqrt{17}}</m>.
+</p>
+
+<p>(c) The maximum rate of decrease at <m>P</m> is
+  <m>-|\vnabla T(1,2,-1)|=-10 e^{-9} |\llt -2,-2,3\rgt|
+                      = -10\sqrt{17} e^{-9}</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2012D</fromexam></title>
+<statement><p>
+The directional derivative of a function <m>w = f(x, y, z)</m> at a point <m>P</m> in the direction
+of the vector <m>\hi</m> is 2, in the direction of the vector <m>\hi+\hj</m> is <m>-\sqrt{2}</m>, and
+in the direction of the vector <m>\hi+\hj+\hk</m> is <m>-\frac{5}{\sqrt{3}}</m>.
+Find the direction in which the function <m>w = f(x, y, z)</m>  has the
+maximum rate of change at the point <m>P</m> . What is this maximum rate of change?
+</p></statement>
+
+<answer><p>
+The unit vector in the direction of maximum rate of change is
+<m>\frac{\llt 2\,,\,-4\,,\,-3\rgt}{\sqrt{29}}</m>.
+The maximum rate of change is <m>\sqrt{29}</m>.
+</p></answer>
+
+<solution><p>
+Denote by <m>\llt a\,,\,b\,,\,c\rgt</m> the gradient of the function <m>f</m> at
+<m>P</m>. We are told
+<md>
+<mrow>
+\llt a\,,\,b\,,\,c\rgt \cdot \llt 1\,,\,0\,,\,0\rgt &amp;= 2
+</mrow><mrow>
+\llt a\,,\,b\,,\,c\rgt \cdot \frac{1}{\sqrt{2}}\llt 1\,,\,1\,,\,0\rgt &amp;= -\sqrt{2}
+</mrow><mrow>
+\llt a\,,\,b\,,\,c\rgt \cdot \frac{1}{\sqrt{3}}\llt 1\,,\,1\,,\,1\rgt &amp;= -\frac{5}{\sqrt{3}}
+</mrow>
+</md>
+Simplifying
+<md>
+<mrow>
+a&amp;=2
+</mrow><mrow>
+a+b&amp;=-2
+</mrow><mrow>
+a+b+c&amp;=-5
+</mrow>
+</md>
+From these equations we read off, in order,
+<m>a=2</m>, <m>b=-4</m> and <m>c=-3</m>.
+The function <m>f</m> has maximum rate of change at <m>P</m> in the
+direction if the gradient of <m>f</m>. The unit vector in that direction is
+<me>
+\frac{\llt 2\,,\,-4\,,\,-3\rgt}{|\llt 2\,,\,-4\,,\,-3\rgt|}
+=\frac{\llt 2\,,\,-4\,,\,-3\rgt}{\sqrt{29}}
+</me>
+The maximum rate of change is the magnitude of the gradient, which is
+<m>\sqrt{29}</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2013D</fromexam></title>
+<statement><p>
+Suppose it is known that the direction of the fastest increase of the
+function <m>f(x,y)</m> at the origin is given by the vector <m>\llt 1, 2\rgt</m>.
+Find a unit vector <m>u</m> that is tangent to the level curve of <m>f(x,y)</m>
+that passes through the origin.
+</p></statement>
+
+<answer><p>
+<m>\pm\frac{1}{\sqrt{5}}\llt 2, -1\rgt</m>
+</p></answer>
+
+<solution><p>
+We are told that the direction of fastest increase for the
+function <m>f(x,y)</m> at the origin is given by the vector <m>\llt 1, 2\rgt</m>.
+This implies that <m>\vnabla f(0,0)</m> is parallel to <m>\llt 1, 2\rgt</m>.
+This in turn implies that <m>\llt 1, 2\rgt</m> is normal to the level curve
+of <m>f(x,y)</m> that passes through the origin. So <m>\llt 2, -1\rgt</m>, being
+perpendicular to <m>\llt 1, 2\rgt</m>,  is tangent to the level curve of
+<m>f(x,y)</m> that passes through the origin.
+The unit vectors that are parallel to <m>\llt 2, -1\rgt</m>
+are <m>\pm\frac{1}{\sqrt{5}}\llt 2, -1\rgt</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2013D</fromexam></title>
+<statement><p>
+The shape of a hill is given by <m>z = 1000 - 0.02x^2 - 0.01y^2</m>.
+Assume that the <m>x</m>--axis is pointing East, and the <m>y</m>--axis
+is pointing North, and all distances are in metres.
+<ol label="a">
+<li>
+What is the direction of the steepest ascent at the point <m>(0, 100, 900)</m>?
+(The answer should be in terms of directions of the compass).
+</li>
+<li>
+What is the slope of the hill at the point <m>(0, 100, 900)</m> in the
+direction from (a)?
+</li>
+<li>
+If you ride a bicycle on this hill in the direction of the steepest
+descent at <m>5</m> m/s, what is the rate of change of your altitude
+(with respect to time) as you pass through the point (0, 100, 900)?
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) South</p><p>
+(b) <m>2</m></p><p>
+(c) <m>-2\sqrt{5}</m>
+</p></answer>
+
+<solution><p>
+ Write
+<m>h(x,y) = 1000 -0.02\,x^2-0.01 y^2</m> so that the hill is <m>z=h(x,y)</m>.
+</p>
+
+<p>(a) The direction of steepest ascent at <m>(0,100,900)</m>
+is the direction of maximum rate of increase of <m>h(x,y)</m> at <m>(0,100)</m>
+which is <m>\vnabla h(0,100) = \llt 0\,,\, -0.01(2)(100)\rgt
+                           = \llt 0\,,\,-2\rgt</m>. In compass
+directions that is South.
+</p>
+
+<p>(b) The slope of the hill there is
+<md>
+<mrow>
+\vnabla h(0,100)\cdot\llt 0,-1\rgt
+=-\pdiff{h}{y}(0,100) = 2
+</mrow>
+</md>
+</p>
+
+<p>(c) Denote by <m>\big(x(t),y(t),z(t)\big)</m> your position at time <m>t</m>
+and suppose that you are at <m>(0,100,900)</m> at time <m>t=0</m>.
+Then we know
+<ul>
+<li>
+<m>z(t) = 1000 -0.02\,x(t)^2-0.01 y(t)^2</m>, so that
+<m>z'(t) = -0.04\,x(t)x'(t)-0.02 y(t)y'(t)</m>,
+ since you are on the hill and
+</li>
+<li>
+<m>x'(0)=0</m> and <m>y'(0) \gt 0</m> since you are going in the direction of steepest
+descent and
+</li>
+<li>
+<m>x'(0)^2+y'(0)^2+z'(0)^2=25</m> since you are moving at speed <m>5</m>.
+</li>
+</ul>
+Since <m>x(0)</m> and <m>y(0)=100</m>, we have <m>z'(0)= -0.02(100)y'(0) = -2y'(0)</m>. So
+<md>
+<mrow>
+25 = x'(0)^2+y'(0)^2+z'(0)^2
+   =5\ y'(0)^2
+&amp;\implies y'(0) = \sqrt{5}
+</mrow><mrow>
+&amp;\implies \llt x'(0)\,,\,y'(0)\,,\,z'(0) \rgt
+          =\llt 0\,,\, \sqrt{5}\,,\, -2\sqrt{5}\rgt
+</mrow>
+</md>
+and your rate of change of altitude is
+<md>
+<mrow>
+\diff{}{t} h\big(x(t)\,,\,y(t)\big)\Big|_{t=0}
+&amp;=\vnabla h(0,100)\cdot \llt x'(0)\,,\,y'(0) \rgt
+=\llt 0\,,\,-2\rgt \cdot \llt 0\,,\, \sqrt{5}\rgt
+=-2\sqrt{5}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2014A</fromexam></title>
+<statement><p>
+Let the pressure <m>P</m> and temperature <m>T</m> at a point <m>(x, y, z)</m> be
+<me>
+P(x,y,z) = \frac{x^2+2y^2}{1+z^2},\qquad
+T(x,y,z) = 5 + xy - z^2
+</me>
+<ol label="a">
+<li>
+If the position of an airplane at time <m>t</m> is
+<me>
+(x(t), y(t), z(t)) = (2t, t^2 - 1, \cos t)
+</me>
+find <m>\diff{}{t} (PT)^2</m> at time <m>t = 0</m> as observed from the airplane.
+</li>
+<li>
+In which direction should a bird at the point <m>(0,-1,1)</m> fly if it
+wants to keep both <m>P</m> and <m>T</m> constant. (Give one possible direction
+vector. It does not need to be a unit vector.)
+</li>
+<li>
+An ant crawls on the surface <m>z^3 + zx + y^2 = 2</m>.
+When the ant is at the point <m>(0,-1,1)</m>, in which direction should it
+go for maximum increase of the temperature <m>T = 5 + xy - z^2</m>?
+Your answer should be a vector <m>\llt a, b, c\rgt</m>, not necessarily
+of unit length. (Note that the ant cannot crawl in the direction of
+the gradient because that leads off the surface. The direction vector
+<m>\llt a, b, c\rgt</m> has to be on the tangent plane to the surface.)
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>-16</m></p><p>
+(b) <m>C \llt  4\,,\,  1 \,,\, -2\rgt</m> for any nonzero constant <m>C</m>
+</p>
+
+<p>(c) Any positive non zero multiple of <m>-\llt 1\,,\, 2\,,\,1\rgt</m> will do.
+</p></answer>
+
+<solution><p>
+Reading through the question as a whole we see that we will need
+<ul>
+<li>
+for part (a), the gradient of <m>PT</m> at <m>(2t, t^2 - 1, \cos t)\Big|_{t=0}
+                                        =(0,-1,1)</m>
+</li>
+<li>
+for part (b), the gradients of both <m>P</m> and <m>T</m> at <m>(0,-1,1)</m> and
+</li>
+<li>
+for part (c), the gradient of <m>T</m> at <m>(0,-1,1)</m> and the gradient of
+<m>S=z^3+xz+y^2</m> at <m>(0,-1,1)</m> (to get the normal vector to the surface
+at that point).
+</li>
+</ul>
+So, by way of preparation, let's compute all of these gradients.
+<md>
+<mrow>
+\vnabla P(x,y,z) &amp;= \frac{2x}{1+z^2}\hi + \frac{4y}{1+z^2}\hj
+                          -\frac{(x^2+2y^2)2z}{{(1+z^2)}^2}\hk  &amp;
+\vnabla P(0,-1,1) &amp;=  -2\,\hj  - \hk
+</mrow><mrow>
+\vnabla T(x,y,z) &amp;= y\,\hi + x\,\hj -2z\,\hk  &amp;
+\vnabla T(0,-1,1) &amp;=  -\hi  - 2\hk
+
+</mrow><mrow>
+\vnabla S(x,y,z) &amp;= z\,\hi + 2y\,\hj +(x+3z^2)\,\hk  &amp;
+\vnabla S(0,-1,1) &amp;= \hi  - 2\hj +3\,\hk
+</mrow>
+</md>
+To get the gradient of <m>PT</m> we use the product rule
+<me>
+\vnabla(PT)(x,y,z) =T(x,y,z)\,\vnabla P(x,y,z) +P(x,y,z)\,\vnabla T(x,y,z)
+</me>
+so that
+<md>
+<mrow>
+\vnabla(PT)(0,-1,1)
+  &amp;=T(0,-1,1)\,\vnabla P(0,-1,1) +P(0,-1,1)\,\vnabla T(0,-1,1)
+</mrow><mrow>
+  &amp;=(5+0-1) \big(-2\,\hj  - \hk\big) + \frac{0+2}{1+1}\big(-\hi  - 2\hk\big)
+</mrow><mrow>
+  &amp;= -\hi -8\,\hj -6\,\hk
+</mrow>
+</md>
+</p>
+
+<p>(a) Since <m>\diff{}{t}(PT)^2 = 2(PT)\diff{}{t}(PT)</m>, and the velocity vector of
+the plane at time <m>0</m> is
+<me>
+\diff{}{t}\llt 2t, t^2 - 1, \cos t\rgt\Big|_{t=0}
+=\llt 2, 2t, -\sin t\rgt\Big|_{t=0}
+=\llt 2,0,0\rgt
+</me>
+we have
+<md>
+<mrow>
+\diff{}{t}(PT)^2\Big|_{t=0}
+&amp;= 2\,P(0,-1,1)\,T(0,-1,1)\ \vnabla(PT)(0,-1,1)\cdot \llt 2,0,0\rgt
+</mrow><mrow>
+&amp;= 2\ \frac{0+2}{1+1}\ (5+0-1)\llt -1,-8,-6\rgt \cdot \llt 2,0,0\rgt
+</mrow><mrow>
+&amp;= -16
+</mrow>
+</md>
+</p>
+
+<p>(b)
+The direction should be perpendicular to <m>\vnabla P(0,-1,1)</m>
+(to keep <m>P</m> constant) and should also be perpendicular to
+<m>\vnabla T(0,-1,1)</m> (to keep <m>T</m> constant). So any nonzero constant times
+<md>
+<mrow>
+\pm \vnabla P(0,-1,1) \times \vnabla T(0,-1,1)
+&amp;=\pm \llt 0 \,,\, -2 \,,\, -1\rgt  \times  \llt -1\,,\,0 \,,\,- 2\rgt
+=\pm \det\left[\begin{matrix}
+                     \hi &amp; \hj &amp; \hk
+</mrow><mrow>
+                     0   &amp;  2  &amp; 1
+</mrow><mrow>
+                     1   &amp;  0  &amp; 2
+                \end{matrix}\right]
+</mrow><mrow>
+&amp;=\pm \llt  4\,,\,  1 \,,\, -2\rgt
+</mrow>
+</md>
+are allowed directions.
+</p>
+
+<p>(c) We want the direction to be as close as possible to <m>\vnabla T(0,-1,1)
+=\llt  -1 \,,\, 0 \,,\, -2\rgt</m> while still being tangent to the surface,
+i.e. being perpendicular to the normal vector
+<m>\vnabla S(0,-1,1)=\llt 1 \,,\, -2 \,,\, 3\rgt</m>.
+We can get that optimal direction by subtracting from <m>\vnabla T(0,-1,1)</m>
+the projection of <m>\vnabla T(0,-1,1)</m> onto the normal vector.
+</p>
+<sidebyside width="60%">
+  <image source="pfigs/OE14A_2"/>
+</sidebyside>
+<p>
+The projection of <m>\vnabla T(0,-1,1)</m> onto the normal vector
+<m>\vnabla S(0,-1,1)</m> is
+<md>
+<mrow>
+\text{proj}_{\vnabla S(0,-1,1)}\vnabla T(0,-1,1)
+&amp;=\frac{\vnabla T(0,-1,1)\cdot \vnabla S(0,-1,1)}
+         {|\vnabla S(0,-1,1)|^2}\vnabla S(0,-1,1)
+</mrow><mrow>
+&amp;=\frac{\llt -1\,,\,0 \,,\,- 2\rgt\cdot \llt 1\,,\, -2 \,,\,3\rgt}
+         {|\llt 1\,,\, -2 \,,\,3\rgt|^2}\llt 1\,,\, -2 \,,\,3\rgt
+</mrow><mrow>
+&amp;=\frac{-7}{14}\llt 1\,,\, -2 \,,\,3\rgt
+</mrow>
+</md>
+</p>
+
+<p>So the optimal direction is
+<md>
+<mrow>
+\vd&amp;=\vnabla T(0,-1,1) -
+\text{proj}_{\vnabla S(0,-1,1)}\vnabla T(0,-1,1)
+</mrow><mrow>
+&amp;=\llt -1\,,\,0 \,,\,- 2\rgt
+  -\frac{-7}{14}\llt 1\,,\, -2 \,,\,3\rgt
+</mrow><mrow>
+&amp;= \llt -\frac{1}{2}\,,\,-1 \,,\,- \frac{1}{2}\rgt
+</mrow>
+</md>
+So any positive non zero multiple of <m>-\llt 1\,,\, 2\,,\,1\rgt</m> will do.
+Note, as a check, that <m>-\llt 1\,,\, 2\,,\,1\rgt</m> has dot product zero,
+i.e. is perpendicular to, <m>\vnabla S(0,-1,1)=\llt 1 \,,\, -2 \,,\, 3\rgt</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2014D</fromexam></title>
+<statement><p>
+Suppose that <m>f(x,y,z)</m> is a function of three variables and let
+<m>\vu = \frac{1}{\sqrt{6}} \llt 1, 1, 2\rgt</m>
+and <m>\vv = \frac{1}{\sqrt{3}} \llt 1, -1, -1\rgt</m>
+and <m>\vw = \frac{1}{\sqrt{3}} \llt 1, 1, 1\rgt</m>.
+Suppose that at a point <m>(a,b,c)</m>,
+<md>
+<mrow>
+D_\vu f&amp;=0
+</mrow><mrow>
+D_\vv f&amp;=0
+</mrow><mrow>
+D_\vw f&amp;=4
+</mrow>
+</md>
+Find <m>\vnabla f</m> at <m>(a,b,c)</m>.
+</p></statement>
+
+<answer><p>
+<m>\vnabla f(a,b,c) =\sqrt{3} \llt 2,6,-4\rgt</m>
+</p></answer>
+
+<solution><p>
+Write <m>\vnabla f(a,b,c) =\llt F,G,H\rgt</m>. We are told that
+<md>
+<mrow>
+D_\vu f&amp;=\frac{1}{\sqrt{6}} \llt 1, 1, 2\rgt \cdot \llt F,G,H\rgt = 0
+</mrow><mrow>
+D_\vv f&amp;=\frac{1}{\sqrt{3}} \llt 1, -1, -1\rgt \cdot \llt F,G,H\rgt = 0
+</mrow><mrow>
+D_\vw f&amp;=\frac{1}{\sqrt{3}} \llt 1, 1, 1\rgt \cdot \llt F,G,H\rgt = 4
+</mrow>
+</md>
+so that
+<md>
+<mrow>
+ F + G + 2H &amp;= 0 \tag{E1}
+</mrow><mrow>
+ F - G - H &amp;= 0 \tag{E2}
+</mrow><mrow>
+ F + G + H &amp;= 4\sqrt{3} \tag{E3}
+</mrow>
+</md>
+Adding (E2) and (E3) gives <m>2F=4\sqrt{3}</m> or <m>F=2\sqrt{3}</m>.
+Substituting <m>F=2\sqrt{3}</m> into (E1) and (E2) gives
+<md>
+<mrow>
+   G + 2H &amp;= -2\sqrt{3} \tag{E1}
+</mrow><mrow>
+ - G - H &amp;=  -2\sqrt{3} \tag{E2}
+</mrow>
+</md>
+Adding (E1) and (E2) gives <m>H=-4\sqrt{3}</m> and substituting
+<m>H=-4\sqrt{3}</m> back into (E2) gives <m>G=6\sqrt{3}</m>. All together
+<me>
+\vnabla f(a,b,c) =\sqrt{3} \llt 2,6,-4\rgt
+</me>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2003D</fromexam></title>
+<statement><p>
+The elevation of a hill is given by the equation
+<m>f(x,y)=x^2y^2e^{-x-y}</m>. An ant sits at the point <m>(1,1,e^{-2})</m>.
+<ol label="a">
+<li>
+Find the unit vector <m>\vu=\llt u_1,u_2\rgt</m> that maximizes
+<me>
+\lim_{t\rightarrow 0}\frac{f\big((1,1)+t\vu\big)-f(1,1)}{t}
+</me>
+</li>
+<li>
+Find a vector <m>\vv=\llt v_1,v_2,v_3\rgt</m> pointing in the direction
+of the path that the ant could take in order to stay on the same elevation
+level <m>e^{-2}</m>.
+</li>
+<li> Find a vector <m>\vv=\llt v_1,v_2,v_3\rgt</m> pointing in the direction
+of the path that the ant should take in order to maximize its instantaneous
+rate of level increase.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\frac{1}{\sqrt{2}}\llt 1,1\rgt</m></p><p>
+(b) <m>\vv=c\llt 1,-1,0\rgt</m> for any nonzero constant <m>c</m>
+</p>
+
+<p>(c) <m>\vv=\frac{1}{\sqrt{2}}\llt 1,1,2e^{-2}\rgt</m>. Any positive multiple
+of this vector is also a correct answer.
+</p></answer>
+
+<solution><p>
+(a) The expression
+<m>
+\lim_{t\rightarrow 0}\frac{f((1,1)+t\vu)-f(1,1)}{t}
+</m>
+is the directional derivative of <m>f</m> at <m>(1,1)</m> in the direction <m>\vu</m>,
+which is <m>D_\vu f(1,1)=\vnabla f(1,1)\cdot\vu</m>. This is mazimized when <m>\vu</m> is
+parallel to  <m>\vnabla f(1,1)</m>. Since
+<me>
+f_x(x,y)=2xy^2e^{-x-y}-x^2y^2e^{-x-y}\qquad
+f_y(x,y)=2x^2ye^{-x-y}-x^2y^2e^{-x-y}
+</me>
+we have
+<me>
+\vnabla f(1,1)=e^{-2}\llt 1,1\rgt
+</me>
+so that the desired unit vector <m>\vu</m> is <m>\frac{1}{\sqrt{2}}\llt 1,1\rgt</m>.
+</p>
+
+<p>(b) In order to remain at elevation <m>e^{-2}</m>, the ant must move so
+that <m>D_\vu f(1,1)=0</m>. This is the case if <m>\vu\perp\vnabla f(1,1)</m>.
+For example, we can take <m>\vu=\llt 1,-1\rgt</m>. When the ant moves
+in this direction, while remaining on the surface of the hill, its
+vertical component of velocity is zero. So <m>\vv=c\llt 1,-1,0\rgt</m> for any
+nonzero constant <m>c</m>.
+</p>
+
+<p>(c) In order to maximize its instantaneous rate of level increase,
+the ant must choose the <m>x</m> and <m>y</m> coordinates of its velocity vector
+in the same direction as  <m>\vnabla f(1,1)</m>. Namely <m>\vu=c\llt 1,1\rgt</m> for any
+<m>c \gt 0</m>. To make <m>\vu</m> a unit vector, we choose <m>c=\frac{1}{\sqrt{2}}</m>.
+The corresponding value of the <m>z</m> coordinate of its velocity vector is
+the rate of change of <m>f</m> per unit horizontal distance travelled, which
+is the directional derivative
+<me>
+D_\vu f(1,1)=\vnabla f(1,1)\cdot\vu=e^{-2}\llt 1,1\rgt \cdot\llt c,c\rgt
+=2ce^{-2}
+</me>
+ So <m>\vv=\frac{1}{\sqrt{2}}\llt 1,1,2e^{-2}\rgt</m>. Any positive multiple
+of this vector is also a correct answer.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2001D</fromexam></title>
+<statement><p>
+Let the temperature in a region of space be given by
+<m>T(x,y,z)=3x^2+\half y^2+2z^2</m> degrees.
+<ol label="a">
+<li>
+A sparrow is flying along the curve <m>\vr(s)=\big(\frac{1}{3}s^3,2s,s^2\big)</m>
+at a constant speed of <m>3{\rm ms}^{-1}</m>. What is the velocity of the sparrow
+when <m>s=1</m>?
+</li>
+<li>
+At what rate does the sparrow feel the temperature is changing
+at the point <m>A\big(\frac{1}{3},2,1\big)</m> for which <m>s=1</m>.
+</li>
+<li>
+At the point <m>A\big(\frac{1}{3},2,1\big)</m> in what direction
+will the temperature be decreasing at maximum rate?
+</li>
+<li>
+ An eagle crosses the path of the sparrow
+at <m>A\big(\frac{1}{3},2,1\big)</m>, is moving at right angles to the path
+of the sparrow, and is also moving in a direction in which the temperature
+remains constant. In what directions could the eagle be flying as it passes
+through the point <m>A</m>?
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\llt 1,2,2\rgt</m></p><p>
+(b) <m>14^\circ/{\rm s}</m></p><p>
+(c) any positive constant times <m>-\llt 2,2,4\rgt</m>
+</p>
+
+<p>(d) any positive constant times <m>\pm\llt 2,0,-1\rgt</m>
+</p></answer>
+
+<solution><p>
+(a) The direction of motion at <m>s=1</m> is given by the tangent vector
+<me>
+\vr'(s)=\llt s^2,2,2s\rgt\big|_{s=1}=\llt 1,2,2\rgt
+</me>
+Since the length of the velocity vector must be <m>3</m>,
+<me>
+\text{velocity}=\vv=3\frac{\llt 1,2,2\rgt}{|\llt 1,2,2\rgt|}=\llt 1,2,2\rgt
+</me>
+</p>
+
+<p>(b) The rate of change of temperature per unit distance felt by the
+sparrow at <m>s=1</m> is <m>\vnabla T\big(\frac{1}{3},2,1\big)\cdot\frac{\vv}{|\vv|}</m>.
+ The rate of change of temperature per unit time felt by the
+sparrow at <m>s=1</m> is
+<md>
+<mrow>
+\vnabla T\left(\frac{1}{3},2,1\right)\cdot\frac{\vv}{|\vv|}\ |\vv|
+&amp;=\vnabla T\left(\frac{1}{3},2,1\right)\cdot\vv
+=\vv\cdot\llt 6x,y,4z\rgt\Big|_{({1\over3},2,1\big)}
+</mrow><mrow>
+&amp;=\llt 1,2,2\rgt\cdot\llt 2,2,4\rgt=14^\circ/{\rm s}
+</mrow>
+</md>
+</p>
+
+<p>(c) The temperature decreases at maximum rate in the direction
+opposite the temperature gradient, which is (any positive constant times) <m>-\llt 2,2,4\rgt</m>.
+</p>
+
+<p>(d) The eagle is moving at right angles to the direction of motion
+of the sparrow, which is <m>\llt 1,2,2\rgt</m>. As the eagle is also moving
+in a direction for which the temperature remains constant, it must
+be moving perpendicularly to the temperature gradient, <m>\llt 2,2,4\rgt</m>.
+So the direction of the eagle must be (a posiitve constant times)
+one of
+<md>
+<mrow>
+   \pm\llt 1,2,2\rgt \times\llt 2,2,4\rgt
+=\pm\det\left[\begin{matrix}
+                     \hi &amp; \hj &amp; \hk
+</mrow><mrow>
+                     1   &amp;  2  &amp; 2
+</mrow><mrow>
+                     2   &amp;  2  &amp; 4
+                \end{matrix}\right]
+=\pm\llt 4,0,-2\rgt
+</mrow>
+</md>
+or equivalently, any positive constant times <m>\pm\llt 2,0,-1\rgt</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2001A</fromexam></title>
+<statement><p>
+Assume that the temperature <m>T</m> at a point <m>(x,y,z)</m> near
+a flame at the origin is given by
+<me>
+T(x,y,z)=\frac{200}{1+x^2+y^2+z^2}
+</me>
+where the coordinates are given in meters and the temperature is in degrees
+Celsius. Suppose that at some moment in time, a moth is at the point <m>(3,4,0)</m>
+and is flying at a constant speed of <m>1 {\rm m/s}</m> in the direction of maximum
+increase of temperature.
+<ol label="a">
+<li>
+Find the velocity vector <m>\vv</m> of the moth at this moment.
+</li>
+<li>
+ What rate of change of temperature does the moth feel at that moment?
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\vv=-\llt \frac{3}{5},\frac{4}{5},0\rgt</m></p><p>
+(b) <m>\frac{500}{169}\approx 2.96^\circ/{\rm s}</m>
+</p></answer>
+
+<solution><p>
+(a) The moth is moving the direction of the temperature gradient
+at <m>(3,4,0)</m>, which is
+<me>
+\vnabla T(3,4,0)
+=-200\frac{2x\hi+2y\hj+2z\hk}{{(1+x^2+y^2+z^2)}^2}\bigg|_{(3,4,0)}
+=-400\frac{3\hi+4\hj}{26^2}
+</me>
+Since the speed of the moth is <m>1 {\rm m/s}</m> its velocity vector is a vector
+of length one in direction <m>-\frac{400}{26^2}\llt 3,4,0\rgt</m> and hence is
+<m>\vv=-\frac{\llt 3,4,0\rgt}{|\llt 3,4,0\rgt|}
+=-\llt\frac{3}{5},\frac{4}{5},0\rgt</m>.
+</p>
+
+<p>(b) The rate of change of temperature (per unit time) the moth feels at
+that time is
+<me>
+\vnabla T(3,4,0)\cdot\vv
+=\frac{400}{26^2}\llt 3,4,0\rgt\cdot \llt\frac{3}{5},\frac{4}{5},0\rgt
+=\frac{400\times25}{26^2\times 5}
+=\frac{500}{169}\approx 2.96^\circ/{\rm s}
+</me>
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2000D</fromexam></title>
+<statement><p>
+We say that <m>u</m> is inversely proportional to <m>v</m> if there
+is a constant <m>k</m> so that <m>u=k/v</m>. Suppose that the temperature <m>T</m> in
+a metal ball is inversely proportional to the distance from the centre
+of the ball, which we take to be the origin. The temperature at the point
+<m>(1,2,2)</m> is <m>120^\circ</m>.
+<ol label="a">
+<li>
+Find the constant of proportionality.
+</li>
+<li>
+Find the rate of change of <m>T</m> at <m>(1,2,2)</m> in the direction
+towards the point <m>(2,1,3)</m>.
+</li>
+<li>
+Show that at most points in the ball, the direction of greatest
+increase is towards the origin.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>360</m></p><p>
+(b) <m>-\frac{40}{3\sqrt{3}}\approx-7.70</m></p><p>
+(c) <m>\vnabla T(x,y,z)=-360\frac{x\hi+y\hj+z\hk}{{(x^2+y^2+z^2)}^{3/2}}</m>
+</p></answer>
+
+<solution><p>
+(a)
+We are told that <m>T(x,y,z)=\frac{k}{|\llt x,y,z\rgt|}
+=\frac{k}{\sqrt{x^2+y^2+z^2}}</m>
+for some constant <m>k</m> and that
+<me>
+120=T(1,2,2)=\frac{k}{|\llt 1,2,2\rgt|}
+\implies k=120\times\sqrt{1+2^2+2^2}
+          = 360
+</me>
+</p>
+
+<p>(b) The (unit) direction from <m>(1,2,2)</m> to <m>(2,1,3)</m>
+is <m>\vd=\frac{\llt 2,1,3\rgt-\llt 1,2,2\rgt}{|\llt 2,1,3\rgt-\llt 1,2,2\rgt|}
+=\frac{\llt 1,-1,1\rgt}{|\llt 1,-1,1\rgt|}=\frac{1}{\sqrt{3}}\llt 1,-1,1\rgt</m>.
+The desired rate of change of temperature is
+<md>
+<mrow>
+D_{\vd} T(1,2,2)
+&amp;=\vnabla T(1,2,2)\cdot\vd
+=-360\frac{x\hi+y\hj+z\hk}{{(x^2+y^2+z^2)}^{3/2}}\Big|_{\llt 1,2,2\rgt}\cdot\vd
+
+</mrow><mrow>
+&amp;=-360\frac{\llt 1,2,2\rgt}{27}\cdot\frac{\llt 1,-1,1\rgt}{\sqrt{3}}
+=-\frac{40}{3\sqrt{3}}\approx-7.70
+</mrow>
+</md>
+degrees per unit distance.
+</p>
+
+<p>(c) At <m>(x,y,z)</m>, the direction of greatest increase is in the direction
+of the temperature gradient at <m>(x,y,z)</m>, which is
+<m>\vnabla T(x,y,z)
+=-360\frac{x\hi+y\hj+z\hk}{{(x^2+y^2+z^2)}^{3/2}}</m>
+and which points opposite to the radius vector. That is, it points towards
+the origin. This argument only fails at <m>(x,y,z)=(0,0,0)</m>, where the gradient,
+and indeed <m>T(x,y,z)</m>, is not defined.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2000A</fromexam></title>
+<statement><p>
+The depth of a lake in the <m>xy</m>-plane is equal to
+   <m>f(x, y) = 32-x^2-4x-4y^2</m> meters.
+<ol label="a">
+<li>
+Sketch the shoreline of the lake in the <m>xy</m>-plane.
+</li>
+</ol>
+Your calculus instructor is in the water at the point <m>(-1, 1)</m>.
+Find a unit vector which indicates in which direction he should swim
+in order to:
+<ol label="a">
+<li>[(b)]
+stay at a constant depth?
+</li>
+<li>[(c)]
+increase his depth as rapidly as possible (i.e. be most likely to drown)?
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="10% 80%">
+<p>(a)</p>
+<image source="pfigs/OE00AQ3"/>
+</sidebyside>
+<p>
+(b) <m>\pm\frac{1}{\sqrt{17}}\llt 4,-1\rgt</m>
+</p><p>
+(c) <m>-\frac{1}{\sqrt{17}}\llt 1,4\rgt</m>
+</p></answer>
+
+<solution><p>
+(a) The shoreline is <m>f(x,y)=0</m> or <m>x^2+4x+4y^2=32</m> or <m>(x+2)^2+4y^2=36</m>,
+which is an ellipse centred on <m>(-2,0)</m> with semiaxes <m>6</m> in the <m>x</m>-direction
+and <m>3</m> in the <m>y</m>-direction.
+</p>
+<sidebyside width="60%">
+  <image source="pfigs/OE00AQ3"/>
+</sidebyside>
+<p>
+(b,c) The gradient of <m>f</m> at <m>(-1,1)</m> is
+<me>
+\vnabla f(-1,1)=\big[(-2x-4)\,\hi-8y\,\hj\big]_{(-1,1)}=-2\,\hi-8\,\hj
+</me>
+To remain at constant depth, he should swim perpendicular to the depth
+gradient. So he should swim in direction <m>\pm\frac{1}{\sqrt{17}}\llt 4,-1\rgt</m>.
+To increase his depth as rapidly as possible, he should swim in the direction
+of the depth gradient, which is <m>-\frac{1}{\sqrt{17}}\llt 1,4\rgt</m>.
+</p></solution>
+</exercise>
+</exercisegroup>
+
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise>
+<statement><p>
+The temperature <m>T(x,y)</m> at points of the <m>xy</m>-plane is given by
+<m>T(x,y)=x^2-2y^2</m>.
+<ol label="a">
+<li>
+Draw a contour diagram for <m>T</m> showing some isotherms (curves
+of constant temperature).
+</li>
+<li>
+In what direction should an ant at position <m>(2,-1)</m> move if
+it wishes to cool off as quickly as possible?
+</li>
+<li>
+If the ant moves in that direction at speed <m>v</m> at what rate
+does its temperature decrease?
+</li>
+<li>
+What would the rate of decrease of temperature of the ant be
+if it moved from <m>(2,-1)</m> at speed <m>v</m> in direction <m>\llt -1,-2\rgt</m>?
+</li>
+<li>
+Along what curve through <m>(2,-1)</m> should the ant move to continue
+experiencing maximum rate of cooling?
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review §<xref ref="sec_directional_derivatives"/> in the CLP-3 text.
+</p>
+
+<p>(e) Suppose that the ant moves along the curve <m>y=y(x)</m>.
+For the ant to always experience maximum rate of cooling (or maximum
+rate of heating), the tangent to this curve must be parallel to
+<m>\vnabla T(x,y)</m> at every point of the curve. This gives a separable
+differential equation for the function <m>y(x)</m>. Also, don't forget that <m>(2,-1)</m> must be on the curve.
+</p></hint>
+
+<answer><p>
+(a) Here is a sketch which show the isotherms <m>T=0,\ 1,\ -1</m> as well
+as the branch of the <m>T=2</m> isotherm that contains the ant's location
+<m>(2,-1)</m>.
+</p>
+<sidebyside width="60%">
+<image source="pfigs/ant"/>
+</sidebyside>
+<p>
+(b) <m>\llt -1,-1\rgt/\sqrt{2}</m></p><p>
+(c) <m>4\sqrt{2}\,v</m> </p><p>
+(d) <m>\frac{12}{\sqrt{5}}\,v</m> </p><p>
+(e) <m>y=-\frac{4}{x^2}</m>
+</p></answer>
+
+<solution><p>
+(a) The curve on which the temperature is <m>T_0</m> is <m>x^2-2y^2=T_0</m>.
+If <m>T_0=0</m>, this is the pair of straight lines <m>y=\pm\frac{x}{\sqrt{2}}</m>.
+If <m>T_0 \gt 0</m>, it is a hyperbola on which <m>x^2=2y^2+T_0\ge T_0</m>.
+If <m>T_0 \lt 0</m>, it is a hyperbola on which <m>2y^2=x^2-T_0\ge |T_0|</m>.
+Here is a sketch which show the isotherms <m>T=0,\ 1,\ -1</m> as well
+as the branch of the <m>T=2</m> isotherm that contains the ant's location
+<m>(2,-1)</m>.
+</p>
+<sidebyside width="60%">
+  <image source="pfigs/ant"/>
+</sidebyside>
+
+<p>
+Note that the temperature gradient is <m>\vnabla T(x,y)=\llt 2x,-4y\rgt</m>.
+In particular, the temperature gradient at <m>(2,-1)</m>
+is <m>\vnabla T(2,-1)=\llt 4,4\rgt</m>.
+</p>
+
+<p>(b) To achieve maximum rate of cooling, the ant should move in the direction
+opposite the temperature gradient at <m>(2,-1)</m>. So the direction of
+maximum rate of cooling is
+<me>
+-\frac{\llt 4,4\rgt}{4\sqrt{2}}
+    =\frac{\llt -1,-1\rgt}{\sqrt{2}}
+</me>
+</p>
+
+<p>(c) If the ant moves in the direction of part (b), its rate of cooling
+per unit distance is <m>|\vnabla T(2,-1)|=|\llt 4,4\rgt| = 4\sqrt{2}</m>.
+It the ant is moving at speed <m>v</m>, its rate of cooling
+per unit time is <m>4\sqrt{2}\,v</m>.
+</p>
+
+<p>(d) If the ant moves from <m>(2,-1)</m>  in direction <m>\llt -1,-2\rgt</m>
+its temperature increases at the rate
+<me>
+  D_{\frac{\llt -1,-2\rgt}{\sqrt{5}}} T(2,-1)
+        = \llt 4,4\rgt\cdot \frac{\llt -1,-2\rgt}{\sqrt{5}}
+        = -\frac{12}{\sqrt{5}}
+</me>
+per unit distance. So, if the ant is moving at speed <m>v</m>,
+its rate of decrease of temperature per unit time
+is <m>\frac{12}{\sqrt{5}}\,v</m>
+</p>
+
+<p>(e) Suppose that the ant moves along the curve <m>y=y(x)</m>. For the ant to always
+experience maximum rate of cooling (or maximum rate of heating),
+the tangent to this curve must be parallel to <m>\vnabla T(x,y)</m> at every point of the curve. A tangent to the curve at <m>(x,y)</m> is <m>\llt 1,\diff{y}{x}(x)\rgt</m>.
+This is parallel to <m>\vnabla T(x,y)=\llt 2x,-4y\rgt</m> when
+<md>
+<mrow>
+\frac{\diff{y}{x}}{1}=\frac{-4y}{2x}
+\implies \frac{dy}{y}=-2\frac{dx}{x}
+\implies \ln y=-2\ln x+C
+\implies y=C'x^{-2}
+</mrow>
+</md>
+To pass through <m>(2,-1)</m>, we need <m>C'=-4</m>, so <m>y=-\frac{4}{x^2}</m>.
+</p>
+
+</solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2008A</fromexam></title>
+<statement><p>
+Consider the function <m>f(x,y,z) = x^2 + \cos(yz)</m>.
+</p>
+
+<p><ol label="a">
+<li>
+Give the direction in which <m>f</m> is increasing the fastest at the point
+<m>(1, 0, \pi/2)</m>.
+</li>
+<li>
+Give an equation for the plane <m>T</m> tangent to the surface
+<me>
+S = \Set{(x,y,z)}{f(x,y,z) = 1}
+</me>
+at the point <m>(1, 0, \pi/2)</m>.
+</li>
+<li>
+Find the distance between <m>T</m> and the point <m>(0, 1, 0)</m>.
+</li>
+<li>
+Find the angle between the plane <m>T</m> and the plane
+<me>
+P = \Set{(x,y,z)}{x + z = 0}.
+</me>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>\hi</m></p><p>
+(b) <m>x=1</m></p><p>
+(c) <m>1</m></p><p>
+(d) <m>\frac{\pi}{4}</m>
+</p></answer>
+
+<solution><p>
+The first order partial derivatives of <m>f</m>, both at a general point
+<m>(x,y,z)</m> and at the point <m>(1, 0, \pi/2)</m>, are
+<md alignment="alignat">
+<mrow>{3}
+f_x(x,y,z)&amp;= 2x\qquad &amp;
+     f_x(1, 0, \pi/2)&amp;= 2
+</mrow><mrow>
+f_y(x,y,z)&amp;= -z\sin(yz)\qquad &amp;
+     f_y(1, 0, \pi/2)&amp;= 0
+</mrow><mrow>
+f_z(x,y,z)&amp;= -y\sin(yz)\qquad &amp;
+     f_z(1, 0, \pi/2)&amp;= 0
+</mrow>
+</md>
+</p>
+
+<p>(a) The rate of increase of <m>f</m> is largest in the direction of
+<m>\vnabla f(1, 0, \pi/2)=\llt 2,0,0\rgt</m>. A unit vector in that direction
+is <m>\hi</m>.
+</p>
+
+<p>(b) The gradient vector <m>\vnabla f(1, 0, \pi/2)=\llt 2,0,0\rgt</m> is a normal
+vector to the surface <m>f=1</m> at <m>(1, 0, \pi/2)</m>. So the specified tangent
+plane is
+<md>
+<mrow>
+\llt 2,0,0\rgt \cdot \llt x-1\,,\,y-0\,,\,z-\pi/2\rgt=0\qquad\text{or}\qquad
+x=1
+</mrow>
+</md>
+</p>
+
+<p>(c) The vector from the point <m>(0,1,0)</m> to the point <m>(1,1,0)</m>, on <m>T</m>,
+is <m>\llt 1,0,0\rgt</m>, which is perpendicular to <m>T</m>. So <m>(1,1,0)</m>
+is the point on <m>T</m> nearest <m>(0,1,0)</m>  and the distance from <m>(0,1,0)</m> to <m>T</m>
+is <m>|\llt 1,0,0\rgt|=1</m>.
+</p>
+
+<p>(d) The vector <m>\llt 1,0,1\rgt</m> is perpendicular to the plane <m>x+z=0</m>.
+So the angle between the planes <m>T</m> and <m>x+z=0</m> is the same as the angle
+<m>\theta</m> between the vectors <m>\llt 1,0,0\rgt</m> and <m>\llt 1,0,1\rgt</m>,
+which obeys
+<md>
+<mrow>
+&amp; |\llt 1,0,0\rgt| \ |\llt 1,0,1\rgt|\ \cos\theta
+   =|\llt 1,0,0\rgt\cdot\llt 1,0,1\rgt|
+   =1
+</mrow><mrow>
+&amp;\implies \cos\theta=\frac{1}{\sqrt{2}}
+\implies  \theta=\frac{\pi}{4}
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2015D</fromexam></title>
+<statement><p>
+A function <m>T(x,y,z)</m> at <m>P = (2,1,1)</m> is known to have
+<m>T(P) = 5</m>, <m>T_x (P) = 1</m>, <m>T_y(P) = 2</m>, and <m>T_z(P) = 3</m>.
+<ol label="a">
+<li>
+A bee starts flying at <m>P</m> and flies along the unit vector pointing
+towards the point <m>Q = (3,2,2)</m>. What is the rate of change of
+<m>T(x,y,z)</m> in this direction?
+</li>
+<li>
+Use the linear approximation of <m>T</m> at the point <m>P</m> to approximate
+<m>T(1.9,1,1.2)</m>.
+</li>
+<li>
+Let <m>S(x,y,z) = x + z</m>. A bee starts flying at <m>P</m>; along which unit
+vector direction should the bee fly so that the rate of change of <m>T(x,y,z)</m>
+and of <m>S(x,y,z)</m> are both zero in this direction?
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>2\sqrt{3}</m> </p><p>
+(b) <m>5.5</m></p><p>
+(c) <m>\pm\frac{\llt 1,1,-1\rgt}{\sqrt{3}}</m>
+</p></answer>
+
+<solution><p>
+(a) We are being asked for the directional derivative of
+<m>T</m> in the direction of the  unit vector from <m>P=(2,1,1)</m> to <m>Q=(3,2,2)</m>,
+which is <m>\frac{\llt 1,1,1\rgt}{\sqrt{3}}</m>. That directional
+derivative is
+<md>
+<mrow>
+\vnabla T(P)\cdot \frac{\llt 1,1,1\rgt}{\sqrt{3}}
+=\llt 1,2,3\rgt \cdot \frac{\llt 1,1,1\rgt}{\sqrt{3}}
+=2\sqrt{3}
+</mrow>
+</md>
+</p>
+
+<p>(b) The linear approximation to <m>T</m> at <m>P</m> is
+<md>
+<mrow>
+T(2+\De x\,,\,1+\De y\,,\,1+\De z)
+   &amp;\approx T(P) + T_x(P)\,\De x + T_y(P)\,\De y + T_z(P)\,\De z
+</mrow><mrow>
+   &amp;= 5 +\De x +2\,\De y +3\,\De z
+</mrow>
+</md>
+Applying this with <m>\De x = -0.1</m>, <m>\De y = 0</m>, <m>\De z=0.2</m> gives
+<md>
+<mrow>
+T(1.9\,,\,1\,,\,1.2)
+   &amp;\approx 5 +(-0.1) +2\,(0) +3\,(0.2)
+   =5.5
+</mrow>
+</md>
+</p>
+
+<p>(c) For the rate of change of <m>T</m> to be zero, the direction of
+motion must be perpendicular to <m>\vnabla T(P) = \llt 1,2,3\rgt</m>.
+For the rate of change of <m>S</m> to also be zero, the direction of
+motion must also be perpendicular to <m>\vnabla S(P) = \llt 1,0,1\rgt</m>.
+The vector
+<md>
+<mrow>
+\llt 1,2,3\rgt \times \llt 1,0,1\rgt
+&amp;=\det\left[\begin{matrix}
+             \hi &amp; \hj &amp; \hk
+</mrow><mrow>
+              1  &amp;  2  &amp; 3
+</mrow><mrow>
+              1  &amp;  0  &amp; 1\end{matrix}\right]
+=\llt 2,2,-2\rgt
+</mrow>
+</md>
+is perpendicular to both <m>\vnabla T(P)</m> and <m>\vnabla S(P)</m>.
+So the desired unit vectors are <m>\pm\frac{\llt 1,1,-1\rgt}{\sqrt{3}}</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2016D</fromexam></title>
+<statement><p>
+Consider the functions <m>F(x,y,z) = z^3 +xy^2 +xz</m> and <m>G(x,y,z)=3x-y+4z</m>.
+You are standing at the point <m>P(0,1,2)</m>.
+<ol label="a">
+<li>
+You jump from <m>P</m> to <m>Q(0.1\,,\,0.9\,,\,1.8)</m>. Use the linear approximation
+to determine approximately the amount by which <m>F</m> changes.
+</li>
+<li>
+You jump from <m>P</m> in the direction along which <m>G</m> increases most rapidly.
+Will <m>F</m> increase or decrease?
+</li>
+<li>
+You jump from <m>P</m> in a direction <m>\llt a\,,\,b\,,\,c\rgt</m> along which the rates
+of change of <m>F</m> and <m>G</m> are both zero. Give an example of such a direction
+(need not be a unit vector).
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) <m>-2.1</m></p><p>
+(b) <m>F</m> increases.</p><p>
+(c) Any nonzero constant times <m>\llt 4 \,,\, 8 \,,\, -1 \rgt</m>.
+</p></answer>
+
+<solution><p>
+We are going to need the gradients of both <m>F</m> and <m>G</m> at <m>(0,1,2)</m>.
+So we compute
+<md>
+<mrow>
+\pdiff{F}{x}(x,y,z)&amp;=y^2+z &amp;
+\pdiff{F}{y}(x,y,z)&amp;=2xy  &amp;
+\pdiff{F}{z}(x,y,z)&amp;=3z^2+x
+</mrow><mrow>
+\pdiff{G}{x}(x,y,z)&amp;=3 &amp;
+\pdiff{G}{y}(x,y,z)&amp;=-1  &amp;
+\pdiff{G}{z}(x,y,z)&amp;=4
+</mrow>
+</md>
+and then
+<me>
+\vnabla F(0,1,2) = \llt 3,0,12 \rgt\qquad
+\vnabla G(0,1,2) = \llt 3,-1,4 \rgt
+</me>
+</p>
+
+<p>(a) The linear approximation to <m>F</m> at <m>(0,1,2)</m> is
+<md>
+<mrow>
+F(x,y,z)
+&amp;\approx F(0,1,2) + F_x(0,1,2)\,x + F_y(0,1,2)\,(y-1) + F_z(0,1,2)\,(z-2)
+</mrow><mrow>
+&amp;=8+ 3 x + 12 (z-2)
+</mrow>
+</md>
+In particular
+<md>
+<mrow>
+F(0.1\,,\,0.9\,,\,1.8) - F(0,1,2)
+&amp;\approx 3(0.1) + 12(-0.2)
+=-2.1
+</mrow>
+</md>
+</p>
+
+<p>(b) The direction along which <m>G</m> increases most rapidly at <m>P</m> is
+<m>\vnabla G(0,1,2) = \llt 3,-1,4 \rgt</m>. The directional derivative of <m>F</m>
+in that direction is
+<md>
+<mrow>
+D_{\frac{\llt 3,-1,4\rgt}{\sqrt{26}}}F(0,1,2)
+ = \vnabla F(0,1,2) \cdot \frac{\llt 3,-1,4\rgt}{\sqrt{26}}
+ = \llt 3,0,12 \rgt\cdot \frac{\llt 3,-1,4\rgt}{\sqrt{26}}
+  \gt  0
+</mrow>
+</md>
+So <m>F</m> increases.
+</p>
+
+<p>(c)
+For the rate of change of <m>F</m> to be zero,
+<m>\llt a\,,\,b\,,\,c\rgt</m> must be perpendicular to
+<m>\vnabla F(0,1,2) = \llt 3,0,12  \rgt</m>.
+</p>
+
+<p>For the rate of change of <m>G</m> to be zero,
+<m>\llt a\,,\,b\,,\,c\rgt</m> must be perpendicular to
+<m>\vnabla G(0,1,2) = \llt 3,-1,4 \rgt</m>.
+</p>
+
+<p>So any nonzero constant times
+<md>
+<mrow>
+\det\left[\begin{matrix}
+            \hi  &amp;  \hj  &amp;  \hk
+</mrow><mrow>
+            3    &amp;   0   &amp;   12
+</mrow><mrow>
+            3    &amp;  -1   &amp;    4
+            \end{matrix}\right]
+=\llt 12 \,,\, 24 \,,\, -3 \rgt
+=3 \llt 4 \,,\, 8 \,,\, -1 \rgt
+</mrow>
+</md>
+is an allowed direction.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2004A</fromexam></title>
+<statement><p>
+A meteor strikes the ground in the heartland of Canada.
+Using satellite photographs, a model
+<me>
+z=f(x,y)=-\frac{100}{x^2+2x+4y^2+11}
+</me>
+of the resulting crater is made and a plan is drawn up to convert the site into
+a tourist attraction. A car park is to be built at  <m>(4,5)</m> and a hiking trail is to be made. The trail is to start at the car park and take the steepest route to the bottom of the crater.
+<ol label="a">
+<li>
+  Sketch a map of the proposed site clearly marking the car park,
+a few level curves for the function <m>f</m>  and the trail.
+</li>
+<li>
+In which direction does the trail leave the car park?
+</li>
+</ol>
+</p></statement>
+
+<answer>
+<sidebyside widths="10% 80%">
+<p>(a)</p>
+<image source="pfigs/crater"/>
+</sidebyside>
+<p>
+(b) <m>-\llt 1,4\rgt</m>
+</p>
+
+</answer>
+
+<solution><p>
+(a)  Since
+<me>
+z=-\frac{100}{x^2+2x+4y^2+11}=-\frac{100}{(x+1)^2+4y^2+10}
+</me>
+the bottom of the crater is at <m>x=-1</m>, <m>y=0</m> (where the denominator is
+a minimum) and the contours (level curves) are ellipses having equations
+<m>(x+1)^2+4y^2=C</m>. In the sketch below, the filled dot represents the
+bottom of the crater and the open dot represents the car park. The
+contours sketched are (from inside out) <m>z=-7.5, -5, -2.5, -1</m>. Note that
+the trail crosses the contour lines at right angles.
+</p>
+<sidebyside width="60%">
+  <image source="pfigs/crater"/>
+</sidebyside>
+<p>
+(b) The trail is to be parallel to
+<me>
+\vnabla z = \frac{100}{{(x^2+2x+4y^2+11)}^2}(2x+2,8y)
+</me>
+At the car park <m>\vnabla z(4,5)\parallel \llt 10, 40\rgt\parallel \llt 1,4\rgt</m>.
+To move towards the bottom of the crater, we should leave in the direction
+<m>-\llt 1,4\rgt</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2002D</fromexam></title>
+<statement><p>
+ You are standing at a lone palm tree in the middle of the
+Exponential Desert. The height of the sand dunes around you is given in
+meters by
+<me>
+h(x,y)=100 e^{-(x^2+2y^2)}
+</me>
+where <m>x</m> represents the number of meters east of the palm tree (west if
+<m>x</m> is negative) and <m>y</m> represents the number of meters north of the palm
+tree (south if <m>y</m> is negative).
+<ol label="a">
+<li>
+Suppose that you walk <m>3</m> meters east and 2 meters north.
+At your new location, <m>(3,2)</m>, in what direction is the sand dune sloping
+most steeply downward?
+</li>
+<li>
+If you walk north from the location described in part (a),
+what is the instantaneous rate of change of height of the sand dune?
+</li>
+<li>
+ If you are standing at <m>(3,2)</m> in what direction should you
+walk to ensure that you remain at the same height?
+</li>
+<li>
+ Find the equation of the curve through <m>(3,2)</m> that you should
+move along in order that you are always pointing in a steepest descent
+direction at each point of this curve.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) any positive multiple of <m>\llt 3,4\rgt</m></p><p>
+(b) <m>-800 e^{-17}</m></p><p>
+(c) <m>\pm\big(\frac{4}{5},-\frac{3}{5}\big)</m></p><p>
+(d) <m>y=\frac{2}{9}x^2</m>
+</p></answer>
+
+<solution><p>
+We have
+<me>
+\vnabla h(x,y)= -200 e^{-(x^2+2y^2)}\llt x,2y\rgt\text{ and, in particular, }
+\vnabla h(3,2)= -200 e^{-17}\llt 3,4\rgt
+</me>
+</p>
+
+<p>(a) At <m>(3,2)</m> the dune slopes downward the most steeply in the direction
+opposite <m>\vnabla h(3,2)</m>, which is (any positive multiple of) <m>\llt 3,4\rgt</m>.
+</p>
+
+<p>(b) The rate is <m>D_{\hj} h(3,2)=\vnabla h(3,2)\cdot\hj=-800 e^{-17}</m>.
+</p>
+
+<p>(c) To remain at the same height, you should walk perpendicular to
+<m>\vnabla h(3,2)</m>. So you should walk in one of the directions
+<m>\pm\big(\frac{4}{5},-\frac{3}{5}\big)</m>.
+</p>
+
+<p>(d) Suppose that you are walking along a steepest descent curve.
+Then the direction from <m>(x,y)</m> to <m>(x+\dee{x}, y+\dee{y})</m>, with
+<m>(\dee{x},\dee{y})</m> infinitesmal, must be opposite to
+<m>\vnabla h(x,y)= -200 e^{-(x^2+2y^2)}(x,2y)</m>.
+Thus <m>(\dee{x},\dee{y})</m> must be parallel to <m>(x,2y)</m> so that the slope
+<md>
+<mrow>
+\diff{y}{x}=\frac{2y}{x}
+\implies \frac{\dee{y}}{y}=2\frac{\dee{x}}{x}
+\implies \ln y=2\ln x+C
+</mrow>
+</md>
+We must choose <m>C</m> to obey <m>\ln 2=2\ln 3+C</m> in order to pass through
+the point <m>(3,2)</m>. Thus <m>C=\ln\frac{2}{9}</m> and the curve is
+<m>\ln y=2\ln x+\ln\frac{2}{9}</m> or <m>y=\frac{2}{9}x^2</m>.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M200 2002A</fromexam></title>
+<statement><p>
+Let <m>f(x,y)</m> be a differentiable function with <m>f(1,2)=7</m>. Let
+<me>
+\vu=\frac{3}{5}\,\hi+\frac{4}{5}\,\hj,\qquad
+\vv=\frac{3}{5}\,\hi-\frac{4}{5}\,\hj
+</me>
+be unit vectors. Suppose it is known that the directional derivatives
+<m>D_\vu f(1,2)</m> and <m>D_\vv f(1,2)</m> are equal to <m>10</m> and <m>2</m> respectively.
+<ol label="a">
+<li>
+Show that the gradient vector <m>\vnabla f</m> at <m>(1,2)</m> is <m>10\hi+5\hj</m>.
+</li>
+<li>
+Determine the rate of change of <m>f</m> at <m>(1,2)</m> in the direction
+of the vector <m>\hi+2\hj</m>.
+</li>
+<li>
+Using the tangent plane approximation, estimate the value
+of <m>f(1.01,2.05)</m>.
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a) See the solution.</p><p>
+(b) <m>4\sqrt{5}\approx 8.944</m></p><p>
+(c) <m>7.35</m>
+</p></answer>
+
+<solution><p>
+(a)
+Denote <m>\vnabla f(1,2)= \llt a,b\rgt</m>. We are told that
+<md alignment="alignat">
+<mrow>{3}
+D_\vu f(1,2)&amp;=\vu\cdot(a,b)&amp;&amp;=\frac{3}{5}a+\frac{4}{5}b&amp;&amp;=10
+</mrow><mrow>
+D_\vv f(1,2)&amp;=\vv\cdot(a,b)&amp;&amp;=\frac{3}{5}a-\frac{4}{5}b&amp;&amp;=2
+</mrow>
+</md>
+Adding these two equations gives <m>\frac{6}{5}a=12</m>, which forces <m>a=10</m>,
+and subtracting the two equations gives <m>\frac{8}{5}b=8</m>, which forces
+<m>b=5</m>, as desired.
+</p>
+
+<p>(b) The rate of change of <m>f</m> at <m>(1,2)</m> in the direction
+of the vector <m>\hi+2\hj</m> is
+<md>
+<mrow>
+\frac{\hi+2\hj}{|\hi+2\hj|}\cdot \vnabla f(1,2)
+=\frac{1}{\sqrt{5}}\llt 1,2\rgt\cdot\llt 10,5\rgt
+=4\sqrt{5}\approx 8.944
+</mrow>
+</md>
+</p>
+
+<p>(c) Applying (<xref ref="eqn_lin_approx_2d"/> in the CLP3 text, which is
+<md>
+<mrow>
+f\big(x_0+\De x\,,\,y_0+\De y\big)
+&amp;\approx f\big(x_0\,,\,y_0\big)
+       + \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\De x
+       + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\De y
+</mrow>
+</md>
+with <m>x_0=1</m>, <m>\De x=0.01</m>, <m>y_0=2</m>, and <m>\De y=0.05</m>, gives
+<md>
+<mrow>
+f(1.01,2.05)
+&amp;\approx f(1,2)+f_x(1,2)\times(1.01-1)+f_y(1,2)\times(2.05-2)
+</mrow><mrow>
+&amp;=7+10\times0.01+5\times0.05
+</mrow><mrow>
+&amp;=7.35
+</mrow>
+</md>
+</p></solution>
+</exercise></exercisegroup>
+
+</exercises>
