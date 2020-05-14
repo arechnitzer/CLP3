@@ -353,7 +353,7 @@ Denote by <m>x</m> and <m>y</m> the lengths of sides with <m>x=3\pm 0.1</m>
 and <m>y=4\pm 0.2</m>. Then the length of the hypotenuse is
 <m>f(x,y)=\sqrt{x^2+y^2}</m>. Note that
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 f(x,y)&amp;=\sqrt{x^2+y^2} &amp;
          f(3,4)&amp;=5
 </mrow><mrow>
@@ -429,7 +429,7 @@ and <m>\pdiff{R}{R_2}(2,8)</m>. To find them, we differentiate <m>(*)</m> with r
 </md>
 Setting <m>R_1=2</m> and <m>R_2=8</m> gives
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 -\frac{1}{(8/5)^2}\pdiff{R}{R_1}(2,8)
                  &amp;= -\frac{1}{4} &amp;\quad\implies\quad &amp;
          &amp;\pdiff{R}{R_1}(2,8) &amp;=\frac{16}{25}
@@ -501,7 +501,7 @@ R(25,40,50)=\frac{200}{17}=11.765
 </me>
 Substituting in these values of <m>R_1</m>, <m>R_2</m>, <m>R_3</m> and <m>R</m>,
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 \pdiff{R}{R_1}(25,40,50)
 &amp;=\frac{R(25,40,50)^2}{25^2}&amp;=\frac{64}{17^2}&amp;=0.221
 </mrow><mrow>
@@ -1097,7 +1097,7 @@ for all <m>(x,y)</m> near <m>(2,4)</m>. Differentiating with respect to <m>x</m>
 </md>
 Substituting in <m>x=2</m>, <m>y=4</m> and <m>z(2,4)=1</m> gives
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 3\pdiff{z}{x}(2,4)
        -\pdiff{z}{x}(2,4)+8&amp;=0 &amp;  &amp;\iff &amp;
     \pdiff{z}{x}(2,4) &amp; = -4
@@ -1825,7 +1825,7 @@ to this equation gives
 </md>
 Substiututing <m>F(1,2)=0</m>, <m>y=1</m> and <m>z=2</m> gives
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 4+2F_y(1,2)&amp;=0 &amp; &amp;\ \implies\  &amp; &amp;F_y(1,2)=-2
 </mrow><mrow>
 32+2F_z(1,2)&amp;=0 &amp; &amp;\ \implies\  &amp; &amp; F_z(1,2)=-16

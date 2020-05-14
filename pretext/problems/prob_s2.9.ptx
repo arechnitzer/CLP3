@@ -309,7 +309,7 @@ So <m>(0,0)</m> is a local (and also absolute) minimum.
 <p>(c)
 Note that
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f_{xx}(x,y) &amp;=-4y^2+12x^2\qquad&amp;
          f_{xx}(x,y)&amp;=0
 </mrow><mrow>
@@ -491,7 +491,7 @@ second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
 Here they are.
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f&amp;=x^3 + x^2y + xy^2 - 9x
 </mrow><mrow>
 f_x&amp;=3x^2+2xy+y^2-9 \qquad   &amp; f_{xx}&amp;=6x+2y \qquad &amp; f_{xy}&amp;= 2x+2y
@@ -505,7 +505,7 @@ useful to compute both, as a way to catch some mechanical errors.)
 
 <p>The critical points are the solutions of
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f_x&amp;=3x^2+2xy+y^2-9&amp;&amp;=0  \tag{E1}
 </mrow><mrow>
 f_y&amp;=x(x+2y) &amp;&amp;= 0  \tag{E2}
@@ -608,7 +608,7 @@ So the critical points are the solutions of
 or, dividing by the first equation by <m>xy^2</m> and the second equation
 by <m>x^2y</m>, (recall that <m>x,y\ne 0</m>)
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 10 -6x -2y   &amp;=0 &amp;\qquad\text{or}\qquad 3x+y&amp;=5
 </mrow><mrow>
 10 -4x   -3y &amp;=0 &amp;\qquad\text{or}\qquad 4x+3y&amp;=10
@@ -653,7 +653,7 @@ Theorem <xref ref="thm_second_deriv_test"/> in the CLP-3 text
 we will need all second order partial derivatives. So we need
 all partial derivatives of <m>f</m> up to order two. Here they are.
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 f&amp;=x^2+y^2+x^2y+4
 </mrow><mrow>
 f_x&amp;=2x+2xy\qquad &amp; f_{xx}&amp;=2+2y\qquad &amp; f_{xy}&amp;= 2x
@@ -663,7 +663,7 @@ f_y&amp;=2y+x^2 &amp; f_{yy}&amp;=2
 </md>
 The critical points are the solutions of
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 &amp; &amp; &amp;f_x=0  &amp; &amp;f_y=0
 </mrow><mrow>
 &amp;\iff\quad &amp; &amp;2x(1+y)=0  &amp; &amp;2y+x^2=0
@@ -726,7 +726,7 @@ second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
 Here they are.
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f&amp;=x^3 + x^2 - 2xy + y^2 - x
 </mrow><mrow>
 f_x&amp;=3x^2+2x-2y-1 \qquad   &amp; f_{xx}&amp;=6x+2 \qquad &amp; f_{xy}&amp;= -2
@@ -740,7 +740,7 @@ useful to compute both, as a way to catch some mechanical errors.)
 
 <p>The critical points are the solutions of
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f_x&amp;=3x^2+2x-2y-1&amp;&amp;=0  \tag{E1}
 </mrow><mrow>
 f_y&amp;=-2x+2y &amp;&amp;= 0  \tag{E2}
@@ -806,7 +806,7 @@ we will need all second order partial derivatives. So we need all
 partial derivatives of <m>f</m> up to order two.
 Here they are.
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f&amp;=x^3 + xy^2 - 3x^2 - 4y^2 + 4
 </mrow><mrow>
 f_x&amp;=3x^2+y^2-6x\qquad   &amp; f_{xx}&amp;=6x-6 \qquad &amp; f_{xy}&amp;= 2y
@@ -878,7 +878,7 @@ f_y(x,y)=x-2x^3y
 <li><p>
 First, we find the critical points.
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 f_x&amp;=0 &amp; &amp;\quad\iff\quad  &amp;y(1-3x^2y)&amp;=0 &amp;
          &amp;\quad\iff\quad &amp; &amp;y=0 \text{ or } 3x^2y=1
 </mrow><mrow>
@@ -999,7 +999,7 @@ T_y(x,y)&amp;=(1-2xy-2y^2)e^{-x^2-y^2}
 <li>
 First, we find the critical points.
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 T_x&amp;=0 &amp; &amp;\quad\iff\quad &amp; 2x(x+y)&amp;=1
 </mrow><mrow>
 T_y&amp;=0 &amp; &amp;\quad\iff\quad &amp; 2y(x+y)&amp;=1
@@ -1132,7 +1132,7 @@ second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
 Here they are.
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f&amp;=x^3 + 3xy + 3y^2 - 6x - 3y - 6
 </mrow><mrow>
 f_x&amp;=3x^2+3y-6   &amp; f_{xx}&amp;=6x \qquad &amp; f_{xy}&amp;= 3
@@ -1244,7 +1244,7 @@ second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
 Here they are.
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f&amp;=x^3+3xy+3y^2-6x-3y-6
 </mrow><mrow>
 f_x&amp;=3x^2+3y-6   &amp; f_{xx}&amp;=6x \qquad &amp; f_{xy}&amp;= 3
@@ -1258,7 +1258,7 @@ useful to compute both, as a way to catch some mechanical errors.)
 
 <p>The critical points are the solutions of
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f_x&amp;=3x^2+3y-6&amp;&amp;=0  \tag{E1}
 </mrow><mrow>
 f_y&amp;=3x\ +6y-3 &amp;&amp;= 0  \tag{E2}
@@ -1350,7 +1350,7 @@ second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
 Here they are.
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 h&amp;=y(4 - x^2 - y^2)
 </mrow><mrow>
 h_x&amp;=-2xy   &amp; h_{xx}&amp;=-2y \qquad &amp; h_{xy}&amp;= -2x
@@ -1758,7 +1758,7 @@ second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
 Here they are.
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f&amp;=3x^2 y + y^3 - 3x^2 - 3y^2 + 4
 </mrow><mrow>
 f_x&amp;=6xy-6x   &amp; f_{xx}&amp;=6y-6 \qquad &amp; f_{xy}&amp;= 6x
@@ -1839,7 +1839,7 @@ triangle with vertices <m>(1,0)</m>, <m>(0,1)</m> and <m>(1,1)</m>.
 <solution><p>
  (a) Since
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 f&amp;=2x^3 - 6xy + y^2 +4y
 </mrow><mrow>
 f_x&amp;=6x^2-6y &amp; f_{xx}&amp;=12x\qquad &amp;&amp; f_{xy}&amp;= -6
@@ -1849,7 +1849,7 @@ f_y&amp;=-6x+2y+4\qquad &amp; f_{yy}&amp;=2
 </md>
 the critical points are the solutions of
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 &amp; &amp; &amp;f_x=0\qquad &amp; &amp;f_y=0
 </mrow><mrow>
 &amp;\iff\qquad&amp; &amp;y=x^2\qquad &amp; &amp;y-3x+2=0
@@ -2028,7 +2028,7 @@ f(x,y)=xy(x+2y-6)
 <solution><p>
 (a) We have
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 f(x,y)&amp;=xy(x+2y-6)\quad &amp;
      f_x(x,y)&amp;=2xy+2y^2-6y\quad &amp;
      f_{xx}(x,y)&amp;=2y
@@ -2138,7 +2138,7 @@ maximum or saddle point.
 <solution><p>
 We have
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f(x,y)&amp;=x^4+y^4-4xy\qquad &amp;
 f_x(x,y)&amp;=4x^3-4y\qquad &amp;
 f_{xx}(x,y)&amp;=12x^2
@@ -2248,7 +2248,7 @@ defined in the <m>xy</m>-plane. Classify each critical point as a local minimum,
 <solution><p>
 We have
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f(x,y)&amp;=x^3+xy^2-x\qquad &amp;
 f_x(x,y)&amp;=3x^2+y^2-1\qquad &amp;
 f_{xx}(x,y)&amp;=6x
@@ -2328,7 +2328,7 @@ and the largest value is <m>21</m> at <m>(\pm 2\sqrt{3},-1)</m>.
 (a)
 We have
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 g(x,y)&amp;=x^2-10y-y^2 \qquad&amp;
 g_x(x,y)&amp;=2x \qquad&amp;
 g_{xx}(x,y)&amp;=2
@@ -2414,7 +2414,7 @@ f(x,y)=x^3-3xy^2-3x^2-3y^2
 <solution><p>
 We have
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 f(x,y)&amp;=x^3-3xy^2-3x^2-3y^2\qquad &amp;
 f_x(x,y)&amp;=3x^2-3y^2-6x\qquad &amp;
 f_{xx}(x,y)&amp;=6x-6
@@ -2570,7 +2570,7 @@ A(x,\theta)&amp;=(100-2x)x\sin\theta+2\cdot\half\cdot x\sin\theta\cdot x\cos\the
 </md>
 The maximize the area, we need to solve
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 0=A_x&amp;=(100-4x)\sin\theta+x\sin(2\theta) &amp; &amp;\implies &amp;
 (100-4x)+2x\cos\theta&amp;=0\cr
 0=A_\theta&amp;=(100x-2x^2)\cos\theta+x^2\cos(2\theta)\quad &amp; &amp;\implies\quad &amp;
@@ -2583,7 +2583,7 @@ The first equation forces <m>\cos\theta=-\frac{100-4x}{2x}</m>
 and hence <m>\cos(2\theta)=2\cos^2\theta-1=\frac{(100-4x)^2}{2x^2}-1</m>.
 Substituting these into the second equation gives
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 &amp; &amp; -(100-2x)\frac{100-4x}{2x}+x\Big[\frac{(100-4x)^2}{2x^2}-1\Big]&amp;=0
 </mrow><mrow>
 &amp;\implies &amp; -(100-2x)(100-4x)+(100-4x)^2-2x^2&amp;=0
@@ -2806,7 +2806,7 @@ second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
 Here they are.
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f&amp;=3kx^2 y + y^3 - 3x^2 - 3y^2 + 4
 </mrow><mrow>
 f_x&amp;=6kxy-6x   &amp; f_{xx}&amp;=6ky-6 \qquad &amp; f_{xy}&amp;= 6kx
@@ -3002,7 +3002,7 @@ An experiment yields data points <m>\ (x_i,y_i),\ i=1,2,\cdots,n.</m> We wish to
 We wish to choose <m>m</m> and <m>b</m> so as to minimize  the (square of the)
 rms error <m>E(m,b)=\sum\limits_{i=1}^n (mx_i+b-y_i)^2</m>.
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 0&amp;=\pdiff{E}{m}&amp;&amp;=\smsum_{i=1}^n 2(mx_i+b-y_i)x_i
 &amp;&amp;=m\Big[\smsum_{i=1}^n 2x^2_i\Big]+b\Big[\smsum_{i=1}^n 2x_i\Big]
 -\Big[\smsum_{i=1}^n 2x_iy_i\Big]

@@ -231,7 +231,7 @@ See the solution.
 <solution><p>
 By the quotient rule
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 \pdiff{z}{x}(x,y)
 &amp;=\frac{(1)(x-y)-(x+y)(1)}{(x-y)^2}
 &amp;&amp;=\frac{-2y}{(x-y)^2}
@@ -496,7 +496,7 @@ f_y(x_0,y_0) \amp =\lim_{\De y\rightarrow 0}\frac{f(x_0,y_0+\De y)-f(x_0,y_0)}{\
 </md>
 Setting <m>x_0=y_0=0</m>,
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 f_x(0,0)&amp;=\lim_{\De x\rightarrow 0}\frac{f(\De x,0)-f(0,0)}{\De x}
 &amp;=\lim_{\De x\rightarrow 0}\frac{f(\De x,0)}{\De x}
 &amp;=\lim_{\De x\rightarrow 0}\frac{((\De x)^2-2\times0^2)/(\De x-0)}{\De x}

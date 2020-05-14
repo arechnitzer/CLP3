@@ -31,13 +31,13 @@
   of <q>limit</q> to functions of more than one variable.
   </p>
 </introduction>
-<!-- <xi:include href="./partials01.ptx" />
+<xi:include href="./partials01.ptx" />
 <xi:include href="./partials02.ptx" />
 <xi:include href="./partials03.ptx" />
 <xi:include href="./partials04.ptx" />
 <xi:include href="./partials05.ptx" />
 <xi:include href="./partials06.ptx" />
-<xi:include href="./partials07.ptx" /> -->
+<xi:include href="./partials07.ptx" />
 <xi:include href="./partials08.ptx" />
 <xi:include href="./partials09.ptx" />
 <xi:include href="./partials10.ptx" />

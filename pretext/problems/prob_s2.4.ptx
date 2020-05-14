@@ -2154,7 +2154,7 @@ find
 <solution><p>
 By the chain rule
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 \pdiff{z}{s}(s,t)
 &amp;=\pdiff{}{s}f\big(g(s,t),h(s,t)\big)
 &amp;&amp;=\pdiff{f}{x}\big(g(s,t),h(s,t)\big)

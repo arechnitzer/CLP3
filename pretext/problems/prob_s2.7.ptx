@@ -22,7 +22,7 @@ direction at the point <m>(0,1,1)</m>.
 The partial derivatives, at a general point <m>(x,y,z)</m> and
 also at the point of interest <m>(0,1,1)</m>, are
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f_x(x,y,z)&amp;=yz e^{xyz}\qquad &amp;
    f_x(0,1,1)&amp;= 1
 </mrow><mrow>
@@ -215,7 +215,7 @@ Denote <m>\vnabla f(a,b)=\llt \al,\be\rgt</m>.
 <solution><p>
  Denote <m>\vnabla f(a,b)=\llt \al,\be\rgt</m>. We are told that
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 \llt\al,\be\rgt\cdot\llt\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\rgt&amp;=3\sqrt{2} &amp;
 &amp;\quad\text{or}\quad &amp;
 \al+\be&amp;=6
@@ -840,7 +840,7 @@ positive constant times <m>\llt -1 \,,\, 0 \,,\, 1 \rgt</m> is fine.
 <solution><p>
 (a) The first order partial derivatives of <m>f</m> and <m>g</m> are
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 \pdiff{f}{x}(x,y,z)&amp;=  2e^{-(x^2 +y^2 +z^2)} -2x(2x + y)e^{-(x^2 +y^2 +z^2)}
 &amp;\quad\implies \pdiff{f}{x}(0,1,-1)&amp;=2e^{-2}
 </mrow><mrow>
@@ -2012,7 +2012,7 @@ P = \Set{(x,y,z)}{x + z = 0}.
 The first order partial derivatives of <m>f</m>, both at a general point
 <m>(x,y,z)</m> and at the point <m>(1, 0, \pi/2)</m>, are
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f_x(x,y,z)&amp;= 2x\qquad &amp;
      f_x(1, 0, \pi/2)&amp;= 2
 </mrow><mrow>
@@ -2426,7 +2426,7 @@ of <m>f(1.01,2.05)</m>.
 (a)
 Denote <m>\vnabla f(1,2)= \llt a,b\rgt</m>. We are told that
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 D_\vu f(1,2)&amp;=\vu\cdot(a,b)&amp;&amp;=\frac{3}{5}a+\frac{4}{5}b&amp;&amp;=10
 </mrow><mrow>
 D_\vv f(1,2)&amp;=\vv\cdot(a,b)&amp;&amp;=\frac{3}{5}a-\frac{4}{5}b&amp;&amp;=2

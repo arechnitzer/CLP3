@@ -596,7 +596,7 @@ consider only local maxima.
 According to the method of Lagrange multipliers, we need to find
 all solutions to
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 4w^{-\frac{1}{3}}\ka^{\frac{1}{3}}&amp;=4\la  \tag{E1}
 </mrow><mrow>
 2w^{\frac{2}{3}}\ka^{-\frac{2}{3}}&amp;=2\la  \tag{E2}
@@ -652,7 +652,7 @@ g_x(x,y,z)&amp;=2x      &amp; g_y(x,y,z)&amp;=2y     &amp; g_z(x,y,z)&amp;= 2z
 </md>
 we need to find all solutions to
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 2(x-1)&amp;=\la (2x)\qquad&amp;\iff\qquad
        x&amp;=\frac{1}{1-\la}  \tag{E1}
 </mrow><mrow>
@@ -892,7 +892,7 @@ h_x&amp;=1  &amp;  h_y&amp;=0   &amp; h_z&amp;=-2
 </md>
 the method of Lagrange multipliers requires us to find all solutions to
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 2x&amp;=\la(2x) + \mu(1)  \tag{E1}
 </mrow><mrow>
 2y&amp;=\la(2y) + \mu(0) \qquad&amp;\iff\qquad(1-\la)y&amp;=0 \tag{E2}
@@ -944,7 +944,7 @@ So we can't have <m>\la=1</m>.
 When <m>y=0</m> the remaining equations reduce
 to
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 2(1-\la)x &amp;= \mu  \tag{E1}
 </mrow><mrow>
 (1+\la)z&amp;= -\mu  \tag{E3}
@@ -962,7 +962,7 @@ to consider those two possibilities.
 <p><em>Subcase <m>y=0</m>, <m>z=x</m>:</em>
 When <m>y=0</m> and <m>z=x</m>, the remaining equations reduce to
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 2(1-\la)x &amp;= \mu  \tag{E1}
 </mrow><mrow>
 (1+\la)x&amp;= -\mu  \tag{E3}
@@ -987,7 +987,7 @@ and then, subbing into either equation, <m>\mu=12</m>.)
 When <m>y=0</m> and <m>z=-x</m>, the
 remaining equations reduce to
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 2(1-\la)x &amp;= \mu  \tag{E1}
 </mrow><mrow>
 (1+\la)x&amp;= \mu  \tag{E3}

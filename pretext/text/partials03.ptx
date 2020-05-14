@@ -415,7 +415,7 @@ This function is continuous everywhere. Note that <m>f(x,0)=0</m> for all <m>x</
 <m>f(0,y)=0</m> for all <m>y</m>. We now compute the first order
 partial derivatives. For <m>(x,y)\ne (0,0)</m>,
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 \pdiff{f}{x}(x,y)
   &amp;= y\frac{x^2-y^2}{x^2+y^2} +xy\frac{2x}{x^2+y^2}
       - xy\frac{2x(x^2-y^2)}{{(x^2+y^2)}^2}
@@ -428,7 +428,7 @@ partial derivatives. For <m>(x,y)\ne (0,0)</m>,
 </md>
 For <m>(x,y)= (0,0)</m>,
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 \pdiff{f}{x}(0,0)
   &amp;= \left[\diff{}{x}f(x,0)\right]_{x=0}
   &amp;= \left[\diff{}{x} 0\right]_{x=0}

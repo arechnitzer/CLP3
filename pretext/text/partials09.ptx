@@ -1313,7 +1313,7 @@ gradient and to apply the second derivative test of
 Theorem <xref ref="thm_second_deriv_test"/> we will need all second order partial derivatives. So we need all partial derivatives of order up to two.
 Here they are.
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 f&amp;=2x^3 - 6xy + y^2 +4y
 </mrow><mrow>
 f_x&amp;=6x^2-6y   &amp; f_{xx}&amp;=12x \qquad &amp; f_{xy}&amp;= -6

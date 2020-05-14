@@ -1849,7 +1849,7 @@ of parallel lines and of points <m>(x_i^*,y_i^*)</m>),  then we define
 <statement><p>
 If <m>f(x,y)</m> is continuous in a region <m>\cR</m> described by
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 a&amp;\le x&amp;&amp;\le b
 </mrow><mrow>
 B(x)&amp;\le y&amp;&amp;\le T(x)
@@ -1863,7 +1863,7 @@ for continuous functions <m>B(x)</m>, <m>T(x)</m>, then
 both exist and are equal.
 Similarly, if <m>\cR</m> is described by
 <md alignment="alignat">
-<mrow>{3}
+<mrow>
 c&amp;\le y&amp;&amp;\le d
 </mrow><mrow>
 L(y)&amp;\le x&amp;&amp;\le R(y)

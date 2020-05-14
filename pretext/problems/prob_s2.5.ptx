@@ -998,7 +998,7 @@ xy-2x+y\,z(x,y)+x^2+y^2+z(x,y)^3=7
 </me>
 gives
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 y-2+y\,z_x(x,y)+2x+3z(x,y)^2z_x(x,y)&amp;=0 &amp;   &amp;\implies &amp;
 z_x(x,y)&amp;=\frac{2-2x-y}{y+3z(x,y)^2}
 </mrow><mrow>
@@ -1204,7 +1204,7 @@ graph <m>z=D(x,y)</m>. At this lowest point, the tangent plane to <m>z=D(x,y)</m
 is horizontal. So at the minimum, the normal vector to <m>z=D(x,y)</m>
 has <m>x</m> and <m>y</m> components zero. So
 <md alignment="alignat">
-<mrow>{5}
+<mrow>
 0&amp;=\pdiff{D}{x}(x,y)&amp;&amp;= 2(x-1)+2(x^2+y^2)(2x)
 </mrow><mrow>
 0&amp;=\pdiff{D}{y}(x,y)&amp;&amp;= 2(y-1)+2(x^2+y^2)(2y)
