@@ -299,8 +299,9 @@ Differentiating <m>(*)</m> with respect to <m>y</m>
 gives
 <md>
 <mrow>
-z(x,y)+y\,\pdiff{z}{y}(x,y) - 1 = \frac{1}{y} + \frac{\pdiff{z}{y}(x,y)}{z(x,y)}
-\implies \pdiff{z}{y}(x,y) = \frac{\frac{1}{y}+1-z(x,y)}{y-\frac{1}{z(x,y)}}
+&amp;z(x,y)+y\,\pdiff{z}{y}(x,y) - 1 = \frac{1}{y} + \frac{\pdiff{z}{y}(x,y)}{z(x,y)}
+</mrow><mrow>
+&amp;\hskip1in\implies \pdiff{z}{y}(x,y) = \frac{\frac{1}{y}+1-z(x,y)}{y-\frac{1}{z(x,y)}}
 </mrow>
 </md>
 or, dropping the arguments <m>(x,y)</m> and multiplying both the numerator and denominator by <m>yz</m>,
@@ -360,11 +361,11 @@ for all <m>(T, U, V, W)</m> sufficiently near <m>(1, 1, 2, 4)</m>.
 Differentiating (E1) with respect to <m>T</m> gives
 <md>
 <mrow>
-&amp;2\big(T\, U(T,V,W)-V\big)
-         \left[ U(T,V,W) +T\ \pdiff{U}{T}(T,V,W)\right]
-            \ln\big(W-U(T,V,W)\,V\big)
+&amp;2\big(T\, U(T,V,W)\!-\!V\big)\!
+         \left[ U(T,V,W)\!+\!T\,\pdiff{U}{T}(T,V,W)\right]
+            \ln\big(W\!-\!U(T,V,W)\,V\big)
 </mrow><mrow>
-&amp;\hskip1in
+&amp;\hskip0.5in
   -\big(T\, U(T,V,W)-V\big)^2 \frac{1}{W-U(T,V,W)\,V}\pdiff{U}{T}(T,V,W)\,V = 0
 </mrow>
 </md>
@@ -382,9 +383,10 @@ In particular, for <m>(T, U, V, W)=(1, 1, 2, 4)</m>,
 This simplifies to
 <md>
 <mrow>
--2\left[ 1 +\pdiff{U}{T}(1,2,4)\right] \ln(2)
+&amp;-2\left[ 1 +\pdiff{U}{T}(1,2,4)\right] \ln(2)
                         -\pdiff{U}{T}(1,2,4)=0
-\implies
+</mrow><mrow>
+&amp;\hskip1.0in\implies
 \pdiff{U}{T}(1,2,4) = -\frac{2\ln(2)}{1+2\ln(2)}
 </mrow>
 </md>
@@ -495,17 +497,18 @@ f_y(x_0,y_0) \amp =\lim_{\De y\rightarrow 0}\frac{f(x_0,y_0+\De y)-f(x_0,y_0)}{\
 </mrow>
 </md>
 Setting <m>x_0=y_0=0</m>,
-<md alignment="alignat">
+<md>
 <mrow>
 f_x(0,0)&amp;=\lim_{\De x\rightarrow 0}\frac{f(\De x,0)-f(0,0)}{\De x}
-&amp;=\lim_{\De x\rightarrow 0}\frac{f(\De x,0)}{\De x}
-&amp;=\lim_{\De x\rightarrow 0}\frac{((\De x)^2-2\times0^2)/(\De x-0)}{\De x}
+=\lim_{\De x\rightarrow 0}\frac{f(\De x,0)}{\De x}
+</mrow><mrow>&amp;=\lim_{\De x\rightarrow 0}\frac{((\De x)^2-2\times0^2)/(\De x-0)}{\De x}
 </mrow><mrow>
 &amp;=\lim_{\De x\rightarrow 0}1
 =1
 </mrow><mrow>
 f_y(0,0)&amp;=\lim_{\De y\rightarrow 0}\frac{f(0,\De y)-f(0,0)}{\De y}
-&amp;=\lim_{\De y\rightarrow 0}\frac{f(0,\De y)}{\De y}
+=\lim_{\De y\rightarrow 0}\frac{f(0,\De y)}{\De y}
+</mrow><mrow>
 &amp;=\lim_{\De y\rightarrow 0}\frac{(0^2-2(\De y)^2)/(0-\De y)}{\De y}
 </mrow><mrow>
 &amp;=\lim_{\De y\rightarrow 0}2
@@ -642,7 +645,7 @@ Consider the cylinder whose base is the radius-1 circle in the <m>xy</m>-plane
 centred at <m>(0,0)</m>, and which slopes parallel to the line in the <m>yz</m>-plane
 given by <m>z=y</m>.
 </p>
-<sidebyside>
+<sidebyside width="40%">
 <image><latex-image>\begin{tikzpicture}
 \draw[thin, gray] (0,0)--(1,0) (0,0)--(0,1) (0,0)--(-.2,-.2);
 \draw (0,1)--(0,2) (1,0)--(3,0) (-.2,-.2)--(-1,-1);
@@ -698,7 +701,7 @@ Similarly, differentiating <m>(*)</m> with respect to <m>x</m> gives
 </mrow><mrow>
 z_x(x,y)&amp;=\frac{x}{y-z(x,y)}
 </mrow><mrow>
-z_x(0,-1)&amp;=0 &amp;\mbox{ at } (0,-1,0)
+z_x(0,-1)&amp;=0 \hskip1in\mbox{ at } (0,-1,0)
 </mrow>
 </md>
 The slope looking in the positive <m>x</m> direction is <m>z_x(0,-1)=0</m>.
