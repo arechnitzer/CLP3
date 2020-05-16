@@ -26,8 +26,7 @@ f_{xyz}(x,y,z)
 </p></statement>
 
 <hint><p>
-Repeatedly use (Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
-in the CLP-3 text.
+Repeatedly use (Clairaut's) Theorem <xref ref="thm_mixed_partials"/>.
 </p></hint>
 
 <answer><p>
@@ -39,7 +38,7 @@ We have to derive a bunch of equalities.
 <ul>
 <li>
 Fix any real number <m>x</m> and set <m>g(y,z)=f_x(x,y,z)</m>. By
-(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
 <m>g_{yz}(y,z)=g_{zy}(y,z)</m>, so
 <me>
 f_{xyz}(x,y,z) = g_{yz}(y,z) =g_{zy}(y,z) = f_{xzy}(x,y,z)
@@ -47,7 +46,7 @@ f_{xyz}(x,y,z) = g_{yz}(y,z) =g_{zy}(y,z) = f_{xzy}(x,y,z)
 </li>
 <li>
 For every fixed real number <m>z</m>,
-(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
 gives <m>f_{xy}(x,y,z)=f_{yx}(x,y,z)</m>. So
 <me>
 f_{xyz}(x,y,z) = \pdiff{}{z} f_{xy}(x,y,z)= \pdiff{}{z} f_{yx}(x,y,z)
@@ -60,7 +59,7 @@ f_{xyz}(x,y,z) = f_{xzy}(x,y,z)=f_{yxz}(x,y,z)
 </li>
 <li>
 Fix any real number <m>y</m> and set <m>g(x,z)=f_y(x,y,z)</m>. By
-(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
 <m>g_{xz}(x,z)=g_{zx}(x,z)</m>. So
 <me>
 f_{yxz}(x,y,z) = g_{xz}(x,z) =g_{zx}(x,z) = f_{yzx}(x,y,z)
@@ -72,7 +71,7 @@ f_{xyz}(x,y,z) = f_{xzy}(x,y,z)=f_{yxz}(x,y,z)= f_{yzx}(x,y,z)
 </li>
 <li>
 For every fixed real number <m>y</m>,
-(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
 gives <m>f_{xz}(x,y,z)=f_{zx}(x,y,z)</m>. So
 <me>
 f_{xzy}(x,y,z) = \pdiff{}{y} f_{xz}(x,y,z)= \pdiff{}{y} f_{zx}(x,y,z)
@@ -89,7 +88,7 @@ f_{xyz}(x,y,z) &amp;= f_{xzy}(x,y,z)=f_{yxz}(x,y,z)
 </li>
 <li>
 Fix any real number <m>z</m> and set <m>g(x,y)=f_z(x,y,z)</m>. By
-(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
 <m>g_{xy}(x,y)=g_{yx}(x,y)</m>. So
 <me>
 f_{zxy}(x,y,z) = g_{xy}(x,y) =g_{yx}(x,y) = f_{zxy}(x,y,z)

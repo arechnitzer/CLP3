@@ -55,7 +55,7 @@ A millstone pounds wheat into flour. The wheat sits in a basin, and the millston
 </p>
 
 <p>Consider this claim: <q>As the particles get very close to the millstone, the diameters of the particles approach 50 <m>\mu</m>m.</q>
-In this context, describe the variables below from Definition<nbsp/><xref ref="def_limit"/> in the CLP-3 text.
+In this context, describe the variables below from Definition<nbsp/><xref ref="def_limit"/>.
 </p>
 
 <p><ol label="a">
@@ -192,8 +192,7 @@ whenever the distance from <m>(x,y)</m> to the origin is at most <m>r</m>.
 </li>
 <li>
 For every <m>\epsilon \gt 0</m>, if we choose <m>(x,y)</m> to be sufficiently close to <m>(0,0)</m> (in particular, within a distance <m>r \lt \sqrt\epsilon</m>), then <m>f(x,y)</m> is
-within distance <m>\epsilon</m> of <m>0</m>. By Definition<nbsp/><xref ref="def_limit"/>
-in the CLP-3 text, we have that <m>\lim\limits_{(x,y)\to(0,0)}f(x,y)=0</m>.
+within distance <m>\epsilon</m> of <m>0</m>. By Definition<nbsp/><xref ref="def_limit"/>, we have that <m>\lim\limits_{(x,y)\to(0,0)}f(x,y)=0</m>.
 </li>
 </ol>
 </p>
@@ -207,7 +206,6 @@ Suppose <m>f(x,y)</m> is a polynomial. Evaluate <m>\lim\limits_{(x,y)\to(a,b)}f(
 </p></statement>
 <hint><p>
 Theorem<nbsp/><xref ref="thm_one_d_continuity"/>
-in the CLP-3 text
 </p></hint>
 <answer><p>
 <m>f(a,b)</m>
