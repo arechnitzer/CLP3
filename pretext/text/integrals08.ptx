@@ -129,9 +129,7 @@ P_0&amp;=\vr(u_0, v_0) &amp;
 Now, for any small constants <m>\dee{U}</m> and <m>\dee{V}</m>, we have the linear
 approximation
 <fn>Recall <xref ref="eqn_lin_approx_2d"/>.</fn>
-</p>
-
-<p><md>
+<md>
 <mrow>
 \vr(u_0+\dee{U},v_0+\dee{V})
 &amp;\approx \vr(u_0\,,\,v_0)
@@ -265,8 +263,7 @@ the Jacobian
 movement of the French revolution. It is not named after the Jacobite rebellions that took place in Great Britain and Ireland between 1688 and 1746.
 It is not named after the Jacobean era of English and Scottish history.
 It is named after the German mathematician Carl Gustav Jacob Jacobi
-(1804 <ndash /> 1851). He died from smallpox.</fn>
-.
+(1804 <ndash /> 1851). He died from smallpox.</fn>.
 </p>
 
 <example xml:id="eg_exchange_dA"><title><m>\dee{A}</m> for <m>x\leftrightarrow y</m></title>
@@ -742,8 +739,7 @@ where the length of the vector <m>\vE_3</m> is bounded by a constant times
 We'll now see why dropping terms like <m>\vE_3</m> does not change the value
 of the integral at all
 <fn>See the optional § 1.1.6 of the CLP-2 text
-for an analogous argument concerning Riemann sums.</fn>
-.
+for an analogous argument concerning Riemann sums.</fn>.
 Suppose that our domain of integration consists of all <m>(u,v)</m>'s
 in a rectangle of width <m>W</m> and height <m>H</m>, as in the figure below.
 </p>

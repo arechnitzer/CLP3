@@ -156,9 +156,9 @@ the integral with respect to <m>y</m> treats <m>x</m> as a constant.
 \int_0^2\int_0^3 f(x,y)\,\dee{x}\,\dee{y}
 &amp;=\int_0^2\left[\int_0^3 f(x,y)\,\dee{x}\right]\dee{y}
  =\int_0^2 108y^3\,\dee{y}
- =\Big[27y^4\Big]_{y=0}^{y=2}
 </mrow><mrow>
-&amp;=27\times 16
+&amp;=\Big[27y^4\Big]_{y=0}^{y=2}
+=27\times 16
 = 432
 </mrow>
 </md>
@@ -170,9 +170,9 @@ the integral with respect to <m>y</m> treats <m>x</m> as a constant.
 \int_0^3\int_0^2 f(x,y)\,\dee{y}\,\dee{x}
 &amp;=\int_0^3\left[\int_0^2 f(x,y)\,\dee{y}\right]\dee{x}
  =\int_0^3 48x^2\,\dee{y}
- =\Big[16x^3\Big]_{x=0}^{x=3}
 </mrow><mrow>
-&amp;=16\times 27
+&amp;=\Big[16x^3\Big]_{x=0}^{x=3}
+=16\times 27
 = 432
 </mrow>
 </md>
@@ -184,9 +184,9 @@ the integral with respect to <m>y</m> treats <m>x</m> as a constant.
 \int_0^3\int_0^2 f(x,y)\,\dee{x}\,\dee{y}
 &amp;=\int_0^3\left[\int_0^2 12 x^2y^3\,\dee{x}\right]\dee{y}
 =\int_0^3\left[4 x^3y^3\right]_0^2\dee{y}
-=\int_0^3 32 y^3\dee{y}
 </mrow><mrow>
-&amp; =\Big[8y^4\Big]_0^3
+&amp;=\int_0^3 32 y^3\dee{y}
+ =\Big[8y^4\Big]_0^3
  =8\times 81
  = 648
 </mrow>
@@ -248,7 +248,7 @@ is the triangle with vertices <m>(0,0),\ (0,1),\ (1,1)</m>.
 The following figures show the domains of integration for the
 integrals in this problem.
 </p>
-<sbsgroup widths="5% 40% 5% 40%">
+<sbsgroup widths="5% 33% 5% 33%">
 <sidebyside>
   <p>(a)</p> <image source="pfigs/domain2a"/>
   <p>(b)</p> <image source="pfigs/domain2b"/>
@@ -267,11 +267,11 @@ integrals in this problem.
 <mrow>
 \dblInt_R (x^2+y^2)\,\dee{x}\,\dee{y}
 &amp;=\int_0^a \dee{x}\int_0^b\dee{y}\ (x^2+y^2)
-=\int_0^a \dee{x}\,\left(x^2b+\frac{1}{3}b^3\right)
 \tag{a}
 </mrow><mrow>
+&amp;=\int_0^a \dee{x}\,\left(x^2b+\frac{1}{3}b^3\right)
+</mrow><mrow>
 &amp;=\frac{1}{3}\big(a^3b+ab^3\big)
-\notag \displaybreak[0]
 </mrow><mrow>
 \dblInt_T (x-3y)\,\dee{x}\,\dee{y}
 &amp;=\int_0^a \dee{x}\int_0^{b(1-{x\over a})}\dee{y}\,(x-3y)
@@ -287,47 +287,46 @@ integrals in this problem.
 </mrow><mrow>
 &amp;=\frac{a^2b}{2}-\frac{a^2b}{3}-\frac{ab^2}{2}
 =\frac{a^2b}{6}-\frac{ab^2}{2}
-\notag \displaybreak[0]
 </mrow><mrow>
 \dblInt_R xy^2\,\dee{x}\,\dee{y}
 &amp;=\int_0^1 \dee{x}\int_{x^2}^{\sqrt{x}}\dee{y}\ xy^2
-=\frac{1}{3}\int_0^1 \dee{x}\ x\big(x^{3/2}-x^6 \big)
-=\frac{1}{3}\left(\frac{2}{7}-\frac{1}{8}\right)
 \tag{c}
 </mrow><mrow>
-&amp;=\frac{3}{56}
-\notag \displaybreak[0]
+&amp;=\frac{1}{3}\int_0^1 \dee{x}\ x\big(x^{3/2}-x^6 \big)
+</mrow><mrow>
+&amp;=\frac{1}{3}\left(\frac{2}{7}-\frac{1}{8}\right)
+=\frac{3}{56}
 </mrow><mrow>
 \dblInt_D x\cos y\,\dee{x}\,\dee{y}
 &amp;=\int_0^1 \dee{x}\int_{0}^{1-x^2}\dee{y}\ x\cos y
-=\int_0^1 \dee{x}\ x\sin(1-x^2)
-\tag{d}
+\tag{d}</mrow><mrow>
+&amp;=\int_0^1 \dee{x}\ x\sin(1-x^2)
 </mrow><mrow>
 &amp;=\frac{1}{2}\Big[\cos(1-x^2)\Big]_0^1
 =\frac{1}{2}(1-\cos 1)
-\notag \displaybreak[0]
 </mrow><mrow>
 \dblInt_R \frac{x}{y}e^y\,\dee{x}\,\dee{y}
 &amp;=\int_0^1 \dee{y}\int_{y}^{\sqrt{y}}\dee{x}\ \frac{x}{y}e^y
 =\int_0^1 \dee{y}\ \frac{y-y^2}{2y}e^y
-=\frac{1}{2}\int_0^1 \dee{y}\ (1-y)e^y
 \tag{e}
+</mrow><mrow>
+&amp;=\frac{1}{2}\int_0^1 \dee{y}\ (1-y)e^y
 </mrow><mrow>
 &amp;=\frac{1}{2}\Big[-ye^y+2e^y\Big]_0^1
 =\frac{1}{2}(e-2)
-\notag \displaybreak[0]
+\notag
 </mrow><mrow>
 \dblInt_T \frac{xy}{1+x^4}\,\dee{x}\,\dee{y}
 &amp;=\int_0^1 \dee{x}\int_{x}^{1}\dee{y}\ \frac{xy}{1+x^4}
-=\frac{1}{2}\int_0^1 \dee{x}\ \frac{x(1-x^2)}{1+x^4}
-\tag{f}
+\tag{f}</mrow><mrow>
+&amp;=\frac{1}{2}\int_0^1 \dee{x}\ \frac{x(1-x^2)}{1+x^4}
 </mrow><mrow>
 &amp;=\frac{1}{4}\int_0^1 \dee{t}\ \frac{1-t}{1+t^2}\hbox{ where } t=x^2
 \notag
 </mrow><mrow>
 &amp;=\frac{1}{4}\left[\arctan t-\frac{1}{2}\ln(1+t^2)\right]_0^1
-=\frac{1}{4}\left(\frac{\pi}{4}-\frac{1}{2}\ln 2\right)
-\notag
+</mrow><mrow>
+&amp;=\frac{1}{4}\left(\frac{\pi}{4}-\frac{1}{2}\ln 2\right)
 </mrow>
 </md>
 </p></solution>
@@ -359,17 +358,21 @@ The following figures show the domains of integration for the
 integrals in this problem.
 </p>
 
-<sbsgroup widths="10% 50%">
-<sidebyside>
-  <p>(a)</p> <image source="pfigs/domain4a"/>
+<p>(a)</p>
+<sidebyside width="40%">
+   <image source="pfigs/domain4a"/>
 </sidebyside>
-<sidebyside>
-  <p>(b)</p> <image source="pfigs/domain4b"/>
+
+<p>(b)</p>
+<sidebyside width="66%">
+  <image source="pfigs/domain4b"/>
 </sidebyside>
-<sidebyside>
-<p>(c)</p> <image source="pfigs/domain4c"/>
+
+<p>(c)</p>
+<sidebyside width="33%">
+ <image source="pfigs/domain4c"/>
 </sidebyside>
-</sbsgroup>
+
 
 <p>
 <md>
@@ -383,37 +386,37 @@ integrals in this problem.
 \int_0^{e^2} \dee{y}\int_{\ln y}^2 \dee{x}
 &amp;=\int_0^{e^2} \dee{y}\ \big[2-\ln y\big]
 =\big[2y-y\ln y+y\big]_1^{e^2}
-=e^2-3\notag \displaybreak[0]
+</mrow><mrow>
+&amp;=e^2-3
 </mrow><mrow>
 \int_0^{\sqrt{2}}\dee{y}\int_{-\sqrt{4-2y^2}}^{\sqrt{4-2y^2}}\dee{x}\ y
 &amp;=\int_0^{\sqrt{2}}\dee{y}\ 2y\sqrt{4-2y^2}
-=-\frac{1}{3}\Big[{(4-2y^2)}^{3/2}\Big]_0^{\sqrt{2}}
+\tag{b}</mrow><mrow>
+&amp;=-\frac{1}{3}\Big[{(4-2y^2)}^{3/2}\Big]_0^{\sqrt{2}}
 =\frac{8}{3}
-\tag{b}
 </mrow><mrow>
 \int_{-2}^{2} \dee{x}\int_0^{\sqrt{2-{x^2\over 2}}} \dee{y}\ y
 &amp;=\int_{-2}^{2} \dee{x}\ \left[1-\frac{x^2}{4}\right]
 =2\int_0^{2} \dee{x}\ \left[1-\frac{x^2}{4}\right]
-=2\left[x-\frac{x^3}{12}\right]_0^{2}
-=\frac{8}{3}\notag\displaybreak[0]
+</mrow><mrow>
+&amp;=2\left[x-\frac{x^3}{12}\right]_0^{2}
+=\frac{8}{3}
 </mrow><mrow>
 \int_{-2}^1 \dee{x}\int_{x^2+4x}^{3x+2}\dee{y}
 &amp;=\int_{-2}^1 \dee{x}\ \big[-x^2-x+2\big]
-=\left[-\frac{x^3}{3}-\frac{x^2}{2}+2x\right]_{-2}^1
+\tag{c}</mrow><mrow>
+&amp;=\left[-\frac{x^3}{3}-\frac{x^2}{2}+2x\right]_{-2}^1
 =\frac{9}{2}
-\tag{c}
 </mrow><mrow>
 \int_{-4}^{5} \dee{y}\int_{{y-2\over 3}}^{-2+\sqrt{4+y}} \dee{x}
 &amp;=\int_{-4}^{5} \dee{y}\ \left[\!-\frac{4}{3}-\frac{y}{3}+\sqrt{4+y}\right]
-=\left[-\frac{4y}{3}-\frac{y^2}{6}+\frac{2}{3}{(4+y)}^{3\over 2}\right]_{-4}^{5}
-\notag
 </mrow><mrow>
-&amp;=\frac{9}{2}\notag
+&amp;=\left[-\frac{4y}{3}-\frac{y^2}{6}+\frac{2}{3}{(4+y)}^{3\over 2}\right]_{-4}^{5}
+=\frac{9}{2}
 </mrow>
 </md>
 In part (c), we used that the equation <m>y=x^2+4x</m> is equivalent to
 <m>y+4=(x+2)^2</m> and hence to <m>x=-2\pm\sqrt{y+4}</m>.
-\reqnomode
 </p></solution>
 </exercise>
 
@@ -450,7 +453,7 @@ The figure on the left below contains a sketch of that region together
 with the generic horizontal slices that were used to set up the given
 integrals.
 </p>
-<sidebyside width="40%">
+<sidebyside widths="40% 35%" valign="middle">
   <image source="pfigs/OE06A_6h"/>
    <image source="pfigs/OE06A_6v"/>
 </sidebyside>
@@ -494,10 +497,8 @@ Evaluate the integral by reversing the order of integration.
 </p></statement>
 
 <answer>
-<sidebyside widths="10% 60%">
-  <p>
-  (a)
-  </p>
+<p>(a)</p>
+<sidebyside width="50%">
   <image source="pfigs/OE04Q7a"/>
 </sidebyside>
 
@@ -521,7 +522,7 @@ D = \Set{(x,y)}{0\le x\le 1,\ x\le y\le 1}
 </me>
 It is sketched in the figure on the left below.
 </p>
-<sidebyside width="40%">
+<sidebyside width="45%">
   <image source="pfigs/OE04Q7a"/>
  <image source="pfigs/OE04Q7"/>
 </sidebyside>
@@ -602,7 +603,7 @@ to <m>\sqrt{y}</m>.
 The figure on the left below is a sketch of <m>R</m>, together with
 generic horizontal strips as were used in setting up the integral.
 </p>
-<sidebyside width="40%">
+<sidebyside width="45%">
 <image source="pfigs/OE06D_4h"/>
 <image source="pfigs/OE06D_4v"/>
 </sidebyside>
@@ -644,7 +645,8 @@ I &amp;= \int_1^{\sqrt{2}} \int_{1/y}^{\sqrt{y}} \frac{x}{y}\,\dee{x}\,\dee{y}
 </mrow><mrow>
   &amp;=\left[\frac{y}{2}+\frac{1}{4y^2}\right]_1^{\sqrt{2}}
     +\left[\frac{y}{2}-\frac{y^2}{16}\right]_{\sqrt{2}}^4
-   =\frac{1}{\sqrt{2}} +\frac{1}{8}-\frac{1}{2}-\frac{1}{4}
+</mrow><mrow>
+ &amp;=\frac{1}{\sqrt{2}} +\frac{1}{8}-\frac{1}{2}-\frac{1}{4}
      +2 -1 -\frac{1}{\sqrt{2}} +\frac{1}{8}
 </mrow><mrow>
   &amp;=\frac{1}{2}
@@ -681,8 +683,8 @@ in the opposite order.
 (a) <m>\frac{32}{3}</m>
 </p>
 
-<sidebyside widths="10% 60%">
 <p>(b)</p>
+<sidebyside width="50%">
   <image source="pfigs/OE07A_7"/>
 </sidebyside>
 <p>
@@ -698,7 +700,8 @@ in the opposite order.
 &amp;= \int_{x=-1}^{x=3}\left[x(2x+3-x^2) \right] \dee{x}
 </mrow><mrow>
 &amp;=\left[\frac{2x^3}{3}+\frac{3x^2}{2}-\frac{x^4}{4}\right]_{-1}^3
-=18+\frac{27}{2}-\frac{81}{4} +\frac{2}{3}-\frac{3}{2}+\frac{1}{4}
+</mrow><mrow>
+&amp;=18+\frac{27}{2}-\frac{81}{4} +\frac{2}{3}-\frac{3}{2}+\frac{1}{4}
 </mrow><mrow>
 &amp;=18+12-20+\frac{2}{3}
 =\frac{32}{3}
@@ -718,7 +721,7 @@ in the opposite order.
 Here are two sketches of <m>E</m>, with the left one including a generic
 vertical strip as was used in setting up the given integral.
 </p>
-<sidebyside width="40%">
+<sidebyside widths="45% 50%" valign="middle">
   <image source="pfigs/OE07A_7v"/>
  <image source="pfigs/OE07A_7h"/>
 </sidebyside>
@@ -829,8 +832,8 @@ the order of integration.
 </p></hint>
 
 <answer>
-<sidebyside widths="5% 60%">
 <p>(a)</p>
+<sidebyside widths="40%">
 <image source="pfigs/OE08D_6"/>
 </sidebyside>
 
@@ -855,7 +858,7 @@ The figure on the left below is a sketch of that domain, together with
 a generic horizontal strip as was used in setting up the integral.
 </p>
 
-<sidebyside width="40%">
+<sidebyside width="35%" valign="middle">
   <image source="pfigs/OE08D_6h"/>
    <image source="pfigs/OE08D_6v"/>
 </sidebyside>
@@ -922,7 +925,7 @@ and one including a generic horizontal strip. Notice that the equation
 of the line through <m>(0,0)</m> and <m>(1,1)</m> is <m>y=x</m>.
 </p>
 
-<sidebyside width="40%">
+<sidebyside width="45%">
 <image source="pfigs/OE09A_5v"/>
 <image source="pfigs/OE09A_5h"/>
 </sidebyside>
@@ -1016,7 +1019,7 @@ antiderivative cannot be expressed in terms of familiar functions.)
 So let's try vertical slices as in the sketch
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="50%">
 <image source="pfigs/OE09D_5"/>
 </sidebyside>
 
@@ -1067,8 +1070,8 @@ Evaluate <m>I</m>.
 </p></statement>
 
 <answer>
-<sidebyside widths="10% 60%">
-  <p>(a)</p>
+<p>(a)</p>
+<sidebyside widths="60%">  
   <image source="pfigs/OE09D_6"/>
 </sidebyside>
 
@@ -1094,7 +1097,7 @@ The figure on the left below is a sketch of that domain, together with
 a generic horizontal strip as was used in setting up the integral.
 </p>
 
-<sidebyside width="40%">
+<sidebyside width="45%">
   <image source="pfigs/OE09D_6h"/>
  <image source="pfigs/OE09D_6v"/>
 </sidebyside>
@@ -1165,8 +1168,8 @@ integration.
 </p></hint>
 
 <answer>
-<sidebyside widths="5% 60%">
-  <p>(a)</p>
+<p>(a)</p>
+<sidebyside width="50%">  
   <image source="pfigs/OE10A_6"/>
 </sidebyside>
 
@@ -1258,14 +1261,14 @@ Try reversing the order of integration.
 <answer><p>
 (a) <m>J=\frac{27}{4}</m>
 </p>
-<sidebyside width="75%">
+<sidebyside width="60%">
   <image source="pfigs/OE10D_5a"/>
 </sidebyside>
 
 <p>
 (b) <m>I=\frac{4}{3}\big[e-1\big]</m>
 </p>
-<sidebyside width="75%">
+<sidebyside width="60%">
 <image source="pfigs/OE10D_5b"/>
 </sidebyside>
 </answer>
@@ -1282,7 +1285,7 @@ So the points of intersection of <m>x=y^2</m> and <m>y=x-2</m> are <m>(1,-1)</m>
 and <m>(4,2)</m>. Here is a sketch of <m>D</m>.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="60%">
   <image source="pfigs/OE10D_5aa"/>
 </sidebyside>
 
@@ -1330,7 +1333,7 @@ The figure on the left below is a sketch of that domain, together with
 a generic vertical strip as was used in setting up the integral.
 </p>
 
-<sidebyside width="40%">
+<sidebyside width="48%">
   <image source="pfigs/OE10D_5bv"/>
  <image source="pfigs/OE10D_5bh"/>
 </sidebyside>
@@ -1387,8 +1390,8 @@ looks nasty. Try reversing the order of integration.
 </p></hint>
 
 <answer>
-<sidebyside widths="5% 60%">
-  <p>(a)</p>
+<p>(a)</p>
+<sidebyside width="35%">
   <image source="pfigs/OE11D_5"/>
 </sidebyside>
 
@@ -1412,7 +1415,7 @@ It also shows the generic horizontal slice that was used to set up the given
 iterated integral.
 </p>
 
-<sidebyside width="40%">
+<sidebyside width="35%">
   <image source="pfigs/OE11D_5a"/>
  <image source="pfigs/OE11D_5b"/>
 </sidebyside>
@@ -1554,8 +1557,8 @@ Evaluate the integral for <m>f(x,y)=\frac{1}{(1+y)^2}</m>.
 </p></hint>
 
 <answer>
-<sidebyside widths="5% 60%">
-  <p>(a)</p>
+<p>(a)</p>
+<sidebyside width="40%">
   <image source="pfigs/OE12D_7aa"/>
 </sidebyside>
 
@@ -1676,7 +1679,7 @@ The domain of integration, namely
 is sketched in the figure on the left below.
 </p>
 
-<sidebyside width="45%">
+<sidebyside width="35%">
   <image source="pfigs/OE13D_6a"/>
    <image source="pfigs/OE13D_6b"/>
 </sidebyside>
@@ -1733,7 +1736,7 @@ of integration for the second integral is the shaded region to the right
 of <m>x=2</m>.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="90%">
   <image source="pfigs/OE14A_6"/>
 </sidebyside>
 
@@ -1742,7 +1745,7 @@ To exchange the order of integration, we use horizontal slices as in the
 figure below.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="90%">
   <image source="pfigs/OE14A_6h"/>
 </sidebyside>
 
@@ -1779,8 +1782,8 @@ Compute the integral in the case <m>f(x,y) = e^{x-(x^3/3)}</m>.
 </p></statement>
 
 <answer>
-<sidebyside widths="5% 65%">
 <p>(a)</p>
+<sidebyside width="50%">
 <image source="pfigs/OE15D_6"/>
 </sidebyside>
 
@@ -1807,7 +1810,7 @@ So
 </me>
 </p>
 
-<sidebyside width="45%">
+<sidebyside widths="50% 45%" valign="middle">
   <image source="pfigs/OE15D_6B"/>
   <image source="pfigs/OE15D_6A"/>
 </sidebyside>
@@ -1866,8 +1869,8 @@ reversing the order of integration.
 </p></hint>
 
 <answer>
-<sidebyside widths="5% 65%">
-  <p>(a)</p>
+<p>(a)</p>
+<sidebyside widths="45%">  
   <image source="pfigs/OE16D_6"/>
 </sidebyside>
 
@@ -1890,7 +1893,7 @@ The figure on the left below is a sketch of that domain, together with
 a generic vertical strip as was used in setting up the integral.
 </p>
 
-<sidebyside width="4%">
+<sidebyside width="45%">
 <image source="pfigs/OE16D_6v"/>
 <image source="pfigs/OE16D_6h"/>
 </sidebyside>
@@ -1944,8 +1947,8 @@ Compute the volume of the solid.
 </p></statement>
 
 <answer>
-<sidebyside widths="5% 60%">
-  <p>(a)</p>
+<p>(a)</p>
+<sidebyside width="50%">  
   <image source="pfigs/OE03DQ6a"/>
 </sidebyside>
 
@@ -2038,7 +2041,7 @@ D = \Set{(x,y)}{-2\le x\le 2,\  x^2\le y\le 4}
 </me>
 This is sketched below.
 </p>
-<sidebyside width="65%">
+<sidebyside width="60%">
   <image source="pfigs/OE02DQ6"/>
 
 </sidebyside>
@@ -2138,7 +2141,7 @@ figure below, and also by decomposing <m>D</m> into blue strips, like the
 blue strip in the figure below.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="60%">
   <image source="pfigs/OE02AQ7"/>
 
 </sidebyside>
@@ -2232,7 +2235,7 @@ D = \Set{(x,y)}{0\le y\le 9,\  \sqrt{y}\le x\le 3}
 This is sketched below.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="40%">
 <image source="pfigs/OE01DQ6"/>
 </sidebyside>
 
@@ -2295,8 +2298,8 @@ Find <m>I</m>.
 </p></statement>
 
 <answer>
-<sidebyside widths="5% 75%">
 <p>(a)</p>
+<sidebyside widths="40%">
 <image source="pfigs/OE00DQ6"/>
 </sidebyside>
 
@@ -2323,7 +2326,7 @@ R=\Set{(x,y)}{0\le x\le 1,\ -\sqrt{x}\le y\le \sqrt{x}}
 It is sketched below.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="40%">
 <image source="pfigs/OE00DQ6"/>
 </sidebyside>
 
@@ -2385,7 +2388,7 @@ with <m>y^2=2(y+1)+6</m> or <m>y^2-2y-8=(y-4)(y+2)=0</m>. So they meet at <m>(-1
 The domain of integration is sketched below.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="60%">
   <image source="pfigs/OE00AQ7"/>
 </sidebyside>
 
@@ -2403,19 +2406,19 @@ to <m>y+1</m>.
 So the integral is
 <md>
 <mrow>
-\int_{-2}^4\dee{y}\int_{y^2/2-3}^{y+1}\dee{x}\ xy
-&amp;=\int_{-2}^4\dee{y}\ \frac{1}{2} x^2y\bigg|_{y^2/2-3}^{y+1}
+&amp;\int_{-2}^4\dee{y}\int_{y^2/2-3}^{y+1}\dee{x}\ xy
+=\int_{-2}^4\dee{y}\ \frac{1}{2} x^2y\bigg|_{y^2/2-3}^{y+1}
 </mrow><mrow>
-&amp;=\frac{1}{2}\int_{-2}^4\dee{y}\
+&amp;\hskip0.5in=\frac{1}{2}\int_{-2}^4\dee{y}\
                   \left[y^3+2y^2+y-\frac{1}{4}y^5+3y^3-9y\right]
 </mrow><mrow>
-&amp;=\frac{1}{2}\int_{-2}^4\dee{y}\ \left[-8y+2y^2+4y^3-\frac{1}{4}y^5\right]
+&amp;\hskip0.5in=\frac{1}{2}\int_{-2}^4\dee{y}\ \left[-8y+2y^2+4y^3-\frac{1}{4}y^5\right]
 </mrow><mrow>
-&amp;=\left[-2y^2+\frac{1}{3}y^3+\frac{1}{2}y^4-\frac{1}{48}y^6\right]_{-2}^4
+&amp;\hskip0.5in=\left[-2y^2+\frac{1}{3}y^3+\frac{1}{2}y^4-\frac{1}{48}y^6\right]_{-2}^4
 </mrow><mrow>
-&amp;=-2(16-4)+\frac{1}{3}(64+8)+\frac{1}{2}(256-16)
+&amp;\hskip0.5in=-2(16-4)+\frac{1}{3}(64+8)+\frac{1}{2}(256-16)
 -\frac{1}{48}(4096-64)\cr
-&amp;=-24+24+120-84=36
+&amp;\hskip0.5in=-24+24+120-84=36
 </mrow>
 </md>
 </p></solution>
@@ -2450,7 +2453,7 @@ The volume is
 <me>
 \int_{-2}^{2}\dee{y}\int_{-\sqrt{8-2y^2}}^{\sqrt{8-2y^2}}\dee{x}\ (12-x-y)
 </me>
-Recall, from Theorem \eref{CLP101}{thm:INTevenodd} in the CLP-2 text,
+Recall, from Theorem 1.2.11 in the CLP-2 text,
 that if <m>f(x)</m> is an odd function (meaning that
 <m>f(-x)=-f(x)</m> for all <m>x</m>), then <m>\int_{-a}^a f(x)\ \dee{x}=0</m> (because the
 two integrals <m>\int_0^a f(x)\ \dee{x}</m> and <m>\int_{-a}^0 f(x)\ \dee{x}</m> have the

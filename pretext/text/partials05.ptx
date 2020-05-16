@@ -13,10 +13,7 @@
 is the straight line that fits the curve best
 <fn>It is possible,
 but beyond the scope of this text, to give a precise meaning to
-<q>fits best</q>.</fn>
-</p>
-
-<p>at that point.
+<q>fits best</q>.</fn> at that point.
 Finding tangent lines was probably one of the first applications
 of derivatives that you saw. See, for example,
 Theorem 2.3.2 in the CLP-1 text.
@@ -374,8 +371,7 @@ for solving cubics was developed in the 15th century by
 del Ferro, Cardano and Ferrari (Cardano's student). Ferrari then went
 on to discover a formula for the roots of a quartic. Both the cubic and quartic
 formulae are extremely cumbersome, and no such formula exists for
-polynomials of degree 5 and higher. This is the famous Abel-Ruffini theorem.</fn>
-.
+polynomials of degree 5 and higher. This is the famous Abel-Ruffini theorem.</fn>.
 But, in this case,
 we can guess one solution
 <fn>See Appendix A.16 in the
@@ -585,9 +581,7 @@ We have just found a normal vector!
 the form
 <fn>Alternatively, one could rewrite <m>G=K</m> as <m>G-K=0</m>
 and replace <m>G</m> by <m>G-K</m> in the above argument.</fn>
-</p>
-
-<p><m>G(x,y,z)=K</m>, for any constant <m>K</m>. So we have
+<m>G(x,y,z)=K</m>, for any constant <m>K</m>. So we have
 </p>
 
 

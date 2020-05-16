@@ -1153,9 +1153,7 @@ original coordinate system, then it is <m>(X(t),Y(t),Z(t))
 =(x(t)-1,y(t)-2,z(t)+1)</m> in the new coordinate system. The velocity
 vectors in the two coordinate systems <m>\llt x'(t),y'(t),z'(t)\rgt
 =\llt X'(t),Y'(t),Z'(t)\rgt</m> are identical.</fn>
-</p>
-
-<p>must be perpendicular to both <m>\llt 1,1,-1\rgt</m> and <m>\llt 1,0,1\rgt</m>,
+must be perpendicular to both <m>\llt 1,1,-1\rgt</m> and <m>\llt 1,0,1\rgt</m>,
 it must be one of  <m>\pm\llt 1,1,-1\rgt\times\llt 1,0,1\rgt</m>.
 To get from <m>(1,0,1)</m> to <m>(1,-1,0)</m> by the shortest path, our <m>Z</m>
 coordinate should decrease from <m>1</m> to <m>0</m>. So the <m>Z</m> coordinate of

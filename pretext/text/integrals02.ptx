@@ -47,10 +47,8 @@ The polar coordinates
 the angular coordinate is usually denoted <m>\theta</m>, as we do here.
 The symbol <m>\varphi</m> is also often used for the angular coordinate.
 In fact there is an ISO standard (\#31 <ndash/> 11) which specifies
-that <m>\varphi</m> should be used in the natural sciences and in technology.</fn>
-</p>
-
-<p>of any point <m>(x,y)</m> in the <m>xy</m>-plane are
+that <m>\varphi</m> should be used in the natural sciences and in technology.</fn> 
+of any point <m>(x,y)</m> in the <m>xy</m>-plane are
 <md>
 <mrow>
 r&amp;=\text{ the distance from }(0,0)\text{ to }(x,y)
@@ -259,8 +257,7 @@ graph below. This curve is called a <em>cardiod</em> because it looks
 like a heart
 <fn>Well, a mathematician's heart. The name <q>cardioid</q>
 comes from the Greek word <m>\kappa \alpha \rho \delta \iota \alpha</m>
-(which anglicizes to kardia) for heart.</fn>
-.
+(which anglicizes to kardia) for heart.</fn>.
 </p>
 
 <sidebyside width="40%">
@@ -494,8 +491,7 @@ of constant <m>\theta</m>. As the circumference of the full circle is <m>2\pi r<
 and as <m>\dee{\theta}</m> is the fraction <m>\frac{\dee{\theta}}{2\pi}</m>
 of a full circle
 <fn>Recall that <m>\theta</m> has to be measured in radians for
-this to be true.</fn>
-, the other side of the approximate rectangle has length
+this to be true.</fn>, the other side of the approximate rectangle has length
 <m>\frac{\dee{\theta}}{2\pi}2\pi r = r\dee{\theta}</m>. So the shaded
 region has area approximately
 </p>
@@ -520,8 +516,7 @@ By way of comparison, using Cartesian coordinates we had <m>\dee{A}
 an argument that lacks substance. Here we are just using it to indicate
 that we have left out a bunch of technical details.
 In mathematics, <q>nose-following</q> is sometimes used as the polar opposite
-of handwaving. It refers to a very narrow, mechanical, line of reasoning.</fn>
-.
+of handwaving. It refers to a very narrow, mechanical, line of reasoning.</fn>.
 But using it in
 the usual integral setup procedure, in which we choose <m>\dee{r}</m> and
 <m>\dee{\theta}</m> to be constants times <m>\frac{1}{n}</m> and then take the limit
@@ -1101,8 +1096,7 @@ question
 <fn>The solution is attributed to the French Mathematician
 Sim\'eon Denis Poisson (1781 <ndash/> 840) and was published in the textbook
 <em>Cours d'Analyse de l'\'ecole polytechnique</em> by
-Jacob Karl Franz Sturm (1803 <ndash/> 1855).</fn>
-.
+Jacob Karl Franz Sturm (1803 <ndash/> 1855).</fn>.
 </p>
 
 <p>The integrand <m>e^{-x^2}</m> does not have an antiderivative that can
