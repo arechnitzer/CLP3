@@ -801,8 +801,8 @@ of Theorem <xref ref="thm_tan_plane_G"/>, we evaluate
 <md>
 <mrow>
 \vnabla G(0,0,1)\cdot\llt x-0\,,\,y-0\,,\,z-1\rgt =0
-\qquad\text{or}\qquad 2(z-1)=0
-\qquad\text{or}\qquad z=1
+\quad\text{or}\quad 2(z-1)=0
+\quad\text{or}\quad z=1
 </mrow>
 </md>
 This is of course correct <mdash/> the tangent plane to the unit sphere at the north

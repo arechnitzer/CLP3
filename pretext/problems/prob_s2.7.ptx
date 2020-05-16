@@ -234,12 +234,12 @@ Substituting <m>\al=7</m> into the first equation gives <m>\be=-1</m>. So
 <exercise><title><fromexam>M200 2005D</fromexam></title>
 <statement><p>
 You are standing at a location where the surface of the earth is smooth.
-The slope in the southern direction is <m>4</m> and the slope in the south--eastern direction is <m>\sqrt{2}</m>. Find the slope in the eastern direction.
+The slope in the southern direction is <m>4</m> and the slope in the south-eastern direction is <m>\sqrt{2}</m>. Find the slope in the eastern direction.
 </p></statement>
 
 <hint><p>
-Use a coordinate system with the positive <m>y</m>--axis pointing
-north, with the positive <m>x</m>--axis pointing east and with our current
+Use a coordinate system with the positive <m>y</m>-axis pointing
+north, with the positive <m>x</m>-axis pointing east and with our current
 location being <m>x=y=0</m>. Denote by <m>z(x,y)</m> the elevation of the
 earth's surface at <m>(x,y)</m>. Express the various slopes in terms of
 <m>\vnabla z(0,0)</m>.
@@ -250,8 +250,8 @@ earth's surface at <m>(x,y)</m>. Express the various slopes in terms of
 </p></answer>
 
 <solution><p>
-Use a coordinate system with the positive <m>y</m>--axis pointing
-north, with the positive <m>x</m>--axis pointing east and with our current
+Use a coordinate system with the positive <m>y</m>-axis pointing
+north, with the positive <m>x</m>-axis pointing east and with our current
 location being <m>x=y=0</m>. Denote by <m>z(x,y)</m> the elevation of the
 earth's surface at <m>(x,y)</m>. We are told that
 <md>
@@ -340,7 +340,7 @@ A hiker is walking on a mountain with height above the <m>z = 0</m> plane given 
 <me>
 z = f(x,y) = 6 - xy^2
 </me>
-The positive <m>x</m>--axis points east and the positive <m>y</m>--axis points north,
+The positive <m>x</m>-axis points east and the positive <m>y</m>-axis points north,
 and the hiker starts from the point <m>P(2, 1, 4)</m>.
 <ol label="a">
 <li>
@@ -438,7 +438,7 @@ This is true at all points on <m>y=ax^b</m> if and only if <m>b=\frac{3}{2}</m>.
 As <m>(1,1)</m> must also be on <m>y=ax^b</m>, we need <m>1=a1^b</m>, which forces
 <m>a=1</m>, <m>b=\frac{3}{2}</m>. Here is a contour map showing the hiking trail.
 </p>
-<sidebyside width="60%">
+<sidebyside width="40%">
   <image source="pfigs/hiker"/>
 </sidebyside>
 
@@ -660,7 +660,7 @@ So the allowed directions are <m>\llt \pm\frac{4}{5}\,,\,\frac{3}{5}\rgt</m>.
 
 <exercise><title><fromexam>M200 2010A</fromexam></title>
 <statement><p>
-The temperature <m>T(x, y)</m> at a point of the <m>xy</m>--plane is given by
+The temperature <m>T(x, y)</m> at a point of the <m>xy</m>-plane is given by
 <me>
 T(x, y) = ye^{x^2}
 </me>
@@ -751,7 +751,8 @@ D_{\frac{\llt -3\,,\,-1\,,\,1\rgt}{|\llt -3\,,\,-1\,,\,1\rgt|}}F(3,2,1)
 </mrow><mrow>
 &amp;= \llt 2-1\,,\,3-2(2)\,,\,2(1) \rgt
 \cdot   \frac{\llt -3\,,\,-1\,,\,1\rgt}{|\llt -3\,,\,-1\,,\,1\rgt|}
-=\llt 1\,,\,-1\,,\,2\rgt \cdot   \frac{\llt -3\,,\,-1\,,\,1\rgt}{\sqrt{11}}
+</mrow><mrow>
+&amp;=\llt 1\,,\,-1\,,\,2\rgt \cdot   \frac{\llt -3\,,\,-1\,,\,1\rgt}{\sqrt{11}}
 </mrow><mrow>
 &amp;=0
 </mrow>
@@ -839,25 +840,25 @@ positive constant times <m>\llt -1 \,,\, 0 \,,\, 1 \rgt</m> is fine.
 
 <solution><p>
 (a) The first order partial derivatives of <m>f</m> and <m>g</m> are
-<md alignment="alignat">
+<md>
 <mrow>
 \pdiff{f}{x}(x,y,z)&amp;=  2e^{-(x^2 +y^2 +z^2)} -2x(2x + y)e^{-(x^2 +y^2 +z^2)}
-&amp;\quad\implies \pdiff{f}{x}(0,1,-1)&amp;=2e^{-2}
+</mrow><mrow>&amp;\hskip2in\implies \pdiff{f}{x}(0,1,-1)=2e^{-2}
 </mrow><mrow>
 \pdiff{f}{y}(x,y,z)&amp;=  e^{-(x^2 +y^2 +z^2)} -2y(2x + y)e^{-(x^2 +y^2 +z^2)}
-&amp;\quad\implies \pdiff{f}{y}(0,1,-1)&amp;=-e^{-2}
+</mrow><mrow>&amp;\hskip2in\implies \pdiff{f}{y}(0,1,-1)=-e^{-2}
 </mrow><mrow>
 \pdiff{f}{z}(x,y,z)&amp;=  -2z(2x + y)e^{-(x^2 +y^2 +z^2)}
-&amp;\quad\implies \pdiff{f}{z}(0,1,-1)&amp;=2e^{-2}
+</mrow><mrow>&amp;\hskip2in\implies \pdiff{f}{z}(0,1,-1)=2e^{-2}
 </mrow><mrow>
 \pdiff{g}{x}(x,y,z)&amp;=  z
-&amp;\quad\implies \pdiff{g}{x}(0,1,-1)&amp;=-1
+</mrow><mrow>&amp;\hskip2in\implies \pdiff{g}{x}(0,1,-1)=-1
 </mrow><mrow>
 \pdiff{g}{y}(x,y,z)&amp;=  2y+z
-&amp;\quad\implies \pdiff{g}{y}(0,1,-1)&amp;= 1
+</mrow><mrow>&amp;\hskip2in\implies \pdiff{g}{y}(0,1,-1)= 1
 </mrow><mrow>
 \pdiff{g}{z}(x,y,z)&amp;=  x+y+2z
-&amp;\quad\implies \pdiff{g}{z}(0,1,-1)&amp;=-1
+</mrow><mrow>&amp;\hskip2in\implies \pdiff{g}{z}(0,1,-1)=-1
 </mrow>
 </md>
 so that gradients are
@@ -902,7 +903,7 @@ times
 </md>
 is perpendicular to both <m>\vnabla f(0,1,-1)</m> and
 <m>\vnabla g(0,1,-1)</m>. In addition, the direction of flight for the bat
-must have a positive <m>z</m>--component. So any vector which is a (strictly)
+must have a positive <m>z</m>-component. So any vector which is a (strictly)
 positive constant times <m>\llt -1 \,,\, 0 \,,\, 1 \rgt</m> is fine.
 </p></solution>
 </exercise>
@@ -959,7 +960,7 @@ So <m>\vv</m> has to be some constant times
 or, equivalently, some constant times <m>\llt 1 \,,\, 2 \,,\, -2 \rgt</m>.
 </li>
 <li>
-Since the <m>z</m>--component of <m>\vv</m> has to be positive,
+Since the <m>z</m>-component of <m>\vv</m> has to be positive,
 <m>\vv</m> has to be a positive constant times
 <m>\llt -1 \,,\, -2 \,,\, 2 \rgt</m>.
 </li>
@@ -986,8 +987,8 @@ Then the rate of change of temperature (per unit time) felt by the bee at time
 <m>t=2</m> is
 <md>
 <mrow>
-\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
-&amp;=x'(2)y(2) + x(2)y'(2) -3x'(2) +2y'(2)2+2y(2) +z'(2)
+&amp;\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
+</mrow><mrow>\hskip1in&amp;=x'(2)y(2) + x(2)y'(2) -3x'(2) +2y'(2)2+2y(2) +z'(2)
 </mrow><mrow>
 </mrow>
 </md>
@@ -995,10 +996,11 @@ Recalling that, at time <m>t=2</m>, the bee is at <m>(1,1,0)</m> and has velocit
 <m>\llt -2 \,,\, -4 \,,\, 4 \rgt</m>
 <md>
 <mrow>
-\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
-&amp;=(-2)(1) + (1)(-4) -3(-2) +2(-4)2+2(1) +4
+&amp;\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
 </mrow><mrow>
-&amp;=-10
+&amp;\hskip1in=(-2)(1) + (1)(-4) -3(-2) +2(-4)2+2(1) +4
+</mrow><mrow>
+&amp;\hskip1in=-10
 </mrow>
 </md>
 </p>
@@ -1015,10 +1017,11 @@ By the chain rule, the rate of change of temperature (per unit time)
 felt by the bee at time <m>t=2</m> is
 <md>
 <mrow>
-\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
-&amp;=\bigg[\pdiff{T}{x}\big(x(t),y(t),z(t),t\big)\,x'(t)
+&amp;\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
+</mrow><mrow>
+&amp;\hskip0.5in=\bigg[\pdiff{T}{x}\big(x(t),y(t),z(t),t\big)\,x'(t)
       +\pdiff{T}{y}\big(x(t),y(t),z(t),t\big)\,y'(t)
-</mrow><mrow>&amp;\hskip0.5in
+</mrow><mrow>&amp;\hskip1.0in
       +\pdiff{T}{z}\big(x(t),y(t),z(t),t\big)\,z'(t)
       +\pdiff{T}{t}\big(x(t),y(t),z(t),t\big)\bigg]_{t=2}
 </mrow>
@@ -1026,8 +1029,8 @@ felt by the bee at time <m>t=2</m> is
 Recalling that <m>T = xy - 3x+2yt+z</m>, we have
 <md>
 <mrow>
-\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
-&amp;=[y(2)-3]x'(2) + [x(2)+2\times 2]y'(2) +z'(2) +2y(2)
+&amp;\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
+</mrow><mrow>&amp;\hskip1in=[y(2)-3]x'(2) + [x(2)+2\times 2]y'(2) +z'(2) +2y(2)
 </mrow>
 </md>
 Also recalling that, at time <m>t=2</m>, the bee is at <m>(1,1,0)</m> and has velocity
@@ -1095,8 +1098,9 @@ the directional derivative
 <md>
 <mrow>
 D_{\frac{\llt 0,-1,1 \rgt}{\sqrt{2}}} T(1,2,-1)
-=e^{-9}\llt -20,-20,30\rgt\cdot \frac{\llt 0,-1,1 \rgt}{\sqrt{2}}
-=\frac{50}{\sqrt{2}}e^{-9} =25\,\sqrt{2}\,e^{-9}
+&amp;=e^{-9}\llt -20,-20,30\rgt\cdot \frac{\llt 0,-1,1 \rgt}{\sqrt{2}}
+</mrow><mrow>
+&amp;=\frac{50}{\sqrt{2}}e^{-9} =25\,\sqrt{2}\,e^{-9}
 </mrow>
 </md>
 </p>
@@ -1189,7 +1193,7 @@ are <m>\pm\frac{1}{\sqrt{5}}\llt 2, -1\rgt</m>.
 <exercise><title><fromexam>M200 2013D</fromexam></title>
 <statement><p>
 The shape of a hill is given by <m>z = 1000 - 0.02x^2 - 0.01y^2</m>.
-Assume that the <m>x</m>--axis is pointing East, and the <m>y</m>--axis
+Assume that the <m>x</m>-axis is pointing East, and the <m>y</m>-axis
 is pointing North, and all distances are in metres.
 <ol label="a">
 <li>
@@ -1255,11 +1259,11 @@ descent and
 Since <m>x(0)</m> and <m>y(0)=100</m>, we have <m>z'(0)= -0.02(100)y'(0) = -2y'(0)</m>. So
 <md>
 <mrow>
-25 = x'(0)^2+y'(0)^2+z'(0)^2
+&amp;25 = x'(0)^2+y'(0)^2+z'(0)^2
    =5\ y'(0)^2
-&amp;\implies y'(0) = \sqrt{5}
+</mrow><mrow>&amp;\hskip1in\implies y'(0) = \sqrt{5}
 </mrow><mrow>
-&amp;\implies \llt x'(0)\,,\,y'(0)\,,\,z'(0) \rgt
+&amp;\hskip1in\implies \llt x'(0)\,,\,y'(0)\,,\,z'(0) \rgt
           =\llt 0\,,\, \sqrt{5}\,,\, -2\sqrt{5}\rgt
 </mrow>
 </md>
@@ -1269,7 +1273,8 @@ and your rate of change of altitude is
 \diff{}{t} h\big(x(t)\,,\,y(t)\big)\Big|_{t=0}
 &amp;=\vnabla h(0,100)\cdot \llt x'(0)\,,\,y'(0) \rgt
 =\llt 0\,,\,-2\rgt \cdot \llt 0\,,\, \sqrt{5}\rgt
-=-2\sqrt{5}
+</mrow><mrow>
+&amp;=-2\sqrt{5}
 </mrow>
 </md>
 </p></solution>
@@ -1335,15 +1340,17 @@ So, by way of preparation, let's compute all of these gradients.
 <md>
 <mrow>
 \vnabla P(x,y,z) &amp;= \frac{2x}{1+z^2}\hi + \frac{4y}{1+z^2}\hj
-                          -\frac{(x^2+2y^2)2z}{{(1+z^2)}^2}\hk  &amp;
-\vnabla P(0,-1,1) &amp;=  -2\,\hj  - \hk
+                          -\frac{(x^2+2y^2)2z}{{(1+z^2)}^2}\hk  
 </mrow><mrow>
-\vnabla T(x,y,z) &amp;= y\,\hi + x\,\hj -2z\,\hk  &amp;
-\vnabla T(0,-1,1) &amp;=  -\hi  - 2\hk
-
+&amp;\hskip1in\implies \vnabla P(0,-1,1) =  -2\,\hj  - \hk
 </mrow><mrow>
-\vnabla S(x,y,z) &amp;= z\,\hi + 2y\,\hj +(x+3z^2)\,\hk  &amp;
-\vnabla S(0,-1,1) &amp;= \hi  - 2\hj +3\,\hk
+\vnabla T(x,y,z) &amp;= y\,\hi + x\,\hj -2z\,\hk  
+</mrow><mrow>
+&amp;\hskip1in\implies\vnabla T(0,-1,1) =  -\hi  - 2\hk
+</mrow><mrow>
+\vnabla S(x,y,z) &amp;= z\,\hi + 2y\,\hj +(x+3z^2)\,\hk  
+</mrow><mrow>
+&amp;\hskip1in\implies\vnabla S(0,-1,1) = \hi  - 2\hj +3\,\hk
 </mrow>
 </md>
 To get the gradient of <m>PT</m> we use the product rule
@@ -1391,7 +1398,8 @@ The direction should be perpendicular to <m>\vnabla P(0,-1,1)</m>
 <mrow>
 \pm \vnabla P(0,-1,1) \times \vnabla T(0,-1,1)
 &amp;=\pm \llt 0 \,,\, -2 \,,\, -1\rgt  \times  \llt -1\,,\,0 \,,\,- 2\rgt
-=\pm \det\left[\begin{matrix}
+</mrow><mrow>
+&amp;=\pm \det\left[\begin{matrix}
                      \hi &amp; \hj &amp; \hk
 </mrow><mrow>
                      0   &amp;  2  &amp; 1
@@ -1412,7 +1420,7 @@ i.e. being perpendicular to the normal vector
 We can get that optimal direction by subtracting from <m>\vnabla T(0,-1,1)</m>
 the projection of <m>\vnabla T(0,-1,1)</m> onto the normal vector.
 </p>
-<sidebyside width="60%">
+<sidebyside width="75%">
   <image source="pfigs/OE14A_2"/>
 </sidebyside>
 <p>
@@ -1820,8 +1828,10 @@ increase his depth as rapidly as possible (i.e. be most likely to drown)?
 </p></statement>
 
 <answer>
-<sidebyside widths="10% 80%">
-<p>(a)</p>
+<p>
+(a)
+</p>
+<sidebyside width="30%">
 <image source="pfigs/OE00AQ3"/>
 </sidebyside>
 <p>
@@ -1835,7 +1845,7 @@ increase his depth as rapidly as possible (i.e. be most likely to drown)?
 which is an ellipse centred on <m>(-2,0)</m> with semiaxes <m>6</m> in the <m>x</m>-direction
 and <m>3</m> in the <m>y</m>-direction.
 </p>
-<sidebyside width="60%">
+<sidebyside width="30%">
   <image source="pfigs/OE00AQ3"/>
 </sidebyside>
 <p>
@@ -1883,7 +1893,7 @@ experiencing maximum rate of cooling?
 </p></statement>
 
 <hint><p>
-Review §<xref ref="sec_directional_derivatives"/> in the CLP-3 text.
+Review §<xref ref="sec_directional_derivatives"/>.
 </p>
 
 <p>(e) Suppose that the ant moves along the curve <m>y=y(x)</m>.
@@ -2199,7 +2209,7 @@ and then
 <md>
 <mrow>
 F(x,y,z)
-&amp;\approx F(0,1,2) + F_x(0,1,2)\,x + F_y(0,1,2)\,(y-1) + F_z(0,1,2)\,(z-2)
+&amp;\approx F(0,1,2)\!+\!F_x(0,1,2)\,x\!+\1F_y(0,1,2)\,(y\!-\!1)\!+\!F_z(0,1,2)\,(z\!-\!2)
 </mrow><mrow>
 &amp;=8+ 3 x + 12 (z-2)
 </mrow>
@@ -2278,8 +2288,8 @@ In which direction does the trail leave the car park?
 </p></statement>
 
 <answer>
-<sidebyside widths="10% 80%">
 <p>(a)</p>
+<sidebyside width="70%">
 <image source="pfigs/crater"/>
 </sidebyside>
 <p>
@@ -2300,7 +2310,7 @@ bottom of the crater and the open dot represents the car park. The
 contours sketched are (from inside out) <m>z=-7.5, -5, -2.5, -1</m>. Note that
 the trail crosses the contour lines at right angles.
 </p>
-<sidebyside width="60%">
+<sidebyside width="70%">
   <image source="pfigs/crater"/>
 </sidebyside>
 <p>
@@ -2357,7 +2367,10 @@ direction at each point of this curve.
 <solution><p>
 We have
 <me>
-\vnabla h(x,y)= -200 e^{-(x^2+2y^2)}\llt x,2y\rgt\text{ and, in particular, }
+\vnabla h(x,y)= -200 e^{-(x^2+2y^2)}\llt x,2y\rgt
+</me>
+and, in particular,
+<me>
 \vnabla h(3,2)= -200 e^{-17}\llt 3,4\rgt
 </me>
 </p>
@@ -2448,7 +2461,7 @@ of the vector <m>\hi+2\hj</m> is
 </md>
 </p>
 
-<p>(c) Applying (<xref ref="eqn_lin_approx_2d"/> in the CLP3 text, which is
+<p>(c) Applying (<xref ref="eqn_lin_approx_2d"/>), which is
 <md>
 <mrow>
 f\big(x_0+\De x\,,\,y_0+\De y\big)
