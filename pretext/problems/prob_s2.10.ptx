@@ -646,6 +646,8 @@ So we have the following candidates for the locations of the min and max
 
 <sidebyside>
   <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(-2\sqrt{2},\sqrt{2}, 10)</m>
@@ -960,6 +962,8 @@ Substituting these into (E4) gives
 
 <sidebyside>
   <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>\big(-1 + \sqrt{2}, 0, 1-\sqrt{2}\big)</m>
@@ -1149,6 +1153,7 @@ So we have the following candidates for the locations of the min and max
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> 
 <row>
 <cell> point
        </cell><cell><m>(1,-1,2)</m>
@@ -1279,6 +1284,7 @@ So we have the following candidates for the locations of the min and max
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> 
 <row>
 <cell> point
        </cell><cell><m>\frac{1}{\sqrt{5}}(2,1,0)</m>
@@ -1379,6 +1385,7 @@ compute <m>f</m> at those points.
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> 
 <row>
 <cell>  point
        </cell><cell><m>(1,2,1)</m>
@@ -2072,6 +2079,8 @@ So we have the following candidates for the locations of the min and max
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>  <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(0,0, -6)</m>
@@ -2148,6 +2157,8 @@ So we have the following candidates for the locations of the min and max
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>  <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(0,0, \pm 6)</m>
@@ -2294,6 +2305,7 @@ compute <m>T</m> at those points.
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(0,10)</m>

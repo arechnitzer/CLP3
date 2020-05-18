@@ -391,6 +391,7 @@ f(x, y) = x^3 - y^3 - 2xy + 6.
 <answer>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m> </cell><cell> type </cell>
 </row><row>
@@ -441,6 +442,7 @@ So there are two critical points: <m>(0,0)</m>,
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -466,6 +468,7 @@ Also find out which of these points give local maximum values for
 <answer>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>   </cell><cell> type </cell>
 </row><row>
@@ -531,6 +534,7 @@ which is satisfied if <m>y=\pm 1</m>.
 The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -636,6 +640,7 @@ Find and classify all the critical points of <m>f(x,y)=x^2+y^2+x^2y+4</m>.
 <answer>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> type </cell>
 </row><row>
@@ -681,6 +686,7 @@ So, there are three critical points: <m>(0,0)</m>, <m>\big(\pm\sqrt{2},-1\big)</
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center" />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type
@@ -708,6 +714,7 @@ Find all saddle points, local minima and local maxima of the function
 <answer>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> type </cell>
 </row><row>
@@ -762,6 +769,7 @@ So there are two critical points: <m>\pm\big(\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center" />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -789,6 +797,7 @@ Find and classify [as local maxima, local minima, or saddle points] all critical
 
 <answer>
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> type </cell>
 </row><row>
@@ -843,6 +852,7 @@ So there are two critical points: <m>(0,0)</m>, <m>(2,0)</m>.
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center" />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -924,6 +934,9 @@ All together, we have the following candidates for max and min.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col halign="center"/> 
+         <col halign="center"/>  <col halign="center"/> <col halign="center"/> 
+         <col halign="center"/>  <col halign="center"/> <col halign="center"/> 
 <row>
 <cell>      point
        </cell><cell><m>(0,0)</m>
@@ -1024,6 +1037,8 @@ All together, we have the following candidates for max and min.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col halign="center"/> 
+         <col halign="center"/> 
 <row>
 <cell>      point
        </cell><cell><m>(\half,\half)</m>
@@ -1163,6 +1178,7 @@ the classification is
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col /> 
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1226,6 +1242,7 @@ all critical points of <m>f(x,y)</m>.
 
 <answer>
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col /> 
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>   </cell><cell> type </cell>
 </row><row>
@@ -1290,6 +1307,7 @@ So there are two critical points: <m>\big(\frac{3}{2},-\frac{1}{4}\big)</m> and
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col /> 
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1322,6 +1340,7 @@ Find the maximum and minimum values of <m>h(x, y)</m> on the disk <m>x^2 + y^2 \
 (a)
 </p>
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col /> 
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>   </cell><cell> type </cell>
 </row><row>
@@ -1390,6 +1409,7 @@ So there are four critical points:
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col /> 
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>h_{xx}h_{yy}-h_{xy}^2</m> </cell><cell>
                                                           <m>h_{xx}</m> </cell><cell> type </cell>
@@ -1496,6 +1516,8 @@ So we have the following candidates for the locations of the min and max
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>  <col halign="center"/> <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(1,0)</m>
@@ -1647,6 +1669,7 @@ So there are four critical points: <m>(0,0)</m>, <m>(3,0)</m>, <m>(0,3)</m>,
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell> <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1703,6 +1726,8 @@ max and min indicated.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>  <col halign="center"/> <col halign="center"/>
 <row>
 <cell>      point(s)
        </cell><cell><m>(1,1)</m>
@@ -1797,6 +1822,7 @@ So there are four critical points: <m>(0,0)</m>, <m>(0,2)</m>, <m>(1,1)</m>,
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1866,6 +1892,7 @@ So, there are two critical points: <m>(1,1),\ (2,4)</m>.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1934,6 +1961,8 @@ max and min indicated.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>
 <row>
 <cell>      point
        </cell><cell><m>(1,0)</m>
@@ -2000,6 +2029,7 @@ points.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2078,6 +2108,7 @@ points.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2122,6 +2153,7 @@ min and max must occur at one of
 </p>
 
  <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/>
 <row>
 <cell>      <m>(x,y)</m>  </cell><cell> <m>f(x,y)</m> </cell>
 </row><row>
@@ -2184,6 +2216,7 @@ points.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2294,6 +2327,7 @@ points.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2398,6 +2432,7 @@ Here is a table giving all candidates for extrema:
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/>
 <row>
 <cell>      <m>(x,y)</m>  </cell><cell> <m>g(x,y)</m> </cell>
 </row><row>
@@ -2462,6 +2497,7 @@ points.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2531,6 +2567,7 @@ Here is a table giving all candidates for the maximum:
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/>
 <row>
 <cell>      <m>(x,y)</m>  </cell><cell> <m>g(x,y)</m> </cell>
 </row><row>
@@ -2804,6 +2841,7 @@ and <m>k  \gt  \frac{1}{2}</m>.
 <em>Case <m>k \gt \frac{1}{2}</m>:</em>
 </p>
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>   </cell><cell> type </cell>
 </row><row>
@@ -2868,6 +2906,7 @@ If <m>k \lt \frac{1}{2}</m>, then <m>\frac{3}{k^2}(1-2k) \gt 0</m> and the equat
 there are two critical points: <m>(0,0)</m>, <m>(0,2)</m> and the classification is
 </p>
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2888,6 +2927,7 @@ the classification is
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2911,6 +2951,7 @@ the classification is
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>

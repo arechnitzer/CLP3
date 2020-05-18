@@ -279,6 +279,8 @@ compute <m>f</m> at those points.
 
 <sidebyside>
 <tabular  left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  
+         <col halign="center"/> 
 <row>
 <cell> point
        </cell><cell><m>(4,0)</m>

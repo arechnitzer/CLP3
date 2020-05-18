@@ -1318,6 +1318,7 @@ that the critical points are <m>(1,1),\ (2,4)</m>. The classification is
 </p>
 <sidebyside>
 <tabular  left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>
     <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
@@ -1396,6 +1397,7 @@ The classification is
 
 <sidebyside>
   <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>
     <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
@@ -1483,6 +1485,7 @@ Here is a table that classifies the critical points.
 </p>
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>
 <m>\Atop{\rm critical}{\rm point}</m> </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell> <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1787,6 +1790,7 @@ max and min indicated.
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col halign="center"/> <col halign="center"/>
 <row>
 <cell>
        point
@@ -1932,6 +1936,10 @@ max and min indicated.
 
 <sidebyside>
 <tabular  left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  
+         <col halign="center"/> 
+         <col halign="center"/> 
+         <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(0,0)</m>
@@ -2064,6 +2072,14 @@ max and min indicated.
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  
+         <col halign="center"/> 
+         <col halign="center"/> 
+         <col halign="center"/>
+         <col halign="center"/>
+         <col halign="center"/>
+         <col halign="center"/>
+         <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(0,0)</m>
@@ -2226,6 +2242,10 @@ max and min indicated.
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  
+         <col halign="center"/> 
+         <col halign="center"/> 
+         <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(0,0)</m>
