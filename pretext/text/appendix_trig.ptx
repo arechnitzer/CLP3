@@ -133,9 +133,9 @@ From the above pair of special triangles we have
 <li> <m>\sin</m> and <m>\cos</m> building blocks
 <md>
 <mrow>
-\tan\theta=\frac{\sin\theta}{\cos\theta}\qquad
-\csc\theta=\frac{1}{\sin\theta}\qquad
-\sec\theta=\frac{1}{\cos\theta}\qquad
+\tan\theta=\frac{\sin\theta}{\cos\theta}\quad
+\csc\theta=\frac{1}{\sin\theta}\quad
+\sec\theta=\frac{1}{\cos\theta}\quad
 \cot\theta=\frac{\cos\theta}{\sin\theta}=\frac{1}{\tan\theta}
 </mrow>
 </md>
@@ -403,7 +403,7 @@ and
 </mrow><mrow>
   \sec(\arcsec x) &amp;= x &amp; |x|\ge 1
 </mrow><mrow>
-  \cot(\arccot x) &amp;= x &amp; \text{any real} x
+  \cot(\arccot x) &amp;= x &amp; \text{any real } x
 </mrow>
 </md>
 </p>

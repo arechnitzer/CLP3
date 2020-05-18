@@ -120,7 +120,7 @@ others use it to mean <m>\log_2 x</m>.
 </li>
 <li>
     <m>\int \ln x\ \dee{x}= x\ln x-x +C,
-    \quad \int \log_q x\ \dee{x}= x\log_q x-\frac{x}{\ln q} +C</m>,\quad
+    \quad \int \log_q x\ \dee{x}= x\log_q x-\frac{x}{\ln q} +C</m>
 </li>
 <li><p>
     <m>\lim\limits_{x\rightarrow\infty}\ln x=\infty,

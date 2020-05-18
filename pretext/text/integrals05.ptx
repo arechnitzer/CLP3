@@ -35,7 +35,7 @@ constant <m>z</m>, planes of constant <m>y</m>, and planes of constant <m>x</m>,
 which we recall look like
 </p>
 
-<sidebyside widths="25% 30% 30%" valign="middle">
+<sidebyside widths="29% 34% 34%" valign="middle">
 <image source="figs/cart2"/>
 <image source="figs/cart4"/>
 <image source="figs/cart3"/>
