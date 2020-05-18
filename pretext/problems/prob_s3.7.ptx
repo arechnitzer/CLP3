@@ -33,7 +33,7 @@ Draw <m>\varphi=\pi</m>.
 </statement>
 
 <answer>
-<sbsgroup width="45%">
+<sbsgroup width="35%">
 <sidebyside>
 <image source="pfigs/spherPhi0"/>
 <image source="pfigs/spherPhiUp"/>
@@ -68,21 +68,21 @@ for any <m>0 \lt \Phi \lt \pi</m>,
 \Set{(x,y,z)}{\varphi(x,y,z)=\Phi}
 &amp;=\Set{(x,y,z)}{z=\tan\Phi\sqrt{x^2+y^2}}
 </mrow><mrow>
-&amp;=\text{the cone that makes the angle $\Phi$ with the positive $z$-axis}
+&amp;\hskip-0.5in=\text{the cone that makes the angle $\Phi$ with the positive $z$-axis}
 </mrow>
 </md>
 </p>
 
-<sbsgroup width="45%">
+<sbsgroup width="40%">
 <sidebyside>
 <image source="pfigs/spherPhi0"/>
 <image source="pfigs/spherPhiUp"/>
 </sidebyside>
-<sidebyside>
+<sidebyside widths="45% 45%" valign="middle">
 <image source="pfigs/spherPhiFl"/>
 <image source="pfigs/spherPhiDn"/>
 </sidebyside>
-<sidebyside>
+<sidebyside width="40%">
 <image source="pfigs/spherPhiPi"/>
 </sidebyside>
 </sbsgroup>
@@ -118,7 +118,7 @@ Sketch the point with the specified spherical coordinates.
 </statement>
 
 <answer>
-<sidebyside width="75%">
+<sidebyside width="95%">
 <image source="pfigs/sphericalP1"/>
 </sidebyside>
 </answer>
@@ -143,7 +143,7 @@ lie in the <m>xy</m>-plane.
 </ul>
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="95%">
 <image source="pfigs/sphericalP1"/>
 </sidebyside>
 </solution>
@@ -357,11 +357,13 @@ z^2=3x^2+3y^2
 &amp;\iff
 \rho^2\cos^2\varphi = 3\rho^2\sin^2\varphi\cos^2\theta
                      +3\rho^2\sin^2\varphi\sin^2\theta
+</mrow><mrow>&amp;\phantom{\iff \rho^2\cos^2\varphi\ }
                     =3\rho^2\sin^2\varphi
 </mrow><mrow>
 &amp;\iff
 \tan^2\varphi=\frac{1}{3}
-\iff
+</mrow><mrow>
+&amp;\iff
 \tan\varphi=\pm\frac{1}{\sqrt{3}}
 </mrow><mrow>
 &amp;\iff \varphi=\frac{\pi}{6}\text{ or }\frac{5\pi}{6}
@@ -376,22 +378,23 @@ i.e. the part with <m>z\le 0</m>, is <m>\varphi=\pi-\frac{\pi}{6}=\frac{5\pi}{6}
 <p>(b) In spherical coordinates
 <md>
 <mrow>
-x^2+y^2+(z-1)^2=1
-&amp;\iff
+&amp;x^2+y^2+(z-1)^2=1
+</mrow><mrow>
+&amp;\hskip0.5in\iff
 \rho^2\sin^2\varphi\cos^2\theta
     +\rho^2\sin^2\varphi\sin^2\theta
     +\big(\rho\cos\varphi-1\big)^2
                     =1
 </mrow><mrow>
-&amp;\iff
+&amp;\hskip0.5in\iff
 \rho^2\sin^2\varphi
     +\rho^2\cos^2\varphi-2\rho\cos\varphi
                     =0
 </mrow><mrow>
-&amp;\iff
+&amp;\hskip0.5in\iff
 \rho^2-2\rho\cos\varphi =0
 </mrow><mrow>
-&amp;\iff \rho=2\cos\varphi
+&amp;\hskip0.5in\iff \rho=2\cos\varphi
 </mrow>
 </md>
 </p>
@@ -432,9 +435,10 @@ See the solution.
 In spherical coordinates, the sphere in question is
 <md>
 <mrow>
-B =\Set{(\rho\sin\varphi\cos\theta\,,\,\rho\sin\varphi\sin\theta\,,\,
-          \rho\cos\varphi)}{0\le\rho\le 1\,,\,0\le\varphi\le\pi\,,\,
-          0\le\theta\le 2\pi}
+B =\big\{\ (\rho\sin\varphi\cos\theta\,,\,\rho\sin\varphi\sin\theta\,,\,
+          \rho\cos\varphi)\ \big|\ 0\le\rho\le 1\,,\,&amp;0\le\varphi\le\pi\,,\,
+</mrow><mrow>
+          &amp;\hskip0.25in 0\le\theta\le 2\pi\ \big\}
 </mrow>
 </md>
 As <m>\dee{V} =\rho^2\sin\varphi\ \dee{\rho}\,\dee{\varphi}\,\dee{\theta}</m>,
@@ -481,8 +485,8 @@ Be sure to show the units on the coordinates axes.
 </p></statement>
 
 <answer>
-<sidebyside widths="10% 70%">
-  <p>(a)</p>
+<p>(a)</p>
+<sidebyside width="50%">  
   <image source="pfigs/OE06A_8b"/>
 </sidebyside>
 
@@ -563,7 +567,7 @@ in the figure on the right below. The part of <m>E</m> in the <m>xz</m>-plane
 (with <m>y\ge 0</m>) is shaded a little more darkly.
 </p>
 
-<sidebyside width="45%">
+<sidebyside width="45%" valign="middle">
   <image source="pfigs/OE06A_8aa"/>
    <image source="pfigs/OE06A_8bb"/>
 </sidebyside>
@@ -598,7 +602,7 @@ So
         \frac{(1+\cos\varphi)^3-1^3}{3}
 </mrow><mrow>
 &amp;=-\frac{2\pi}{3} \int_2^1 \big(u^3-1\big)\ \dee{u}
-\qquad\text{with }u=1+\cos\varphi,\ \dee{u}=-\sin\varphi\,\dee{\varphi}
+\quad\text{with }u=1+\cos\varphi,\ \dee{u}=-\sin\varphi\,\dee{\varphi}
 </mrow><mrow>
 &amp;= -\frac{2\pi}{3}\left[\frac{u^4}{4}-u\right]_2^1
 </mrow><mrow>
@@ -776,7 +780,8 @@ so that
 \text{Volume}
 &amp;= \int_{0}^{a}\dee{\rho}  \int_{0}^{2\pi} \dee{\theta}
 \int_0^{{\pi\over 4}}\dee{\varphi}\ \rho^2\sin\varphi
-= \Big\{\int_{0}^{a}\dee{\rho}\ \rho^2  \Big\}\Big\{\int_{0}^{2\pi} \dee{\theta}\Big\}\Big\{
+</mrow><mrow>
+&amp;= \Big\{\int_{0}^{a}\dee{\rho}\ \rho^2  \Big\}\Big\{\int_{0}^{2\pi} \dee{\theta}\Big\}\Big\{
 \int_0^{{\pi\over 4}}\dee{\varphi}\ \sin\varphi\Big\}
 </mrow><mrow>
 &amp;= \frac{a^3}{3}\ 2\pi\ \Big[-\cos\varphi\Big]_0^{{\pi\over 4}}
@@ -804,7 +809,9 @@ By symmetry, the two specified integrals are equal, and are
 &amp;=\frac{a^4}{4}\frac{\pi}{2} \int_0^{{\pi\over 2}}\dee{\varphi}\
 \sin\varphi\cos\varphi
 </mrow><mrow>
-&amp;=\frac{\pi a^4}{8} \int_0^{1}\dee{t}\ t\qquad\hbox{ where } t=\sin\varphi, \dee{t}=\cos\varphi\,\dee{\varphi}
+&amp;=\frac{\pi a^4}{8} \int_0^{1}\dee{t}\ t
+</mrow><mrow>
+&amp;\hskip0.5in\text{ where } t=\sin\varphi, \dee{t}=\cos\varphi\,\dee{\varphi}
 </mrow><mrow>
 &amp;=\frac{\pi a^4}{16}
 </mrow>
@@ -828,13 +835,14 @@ So the
 \text{mass}
 &amp;= \int_{0}^{a}\dee{\rho}\ \rho^2 \int_0^{\pi}\dee{\varphi}\ \sin\varphi
 \int_{0}^{2\pi} \dee{\theta}\ \overbrace{\frac{A}{B+\rho^2}}^{\rm density}
-=2\pi A\Big\{ \int_0^{\pi}\dee{\varphi}\ \sin\varphi\Big\}
+</mrow><mrow>
+&amp;=2\pi A\Big\{ \int_0^{\pi}\dee{\varphi}\ \sin\varphi\Big\}
 \Big\{\int_{0}^{a}\dee{\rho}\ \frac{\rho^2}{B+\rho^2} \Big\}
 </mrow><mrow>
 &amp;=4\pi A\int_{0}^{a}\dee{\rho}\ \left(1-\frac{B}{B+\rho^2} \right)
 </mrow><mrow>
 &amp;=4\pi Aa-4\pi A\sqrt{B}\int_{0}^{a/\sqrt{B}}\dee{s}\ \frac{1}{1+s^2}
-\qquad\hbox{ where } \rho=\sqrt{B}\,s,  \dee{\rho}=\sqrt{B}\,\dee{s}
+\quad\hbox{ where } \rho=\sqrt{B}\,s,  \dee{\rho}=\sqrt{B}\,\dee{s}
 </mrow><mrow>
 &amp;=4\pi A\left(a-\sqrt{B}\tan^{-1}\frac{a}{\sqrt{B}}\right)
 </mrow>
@@ -869,7 +877,7 @@ So we have the following sketch of the intersection of the specified
 volume with the right half of the <m>yz</m>-plane.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="50%">
 <image source="pfigs/domain3d"/>
 </sidebyside>
 
@@ -928,9 +936,11 @@ and the spherical coordinate <m>\rho</m> runs from <m>2</m>, on <m>x^2+y^2+z^2=4
 to <m>3</m>, on <m>x^2+y^2+z^2=9</m>. So, in spherical coordinates,
 <md>
 <mrow>
-H=\Set{
-(\rho\sin\varphi\cos\theta\,,\,\rho\sin\varphi\sin\theta\,,\,\rho\cos\varphi)}
-{2\le \rho\le 3,\ 0\le\varphi\le\pi/2,\ 0\le\theta\le 2\pi}
+H=\big\{\ 
+(\rho\sin\varphi\cos\theta\,,\,\rho\sin\varphi\sin\theta\,,\,\rho\cos\varphi)\ \big|\ 
+2\le \rho\le 3,\ &amp;0\le\varphi\le\pi/2,
+</mrow><mrow>
+&amp; \hskip0.25in 0\le\theta\le 2\pi\ \big\}
 </mrow>
 </md>
 </p>
@@ -1047,8 +1057,8 @@ Evaluate <m>I</m> by any method.
 </p></statement>
 
 <answer>
-<sidebyside widths="10% 70%">
 <p>(a)</p>
+<sidebyside width="40%">
 <image source="pfigs/OE08D_8"/>
 </sidebyside>
 
@@ -1062,7 +1072,7 @@ Evaluate <m>I</m> by any method.
 
 <solution>
 <p>(a) Here is a sketch</p>
-<sidebyside width="75%">
+<sidebyside width="40%">
   <image source="pfigs/OE08D_8"/>
 </sidebyside>
 
@@ -1179,25 +1189,26 @@ So, to be picky, we'll take the limit as <m>R\rightarrow\infty</m>
 of the integral over <m>0\le\rho\le R</m>.
 <md>
 <mrow>
-\tripInt_{\bbbr^3}  {\big[1+{(x^2+y^2+z^2)}^3\big]}^{-1}\ \dee{V}
-&amp;=\lim_{R\rightarrow\infty}
+&amp;\tripInt_{\bbbr^3}  {\big[1+{(x^2+y^2+z^2)}^3\big]}^{-1}\ \dee{V}
+</mrow><mrow>
+&amp;\hskip0.5in=\lim_{R\rightarrow\infty}
         \int_0^R \dee{\rho} \int_0^{2\pi}\dee{\theta} \int_0^\pi\dee{\varphi}\
                       \rho^2\sin\varphi\ \frac{1}{1+\rho^6}
 </mrow><mrow>
-&amp;=\lim_{R\rightarrow\infty}
+&amp;\hskip0.5in=\lim_{R\rightarrow\infty}
         \int_0^R  \dee{\rho} \int_0^{2\pi}\dee{\theta} \
        \frac{\rho^2}{1+\rho^6}\Big[-\cos\varphi\Big]_0^\pi
 </mrow><mrow>
-&amp;=4\pi \lim_{R\rightarrow\infty}
+&amp;\hskip0.5in=4\pi \lim_{R\rightarrow\infty}
         \int_0^R  \dee{\rho} \ \frac{\rho^2}{1+\rho^6}
 </mrow><mrow>
-&amp;=\frac{4\pi}{3} \lim_{R\rightarrow\infty}
+&amp;\hskip0.5in=\frac{4\pi}{3} \lim_{R\rightarrow\infty}
         \int_0^{R^3}  \dee{u} \ \frac{1}{1+u^2}\qquad
 \text{with }u=\rho^3,\ \dee{u}=3\rho^2\,\dee{\rho}
 </mrow><mrow>
-&amp;=\frac{4\pi}{3}\lim_{R\rightarrow\infty}\Big[\arctan u\Big]_0^{R^3}
+&amp;\hskip0.5in=\frac{4\pi}{3}\lim_{R\rightarrow\infty}\Big[\arctan u\Big]_0^{R^3}
 </mrow><mrow>
-&amp;=\frac{2\pi^2}{3}\qquad\text{since }
+&amp;\hskip0.5in=\frac{2\pi^2}{3}\qquad\text{since }
             \lim_{R\rightarrow\infty}\arctan R^3=\frac{\pi}{2}
 </mrow>
 </md>
@@ -1268,7 +1279,7 @@ to <m>\frac{\pi}{2}</m> (the <m>xy</m>-plane). Here is a sketch of the side view
 of <m>V</m>.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="40%">
   <image source="pfigs/OE12D_10"/>
 </sidebyside>
 
@@ -1277,20 +1288,20 @@ As <m>\dee{V} = \rho^2\sin\varphi\ \dee{\rho}\,\dee{\varphi}\,\dee{\theta}</m>
 and <m>\big(x^2+y^2+z^2\big)^{5/2}=\rho^5</m>, the integral is
 <md>
 <mrow>
-\int_{-1}^1 \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}
+&amp;\int_{-1}^1 \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}
            \int_{1-\sqrt{1-x^2-y^2}}^{1+\sqrt{1-x^2-y^2}}
    (x^2+y^2+z^2)^{5/2}  \ \dee{z}\,\dee{y}\,\dee{x}
-&amp;=\int_0^{2\pi}\dee{\theta}\int_0^{\pi/2}\dee{\varphi}
+</mrow><mrow>
+&amp;\hskip0.5in=\int_0^{2\pi}\dee{\theta}\int_0^{\pi/2}\dee{\varphi}
        \int_0^{2\cos\varphi}\dee{\rho}\ \rho^2\sin\varphi
         \ \rho^5
 </mrow><mrow>
-&amp;=\int_0^{2\pi}\dee{\theta}\int_0^{\pi/2}\dee{\varphi}
+&amp;\hskip0.5in=\int_0^{2\pi}\dee{\theta}\int_0^{\pi/2}\dee{\varphi}
        \ \frac{2^8\cos^8\varphi}{8}\sin\varphi
 </mrow><mrow>
-&amp;=32\int_0^{2\pi}\dee{\theta}\ \left[-\frac{\cos^9\varphi}{9}\right]_0^{\pi/2}
-
+&amp;\hskip0.5in=32\int_0^{2\pi}\dee{\theta}\ \left[-\frac{\cos^9\varphi}{9}\right]_0^{\pi/2}
 </mrow><mrow>
-&amp;=\frac{32}{9}(2\pi)
+&amp;\hskip0.5in=\frac{32}{9}(2\pi)
 =\frac{64\pi}{9}
 </mrow>
 </md>
@@ -1312,7 +1323,7 @@ The side of the cylinder has equation <m>x^2+y^2=a^2</m>, i.e. <m>\rho\sin\varph
 The bottom of the cylinder has equation <m>z=0</m>, i.e. <m>\varphi=\frac{\pi}{2}</m>.
 </p>
 
-<sidebyside width="30%">
+<sidebyside widths="28% 28% 35%" valign="middle">
 <image source="pfigs/cylinder1"/>
 <image source="pfigs/cylinder2"/>
 <image source="pfigs/cylinder3"/>
@@ -1322,13 +1333,14 @@ The bottom of the cylinder has equation <m>z=0</m>, i.e. <m>\varphi=\frac{\pi}{2
 For each fixed <m>\varphi</m>, <m>\theta</m> runs from <m>0</m> to <m>2\pi</m> and <m>\rho</m>
 runs from <m>0</m>
 to either <m>\frac{h}{\cos\varphi}</m> (at the top of the can,
-if <m>\varphi \lt \tan^{-1}\frac{a}{h}</m>)
-or <m>\frac{a}{\sin\varphi}</m> (at the side of the can, if <m>\varphi \gt \tan^{-1}\frac{a}{h}</m>). So the
+when <m>\varphi \lt \tan^{-1}\frac{a}{h}</m>)
+or <m>\frac{a}{\sin\varphi}</m> (at the side of the can, when <m>\varphi \gt \tan^{-1}\frac{a}{h}</m>). So the
 <md>
 <mrow>
 \text{Volume}
 &amp;= \int_{0}^{\tan^{-1}{a\over h}} \dee{\varphi} \int_{0}^{2\pi} \dee{\theta}
 \int_0^{h/\cos\varphi}\dee{\rho}\ \rho^2\sin\varphi
+</mrow><mrow>&amp;\hskip1in
 +\int_{\tan^{-1}{a\over h}}^{{\pi\over 2}} \dee{\varphi} \int_{0}^{2\pi} \dee{\theta}
 \int_0^{a/\sin\varphi}\dee{\rho}\ \rho^2\sin\varphi
 </mrow><mrow>
@@ -1340,7 +1352,7 @@ or <m>\frac{a}{\sin\varphi}</m> (at the side of the can, if <m>\varphi \gt \tan^
 &amp;=2\pi\Big\{\int_0^{{a\over h}}\dee{t}\ \frac{h^3}{3}t
 -\int^0_{{h\over a}}\dee{s}\ \frac{a^3}{3}\Big\}
 </mrow><mrow>
-&amp;\hskip1in\hbox{ where }
+&amp;\hskip0.5in\hbox{ where }
   t=\tan\varphi, \dee{t}=\sec^2\varphi\,\dee{\varphi},
   s=\cot\varphi, \dee{s}=-\csc^2\varphi\,\dee{\varphi}
 </mrow><mrow>
@@ -1353,8 +1365,8 @@ or <m>\frac{a}{\sin\varphi}</m> (at the side of the can, if <m>\varphi \gt \tan^
 </p></solution>
 </exercise>
 
-<exercise>
-<statement><p> [M200 2003A]
+<exercise><title><fromexam>M200 2003A</fromexam></title>
+<statement><p> 
 Let <m>B</m> denote the region inside the sphere <m>x^2+y^2+z^2=4</m>
 and above the cone <m>x^2+y^2=z^2</m>. Compute the moment of inertia
 <me>
@@ -1377,13 +1389,16 @@ or <m>\varphi=\frac{\pi}{4},\ \frac{3\pi}{4}</m>. So
 <md>
 <mrow>
 \text{moment}
-&amp;=\int_0^2\dee{\rho}\int_0^{\pi/4}\dee{\varphi}\int_0^{2\pi}\dee{\theta}\ \rho^2\sin\varphi
-                                           \  (\rho\cos\varphi)^2
-=2\pi\int_0^2 \dee{\rho}\ \rho^4\int_0^{\pi/4}\dee{\varphi}\ \sin\varphi\cos^2\varphi
+&amp;=\int_0^2\dee{\rho}\int_0^{\pi/4}\dee{\varphi}\int_0^{2\pi}\dee{\theta}\ 
+                            \rho^2\sin\varphi\  (\rho\cos\varphi)^2
+</mrow><mrow>
+&amp;=2\pi\int_0^2 \dee{\rho}\ \rho^4\int_0^{\pi/4}\dee{\varphi}\ \sin\varphi\cos^2\varphi
 </mrow><mrow>
 &amp;=2\pi\left[\frac{\rho^5}{5}\right]_0^2
     \left[-\frac{1}{3}\cos^3\varphi\right]_0^{\pi/4}
-=\frac{64}{15}\pi\left(1-\frac{1}{2\sqrt{2}}\right)\approx 8.665
+=\frac{64}{15}\pi\left(1-\frac{1}{2\sqrt{2}}\right)
+</mrow><mrow>
+&amp;\approx 8.665
 </mrow>
 </md>
 </p></solution>
@@ -1502,22 +1517,27 @@ the sphere <m>x^2+y^2+z^2=4</m> is <m>\rho^2=4</m> or <m>\rho=2</m> and the
 </p>
 
 <p>(b) The mass of the half ball is
-<me>
-9 \int_0^2d\rho\int_0^{\pi/2}d\phi\int_0^{2\pi}d\theta\ \rho^3\sin\phi \cos\phi
-=9 \bigg[\int_0^2d\rho\ \rho^3\bigg]
+<md>
+<mrow>
+&amp;9 \int_0^2d\rho\int_0^{\pi/2}d\phi\int_0^{2\pi}d\theta\ \rho^3\sin\phi \cos\phi
+</mrow><mrow>
+&amp;\hskip1in=9 \bigg[\int_0^2d\rho\ \rho^3\bigg]
   \bigg[\int_0^{\pi/2}d\phi\ \sin\phi \cos\phi\bigg]
   \bigg[\int_0^{2\pi}d\theta\bigg]
-</me>
+</mrow>
+</md>
 In spherical coordinates, the
 cone <m>x^2+y^2=z^2</m> is <m>\rho^2\sin^2\phi=\rho^2\cos^2\phi</m> or
 <m>\tan\phi=\pm1</m> or <m>\phi=\frac{\pi}{4},\ \frac{3\pi}{4}</m>. So the mass
 of the part that is inside the cone is
-<me>
-9 \int_0^2d\rho\int_0^{\pi/4}d\phi\int_0^{2\pi}d\theta\ \rho^3\sin\phi \cos\phi
-=9 \bigg[\int_0^2d\rho\ \rho^3\bigg]
+<md>
+<mrow>
+&amp;9 \int_0^2d\rho\int_0^{\pi/4}d\phi\int_0^{2\pi}d\theta\ \rho^3\sin\phi \cos\phi
+</mrow><mrow>&amp;\hskip1in=9 \bigg[\int_0^2d\rho\ \rho^3\bigg]
   \bigg[\int_0^{\pi/4}d\phi\ \sin\phi \cos\phi\bigg]
   \bigg[\int_0^{2\pi}d\theta\bigg]
-</me>
+</mrow>
+</md>
 The fraction inside the cone is
 <me>
 \frac{\int_0^{\pi/4}d\phi\ \sin\phi \cos\phi}{\int_0^{\pi/2}d\phi\ \sin\phi \cos\phi}
@@ -1558,7 +1578,7 @@ In spherical coordinates, <m>x=\rho\sin\varphi\cos\theta</m>,
       +\rho^3\sin\varphi\,\cos^2\varphi}
      {\rho^2\sin^2\varphi+\rho^4\cos^4\varphi}
 </mrow><mrow>
-&amp;\hskip1in
+&amp;\hskip0.5in
 =\frac{\sin^2\varphi\cos\theta\sin\theta
       +\rho\sin\varphi\sin\theta\,\cos^2\varphi
       +\rho\sin\varphi\cos\theta\,\cos^2\varphi}
@@ -1641,12 +1661,15 @@ The cone with vertex at the origin that contains the top edge,
 U&amp;=\Set{(x,y,z)}{x^2+y^2\le 4,\ 0\le z\le 2,\ x^2+y^2\ge z^2}
 </mrow>
 </md>
-Here are sketches of the <m>y=0</m> cross-section of <m>V</m>, on the left,
-and <m>U</m>, on the right.
+Here are sketches of the <m>y=0</m> cross-section of <m>V</m>, on top,
+and <m>U</m>, on the bottom.
 </p>
 
-<sidebyside width="45%">
+<sidebyside width="66%">
 <image source="pfigs/OE07A_8"/>
+</sidebyside>
+
+<sidebyside width="66%">
 <image source="pfigs/OE07A_8a"/>
 </sidebyside>
 
@@ -1659,7 +1682,7 @@ So
 U&amp;=\Set{(r\cos\theta,r\sin\theta,z)}{r\le 2,\ 0\le z\le 2,\ r\ge z}
 </mrow>
 </md>
-Looking at the figure on the left below, we see that, on <m>U</m>
+Looking at the figure below, we see that, on <m>U</m>
 <ul>
 <li>
   <m>z</m> runs from <m>0</m> to <m>2</m>, and
@@ -1682,9 +1705,8 @@ So
 </md>
 </p>
 
-<sidebyside width="45%">
+<sidebyside width="60%">
   <image source="pfigs/OE07A_8c"/>
- <image source="pfigs/OE07A_8s"/>
 </sidebyside>
 
 <p>
@@ -1716,12 +1738,14 @@ and the density <m>\sqrt{x^2+y^2}=\rho\sin\varphi</m>.
 So
 <md>
 <mrow>
-U&amp;=\Set{(\rho\sin\varphi\cos\theta,\rho\sin\varphi\sin\theta,\rho\cos\varphi)}
- {\frac{\pi}{4}\le\varphi\le\frac{\pi}{2},\
-     0\le \theta\le 2\pi,\ \rho\sin\varphi\le 2}
+U=\big\{\ (\rho\sin\varphi\cos\theta,\rho\sin\varphi\sin\theta,\rho\cos\varphi)
+              \ \big|\ 
+            \frac{\pi}{4}\le\varphi\le\frac{\pi}{2},\ &amp;0\le \theta\le 2\pi,\ 
+             </mrow><mrow>
+             &amp;\hskip0.25in\rho\sin\varphi\le 2\ \big\}
 </mrow>
 </md>
-Looking at the figure on the right above, we see that, on <m>U</m>
+Looking at the figure below, we see that, on <m>U</m>
 <ul>
 <li>
   <m>\varphi</m> runs from <m>\frac{\pi}{4}</m> (on the cone) to
@@ -1748,6 +1772,11 @@ So
 </mrow>
 </md>
 </p>
+
+<sidebyside width="60%">
+ <image source="pfigs/OE07A_8s"/>
+</sidebyside>
+
 
 <p>(c) We'll use the cylindrical form.
 <md>
@@ -1838,7 +1867,8 @@ and
 M &amp;=\tripInt_V \rho(x,y,z)\ \dee{V}
    =\int_0^1\dee{r}\int_0^{2\pi}\dee{\theta}
            \int_r^{\sqrt{2-r^2}}\dee{z}\ r\overbrace{(r^2)}^{\de}
-   =\int_0^1\dee{r}\int_0^{2\pi}\dee{\theta}
+</mrow><mrow>
+   &amp;=\int_0^1\dee{r}\int_0^{2\pi}\dee{\theta}
            \int_r^{\sqrt{2-r^2}}\dee{z}\ r^3
 </mrow>
 </md>
@@ -1864,11 +1894,15 @@ the density <m>x^2+y^2=\rho^2\sin^2\varphi</m>, and
 </li>
 </ul>
 So
-<me>
-V =\Set{(\rho\sin\varphi\cos\theta\,,\,\rho\sin\varphi\sin\theta\,,\,
-          \rho\cos\varphi)}{0\le\rho\le \sqrt{2},\  0\le\theta\le2\pi,\
-                            0\le \varphi\le \frac{\pi}{4}}
-</me>
+<md>
+<mrow>
+V =\big\{\ (\rho\sin\varphi\cos\theta\,,\,\rho\sin\varphi\sin\theta\,,\,
+                                         \rho\cos\varphi)\ \big|\ 
+            0\le\rho\le \sqrt{2},\  &amp;0\le\theta\le2\pi,
+            </mrow><mrow>
+                    &amp;\hskip 0.25in 0\le \varphi\le \frac{\pi}{4}\ \big\}
+</mrow>
+</md>
 and, since the integrand <m>x^2+y^2=\rho^2\sin^2\varphi</m>,
 <md>
 <mrow>
@@ -2105,11 +2139,15 @@ the integrand <m>x^2+y^2=\rho^2\sin^2\varphi</m>, and
 </li>
 </ul>
 So
-<me>
-T =\Set{(\rho\sin\varphi\cos\theta\,,\,\rho\sin\varphi\sin\theta\,,\,
-          \rho\cos\varphi)}{0\le\rho\le 3,\  0\le\theta\le2\pi,\
-                            0\le \varphi\le \frac{\pi}{6}}
-</me>
+<md>
+<mrow>
+T =\big\{\ (\rho\sin\varphi\cos\theta\,,\,\rho\sin\varphi\sin\theta\,,\,
+                            \rho\cos\varphi)\ \big|\ 
+                     0\le\rho\le 3,\  &amp;0\le\theta\le2\pi,
+                    </mrow><mrow>
+                      &amp;\hskip0.25in    0\le \varphi\le \frac{\pi}{6}\ \big\}
+</mrow>
+</md>
 and,
 <md>
 <mrow>
@@ -2162,7 +2200,8 @@ I &amp;=\tripInt_V (x^2+y^2)\ \dee{V}
    =\int_0^{3/2}\dee{r}\int_0^{2\pi}\dee{\theta}
            \int_{\sqrt{3}\,r}^{\sqrt{9-r^2}}\dee{z}\
                                r\overbrace{(r^2)}^{x^2+y^2}
-   =\int_0^{3/2}\dee{r}\int_0^{2\pi}\dee{\theta}
+</mrow><mrow>
+   &amp;=\int_0^{3/2}\dee{r}\int_0^{2\pi}\dee{\theta}
                           \int_{\sqrt{3}\,r}^{\sqrt{9-r^2}}\dee{z}\ \ r^3
 </mrow>
 </md>
@@ -2180,7 +2219,8 @@ I  &amp;=\int_0^{3}\dee{\rho}\int_0^{2\pi}\dee{\theta}
 </mrow><mrow>
    &amp;=2\pi \int_0^3\dee{\rho}\ \rho^4
                 \left[-\cos\varphi +\frac{\cos^3\varphi}{3}\right]_0^{\pi/6}
-    =2\pi \left[-\frac{\sqrt{3}}{2} + \frac{\sqrt{3}}{8}+1-\frac{1}{3}\right]
+</mrow><mrow>
+   &amp;=2\pi \left[-\frac{\sqrt{3}}{2} + \frac{\sqrt{3}}{8}+1-\frac{1}{3}\right]
                       \int_0^3\dee{\rho}\ \rho^4
 </mrow><mrow>
     &amp;=2\pi \frac{3^5}{5}\left[\frac{2}{3} - \frac{3\sqrt{3}}{8}\right]
@@ -2242,7 +2282,7 @@ Here is a sketch of the <m>y=0</m> cross-section of <m>E</m>.
 </p>
 
 
-<sidebyside width="75%">
+<sidebyside width="85%">
 <image source="pfigs/OE11A_8"/>
 </sidebyside>
 
@@ -2278,11 +2318,15 @@ or <m>\tan\varphi\le 1</m> or <m>\varphi\le\frac{\pi}{4}</m>, and
 </li>
 </ul>
 So
-<me>
-E =\Set{(\rho\sin\varphi\cos\theta\,,\,\rho\sin\varphi\sin\theta\,,\,
-          \rho\cos\varphi)}{0\le\rho\le 1,\  0\le\theta\le2\pi,\
-                            0\le \varphi\le \frac{\pi}{4}}
-</me>
+<md>
+<mrow>
+E =\big\{\ (\rho\sin\varphi\cos\theta\,,\,\rho\sin\varphi\sin\theta\,,\,
+                    \rho\cos\varphi)\ \big|\ 
+                    0\le\rho\le 1,\  &amp;0\le\theta\le2\pi,
+         </mrow><mrow>
+                          &amp;\hskip0.25in  0\le \varphi\le \frac{\pi}{4}\ \big\}
+</mrow>
+</md>
 and, since the integrand <m>\sqrt{x^2+y^2+z^2}=\rho</m>,
 <md>
 <mrow>
@@ -2470,7 +2514,7 @@ As a check, the body of the snow man has radius <m>\sqrt{12} = 2\sqrt{3}
 (the center of the head). Here is a sketch of a side view of the snowman.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="66%">
 <image source="pfigs/OE11D_8a"/>
 </sidebyside>
 
@@ -2512,16 +2556,17 @@ The intersection of the head and body is thus
 We'll compute the volume of <m>\cV</m> using cylindrical coordinates
 <md>
 <mrow>
-\text{Volume}(\cV) &amp;= \int_0^{\sqrt{3}}\dee{r}\int_0^{2\pi}\dee{\theta}
+&amp;\text{Volume}(\cV) = \int_0^{\sqrt{3}}\dee{r}\int_0^{2\pi}\dee{\theta}
                      \int_{4-\sqrt{4-r^2}}^{\sqrt{12-r^2}}\dee{z}\ r
 </mrow><mrow>
-   &amp;=\int_0^{\sqrt{3}}\dee{r}\ 2\pi\ r\big[\sqrt{12-r^2}-4+\sqrt{4-r^2}\big]
+   &amp;\hskip0.5in
+          =\int_0^{\sqrt{3}}\dee{r}\ 2\pi\ r\big[\sqrt{12-r^2}-4+\sqrt{4-r^2}\big]
 </mrow><mrow>
-   &amp;=2\pi\left[-\frac{1}{3}{\big(12-r^2\big)}^{3/2}
+   &amp;\hskip0.5in=2\pi\left[-\frac{1}{3}{\big(12-r^2\big)}^{3/2}
                -2r^2
                -\frac{1}{3}{\big(4-r^2\big)}^{3/2}\right]_0^{\sqrt{3}}
 </mrow><mrow>
-   &amp;= 2\pi\left[-\frac{1}{3}{\big(9\big)}^{3/2}
+   &amp;\hskip0.5in= 2\pi\left[-\frac{1}{3}{\big(9\big)}^{3/2}
                -2(3)
                -\frac{1}{3}{\big(1\big)}^{3/2}
                +\frac{1}{3}{\big(12\big)}^{3/2}
@@ -2529,14 +2574,14 @@ We'll compute the volume of <m>\cV</m> using cylindrical coordinates
                +\frac{1}{3}{\big(4\big)}^{3/2}
                \right]
 </mrow><mrow>
-   &amp;= 2\pi\left[-9
+   &amp;\hskip0.5in= 2\pi\left[-9
                -6
                -\frac{1}{3}
                +\frac{1}{3}{\big(12\big)}^{3/2}
                +\frac{8}{3}
                \right]
 </mrow><mrow>
-   &amp;=2\pi\left[\frac{1}{3}{\big(12\big)}^{3/2}
+   &amp;\hskip0.5in=2\pi\left[\frac{1}{3}{\big(12\big)}^{3/2}
                -\frac{38}{3}
                \right]
 </mrow>
@@ -2555,15 +2600,18 @@ So the volume of the snowman is
 </md>
 </p>
 
-<p>(b) The figure on the left below is another side view of the snowman.
+<p>(b) The top figure below is another side view of the snowman.
 This time it is divided into a lighter gray top part, a darker gray
-middle part and a lighter gray bottom part. The figure on the
-right below is an enlarged view of the central part of the figure on the
+middle part and a lighter gray bottom part. The bottom figure 
+below is an enlarged view of the central part of the figure on the
 left.
 </p>
 
-<sidebyside width="45%">
+<sidebyside width="60%">
   <image source="pfigs/OE11D_8b"/>
+</sidebyside>
+
+<sidebyside width="60%">
    <image source="pfigs/OE11D_8c"/>
 </sidebyside>
 
@@ -2571,7 +2619,7 @@ left.
 i. The top part is the Pac-Man
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="66%">
 <image source="pfigs/OE11D_8d"/>
 </sidebyside>
 <p>
@@ -2589,7 +2637,7 @@ z-4 = - \sqrt{\frac{x^2+y^2}{3}}
 <p>ii. The middle part is the diamond shaped
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="66%">
 <image source="pfigs/OE11D_8e"/>
 </sidebyside>
 
@@ -2609,7 +2657,7 @@ z = \sqrt{3(x^2+y^2)}
 <p>iii. The bottom part is the Pac-Man
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="66%">
 <image source="pfigs/OE11D_8f"/>
 </sidebyside>
 
@@ -2660,7 +2708,7 @@ The figure below is a sketch of the part of the surface in the
 first octant.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="40%">
 <image source="pfigs/torusB"/>
 </sidebyside>
 
@@ -2741,7 +2789,7 @@ The figure on the right below is a sketch of the part of the torus in the
 first octant.
 </p>
 
-<sidebyside width="45%">
+<sidebyside widths="29% 45%" valign="middle">
 <image source="pfigs/torusA"/>
 <image source="pfigs/torusB"/>
 </sidebyside>
@@ -2805,7 +2853,7 @@ I &amp;= \tripInt_E z \sqrt{x^2 + y^2 + z^2}\  \dee{V}
 Here is a sketch of a constant <m>\theta</m> section of <m>E</m>.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="40%">
 <image source="pfigs/OE14A_8"/>
 </sidebyside>
 
@@ -2816,19 +2864,23 @@ So, in spherical coordinates <m>z=r</m> (which makes an angle <m>\frac{\pi}{4}</
 with the <m>z</m> axis) becomes <m>\varphi=\frac{\pi}{4}</m>, and
 the plane <m>z=0</m>, i.e. the <m>xy</m>-plane, becomes <m>\varphi=\frac{\pi}{2}</m>,
 and <m>r=1</m> becomes <m>\rho\sin\varphi = 1</m>.  So
-<me>
-E = \left\{(\rho\sin\varphi\cos\theta\,,\,\rho\sin\varphi\sin\theta\,,\,
-          \rho\cos\varphi)\ \left|\
+<md>
+<mrow>
+E = \Big\{(\rho\sin\varphi\cos\theta\,,\,\rho\sin\varphi\sin\theta\,,\,
+          \rho\cos\varphi)\ \Big|\
                     \frac{\pi}{4}\le \varphi\le \frac{\pi}{2},
-            \ 0\le\theta\le 2\pi,
-              \ 0\le \rho\le \frac{1}{\sin\varphi}\ \right.\right\}
-</me>
+                    \ &amp;0\le\theta\le 2\pi,
+               </mrow><mrow>
+                &amp;\hskip0.1in 0\le \rho\le \frac{1}{\sin\varphi}\ \Big\}
+</mrow>
+</md>
 and, since
   <m>\dee{V} = \rho^2\sin\varphi\,\dee{\rho}\,\dee{\theta}\,\dee{\varphi}</m>,
 <md>
 <mrow>
 I &amp;= \tripInt_E z \sqrt{x^2 + y^2 + z^2}\  \dee{V}
-  = \int_{\pi/4}^{\pi/2}\dee{\varphi}
+</mrow><mrow>
+  &amp;= \int_{\pi/4}^{\pi/2}\dee{\varphi}
                 \int_0^{2\pi}\dee{\theta}
                 \int_0^{1/\sin\varphi}\dee{\rho}\
                 \rho^2\sin\varphi \
@@ -2915,7 +2967,7 @@ runs over the third quadrant part of the disk of radius <m>a</m>, centred
 on the origin.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="50%">
   <image source="pfigs/OE14D_8AA"/>
 </sidebyside>
 
@@ -2931,15 +2983,16 @@ of radius <m>a</m>, centred on the origin, that lies in the octant
 <m>x\le 0</m>, <m>y\le 0</m>, <m>z\ge 0</m>.
 <md>
 <mrow>
-V&amp;=\Set{(x,y,z)}{-a\le x\le 0,\ -\sqrt{a^2-x^2}\le y\le 0,\
-                 0\le z\le\sqrt{a^2-x^2-y^2} }
+V&amp;=\Big\{\ (x,y,z)\ \Big|\ -a\le x\le 0,\ -\sqrt{a^2-x^2}\le y\le 0,
+                </mrow><mrow>
+                &amp;\hskip0.1in 0\le z\le\sqrt{a^2-x^2-y^2} \Big\}
 </mrow><mrow>
 &amp;=\Set{(x,y,z)}{x^2+y^2+z^2\le a^2,\ x\le 0,\ y\le 0,\ z\ge 0 }
 </mrow>
 </md>
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="60%">
   <image source="pfigs/OE14D_8BB"/>
 </sidebyside>
 
@@ -3063,7 +3116,7 @@ The figure below shows  a constant <m>\theta</m> cross-section of
 (i.e. the <m>xy</m>-plane).
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="40%">
   <image source="pfigs/OE15D_8"/>
 </sidebyside>
 
@@ -3147,7 +3200,8 @@ and the cone <m>z = \sqrt{x^2 + y^2}</m> intersect when <m>z=\sqrt{x^2+y^2}</m>,
 <mrow>
 x^2 + y^2 + (z-1)^2 = z^2+(z-1)^2=1
 &amp;\iff 2z^2-2z=0
-\iff 2z(z-1)=0
+</mrow><mrow>
+&amp;\iff 2z(z-1)=0
 </mrow><mrow>
 &amp;\iff z=0,1
 </mrow>
@@ -3199,11 +3253,13 @@ V = \tripInt_S\dee{V}
 the cone <m>z=\sqrt{x^2+y^2}</m> becomes
 <md>
 <mrow>
-\rho\,\cos\varphi =\sqrt{\rho^2\sin^2\varphi\,\cos^2\theta
+&amp;\rho\,\cos\varphi =\sqrt{\rho^2\sin^2\varphi\,\cos^2\theta
                          +\rho^2\sin^2\varphi\,\sin^2\theta}
                   =\rho\sin\varphi
-\iff \tan\varphi=1
-\iff \varphi=\frac{\pi}{4}
+</mrow><mrow>
+&amp;\hskip0.5in\iff \tan\varphi=1
+</mrow><mrow>
+&amp;\hskip0.5in\iff \varphi=\frac{\pi}{4}
 </mrow>
 </md>
 </li>
@@ -3311,7 +3367,7 @@ m=\int_0^{2\pi}\dee{\theta}\int_0^{3/2}\dee{r}\ r\int_{\sqrt{3}\,r}^{\sqrt{9-r^2
 </md>
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="33%">
   <image source="pfigs/OE04Q8"/>
 </sidebyside>
 
