@@ -25,8 +25,7 @@ x=f(u)\qquad
 </fact>
 
 <p>
-See Theorems \eref{CLP101}{thm subs indef} and \eref{CLP101}{thm subs def}
-in the CLP-2 text.
+See Theorems 1.4.2 and 1.4.6 in the CLP-2 text.
 Expressing multivariable integrals using polar or cylindrical or
 spherical coordinates are really  multivariable substitutions. For example,
 switching to spherical coordinates amounts replacing the coordinates <m>x,y,z</m> with the coordinates <m>\rho,\theta,\varphi</m> by using the substitution
@@ -50,18 +49,14 @@ spherical coordinates as special cases.
 </p>
 
 <p>Suppose that we wish to integrate over a region, <m>\cR</m>, in <m>\bbbr^2</m> and that
-we also wish
-<fn>We'll keep our third wish in reserve.</fn>
+we also wish<fn>We'll keep our third wish in reserve.</fn>
  to use two new coordinates, that we'll call <m>u</m> and <m>v</m>, in place
 of <m>x</m> and <m>y</m>. The new coordinates <m>u</m>, <m>v</m> are related to the old coordinates
-<m>x</m>, <m>y</m>, by the functions
-<fn>We are abusing notation a little here by
+<m>x</m>, <m>y</m>, by the functions<fn>We are abusing notation a little here by
 using <m>x</m> and <m>y</m> both as coordinates and as functions. We could
 write <m>x=f(u,v)</m> and <m>y=g(u,v)</m>, but it is easier to remember
 <m>x=x(u,v)</m> and <m>y=y(u,v)</m>.</fn>
-</p>
-
-<p><md>
+<md>
 <mrow>
 x&amp;=x(u,v)
 </mrow><mrow>
@@ -86,7 +81,7 @@ the angle <m>v</m> with the <m>x</m>-axis), while, if we hold
 centred on the origin).
 </p>
 
-<sidebyside>
+<sidebyside widths="35% 35%" valign="middle">
 <image source="figs/polarU"/>
 <image source="figs/polarV"/>
 </sidebyside>
@@ -97,7 +92,7 @@ up into small pieces by drawing a bunch of curves of constant <m>u</m>
 constant <m>v</m> (the red curves in the figure below).
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/RSlice"/>
 </sidebyside>
 
@@ -106,7 +101,7 @@ Concentrate on any one the small pieces. Here is a greatly magnified
 sketch.
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/dA"/>
 </sidebyside>
 
@@ -127,8 +122,7 @@ P_0&amp;=\vr(u_0, v_0) &amp;
 </mrow>
 </md>
 Now, for any small constants <m>\dee{U}</m> and <m>\dee{V}</m>, we have the linear
-approximation
-<fn>Recall <xref ref="eqn_lin_approx_2d"/>.</fn>
+approximation<fn>Recall <xref ref="eqn_lin_approx_2d"/>.</fn>
 <md>
 <mrow>
 \vr(u_0+\dee{U},v_0+\dee{V})
@@ -169,9 +163,7 @@ We shall not prove this. But we shall show, in the optional
 
 <p>The small piece of <m>\cR</m> surface with corners <m>P_0</m>, <m>P_1</m>, <m>P_2</m>, <m>P_3</m>
 is approximately a parallelogram with sides
-</p>
-<sidebyside>
-<p><md>
+<md>
 <mrow>
 \overrightarrow{P_0P_1}
 \approx \overrightarrow{P_2P_3}
@@ -186,7 +178,10 @@ is approximately a parallelogram with sides
      \pdiff{y}{v}(u_0,v_0) \rgt \dee{v}
 \qquad
 </mrow>
-</md></p>
+</md>
+</p>
+
+<sidebyside width="20%">
 <image source="figs/dA2"/>
 </sidebyside>
 
@@ -223,7 +218,7 @@ Also recall that we don't really need determinants for this text, though it
 does make for nice compact notation.
 </p>
 
-<p>The formula <xref ref="eq_dA"/> is the heart of the following theorem, which tells
+<p>The formula (<xref ref="eq_dA"/>) is the heart of the following theorem, which tells
 us how to translate an integral in one coordinate system into an
 integral in another coordinate system.
 </p>
@@ -257,9 +252,8 @@ the points <m>(x,y)</m> of the region <m>\cR</m> in the <m>xy</m>-plane. Then
        \end{matrix}\right]
 </mrow>
 </md>
-that appears in <xref ref="eq_dA"/> and Theorem <xref ref="thm_2d_sub"/> is known as
-the Jacobian
-<fn>It is not named after the Jacobin Club, a political
+that appears in (<xref ref="eq_dA"/>) and Theorem <xref ref="thm_2d_sub"/> is known as
+the Jacobian<fn>It is not named after the Jacobin Club, a political
 movement of the French revolution. It is not named after the Jacobite rebellions that took place in Great Britain and Ireland between 1688 and 1746.
 It is not named after the Jacobean era of English and Scottish history.
 It is named after the German mathematician Carl Gustav Jacob Jacobi
@@ -286,7 +280,7 @@ Since
 </mrow><mrow>
 </mrow>
 </md>
-<xref ref="eq_dA"/>, but with <m>u</m> renamed to <m>X</m> and <m>v</m> renamed to <m>Y</m>,
+(<xref ref="eq_dA"/>), but with <m>u</m> renamed to <m>X</m> and <m>v</m> renamed to <m>Y</m>,
 gives
 <md>
 <mrow>
@@ -320,7 +314,7 @@ Since
 </mrow><mrow>
 </mrow>
 </md>
-<xref ref="eq_dA"/>, but with <m>u</m> renamed to <m>r</m> and <m>v</m> renamed to <m>\theta</m>,
+(<xref ref="eq_dA"/>), but with <m>u</m> renamed to <m>r</m> and <m>v</m> renamed to <m>\theta</m>,
 gives
 <md>
 <mrow>
@@ -337,8 +331,7 @@ which is exactly what we found in <xref ref="eq_dA_polar"/>.
 
 <example xml:id="eg_parabolic_dA"><title><m>\dee{A}</m> for Parabolic Coordinates</title>
 <p>
-Parabolic
-<fn>The name comes from the fact that both the curves of constant <m>u</m> and the curves of constant <m>v</m> are parabolas.</fn>
+Parabolic<fn>The name comes from the fact that both the curves of constant <m>u</m> and the curves of constant <m>v</m> are parabolas.</fn>
  coordinates are defined by
 <md>
 <mrow>
@@ -356,7 +349,7 @@ Since
 </mrow><mrow>
 </mrow>
 </md>
-<xref ref="eq_dA"/> gives
+(<xref ref="eq_dA"/>) gives
 <md>
 <mrow>
 \dee{A} &amp;= \left|\det\left[\begin{matrix} u &amp; v \\
@@ -405,7 +398,7 @@ applying Theorem <xref ref="thm_2d_sub"/> we also need to know
 </p>
 
 <p>
-By <xref ref="eq_dA"/>, recalling that <m>x(s,t)=s</m> and <m>y(s,t)=t(1+s)</m>,
+By (<xref ref="eq_dA"/>), recalling that <m>x(s,t)=s</m> and <m>y(s,t)=t(1+s)</m>,
 <md>
 <mrow>
 \dee{x}\,\dee{y}
@@ -426,7 +419,7 @@ in terms of the new coordinates <m>s</m> and <m>t</m>. Here is the sketch of <m>
 in the original coordinates <m>(x,y)</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/genSub"/>
 </sidebyside>
 
@@ -455,7 +448,7 @@ Here is another copy of the sketch of <m>\cR</m>. But this time
 the equations of its four sides are expressed in terms of <m>s</m> and <m>t</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/genSubB"/>
 </sidebyside>
 
@@ -472,8 +465,10 @@ As <m>\dee{x}\,\dee{y} = (1+s)\,\dee{s}\,\dee{t}</m> and the integrand
 \dblInt_\cR\frac{y}{1+x}\ \dee{x}\,\dee{y}
 &amp;=\int_0^1\dee{s}\int_1^2\dee{t}\ (1+s)t
 =\int_0^1\dee{s}\ (1+s)\ \left[\frac{t^2}{2}\right]_1^2
-=\frac{3}{2}\left[s+\frac{s^2}{2}\right]_0^1
-=\frac{3}{2}\times \frac{3}{2}
+</mrow><mrow>
+&amp;=\frac{3}{2}\left[s+\frac{s^2}{2}\right]_0^1
+</mrow><mrow>
+&amp;=\frac{3}{2}\times \frac{3}{2}
 </mrow><mrow>
 &amp;=\frac{9}{4}
 </mrow>
@@ -482,16 +477,16 @@ As <m>\dee{x}\,\dee{y} = (1+s)\,\dee{s}\,\dee{t}</m> and the integrand
 </solution>
 </example>
 
-<p>There are natural generalizations of <xref ref="eq_dA"/> and
+<p>There are natural generalizations of (<xref ref="eq_dA"/>) and
 Theorem <xref ref="thm_2d_sub"/> to three (and also to higher) dimensions,
-that are derived in precisely the same way as <xref ref="eq_dA"/>
+that are derived in precisely the same way as (<xref ref="eq_dA"/>)
 was derived. The derivation is based on the fact, discussed in
 the optional Section <xref ref="sec_GEOparallelogram"/>, that
 the volume of the parallelepiped (three dimensional parallelogram)
 </p>
 
-<sidebyside>
-<image source="figs/../figs_geometry/piped"/>
+<sidebyside width="20%">
+<image source="figs/piped"/>
 </sidebyside>
 
 <p>
@@ -512,8 +507,8 @@ where the determinant of a <m>3\times 3</m> matrix can be defined in terms
 of some <m>2\times 2</m> determinants by
 </p>
 
-<sidebyside width="">
-  <image source="figs/../figs_geometry/det2"/>
+<sidebyside>
+  <image source="figs/det2"/>
 </sidebyside>
 
 <p>
@@ -572,7 +567,7 @@ Since
                &amp;\pdiff{z}{z}&amp;=1
 </mrow>
 </md>
-<xref ref="eq_dV"/>, but with <m>u</m> renamed to <m>r</m> and <m>v</m> renamed to <m>\theta</m>,
+(<xref ref="eq_dV"/>), but with <m>u</m> renamed to <m>r</m> and <m>v</m> renamed to <m>\theta</m>,
 gives
 <md>
 <mrow>
@@ -588,19 +583,20 @@ gives
         -\sin\theta\det\left[\begin{matrix}
                                             -r\sin\theta&amp;0 \\
                                                 0 &amp; 1
-                           \end{matrix}\right]
-        +0\det\left[\begin{matrix}
+                           \end{matrix}\right]\right.
+       </mrow><mrow>
+        &amp;\hskip2.3in+0\left.\det\left[\begin{matrix}
                               -r\sin\theta  &amp;  r\cos\theta \\
                                                 0 &amp; 0
                            \end{matrix}\right]
-    \right| \dee{r}\,\dee{\theta}\,\dee{z}
+     \right| \dee{r}\,\dee{\theta}\,\dee{z}
 </mrow><mrow>
    &amp;=\big(r\cos^2\theta + r\sin^2\theta\big)\,\dee{r}\,\dee{\theta}\,\dee{z}
 </mrow><mrow>
   &amp;= r\,\dee{r}\,\dee{\theta}\,\dee{z}
 </mrow>
 </md>
-which is exactly what we found in <xref ref="eq_dV_cylindrical"/>.
+which is exactly what we found in (<xref ref="eq_dV_cylindrical"/>).
 </p></example>
 
 <example xml:id="eg_spherical_dV"><title><m>\dee{V}</m> for Spherical Coordinates</title>
@@ -631,7 +627,7 @@ Since
                &amp;\pdiff{z}{\varphi}&amp;=-\rho\,\sin\varphi
 </mrow>
 </md>
-<xref ref="eq_dV"/>, but with <m>u</m> renamed to <m>\rho</m>, <m>v</m> renamed to <m>\theta</m>
+(<xref ref="eq_dV"/>), but with <m>u</m> renamed to <m>\rho</m>, <m>v</m> renamed to <m>\theta</m>
 and <m>w</m> renamed to <m>\varphi</m>, gives
 <md>
 <mrow>
@@ -649,7 +645,8 @@ and <m>w</m> renamed to <m>\varphi</m>, gives
 &amp;= \left|\cos\theta\,\sin\varphi\det\left[\begin{matrix}
                            \rho\,\cos\theta\,\sin\varphi&amp;0 \\
                          \rho\,\sin\theta\,\cos\varphi  &amp;-\rho\,\sin\varphi
-                           \end{matrix}\right]
+                           \end{matrix}\right] \right.
+</mrow><mrow> &amp;\hskip1in\left.
         -\sin\theta\,\sin\varphi\det\left[\begin{matrix}
                              -\rho\,\sin\theta\,\sin\varphi &amp;0 \\
                               \rho\,\cos\theta\,\cos\varphi &amp;-\rho\,\sin\varphi
@@ -675,7 +672,7 @@ and <m>w</m> renamed to <m>\varphi</m>, gives
   &amp;= \rho^2\sin\varphi\,\dee{\rho}\,\dee{\theta}\,\dee{\varphi}
 </mrow>
 </md>
-which is exactly what we found in <xref ref="eq_dV_spherical"/>.
+which is exactly what we found in (<xref ref="eq_dV_spherical"/>).
 </p></example>
 
 </introduction>
@@ -684,11 +681,11 @@ which is exactly what we found in <xref ref="eq_dV_spherical"/>.
   <title>Optional <mdash/> Dropping Higher Order Terms in <m>\dee{u},\dee{v}</m></title>
 
 
-<p>In the course of deriving <xref ref="eq_dA"/>, that is,
+<p>In the course of deriving (<xref ref="eq_dA"/>), that is,
 the <m>\dee{A}</m> formula for
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/dA"/>
 </sidebyside>
 
@@ -707,8 +704,7 @@ the <m>\dee{A}</m> formula for
 &amp;\approx \pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{v}
 </mrow>
 </md>
-where <m>\vE_1</m> is bounded
-<fn>Remember the error in the Taylor polynomial
+where <m>\vE_1</m> is bounded<fn>Remember the error in the Taylor polynomial
 approximations. See <xref ref="eqn_quadratic_exact"/> and
 <xref ref="eqn_linear_bound"/>.</fn>
  by a constant times <m>\dee{u}^2</m>
@@ -720,31 +716,30 @@ to zero.
 <p>So we approximated
 <md>
 <mrow>
-\big|\overrightarrow{P_0P_1}\times\overrightarrow{P_0P_2}\big|
-&amp;=\Big|\Big[\pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u} + \vE_1\Big]
+\left|\overrightarrow{P_0P_1}\times\overrightarrow{P_0P_2}\right|
+&amp;=\left|\Big[\pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u} + \vE_1\Big]
 \times\Big[\pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{v} + \vE_2\Big]
-\Big|
+\right|
 </mrow><mrow>
-&amp;=\Big|\pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u}
+&amp;=\left|\pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u}
 \times\pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{v} + \vE_3
-\Big|
+\right|
 </mrow><mrow>
-&amp;\approx \Big|\pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u}
+&amp;\approx \left|\pdiff{\vr}{u}(u_0\,,\,v_0)\,\dee{u}
 \times\pdiff{\vr}{v}(u_0\,,\,v_0)\,\dee{v}
-\Big|
+\right|
 </mrow>
 </md>
 where the length of the vector <m>\vE_3</m> is bounded by a constant times
 <m>\dee{u}^2\,\dee{v}+\dee{u}\,\dee{v}^2</m>.
 We'll now see why dropping terms like <m>\vE_3</m> does not change the value
-of the integral at all
-<fn>See the optional § 1.1.6 of the CLP-2 text
+of the integral at all<fn>See the optional § 1.1.6 of the CLP-2 text
 for an analogous argument concerning Riemann sums.</fn>.
 Suppose that our domain of integration consists of all <m>(u,v)</m>'s
 in a rectangle of width <m>W</m> and height <m>H</m>, as in the figure below.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/slicing"/>
 </sidebyside>
 
