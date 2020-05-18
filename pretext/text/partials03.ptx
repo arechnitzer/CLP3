@@ -147,8 +147,7 @@ and in Example <xref ref="eg_higher_order_C"/>
 = 24\ x_1^3\, x_2^2\, x_3
 </me>
 In all of these examples, it didn't matter what order we took the derivatives
-in. The following theorem
-<fn>The history of this important theorem is pretty convoluted. See
+in. The following theorem<fn>The history of this important theorem is pretty convoluted. See
 <q>A note on the history of mixed partial derivatives</q>
 by Thomas James Higgins which was published in Scripta Mathematica <alert>7</alert> (1940), 59-62.
 The Theorem is named for Alexis Clairaut (1713--1765), a French mathematician, astronomer, and geophysicist, and Hermann Schwarz (1843--1921), a German mathematician.

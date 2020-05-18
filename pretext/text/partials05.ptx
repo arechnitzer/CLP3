@@ -10,8 +10,7 @@
 <introduction>
 
 <p>The tangent line to the curve <m>y=f(x)</m> at the point <m>\big(x_0,f(x_0)\big)</m>
-is the straight line that fits the curve best
-<fn>It is possible,
+is the straight line that fits the curve best<fn>It is possible,
 but beyond the scope of this text, to give a precise meaning to
 <q>fits best</q>.</fn> at that point.
 Finding tangent lines was probably one of the first applications
@@ -365,16 +364,14 @@ b-3=-2b^3\qquad\text{or equivalently}\qquad
 </me>
 </li>
 </ul>
-In general, cubic equations are very hard to solve
-<fn>The method
+In general, cubic equations are very hard to solve<fn>The method
 for solving cubics was developed in the 15th century by
 del Ferro, Cardano and Ferrari (Cardano's student). Ferrari then went
 on to discover a formula for the roots of a quartic. Both the cubic and quartic
 formulae are extremely cumbersome, and no such formula exists for
 polynomials of degree 5 and higher. This is the famous Abel-Ruffini theorem.</fn>.
 But, in this case,
-we can guess one solution
-<fn>See Appendix A.16 in the
+we can guess one solution<fn>See Appendix A.16 in the
 CLP-2 text. There it is shown that any integer root of a polynomial with
 integer coefficients must divide the constant term exactly. So in this case
 only <m>\pm 1</m> and <m>\pm 3</m> could be integer roots. So it good to check to
@@ -411,8 +408,7 @@ the distance from <m>(0,3,0)</m> to <m>z=x^2+y^2</m> is the distance from
 </p>
 
 <p>Finally back to the claim that, because <m>\big(a,b,f(a,b)\big)</m>
-is the point on <m>z=f(x,y)</m> that is nearest
-<fn>Note that we are assuming
+is the point on <m>z=f(x,y)</m> that is nearest<fn>Note that we are assuming
 that <m>\big(a,b,f(a,b)\big)</m> is the point on the surface that is nearest
 <m>(0,3,0)</m>. That there exists such a point is intuitively obvious from
 a sketch of the surface. The mathematical proof that there exists such
@@ -545,8 +541,7 @@ given its own name.
 
 <definition xml:id="def_gradient"><title>Gradient</title>
 <statement><p>
-The gradient
-<fn>The gradient will also play a big role in
+The gradient<fn>The gradient will also play a big role in
 Section <xref ref="sec_directional_derivatives"/>.</fn>
  of the function <m>G(x,y,z)</m> at the point
 <m>\big( x_0\,,\,y_0\,,\,z_0\big)</m> is
@@ -578,8 +573,7 @@ We have just found a normal vector!
 </p>
 
 <p>The above argument goes through unchanged for surfaces of
-the form
-<fn>Alternatively, one could rewrite <m>G=K</m> as <m>G-K=0</m>
+the form<fn>Alternatively, one could rewrite <m>G=K</m> as <m>G-K=0</m>
 and replace <m>G</m> by <m>G-K</m> in the above argument.</fn>
 <m>G(x,y,z)=K</m>, for any constant <m>K</m>. So we have
 </p>
@@ -631,8 +625,7 @@ Theorem <xref ref="thm_tan_plane_G"/> with <m>G(x,y,z)=z-f(x,y)</m>. Since
 <me>
 \vnabla G(x_0,y_0,z_0) = -f_x(x_0,y_0)\,\hi -f_y(x_0,y_0)\,\hj +\hk
 </me>
-Theorem <xref ref="thm_tan_plane_G"/> then gives
-<fn>Indeed we could write
+Theorem <xref ref="thm_tan_plane_G"/> then gives<fn>Indeed we could write
 Theorem <xref ref="thm_tan_plane_f"/> as a corollary of Theorem <xref ref="thm_tan_plane_G"/>.
 But in a textbook one tries to start with the concrete and move to the more
 general.</fn>
@@ -675,8 +668,7 @@ so that, by Theorem <xref ref="thm_tan_plane_G"/>,
 \vn = \vnabla G(1,2,3) = 12\,\hi -3\,\hj-\hk
 </me>
 is a normal vector to the surface at <m>(1,2,3)</m>.
-Equipped
-<fn>The spelling <q>equipt</q> is a bit archaic. There must
+Equipped<fn>The spelling <q>equipt</q> is a bit archaic. There must
 be a joke here about quips.</fn>
  with the normal, it is easy to work out an equation for
 the tangent plane.
@@ -830,8 +822,7 @@ an equation of the form <m>ax+by+cz=d</m>, with <m>a</m>, <m>b</m>, <m>c</m> and
 Suppose that we wish to find the highest and lowest points on the
 surface <m>G(x,y,z) = x^2-2x +y^2-4y + z^2-6z = 2</m>. That is, we wish
 to find the points on the surface with the maximum value of <m>z</m>
-and with the minimum
-<fn>Recall that <q>minimum</q> means the most
+and with the minimum<fn>Recall that <q>minimum</q> means the most
 negative, not the closest to zero.</fn>
  value of <m>z</m>.
 </p>
@@ -858,8 +849,7 @@ If the tangent plane at <m>(x_0,y_0,z_0)</m> is not horizontal, then the
 tangent plane contains points near <m>(x_0,y_0,z_0)</m> with <m>z</m> bigger
 than <m>z_0</m> and points near <m>(x_0,y_0,z_0)</m> with <m>z</m> smaller than <m>z_0</m>.
 Near <m>(x_0,y_0,z_0)</m>, the tangent plane is a good approximation to the
-surface. So the surface also contains
-<fn>While this is intuitively
+surface. So the surface also contains<fn>While this is intuitively
 obvious, proving it is beyond the scope of this text.</fn>
  such points.
 </p>
@@ -1019,8 +1009,7 @@ First note that the point <m>(1,1,1)</m> is not itself on the plane
 </me>
 Denote by <m>(a,b,c)</m> the point on the plane <m>x+2y+3z=20</m> that
 is nearest <m>(1,1,1)</m>. Then the vector from <m>(1,1,1)</m> to <m>(a,b,c)</m>,
-namely <m>\llt a-1\,,\,b-1\,,\,c-1\rgt</m>, must be perpendicular
-<fn>We
+namely <m>\llt a-1\,,\,b-1\,,\,c-1\rgt</m>, must be perpendicular<fn>We
 saw why this vector must be perpendicular to the plane in
 Example <xref ref="eg_tan_plane_B"/>.</fn>
  to the plane.

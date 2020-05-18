@@ -547,11 +547,10 @@ the full volume is twice the volume in the first octant so that
 &amp;= 2\int_{0}^{{\pi\over 2}} \dee{\theta}\ \left(\frac{2^4}{3}-\frac{2^4}{4}\right)\sin^4\theta
 </mrow>
 </md>
-To integrate
-<fn>For a general discussion of trigonometric integrals see
-§1.8 in the CLP-2 text</fn>. In particular the integral
+To integrate<fn>For a general discussion of trigonometric integrals see
+§1.8 in the CLP-2 text. In particular the integral
 <m>\int \cos^4 x\ \dee{x}</m> is evaluated in Example 1.8.8
-in the CLP-2 text.}
+in the CLP-2 text.</fn>
 <m>\sin^4\theta</m>, we use the double angle formulae
 <m>\sin^2 x= \frac{1-\cos(2x)}{2}</m> and <m>\cos^2 x= \frac{1+\cos(2x)}{2}</m>
 to write

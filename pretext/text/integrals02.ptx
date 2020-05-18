@@ -21,8 +21,7 @@ of constant <m>x</m> and many lines of constant <m>y</m>.
 There is no law that says that we must cut up our domains of integration
 into tiny pieces in that way. Indeed, when the objects of interest
 are sort of round and centered on the origin, it is often
-advantageous
-<fn>The <q>golden hammer</q> (also known as Maslow's hammer
+advantageous<fn>The <q>golden hammer</q> (also known as Maslow's hammer
 and as the law of the instrument) refers to a tendency to always use
 the same tool, even when it isn't the best tool for the job.
 It is just as bad in mathematics as it is in carpentry.</fn>
@@ -42,8 +41,7 @@ So let's review before we resume integrating.
 
 <definition xml:id="def_polars">
 <statement><p>
-The polar coordinates
-<fn>In the mathematical literature,
+The polar coordinates<fn>In the mathematical literature,
 the angular coordinate is usually denoted <m>\theta</m>, as we do here.
 The symbol <m>\varphi</m> is also often used for the angular coordinate.
 In fact there is an ISO standard (\#31 <ndash/> 11) which specifies
@@ -102,8 +100,7 @@ on the left, and curves of constant <m>r</m>, on the right.
 of <m>2\pi</m>. For example, the point <m>(1,0)</m> on the <m>x</m>-axis could have
 <m>\theta=0</m>, but could also have <m>\theta=2\pi</m> or <m>\theta=4\pi</m>. It is sometimes
 convenient to assign <m>\theta</m> negative values. When <m>\theta \lt 0</m>, the
-counter-clockwise
-<fn>or anti-clockwise or widdershins.
+counter-clockwise<fn>or anti-clockwise or widdershins.
 Yes, widdershins is a real word, though the Oxford English Dictionary
 lists its frequency of usage as between 0.01 and 0.1 times
 per million words. Of course both <q>counter-clockwise</q>
@@ -254,8 +251,7 @@ so that <m>r(\pi+\theta) = r(\pi-\theta)</m>. So we get the figure.
 <li><p>
 Finally, we fill in a smooth curve through the dots and we get the
 graph below. This curve is called a <em>cardiod</em> because it looks
-like a heart
-<fn>Well, a mathematician's heart. The name <q>cardioid</q>
+like a heart<fn>Well, a mathematician's heart. The name <q>cardioid</q>
 comes from the Greek word <m>\kappa \alpha \rho \delta \iota \alpha</m>
 (which anglicizes to kardia) for heart.</fn>.
 </p>
@@ -448,8 +444,7 @@ the <q>three petal rose</q>.
 </sidebyside>
 
 <p>
-There is an infinite family of similar rose curves (also called rhodonea
-<fn>The name rhodenea first appeared in the 1728 publication
+There is an infinite family of similar rose curves (also called rhodonea<fn>The name rhodenea first appeared in the 1728 publication
 <em>Flores geometrici</em> of the Italian monk, theologian, mathematician
 and engineer, Guido Grandi (1671<ndash/> 1742).</fn>
  curves).
@@ -489,8 +484,7 @@ The other side is a portion of a circle of radius <m>r</m> that subtends,
 at the origin, an angle <m>\dee{\theta}</m>, the angle between the lines
 of constant <m>\theta</m>. As the circumference of the full circle is <m>2\pi r</m>
 and as <m>\dee{\theta}</m> is the fraction <m>\frac{\dee{\theta}}{2\pi}</m>
-of a full circle
-<fn>Recall that <m>\theta</m> has to be measured in radians for
+of a full circle<fn>Recall that <m>\theta</m> has to be measured in radians for
 this to be true.</fn>, the other side of the approximate rectangle has length
 <m>\frac{\dee{\theta}}{2\pi}2\pi r = r\dee{\theta}</m>. So the shaded
 region has area approximately
@@ -510,8 +504,7 @@ By way of comparison, using Cartesian coordinates we had <m>\dee{A}
 =\dee{x}\,\dee{y}</m>.
 </p>
 
-<p>This intuitive computation has been somewhat handwavy
-<fn>
+<p>This intuitive computation has been somewhat handwavy<fn>
 <q>Handwaving</q> is sometimes used as a pejorative to refer to
 an argument that lacks substance. Here we are just using it to indicate
 that we have left out a bunch of technical details.
@@ -551,8 +544,7 @@ is the outer curve while <m>r=B(\theta)</m> is the inner curve.
 <image source="figs/polarMass2"/>
 </sidebyside>
 
-<p>Divide <m>\cR</m> into wedges (as in wedges of pie
-<fn>There is a pie/pi/pye
+<p>Divide <m>\cR</m> into wedges (as in wedges of pie<fn>There is a pie/pi/pye
 pun in there somewhere.</fn>
  or wedges of cheese)
 by drawing in many lines of constant <m>\theta</m>, with the various
@@ -1092,16 +1084,14 @@ Evaluate <m>\displaystyle\int_0^\infty e^{-x^2}\ \dee{x}</m>.
 <solution>
 <p>
 This is actually a trick question. In fact it is a famous trick
-question
-<fn>The solution is attributed to the French Mathematician
+question<fn>The solution is attributed to the French Mathematician
 Sim\'eon Denis Poisson (1781 <ndash/> 840) and was published in the textbook
 <em>Cours d'Analyse de l'\'ecole polytechnique</em> by
 Jacob Karl Franz Sturm (1803 <ndash/> 1855).</fn>.
 </p>
 
 <p>The integrand <m>e^{-x^2}</m> does not have an antiderivative that can
-be expressed in terms of elementary functions
-<fn>On the other hand it is the core of the function
+be expressed in terms of elementary functions<fn>On the other hand it is the core of the function
 <m>\text{erf}
 (z)=\frac{2}{\sqrt{\pi}}\int_0^z e^{-t^2}\ \dee{t}</m>, which
 gives Gaussian (i.e. bell curve) probabilities.

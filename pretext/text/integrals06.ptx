@@ -548,8 +548,7 @@ essentially, <m>\theta=2\pi</m>.
 </li>
 <li><p>
 Concentrate on any one wedge. Subdivide it into tiny approximate
-cubes
-<fn>Again they are wonky cubes, but we can bound the error
+cubes<fn>Again they are wonky cubes, but we can bound the error
 and show that it goes to zero in the limit <m>\dee{r}
 ,\dee{\theta},\dee{z} \rightarrow 0</m>. </fn>
 by inserting many surfaces of constant <m>r</m>, with the various values of <m>r</m> differing by <m>\dee{r}</m>.  Each cube

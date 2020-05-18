@@ -63,8 +63,7 @@ arrows representing the forces with their tails at the ball.
 
 <p>In this text, we will used bold faced letters, like <m>\vv</m>, <m>\vt</m>, <m>\vg</m>,
 to designate vectors. In handwriting, it is clearer to use a small
-overhead arrow
-  <fn>
+overhead arrow<fn>
     Some people use an underline, as in <m>\underline{v}</m>, rather than an arrow.</fn>,
 as in <m>\vec{v}</m>, <m>\vec{t}</m>, <m>\vec{g}</m>, instead.
 Also, when we want to emphasise that some quantity is a number,
@@ -75,8 +74,7 @@ rather than a vector, we will call the number a <em>scalar</em>.
 Both points and vectors in 2d are specified by two numbers. Until
 you get used to this, it might confuse you sometimes <mdash/> does a given pair of
 numbers represent a point or a vector?
-To distinguish
-<fn>
+To distinguish<fn>
   Or, in the Wikipedia jargon, disambiguate.
 </fn>
 between the components of a vector and the coordinates
@@ -85,8 +83,7 @@ the origin, we shall use angle brackets rather than round brackets
 around the components of a vector. For example, the figure below shows
 the two-dimensional vector <m>\llt 2,1\rgt</m> drawn in three different positions.
 In each case, when the tail is at the point <m>(u,v)</m> the head is at
-<m>(2+u,1+v)</m>. We warn you that, out in the  real world
-<fn>
+<m>(2+u,1+v)</m>. We warn you that, out in the  real world<fn>
   OK. OK. Out in that (admittedly very small) part of the real world that actually knows
 what a vector is.
 </fn>,
@@ -331,8 +328,7 @@ a linear combination of the vectors.
 Thus all vectors can be expressed as linear combinations of the standard
 basis vectors. This makes basis vectors very helpful in computations.
 The  standard basis vectors are unit vectors, meaning that they are of
-length one, where the length of a vector <m>\va</m> is denoted
-<fn>The notation <m>\|\va\|</m> is also used for the length of <m>\va</m>.</fn>
+length one, where the length of a vector <m>\va</m> is denoted<fn>The notation <m>\|\va\|</m> is also used for the length of <m>\va</m>.</fn>
  <m>|\va|</m>
 and is defined by
 </p>
@@ -592,8 +588,7 @@ and <m>|\va|\sin\theta</m>. So Pythagoras gives
 &amp;=|\vb|^2-2|\va|\,|\vb|\,\cos\theta+|\va|^2
 </mrow>
 </md>
-This is precisely the cosine law
-<fn>
+This is precisely the cosine law<fn>
   You may be used to seeing it written as <m>c^2=a^2+b^2-2 a b \cos C</m>, where <m>a</m>, <m>b</m> and <m>c</m> are the lengths of the three sides of the triangle and <m>C</m> is the angle opposite the side of length <m>c</m>
 </fn>.
 Observe that, when <m>\theta=\tfrac{\pi}{2}</m>,
@@ -641,8 +636,7 @@ for some integer <m>k</m>, which in turn is true if and only if <m>\va</m> and
 Because of Property 7 of Theorem <xref ref="thm_dotPppties"/>, the dot product
 can be used to test whether or not two vectors are perpendicular to
 each other. That is, whether or not the angle between the two vectors
-is <m>90^\circ</m>. Another name
-<fn>The concepts of the dot product
+is <m>90^\circ</m>. Another name<fn>The concepts of the dot product
 and perpendicularity have been generalized a lot in mathematics (for example,
 from 2d and 3d vectors to functions). The generalization of the dot
 product is called the <q>inner product</q> and the generalization
@@ -822,8 +816,7 @@ at <m>\ell</m> (so that the rod does not stretch or contract) and whose
 direction is always parallel to the rod,
 </li>
 <li> and possibly some frictional forces, like friction in the hinge and air resistance. Assume
-that the total frictional force has magnitude proportional
-<fn>The behaviour of air resistance (sometimes called drag) is pretty complicated.
+that the total frictional force has magnitude proportional<fn>The behaviour of air resistance (sometimes called drag) is pretty complicated.
 We're using a reasonable low speed approximation. At high speeds drag is typically proportional to the square of the speed.
 </fn> to the speed of the
 mass and has direction opposite to the direction of motion of the mass.
@@ -854,8 +847,7 @@ We are now going to use Newton's law of motion
 </mrow>
 </md>
 to determine now <m>\theta</m> evolves in time. By definition, the
-velocity and acceleration vectors
-<fn>
+velocity and acceleration vectors<fn>
   For a more comprehensive treatment of derivatives of vector valued functions <m>\vr(t)</m>, and in particular of velocity and acceleration, see Section <xref ref="sec_curves"/> in this text and Section 1.1 in the CLP-4 text.
 </fn> for the position vector
 <m>\llt x(t),y(t)\rgt</m> are
@@ -1153,8 +1145,7 @@ In fact, all cases are covered by the formula
 </mrow><mrow> c&amp;d\end{matrix}\right]=ad-bc
 </mrow>
 </md>
-and is called the <em>determinant</em> of the matrix
-<fn>The topics of
+and is called the <em>determinant</em> of the matrix<fn>The topics of
 matrices and determinants appear prominently in linear algebra courses. We
 are only going to use them as notation, and we will explicitly explain
 that notation. A linear algebra course is <em>not</em> a prerequisite
@@ -1515,8 +1506,7 @@ In the left hand figure of
       </sidebyside>
 <p>
   the two vectors are labeled <m>\vc</m> and <m>\vd</m>. Which of these two
-candidates is correct is determined by the right hand rule
-<fn>
+candidates is correct is determined by the right hand rule<fn>
 That the cross product uses the right hand rule, rather than the left hand rule, is an example of the tyranny of the masses <mdash/> only roughly 10\%
 of humans are left-handed. </fn>,
 which says that if you form your right hand into a fist with your fingers curling from
@@ -1824,8 +1814,7 @@ derive the formula for the volume of the parallelepiped with edges
 
 <p>
 The volume of the parallelepiped is the area of its base times its
-height
-<fn>
+height<fn>
   This is a simple integral calculus exercise.
 </fn>.
 The base is the parallelogram with sides <m>\vb</m> and

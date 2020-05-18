@@ -134,8 +134,7 @@ Denote by <m>\theta</m> the angle between the vectors
 The base of the parallelogram, <m>\overrightarrow{P_0P_1}</m>,
 has length <m>\big|\overrightarrow{P_0P_1}\big|</m>, and the height of the
 parallelogram is <m>\big|\overrightarrow{P_0P_2}\big|\,\sin\theta</m>.
-So the area of the parallelogram is
-<fn>As we mentioned above,
+So the area of the parallelogram is<fn>As we mentioned above,
 the approximation below becomes exact when the limit <m>\dee{x}
 ,\dee{y}\rightarrow 0</m> is taken in the definition of the integral.
 See §3.3.5 in the CLP-4 text.</fn>, by
@@ -396,8 +395,7 @@ x^2+y^2+z^2=a^2\qquad z\ge 0
 (with <m>a \gt 0</m>).
 You probably know, from high school, that the answer is
 <m>\frac{1}{2}\times 4\pi a^2=2\pi a^2</m>. But you have probably
-not seen a derivation
-<fn>There is a pun hidden here, because
+not seen a derivation<fn>There is a pun hidden here, because
 you can (with a little thought) also get the surface area by differentiating
 the volume with respect to the radius.</fn>
  of this answer.

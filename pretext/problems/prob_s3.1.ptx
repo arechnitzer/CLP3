@@ -71,8 +71,7 @@ where <m>z(x,y)=\sqrt{9-x^2-y^2}</m> and
 </mrow>
 </md>
 So <m>\cR</m> is the right half of the circular disk of radius <m>3</m>
-centred on <m>(0,0)</m>. By Equation (<xref ref="eqn_Volume_y_slice"/>)
-in the CLP-3 text, the given integral is the volume of the solid
+centred on <m>(0,0)</m>. By Equation (<xref ref="eqn_Volume_y_slice"/>), the given integral is the volume of the solid
 <md>
 <mrow>
 \cV&amp;=\Big\{\,(x,y,z)\,\Big|\,(x,y)\in\cR,\ 0\le z\le \sqrt{9-x^2-y^2}\,\Big\}

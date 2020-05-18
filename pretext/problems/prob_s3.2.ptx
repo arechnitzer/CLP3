@@ -1151,7 +1151,7 @@ evaluate it is
 </mrow>
 </md>
 That <m>\lim\limits_{\veps\to 0^+}\veps\ln\veps = 0</m> was shown in
-Example \eref{CLP100}{eg:hopitalJ} of the CLP-1 text.
+Example 3.7.15 of the CLP-1 text.
 </p>
 
 </solution>

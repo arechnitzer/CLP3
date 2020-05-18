@@ -383,7 +383,7 @@ All together
 </md>
 For an efficient, sneaky, way to evaluate
 <m>\int_0^{\pi/2}\sin^2\theta\ \dee{\theta}</m>,
-see Remark <xref ref="rem_sneaky"/> in the CLP-3 text.
+see Remark <xref ref="rem_sneaky"/>.
 </p></solution>
 </exercise>
 

@@ -204,13 +204,12 @@ Another way to write the system of equations in the first step is
 <me>
 L_x(a,b,c,\la) = L_y(a,b,c,\la) = L_z(a,b,c,\la) = L_\la(a,b,c,\la) = 0
 </me>
-where <m>L(x,y,z,\la)</m> is the auxiliary function
-<fn>We call <m>L</m> an auxiliary function because, while we use it to help solve the problem,
+where <m>L(x,y,z,\la)</m> is the auxiliary function<fn>We call <m>L</m> an auxiliary function because, while we use it to help solve the problem,
 it doesn't actually appear in either the statement of the question or in
-the answer itself.</fn> <fn>Some people
+the answer itself</fn> <fn>Some people
 use <m>L(x,y,z,\la)=f(x,y,z)+\la\, g(x,y,z)</m> instead. This amounts to renaming
 <m>\la</m> to <m>-\la</m>. While we care that <m>\la</m> has a value, we don't care what it
-is.</fn>
+is.</fn>.
 </p>
 
 <p><me>
@@ -427,8 +426,7 @@ distance <m>\sqrt{x^2+y^2}</m> subject to the constraint
 g(x,y)=3x^2-2xy+3y^2-4=0
 </me>
 Now maximizing/minimizing <m>\sqrt{x^2+y^2}</m>
-is equivalent
-<fn>The function <m>S(z)=z^2</m> is a strictly increasing function for <m>z\ge 0</m>. So, for <m>a,b\ge 0</m>, the statement <q><m>a \lt b</m></q> is equivalent to the statement <q><m>S(a) \lt S(b)</m></q>.</fn>
+is equivalent<fn>The function <m>S(z)=z^2</m> is a strictly increasing function for <m>z\ge 0</m>. So, for <m>a,b\ge 0</m>, the statement <q><m>a \lt b</m></q> is equivalent to the statement <q><m>S(a) \lt S(b)</m></q>.</fn>
  to maximizing/minimizing
 its square <m>\big(\sqrt{x^2+y^2}\big)^2=x^2+y^2</m>.
 So we are free to choose the objective function
@@ -541,8 +539,7 @@ is larger than the distance from <m>(0,0)</m> to
 So the ends of the minor axes are <m>\pm\big(\frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\big)</m> and the
 ends of the major axes are <m>\pm(1,1)</m>. Those ends are sketched in the
 figure on the left below. Once we have the ends, it is an easy
-matter
-<fn>if you tilt your head so that the line through
+matter<fn>if you tilt your head so that the line through
 <m>(1,1)</m> and <m>(-1,-1)</m> appears horizontal</fn>
 to sketch the ellipse as in the figure on the right below.
 </p>
@@ -708,8 +705,7 @@ partial derivatives in a region of <m>\bbbr^3</m> that contains the curve
 <me>
 g(x,y,z)=h(x,y,z)=0
 </me>
-Assume
-<fn>This condition says that the normal vectors to <m>g=0</m> and <m>h=0</m>
+Assume<fn>This condition says that the normal vectors to <m>g=0</m> and <m>h=0</m>
 at <m>(x,y,z)</m> are not parallel. This ensures that the surfaces <m>g=0</m>
 and <m>h=0</m> are not tangent to each other at <m>(x,y,z)</m>. They intersect
 in a curve.</fn>

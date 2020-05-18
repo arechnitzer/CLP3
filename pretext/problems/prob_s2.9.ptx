@@ -3050,8 +3050,7 @@ S_{x}\,m+n\,b&amp;=S_{y} \tag{2}
 </mrow>
 </md>
 This is a system of two linear equations in two unknowns.
-One way
-<fn>This procedure is probably not the most efficient one. But it has the advantage that it always works, it does not require any ingenuity on the part of the solver, and it generalizes easily to larger linear systems of equations.</fn>
+One way<fn>This procedure is probably not the most efficient one. But it has the advantage that it always works, it does not require any ingenuity on the part of the solver, and it generalizes easily to larger linear systems of equations.</fn>
  to solve them, is to use one of the two equations to solve
 for one of the two unknowns in terms of the other unknown. For example,
 equation (2) gives that

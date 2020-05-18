@@ -120,9 +120,8 @@ at <m>(x,y)=(a,b)</m>.
 
 <p>
 The notation <m>{\left(\pdiff{f}{x}\right)}_{\!y}</m> is used to make explicit
-that the variable <m>y</m> is being held.
-<fn>
-  There are applications in which there are several variables that cannot be varied independently. For example, the pressure, volume and temperature of an ideal gas are related by the equation of state <m>PV= \text{(constant)} T</m>. In those applications, it may not be clear from the context which variables are being held fixed.</fn>
+that the variable <m>y</m> is being held fixed<fn>
+  There are applications in which there are several variables that cannot be varied independently. For example, the pressure, volume and temperature of an ideal gas are related by the equation of state <m>PV= \text{(constant)} T</m>. In those applications, it may not be clear from the context which variables are being held fixed.</fn>.
 </p>
 </statement>
 </definition>
@@ -490,8 +489,7 @@ For example, when <m>x=y=0</m>, the equation reduces to
 <me>
 z(0,0)^5=-1
 </me>
-which forces
-<fn>The only real number <m>z</m> which obeys <m>z^5=-1</m>
+which forces<fn>The only real number <m>z</m> which obeys <m>z^5=-1</m>
 is <m>z=-1</m>. However there are four other complex numbers which also obey
 <m>z^5=-1</m>.</fn>
  <m>z(0,0)=-1</m>. Let's find the partial derivative <m>\pdiff{z}{x}(0,0)</m>.
@@ -503,8 +501,7 @@ All we know is that
 z(x,y)^5 + y^2 e^{z(x,y)} + e^{2x} =0
 </me>
 for all <m>x</m> and <m>y</m>. We can turn this into an equation for <m>\pdiff{z}{x}(0,0)</m>
-by differentiating
-<fn>You should have already seen this technique,
+by differentiating<fn>You should have already seen this technique,
 called implicit differentiation, in your first Calculus course. It is covered
 in Section 2.11 in the CLP-1 text.</fn>
  the whole equation with respect to <m>x</m>,
@@ -774,8 +771,7 @@ and if you evaluate the second matrix at <m>x=x(r,\theta)</m>, <m>y=y(r,\theta)<
 </me>
 </li>
 <li>
-and if you multiply
-<fn>Matrix multiplication is usually covered in courses on linear algebra, which you may or may not have taken. That's why this example is optional.</fn>
+and if you multiply<fn>Matrix multiplication is usually covered in courses on linear algebra, which you may or may not have taken. That's why this example is optional.</fn>
  the two matrices together
 <md>
 <mrow>

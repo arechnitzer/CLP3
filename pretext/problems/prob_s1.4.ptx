@@ -1145,8 +1145,7 @@ is perpendicular to the sphere at <m>P</m>. So a normal vector to
 the sphere at our initial point <m>(X,Y,Z)=(1,0,1)</m> is <m>\llt 1,0,1\rgt</m>.
 </li>
 </ul>
-Since our initial direction
-<fn>Note that the change of coordinates
+Since our initial direction<fn>Note that the change of coordinates
 <m>X=x-1</m>, <m>Y=y-2</m>, <m>Z=z+1</m> has absolutely no effect on any velocity or direction
 vector. If our position at time <m>t</m> is <m>(x(t),y(t),z(t))</m> in the
 original coordinate system, then it is <m>(X(t),Y(t),Z(t))

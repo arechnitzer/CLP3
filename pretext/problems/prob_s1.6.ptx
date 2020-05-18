@@ -675,8 +675,7 @@ the arclength of <m>\vr(t)</m> from <m>t=0</m> to <m>t=1</m> is
 <exercise>
 <statement><p>
 A particle's position at time <m>t</m> is given by <m>\vr(t)=(t+\sin t, \cos t)</m>
-<fn>The particle traces out a cycloid--see Question<nbsp/><xref ref="prob_s1_1_cycloid"/></fn>
-. What is the magnitude of the acceleration of the particle at time <m>t</m>?
+<fn>The particle traces out a cycloid--see Question<nbsp/><xref ref="prob_s1_1_cycloid"/></fn>. What is the magnitude of the acceleration of the particle at time <m>t</m>?
 </p></statement>
 <hint><p>
 <m>\vr(t)</m> is the position of the particle, so its acceleration is <m>r'(t)</m>.
