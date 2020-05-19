@@ -1,5 +1,5 @@
 # CLP-3 Multivariable Calculus
-A free, open source, integral calculus textbook aimed at standard university Calculus 3 courses.
+A free, open source, multivariable calculus textbook aimed at standard university Calculus 3 courses.
 
 Full details can be found at [the textbook website](http://www.math.ubc.ca/~CLP/index.html)
 
