@@ -34,13 +34,15 @@ on both <m>S_1</m> and <m>S_2</m>. The gradients of <m>F</m> and <m>G</m> are
   &amp;=\llt\pdiff{F}{x}(x,y,z)\,,\,
         \pdiff{F}{y}(x,y,z)\,,\,
         \pdiff{F}{z}(x,y,z)\rgt
-    =\llt 2x\,,\,2y\,,\,2(z-1)\rgt
+</mrow><mrow>
+    &amp;=\llt 2x\,,\,2y\,,\,2(z-1)\rgt
 </mrow><mrow>
 \vnabla G(x,y,z)
   &amp;=\llt\pdiff{G}{x}(x,y,z)\,,\,
         \pdiff{G}{y}(x,y,z)\,,\,
         \pdiff{G}{z}(x,y,z)\rgt
-    =\llt 2x\,,\,2y\,,\,2(z+1)\rgt
+</mrow><mrow>
+    &amp;=\llt 2x\,,\,2y\,,\,2(z+1)\rgt
 </mrow>
 </md>
 In particular,
@@ -103,17 +105,22 @@ The gradient
 to the surface <m>S</m> at <m>(x_0,y_0,z_0)</m>. So the tangent plane
 to the surface <m>S</m> at <m>(x_0,y_0,z_0)</m> is
 <me>
-\llt\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\,,\,
-\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\,,\,
-\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\rgt \cdot
-\llt x-x_0\,,\, y-y_0\,,\,z-z_0\rgt = 0
+\llt\pdiff{G}{x},
+\pdiff{G}{y},
+\pdiff{G}{z}\rgt \cdot
+\llt x-x_0,y-y_0,z-z_0\rgt = 0
 </me>
+with the derivatives of <m>G</m> evaluated at <m>\big(x_0,y_0,z_0\big)</m>,
 or
-<me>
-\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\ (x-x_0)
-+\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\ (y-y_0)
-+\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\ (z-z_0) = 0
-\tag{$E_2$}</me>
+<md>
+<mrow>
+\pdiff{G}{x}\big( x_0,y_0,z_0\big)(x-x_0)
+&amp;+\pdiff{G}{y}\big( x_0,y_0,z_0\big)(y-y_0)
+</mrow><mrow>
+&amp;+\pdiff{G}{z}\big( x_0,y_0,z_0\big)(z-z_0) = 0
+\tag{$E_2$}
+</mrow>
+</md>
 </li>
 </ul>
 Next, we'll show that the tangent vector
@@ -136,40 +143,46 @@ by the chain rule,
 </mrow><mrow>
 &amp;=\pdiff{G}{x}\big( x(t)\,,\,y(t)\,,\,z(t)\big)\ x'(t)
 +\pdiff{G}{y}\big( x(t)\,,\,y(t)\,,\,z(t)\big)\ y'(t)
+</mrow><mrow>
+&amp;\hskip0.5in
 +\pdiff{G}{z}\big( x(t)\,,\,y(t)\,,\,z(t)\big)\ z'(t)
 </mrow>
 </md>
 Then setting <m>t=t_0</m> gives
-<me>
+<md>
+<mrow>
 \pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\ x'(t_0)
-+\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\ y'(t_0)
-+\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\ z'(t_0) = 0
+&amp;+\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\ y'(t_0)
+</mrow><mrow>&amp;+\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\ z'(t_0) = 0
 \tag{$E_3$}
-</me>
+</mrow>
+</md>
 Finally, we are in a position to show that if <m>(x,y,z)</m> is any point on
 the tangent line to <m>C</m> at <m>\vr_0</m>, then <m>(x,y,z)</m> is also on the
 tangent plane to <m>S</m> at <m>\vr_0</m>. As <m>(x,y,z)</m> is on the tangent line to <m>C</m>
 at <m>\vr_0</m> then there is a <m>t</m> such that, by <m>(E_1)</m>,
 <md>
 <mrow>
-&amp;\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\ \color{blue}{\{x-x_0\}}
-+\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\ \color{blue}{\{y-y_0\}}
-+\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\ \color{blue}{\{z-z_0\}}
+&amp;\pdiff{G}{x}\big(x_0,y_0,z_0\big)\color{blue}{\{x\!-\!x_0\}}
++\pdiff{G}{y}\big(x_0,y_0,z_0\big)\color{blue}{\{y\!-\!y_0\}}
++\pdiff{G}{z}\big(x_0,y_0,z_0\big)\color{blue}{\{z\!-\!z_0\}}
 </mrow><mrow>
-&amp;=\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\
-               \color{blue}{\big\{ t\,x'(t_0)\big\}}
-+\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\
-               \color{blue}{\big\{ t\,y'(t_0)\big\}}
-+\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\
-               \color{blue}{\big\{ t\,z'(t_0)\big\}}
+&amp;=\pdiff{G}{x}\big(x_0,y_0,z_0\big)
+               \color{blue}{\big\{t x'(t_0)\big\}}
++\pdiff{G}{y}\big(x_0,y_0,z_0\big)
+               \color{blue}{\big\{ty'(t_0)\big\}}
+</mrow><mrow>&amp;\hskip1in
++\pdiff{G}{z}\big(x_0,y_0,z_0\big)
+               \color{blue}{\big\{tz'(t_0)\big\}}
 </mrow><mrow>
-&amp;=\color{blue}{t}\left[\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\
+&amp;=\color{blue}{t}\left[\pdiff{G}{x}\big(x_0,y_0,z_0\big)
                 \color{blue}{x'(t_0)}
-+\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\
++\pdiff{G}{y}\big(x_0,y_0,z_0\big)
                 \color{blue}{y'(t_0)}
-+\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\
++\pdiff{G}{z}\big(x_0,y_0,z_0\big)\
                  \color{blue}{z'(t_0)} \right]
-=0
+</mrow><mrow>
+ &amp;=0
 </mrow>
 </md>
 by <m>(E_3)</m>. That is, <m>(x,y,z)</m> obeys the equation, <m>(E_2)</m>, of the tangent plane to <m>S</m> at <m>\vr_0</m> and so is on that tangent plane.  So the tangent
@@ -214,6 +227,7 @@ is contained in the tangent plane to <m>S_1</m> at <m>(x_0,y_0,z_0)</m>, by
 Q[<xref ref="tan_line_plane"/>]. In particular, any tangent vector, <m>\vt</m>, to
 <m>C</m> at <m>(x_0,y_0,z_0)</m> must be perpendicular to <m>\vnabla F(x_0,y_0,z_0)</m>,
 the normal vector to <m>S_1</m> at <m>(x_0,y_0,z_0)</m>.
+(See Theorem <xref ref="thm_tan_plane_f"/>.)
 </li>
 <li>
 Since <m>C</m> is contained in <m>S_2</m>, the tangent line to <m>C</m> at <m>(x_0,y_0,z_0)</m>
@@ -235,10 +249,14 @@ One such tangent vector is
 are nonzero and not parallel, <m>\vt</m> is nonzero.) So the normal plane in
 question passes through <m>(x_0,y_0,z_0)</m> and has normal vector <m>\vn=\vt</m>.
 Consquently, the normal plane is
-<me>
-\vn\cdot\llt x-x_0\,,\,y-y_0\,,\,z-z_0\rgt =0 \qquad\text{where }
+<md>
+<mrow>
+&amp;\vn\cdot\llt x-x_0\,,\,y-y_0\,,\,z-z_0\rgt =0 
+</mrow><mrow>
+    &amp;\qquad\text{where }
 \vn=\vt=\vnabla F(x_0,y_0,z_0)\times \vnabla G(x_0,y_0,z_0)
-</me>
+</mrow>
+</md>
 </p>
 
 </solution>
@@ -284,7 +302,7 @@ Q[<xref ref="tan_line_plane"/>]. In particular, any tangent vector, <m>\vt</m>, 
 <m>C</m> at <m>(x_0,y_0,z_0)</m> must be perpendicular to <m>-f_x(x_0,y_0)\,\hi
 -f_y(x_0,y_0)\,\hj+\hk</m>,
 the normal vector to <m>S_1</m> at <m>(x_0,y_0,z_0)</m>.
-(See Theorem <xref ref="thm_tan_plane_f"/> in the CLP-3 text.)
+(See Theorem <xref ref="thm_tan_plane_f"/>.)
 </li>
 <li>
 Since <m>C</m> is contained in <m>S_2</m>, the tangent line to <m>C</m> at <m>(x_0,y_0,z_0)</m>
@@ -312,9 +330,10 @@ One such tangent vector is
            -g_x(x_0,y_0) &amp; -g_y(x_0,y_0) &amp; 1
                 \end{matrix}\right]
 </mrow><mrow>
-    &amp;=\llt g_y(x_0,y_0)-f_y(x_0,y_0)\,,\,
+    &amp;=\big\lt g_y(x_0,y_0)-f_y(x_0,y_0)\,,\,
            f_x(x_0,y_0)-g_x(x_0,y_0)\,,\,
-           f_x(x_0,y_0)g_y(x_0,y_0)-f_y(x_0,y_0)g_x(x_0,y_0)\rgt
+            </mrow><mrow>&amp;\hskip2in
+           f_x(x_0,y_0)g_y(x_0,y_0)-f_y(x_0,y_0)g_x(x_0,y_0)\big\gt
 </mrow>
 </md>
 So the tangent line in question passes through <m>(x_0,y_0,z_0)</m> and has
@@ -352,7 +371,7 @@ Find the tangent plane to the surface <m>z = f(x,y)</m> at the point
 </p></answer>
 
 <solution><p>
-We are going to use Theorem <xref ref="thm_tan_plane_f"/> in the CLP-3 text.
+We are going to use Theorem <xref ref="thm_tan_plane_f"/>.
 To do so, we need the first order derivatives of <m>f(x,y)</m>
 at <m>(x,y)=(-1,1)</m>. So we find them first.
 <md alignment="alignat">
@@ -370,7 +389,8 @@ f_y(-1,1)&amp;=\frac{1}{3} -\frac{4}{3^2}=-\frac{1}{9}
 <md>
 <mrow>
 z&amp;=f(-1,1) + f_x(-1,1)\,(x+1) + f_y(-1,1)\,(y-1)
- =\frac{1}{3} -\frac{2}{9}\,(x+1) -\frac{1}{9}\,(y-1)
+</mrow><mrow>
+ &amp; =\frac{1}{3} -\frac{2}{9}\,(x+1) -\frac{1}{9}\,(y-1)
 </mrow><mrow>
  &amp;=\frac{2}{9}-\frac{2}{9}x-\frac{1}{9}y
 </mrow>
@@ -395,7 +415,7 @@ at the point <m>(2, 1, 1)</m>.
 <solution><p>
 The equation of the given surface is of the form <m>G(x,y,z)=9</m>
 with <m>G(x,y,z) =\frac{27}{\sqrt{x^2+y^2+z^2+3}}</m>. So,
-by Theorem <xref ref="thm_tan_plane_G"/> in the CLP-3 text, a normal
+by Theorem <xref ref="thm_tan_plane_G"/>, a normal
 vector to the surface at <m>(2,1,1)</m> is
 <md>
 <mrow>
@@ -512,7 +532,7 @@ G(-1,1,2) = (-1)(1)(2)^2 + (1)^2 (2)^3 - 3 - (-1)^2
           =0
 </mrow>
 </md>
-By Theorem <xref ref="thm_tan_plane_G"/> in the CLP-3 text, since
+By Theorem <xref ref="thm_tan_plane_G"/>, since
 <md alignment="alignat">
 <mrow>
 G_x(x,y,z)&amp;=yz^2 -2x \qquad &amp;
@@ -570,7 +590,7 @@ For what value of <m>a</m> is the tangent plane parallel to the plane
 (a)
 The surface is <m>G(x,y,z)=z-x^2+2xy-y^2=0</m>. When <m>x=a</m> and <m>y=2a</m>
  and <m>(x,y,z)</m> is on the surface, we have <m>z= a^2-2(a)(2a) +(2a)^2=a^2</m>.
-So, by Theorem <xref ref="thm_tan_plane_G"/> in the CLP-3 text,
+So, by Theorem <xref ref="thm_tan_plane_G"/>,
 a normal vector to this surface at <m>(a,2a,a^2)</m> is
 <md>
 <mrow>
@@ -582,7 +602,7 @@ and the equation of the tangent plane is
 <md>
 <mrow>
 \llt 2a\,,\,-2a\,,\,1\rgt\cdot\llt x-a\,,\,y-2a\,,\,z-a^2\rgt =0
-\qquad\text{or}\qquad
+\quad\text{or}\quad
 2ax -2ay +z = -a^2
 </mrow>
 </md>
@@ -622,14 +642,16 @@ f_y(x,y) &amp; = \frac{2}{x^2+y^2}-\frac{4y^2}{{(x^2+y^2)}^2}\quad &amp;
 </mrow><mrow>
 </mrow>
 </md>
-So, by Theorem <xref ref="thm_tan_plane_f"/> in the CLP-3 text,
+So, by Theorem <xref ref="thm_tan_plane_f"/>,
 a normal vector to the surface at <m>(x,y)=(-1,2)</m> is
 <m>\llt \frac{8}{25}\,,\,-\frac{6}{25}\,,\,-1\rgt</m>.
 As <m>f(-1,2)= \frac{4}{5}</m>, the tangent plane is
 <md>
 <mrow>
-\llt \frac{8}{25}\,,\,-\frac{6}{25}\,,\,-1\rgt\cdot\llt x+1\,,\,y-2\,,\,
-         z -\frac{4}{5}\rgt=0\quad \text{or}\quad
+&amp;\llt \frac{8}{25}\,,\,-\frac{6}{25}\,,\,-1\rgt\cdot\llt x+1\,,\,y-2\,,\,
+         z -\frac{4}{5}\rgt=0
+</mrow><mrow>
+ &amp; \quad \text{or}\quad
 \frac{8}{25}x-\frac{6}{25}y-z=-\frac{8}{5}
 </mrow>
 </md>
@@ -747,11 +769,14 @@ Substituting <m>z_0=-\frac{1}{2}</m> into (E2) gives
 </me>
 Finally <m>x_0</m> is determined by the requirement that <m>(x_0,y_0,z_0)</m>
 must lie on <m>S</m> and so must obey
-<me>
+<md>
+<mrow>
 z_0 = x_0^2 + 2y_0^2 + 2y_0 - 1
-\implies -\frac{1}{2} = x_0^2 + 2(-1)^2 +2(-1)-1
-\implies x_0^2 = \frac{1}{2}
-</me>
+&amp;\implies -\frac{1}{2} = x_0^2 + 2(-1)^2 +2(-1)-1
+</mrow><mrow>
+ &amp;\implies x_0^2 = \frac{1}{2}
+</mrow>
+</md>
 So the allowed points <m>P</m> are
   <m>\big(\frac{1}{\sqrt{2}}\,,\,-1\,,\,-\frac{1}{2}\big)</m>
 and
@@ -900,7 +925,7 @@ normal to the surface at <m>(x_0,y_0,z_0)</m> is
 <md>
 <mrow>
 &amp;\vnabla\Big(xy e^{-(x^2+y^2)/2}-z\Big)\bigg|_{(x_0,y_0,z_0)}
-</mrow><mrow>&amp;\hskip1in
+</mrow><mrow>&amp;\hskip0.3in
 =\llt y_0 e^{-(x_0^2+y_0^2)/2}-x_0^2y_0 e^{-(x_0^2+y_0^2)/2},
       x_0 e^{-(x_0^2+y_0^2)/2}-x_0y_0^2 e^{-(x_0^2+y_0^2)/2},-1\rgt
 </mrow>
@@ -974,10 +999,11 @@ Find an expression for
  A normal vector to the surface at <m>(0,2,1)</m> is
 <md>
 <mrow>
-\vnabla\big(xy-2x+yz+x^2+y^2+z^3-7\big)\big|_{(0,2,1)}
-&amp;=\llt y-2+2x\,,\,x+z+2y\,,\,y+3z^2\rgt\big|_{(0,2,1)}
+&amp;\vnabla\big(xy-2x+yz+x^2+y^2+z^3-7\big)\big|_{(0,2,1)}
 </mrow><mrow>
-&amp;=\llt 0, 5, 5\rgt
+&amp;\hskip0.5in=\llt y-2+2x\,,\,x+z+2y\,,\,y+3z^2\rgt\big|_{(0,2,1)}
+</mrow><mrow>
+&amp;\hskip0.5in=\llt 0, 5, 5\rgt
 </mrow>
 </md>
 So the tangent plane is
@@ -997,13 +1023,17 @@ The vector parametric equations for the normal line are
 xy-2x+y\,z(x,y)+x^2+y^2+z(x,y)^3=7
 </me>
 gives
-<md alignment="alignat">
+<md>
 <mrow>
-y-2+y\,z_x(x,y)+2x+3z(x,y)^2z_x(x,y)&amp;=0 &amp;   &amp;\implies &amp;
-z_x(x,y)&amp;=\frac{2-2x-y}{y+3z(x,y)^2}
+y-2+y\,z_x(x,y)+2x+3z(x,y)^2z_x(x,y)&amp;=0
 </mrow><mrow>
-x+z(x,y)+y\,z_y(x,y)+2y+3z(x,y)^2z_y(x,y)&amp;=0 &amp;   &amp;\implies &amp;
-z_y(x,y)&amp;=-\frac{x+2y+z(x,y)}{y+3z(x,y)^2}
+ &amp;\hskip-1in\implies 
+z_x(x,y)=\frac{2-2x-y}{y+3z(x,y)^2}
+</mrow><mrow>
+x+z(x,y)+y\,z_y(x,y)+2y+3z(x,y)^2z_y(x,y)&amp;=0
+</mrow><mrow>
+ &amp;\hskip-1in\implies 
+z_y(x,y)=-\frac{x+2y+z(x,y)}{y+3z(x,y)^2}
 </mrow>
 </md>
 In particular, at <m>(0,2,1)</m>, <m>z_y(0,2)=-\frac{4+1}{2+3}=-1</m>.
@@ -1013,8 +1043,8 @@ In particular, at <m>(0,2,1)</m>, <m>z_y(0,2)=-\frac{4+1}{2+3}=-1</m>.
 Differentiating <m>z_x</m> with respect to <m>y</m> gives
 <md>
 <mrow>
-z_{xy}(x,y)
-&amp;=-\frac{1}{y+3z(x,y)^2}
+&amp;z_{xy}(x,y)
+=-\frac{1}{y+3z(x,y)^2}
 -\frac{2-2x-y}{{[y+3z(x,y)^2]}^2}\big(1+6z(x,y)z_y(x,y)\big)
 </mrow><mrow>
 &amp;=-\frac{1}{y+3z(x,y)^2}
@@ -1028,8 +1058,10 @@ to <m>x</m>. This gives
 <mrow>
 z_{yx}(x,y)
 &amp;=-\frac{1+z_x(x,y)}{y+3z(x,y)^2}
-+\frac{x+2y+z(x,y)}{{[y+3z(x,y)^2]}^2}6z(x,y)z_x(x,y)\cr
++\frac{x+2y+z(x,y)}{{[y+3z(x,y)^2]}^2}6z(x,y)z_x(x,y)
+</mrow><mrow>
 &amp;=-\frac{1}{y+3z(x,y)^2}\left(1+\frac{2-2x-y}{y+3z(x,y)^2}\right)
+</mrow><mrow>&amp;\hskip0.5in
 +\frac{x+2y+z(x,y)}{{[y+3z(x,y)^2]}^2}6z(x,y)\frac{2-2x-y}{y+3z(x,y)^2}
 </mrow>
 </md>
@@ -1137,10 +1169,15 @@ minus the angle between the curve and the normal vector to the surface at <m>P</
 
 <solution><p>
 <m>\vr(t)=\llt x(t)\,,\,y(t)\,,\,z(t)\rgt</m> intersects <m>z^3 + xyz -2 = 0</m> when
-<me>
-z(t)^3+x(t)\,y(t)\,z(t)-2=0\iff \big(t^2\big)^3 + \big(t^3)(t)\big(t^2\big)-2=0
-\iff 2t^6=2\iff t=1
-</me>
+<md>
+<mrow>
+z(t)^3+x(t)\,y(t)\,z(t)-2=0&amp;\iff \big(t^2\big)^3 + \big(t^3)(t)\big(t^2\big)-2=0
+</mrow><mrow>
+ &amp;\iff 2t^6=2
+</mrow><mrow>
+ &amp;\iff t=1
+</mrow>
+</md>
 since <m>t</m> is required to be positive.
 The direction vector for the curve at <m>t=1</m> is
 <me>
@@ -1217,7 +1254,7 @@ with
 0=2(x-1)+2(x^2+x^2)(2x)=8x^3+2x-2
 </me>
 Observe that the value of <m>8x^3+2x-2=2(4x^3+x-1)</m> at <m>x=\frac{1}{2}</m> is <m>0</m>.
-(See Appendix \eref{CLP101}{ap:roots} of the CLP-2 text for some
+(See Appendix A.16 of the CLP-2 text for some
 useful tricks that can help you guess roots of polynomials with
 integer coefficients.) So <m>\big(x-\frac{1}{2}\big)</m> is a factor of
 <me>

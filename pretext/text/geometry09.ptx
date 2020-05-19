@@ -9,10 +9,8 @@
 <definition xml:id="def_quadric"><title>Quadrics</title>
   <statement><p>
   A <term>quadric</term> surface is surface that consists of all points that
-  obey <m>Q(x,y,z)=0</m>, with <m>Q</m> being a polynomial of degree two
-  <fn>Technically, we should also require that the polynomial
-  can't be factored into the product of two polynomials of degree one.</fn>
-  .
+  obey <m>Q(x,y,z)=0</m>, with <m>Q</m> being a polynomial of degree two<fn>Technically, we should also require that the polynomial
+  can't be factored into the product of two polynomials of degree one.</fn>.
   </p></statement>
 </definition>
 
@@ -33,8 +31,7 @@
   If <m>A=B=D=0</m> but <m>g</m> and <m>h</m> are not both zero, this is a straight line.
   If <m>A</m>, <m>B</m>, and <m>D</m> are not all zero, then by rotating and translating
   our coordinate system the equation of the cross section can be brought
-  into one of the forms
-  <fn>This statement can be justified using a
+  into one of the forms<fn>This statement can be justified using a
   linear algebra eigenvalue/eigenvector analysis. It is
   beyond what we can cover here, but is not too difficult for a standard
   linear algebra course.</fn>

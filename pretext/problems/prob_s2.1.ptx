@@ -55,7 +55,7 @@ A millstone pounds wheat into flour. The wheat sits in a basin, and the millston
 </p>
 
 <p>Consider this claim: <q>As the particles get very close to the millstone, the diameters of the particles approach 50 <m>\mu</m>m.</q>
-In this context, describe the variables below from Definition<nbsp/><xref ref="def_limit"/> in the CLP-3 text.
+In this context, describe the variables below from Definition<nbsp/><xref ref="def_limit"/>.
 </p>
 
 <p><ol label="a">
@@ -124,7 +124,7 @@ You can probably solve (a) and (b) by just staring at <m>f(x,y)</m>.
   Since two different directions give us different values as we approach the origin,  <m>\lim\limits_{(x,y)\to(0,0)}f(x,y)</m> does not exist.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image><latex-image>\begin{tikzpicture}
 \YEaxis{1.5}{1.5}
 \draw[very thick, \lt -,dashed] (0,.2)--(0,1) node[above left]{$f=0$};
@@ -192,8 +192,7 @@ whenever the distance from <m>(x,y)</m> to the origin is at most <m>r</m>.
 </li>
 <li>
 For every <m>\epsilon \gt 0</m>, if we choose <m>(x,y)</m> to be sufficiently close to <m>(0,0)</m> (in particular, within a distance <m>r \lt \sqrt\epsilon</m>), then <m>f(x,y)</m> is
-within distance <m>\epsilon</m> of <m>0</m>. By Definition<nbsp/><xref ref="def_limit"/>
-in the CLP-3 text, we have that <m>\lim\limits_{(x,y)\to(0,0)}f(x,y)=0</m>.
+within distance <m>\epsilon</m> of <m>0</m>. By Definition<nbsp/><xref ref="def_limit"/>, we have that <m>\lim\limits_{(x,y)\to(0,0)}f(x,y)=0</m>.
 </li>
 </ol>
 </p>
@@ -207,7 +206,6 @@ Suppose <m>f(x,y)</m> is a polynomial. Evaluate <m>\lim\limits_{(x,y)\to(a,b)}f(
 </p></statement>
 <hint><p>
 Theorem<nbsp/><xref ref="thm_one_d_continuity"/>
-in the CLP-3 text
 </p></hint>
 <answer><p>
 <m>f(a,b)</m>
@@ -346,7 +344,8 @@ since <m>|\cos\theta|\le 1</m> for all <m>\theta</m>.
     &amp;=\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\
                                 \frac{r^2\cos^2\theta\ r^2\sin^2\theta}
                                       {r^2\cos^2\theta+r^4\sin^4\theta}
-   =\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ r^2\sin^2\theta
+  </mrow><mrow>
+   &amp;=\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ r^2\sin^2\theta
                   \frac{\cos^2\theta}{\cos^2\theta+r^2\sin^4\theta}
 </mrow><mrow>
    &amp;=  0
@@ -630,11 +629,12 @@ centred on <m>(0,1)</m>. That is, make the change of variables
 (a) In polar coordinates <m>x=r\cos\theta</m>, <m>y=r\sin\theta</m>
 <md>
 <mrow>
-\frac{2x^2 + x^2y - y^2x + 2y^2}{x^2 + y^2}
-&amp;=\frac{2r^2\cos^2\theta + r^3\cos^2\theta\sin\theta - r^3\cos\theta\sin^2\theta
+&amp;\frac{2x^2 + x^2y - y^2x + 2y^2}{x^2 + y^2}
+</mrow><mrow>
+&amp;\hskip0.5in=\frac{2r^2\cos^2\theta + r^3\cos^2\theta\sin\theta - r^3\cos\theta\sin^2\theta
                  + 2r^2\sin^2\theta}{r^2}
 </mrow><mrow>
-&amp;=2+ r\big[\cos^2\theta\sin\theta - \sin^2\theta\cos\theta \big]
+&amp;\hskip0.5in=2+ r\big[\cos^2\theta\sin\theta - \sin^2\theta\cos\theta \big]
 </mrow>
 </md>
 As
@@ -811,12 +811,15 @@ so that  <m>\theta=\frac{\pi}{4}</m>, we get the limit <m>\sin\theta\cos\theta\b
 </p>
 
 <p>(b) This limit does not exist, since if it were to exist the limit
-<me>
+<md>
+<mrow>
 \lim_{(x,y)\rightarrow(0,0)}\frac{xy}{x^2+y^2}
-=\lim_{(x,y)\rightarrow(0,0)}\frac{xy}{\sin(xy)}\ \frac{\sin(xy)}{x^2+y^2}
-=\lim_{(x,y)\rightarrow(0,0)}\frac{xy}{\sin(xy)}\
+&amp;=\lim_{(x,y)\rightarrow(0,0)}\frac{xy}{\sin(xy)}\ \frac{\sin(xy)}{x^2+y^2}
+</mrow><mrow>
+&amp;=\lim_{(x,y)\rightarrow(0,0)}\frac{xy}{\sin(xy)}\
 \lim_{(x,y)\rightarrow(0,0)}\frac{\sin(xy)}{x^2+y^2}
-</me>
+</mrow>
+</md>
 would also exist. (Recall that <m>\ds\lim_{t\rightarrow 0}\tfrac{\sin t}{t}
 =1</m>.)
 </p>

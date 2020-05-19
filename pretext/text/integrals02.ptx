@@ -21,8 +21,7 @@ of constant <m>x</m> and many lines of constant <m>y</m>.
 There is no law that says that we must cut up our domains of integration
 into tiny pieces in that way. Indeed, when the objects of interest
 are sort of round and centered on the origin, it is often
-advantageous
-<fn>The <q>golden hammer</q> (also known as Maslow's hammer
+advantageous<fn>The <q>golden hammer</q> (also known as Maslow's hammer
 and as the law of the instrument) refers to a tendency to always use
 the same tool, even when it isn't the best tool for the job.
 It is just as bad in mathematics as it is in carpentry.</fn>
@@ -42,15 +41,12 @@ So let's review before we resume integrating.
 
 <definition xml:id="def_polars">
 <statement><p>
-The polar coordinates
-<fn>In the mathematical literature,
+The polar coordinates<fn>In the mathematical literature,
 the angular coordinate is usually denoted <m>\theta</m>, as we do here.
 The symbol <m>\varphi</m> is also often used for the angular coordinate.
 In fact there is an ISO standard (\#31 <ndash/> 11) which specifies
-that <m>\varphi</m> should be used in the natural sciences and in technology.</fn>
-</p>
-
-<p>of any point <m>(x,y)</m> in the <m>xy</m>-plane are
+that <m>\varphi</m> should be used in the natural sciences and in technology.</fn> 
+of any point <m>(x,y)</m> in the <m>xy</m>-plane are
 <md>
 <mrow>
 r&amp;=\text{ the distance from }(0,0)\text{ to }(x,y)
@@ -104,8 +100,7 @@ on the left, and curves of constant <m>r</m>, on the right.
 of <m>2\pi</m>. For example, the point <m>(1,0)</m> on the <m>x</m>-axis could have
 <m>\theta=0</m>, but could also have <m>\theta=2\pi</m> or <m>\theta=4\pi</m>. It is sometimes
 convenient to assign <m>\theta</m> negative values. When <m>\theta \lt 0</m>, the
-counter-clockwise
-<fn>or anti-clockwise or widdershins.
+counter-clockwise<fn>or anti-clockwise or widdershins.
 Yes, widdershins is a real word, though the Oxford English Dictionary
 lists its frequency of usage as between 0.01 and 0.1 times
 per million words. Of course both <q>counter-clockwise</q>
@@ -256,11 +251,9 @@ so that <m>r(\pi+\theta) = r(\pi-\theta)</m>. So we get the figure.
 <li><p>
 Finally, we fill in a smooth curve through the dots and we get the
 graph below. This curve is called a <em>cardiod</em> because it looks
-like a heart
-<fn>Well, a mathematician's heart. The name <q>cardioid</q>
+like a heart<fn>Well, a mathematician's heart. The name <q>cardioid</q>
 comes from the Greek word <m>\kappa \alpha \rho \delta \iota \alpha</m>
-(which anglicizes to kardia) for heart.</fn>
-.
+(which anglicizes to kardia) for heart.</fn>.
 </p>
 
 <sidebyside width="40%">
@@ -451,8 +444,7 @@ the <q>three petal rose</q>.
 </sidebyside>
 
 <p>
-There is an infinite family of similar rose curves (also called rhodonea
-<fn>The name rhodenea first appeared in the 1728 publication
+There is an infinite family of similar rose curves (also called rhodonea<fn>The name rhodenea first appeared in the 1728 publication
 <em>Flores geometrici</em> of the Italian monk, theologian, mathematician
 and engineer, Guido Grandi (1671<ndash/> 1742).</fn>
  curves).
@@ -492,10 +484,8 @@ The other side is a portion of a circle of radius <m>r</m> that subtends,
 at the origin, an angle <m>\dee{\theta}</m>, the angle between the lines
 of constant <m>\theta</m>. As the circumference of the full circle is <m>2\pi r</m>
 and as <m>\dee{\theta}</m> is the fraction <m>\frac{\dee{\theta}}{2\pi}</m>
-of a full circle
-<fn>Recall that <m>\theta</m> has to be measured in radians for
-this to be true.</fn>
-, the other side of the approximate rectangle has length
+of a full circle<fn>Recall that <m>\theta</m> has to be measured in radians for
+this to be true.</fn>, the other side of the approximate rectangle has length
 <m>\frac{\dee{\theta}}{2\pi}2\pi r = r\dee{\theta}</m>. So the shaded
 region has area approximately
 </p>
@@ -514,14 +504,12 @@ By way of comparison, using Cartesian coordinates we had <m>\dee{A}
 =\dee{x}\,\dee{y}</m>.
 </p>
 
-<p>This intuitive computation has been somewhat handwavy
-<fn>
+<p>This intuitive computation has been somewhat handwavy<fn>
 <q>Handwaving</q> is sometimes used as a pejorative to refer to
 an argument that lacks substance. Here we are just using it to indicate
 that we have left out a bunch of technical details.
 In mathematics, <q>nose-following</q> is sometimes used as the polar opposite
-of handwaving. It refers to a very narrow, mechanical, line of reasoning.</fn>
-.
+of handwaving. It refers to a very narrow, mechanical, line of reasoning.</fn>.
 But using it in
 the usual integral setup procedure, in which we choose <m>\dee{r}</m> and
 <m>\dee{\theta}</m> to be constants times <m>\frac{1}{n}</m> and then take the limit
@@ -556,8 +544,7 @@ is the outer curve while <m>r=B(\theta)</m> is the inner curve.
 <image source="figs/polarMass2"/>
 </sidebyside>
 
-<p>Divide <m>\cR</m> into wedges (as in wedges of pie
-<fn>There is a pie/pi/pye
+<p>Divide <m>\cR</m> into wedges (as in wedges of pie<fn>There is a pie/pi/pye
 pun in there somewhere.</fn>
  or wedges of cheese)
 by drawing in many lines of constant <m>\theta</m>, with the various
@@ -606,8 +593,29 @@ namely <m>a</m>, to its largest value on <m>\cR</m>, namely <m>b</m>.
 </li>
 </ul>
 In conclusion,
+<me>
+\text{Mass}(\cR) = \int_a^b  \dee{\theta}
+             \int_{B(\theta)}^{T(\theta)}  \dee{r}\,r\,
+                   f\big(r\cos\theta\,,\,r\sin\theta\big)
+</me>
+We have repeatedly used the word <q>essentially</q> above to avoid getting
+into the nitty-gritty details required to prove things rigorously.
+The mathematically correct proof of <xref ref="eq_polar_mass"/> follows
+the same intuition, but requires some more careful error bounds,
+as in the optional §<xref ref="sec_integral_error"/> below.
 </p>
+</solution>
 
+</example>
+
+<p>In the last example, we derived the important formula that the mass 
+of the region
+<me>
+\cR=\Set{(r\cos\theta,r\sin\theta)}{a\le\theta\le b,
+               B(\theta)\le r\le T(\theta)}
+</me>
+with mass density <m>f(x,y)</m> is
+</p>
 <fact xml:id="eq_polar_mass">
 <statement>
 <p>
@@ -620,20 +628,26 @@ In conclusion,
 </statement>
 </fact>
 
-<p>
-We have repeatedly used the word <q>essentially</q> above to avoid getting
-into the nitty-gritty details required to prove things rigorously.
-The mathematically correct proof of <xref ref="eq_polar_mass"/> follows
-the same intuition, but requires some more careful error bounds,
-as in the optional §<xref ref="sec_integral_error"/> below.
+
+<p>We can immediately adapt that example to calculate areas and derive the formula
+that the area of the region
+<me>
+\cR=\Set{(r\cos\theta,r\sin\theta)}{a\le\theta\le b, 
+              0\le r\le R(\theta)}
+</me>
+is
 </p>
-</solution>
+<fact xml:id="eq_polar_area">
+<statement>
+<p>
+<me>
+\text{Area}(\cR) =\frac{1}{2} \int_a^b R(\theta)^2\  \dee{\theta}
+</me>
+</p>
+</statement>
+</fact>
 
-</example>
-
-
-<p>We can immediately adapt the last example to calculate areas <mdash/> all we have to
-do is set the density to <m>1</m>.
+<p> We just have set the density to <m>1</m>. We do so in the next example.
 </p>
 
 
@@ -661,19 +675,9 @@ with <m>f(x,y)=1</m>, <m>B(\theta)=0</m> and <m>T(\theta)=R(\theta)</m>,
 </mrow>
 </md>
 In this case we can easily do the inner <m>r</m> integral, giving
-</p>
-
-<fact xml:id="eq_polar_area">
-<statement>
-<p>
 <me>
 \text{Area}(\cR) =\frac{1}{2} \int_a^b R(\theta)^2\  \dee{\theta}
 </me>
-</p>
-</statement>
-</fact>
-
-<p>
 The expression <m>\frac{1}{2} R(\theta)^2\ \dee{\theta}</m> in
 <xref ref="eq_polar_area"/> has a geometric interpretation. It is just
 the area of a wedge of a circular disk of radius <m>R(\theta)</m>
@@ -1080,17 +1084,14 @@ Evaluate <m>\displaystyle\int_0^\infty e^{-x^2}\ \dee{x}</m>.
 <solution>
 <p>
 This is actually a trick question. In fact it is a famous trick
-question
-<fn>The solution is attributed to the French Mathematician
+question<fn>The solution is attributed to the French Mathematician
 Sim\'eon Denis Poisson (1781 <ndash/> 840) and was published in the textbook
 <em>Cours d'Analyse de l'\'ecole polytechnique</em> by
-Jacob Karl Franz Sturm (1803 <ndash/> 1855).</fn>
-.
+Jacob Karl Franz Sturm (1803 <ndash/> 1855).</fn>.
 </p>
 
 <p>The integrand <m>e^{-x^2}</m> does not have an antiderivative that can
-be expressed in terms of elementary functions
-<fn>On the other hand it is the core of the function
+be expressed in terms of elementary functions<fn>On the other hand it is the core of the function
 <m>\text{erf}
 (z)=\frac{2}{\sqrt{\pi}}\int_0^z e^{-t^2}\ \dee{t}</m>, which
 gives Gaussian (i.e. bell curve) probabilities.

@@ -15,7 +15,7 @@ Here is a figure showing the definitions of the
 three Cartesian coordinates <m>(x,y,z)</m>
 </p>
 
-<sidebyside>
+<sidebyside width="33%">
 <image source="figs/cart1"/>
 </sidebyside>
 
@@ -24,7 +24,7 @@ and here are three figures showing a surface of constant <m>x</m>,
 a surface of constant <m>x</m>, and a surface of constant <m>z</m>.
 </p>
 
-<sidebyside>
+<sidebyside widths="34% 34% 29%" valign="middle">
 <image source="figs/cart3"/>
 <image source="figs/cart4"/>
 <image source="figs/cart2"/>
@@ -35,7 +35,7 @@ Finally here is a figure showing the volume element <m>\dee{V}</m> in
 cartesian coordinates.
 </p>
 
-<sidebyside>
+<sidebyside width="45%">
 <image source="figs/cart5"/>
 </sidebyside>
 </subsection>
@@ -58,7 +58,7 @@ z&amp;=\text{ signed distance from }(x,y,z)
 </md>
 </p>
 
-<sidebyside>
+<sidebyside width="33%">
 <image source="figs/cyl1"/>
 </sidebyside>
 
@@ -79,7 +79,7 @@ Here are three figures showing a surface of constant <m>r</m>,
 a surface of constant <m>\theta</m>, and a surface of constant <m>z</m>.
 </p>
 
-<sidebyside>
+<sidebyside widths="29% 30% 30%" valign="middle">
 <image source="figs/cyl3"/>
 <image source="figs/cyl4"/>
 <image source="figs/cyl2"/>
@@ -90,7 +90,7 @@ Finally here is a figure showing the volume element <m>\dee{V}</m> in
 cylindrical coordinates.
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/cyl5"/>
 </sidebyside>
 
@@ -112,7 +112,7 @@ three spherical coordinates
 </md>
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/spherical"/>
 </sidebyside>
 <p>
@@ -120,7 +120,7 @@ and here are two more figures giving the side and top views of the
 previous figure.
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 50%" valign="middle">
 <image source="figs/sphericalSide"/>
 <image source="figs/sphericalTop"/>
 </sidebyside>
@@ -143,7 +143,7 @@ Here are three figures showing a surface of constant <m>\rho</m>,
 a surface of constant <m>\theta</m>, and a surface of constant <m>\varphi</m>.
 </p>
 
-<sidebyside>
+<sidebyside widths="30% 30% 30%" valign="middle">
 <image source="figs/spher2"/>
 <image source="figs/spher3"/>
 <image source="figs/spher4"/>
@@ -155,7 +155,7 @@ Here is a figure showing the surface element <m>\dee{S}</m> in
 spherical coordinates
 </p>
 
-<sidebyside>
+<sidebyside width="80%">
 <image source="figs/spher11"/>
 </sidebyside>
 <p>
@@ -164,7 +164,7 @@ how the factors <m>\rho\ \dee{\varphi}</m> and
 <m>\rho\sin\varphi\ \dee{\theta}</m> arise.
 </p>
 
-<sidebyside>
+<sidebyside widths="48% 48%" valign="middle">
 <image source="figs/spher9"/>
 <image source="figs/spher10"/>
 </sidebyside>
@@ -173,7 +173,7 @@ how the factors <m>\rho\ \dee{\varphi}</m> and
 Finally, here is a figure showing the volume element <m>\dee{V}</m> in
 spherical coordinates
 </p>
-<sidebyside>
+<sidebyside width="60%">
 <image source="figs/spher5"/>
 </sidebyside>
 

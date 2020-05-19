@@ -122,7 +122,7 @@ Determine whether the given pair of vectors is perpendicular
 </p></statement>
 
 <hint><p>
-Review Theorem <xref ref="thm_dotPppties"/> in the CLP-3 text.
+Review Theorem <xref ref="thm_dotPppties"/>.
 </p></hint>
 
 <answer><p>
@@ -134,7 +134,7 @@ Review Theorem <xref ref="thm_dotPppties"/> in the CLP-3 text.
 </p></answer>
 
 <solution><p>
-By property 7 of Theorem <xref ref="thm_dotPppties"/> in the CLP-3 text,
+By property 7 of Theorem <xref ref="thm_dotPppties"/>,
 <md alignment="alignat">
 <mrow>
 \llt 1,3,2\rgt \cdot\llt 2,-2,2\rgt
@@ -478,7 +478,7 @@ the projection of the vector <m>\overrightarrow{OC}</m> on the vector
 <li> Determine <m>C</m>.
 </li>
 <li><p>
-Evaluate, using the formula <xref ref="eqn_proj"/> in the CLP-3 text,
+Evaluate, using the formula <xref ref="eqn_proj"/>,
 <ul>
 <li>
 the projection of the vector <m>\overrightarrow{OC}</m> on the vector
@@ -614,7 +614,7 @@ which implies
 =\frac{1}{2}|\overrightarrow{OB}|^2
 </mrow>
 </md>
-So, by Equation <xref ref="eqn_proj"/> in the CLP-3 text,
+So, by Equation <xref ref="eqn_proj"/>,
 <md>
 <mrow>
 \text{proj}_{\overrightarrow{\scriptstyle OA}}\,\overrightarrow{OC}
@@ -787,7 +787,7 @@ following vectors.
 </p></statement>
 
 <hint><p>
-Review § <xref ref="sec_GEOparallelogram"/> in the CLP-3 text.
+Review § <xref ref="sec_GEOparallelogram"/>.
 </p></hint>
 
 <answer><p>
@@ -798,7 +798,7 @@ Review § <xref ref="sec_GEOparallelogram"/> in the CLP-3 text.
 </p></answer>
 
 <solution><p> (a)
-By <xref ref="eq_pgram_area"/> in the CLP-3 text, the area is
+By <xref ref="eq_pgram_area"/>, the area is
 <md>
 <mrow>
 \left| \det\left[\begin{matrix}-3&amp;1
@@ -809,7 +809,7 @@ By <xref ref="eq_pgram_area"/> in the CLP-3 text, the area is
 </p>
 
 <p>(b)
-By <xref ref="eq_pgram_area"/> in the CLP-3 text, the area is
+By <xref ref="eq_pgram_area"/>, the area is
 <md>
 <mrow>
 \left|\det\left[\begin{matrix} 4&amp;2
@@ -900,7 +900,7 @@ following vectors.
 </p></statement>
 
 <hint><p>
-Review §<xref ref="sec_GEOparallelogram"/> in the CLP-3 text.
+Review §<xref ref="sec_GEOparallelogram"/>.
 </p></hint>
 
 <answer><p>
@@ -912,7 +912,7 @@ Review §<xref ref="sec_GEOparallelogram"/> in the CLP-3 text.
 
 <solution><p>
 (a)
-By <xref ref="eq_piped_volume"/> in the CLP-3 text, the volume is
+By <xref ref="eq_piped_volume"/>, the volume is
 <md>
 <mrow>
 &amp;\left| \det\left[\begin{matrix}
@@ -941,7 +941,7 @@ By <xref ref="eq_piped_volume"/> in the CLP-3 text, the volume is
 </p>
 
 <p>(b)
-By <xref ref="eq_piped_volume"/> in the CLP-3 text, the volume is
+By <xref ref="eq_piped_volume"/>, the volume is
 <md>
 <mrow>
 &amp;\left|\det\left[\begin{matrix}
@@ -1078,7 +1078,7 @@ Determine the angle between the vectors <m>\va</m> and <m>\vb</m> if
 </p></answer>
 
 <solution><p>
-By property 6 of Theorem <xref ref="thm_dotPppties"/> in the CLP-3 text,
+By property 6 of Theorem <xref ref="thm_dotPppties"/>,
 <md alignment="alignat">
 <mrow>
 &amp;\cos\theta=\frac{\va\cdot\vb}{|\va|\,|\vb|}
@@ -1495,8 +1495,7 @@ half times the length, <m>|\va|</m>, of its base times its height
 
 <p>
 Thus the area of the triangle is  <m>\half|\va|\,|\vb|\,\sin\theta</m>.
-By property 2 of the cross product in Theorem <xref ref="thm_crossPppties"/>
-of the CLP-3 text,
+By property 2 of the cross product in Theorem <xref ref="thm_crossPppties"/>,
  <m>|\va\times\vb|=|\va|\,|\vb|\,\sin\theta</m>. So
 <md>
 <mrow>
@@ -1961,8 +1960,7 @@ that involves dot but not cross products.
 </p></answer>
 
 <solution><p>
-By properties 9 and 10 of Theorem <xref ref="thm_crossPppties"/> in the CLP-3
-text,
+By properties 9 and 10 of Theorem <xref ref="thm_crossPppties"/>,
 <md>
 <mrow>
 &amp;(\va\times\vb)\cdot(\vc\times\vd)

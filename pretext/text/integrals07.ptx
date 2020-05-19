@@ -20,8 +20,7 @@ coordinates</em>.
 
 <definition xml:id="def_spherical">
 <statement><p>
-Spherical coordinates are denoted
-<fn>We are using the
+Spherical coordinates are denoted<fn>We are using the
 standard mathematics conventions for the spherical coordinates.
 Under the ISO conventions they are <m>(r,\varphi,\theta)</m>.</fn>
 <m>\rho</m>, <m>\theta</m> and <m>\varphi</m> and are defined by
@@ -36,8 +35,8 @@ Under the ISO conventions they are <m>(r,\varphi,\theta)</m>.</fn>
 </md>
 </p>
 
-<sidebyside>
-<image source="figs/../figs_coord/spherical"/>
+<sidebyside width="50%">
+<image source="figs/spherical"/>
 </sidebyside>
 </statement>
 </definition>
@@ -47,9 +46,9 @@ Here are two more figures giving the side and top views of the
 previous figure.
 </p>
 
-<sidebyside>
-<image source="figs/../figs_coord/sphericalSide"/>
-<image source="figs/../figs_coord/sphericalTop"/>
+<sidebyside widths="40% 50%" valign="middle">
+<image source="figs/sphericalSide"/>
+<image source="figs/sphericalTop"/>
 </sidebyside>
 
 <p>
@@ -87,8 +86,7 @@ with <m>\rho</m> a constant (which looks like an onion skin),
 </li>
 <li>
 a surface of constant <m>\theta</m>, i.e. a surface <m>y= x\,\tan\theta</m>
-with
-<fn>and with the sign of <m>x</m> being the same as the sign of <m>\cos\theta</m></fn>
+with<fn>and with the sign of <m>x</m> being the same as the sign of <m>\cos\theta</m></fn>
  <m>\theta</m> a constant (which looks like the page of a book), and
 </li>
 <li>
@@ -99,7 +97,7 @@ a surface of constant <m>\varphi</m>, i.e. a surface
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside widths="30% 30% 30%" valign="middle">
 <image source="figs/spher2"/>
 <image source="figs/spher3"/>
 <image source="figs/spher4"/>
@@ -111,8 +109,7 @@ a surface of constant <m>\varphi</m>, i.e. a surface
   <title>The Volume Element in Spherical Coordinates</title>
 
 
-<p>If we cut up a solid
-<fn>You know the drill.</fn>
+<p>If we cut up a solid<fn>You know the drill.</fn>
  by
 <ul>
 <li><p>
@@ -121,7 +118,7 @@ using planes of constant <m>\theta</m>, say with the difference between
 successive <m>\theta</m>'s being <m>\dee{\theta}</m>,
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/sphereSph1"/>
 </sidebyside>
 </li>
@@ -132,7 +129,7 @@ constant <m>\varphi</m>, say with the difference between successive
 <m>\varphi</m>'s being <m>\dee{\varphi}</m>,
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/sphereSph2"/>
 </sidebyside>
 </li>
@@ -142,7 +139,7 @@ of  constant <m>\rho</m>, say with the difference between successive <m>\rho</m>
 being <m>\dee{\rho}</m>,
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/sphereSph3"/>
 </sidebyside>
 </li>
@@ -150,7 +147,7 @@ being <m>\dee{\rho}</m>,
 we end up with approximate cubes that look like
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image source="figs/spher5b"/>
 </sidebyside>
 <p>
@@ -188,7 +185,7 @@ the difference between the successive <m>\rho</m>'s was <m>\dee{\rho}</m>, so
 those edges of the cube each have length <m>\dee{\rho}</m>.
 </p>
 
-<sidebyside>
+<sidebyside widths="30% 30% 30%" valign="middle">
 <image source="figs/sphereTh"/>
      <image source="figs/spherePhi"/>
      <image source="figs/sphereThPhiA"/>
@@ -199,17 +196,14 @@ Four of the cube edges are formed by holding <m>\theta</m> and <m>\rho</m>
 fixed and varying <m>\varphi</m>. The intersection of a plane of fixed <m>\theta</m>
 (which contains the origin) with a sphere of fixed <m>\rho</m>
 (which is centred on the origin) is a circle of radius <m>\rho</m> centred
-on the origin. It is a line of longitude
-<fn>The problem of finding
+on the origin. It is a line of longitude<fn>The problem of finding
 a practical, reliable method for determining the longitude of a ship
 at sea was a very big deal for a period of several centuries.
 Among the scientists who worked in this were Galileo,
-Edmund Halley (of Halley's comet) and Robert Hooke (of Hooke's law).
-</fn>
-.
+Edmund Halley (of Halley's comet) and Robert Hooke (of Hooke's law).</fn>.
 </p>
 
-<sidebyside>
+<sidebyside widths="30% 30% 30%" valign="middle">
 <image source="figs/sphereRho"/>
      <image source="figs/sphereTh"/>
      <image source="figs/sphereRhoThB"/>
@@ -221,8 +215,8 @@ Thus those four edges of the cube are circular arcs of radius
 essentially <m>\rho</m> that subtend an angle <m>\dee{\varphi}</m>, and so have length <m>\rho\,\dee{\varphi}</m>.
 </p>
 
-<sidebyside>
-<image source="figs/../figs_coord/spher9"/>
+<sidebyside width="50%">
+<image source="figs/spher9"/>
 </sidebyside>
 </li>
 <li><p>
@@ -235,7 +229,7 @@ The circle has radius <m>\rho\sin\varphi</m> and is centred
 on <m>\big(0,0, \rho\cos\varphi\big)</m>.
 </p>
 
-<sidebyside>
+<sidebyside widths="30% 30% 30%" valign="middle">
 <image source="figs/sphereRho"/>
  <image source="figs/spherePhi"/>
  <image source="figs/sphereRhoPhi"/>
@@ -249,8 +243,8 @@ essentially <m>\rho\sin\varphi</m> that subtend an angle <m>\dee{\theta}</m>, an
 have length <m>\rho\sin\varphi\,\dee{\theta}</m>.
 </p>
 
-<sidebyside>
-<image source="figs/../figs_coord/spher10"/>
+<sidebyside width="50%">
+<image source="figs/spher10"/>
 </sidebyside>
 </li>
 </ul>
@@ -264,8 +258,7 @@ have length <m>\rho\sin\varphi\,\dee{\theta}</m>.
 <example xml:id="eg_ice_cream_cone"><title>Ice Cream Cone</title>
 <statement>
 <p>
-Find the volume of the ice cream
-<fn>A very mathematical ice cream. Rocky-rho'd? Choculus?</fn>
+Find the volume of the ice cream<fn>A very mathematical ice cream. Rocky-rho'd? Choculus?</fn>
  cone that consists of the part of the interior
 of the sphere <m>x^2+y^2+z^2=a^2</m> that is above the <m>xy</m>-plane and that
 is inside the cone <m>x^2+y^2=b^2 z^2</m>. Here <m>a</m> and <m>b</m> are any two
@@ -288,7 +281,7 @@ part of the ice cream cone in the first octant. The volume of the full ice
 cream cone will be four times the volume of the part in the first octant.
 </p>
 
-<sidebyside>
+<sidebyside width="33%">
 <image source="figs/iceCream"/>
 </sidebyside>
 
@@ -317,7 +310,7 @@ right below.
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 40%" valign="middle">
 <image source="figs/iceCream1"/>
 <image source="figs/iceCream1a"/>
 </sidebyside>
@@ -343,7 +336,7 @@ on the right below.
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 40%" valign="middle">
 <image source="figs/iceCream2"/>
 <image source="figs/iceCream2b"/>
 </sidebyside>
@@ -367,7 +360,7 @@ essentially, <m>\rho=a</m>.  See the figure on the right below.
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 40%" valign="middle">
 <image source="figs/iceCream3"/>
 <image source="figs/iceCream3b"/>
 </sidebyside>
@@ -446,7 +439,7 @@ original problem) in terms of <m>b</m> (which was in the statement of the
 original problem), just by looking at the triangle
 </p>
 
-<sidebyside>
+<sidebyside width="20%">
 <image source="figs/triangleIceCream"/>
 </sidebyside>
 
@@ -502,7 +495,7 @@ the total amount of apple remaining will be eight times the amount
 from the first octant.
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image source="figs/appleCoreB"/>
 </sidebyside>
 
@@ -516,7 +509,7 @@ by inserting many planes of constant <m>\theta</m>, with the various values of
 Each segment, viewed from the side, looks like
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/appleCoreB2"/>
 </sidebyside>
 
@@ -535,7 +528,7 @@ and the bottom searchlight has, essentially, <m>\varphi=\frac{\pi}{2}</m>.
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/appleCoreB3"/>
 </sidebyside>
 </li>
@@ -560,7 +553,7 @@ From it, we see (after a little trig) that the first cube has, essentially,
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside widths="38% 60%" valign="middle">
 <image source="figs/appleCoreB3b"/>
 <image source="figs/appleCoreB3c"/>
 </sidebyside>
@@ -659,7 +652,7 @@ From the triangle below, we have
 <m>\cos\al =\frac{\sqrt{a^2-b^2}}{a} </m> and <m>\cot\al=\frac{\sqrt{a^2-b^2}}{b}</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="20%">
 <image source="figs/triangleApple"/>
 </sidebyside>
 

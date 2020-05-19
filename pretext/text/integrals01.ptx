@@ -258,8 +258,7 @@ dealing with regions of the form
 </sidebyside>
 
 <p>
-Here <m>L(y)</m> (<q><m>L</m></q> stands for <q>left</q>) is the smallest
-<fn>
+Here <m>L(y)</m> (<q><m>L</m></q> stands for <q>left</q>) is the smallest<fn>
 By the <q>smallest </q> <m>x</m> we mean the <m>x</m> farthest to the left along
 the number line, not the <m>x</m> closest to <m>0</m>.</fn>
  allowed
@@ -500,8 +499,7 @@ and if <m>f(x,y)</m> is continuous, then
 \int_a^b \int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\,\dee{x}
 =\int_c^d \int_{L(y)}^{R(y)} f\big(x,y\big)\,\dee{x}\,\dee{y}
 </me>
-This is called Fubini's theorem
-<fn>This theorem is named after the Italian mathematician Guido Fubini (1879--1943).
+This is called Fubini's theorem<fn>This theorem is named after the Italian mathematician Guido Fubini (1879--1943).
 </fn>. It will be discussed more in the
 optional §<xref ref="sec_def_int_more"/>.
 </p>
@@ -857,8 +855,7 @@ height <m>\dee{y}</m> and of width <m>\dee{x}</m>. See the figure on the left ab
 </li>
 <li>
    So the volume of the part of <m>\cV</m> that is above the strip centred on <m>y</m>
-        is essentially
-<fn>Think of the part of <m>\cV</m> that is above the strip as being a thin slice of bread.
+        is essentially<fn>Think of the part of <m>\cV</m> that is above the strip as being a thin slice of bread.
         Then the factor <m>\dee{y}</m> in <m>\dee{y}\int_{L(y)}^{R(y)}\dee{x}\ f(x,y)</m>
 is the thickness of the slice of bread. The factor
              <m>\int_{L(y)}^{R(y)}\dee{x}\ f(x,y)</m> is the surface area
@@ -952,8 +949,7 @@ x = \frac{2y^2}{\nu}\text{ and }y=\frac{x^2}{4\nu}
 &amp;\iff\quad \left(\frac{x^3}{8\nu^3}-1\right)x=0
 </mrow>
 </md>
-This equation has only two real
-<fn>It also has two complex solutions that
+This equation has only two real<fn>It also has two complex solutions that
 play no role here.</fn>
  solutions <mdash/> <m>x=0</m> and <m>x=2\nu</m>.
 So the upward opening parabola <m>y = \frac{x^2}{4\nu}</m> and the
@@ -1652,8 +1648,7 @@ So the iterated integral is
 </me>
 And we have a problem. The integrand <m>\frac{\sin x}{x}</m> does not have
 an antiderivative that can be expressed in terms of elementary
-functions
-<fn>Perhaps the best known function whose antiderivative
+functions<fn>Perhaps the best known function whose antiderivative
 cannot be expressed in terms of elementary functions is <m>e^{-x^2}
 </m>.
 It is the integrand of the error function
@@ -1661,11 +1656,10 @@ It is the integrand of the error function
 \erf(x) =\frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}\ dt
 </m>
 that is used in computing <q>bell curve</q> probabilities. See Example
-3.6.10 in the CLP-2 text.</fn>
+3.6.10 in the CLP-2 text.</fn>.
 It is impossible to evaluate <m>\int_y^1\dee{x}\ \frac{\sin x}{x}</m> without
 resorting to, for example, numerical methods or
-infinite series
-<fn>See, for example, Example 3.6.10 in the CLP-2 text.</fn>.
+infinite series<fn>See, for example, Example 3.6.10 in the CLP-2 text.</fn>.
 </p>
 
 <sidebyside widths="40% 40%">
@@ -1785,8 +1779,7 @@ So using vertical strips as in the figure above
 </mrow>
 </md>
 To evaluate this integral, we use the trig
-substitution
-<fn>See §1.9 in the CLP-2 text for a general discussion of trigonometric 
+substitution<fn>See §1.9 in the CLP-2 text for a general discussion of trigonometric 
 substitution.</fn>
 <m>2y^2=\sin^2\theta</m>, or
 <me>
@@ -1804,8 +1797,7 @@ to give
 </mrow>
 </md>
 Then to integrate <m>\cos^4\theta</m>, we use the double angle
-formula
-<fn>We weren't joking about his being a good review of
+formula<fn>We weren't joking about his being a good review of
 single variable integration techniques. See Example 1.8.8 in the CLP-2 text.</fn>
 <md>
 <mrow>
@@ -1869,8 +1861,7 @@ not just those  in one particular row or column.
 </li>
 </ul>
 Now repeat this construction over and over again, using finer and
-finer grids. If, as the size
-<fn>For example, let <m>p_i</m> be the perimeter
+finer grids. If, as the size<fn>For example, let <m>p_i</m> be the perimeter
 of rectangle number <m>i</m> and require that <m>\max_{1\le i\le n}
  p_i</m> tends to zero. This way both the heights and widths of all rectangles
 also tend to zero.</fn> of the rectangles approaches zero,
@@ -1981,8 +1972,7 @@ depends on the choice of points <m>(x_i^*,y_i^*)</m>. So the integral
 <m>\dblInt_\cR f(x,y)\ \dee{x}\,\dee{y}</m> does not exist.
 </p>
 
-<p>Here is an even more pathological
-<fn>For mathematicians, <q>pathological</q> is a synonym for <q>cool</q>.</fn>
+<p>Here is an even more pathological<fn>For mathematicians, <q>pathological</q> is a synonym for <q>cool</q>.</fn>
  example.
 </p>
 <example xml:id="eg_bad_Fubini">

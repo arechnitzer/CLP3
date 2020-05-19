@@ -1145,17 +1145,14 @@ is perpendicular to the sphere at <m>P</m>. So a normal vector to
 the sphere at our initial point <m>(X,Y,Z)=(1,0,1)</m> is <m>\llt 1,0,1\rgt</m>.
 </li>
 </ul>
-Since our initial direction
-<fn>Note that the change of coordinates
+Since our initial direction<fn>Note that the change of coordinates
 <m>X=x-1</m>, <m>Y=y-2</m>, <m>Z=z+1</m> has absolutely no effect on any velocity or direction
 vector. If our position at time <m>t</m> is <m>(x(t),y(t),z(t))</m> in the
 original coordinate system, then it is <m>(X(t),Y(t),Z(t))
 =(x(t)-1,y(t)-2,z(t)+1)</m> in the new coordinate system. The velocity
 vectors in the two coordinate systems <m>\llt x'(t),y'(t),z'(t)\rgt
 =\llt X'(t),Y'(t),Z'(t)\rgt</m> are identical.</fn>
-</p>
-
-<p>must be perpendicular to both <m>\llt 1,1,-1\rgt</m> and <m>\llt 1,0,1\rgt</m>,
+must be perpendicular to both <m>\llt 1,1,-1\rgt</m> and <m>\llt 1,0,1\rgt</m>,
 it must be one of  <m>\pm\llt 1,1,-1\rgt\times\llt 1,0,1\rgt</m>.
 To get from <m>(1,0,1)</m> to <m>(1,-1,0)</m> by the shortest path, our <m>Z</m>
 coordinate should decrease from <m>1</m> to <m>0</m>. So the <m>Z</m> coordinate of

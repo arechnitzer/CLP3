@@ -415,15 +415,13 @@ s(\Theta)-s(0)&amp;= \int_{0}^\Theta \big|\vr'(\theta)\big|\,\dee{\theta}
           =a\Theta
 </mrow>
 </md>
-As
-<fn>You might guess that <m>\Theta</m> is a capital Greek theta. You'd be right.</fn>
+As<fn>You might guess that <m>\Theta</m> is a capital Greek theta. You'd be right.</fn>
  <m>s(\Theta)</m> is the arc length of the part of the circle with
 <m>0\le\theta\le\Theta</m>, the circumference of the whole circle is
 <me>
 s(2\pi) = 2\pi a
 </me>
-which is reassuring, since this formula has been known
-<fn>The earliest known written approximations of <m>\pi</m>, in Egypt and Babylon, date
+which is reassuring, since this formula has been known<fn>The earliest known written approximations of <m>\pi</m>, in Egypt and Babylon, date
 from 1900<ndash/>1600BC. The first recorded algorithm for rigorously evaluating <m>\pi</m>
 was developed by Archimedes around 250 BC. The first use of the symbol <m>\pi</m>,
 for the ratio between the circumference of a circle and its diameter,
@@ -447,8 +445,7 @@ of the whole circle, and so should have length <m>\frac{\Theta}{2\pi}\times
 </me>
 so that the tangent to the circle at any point is perpendicular
 to the radius vector of the circle at that point. This is another geometric fact
-that has been known
-<fn>It is Proposition 18 in Book 3 of Euclid's Elements. It was published around 300BC.</fn>
+that has been known<fn>It is Proposition 18 in Book 3 of Euclid's Elements. It was published around 300BC.</fn>
  for thousands of years.
 </p>
 </example>

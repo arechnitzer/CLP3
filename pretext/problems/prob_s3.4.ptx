@@ -17,8 +17,7 @@ the surface <m>z=y\,\tan\theta</m> with <m>0\le x\le a</m>, <m>0\le y\le b</m>.
 Find the surface area of <m>S</m> without using any calculus.
 </li>
 <li>
-Find the surface area of <m>S</m> by using Theorem <xref ref="thm_surface_area"/>
-in the CLP-3 text.
+Find the surface area of <m>S</m> by using Theorem <xref ref="thm_surface_area"/>.
 </li>
 </ol>
 </p>
@@ -53,7 +52,7 @@ and with <m>(x,y)</m> running over
 <me>
 \cD =\Set{(x,y)}{0\le x\le a,\ 0\le y\le b}
 </me>
-Hence by Theorem <xref ref="thm_surface_area"/> in the CLP-3 text
+Hence by Theorem <xref ref="thm_surface_area"/>
 <md>
 <mrow>
 \text{Area}(S)&amp;=\dblInt_\cD \sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\ \dee{x}\,\dee{y}
@@ -83,7 +82,7 @@ the area of the region <m>D</m>.
 <solution><p>
  <m>S</m> is the part of the surface <m>z=f(x,y)</m> with <m>f(x,y) = \frac{d-ax-by}{c}</m>
 and with <m>(x,y)</m> running over <m>D</m>.
-Hence by Theorem <xref ref="thm_surface_area"/> in the CLP-3 text
+Hence by Theorem <xref ref="thm_surface_area"/>
 <md>
 <mrow>
 \text{Area}(S)&amp;=\dblInt_D \sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\ \dee{x}\,\dee{y}
@@ -105,7 +104,7 @@ Let <m>a,b,c  \gt  0</m>. Denote by <m>S</m> the triangle with vertices <m>(a,0,
 <ol label="a">
 <li>
 Find the surface area of <m>S</m> in three different ways, each using
-Theorem <xref ref="thm_surface_area"/> in the CLP-3 text.
+Theorem <xref ref="thm_surface_area"/>.
 </li>
 <li>
 Denote by <m>T_{xy}</m> the projection of <m>S</m> onto the <m>xy</m>-plane. (It is the
@@ -144,7 +143,7 @@ part of that plane.
 <m>f(x,y) = c\left(1-\frac{x}{a}-\frac{y}{b}\right)</m>
 and with <m>(x,y)</m> running over the triangle <m>T_{xy}</m> in the <m>xy</m>-plane
 with vertices <m>(0,0,0)</m> <m>(a,0,0)</m> and <m>(0,b,0)</m>.
-Hence by part a of Theorem <xref ref="thm_surface_area"/> in the CLP-3 text
+Hence by part a of Theorem <xref ref="thm_surface_area"/>
 <md>
 <mrow>
 \text{Area}(S)&amp;=\dblInt_{T_{xy}} \sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\ \dee{x}\,\dee{y}
@@ -164,8 +163,8 @@ area <m>\frac{1}{2}ab</m>. So
 </me>
 </p>
 
-<sidebyside width="75%">
-  <image source="pfig/triangleProjection"/>
+<sidebyside width="45%">
+  <image source="pfigs/triangleProjection"/>
 </sidebyside>
 
 <p>
@@ -174,7 +173,7 @@ area <m>\frac{1}{2}ab</m>. So
 <m>g(y,z) = a\left(1-\frac{y}{b}-\frac{z}{c}\right)</m>
 and with <m>(y,z)</m> running over the triangle <m>T_{yz}</m> in the <m>yz</m>-plane
 with vertices <m>(0,0,0)</m> <m>(0,b,0)</m> and <m>(0,0,c)</m>.
-Hence by part b of Theorem <xref ref="thm_surface_area"/> in the CLP-3 text
+Hence by part b of Theorem <xref ref="thm_surface_area"/>
 <md>
 <mrow>
 \text{Area}(S)&amp;=\dblInt_{T_{yz}} \sqrt{1+g_y(y,z)^2+g_z(y,z)^2}\ \dee{y}\,\dee{z}
@@ -198,7 +197,7 @@ height <m>c</m>, it has area <m>\frac{1}{2}bc</m>. So
 <m>h(x,z) = b\left(1-\frac{x}{a}-\frac{z}{c}\right)</m>
 and with <m>(x,z)</m> running over the triangle <m>T_{xz}</m> in the <m>xz</m>-plane
 with vertices <m>(0,0,0)</m> <m>(a,0,0)</m> and <m>(0,0,c)</m>.
-Hence by part c of Theorem <xref ref="thm_surface_area"/> in the CLP-3 text
+Hence by part c of Theorem <xref ref="thm_surface_area"/>
 <md>
 <mrow>
 \text{Area}(S)&amp;=\dblInt_{T_{xz}} \sqrt{1+h_x(x,z)^2+h_z(x,z)^2}\ \dee{x}\,\dee{z}
@@ -260,13 +259,14 @@ For the surface <m>z=f(x,y)=y^{3/2}</m>,
 =\sqrt{1+\Big(\frac{3}{2}\sqrt{y}\Big)^2}\ \dee{x}\dee{y}
 =\sqrt{1+\frac{9}{4}y}\ \dee{x}\dee{y}
 </me>
-by Theorem <xref ref="thm_surface_area"/>.a in the CLP-3 text,
+by Theorem <xref ref="thm_surface_area"/>.a,
 So the area is
 <md>
 <mrow>
 \int_0^1\dee{x}\int_0^1\dee{y}\ \sqrt{1+\frac{9}{4}y}
 &amp;=\int_0^1\dee{x}\ \frac{8}{27}\Big[\Big(1+\frac{9}{4}y\Big)^{3/2}\Big]_0^1
-=\int_0^1\dee{x}\ \frac{8}{27}\Big[\Big(\frac{13}{4}\Big)^{3/2}-1\Big]
+</mrow><mrow>
+&amp;=\int_0^1\dee{x}\ \frac{8}{27}\Big[\Big(\frac{13}{4}\Big)^{3/2}-1\Big]
 </mrow><mrow>
 &amp;=\frac{8}{27}\left[\left(\frac{13}{4}\right)^{3/2}-1\right]
 </mrow>
@@ -293,7 +293,7 @@ First observe that any point <m>(x,y,z)</m> on the paraboliod lies above the <m>
 That is, if and only if <m>(x,y)</m> lies in the circular disk of radius <m>a</m>
 centred on the origin. The equation of the paraboloid is of the form
 <m>z=f(x,y)</m> with <m>f(x,y)=a^2-x^2-y^2</m>. So, by
-Theorem <xref ref="thm_surface_area"/>.a in the CLP-3 text,
+Theorem <xref ref="thm_surface_area"/>.a,
 <md>
 <mrow>
 \text{Surface area}
@@ -347,7 +347,7 @@ f_y(x,y)=\frac{y}{\sqrt{x^2+y^2}}
 </mrow>
 </md>
 So, by
-Theorem <xref ref="thm_surface_area"/>.a in the CLP-3 text,
+Theorem <xref ref="thm_surface_area"/>.a,
 <md>
 <mrow>
 \text{Surface area}
@@ -386,7 +386,7 @@ f_x(x,y)=\sqrt{x}\qquad
 f_y(x,y)=\sqrt{y}
 </mrow>
 </md>
-So, by Theorem <xref ref="thm_surface_area"/>.a in the CLP-3 text,
+So, by Theorem <xref ref="thm_surface_area"/>.a,
 <md>
 <mrow>
 \text{Surface area}
@@ -422,8 +422,8 @@ with another ball of radius <m>2</m> centred at <m>(0, 0, 2\sqrt{3})</m> cut out
 The diagram below shows the slice where <m>y = 0</m>.
 </p>
 
-<sidebyside width="75%">
-  <image source="pfig/OE253_16D_2"/>
+<sidebyside width="50%">
+  <image source="pfigs/OE253_16D_2"/>
 </sidebyside>
 <p>
 <ol label="(i)">
@@ -461,7 +461,7 @@ any integrals.
 
 <solution><p>
 (a)
-By Theorem <xref ref="thm_surface_area"/>.a in the CLP-3 text,
+By Theorem <xref ref="thm_surface_area"/>.a,
 <m>F(x,y) = \sqrt{1+f_x(x,y)^2+f_y(x,y)^2}</m>.
 </p>
 
@@ -478,7 +478,7 @@ The point on the dimple with the largest value of <m>x</m> is
 <m>(1,0,\sqrt{3})</m>. (It is marked by a dot in the figure above.) The dimple
 is invariant under rotations around the <m>z</m>--axis and so has <m>(x,y)</m>
 running over <m>x^2+y^2\le 1</m>. So, by
-Theorem <xref ref="thm_surface_area"/>.a in the CLP-3 text,
+Theorem <xref ref="thm_surface_area"/>.a,
 <md>
 <mrow>
 \text{Surface area}
@@ -503,22 +503,22 @@ Switching to polar coordinates,
 in the plane <m>z=\sqrt{3}</m>, as in the figure below, the <q>Death Star</q>
 becomes a perfect ball of radius <m>2</m>.
 </p>
-<sidebyside width="75%">
-  <image source="pfig/OE253_16D_2a"/>
+<sidebyside width="50%">
+  <image source="pfigs/OE253_16D_2a"/>
 </sidebyside>
 <p>
 The area of the pink dimple in the figure above is identical to the area
 of the blue cap in that figure. So the total surface area of the
 Death Star is exactly the surface area of a sphere of radius <m>a=2</m> and so
-(see Example <xref ref="eg_area_hemisphere"/> in the CLP-3 text)
+(see Example <xref ref="eg_area_hemisphere"/>)
 is <m>4\pi a^2 = 4 \pi 2^2=16\pi</m>.
 </p>
 
 </solution>
 </exercise>
 
-<exercise>
-<statement><p> [M200 2003A]
+<exercise><title><fromexam>M200 2003A</fromexam></title>
+<statement><p> 
 Find the area of the cone <m>z^2=x^2+y^2</m> between <m>z=1</m> and <m>z=16</m>.
 </p></statement>
 
@@ -529,33 +529,36 @@ Find the area of the cone <m>z^2=x^2+y^2</m> between <m>z=1</m> and <m>z=16</m>.
 <solution><p>
 On the upper half of the cone
 <me>
-z=f(x,y)=\sqrt{x^2+y^2}\qquad
-f_x(x,y)=\frac{x}{\sqrt{x^2+y^2}}\qquad
+z=f(x,y)=\sqrt{x^2+y^2}\quad
+f_x(x,y)=\frac{x}{\sqrt{x^2+y^2}}\quad
 f_y(x,y)=\frac{y}{\sqrt{x^2+y^2}}
 </me>
 so that
-<me>
-\dee{S}=\sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\,\dee{x}\,\dee{y}
-=\sqrt{1+\frac{x^2}{x^2+y^2}+\frac{y^2}{x^2+y^2}}\,\dee{x}\,\dee{y}
-=\sqrt{2}\,\dee{x}\,\dee{y}
-</me>
+<md>
+<mrow>
+\dee{S}&amp;=\sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\,\dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;=\sqrt{1+\frac{x^2}{x^2+y^2}+\frac{y^2}{x^2+y^2}}\,\dee{x}\,\dee{y}
+</mrow><mrow>&amp;=\sqrt{2}\,\dee{x}\,\dee{y}
+</mrow>
+</md>
 and
 <md>
 <mrow>
-\text{Area}&amp;= \dblInt_{1\le x^2+y^2\le 16^2}\sqrt{2}\,\dee{x}\,\dee{y}
+&amp;\text{Area}= \dblInt_{1\le x^2+y^2\le 16^2}\sqrt{2}\,\dee{x}\,\dee{y}
 </mrow><mrow>
-&amp;=\sqrt{2}\,\Big[\text{area of }\Set{(x,y)}{x^2+y^2\le 16^2}-
+&amp;\hskip0.25in=\sqrt{2}\,\Big[\text{area of }\Set{(x,y)}{x^2+y^2\le 16^2}-
            \text{area of }\Set{(x,y)}{x^2+y^2\le 1}\Big]
 </mrow><mrow>
-&amp;=\sqrt{2}\,\big[\pi 16^2-\pi 1^2\big]
+&amp;\hskip0.25in=\sqrt{2}\,\big[\pi 16^2-\pi 1^2\big]
 =255\sqrt{2}\pi\approx 1132.9
 </mrow>
 </md>
 </p></solution>
 </exercise>
 
-<exercise>
-<statement><p> [M200 2001D]
+<exercise><title><fromexam>M200 2001D</fromexam></title>
+<statement><p> 
 Find the surface area of that part of the hemisphere
 <m>z=\sqrt{a^2-x^2-y^2}</m> which lies within the cylinder <m>\big(x-\frac{a}{2}\big)^2+y^2=\big(\frac{a}{2}\big)^2</m>.
 </p></statement>
@@ -568,8 +571,9 @@ Find the surface area of that part of the hemisphere
 We are to find the surface area of part of a hemisphere. On the hemisphere
 <md>
 <mrow>
-z=f(x,y)=\sqrt{a^2-x^2-y^2}\qquad
-f_x(x,y)=-\frac{x}{\sqrt{a^2-x^2-y^2}}\qquad
+z=f(x,y)&amp;=\sqrt{a^2-x^2-y^2}
+</mrow><mrow>
+f_x(x,y)&amp;=-\frac{x}{\sqrt{a^2-x^2-y^2}}\qquad
 f_y(x,y)=-\frac{y}{\sqrt{a^2-x^2-y^2}}
 </mrow>
 </md>
@@ -577,7 +581,8 @@ so that
 <md>
 <mrow>
 \dee{S}&amp;=\sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\,\dee{x}\,\dee{y}
-=\sqrt{1+\frac{x^2}{a^2-x^2-y^2}+\frac{y^2}{a^2-x^2-y^2}}\,\dee{x}\,\dee{y}
+</mrow><mrow>
+&amp;=\sqrt{1+\frac{x^2}{a^2-x^2-y^2}+\frac{y^2}{a^2-x^2-y^2}}\,\dee{x}\,\dee{y}
 </mrow><mrow>
 &amp;=\sqrt{\frac{a^2}{a^2-x^2-y^2}}\,\dee{x}\,\dee{y}
 </mrow>
@@ -588,8 +593,8 @@ inside the cylinder, <m>x^2-ax+y^2=0</m>, which is polar coordinates is
 becomes <m>r^2-ar\cos\theta=0</m> or <m>r=a\cos\theta</m>. The top half of the domain of
 integration is sketched below.
 </p>
-<sidebyside width="75%">
-  <image source="pfig/OE01DQ7"/>
+<sidebyside width="50%">
+  <image source="pfigs/OE01DQ7"/>
 </sidebyside>
 <p>
 So the
@@ -598,7 +603,8 @@ So the
 {\rm Surface\ Area}
 &amp;= 2\int_0^{\pi/2}\dee{\theta}\int_0^{a\cos\theta}\dee{r}\ r
                                       \frac{a}{\sqrt{a^2-r^2}}
-= 2a\int_0^{\pi/2}\dee{\theta}\ \Big[-\sqrt{a^2-r^2}\,\Big]_0^{a\cos\theta}
+</mrow><mrow>
+&amp;= 2a\int_0^{\pi/2}\dee{\theta}\ \Big[-\sqrt{a^2-r^2}\,\Big]_0^{a\cos\theta}
 </mrow><mrow>
 &amp;= 2a\int_0^{\pi/2}\dee{\theta}\ \big[a-a\sin\theta\big]
 </mrow><mrow>

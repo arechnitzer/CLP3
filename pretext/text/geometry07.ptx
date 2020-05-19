@@ -9,8 +9,7 @@
 <p>In practice students taking multivariable calculus regularly have great
 difficulty visualising surfaces in three dimensions, despite the fact
 that we all live in three dimensions. We'll now develop some
-technique to help us sketch surfaces in three dimensions
-<fn>Of course you could instead use some fancy graphing software, but part of the point is to
+technique to help us sketch surfaces in three dimensions<fn>Of course you could instead use some fancy graphing software, but part of the point is to
 build intuition. Not to mention that you can't use fancy graphing software on
 your exam.</fn>.
 </p>
@@ -51,8 +50,7 @@ Here are some examples.
   </mrow>
   </md>
   Think of <m>z_0</m> as a constant.
-  Then <m>4x^2+y^2=1+z_0^2</m> is a curve in the <m>xy</m>-plane. As <m>1+z_0^2</m> is a constant, the curve is an ellipse. To determine its semi-axes
-  <fn>The
+  Then <m>4x^2+y^2=1+z_0^2</m> is a curve in the <m>xy</m>-plane. As <m>1+z_0^2</m> is a constant, the curve is an ellipse. To determine its semi-axes<fn>The
   semi-axes of an ellipse are the line segments from the centre of the ellipse
   to the farthest point on the curve and to the nearest point on the curve.
   For a circle the lengths of both of these line segments are just the  radius.
@@ -109,9 +107,7 @@ Here are some examples.
   x=0,\ y^2-z^2=1\qquad\text{and}\qquad
   y=0,\ 4x^2-z^2=1
   </me>
-  These equations describe hyperbolae
-  <fn>It's not just a figure of speech!</fn>
-  . If you don't remember how to sketch them, don't worry. We'll
+  These equations describe hyperbolae<fn>It's not just a figure of speech!</fn>. If you don't remember how to sketch them, don't worry. We'll
   do it now. We'll first sketch them in 2d. Since
   <md alignment="alignat">
   <mrow>
@@ -525,6 +521,6 @@ the value <m>C</m>.
 
   </example>
 
-  <xi:include href="../problems/prob_s1.7.ptx" />
+<xi:include href="../problems/prob_s1.7.ptx" />
 
 </section>

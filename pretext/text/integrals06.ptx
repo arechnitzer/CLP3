@@ -22,9 +22,7 @@ more such coordinate systems <mdash/> cylindrical and spherical coordinates.
 
 <p>In the event that we wish to compute, for example, the mass
 of an object that is invariant under rotations about the
-<m>z</m>-axis
-<fn>like a pipe or a can of tuna fish</fn>
-,
+<m>z</m>-axis<fn>like a pipe or a can of tuna fish</fn>,
 it is advantageous to use a natural generalization of polar coordinates
 to three dimensions. The coordinate system is called <em>cylindrical
 coordinates</em>.
@@ -32,13 +30,10 @@ coordinates</em>.
 
 <definition xml:id="def_cylindrical">
 <statement><p>
-Cylindrical coordinates are denoted
-<fn>We are using the
+Cylindrical coordinates are denoted<fn>We are using the
 standard mathematics conventions for the cylindrical coordinates.
 Under the ISO conventions they are <m>(\rho,\varphi,z)</m>.</fn>
-</p>
-
-<p><m>r</m>, <m>\theta</m> and <m>z</m> and are defined by
+<m>r</m>, <m>\theta</m> and <m>z</m> and are defined by
 <md>
 <mrow>
 r&amp;=\text{ the distance from }(x,y,0)\text{ to }(0,0,0)
@@ -55,8 +50,8 @@ z&amp;=\text{ the signed distance from }(x,y,z)
 </md>
 </p>
 
-<sidebyside>
-<image source="figs/../figs_coord/cyl1"/>
+<sidebyside width="33%">
+<image source="figs/cyl1"/>
 </sidebyside>
 <p>
 That is, <m>r</m> and <m>\theta</m> are the usual polar coordinates and <m>z</m> is the
@@ -66,8 +61,7 @@ usual <m>z</m>.
 
 <p>
  The Cartesian and cylindrical coordinates
-are related by
-<fn>As was the case for polar coordinates, it is
+are related by<fn>As was the case for polar coordinates, it is
 sometimes convenient to extend these definitions by saying that
 <m>x = r\cos\theta</m> and <m>y = r\sin\theta</m> even when r is negative. See the end of Section <xref ref="sec_polar_coords"/>.</fn>
 </p>
@@ -94,10 +88,10 @@ z&amp;=z
 Here are sketches of surfaces of constant <m>r</m>, constant <m>\theta</m>, and constant <m>z</m>.
 </p>
 
-<sidebyside>
-<image source="figs/../figs_coord/cyl3"/>
-<image source="figs/../figs_coord/cyl4"/>
-<image source="figs/../figs_coord/cyl2"/>
+<sidebyside widths="29% 30% 30%" valign="middle">
+<image source="figs/cyl3"/>
+<image source="figs/cyl4"/>
+<image source="figs/cyl2"/>
 </sidebyside>
 
 </subsection>
@@ -120,7 +114,7 @@ first slicing it into horizontal plates of thickness <m>\dee{z}</m>
 by using planes of constant <m>z</m>,
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/sphereCyl1"/>
 </sidebyside>
 </li>
@@ -129,7 +123,7 @@ and then subdividing the plates into wedges using surfaces of  constant <m>\thet
 say with the difference between successive <m>\theta</m>'s being <m>\dee{\theta}</m>,
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/sphereCyl2"/>
 </sidebyside>
 </li>
@@ -139,7 +133,7 @@ of  constant <m>r</m>, say with the difference between successive <m>r</m>'s
 being <m>\dee{r}</m>,
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/sphereCyl3"/>
 </sidebyside>
 </li>
@@ -147,7 +141,7 @@ being <m>\dee{r}</m>,
 we end up with approximate cubes that look like
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/cylCube"/>
 </sidebyside>
 <p>
@@ -166,8 +160,7 @@ edges of the cube have length <m>\dee{z}</m>.
 When we introduced slices using surfaces of constant <m>\theta</m>,
 the difference between the successive <m>\theta</m>'s was <m>\dee{\theta}</m>, so
 the remaining edges of the cube are circular arcs of radius
-essentially
-<fn>The inner edge has radius <m>r</m>,
+essentially<fn>The inner edge has radius <m>r</m>,
 but the outer edge has radius <m>r+\dee{r}
 </m>. However the error that this generates goes to zero in the limit <m>\dee{r}</m>, <m>\dee{\theta}</m>, <m>\dee{z}</m> <m>\rightarrow 0</m>.</fn>
 <m>r</m> that subtend an angle <m>\theta</m>, and
@@ -176,8 +169,7 @@ so have length <m>r\,\dee{\theta}</m>. See the derivation of equation
 </li>
 </ul>
 So the volume of the approximate cube in cylindrical coordinates is
-(essentially
-<fn>By <q>essentially</q>, we mean that the formula for
+(essentially<fn>By <q>essentially</q>, we mean that the formula for
 <m>\dee{V}
 </m> works perfectly when we take the limit <m>\dee{r},\dee{\theta},
 \dee{z}\rightarrow 0</m> of Riemann sums.</fn>)
@@ -254,7 +246,7 @@ The bottom plate has, essentially, <m>z=0</m> and the top plate has, essentially
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside widths="50% 40%" valign="middle">
 <image source="figs/sphereCyl1a"/>
 <image source="figs/sphereCyl1b"/>
 </sidebyside>
@@ -282,7 +274,7 @@ on the right below.
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside widths="45% 45%" valign="middle">
 <image source="figs/sphereCyl2a"/>
 <image source="figs/sphereCyl2b"/>
 </sidebyside>
@@ -305,7 +297,7 @@ essentially, <m>r=\sqrt{1-z^2}</m>.  See the figure on the right below.
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 45%" valign="middle">
 <image source="figs/sphereCyl3a"/>
 <image source="figs/sphereCyl3b"/>
 </sidebyside>
@@ -367,7 +359,8 @@ namely  <m>1</m>. The mass in the first octant is thus
 &amp;= \frac{1}{4}\int_0^1\dee{z}\int_0^{\pi/2}\dee{\theta}\ {(1-z^2)}^2
 </mrow><mrow>
 &amp;= \frac{\pi}{8}\int_0^1\dee{z}\ {(1-z^2)}^2
- =\frac{\pi}{8}\int_0^1\dee{z}\ (1-2z^2+z^4)
+</mrow><mrow>
+&amp;=\frac{\pi}{8}\int_0^1\dee{z}\ (1-2z^2+z^4)
 </mrow><mrow>
 &amp;= \frac{\pi}{8}\overbrace{\left[1-\frac{2}{3}+\frac{1}{5}\right]}^{8/15}
 </mrow><mrow>
@@ -392,6 +385,32 @@ of integration in Example <xref ref="eg_sphere_mass_A"/>.)
 </p>
 </solution>
 </example>
+
+<p>In the next example, we compute the moment of inertia of a right circular cone. The Definition <xref ref="def_moment_of_inertia"/> of the moment of inertia
+was restricted to two dimensions. However, as was pointed out at the time,
+the same analysis extends naturally to the definition
+</p>
+
+<fact xml:id="eqn_mom_of_inertia_3d">
+  <statement>
+    <p>
+      <me>
+I_\cA=\tripInt_\cV D(x,y,z)^2\,\rho(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z}
+</me>
+</p>
+</statement>
+</fact>
+<p>
+of the moment of inertia of a solid <m>\cV</m> in three dimensions. Here
+<ul>
+<li>
+<m>\rho(x,y,z)</m> is the mass density of the solid at the point <m>(x,y,z)</m> and
+</li>
+<li>
+<m>D(x,y,z)</m> is the distance from <m>(x,y,z)</m> to the axis of rotation.
+</li>
+</ul>
+</p>
 
 
 <example xml:id="eg_moment_cone">
@@ -419,7 +438,7 @@ and parallel to the base.
 Here is a sketch of the cone.
 </p>
 
-<sidebyside>
+<sidebyside width="20%">
 <image source="figs/cone"/>
 </sidebyside>
 
@@ -439,34 +458,12 @@ the axis of rotation being the <m>y</m>-axis.
 and call the cone <m>\cV</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="33%">
 <image source="figs/coneZ"/>
 </sidebyside>
 
-<p>The Definition <xref ref="def_moment_of_inertia"/> of the moment of inertia
-was restricted to two dimensions. However, as was pointed out at the time,
-the same analysis extends naturally to the definition
-</p>
-
-<fact xml:id="eqn_mom_of_inertia_3d">
-  <statement>
-    <p>
-      <me>
-I_\cA=\tripInt_\cV D(x,y,z)^2\,\rho(x,y,z)\ \dee{x}\,\dee{y}\,\dee{z}
-</me>
-</p>
-</statement>
-</fact>
 <p>
-of the moment of inertia of a solid <m>\cV</m> in three dimensions. Here
-<ul>
-<li>
-<m>\rho(x,y,z)</m> is the mass density of the solid at the point <m>(x,y,z)</m> and
-</li>
-<li>
-<m>D(x,y,z)</m> is the distance from <m>(x,y,z)</m> to the axis of rotation.
-</li>
-</ul>
+We shall use <xref ref="eqn_mom_of_inertia_3d"/> to find the moment of inertia.
 In the current problem, the axis of rotation is the <m>y</m>-axis. The point on the
 <m>y</m>-axis that is closest to <m>(x,y,z)</m> is <m>(0,y,0)</m> so that the distance from <m>(x,y,z)</m> to the axis is just
 <me>
@@ -474,7 +471,7 @@ D(x,y,z) = \sqrt{x^2+z^2}
 </me>
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/cart6"/>
 </sidebyside>
 <p>
@@ -486,7 +483,7 @@ The formula
 <me>
 \text{Volume}(\cV)= \frac{1}{3} \pi a^2 h
 </me>
-for the volume of a cone was derived in Example \eref{CLP101}{eg:VOLa}
+for the volume of a cone was derived in Example 1.6.1
 of the CLP-2 text and in Appendix B.5.2 of the CLP-1 text.
 However because of the similarity between
 the integral
@@ -504,7 +501,7 @@ Start by slicing the cone into horizontal plates by inserting many planes of
 constant <m>z</m>, with the various values of <m>z</m> differing by <m>\dee{z}</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="33%">
 <image source="figs/coneP"/>
 </sidebyside>
 <p>
@@ -522,7 +519,7 @@ the disk at height <m>z</m> has radius <m>R</m> obeying
 </me>
 </p>
 
-<sidebyside>
+<sidebyside widths="60% 35%" valign="middle">
 <image source="figs/coneX"/>
 <image source="figs/coneT"/>
 </sidebyside>
@@ -551,8 +548,7 @@ essentially, <m>\theta=2\pi</m>.
 </li>
 <li><p>
 Concentrate on any one wedge. Subdivide it into tiny approximate
-cubes
-<fn>Again they are wonky cubes, but we can bound the error
+cubes<fn>Again they are wonky cubes, but we can bound the error
 and show that it goes to zero in the limit <m>\dee{r}
 ,\dee{\theta},\dee{z} \rightarrow 0</m>. </fn>
 by inserting many surfaces of constant <m>r</m>, with the various values of <m>r</m> differing by <m>\dee{r}</m>.  Each cube
@@ -592,7 +588,7 @@ as expected, and
        +\frac{1}{2}\left(\frac{a}{h}z\right)^2z^2\right]
 </mrow><mrow>
 &amp;\hskip1in\text{since } \int_0^{2\pi}\cos^2\theta\ \dee{\theta}=\pi
-                 \text{by Remark } <xref ref="rem_sneaky"/>
+                 \text{ by Remark } <xref ref="rem_sneaky"/>
 </mrow><mrow>
 &amp;=\int_0^h\dee{z}\left[
       \frac{1}{4}\frac{a^4}{h^4}

@@ -175,8 +175,7 @@ distance as you leave <m>(a,b)</m> moving in direction <m>\vv</m> is
 <statement><p>
 <m>D_{\frac{\vv}{|\vv|}}\ f(a,b)</m> is called the <em>directional derivative</em>
 of the function <m>f(x,y)</m> at the point <m>(a,b)</m> in the
-direction
-<fn>Some people require direction vectors to have unit
+direction<fn>Some people require direction vectors to have unit
 length. We don't. </fn>
  <m>\vv</m>.
 </p></statement>
@@ -378,8 +377,7 @@ The unit vector giving the direction of minimum rate of increase is
 </li>
 <li><p>
 The directions giving zero rate of increase are perpendicular
-to <m>\vnabla f(a,b)</m>. One vector perpendicular
-<fn>
+to <m>\vnabla f(a,b)</m>. One vector perpendicular<fn>
   Check this by taking the dot product of <m>\llt 1,2\rgt</m> and <m>\llt 2,-1\rgt</m>.
 </fn>
 to <m>\llt 1,2\rgt</m> is <m>\llt 2,-1\rgt</m>.  So the unit vectors giving the
@@ -686,8 +684,7 @@ out what the question is asking is half the battle. By Definition
 <xref ref="def_gradient"/>, the gradient of a function <m>g(x,y)</m>
 is the vector <m>\llt g_x(x,y),g_y(x,y)\rgt</m>. In this question we are told
 that we are given some function <m>f(r,\theta)</m> of the polar
-coordinates
-<fn>Polar coordinates were defined in
+coordinates<fn>Polar coordinates were defined in
 Example <xref ref="ex_LIMtwodB"/>.</fn>
  <m>r</m> and <m>\theta</m>. We are supposed to convert
 this function to Cartesian  coordinates.
