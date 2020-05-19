@@ -11,9 +11,7 @@
 <p>One of the core topics in single variable calculus courses
 is finding the maxima and minima of functions of one variable.
 We'll now extend that discussion to functions of more than one
-variable
-<fn>Life is not (always) one-dimensional and sometimes we have to embrace it.</fn>
-. Rather than leaping into the deep end, we'll not be too
+variable<fn>Life is not (always) one-dimensional and sometimes we have to embrace it.</fn>. Rather than leaping into the deep end, we'll not be too
 ambitious and concentrate on functions of two variables. That being said,
 many of the techniques work more generally.
 To start, we have the following natural extensions to some familiar
@@ -58,8 +56,7 @@ Local maximum and minimum values are also called extremal values.
 <p>
 One of the first things you did when you were developing the techniques
 used to find the maximum and minimum values of <m>f(x)</m> was ask
-yourself
-<fn>Or perhaps your instructor asked you.</fn>
+yourself<fn>Or perhaps your instructor asked you.</fn>
 <ul>
 <li>
 Suppose that the largest value of <m>f(x)</m> is <m>f(a)</m>.
@@ -204,8 +201,7 @@ Note that some people (and texts) combine both of these cases and call
 <p>
 Theorem <xref ref="thm_stationary_point"/> tells us that every local maximum
 or minimum (in the interior of the domain of a function whose partial derivatives exist)
-is a critical point.  Beware that it does <em>not</em>
-<fn>A very common error of logic that people make is <q>Affirming the consequent</q>.
+is a critical point.  Beware that it does <em>not</em><fn>A very common error of logic that people make is <q>Affirming the consequent</q>.
 <q>If P then Q</q> is true, does not imply that <q>If Q then P</q> is true .
 The statement <q>If he is Shakespeare then he is dead</q> is true.
 But concluding from <q>That man is dead</q> that <q>He must be Shakespeare</q>
@@ -215,11 +211,9 @@ tell us that every critical point is either a local maximum or a local minimum.
 </p>
 </warning>
 
-<p>In fact, we shall see later
-<fn>And you also saw, for example in
+<p>In fact, we shall see later<fn>And you also saw, for example in
 Example 3.6.4 of the CLP-1 text, that critical points that are also
-inflection points are neither local maxima nor local minima.</fn>
-,
+inflection points are neither local maxima nor local minima.</fn>,
 in Examples <xref ref="eg_maxminA"/> and
 <xref ref="eg_maxminC"/>, critical points that are neither local maxima nor a local minima. None-the-less,
 Theorem <xref ref="thm_stationary_point"/> is very useful because often functions have
@@ -502,9 +496,7 @@ A discussion of breweries is about to take place.
 <example xml:id="eg_MXMNbrewery">
 <statement>
 <p>
-In a certain community, there are two breweries in competition
-<fn>We have both types of music here <mdash/> country and western.</fn>
-, so that
+In a certain community, there are two breweries in competition<fn>We have both types of music here <mdash/> country and western.</fn>, so that
 sales of each negatively affect the profits of the other. If brewery A
 produces <m>x</m> litres of beer per month and brewery B produces <m>y</m> litres
 per month, then the profits of the two breweries are given by
@@ -516,9 +508,7 @@ respectively. Find the sum of the two profits if each brewery independently
 sets its own production level to maximize its own profit and assumes that
 its competitor does likewise. Then, assuming cartel behaviour,
 find the sum of the two profits if the two
-breweries cooperate so as to maximize that sum
-<fn>This sort of thing is generally illegal.</fn>
-.
+breweries cooperate so as to maximize that sum<fn>This sort of thing is generally illegal.</fn>.
 </p>
 </statement>
 
@@ -567,9 +557,7 @@ P+Q&amp;=2(x+y)-\tfrac{1}{10^6}\big(\tfrac{5}{2}x^2+3y^2\big)
 </mrow>
 </md>
 So cooperating really does help their profits. Unfortunately,
-like a very small tea-pot, consumers will be a little poorer
-<fn>Sorry about the pun.</fn>
-.
+like a very small tea-pot, consumers will be a little poorer<fn>Sorry about the pun.</fn>.
 </p>
 </solution>
 </example>
@@ -702,13 +690,11 @@ All terms in the sum are positive, regardless of whether the points
 Our problem is to find the <m>m</m> and <m>b</m> that minimizes <m>E(m,b)</m>.
 This technique for drawing a line through a bunch of
 data points is called <q>linear regression</q>. It is used
-<em>a lot</em>
-<fn>Proof by search engine.</fn>
+<em>a lot</em><fn>Proof by search engine.</fn>
 <fn>And has been used for a long time. It was introduced
 by the French mathematician Adrien-Marie Legendre, 1752--1833, in 1805,
 and by the German mathematician and physicist Carl Friedrich Gauss,
-1777--1855, in 1809.</fn>
-.
+1777--1855, in 1809.</fn>.
 Even in the real world <mdash/> and not just the real world that you find
 in mathematics problems. The actual real world that involves jobs.
 </p>
@@ -857,13 +843,10 @@ So <m>f(x,y)</m> has precisely one critical point, namely <m>(9\,,\,-4)</m>.
 
 <p>Now let's try to determine if <m>f(x,y)</m> has a local minimum, or a local maximum,
 or neither, at <m>(9,-4)</m>. A good way to determine the behaviour of <m>f(x,y)</m>
-for <m>(x,y)</m> near <m>(9,-4)</m> is to make the change of variables
-<fn>This
+for <m>(x,y)</m> near <m>(9,-4)</m> is to make the change of variables<fn>This
 is equivalent to translating the graph so that the critical point
 lies at <m>(0,0)</m>.</fn>
-</p>
-
-<p><me>
+<me>
 x=9+\De x\qquad
 y=-4+\De y
 </me>
@@ -1125,14 +1108,11 @@ quadratic approximation <xref ref="eqn_quadratic_approx"/> gives
 </me>
 since <m>(a,b)</m> is a critical point so that <m>f_x(a,b)=f_y(a,b)=0</m>.
 Then using the technique of Examples <xref ref="eg_maxminB"/> and <xref ref="eg_maxminC"/>,
-we get
-<fn>There are analogous results in higher dimensions that are accessible to people who have learned some linear algebra. They
+we get<fn>There are analogous results in higher dimensions that are accessible to people who have learned some linear algebra. They
 are derived by diagonalizing the matrix of second derivatives, which is
 called the Hessian matrix.
 </fn>
-</p>
-
-<p>(details below)
+(details below).
 </p>
 
 <theorem xml:id="thm_second_deriv_test"><title>Second Derivative Test</title>
@@ -1254,9 +1234,7 @@ negative for the other sign of <m>\De x\,\De y</m>. So
 <p>You might wonder why, in the local maximum/local minimum cases
 of Theorem <xref ref="thm_second_deriv_test"/>, <m>f_{xx}(a,b)</m> appears rather
 than <m>f_{yy}(a,b)</m>. The answer
-is only that <m>x</m> is before <m>y</m> in the alphabet
-<fn>The shackles of convention are not limited to mathematics. Election ballots often have the candidates listed in alphabetic order.</fn>
-. You can use <m>f_{yy}(a,b)</m>
+is only that <m>x</m> is before <m>y</m> in the alphabet<fn>The shackles of convention are not limited to mathematics. Election ballots often have the candidates listed in alphabetic order.</fn>. You can use <m>f_{yy}(a,b)</m>
 just as well as <m>f_{xx}(a,b)</m>. The reason is that if
 <m>D(a,b) \gt 0</m> (as in the first two bullets of the theorem),
 then because <m>D(a,b) = f_{xx}(a,b)\,f_{yy}(a,b) - f_{xy}(a,b)^2 \gt 0</m>,
@@ -1340,6 +1318,7 @@ that the critical points are <m>(1,1),\ (2,4)</m>. The classification is
 </p>
 <sidebyside>
 <tabular  left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>
     <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
@@ -1418,6 +1397,7 @@ The classification is
 
 <sidebyside>
   <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>
     <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
@@ -1505,6 +1485,7 @@ Here is a table that classifies the critical points.
 </p>
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>
 <m>\Atop{\rm critical}{\rm point}</m> </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell> <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1584,8 +1565,7 @@ minimum<fn>Indeed one can use the facts that <m>0 \lt x \lt \infty</m>, that
 <m>0 \lt y \lt \infty</m>, and that <m>S\rightarrow\infty</m> as <m>x\rightarrow 0</m> and
 as <m>y\rightarrow 0</m> and as <m>x\rightarrow \infty</m> and as
 <m>y\rightarrow\infty</m> to prove that the single critical point gives the
-global minimum.</fn>
-. But let's use the second derivative test to verify that
+global minimum.</fn>. But let's use the second derivative test to verify that
 at least the critical point is a local minimum. The various second partial derivatives are
 <md>
 <mrow>
@@ -1637,8 +1617,7 @@ of a function of one variable on an interval.
 </p>
 
 <p>For concreteness, let's suppose that we
-want to find the extremal
-<fn>Recall that <q>extremal value</q>
+want to find the extremal<fn>Recall that <q>extremal value</q>
 means <q>either maximum value or minimum value</q>.</fn>
  values of a function
 <m>f(x)</m> on the interval <m>0\le x\le 1</m>. If an extremal value is attained
@@ -1666,8 +1645,7 @@ either
  <ol>
 <li> <m>0 \lt a \lt 1</m> and <m>f'(a)=0</m> or
 </li>
-<li> <m>0 \lt a \lt 1</m> and <m>f'(a)</m> does not exist
-<fn>Recall that if <m>f'(a)</m> does not exist, then <m>a</m> is called a singular point of <m>f</m>.</fn>
+<li> <m>0 \lt a \lt 1</m> and <m>f'(a)</m> does not exist<fn>Recall that if <m>f'(a)</m> does not exist, then <m>a</m> is called a singular point of <m>f</m>.</fn>
  or
 </li>
 <li> <m>a</m> is a boundary point, i.e. <m>a=0</m> or <m>a=1</m>,
@@ -1687,8 +1665,7 @@ is similar.  You again
 <ol>
 <li><p> build up a list of all candidate points <m>(a,b)</m> in the set at which
 the maximum or minimum could be attained, by finding all <m>(a,b)</m>'s for which
-either
-<fn>This is probably a good time to review the statement of
+either<fn>This is probably a good time to review the statement of
 Theorem <xref ref="thm_stationary_point"/>.</fn>
 <ol>
 <li> <m>(a,b)</m> is in the interior of the set (for our example, <m>a^2+b^2 \lt 1</m>)
@@ -1698,16 +1675,14 @@ Theorem <xref ref="thm_stationary_point"/>.</fn>
         does not exist or
 </li>
 <li><p>
-<m>(a,b)</m> is a boundary
-<fn>It should intuitively obvious
+<m>(a,b)</m> is a boundary<fn>It should intuitively obvious
        from a sketch that the boundary of the disk <m>x^2+y^2\le 1</m> is
        the circle <m>x^2+y^2=1</m>.
        But if you really need a formal definition, here it is. A point
        <m>(a,b)</m> is on the boundary of a set <m>S</m> if there is a sequence of
        points in <m>S</m> that converges to <m>(a,b)</m> and there is also a sequence
        of points in the  complement of <m>S</m> that converges to <m>(a,b)</m>.</fn>
-</p>
-<p>     point, (for our example, <m>a^2+b^2=1</m>), and
+       point, (for our example, <m>a^2+b^2=1</m>), and
         could give the maximum or minimum on the boundary <mdash/>
         more about this shortly <mdash/>
 </p>
@@ -1815,6 +1790,7 @@ max and min indicated.
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col halign="center"/> <col halign="center"/>
 <row>
 <cell>
        point
@@ -1875,8 +1851,7 @@ and, finally, analyze the boundary.
 If <m>f</m> takes its maximum or minimum value at a point in the interior,
 <m>x^2+y^2 \lt 1</m>, then that point must be either a critical point of <m>f</m>
 or a singular point of <m>f</m>.
-To find the critical points
-<fn>We actually found the critical points in
+To find the critical points<fn>We actually found the critical points in
 Example <xref ref="eg_max_min_A"/>. But, for the convenience of the reader, we'll repeat that here.</fn>
  we compute the first order derivatives.
 <md>
@@ -1921,14 +1896,11 @@ points.
 <p><em>Boundary:</em>
 On the boundary, <m>x^2+y^2=1</m>, we could again take advantage of having
 a circle and write <m>x=\cos t</m> and <m>y=\sin t</m>.
-But, for practice, we'll use another method
-<fn>Even if you
+But, for practice, we'll use another method<fn>Even if you
 don't believe that <q>you can't have too many tools</q>, it is pretty dangerous
-to have to rely on just one tool.</fn>
-. We know that <m>(x,y)</m> satisfies
+to have to rely on just one tool.</fn>. We know that <m>(x,y)</m> satisfies
 <m>x^2+y^2=1</m>, and hence <m>y^2=1-x^2</m>. Examining the formula for <m>f(x,y)</m>,
-we see that it contains only even
-<fn>If it contained odd powers too,
+we see that it contains only even<fn>If it contained odd powers too,
 we could consider the cases <m>y\ge 0</m> and <m>y\le 0</m> separately and
 substitute <m>y=\sqrt{1-x^2}</m> in the former case and <m>y=-\sqrt{1-x^2}</m>
 in the latter case.</fn>
@@ -1955,17 +1927,19 @@ Here is a sketch showing all of the points that we have identified.
 </sidebyside>
 
 <p>
-Note that the point <m>(2,0)</m> is outside the allowed region
-<fn>We found <m>(2,0)</m> as a solution to the critical point equations (E1), (E2).
+Note that the point <m>(2,0)</m> is outside the allowed region<fn>We found <m>(2,0)</m> as a solution to the critical point equations (E1), (E2).
 That's because, in the course of solving those equations,
-we ignored the constraint that <m>x^2+y^2\le 1</m>.</fn>
-.
+we ignored the constraint that <m>x^2+y^2\le 1</m>.</fn>.
 So all together, we have the following candidates for max and min, with the
 max and min indicated.
 </p>
 
 <sidebyside>
 <tabular  left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  
+         <col halign="center"/> 
+         <col halign="center"/> 
+         <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(0,0)</m>
@@ -2098,6 +2072,14 @@ max and min indicated.
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  
+         <col halign="center"/> 
+         <col halign="center"/> 
+         <col halign="center"/>
+         <col halign="center"/>
+         <col halign="center"/>
+         <col halign="center"/>
+         <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(0,0)</m>
@@ -2196,11 +2178,8 @@ different methods.
 <ul>
 <li><p> <em>Method 1:</em>
  You (probably) learned in high school that any line in
-the <m>xy</m>-plane
-<fn>To be picky, any line the <m>xy</m>-plane that is not parallel to the <m>y</m> axis.</fn>
-</p>
-
-<p>has equation <m>y=mx + b</m> where <m>b</m> is the <m>y</m> intercept and <m>m</m> is the slope.
+the <m>xy</m>-plane<fn>To be picky, any line the <m>xy</m>-plane that is not parallel to the <m>y</m> axis.</fn>
+has equation <m>y=mx + b</m> where <m>b</m> is the <m>y</m> intercept and <m>m</m> is the slope.
 In this case, the line crosses the <m>y</m> axis at <m>y=2</m> and so has <m>y</m> intercept
 <m>b=2</m>. The line passes through <m>(0,2)</m> and <m>(1,0)</m> and so, as we see in the figure below, has slope
 <m>m=\frac{\De y}{\De x}=\frac{0-2}{1-0}=-2</m>. Thus the side of the triangle that
@@ -2235,9 +2214,7 @@ x=t,\ y=2-2t
 </me>
 </li>
 </ul>
-By any of these three methods
-<fn>In the third method, <m>x</m> has just be renamed to <m>t</m>.</fn>
-, we have that the side of the triangle that
+By any of these three methods<fn>In the third method, <m>x</m> has just be renamed to <m>t</m>.</fn>, we have that the side of the triangle that
 runs from <m>(0,2)</m> to <m>(1,0)</m> is <m>y=2-2x</m> with <m>0\le x\le 1</m>. On that side of the triangle
 <me>
 f(x,2-2x) = x(2-2x)+2x+(2-2x)
@@ -2265,6 +2242,10 @@ max and min indicated.
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  
+         <col halign="center"/> 
+         <col halign="center"/> 
+         <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(0,0)</m>

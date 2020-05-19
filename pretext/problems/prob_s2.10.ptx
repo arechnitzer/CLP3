@@ -99,7 +99,7 @@ D_{\vd/|\vd|}f(x_0,y_0,z_0)=\vnabla f(x_0,y_0,z_0)\cdot\frac{\vd}{|\vd|} = 0
 </me>
 </p>
 
-<p>(b) By Definition <xref ref="def_dri_deriv"/> in the CLP-3 text, the
+<p>(b) By Definition <xref ref="def_dri_deriv"/>, the
 directional derivative is
 <me>
 D_{\vd/|\vd|}f(x_0,y_0,z_0)=\vnabla f(x_0,y_0,z_0)\cdot\frac{\vd}{|\vd|}
@@ -107,7 +107,7 @@ D_{\vd/|\vd|}f(x_0,y_0,z_0)=\vnabla f(x_0,y_0,z_0)\cdot\frac{\vd}{|\vd|}
 <ul>
 <li>
 As <m>(x_0,y_0,z_0)</m> is a local maximum for <m>f</m> on <m>S</m>, the method of
-Lagrange multipliers, Theorem <xref ref="thm_Lagrange"/> in the CLP-3 text,
+Lagrange multipliers, Theorem <xref ref="thm_Lagrange"/>,
 gives that <m>\vnabla f(x_0,y_0,z_0) =\la\vnabla g(x_0,y_0,z_0)</m> for some <m>\la</m>.
 </li>
 <li>
@@ -144,17 +144,17 @@ all solutions to
 <md alignment="alignat">
 <mrow>
 f_x = 1 = 2\la x  &amp;= \la g_x
-      \quad&amp;&amp;\implies\quad &amp;&amp; x=\frac{1}{2\la} \tag{E1}
+      \ &amp;&amp;\implies\  &amp;&amp; x=\frac{1}{2\la} \tag{E1}
 </mrow><mrow>
 f_y = 1 = 2\la y &amp;= \la g_y
-      \quad&amp;&amp;\implies\quad &amp;&amp; y=\frac{1}{2\la}\tag{E2}
+      \ &amp;&amp;\implies\  &amp;&amp; y=\frac{1}{2\la}\tag{E2}
 </mrow><mrow>
 f_z = -1 = 2\la z &amp;= \la g_z
-       \quad&amp;&amp;\implies\quad &amp;&amp; z=-\frac{1}{2\la} \tag{E3}
+       \ &amp;&amp;\implies\  &amp;&amp; z=-\frac{1}{2\la} \tag{E3}
 </mrow><mrow>
 x^2+y^2+z^2&amp;=1
-       \quad&amp;&amp;\implies\quad &amp;&amp;3\left(\frac{1}{2\la}\right)^2=1
-\quad&amp;&amp;\implies\quad &amp; \la&amp;=\pm\frac{\sqrt{3}}{2}\tag{E4}
+       \ &amp;&amp;\implies\  &amp;&amp;3\left(\frac{1}{2\la}\right)^2=1
+\ &amp;&amp;\implies\  &amp; \la&amp;=\pm\frac{\sqrt{3}}{2}\tag{E4}
 </mrow>
 </md>
 Thus the critical points are
@@ -306,27 +306,30 @@ the cylinder is parallel to the <m>z</m>--axis.
 <li>
 If the axis of the cylinder does
 not lie exactly on the <m>z</m>--axis, we can enlarge the cylinder sideways.
-(See the figure on the left below. It shows the <m>y=0</m> cross--section of
+(See the first figure below. It shows the <m>y=0</m> cross--section of
 the cylinder.) So we can assume that the axis of the cylinder lies on the <m>z</m>--axis
 </li>
 <li>
 If the top and/or the bottom of the cylinder does not touch the sphere
 <m>x^2+y^2+z^2=1</m>, we can enlarge the cylinder vertically. (See the
-central figure below.)
+second figure below.)
 </li>
 <li>
 So we may assume that the cylinder is
 <me>
 §et{(x,y,z)}{x^2+y^2\le r^2,\ -h/2\le z\le h/2}
 </me>
-with <m>r^2+(h/2)^2=1</m>. See the figure on the right below.
+with <m>r^2+(h/2)^2=1</m>. See the third figure below.
 </li>
 </ul>
 </p>
 
-<sidebyside width="32%">
+<sidebyside width="33%">
 <image source="pfigs/OE06A_4r"/>
 <image source="pfigs/OE06A_4h"/>
+</sidebyside>
+
+<sidebyside width="50%">
 <image source="pfigs/OE06A_4"/>
 </sidebyside>
 
@@ -413,8 +416,7 @@ so that <m>x^2=2y^2</m> or <m>x=\pm \sqrt{2}\,y</m>. Then (E3) gives
 \iff y=\pm\frac{1}{2}
 </mrow>
 </md>
-The method of Lagrange multipliers, Theorem <xref ref="thm_Lagrange"/>
-in the CLP-3 text, gives
+The method of Lagrange multipliers, Theorem <xref ref="thm_Lagrange"/>, gives
 that the only possible locations of the maximum and minimum of the function
 <m>f</m> are <m>\left(\pm\frac{1}{\sqrt{2}},\pm\frac{1}{2}\right)</m>.
 So the maximum and minimum values of <m>f</m> are <m>\frac{1}{2\sqrt{2}}</m>
@@ -436,7 +438,7 @@ min<m>=1</m>, max<m>=\sqrt{2}</m>.
 This is a constrained optimization problem with the objective function being
 <m>f(x,y) = x^2 + y^2</m> and the constraint function being
 <m>g(x,y) =x^4 + y^4 - 1</m>.
-By Theorem <xref ref="thm_Lagrange"/> in the CLP-3 text, any minimum
+By Theorem <xref ref="thm_Lagrange"/>, any minimum
 or maximum <m>(x,y)</m> must obey the  Lagrange multiplier equations
 <md>
 <mrow>
@@ -497,7 +499,7 @@ the distance from  the point <m>(x,y,z)</m> to the point <m>(1,-2,1)</m>.
 So it suffices to find the <m>(x,y,z)</m> which minimizes <m>
 f(x,y,z)=(x-1)^2+(y+2)^2+(z-1)^2</m> subject
 to the constraint <m>g(x,y,z) = z^2 + x^2 + y^2 - 2y - 10=0</m>.
-By Theorem <xref ref="thm_Lagrange"/> in the CLP-3 text, any local minimum
+By Theorem <xref ref="thm_Lagrange"/>, any local minimum
 or maximum <m>(x,y,z)</m> must obey the  Lagrange multiplier equations
 <md>
 <mrow>
@@ -563,7 +565,7 @@ The maximum is <m>5</m> and the minimum is <m>0</m>.
 We are to maximize and minimize <m>f(x,y,z)=x^2 + y^2 -\frac{1}{20} z^2</m>
 subject to the constraints <m>g(x,y,z)=x + 2y + z - 10=0</m> and
 <m>h(x,y,z) = x^2 + y^2 - z=0</m>.
-By Theorem <xref ref="thm_doubleLagrange"/> in the CLP-3 text,
+By Theorem <xref ref="thm_doubleLagrange"/>,
 any local minimum or maximum <m>(x,y,z)</m> must obey the  double Lagrange
 multiplier equations
 <md>
@@ -644,6 +646,8 @@ So we have the following candidates for the locations of the min and max
 
 <sidebyside>
   <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(-2\sqrt{2},\sqrt{2}, 10)</m>
@@ -686,7 +690,7 @@ the point <m>(x,y,z)</m> to the origin. So it suffices to find the <m>(x,y,z)</m
 (in the first octant) which minimizes <m>f(x,y,z)=x^2+y^2+z^2</m> subject
 to the constraint <m>g(x,y,z) = x^3y^2z -6\sqrt{3}=0</m>.
 To start, we'll find the minimizers in all of <m>\bbbr^3</m>.
-By Theorem <xref ref="thm_Lagrange"/> in the CLP-3 text, any local minimum
+By Theorem <xref ref="thm_Lagrange"/>, any local minimum
 or maximum <m>(x,y,z)</m> must obey the  Lagrange multiplier equations
 <md>
 <mrow>
@@ -769,7 +773,7 @@ and the constraint function  being
 <me>
 G(x,y,z) =x^2 + xy + y^2 + 3z^2 - 9
 </me>
-By Theorem <xref ref="thm_Lagrange"/> in the CLP-3 text, any local minimum
+By Theorem <xref ref="thm_Lagrange"/>, any local minimum
 or maximum <m>(x,y,z)</m> must obey the  Lagrange multiplier equations
 <md>
 <mrow>
@@ -794,10 +798,10 @@ If <m>\la\ne 0</m>, then multiplying (E1) by <m>x</m>, (E2) by <m>y</m>, and (E3
 gives
 <md>
 <mrow>
-xyz = \la (2x^2+xy) = \la(2y^2 +xy) =6\la z^2
-&amp;\implies 2x^2+xy =2y^2 +xy =6z^2
+&amp;xyz = \la (2x^2+xy) = \la(2y^2 +xy) =6\la z^2
+</mrow><mrow>&amp;\hskip1in\implies 2x^2+xy =2y^2 +xy =6z^2
 </mrow><mrow>
-&amp;\implies x=\pm y,\ z^2=\frac{1}{6}(2x^2+xy)
+&amp;\hskip1in\implies x=\pm y,\ z^2=\frac{1}{6}(2x^2+xy)
 </mrow>
 </md>
 <ul>
@@ -806,8 +810,9 @@ If <m>x=y</m>, then <m>z^2=\frac{x^2}{2}</m> and, by (E4)
 <md>
 <mrow>
 x^2+x^2+x^2 +\frac{3}{2}x^2=9
-\implies x^2=2
-\implies x=y=\pm \sqrt{2},\ z=\pm 1
+&amp;\implies x^2=2
+</mrow><mrow>
+&amp;\implies x=y=\pm \sqrt{2},\ z=\pm 1
 </mrow>
 </md>
 For these points
@@ -823,8 +828,9 @@ If <m>x=-y</m>, then <m>z^2=\frac{x^2}{6}</m> and, by (E4)
 <md>
 <mrow>
 x^2-x^2+x^2 +\frac{x^2}{2}=9
-\implies x^2=6
-\implies x=-y=\pm \sqrt{6},\ z=\pm 1
+&amp;\implies x^2=6
+</mrow><mrow>
+&amp;\implies x=-y=\pm \sqrt{6},\ z=\pm 1
 </mrow>
 </md>
 For these points
@@ -867,7 +873,7 @@ on the ellipsoid.
 
 <p>We have to minimize <m>f(x,y,z)=x^2+y^2+z^2</m> subject to the constraint
 <m>g(x,y,z) = 2(x+1)^2 + y^2 + 2(z-1)^2 -8</m>.
-By Theorem <xref ref="thm_Lagrange"/> in the CLP-3 text, any local minimum
+By Theorem <xref ref="thm_Lagrange"/>, any local minimum
 or maximum <m>(x,y,z)</m> must obey the  Lagrange multiplier equations
 <md>
 <mrow>
@@ -956,6 +962,8 @@ Substituting these into (E4) gives
 
 <sidebyside>
   <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>\big(-1 + \sqrt{2}, 0, 1-\sqrt{2}\big)</m>
@@ -1009,7 +1017,7 @@ What are the coordinates of the lowest point on <m>C</m>?
 (a)
 We are to maximize <m>f(x,y,z)=z</m> subject to the constraints
 <m>g(x,y,z)=x+y+z-2=0</m> and <m>h(x,y,z) = x^2 + y^2 + z^2 -2=0</m>.
-By Theorem <xref ref="thm_doubleLagrange"/> in the CLP-3 text,
+By Theorem <xref ref="thm_doubleLagrange"/>,
 any local minimum or maximum <m>(x,y,z)</m> must obey the  double Lagrange
 multiplier equations
 <md>
@@ -1096,7 +1104,7 @@ Find the point on the sphere <m>x^2 + y^2 + z^2 = 6</m> that is farthest from th
 This is a constrained optimization problem with the objective function being
 <m>f(x,y,z) = (x - 2)^2 + (y + 2)^2 + (z - 4)^2</m> and the constraint function
 being <m>g(x,y,z) =x^2 + y^2 + z^2 - 6</m>.
-By Theorem <xref ref="thm_Lagrange"/> in the CLP-3 text, any local minimum
+By Theorem <xref ref="thm_Lagrange"/>, any local minimum
 or maximum <m>(x,y,z)</m> must obey the  Lagrange multiplier equations
 <md>
 <mrow>
@@ -1131,8 +1139,9 @@ into (E4) gives
 <md>
 <mrow>
 \frac{4}{(1-\la)^2} + \frac{4}{(1-\la)^2} + \frac{16}{(1-\la)^2} =6
-\iff (1-\la)^2=4
-\iff 1-\la =\pm 2
+&amp;\iff (1-\la)^2=4
+</mrow><mrow>
+&amp;\iff 1-\la =\pm 2
 </mrow>
 </md>
 and hence
@@ -1144,6 +1153,7 @@ So we have the following candidates for the locations of the min and max
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> 
 <row>
 <cell> point
        </cell><cell><m>(1,-1,2)</m>
@@ -1201,7 +1211,7 @@ the point on the sphere <m>x^2+y^2+z^2=1</m> that is nearest <m>(2,1,0)</m>.
 This is a constrained optimization problem with the objective function being
 <m>f(x,y,z) = (x-2)^2 + (y-1)^2 + z^2</m> and the constraint function being
 <m>g(x,y,z) =x^2 + y^2 + z^2 - 1</m>.
-By Theorem <xref ref="thm_Lagrange"/> in the CLP-3 text, any local minimum
+By Theorem <xref ref="thm_Lagrange"/>, any local minimum
 or maximum <m>(x,y,z)</m> must obey the  Lagrange multiplier equations
 <md>
 <mrow>
@@ -1248,8 +1258,8 @@ at these points,
 &amp;x-2=\la x = \frac{2\la}{1-\la},\qquad
 y-1=\la y = \frac{\la}{1-\la}
 </mrow><mrow>
-&amp;\implies f(x,y,z) =\frac{4\la^2}{(1-\la)^2} + \frac{\la^2}{(1-\la)^2}
-                   =\frac{5\la^2}{(1-\la)^2}
+&amp;\implies f(x,y,z) =\frac{4\la^2}{(1\!-\!\la)^2}\!+\!\frac{\la^2}{(1\!-\!\la)^2}
+                   =\frac{5\la^2}{(1\!-\!\la)^2}
                    =\la^2
                    =\big(1\mp\sqrt{5}\big)^2
 </mrow>
@@ -1274,6 +1284,7 @@ So we have the following candidates for the locations of the min and max
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> 
 <row>
 <cell> point
        </cell><cell><m>\frac{1}{\sqrt{5}}(2,1,0)</m>
@@ -1353,8 +1364,9 @@ this equation by (E3) gives <m>2z=\frac{y}{z}</m> or <m>y=2z^2</m>.
 Then subbing <m>x=z</m> and <m>y=2z^2</m> into (E4) gives
 <md>
 <mrow>
-z^2+4z^4+z^2-6=0 \iff 4z^4 +2z^2 -6 = 0
-                 \iff (2z^2+3)(2z^2-2) =0
+z^2+4z^4+z^2-6=0 &amp;\iff 4z^4 +2z^2 -6 = 0
+</mrow><mrow>
+                 &amp;\iff (2z^2+3)(2z^2-2) =0
 </mrow>
 </md>
 </li>
@@ -1365,8 +1377,7 @@ As <m>2z^2+3 \gt 0</m>, we must have <m>2z^2-2=0</m> or <m>z=\pm 1</m>.
 </p>
 
 <p>Recalling that <m>x=z</m> and <m>y=2z^2</m>,
-the method of Lagrange multipliers, Theorem <xref ref="thm_Lagrange"/>
-in the CLP-3 text, gives
+the method of Lagrange multipliers, Theorem <xref ref="thm_Lagrange"/>, gives
 that the only possible locations of the maximum and minimum of the function
 <m>f</m> are <m>(1,2,1)</m> and <m>(-1,2,-1)</m>. To complete the problem, we only have to
 compute <m>f</m> at those points.
@@ -1374,6 +1385,7 @@ compute <m>f</m> at those points.
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> 
 <row>
 <cell>  point
        </cell><cell><m>(1,2,1)</m>
@@ -1425,22 +1437,28 @@ Define <m>L(x,y,\la)=x^2+y^2-\la(2x^2 + 4xy + 5y^2 - 30)</m>. Then
 gives <m>y=\frac{1-2\la}{2\la}x</m>. Substituting this into
 equation (2) gives <m>-2\la x+\frac{(1-5\la)(1-2\la)}{2\la}x=0</m>. To get a nonzero
 <m>(x,y)</m> we need
-<me>
--2\la +\frac{(1-5\la)(1-2\la)}{2\la}=0\iff 0=-4\la^2+(1-5\la)(1-2\la)
+<md>
+<mrow>
+&amp;-2\la +\frac{(1-5\la)(1-2\la)}{2\la}=0
+</mrow><mrow>
+&amp;\iff 0=-4\la^2+(1-5\la)(1-2\la)
 =6\la^2-7\la+1=(6\la-1)(\la-1)
-</me>
+</mrow>
+</md>
 So <m>\la</m> must be either <m>1</m> or <m>\frac{1}{6}</m>. Substituting these into either (1) or (2) gives
 <md alignment="alignat">
 <mrow>
 \la&amp;=1&amp;&amp;\implies -x-2y&amp;=0
       &amp;&amp;\implies x&amp;=-2y
-      &amp;&amp;\implies 8y^2-8y^2+5y^2&amp;=30
-      &amp;&amp;\implies y&amp;=\pm \sqrt{6}
+      &amp;&amp;\implies 8y^2-8y^2+5y^2=30
+</mrow><mrow>
+      &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;\implies y=\pm \sqrt{6}
 </mrow><mrow>
 \la&amp;=\frac{1}{6}&amp;&amp;\implies \frac{2}{3} x-\frac{1}{3} y&amp;=0
                 &amp;&amp;\implies y&amp;=2x
-                &amp;&amp;\implies 2x^2+8x^2+20x^2&amp;=30
-                &amp;&amp;\implies x&amp;=\pm 1
+                &amp;&amp;\implies 2x^2+8x^2+20x^2=30
+</mrow><mrow>
+       &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;\implies x=\pm 1
 </mrow>
 </md>
 The farthest points are <m>\pm\sqrt{6}(-2,1)</m>.
@@ -1499,10 +1517,12 @@ and eigenvectors.) For the equations of interest, this
 is
 <md>
 <mrow>
-\det\left[\begin{matrix}1-3\la&amp;\la
+&amp;\det\left[\begin{matrix}1-3\la&amp;\la
 </mrow><mrow> \la&amp;1-3\la\end{matrix}\right]
            =(1-3\la)^2-\la^2
-=(1-2\la)(1-4\la)=0\implies\la=\frac{1}{2},\frac{1}{4}
+=(1-2\la)(1-4\la)=0
+</mrow><mrow>
+&amp;\hskip3in\implies\la=\frac{1}{2},\frac{1}{4}
 </mrow>
 </md>
 Even if you have not already taken a linear algebra course, you also come to
@@ -1521,13 +1541,17 @@ By either of these two methods, we now know that <m>\la</m> must be either
 <mrow>
 \la&amp;=\frac{1}{2}&amp;&amp;\implies&amp; -\frac{1}{2} x+\frac{1}{2} y&amp;=0
                 &amp;&amp;\implies\ &amp; x&amp;=y
-                &amp;&amp;\implies 3x^2-2x^2+3x^2&amp;=4
-                &amp;&amp;\implies\ x&amp;=\pm 1
+                &amp;&amp;\implies 3x^2-2x^2+3x^2=4
+</mrow><mrow>
+                &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+                &amp;\implies\ x=\pm 1
 </mrow><mrow>
 \la&amp;=\frac{1}{4}&amp;&amp;\implies&amp; \frac{1}{4} x+\frac{1}{4} y&amp;=0
                 &amp;&amp;\implies\ &amp; x&amp;=-y
-                &amp;&amp;\implies 3x^2+2x^2+3x^2&amp;=4
-                &amp;&amp;\implies\ x&amp;=\pm \frac{1}{\sqrt{2}}
+                &amp;&amp;\implies 3x^2+2x^2+3x^2=4
+</mrow><mrow>
+                &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+                &amp;\implies\ x=\pm \frac{1}{\sqrt{2}}
 </mrow>
 </md>
 The ends of the minor axes are <m>\pm\big(\frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\big)</m>.
@@ -1554,7 +1578,7 @@ the top costs two units per square meter. Then the top costs <m>2xy</m>, the
 bottom costs <m>xy</m> and the four sides cost <m>2xz+2yz</m>. We are to find the
 <m>x</m>, <m>y</m> and <m>z</m> that minimize the cost <m>f(x,y,z)=2xy +xy +2xz+2yz</m> subject
 to the constraint that <m>g(x,y,z)=xyz-96=0</m>. By the method of
-Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/> in the CLP-3 text),
+Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/>),
 the minimizing <m>x</m>, <m>y</m>, <m>z</m> must obey
 <md alignment="alignat">
 <mrow>
@@ -1618,7 +1642,7 @@ is <m>-5</m>.
 We are to find the <m>x</m>, <m>y</m> and <m>z</m> that minimize the temperature
 <m>T(x,y,z)=40xy^2z</m> subject to the constraint that
 <m>g(x,y,z)=x^2+y^2+z^2-1=0</m>. By the method of
-Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/> in the CLP-3 text),
+Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/>),
 the minimizing <m>x</m>, <m>y</m>, <m>z</m> must obey
 <md alignment="alignat">
 <mrow>
@@ -1678,7 +1702,7 @@ its faces parallel to the coordinate planes and which is contained inside
 the region <m>0\le z\le 48-4x^2-3y^2</m>.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="50%">
 <image source="pfigs/inscSpher"/>
 </sidebyside>
 
@@ -1699,7 +1723,7 @@ The volume of this box will be <m>(2x)(2y)z</m>.
 So we are to find the <m>x</m>, <m>y</m> and <m>z</m> that maximize the volume
 <m>f(x,y,z)=4xyz</m> subject to the constraint that
 <m>g(x,y,z)=48-4x^2-3y^2-z =0</m>. By the method of
-Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/> in the CLP-3 text),
+Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/>),
 the minimizing <m>x</m>, <m>y</m>, <m>z</m> must obey
 <md alignment="alignat">
 <mrow>
@@ -1748,8 +1772,7 @@ of <m>12{\rm m}^3</m>.
 Use units of money for which cardboard costs one unit per
 square meter. Then, if the bin has dimensions <m>x\times y\times z</m>, it costs
 <m>3xy+2xz+2yz</m>. We are to find the <m>x</m>, <m>y</m> and <m>z</m> that minimize the cost <m>f(x,y,z)=3xy+2xz+2yz</m> subject to the constraint that <m>g(x,y,z)=xyz-12=0</m>.
-By the method of Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/>
-in the CLP-3 text), the minimizing <m>x</m>, <m>y</m>, <m>z</m> must obey
+By the method of Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/>), the minimizing <m>x</m>, <m>y</m>, <m>z</m> must obey
 <md alignment="alignat">
 <mrow>
 f_x&amp;=3y+2z&amp;&amp;=\la yz=\la g_x
@@ -1806,8 +1829,7 @@ dimensions for the box.
 <solution><p>
 If the box has dimensions <m>x\times y\times z</m>, it costs
 <m>24xy+16xz+16yz</m>. We are to find the <m>x</m>, <m>y</m> and <m>z</m> that minimize the cost <m>f(x,y,z)=24xy+16xz+16yz</m> subject to the constraint that <m>g(x,y,z)=xyz-4=0</m>.
-By the method of Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/>
-in the CLP-3 text), the minimizing <m>x</m>, <m>y</m>, <m>z</m> must obey
+By the method of Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/>), the minimizing <m>x</m>, <m>y</m>, <m>z</m> must obey
 <md alignment="alignat">
 <mrow>
 f_x&amp;=24y+16z&amp;&amp;=\la yz=\la g_x
@@ -1872,8 +1894,7 @@ The plane passes through <m>(1,2,3)</m> if and only if <m>a+2b+3c=1</m>.
 Thus we are to find the <m>a</m>, <m>b</m> and <m>c</m> that maximize the volume
 <m>f(a,b,c)=\frac{1}{6abc}</m> subject to the constraint that
 <m>g(a,b,c)=a+2b+3c-1=0</m>.
-By the method of Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/>
-in the CLP-3 text), the maximizing <m>a</m>, <m>b</m>, <m>c</m> must obey
+By the method of Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/>), the maximizing <m>a</m>, <m>b</m>, <m>c</m> must obey
 <md alignment="alignat">
 <mrow>
 f_a&amp;=-\frac{1}{6a^2bc}&amp;&amp;=\la&amp;=\la g_a\quad &amp;&amp;\iff\quad 6\la a^2bc&amp;=-1
@@ -1922,7 +1943,7 @@ We'll find the minimum distance<m>^2</m> and then take the square root.
 That is, we'll find the minimum of <m>f(x,y,z)=x^2+y^2+z^2</m> subject to
 the constraints
 <m>g(x,y,z)=x-z-4=0</m> and <m>h(x,y,z) = x + y + z -3=0</m>.
-By Theorem <xref ref="thm_doubleLagrange"/> in the CLP-3 text,
+By Theorem <xref ref="thm_doubleLagrange"/>,
 any local minimum or maximum <m>(x,y,z)</m> must obey the  double Lagrange
 multiplier equations
 <md>
@@ -1985,7 +2006,7 @@ and the max is <m>48</m> at <m>(4,\pm 4,2)</m>.
 <p>
 This is a constrained optimization problem with objective function
 <m>f(x,y,z) = 6 x +y^2 +xz</m> and constraint function <m>g(x,y,z) =x^2+y^2+z^2-36</m>.
-By Theorem <xref ref="thm_Lagrange"/> in the CLP-3 text, any local minimum
+By Theorem <xref ref="thm_Lagrange"/>, any local minimum
 or maximum <m>(x,y,z)</m> must obey the  Lagrange multiplier equations
 <md>
 <mrow>
@@ -2058,6 +2079,8 @@ So we have the following candidates for the locations of the min and max
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>  <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(0,0, -6)</m>
@@ -2134,6 +2157,8 @@ So we have the following candidates for the locations of the min and max
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>  <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(0,0, \pm 6)</m>
@@ -2243,8 +2268,7 @@ By way of preparation, we have
 <p>(a-i)
 For this problem the objective function is <m>T(x,y) = e^y\big(x^2+y^2\big)</m>
 and the constraint function is <m>g(x,y)=x^2 + y^2 - 100</m>.
-According to the method of Lagrange multipliers, Theorem <xref ref="thm_Lagrange"/>
-in the CLP-3 text, we need to find all solutions to
+According to the method of Lagrange multipliers, Theorem <xref ref="thm_Lagrange"/>, we need to find all solutions to
 <md>
 <mrow>
 T_x = 2x\,e^y &amp;=\la (2x) = \la g_x \tag{E1}
@@ -2281,6 +2305,7 @@ compute <m>T</m> at those points.
 
 <sidebyside>
 <tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(0,10)</m>
@@ -2392,25 +2417,33 @@ we get to the largest (smallest) value of <m>c</m> for which the plane
 (Note that this normal vector is never the zero vector because <m>(0,0,0)</m>
 is not on the surface.) So the tangent plane
 to <m>4x^2+4y^2+z^2=96</m> at <m>(x_0,y_0,z_0)</m> is
-<me>
-8x_0(x-x_0)+8y_0(y-y_0)+2z_0(z-z_0)=0\quad\text{or}\quad
+<md>
+<mrow>
+&amp;8x_0(x-x_0)+8y_0(y-y_0)+2z_0(z-z_0)=0
+</mrow><mrow>
+&amp;\text{or}\quad
 8x_0x+8y_0y+2z_0z=8x_0^2+8y_0^2+2z_0^2
-</me>
+</mrow>
+</md>
 This plane is of the form <m>x+y+z=c</m> if and only if <m>8x_0=8y_0=2z_0</m>.
 A point <m>(x_0,y_0,z_0)</m> with <m>8x_0=8y_0=2z_0</m> is on the surface
 <m>4x^2+4y^2+z^2=96</m> if and only if
-<me>
+<md>
+<mrow>
 4x_0^2+4y_0^2+z_0^2=4x_0^2+4x_0^2+(4x_0)^2=96
 \iff 24 x_0^2=96
-\iff x_0^2=4
-\iff x_0=\pm 2
-</me>
+&amp;\iff x_0^2=4
+</mrow><mrow>
+&amp;\iff x_0=\pm 2
+</mrow>
+</md>
 When <m>x_0=\pm 2</m>, we have <m>y_0=\pm 2</m> and <m>z_0=\pm 8</m> (upper signs go together
 and lower signs go together) so that the tangent plane <m>8x_0x+8y_0y+2z_0z=8x_0^2+8y_0^2+2z_0^2</m>
 is
 <md>
 <mrow>
-8(\pm 2)x+8(\pm 2)y+2(\pm 8)z=8(\pm 2)^2+8(\pm 2)^2+2(\pm 8)^2
+8(\pm 2)x+8(\pm 2)y+2(\pm 8)z&amp;=8(\pm 2)^2+8(\pm 2)^2+2(\pm 8)^2
+</mrow><mrow>
 &amp;\quad\text{or}\quad
 \pm x \pm y \pm z=2+2+8
 </mrow><mrow>
@@ -2426,7 +2459,7 @@ is
 We are to find the <m>x</m>, <m>y</m> and <m>z</m> that minimize or maximize
 <m>f(x,y,z)=x+y+z</m> subject to the constraint that
 <m>g(x,y,z)=4x^2+4y^2+z^2-96=0</m>. By the method of
-Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/> in the CLP-3 text),
+Lagrange multipliers (Theorem<nbsp/><xref ref="thm_Lagrange"/>),
 the minimizing/maximizing <m>x</m>, <m>y</m>, <m>z</m> must obey
 <md alignment="alignat">
 <mrow>
@@ -2518,26 +2551,26 @@ So we may assume that <m>x\ne 0</m>. Then
 <mrow>
 &amp;\text{There is a $\la$ such that $(x,y,\la)$ obeys (E1)}
 </mrow><mrow>
-&amp;\hskip0.2in
+&amp;
   \iff \text{there is a $\la$ such that }
-        f_x(x,y)=\la g_x(x,y),\quad f_y(x,y)=\la g_y(x,y),\quad g(x,y)=0
+        f_x(x,y)=\la g_x(x,y),\ f_y(x,y)=\la g_y(x,y),\ g(x,y)=0
 </mrow><mrow>
-&amp;\hskip0.2in
+&amp;
   \iff \text{there is a $\la$ such that }
            f_x(x,y)=\la y,\quad f_y(x,y)=\la x,\quad xy=1
 </mrow><mrow>
-&amp;\hskip0.2in
+&amp;
   \iff \text{there is a $\la$ such that }
       \frac{1}{y}f_x(x,y)= \frac{1}{x} f_y(x,y)=\la ,\quad xy=1
 </mrow><mrow>
-&amp;\hskip0.2in
+&amp;
   \iff  \frac{1}{y}f_x(x,y)= \frac{1}{x} f_y(x,y) ,\quad xy=1
 </mrow><mrow>
-&amp;\hskip0.2in
+&amp;
   \iff  xf_x\Big(\!x,\frac{1}{x}\Big)= \frac{1}{x}
         f_y\Big(\!x,\frac{1}{x}\Big) ,\quad y=\frac{1}{x}
 </mrow><mrow>
-&amp;\hskip0.2in
+&amp;
   \iff F'(x) = \diff{}{x} f\Big(\!x,\frac{1}{x}\Big)
              = f_x\Big(\!x,\frac{1}{x}\Big)
               -\frac{1}{x^2}f_y\Big(\!x,\frac{1}{x}\Big)

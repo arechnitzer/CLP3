@@ -21,8 +21,7 @@ in §2.4 of the CLP-1 text.
 \frac{\partial^2 w}{\partial x^2}(x,t)
          -\frac{1}{c^2}\frac{\partial^2 w}{\partial t^2}(x,t)=0
 </me>
-This is an extremely important
-<fn>If you plug <q>wave equation</q> into your favourite search engine you will get more than a million hits.</fn>
+This is an extremely important<fn>If you plug <q>wave equation</q> into your favourite search engine you will get more than a million hits.</fn>
 partial differential equation called the <q>wave equation</q> (in one spatial dimension)
 that is used in modelling water waves, sound waves, seismic waves,
 light waves and so on.
@@ -307,8 +306,7 @@ our solution in a very neat form.
 <me>
 W(u,v) = U(u) + V(v)
 </me>
-and the function we want is
-<fn>This is known as d'Alembert's form of the solution. It is named after Jean le Rond d'Alembert, 1717--1783, who was a French mathematician, physicist, philosopher and music
+and the function we want is<fn>This is known as d'Alembert's form of the solution. It is named after Jean le Rond d'Alembert, 1717--1783, who was a French mathematician, physicist, philosopher and music
 theorist.</fn>
 <me>
 w(x,t) = W(x+ct\,,\,x-ct)

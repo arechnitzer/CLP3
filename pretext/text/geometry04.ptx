@@ -156,8 +156,7 @@
   <li> first observe that the vector <m>\vn=\llt 1,2,3\rgt</m> is normal to <m>P</m>
   and then
   </li>
-  <li> start walking
-  <fn>To see why heading in the normal direction gives
+  <li> start walking<fn>To see why heading in the normal direction gives
   the shortest walk, revisit Example <xref ref="eg_nearest_point"/>.</fn>
    away from <m>\vx</m>
   in the  direction of the normal vector <m>\vn</m> and
@@ -228,8 +227,7 @@
      and then
   </li>
   <li> we'll realize, by looking at the figure, that the vector from <m>\vx</m>
-  to <m>\vy</m> is exactly the projection
-  <fn>Now might be a good time to review
+  to <m>\vy</m> is exactly the projection<fn>Now might be a good time to review
   the Definition <xref ref="def_projection"/> of projection.</fn>
    of the vector <m>\vv</m> on <m>\vn</m> so that
   </li>

@@ -30,7 +30,7 @@ Draw <m>\theta=\frac{\pi}{4}</m>.
 </statement>
 
 <answer>
-<sbsgroup widths="10% 40% 40%">
+<sbsgroup widths="10% 27% 30%">
 <sidebyside>
 <p>(a), (b)</p>
 <image source="pfigs/cylR0"/>
@@ -51,7 +51,8 @@ the distance, <m>\sqrt{x^2+y^2}</m>, from <m>(x,y,z)</m> to the <m>z</m>-axis, t
 <mrow>
 \Set{(x,y,z)}{r(x,y,z)=0}
 &amp;=\Set{(x,y,z)}{x^2+y^2=0}
-=\Set{(x,y,z)}{x=y=0}
+</mrow><mrow>
+&amp;=\Set{(x,y,z)}{x=y=0}
 </mrow><mrow>
 &amp;=\text{the $z$-axis}
 </mrow><mrow>
@@ -63,7 +64,7 @@ the distance, <m>\sqrt{x^2+y^2}</m>, from <m>(x,y,z)</m> to the <m>z</m>-axis, t
 </md>
 </p>
 
-<sidebyside width="45%">
+<sidebyside widths="27% 30%">
   <image source="pfigs/cylR0"/>
   <image source="pfigs/cylR"/>
 </sidebyside>
@@ -84,7 +85,7 @@ to <m>(x,y,0)</m>, the sets
 </md>
 </p>
 
-<sidebyside width="45%">
+<sidebyside widths="28% 30%">
   <image source="pfigs/cylTh0"/>
   <image source="pfigs/cylTh"/>
 </sidebyside>
@@ -116,7 +117,7 @@ Sketch the points with the specified cylindrical coordinates.
 </statement>
 
 <answer>
-<sidebyside width="75%">
+<sidebyside width="85%">
 <image source="pfigs/cylP1"/>
 </sidebyside>
 
@@ -136,7 +137,7 @@ In particular all points with <m>z=0</m> lie on the <m>xy</m>-plane.
 </li>
 </ul>
 </p>
-<sidebyside width="75%">
+<sidebyside width="90%">
 <image source="pfigs/cylP1"/>
 </sidebyside>
 </solution>
@@ -188,11 +189,14 @@ coordinates
 <p>(b) When <m>\theta=\frac{\pi}{4}</m>,  <m>\sin\theta=\cos\theta=\frac{1}{\sqrt{2}}</m>,
 so that the polar coordinates <m>r=1</m>, <m>\theta=\frac{\pi}{4}</m>, <m>z=0</m> correspond
 to the Cartesian coordinates
-<me>
-(x,y,z) = (r\cos\theta,r\sin\theta,z)
+<md>
+<mrow>
+(x,y,z) &amp;= (r\cos\theta,r\sin\theta,z)
   = \left(1\times\cos \frac{\pi}{4},\  1\times\sin \frac{\pi}{4},\ 0\right)
-  = \left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}},0\right)
-</me>
+</mrow><mrow>
+&amp;= \left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}},0\right)
+</mrow>
+</md>
 </p>
 
 <p>(c) When <m>\theta=\frac{\pi}{2}</m>,  <m>\sin\theta=1</m> and <m>\cos\theta=0</m>,
@@ -218,11 +222,15 @@ to the Cartesian coordinates
 <p>(e) When <m>\theta=\frac{\pi}{4}</m>,  <m>\sin\theta=\cos\theta=\frac{1}{\sqrt{2}}</m>,
 so that the polar coordinates <m>r=1</m>, <m>\theta=\frac{\pi}{4}</m>, <m>z=1</m> correspond
 to the Cartesian coordinates
-<me>
-(x,y,z) = (r\cos\theta,r\sin\theta,z)
-  = \left(1\times\cos \frac{\pi}{4},\  1\times\sin \frac{\pi}{4},\ 1\right)
-  = \left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}},1\right)
-</me>
+<md>
+<mrow>
+(x,y,z) &amp;= (r\cos\theta,r\sin\theta,z)
+</mrow><mrow>  
+&amp;= \left(1\times\cos \frac{\pi}{4},\  1\times\sin \frac{\pi}{4},\ 1\right)
+</mrow><mrow>
+&amp;= \left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}},1\right)
+</mrow>
+</md>
 </p>
 
 </solution>
@@ -412,9 +420,15 @@ The figures below show the parts of the cone, the cylinder and
 the intersection, respectively, that are in the first octant.
 </p>
 
-<sidebyside width="30%">
+<sidebyside width="50%">
   <image source="pfigs/domainCylinderConea"/>
+</sidebyside>
+
+<sidebyside width="42%">
   <image source="pfigs/domainCylinderConeb"/>
+</sidebyside>
+
+<sidebyside width="55%">
   <image source="pfigs/domainCylinderCone"/>
 </sidebyside>
 
@@ -444,7 +458,7 @@ volume in the first octant.
 </mrow><mrow>
 &amp;= 8a^3\left[\int_0^{{\pi\over 2}} \dee{\theta}\ \frac{1-\cos(2\theta)}{2}
              +\frac{2}{3}\int^0_1 \dee{t}\ \big(1-t^2\big)\right]
-\qquad\text{where } t=\cos\theta
+\quad\text{where } t=\cos\theta
 </mrow><mrow>
 &amp;= 8a^3\left[\frac{\pi}{4}-\frac{2}{3}\left(1-\frac{1}{3}\right)\right]
 =a^3\big(2\pi-\frac{32}{9}\big)
@@ -452,7 +466,7 @@ volume in the first octant.
 </md>
 For an efficient, sneaky, way to evaluate
 <m>\int_0^{{\pi\over 2}} \dee{\theta}\ \sin^2\theta</m>,
-see Remark <xref ref="rem_sneaky"/> in the CLP-3 text.
+see Remark <xref ref="rem_sneaky"/>.
 </p>
 
 <p>(b) The domain of integration is
@@ -477,7 +491,8 @@ and
 &amp;= \int_{-{\pi\over 4}}^{{\pi\over 3}} \dee{\theta}\int_0^1\dee{r}\ r
              \int_0^{1 -r^2}\dee{z}
 = \left(\frac{\pi}{3}+\frac{\pi}{4}\right)\int_0^1\dee{r}\ r(1-r^2)
-= \frac{7}{12}\pi\left(\frac{1}{2}-\frac{1}{4}\right)
+</mrow><mrow>
+&amp;= \frac{7}{12}\pi\left(\frac{1}{2}-\frac{1}{4}\right)
 = \frac{7}{48}\pi
 </mrow>
 </md>
@@ -498,7 +513,7 @@ x^2+y^2\le 2y
 This disk is sketched in the figure
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="45%">
 <image source="pfigs/domain2bis"/>
 </sidebyside>
 
@@ -526,16 +541,16 @@ the full volume is twice the volume in the first octant so that
 <mrow>
 \text{Volume}
 &amp;= 2\int_{0}^{{\pi\over 2}} \dee{\theta}\int_0^{2\sin\theta}\dee{r}\ r\int_{r^2}^{2r\sin\theta}\dee{z}
-= 2\int_{0}^{{\pi\over 2}} \dee{\theta}\int_0^{2\sin\theta}\dee{r}\ r(2r\sin\theta-r^2)\cr
+</mrow><mrow>
+&amp;= 2\int_{0}^{{\pi\over 2}} \dee{\theta}\int_0^{2\sin\theta}\dee{r}\ r(2r\sin\theta-r^2)
+</mrow><mrow>
 &amp;= 2\int_{0}^{{\pi\over 2}} \dee{\theta}\ \left(\frac{2^4}{3}-\frac{2^4}{4}\right)\sin^4\theta
 </mrow>
 </md>
-To integrate
-<fn>For a general discussion of trigonometric integrals see
-§\eref{CLP101</fn>
-{sec trigint} in the CLP-2 text. In particular the integral
-<m>\int \cos^4 x\ \dee{x}</m> is evaluated in Example \eref{CLP101}{eg:TRGINTc}
-in the CLP-2 text.}
+To integrate<fn>For a general discussion of trigonometric integrals see
+§1.8 in the CLP-2 text. In particular the integral
+<m>\int \cos^4 x\ \dee{x}</m> is evaluated in Example 1.8.8
+in the CLP-2 text.</fn>
 <m>\sin^4\theta</m>, we use the double angle formulae
 <m>\sin^2 x= \frac{1-\cos(2x)}{2}</m> and <m>\cos^2 x= \frac{1+\cos(2x)}{2}</m>
 to write
@@ -680,12 +695,13 @@ we have
 <md>
 <mrow>
 \tripInt_E z^n\ \dee{V}
-=2\pi\left.\begin{cases}
+&amp;=2\pi\left.\begin{cases}
 \frac{1}{3}(2\sqrt{2}-1)-\frac{1}{4} &amp;\text{if }n=0
 </mrow><mrow>
 \frac{1}{2}-\frac{1}{8}-\frac{1}{12} &amp;\text{if }n=1
 \end{cases}\right\}
-=2\pi\begin{cases}
+</mrow><mrow>
+&amp;=2\pi\begin{cases}
 \frac{2}{3}\sqrt{2}-\frac{7}{12} &amp;\text{if }n=0
 </mrow><mrow>
 \frac{7}{24} &amp;\text{if }n=1
@@ -757,11 +773,13 @@ so
    \int_{r^2}^{\sqrt{6-r^2}} \dee{z}\ r\ r^2
 </mrow><mrow>
 &amp;=2\pi\int_0^{\sqrt{2}}\dee{r}  \ r^3\big(\sqrt{6-r^2}-r^2\big)
- =2\pi\int_0^{\sqrt{2}}\dee{r}\,r\ r^2\sqrt{6-r^2}
+</mrow><mrow>
+&amp; =2\pi\int_0^{\sqrt{2}}\dee{r}\,r\ r^2\sqrt{6-r^2}
    - 2\pi\int_0^{\sqrt{2}}\dee{r}  \ r^5
 </mrow><mrow>
 &amp;=2\pi\int_6^4\frac{\dee{u}}{-2}  \ (6-u)\sqrt{u} -2\pi\frac{2^3}{6}
-\qquad\text{with } u = 6-r^2,\ \dee{u} = -2r\,\dee{r}
+</mrow><mrow>
+&amp;\hskip1in\qquad\text{with } u = 6-r^2,\ \dee{u} = -2r\,\dee{r}
 </mrow><mrow>
 &amp;=-\pi\left[6\frac{u^{3/2}}{3/2}-\frac{u^{5/2}}{5/2}\right]_6^4-\frac{8\pi}{3}
 </mrow><mrow>
@@ -809,18 +827,21 @@ becomes <m>r^2=ar\cos\theta</m> or <m>r=a\cos\theta</m>.
 Here is a sketch of the top view of the solid.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="50%">
   <image source="pfigs/OE13D_7"/>
 </sidebyside>
 
 <p>
 The solid is
-<me>
-\Set{(r\cos\theta\,,\,r\sin\theta\,,\,z)}{
+<md>
+<mrow>
+\big\{\ (r\cos\theta\,,\,r\sin\theta\,,\,z)\ \big|\ 
         -\frac{\pi}{2}\le\theta\le\frac{\pi}{2}\,,\,
-        0\le r\le a\cos\theta\,,\,
-        -\sqrt{a^2-r^2}\le z\le \sqrt{a^2-r^2}}
-</me>
+       &amp; 0\le r\le a\cos\theta\,,\,
+</mrow><mrow>
+       &amp;\hskip0.25in -\sqrt{a^2-r^2}\le z\le \sqrt{a^2-r^2}\ \big\}
+</mrow>
+</md>
 By symmetry, the volume of the specified solid is four times
 the volume of the solid
 <me>
@@ -883,10 +904,14 @@ runs over the circle <m>x^2+y^2=4</m>. So the domain of integration is
 E = \Set{(x,y,z)}{x^2+y^2\le 4,\ y^2\le z\le 4-x^2}
 </me>
 Let's switch to cylindrical coordinates. Then
-<me>
-E = \Set{(r\cos\theta,r\sin\theta,z)}{0\le r\le 2,\ 0\le\theta\le 2\pi,
-            \ r^2\sin^2\theta\le z\le 4-r^2\cos^2\theta}
-</me>
+<md>
+<mrow>
+E = \big\{\ (r\cos\theta,r\sin\theta,z)\ \big|\ 0\le r\le 2,\ 
+               &amp;0\le\theta\le 2\pi,
+</mrow><mrow>
+            &amp;\hskip0.25in r^2\sin^2\theta\le z\le 4-r^2\cos^2\theta\ \big\}
+</mrow>
+</md>
 and, since <m>\dee{V} = r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>,
 <md>
 <mrow>
@@ -912,7 +937,7 @@ and, since <m>\dee{V} = r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>,
 </md>
 For an efficient, sneaky, way to evaluate
 <m>\int_0^{2\pi}\sin^2\theta\ \dee{\theta}</m>,
-see Remark <xref ref="rem_sneaky"/> in the CLP-3 text.
+see Remark <xref ref="rem_sneaky"/>.
 </p></solution>
 </exercise>
 
@@ -921,11 +946,14 @@ see Remark <xref ref="rem_sneaky"/> in the CLP-3 text.
 The centre of mass <m>(\bar x,\bar y, \bar z)</m> of a body <m>B</m> having
 density <m>\rho(x,y,z)</m> (units of mass per unit volume) at <m>(x,y,z)</m> is defined
 to be
-<me>
+<md>
+<mrow>
 \bar x=\frac{1}{M}\tripInt_B x\rho(x,y,z)\ \dee{V}\quad
-\bar y=\frac{1}{M}\tripInt_B y\rho(x,y,z)\ \dee{V}\quad
+\bar y=\frac{1}{M}\tripInt_B y\rho(x,y,z)\ \dee{V}
+</mrow><mrow>
 \bar z=\frac{1}{M}\tripInt_B z\rho(x,y,z)\ \dee{V}
-</me>
+</mrow>
+</md>
 where
 <me>
 M=\tripInt_B \rho(x,y,z)\ \dee{V}
@@ -955,15 +983,17 @@ In cylindrical coordinates, the equation of the spherical surface of the
 body is <m>r^2+z^2=a^2</m>. The part of the body at height <m>z</m> above the
 <m>xy</m>--plane is one quarter of a disk of radius <m>\sqrt{a^2-z^2}</m>. The numerator
 of <m>\bar z</m> is
-<md alignment="alignat">
+<md>
 <mrow>
 \tripInt_B z\rho\ \dee{V}
 &amp;=\rho\int_0^a \dee{z}\int_0^{\pi/2}d\theta\int_0^{\sqrt{a^2-z^2}}dr\ r\ z
-&amp;&amp;=\rho\int_0^a \dee{z}\int_0^{\pi/2}d\theta\ z\ \frac{r^2}{2}
+</mrow><mrow>
+&amp;=\rho\int_0^a \dee{z}\int_0^{\pi/2}d\theta\ z\ \frac{r^2}{2}
                                    \bigg|_0^{\sqrt{a^2-z^2}}
 </mrow><mrow>
 &amp;=\frac{\rho}{2}\int_0^a \dee{z}\int_0^{\pi/2}d\theta\ z(a^2-z^2)
-&amp;&amp;=\frac{\pi}{4}\rho\int_0^a \dee{z}\ z(a^2-z^2)
+</mrow><mrow>
+&amp;=\frac{\pi}{4}\rho\int_0^a \dee{z}\ z(a^2-z^2)
 </mrow><mrow>
 &amp;=\frac{\pi}{4}\rho\left[a^2\frac{z^2}{2}-\frac{z^4}{4}\right]_0^a
 =\frac{\pi}{16}\rho a^4
@@ -1019,14 +1049,15 @@ By part (a)
 <md>
 <mrow>
 \text{mass} =
-\int_{1/2}^2 \dee{r} \int_{-\sqrt{4-r^2}}^{\sqrt{4-r^2}} \dee{z}\int_0^{2\pi}\dee{\theta}\
+&amp;\int_{1/2}^2 \dee{r} \int_{-\sqrt{4-r^2}}^{\sqrt{4-r^2}} \dee{z}\int_0^{2\pi}\dee{\theta}\
 \frac{5}{\sqrt{3}}(z^2+1)r
-&amp;=4\pi\frac{5}{\sqrt{3}}\int_{1/2}^2\dee{r}\ r\int_0^{\sqrt{4-r^2}}\dee{z}\ (z^2+1)
 </mrow><mrow>
-&amp;=4\pi\frac{5}{\sqrt{3}}\int_{1/2}^2\dee{r}\
+&amp;\hskip0.5in=4\pi\frac{5}{\sqrt{3}}\int_{1/2}^2\dee{r}\ r\int_0^{\sqrt{4-r^2}}\dee{z}\ (z^2+1)
+</mrow><mrow>
+&amp;\hskip0.5in=4\pi\frac{5}{\sqrt{3}}\int_{1/2}^2\dee{r}\
                    r\left[\frac{z^3}{3}+z\right]_0^{\sqrt{4-r^2}}
 </mrow><mrow>
-&amp;=4\pi\frac{5}{\sqrt{3}}\int_{1/2}^2\dee{r}\
+&amp;\hskip0.5in=4\pi\frac{5}{\sqrt{3}}\int_{1/2}^2\dee{r}\
            r\left[\frac{1}{3}{(4-r^2)}^{3/2}+{(4-r^2)}^{1/2}\right]
 </mrow>
 </md>
@@ -1049,8 +1080,8 @@ Make the change of variables <m>s=4-r^2</m>, <m>\dee{s}=-2r\,\dee{r}</m>. This g
 </p></solution>
 </exercise>
 
-<exercise>
-<statement><p> [M200 2001A]
+<exercise><title><fromexam>M200 2001A</fromexam></title>
+<statement><p> 
 Consider the finite solid bounded by the three surfaces:
 <m>z=e^{-x^2-y^2}</m>, <m>z=0</m> and <m>x^2+y^2=4</m>.
 <ol label="a">
@@ -1113,8 +1144,8 @@ So
 </p></solution>
 </exercise>
 
-<exercise>
-<statement><p> [M200 2000A]
+<exercise><title><fromexam>M200 2000A</fromexam></title>
+<statement><p> 
 Find the volume of the solid which is inside <m>x^2 + y^2 = 4</m>,
 above <m>z = 0</m> and below <m>2z = y</m>.
 </p></statement>
@@ -1131,7 +1162,7 @@ When we look at the solid from above, we see all <m>(x,y)</m> with
 below.
 </p>
 
-<sidebyside width="45%">
+<sidebyside width="50%" valign="middle">
   <image source="pfigs/OE00AQ9a"/>
   <image source="pfigs/OE00AQ9b"/>
 </sidebyside>
@@ -1157,7 +1188,8 @@ So the volume is
 \int_0^\pi \dee{\theta}\int_0^2 \dee{r}\int_0^{r\sin\theta/2} dz\ r
 &amp;=\int_0^\pi \dee{\theta}\int_0^2 \dee{r}\ \frac{1}{2} r^2\sin\theta
 =\int_0^\pi \dee{\theta}\ \frac{r^3}{6}\sin\theta\,\bigg|_0^2
-=\frac{4}{3}\int_0^\pi \dee{\theta}\ \sin\theta
+</mrow><mrow>
+&amp;=\frac{4}{3}\int_0^\pi \dee{\theta}\ \sin\theta
 </mrow><mrow>
 &amp;=-\frac{4}{3}\cos\theta\,\bigg|_0^\pi
 =\frac{8}{3}
@@ -1208,19 +1240,20 @@ As
 <md>
 <mrow>
 \pdiff{\rho}{x}(x,y,z)
-      &amp;= \frac{4x}{1+x^2+y^2} -\frac{2x(z+2x^2)}{{(1+x^2+y^2)}^2} &amp;
+      &amp;= \frac{4x}{1+x^2+y^2} -\frac{2x(z+2x^2)}{{(1+x^2+y^2)}^2} 
+</mrow><mrow>&amp;\hskip0.5in
 \pdiff{\rho}{x}(1,0,-1)
-      &amp;= \frac{4}{2} -\frac{2(-1+2)}{{(2)}^2} =\frac{3}{2}
+      = \frac{4}{2} -\frac{2(-1+2)}{{(2)}^2} =\frac{3}{2}
 </mrow><mrow>
 \pdiff{\rho}{y}(x,y,z)
-      &amp;=  -\frac{2y(z+2x^2)}{{(1+x^2+y^2)}^2} &amp;
-\pdiff{\rho}{y}(1,0,-1)
-      &amp;=  0
+      &amp;=  -\frac{2y(z+2x^2)}{{(1+x^2+y^2)}^2} 
+</mrow><mrow>&amp;\hskip0.5in
+\pdiff{\rho}{y}(1,0,-1)=  0
 </mrow><mrow>
 \pdiff{\rho}{z}(x,y,z)
-      &amp;= \frac{1}{1+x^2+y^2} &amp;
-\pdiff{\rho}{z}(1,0,-1)
-      &amp;= \frac{1}{2}
+      &amp;= \frac{1}{1+x^2+y^2} 
+</mrow><mrow>&amp;\hskip0.5in
+\pdiff{\rho}{z}(1,0,-1) = \frac{1}{2}
 </mrow>
 </md>
 So <m>\vnabla\rho(1,0,-1) = \frac{1}{2}(3,0,1)</m>. The unit vector
@@ -1286,7 +1319,7 @@ its distance from the axis.
 <m>x</m> runs from <m>b-a</m> to <m>b+a</m>.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="50%">
 <image source="pfigs/torusSection"/>
 </sidebyside>
 
@@ -1348,22 +1381,22 @@ substitute in <m>s=a\sin t</m>, <m>\dee{s}=a\cos t</m>.
 \text{moment}
 &amp;= \frac{2M}{\pi a^2b} \int_{-{\pi\over 2}}^{{\pi\over 2}}(a\cos t\, \dee{t})
 \ (3a^2b\sin^2 t+b^3)a\cos t
-= \frac{2M}{\pi } \int_{-{\pi\over 2}}^{{\pi\over 2}}\dee{t}\
+</mrow><mrow>
+&amp;= \frac{2M}{\pi } \int_{-{\pi\over 2}}^{{\pi\over 2}}\dee{t}\
 (3a^2\sin^2 t+b^2)\cos^2 t
 </mrow><mrow>
 &amp;= \frac{4M}{\pi} \int_0^{{\pi\over 2}}\dee{t}\
 (3a^2\cos^2 t-3a^2\cos^4 t+b^2\cos^2 t)
-      \qquad\text{since } \sin^2t=1-\cos^2t
+</mrow><mrow>
+&amp;\hskip1in    \text{since } \sin^2t=1-\cos^2t
 </mrow>
 </md>
-To integrate
-<fn>For a general discussion of trigonometric integrals see
-§\eref{CLP101</fn>
-{sec trigint} in the CLP-2 text. In particular the integral
-<m>\int \cos^4 x\ \dee{x}</m> is evaluated in Example \eref{CLP101}{eg:TRGINTc}
+To integrate<fn>For a general discussion of trigonometric integrals see
+§1.8 in the CLP-2 text. In particular the integral
+<m>\int \cos^4 x\ \dee{x}</m> is evaluated in Example 1.8.8
 in the CLP-2 text. For an efficient, sneaky, way to evaluate
 <m>\int_0^{{\pi\over 2}} \cos^2 t\ \dee{t}</m>
-see Remark <xref ref="rem_sneaky"/> in the CLP-3 text.}
+see Remark <xref ref="rem_sneaky"/>.</fn>
 <m>\cos^2t</m> and <m>\cos^4t</m>, we use the double angle formulae
 <m>\sin^2 x= \frac{1-\cos(2x)}{2}</m> and <m>\cos^2 x= \frac{1+\cos(2x)}{2}</m>
 to write
@@ -1387,9 +1420,10 @@ So
 <mrow>
 \text{moment}
 &amp;= \frac{4M}{\pi}
-\left[3a^2\left(\frac{t}{2}+\frac{\sin(2t)}{4}\right)
-    -3a^2\left(\frac{3t}{8} + \frac{1}{4} \sin(2t) + \frac{1}{32}\sin(4t)\right)
-    +b^2\left(\frac{t}{2}+\frac{\sin(2t)}{4}\right)\right]_0^{{\pi\over 2}}
+\bigg[3a^2\left(\frac{t}{2}\!+\!\frac{\sin(2t)}{4}\right)
+    \!-\!3a^2\left(\frac{3t}{8}\!+\! \frac{1}{4} \sin(2t)\!+\! \frac{1}{32}\sin(4t)\right)
+</mrow><mrow>
+&amp;\hskip3.4in  +b^2\left(\frac{t}{2}+\frac{\sin(2t)}{4}\right)\!\bigg]_0^{{\pi\over 2}}
 </mrow><mrow>
 &amp;= \frac{4M}{\pi}
          \Big[3a^2\frac{\pi}{4}-3a^2\frac{3\pi}{16}+b^2\frac{\pi}{4}\Big]

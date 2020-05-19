@@ -12,19 +12,21 @@
 <statement><p>
 Let all of the third order partial derivatives of the function
 <m>f(x,y,z)</m> exist and be continuous. Show that
-<me>
+<md>
+<mrow>
 f_{xyz}(x,y,z)
-=f_{xzy}(x,y,z)
+&amp;=f_{xzy}(x,y,z)
 =f_{yxz}(x,y,z)
 =f_{yzx}(x,y,z)
-=f_{zxy}(x,y,z)
+</mrow><mrow>
+&amp;=f_{zxy}(x,y,z)
 =f_{zyx}(x,y,z)
-</me>
+</mrow>
+</md>
 </p></statement>
 
 <hint><p>
-Repeatedly use (Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
-in the CLP-3 text.
+Repeatedly use (Clairaut's) Theorem <xref ref="thm_mixed_partials"/>.
 </p></hint>
 
 <answer><p>
@@ -36,7 +38,7 @@ We have to derive a bunch of equalities.
 <ul>
 <li>
 Fix any real number <m>x</m> and set <m>g(y,z)=f_x(x,y,z)</m>. By
-(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
 <m>g_{yz}(y,z)=g_{zy}(y,z)</m>, so
 <me>
 f_{xyz}(x,y,z) = g_{yz}(y,z) =g_{zy}(y,z) = f_{xzy}(x,y,z)
@@ -44,7 +46,7 @@ f_{xyz}(x,y,z) = g_{yz}(y,z) =g_{zy}(y,z) = f_{xzy}(x,y,z)
 </li>
 <li>
 For every fixed real number <m>z</m>,
-(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
 gives <m>f_{xy}(x,y,z)=f_{yx}(x,y,z)</m>. So
 <me>
 f_{xyz}(x,y,z) = \pdiff{}{z} f_{xy}(x,y,z)= \pdiff{}{z} f_{yx}(x,y,z)
@@ -57,7 +59,7 @@ f_{xyz}(x,y,z) = f_{xzy}(x,y,z)=f_{yxz}(x,y,z)
 </li>
 <li>
 Fix any real number <m>y</m> and set <m>g(x,z)=f_y(x,y,z)</m>. By
-(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
 <m>g_{xz}(x,z)=g_{zx}(x,z)</m>. So
 <me>
 f_{yxz}(x,y,z) = g_{xz}(x,z) =g_{zx}(x,z) = f_{yzx}(x,y,z)
@@ -69,29 +71,37 @@ f_{xyz}(x,y,z) = f_{xzy}(x,y,z)=f_{yxz}(x,y,z)= f_{yzx}(x,y,z)
 </li>
 <li>
 For every fixed real number <m>y</m>,
-(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
 gives <m>f_{xz}(x,y,z)=f_{zx}(x,y,z)</m>. So
 <me>
 f_{xzy}(x,y,z) = \pdiff{}{y} f_{xz}(x,y,z)= \pdiff{}{y} f_{zx}(x,y,z)
 =f_{zxy}(x,y,z)
 </me>
 So far, we have
-<me>
-f_{xyz}(x,y,z) = f_{xzy}(x,y,z)=f_{yxz}(x,y,z)= f_{yzx}(x,y,z)=f_{zxy}(x,y,z)
-</me>
+<md>
+<mrow>
+f_{xyz}(x,y,z) &amp;= f_{xzy}(x,y,z)=f_{yxz}(x,y,z)
+</mrow><mrow>
+&amp;= f_{yzx}(x,y,z)=f_{zxy}(x,y,z)
+</mrow>
+</md>
 </li>
 <li>
 Fix any real number <m>z</m> and set <m>g(x,y)=f_z(x,y,z)</m>. By
-(Clairaut's) Theorem <xref ref="thm_mixed_partials"/> in the CLP-3 text
+(Clairaut's) Theorem <xref ref="thm_mixed_partials"/>
 <m>g_{xy}(x,y)=g_{yx}(x,y)</m>. So
 <me>
 f_{zxy}(x,y,z) = g_{xy}(x,y) =g_{yx}(x,y) = f_{zxy}(x,y,z)
 </me>
 We now have all of
-<me>
-f_{xyz}(x,y,z) = f_{xzy}(x,y,z)=f_{yxz}(x,y,z)= f_{yzx}(x,y,z)=f_{zxy}(x,y,z)
+<md>
+<mrow>
+f_{xyz}(x,y,z) &amp;= f_{xzy}(x,y,z)=f_{yxz}(x,y,z)
+</mrow><mrow>
+&amp;= f_{yzx}(x,y,z)=f_{zxy}(x,y,z)
 = f_{zxy}(x,y,z)
-</me>
+</mrow>
+</md>
 </li>
 </ul>
 </p></solution>
@@ -184,17 +194,16 @@ f_{yxy}(x,y) = f_{xyy}(x,y) &amp;= 12xy
 </p>
 
 <p>(b) We have
-<md>
+<md alignment="alignat">
 <mrow>
-f_x(x,y) &amp;= y^2e^{xy^2} &amp;
+f_x(x,y) &amp;= y^2e^{xy^2} 
+</mrow><mrow>
 f_{xx}(x,y) &amp;= y^4e^{xy^2} &amp;
 f_{xxy}(x,y) &amp;= 4y^3e^{xy^2} + 2xy^5e^{xy^2}
 </mrow><mrow>
- &amp; &amp;
-f_{xy}(x,y) &amp;= 2ye^{xy^2}+2xy^3e^{xy^2} &amp;
-f_{xyy}(x,y) &amp;= \big(2+4xy^2+6xy^2+4x^2y^4\big)e^{xy^2}
+f_{xy}(x,y) &amp;= 2ye^{xy^2}+2xy^3e^{xy^2}\quad &amp;
+f_{xyy}(x,y) &amp;= \big(2\!+\!4xy^2\!+\!6xy^2\!+\!4x^2y^4\big)e^{xy^2}
 </mrow><mrow>
- &amp; &amp;
  &amp; &amp;
  &amp;= \big(2+10xy^2+4x^2y^4\big)e^{xy^2}
 </mrow>
@@ -241,22 +250,27 @@ Find all second partial derivatives of <m>f(x,y)=\sqrt{x^2+5y^2}</m>.
 Let <m>f(x,y)=\sqrt{x^2+5y^2}</m>. Then
 <md>
 <mrow>
-f_x&amp;=\frac{x}{\sqrt{x^2+5y^2}} &amp;
+f_x&amp;=\frac{x}{\sqrt{x^2+5y^2}} 
+</mrow><mrow>
 f_{xx}&amp;=\frac{1}{\sqrt{x^2+5y^2}}-\frac{1}{2}\frac{(x)(2x)}{(x^2+5y^2)^{3/2}} &amp;
 f_{xy}&amp;=-\frac{1}{2}\frac{(x)(10y)}{(x^2+5y^2)^{3/2}}
-\cr
-f_y&amp;=\frac{5y}{\sqrt{x^2+5y^2}} &amp;
+</mrow><mrow>
+f_y&amp;=\frac{5y}{\sqrt{x^2+5y^2}} 
+</mrow><mrow>
 f_{yy}&amp;=\frac{5}{\sqrt{x^2+5y^2}}-\frac{1}{2}\frac{(5y)(10y)}{(x^2+5y^2)^{3/2}}&amp;
 f_{yx}&amp;=-\frac{1}{2}\frac{(5y)(2x)}{(x^2+5y^2)^{3/2}}
 </mrow>
 </md>
 Simplifying, and in particular using that <m>\frac{1}{\sqrt{x^2+5y^2}}
 =\frac{x^2+5y^2}{(x^2+5y^2)^{3/2}}</m>,
-<me>
-f_{xx}=\frac{5y^2}{(x^2+5y^2)^{3/2}}\qquad
-f_{xy}=f_{yx}=-\frac{5xy}{(x^2+5y^2)^{3/2}}\qquad
-f_{yy}=\frac{5x^2}{(x^2+5y^2)^{3/2}}
-</me>
+<md>
+<mrow>
+f_{xx}&amp;=\frac{5y^2}{(x^2+5y^2)^{3/2}}\qquad
+f_{xy}=f_{yx}=-\frac{5xy}{(x^2+5y^2)^{3/2}}
+</mrow><mrow>
+f_{yy}&amp;=\frac{5x^2}{(x^2+5y^2)^{3/2}}
+</mrow>
+</md>
 </p></solution>
 </exercise>
 
@@ -396,11 +410,14 @@ f_r(r,\theta)=mr^{m-1}\cos m\theta\qquad
 f_\theta(r,\theta)=-mr^m\sin m\theta
 </me>
 The second order derivatives are
-<me>
-f_{rr}(r,\theta)=m(m-1)r^{m-2}\cos m\theta \qquad
-f_{r\theta}(r,\theta)=-m^2r^{m-1}\sin m\theta \qquad
-f_{\theta\theta}(r,\theta)=-m^2r^m\cos m\theta
-</me>
+<md>
+<mrow>
+f_{rr}(r,\theta)&amp;=m(m-1)r^{m-2}\cos m\theta \qquad
+f_{r\theta}(r,\theta)=-m^2r^{m-1}\sin m\theta 
+</mrow><mrow>
+f_{\theta\theta}(r,\theta)&amp;=-m^2r^m\cos m\theta
+</mrow>
+</md>
 so that
 <me>
 f_{rr}(1,0)=m(m-1),\
@@ -410,10 +427,14 @@ f_{\theta\theta}(1,0)=-m^2
 </p>
 
 <p>(b) By part (a), the expression
-<me>
+<md>
+<mrow>
 f_{rr}+\frac{\la}{r}f_r+\frac{1}{r^2}f_{\theta\theta}
-=m(m-1)r^{m-2}\cos m\theta+\la mr^{m-2}\cos m\theta-m^2r^{m-2}\cos m\theta
-</me>
+&amp;=m(m-1)r^{m-2}\cos m\theta+\la mr^{m-2}\cos m\theta
+</mrow><mrow>
+&amp;\hskip1in-m^2r^{m-2}\cos m\theta
+</mrow>
+</md>
 vanishes for all <m>r</m> and <m>\theta</m> if and only if
 <me>
 m(m-1)+\la m-m^2=0\iff m(\la-1)=0\iff \la=1
@@ -445,7 +466,8 @@ As
 <mrow>
 u_t(x,y,z,t)
 &amp;=-\frac{3}{2}\frac{1}{t^{5/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
-  +\frac{1}{4\al\,t^{7/2}}(x^2+y^2+z^2) e^{-(x^2+y^2+z^2)/(4\al t)}
+</mrow><mrow>
+&amp;\hskip1in  +\frac{1}{4\al\,t^{7/2}}(x^2+y^2+z^2) e^{-(x^2+y^2+z^2)/(4\al t)}
 </mrow><mrow>
 u_x(x,y,z,t)
 &amp;=-\frac{x}{2\al\,t^{5/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
@@ -466,10 +488,11 @@ u_{zz}(x,y,z,t)
 we have
 <md>
 <mrow>
-\al\big(u_{xx} + u_{yy} + u_{zz} \big)
+\al\big(u_{xx}\!+\!u_{yy}\!+\!u_{zz} \big)
 &amp;=-\frac{3}{2\,t^{5/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
-  +\frac{x^2+y^2+z^2}{4\al\,t^{7/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
-=u_t
+  \!+\!\frac{x^2\!+\!y^2\!+\!z^2}{4\al\,t^{7/2}} e^{-(x^2+y^2+z^2)/(4\al t)}
+</mrow><mrow>
+&amp;=u_t
 </mrow>
 </md>
 </p>

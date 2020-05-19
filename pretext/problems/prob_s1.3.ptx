@@ -237,7 +237,7 @@ containing the given point and with the given normal.
 </p></statement>
 
 <hint><p>
-Review Equation<nbsp/><xref ref="eqn_line"/> in the CLP-3 text.
+Review Equation<nbsp/><xref ref="eqn_line"/>.
 </p></hint>
 
 <answer><p>
@@ -288,7 +288,7 @@ to the line <m>3x-4y=-4</m>.
 </p></statement>
 
 <hint><p>
-Review Example<nbsp/><xref ref="eg_nearest_point"/> in the CLP-3 text.
+Review Example<nbsp/><xref ref="eg_nearest_point"/>.
 </p></hint>
 
 <answer><p>
@@ -422,7 +422,7 @@ So, we set <m>\mathbf{n}=\llt \frac{5}{2},1+\frac{\sqrt3}{2} \rgt-\llt 2,1\rgt =
 </latex-image></image>
 </sidebyside>
 <p>
-We know one point on the line is <m>\left(\frac{5}{2},1+\frac{\sqrt3}{2}\right)</m>, so following Equation<nbsp/><xref ref="eqn_line"/>  in the CLP-3 text:
+We know one point on the line is <m>\left(\frac{5}{2},1+\frac{\sqrt3}{2}\right)</m>, so following Equation<nbsp/><xref ref="eqn_line"/>:
 <md>
 <mrow>
 n_xx+n_yy&amp;=n_xx_0+n_yy_0

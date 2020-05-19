@@ -503,8 +503,7 @@
   <li>
     <p>
   The vector <m>\vv</m> constructed in the procedure above is a vector between <m>L</m> and <m>L'</m> and so is also a vector between <m>P</m> and <m>P'</m>. Looking at the figure
-  below
-  <fn>and possibly reviewing the Definition <xref ref="def_projection"/>
+  below<fn>and possibly reviewing the Definition <xref ref="def_projection"/>
   of projection</fn>,
   we see that the vector from <m>\vx(s)</m> to <m>\vy(t)</m> is
   (up to a sign) the projection of <m>\vv</m> on <m>\vn</m>.
@@ -524,6 +523,6 @@
 
   </example>
 
-  <xi:include href="../problems/prob_s1.5.ptx" />
+<xi:include href="../problems/prob_s1.5.ptx" />
 
 </section>

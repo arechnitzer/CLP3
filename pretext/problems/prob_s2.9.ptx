@@ -48,16 +48,16 @@ correct word.
 <md>
 <mrow>
 \text{(i) }&amp; \text{ the first order partial derivative $F_x(1,2)$ is} &amp; &amp;
-\text{positive/negative/zero (circle one)}
+\text{positive/negative/zero}
 </mrow><mrow>
 \text{(ii) }&amp; F \text{ has a critical point at } (2,2) &amp;
-         &amp;\text{true/false (circle one)}
+         &amp;\text{true/false}
 </mrow><mrow>
-\text{(iii) }&amp; \text{ the second order partial derivative $F_{xy}(1,2)$ is} &amp; &amp;\text{positive/negative/zero (circle one)}
+\text{(iii) }&amp; \text{ the second order partial derivative $F_{xy}(1,2)$ is} &amp; &amp;\text{positive/negative/zero}
 </mrow>
 </md>
 </p>
-<sidebyside width="60%">
+<sidebyside width="66%">
   <image source="pfigs/OE16D_2b"/>
 </sidebyside>
 </li>
@@ -100,12 +100,12 @@ a) (i) <m>\vnabla f</m> is zero at critical points.
           through <m>(x,y)</m>. Looking at the diagram, we see
 <md>
 <mrow>
-f_y(P)  \lt 0\qquad
-f_y(Q)  \lt 0\qquad
-f_y(R) =0\qquad
-f_y(S)  \gt 0\qquad
-f_y(T) =0\qquad
-f_y(U) =0
+f_y(P)  &amp;\lt 0&amp;
+f_y(Q)  &amp;\lt 0&amp;
+f_y(R) &amp;=0</mrow><mrow>
+f_y(S)  &amp;\gt 0&amp;
+f_y(T) &amp;=0&amp;
+f_y(U) &amp;=0
 </mrow>
 </md>
 So only <m>S</m> works.
@@ -204,8 +204,9 @@ So, by the chain rule,
 <md>
 <mrow>
 f'(t) &amp;= \pdiff{g}{x}(a_1+td_1,a_2+td_2,a_3+td_3)\,d_1
+</mrow><mrow>&amp;\hskip1in
        +\pdiff{g}{y}(a_1+td_1,a_2+td_2,a_3+td_3)\,d_2
-</mrow><mrow>&amp;\hskip2in
+</mrow><mrow>&amp;\hskip1in
        +\pdiff{g}{z}(a_1+td_1,a_2+td_2,a_3+td_3)\,d_3
 </mrow><mrow>
      &amp;=\vnabla g(\va+t\vd)\cdot\vd
@@ -325,8 +326,7 @@ As
 <m>
 f_{xx}(0,0)f_{yy}(0,0)-f_{xy}(0,0)^2=0
 </m>,
-the Second Derivative Test (Theorem <xref ref="thm_second_deriv_test"/>
-in the CLP-3 text) tells us absolutely nothing.
+the Second Derivative Test (Theorem <xref ref="thm_second_deriv_test"/>) tells us absolutely nothing.
 </p></solution>
 </exercise>
 
@@ -391,6 +391,7 @@ f(x, y) = x^3 - y^3 - 2xy + 6.
 <answer>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m> </cell><cell> type </cell>
 </row><row>
@@ -406,7 +407,7 @@ f(x, y) = x^3 - y^3 - 2xy + 6.
 <solution><p>
 To find the critical points we will need the gradient of <m>f</m>, and to
 apply the second derivative test of
-Theorem <xref ref="thm_second_deriv_test"/> in the CLP-3 text
+Theorem <xref ref="thm_second_deriv_test"/>
 we will need all second order partial derivatives. So we need all
 partial derivatives of <m>f</m> up to order two.
 Here they are.
@@ -441,6 +442,7 @@ So there are two critical points: <m>(0,0)</m>,
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -466,6 +468,7 @@ Also find out which of these points give local maximum values for
 <answer>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>   </cell><cell> type </cell>
 </row><row>
@@ -485,7 +488,7 @@ Also find out which of these points give local maximum values for
 <solution><p>
 To find the critical points we will need the
 gradient of <m>f</m>, and to apply the second derivative test of
-Theorem <xref ref="thm_second_deriv_test"/> in the CLP-3 text
+Theorem <xref ref="thm_second_deriv_test"/>
 we will need all
 second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
@@ -531,6 +534,7 @@ which is satisfied if <m>y=\pm 1</m>.
 The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -584,10 +588,13 @@ First observe that, on the boundary of this region, at least one of
 <m>x</m>, <m>y</m> and <m>z</m> is zero. So <m>f(x,y,z)=x^2 y^2 z</m> is zero on the boundary.
 As <m>f</m> takes values which are strictly bigger than zero at all points of <m>D</m>
 that are not on the boundary, the minimum value of <m>f</m> is <m>0</m> on
-<me>
-\partial D = \Set{(x,y,z)}{x\ge 0,\ y\ge 0,\ z\ge 0,\ 2x+y+z=5,\
-               \text{at least one of $x,y,z$ zero}}
-</me>
+<md>
+\<mrow>
+\partial D &amp;= \big\{\ (x,y,z)\ \big|\ x\ge 0,\ y\ge 0,\ z\ge 0,\ 2x+y+z=5,
+        </mrow><mrow>&amp;\hskip2.5in
+               \text{at least one of }x,y,z\text{ zero}\ \big\}
+</mrow>
+</md>
 </p>
 
 <p>The maximum value of <m>f</m> will be taken at a critical point.
@@ -633,6 +640,7 @@ Find and classify all the critical points of <m>f(x,y)=x^2+y^2+x^2y+4</m>.
 <answer>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> type </cell>
 </row><row>
@@ -649,7 +657,7 @@ Find and classify all the critical points of <m>f(x,y)=x^2+y^2+x^2y+4</m>.
 <solution><p>
 To find the critical points we will need the
 gradient of <m>f</m>, and to apply the second derivative test of
-Theorem <xref ref="thm_second_deriv_test"/> in the CLP-3 text
+Theorem <xref ref="thm_second_deriv_test"/>
 we will need all second order partial derivatives. So we need
 all partial derivatives of <m>f</m> up to order two. Here they are.
 <md alignment="alignat">
@@ -678,6 +686,7 @@ So, there are three critical points: <m>(0,0)</m>, <m>\big(\pm\sqrt{2},-1\big)</
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center" />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type
@@ -705,6 +714,7 @@ Find all saddle points, local minima and local maxima of the function
 <answer>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> type </cell>
 </row><row>
@@ -720,7 +730,7 @@ Find all saddle points, local minima and local maxima of the function
 <solution><p>
 To find the critical points we will need the
 gradient of <m>f</m>, and to apply the second derivative test of
-Theorem <xref ref="thm_second_deriv_test"/> in the CLP-3 text
+Theorem <xref ref="thm_second_deriv_test"/>
 we will need all
 second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
@@ -759,6 +769,7 @@ So there are two critical points: <m>\pm\big(\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center" />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -786,6 +797,7 @@ Find and classify [as local maxima, local minima, or saddle points] all critical
 
 <answer>
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> type </cell>
 </row><row>
@@ -801,7 +813,7 @@ Find and classify [as local maxima, local minima, or saddle points] all critical
 <solution><p>
 To find the critical points we will need the gradient of <m>f</m> and to
 apply the second derivative test of
-Theorem <xref ref="thm_second_deriv_test"/> in the CLP-3 text
+Theorem <xref ref="thm_second_deriv_test"/>
 we will need all second order partial derivatives. So we need all
 partial derivatives of <m>f</m> up to order two.
 Here they are.
@@ -840,6 +852,7 @@ So there are two critical points: <m>(0,0)</m>, <m>(2,0)</m>.
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center" />  <col halign="center"/>  <col halign="center"/> <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -921,6 +934,9 @@ All together, we have the following candidates for max and min.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col halign="center"/> 
+         <col halign="center"/>  <col halign="center"/> <col halign="center"/> 
+         <col halign="center"/>  <col halign="center"/> <col halign="center"/> 
 <row>
 <cell>      point
        </cell><cell><m>(0,0)</m>
@@ -1021,6 +1037,8 @@ All together, we have the following candidates for max and min.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col />  <col halign="center"/>  <col halign="center"/> <col halign="center"/> 
+         <col halign="center"/> 
 <row>
 <cell>      point
        </cell><cell><m>(\half,\half)</m>
@@ -1106,7 +1124,7 @@ already. In those cases you should add them to the picture.)
 
 
 <p>(b)</p>
-<sbsgroup widths="10% 70%">
+<sbsgroup widths="10% 40%">
 <sidebyside>
 <p>(i)</p> <image source="pfigs/level1b"/>
 </sidebyside>
@@ -1126,7 +1144,7 @@ already. In those cases you should add them to the picture.)
 (a)
 To find the critical points we will need the
 gradient of <m>f</m> and to apply the second derivative test of
-Theorem <xref ref="thm_second_deriv_test"/> in the CLP-3 text
+Theorem <xref ref="thm_second_deriv_test"/>
 we will need all
 second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
@@ -1160,6 +1178,7 @@ the classification is
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col /> 
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1194,7 +1213,7 @@ There are saddle points where level curves cross and there
 are local max's or min's at <q>bull's eyes</q>.
 </p>
 
-<sbsgroup widths="10% 70%">
+<sbsgroup widths="10% 40%">
 <sidebyside>
 <p>(i)</p> <image source="pfigs/level1b"/>
 </sidebyside>
@@ -1223,6 +1242,7 @@ all critical points of <m>f(x,y)</m>.
 
 <answer>
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col /> 
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>   </cell><cell> type </cell>
 </row><row>
@@ -1238,7 +1258,7 @@ all critical points of <m>f(x,y)</m>.
 <solution><p>
 To find the critical points we will need the
 gradient of <m>f</m>, and to apply the second derivative test of
-Theorem <xref ref="thm_second_deriv_test"/> in the CLP-3 text
+Theorem <xref ref="thm_second_deriv_test"/>
 we will need all
 second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
@@ -1287,6 +1307,7 @@ So there are two critical points: <m>\big(\frac{3}{2},-\frac{1}{4}\big)</m> and
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col /> 
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1319,6 +1340,7 @@ Find the maximum and minimum values of <m>h(x, y)</m> on the disk <m>x^2 + y^2 \
 (a)
 </p>
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col /> 
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>   </cell><cell> type </cell>
 </row><row>
@@ -1344,7 +1366,7 @@ Find the maximum and minimum values of <m>h(x, y)</m> on the disk <m>x^2 + y^2 \
 (a)
 To find the critical points we will need the
 gradient of <m>h</m> and to apply the second derivative test of
-Theorem <xref ref="thm_second_deriv_test"/> in the CLP-3 text
+Theorem <xref ref="thm_second_deriv_test"/>
 we will need all
 second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
@@ -1387,6 +1409,7 @@ So there are four critical points:
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col /> 
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>h_{xx}h_{yy}-h_{xy}^2</m> </cell><cell>
                                                           <m>h_{xx}</m> </cell><cell> type </cell>
@@ -1493,6 +1516,8 @@ So we have the following candidates for the locations of the min and max
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>  <col halign="center"/> <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(1,0)</m>
@@ -1602,7 +1627,7 @@ The minimum is <m>-1</m> at <m>(1,1)</m> and the maximum is <m>80</m> at <m>(4,4
 (a)
 Thinking a little way ahead, to find the critical points we will need the
 gradient of <m>f</m> and to apply the second derivative test of
-Theorem <xref ref="thm_second_deriv_test"/> in the CLP-3 text
+Theorem <xref ref="thm_second_deriv_test"/>
 we will need all
 second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
@@ -1644,6 +1669,7 @@ So there are four critical points: <m>(0,0)</m>, <m>(3,0)</m>, <m>(0,3)</m>,
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell> <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1700,6 +1726,8 @@ max and min indicated.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>  <col halign="center"/> <col halign="center"/>
 <row>
 <cell>      point(s)
        </cell><cell><m>(1,1)</m>
@@ -1726,7 +1754,7 @@ max and min indicated.
 </row>
 </tabular></sidebyside>
 
-<sidebyside width="75%">
+<sidebyside width="40%">
   <image source="pfigs/OE14D_5"/>
 </sidebyside>
 
@@ -1752,7 +1780,7 @@ Find and classify the critical points of
 <solution><p>
 Thinking a little way ahead, to find the critical points we will need the
 gradient of <m>f</m>, and to apply the second derivative test of
-Theorem <xref ref="thm_second_deriv_test"/> in the CLP-3 text
+Theorem <xref ref="thm_second_deriv_test"/>
 we will need all
 second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
@@ -1794,6 +1822,7 @@ So there are four critical points: <m>(0,0)</m>, <m>(0,2)</m>, <m>(1,1)</m>,
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1863,6 +1892,7 @@ So, there are two critical points: <m>(1,1),\ (2,4)</m>.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1882,7 +1912,7 @@ consists of the line segments (i) <m>x=1</m>, <m>0\le y\le 1</m>, (ii) <m>y=1</m
 x\le 1</m> and (iii) <m>y=1-x</m>, <m>0\le x\le 1</m>.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="40%">
 <image source="pfigs/OE04Q4"/>
 </sidebyside>
 
@@ -1901,15 +1931,29 @@ the max and min of <m>2x^3-6x+5</m> for <m>0\le x\le 1</m> must occur either at 
 where <m>f=5</m>, or at <m>x=1</m>, where <m>f=1</m>.
 </li>
 <li>
-Next, we look at the part of the boundary with <m>y=1-x</m>. There <m>f=2x^3-6x(1-x)
-+(1-x)^2+4(1-x)=2x^3+7x^2-12x+5</m>.
-As <m>\diff{}{x}(2x^3+7x^2-12x+5)=6x^2+14x-12
+Next, we look at the part of the boundary with <m>y=1-x</m>. There 
+<md>
+<mrow>
+f=2x^3-6x(1-x)+(1-x)^2+4(1-x)=2x^3+7x^2-12x+5
+</mrow>
+</md>
+As 
+<md>
+<mrow>
+\diff{}{x}(2x^3+7x^2-12x+5)&amp;=6x^2+14x-12
                                =2\big(3x^2+7x-6\big)
-                               =2(3x-2)(x+3)</m>,
+</mrow><mrow>
+                           &amp;=2(3x-2)(x+3)
+</mrow>
+</md>
 the max and min of <m>2x^3+7x^2-12x+5</m> for <m>0\le x\le 1</m> must occur either at <m>x=0</m>,
-where <m>f=5</m>, or at <m>x=1</m>, where <m>f=2</m>, or at <m>x=\frac{2}{3}</m>, where <m>f=2(\frac{8}{27})-6(\frac{2}{3})(\frac{1}{3})+\frac{1}{9}+\frac{4}{3}
+where <m>f=5</m>, or at <m>x=1</m>, where <m>f=2</m>, or at <m>x=\frac{2}{3}</m>, where <md>
+<mrow>
+f=2(\frac{8}{27})-6(\frac{2}{3})(\frac{1}{3})+\frac{1}{9}+\frac{4}{3}
 =\frac{16-36+3+36}{27}
-=\frac{19}{27}</m>.
+=\frac{19}{27}
+</mrow>
+</md>
 </li>
 </ul>
 So all together, we have the following candidates for max and min, with the
@@ -1917,6 +1961,8 @@ max and min indicated.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col /> <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+        <col halign="center"/>
 <row>
 <cell>      point
        </cell><cell><m>(1,0)</m>
@@ -1983,6 +2029,7 @@ points.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2029,14 +2076,15 @@ f(x,y)=xy(x+2y-6)
 (a) We have
 <md alignment="alignat">
 <mrow>
-f(x,y)&amp;=xy(x+2y-6)\quad &amp;
-     f_x(x,y)&amp;=2xy+2y^2-6y\quad &amp;
+f(x,y)&amp;=xy(x+2y-6)
+</mrow><mrow>
+     f_x(x,y)&amp;=2xy+2y^2-6y\qquad  &amp;
      f_{xx}(x,y)&amp;=2y
 </mrow><mrow>
- &amp; &amp; f_y(x,y)&amp;=x^2+4xy-6x &amp;
+     f_y(x,y)&amp;=x^2+4xy-6x\qquad &amp;
      f_{yy}(x,y)&amp;=4x
 </mrow><mrow>
- &amp; &amp; &amp; &amp;f_{xy}(x,y)&amp;=2x+4y-6
+ &amp; &amp; f_{xy}(x,y)&amp;=2x+4y-6
 </mrow>
 </md>
 At a critical point
@@ -2045,14 +2093,14 @@ At a critical point
 f_x(x,y)=f_y(x,y)=0
 &amp;\iff 2y(x+y-3)=0\text{ and }x(x+4y-6)=0
 </mrow><mrow>
-&amp;\iff \{y=0\text{ or }x+y=3\}\text{ and }\{x=0\text{ or }x+4y=6\}
+&amp;\hskip-0.5in\iff \{y=0\text{ or }x+y=3\}\text{ and }\{x=0\text{ or }x+4y=6\}
 </mrow><mrow>
-&amp;\iff \{x=y=0\}\text{ or }\{y=0,\ x+4y=6\}
+&amp;\hskip-0.5in\iff \{x=y=0\}\text{ or }\{y=0,\ x+4y=6\}
 </mrow><mrow>
-&amp;\hskip0.5in\text{ or }\{x+y=3,\ x=0\}
+&amp;\text{ or }\{x+y=3,\ x=0\}
                    \text{ or }\{x+y=3,\ x+4y=6\}
 </mrow><mrow>
-&amp;\iff (x,y)=(0,0)\text{ or }(6,0)\text{ or }(0,3)\text{ or }(2,1)
+&amp;\hskip-0.5in\iff (x,y)=(0,0)\text{ or }(6,0)\text{ or }(0,3)\text{ or }(2,1)
 </mrow>
 </md>
 Here is a table giving the classification of each of the four critical
@@ -2060,6 +2108,7 @@ points.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2104,6 +2153,7 @@ min and max must occur at one of
 </p>
 
  <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/>
 <row>
 <cell>      <m>(x,y)</m>  </cell><cell> <m>f(x,y)</m> </cell>
 </row><row>
@@ -2166,6 +2216,7 @@ points.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2265,9 +2316,9 @@ At a critical point
 f_x(x,y)=f_y(x,y)=0
 &amp;\iff xy=0\text{ and }3x^2+y^2=1
 </mrow><mrow>
-&amp;\iff \{x=0\text{ or }y=0\}\text{ and }3x^2+y^2=1
+&amp;\hskip-0.75in\iff \{x=0\text{ or }y=0\}\text{ and }3x^2+y^2=1
 </mrow><mrow>
-&amp;\iff (x,y)=(0,1)\text{ or }(0,-1)\text{ or }\left(\frac{1}{\sqrt{3}},0\right)
+&amp;\hskip-0.75in\iff (x,y)=(0,1)\text{ or }(0,-1)\text{ or }\left(\frac{1}{\sqrt{3}},0\right)
 \text{ or }\left(-\frac{1}{\sqrt{3}},0\right)
 </mrow>
 </md>
@@ -2276,6 +2327,7 @@ points.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2343,8 +2395,9 @@ At a critical point
 <md>
 <mrow>
 g_x(x,y)=g_y(x,y)=0
-\iff 2x=0\text{ and }-10-2y=0
-\iff (x,y)=(0,-5)
+&amp;\iff 2x=0\text{ and }-10-2y=0
+</mrow><mrow>
+&amp;\iff (x,y)=(0,-5)
 </mrow>
 </md>
 Since <m>g_{xx}(0,-5)g_{yy}(0,-5)-g_{xy}(0,-5)^2=2\times(-2)-0^2 \lt 0</m>,
@@ -2379,6 +2432,7 @@ Here is a table giving all candidates for extrema:
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/>
 <row>
 <cell>      <m>(x,y)</m>  </cell><cell> <m>g(x,y)</m> </cell>
 </row><row>
@@ -2415,14 +2469,15 @@ f(x,y)=x^3-3xy^2-3x^2-3y^2
 We have
 <md alignment="alignat">
 <mrow>
-f(x,y)&amp;=x^3-3xy^2-3x^2-3y^2\qquad &amp;
+f(x,y)&amp;=x^3-3xy^2-3x^2-3y^2
+</mrow><mrow>
 f_x(x,y)&amp;=3x^2-3y^2-6x\qquad &amp;
 f_{xx}(x,y)&amp;=6x-6
-</mrow><mrow>
- &amp; &amp; f_y(x,y)&amp;=-6xy-6y &amp;
+</mrow><mrow> 
+f_y(x,y)&amp;=-6xy-6y &amp;
 f_{yy}(x,y)&amp;=-6x-6
 </mrow><mrow>
- &amp; &amp; &amp; &amp;f_{xy}(x,y)&amp;=-6y
+  &amp; &amp;f_{xy}(x,y)&amp;=-6y
 </mrow>
 </md>
 At a critical point
@@ -2431,9 +2486,9 @@ At a critical point
 f_x(x,y)=f_y(x,y)=0
 &amp;\iff 3(x^2-y^2-2x)=0\text{ and }-6y(x+1)=0
 </mrow><mrow>
-&amp;\iff \{x=-1\text{ or }y=0\}\text{ and }x^2-y^2-2x=0
+&amp;\hskip-0.5in\iff \{x=-1\text{ or }y=0\}\text{ and }x^2-y^2-2x=0
 </mrow><mrow>
-&amp;\iff (x,y)=(-1,\sqrt{3})\text{ or }(-1,-\sqrt{3})\text{ or }(0,0)
+&amp;\hskip-0.5in\iff (x,y)=(-1,\sqrt{3})\text{ or }(-1,-\sqrt{3})\text{ or }(0,0)
 \text{ or }(2,0)
 </mrow>
 </md>
@@ -2442,6 +2497,7 @@ points.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2511,6 +2567,7 @@ Here is a table giving all candidates for the maximum:
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/>
 <row>
 <cell>      <m>(x,y)</m>  </cell><cell> <m>g(x,y)</m> </cell>
 </row><row>
@@ -2553,7 +2610,7 @@ Suppose that the bends are made a  distance <m>x</m> from the ends of the fence
 and that the bends are through an angle <m>\theta</m>.
 Here is a sketch of the enclosure.
 </p>
-<sidebyside width="75%">
+<sidebyside width="60%">
 <image source="pfigs/fence"/>
 </sidebyside>
 
@@ -2569,12 +2626,17 @@ A(x,\theta)&amp;=(100-2x)x\sin\theta+2\cdot\half\cdot x\sin\theta\cdot x\cos\the
 </mrow>
 </md>
 The maximize the area, we need to solve
-<md alignment="alignat">
+<md>
 <mrow>
-0=A_x&amp;=(100-4x)\sin\theta+x\sin(2\theta) &amp; &amp;\implies &amp;
-(100-4x)+2x\cos\theta&amp;=0\cr
-0=A_\theta&amp;=(100x-2x^2)\cos\theta+x^2\cos(2\theta)\quad &amp; &amp;\implies\quad &amp;
-(100-2x)\cos\theta+x\cos(2\theta)&amp;=0
+0=A_x&amp;=(100-4x)\sin\theta+x\sin(2\theta) 
+</mrow><mrow>
+&amp;\hskip1in\implies\quad 
+(100-4x)+2x\cos\theta=0
+</mrow><mrow>
+0=A_\theta&amp;=(100x-2x^2)\cos\theta+x^2\cos(2\theta)
+</mrow><mrow>
+&amp;\hskip0.5in\implies\quad 
+(100-2x)\cos\theta+x\cos(2\theta)=0
 </mrow>
 </md>
 Here we have used that the fence of maximum area cannot have <m>\sin\theta=0</m>
@@ -2620,7 +2682,7 @@ The box has dimensions <m>(2V)^{1/3}\times(2V)^{1/3}\times 2^{-2/3}V^{1/3}</m>.
 Suppose that the box has side lengths <m>x</m>, <m>y</m> and <m>z</m>.
 Here is a sketch.
 </p>
-<sidebyside width="75%">
+<sidebyside width="35%">
 <image source="pfigs/box"/>
 </sidebyside>
 <p>
@@ -2779,6 +2841,7 @@ and <m>k  \gt  \frac{1}{2}</m>.
 <em>Case <m>k \gt \frac{1}{2}</m>:</em>
 </p>
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>   </cell><cell> type </cell>
 </row><row>
@@ -2800,7 +2863,7 @@ and <m>k  \gt  \frac{1}{2}</m>.
 <solution><p>
 To find the critical points we will need the
 gradient of <m>f</m> and to apply the second derivative test of
-Theorem <xref ref="thm_second_deriv_test"/> in the CLP-3 text
+Theorem <xref ref="thm_second_deriv_test"/>
 we will need all
 second order partial derivatives. So we need all partial derivatives of
 <m>f</m> up to order two.
@@ -2843,6 +2906,7 @@ If <m>k \lt \frac{1}{2}</m>, then <m>\frac{3}{k^2}(1-2k) \gt 0</m> and the equat
 there are two critical points: <m>(0,0)</m>, <m>(0,2)</m> and the classification is
 </p>
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2863,6 +2927,7 @@ the classification is
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -2886,6 +2951,7 @@ the classification is
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -3025,8 +3091,7 @@ S_{x}\,m+n\,b&amp;=S_{y} \tag{2}
 </mrow>
 </md>
 This is a system of two linear equations in two unknowns.
-One way
-<fn>This procedure is probably not the most efficient one. But it has the advantage that it always works, it does not require any ingenuity on the part of the solver, and it generalizes easily to larger linear systems of equations.</fn>
+One way<fn>This procedure is probably not the most efficient one. But it has the advantage that it always works, it does not require any ingenuity on the part of the solver, and it generalizes easily to larger linear systems of equations.</fn>
  to solve them, is to use one of the two equations to solve
 for one of the two unknowns in terms of the other unknown. For example,
 equation (2) gives that

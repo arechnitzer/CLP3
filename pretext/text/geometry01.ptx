@@ -7,16 +7,14 @@
 
 <title>Points</title>
 
-<p>Each point in two dimensions may be labeled by two coordinates
-  <fn>This is why the <m>xy</m>-plane is called <q>two dimensional</q> <mdash/> the name of each point consists of two real numbers.</fn><m>(x,y)</m> which specify the position of the point in some units with respect to some axes as in the figure below.
+<p>Each point in two dimensions may be labeled by two coordinates<fn>This is why the <m>xy</m>-plane is called <q>two dimensional</q> <mdash/> the name of each point consists of two real numbers.</fn><m>(x,y)</m> which specify the position of the point in some units with respect to some axes as in the figure below.
 </p>
 
   <sidebyside width="28%" >
   <image source="figs/point2d.svg"/>
   </sidebyside>
 <p>
-  The set of all points in two dimensions is denoted
-  <fn>
+  The set of all points in two dimensions is denoted<fn>
     Not surprisingly, the <m>2</m> in <m>\bbbr^2</m> signifies that each point is labelled by two numbers and the <m>\bbbr</m> in <m>\bbbr^2</m> signifies that the numbers in question are real numbers.
     There are more advanced applications (for example in signal analysis and in quantum mechanics) where complex numbers are used. The space of all pairs <m>(z_1,z_2)</m>, with <m>z_1</m> and <m>z_2</m> complex numbers is denoted  <m>\bbbc^2</m>.
   </fn> <m>\bbbr^2</m>.

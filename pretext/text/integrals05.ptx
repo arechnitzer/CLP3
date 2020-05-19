@@ -35,10 +35,10 @@ constant <m>z</m>, planes of constant <m>y</m>, and planes of constant <m>x</m>,
 which we recall look like
 </p>
 
-<sidebyside>
-<image source="figs/../figs_coord/cart2"/>
-<image source="figs/../figs_coord/cart4"/>
-<image source="figs/../figs_coord/cart3"/>
+<sidebyside widths="29% 34% 34%" valign="middle">
+<image source="figs/cart2"/>
+<image source="figs/cart4"/>
+<image source="figs/cart3"/>
 </sidebyside>
 
 <p>
@@ -66,7 +66,7 @@ The bottom plate starts at <m>z=0</m> and the top plate ends at
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside widths="45% 35%" valign="middle">
 <image source="figs/sphereMass1"/>
 <image source="figs/sphereMass1a"/>
 </sidebyside>
@@ -92,7 +92,7 @@ essentially, <m>y=\sqrt{1-z^2}</m>.  See the figure on the right below.
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside widths="45% 55%" valign="middle">
 <image source="figs/sphereMass2"/>
 <image source="figs/sphereMass2a"/>
 </sidebyside>
@@ -113,7 +113,7 @@ essentially, <m>x=\sqrt{1-y^2-z^2}</m>.  See the figure on the right below.
 </li>
 </ul></p>
 
-<sidebyside>
+<sidebyside widths="50% 40%" valign="middle">
 <image source="figs/sphereMass3"/>
 <image source="figs/sphereMass3a"/>
 </sidebyside>
@@ -169,22 +169,23 @@ add up the masses of the plates that it contains, by integrating <m>z</m> from i
 namely  <m>1</m>. The mass in the first octant is thus
 <md>
 <mrow>
-\int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\int_0^{\sqrt{1-y^2-z^2}}  \dee{x}\,xyz
-&amp;= \int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\ yz
+&amp;\int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\int_0^{\sqrt{1-y^2-z^2}}  \dee{x}\,xyz
+</mrow><mrow>
+&amp;\hskip0.5in= \int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\ yz
           \left[\int_0^{\sqrt{1-y^2-z^2}}  \dee{x}\,x\right]
 </mrow><mrow>
-&amp;= \int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\
+&amp;\hskip0.5in= \int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\
               \frac{1}{2}yz \big(1-y^2-z^2\big)
 </mrow><mrow>
-&amp;=\int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\
+&amp;\hskip0.5in=\int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\
                       \left[\frac{z(1-z^2)}{2}y-\frac{z}{2}y^3\right]
 </mrow><mrow>
-&amp;=\int_0^1\dee{z}\ \left[\frac{z{(1-z^2)}^2}{4}-\frac{z{(1-z^2)}^2}{8}\right]
+&amp;\hskip0.5in=\int_0^1\dee{z}\ \left[\frac{z{(1-z^2)}^2}{4}-\frac{z{(1-z^2)}^2}{8}\right]
 </mrow><mrow>
-&amp;=-\int_1^0\dee{u}\ \frac{u^2}{16}
+&amp;\hskip0.5in=-\int_1^0\dee{u}\ \frac{u^2}{16}
            \qquad\text{with }u=1-z^2,\ \dee{u}=-2z\,\dee{z}
 </mrow><mrow>
-&amp;=\frac{1}{48}
+&amp;\hskip0.5in=\frac{1}{48}
 </mrow>
 </md>
 </li>
@@ -200,11 +201,12 @@ So the mass of the total (eight octant) sphere is <m>8\times\frac{1}{48}=\frac{1
 <p>Consider, for example, the limits of integration for the integral
 <md>
 <mrow>
-\int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\int_0^{\sqrt{1-y^2-z^2}}  \dee{x}\,xyz
-=\int_0^1\left(\int_0^{\sqrt{1-z^2}}\left(\int_0^{\sqrt{1-y^2-z^2}}  xyz\ \dee{x}\right)\dee{y} \right)\dee{z}
+&amp;\int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\int_0^{\sqrt{1-y^2-z^2}}  \dee{x}\,xyz
+</mrow><mrow>
+&amp;\hskip0.5in=\int_0^1\left(\int_0^{\sqrt{1-z^2}}\left(\int_0^{\sqrt{1-y^2-z^2}}  xyz\ \dee{x}\right)\dee{y} \right)\dee{z}
 </mrow>
 </md>
-that we have just evaluated.
+that we have just evaluated in Example  <xref ref="eg_sphere_mass_A"/>.
 <ul>
 <li>
 When we are integrating over the innermost integral, with respect to <m>x</m>,
@@ -260,7 +262,7 @@ That's
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside widths="30% 30% 30%" valign="middle">
 <image source="figs/limits3dA"/>
 <image source="figs/limits3dB"/>
 <image source="figs/limits3dC"/>
@@ -275,7 +277,7 @@ For this iterated integral, the outside integral is with respect to
 as in the figure below.
 </p>
 
-<sidebyside>
+<sidebyside width="80%">
 <image source="figs/limits3dD"/>
 </sidebyside>
 
@@ -313,7 +315,7 @@ For this iterated integral, the outside integral is with respect to
 as in the figure below.
 </p>
 
-<sidebyside>
+<sidebyside width="75%">
 <image source="figs/limits3dE"/>
 </sidebyside>
 
@@ -361,8 +363,6 @@ figure out the limits of integration for both the order
 
 <p>Our first task is to get a good idea as to what the domain of integration looks like. We start by reading off of the given integral that
 <ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
 <li>
 the outside integral says that <m>y</m> runs from <m>0</m> to <m>2</m>, and
 </li>
@@ -392,9 +392,9 @@ Here, on the left, is a (2d) sketch of all <m>(x,z)</m>'s that obey those
 inequalities, and, on the right, is a (3d) sketch of all <m>(x,Y,z)</m>'s that obey those inequalities.
 </p>
 
-<sidebyside>
-<image source="figs/figs_integration/xchange2"/>
-<image source="figs/figs_integration/xchange5"/>
+<sidebyside widths="40% 40%" valign="middle">
+<image source="figs/xchange2"/>
+<image source="figs/xchange5"/>
 </sidebyside>
 
 <p>
@@ -405,8 +405,8 @@ i.e. a point, when <m>Y=2</m>.
 Here is a sketch of <m>V</m> together with a typical <m>y=Y</m> rectangle.
 </p>
 
-<sidebyside>
-<image source="figs/figs_integration/xchange4"/>
+<sidebyside width="50%">
+<image source="figs/xchange4"/>
 </sidebyside>
 
 <p>
@@ -422,13 +422,16 @@ x\ge 0\qquad
 2x+y\le 2
 </mrow>
 </md>
-Here, on the left, is a (2d) sketch showing the top view of all <m>(x,y)</m>'s
-that obey those inequalities, and, on the right, is a (3d) sketch of all <m>(x,y,Z)</m>'s that obey those inequalities.
+Here, on the top, is a (2d) sketch showing the top view of all <m>(x,y)</m>'s
+that obey those inequalities, and, on the bottom, is a (3d) sketch of all <m>(x,y,Z)</m>'s that obey those inequalities.
 </p>
 
-<sidebyside>
-<image source="figs/figs_integration/xchange3"/>
-<image source="figs/figs_integration/xchange6"/>
+<sidebyside widths="66%">
+<image source="figs/xchange3"/>
+</sidebyside>
+
+<sidebyside widths="66%">
+<image source="figs/xchange6"/>
 </sidebyside>
 
 <p>
@@ -436,8 +439,8 @@ To express <m>I</m> as an integral with the order of integration
 <m>\int\dee{z}\int\dee{y}\int\dee{x}\ f(x,y,z)</m>, we subdivide the plate at height <m>z</m> into vertical strips as in the figure
 </p>
 
-<sidebyside>
-<image source="figs/figs_integration/xchange3v"/>
+<sidebyside width="66%">
+<image source="figs/xchange3v"/>
 </sidebyside>
 
 <p>
@@ -459,8 +462,8 @@ Alternatively, to express <m>I</m> as an integral with the order of integration
 <m>\int\dee{z}\int\dee{x}\int\dee{y}\ f(x,y,z)</m>, we subdivide the plate at height <m>z</m> into horizontal strips as in the figure
 </p>
 
-<sidebyside>
-<image source="figs/figs_integration/xchange3h"/>
+<sidebyside width="66%">
+<image source="figs/xchange3h"/>
 </sidebyside>
 
 <p>

@@ -142,7 +142,7 @@ of the given planes.
 </p></statement>
 
 <hint><p>
-Review Example <xref ref="eg_line_equations"/> in the CLP-3 text.
+Review Example <xref ref="eg_line_equations"/>.
 </p></hint>
 
 <answer><p>
@@ -200,7 +200,7 @@ of the planes
 </p></statement>
 
 <hint><p>
-Review Example <xref ref="eg_line_equations"/> in the CLP-3 text.
+Review Example <xref ref="eg_line_equations"/>.
 </p></hint>
 
 <answer><p>
@@ -462,7 +462,7 @@ Write a vector parametric equation for <m>L</m>.
 </p></statement>
 
 <hint><p>
-Review Example <xref ref="eg_line_equations"/> in the CLP-3 text.
+Review Example <xref ref="eg_line_equations"/>.
 </p></hint>
 
 <answer><p>
@@ -507,7 +507,7 @@ Find the distance from <m>(1,0,1)</m> to the line
 </p></statement>
 
 <hint><p>
-Review Example <xref ref="eg_VPdistance-point-line"/> in the CLP-3 text.
+Review Example <xref ref="eg_VPdistance-point-line"/>.
 </p></hint>
 
 <answer><p>
@@ -552,7 +552,7 @@ The vector from <m>(1,0,1)</m> to the point <m>(5+4t,3+t,-2t)</m> on the line
 is <m>\llt 4+4t,3+t,-1-2t\rgt</m>. In order for <m>(5+4t,3+t,-2t)</m> to be the point
 of the line closest to <m>(1,0,1)</m>, the vector <m>\llt 4+4t,3+t,-1-2t\rgt</m>
 joining those two points must be perpendicular to the direction vector
-<m>\llt 4,1,-2\rgt </m> of the line. (See Example <xref ref="eg_VPdistance-point-line"/>  in the CLP-3 text.)
+<m>\llt 4,1,-2\rgt </m> of the line. (See Example <xref ref="eg_VPdistance-point-line"/>.)
 This is the case when
 <md>
 <mrow>
@@ -591,7 +591,7 @@ Find the distance from <m>L_2</m> to <m>P</m>.
 </p></statement>
 
 <hint><p>
-Review Example <xref ref="eg_VPdistance-point-plane"/> in the CLP-3 text.
+Review Example <xref ref="eg_VPdistance-point-plane"/>.
 </p></hint>
 
 <answer><p>
@@ -625,7 +625,7 @@ same as the distance from any one point of <m>L_2</m>, for example <m>(-3,4,-1)<
 to <m>P</m>. As <m>(1,-2,-5)</m> is a point on <m>P</m>, the vector
 <m>\llt 1,-2,-5\rgt-\llt -3, 4,-1\rgt =\llt 4,-6,-4\rgt </m> has its head on <m>P</m>
 and tail at <m>(-3,4,-1)</m> on <m>L_2</m>.
-The distance from <m>L_2</m> to <m>P</m> is the length of the projection of the vector <m>\llt 4,-6,-4\rgt </m> on the normal to <m>P</m>. (See Example <xref ref="eg_VPdistance-point-plane-bis"/> in the CLP-3 text.) This is
+The distance from <m>L_2</m> to <m>P</m> is the length of the projection of the vector <m>\llt 4,-6,-4\rgt </m> on the normal to <m>P</m>. (See Example <xref ref="eg_VPdistance-point-plane-bis"/>.) This is
 <me>
 \left|\text{proj}_{\llt 8,2,-11\rgt}\llt 4,-6,-4\rgt\right|
 =\frac{|\llt 4,-6,-4\rgt \cdot\llt 8,2,-11\rgt|} {|\llt 8,2,-11\rgt|}
@@ -819,7 +819,7 @@ by the equation <m>x - y + 2z = 0</m>. Find <m>\alpha</m>.
 
 <hint><p>
 Review the properties of the dot product in
-Theorem <xref ref="thm_dotPppties"/> of the CLP-3 text.
+Theorem <xref ref="thm_dotPppties"/>.
 </p></hint>
 
 <answer><p>
@@ -1150,8 +1150,7 @@ Calculate the distance between the lines
 </p></statement>
 
 <hint><p>
-Review Example <xref ref="eg_VPdistance-line-line-bis"/>
-in the CLP-3 text.
+Review Example <xref ref="eg_VPdistance-line-line-bis"/>.
 </p></hint>
 
 <answer><p>
@@ -1159,8 +1158,7 @@ in the CLP-3 text.
 </p></answer>
 
 <solution><p>
-We'll use the procedure of Example <xref ref="eg_VPdistance-line-line-bis"/>
-in the CLP-3 text.
+We'll use the procedure of Example <xref ref="eg_VPdistance-line-line-bis"/>.
 The vector
 <me>
 \llt 3,-4,4\rgt \times\llt -3,4,1\rgt

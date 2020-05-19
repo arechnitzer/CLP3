@@ -19,22 +19,19 @@
   </sidebyside>
 
   <p>
-  An equivalent
-  <fn>It is outside our scope to prove this equivalence.</fn>
+  An equivalent<fn>It is outside our scope to prove this equivalence.</fn>
   (and often used) definition is that a conic section is the set of all points
-  in the <m>xy</m>--plane that obey <m>Q(x,y)=0</m> with
+  in the <m>xy</m>-plane that obey <m>Q(x,y)=0</m> with
   <me>
   Q(x,y) = Ax^2 + By^2 + Cxy + Dx + Ey + F =0
   </me>
-  being a polynomial of degree two
-  <fn>Technically, we should also require
+  being a polynomial of degree two<fn>Technically, we should also require
   that the constants <m>A</m>, <m>B</m>, <m>C</m>, <m>D</m>, <m>E</m>, <m>F</m>, are real numbers,
   that <m>A</m>, <m>B</m>, <m>C</m> are not all zero, that <m>Q(x,y)=0</m> has more than one
   real solution, and that the polynomial can't be factored
   into the product of two polynomials of degree one.</fn>.
   By rotating and translating  our coordinate system the equation of the conic section can be brought
-  into one of the forms
-  <fn>This statement can be justified using a
+  into one of the forms<fn>This statement can be justified using a
   linear algebra eigenvalue/eigenvector analysis. It is
   beyond what we can cover here, but is not too difficult for a standard
   linear algeba course.</fn>
@@ -80,7 +77,7 @@
                </p>
                <p> <m>\frac{x^2}{a^2}-\frac{y^2}{b^2}=1</m>
                </p>
-               <p> <m>x^2+y^2+z^2=r^2</m></p>
+               <p> <m>x^2\!+\!y^2\!+\!z^2=r^2</m></p>
 </sidebyside><sidebyside>
   <p> <m>x=</m>constant cross-section
               </p><p> two lines
@@ -112,6 +109,7 @@
 <figure><caption>Table of quadric surfaces-1</caption>
 <sbsgroup valign="middle" width="22%">
   <sidebyside>
+    <p> name </p>
     <p> ellipsoid </p>
     <p> elliptic paraboloid</p>
     <p>elliptic cone</p>
@@ -180,7 +178,7 @@
   <p> ellipse </p>
   <p> two lines if <m>z=0</m>, hyperbola if <m>z\ne 0</m> </p>
 </sidebyside><sidebyside>
-<p>sketch></p>
+<p>sketch</p>
   <image source="figs/hyperboloid1.svg"/>
   <image source="figs/hyperboloid2.svg"/>
   <image source="figs/hyperbolic_paraboloid.svg"/>

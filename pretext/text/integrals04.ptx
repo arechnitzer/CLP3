@@ -22,7 +22,7 @@ the plane <m>y=y_0</m> for some constant <m>y_0</m>.
 </ul>
 </p>
 
-<sidebyside>
+<sidebyside width="33%">
 <image source="figs/sphericaldSxy"/>
 </sidebyside>
 <p>
@@ -30,7 +30,7 @@ Concentrate on any one the tiny pieces. Here is a greatly magnified
 sketch of it, looking at it from above.
 </p>
 
-<sidebyside>
+<sidebyside width="45%">
 <image source="figs/dSfxy"/>
 </sidebyside>
 <p>
@@ -71,8 +71,7 @@ P_2&amp;=(x_0+\dee{x})\,\hi+y_0\,\hj + f(x_0+\dee{x},y_0)\,\hk
 </mrow>
 </md>
 Now, for any small constants <m>\dee{X}</m> and <m>\dee{Y}</m>, we have the linear
-approximation
-<fn>Recall <xref ref="eqn_lin_approx_2d"/>.</fn>
+approximation<fn>Recall <xref ref="eqn_lin_approx_2d"/>.</fn>
 <md>
 <mrow>
 f(x_0+\dee{X},y_0+\dee{Y})
@@ -111,7 +110,7 @@ error terms that we dropped contribute exactly <m>0</m> to the integral.
 surface with corners <m>P_0</m>, <m>P_1</m>, <m>P_2</m>, <m>P_3</m>  is approximately a parallelogram with sides
 </p>
 
-<sidebyside >
+<sidebyside widths="40% 25%" valign="middle">
 <p>
 <md>
 <mrow>
@@ -135,11 +134,10 @@ Denote by <m>\theta</m> the angle between the vectors
 The base of the parallelogram, <m>\overrightarrow{P_0P_1}</m>,
 has length <m>\big|\overrightarrow{P_0P_1}\big|</m>, and the height of the
 parallelogram is <m>\big|\overrightarrow{P_0P_2}\big|\,\sin\theta</m>.
-So the area of the parallelogram is
-<fn>As we mentioned above,
+So the area of the parallelogram is<fn>As we mentioned above,
 the approximation below becomes exact when the limit <m>\dee{x}
 ,\dee{y}\rightarrow 0</m> is taken in the definition of the integral.
-See §\eref{CLP317}{sec:hoterms} in the CLP-4 text.</fn>, by
+See §3.3.5 in the CLP-4 text.</fn>, by
 Theorem <xref ref="thm_crossPppties"/>,
 <md>
 <mrow>
@@ -147,7 +145,7 @@ Theorem <xref ref="thm_crossPppties"/>,
 =|\overrightarrow{P_0P_1}|\ |\overrightarrow{P_0P_2}| \ \sin\theta
 &amp;= \big|\overrightarrow{P_0P_1}\times\overrightarrow{P_0P_2}\big|
 </mrow><mrow>
-&amp;\approx \bigg|\left(\hj\ +\   \pdiff{f}{y}(x_0\,,\,y_0)\,\hk\right)\times
+&amp;\hskip-0.5in\approx \bigg|\left(\hj\ +\   \pdiff{f}{y}(x_0\,,\,y_0)\,\hk\right)\times
               \left(\hi\ +\   \pdiff{f}{x}(x_0\,,\,y_0)\,\hk\right)\bigg|
           \dee{x}\dee{y}
 </mrow>
@@ -163,15 +161,15 @@ The cross product is easily evaluated:
            1 &amp; 0 &amp; \frac{\partial f}{\partial x}(x_0,y_0)
            \end{matrix}\right]
 </mrow><mrow>
-&amp;= f_x(x_0,y_0)\,\hi + f_y(x_0,y_0)\,\hj - \hk
+&amp;\hskip-0.5in= f_x(x_0,y_0)\,\hi + f_y(x_0,y_0)\,\hj - \hk
 </mrow>
 </md>
 as is its length:
 <md>
 <mrow>
-\left|\left(\hj\ +\   \pdiff{f}{y}(x_0\,,\,y_0)\,\hk\right)\times
+&amp;\left|\left(\hj\ +\   \pdiff{f}{y}(x_0\,,\,y_0)\,\hk\right)\times
               \left(\hi\ +\   \pdiff{f}{x}(x_0\,,\,y_0)\,\hk\right)\right|
-&amp;= \sqrt{1 + f_x(x_0,y_0)^2 + f_y(x_0,y_0)^2}
+</mrow><mrow>&amp;\hskip1in= \sqrt{1 + f_x(x_0,y_0)^2 + f_y(x_0,y_0)^2}
 </mrow>
 </md>
 Throughout this computation, <m>x_0</m> and <m>y_0</m> were arbitrary.
@@ -243,63 +241,6 @@ region <m>\cD</m> in the <m>xz</m>-plane is
 </p></statement>
 </theorem>
 
-<!--
-\intremark{
-The formulae like
-<m>\dee{S}= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\ \dee{x}\dee{y}</m>
-in <xref ref="eq_dSgraph"/> have geometric interpretations. The red
-parallelogram in the sketch
-</p>
-
-<sidebyside>
-<image source="figs/surfaceProj"/>
-</sidebyside>
-represents a little piece of our surface. It has area
-<m>\dee{S}= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\ \dee{x}\dee{y}</m>.
-The blue parallelogram in the same sketch represents the projection
-of the red parallelogram onto the <m>xy</m>-plane. It has area <m>\dee{x}\dee{y}</m>.
-The vector <m>\hn</m> in the sketch is a unit normal for the red parallelogram.
-We have seen that it is parallel to
-<me>
-\frac{\partial\vr}{\partial x}\times
-              \frac{\partial\vr}{\partial y}
-= -f_x(x,y)\,\hi - f_y(x,y)\,\hj + \hk
-</me>
-so that the angle <m>\theta</m> between <m>\hn</m> and <m>\hk</m> obeys
-<md>
-<mrow>
-\cos\theta &amp;= \frac{(-f_x(x,y)\,\hi - f_y(x,y)\,\hj + \hk)\cdot\hk}
-                 {\big|-f_x(x,y)\,\hi - f_y(x,y)\,\hj + \hk\big|\,|\hk|}
-</mrow><mrow>
-&amp;=\frac{1}{\sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}}
-</mrow>
-</md>
-The geometric interpretation of
-<m>\dee{S}= \sqrt{1 + f_x(x,y)^2 + f_y(x,y)^2}\ \dee{x}\dee{y}</m>
-is that the area <m>\dee{S}</m> of a little piece of surface is the
-area of its projection on the <m>xy</m>-plane times the factor
-<m>\frac{1}{\cos\theta}</m> where <m>\theta</m> is the angle between <m>\hn</m>
-(which is perpendicular to the surface) and <m>\hk</m> (which is
-perpendicular to the <m>xy</m>-plane). Notice that
-<ul>
-<li>sep1pt \parskip0pt \parsep0pt
-</li>
-<li>[<m>\circ</m>]
-when <m>\theta</m> is close to zero, which corresponds the <m>f</m> being almost constant
-and our surface being almost parallel to the <m>xy</m>-plane, <m>\dee{S}</m>
-reduces to almost <m>\dee{x}\dee{y}</m>.
-</li>
-<li>[<m>\circ</m>]
-On the other hand, in the limit <m>\theta\rightarrow\frac{\pi}{2}</m>, which
-corresponds to <m>f_x</m> and/or <m>f_y</m> becoming infinite
-and our surface becoming perpendicular to the <m>xy</m>-plane,
-<m>\dee{S}</m> becomes <q>infinity times</q> <m>\dee{x}\dee{y}</m>. In this case,
-we should represent our surface either in the form <m>x=g(y,z)</m>
-or in the form <m>y=h(x,z)</m>, rather than in the form <m>z=f(x,y)</m>.
-</li>
-</ul>
-}
- -->
 
 <example xml:id="eg_area_cone"><title>Area of a cone</title>
 <p>
@@ -311,7 +252,7 @@ z=\sqrt{x^2+y^2}
 with <m>0\le z\le a</m> or, equivalently, with <m>x^2+y^2\le a^2</m>.
 </p>
 
-<sidebyside>
+<sidebyside width= "20%">
 <image source="figs/cone"/>
 </sidebyside>
 <p>
@@ -382,7 +323,7 @@ that is in the first octanct, which is
 </me>
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 40%">
 <image source="figs/cylinderF"/>
 <image source="figs/cylinderG"/>
 </sidebyside>
@@ -454,8 +395,7 @@ x^2+y^2+z^2=a^2\qquad z\ge 0
 (with <m>a \gt 0</m>).
 You probably know, from high school, that the answer is
 <m>\frac{1}{2}\times 4\pi a^2=2\pi a^2</m>. But you have probably
-not seen a derivation
-<fn>There is a pun hidden here, because
+not seen a derivation<fn>There is a pun hidden here, because
 you can (with a little thought) also get the surface area by differentiating
 the volume with respect to the radius.</fn>
  of this answer.

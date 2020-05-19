@@ -19,13 +19,15 @@ Find the linear approximation to <m>P(x_0+\De x,y_0+\De y)</m>.
 </li>
 <li>
 Denote by
-<me>
-P_\% = 100\left|\frac{P(x_0+\De x,y_0+\De y)-P(x_0,y_0)}{P(x_0,y_0)}\right|
-\qquad
-x_\% = 100\left|\frac{\De x}{x_0}\right|
-\qquad
-y_\% = 100\left|\frac{\De y}{y_0}\right|
-</me>
+<md>
+<mrow>
+P_\% &amp;= 100\left|\frac{P(x_0+\De x,y_0+\De y)-P(x_0,y_0)}{P(x_0,y_0)}\right|
+</mrow><mrow>
+x_\% &amp;= 100\left|\frac{\De x}{x_0}\right|
+</mrow><mrow>
+y_\% &amp;= 100\left|\frac{\De y}{y_0}\right|
+</mrow>
+</md>
 the percentage errors in <m>P</m>, <m>x</m> and <m>y</m> respectively. Use the linear approximation to find an (approximate) upper bound on <m>P_\%</m> in terms of
 <m>m</m>, <m>n</m>, <m>x_\%</m> and <m>y_\%</m>.
 </li>
@@ -35,7 +37,7 @@ the percentage errors in <m>P</m>, <m>x</m> and <m>y</m> respectively. Use the l
 </statement>
 
 <hint><p>
-Review Example <xref ref="eg_errors_in_measurement"/> in the CLP-3 text.
+Review Example <xref ref="eg_errors_in_measurement"/>.
 Be careful when taking absolute values.
 </p></hint>
 
@@ -53,7 +55,7 @@ Be careful when taking absolute values.
 P_x(x_0,y_0) = m x_0^{m-1} y_0^n\qquad
 P_y(x_0,y_0) = n x_0^m y_0^{n-1}
 </me>
-So, by (<xref ref="eqn_lin_approx_2d"/>) in the CLP-3 text, the
+So, by (<xref ref="eqn_lin_approx_2d"/>), the
 linear approximation is
 <md>
 <mrow>
@@ -70,7 +72,8 @@ P(x_0+\De x,y_0+\De y)
 <mrow>
 \frac{P(x_0+\De x,y_0+\De y)-P(x_0,y_0)}{P(x_0,y_0)}
 &amp;\approx \frac{mx_0^{m-1}y_0^n\,\De x  + nx_0^m y_0^{n-1}\,\De y}{x_0^my_0^n}
- =m\frac{\De x}{x_0} + n\frac{\De y}{y_0}
+</mrow><mrow>
+&amp;=m\frac{\De x}{x_0} + n\frac{\De y}{y_0}
 </mrow>
 </md>
 Hence
@@ -172,16 +175,16 @@ We used that <m>\diff{}{\theta}\sin\theta = \cos\theta</m>. That is true only if
 
 <solution><p>
 We used that <m>\diff{}{\theta}\sin\theta = \cos\theta</m>. That is true only if <m>\theta</m> is given in radians, not degrees.
-(See Lemma \eref{CLP100}{lem DIFFsincos} and
-Warning \eref{CLP100}{warning:radians} in the CLP-1 text.)
+(See Lemma 2.8.3 and Warning 3.4.23 in the CLP-1 text.)
 So we have to convert <m>2^\circ</m>
 to radians, which is <m>2\times\frac{\pi}{180}=\frac{\pi}{90}</m>.
 The correct computation is
 <md>
 <mrow>
-Y\big(0.9,\tfrac{\pi}{90}\big) = Y\big(1-0.1\,,\, 0+\tfrac{\pi}{90}\big)
+Y\big(0.9,\tfrac{\pi}{90}\big) &amp;= Y\big(1-0.1\,,\, 0+\tfrac{\pi}{90}\big)
    \approx 0\ +\ (0)\,(-0.1)\ +\ (1)\big(\tfrac{\pi}{90}\big)
-         =\tfrac{\pi}{90}
+   </mrow><mrow>      
+   &amp;=\tfrac{\pi}{90}
    \approx 0.035
 </mrow>
 </md>
@@ -226,7 +229,8 @@ This gives
 <md>
 <mrow>
 f(0.01,1.05)&amp;\approx f(0,1)+f_x(0,1)(0.01)+f_y(0,1)(0.05)
-=0+\pi(0.01)+1(0.05)
+</mrow><mrow>
+&amp;=0+\pi(0.01)+1(0.05)
 </mrow><mrow>
 &amp;=0.01\,\pi + 0.05
 \approx 0.0814
@@ -266,8 +270,9 @@ f_y(-1,1)&amp;=\frac{1}{3} -\frac{4}{3^2}=-\frac{1}{9}
 <p>The linear approximation to <m>f(x,y)</m> about <m>(-1,1)</m> is
 <md>
 <mrow>
-f(x,y)\approx=f(-1,1) + f_x(-1,1)\,(x+1) + f_y(-1,1)\,(y-1)
- =\frac{1}{3} -\frac{2}{9}\,(x+1) -\frac{1}{9}\,(y-1)
+f(x,y)&amp;\approx f(-1,1) + f_x(-1,1)\,(x+1) + f_y(-1,1)\,(y-1)
+</mrow><mrow>
+&amp; =\frac{1}{3} -\frac{2}{9}\,(x+1) -\frac{1}{9}\,(y-1)
 </mrow>
 </md>
 In particular
@@ -308,15 +313,16 @@ and <m>x_4+\veps_4</m>. Then <m>0\le x_1,x_2,x_3,x_4\le 50</m> and
 <m>|\veps_1|,|\veps_2|,|\veps_3|,|\veps_4|\le 0.05</m>. If
 <m>P(x_1,x_2,x_3,x_4)=x_1x_2x_3x_4</m>, then the error in the product
 introduced by rounding is, using the four variable variant of the
-linear approximation (<xref ref="eqn_lin_approx_3d"/>) of the CLP-3 text,
+linear approximation (<xref ref="eqn_lin_approx_3d"/>),
 <md>
 <mrow>
 &amp;\big|P(x_1+\veps_1,x_2+\veps_2,x_3+\veps_3,x_4+\veps_4)-P(x_1,x_2,x_3,x_4)\big|
 </mrow><mrow>
-&amp;\approx\big|\pdiff{P}{x_1}(x_1,x_2,x_3,x_4)\veps_1
+&amp;\approx\Big|\pdiff{P}{x_1}(x_1,x_2,x_3,x_4)\veps_1
 +\pdiff{P}{x_2}(x_1,x_2,x_3,x_4)\veps_2
-+\pdiff{P}{x_3}(x_1,x_2,x_3,x_4)\veps_3
-+\pdiff{P}{x_4}(x_1,x_2,x_3,x_4)\veps_4\big|
+</mrow><mrow>
+&amp;\hskip0.5in+\pdiff{P}{x_3}(x_1,x_2,x_3,x_4)\veps_3
++\pdiff{P}{x_4}(x_1,x_2,x_3,x_4)\veps_4\Big|
 </mrow><mrow>
 &amp;=\big|x_2x_3x_4\veps_1
 +x_1x_3x_4\veps_2
@@ -367,8 +373,9 @@ f_y(x,y)&amp;=\frac{y}{\sqrt{x^2+y^2}} &amp;
 By the linear approximation
 <md>
 <mrow>
-f(x,y)\approx f(3,4) + f_x(3,4)\,(x-3) + f_y(3,4)\,(y-4)
-      =5 +\frac{3}{5}\,(x-3)  +\frac{4}{5}\,(y-4)
+f(x,y)&amp;\approx f(3,4) + f_x(3,4)\,(x-3) + f_y(3,4)\,(y-4)
+</mrow><mrow>
+     &amp; =5 +\frac{3}{5}\,(x-3)  +\frac{4}{5}\,(y-4)
 </mrow>
 </md>
 So the approximate maximum error in calculating the length of the hypotenuse
@@ -463,7 +470,7 @@ maximum error in the calculated value of <m>R</m>.
 
 <hint><p>
 Review the relationship between absolute error and percentage error
-given in Definition <xref ref="def_error"/> in the CLP-3 text.
+given in Definition <xref ref="def_error"/>.
 </p></hint>
 
 <answer><p>
@@ -494,11 +501,14 @@ for <m>R(R_1,R_2,R_3)</m> gives
 </mrow>
 </md>
 When <m>R_1=25\Om</m>, <m>R_2=40\Om</m> and <m>R_3=50\Om</m>
-<me>
-\frac{1}{R(25,40,50)}=\frac{1}{25}+\frac{1}{40}+\frac{1}{50}
-=\frac{8+5+4}{200}\implies
+<md>
+<mrow>
+\frac{1}{R(25,40,50)}&amp;=\frac{1}{25}+\frac{1}{40}+\frac{1}{50}
+=\frac{8+5+4}{200}
+</mrow><mrow>&amp;\implies
 R(25,40,50)=\frac{200}{17}=11.765
-</me>
+</mrow>
+</md>
 Substituting in these values of <m>R_1</m>, <m>R_2</m>, <m>R_3</m> and <m>R</m>,
 <md alignment="alignat">
 <mrow>
@@ -514,8 +524,7 @@ Substituting in these values of <m>R_1</m>, <m>R_2</m>, <m>R_3</m> and <m>R</m>,
 </md>
 If the absolute errors in measuring <m>R_1</m>, <m>R_2</m> and <m>R_3</m> are denoted
 <m>\veps_1</m>, <m>\veps_2</m> and <m>\veps_3</m>, respectively, then,
-, using the linear approximation (<xref ref="eqn_lin_approx_3d"/>)
-of the CLP-3 text, the corresponding error <m>E</m> in <m>R</m> is
+, using the linear approximation (<xref ref="eqn_lin_approx_3d"/>), the corresponding error <m>E</m> in <m>R</m> is
 <md>
 <mrow>
 E &amp;= R(25+\veps_1,40+\veps_2,50+\veps_3)-R(25,40,50)
@@ -536,11 +545,15 @@ and obeys
 </md>
 We are told that the percentage error in each measurement is no more that
 <m>0.5\%</m>. So
-<me>
-|\veps_1|\le \frac{0.5}{100}25=\frac{1}{8}=0.125\qquad
-|\veps_2|\le \frac{0.5}{100}40=\frac{1}{5}=0.2\qquad
-|\veps_3|\le \frac{0.5}{100}50=\frac{1}{4}=0.25
-</me>
+<md>
+<mrow>
+|\veps_1|&amp;\le \frac{0.5}{100}25=\frac{1}{8}=0.125
+</mrow><mrow>
+|\veps_2|&amp;\le \frac{0.5}{100}40=\frac{1}{5}=0.2
+</mrow><mrow>
+|\veps_3|&amp;\le \frac{0.5}{100}50=\frac{1}{4}=0.25
+</mrow>
+</md>
 so that
 <md>
 <mrow>
@@ -705,15 +718,18 @@ The sag will be more sensitive to changes in height.
 
 <solution><p>
 Using the four variable variant of the linear approximation
-(<xref ref="eqn_lin_approx_3d"/>) of the CLP-3 text,
-<me>
-\De S\approx \pdiff{S}{p}\De p
+(<xref ref="eqn_lin_approx_3d"/>),
+<md>
+<mrow>
+\De S&amp;\approx \pdiff{S}{p}\De p
        +\pdiff{S}{\ell}\De \ell
        +\pdiff{S}{w}\De w
        +\pdiff{S}{h}\De h
-   =C\frac{p\ell^4}{w h^3}\left[\frac{\De p}{p}+4\frac{\De\ell}{\ell}
+ </mrow><mrow>
+   &amp;  =C\frac{p\ell^4}{w h^3}\left[\frac{\De p}{p}+4\frac{\De\ell}{\ell}
                 -\frac{\De w}{w}-3\frac{\De h}{h}   \right]
-</me>
+</mrow>
+</md>
 When <m>w\approx0.1</m> and <m>h\approx0.2</m>,
 <me>
 \frac{\De w}{w}\approx 10\De w\qquad
@@ -804,8 +820,8 @@ for all <m>x</m> and <m>y</m> (sufficiently close to <m>(-1,1)</m>).
 Differentiating <m>(*)</m> with respect to <m>x</m> gives
 <md>
 <mrow>
-y\,f(x,y) +xy\,f_x(x,y) +  1  + 3f(x,y)^2 f_x(x,y) = 0
-\implies
+&amp;y\,f(x,y) +xy\,f_x(x,y) +  1  + 3f(x,y)^2 f_x(x,y) = 0
+</mrow><mrow>&amp;\hskip1in\implies
 f_x(x,y) = -\frac{y\,f(x,y) +1}{3f(x,y)^2 +xy}
 </mrow>
 </md>
@@ -818,7 +834,8 @@ Without knowing <m>f(x,y)</m> explicitly, there's not much that we can do with t
 \iff f(-1,1)^3 -f(-1,1) =0
 </me>
 Since <m>f(-1, 1)  \lt  0</m> we may divide this equation by <m>f(-1, 1)  \lt  0</m>,
-giving <m>f(-1,1)^2 - 1=0</m>. Since <m>f(-1, 1)  \lt  0</m>, we must have <m>f(-1, 1)=-1</m>.
+giving <m>f(-1,1)^2 - 1=0</m>. Since <m>f(-1, 1)  \lt  0</m>, we must have 
+<m>f(-1, 1)=-1</m>.
 By part (a)
 <md>
 <mrow>
@@ -832,14 +849,17 @@ Differentiating <m>(*)</m> with respect to <m>y</m> gives
 x\,f(x,y) + xy\,f_y(x,y)  + 2y + 3f(x,y)^2 f_y(x,y) =0
 </me>
 Then setting <m>x=-1</m>, <m>y=1</m> and <m>f(-1,1)=-1</m> gives
-<me>
-(-1)\,(-1) + (-1)(1)\,f_y(-1,1)  + 2(1) + 3(-1)^2 f_y(-1,1) =0
-\implies f_y(-1,1) =-\frac{3}{2}
-</me>
+<md>
+<mrow>
+&amp;(-1)\,(-1) + (-1)(1)\,f_y(-1,1)  + 2(1) + 3(-1)^2 f_y(-1,1) =0
+</mrow><mrow>
+&amp;\hskip1in\implies f_y(-1,1) =-\frac{3}{2}
+</mrow>
+</md>
 So the linear approximation is
 <me>
-f(x,y) \approx f(-1,1) + f_x(-1,1)\,(x+1) + f_y(-1,1)\,(y-1)
-           = -1 -\frac{3}{2} (y-1)
+f(x,y) \approx f(-1,1) + f_x(-1,1)\,(x\!+\!1) + f_y(-1,1)\,(y\!-\!1)
+           = -1 -\frac{3}{2} (y\!-\!1)
 </me>
 </p>
 
@@ -1038,16 +1058,17 @@ dimensions. Then the volume of the can, including the metal, is <m>V(8,12)</m>
 and the volume of the interior, excluding the metal, is
 <md>
 <mrow>
-V(8-2\times0.04\,,\,12-2\times 0.04)
-&amp;\approx  V(8,12)
+&amp;V(8-2\times0.04\,,\,12-2\times 0.04)
+</mrow><mrow>
+&amp;\hskip0.5in\approx  V(8,12)
 +V_d(8,12)(-2\times 0.04)
 +V_h(8,12)(-2\times 0.04)
 </mrow><mrow>
-&amp;=V(8,12)
+&amp;\hskip0.5in=V(8,12)
 +\frac{1}{2}\pi\times 8\times 12\times(-2\times 0.04)
 +\pi\left(\frac{8}{2}\right)^2\!\!(-2\times 0.04)
 </mrow><mrow>
-&amp;=V(8,12)
+&amp;\hskip0.5in=V(8,12)
 -\pi\times 128\times 0.04
 </mrow>
 </md>
@@ -1110,7 +1131,9 @@ Substituting in <m>x=2</m>, <m>y=4</m> and <m>z(2,4)=1</m> gives
 The linear approximation is
 <md>
 <mrow>
-z(x,y)&amp;\approx z(2,4)+z_x(2,4)(x-2)+z_y(2,4)(y-4)= 1-4(x-2)+2(y-4)
+z(x,y)&amp;\approx z(2,4)+z_x(2,4)(x-2)+z_y(2,4)(y-4)
+</mrow><mrow>
+&amp;= 1-4(x-2)+2(y-4)
 </mrow><mrow>
 &amp;=1-4x+2y
 </mrow>
@@ -1183,16 +1206,16 @@ Differentiating this equation with respect to <m>x</m> gives
 <md>
 <mrow>
 &amp; 3z(x,y)^2\,\pdiff{z}{x}(x,y) -y\, z(x,y)^2 -2xy\,z(x,y)\pdiff{z}{x}(x,y) - 4=0
-</mrow><mrow> \implies
-&amp;\pdiff{z}{x} = \frac{4+yz^2}{3z^2-2xyz}
+</mrow><mrow> 
+&amp; \implies \pdiff{z}{x} = \frac{4+yz^2}{3z^2-2xyz}
 </mrow>
 </md>
 and differentiating with respect to <m>y</m> gives
 <md>
 <mrow>
 &amp; 3z(x,y)^2\,\pdiff{z}{y}(x,y) -x\, z(x,y)^2 -2xy\,z(x,y)\pdiff{z}{y}(x,y) =0
-</mrow><mrow> \implies
-&amp;\pdiff{z}{y} = \frac{xz^2}{3z^2-2xyz}
+</mrow><mrow> 
+&amp; \implies \pdiff{z}{y} = \frac{xz^2}{3z^2-2xyz}
 </mrow>
 </md>
 </p>
@@ -1201,17 +1224,21 @@ and differentiating with respect to <m>y</m> gives
 When <m>(x,y,z)=(1,1,2)</m>,
 <md>
 <mrow>
-\pdiff{z}{x}(1,1) = \frac{4+(1)(2)^2}{3(2)^2-2(1)(1)(2)} = 1\qquad
-\pdiff{z}{y}(1,1) = \frac{(1)(2)^2}{3(2)^2-2(1)(1)(2)} = \frac{1}{2}
+\pdiff{z}{x}(1,1) &amp;= \frac{4+(1)(2)^2}{3(2)^2-2(1)(1)(2)} = 1
+</mrow><mrow>
+\pdiff{z}{y}(1,1) &amp;= \frac{(1)(2)^2}{3(2)^2-2(1)(1)(2)} = \frac{1}{2}
 </mrow>
 </md>
 </p>
 
 <p>(c) Under the linear approximation at <m>(1,1)</m>
-<me>
-z(x,y) \approx z(1,1) + z_x(1,1)\,(x-1) + z_y\,(1,1)\,(y-1)
-        = 2 + (x-1) +\frac{1}{2}(y-1)
-</me>
+<md>
+<mrow>
+z(x,y) &amp;\approx z(1,1) + z_x(1,1)\,(x-1) + z_y\,(1,1)\,(y-1)
+</mrow><mrow> 
+       &amp;= 2 + (x-1) +\frac{1}{2}(y-1)
+</mrow>
+</md>
 So errors of <m>\pm 0.03</m> in <m>x</m> and <m>\pm 0.02</m> in <m>y</m> leads of errors
 of about
 <me>
@@ -1236,8 +1263,9 @@ At <m>A</m>, <m>x=2</m>, <m>y=0</m>, <m>z=2</m> (since <m>z^3-(2)(0)z^2-4(2)=0</
 so that
 <md>
 <mrow>
-\pdiff{z}{x}(2,0) = \frac{4+(0)(2)^2}{3(2)^2-2(2)(0)(2)} = \frac{1}{3}\qquad
-\pdiff{z}{y}(2,0) = \frac{(2)(2)^2}{3(2)^2-2(2)(0)(2)} = \frac{2}{3}
+\pdiff{z}{x}(2,0) &amp;= \frac{4+(0)(2)^2}{3(2)^2-2(2)(0)(2)} = \frac{1}{3}
+</mrow><mrow>
+\pdiff{z}{y}(2,0) &amp;= \frac{(2)(2)^2}{3(2)^2-2(2)(0)(2)} = \frac{2}{3}
 </mrow>
 </md>
 and
@@ -1305,8 +1333,9 @@ f_y(x,y)&amp;=e^{-x}    &amp; f_y(1,e)&amp;= e^{-1}
 <p>(a) The linear approximation to <m>f(x,y)</m> at <m>(x,y)=(1,e)</m> is
 <md>
 <mrow>
-f(x,y) \approx f(1,e) + f_x(1,e)\,(x-1) +f_y(1,e)\,(y-e)
-       = 1 -(x-1) +e^{-1}(y-e)
+f(x,y) &amp;\approx f(1,e) + f_x(1,e)\,(x-1) +f_y(1,e)\,(y-e)
+</mrow><mrow>       
+&amp;= 1 -(x-1) +e^{-1}(y-e)
 </mrow>
 </md>
 The maximum error is then approximately
@@ -1476,8 +1505,9 @@ Find the equation of the tangent plane to the surface at the point <m>(1, 3, 1)<
 (a) The linear approximation to <m>f(x,y)</m> at <m>(1,3)</m> is
 <md>
 <mrow>
-f(x,y) \approx f(1,3) + f_x(1,3)\,(x-1) +f_y(1,3)\,(y-3)
-      = 1 + 3(x-1) -2(y-3)
+f(x,y) &amp;\approx f(1,3) + f_x(1,3)\,(x-1) +f_y(1,3)\,(y-3)
+</mrow><mrow>       
+&amp; = 1 + 3(x-1) -2(y-3)
 </mrow>
 </md>
 So the change is <m>z</m> is approximately
@@ -1543,16 +1573,16 @@ and we may also differentiate <m>(*)</m> with respect to <m>T</m>, giving
 </mrow>
 </md>
 In particular, when <m>p=1</m>, <m>V=2</m>, <m>T=5</m>,
-<md alignment="alignat">
+<md>
 <mrow>
 \big(4 +4 V_p(1,5)\big)\big(2 - 1\big)
 + \big(4 + 16\big)V_p(1,5) &amp;= 20 V_p(1,5)
-&amp;\quad\implies
-V_p(1,5)&amp;=-1
+</mrow><mrow>
+&amp;\hskip-0.5in\implies V_p(1,5)=-1
 </mrow><mrow>
 4 V_T(1,5)\big(2 - 1\big) + \big(4 + 16\big)V_T(1,5) &amp;= 4 + 20 V_T(1,5)
-&amp;\quad\implies
-V_T(1,5)&amp;=1
+</mrow><mrow>
+&amp;\hskip-0.5in\implies V_T(1,5)=1
 </mrow>
 </md>
 so that the change in <m>V</m> is
@@ -1746,7 +1776,9 @@ So a normal vector to the surface at <m>(1,1-1)</m> is
 So the equation of the tangent plane is
 <md>
 <mrow>
-\big(-2-\pi\big)(x-1) + 2(y-1) +3 (z+1) =0\quad\text{or}\quad
+&amp;\big(-2-\pi\big)(x-1) + 2(y-1) +3 (z+1) =0
+</mrow><mrow>       
+&amp;\text{or}\quad
 -(2+\pi)x +2y +3z = -\pi-3
 </mrow>
 </md>

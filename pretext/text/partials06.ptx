@@ -44,8 +44,7 @@ g(t_0)+g'(t_0)\De t+\tfrac{1}{2!}g'(t_0)\De t^2
 +\tfrac{1}{n!}g^{(n)}(t_0) \De t^n +E_n(\De t)
 </mrow>
 </md>
-and obeys
-<fn>You may have seen it written as
+and obeys<fn>You may have seen it written as
 <m>E_n(x)=\tfrac{1}{(n+1)!}g^{(n+1)}(c) (x-a)^{n+1}</m>
 </fn>
 <me>
@@ -199,8 +198,7 @@ Then the linear approximation <xref ref="eqn_lin_approx_2d"/> becomes
 </md>
 If they want to emphasize that that <m>\De x</m>, <m>\De y</m> and <m>\De f</m>
 are really small (they may even say <q>infinitesimal</q>), they'll
-write
-<fn>Don't take the notation <m>\dee{x}</m> or the terminology
+write<fn>Don't take the notation <m>\dee{x}</m> or the terminology
 <q>infinitesimal</q> too seriously. It is just intended to signal <q>very small</q>.</fn> <m>\dee{x}</m>, <m>\dee{y}</m> and <m>\dee{f}</m> instead. In this notation
 <md>
 <mrow>
@@ -388,12 +386,10 @@ degrees. See Warning 3.4.23 in the CLP-1 text.
 </me>
 We need to compute (approximately)
 <m>A(10.1\,,\,19.8\,,\,\frac{\pi}{6}+\frac{\pi}{36}\big)</m>.
-We will, of course
-<fn>There are other choices possible.
+We will, of course<fn>There are other choices possible.
 For example, we could write <m>35^\circ=45^\circ-10^\circ</m>. To get a good
 approximation we try to make <m>\De\theta</m> as small as possible, while
-keeping the arithmetic reasonably simple.</fn>
-, choose
+keeping the arithmetic reasonably simple.</fn>, choose
 <md>
 <mrow>
 a_0&amp;=10    &amp;  b_0&amp;=20    &amp; \theta_0&amp;=\frac{\pi}{6}
@@ -465,8 +461,7 @@ sides together with the angle between them and then using the formula
 A(a,b,\theta) = \frac{1}{2} ab\sin\theta
 </me>
 Of course, in the real world
-<fn>Of course in our <q>real world</q> everyone uses calculus.</fn>
-, we cannot measure lengths and angles exactly. So if we need
+<fn>Of course in our <q>real world</q> everyone uses calculus.</fn>, we cannot measure lengths and angles exactly. So if we need
 to know the area to within 1%,  the question becomes: <q>How accurately
 do we have to measure the side lengths
 and included angle if we want the area that we compute to have

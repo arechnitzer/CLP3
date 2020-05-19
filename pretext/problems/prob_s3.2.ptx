@@ -34,12 +34,14 @@ with <m>0\le\theta_i \lt 2\pi</m>, for the point <m>(x_i,y_i)</m>.
 </p></statement>
 
 <answer><p>
-The left hand sketch below contains the points, <m>(x_1,y_1)</m>, <m>(x_3,y_3)</m>,
-<m>(x_5,y_5)</m>, that are on the axes. The right hand sketch below contains the
+The first hand sketch below contains the points, <m>(x_1,y_1)</m>, <m>(x_3,y_3)</m>,
+<m>(x_5,y_5)</m>, that are on the axes. The second hand sketch below contains the
 points, <m>(x_2,y_2)</m>, <m>(x_4,y_4)</m>, that are not on the axes.
 </p>
-<sidebyside width="45%">
+<sidebyside width="90%">
   <image source="pfigs/polar3A"/>
+</sidebyside>
+<sidebyside width="45%">
   <image source="pfigs/polar2A"/>
 </sidebyside>
 <p>
@@ -51,12 +53,14 @@ points, <m>(x_2,y_2)</m>, <m>(x_4,y_4)</m>, that are not on the axes.
 </p></answer>
 
 <solution><p>
-The left hand sketch below contains the points, <m>(x_1,y_1)</m>, <m>(x_3,y_3)</m>,
-<m>(x_5,y_5)</m>, that are on the axes. The right hand sketch below contains the
+The first hand sketch below contains the points, <m>(x_1,y_1)</m>, <m>(x_3,y_3)</m>,
+<m>(x_5,y_5)</m>, that are on the axes. The second hand sketch below contains the
 points, <m>(x_2,y_2)</m>, <m>(x_4,y_4)</m>, that are not on the axes.
 </p>
-<sidebyside width="45%">
+<sidebyside width="90%">
   <image source="pfigs/polar3A"/>
+</sidebyside>
+<sidebyside width="45%">
   <image source="pfigs/polar2A"/>
 </sidebyside>
 
@@ -67,24 +71,29 @@ are related to the cartesian coordinates <m>x</m>, <m>y</m>, by <m>x=r\cos\theta
 (assuming that <m>x\ne 0</m>) and
 <md alignment="alignat">
 <mrow>
-(x_1,y_1) &amp;= (3,0) &amp;&amp;\implies &amp;r_1=3,\ \tan\theta_1=0
-                   &amp;&amp;\implies \theta_1&amp;=0
+(x_1,y_1) &amp;= (3,0) &amp;&amp;\implies r_1=3,\ \tan\theta_1=0
+</mrow><mrow>&amp;
+                   &amp;&amp;\implies \theta_1 =0
                    \text{ as $(x_1,y_1)$ is on the positive $x$-axis}
 </mrow><mrow>
-(x_2,y_2) &amp;= (1,1) &amp;&amp;\implies &amp;r_2=\sqrt{2},\ \tan\theta_2=1
-                   &amp;&amp;\implies \theta_2&amp;=\frac{\pi}{4}
+(x_2,y_2) &amp;= (1,1) &amp;&amp;\implies r_2=\sqrt{2},\ \tan\theta_2=1
+</mrow><mrow>&amp;
+                   &amp;&amp;\implies \theta_2=\frac{\pi}{4}
                    \text{ as $(x_2,y_2)$ is in the first octant}
 </mrow><mrow>
-(x_3,y_3) &amp;= (0,1) &amp;&amp;\implies &amp;r_3=1,\ \cos\theta_3=0
-                   &amp;&amp;\implies \theta_3&amp;=\frac{\pi}{2}
+(x_3,y_3) &amp;= (0,1) &amp;&amp;\implies r_3=1,\ \cos\theta_3=0
+</mrow><mrow>&amp;
+                   &amp;&amp;\implies \theta_3=\frac{\pi}{2}
                    \text{ as $(x_3,y_3)$ is on the positive $y$-axis}
 </mrow><mrow>
-(x_4,y_4) &amp;= (-1,1) &amp;&amp;\implies &amp;r_4=\sqrt{2},\ \tan\theta_4=-1
-                   &amp;&amp;\implies \theta_4&amp;=\frac{3\pi}{4}
+(x_4,y_4) &amp;= (-1,1) &amp;&amp;\implies r_4=\sqrt{2},\ \tan\theta_4=-1
+</mrow><mrow>&amp;
+                   &amp;&amp;\implies \theta_4=\frac{3\pi}{4}
                    \text{ as $(x_4,y_4)$ is in the third octant}
 </mrow><mrow>
-(x_5,y_5) &amp;= (-2,0) &amp;&amp;\implies &amp;r_5=2,\ \tan\theta_5=0
-                   &amp;&amp;\implies \theta_5&amp;=\pi
+(x_5,y_5) &amp;= (-2,0) &amp;&amp;\implies r_5=2,\ \tan\theta_5=0
+</mrow><mrow>&amp;
+                   &amp;&amp;\implies \theta_5 =\pi
                    \text{ as $(x_5,y_5)$ is on the negative $x$-axis}
 </mrow>
 </md>
@@ -220,7 +229,7 @@ with polar coordinates <m>\theta=\frac{5\pi}{4}</m>, <m>r \gt 0</m> and the pink
 half-line is the set of all points  with polar coordinates
 <m>\theta=\frac{5\pi}{4}</m>, <m>r \lt 0</m>.
 </p>
-<sidebyside width="45%">
+<sidebyside width="40%">
   <image source="pfigs/polar4A"/>
   <image source="pfigs/polar4B"/>
 </sidebyside>
@@ -269,8 +278,8 @@ half-line is the set of all points  with polar coordinates
 </solution>
 </exercise>
 
-<exercise>
-<statement><p>xml:id="prb_polar_vectors"
+<exercise xml:id="prb_polar_vectors">
+<statement><p>
 Consider the points
 <md>
 <mrow>
@@ -320,14 +329,14 @@ The angle between them is <m>\frac{\pi}{2}</m>. The cross product is
 Here is a sketch of <m>(x_i,y_i)</m>, <m>\he_r(\theta_i)</m>,
 <m>\he_\theta(\theta_i)</m> for <m>i =1,3,5</m> (the points on the axes)
 </p>
-<sidebyside width="60%">
+<sidebyside width="90%">
 <image source="pfigs/polar3"/>
 </sidebyside>
 <p>
 and here is a sketch (to a different scale) of <m>(x_i,y_i)</m>, <m>\he_r(\theta_i)</m>,
 <m>\he_\theta(\theta_i)</m> for <m>i =2,4</m> (the points off the axes).
 </p>
-<sidebyside width="60%">
+<sidebyside width="75%">
 <image source="pfigs/polar2"/>
 </sidebyside>
 </answer>
@@ -381,14 +390,14 @@ The <m>x</m>-component of <m>\he_\theta(\theta)</m> has opposite sign to that of
 Here is a sketch of <m>(x_i,y_i)</m>, <m>\he_r(\theta_i)</m>,
 <m>\he_\theta(\theta_i)</m> for <m>i =1,3,5</m> (the points on the axes)
 </p>
-<sidebyside width="60%">
+<sidebyside width="90%">
 <image source="pfigs/polar3"/>
 </sidebyside>
 <p>
 and here is a sketch (to a different scale) of <m>(x_i,y_i)</m>, <m>\he_r(\theta_i)</m>,
 <m>\he_\theta(\theta_i)</m> for <m>i =2,4</m> (the points off the axes).
 </p>
-<sidebyside width="60%">
+<sidebyside width="75%">
 <image source="pfigs/polar2"/>
 </sidebyside>
 </solution>
@@ -436,7 +445,7 @@ will help.
 <solution><p>
 Here is a sketch of <m>\llt a, b\rgt</m> and <m>\llt A, B\rgt</m>.
 </p>
-<sidebyside width="60%">
+<sidebyside width="40%">
 <image source="pfigs/polar4"/>
 </sidebyside>
 <p>
@@ -491,30 +500,45 @@ coordinates in two different ways.
 <answer>
 
 <p>(a)
-<m>\displaystyle\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
-=\int_0^{\frac{\pi}{4}}\dee{\theta}
+<md>
+<mrow>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+&amp;=\int_0^{\frac{\pi}{4}}\dee{\theta}
  \int_0^2\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
-=\int_0^2\dee{r}
+</mrow><mrow>
+&amp;=\int_0^2\dee{r}
   \int_0^{\frac{\pi}{4}}\dee{\theta}
- \ r\ f(r\cos\theta,r\sin\theta)</m>
+ \ r\ f(r\cos\theta,r\sin\theta)
+</mrow>
+</md>
 </p>
 
 <p>(b)
-<m>\displaystyle\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
-=\int_0^{\frac{\pi}{2}}\dee{\theta}
+<md>
+<mrow>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+&amp;=\int_0^{\frac{\pi}{2}}\dee{\theta}
  \int_1^2\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
-=\int_1^2\dee{r}
+</mrow><mrow>
+&amp;=\int_1^2\dee{r}
   \int_0^{\frac{\pi}{2}}\dee{\theta}
- \ r\ f(r\cos\theta,r\sin\theta)</m>
+ \ r\ f(r\cos\theta,r\sin\theta)
+</mrow>
+</md>
 </p>
 
 <p>(c)
-<m>\displaystyle \dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
-=\int_0^{\frac{\pi}{2}}\dee{\theta}
+<md>
+<mrow>
+\dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
+&amp;=\int_0^{\frac{\pi}{2}}\dee{\theta}
  \int_0^{2\cos\theta}\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
-=\int_0^2\dee{r}
+</mrow><mrow>
+&amp;=\int_0^2\dee{r}
   \int_0^{\arccos\frac{r}{2}}\dee{\theta}
- \ r\ f(r\cos\theta,r\sin\theta)</m>
+ \ r\ f(r\cos\theta,r\sin\theta)
+</mrow>
+</md>
 </p>
 
 <p>(d)
@@ -527,7 +551,8 @@ coordinates in two different ways.
 &amp;=\int_0^2\dee{r}
   \int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\dee{\theta}
  \ r\ f(r\cos\theta,r\sin\theta)
-+\int_2^{2\sqrt{2}}\dee{r}
+</mrow><mrow>
+&amp;\hskip0.5in+\int_2^{2\sqrt{2}}\dee{r}
   \int_{\frac{\pi}{4}}^{\arcsin\frac{2}{r}}\dee{\theta}
  \ r\ f(r\cos\theta,r\sin\theta)
 </mrow>
@@ -572,7 +597,7 @@ In polar coordinates <m>\dee{x}\,\dee{y} = r\,\dee{r}\,\dee{\theta}</m>, so that
  \int_0^2\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
 </me>
 </p>
-<sidebyside width="45%">
+<sidebyside width="40%">
 <image source="pfigs/polar5a2"/>
 <image source="pfigs/polar5a3"/>
 </sidebyside>
@@ -637,7 +662,7 @@ In polar coordinates <m>\dee{x}\,\dee{y} = r\,\dee{r}\,\dee{\theta}</m>, so that
 </me>
 </p>
 
-<sidebyside width="45%">
+<sidebyside width="38%">
 <image source="pfigs/polar5b2"/>
 <image source="pfigs/polar5b3"/>
 </sidebyside>
@@ -679,7 +704,7 @@ when <m>\theta=\frac{\pi}{2}</m>, <m>r=0</m>.
 </li>
 </ul>
 </p>
-<sidebyside width="75%">
+<sidebyside width="35%">
   <image source="pfigs/polar5e4"/>
 </sidebyside>
 
@@ -706,7 +731,7 @@ In polar coordinates <m>\dee{x}\,\dee{y} = r\,\dee{r}\,\dee{\theta}</m>, so that
  \int_0^{2\cos\theta}\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
 </me>
 </p>
-<sidebyside width="45%">
+<sidebyside widths="35% 40%" valign="middle">
   <image source="pfigs/polar5e2"/>
  <image source="pfigs/polar5e3"/>
 </sidebyside>
@@ -762,7 +787,7 @@ On this domain,
 </li>
 <li>
 For each fixed <m>\theta</m> in that range, <m>r</m> runs from <m>0</m> to
-<m>\frac{2}{\sin\theta}</m>, as in the figure on the left below.
+<m>\frac{2}{\sin\theta}</m>, as in the first figure below.
 </li>
 </ul>
 In polar coordinates <m>\dee{x}\,\dee{y} = r\,\dee{r}\,\dee{\theta}</m>, so that
@@ -772,9 +797,11 @@ In polar coordinates <m>\dee{x}\,\dee{y} = r\,\dee{r}\,\dee{\theta}</m>, so that
  \int_0^{\frac{2}{\sin\theta}}\dee{r}\ r\ f(r\cos\theta,r\sin\theta)
 </me>
 </p>
-<sidebyside width="33%">
+<sidebyside widths="45% 40%" valign="middle">
 <image source="pfigs/polar5c2"/>
 <image source="pfigs/polar5c4"/>
+</sidebyside>
+<sidebyside width="45%">
 <image source="pfigs/polar5c5"/>
 </sidebyside>
 
@@ -787,25 +814,28 @@ to <m>2\sqrt{2}</m> (at the point <m>(2,2)</m>).
 </li>
 <li>
 For each fixed <m>r</m> between <m>0</m> and <m>2</m>, <m>\theta</m> runs from <m>\frac{\pi}{4}</m>
-to <m>\frac{\pi}{2}</m>, as in the central figure above.
+to <m>\frac{\pi}{2}</m>, as in the second figure above.
 </li>
 <li>
 For each fixed <m>r</m> between <m>2</m> and <m>2\sqrt{2}</m>, <m>\theta</m> runs
 from <m>\frac{\pi}{4}</m> to <m>\arcsin\frac{2}{r}</m> (which was gotten by solving
-<m>r\sin\theta=2</m> for <m>\theta</m> as a function of <m>r</m>), as in the figure
-on the right above.
+<m>r\sin\theta=2</m> for <m>\theta</m> as a function of <m>r</m>), as in the third figure
+above.
 </li>
 </ul>
 So
-<me>
+<md>
+<mrow>
 \dblInt_\cR f(x,y)\,\dee{x}\,\dee{y}
-=\int_0^2\dee{r}
+&amp;=\int_0^2\dee{r}
   \int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\dee{\theta}
  \ r\ f(r\cos\theta,r\sin\theta)
-+\int_2^{2\sqrt{2}}\dee{r}
+</mrow><mrow>
+&amp;\hskip1in+\int_2^{2\sqrt{2}}\dee{r}
   \int_{\frac{\pi}{4}}^{\arcsin\frac{2}{r}}\dee{\theta}
  \ r\ f(r\cos\theta,r\sin\theta)
-</me>
+</mrow>
+</md>
 </p>
 
 </solution>
@@ -838,17 +868,18 @@ following polar coordinate integrals.
 </p></statement>
 
 <answer>
-<sbsgroup widths="10% 60%">
-  <sidebyside>
-  <p>(a)</p>  <image source="pfigs/polar6a2"/>
+<p>(a)</p>
+  <sidebyside width="60%">
+    <image source="pfigs/polar6a2"/>
   </sidebyside>
-  <sidebyside>
-  <p>(b)</p>  <image source="pfigs/polar6b2"/>
+<p>(b)</p>
+  <sidebyside width="50%">
+    <image source="pfigs/polar6b2"/>
   </sidebyside>
-  <sidebyside>
-  <p>(c)</p>  <image source="pfigs/polar6c2"/>
+<p>(c)</p>
+  <sidebyside width="70%">
+    <image source="pfigs/polar6c2"/>
   </sidebyside>
-</sbsgroup>
 </answer>
 
 <solution><p>
@@ -891,7 +922,7 @@ D=\Set{(x,y)}{1\le x^2+y^2\le 4,\ -x\le y\le x,\ x\ge 0}
 Here are two sketches. <m>D</m> is the shaded region in the sketch on the right.
 </p>
 
-<sidebyside width="45%">
+<sidebyside widths="35% 60%" valign="middle">
 <image source="pfigs/polar6a1"/>
 <image source="pfigs/polar6a2"/>
 </sidebyside>
@@ -934,7 +965,7 @@ D=\Set{(x,y)}{0\le y\le 1,\ y\le x\le 2-y}
 <m>D</m> is the shaded region in the sketch on the right.
 </p>
 
-<sidebyside width="45%">
+<sidebyside widths="45% 45%" valign="middle">
 <image source="pfigs/polar6b1"/>
 <image source="pfigs/polar6b2"/>
 </sidebyside>
@@ -962,11 +993,13 @@ In Cartesian coordinates
 </li>
 </ul>
 So <m>D</m> is the interior of the ellipse <m>x^2+9y^2=9</m>
-and <m>D</m> is the shaded region in the sketch on the right.
+and <m>D</m> is the shaded region in the lower sketch.
 </p>
 
-<sidebyside width="45%">
+<sidebyside width="60%">
   <image source="pfigs/polar6c1"/>
+</sidebyside>
+<sidebyside width="60%">
  <image source="pfigs/polar6c2"/>
 </sidebyside>
 </solution>
@@ -1022,7 +1055,8 @@ The integral is
 </mrow><mrow>
 &amp;=\int_0^a \dee{r}\ r^2\Big[\sin\theta-\cos\theta\Big]_0^{{\pi\over 3}}
 =\frac{a^3}{3}\left[\frac{\sqrt{3}}{2}-\frac{1}{2}+1\right]
-=\frac{a^3}{6}\big[\sqrt{3}+1\big]
+</mrow><mrow>
+&amp;=\frac{a^3}{6}\big[\sqrt{3}+1\big]
 </mrow>
 </md>
 </p>
@@ -1031,7 +1065,7 @@ The integral is
 In polar coordinates, the domain of integration,
 <m>x^2+y^2\le 2</m>, <m>x\ge 1</m>,
 </p>
-<sidebyside width="75%">
+<sidebyside width="40%">
   <image source="pfigs/domain1b"/>
 </sidebyside>
 
@@ -1075,10 +1109,12 @@ coordinates version of <m>x=1</m>). The integral is
 &amp;=\int_0^{{\pi\over 4}}\dee{\theta}\
 \frac{r^4}{4}\bigg|_0^{1\over\cos\theta}
 =\frac{1}{4}\int_0^{{\pi\over 4}}\dee{\theta}\ \frac{1}{\cos^4\theta}
-=\frac{1}{4}\int_0^{{\pi\over 4}}\dee{\theta}\ \sec^4\theta
+</mrow><mrow>
+&amp;=\frac{1}{4}\int_0^{{\pi\over 4}}\dee{\theta}\ \sec^4\theta
 </mrow><mrow>
 &amp;=\frac{1}{4}\int_0^{{\pi\over 4}}\dee{\theta}\ \sec^2\theta\big(1+\tan^2\theta\big)
-=\frac{1}{4}\int_0^1d t\ \big(1+t^2\big)\text{ where }t=\tan\theta
+</mrow><mrow>
+&amp;=\frac{1}{4}\int_0^1d t\ \big(1+t^2\big)\text{ where }t=\tan\theta
 </mrow><mrow>
 &amp;=\frac{1}{4}\left[t+\frac{t^3}{3}\right]_0^1
 =\frac{1}{4}\ \frac{4}{3}
@@ -1094,7 +1130,8 @@ coordinates version of <m>x=1</m>). The integral is
 \dblInt_{x^2+y^2\le 1}\hskip-5pt \ln(x^2+y^2)\,\dee{x}\,\dee{y}
 &amp;=\int_0^{2\pi}\hskip-3pt \dee{\theta}\int_0^1\dee{r}\ r\ln r^2
 =2\pi\int_0^1\dee{r}\ r\ln r^2
-=\pi\int_0^1 \dee{s}\ \ln s\text{ where } s=r^2
+</mrow><mrow>
+&amp;=\pi\int_0^1 \dee{s}\ \ln s\text{ where } s=r^2
 </mrow><mrow>
 &amp;=\pi\Big[s\ln s-s\Big]_0^1
 =-\pi
@@ -1108,12 +1145,13 @@ evaluate it is
 \int_0^1 \dee{s}\ \ln s
 &amp;=\lim_{\veps\to 0^+}\int_\veps^1 \dee{s}\ \ln s
 =\lim_{\veps\to 0^+}\Big[s\ln s-s\Big]_\veps^1
-=\lim_{\veps\to 0^+}\Big[-1-\veps\ln\veps+\veps\Big]
+</mrow><mrow>
+&amp;=\lim_{\veps\to 0^+}\Big[-1-\veps\ln\veps+\veps\Big]
 =-1
 </mrow>
 </md>
 That <m>\lim\limits_{\veps\to 0^+}\veps\ln\veps = 0</m> was shown in
-Example \eref{CLP100}{eg:hopitalJ} of the CLP-1 text.
+Example 3.7.15 of the CLP-1 text.
 </p>
 
 </solution>
@@ -1186,7 +1224,7 @@ has equation <m>r^2=2ar\sin\theta</m>, or equivalently, <m>r=2a\sin\theta</m>,
 in polar coordinates.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="40%">
 <image source="pfigs/domain2"/>
 </sidebyside>
 
@@ -1201,10 +1239,12 @@ the volume is
 &amp;=2\int_0^{{\pi\over 2}}\dee{\theta}\int_0^{2a\sin\theta}\dee{r}\
                                              r\big[r-(-r)\big]
 =4\int_0^{{\pi\over 2}}\dee{\theta}\int_0^{2a\sin\theta}\dee{r}\ r^2
-=\frac{4}{3}\int_0^{{\pi\over 2}}\!\!\dee{\theta}\ (2a\sin\theta)^3
+</mrow><mrow>
+&amp;=\frac{4}{3}\int_0^{{\pi\over 2}}\!\!\dee{\theta}\ (2a\sin\theta)^3
 </mrow><mrow>
 &amp;=\frac{32}{3}a^3\int_0^{{\pi\over 2}}\!\!\dee{\theta}\ \sin\theta(1-\cos^2\theta)
-=-\frac{32}{3}a^3\int_1^0 dt\ (1-t^2)\text{ where } t=\cos\theta
+</mrow><mrow>
+&amp;=-\frac{32}{3}a^3\int_1^0 dt\ (1-t^2)\text{ where } t=\cos\theta
 </mrow><mrow>
 &amp;=-\frac{32}{3}a^3\left[t-\frac{t^3}{3}\right]_1^0
 =\frac{64}{9}a^3
@@ -1231,7 +1271,7 @@ The figure below shows the top view of the specified solid.
 coordinates, the circle is <m>r^2=2ar\cos\theta</m> or <m>r=2a\cos\theta</m>.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="33%">
   <image source="pfigs/domainTwoCylinder"/>
 </sidebyside>
 
@@ -1289,8 +1329,8 @@ Be sure to show the units on the coordinate axes.
 </hint>
 
 <answer>
-<sidebyside widths="10% 70%">
 <p>(a)</p>
+<sidebyside width="50%">
 <image source="pfigs/OE05D_8"/>
 </sidebyside>
 <p>
@@ -1306,19 +1346,21 @@ The equation <m>x^2 + y^2 \le 2y</m> is equivalent to the
 equation <m>x^2 + (y-1)^2=1</m>, which is the equation of the cylinder whose
 <m>z=z_0</m> cross--section is the horizontal circle of radius <m>1</m>, centred on
 <m>x=0</m>, <m>y=1</m>, <m>z=z_0</m>. The part of this cylinder in the first octant is
-sketched in the figure on the left below.
+sketched in the first figure below.
 </li>
 <li>
 <m>z \le \sqrt{x^2 + y^2}</m> is the equation of the cone with vertex <m>(0,0,0)</m>,
 and axis the positive <m>z</m>--axis, whose radius at height <m>z=2</m> is <m>2</m>.
-The part of this cone in the first octant is sketched in the figure
-on the right below.
+The part of this cone in the first octant is sketched in the second figure below.
 </li>
 </ul>
 </p>
 
-<sidebyside width="45%">
+<sidebyside width="50%">
   <image source="pfigs/OE05D_8a"/>
+</sidebyside>
+
+<sidebyside width="60%">
  <image source="pfigs/OE05D_8b"/>
 </sidebyside>
 
@@ -1333,7 +1375,7 @@ and contains, in the octant <m>x\le 0</m>, <m>y\ge 0</m>, <m>z\ge 0</m>, a mirro
 image of the first octant part of <m>E</m>.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="50%">
   <image source="pfigs/OE05D_8"/>
 </sidebyside>
 
@@ -1416,7 +1458,7 @@ The equation <m>y=\sqrt{4-x^2}</m> is equivalent to <m>x^2+y^2=4</m>, <m>y\ge 0<
 This domain is sketched in the figure on the left below.
 </p>
 
-<sidebyside width="45%">
+<sidebyside widths="42% 35%" valign="middle">
   <image source="pfigs/OE06A_7v"/>
    <image source="pfigs/OE06A_7p"/>
 </sidebyside>
@@ -1488,8 +1530,8 @@ Find M when
 </p></statement>
 
 <answer>
-<sidebyside widths="10% 70%">
-  <p>(a)</p>
+<p>(a)</p>
+<sidebyside width="45%">  
   <image source="pfigs/OE06D_5"/>
 </sidebyside>
 
@@ -1503,7 +1545,7 @@ Find M when
 <solution><p>
 (a) The region <m>\cL</m> is sketched in the figure on the left below.
 </p>
-<sidebyside width="45%">
+<sidebyside widths="40% 40%" valign="middle">
 <image source="pfigs/OE06D_5"/>
 <image source="pfigs/OE06D_5p"/>
 </sidebyside>
@@ -1631,7 +1673,7 @@ the circle <m>x^2+y^2=2</m> is <m>r=\sqrt{2}</m> and the line <m>y=x</m> is
 <m>\theta=\frac{\pi}{4}</m>.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="50%">
 <image source="pfigs/OE11D_5bb"/>
 </sidebyside>
 
@@ -1672,8 +1714,8 @@ Evaluate the integral by transforming to polar coordinates.
 </p></statement>
 
 <answer>
-<sidebyside widths="10% 70%">
 <p>(a)</p>
+<sidebyside width="70%">
   <image source="pfigs/OE13D_5a"/>
 </sidebyside>
 <p>
@@ -1720,10 +1762,12 @@ and
 \int_0^1 \int_{\sqrt{3}y}^{\sqrt{4-y^2}} \ln\big(1+x^2+y^2)\
                          \dee{x}\,\dee{y}
 &amp;= \int_0^2\dee{r}\int_0^{\pi/6}\dee{\theta}\ r\,\ln(1+r^2)
-= \frac{\pi}{6}\int_0^2\dee{r}\ r\,\ln(1+r^2)
+</mrow><mrow>
+&amp;= \frac{\pi}{6}\int_0^2\dee{r}\ r\,\ln(1+r^2)
 </mrow><mrow>
 &amp;=\frac{\pi}{12}\int_1^5 \dee{u} \ln(u)
-        \qquad\text{with }u=1+r^2,\ \dee{u}=2r\,\dee{r}
+</mrow><mrow>
+&amp;\hskip0.5in\text{with }u=1+r^2,\ \dee{u}=2r\,\dee{r}
 </mrow><mrow>
 &amp;=\frac{\pi}{12}\Big[u\ln(u)-u\Big]_1^5
 </mrow><mrow>
@@ -1750,7 +1794,7 @@ Let <m>D</m> be the region in the <m>xy</m>--plane bounded on the left by the li
 Here is a sketch of <m>D</m>.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="66%">
   <image source="pfigs/OE14A_5"/>
 </sidebyside>
 
@@ -1814,7 +1858,7 @@ Find the volume of the solid below <m>z = \sqrt{x^2 + y^2}</m> and above <m>D</m
 radius <m>1</m> centred on <m>(1,0)</m>. Here is a sketch.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="60%">
   <image source="pfigs/OE14D_6"/>
 </sidebyside>
 
@@ -1864,7 +1908,7 @@ distance of points in <m>D</m> from the origin. You may use that
 for all natural numbers <m>n\ge 2</m>.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="66%">
 <image source="pfigs/OE00AQ8"/>
 </sidebyside>
 </statement>
@@ -1885,11 +1929,14 @@ for each fixed <m>\theta</m> between <m>0</m> and <m>\frac{\pi}{2}</m>, <m>r</m>
 </li>
 </ul>
 So the area of <m>D</m> is
-<me>
-\text{area}=A=\int_0^{\pi/2} \dee{\theta}\int_1^{1+\cos\theta} \dee{r}\ r
+<md>
+<mrow>
+\text{area}&amp;=A=\int_0^{\pi/2} \dee{\theta}\int_1^{1+\cos\theta} \dee{r}\ r
 =\int_0^{\pi/2} \dee{\theta}\ \frac{1}{2} r^2\bigg|_1^{1+\cos\theta}
-=\int_0^{\pi/2} \dee{\theta}\ \left[\frac{1}{2} \cos^2\theta+\cos\theta\right]
-</me>
+</mrow><mrow>
+&amp;=\int_0^{\pi/2} \dee{\theta}\ \left[\frac{1}{2} \cos^2\theta+\cos\theta\right]
+</mrow>
+</md>
 We are interested in the average value of <m>r</m> on <m>D</m>, which is
 <md>
 <mrow>
@@ -1956,8 +2003,8 @@ as an iterated integral in polar coordinates <m>(r, \theta)</m> where <m>x = r \
 </p></statement>
 
 <answer>
-<sidebyside widths="10% 70%">
-  <p>(a)</p>
+<p>(a)</p>
+<sidebyside width="90%">  
   <image source="pfigs/OE10A_5"/>
 </sidebyside>
 
@@ -2003,7 +2050,7 @@ line <m>y=\frac{x}{2}</m>.
 Here is a sketch of <m>G</m>
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="90%">
   <image source="pfigs/OE10A_5"/>
 </sidebyside>
 
@@ -2034,7 +2081,7 @@ is <m>\left(\frac{2}{\sqrt{5}}\,,\,\frac{1}{\sqrt{5}}\right)</m>.
 sketch
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="90%">
 <image source="pfigs/OE10A_5xy"/>
 </sidebyside>
 
@@ -2081,7 +2128,7 @@ or <m>\tan\theta =2</m>.
 Looking at the sketch
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="66%">
   <image source="pfigs/OE10A_5p"/>
 </sidebyside>
 
@@ -2129,8 +2176,8 @@ Evaluate <m>J</m> by using polar coordinates.
 </p></statement>
 
 <answer>
-<sidebyside widths="10% 70%">
-  <p>(a)</p>
+ <p>(a)</p>
+<sidebyside width="70%"> 
 <image source="pfigs/OE11A_6"/>
   </sidebyside>
 
@@ -2162,7 +2209,7 @@ It also shows the generic horizontal slice that was used to set up the given
 iterated integral.
 </p>
 
-<sidebyside width="45%">
+<sidebyside width="50%">
   <image source="pfigs/OE11A_6a"/>
  <image source="pfigs/OE11A_6b"/>
 </sidebyside>
@@ -2274,7 +2321,7 @@ Now switch to polar coordinates using <m>u=r\cos\theta</m>, <m>v=r\sin\theta</m>
 A symmetrical coffee percolator holds 24 cups when full. The interior has a circular cross-section which tapers from a radius of 3' at the centre to 2' at the base and top, which are 12' apart. The bounding surface is parabolic. Where should the mark indicating the 6 cup level be placed?
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="33%">
   <image source="pfigs/coffee"/>
 </sidebyside>
 
@@ -2317,11 +2364,14 @@ V(z)
 We are told that the mark is to be at the 6 cup level and that the urn holds 24 cups. So the mark is to be at the height <m>z_0</m> for which the volume, <m>V(z_0)</m>,
 is one quarter of the total volume, <m>V(6)</m>.
 That is, we are to choose <m>z_0</m> so that <m>V(z_0)=\frac{1}{4} V(6)</m> or
-<me>
+<md>
+<mrow>
 \pi\left[9z-\frac{z^3}{18}+\frac{z^5}{5\times36^2}\right]_{-6}^{z_0}
-=\frac{\pi}{4}\left[9z-\frac{z^3}{18}+\frac{z^5}{5\times36^2}\right]_{-6}^{6}
-=\frac{\pi}{2}\left[9\times 6-\frac{6^3}{18}+\frac{6^5}{5\times36^2}\right]
-</me>
+&amp;=\frac{\pi}{4}\left[9z-\frac{z^3}{18}+\frac{z^5}{5\times36^2}\right]_{-6}^{6}
+</mrow><mrow>
+&amp;=\frac{\pi}{2}\left[9\times 6-\frac{6^3}{18}+\frac{6^5}{5\times36^2}\right]
+</mrow>
+</md>
 or
 <me>
 9z_0-\frac{z_0^3}{18}+\frac{z_0^5}{5\times36^2}
@@ -2364,7 +2414,7 @@ order of integration reversed. <em>Do not compute either integral in part
 <p>(b) <m>\int_0^1 \dee{x}\int_x^{2-x}\dee{y}\ e^{x^2+y^2}</m>
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="40%">
 <image source="pfigs/OE03AQ5a"/>
 </sidebyside>
 </answer>
@@ -2378,7 +2428,8 @@ order of integration reversed. <em>Do not compute either integral in part
 &amp;=\dblInt_{x^2+y^2\le 9} e^{x^2+y^2}\ \dee{x}\dee{y}
 =\int_0^3 \dee{r}\int_0^{2\pi}\dee{\theta}\ r e^{r^2}
 =2\pi\int_0^3\dee{r}\ r e^{r^2}
-=\pi e^{r^2}\Big|_0^3
+</mrow><mrow>
+&amp;=\pi e^{r^2}\Big|_0^3
 </mrow><mrow>
 &amp;=\pi\big(e^9-1\big)\approx 25,453
 </mrow>

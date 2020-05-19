@@ -17,7 +17,7 @@ lead to double integrals.
   <title>Averages</title>
 
 
-<p>In Section \eref{CLP101}{sec avg} of the CLP-2 text, we defined
+<p>In Section 2.2 of the CLP-2 text, we defined
 the average value of a function of one variable. We'll now extend that
 discussion to functions of two variables. First, we recall the
 definition of the average of a finite set of numbers.
@@ -93,8 +93,7 @@ Let <m>f(x,y)</m> be an integrable function defined on region <m>\cR</m> in the
 <example xml:id="eg_dblInt_G"><title>Average</title>
 <statement>
 <p>
-Let <m>a \gt 0</m>. A mountain, call it Half Dome
-<fn>There is a real Half-Dome
+Let <m>a \gt 0</m>. A mountain, call it Half Dome<fn>There is a real Half-Dome
 mountain in Yosemite National Park. It has <m>a=1445\,\text{m}
 </m>. </fn>, has height
 <m>z(x,y)=\sqrt{a^2-x^2-y^2}</m> above each point <m>(x,y)</m>
@@ -102,7 +101,7 @@ in the base region <m>\cR=\Set{(x,y)}{x^2+y^2\le a^2, x\le 0}</m>.
 Find its average height.
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/halfDomeA"/>
 </sidebyside>
 </statement>
@@ -164,7 +163,7 @@ Example <xref ref="eg_dblInt_G"/> as an iterated integral.
 <p>Here is a sketch of the top view of the base region <m>\cR</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="60%">
 <image source="figs/halfDomeB"/>
 </sidebyside>
 
@@ -194,7 +193,7 @@ x &amp;= C\sin\theta\qquad\text{with } -\frac{\pi}{2}\le\theta\le\frac{\pi}{2}
 </mrow>
 </md>
 Trigonometric substitution was discussed in detail in
-Section \eref{CLP101}{sec trigsub} in the CLP-2 text.
+Section 1.9 in the CLP-2 text.
 Since
 <md>
 <mrow>
@@ -213,13 +212,13 @@ and
 the inner integral
 <md>
 <mrow>
-\int_{-\sqrt{a^2-y^2}}^0\dee{x}\   \sqrt{a^2-x^2-y^2}
-&amp;=\int_{-\pi/2}^0 C^2\cos^2\theta\ \dee{\theta}
+&amp;\int_{-\sqrt{a^2-y^2}}^0\dee{x}\   \sqrt{a^2-x^2-y^2}
+=\int_{-\pi/2}^0 C^2\cos^2\theta\ \dee{\theta}
 </mrow><mrow>
-&amp;=C^2\int_{-\pi/2}^0\frac{1+\cos(2\theta)}{2}\ \dee{\theta}
+&amp;\hskip1in=C^2\int_{-\pi/2}^0\frac{1+\cos(2\theta)}{2}\ \dee{\theta}
 =C^2\left[\frac{\theta+\frac{\sin(2\theta)}{2}}{2}\right]_{-\pi/2}^0
 </mrow><mrow>
-&amp;=\frac{\pi C^2}{4} =\frac{\pi}{4}\big(a^2-y^2\big)
+&amp;\hskip1in=\frac{\pi C^2}{4} =\frac{\pi}{4}\big(a^2-y^2\big)
 </mrow>
 </md>
 and the full integral
@@ -228,7 +227,8 @@ and the full integral
 \dblInt_\cR \sqrt{a^2-x^2-y^2}\,\dee{x}\,\dee{y}
 &amp;=\frac{\pi}{4} \int_{-a}^a \big(a^2-y^2\big)\  \dee{y}
 =\frac{\pi}{2} \int_0^a \big(a^2-y^2\big)\  \dee{y}
-=\frac{\pi}{2}\left[a^3-\frac{a^3}{3}\right]
+</mrow><mrow>
+&amp;=\frac{\pi}{2}\left[a^3-\frac{a^3}{3}\right]
 </mrow><mrow>
 &amp;=\frac{1}{3}\pi a^3
 </mrow>
@@ -259,10 +259,11 @@ Thus
 <md>
 <mrow>
 \int_{-\pi/2}^0 \cos^2\theta\ \dee{\theta}
-=\int_{-\pi/2}^0 \sin^2\theta\ \dee{\theta}
+&amp;=\int_{-\pi/2}^0 \sin^2\theta\ \dee{\theta}
 =\int_{-\pi/2}^0 \frac{1}{2}\big[\sin^2\theta+\cos^2\theta\big]\,\dee{\theta}
 =\frac{1}{2}\int_{-\pi/2}^0 \dee{\theta}
-=\frac{\pi}{4}
+</mrow><mrow>
+&amp;=\frac{\pi}{4}
 </mrow>
 </md>
 </p>
@@ -307,7 +308,7 @@ is just <m>F</m>, just as you would want.
 <p>One important example of a weighted average is the centre of mass.
 If you support a body at its centre of mass (in a uniform gravitational
 field) it balances perfectly. That's the definition of the centre of mass
-of the body. In Section \eref{CLP101}{sec com} of the CLP-2 text, we found
+of the body. In Section 2.3 of the CLP-2 text, we found
 that the centre of mass of a body that consists of mass distributed
 continuously along a straight line, with mass density <m>\rho(x)</m>kg/m and
 with <m>x</m> running from <m>a</m> to <m>b</m>, is at
@@ -373,7 +374,7 @@ In this case
 
 <example xml:id="eg_dblInt_I"><title>Centre of Mass</title>
 <p>
-In Section \eref{CLP101}{sec com} of the CLP-2 text, we did not
+In Section 2.3 of the CLP-2 text, we did not
 have access to multivariable integrals, so we used some physical intuition
 to derive that the centroid of a body that fills the
 region
@@ -394,7 +395,7 @@ formulae directly from <xref ref="eq_centroid"/>. Using vertical slices,
 as in this figure,
 </p>
 
-<sidebyside>
+<sidebyside width="50%">
 <image source="figs/centroidXY"/>
 </sidebyside>
 
@@ -428,7 +429,7 @@ just as desired.
 
 <example xml:id="eg_dblInt_Iqc"><title>Quarter Circle</title>
 <p>
-In Example \eref{CLP101}{eg:TRQcentroidBa} of the CLP-2 text,
+In Example 2.3.4 of the CLP-2 text,
 we found the centroid of the quarter circular disk
 <me>
 D=\Set{(x,y)}{x\ge 0,\ y\ge 0,\ x^2+y^2\le r^2}
@@ -451,7 +452,7 @@ We'll evaluate <m>\dblInt_D x\ \dee{x}\,\dee{y}</m> by using horizontal
 slices, as in the figure on the left below.
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 33%" valign="middle">
 <image source="figs/centroidQuarterCircleh"/>
 <image source="figs/centroidQuarterCirclev"/>
 </sidebyside>
@@ -472,10 +473,11 @@ So
 \dblInt_D x\ \dee{x}\,\dee{y}
 &amp;= \int_0^r\dee{y}\int_0^{\sqrt{r^2-y^2}}\dee{x} \ x
 = \int_0^r\dee{y}\ \left[\frac{x^2}{2}\right]_0^{\sqrt{r^2-y^2}}
-=\frac{1}{2} \int_0^r\dee{y}\ \big[r^2-y^2\big]
 </mrow><mrow>
-&amp;=\frac{1}{2}\left[r^3-\frac{r^3}{3}\right]
-= \frac{r^3}{3}
+&amp;=\frac{1}{2} \int_0^r\dee{y}\ \big[r^2-y^2\big]
+=\frac{1}{2}\left[r^3-\frac{r^3}{3}\right]
+</mrow><mrow>
+&amp;= \frac{r^3}{3}
 </mrow>
 </md>
 and
@@ -484,7 +486,7 @@ and
 = \frac{4}{\pi r^2}\left[\frac{r^3}{3}\right]
 =\frac{4r}{3\pi}
 </me>
-This is the same answer as we got in Example \eref{CLP101}{eg:TRQcentroidBa}
+This is the same answer as we got in Example 2.3.4
 of the CLP-2 text. But because we were able to use horizontal slices,
 the integral in this example was a little easier to evaluate than the
 integral in CLP-2. Had we used vertical slices, we would have ended up
@@ -540,7 +542,7 @@ circle <m>(x-2)^2+y^2=4</m>.
 Here is a sketch of that circle and of the region of interest, <m>\cR</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="40%">
 <image source="figs/comPolarA"/>
 </sidebyside>
 
@@ -680,12 +682,15 @@ centroid.
 </p>
 
 <p>That is the case for the integral in this example. Rewrite
-<me>
+<md>
+<mrow>
 \int_0^2\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}
                                  \big(2x+3y\big)\dee{y}\,\dee{x}
-=2\int_0^2\dee{x}\left[\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}\dee{y}\ x\right]
- +3\int_0^2\dee{x}\left[\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}\dee{y}\ y\right]
-</me>
+&amp;=2\int_0^2\dee{x}\left[\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}\dee{y}\ x\right]
+ </mrow><mrow>
+&amp;\hskip0.5in+3\int_0^2\dee{x}\left[\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}\dee{y}\ y\right]
+</mrow>
+</md>
 On the domain of integration
 <ul>
 <li>
@@ -708,7 +713,7 @@ Our domain of integration is exactly the disk
 of radius <m>1</m> centred on <m>(1,0)</m>.
 </p>
 
-<sidebyside>
+<sidebyside width="66%">
 <image source="figs/cofm"/>
 </sidebyside>
 
@@ -740,23 +745,17 @@ that has mass density <m>\rho(x,y)\,\text{kg}/\text{m}^2</m>, and that is
 rotating at <m>\om\,\text{rad}/\text{s}</m>  about some axis.
 Let's call the axis of rotation <m>\cA</m>.
 We are now going to determine the kinetic energy of that plate.
-Recall
-<fn>If you don't recall, don't worry. We wouldn't lie to you.
-Or check it on Wikipedia. They wouldn't lie to you either.
-</fn>
-</p>
-
-<p>that, by definition, the kinetic energy of a point particle of
+Recall<fn>If you don't recall, don't worry. We wouldn't lie to you.
+Or check it on Wikipedia. They wouldn't lie to you either.</fn>
+that, by definition, the kinetic energy of a point particle of
 mass <m>m</m> that is moving with speed <m>v</m> is <m>\frac{1}{2}mv^2</m>.
 </p>
 
 <p>To get the kinetic energy of the entire plate, cut it up into tiny
-rectangles
-<fn>The relatively small number of <q>rectangles</q>
+rectangles<fn>The relatively small number of <q>rectangles</q>
 around the boundary of <m>\cR</m> won't actually be rectangles. But, as we have seen
 in the optional §<xref ref="sec_integral_error"/>, one can still make things
-rigorous despite the rectangles being a bit squishy around the edges.</fn>
-,
+rigorous despite the rectangles being a bit squishy around the edges.</fn>,
 say of size <m>\dee{x}\times\dee{y}</m>. Think of
 each rectangle as being (essentially) a point particle. If the  point
 <m>(x,y)</m> on the plate is a distance <m>D(x,y)</m> from the axis of rotation
@@ -765,7 +764,7 @@ radius <m>D(x,y)</m>. The figure on the right below shows that circle as seen
 from high up on the axis of rotation.
 </p>
 
-<sidebyside>
+<sidebyside widths="40% 28%" valign="middle">
 <image source="figs/momInertia"/>
 <image source="figs/momInertiaB"/>
 </sidebyside>
@@ -854,7 +853,7 @@ Assume that it has density one.
 The distance from any point <m>(x,y)</m> inside the disk to the axis of
 </p>
 
-<sidebyside>
+<sidebyside width="35%">
 <image source="figs/diskI"/>
 </sidebyside>
 
@@ -865,9 +864,7 @@ the interior of the disk about the <m>x</m>-axis is
 <me>
 I_x = \dblInt_\cR y^2\ \dee{x}\dee{y}
 </me>
-Switching to polar coordinates
-<fn>See how handy they are!</fn>
-,
+Switching to polar coordinates<fn>See how handy they are!</fn>,
 <md>
 <mrow>
 I_x &amp;= \int_0^{2\pi}\dee{\theta}\int_0^{a}\dee{r}\ r
@@ -903,7 +900,7 @@ Assume that the cardiod lies in the <m>xy</m>-plane and  has density one.
   We sketched the cardiod (with <m>a=1</m>) in Example <xref ref="eg_cardioid"/>.
 </p>
 
-<sidebyside>
+<sidebyside width="35%">
 <image source="figs/cardioidIZ"/>
 </sidebyside>
 
@@ -956,7 +953,8 @@ To integrate <m>\cos^4\theta</m>, we use the double angle formula
 </mrow><mrow>
 \implies \cos^4\theta &amp;= \frac{\big(\cos(2\theta)+1\big)^2}{4}
     =\frac{\cos^2(2\theta)+2\cos(2\theta)+1}{4}
-    =\frac{\frac{\cos(4\theta)+1}{2}+2\cos(2\theta)+1}{4}
+</mrow><mrow>
+&amp;=\frac{\frac{\cos(4\theta)+1}{2}+2\cos(2\theta)+1}{4}
 </mrow><mrow>
    &amp;=\frac{3}{8} +\frac{1}{2}\cos(2\theta) +\frac{1}{8}\cos(4\theta)
 </mrow>
@@ -965,9 +963,10 @@ to give
 <md>
 <mrow>
 \int_0^{2\pi}\dee{\theta}\ \cos^4\theta
-=\int_0^{2\pi}\dee{\theta}\ \left[\frac{3}{8}
+&amp;=\int_0^{2\pi}\dee{\theta}\ \left[\frac{3}{8}
          +\frac{1}{2}\cos(2\theta) +\frac{1}{8}\cos(4\theta)\right]
-=\frac{3}{8} \times 2\pi +\frac{1}{2}\times 0 +\frac{1}{8}\times 0
+</mrow><mrow>
+&amp;=\frac{3}{8} \times 2\pi +\frac{1}{2}\times 0 +\frac{1}{8}\times 0
 =\frac{3}{4}\pi
 </mrow>
 </md>
