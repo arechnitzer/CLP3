@@ -1,0 +1,105 @@
+\documentclass[12pt,letterpaper, openany]{book}
+
+
+\usepackage{clp_notes_header}
+\usepackage{clp_multi_macros}
+\renewcommand{\showintremarks}{n}
+\renewcommand{\showissues}{y}
+
+\graphicspath{{./figs_misc/}}
+
+\newcommand{\llt}{\left<}
+\newcommand{\rgt}{\right>}
+\newcommand{\vd}{\mathbf{d}}
+\newcommand{\he}{\mathbf{e}}
+\newcommand{\vg}{\mathbf{g}}
+\newcommand{\vt}{\mathbf{t}}
+\newcommand{\vw}{\mathbf{w}}
+\def\eqover#1{\ {\buildrel #1 \over =}\ }
+\newcommand{\impliesover}[1]{ {\buildrel #1 \over\implies} }
+
+\usepackage{xr}
+   \externaldocument[CLP100-]{clp_1_dc_text} 
+   \externaldocument[CLP101-]{clp_2_ic_text} 
+   \externaldocument[CLP317-]{clp_4_vc} 
+   \newcommand{\eref}[2]{\ref*{#1-#2}}
+%   \newcommand{\eref}[2]{\Ref{#1-#2}}
+
+
+
+\begin{document}
+%% Cover image, not numbered
+\setcounter{page}{0}\includepdf[noautoscale=false]{figs_misc/clp3-cover.pdf}
+
+\begin{titlepage} 
+\begin{center} 
+\textsc{\LARGE
+CLP-3 Multivariable Calculus
+}\\[2ex]
+
+\vspace{5ex}
+\hrule
+\vspace{5ex}
+
+\begin{minipage}[t]{0.3\textwidth} \begin{flushleft}
+\large Joel \textsc{Feldman}
+\end{flushleft} \end{minipage}%
+\begin{minipage}[t]{0.3\textwidth} \begin{flushleft}
+\large Andrew \textsc{Rechnitzer}
+\end{flushleft} \end{minipage}%
+\begin{minipage}[t]{0.3\textwidth} \begin{flushright}
+\large Elyse \textsc{Yeager}
+\end{flushright} \end{minipage}%
+\end{center}
+\vspace{2ex}
+\hrule
+
+\vfill
+\textsc{This document was typeset on \today.}
+\end{titlepage}
+
+\subsection*{Legal stuff}
+\begin{itemize}
+ \item Copyright \copyright\ 2017--20 Joel Feldman, Andrew Rechnitzer and Elyse Yeager.
+
+\item In the near future this will be licensed under the 
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International 
+License. You can view a copy of the license at \\
+\url{http://creativecommons.org/licenses/by-nc-sa/4.0/}.
+\begin{center}
+ \includegraphics{by-nc-sa.pdf}
+\end{center}
+
+
+\end{itemize}
+
+\begin{comment}
+\newpage
+\section*{Issues to be sorted}
+\begin{itemize}
+\item 
+
+\end{itemize}
+\end{comment}
+
+\frontmatter
+
+
+\tableofcontents
+
+\mainmatter
+\input{clp_3d_geometry}
+\input{clp_partial_derivs}
+\input{clp3_integrals}
+
+
+\appendix 
+\input{clp_app_trig}
+\input{clp_app_powerlog}
+\input{clp_app_deriv}
+\input{clp_app_integral}
+\input{clp_app_taylor}
+\input{clp_3d_coord}
+\input{clp_quadric}
+\printIssueCount
+\end{document}

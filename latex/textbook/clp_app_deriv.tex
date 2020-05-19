@@ -1,0 +1,73 @@
+
+\chapter{Table of Derivatives}\label{app deriv}
+
+Throughout this table, $a$ and $b$ are constants, independent of $x$.
+
+\begin{center}
+
+\renewcommand{\arraystretch}{2.5}
+     \begin{tabular}{|c|c|}
+        \hline
+    $F(x)$ & $F'(x)=\diff{F}{x}$ \\ 
+        \hline\hline
+%  linearity 
+    $af(x)+bg(x)$ & $af'(x)+bg'(x)$ \\  \hline
+    $f(x)+g(x)$ & $f'(x)+g'(x)$ \\  \hline
+    $f(x)-g(x)$ & $f'(x)-g'(x)$ \\  \hline
+    $af(x)$ & $af'(x)$ \\  \hline
+%  product, quotient
+    $f(x)g(x)$ & $f'(x)g(x)+f(x)g'(x)$ \\  \hline
+    $f(x)g(x)h(x)$ &$f'(x)g(x)h(x)+f(x)g'(x)h(x)+f(x)g(x)h'(x)$ \\  \hline
+    $\frac{f(x)}{g(x)}$ & $\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}$ \\  \hline
+    $\frac{1}{g(x)}$ & $-\frac{g'(x)}{g(x)^2}$ \\  \hline\hline
+%  chain
+    $f\big(g(x)\big)$ & $f'\big(g(x)\big)g'(x)$ \\  \hline
+     \end{tabular}
+
+     \begin{tabular}{|c|c|}
+        \hline
+    $F(x)$ & $F'(x)=\diff{F}{x}$ \\ 
+        \hline\hline
+%  powers
+%    $1$ & $0$ \\  \hline
+    $a$ & $0$ \\  \hline
+    $x^a$ & $ax^{a-1}$ \\  \hline
+    $g(x)^a$ & $ag(x)^{a-1}g'(x)$ \\  \hline\hline
+% trig
+    $\sin x$ & $\cos x$ \\  \hline
+    $\sin g(x)$ & $g'(x)\cos g(x)$ \\  \hline
+    $\cos x$ & $-\sin x$ \\  \hline
+    $\cos g(x)$ & $-g'(x)\sin g(x)$ \\  \hline
+    $\tan x$ & $\sec^2 x$ \\  \hline
+    $\csc x$ & $-\csc x\cot x$ \\  \hline
+    $\sec x$ & $\sec x\tan x$ \\  \hline
+    $\cot x$ & $-\csc^2 x$ \\  \hline\hline
+% exp
+    $e^x$ & $e^x$ \\  \hline
+    $e^{g(x)}$ & $g'(x)e^{g(x)}$ \\  \hline
+    $a^x$ & $(\ln a)\ a^x$ \\  \hline\hline
+     \end{tabular}\qquad\qquad
+     \begin{tabular}{|c|c|}
+        \hline
+    $F(x)$ & $F'(x)=\diff{F}{x}$ \\ 
+        \hline\hline
+%  log
+    $\ln x$ & $\frac{1}{x}$ \\  \hline
+    $\ln g(x)$ & $\frac{g'(x)}{g(x)}$ \\  \hline
+    $\log_a x$ & $\frac{1}{x\ln a}$ \\  \hline\hline
+% inverse trig
+    $\arcsin x$ & $\frac{1}{\sqrt{1-x^2}}$ \\  \hline
+    $\arcsin g(x)$ & $\frac{g'(x)}{\sqrt{1-g(x)^2}}$ \\  \hline
+    $\arccos x$ & $-\frac{1}{\sqrt{1-x^2}}$ \\  \hline
+    $\arctan x$ & $\frac{1}{1+x^2}$ \\  \hline
+    $\arctan g(x)$ & $\frac{g'(x)}{1+g(x)^2}$ \\  \hline
+    $\arccsc x$ & $-\frac{1}{|x|\sqrt{x^2-1}}$ \\  \hline
+    $\arcsec x$ & $\frac{1}{|x|\sqrt{x^2-1}}$ \\  \hline
+    $\arccot x$ & $-\frac{1}{1+x^2}$ \\  \hline
+     \end{tabular}
+\renewcommand{\arraystretch}{1.0}
+
+\end{center}
+
+
+

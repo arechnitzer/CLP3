@@ -1,0 +1,85 @@
+%!PS-Adobe-3.0
+%%BoundingBox:       0.0 0.0     144.0 144.0
+%%Title:              
+%%Created by:        Figure.java
+%%Date:              Sat Jan 05 09:57:40 PST 2019
+%%EndComments
+
+gsave
+
+%% ellipse library
+
+/ellipsedict 10 dict def        %% arguments: xcentre ycentre xradius yradius
+ellipsedict /emtrx matrix put  %%            startangle endangle closetype
+
+/ellipse                       %% closetype: 0 for open, 1 for chord, 2 for wedge
+    {ellipsedict begin
+       /closetype exch def
+       /endangle exch def      /startangle exch def
+       /yrad exch def          /xrad exch def
+       /y exch def             /x exch def
+       /savematrix emtrx currentmatrix def
+    x y translate
+    xrad  yrad  scale
+    newpath
+    closetype 2 eq  {0 0 moveto} if
+    0 0 1 startangle endangle arc
+    closetype 1 eq  {closepath} if
+    closetype 2 eq  {closepath} if
+    savematrix setmatrix
+    end
+    } def
+
+%%  Figure2ps dictionary
+
+/Figure2psDict 30 dict def
+Figure2psDict begin
+  /iscp false def
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+newpath -1.0 -1.0 moveto 145.0 -1.0 lineto 145.0 145.0 lineto -1.0 145.0 lineto closepath clip
+/Helvetica 10 setpsfont
+0.5 setlinewidth
+newpath
+48.0  48.0  moveto
+134.39999999999998  48.0  lineto stroke
+newpath
+48.0  48.0  moveto
+48.0  105.6  lineto stroke
+newpath
+48.0  48.0  moveto
+0.0  0.0  lineto stroke
+1.5 setlinewidth
+0 0.53333 0.8 setrgbcolor  
+1.5 setlinewidth
+newpath
+9.600000000000001  9.600000000000001  moveto
+120.0  48.0  lineto stroke
+newpath
+9.600000000000001  9.600000000000001  moveto
+48.0  83.52  lineto stroke
+newpath
+120.0  48.0  moveto
+48.0  83.52  lineto stroke
+0 0 0 1 setcmykcolor  
+gsave
+  0.0 setgray
+  9.600000000000001 9.600000000000001   2.400000000000002 2.400000000000002  0 360 0 ellipse fill
+grestore
+gsave
+  0.0 setgray
+  120.0 48.0   2.400000000000002 2.400000000000002  0 360 0 ellipse fill
+grestore
+gsave
+  0.0 setgray
+  48.0 83.52   2.400000000000002 2.400000000000002  0 360 0 ellipse fill
+grestore
+
+%%Trailer
+end
+grestore

@@ -1,0 +1,96 @@
+%!PS-Adobe-3.0
+%%BoundingBox:       0.0 0.0     136.8 136.8
+%%Title:              
+%%Created by:        Figure.java
+%%Date:              Sun Dec 16 11:51:26 PST 2018
+%%EndComments
+
+gsave
+
+%% ellipse library
+
+/ellipsedict 10 dict def        %% arguments: xcentre ycentre xradius yradius
+ellipsedict /emtrx matrix put  %%            startangle endangle closetype
+
+/ellipse                       %% closetype: 0 for open, 1 for chord, 2 for wedge
+    {ellipsedict begin
+       /closetype exch def
+       /endangle exch def      /startangle exch def
+       /yrad exch def          /xrad exch def
+       /y exch def             /x exch def
+       /savematrix emtrx currentmatrix def
+    x y translate
+    xrad  yrad  scale
+    newpath
+    closetype 2 eq  {0 0 moveto} if
+    0 0 1 startangle endangle arc
+    closetype 1 eq  {closepath} if
+    closetype 2 eq  {closepath} if
+    savematrix setmatrix
+    end
+    } def
+
+%%  Figure2ps dictionary
+
+/Figure2psDict 30 dict def
+Figure2psDict begin
+  /iscp false def
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+newpath -1.0 -1.0 moveto 137.8 -1.0 lineto 137.8 137.8 lineto -1.0 137.8 lineto closepath clip
+/Helvetica 10 setpsfont
+1.5 setlinewidth
+gsave
+  0.7 setgray
+newpath
+  50.4  122.4  moveto
+  50.4  122.4  lineto
+  50.4  50.400000000000006  lineto
+  86.4  86.4  lineto
+  86.4  122.4  lineto
+fill grestore
+
+newpath
+  50.4  122.4  moveto
+  50.4  122.4  lineto
+  50.4  50.400000000000006  lineto
+  86.4  86.4  lineto
+  86.4  122.4  lineto
+  50.4  122.4  lineto
+closepath stroke
+
+0.5 setlinewidth
+newpath
+0.0  1.4210854715202004E-14  moveto
+136.79999999999998  136.8  lineto stroke
+newpath
+50.4  1.4210854715202004E-14  moveto
+50.4  136.8  lineto stroke
+newpath
+86.4  1.4210854715202004E-14  moveto
+86.4  136.8  lineto stroke
+newpath
+0.0  50.400000000000006  moveto
+68.4  50.400000000000006  lineto stroke
+newpath
+0.0  122.4  moveto
+136.79999999999998  122.4  lineto stroke
+newpath
+14.4  1.4210854715202004E-14  moveto
+14.4  136.8  lineto stroke
+newpath
+108.00000000000001  28.799999999999997  moveto
+52.56  28.799999999999997  lineto stroke
+gsave
+  0.0 setgray
+newpath 52.56  28.799999999999997 moveto 58.56   26.799999999999997  lineto  57.06   28.799999999999997  lineto  58.56   30.799999999999997 lineto closepath fill grestore
+
+
+%%Trailer
+end
+grestore

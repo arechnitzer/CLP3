@@ -1,0 +1,68 @@
+%!PS-Adobe-3.0
+%%BoundingBox:       0.0 0.0     49.6 49.6
+%%Title:              
+%%Created by:        Figure.java
+%%Date:              Wed Mar 28 22:31:27 PDT 2018
+%%EndComments
+
+gsave
+
+%% ellipse library
+
+/ellipsedict 10 dict def        %% arguments: xcentre ycentre xradius yradius
+ellipsedict /emtrx matrix put  %%            startangle endangle closetype
+
+/ellipse                       %% closetype: 0 for open, 1 for chord, 2 for wedge
+    {ellipsedict begin
+       /closetype exch def
+       /endangle exch def      /startangle exch def
+       /yrad exch def          /xrad exch def
+       /y exch def             /x exch def
+       /savematrix emtrx currentmatrix def
+    x y translate
+    xrad  yrad  scale
+    newpath
+    closetype 2 eq  {0 0 moveto} if
+    0 0 1 startangle endangle arc
+    closetype 1 eq  {closepath} if
+    closetype 2 eq  {closepath} if
+    savematrix setmatrix
+    end
+    } def
+
+%%  Figure2ps dictionary
+
+/Figure2psDict 30 dict def
+Figure2psDict begin
+  /iscp false def
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+newpath -1.0 -1.0 moveto 50.6 -1.0 lineto 50.6 50.6 lineto -1.0 50.6 lineto closepath clip
+/Helvetica 10 setpsfont
+0.5 setlinewidth
+newpath
+0.0  9.919999999999995  moveto
+49.60000000000001  9.919999999999995  lineto stroke
+newpath
+9.920000000000002  -7.105427357601002E-15  moveto
+9.920000000000002  49.6  lineto stroke
+  9.920000000000002 9.919999999999995   9.920000000000002 9.920000000000002   0.0 45.0   0  ellipse stroke
+1.0 setlinewidth
+newpath
+9.920000000000002  9.919999999999995  moveto
+37.977997077482215  37.9779970774822  lineto stroke
+1.0 setlinewidth
+0 1 1 0 setcmykcolor  
+gsave
+  0 1 1 0 setcmykcolor   
+  37.977997077482215 37.9779970774822   1.9840000000000004 1.9840000000000004  0 360 0 ellipse fill
+grestore
+
+%%Trailer
+end
+grestore

@@ -1,0 +1,117 @@
+%!PS-Adobe-3.0
+%%BoundingBox:         -1.0   -1.0   58.6   58.6
+%%Title:             hyperbolic_paraboloid.ps
+%%Created by:        scr2ps
+%%Date:              Wed Dec 16 14:26:12 1998
+%%EndComments
+
+gsave
+
+
+%%  scr2ps dictionary
+
+/scr2psDict 30 dict def
+scr2psDict begin
+  /iscp false def 
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /np    {newpath} bind def
+  /mt    {moveto}  bind def
+  /li    {lineto}  bind def
+  /ls    {lineto stroke} bind def
+  /setxscale {/xscale exch def} bind def
+  /setyscale {/yscale exch def} bind def
+  /smt    {yscale mul exch xscale mul exch moveto}  bind def
+  /sli    {yscale mul exch xscale mul exch lineto}  bind def
+  /sls    {yscale mul exch xscale mul exch lineto stroke} bind def
+  /strans {yscale mul exch xscale mul exch translate}  bind def
+  /sct    {yscale mul /y3 exch def
+           xscale mul /x3 exch def
+           yscale mul /y2 exch def
+           xscale mul /x2 exch def
+           yscale mul exch xscale mul exch x2 y2 x3 y3 curveto} bind def
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+1  setxscale
+1  setyscale
+
+np   -1.0   -1.0  mt   58.6   -1.0 li   58.6   58.6 li   -1.0   58.6 li closepath clip
+       0.0      0.0 translate
+
+      0.0 setlinewidth
+
+      0.480  setxscale
+     60.000  0  strans
+
+      0.480  setyscale
+    0       60.000 strans
+
+      0.4 setlinewidth
+
+%% draw bezier curve
+     newpath     -60.000     -20.000  smt
+   -50.000     30.000    -30.000     30.000    -20.000    -20.000 sct
+     stroke
+
+%% draw bezier curve
+     newpath      20.000     -20.000  smt
+    30.000     30.000     50.000     30.000     60.000    -20.000 sct
+     stroke
+
+%% draw bezier curve
+     newpath     -60.000     -20.000  smt
+   -20.000     10.000    -20.000     10.000     20.000    -20.000 sct
+     stroke
+
+%% draw bezier curve
+     newpath     -20.000     -20.000  smt
+    20.000     10.000     20.000     10.000     60.000    -20.000 sct
+     stroke
+
+%% draw bezier curve
+     newpath     -40.600      17.800  smt
+    -0.600      2.800      0.600      2.800     40.600     17.800 sct
+     stroke
+
+     1.0 setgray
+
+%% draw polygonal curve
+     newpath     -26.700       3.900  smt
+   -23.000     -4.400 sli
+    -7.000     -8.800 sli
+     1.100     -3.800 sli
+   -12.800      3.900 sli
+     closepath fill
+
+%% draw polygonal curve
+     newpath      23.300       3.900  smt
+    28.900      1.100 sli
+    37.200     16.000 sli
+    26.100     10.400 sli
+     closepath fill
+
+     0.0 setgray
+
+      0.2 setlinewidth
+
+    [1.5 1.5]  0.8 setdash
+
+%% draw bezier curve
+     newpath      20.000     -20.000  smt
+    30.000     30.000     50.000     30.000     60.000    -20.000 sct
+     stroke
+
+%% draw bezier curve
+     newpath     -60.000     -20.000  smt
+   -20.000     10.000    -20.000     10.000     20.000    -20.000 sct
+     stroke
+
+
+
+%%Trailer
+end 
+grestore
+%%EOF

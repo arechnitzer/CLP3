@@ -1,0 +1,111 @@
+%!PS-Adobe-3.0
+%%BoundingBox:       0.0 0.0     288.0 288.0
+%%Title:              
+%%Created by:        Figure.java
+%%Date:              Fri Aug 17 13:56:12 PDT 2018
+%%EndComments
+
+gsave
+
+%% ellipse library
+
+/ellipsedict 10 dict def        %% arguments: xcentre ycentre xradius yradius
+ellipsedict /emtrx matrix put  %%            startangle endangle closetype
+
+/ellipse                       %% closetype: 0 for open, 1 for chord, 2 for wedge
+    {ellipsedict begin
+       /closetype exch def
+       /endangle exch def      /startangle exch def
+       /yrad exch def          /xrad exch def
+       /y exch def             /x exch def
+       /savematrix emtrx currentmatrix def
+    x y translate
+    xrad  yrad  scale
+    newpath
+    closetype 2 eq  {0 0 moveto} if
+    0 0 1 startangle endangle arc
+    closetype 1 eq  {closepath} if
+    closetype 2 eq  {closepath} if
+    savematrix setmatrix
+    end
+    } def
+
+%%  Figure2ps dictionary
+
+/Figure2psDict 30 dict def
+Figure2psDict begin
+  /iscp false def
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+newpath -1.0 -1.0 moveto 289.0 -1.0 lineto 289.0 289.0 lineto -1.0 289.0 lineto closepath clip
+/Helvetica 10 setpsfont
+0.5 setlinewidth
+newpath
+155.51999999999998  110.60869565217388  moveto
+155.51999999999998  237.2173913043478  lineto stroke
+newpath
+155.51999999999998  110.60869565217388  moveto
+285.12  101.21739130434779  lineto stroke
+newpath
+155.51999999999998  110.60869565217388  moveto
+126.71999999999998  58.43478260869561  lineto stroke
+1.0 setlinewidth
+0.7 setgray
+newpath
+  138.23999999999998  187.82608695652172  moveto
+  145.07213434397732  187.4313656490147  lineto
+  151.96868325399194  187.2320796437264  lineto
+  165.78481171241518  187.4235156990216  lineto
+  172.61921023454872  187.81305749266522  lineto
+  179.34818643952184  188.39568133138607  lineto
+  185.93025395141925  189.16779514547636  lineto
+  192.32483213527058  190.1246385965183  lineto
+  198.49249629015932  191.2603124264535  lineto
+  204.39522071561413  192.56781482847055  lineto
+  209.9966131526971  194.0390846154723  lineto
+  215.26213915438152  195.66505091997504  lineto
+  220.15933500190198  197.43568911902292  lineto
+  224.6580078543756  199.3400826393218  lineto
+  228.73042189770644  201.3664902615439  lineto
+  232.35146934510215  203.50241850884936  lineto
+  235.4988252349292  205.7346986733253  lineto
+  238.1530850715247  208.0495680054493  lineto
+  240.29788446036508  210.43275456601657  lineto
+  241.92  212.86956521739128  lineto
+stroke
+
+newpath
+155.51999999999998  219.1304347826087  moveto
+138.23999999999998  187.82608695652172  lineto stroke
+newpath
+155.51999999999998  110.60869565217388  moveto
+241.92  212.8695652173913  lineto stroke
+newpath
+155.51999999999998  110.60869565217388  moveto
+138.23999999999998  187.82608695652172  lineto stroke
+newpath
+155.51999999999998  219.1304347826087  moveto
+241.92  212.8695652173913  lineto stroke
+gsave
+  0.0 setgray
+  155.51999999999998 219.1304347826087   2.2027764298721024 2.202776429872077  0 360 0 ellipse fill
+grestore
+gsave
+  0.0 setgray
+  241.92 212.8695652173913   2.2027764298721024 2.202776429872077  0 360 0 ellipse fill
+grestore
+gsave
+  0.0 setgray
+  138.23999999999998 187.82608695652172   2.2027764298721024 2.202776429872077  0 360 0 ellipse fill
+grestore
+1.2 setlinewidth
+0 1 1 0 setcmykcolor  
+
+%%Trailer
+end
+grestore

@@ -1,0 +1,310 @@
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts, amssymb, mathtools, mathabx, multirow}
+\usepackage{mathrsfs}
+\usepackage{lipsum}
+%\usepackage{fullpage}
+\usepackage{parskip, calculator, polynom}
+
+\usepackage[letterpaper,left=2.5cm,right=2.5cm,top=2cm,bottom=2cm]{geometry }
+\usepackage{nicefrac,enumerate,array}
+\usepackage{comment}
+% for including coverpage
+\usepackage{pdfpages}
+
+\usepackage{cancel}
+
+\usepackage{tikz}
+
+\usepackage{palatino, mathpazo}
+
+\usepackage{datetime}
+%%%%%%%%%%%%%%%%
+%% Note - hyperref is loaded last, else it causes issues.
+
+%%%%%%%%%%%%%%%%
+%% Messing with headers and footers
+%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\renewcommand{\chaptermark}[1]{\markboth{\textsc{#1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ \textsc{#1}}{}}
+
+\lhead{\leftmark} \chead{} \rhead{\rightmark}
+\lfoot{} \cfoot{\thepage} \rfoot{}
+
+%%%%%%%% fixing long section titles.
+%% from 
+% http://tex.stackexchange.com/questions/241286/toc-and-header-versions-of-section
+% -titles-titlesec-interferes-with-fancyhdr
+% 
+%second = short title for headers, first = long title for in text + toc.
+\newcommand{\longsection}[2]
+     {\let\orisectionmark\sectionmark
+     \renewcommand\sectionmark[1]{}%
+     \section[{#1}]{{#1}\orisectionmark{{#2}}}
+     \orisectionmark{{#2}}
+     \let\sectionmark\orisectionmark}
+%%%%%% 
+% Fix footnotes to lie on one page
+\interfootnotelinepenalty=10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Macros
+\usepackage{clp_macros}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Some useful colours
+\usepackage{xcolor}
+\definecolor{_deepskyblue}{HTML}{007090}
+\definecolor{_deepgreen}{HTML}{006070}
+\definecolor{_darkred}{HTML}{600000}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Boxes and theorems 
+%\usepackage{clp_boxes_theorems}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For function plotting.
+%\usepackage{pgfplots}
+%\pgfplotsset{width=65mm,compat=1.9, tick label style={font=\scriptsize}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% messing with footnotes
+\newcommand{\neghphantom}[1]{\begingroup\sbox0{#1}\hspace*{-\wd0}\endgroup}
+\makeatletter
+\renewcommand\@makefntext[1]{\leftskip=2em\hskip-2em \@thefnmark 
+\neghphantom{\@thefnmark}\hskip2em #1}
+\makeatother
+
+\usetikzlibrary{arrows}
+\renewcommand{\footnoterule}{
+\noindent\hspace{-2ex}\begin{tikzpicture}[scale=1.05]
+\draw[*-*,thick,rounded corners] (0,0) -- (1.0\textwidth,0) -- (1.0\textwidth,-0.5);
+\end{tikzpicture}\vspace{-1.5ex}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Elyse macros.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usetikzlibrary{shapes, patterns, snakes}
+%\usetikzlibrary{shapes, patterns, decorations}
+\tikzstyle{vertex}=[shape=circle, minimum size=2mm, inner sep=0, fill]
+\tikzstyle{opendot}=[shape=circle, minimum size=2mm, inner sep=0, fill=white, draw]
+
+\newcommand{\Conceptual}{Stage~1}
+\newcommand{\Procedural}{Stage~2}
+\newcommand{\Application}{Stage~3}
+\newcommand{\Instructions}[1]{{\small\textit{#1}}}
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines, <->] (-#1,0)--(#1,0) node[right]{$x$};
+\draw[help lines, <->] (0,-#2)--(0,#2) node[above]{$y$};}
+\newcommand{\YEaaxis}[4]{\draw[help lines, <->] (-#1,0)--(#2,0) 
+node[right]{$x$};
+\draw[help lines, <->] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines, <->] (-#1,0)--(#2,0) 
+node[right]{$t$};
+\draw[help lines, <->] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaxis}[4]{\draw[help lines, <->] (-#1,0)--(#2,0) 
+node[right]{$t$};
+\draw[help lines, <->] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YExcoord}[2]{
+	\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{
+	\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{
+	\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{
+	\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+\newcommand{\YEstickfig}[3]{
+	\draw (#1,#2) arc(-90:270:2mm);
+	\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}	
+%%Elyse - IBP choice table
+% (variable)(part)(deriv)(int)(part)(deriv)(int)
+\newcommand{\IBP}[7]{
+\[\begin{array}{c  | l | l |}
+\cline{2-3}
+&&\\
+\color{red}\mbox{Option 1:\quad}&
+	u=#2 &\color{red}\dee{u}=#3 ~\dee{#1}\\[10pt]
+~&	\dee{v}=#5~\dee{#1}&\color{red}v=#7\\[10pt]
+\cline{2-3}
+&&\\
+\color{blue}\mbox{Option 2:\quad}&
+	u=#5&\color{blue}\dee{u}=#6~\dee{#1}\\[10pt]
+~&	\dee{v}=#2~ \dee{#1}&\color{blue}v=#4\\[10pt]
+\cline{2-3}
+\end{array}\]}
+
+%%Elyse - right triangle
+%(angle)(adjacent)(opposite)(hypotenuse)
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+
+%%make nice long division remainders
+%%taken from https://tex.stackexchange.com/questions/8580/how-to-show-the-full-remainder-in-polynomial-long-division
+\makeatletter
+\def\pld@DivPoly@l{%
+    \ifx\pld@remainder\@empty\else
+        \pld@IfNeedsDivision\pld@remainder\pld@divisor
+        {\pld@ExtendPoly\pld@quotient\pld@factor
+         \pld@NMultiplyPoly\pld@sub\pld@divisor\pld@factor
+         \pld@SubtractPoly\pld@remainder\pld@sub
+         \expandafter\pld@DivPoly@l}%
+        {\expandafter\pld@insert@remainder                       % !!!
+         \pld@last@remainder+\relax\relax}                       % !!!
+    \fi}
+\def\pld@insert@remainder#1+#2\relax{%                           % !!!
+    \ifx\relax#1\relax\else\pld@InsertItems\@empty\@empty{#1}\fi % !!!
+    \ifx\relax#2\relax\else\pld@insert@remainder#2\relax\fi}     % !!!
+\def\pld@SubtractPoly@l#1+#2\@empty#3+#4\@empty{%
+    \ifx\relax#1\relax
+        \let\pld@last@remainder\@empty                           % !!!
+        \ifx\relax#3\relax \let\pld@next\@empty \else
+          \pld@AddToPoly\pld@tempoly{#3}%
+          \pld@if \pld@InsertItems{#3}{#3}{}\fi
+          \def\pld@next{\pld@SubtractPoly@l\relax+\@empty#4\@empty}%
+        \fi
+    \else
+    \ifx\relax#3\relax
+        \pld@SubtractPoly@r#1+#2\@empty
+        \let\pld@next\@empty
+    \else
+        \pld@IfMonomE{#1}{#3}%
+        {\def\pld@temp{#1+#3}%
+         \pld@CondenseMonomials\pld@true\pld@temp
+         \ifx\pld@temp\@empty\else
+             \pld@ExtendPoly\pld@tempoly\pld@temp
+         \fi
+         \pld@if \expandafter\pld@InsertItems\expandafter
+                 {\pld@temp}{#3}{#1}\fi
+         \def\pld@next{\pld@SubtractPoly@l#2\@empty#4\@empty}}%
+        {\pld@IfMonomL{#1}{#3}%
+         {\pld@AddToPoly\pld@tempoly{#3}%
+          \pld@if \pld@InsertItems{#3}{#3}{}\fi
+          \def\pld@next{\pld@SubtractPoly@l#1+#2\@empty#4\@empty}}%
+         {\pld@AddToPoly\pld@tempoly{#1}%
+          \pld@if \pld@InsertItems{#1}{}{#1}\fi
+          \def\pld@next{\pld@SubtractPoly@l#2\@empty#3+#4\@empty}}%
+        }%
+    \fi \fi
+    \pld@next}
+\def\pld@SubtractPoly@r#1+\relax+\@empty{%
+    \pld@AddToPoly\pld@tempoly{#1}%
+    \def\pld@last@remainder{#1}}                                 % !!!
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%% messing with chapter and section
+\usepackage[explicit]{titlesec}
+%%%% A fix for titlesec section numbering issues - see https://bugs.launchpad.net/ubuntu/+source/texlive-extra/+bug/1574052
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
+%%%%
+\tikzset{weird fill/.style={append after command={
+   \pgfextra
+        \draw[sharp corners, fill=#1]% 
+    (\tikzlastnode.west)% 
+    [rounded corners=0pt] |- (\tikzlastnode.north)% 
+    [rounded corners=5pt] -| (\tikzlastnode.east)% 
+    [rounded corners=0pt] |- (\tikzlastnode.south)% 
+    [rounded corners=5pt] -| (\tikzlastnode.west)%
+    ;
+   \endpgfextra}}}
+
+\titleformat{name=\chapter}
+{\normalfont}
+{}
+{8pt}
+{
+\begin{center}\begin{tikzpicture}
+\draw node[
+    inner sep=10pt, inner ysep=20pt, very thick,
+    weird fill=_deepgreen, text=white, minimum width={0.9\textwidth},
+    text width={0.9\textwidth}, align=center
+  ](b) {\scshape\huge\filcenter #1};
+\node[right=10pt, rounded corners=0pt, draw, fill=white] at (b.north west) 
+{\chaptertitlename\ \thechapter};
+\end{tikzpicture}\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% messing with part title page.
+\titleformat{name=\part}
+{\normalfont}
+{}
+{8pt}
+{
+\begin{center}\begin{tikzpicture}
+\draw node[
+    inner sep=10pt, inner ysep=40pt, very thick,
+    weird fill=_deepskyblue, text=white, minimum width={0.9\textwidth},
+    text width={0.9\textwidth}, align=center
+  ](b) {\scshape\huge\filcenter #1};
+\node[right=10pt, rounded corners=0pt, draw, fill=white] at (b.north west) 
+{\partname\ \thepart};
+\end{tikzpicture}\end{center}
+}
+
+
+\titleformat{name=\chapter,numberless}
+{\normalfont}
+{}
+{8pt}
+{
+\begin{center}\begin{tikzpicture}
+\draw node[
+    inner sep=10pt, inner ysep=20pt, very thick,
+    weird fill=_deepgreen, text=white, minimum width={0.9\textwidth},
+    text width={0.9\textwidth}, align=center
+  ](b) {\scshape\huge\filcenter #1};
+\end{tikzpicture}\end{center}
+}
+
+
+%
+\titleformat{\section}
+{\titlerule
+\vspace{.8ex}%
+\Large\bfseries}
+{\llap{\thesection}}{0.0em}{$\blacktriangleup$ #1}
+%
+\titleformat{\subsection}{\large\bfseries}
+{\llap{\thesubsection}}{0.0em}{ $\blacktriangleright\!\blacktriangleright$ #1}
+
+\titleformat{\subsubsection}{\bfseries}{\llap{\thesubsubsection}}{0.0em}{
+$\blacktriangleright\!\blacktriangleright\!\blacktriangleright$ #1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% always load hyperref last
+\usepackage[colorlinks=true]{hyperref} 
+\makeatletter
+\Hy@AtBeginDocument{%
+  \def\@pdfborder{0 0 1}% Overrides border definition set with colorlinks=true
+  \def\@pdfborderstyle{/S/U/W 1}% Overrides border style set withcolorlinks=true
+		    % Hyperlink border style will be underlineof width1pt
+}
+\makeatother
+\hypersetup{linkcolor=blue!50!black}
+

@@ -1,0 +1,2631 @@
+\def\ftmagnification{1000}
+\def\spacingNumerator{1}
+\def\spacingDenominator{1}
+\input jmacros
+\input figMac
+\def\figdir{fig/}
+
+\def\date{January 23, 2011}
+%\footline={{\null\date\hfill Vectors and Geometry in Two and Three Dimensions} \hfill\folio}
+\footline={{\sevenrm\copyright\ Joel Feldman. 2011. All rights reserved.\hfill\date\hfill Vectors and Geometry} \hfill\folio}
+
+\def\implies{\quad\Longrightarrow\quad}
+\def\CH{I}
+\def\soln{{\bf Solution.\ }}
+\def\a{{\bf a}}
+\def\b{{\bf b}}
+
+\titlea{ \CH. Vectors and Geometry in Two and Three Dimensions }
+\titleb{\S \CH.1 Points and Vectors}
+Each point in two dimensions may be labeled by two coordinates
+$(a,b)$ which specify the position of the point in some units with respect
+to some axes as in the figure on the left below. Similarly, each point in 
+three dimensions may be labeled by three coordinates $(a,b,c)$. 
+\vadjust{\null\hfill\figplace{point}{0 in}{0 in}\hfill\null}
+The set of all points in two dimensions is denoted $\bbbr^2$ and the set
+of all points is three dimensions is denoted $\bbbr^3$.
+The distance from the point $(x,y,z)$ to the point $(x',y',z')$ is
+$\sqrt{(x-x')^2+(y-y')^2+(z-z')^2}$ so that the equation of the sphere
+centered on $(1,2,3)$ with radius $4$ is $(x-1)^2+(y-2)^2+(z-3)^2=16$.
+
+A {\bf vector} is a quantity which has both a direction and a magnitude,
+like a velocity or a force. To specify a vector in three dimensions
+you have to give three components, just as for a point. To draw the vector
+with components $\ a,\ b,\ c\ $ you can draw an arrow from the point $(0,0,0)$
+to the point $(a,b,c)$. 
+\vadjust{\null\hfill\figplace{vector}{0 in}{0 in}\hfill\null}
+Similarly, to specify a vector in two dimensions
+you have to give two components and to draw the vector
+with components $\ a,\ b\ $ you can draw an arrow from the point $(0,0)$
+to the point $(a,b)$.
+
+
+There are many situations in which it is preferable to draw a vector  with
+its tail at some point other than the origin. For example, suppose that
+you are analyzing the motion of a pendulum.
+\hfill\break
+\centerline{\figplace{pendulum}{0 in}{0 in}}
+There are three forces acting on the pendulum bob: gravity $\vec g$, which
+is pulling the bob straight down, tension $\vec \tau$ in the rod, which is
+pulling the bob in the direction of the rod, and air resistance $\vec r$, 
+which is pulling the bob in a direction opposite to its direction of motion.
+All three forces are acting on the bob. So it is natural to draw all three
+arrows representing the forces with their tails at the ball. 
+
+To distinguish
+between the components of a vector and the coordinates of the point at
+its head, when
+its tail is at some point other than the origin, we shall use square rather
+than round brackets around the components of a vector. For example, here
+is the two--dimensional vector $[2,1]$ drawn in three different positions.
+In each case, when the tail is at the point $(u,v)$ the head is at 
+$(2+u,1+v)$. We warn you that, out in the  real world, no one uses notation
+that distinguishes between components of a vector and the coordinates of its 
+head. It is up to you to keep straight which is being referred to.
+\centerline{\figplace{positions}{0 in}{0 in}}
+%%%%%%%%%%
+\titlec{Exercises for \S\CH.1}
+%%%%%%%%%
+{\parindent=.2in
+\item{1)} Describe and sketch the set of all points $(x,y)$ 
+in $\bbbr^2$ that satisfy
+$$\meqalign{
+a)\ &x=y\hskip2 in &&
+b)\ &x+y=1 \cr
+c)\ &x^2+y^2=4 &&
+d)\ &x^2+y^2=2y\cr
+}$$
+\smallskip
+\item{2)} Describe and sketch the set of all points $(x,y,z)$ 
+in $\bbbr^3$ that satisfy
+$$\meqalign{
+a)\ &z=x &&
+b)\ &x+y+z=1\hskip.5 in &&
+c)\ &x^2+y^2+z^2=4 \cr
+d)\ &x^2+y^2+z^2=4,\ z=1\hskip.5 in &&
+e)\ &x^2+y^2=4 &&
+f)\ &z>\sqrt{x^2+y^2} \cr
+}$$
+\smallskip
+\item{3)} The pressure $p(x,y)$ at the point $(x,y)$ is determined by 
+$x^2-2px+y^2+1=0$. Sketch several isobars. An isobar is a curve with
+equation $p(x,y)=c$ for some constant $c$.
+\smallskip
+\item{4)} Consider any triangle. Pick a coordinate system so that one vertex
+is at the origin and a second vertex is on the positive $x$--axis. Call
+the coordinates of the second vertex $(a,0)$ and those of the third vertex
+$(b,c)$. Find the circumscribing circle (the circle that goes through all
+three vertices).
+
+}
+%%%%%%%%%%
+\titleb{\S \CH.2 Addition of Vectors and Multiplication of a Vector by a Number}
+%%%%%%%%%
+These two operations have the obvious definitions
+$$\deqalign{
+&\vec a=[a_1,a_2],\ \vec b =[b_1,b_2]&\implies\vec a+\vec b=[a_1+b_1,a_2+b_2]\cr
+&\vec a=[a_1,a_2],\ s\hbox{ a number}&\implies s\vec a=[sa_1,sa_2]\cr
+}$$
+and similarly in three dimensions. Pictorially, you add $\vec b$ to $\vec
+a$ by drawing $\vec b$ starting at the head of $\vec a$ and then drawing
+a vector from the tail of $\vec a$ to the head of $\vec b$. To draw 
+$s\vec a$, you just change $\vec a$'s length by the (signed) factor 
+$s$.\hfill\break
+\centerline{\figplace{addmul}{0 in}{0 in}
+           \hskip0.4in\figplace{negmul}{0 in}{0 in}}
+
+These operations rarely cause any problems, because they inherit from the
+real numbers the properties of  addition and multiplication that you 
+are used to. Using $\vec 0$ to denote the vector all of whose components
+are zero and $-\vec a$ to denote the vector each of whose components is
+the negative of the corresponding component of $\vec a$ (so that
+$-[a_1,a_2]=[-a_1,-a_2]$)
+$$\deqalign{
+& 1.\quad&\vec a+\vec b=\vec b+\vec a\qquad\qquad
+& 2.\quad&\vec a+(\vec b+\vec c)=(\vec a+\vec b)+\vec c\cr
+& 3. &\vec a+\vec 0 =\vec a 
+& 4. &\vec a+(-\vec a)=\vec 0\cr
+& 5. &s(\vec a+\vec b)=s\vec a+s\vec b
+& 6. &(s+t)\vec a=s\vec a+t\vec a\cr
+& 7. &(st)\vec a = s(t\vec a)
+& 8. &1\vec a=\vec a\cr
+}$$
+To subtract $\vec b$ from $\vec a$ pictorially, 
+you may add $-\vec b$ (which is drawn by reversing the direction of $\vec b$)
+ to $\vec a$. Alternatively,
+if you draw $\vec a$ and $\vec b$ with their tails at a common point,
+then $\vec a-\vec b$ is the vector from the head of $\vec b$ to
+the head of $\vec a$. That is, $\vec a-\vec b$ is the vector you
+must add to $\vec b$ in order to get $\vec a$.\hfill\break
+\centerline{\figplace{subtract}{0 in}{0 in}}
+
+
+
+There are some vectors that occur sufficiently commonly that they are
+given special names. One is the vector $\vec 0$. Some others are the 
+``standard basis vectors in two dimensions''
+$$
+\hat \imath = [1,0]\qquad\qquad\hat \jmath =[0,1]\qquad
+\smash{\figplace{basis2d}{0 in}{-0.3 in}}
+$$ 
+and the ``standard basis vectors in three dimensions''
+$$
+\hat \imath = [1,0,0]\qquad\qquad\hat \jmath =[0,1,0]
+\qquad\qquad\hat k =[0,0,1]\qquad\qquad
+\smash{\figplace{basis3d}{0 in}{-0.2 in}}
+$$ 
+Some people rename $\hat i$, $\hat j$ and $\hat k$ to $\hat e_1$, $\hat
+e_2$ and $\hat e_3$ respectively.
+Using the above properties we have, for all vectors,
+$$
+[a_1,a_2]=a_1\hat\imath+a_2\hat\jmath\qquad\qquad
+[a_1,a_2,a_3]=a_1\hat\imath+a_2\hat\jmath+a_3\hat k
+$$
+A sum of numbers times vectors, like $a_1\hat\imath+a_2\hat\jmath$ is called
+a linear combination of the vectors.
+Thus all vectors can be expressed as linear combinations of the standard
+basis vectors. The hats $\hat{\ }$ are used to signify that the standard
+basis vectors are unit vectors, meaning that they are of length one,
+where the length of a vector is defined by
+$$\deqalign{
+&\vec a=[a_1,a_2]&\implies &\|\vec a\|=\sqrt{a_1^2+a_2^2}\cr
+&\vec a=[a_1,a_2,a_3]&\implies &\|\vec a\|=\sqrt{a_1^2+a_2^2+a_3^2}\cr
+}$$
+%%%%%%%%%%
+\titlec{Exercises for \S\CH.2}
+%%%%%%%%%
+{\parindent=.2in
+\item{1)} Let $\vec a=[2,0]$ and $\vec b=[1,1]$. Evaluate and sketch
+$\vec a+\vec b,\ \vec a+2\vec b$ and $2\vec a-\vec b$.
+\smallskip
+\item{2)} Find the equation of a sphere if one of its diameters has end
+points $(2,1,4)$ and $(4,3,10)$.
+\smallskip
+\item{3)} Determine whether or not the given points are collinear (that is, lie on a common
+straight line)
+\itemitem{a)} $(1,2,3),\ (0,3,7),\ (3,5,11)$
+\itemitem{b)} $(0,3,-5),\ (1,2,-2),\ (3,0,4)$
+\smallskip
+\item{4)} Show that the set of all points $P$ that are twice as far from
+$(3,-2,3)$ as from $(3/2,1,0)$ is a sphere. Find its centre and radius.
+\smallskip
+\item{5)} Show that the diagonals of a parallelogram bisect each other.
+}
+
+%%%%%%%
+\titleb{\S \CH.3 The Dot Product}
+%%%%%%%
+There are three types of products used with vectors. The first
+is multiplication by a scalar, which we have already seen. The second is
+the {\bf dot product}, which is defined by
+$$\deqalign{
+&\vec a=[a_1,a_2],\ &\vec b=[b_1,b_2]&\implies
+&\vec a\cdot\vec b = a_1b_1+a_2b_2\cr
+&\vec a=[a_1,a_2,a_3],\ &\vec b=[b_1,b_2,b_3]&\implies
+&\vec a\cdot\vec b = a_1b_1+a_2b_2+a_3b_3\cr
+}$$
+in two and three dimensions respectively. The properties of the dot product are
+as follows:
+$$\deqalign{
+&0.\quad &\vec a,\vec b\hbox{ are vectors and }\vec a\cdot\vec b\hbox{
+is a number}\cr
+&1. &\vec a\cdot\vec a=\|\vec a\|^2\cr
+&2. &\vec a\cdot\vec b=\vec b\cdot\vec a\cr
+&3. &\vec a\cdot(\vec b+\vec c)=\vec a\cdot\vec b+\vec a\cdot\vec c,\ 
+       (\vec a+\vec b)\cdot\vec c=\vec a\cdot\vec c+\vec b\cdot\vec c\cr
+&4. &(s\vec a)\cdot\vec b= s(\vec a\cdot\vec b)\cr
+&5.  &\vec 0\cdot\vec a=0\cr
+&6. &\vec a\cdot\vec b=\|\vec a\|\,\|\vec b\|\,\cos\th\hbox{ where $\th$ is the angle
+between $\vec a$ and $\vec b$}\cr
+&7. &\vec a\cdot\vec b=0\iff \vec a=\vec 0\hbox{ or }\vec b=\vec 0\hbox{ or }
+\vec a\perp\vec b\cr
+}$$
+Properties 0 through 5 are almost immediate consequences of the definition.
+For example, for property 3 in dimension 2,
+$$\eqalign{
+\vec a\cdot(\vec b+\vec c)&=[a_1,a_2]\cdot[b_1+c_1,b_2+c_2]
+=a_1(b_1+c_1)+a_2(b_2+c_2)=a_1b_1+a_1c_1+a_2b_2+a_2c_2\cr
+\vec a\cdot\vec b+\vec a\cdot\vec c
+&=[a_1,a_2]\cdot[b_1,b_2]+[a_1,a_2]\cdot[c_1,c_2]
+=a_1b_1+a_2b_2+a_1c_1+a_2c_2\cr
+}$$
+
+Property 6 is sufficiently important that it is often used as the 
+definition of dot product. It is not at all an obvious consequence of the definition.
+To verify it, we just write $\|\vec a-\vec b\|^2$ in two different ways. 
+The first expresses $\|\vec a-\vec b\|^2$ in terms of $\vec a\cdot\vec b$. 
+It is
+$$\eqalign{
+\|\vec a-\vec b\|^2&{\buildrel 1 \over =}(\vec a-\vec b\,)\cdot(\vec a-\vec b\,)\cr
+&{\buildrel 3 \over =}\vec a\cdot\vec a-\vec a\cdot\vec b-\vec b\cdot\vec a
++\vec b\cdot\vec b\cr
+&{\buildrel 1,2 \over =}\|\vec a\|^2+\|\vec b\|^2-2\vec a\cdot\vec b\cr
+}$$
+Here, ${\buildrel 1 \over =}$, for
+example, means that the equality is  a consequence of property 1.
+The second way we write $\|\vec a-\vec b\|^2$ involves $\cos\th$ and follows from
+the cosine law. Just in case you don't remember the cosine law, we prove 
+it along the way. From the figure\hfill\break
+\centerline{\figplace{cosine}{0 in}{0 in}}
+we have
+$$\eqalign{
+\|\vec a-\vec b\|^2&=\big(\|\vec b\|-\|\vec a\|\cos\th\big)^2+
+\big(\|\vec a\|\sin\th\big)^2\cr
+&=\|\vec b\|^2-2\|\vec a\|\,\|\vec b\|\,\cos\th+\|\vec a\|^2\cos^2\th
++\|\vec a\|^2\sin^2\th\cr
+&=\|\vec b\|^2-2\|\vec a\|\,\|\vec b\|\,\cos\th+\|\vec a\|^2\cr
+}$$
+Setting the two expressions for $\|\vec a-\vec b\|^2$ equal to each other,
+$$
+\|\vec a-\vec b\|^2=\|\vec a\|^2+\|\vec b\|^2-2\vec a\cdot\vec b
+=\|\vec b\|^2-2\|\vec a\|\,\|\vec b\|\,\cos\th+\|\vec a\|^2
+$$
+cancelling the $\|\vec a\|^2$ and $\|\vec b\|^2$ common to both expressions
+$$
+-2\vec a\cdot\vec b
+=-2\|\vec a\|\,\|\vec b\|\,\cos\th
+$$
+and dividing by $-2$ gives 
+$$
+\vec a\cdot\vec b=\|\vec a\|\,\|\vec b\|\,\cos\th
+$$
+which is property 6. 
+
+Property 7 follows directly from property 6: $\vec a\cdot\vec b=\|\vec a\|\,\|\vec b\|\,\cos\th$
+is zero if and only if at least one of the three factors 
+$\|\vec a\|,\ \|\vec b\|,\ \cos\th$ is zero. The first factor is zero if
+and only if $\vec a=\vec 0$. The second factor is zero if and only if 
+$\vec b=\vec 0$.
+The third factor is zero if and only if $\th=\pm\sfrac{\pi}{2}+2k\pi$,
+for some integer $k$, which in turn is true if and only if $\vec a$ and 
+$\vec b$ are mutually perpendicular. Because of Property 7,
+the dot product can be used to test whether or not two vectors are 
+orthogonal. ``Orthogonal'' is just another name for perpendicular.
+Testing for orthogonality is one of the main uses of the
+dot product. 
+
+Another is computing projections.  Draw two vectors, $\vec a$ and $\vec b$,
+with their tails at a common point and drop a perpendicular from the head of
+$\vec a$ to the line that passes through both the head and tail of $\vec b$. 
+By definition, the projection of the vector $\vec a$
+on the vector $\vec b$ is the vector from the tail of $\vec b$ to the point
+on the line where the perpendicular hits.\hfill\break
+\centerline{\figplace{proj}{0 in}{0 in}}
+Let $\th$ be the angle between $\vec a$ and $\vec b$. If $|\th|$ is no
+more than $90^\circ$, as in the figure on the left above, 
+the length of the projection of $\vec a$ on $\vec b$ is 
+$\|\vec a\|\cos\th$.
+By property 6,  $\|\vec a\|\cos\th=\vec a\cdot\vec b/\|\vec b\|$, so the
+projection is a vector whose length is $\vec a\cdot\vec b/\|\vec b\|$ and
+whose direction is given by the unit vector $\vec b/\|\vec b\|$. Hence
+$$
+\hbox{projection of $\vec a$ on $\vec b$}={\rm proj}_{\vec b}\,\vec a
+=\frac{\vec a\cdot\vec b}{\|\vec b\|}\frac{\vec b}{\|\vec b\|}
+=\frac{\vec a\cdot\vec b}{\|\vec b\|^2}\,\vec b
+$$
+If $|\th|$ is larger than $90^\circ$, as in the figure on the right above, the projection has length 
+$\|\vec a\|\,\cos(\pi-\th)=-\|\vec a\|\cos\th=-\vec a\cdot\vec b/\|\vec b\|$
+ and direction $-\vec b/\|\vec b\|$. In this case
+$$
+{\rm proj}_{\vec b}\,\vec a
+=-\frac{\vec a\cdot\vec b}{\|\vec b\|}\frac{-\vec b}{\|\vec b\|}
+=\frac{\vec a\cdot\vec b}{\|\vec b\|^2}\,\vec b
+$$
+So the formula ${\rm proj}_{\vec b}\,\vec a
+=\frac{\vec a\cdot\vec b}{\|\vec b\|^2}\,\vec b$ is applicable whenever
+$\vec b\ne\vec 0$.
+One use of projections is to ``resolve forces''. There is an example in
+the next section.
+%%%%%%%%%%
+\titlec{Exercises for \S\CH.3}
+%%%%%%%%%
+{\parindent=.2in
+\item{1)} Compute the dot product of the vectors $\vec a$ and $\vec b$.
+Find the angle between them.
+\itemitem{a)} $\vec a=(1,2),\ \vec b=(-2,3)$
+\itemitem{b)} $\vec a=(-1,1),\ \vec b=(1,1)$
+\itemitem{c)} $\vec a=(1,1),\ \vec b=(2,2)$
+\itemitem{d)} $\vec a=(1,2,1),\ \vec b=(-1,1,1)$
+\itemitem{e)} $\vec a=(-1,2,3),\ \vec b=(3,0,1)$
+\smallskip\goodbreak
+\item{2)} Let $\vec a=[a_1,a_2]$. Compute the projection of $\vec a$ on
+$\hat i$ and $\hat j$.
+\smallskip
+\item{3)} Does the triangle with vertices $(1,2,3),\ (4,0,5)$ and $(3,6,4)$
+have a right angle?
+\smallskip
+\item{4)} Let $O=(0,0)$, $A=(a,0)$ and $B=(b,c)$ be the three vertices
+of the triangle in problem 4 of \S \CH.1. Let $U$ be the centre of the
+circle through $O,\ A$ and $B$. Guess 
+${\rm proj}_{\overrightarrow{\sst OA}}\,
+\overrightarrow{OU}$ and ${\rm proj}_{\overrightarrow{\sst OB}}\,
+\overrightarrow{OU}$. Compute ${\rm proj}_{\overrightarrow{\sst OA}}\,
+\overrightarrow{OU}$ and ${\rm proj}_{\overrightarrow{\sst OB}}\,
+\overrightarrow{OU}$. 
+
+}
+
+%%%%%%
+\titleb{\S \CH.4 Application of Dot Products to Resolution of Forces
+-- The Pendulum}
+%%%%%%
+Model a pendulum by a mass $m$ that is connected to a hinge by an idealized
+rod that is massless and of fixed length $\ell$. Denote by $\th$ the angle
+\vadjust{
+\centerline{\figplace{pendulum2}{0 in}{0 in} }
+}
+between the rod and vertical. The forces acting on the mass are
+gravity, which has magnitude $mg$ and direction $(0,-1)$, tension in the
+rod, whose magnitude $\tau(t)$ automatically adjusts itself so that the distance
+between the mass and the hinge is fixed at $\ell$ and whose direction
+is always parallel to the rod and possibly some frictional
+forces, like friction in the hinge and air resistance. Assume
+that the total frictional force has magnitude proportional to the speed of the 
+mass and has direction opposite to the direction of motion of the mass.
+
+
+If we use a coordinate system centered on the hinge, the $(x,y)$ coordinates
+of the mass at time $t$ are 
+$$\eqalign{
+x(t)&=\ell\sin\th(t)\cr
+y(t)&=-\ell\cos\th(t)\cr
+}$$
+where $\th(t)$ is the angle between the rod and vertical at time $t$.
+So, the velocity and acceleration vectors of the mass are
+$$\deqalign{
+\vec v(t)&=\sfrac{d\hfill}{dt}[x(t),y(t)]
+&=\ell\,[\sfrac{d\hfill}{dt}\sin\th(t),-\sfrac{d\hfill}{dt}\cos\th(t)]
+&=\ell\,[\cos\th(t),\sin\th(t)]\,\sfrac{d\th}{dt}(t)\cr
+\vec a(t)&=\sfrac{d^2\hfill}{dt^2}[x(t),y(t)]
+&=\ell\sfrac{d\hfill}{dt}\!\left\{[\cos\th(t),\sin\th(t)]\sfrac{d\th}{dt}(t)
+\right\}
+&=\ell[\cos\th(t),\sin\th(t)]\sfrac{d^2\th}{dt^2}(t)
++\ell[\sfrac{d\hfill}{dt}\cos\th(t),\sfrac{d\hfill}{dt}\sin\th(t)]\,
+\sfrac{d\th}{dt}(t)\cr
+&= \ell[\cos\th(t),\sin\th(t)]\sfrac{d^2\th}{dt^2}(t)
++\ell[-\sin\th(t),\cos\th(t)]\big(\sfrac{d\th}{dt}(t)\big)^2\hidewidth\cr
+}$$
+The negative of
+the velocity vector is  $- \ell[\cos\th,\sin\th]\sfrac{d\th}{dt}$, so the total frictional force is 
+$-\be \ell[\cos\th,\sin\th]\sfrac{d\th}{dt}$ for some constant of
+proportionality $\be$. The vector $\tau(t) [-\sin\th(t),\cos\th(t)]$ has magnitude
+$\tau(t)$ and direction parallel to the rod pointing from the mass towards
+the hinge and so is the force due to tension in the rod.
+Hence, for this physical system, Newton's law of motion
+$$
+\hbox{mass}\times\hbox{acceleration}=\hbox{applied force}
+$$
+is 
+$$
+m\ell[\cos\th,\sin\th]\sfrac{d^2\th}{dt^2}
++m\ell[-\sin\th,\cos\th]\big(\sfrac{d\th}{dt}\big)^2
+=mg[0,-1]+\tau [-\sin\th,\cos\th]
+-\be \ell[\cos\th,\sin\th]\sfrac{d\th}{dt}
+\eqn{\CH.1}$$
+This rather complicated equation can be considerably simplified (and 
+consequently better understood) by ``taking its components parallel to
+and perpendicular to the direction of motion''. From the velocity vector
+$\vec v(t)$, we see that $[\cos\th(t),\sin\th(t)]$ is a unit vector
+parallel to the direction of motion at time $t$.
+In general, the projection of any vector $\vec b$ on any unit vector $\hat d$ is
+$$
+\frac{\vec b\cdot\hat d}{{\|\hat d\|}^2}\,\hat d=\big(\vec b\cdot \hat d\big)
+\,\hat d
+$$
+The coefficient $\vec b\cdot \hat d$ is, by definition, the
+component of $\vec b$ in the direction $\hat d$.
+So, by dotting both sides of the equation of motion (\CH.1) with
+$\hat d=[\cos\th(t),\sin\th(t)]$, we extract the component parallel to the
+direction of motion. Since
+$$\eqalign{
+[\cos\th,\sin\th]\cdot[\cos\th,\sin\th]&=1\cr
+[\cos\th,\sin\th]\cdot[-\sin\th,\cos\th]&=0\cr
+[\cos\th,\sin\th]\cdot[0,-1]&=-\sin\th\cr
+}$$
+this gives
+$$ 
+m\ell\sfrac{d^2\th}{dt^2}=-mg\sin\th-\be \ell\sfrac{d\th}{dt}
+$$
+When $\th$ is small, we can approximate $\sin\th\approx\th$ and get the
+equation
+$$
+\sfrac{d^2\th}{dt^2}+\sfrac{\be}{m}\sfrac{d\th}{dt}+\sfrac{g}{\ell}\th=0
+$$
+which is easily solved. 
+
+In \S 4, we shall develop an algorithm for finding the
+solution. For now, we'll just guess. When there is no friction (so that $\be=0$),
+we would expect the pendulum to just oscillate. So it is natural to guess
+$\th(t)=A\sin(\om t-\de)$, which is an oscillation with (unknown) amplitude
+$A$, frequency $\om$ (radians per unit time) and phase $\de$. Substituting
+the guess into the left hand side $\th''+\sfrac{g}{\ell}\th$  
+yields $-A\om^2\sin(\om t-\de)+A\sfrac{g}{\ell}\sin(\om t-\de)$, which is zero if $\om=\sqrt{g/\ell}$. So
+$\ \th(t)=A\sin(\om t-\de)\ $ is a solution for any amplitude $A$ and
+phase $\de$ provided the frequency $\om=\sqrt{g/\ell}$. When there is 
+some, but not too much, friction, so that $\be>0$ is relatively small, 
+we would expect ``oscillation with decaying amplitude''. So we 
+guess $\ \th(t)=Ae^{-\ga t}\sin(\om t-\de).$ With this guess,
+$$\deqalign{
+\th(t)&=\phantom{- -\ga\om^{2})} Ae^{-\ga t}&\sin(\om t-\de)\cr
+\th'(t)&=\phantom{-\om^{2})}-\ga Ae^{-\ga t}&\sin(\om t-\de)
+&+\phantom{2\ga }\om A e^{-\ga t}&\cos(\om t-\de)\cr
+\th''(t)&=(\ga^2-\om^2)Ae^{-\ga t}&\sin(\om t-\de)&-2\ga\om A e^{-\ga t}&\cos(\om t-\de)\cr
+}$$
+and the left hand side
+$$
+\sfrac{d^2\th}{dt^2}+\sfrac{\be}{m}\sfrac{d\th}{dt}+\sfrac{g}{\ell}\th
+=\left[\ga^2-\om^2-\sfrac{\be}{m}\ga+\sfrac{g}{\ell}\right]Ae^{-\ga t}\sin(\om t-\de)
++\left[-2\ga\om+\sfrac{\be}{m}\om\right]Ae^{-\ga t}\cos(\om t-\de)
+$$
+vanishes if $\ga^2-\om^2-\sfrac{\be}{m}\ga+\sfrac{g}{\ell}=0$ and 
+$-2\ga\om+\sfrac{\be}{m}\om=0.$ The second equation tells us the decay
+rate $\ga=\sfrac{\be}{2m}$ and then the first tells us the frequency
+$$
+\om=\sqrt{\ga^2-\sfrac{\be}{m}\ga+\sfrac{g}{\ell}}
+=\sqrt{\sfrac{g}{\ell}-\sfrac{\be^2}{4m^2}}
+$$ 
+When there is a lot of friction
+(namely when $\sfrac{\be^2}{4m^2}>\sfrac{g}{\ell}$, so that the frequency
+$\om$ is not a real number), we would expect damping without oscillation 
+and so would guess $\th(t)=Ae^{-\ga t}$.
+
+
+To extract the components perpendicular to the direction of motion, we
+dot with $[-\sin\th,\cos\th]$ rather than $[\cos\th,\sin\th]$. Note that,
+because $[-\sin\th,\cos\th]\cdot[\cos\th,\sin\th]=0$, 
+$[-\sin\th,\cos\th]$ really is perpendicular to the direction of motion. 
+Since
+$$\eqalign{
+[-\sin\th,\cos\th]\cdot[\cos\th,\sin\th]&=0\cr
+[-\sin\th,\cos\th]\cdot[-\sin\th,cos\th]&=1\cr
+[-\sin\th,\cos\th]\cdot[0,-1]&=-\cos\th\cr
+}$$
+dotting both sides of the equation of motion (\CH.1)
+with $[-\sin\th,\cos\th]$ gives
+$$
+m\ell\big(\sfrac{d\th}{dt}\big)^2=-mg\cos\th+\tau 
+$$
+This equation just determines the tension
+$\tau=m\ell\big(\sfrac{d\th}{dt}\big)^2+mg\cos\th$ in the rod, once you know
+$\th(t)$.
+%%%%%%%%%%
+\goodbreak
+\titlec{Exercises for \S\CH.4}
+%%%%%%%%%
+{\parindent=.2in
+\item{1)} Consider a skier who is sliding without friction on the
+hill $y=h(x)$ in a two dimensional world. The skier is subject to two
+forces. One is gravity. The other acts perpendicularly to the hill. The second force automatically adjusts its magnitude so as to prevent the skier from burrowing into the hill. Suppose that the skier became
+airborne at some $(x_0,y_0)$ with $y_0=h(x_0)$. How fast was the skier going?
+\smallskip
+\item{2)} A marble is placed on the plane $ax+by+cz=d$. The coordinate
+system has been chosen so that the positive $z$--axis points straight up.
+The coefficient $c$ is nonzero and the coefficients $a$ and $b$ are not
+both zero.
+In which direction does the marble roll? Why were the conditions ``$c\ne 0$''
+and ``$a,b$ not both zero''
+imposed?
+
+}
+%%%%%%%%%%
+\titleb{\S \CH.5 Areas of Parallelograms}
+%%%%%%%%%
+Construct a parallelogram as follows. Pick two vectors $[a,b]$ and $[c,d]$.
+Draw them with their tails at a common point. Then draw $[a,b]$ a second
+time with its tail at the head of $[c,d]$ and draw  $[c,d]$ a second
+time with its tail at the head of $[a,b]$. If the the common point is the
+origin, you get a picture like the figure below.
+\vadjust{\null\hfill\figplace{area2}{0 in}{0 in}\hfill\null} 
+Any parallelogram can be constructed like this if you pick the common point
+and two vectors appropriately. Let's compute the area of the parallelogram.
+The area of the large rectangle with vertices $(0,0),\ (0, b+d),\ (a+c,0)$
+and $(a+c,b+d)$ is $(a+c)(b+d)$. The parallelogram we want can be extracted
+from the large rectangle by deleting the two small rectangles (each of
+area $bc$) the two lightly shaded triangles (each of area $\half cd$)
+and the two darkly shaded triangles (each of area $\half ab$). So the desired
+$$
+{\rm area} = (a+c)(b+d) - 2\times bc -2\times \half cd-2\times\half ab
+=ad-bc
+$$
+In the above figure, we have implicitly assumed that $a,\ b,\ c,\ d\ge 0$
+and $d/c\ge b/a$. In words, we have assumed that both vectors $[a,b],\
+[c,d]$ lie in the first quadrant and that $[c,d]$ lies above $[a,b]$.
+By simply interchanging $a\leftrightarrow c$ and $b\leftrightarrow d$
+in the picture and throughout the argument, we see that when 
+$a,\ b,\ c,\ d\ge 0$ and $b/a\ge d/c$, so that the vector $[c,d]$ lies below 
+$[a,b]$, the area of the parallelogram is $bc-ad$. In fact, all cases are
+covered by the formula
+$$
+\shbox{\hbox{area of parallelogram with sides $[a,b]$ and $[c,d]=|ad-bc|$}}
+$$
+
+Given two vectors $[a,b]$ and $[c,d]$, the expression $ad-bc$ is generally
+written
+$$
+\det\left[\matrix{a&b\cr c&d\cr}\right]=ad-bc
+$$
+and is called the {\bf determinant} of the matrix 
+$$
+\left[\matrix{a&b\cr c&d\cr}\right]
+$$ 
+with rows $[a,b]$ and $[c,d]$. The determinant
+of a $2\times 2$ matrix is the product of the diagonal entries minus the
+product of the off--diagonal entries. There
+is a similar formula in three dimensions. Any three vectors 
+$\vec a=[a_1,a_2,a_3],\ \vec b=[b_1,b_2,b_3]$ and $\vec c=[c_1,c_2,c_3]$ in three dimensions
+\vadjust{\null\hfill\figplace{piped}{0 in}{0 in}\hfill\null}
+determine a parallelopiped 
+(three dimensional parallelogram). Its volume is given by the formula
+$$
+\shbox{\hbox{volume of parallelopiped with edges $\vec a,\ \vec b,\ \vec c\ 
+=\ \left|
+\det\left[\matrix{a_1&a_2&a_3\cr b_1&b_2&b_3\cr c_1&c_2&c_3\cr}\right]
+\right|$}}
+$$
+The determinant of a $3\times 3$ matrix can be defined in terms
+of some $2\times 2$ determinants by\hfill\break
+\centerline{\figplace{det2}{0 in}{0 in}}
+
+\noindent This formula is called ``expansion along the top row''. There
+is one term in the formula for each entry in the top row of the $3\times 3$
+matrix. The term is
+a sign times the entry itself times the determinant of the $2\times 2$ matrix
+gotten by deleting the row and column that contains the entry. The sign
+alternates, starting with a $+$. 
+
+We shall not prove this formula completely. But,
+there is one case in which we can easily verify that the volume of the 
+parallelopiped is really given by the absolute value of the
+claimed determinant. If the vectors $\vec b$ and $\vec c$ happen to lie
+in the $xy$ plane, so that $b_3=c_3=0$, then 
+$$\eqalign{
+\det\left[\matrix{a_1&a_2&a_3\cr b_1&b_2&0\cr c_1&c_2&0\cr}\right]
+&=a_1(b_20-0c_2) -a_2(b_10-0c_1) +a_3(b_1c_2-b_2c_1)\cr
+&=a_3(b_1c_2-b_2c_1)
+}$$
+The first factor, $a_3$, is the $z$--coordinate of the one vector not contained in the $xy$--plane. It 
+is (up to a sign) the height of the parallelopiped. The second factor is,
+up to a sign, the area of the parallelogram determined by $\vec b$
+and $\vec c$. This parallelogram forms the base of the parallelopiped. 
+The product is indeed, up to a sign, the volume of the parallelopiped.
+That the formula is true in general is a consequence of the fact (that
+we will not prove) that the value of a determinant does not change when
+one rotates the coordinate system and that one can always rotate
+our coordinate axes around so that $\vec b$ and $\vec c$ both lie in the
+$xy$ plane. 
+
+
+
+
+
+%%%%%%%%%%
+\titlec{Exercises for \S\CH.5}
+%%%%%%%%%
+{\parindent=.2in
+\item{1)} Derive the formula ``area of parallegram $= |ad-bc|$'' in the
+case when $(a,b)$ lies in the first quadrant and $(c,d)$ lies in the
+second quadrant.
+\smallskip
+\itemitem{2\ \ \ a)} Let $[a,b]$ be a vector. Let $r$ be the length of $[a,b]$ and $\th$ the angle between $[a,b]$ and the $x$--axis. Express $a$ and $b$ in terms of $r$ and $\th$.
+\itemitem{b)} Let $[A,B]$ be the vector gotten by rotating $[a,b]$ by an
+angle $\varphi$ about its tail. Express $A$ and $B$ in terms of $a,\ b$
+and $\varphi$.
+\smallskip
+\item{3)} Let $[a,b]$ and $[c,d]$ be two vectors. Let $[A,B]$ be the 
+vector gotten by rotating $[a,b]$ by an angle $\varphi$ about its tail. 
+Let $[C,D]$ be the vector gotten by rotating $[c,d]$ by the same
+angle $\varphi$ about its tail. Show that
+$$
+\det\left[\matrix{a&b\cr c&d}\right]
+=\det\left[\matrix{A&B\cr C&D}\right]
+$$
+
+}
+
+%%%%%%%%
+\titleb{\S\CH.6 The Cross Product}
+%%%%%%%%
+We have already seen two different products involving vectors -- multiplication
+by scalars and the dot product. There is a third product, called the {\bf
+cross product} that is defined by
+$$
+\vec a=[a_1,a_2,a_3],\ \vec b=[b_1,b_2,b_3]\implies
+\vec a\times\vec b = [a_2b_3-a_3b_2, a_3b_1-a_1b_3, a_1b_2-a_2b_1]
+$$
+Note that each component has the form $a_ib_j-a_jb_i$. The index $i$ of
+the first $a$ in component number $k$ of $\vec a\times\vec b$
+is just after $k$ in the list $1,2,3,1,2,3,1,2,3,\cdots$. 
+The index $j$ of the first $b$ is just before $k$ in the list. 
+$$
+(\vec a\times\vec b)_k=a_{{\rm just\  after\  }k}\ b_{{\rm just\  before\  }k}
+-a_{{\rm just\  before\  }k}\ b_{{\rm just\  after\  }k}
+$$
+For example, for component number $k=3$,
+$$
+\left.  {{\rm just\  after\  }3=1\atop{\rm just\  before\  }3=2}\right\}
+\implies (\vec a\times\vec b)_3= a_1b_2-a_2b_1
+$$
+
+
+There is a much better way to remember this definition. Recall that
+a $2\times 2$ matrix is an array of numbers having two rows and two columns
+and that the determinant of a $2\times 2$ matrix is 
+%defined by
+%$$
+%\det \left[\matrix{a& b\cr c&d\cr}\right]=ad-bc
+%$$
+%It is 
+the product of the entries on the diagonal minus the product
+of the entries not on the diagonal. A $3\times 3$ matrix is an array of
+numbers having three rows and three columns.
+$$
+ \left[\matrix{i& j &k\cr a_1&a_2&a_3\cr b_1&b_2&b_3\cr}\right]
+$$
+You will shortly see why I have given the matrix entries rather peculiar
+names. The determinant of a $3\times 3$ matrix can be defined in terms
+of some $2\times 2$ determinants by\hfill\break
+\centerline{\figplace{det}{0 in}{0 in}}
+
+\noindent This formula is called ``expansion along the top row''. There
+is one term in the formula for each entry in the top row. The term is
+a sign times the entry itself times the determinant of the $2\times 2$ matrix
+gotten by deleting the row and column that contains the entry. The sign
+alternates, starting with a $+$. The formula for $\vec a\times \vec b$
+is gotten by replacing $i$ by $\hat \imath$, $j$ by $\hat \jmath$ and
+$k$ by $\hat k$. That is the reason for my peculiar choice of names for
+the matrix entries.
+$$
+\vec a\times\vec b=\det\left[\matrix{\hat \imath& \hat \jmath &\hat k\cr a_1&a_2&a_3\cr b_1&b_2&b_3\cr}\right]
+$$
+
+
+
+The above definition is
+good from the point of view of computing $\vec a\times\vec b$. Our first
+properties of the cross product lead up to a geometric definition of $\vec
+a\times\vec b$, which is better for interpreting $\vec a\times\vec b$. 
+ These properties of the cross product, which state that  $\vec a\times\vec b$
+is a vector and then determine its direction and length, are as follows:
+\vskip.1in
+\leftdisplay{
+0.\quad \vec a,\vec b\hbox{ are vectors in three dimensions and }
+\vec a\times\vec b\hbox{ is a vector in three dimensions}
+}
+\vskip.1in
+\leftdisplay{
+1.\quad\vec a\times\vec b\perp \vec a,\vec b
+}
+\vskip.1in
+\item{}Proof: To check that $\vec a$ and $\vec a\times \vec b$ are perpendicular, 
+one just has to check that the dot product $\vec a\cdot(\vec a\times \vec b)=0$.
+The six terms in $\vec a\cdot(\vec a\times \vec b)=
+a_1(a_2b_3-a_3b_2)+a_2(a_3b_1-a_1b_3)+a_3(a_1b_2-a_2b_1)$ cancel pairwise.
+The computation showing that $\vec b\cdot(\vec a\times \vec b)=0$ is similar.
+
+\vfill\eject
+\leftdisplay{
+2.\quad \|\vec a\times\vec b\|=\|\vec a\|\,\|\vec b\|\sin\th
+\hbox{ where $\th$ is the angle between $\vec a$ and $\vec b$}
+}
+\leftdisplay{
+\phantom{2.\quad \|\vec a\times\vec b\|}=\hbox{the area of the parallelogram
+with sides $\vec a$ and $\vec b$}\smash{\figplace{area}{1 in}{0 in}}
+}
+\vskip.1in
+\item{}Proof: This follows from 
+$\|\vec a\times\vec b\|^2
+=\|\vec a\|^2\|\vec b\|^2-(\vec a\cdot\vec b)^2
+=\|\vec a\|^2\|\vec b\|^2(1-\cos^2\th)$ which in turn is gotten by comparing
+$$\eqalignno{
+\|\vec a\times\vec b\|^2
+&=(a_2b_3-a_3b_2)^2+(a_3b_1-a_1b_3)^2+ (a_1b_2-a_2b_1)^2\cr
+&=a_2^2b_3^2-2a_2b_3a_3b_2+a_3^2b_2^2
++a_3^2b_1^2-2a_3b_1a_1b_3+a_1^2b_3^2
++a_1^2b_2^2-2a_1b_2a_2b_1+a_2^2b_1^2\cr
+\noalign{and}
+\|\vec a\|^2\|\vec b\|^2-(\vec a\cdot\vec b)^2
+&=\big(a_1^2+a_2^2+a_3^2\big)\big(b_1^2+b_2^2+b_3^2\big)
+-\big(a_1b_1+a_2b_2+a_3b_3\big)^2\cr
+&=a_1^2b_2^2+a_1^2b_3^2+a_2^2b_1^2+a_2^2b_3^2+a_3^2b_1^2+a_3^2b_2^2
+ -\big(2a_1b_1a_2b_2+2a_1b_1a_3b_3+2a_2b_2a_3b_3\big)\cr
+}$$
+To see that $\|\vec a\|\,\|\vec b\|\sin\th$ is the area of the parallelogram
+with sides $\vec a$ and $\vec b$, just recall that the area of any parallelogram
+is given by the length of its base times its height. Think of $\vec a$ as the
+base of the parallelogram. Then $\|\vec a\|$ is the length of the base
+and $\|\vec b\|\sin\th$ is the height.
+\vskip.1in
+
+These properties almost determine $\vec a\times\vec b$. Property 1 forces
+the vector $\vec a\times\vec b$ to lie on the line perpendicular to the
+plane containing $\vec a$ and $\vec b$. There are precisely two vectors
+on this line that have the length given by property 2. In the left figure
+of\hfill\break
+\centerline{\figplace{cross}{0 in}{0 in}}
+the two vectors are labeled $\vec c$ and $\vec d$. Which of these two
+candidates is correct is determined by the right hand rule, which says
+that if you form your right hand into a fist with your fingers curling from 
+$\vec a$ to $\vec b$, then when you stick your thumb straight out from
+the fist, it points in the direction of $\vec a\times\vec b$. This is
+illustrated in the figure on the right above. The important special cases
+\vskip.1in
+\leftdisplay{
+3.\quad \hat\imath\times\hat\jmath=\hat k,\ \hat\jmath\times\hat k=\hat \imath,\
+\hat k\times\hat\imath=\hat \jmath
+}
+\vskip.1 in
+\noindent all follow directly from the definition of the cross product and all obey the right hand rule. 
+Combining properties 1, 2 and the right hand rule give the geometric definition
+of $\vec a\times\vec b$.
+\vskip.1 in
+\leftdisplay{
+4.\quad \vec a\times\vec b=\|\vec a\|\,\|\vec b\|\sin\th\ \hat n
+\hbox{ where $\th$ is the angle between $\vec a$ and $\vec b$, }
+\|\hat n\|=1,\ \hat n\perp\vec a,\vec b
+}
+\leftdisplay{
+\phantom{4.\quad \vec a\times\vec b=\|\vec a\|\,\|\vec b\|\sin\th\ \hat n\ }
+\hbox{ and $(\vec a,\vec b,\hat n)$ obey the right hand rule}
+}
+\vskip.1in
+\item{}Outline of Proof: We have already seen that the right hand side
+has the correct length and, except possibly for a sign, direction.
+To check that the right hand rule holds in
+general, rotate your coordinate system around so that $\vec a$ points along
+the positive $x$ axis and $\vec b$ lies in the $xy$--plane with positive
+$y$ component. That is $\vec a=\al\hat\imath$ and $\vec b=\be\hat\imath+\ga
+\hat\jmath$ with $\al,\ga\ge 0$. Then 
+$\vec a\times\vec b=\al\hat\imath\times(\be\hat\imath+\ga\hat\jmath)
+=\al\be\,\hat\imath\times\hat\imath+\al\ga\,\hat\imath\times\hat\jmath$. The
+first term vanishes by property 2, because the angle $\th$ between $\hat\imath$
+and $\hat\imath$ is zero. So, by property 3, $\vec a\times\vec b= 
+\al\ga\hat k$ points
+along the positive $z$ axis, which is consistent with the right hand rule.
+
+\vskip.1 in\noindent 
+The analog of property 7 of the dot product follows
+immediately from property 2.
+\vskip.1 in
+\leftdisplay{
+5.\quad \vec a\times\vec b=0\iff \vec a=\vec 0\hbox{ or }\vec b=\vec 0
+\hbox{ or }\vec a\parallel\vec b
+}
+\vskip.1 in \noindent 
+The remaining properties are all tools for
+helping do computations with cross products.
+\vskip.1 in
+\leftdisplay{
+6.\quad\vec a\times \vec b=-\vec b\times\vec a
+}\vskip.1in\leftdisplay{
+7.\quad(s\vec a)\times \vec b=\vec a\times(s\vec b)=s(\vec a\times \vec b)
+}\vskip.1in\leftdisplay{
+8.\quad\vec a\times(\vec b+\vec c)=\vec a\times\vec b+\vec a\times \vec c
+}\vskip.1in\leftdisplay{
+9.\quad\vec a\cdot(\vec b\times\vec c)=(\vec a\times\vec b)\cdot\vec c
+}\vskip.1in\leftdisplay{
+10.\quad \vec a\times(\vec b\times\vec c)=(\vec c\cdot\vec a)\vec b
+-(\vec b\cdot\vec a)\vec c
+}
+\vskip.1in\noindent
+{\bf WARNING:} Take particular care with properties 6 and 10. They are 
+counterintuitive and cause huge numbers of errors. In particular, 
+$$\eqalign{
+\vec a\times\vec b&\ne\vec b\times\vec a\cr
+\vec a\times(\vec b\times\vec c)&\ne (\vec a\times\vec b)\times\vec c\cr
+}$$ 
+for most $\vec a,\ \vec b$ and $\vec c$. For example
+$$\eqalign{
+\hat \imath\times(\hat \imath\times\hat \jmath)
+&=\hat \imath\times\hat k=-\hat k\times\hat \imath =-\hat \jmath\cr
+(\hat \imath\times \hat \imath)\times\hat \jmath&= \vec 0\times\hat \jmath=\vec
+0\cr
+}$$ 
+\example{\CH.4}{
+As an illustration of the properties of the dot and cross product, we now
+derive the formula for the volume of the parallelopiped with edges 
+$\vec a=[a_1,a_2,a_3]$, $\vec b = [b_1,b_2,b_3]$, $\vec c = [c_1,c_2,c_3]$
+that was mentioned in \S I.5.
+\vadjust{\centerline{\figplace{pipedVolume}{0 in}{0 in}}}
+The volume of the parallelopiped is the area of its base times its height.
+The base is the parallelogram with sides $\vec b$ and
+$\vec c$. Its area is the length of its base, which is $\|\vec b\|$,
+times its height, which is $\|\vec c\|\,\sin\th'$. (Drop a 
+perpendicular from the head of $\vec c$ to the line containing $\vec b$). 
+Here $\th'$ is the angle between $\vec b$ and $\vec c$. So the area of the 
+base is $\|\vec b\|\,\|\vec c\|\,\sin\th'= \|\vec b\times\vec c\|$, by 
+property 2 of the cross product. To get the height of the paralleopiped, we drop a perpendicular
+from the head of $\vec a$ to the line that passes through the tail of $\vec
+a$ and is perpendicular to the base of the paralellopiped. In other words, from
+the head of $\vec a$ to the line that contains both the head and the tail
+of $\vec b\times\vec c$. So the height of the paralleopiped is
+$\|\vec a\|\,|\cos\th|$  (I have included the absolute values because if
+the angle between $\vec b\times\vec c$ and $\vec a$ happens to be greater
+than $90^\circ$, the $\cos\th$ produced by taking the dot product of 
+$\vec a$ and  $(\vec b\times\vec c$) will be negative). All together
+$$\eqalign{
+\hbox{volume of parallelopiped}
+&=(\hbox{area of base})\,(\hbox{height})\cr
+&=\|\vec b\times\vec c\|\ \|\vec a\|\ |\cos\th'|\cr
+&=\big|\vec a\cdot(\vec b\times\vec c)\big|\cr
+&=\left|a_1 (\vec b\times\vec c)_1 +a_2 (\vec b\times\vec c)_2 
+               +a_3 (\vec b\times\vec c)_3\right|\cr
+&=\left|a_1\det\left[\matrix{b_2&b_3\cr c_2&c_3\cr}\right] 
+        -a_2 \det\left[\matrix{b_1&b_3\cr c_1&c_3\cr}\right] 
+               +a_3\det\left[\matrix{b_1&b_2\cr c_1&c_2\cr}\right]\right|\cr
+&=\left|\det\left[\matrix{a_1&a_2&a_3\cr
+                          b_1&b_2&b_3\cr
+                          c_1&c_2&c_3\cr}\right]\right|
+}$$
+
+
+}\goodbreak
+%%%%%%%%%%
+\titlec{Exercises for \S\CH.6}
+%%%%%%%%%
+{\parindent=.2in
+\item{1)} Compute $(1,2,3)\times(4,5,6)$.
+\smallskip
+\item{2)} Show that $\vec a\cdot(\vec b\times\vec c)
+                         =(\vec a\times\vec b)\cdot\vec c$.
+\smallskip
+\item{3)} Show that $\vec a\times(\vec b\times\vec c)
+=(\vec a\cdot\vec c)\vec b-(\vec a\cdot\vec b)\vec c$.
+\smallskip
+\item{4)} Derive a formula for $(\vec a\times\vec b)\cdot(\vec c\times\vec d)$
+that involves dot but not cross products.
+
+}
+
+%%%%%%%
+\titleb{\S \CH.7 Application of Cross Products to Rotational Motion}
+%%%%%%%
+In most computations involving rotational motion, the cross product shows
+up in one form or another. This is one of the main applications of the cross
+product. Consider, for example, a rigid body which is rotating 
+ at a rate $\Om$ radians per second about an axis whose direction is given
+by the unit vector $\hat a$. Let $P$ be any point
+on the body. Let's figure out its velocity. Pick any point on the axis
+of rotation and designate it as the origin of our coordinate system. Denote
+by $\vec r$ the vector from the origin to the point $P$. Let $\th$ denote
+the angle between $\hat a$ and $\vec r$. As time progresses the point $P$
+sweeps out a circle of radius $R=\|\vec r\,\|\sin\th$. \vadjust{\centerline{\figplace{rigid}{0 in}{0 in}}}
+In one second it travels along an arc that subtends an angle of $\Om$ radians,
+which is the fraction $\sfrac{\Om}{2\pi}$ of a full circle. 
+ The length of this arc is
+$\sfrac{\Om}{2\pi}\times 2\pi R=\Om R=\Om\|\vec r\,\|\sin\th$ so $P$ travels the distance $\Om\|\vec r\,\|\sin\th$
+in one second and its speed, which is also the length of its velocity vector,
+is $\Om\|\vec r\,\|\sin\th$. Now we just need to figure out the direction
+of the velocity vector. That is, the direction of motion of the point $P$.
+Imagine that both $\hat a$ and $\vec r$ lie in the plane of a piece of paper, 
+as in the figure above. Then $\vec v$ points either straight into 
+or straight out of the page and consequently is perpendicular
+to both $\hat a$ and $\vec r$. To distinguish between the ``into the page''
+and ``out of the page'' cases, let's impose the conventions that 
+$\Om>0$ and the axis of rotation $\hat a$ is chosen to obey the right hand
+ rule, meaning that if the thumb of
+your right hand is pointing in the direction $\hat a$, then your fingers
+are pointing in the direction of motion of the rigid body.  Under these
+conventions, the velocity vector $\vec v$ obeys
+\item{$\bullet$}$\|\vec v\,\|=\Om\|\vec r\,\|\|\hat a\|\sin\th$
+\item{$\bullet$}$\vec v\perp\hat a,\vec r$
+\item{$\bullet$}$(\hat a,\vec r,\vec v)$ obey the right hand rule
+
+\goodbreak\noindent
+which is exactly the description of $\Om\hat a\times\vec r$. It is conventional
+to define the ``angular velocity'' of a rigid body to be $\vec \Om=\Om\hat a$. That
+is, the vector with length given by the rate of rotation and direction
+given by the axis of rotation of the rigid body. In terms of this angular 
+velocity vector, the velocity of the point $P$ is
+$$
+\vec v=\vec\Om\times\vec r
+$$
+%%%%%%%%%%
+\titlec{Exercises for \S\CH.7}
+%%%%%%%%%
+{\parindent=.2in
+\item{1)} A body rotates at an angular velocity of 10 rad/sec about the
+axis through $(1,1,-1)$ and $(2,-3,1)$. Find the velocity of the point $(1,2,3)$ on the body.
+\smallskip
+\item{2)} Imagine a plate that lies in the $xy$--plane and is rotating
+about the $z$--axis. Let $P$ be a point that is painted on this plate.
+Denote by $r$ the distance from $P$ to the origin, by $\th(t)$ the angle
+at time $t$ between the line from $O$ to $P$ and the $x$--axis and by
+$\big(x(t),y(t)\big)$ the coordinates of $P$ at time $t$. Find $x(t)$ and
+$y(t)$ in terms of $\th(t)$. Compute the velocity of $P$ at time $t$ by
+differentiating $[x(t),y(t)]$. Compute the velocity of $P$ at time $t$
+by applying $\vec v=\vec \Om\times\vec r$.
+
+}
+
+%%%%%%%%
+\titleb{\S \CH.8 Equations of Lines in Two Dimensions}
+%%%%%%%%
+A line in two dimensions can be specified  by giving one point
+$(x_0,y_0)$ on the line and one vector $\vec d=[d_x,d_y]$ whose direction is parallel
+to the line.
+\vadjust{\centerline{\figplace{2dLine}{0 in}{0 in}}}
+If $(x,y)$ is any point on the line then the vector $[x-x_0,y-y_0]$, whose tail
+is at $(x_0,y_0)$ and whose head is at $(x,y)$,  must be parallel
+to $\vec d$ and hence a scalar multiple of $\vec d$. So
+$$
+[x-x_0,y-y_0]=t \vec d
+$$
+or, writing out in components,
+$$\eqalign{
+x-x_0&=t d_x\cr
+y-y_0&=t d_y\cr
+}$$
+These are called the parametric equations of the line, because they contain
+a free parameter, namely $t$. As $t$ varies from $-\infty$ to $\infty$,
+the point $(x_0+td_x,y_0+td_y)$ runs from one end of the line to the other.
+
+It is easy to eliminate the parameter $t$ from the equations. Just solve
+for $t$ in the two equations 
+$$
+t=\sfrac{x-x_0}{d_x}\qquad\qquad t=\sfrac{y-y_0}{d_y}
+$$
+Equating these two expressions for $t$ gives 
+$$
+\sfrac{x-x_0}{d_x}=\sfrac{y-y_0}{d_y}
+$$
+which is called the symmetric equation for the line. In the event that
+the line is parallel to one of the axes, one of $d_x$ and $d_y$ is zero
+and we have to be a little careful to avoid division by zero. To do so,
+just multiply $x-x_0=t d_x$ by $d_y$, multiply $y-y_0=t d_y$ by $d_x$
+and subtract to give
+$$
+(x-x_0)d_y-(y-y_0)d_x=0
+$$
+
+A second way to specify a line in two dimensions is to give one point
+$(x_0,y_0)$ on the line and one vector $\vec n=[n_x,n_y]$ whose direction is 
+perpendicular to that of the line.
+\vadjust{\centerline{\figplace{2dLine_normal}{0 in}{0 in}}}
+If $(x,y)$ is any point on the line then the vector $[x-x_0,y-y_0]$, whose tail
+is at $(x_0,y_0)$ and whose head is at $(x,y)$,   must be perpendicular
+to $\vec n$ so that
+$$
+\vec n\cdot[x-x_0,y-y_0]=0
+$$
+Writing out in components
+$$
+n_x(x-x_0)+n_y(y-y_0)=0\qquad\hbox{or}\qquad n_xx+n_yy= n_xx_0+n_yy_0
+$$
+Observe that the coefficients $n_x,n_y$ of $x$ and $y$ in the equation
+of the line are the components of a vector $[n_x,n_y]$ perpendicular to the 
+line. This enables us to read off a vector perpendicular to any
+given line directly from the equation of the line. Such a vector is called 
+a normal vector for the line. 
+\example{\CH.2}{Consider, for example,
+the line $y=3x+7$. To rewrite this equation in the form 
+$n_xx+n_yy= n_xx_0+n_yy_0$ we have to move terms around so that $x$ and
+$y$ are on one side of the equation and $7$ is  on the other side:
+ $3x-y=-7$. Then $n_x$ is the coefficient of $x$, namely $3$, and $n_y$
+is the coefficient of $y$, namely $-1$. One normal vector
+for $y=3x+7$ is $[3,-1]$. 
+
+To verify that $[3,-1]$ really is perpendicular to the
+line, we can rewrite $y=3x+7$ in the form $\vec n\cdot[x-x_0,y-y_0]=0$.
+Note that when $(x,y)$ obeys $y=3x+7$ and $x=0$, we have $y=7$. Thus 
+$(0,7)$ is one point on the line. 
+$$\meqalign{
+& && 3x-y&=-7\cr
+&\iff&&[3,-1]\cdot[x,y]&=-7\cr
+&\iff&&[3,-1]\cdot[x,y]&=[3,-1]\cdot[0,7]\cr
+&\iff&&[3,-1]\cdot([x,y]-[0,7])&=0\cr
+&\iff&&[3,-1]\cdot[x-0,y-7]&=0\cr
+}$$
+Now $[x-0,y-7]$ is a vector which has both head, namely $(x,y)$, and 
+tail, namely $(0,7)$ on the line $y=3x+7$. So $[x-0,y-7]$ is a vector that 
+is parallel to the line. The vanishing of the last dot product tells us
+that $[3,-1]$ is perpendicular to $[x-0,y-7]$ and hence to $y=3x+7$.
+
+Of course, if $[3,-1]$ is perpendicular to $y=3x+7$, so is $-5[3,-1]=[-15,5]$.
+In fact, if we first multiply the equation $3x-y=-7$ by $-5$ to
+get $-15x+5y=35$ and then set $n_x$ and $n_y$ to the coefficients of $x$
+and $y$ respectively, we get $\vec n=[-15,5]$.
+}
+\example{\CH.3}{
+In this example, we find the point on the line $y=6-3x$ (call the line $L$)
+that is closest to $(7,5)$. We'll start by sketching the line. To do so, 
+we guess two points on $L$ and then draw the line that passes through 
+the two points.
+\item{$\circ$} If $(x,y)$ is on $L$ and $x=0$, then $y=6$. So $(0,6)$ is 
+on $L$.
+\item{$\circ$} If $(x,y)$ is on $L$ and $y=0$, then $x=2$. So $(2,0)$ is 
+on $L$.
+
+\centerline{\figput{closest}}
+
+
+\noindent To find the point on $L$ that is nearest to $(7,5)$, we drop
+a perpendicular from $(7,5)$ to $L$. The perpendicular hits $L$ at the
+point we want, which we'll call $P$. Let's use $N$ to denote the line 
+which passes through $(7,5)$ and which is perpedicular to $L$. Since $L$
+has the equation $3x+y=6$, one vector perpedicular to $L$, and hence parallel
+to $N$, is $[3,1]$. So if $(x,y)$ is any point on $N$, the vector $[x-7,y-5]$
+must be of the form $t[3,1]$. So the parametric equations of $N$ are
+$$
+[x-7,y-5]=t[3,1]\qquad\hbox{or}\qquad
+x=7+3t,\ y=5+t
+$$
+Now let $(x,y)$ be the coordinates of $P$. Since $P$ is on $N$,
+we have $x=7+3t$, $y=5+t$ for some $t$. Since $P$ is also on $L$, we also
+have $3x+y=6$. So
+$$\meqalign{
+&& & 3(7+3t)+(5+t)&= 6\cr
+&& \iff& 10t+26&= 6\cr
+&& \iff& t&=-2\cr
+&& \implies& x&= 7+3\times (-2)=1,\ y=5+(-2)=3
+}$$
+and $P$ is \shbox{$(1,3)$}$\,$.
+
+
+}
+%%%%%%%%%%
+\titlec{Exercises for \S\CH.8}
+%%%%%%%%%
+{\parindent=.2in
+\item{1)} Use a projection to find the distance from the point $(-2,3)$
+to the line $3x-4y=-4$.
+\smallskip
+\item{2)} Let $\vec a$, $\vec b$ and $\vec c$ be the vertices of a triangle. By definition, a median of a triangle is a straight line that
+passes through a vertex of the triangle and through the midpoint of
+the opposite side.
+\itemitem{a)} Find the parametric equations of the three medians.
+\itemitem{b)} Do the three medians meet at a common point? If so,
+which point? 
+
+}
+%%%%%
+\goodbreak
+\titleb{\S\CH.9 Equations of Planes in Three Dimensions}
+%%%%%
+Specifying one point $(x_0,y_0,z_0)$ on a plane and a vector $\vec d$ parallel
+to the plane does not uniquely determine the plane, because it is free
+to rotate about $\vec d$. On the other hand, giving one point
+\vadjust{\centerline{\figplace{3dPlane}{-.75 in}{0 in}
+\figplace{3dPlane2}{.75 in}{0 in}}}
+on the plane and one vector $\vec n=[n_x,n_y, n_z]$ whose direction is 
+perpendicular to that of the plane does uniquely determine the plane.
+If $(x,y,z)$ is any point on the line then the vector $[x-x_0,y-y_0,z-z_0]$,
+whose tail is at $(x_0,y_0,z_0)$ and whose arrow is at $(x,y,z)$,  must be
+perpendicular to $\vec n$ so that
+$$
+\vec n\cdot[x-x_0,y-y_0,z-z_0]=0
+$$
+Writing out in components
+$$
+n_x(x-x_0)+n_y(y-y_0)+n_z(z-z_0)=0
+\qquad\hbox{or}\qquad n_xx+n_yy+n_zz= n_xx_0+n_yy_0+n_zz_0
+$$
+Again, the coefficients $n_x,n_y,n_z$ of $x,\ y$ and $z$ in the equation
+of the plane are the components of a vector $[n_x,n_y,n_z]$ perpendicular 
+to the plane. 
+%%%%%%%%%%
+\goodbreak
+\titlec{Exercises for \S\CH.9}
+%%%%%%%%%
+{\parindent=.2in
+\item{1)} Find the equation of the plane containing the points $(1,0,1)$,
+$(1,1,0)$ and $(0,1,1)$.
+\smallskip
+\item{2)} Find the equation of the sphere which has the two planes
+$x+y+z=3,\ x+y+z=9$ as tangent planes if the center of the sphere is on
+the planes $2x-y=0,\ 3x-z=0$.
+\smallskip
+\item{3)} Find the equation of the plane that passes through the point
+$(-2,0,1)$ and through the line of intersection of $2x+3y-z=0,\ x-4y+2z=-5$.
+\smallskip
+\item{4)} What's wrong with the question ``Find the equation of the plane
+containing $(1,2,3)$, $(2,3,4)$ and $(3,4,5)$.''?
+\smallskip
+\item{5)} Find the distance from the point $\vec p$ to the plane $\vec n\cdot 
+\vec x= c$.
+
+}
+%%%%%%%%
+\titleb{\S\CH.10 Equations of Lines in Three Dimensions}
+%%%%%%%%
+Just as in two dimensions, a line in three dimensions can be specified  by
+giving one point $(x_0,y_0,z_0)$ on the line and one vector 
+$\vec d=[d_x,d_y,d_z]$ whose direction is parallel to that of the line.
+If $(x,y,z)$ is any point on the line then the vector $[x-x_0,y-y_0,z-z_0]$,
+whose tail is at $(x_0,y_0,z_0)$ and whose arrow is at $(x,y,z)$,  must be
+parallel to $\vec d$ and hence a scalar multiple of $\vec d$. Translating
+this statement into a vector equation
+$$
+[x-x_0,y-y_0,z-z_0]=t \vec d
+$$
+or the three corresponding scalar equations
+$$\eqalign{
+x-x_0&=t d_x\cr
+y-y_0&=t d_y\cr
+z-z_0&=t d_z\cr
+}$$
+again gives the parametric equations of the plane.
+Solving all three equations for the parameter $t$ 
+$$
+t=\sfrac{x-x_0}{d_x}=\sfrac{y-y_0}{d_y}=\sfrac{z-z_0}{d_z}
+$$
+and erasing the ``$t=$'' again gives the symmetric equations for the line. 
+
+\example{\CH.4}{ The set of points $(x,y,z)$ that obey $x+y+z=2$ form a
+plane. The set of points $(x,y,z)$ that obey $x-y=0$ form a second plane. 
+ The set of points $(x,y,z)$ that obey both $x+y+z=2$ and $x-y=0$  lie
+on the intersection of these two planes and hence form a line. We shall
+find the parametric equations for that line. To sketch $x+y+z=2$ we observe
+that if any two of $x,y,z$ are zero, then the third is $2$. So all of $(0,0,2)$,
+$(0,2,0)$ and $(2,0,0)$ are on $x+y+z=2$. The plane $x-y=0$ contains all
+of the $z$--axis, since $(0,0,z)$ obeys $x-y=0$ for all $z$.
+
+\centerline{\figput{planeInt}}
+
+\noindent{\bf Method 1.} Each point on the line has a different value of
+$z$. We'll use $z$ as the parameter. (We could just as well use $x$ or
+$y$.) There is no law that requires us to use the parameter name $t$,
+but that's what we have done so far, so set $t=z$. If $(x,y,z)$ is on 
+the line then $z=t$ and
+$$\eqalign{
+x+y+t&=2 \cr
+x-y\phantom{\ \,+t}&=0  \cr
+}$$
+The second equation forces $y=x$. Substituting this into the first equation
+gives
+$$
+2x+t=2 \implies x=y=1-\sfrac{t}{2}
+$$
+So the parametric equations are
+$$
+x=1-\sfrac{t}{2},\ 
+y=1-\sfrac{t}{2},\ 
+z=t\qquad\hbox{or}\qquad
+[x-1,y-1,z] = t\big[-\half, -\half, 1\big]
+$$
+\noindent{\bf Method 2.} We first find one point on the line. There
+are lots of them. We'll find the point with $z=0$. (We could just as well
+use z=123.4.) If  $(x,y,z)$ is on the line and $z=0$, then
+$$\eqalign{
+x+y&=2\cr
+x-y&=0\cr
+}$$
+The second equation forces again $y=x$. Substituting this into the first 
+equation gives
+$$
+2x=2 \implies x=y=1
+$$
+So $(1,1,0)$ is on the line. Now we'll find a direction vector, $\vec d$,
+for the line. Since the line is contained in the plane $x+y+z=2$,
+any vector lying on the line, like $\vec d$, is also completely contained
+in that plane. So $\vec d$ must be perpendicular to the normal vector of
+$x+y+z=2$, which is $[1,1,1]$. Similarly, since the line is contained in 
+the plane $x-y=0$, any vector lying on the line, like $\vec d$, is also 
+completely contained in that plane.  So $\vec d$ must be perpendicular to 
+the normal vector of $x-y=0$, which is $[1,-1,0]$. So we may choose for
+$\vec d$ any vector which is perpendicual to both $[1,1,1]$ and $[1,-1,0]$,
+like, for example,
+$$\eqalign{
+\vec d&=[1,-1,0]\times[1,1,1]
+=\det\left[\matrix{\hat\imath &\hat\jmath&\hat k\cr 1&-1&0\cr 1&1&1\cr}\right]
+=\hat\imath\det\left[\matrix{-1&0\cr1&1\cr}\right]
+-\hat\jmath\det\left[\matrix{1&0\cr 1&1\cr }\right]
++\hat k\det\left[\matrix{1&-1\cr 1&1}\right]\cr
+&=-\hat\imath-\hat\jmath+2\hat k
+}$$
+We now have both a point on the line and a direction vector for the line,
+so, as usual, the parametric equations for the line are
+$$
+[x-1,y-1,z]=t[-1,-1,2]\qquad\hbox{or}\qquad
+x=1-t,\ y=1-t,\ z=2t
+$$
+\smallskip
+\noindent{\bf Method 3.} We'll find two points on the line. We
+have already found that $(1,1,0)$ is on the line. From the picture,
+it looks like $(0,0,2)$ is also on the line. This is indeed the case
+since $(0,0,2)$ obeys both $x+y+z=2$ and $x-y=0$. As both $(1,1,0)$
+and $(0,0,2)$ are on the line, the vector with head at $(1,1,0)$ and tail
+at $(0,0,2)$, which is $[1-0,1-0,0-2]=[1,1,-2]$, is a direction vector for the 
+line. As $(0,0,2)$ is a point on the line and $[1,1,-2]$ is a direction
+vector for the line, the parametric equations for the line are
+$$
+[x-0,y-0,z-2]=t[1,1,-2]\qquad\hbox{or}\qquad
+x=t,\ y=t,\ z=2-2t
+$$
+The parametric equations given by the three methods are different. That's
+just because we have really used different parameters in the three methods,
+even though we have always called the parameter $t$.To clarify the relation
+between the three answers, rename the parameter of method 1 to $t_1$,
+the parameter of method 2 to $t_2$ and the parameter of method 3 to $t_3$.
+The parametric eqautions then become
+$$\meqalign{
+&\hbox{Method 1:} &&
+   x&=1-\sfrac{t_1}{2} &&
+   y&=1-\sfrac{t_1}{2} && 
+   z&=t_1 \cr
+&\hbox{Method 2:} &&
+   x&=1-t_2 &&
+   y&=1-t_2 && 
+   z&=2t_2 \cr
+&\hbox{Method 3:} &&
+   x&=t_3 &&
+   y&=t_3 && 
+   z&=2-2t_3 \cr
+}$$  
+Substituting $t_1=2t_2$ into the Method 1 equations gives the Method 2
+equations, and substituting $t_3=1-t_2$ into the Method 3 equations gives 
+the Method 2 equations.
+
+}
+
+
+%%%%%%%%%%
+\titlec{Exercises for \S\CH.10}
+%%%%%%%%%
+{\parindent=.2in
+\item{1)} Find the equation of the line through $(2,-1,-1)$ and parallel
+to each of the two planes $x+y=0$ and $x-y+2z=0$. Express the equations
+of the line in vector and scalar parametric forms and in symmetric form.
+
+}
+%%%%%%%%
+\titleb{\S\CH.11 Worked Problems}
+%%%%%%%%
+\countdef\counter=10
+\counter =1 
+\def\next{\number\counter )\ \global\advance\counter by 1}
+{ \parindent =.25in \raggedbottom
+
+%%%%%%%%%%%%%%%%%
+\titlec{Questions}
+%%%%%%%%%%%%%%%%
+\edef\Qone{\number\counter}
+%%%%%%%%%%%%%%%%%1
+\item{\next}  Describe the set of all points $(x,y,z)$ 
+in $\bbbr^3$ that satisfy $x^2 +y^2+z^2= 2x-4y+4$.
+\medskip
+%%%%%%%%%%%%%%%%%2
+\item{\next}  Describe the set of all points $(x,y,z)$ 
+in $\bbbr^3$ that satisfy $x^2 +y^2+z^2< 2x-4y+4$.
+\medskip
+%%%%%%%%%%%%%%%%%3
+\item{\next} Compute the areas of the parallelograms determined by the
+following vectors.
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+
+a)\quad  $[-3,1],\ [4,3]$ & b)\quad  $[4,2],\ [6,8]$\cr
+}
+\medskip
+%%%%%%%%%%%%%%%%%4
+\item{\next} Compute the volumes of the parallelopipeds determined by the
+following vectors.
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+
+a)\quad $[4,1,-1],\ [-1,5,2],\ [1,1,6]$ & b)\quad $[-2,1,2],\ [3,1,2],\ [0,2,5]$\cr
+}
+\medskip
+%%%%%%%%%%%%%%%%%5
+\item{\next} Determine the angle between the vectors $\vec a$ and $\vec
+b$ if
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+
+a) $\vec a=[1,2],\ \vec b=[3,4]$ &
+b) $\vec a=[2,1,4],\ \vec b=[4,-2,1]$ &
+c) $\vec a=[1,-2,1],\ \vec b=[3,1,0]$ \cr
+}
+\medskip
+%%%%%%%%%%%%%%%%%6
+\item{\next} Determine whether the given pair of vectors is perpendicular
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+
+a) $[1,3,2],\ [2,-2,2]$ &
+b) $[-3,1,7],\ [2,-1,1]$ &
+c) $[2,1,1],\ [-1,4,2]$ \cr
+}
+\medskip
+%%%%%%%%%%%%%%%%%7
+\item{\next} Determine all values of $y$ for which the given vectors are
+ perpendicular
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+
+a) $[2,4],\ [2,y]$ &
+b) $[4,-1],\ [y,y^2]$ &
+c) $[3,1,1],\ [2,5y,y^2]$ \cr
+}
+\medskip
+%%%%%%%%%%%%%%%%%8
+\item{\next} Determine a number $\al$ such that $[1,2,3]$ is perpendicular
+to $[\al,2,\al]$.
+%%%%%%%%%%%%%%%%%9
+\medskip
+\item{\next} Let $\vec u=-2\hat\imath+5\hat\jmath$ and $\vec v=\al\hat\imath
+-2\hat\jmath$. Find $\al$ so that
+\itemitem{a)} $\vec u\perp\vec v$
+\itemitem{b)} $\vec u \| \vec v$
+\itemitem{c)} The angle between $\vec u$ and $\vec v$ is $60^\circ$.
+\medskip
+%%%%%%%%%%%%%%%%%10
+\item{\next} Find the angle between the diagonal of a cube and the diagonal
+of one of its faces.
+\medskip
+%%%%%%%%%%%%%%%%%11
+\item{\next} Define $\vec a=[1,2,3],\ \vec b=[4,10,6]$.
+\itemitem{a)} Find the component of $\vec b$ in the direction $\vec a$.
+\itemitem{b)} Find the projection of $\vec b$ on $\vec a$.
+\itemitem{c)} Find the projection of $\vec b$ perpendicular to $\vec a$.
+\medskip
+%%%%%%%%%%%%%%%%%12
+\item{\next} Consider the following statement: ``If $\vec a\ne\vec 0$
+and if $\vec a\cdot\vec b=\vec a\cdot\vec c$ then $\vec b=\vec c$.''
+If the statment is true, prove it. If the statement is false, give a 
+counterexample.
+\medskip
+%%%%%%%%%%%%%%%%%13
+\item{\next} Consider a cube such that each side has length $s$. Name,
+in order, the four vertices on the bottom of the cube $A, B, C, D$ and the
+corresponding four vertices on the top of the cube $A', B', C', D'$.
+\itemitem{a)} Show that all edges of the tetrahedron $A'C'BD$ have the
+same length.
+\itemitem{b)} Let $E$ be the center of the cube. Find the angle between
+$EA$ and $EC$.
+\medskip
+%%%%%%%%%%%%%%%%%14
+\item{\next} 
+A prism has the six vertices
+$$\meqalign{
+A&=(1,0,0)   &&  A'&=(5,0,1) \cr
+B&=(0,3,0)   &&  B'&=(4,3,1) \cr
+C&=(0,0,4)   &&  C'&=(4,0,5) \cr
+}$$
+\itemitem{a)} Verify that three of the faces are parallelograms.
+Are they rectangular?
+\itemitem{b)} Find the length of $AA'$.
+\itemitem{c)} Find the area of the triangle $ABC$.
+\itemitem{d)} Find the volume of the prism.
+\medskip
+%%%%%%%%%%%%%%%%%15
+\item{\next}The figure below represents a pin jointed network in equilibrium.
+ The line
+$ACD$ is horizontal. Each of $AC,\ CD,\ BC$ and $BD$ are 2m long. The only
+external force is a downward force of 10n applied at $C$. The support
+$A$ is completely fixed, whereas $C$ provides only vertical support.
+Determine the tensions $N_i$ in the five rods, using the sign convention
+that $N_i>0$ when rod number $i$ is pulling on its ends, rather than pushing on them.
+
+
+\centerline{\figplace{bridge}{0in}{0in}}
+\medskip
+%%%%%%%%%%%%%%%%%16
+\item{\next} Let $PQR$ be a triangle in $\bbbr^3$. Find the work done in
+moving an object around the triangle when it is subject to a constant force $\vec F$.
+\medskip
+%%%%%%%%%%%%%%%%%17
+\item{\next} Calculate the following cross products.
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+
+a)\quad $[1,-5,2]\times[-2,1,5]$& b)\quad $[2,-3,-5]\times[4,-2,7]$
+& c)\quad $[-1,0,1]\times[0,4,5]$\cr
+}
+\medskip
+%%%%%%%%%%%%%%%%%18
+\item{\next} Let $\vec p=[-1,4,2],\ \vec q=[3,1,-1],\ \vec r=[2,-3,-1]$.
+Check, by direct computation, that
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+(a) $\vec p\times\vec p=\vec 0$
+&(b) $\vec p\times\vec q=-\vec q\times\vec p$
+&(c) $\vec p\times(3\vec r)=3(\vec p\times\vec r)$\cr
+\+(d) $\vec p\times(\vec q+\vec r) = \vec p\times\vec q+\vec p\times\vec r$
+&(e) $\vec p\times(\vec q\times\vec r) \ne (\vec p\times\vec q)\times\vec r$\cr
+}
+\medskip
+%%%%%%%%%%%%%%%%%19
+\item{\next} Calculate the area of the triangle with vertices $(0,0,0)$
+$(1,2,3)$ and $(3,2,1)$.
+\medskip
+%%%%%%%%%%%%%%%%%20
+\item{\next} Show that the area of the parallelogram spanned by the
+vectors $\vec a$ and $\vec b$ is $\|\vec a\times \vec b\|$.
+\medskip
+%%%%%%%%%%%%%%%%%21
+\item{\next} Show that the volume of the parallelopiped spanned by the
+vectors $\vec a,\ \vec b$ and $\vec c$ is $|\vec a\cdot(\vec b\times\vec
+c)|$.
+\medskip
+%%%%%%%%%%%%%%%%%22
+\item{\next} (Three dimensional Pythagorean Theorem) A solid body in space 
+with exactly four vertices is called a tetrahedron. Let $A$, $B$, $C$ and
+$D$ be the areas of the four faces of a tetrahedron. Suppose that the
+three edges meeting at the vertex opposite the face of area $D$ are 
+perpendicular to each other. Show that $D^2=A^2+B^2+C^2$.
+
+\centerline{\figplace{tetrahedron}{0 in}{0 in}}
+\medskip
+%%%%%%%%%%%%%%%%%23
+\item{\next} (Three dimensional law of cosines)  Let $A$, $B$, $C$ and
+$D$ be the areas of the four faces of a tetrahedron. Let $\al$ be the angle
+between the faces with areas $B$ and $C$, $\be$ be the angle
+between the faces with areas $A$ and $C$ and $\ga$ be the angle
+between the faces with areas $A$ and $B$. (By definition, the angle between
+two faces is the angle between the normal vectors to the faces.)
+ Show that 
+$$
+D^2=A^2+B^2+C^2-2BC\cos\al-2AC\cos\be-2AB\cos\ga
+$$
+\medskip
+%%%%%%%%%%%%%%%%%24
+\item{\next} Consider the following statement: ``If $\vec a\ne\vec 0$
+and if $\vec a\times\vec b=\vec a\times\vec c$ then $\vec b=\vec c$.''
+If the statment is true, prove it. If the statement is false, give a 
+counterexample.
+\medskip
+%%%%%%%%%%%%%%%%%25
+\edef\Qnine{\number\counter}
+\item{\next} Consider the following statement: ``The vector $\vec a\times(\vec
+b\times\vec c)$ is of the form $\al\vec b+\be\vec c$ for some real numbers
+$\al$ and $\be$.''
+If the statment is true, prove it. If the statement is false, give a 
+counterexample.
+\medskip
+%%%%%%%%%%%%%%%%%26
+\item{\next} What geometric conclusions can you draw from
+$\vec a\cdot(\vec b\times\vec c)=[1,2,3]$?
+\medskip
+%%%%%%%%%%%%%%%%%27
+\item{\next} What geometric conclusions can you draw from
+$\vec a\cdot(\vec b\times\vec c)=0$?
+\medskip
+%%%%%%%%%%%%%%%%%28
+\item{\next} Find the vector parametric, scalar parametric
+ and symmetric equations for the line
+containing the given point and with given direction.
+\itemitem{a)} point $(1,2)$, direction $[3,2]$
+\itemitem{c)} point $(5,4)$, direction $[2,-1]$
+\itemitem{d)} point $(-1,3)$, direction $[-1,2]$
+\medskip
+%%%%%%%%%%%%%%%%%29
+\item{\next} Find the vector parametric, scalar parametric
+ and symmetric equations for the line
+containing the given point and with given normal.
+\itemitem{a)} point $(1,2)$, normal $[3,2]$
+\itemitem{c)} point $(5,4)$, normal $[2,-1]$
+\itemitem{d)} point $(-1,3)$, normal $[-1,2]$
+\medskip
+%%%%%%%%%%%%%%%%%30
+\item{\next} Find a vector parametric equation for the line of intersection
+of the given planes.
+\itemitem{a)} $x-2z=3$ and $y+\half z=5$
+\itemitem{b)} $2x-y-2z=-3$ and $4x-3y-3 z=-5$
+\medskip
+%%%%%%%%%%%%%%%%%31
+\item{\next} In each case, determine whether or not the given pair
+of lines intersect. If not, determine the distance between the lines.
+Also find all planes containing the pair of lines.
+\itemitem{a)} $(x,y,z) = (-3,2,4)+t[-4,2,1]$ and $(x,y,z) = (2,1,2)+t[1,1,-1]$
+\itemitem{b)} $(x,y,z) = (-3,2,4)+t[-4,2,1]$ and $(x,y,z) = (2,1,-1)+t[1,1,-1]$
+\itemitem{c)} $(x,y,z) = (-3,2,4)+t[-2,-2,2]$ and $(x,y,z) = (2,1,-1)+t[1,1,-1]$
+\itemitem{d)} $(x,y,z) = (3,2,-2)+t[-2,-2,2]$ and $(x,y,z) = (2,1,-1)+t[1,1,-1]$
+\medskip
+%%%%%%%%%%%%%%%%%32
+\item{\next} Determine a vector equation for the line of intersection
+of the planes
+\itemitem{a)} $x+y+z=3$ and $x+2y+3z=7$
+\itemitem{b)} $x+y+z=3$ and $2x+2y+2z=7$
+\medskip
+%%%%%%%%%%%%%%%%%33
+\item{\next} Describe the set of points equidistant from $(1,2,3)$ and
+$(5,2,7)$.
+\medskip
+%%%%%%%%%%%%%%%%%34
+\item{\next} Describe the set of points equidistant from $\a$ and
+$\b$.
+\medskip
+%%%%%%%%%%%%%%%%%35
+\item{\next} Find the plane containing the given three points.
+\smallskip\item{}\vbox {\hsize=6.5in
+\settabs 2\columns
+\+a) $(1,0,1),\ (2,4,6),\ (1,2,-1)$ &
+b) $(1,-2,-3),\ (4,-4,4),\ (3,2,-3)$ \cr
+\+c) $(1,-2,-3),\ (5,2,1),\ (-1,-4,-5)$\cr
+}
+\medskip
+%%%%%%%%%%%%%%%%%36
+\item{\next} Find the distance from the given point to the given plane.
+\itemitem{a)} point $(-1,3,2)$, plane $x+y+z=7$
+\itemitem{b)} point $(1,-4,3)$, plane $x-2y+z=5$
+\smallskip
+\medskip
+%%%%%%%%%%%%%%%%%37
+\item{\next} Find the distance from $(1,0,1)$ to the line
+$x+2y+3z=11,\ x-2y+z=-1$. 
+\medskip
+%%%%%%%%%%%%%%%%%38
+\item{\next} Let $L_1$ be the line passing through $(1,-2,-5)$ in the direction of $\vec d_1=[2,3,2]$. Let $L_2$ be the line passing through
+$(-3,4,-1)$ in the direction $\vec d_2=[5,2,4]$.
+\itemitem{a)} Find the equation of the plane $P$ that contains $L_1$
+and is parallel to $L_2$. 
+\itemitem{b)} Find the distance from $L_2$ to $P$.
+\medskip
+%%%%%%%%%%%%%%%%%39
+\item{\next} Calculate the distance between the lines 
+$\sfrac{x+2}{3}=\sfrac{y-7}{-4}=\sfrac{z-2}{4}$ and $\sfrac{x-1}{-3}=\sfrac{y+2}{4}=\sfrac{z+1}{1}$.
+\medskip
+%%%%%%%%%%%%%%%%%40
+\item{\next} Let $P,\ Q,\ R$ and $S$ be the vertices of a tetrahedron.
+Denote by $\vec p,\ \vec q,\ \vec r$ and $\vec s$ the vectors from the origin
+to $P,\ Q,\ R$ and $S$ respectively. A line is drawn from each vertex to
+the centroid of the opposite face, where the centroid of a triangle with 
+vertices $\vec a,\ \vec b$ and $\vec c$ is $\sfrac{1}{3}(\vec a+\vec b+\vec
+c)$. Show that these four lines meet at
+$\sfrac{1}{4}(\vec p+\vec q+\vec r+\vec s$).
+\medskip
+
+
+\counter =1 
+\goodbreak
+%%%%%%%%%%%%%%%%%
+\titlec{Solutions}
+%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%1
+\item{\next}  Describe the set of all points $(x,y,z)$ 
+in $\bbbr^3$ that satisfy $x^2 +y^2+z^2= 2x-4y+4$.
+\smallskip
+\item{}\soln The point $(x,y,z)$ satisfies $x^2 +y^2+z^2= 2x-4y+4$
+if and only if it satisfies $x^2-2x +y^2+4y+z^2= 4$, or equivalently 
+$(x-1)^2 +(y+2)^2+z^2=9 $. Since $\sqrt{(x-1)^2 +(y+2)^2+z^2}$ is the distance
+from $(1, -2, 0)$ to $(x,y,z)$, our point satisfies the given equation
+if and only if its distance from $(1,-2,0)$ is three. So the set is
+\shbox{the sphere of radius 3 centered on $(1,-2,0)$}\ .
+\medskip
+%%%%%%%%%%%%%%%%%2
+\item{\next}  Describe the set of all points $(x,y,z)$ 
+in $\bbbr^3$ that satisfy $x^2 +y^2+z^2< 2x-4y+4$.
+\smallskip
+\item{}\soln As in problem \Qone, $x^2 +y^2+z^2< 2x-4y+4$
+if and only if  $(x-1)^2 +(y+2)^2+z^2<9 $. Hence our point 
+satifies the given inequality
+if and only if its distance from $(1,-2,0)$ is strictly smaller than three. 
+The set is
+\shbox{the interior of the sphere of radius 3 centered on $(1,-2,0)$}\ .
+\medskip
+%%%%%%%%%%%%%%%%%3
+\item{\next} Compute the areas of the parallelograms determined by the
+following vectors.
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+
+a)\quad  $[-3,1],\ [4,3]$ & b)\quad  $[4,2],\ [6,8]$\cr
+}
+\smallskip
+\item{}\soln
+$$\leqalignno{
+\det\left[\matrix{-3&1\cr4&3\cr}\right] &=-3\times 3-1\times
+4 = -13 \qquad\implies \shbox{area$=13$}&{\rm a)}\cr 
+\det\left[\matrix{4&2\cr6&8\cr}\right] &=4\times 8-2\times
+6 \kern 7pt= 20\kern 8pt \qquad\implies \shbox{area$=20$}&{\rm b)}\cr 
+}$$
+%$$\deqalign{
+%&{\rm a)}\qquad&\det\left[\matrix{-3&1\cr4&3\cr}\right] &=-3\times 3-1\times
+%4 &= -13 \qquad&\implies \shbox{area$=13$}\cr 
+%&{\rm b)}\qquad&\det\left[\matrix{4&2\cr6&8\cr}\right] &=4\times 8-2\times
+%6 &= 20 \qquad&\implies \shbox{area$=20$}\cr 
+%}$$
+\medskip
+%%%%%%%%%%%%%%%%%4
+\item{\next} Compute the volumes of the parallelopipeds determined by the
+following vectors.
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+
+a)\quad $[4,1,-1],\ [-1,5,2],\ [1,1,6]$ & b)\quad $[-2,1,2],\ [3,1,2],\ [0,2,5]$\cr
+}
+\smallskip
+\item{}\soln
+$$\eqalign{
+\det\left[\matrix{4&1&-1\cr-1&5&2\cr1&1&6\cr}\right] 
+&=4\det\left[\matrix{5&2\cr1&6\cr}\right]
+-1\det\left[\matrix{-1&2\cr1&6\cr}\right]
++(-1)\det\left[\matrix{-1&5\cr1&1\cr}\right]\cr
+&=4(30-2)-1(-6-2)-1(-1-5) = 4\times28+8+6=126\cr
+\det\left[\matrix{-2&1&2\cr3&1&2\cr0&2&5\cr}\right] 
+&=-2\det\left[\matrix{1&2\cr2&5\cr}\right]
+-1\det\left[\matrix{3&2\cr0&5\cr}\right]
++2\det\left[\matrix{3&1\cr0&2\cr}\right]\cr
+&=-2(5-4)-1(15-0)+2(6-0) =-2-15+12=-5\cr
+}$$
+So the volumes are \shbox{$126$} and \shbox{$5$} respectively.
+\medskip
+%%%%%%%%%%%%%%%%%5
+\item{\next} Determine the angle between the vectors $\vec a$ and $\vec
+b$ if
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+
+a) $\vec a=[1,2],\ \vec b=[3,4]$ &
+b) $\vec a=[2,1,4],\ \vec b=[4,-2,1]$ &
+c) $\vec a=[1,-2,1],\ \vec b=[3,1,0]$ \cr
+}
+\smallskip\item{}\soln
+$$\leqalignno{
+&\cos\th =\frac{\vec a\cdot\vec b}{\|\vec a\|\,\|\vec b\|}
+        =\frac{1\times 3+2\times 4}{\sqrt{1+4}\sqrt{9+16}}
+        =\frac{11}{5\sqrt{5}}= .9839 
+\qquad \implies\quad \shbox{$\th=10.3^\circ$} &{\rm a)}\cr
+&\cos\th =\frac{\vec a\cdot\vec b}{\|\vec a\|\,\|\vec b\|}
+        =\frac{2\times 4-1\times 2+4\times 1}{\sqrt{4+1+16}\sqrt{16+4+1}}
+        =\frac{10}{21}= .4762 
+\qquad \implies\quad \shbox{$\th=61.6^\circ$} &{\rm b)}\cr
+&\cos\th =\frac{\vec a\cdot\vec b}{\|\vec a\|\,\|\vec b\|}
+        =\frac{1\times 3-2\times 1+1\times 0}{\sqrt{1+4+1}\sqrt{9+1}}
+        =\frac{1}{\sqrt{60}}= .1291 
+\qquad \implies\quad \shbox{$\th=82.6^\circ$} &{\rm c)}\cr
+}$$
+\medskip\goodbreak
+%%%%%%%%%%%%%%%%%6
+\item{\next} Determine whether the given pair of vectors is perpendicular
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+
+a) $[1,3,2],\ [2,-2,2]$ &
+b) $[-3,1,7],\ [2,-1,1]$ &
+c) $[2,1,1],\ [-1,4,2]$ \cr
+}
+\smallskip\item{}\soln
+$$\leqalignno{
+&[1,3,2]\cdot[2,-2,2]=1\times2-3\times 2+2\times2=0\qquad\implies\quad
+\shbox{perpendicular}&{\rm a)}\cr
+&[-3,1,7]\cdot[2,-1,1]=-3\times2-1\times 1+7\times1=0\qquad\implies\quad
+\shbox{perpendicular}&{\rm b)}\cr
+&[2,1,1]\cdot[-1,4,2]=-2\times1+1\times 4+1\times2=4\ne 0\qquad\implies\quad
+\shbox{not perpendicular}&{\rm a)}\cr
+}$$
+\medskip
+%%%%%%%%%%%%%%%%%7
+\item{\next} Determine all values of $y$ for which the given vectors are
+ perpendicular
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+
+a) $[2,4],\ [2,y]$ &
+b) $[4,-1],\ [y,y^2]$ &
+c) $[3,1,1],\ [2,5y,y^2]$ \cr
+}
+\smallskip\item{}\soln
+$$\leqalignno{
+&[2,4]\cdot[2,y]=2\times2+4\times y=4+4y=0\qquad\iff\qquad\shbox{$y=-1$}
+&{\rm a)}\cr
+&[4,-1]\cdot[y,y^2]=4\times y-1\times y^2=4y-y^2=0\qquad\iff\qquad\shbox{$y=0,4$}
+&{\rm b)}\cr
+&[3,1,1]\cdot[2,5y,y^2]=3\times2+1\times 5y+1\times y^2=6+5y+y^2=0\qquad\iff\qquad\shbox{$y=-2,-3$}
+&{\rm c)}\cr
+}$$
+\medskip
+%%%%%%%%%%%%%%%%%8
+\item{\next} Determine a number $\al$ such that $[1,2,3]$ is perpendicular
+to $[\al,2,\al]$.
+\smallskip
+\item{}\soln $\al$ must obey $[1,2,3]\cdot[\al,2,\al]=0$ or $\al+4+3\al=0$.
+The only solution is \shbox{$\al=-1$}$\,$.
+%%%%%%%%%%%%%%%%%9
+\medskip
+\item{\next} Let $\vec u=-2\hat\imath+5\hat\jmath$ and $\vec v=\al\hat\imath
+-2\hat\jmath$. Find $\al$ so that
+\itemitem{a)} $\vec u\perp\vec v$
+\itemitem{b)} $\vec u \| \vec v$
+\itemitem{c)} The angle between $\vec u$ and $\vec v$ is $60^\circ$.
+\smallskip 
+\item{}\soln a) We want $0=\vec u\cdot\vec v=-2\al-10$ or \shbox{$\al=-5$}$\,$.
+\item{}b) We want $-2/\al=5/(-2)$ or \shbox{$\al=0.8$}$\,$.
+\item{}c) We want $\vec u\cdot\vec v=-2\al-10
+=\|\vec u\|\,\|\vec v\|\,\cos 60^\circ
+=\sqrt{29}\sqrt{\al^2+4}\half$. Squaring both sides gives
+$$\meqalign{
+& && &4\al^2+40\al+100=\sfrac{29}{4}(\al^2+4)\cr
+&\implies && &13\al^2-160\al-284=0\cr
+&\implies && &\al =\frac{160\pm\sqrt{160^2+4\times13\times284}}{26}
+\approx 13.88\hbox{ or }-1.574
+}$$ 
+Both of these $\al$'s give $\vec u\cdot\vec v<0$ so \shbox{no $\al$ works}$\,$.
+\medskip
+%%%%%%%%%%%%%%%%%10
+\item{\next} Find the angle between the diagonal of a cube and the diagonal
+of one of its faces.
+\smallskip\item{}\soln  We may choose our coordinate axes so that the vertices
+of the cube are at $(0,0,0)$, $(s,0,0)$, $(0,s,0)$, $(0,0,s)$, 
+$(s,s,0)$, $(0,s,s)$, $(s,0,s)$ and $(s,s,s)$. The diagonal from $(0,0,0)$
+to $(s,s,s)$ is $[s,s,s]$. One face of the cube has vertices $(0,0,0)$,
+$(s,0,0)$, $(0,s,0)$ and $(s,s,0)$. One diagonal of this face runs from
+$(0,0,0)$ to $(s,s,0)$ and hence is $[s,s,0]$. The angle between $[s,s,s]$
+and $[s,s,0]$ is
+$$
+\cos^{-1}\left(\frac{[s,s,s]\cdot[s,s,0]}{\|[s,s,s]\|\|[s,s,0]\|}\right)
+=\cos^{-1}\left(\frac{2s^2}{\sqrt{3}s\sqrt{2}s}\right)
+=\cos^{-1}\left(\frac{2}{\sqrt{6}}\right)\approx 35.26^\circ
+$$
+A second diagonal for the face with vertices  $(0,0,0)$,
+$(s,0,0)$, $(0,s,0)$ and $(s,s,0)$ is that running from
+$(s,0,0)$ to $(0,s,0)$. This diagonal is $[-s,s,0]$. The angle between 
+$[s,s,s]$ and $[-s,s,0]$ is
+$$
+\cos^{-1}\left(\frac{[s,s,s]\cdot[-s,s,0]}{\|[s,s,s]\|\|[-s,s,0]\|}\right)
+=\cos^{-1}\left(\frac{0}{\sqrt{3}s\sqrt{2}s}\right)
+=\cos^{-1}(0)=90^\circ
+$$
+Note that every component of every vertex of the cube is either $0$ or
+$s$. In general, two vertices of the cube are at
+opposite ends of a diagonal of the cube if all three components of the
+two vertices are different. For example, if one end of the diagonal is
+$(s,0,s)$, the other end is $(0,s,0)$. The diagonals of the cube are all 
+of the form $[\pm s,\pm s,\pm s]$. All of these diagonals are of length $\sqrt{3}s$.
+Two vertices are on the same face of the cube if one of their components
+agree. They are on opposite ends of a diagonal for the face if their other
+two components differ. For example $(0,s,s)$ and $(s,0,s)$ are both on
+the face with $z=s$.  Because the $x$ components $0,\ s$ are different
+and the $y$ components $s,\ 0$ are different, $(0,s,s)$ and $(s,0,s)$
+are the ends of a diagonal of the face with $z=s$. The diagonals of the
+faces with $z=0$ or $z=s$ are $[\pm s,\pm s,0]$. The diagonals of the
+faces with $y=0$ or $y=s$ are $[\pm s,0, \pm s]$. The diagonals of the
+faces with $x=0$ or $x=s$ are $[0,\pm s,\pm s]$. All of these diagonals
+have length $\sqrt{2}s$. The dot product of one the cube diagonals
+$[\pm s,\pm s,\pm s]$ with one of the face diagonals  $[\pm s,\pm s,0]$,
+ $[\pm s,0, \pm s]$, $[0,\pm s,\pm s]$ is of the form $\pm s^2\pm s^2+0$
+and hence must be either $2s^2$ or $0$ or $-2s^2$. In general, the angle
+between a cube diagonal and a face diagonal is
+$$
+\cos^{-1}\left(\frac{\hbox{$2s^2$ or 0 or $-2s^2$}}{\sqrt{3}s\sqrt{2}s}\right)
+=\cos^{-1}\left(\frac{\hbox{$2$ or $0$ or $-2$}}{\sqrt{6}}\right)\approx 
+\shbox{$35.26^\circ$ or $90^\circ$ or $144.74^\circ$}. 
+$$
+\medskip
+%%%%%%%%%%%%%%%%%11
+\item{\next} Define $\vec a=[1,2,3],\ \vec b=[4,10,6]$.
+\itemitem{a)} Find the component of $\vec b$ in the direction $\vec a$.
+\itemitem{b)} Find the projection of $\vec b$ on $\vec a$.
+\itemitem{c)} Find the projection of $\vec b$ perpendicular to $\vec a$.
+\smallskip\goodbreak\item{}\soln
+\item{}a) The component of $\vec b$ in the direction $\vec a$ is
+$$
+\vec b\cdot\frac{\vec a}{\|\vec a\|}=\frac{1\times 4+2\times 10+3\times
+6}{\sqrt{1+4+9}}=\shbox{$\frac{42}{\sqrt{14}}$}
+$$
+\item{}b) The projection of $\vec b$ on $\vec a$ is a vector of length
+$42/\sqrt{14}$ in direction $\vec a/\|\vec a\|$, namely $\sfrac{42}{14}[1,2,3]=$
+\shbox{$[3,6,9]$}
+\item{}c) The projection of $\vec b$ perpendicular to $\vec a$
+is $\vec b$ minus its projection on $\vec a$, namely
+$[4,10,6]-[3,6,9]=$\shbox{$[1,4,-3]$}
+\medskip
+%%%%%%%%%%%%%%%%%12
+\item{\next} Consider the following statement: ``If $\vec a\ne\vec 0$
+and if $\vec a\cdot\vec b=\vec a\cdot\vec c$ then $\vec b=\vec c$.''
+If the statment is true, prove it. If the statement is false, give a 
+counterexample.
+\smallskip
+\item{}\soln This statement is \shbox{false}$\,$. The two numbers 
+$\vec a\cdot\vec b$, $\vec a\cdot\vec c$ are equal if and only if
+$\vec a\cdot(\vec b-\vec c)= 0$. This in turn is the case if and only
+if $\vec a$ is perpendicular to $\vec b-\vec c$ (under the convention that
+$\vec 0$ is perpendicular to all vectors). For example, if $\vec a=[1,0,1]$,
+$\vec b=[40,138,42],\ \vec c=[39,38,43]$, then $\vec b-\vec c=[1,100,-1]$
+is perpendicular to $\vec a$ so that $\vec a\cdot\vec b=\vec a\cdot\vec c$.
+\medskip
+%%%%%%%%%%%%%%%%%13
+\item{\next} Consider a cube such that each side has length $s$. Name,
+in order, the four vertices on the bottom of the cube $A, B, C, D$ and the
+corresponding four vertices on the top of the cube $A', B', C', D'$.
+\itemitem{a)} Show that all edges of the tetrahedron $A'C'BD$ have the
+same length.
+\itemitem{b)} Let $E$ be the center of the cube. Find the angle between
+$EA$ and $EC$.
+\smallskip
+\item{}\soln We may choose our coordinate axes so that $A=(0,0,0),\ B=(s,0,0),\
+C=(s,s,0),\ D=(0,s,0)$ and $A'=(0,0,s),\ B'=(s,0,s),\
+C'=(s,s,s),\ D'=(0,s,s)$.
+\item{}a) Then
+$$\deqalign{
+|A'C'|&=\big\|[s,s,s]-[0,0,s]\big\|&=\big\|[s,s,0]\big\|&=\sqrt{2}\,s\cr
+|A'B|&=\big\|[s,0,0]-[0,0,s]\big\|&=\big\|[s,0,-s]\big\|&=\sqrt{2}\,s\cr
+|A'D|&=\big\|[0,s,0]-[0,0,s]\big\|&=\big\|[0,s,-s]\big\|&=\sqrt{2}\,s\cr
+|C'B|&=\big\|[s,0,0]-[s,s,s]\big\|&=\big\|[0,-s,-s]\big\|&=\sqrt{2}\,s\cr
+|C'D|&=\big\|[0,s,0]-[s,s,s]\big\|&=\big\|[-s,0,-s]\big\|&=\sqrt{2}\,s\cr
+|BD|&=\big\|[0,s,0]-[s,0,0]\big\|&=\big\|[-s,s,0]\big\|&=\sqrt{2}\,s\cr
+}$$
+\item{}b) $E=\half(s,s,s)$ so that $EA=[0,0,0]-\half[s,s,s]=-\half[s,s,s]$ and 
+$EC=[s,s,0]-\half[s,s,s]=\half[s,s,-s]$.
+$$
+\cos\th =\frac{-[s,s,s]\cdot[s,s,-s]}{\|[s,s,s]\|\,\|[s,s,-s]\|}
+        =\frac{-s^2}{3s^2}
+        =-\frac{1}{3}
+\qquad \implies\quad \shbox{$\th=109.5^\circ$}
+$$
+\medskip
+%%%%%%%%%%%%%%%%%14
+\item{\next} 
+A prism has the six vertices
+$$\meqalign{
+A&=(1,0,0)   &&  A'&=(5,0,1) \cr
+B&=(0,3,0)   &&  B'&=(4,3,1) \cr
+C&=(0,0,4)   &&  C'&=(4,0,5) \cr
+}$$
+\itemitem{a)} Verify that three of the faces are parallelograms.
+Are they rectangular?
+\itemitem{b)} Find the length of $AA'$.
+\itemitem{c)} Find the area of the triangle $ABC$.
+\itemitem{d)} Find the volume of the prism.
+\smallskip
+\item{}\soln a) $AA'=[4,0,1]$ and $BB'=[4,0,1]$ are opposite sides
+of the quadrilateral $AA'B'B$. They have the same length 
+and direction. The same is true for $AB=[-1,3,0]$ and $A'B'=[-1,3,0]$.
+So $AA'B'B$ is a parallelogram. Because, 
+$AA'\cdot AB=[4,0,1]\cdot[-1,3,0]=-4\ne 0$, the neighbouring edges of 
+$AA'B'B$ are not perpendicular and so \shbox{$AA'B'B$ is not a rectangle}$\,$.
+
+\item{}Similarly, the quadilateral $ACC'A'$ has opposing sides
+$AA'=[4,0,1]=CC'=[4,0,1]$ and $AC=[-1,0,4]=A'C'=[-1,0,4]$ and so is
+a parallelogram. Because $AA'\cdot AC=[4,0,1]\cdot[-1,0,4]= 0$, the neighbouring edges of $ACC'A'$ are perpendicular, so
+\shbox{$ACC'A'$ is a rectangle}$\,$.
+
+\item{}Finally, the quadilateral $BCC'B'$ has opposing sides
+$BB'=[4,0,1]=CC'=[4,0,1]$ and $BC=[0,-3,4]=B'C'=[0,-3,4]$ and so is
+a parallelogram. Because $BB'\cdot BC=[4,0,1]\cdot[0,-3,4]= 4\ne 0$, the neighbouring edges of $BCC'B'$ are not perpendicular, so 
+\shbox{$BCC'B'$ not a rectangle}$\,$.
+
+\item{}b) The length of $AA'$ is $\|[4,0,1]\|=\sqrt{16+1}=$
+\shbox{$\sqrt{17}$}$\,$.
+
+\item{}c) The area of a triangle is one half its base times its height. That is, one half times $\|AB\|$ times $\|AC\|\sin\th$, where $\th$ is the angle between $AB$ and $AC$. This is precisely $\half \|AB\times AC\|=\half\|[-1,3,0]\times[-1,0,4]\| =\half\|[12,4,3]\|=$
+\shbox{$6\half$}$\,$.
+
+\item{}d) The volume of the prism is the area of its base $ABC$,
+ times its height, which is the length of $AA'$ times the cosine of the
+angle between $AA'$ and the normal to $ABC$. This coincides with
+$\half [12,4,3]\cdot[4,0,1]=\half(48+3)=$\shbox{$25.5$}$\,$, which is one half times the length of
+$[12,4,3]$ (the area of $ABC$) times the length of $[4,0,1]$ (the
+length of $AA'$) times the cosine of the angle bewteen $[12,4,3]$ and
+$[4,0,1]$ (the angle between the normal to $ABC$ and $AA'$).
+\medskip
+%%%%%%%%%%%%%%%%%15
+\item{\next}The figure below represents a pin jointed network in equilibrium.
+ The line
+$ACD$ is horizontal. Each of $AC,\ CD,\ BC$ and $BD$ are 2m long. The only
+external force is a downward force of 10n applied at $C$. The support
+$A$ is completely fixed, whereas $C$ provides only vertical support.
+Determine the tensions $N_i$ in the five rods, using the sign convention
+that $N_i>0$ when rod number $i$ is pulling on its ends, rather than pushing on them.
+
+
+\centerline{\figplace{bridge}{0in}{0in}}
+\smallskip
+\item{}\soln Because the network is in equilibrium, the net horizontal
+force and net vertical force on each pin is zero. Note that the
+angles $\angle BCD= \angle BDC = 60^\circ$ and
+$\angle CAB=\angle ABC = 30^\circ$. The horizontal force balance
+equations are
+$$\meqalign{
+&A:  && N_4+N_1\cos 30^\circ &= \hbox{horizontal force due to support at }A\cr
+&B:  && N_1\cos 30^\circ +N_2\cos 60^\circ &= N_3\cos 60^\circ\cr
+&C:  && N_4&=N_2\cos 60^\circ +N_5\cr
+&D:  && N_3\cos 60^\circ+N_5 &=0 \cr
+}$$
+The vertical force balance
+equations are
+$$\meqalign{
+&A:  && N_1\sin 30^\circ &= \hbox{vertical force due to support at }A\cr
+&B:  && N_1\sin 30^\circ +N_2\sin 60^\circ + N_3\sin 60^\circ&=0\cr
+&C:  && N_2\sin 60^\circ &=10\cr
+&D:  && N_3\sin 60^\circ &= \hbox{vertical force due to support at }D \cr
+}$$
+We are not interested in the forces exerted by the supports at $A$
+and $D$, so we drop those equations, leaving
+$$\meqalign{
+&HB:  && \sfrac{\sqrt{3}}{2}N_1 +\half N_2 &= \half N_3\cr
+&HC:  && N_4&=\half N_2 +N_5\cr
+&HD:  && \half N_3+N_5 &=0 \cr
+&VB:  && \half N_1 +\sfrac{\sqrt{3}}{2}N_2 + \sfrac{\sqrt{3}}{2}N_3&=0\cr
+&VC:  && \sfrac{\sqrt{3}}{2}N_2 &=10\cr
+}$$
+The last equation gives \shbox{$N_2=20/\sqrt{3}$}$\,$. Subbing this into
+the first and fourth equations gives
+$$\eqalign{
+\sqrt{3}N_1 -\phantom{\sqrt{3}} N_3 &= -\sfrac{20}{\sqrt{3}} \cr
+N_1 +\sqrt{3}N_3 &= -20 \cr
+}$$
+Adding $\sqrt{3}$ times the first equation to the second gives $4N_1=-40$
+or \shbox{$N_1=-10$} and hence \shbox{$N_3=-10/\sqrt{3}$}$\,$. Then $HD$
+gives \shbox{$N_5=5/\sqrt{3}$} and $HC$ gives \shbox{$N_4=15/\sqrt{3}$}$\,$.
+\medskip
+%%%%%%%%%%%%%%%%%16
+\item{\next} Let $PQR$ be a triangle in $\bbbr^3$. Find the work done in
+moving an object around the triangle when it is subject to a constant force $\vec F$.
+\smallskip\item{}\soln When an object is subject
+to a constant force and  moves in a straight line, the work done is the distance travelled times the component
+of the force in the direction of the line. If the force is $\vec F$ and
+the object moves a distance $\|\vec d\|$ in direction $\vec d$, the component
+of $\vec F$ in the direction of motion is $\vec F\cdot\vec d/\|\vec d\|$,
+so the work done is $\vec F\cdot\vec d$.
+
+\item{} Let us denote by $\vec p,\ \vec
+q$ and $\vec r$ the vectors from the origin to $P,\ Q$ and $R$ respectively.
+The work done on the object
+as it moves from $P$ to $Q$ is $\vec F\cdot(\vec q-\vec p)$. The work done
+as it moves from $Q$ to $R$ is $\vec F\cdot(\vec r-\vec q)$ and the work
+done as it moves from $R$ to $P$ is $\vec F\cdot(\vec p-\vec r)$. So the
+total work done is 
+$$
+\vec F\cdot(\vec q-\vec p)+\vec F\cdot(\vec r-\vec q)+\vec F\cdot(\vec p-\vec r)
+=\vec F\cdot(\vec q-\vec p+\vec r-\vec q+\vec p-\vec r)=\shbox{$0$}
+$$
+\medskip
+%%%%%%%%%%%%%%%%%17
+\item{\next} Calculate the following cross products.
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+
+a)\quad $[1,-5,2]\times[-2,1,5]$& b)\quad $[2,-3,-5]\times[4,-2,7]$
+& c)\quad $[-1,0,1]\times[0,4,5]$\cr
+}
+\smallskip
+\item{}\soln
+$$\leqalignno{
+\det\left[\matrix{\hat \imath&\hat \jmath&\hat k\cr1&-5&2\cr-2&1&5\cr}\right] 
+&=\hat \imath\det\left[\matrix{-5&2\cr1&5\cr}\right]
+-\hat \jmath\det\left[\matrix{1&2\cr-2&5\cr}\right]
++\hat k\det\left[\matrix{1&-5\cr-2&1\cr}\right]&a)\cr
+&=\hat \imath(-25-2)-\hat \jmath(5+4)+\hat k(1-10) 
+= \shbox{$[-27,-9,-9]$}\cr
+%
+\det\left[\matrix{\hat \imath&\hat \jmath&\hat k\cr2&-3&-5\cr4&-2&7\cr}\right] 
+&=\hat \imath\det\left[\matrix{-3&-5\cr-2&7\cr}\right]
+-\hat \jmath\det\left[\matrix{2&-5\cr4&7\cr}\right]
++\hat k\det\left[\matrix{2&-3\cr4&-2\cr}\right]&b)\cr
+&=\hat \imath(-21-10)-\hat \jmath(14+20)+\hat k(-4+12) 
+= \shbox{$[-31,-34,8]$}\cr
+%
+\det\left[\matrix{\hat \imath&\hat \jmath&\hat k\cr-1&0&1\cr0&4&5\cr}\right] 
+&=\hat \imath\det\left[\matrix{0&1\cr4&5\cr}\right]
+-\hat \jmath\det\left[\matrix{-1&1\cr0&5\cr}\right]
++\hat k\det\left[\matrix{-1&0\cr0&4\cr}\right]&c)\cr
+&=\hat \imath(0-4)-\hat \jmath(-5-0)+\hat k(-4-0) 
+= \shbox{$[-4,5,-4]$}\cr
+}$$
+\medskip
+%%%%%%%%%%%%%%%%%18
+\item{\next} Let $\vec p=[-1,4,2],\ \vec q=[3,1,-1],\ \vec r=[2,-3,-1]$.
+Check, by direct computation, that
+\smallskip\item{}
+\vbox {\hsize=6.5in
+\settabs 3\columns
+\+(a) $\vec p\times\vec p=\vec 0$
+&(b) $\vec p\times\vec q=-\vec q\times\vec p$
+&(c) $\vec p\times(3\vec r)=3(\vec p\times\vec r)$\cr
+\+(d) $\vec p\times(\vec q+\vec r) = \vec p\times\vec q+\vec p\times\vec r$
+&(e) $\vec p\times(\vec q\times\vec r) \ne (\vec p\times\vec q)\times\vec r$\cr
+}
+\smallskip
+\item{}\soln
+$$\leqalignno{
+\vec p\times\vec p 
+&= \det\left[\matrix{\hat \imath&\hat \jmath&\hat k\cr-1&4&2\cr-1&4&2\cr}\right]
+=\hat \imath(4\times2-2\times4)-\hat \jmath(2-(-2))
++\hat k(-4-(-4)) 
+= \shbox{$[0,0,0]$}&{\rm a)}\cr
+}$$
+$$\leqalignno{
+\vec p\times\vec q 
+&= \det\left[\matrix{\hat \imath&\hat \jmath&\hat k\cr-1&4&2\cr3&1&-1\cr}\right]
+=\hat \imath(-4-2)-\hat \jmath(1-6)
++\hat k(-1-12) 
+= \shbox{$[-6,5,-13]$}&{\rm b)}\cr
+\vec q\times\vec p 
+&= \det\left[\matrix{\hat \imath&\hat \jmath&\hat k\cr3&1&-1\cr-1&4&2\cr}\right]
+=\hat \imath(2+4)-\hat \jmath(6-1)
++\hat k(12+1) 
+= \shbox{$[6,-5,13]$}\cr
+\vec p\times\vec (3r) 
+&= \det\left[\matrix{\hat \imath&\hat \jmath&\hat k\cr-1&4&2\cr6&-9&-3\cr}\right]
+=\hat \imath(-12+18)-\hat \jmath(3-12)
++\hat k(9-24) 
+= \shbox{$[6,9,-15]$}&{\rm c)}\cr
+3(\vec p\times\vec r) 
+&= 3\det\left[\matrix{\hat \imath&\hat \jmath&\hat k\cr-1&4&2\cr2&-3&-1\cr}\right]
+=3\Big(\hat \imath(-4+6)-\hat \jmath(1-4)
++\hat k(3-8) \Big)
+= \shbox{$[6,9,-15]$}\cr
+}$$
+\item{}d) As $\vec q+\vec r=[5,-2,-2]$
+$$
+\vec p\times(\vec q+\vec r)
+= \det\left[\matrix{\hat \imath&\hat \jmath&\hat k\cr-1&4&2\cr5&-2&-2\cr}\right]
+=\hat \imath(-8+4)-\hat \jmath(2-10)
++\hat k(2-20) 
+= \shbox{$[-4,8,-18]$
+}$$
+{\phantom{d) }}
+Using the values of $\vec p\times\vec q$ and $\vec p\times\vec r$ computed
+in parts b and c
+$$
+\vec p\times\vec q+\vec p\times\vec r=[-6,5,-13]+[2,3,-5]= \shbox{$[-4,8,-18]$}
+$$
+$$\leqalignno{
+\vec q\times\vec r 
+&= \det\left[\matrix{\hat \imath&\hat \jmath&\hat k\cr3&1&-1\cr2&-3&-1\cr}\right]
+=\hat \imath(-1-3)-\hat \jmath(-3+2)
++\hat k(-9-2) 
+= [-4,1,-11]&{\rm e)}\cr
+\vec p\times(\vec q\times\vec r)
+&= \det\left[\matrix{\hat \imath&\hat \jmath&\hat k\cr-1&4&2\cr-4&1&-11\cr}\right]
+=\hat \imath(-44-2)-\hat \jmath(11+8)
++\hat k(-1+16) 
+= \shbox{$[-46,-19,15]$}\cr
+(\vec p\times\vec q)\times\vec r
+&= \det\left[\matrix{\hat \imath&\hat \jmath&\hat k\cr-6&5&-13\cr2&-3&-1\cr}\right]
+=\hat \imath(-5-39)-\hat \jmath(6+26)
++\hat k(18-10) 
+= \shbox{$[-44,-32,8]$}\cr
+}$$
+\medskip
+%%%%%%%%%%%%%%%%%19
+\item{\next} Calculate the area of the triangle with vertices $(0,0,0)$
+$(1,2,3)$ and $(3,2,1)$.
+\smallskip\item{}\soln Denote by $\th$ the angle between the two vectors
+$\vec a=[1,2,3]$ and $\vec b=[3,2,1]$. The area of the triangle is one 
+half times the length $\|\vec a\|$ of its base times its height 
+$h=\|\vec b\|\sin\th$. 
+\vadjust{\hfil\figplace{triangle}{0 in}{0 in}}
+Thus the area of the triangle is  $\half\|\vec a\|\|\vec b\|\sin\th$.
+By property 2 of the cross product,
+ $\|\vec a\times\vec b\|=\|\vec a\|\|\vec b\|\sin\th$. So
+$$
+{\rm area} = \half\|\vec a\times\vec b\|
+=\half\|[1,2,3]\times[3,2,1]\|
+=\half\| \hat \imath(2-6)-\hat\jmath(1-9) +\hat k(2-6)  \|
+=\half\sqrt{16+64+16}=\shbox{$2\sqrt{6}$}
+$$
+\medskip
+%%%%%%%%%%%%%%%%%20
+\item{\next} Show that the area of the parallelogram spanned by the
+vectors $\vec a$ and $\vec b$ is $\|\vec a\times \vec b\|$.
+\smallskip\item{}\soln The area of a parallelogram is the length of its
+base time its height. We can choose the base to be $\vec a$. Then, if $\th$
+is the angle between its sides $\vec a$ and $\vec b$, its height is 
+$\|\vec b\|\sin\th$.  
+So
+$$
+{\rm area} = \|\vec a\|\|\vec b\|\sin\th=\shbox{$\|\vec a\times\vec b\|$}
+$$
+\medskip
+%%%%%%%%%%%%%%%%%21
+\item{\next} Show that the volume of the parallelopiped spanned by the
+vectors $\vec a,\ \vec b$ and $\vec c$ is $|\vec a\cdot(\vec b\times\vec
+c)|$.
+\smallskip\item{}\soln The volume of a parallelopiped is the area of its
+base time its height. We can choose the base to be the parallelogram 
+spanned by $\vec b$ and $\vec c$. It has area $\|\vec b\times\vec c\|$.
+The vector $\vec b\times\vec c$ is perpendicular to the base. Denote by
+$\th$ the angle between $\vec a$ and the perpendicular $\vec b\times\vec c$.
+The height of the parallelopiped is $\|\vec a\| |\cos\th|$. So 
+$$
+{\rm volume} = \|\vec a\|\, |\cos\th|\, \|\vec b\times\vec c\|
+=\shbox{$|\vec a\cdot(\vec b\times\vec c)|$}
+$$
+\medskip
+%%%%%%%%%%%%%%%%%22
+\item{\next} (Three dimensional Pythagorean Theorem) A solid body in space 
+with exactly four vertices is called a tetrahedron. Let $A$, $B$, $C$ and
+$D$ be the areas of the four faces of a tetrahedron. Suppose that the
+three edges meeting at the vertex opposite the face of area $D$ are 
+perpendicular to each other. Show that $D^2=A^2+B^2+C^2$.
+
+\centerline{\figplace{tetrahedron}{0 in}{0 in}}
+\smallskip\item{}\soln Choose our coordinate axes so that the vertex opposite
+the face of area $D$ is at the origin. Denote  
+by $\vec a$, $\vec b$ and
+$\vec c$ the vertices opposite the sides of area $A$, $B$ and $C$ respectively.
+Then the face of area $A$ has edges $\vec b$ and $\vec c$ so that
+$A=\half \|\vec b\times\vec c\|$. Similarly $B=\half\|\vec c\times\vec a\|$ and
+$C=\half\|\vec a\times \vec b\|$. The face of area $D$ is the triangle 
+spanned by $\vec b-\vec a$ and $\vec c-\vec a$ so that
+$$\eqalign{
+D&=\half\|(\vec b-\vec a)\times(\vec c-\vec a)\|\cr
+&=\half\|\vec b\times \vec c-\vec a\times\vec c-\vec b\times\vec a\|\cr
+&=\half\|\vec b\times \vec c+\vec c\times\vec a+\vec a\times\vec b\|\cr
+}$$ 
+By hypothesis, the vectors $\vec a$, $\vec b$ and $\vec c$ are all perpendicular
+to each other. Consequently the vectors $\vec b\times \vec c$ (which is
+a scalar times $\vec a$), $\vec c\times\vec a$ (which is a scalar times
+$\vec b$) and $\vec a\times\vec b$ ( which is a scalar times $\vec c$)
+are also mutually perpendicular. So, when we multiply out
+$$
+D^2=\sfrac{1}{4}\big[\vec b\times \vec c+\vec c\times\vec a+\vec a\times\vec b\big]\cdot\big[\vec b\times \vec c+\vec c\times\vec a+\vec a\times\vec b\big]
+$$
+all the cross terms vanish, leaving
+$$
+D^2=\sfrac{1}{4}\big[(\vec b\times \vec c)\cdot(\vec b\times \vec c)
++(\vec c\times\vec a)\cdot(\vec c\times\vec a)
++(\vec a\times\vec b)\cdot(\vec a\times\vec b)\big]=A^2+B^2+C^2
+$$
+\medskip
+%%%%%%%%%%%%%%%%%23
+\item{\next} (Three dimensional law of cosines)  Let $A$, $B$, $C$ and
+$D$ be the areas of the four faces of a tetrahedron. Let $\al$ be the angle
+between the faces with areas $B$ and $C$, $\be$ be the angle
+between the faces with areas $A$ and $C$ and $\ga$ be the angle
+between the faces with areas $A$ and $B$. (By definition, the angle between
+two faces is the angle between the normal vectors to the faces.)
+ Show that 
+$$
+D^2=A^2+B^2+C^2-2BC\cos\al-2AC\cos\be-2AB\cos\ga
+$$
+\smallskip\item{}\soln As in the last problem 
+$$
+D^2=\sfrac{1}{4}\big[\vec b\times \vec c+\vec c\times\vec a+\vec a\times\vec b\big]\cdot\big[\vec b\times \vec c+\vec c\times\vec a+\vec a\times\vec b\big]
+$$
+But now $(\vec b\times \vec c)\cdot(\vec a\times\vec c)$, instead of vanishing,
+is $\|\vec b\times \vec c\|=2A$ times $\|\vec a\times\vec c\|=2B$ times
+the cosine of the angle between $\vec b\times \vec c$ (which is perpendicular
+to the face of area $A$) and $\vec a\times\vec c$ (which is perpendicular
+to the face of area $B$). That is
+$$\eqalign{
+(\vec b\times \vec c)\cdot(\vec a\times\vec c)&=4 AB\cos \ga\cr
+(\vec a\times \vec b)\cdot(\vec c\times\vec b)&=4 AC\cos \be\cr
+(\vec b\times \vec a)\cdot(\vec c\times\vec a)&=4 BC\cos \al\cr
+}$$
+(If you're worried about the signs, that is, why $(\vec b\times \vec c)\cdot(\vec a\times\vec c)=4 AB\cos \ga$
+rather than $(\vec b\times \vec c)\cdot(\vec c\times\vec a)=4 AB\cos \ga$,
+note  that when $\vec a\approx\vec b$, 
+$(\vec b\times \vec c)\cdot(\vec a\times\vec c)\approx\|\vec b\times\vec
+c\|^2$ is positive and 
+$(\vec b\times \vec c)\cdot(\vec c\times\vec a)
+\approx -\|\vec b\times\vec c\|^2$ is negative.) Now, expanding out
+$$\eqalign{
+D^2\ =\ &\sfrac{1}{4}\big[\vec b\times \vec c+\vec c\times\vec a+\vec a\times\vec b\big]\cdot\big[\vec b\times \vec c+\vec c\times\vec a+\vec a\times\vec b\big]\cr
+=\ &\sfrac{1}{4}\big[(\vec b\times \vec c)\cdot(\vec b\times \vec c)
++(\vec c\times\vec a)\cdot(\vec c\times\vec a)
++(\vec a\times\vec b)\cdot(\vec a\times\vec b)\cr
+&+2(\vec b\times \vec c)\cdot(\vec c\times \vec a)
++2(\vec b\times \vec c)\cdot(\vec a\times \vec b)
++2(\vec c\times \vec a)\cdot(\vec a\times \vec b)\big]\cr
+=\ &A^2+B^2+C^2-2 AB\cos \ga-2 AC\cos \be-2 BC\cos \al\cr
+}$$
+\medskip\goodbreak
+%%%%%%%%%%%%%%%%%24
+\item{\next} Consider the following statement: ``If $\vec a\ne\vec 0$
+and if $\vec a\times\vec b=\vec a\times\vec c$ then $\vec b=\vec c$.''
+If the statment is true, prove it. If the statement is false, give a 
+counterexample.
+\smallskip
+\item{}\soln This statement is \shbox{false}$\,$. The two vectors 
+$\vec a\times\vec b$, $\vec a\times\vec c$ are equal if and only if
+$\vec a\times(\vec b-\vec c)=\vec 0$. This in turn is the case if and only
+if $\vec a$ is parallel to $\vec b-\vec c$ (under the convention that
+$\vec 0$ is parallel to all vectors). For example, if $\vec a=[1,0,1]$,
+$\vec b=[40,38,42],\ \vec c=[37,38,39]$, then $\vec b-\vec c=[3,0,3]$
+is parallel to $\vec a$ so that $\vec a\times\vec b=\vec a\times\vec c$.
+\medskip
+%%%%%%%%%%%%%%%%%25
+\edef\Qnine{\number\counter}
+\item{\next} Consider the following statement: ``The vector $\vec a\times(\vec
+b\times\vec c)$ is of the form $\al\vec b+\be\vec c$ for some real numbers
+$\al$ and $\be$.''
+If the statment is true, prove it. If the statement is false, give a 
+counterexample.
+\smallskip
+\item{}\soln This statement is \shbox{true}$\,$. In the event that $\vec b$ and 
+$\vec c$ are parallel, $\vec b\times\vec c=\vec 0$ so that
+$\vec a\times(\vec b\times\vec c)=\vec 0=0\vec b+0\vec c$, so we may assume
+that $\vec b$ and $\vec c$ are not parallel. Then as $\al$ and $\be$ run
+over $\bbbr$, the vector $\al\vec b+\be \vec c$ runs over the plane that
+contains the origin and the vectors $\vec b$ and $\vec c$. Call this plane
+$P$. Because
+$\vec d=\vec b\times\vec c$ is nonzero and perpendicular to both 
+$\vec b$ and $\vec c$, $P$ is the plane that contains the origin
+and is perpendicular to $\vec d$. As $\vec a\times(\vec
+b\times\vec c)=\vec a\times\vec d$ is always perpendicular to $\vec d$,
+it lies in $P$.
+\medskip
+%%%%%%%%%%%%%%%%%26
+\item{\next} What geometric conclusions can you draw from
+$\vec a\cdot(\vec b\times\vec c)=[1,2,3]$?
+\smallskip
+\item{}\soln \shbox{None}$\,$. The given equation is nonsense. The left hand side is
+a number while the right hand side is a vector.
+\medskip
+%%%%%%%%%%%%%%%%%27
+\item{\next} What geometric conclusions can you draw from
+$\vec a\cdot(\vec b\times\vec c)=0$?
+\smallskip
+\item{}\soln If $\vec b$ and $\vec c$ are parallel, then $\vec b\times\vec c=\vec 0$
+and $\vec a\cdot(\vec b\times\vec c)=0$ for all $\vec a$.
+If $\vec b$ and $\vec c$ are not parallel, $\vec a\cdot(\vec b\times\vec c)=0$ 
+if and only if $\vec a$ is perpendicular to $\vec d=\vec b\times\vec c$.
+As we saw in question \Qnine, the set of all vectors perpendicular to
+$\vec d$ is the plane consisting of all vectors of the form  
+$\al\vec b+\be\vec c$ with $\al$ and $\be$ real numbers. So $\vec a$ must
+be of this form.
+\medskip
+%%%%%%%%%%%%%%%%%28
+\item{\next} Find the vector parametric, scalar parametric
+ and symmetric equations for the line
+containing the given point and with given direction.
+\itemitem{a)} point $(1,2)$, direction $[3,2]$
+\itemitem{c)} point $(5,4)$, direction $[2,-1]$
+\itemitem{d)} point $(-1,3)$, direction $[-1,2]$
+\smallskip
+\item{}\soln 
+\itemitem{a)}
+The vector parametric equation is \shbox{$(x,y)=(1,2)+t[3,2]$}$\,.$
+The scalar parametric equations are \shbox{$x=1+3t,\ y=2+2t$}$\,.$
+The symmetric equation is \shbox{$\sfrac{x-1}{3}=\sfrac{y-2}{2}$}$\,.$
+\itemitem{b)}
+The vector parametric equation is \shbox{$(x,y)=(5,4)+t[2,-1]$}$\,.$
+The scalar parametric equations are \shbox{$x=5+2t,\ y=4-t$}$\,.$
+The symmetric equation is \shbox{$\sfrac{x-5}{2}=\sfrac{y-4}{-1}$}$\,.$
+\itemitem{c)}
+The vector parametric equation is \shbox{$(x,y)=(-1,3)+t[-1,2]$}$\,.$
+The scalar parametric equations are \shbox{$x=-1-t,\ y=3+2t$}$\,.$
+The symmetric equation is \shbox{$\sfrac{x+1}{-1}=\sfrac{y-3}{2}$}$\,.$
+\medskip
+%%%%%%%%%%%%%%%%%29
+\item{\next} Find the vector parametric, scalar parametric
+ and symmetric equations for the line
+containing the given point and with given normal.
+\itemitem{a)} point $(1,2)$, normal $[3,2]$
+\itemitem{c)} point $(5,4)$, normal $[2,-1]$
+\itemitem{d)} point $(-1,3)$, normal $[-1,2]$
+\smallskip
+\item{}\soln 
+\itemitem{a)} The vector $[-2,3]$ is perpendicular to $[3,2]$ (you can
+verify this by taking the dot product of the two vectors) and hence is 
+a direction vector for the line.
+The vector parametric equation is \shbox{$(x,y)=(1,2)+t[-2,3]$}$\,.$
+The scalar parametric equations are \shbox{$x=1-2t,\ y=2+3t$}$\,.$
+The symmetric equation is \shbox{$\sfrac{x-1}{-2}=\sfrac{y-2}{3}$}$\,.$
+\itemitem{b)} The vector $[1,2]$ is perpendicular to $[2,-1]$ 
+ and hence is a direction vector for the line.
+The vector parametric equation for the line is \shbox{$(x,y)=(5,4)+t[1,2]$}$\,.$
+The scalar parametric equations are \shbox{$x=5+t,\ y=4+2t$}$\,.$
+The symmetric equation is \shbox{$x-5=\sfrac{y-4}{2}$}$\,.$
+\itemitem{c)} The vector $[2,1]$ is perpendicular to $[-1,2]$  
+and hence is a direction vector for the line.
+The vector parametric equation is \shbox{$(x,y)=(-1,3)+t[2,1]$}$\,.$
+The scalar parametric equations are the two component equations \shbox{$x=-1+2t,\ y=3+t$}$\,.$
+The symmetric equation is \shbox{$\sfrac{x+1}{2}=y-3$}$\,.$
+\medskip
+%%%%%%%%%%%%%%%%%30
+\item{\next} Find a vector parametric equation for the line of intersection
+of the given planes.
+\itemitem{a)} $x-2z=3$ and $y+\half z=5$
+\itemitem{b)} $2x-y-2z=-3$ and $4x-3y-3 z=-5$
+\smallskip
+\item{}\soln 
+\itemitem{a)} The point $(x,y,z)$ obeys both $x-2z=3$ and $y+\half z=5$
+if and only if $(x,y,z) = (3+2z, 5-\half z, z) = (3,5,0)+[2,-\half,1]z$.
+So, introducing a new variable $t$ obeying $t=z$, we get the vector 
+parametric equation \shbox{$(x,y,z) =  (3,5,0)+[2,-\half,1]t$}$\,$.
+\itemitem{b)} The point $(x,y,z)$ obeys 
+$$\eqalign{
+\left\{{2x-y-2z=-3\atop 4x-3y-3 z=-5} \right\}
+&\iff \left\{{2x-y=2z-3\atop 4x-3y=3 z-5} \right\}
+\iff\left\{{4x-2y=4z-6\atop 4x-3y=3 z-5} \right\}\cr
+\noalign{\vskip0.1in}
+&\iff\left\{{4x-2y=4z-6\atop y=z-1} \right\}
+}$$
+Hence the point $(x,y,z)$ is on the line if and only if 
+$(x,y,z) = \big(\sfrac{1}{4}(2y+4z-6), z-1, z\big)=
+(\sfrac{3}{2}z-2, z-1, z) = (-2,-1,0)+[\sfrac{3}{2},1,1]z$.
+So, introducing a new variable $t$ obeying $t=z$, we get the vector 
+parametric equation \shbox{$(x,y,z) =  (-2,-1,0)+[\sfrac{3}{2},1,1]t$}$\,$.
+\medskip
+%%%%%%%%%%%%%%%%%31
+\item{\next} In each case, determine whether or not the given pair
+of lines intersect. If not, determine the distance between the lines.
+Also find all planes containing the pair of lines.
+\itemitem{a)} $(x,y,z) = (-3,2,4)+t[-4,2,1]$ and $(x,y,z) = (2,1,2)+t[1,1,-1]$
+\itemitem{b)} $(x,y,z) = (-3,2,4)+t[-4,2,1]$ and $(x,y,z) = (2,1,-1)+t[1,1,-1]$
+\itemitem{c)} $(x,y,z) = (-3,2,4)+t[-2,-2,2]$ and $(x,y,z) = (2,1,-1)+t[1,1,-1]$
+\itemitem{d)} $(x,y,z) = (3,2,-2)+t[-2,-2,2]$ and $(x,y,z) = (2,1,-1)+t[1,1,-1]$
+\smallskip\goodbreak
+\item{}\soln 
+\itemitem{a)} Note that the value of the parameter $t$ in the 
+equation $(x,y,z) = (-3,2,4)+t[-4,2,1]$ need not have the same value as
+ the parameter $t$ in the 
+equation $(x,y,z) = (2,1,2)+t[1,1,-1]$. So it is much safer to change the
+name of the parameter in the first equation from $t$ to $s$. In order
+for a point $(x,y,z)$ to lie on both lines we need
+$$
+(-3,2,4)+s[-4,2,1] = (2,1,2)+t[1,1,-1]
+$$
+or equivalently, writing out the three component equations and moving
+all $s$'s and $t$'s to the left and constants to the right,
+$$\eqalign{
+-4s -t &= 5\cr
+2s -t &= -1\cr
+s +t &= -2\cr
+}$$
+Adding the last two equations together gives $3s=-3$ or $s=-1$. Substituting
+this into the last equation gives $t=-1$. Note that $s=t=-1$ does indeed
+satisfy all three equations so that $(x,y,z)=(-3,2,4)-[-4,2,1]=\shbox{$(1,0,3)$}$
+lies on both lines. Any plane that contains the two lines must be parallel
+to the direction vectors $[-4,2,1]$ and $[1,1,-1]$. So its normal vector
+must be perpendicular to them, i.e. must be parallel to 
+$[-4,2,1]\times[1,1,-1]=[-3,-3,-6]=-3[1,1,2]$. The plane must contain
+$(1,0,3)$ and be perpendicular to $[1,1,2]$. Its equation is
+$[1,1,2]\cdot[x-1,y,z-3]=0$ or \shbox{$x+y+2z=7$}$\,$. This can be
+checked by verifying that $(-3,2,4)+s[-4,2,1]$ and $(2,1,2)+t[1,1,-1]$ obey
+$x+y+2z=7$ for all $s$ and $t$ respectively. 
+\itemitem{b)} In order
+for a point $(x,y,z)$ to lie on both lines we need
+$$
+(-3,2,4)+s[-4,2,1] = (2,1,-1)+t[1,1,-1]
+$$
+or equivalently, writing out the three component equations and moving
+all $s$'s and $t$'s to the left and constants to the right,
+$$\eqalign{
+-4s -t &= 5\cr
+2s -t &= -1\cr
+s +t &= -5\cr
+}$$
+Adding the last two equations together gives $3s=-6$ or $s=-2$. Substituting
+this into the last equation gives $t=-3$. However, substituting $s=-2,\
+t=-3$ into the first equation gives $11=5$, which is impossible. The
+two lines \shbox{do not intersect}$\,$. In order for two lines to lie
+in a common plane and not intersect, they must be parallel. So, in this
+case \shbox{no plane contains the two lines}$\,$.
+\itemitem{c)} In order
+for a point $(x,y,z)$ to lie on both lines we need
+$$
+(-3,2,4)+s[-2,-2,2] = (2,1,-1)+t[1,1,-1]
+$$
+or equivalently, writing out the three component equations and moving
+all $s$'s and $t$'s to the left and constants to the right,
+$$\eqalign{
+-2s -t &= 5\cr
+-2s -t &= -1\cr
+2s +t &= -5\cr
+}$$
+The first two equations are obviously contradictory. The
+two lines \shbox{do not intersect}$\,$. Any plane containing the two lines 
+to lie must be parallel to $[1,1,-1]$ (and hence automatically parallel
+to $[-2,-2,2]=-2[1,1,-1]$) and must also be parallel to the vector
+from the point $(-3,2,4)$, which lies on the first line, to the point
+$(2,1,-1)$, which lies on the second. The vector is $[5,-1,-5]$. Hence the
+normal to the plane is $[5,-1,-5]\times[1,1,-1]=[6,0,6]=6[1,0,1]$.
+The plane perpendicular to $[1,0,1]$ containing $(2,1,-1)$ is
+$[1,0,1]\cdot[x-2,y-1,z+1]=0$ or \shbox{$x+z=1$}$\,$.
+\itemitem{d)} Again the two lines are parallel, since $[-2,-2,2]=-2[1,1,-1]$.
+Furthermore the point $(3,2,-2)=(3,2,-2)+0[-2,-2,2]=(2,1,-1)+1[1,1,-1]$
+lies on both lines. So the two lines not only \shbox{intersect} but
+are identical. Any plane that contains the point $(3,2,-2)$ and is parallel
+to $[1,1,-1]$ contains both lines. In general, the plane $ax+by+cz=d$
+contains $(3,2,-2)$ if and only if $d=3a+2b-2c$ and is parallel to 
+$[1,1,-1]$ if and only if $[a,b,c]\cdot[1,1,-1]=a+b-c=0$. So, for arbitrary $a$ and $b$ (not
+both zero) \shbox{$ax+by+(a+b)z=a$} works.
+\medskip
+%%%%%%%%%%%%%%%%%32
+\item{\next} Determine a vector equation for the line of intersection
+of the planes
+\itemitem{a)} $x+y+z=3$ and $x+2y+3z=7$
+\itemitem{b)} $x+y+z=3$ and $2x+2y+2z=7$
+\smallskip
+\item{}\soln
+\itemitem{a)} The normals to the two planes are $[1,1,1]$ and $[1,2,3]$
+respectively. The line of intersection must have direction perpendicular
+to both of these normals. Its direction vector is 
+$\ 
+[1,1,1]\times[1,2,3]=[1,-2,1]
+\ $ 
+Substituting $z=0$ into the equations of the two planes and solving, we see that $z=0,\ y=4, x=-1$ lies on both planes. The line of
+intersection is \shbox{$(x,y,z)=(-1,4,0)+t[1,-2,1]$}$\,$. This can be checked
+by verifying that,  for all values of $t$, $(x,y,z)=(-1,4,0)+t[1,-2,1]$ satsifies both 
+$x+y+z=3$ and $x+2y+3z=7$.
+\itemitem{b)} The two equations $x+y+z=3$ and $2x+2y+2z=7$ are mutually
+contradictory. They have no solution. The two planes are parallel and
+\shbox{do not intersect}$\,$.
+\medskip
+%%%%%%%%%%%%%%%%%33
+\item{\next} Describe the set of points equidistant from $(1,2,3)$ and
+$(5,2,7)$.
+\smallskip
+\item{}\soln The distance from the point $(x,y,z)$ to $(1,2,3)$
+is $\sqrt{(x-1)^2+(y-2)^2+(z-3)^2}$ and to $(5,2,7)$ is
+$\sqrt{(x-5)^2+(y-2)^2+(z-7)^2}$. Hence $(x,y,z)$ is equidistant 
+from $(1,2,3)$ and $(5,2,7)$ if and only if
+$$\meqalign{
+& && (x-1)^2+(y-2)^2+(z-3)^2&=(x-5)^2+(y-2)^2+(z-7)^2\cr
+&\iff && x^2-2x+1+z^2-6z+9&=x^2-10x+25+z^2-14z+49\cr
+&\iff && 8x+8z&=64\cr
+&\iff && x+z&=8\cr
+}$$
+This is the \shbox{plane through $(3,2,5)=\half(1,2,3)+\half(5,2,7)$
+with normal $[1,0,1]=\sfrac{1}{4}\big([5,2,7]-[1,2,3]\big)$}$\,$.
+\medskip
+%%%%%%%%%%%%%%%%%34
+\item{\next} Describe the set of points equidistant from $\a$ and
+$\b$.
+\smallskip
+\item{}\soln The distance from the point $\x$ to $\a$
+is $\sqrt{(\x-\a)\cdot(\x-\a)}$ and to $\b$ is
+$\sqrt{(\x-\b)\cdot(\x-\b)}$. Hence $\x$ is equidistant 
+from $\a$ and $\b$ if and only if
+$$\meqalign{
+& && (\x-\a)\cdot(\x-\a)&=(\x-\b)\cdot(\x-\b)\cr
+&\iff && \|\x\|^2-2\a\cdot\x+\|\a\|^2&=\|\x\|^2-2\b\cdot\x+\|\b\|^2\cr
+&\iff && 2(\b-\a)\cdot\x&=\|\b\|^2-\|\a\|^2\cr
+}$$
+This is the \shbox{plane through $\half\a+\half\b$
+with normal $\b-\a$}$\,$.
+\medskip
+%%%%%%%%%%%%%%%%%35
+\item{\next} Find the plane containing the given three points.
+\smallskip\item{}\vbox {\hsize=6.5in
+\settabs 2\columns
+\+a) $(1,0,1),\ (2,4,6),\ (1,2,-1)$ &
+b) $(1,-2,-3),\ (4,-4,4),\ (3,2,-3)$ \cr
+\+c) $(1,-2,-3),\ (5,2,1),\ (-1,-4,-5)$\cr
+}
+\smallskip
+\item{}\soln 
+\itemitem{a)} The plane must be parallel to $[2,4,6]-[1,0,1]=[1,4,5]$
+ and to $[1,2,-1]-[1,0,1]=[0,2,-2]$. So its normal vector must be
+perpendicular to both $[1,4,5]$ and $[0,2,-2]$ and hence parallel to
+$[1,4,5]\times[0,2,-2]=[-18,2,2]$. The plane is 
+$9(x-1)-y-(z-1)=0$ or \shbox{$9x-y-z=8$}$\,$. Check: all of 
+$(1,0,1),\ (2,4,6)$ and $(1,2,-1)$ satisfy $9x-y-z=8$.
+\itemitem{a)} The plane must be parallel to $[4,-4,4]-[1,-2,-3]=[3,-2,7]$
+ and to $[3,2,-3]-[1,-2,-3]=[2,4,0]$. So its normal vector must be
+perpendicular to both $[3,-2,7]$ and $[2,4,0]$ and hence parallel to
+$[3,-2,7]\times[2,4,0]=[-28,14,16]$. The plane is 
+$14(x-1)-7(y+2)-8(z+3)=0$ or \shbox{$14x-7y-8z=52$}$\,$. Check: all of 
+$(1,-2,-3),\ (4,-4,4)$ and $(3,2,-3)$ satisfy $14x-7y-8z=52$.
+\itemitem{c)} The plane must be parallel to $[5,2,1]-[1,-2,-3]=[4,4,4]$
+ and to $[-1,-4,-5]-[1,-2,-3]=[-2,-2,-2]$. My, my. These two vectors are
+parallel. So the three points are all on the same straight line. Any
+plane containing the line contains all three points. If $[a,b,c]$
+is any vector perpendicular to $[1,1,1]$ (i.e. which obeys $a+b+c=0$)
+then the plane  
+$a(x-1)+b(y+2)+c(z+3)=0$ or \shbox{$ax+by-(a+b)z=4a+b$}$\,$ contains the
+three given points. Check: all of 
+$(1,-2,-3),\ (5,2,1)$ and $(-1,-4,-5)$ satisfy the equation $ax+by-(a+b)z=4a+b$ 
+for all $a$ and $b$.
+\medskip
+%%%%%%%%%%%%%%%%%36
+\item{\next} Find the distance from the given point to the given plane.
+\itemitem{a)} point $(-1,3,2)$, plane $x+y+z=7$
+\itemitem{b)} point $(1,-4,3)$, plane $x-2y+z=5$
+\smallskip
+\item{}\soln 
+\itemitem{a)} One point on the plane is $(0,0,7)$. The vector from $(-1,2,3)$
+to $(0,0,7)$ is $[0,0,7]-[-1,2,3]=[1,-2,4]$. A unit vector perpendicular
+to the plane is $\sfrac{1}{\sqrt{3}}[1,1,1]$. The distance from  
+$(-1,2,3)$ to the plane is the length of the projecion of $[1,-2,4]$
+on $\sfrac{1}{\sqrt{3}}[1,1,1]$ which is $\sfrac{1}{\sqrt{3}}[1,1,1]\cdot
+[1,-2,4]=\sfrac{3}{\sqrt{3}}=$ \shbox{$\sqrt{3}$}$\,$.
+\itemitem{b)} One point on the plane is $(0,0,5)$. The vector from $(1,-4,3)$
+to $(0,0,5)$ is $[0,0,5]-[1,-4,3]=[-1,4,2]$. A unit vector perpendicular
+to the plane is $\sfrac{1}{\sqrt{6}}[1,-2,1]$. The distance from  
+$(1,-4,3)$ to the plane is the length of the projecion of $[-1,4,2]$
+on $\sfrac{1}{\sqrt{6}}[1,-2,1]$ which is the absolute value of $\sfrac{1}{\sqrt{6}}[1,-2,1]\cdot
+[-1,4,2]=\sfrac{-7}{\sqrt{6}}$ or \shbox{$7/\sqrt{6}$}$\,$.
+\medskip
+%%%%%%%%%%%%%%%%%37
+\item{\next} Find the distance from $(1,0,1)$ to the line
+$x+2y+3z=11,\ x-2y+z=-1$. 
+\item{}\soln The normal vectors to the two give planes are 
+$[1,2,3]$ and $[1,-2,1]$ respectively. Since the line is to be contained
+in both planes, its direction vector must be perpendicular to both 
+$[1,2,3]$ and $[1,-2,1]$ and hence must be parallel to 
+$[1,2,3]\times[1,-2,1]=[8, 2,-4]$ or to $[4,1,-2]$. Setting $z=0$ and
+solving $x+2y=11,\ x-2y=-1$, we see that $(5,3,0)$ is on the line. So
+the vector parametric equation of the line is $(x,y,z)=(5,3,0)+t[4,1,-2]
+=(5+4t,3+t,-2t)$.
+The vector from $(1,0,1)$ to $(5+4t,3+t,-2t)$ is $[4+4t,3+t,-1-2t]$.
+In order for $(5+4t,3+t,-2t)$ to be the point of the line closest to
+$(1,0,1)$, the vector $[4+4t,3+t,-1-2t]$ joining the two points 
+must be perpendicular to the direction vector $[4,1,-2]$ of the line.
+This is the case when
+$$
+[4,1,-2]\cdot [4+4t,3+t,-1-2t]=0\qquad\hbox{or}\qquad
+16+16t+3+t+2+4t=0\qquad\hbox{or}\qquad t=-1
+$$
+The point on the line nearest $(1,0,1)$ is $(5-4,3-1,2)=(1,2,2)$. The distance
+from the point to the line is the length of the vector 
+$[1,2,2]-[1,0,1]=[0,2,1]$ or \shbox{$\sqrt{5}$}$\,$.
+\medskip
+%%%%%%%%%%%%%%%%%38
+\item{\next} Let $L_1$ be the line passing through $(1,-2,-5)$ in the direction of $\vec d_1=[2,3,2]$. Let $L_2$ be the line passing through
+$(-3,4,-1)$ in the direction $\vec d_2=[5,2,4]$.
+\itemitem{a)} Find the equation of the plane $P$ that contains $L_1$
+and is parallel to $L_2$. 
+\itemitem{b)} Find the distance from $L_2$ to $P$.
+\smallskip
+\item{}\soln a) The plane $P$ must be parallel to both $[2,3,2]$ (since it 
+contains $L_1$) and $[5,2,4]$ (since it is parallel to $L_2$.
+Hence $[2,3,2]\times [5,2,4]=[8,2,-11]$ is normal to $P$. The equation
+of $P$ is $[8,2,-11]\times[x-1,y+2,z+5]=0$ or \shbox{8x+2y-11z=59}$\,$. 
+\item{}b) The vector $[1+3,-2-4,-5+1]=[4,-6,-4]$ has its head on
+$P$ and tail on $L_2$. The distance from $L_2$ to $P$ is the length
+of $[4,-6,-4]$ times the cosine of the angle between $[4,-6,-4]$
+and the normal to $P$. This is $[4,-6,-4]\cdot[8,2,-11]/\|[8,2,-11]\|
+=64/\sqrt{189}\approx$\shbox{4.655}$\,$.
+\medskip\goodbreak
+%%%%%%%%%%%%%%%%%39
+\item{\next} Calculate the distance between the lines 
+$\sfrac{x+2}{3}=\sfrac{y-7}{-4}=\sfrac{z-2}{4}$ and $\sfrac{x-1}{-3}=\sfrac{y+2}{4}=\sfrac{z+1}{1}$.
+\smallskip
+\item{}\soln The vector $[3,-4,4]\times[-3,4,1]=[-20,-15,0]$ is perpendicular to
+both lines. Hence so is $-\sfrac{1}{5}[-20,-15,0]=[4,3,0]$. The point
+$(-2,7,2)$ is on the first line and the point $(1,-2,-1)$ is on the second
+line. Hence $[-3,9,3]$ is a vector joining the two lines. The desired
+distance is the length of $[-3,9,3]$ times the cosine of the angle
+between $[-3,9,3]$ and $[4,3,0]$. This is $[-3,9,3]\cdot\sfrac{1}{5}[4,3,0]=$\shbox{$3$}$\,$.
+\medskip
+%%%%%%%%%%%%%%%%%40
+\item{\next} Let $P,\ Q,\ R$ and $S$ be the vertices of a tetrahedron.
+Denote by $\vec p,\ \vec q,\ \vec r$ and $\vec s$ the vectors from the origin
+to $P,\ Q,\ R$ and $S$ respectively. A line is drawn from each vertex to
+the centroid of the opposite face, where the centroid of a triangle with 
+vertices $\vec a,\ \vec b$ and $\vec c$ is $\sfrac{1}{3}(\vec a+\vec b+\vec
+c)$. Show that these four lines meet at
+$\sfrac{1}{4}(\vec p+\vec q+\vec r+\vec s$).
+\smallskip\item{}\soln
+The face opposite $\vec p$ is the triangle with vertices $\vec q,\ \vec r $ 
+and $\vec s$. The centroid of this triangle is $\sfrac{1}{3}(\vec q+\vec r+\vec
+s)$. The direction vector of the line through $\vec p$ and the 
+centroid $\sfrac{1}{3}(\vec q+\vec r+\vec s)$ is 
+$\sfrac{1}{3}(\vec q+\vec r+\vec s)-\vec p$. The points on the line through
+$\vec p$ and the centroid $\sfrac{1}{3}(\vec q+\vec r+\vec s)$ are those
+of the form
+$$
+\vec x=\vec p+ t\big[\sfrac{1}{3}(\vec q+\vec r+\vec s)-\vec p\big]
+$$
+for some real number $t$. Observe that when $t=\sfrac{3}{4}$
+$$
+\vec p+ t\big[\sfrac{1}{3}(\vec q+\vec r+\vec s)-\vec p\big]
+=\sfrac{1}{4}(\vec p+\vec q+\vec r+\vec s)
+$$
+so that $\sfrac{1}{4}(\vec p+\vec q+\vec r+\vec s)$ is on the line.
+The other three lines have vector parametric equations
+$$\eqalign{
+\vec x&=\vec q+ t\big[\sfrac{1}{3}(\vec p+\vec r+\vec s)-\vec q\big]\cr
+\vec x&=\vec r+ t\big[\sfrac{1}{3}(\vec p+\vec q+\vec s)-\vec r\big]\cr
+\vec x&=\vec s+ t\big[\sfrac{1}{3}(\vec p+\vec q+\vec r)-\vec s\big]\cr
+}$$
+When $t=\sfrac{3}{4}$, each of the three right hand sides also reduces
+to $\sfrac{1}{4}(\vec p+\vec q+\vec r+\vec s)$ so that
+$\sfrac{1}{4}(\vec p+\vec q+\vec r+\vec s)$ is also on each of these
+three lines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+\end

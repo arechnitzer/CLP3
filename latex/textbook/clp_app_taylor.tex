@@ -1,0 +1,56 @@
+
+\chapter{Table of Taylor Expansions}\label{app taylor}
+
+
+Let $n\ge $ be an integer. Then if the function $f$ has $n+1$ derivatives on an interval that contains both $x_0$ and $x$, we have the Taylor expansion
+\begin{align*}
+f(x)&=f(x_0)+f'(x_0)\,(x-x_0)+\dfrac{1}{2!}f''(x_0)\,(x-x_0)^2+\cdots
++\dfrac{1}{n!}f^{(n)}(x_0)\,(x-x_0)^n\\ &\hskip0.5in
++\dfrac{1}{(n+1)!}f^{(n+1)}(c)\,(x-x_0)^{n+1}\qquad\hbox{for some $c$ between
+$x_0$ and $x$}
+\end{align*}
+The limit as $n\rightarrow\infty$ gives the Taylor series
+\begin{align*}
+f(x)&=\sum_{n=0}^\infty\dfrac{f^{(n)}(x_0)}{n!}(x-x_0)^n
+\end{align*}
+for $f$. When $x_0=0$ this is also called the Maclaurin series for $f$.
+Here are Taylor series expansions of some important functions.
+\begin{align*}
+e^x&=\sum_{n=0}^\infty \dfrac{1}{n!}x^n 
+                       &&\text{for $-\infty<x<\infty$}\\
+&=1+x+\dfrac{1}{2}x^2+\dfrac{1}{3!}x^3+\cdots+\dfrac{1}{n!}x^n+\cdots
+        \hidewidth\\
+\sin x&=\sum_{n=0}^\infty\dfrac{(-1)^n}{(2n+1)!}x^{2n+1}
+                        &&\text{for $-\infty<x<\infty$} \\
+      &=x-\dfrac{1}{3!}x^3+\dfrac{1}{5!}x^5-\cdots
+        +\dfrac{(-1)^n}{(2n+1)!}x^{2n+1}+\cdots
+        \hidewidth\\
+\cos x&=\sum_{n=0}^\infty\dfrac{(-1)^n}{(2n)!}x^{2n}
+                      &&\text{for $-\infty<x<\infty$}\\
+        &=1-\dfrac{1}{2!}x^2+\dfrac{1}{4!}x^4-\cdots
+        +\dfrac{(-1)^n}{(2n)!}x^{2n}+\cdots
+             \hidewidth\displaybreak[0]\\
+\dfrac{1}{1-x}&=\sum_{n=0}^\infty x^n
+                  &&\text{for $-1\le x<1$}\\
+              &=1+x+x^2+x^3+\cdots+x^n+\cdots
+                  \hidewidth\displaybreak[0]\\
+\dfrac{1}{1+x}&=\sum_{n=0}^\infty(-1)^n x^n
+                   &&\text{for $-1<x\le 1$}\\
+              &=1-x+x^2-x^3+\cdots+(-1)^nx^n+\cdots
+                 \hidewidth\displaybreak[0]\\
+\ln(1-x)&=-\sum_{n=1}^\infty\dfrac{1}{n}x^n
+                 &&\text{for $-1\le x< 1$}\\
+        &=-x-\half x^2-\dfrac{1}{3}x^3-\cdots-\dfrac{1}{n}x^n-\cdots
+                 \hidewidth\\
+\ln(1+x)&=-\sum_{n=1}^\infty\dfrac{(-1)^n}{n}x^n
+                    &&\text{for $-1<x\le 1$}\\
+        &=x-\half x^2+\dfrac{1}{3}x^3-\cdots-\dfrac{(-1)^n}{n}x^n-\cdots
+                      \hidewidth\\
+(1+x)^p&=1+px+\dfrac{p(p-1)}{2}x^2+\dfrac{p(p-1)(p-2)}{3!}x^3+\cdots
+                     \hidewidth\\   
+           &\hskip0.5in+
+           \dfrac{p(p-1)(p-2)\cdots(p-n+1)}{n!}x^n+\cdots
+                      \hidewidth
+\end{align*}
+
+

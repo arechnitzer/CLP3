@@ -1,0 +1,132 @@
+%!PS-Adobe-3.0
+%%BoundingBox:       0.0 0.0     180.0 252.0
+%%Title:              
+%%Created by:        Figure.java
+%%Date:              Mon Jul 16 22:20:46 PDT 2018
+%%EndComments
+
+gsave
+
+%% ellipse library
+
+/ellipsedict 10 dict def        %% arguments: xcentre ycentre xradius yradius
+ellipsedict /emtrx matrix put  %%            startangle endangle closetype
+
+/ellipse                       %% closetype: 0 for open, 1 for chord, 2 for wedge
+    {ellipsedict begin
+       /closetype exch def
+       /endangle exch def      /startangle exch def
+       /yrad exch def          /xrad exch def
+       /y exch def             /x exch def
+       /savematrix emtrx currentmatrix def
+    x y translate
+    xrad  yrad  scale
+    newpath
+    closetype 2 eq  {0 0 moveto} if
+    0 0 1 startangle endangle arc
+    closetype 1 eq  {closepath} if
+    closetype 2 eq  {closepath} if
+    savematrix setmatrix
+    end
+    } def
+
+%%  Figure2ps dictionary
+
+/Figure2psDict 30 dict def
+Figure2psDict begin
+  /iscp false def
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+newpath -1.0 -1.0 moveto 181.0 -1.0 lineto 181.0 253.0 lineto -1.0 253.0 lineto closepath clip
+/Helvetica 10 setpsfont
+0.5 setlinewidth
+newpath
+45.0  69.61325966850828  moveto
+45.0  174.03314917127068  lineto stroke
+newpath
+120.0  93.97790055248618  moveto
+135.0  98.85082872928174  lineto stroke
+newpath
+45.0  69.61325966850828  moveto
+90.0  11.13812154696133  lineto stroke
+[2 2] 1.0 setdash
+newpath
+45.0  69.61325966850828  moveto
+120.0  93.97790055248618  lineto stroke
+[  ] 0 setdash
+1.5 setlinewidth
+0 1 1 0 setcmykcolor  
+newpath
+82.5  20.88397790055248  moveto
+120.0  93.97790055248618  lineto stroke
+newpath
+120.0  93.97790055248618  moveto
+120.0  180.99447513812154  lineto stroke
+newpath
+45.0  69.61325966850828  moveto
+82.5  20.88397790055248  lineto stroke
+newpath
+  45.0  69.61325966850828  moveto
+  48.75  71.04903314917127  lineto
+  52.5  72.91988950276242  lineto
+  56.25  75.22582872928176  lineto
+  60.0  77.96685082872928  lineto
+  63.75  81.14295580110496  lineto
+  67.5  84.75414364640883  lineto
+  71.25  88.80041436464087  lineto
+  75.0  93.2817679558011  lineto
+  78.75  98.19820441988949  lineto
+  82.5  103.54972375690608  lineto
+  86.25  109.33632596685084  lineto
+  90.0  115.55801104972375  lineto
+  93.75  122.21477900552483  lineto
+  97.5  129.30662983425412  lineto
+  101.25  136.8335635359116  lineto
+  105.0  144.7955801104972  lineto
+  108.75  153.19267955801104  lineto
+  112.49999999999999  162.024861878453  lineto
+  116.25  171.2921270718232  lineto
+  119.99999999999999  180.9944751381215  lineto
+stroke
+
+newpath
+  82.5  20.88397790055248  moveto
+  84.375  24.756215469613252  lineto
+  86.25  29.0635359116022  lineto
+  88.125  33.80593922651933  lineto
+  90.0  38.98342541436463  lineto
+  91.875  44.59599447513811  lineto
+  93.75  50.64364640883977  lineto
+  95.625  57.12638121546961  lineto
+  97.5  64.04419889502762  lineto
+  99.375  71.3970994475138  lineto
+  101.25  79.18508287292816  lineto
+  103.125  87.40814917127072  lineto
+  105.0  96.06629834254142  lineto
+  106.875  105.1595303867403  lineto
+  108.75  114.68784530386738  lineto
+  110.625  124.65124309392264  lineto
+  112.5  135.04972375690608  lineto
+  114.375  145.88328729281764  lineto
+  116.24999999999999  157.1519337016574  lineto
+  118.125  168.8556629834254  lineto
+  119.99999999999999  180.9944751381215  lineto
+stroke
+
+gsave
+  0.0 setgray
+  120.0 180.99447513812154   1.6770509831248421 2.0532961675942882  0 360 0 ellipse fill
+grestore
+gsave
+  0.0 setgray
+  82.5 20.88397790055248   1.6770509831248421 2.0532961675942882  0 360 0 ellipse fill
+grestore
+
+%%Trailer
+end
+grestore

@@ -1,0 +1,51 @@
+lbl file prepared by figPac Thu Apr 05 12:07:17 PDT 2018
+130.09
+144.54
+0
+0
+0
+2
+ 
+130.09
+144.54
+2
+0
+ 
+44.47
+ 1.11
+1
+0
+$z$
+144.98
+78.53
+0
+1
+$y$
+144.10
+60.01
+0
+1
+$z=f(a,y),\ x=a$
+75.61
+14.92
+1
+0
+${\scriptstyle (a\,,\,b\,,\,f(a,b))}$
+106.74
+28.77
+0
+0
+${\scriptstyle (a\,,\,b+h\,,\,f(a+h,b))}$
+71.16
+82.70
+1
+2
+${\scriptstyle (a,b,0)}$
+111.18
+82.70
+1
+2
+${\scriptstyle (a,b+h,0)}$
+-1000
+0/1/2 left/center/right
+0/1/2 bottom/center/top

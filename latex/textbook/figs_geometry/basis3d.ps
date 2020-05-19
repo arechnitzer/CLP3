@@ -1,0 +1,83 @@
+%!PS-Adobe-3.0
+%%BoundingBox:       0.0 0.0     93.6 93.6
+%%Title:              
+%%Created by:        Figure.java
+%%Date:              Wed Apr 18 11:22:53 PDT 2018
+%%EndComments
+
+gsave
+
+%% ellipse library
+
+/ellipsedict 10 dict def        %% arguments: xcentre ycentre xradius yradius
+ellipsedict /emtrx matrix put  %%            startangle endangle closetype
+
+/ellipse                       %% closetype: 0 for open, 1 for chord, 2 for wedge
+    {ellipsedict begin
+       /closetype exch def
+       /endangle exch def      /startangle exch def
+       /yrad exch def          /xrad exch def
+       /y exch def             /x exch def
+       /savematrix emtrx currentmatrix def
+    x y translate
+    xrad  yrad  scale
+    newpath
+    closetype 2 eq  {0 0 moveto} if
+    0 0 1 startangle endangle arc
+    closetype 1 eq  {closepath} if
+    closetype 2 eq  {closepath} if
+    savematrix setmatrix
+    end
+    } def
+
+%%  Figure2ps dictionary
+
+/Figure2psDict 30 dict def
+Figure2psDict begin
+  /iscp false def
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+newpath -1.0 -1.0 moveto 94.6 -1.0 lineto 94.6 94.6 lineto -1.0 94.6 lineto closepath clip
+/Helvetica 10 setpsfont
+0.5 setlinewidth
+newpath
+37.44  37.44  moveto
+84.24  37.44  lineto stroke
+newpath
+37.44  37.44  moveto
+37.44  84.24  lineto stroke
+newpath
+37.44  37.44  moveto
+16.38  7.9559999999999995  lineto stroke
+1.0 setlinewidth
+0 1 1 0 setcmykcolor  
+newpath
+37.44  37.44  moveto
+74.88  37.44  lineto stroke
+gsave
+  0 1 1 0 setcmykcolor   
+newpath 74.88  37.44 moveto 67.08   40.04  lineto  69.03   37.44  lineto  67.08   34.839999999999996 lineto closepath fill grestore
+
+newpath
+37.44  37.44  moveto
+37.44  74.88  lineto stroke
+gsave
+  0 1 1 0 setcmykcolor   
+newpath 37.44  74.88 moveto 34.839999999999996   67.08  lineto  37.44   69.03  lineto  40.04   67.08 lineto closepath fill grestore
+
+newpath
+37.44  37.44  moveto
+20.592  13.852799999999995  lineto stroke
+gsave
+  0 1 1 0 setcmykcolor   
+newpath 20.592  13.852799999999995 moveto 27.24136493614646   18.688701771742878  lineto  23.99224343325671   18.613140806559397  lineto  23.00995088587144   21.711140379082178 lineto closepath fill grestore
+
+
+%%Trailer
+end
+grestore

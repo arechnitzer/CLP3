@@ -1,0 +1,51 @@
+lbl file prepared by figPac Thu Dec 26 17:27:55 PST 2013
+441.65
+65.04
+0
+0
+0
+2
+ 
+441.65
+65.04
+2
+0
+ 
+-10.32
+28.91
+0
+1
+$\det \left[\begin{matrix}i& j & k\\ a_1&a_2&a_3\\ b_1&b_2&b_3\end{matrix}\right]$
+75.67
+28.91
+0
+1
+$\ =\ i\det \left[\begin{matrix}i\kern7pt& j & k\\ a_1&a_2&a_3\\ b_1&b_2&b_3\end{matrix}\right]$
+184.36
+28.91
+0
+1
+$\ -\ j\det \left[\begin{matrix}i& j\kern5pt & k\\ a_1&a_2&a_3\\ b_1&b_2&b_3\end{matrix}\right]$
+297.87
+28.91
+0
+1
+$\ +\ k\det \left[\begin{matrix}i& j & k\kern3pt\\ a_1&a_2&a_3\\ b_1&b_2&b_3\end{matrix}\right]$
+75.67
+63.60
+0
+1
+$\ =\ i\,(a_2b_3-a_3b_2)$
+171.98
+63.60
+0
+1
+$\,-\,j\,(a_1b_3-a_3b_1)$
+273.80
+63.60
+0
+1
+$\,+\,k\,(a_1b_2-a_2b_1)$
+-1000
+0/1/2 left/center/right
+0/1/2 bottom/center/top
