@@ -2,6 +2,7 @@
 
 \usepackage{clp_problems_header}
 \usepackage{clp_multi_macros}
+\graphicspath{{./figures/}}
 
 \makeatletter
 \newcommand{\leqnomode}{\tagsleft@true}
@@ -17,8 +18,8 @@
 %\makeatother
 
 \usepackage{xr}
-   \externaldocument[CLP3-]{clp_3_mc} 
-   \externaldocument[CLP200-]{clp_3_mc} 
+   \externaldocument[CLP3-]{clp_3_mc_text} 
+   \externaldocument[CLP200-]{clp_3_mc_text} 
    \externaldocument[CLP101-]{clp_2_ic_text} 
    \externaldocument[CLP100-]{clp_1_dc_text} 
    \newcommand{\eref}[2]{\ref*{#1-#2}}
@@ -55,7 +56,7 @@
 \reqnomode
 
 %% Cover image, not numbered
-\setcounter{page}{0}\includepdf[noautoscale=false]{fig/clp3-exercises.pdf}
+\setcounter{page}{0}\includepdf[noautoscale=false]{figures/clp3-exercises.pdf}
 
 \begin{titlepage} 
 \begin{center} 
@@ -91,7 +92,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 License. You can view a copy of the license at \\
 \url{http://creativecommons.org/licenses/by-nc-sa/4.0/}.
 \begin{center}
- \includegraphics{fig/by-nc-sa.pdf}
+ \includegraphics{figures/by-nc-sa.pdf}
 \end{center}
 \end{itemize}
 
@@ -119,70 +120,70 @@ License. You can view a copy of the license at \\
 \chaptermark{Vectors and Geometry}
 \setcounter{section}{0}
 \section{Points}
-\input{prob_s1.1}
+\input{problems/prob_s1.1}
 \section{Vectors}
-\input{prob_s1.2}
+\input{problems/prob_s1.2}
 %\setcounter{section}{3}
 \section{Equations of Lines in 2d}
-\input{prob_s1.3}
+\input{problems/prob_s1.3}
 \section{Equations of Planes in 3d}
-\input{prob_s1.4}
+\input{problems/prob_s1.4}
 \section{Equations of Lines in 3d}
-\input{prob_s1.5}
+\input{problems/prob_s1.5}
 %\setcounter{section}{6}
 \section{Curves and their Tangent Vectors}
-\input{prob_s1.6}
+\input{problems/prob_s1.6}
 \section{Sketching Surfaces in 3d}
-\input{prob_s1.7}
+\input{problems/prob_s1.7}
 %\section{Cylinders}
-%\input{prob_s1.8}
+%\input{problems/prob_s1.8}
 %\section{Quadric Surfaces}
-%\input{prob_s1.9}
+%\input{problems/prob_s1.9}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Partial Derivatives}
 \section{Limits}
-\input{prob_s2.1}
+\input{problems/prob_s2.1}
 \section{Partial Derivatives}
-\input{prob_s2.2}
+\input{problems/prob_s2.2}
 \section{Higher Order Derivatives}
-\input{prob_s2.3}
+\input{problems/prob_s2.3}
 %\setcounter{section}{3}
 \section{The Chain Rule}
-\input{prob_s2.4}
+\input{problems/prob_s2.4}
 \section{Tangent Planes and Normal Lines}
-\input{prob_s2.5}
+\input{problems/prob_s2.5}
 \section{Linear Approximations and Error}
-\input{prob_s2.6}
+\input{problems/prob_s2.6}
 \section{Directional Derivatives and the Gradient}
-\input{prob_s2.7}
+\input{problems/prob_s2.7}
 \setcounter{section}{8}
 %%\section{Optional --- Solving the Wave Equation}
-%%\input{prob_s2.8}
+%%\input{problems/prob_s2.8}
 \section{Maximum and Minimum Values}
-\input{prob_s2.9}
+\input{problems/prob_s2.9}
 \section{Lagrange Multipliers}
-\input{prob_s2.10}
+\input{problems/prob_s2.10}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Multiple Integrals}
 \section{Double Integrals}
-\input{prob_s3.1}
+\input{problems/prob_s3.1}
 \section{Double Integrals in Polar Coordinates}
-\input{prob_s3.2}
+\input{problems/prob_s3.2}
 \section{Applications of Double Integrals}
-\input{prob_s3.3}
+\input{problems/prob_s3.3}
 %\setcounter{section}{4}
 \section{Surface Area}
-\input{prob_s3.4}
+\input{problems/prob_s3.4}
 \section{Triple Integrals}
-\input{prob_s3.5}
+\input{problems/prob_s3.5}
 \section{Triple Integrals in Cylindrical Coordinates}
-\input{prob_s3.6}
+\input{problems/prob_s3.6}
 \section{Triple Integrals in Spherical Coordinates}
-\input{prob_s3.7}
+\input{problems/prob_s3.7}
 %\section{ Optional --- Integrals in General Coordinates}
-%\input{prob_s3.8}
+%\input{problems/prob_s3.8}
 
 
 
