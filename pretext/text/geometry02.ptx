@@ -983,7 +983,7 @@ the solution, but we'll just guess.
 </me>
 which is an oscillation with (unknown) amplitude <m>A</m>, frequency <m>\omega</m> (radians per unit time) and phase <m>\delta</m>.
 Substituting this guess into the left hand side,
-<m>\theta'  + \tfrac{g}{\ell}\theta</m>,  yields
+<m>\theta''  + \tfrac{g}{\ell}\theta</m>,  yields
 <me>
 -A\omega^2\sin(\omega t-\delta)+A\tfrac{g}{\ell}\sin(\omega t-\delta)
 </me>
@@ -1012,7 +1012,7 @@ With this guess,
 &amp;+\phantom{2\gamma }\omega A e^{-\gamma t}&amp;\cos(\omega t-\delta)
 </mrow>
 <mrow>
-\theta'(t)&amp;=(\gamma^2-\omega^2)Ae^{-\gamma t}&amp;\sin(\omega t-\delta)
+\theta''(t)&amp;=(\gamma^2-\omega^2)Ae^{-\gamma t}&amp;\sin(\omega t-\delta)
                     &amp;-2\gamma\omega A e^{-\gamma t}&amp;\cos(\omega t-\delta)
 </mrow>
 </md>

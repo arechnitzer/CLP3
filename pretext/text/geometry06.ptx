@@ -370,8 +370,8 @@ particle at time <m>t</m>, then
 
 <mrow>
 \text{acceleration at time } t
-       &amp;=\va(t)=\vr'(t)=\vv'(t)
-       =\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big)
+       &amp;=\va(t)=\vr''(t)=\vv'(t)
+       =\big(x''(t)\,,\,y''(t)\,,\,z''(t)\big)
 </mrow>
 
 <intertext>and the distance travelled between times <m>T_0</m> and <m>T</m> is</intertext>

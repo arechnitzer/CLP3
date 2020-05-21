@@ -456,9 +456,9 @@ where <m>F(u)=cf'(u)</m> and <m>u(x,t)=x+ct</m>. Then
 \frac{\partial^2}{\partial t^2}f(x+ct)
 &amp;=\pdiff{W}{t}(x,t)
 =\diff{F}{u}\big(u(x,t)\big)  \pdiff{u}{t}(x,t)
-=c\,f'(x+ct)\,c
+=c\,f''(x+ct)\,c
 </mrow><mrow>
-&amp;=c^2\,f'(x+ct)
+&amp;=c^2\,f''(x+ct)
 </mrow>
 </md>
 </p>
