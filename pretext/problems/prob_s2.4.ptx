@@ -1260,8 +1260,8 @@ For any (differentiable) function <m>F</m>, we have, by the chain and product ru
 
 <exercise><title><fromexam>M200 2009A</fromexam></title>
 <statement><p>
-Let <m>f(x)</m> and <m>g(x)</m> be two functions of <m>x</m> satisfying <m>f'(7) = -2</m>
-and <m>g'(-4) = -1</m>. If <m>z = h(s,t) = f(2s + 3t) + g(s - 6t)</m> is a function
+Let <m>f(x)</m> and <m>g(x)</m> be two functions of <m>x</m> satisfying <m>f''(7) = -2</m>
+and <m>g''(-4) = -1</m>. If <m>z = h(s,t) = f(2s + 3t) + g(s - 6t)</m> is a function
 of <m>s</m> and <m>t</m>, find the value of <m>\frac{\partial^2 z}{\partial t^2}</m>
 when <m>s = 2</m> and <m>t = 1</m>.
 </p></statement>
@@ -1286,20 +1286,20 @@ By the chain rule,
 &amp;= 3f'(2s + 3t) - 6g'(s - 6t)
 </mrow><mrow>
 \frac{\partial^2 h}{\partial t^2}(s,t)
-&amp;=\color{blue}{3\pdiff{}{t}\big[f'(2s + 3t)\big]}
-  \color{red}{- 6\pdiff{}{t}\big[ g'(s - 6t) \big]}
+&amp;=\color{blue}{3\pdiff{}{t}\big[f''(2s + 3t)\big]}
+  \color{red}{- 6\pdiff{}{t}\big[ g''(s - 6t) \big]}
 </mrow><mrow>
-&amp;=\color{blue}{3\,f'(2s + 3t)\pdiff{}{t}(2s+3t)}
-  \color{red}{- 6\,g'(s - 6t) \pdiff{}{t}(s-6t)}
+&amp;=\color{blue}{3\,f''(2s + 3t)\pdiff{}{t}(2s+3t)}
+  \color{red}{- 6\,g''(s - 6t) \pdiff{}{t}(s-6t)}
 </mrow><mrow>
-&amp;=\color{blue}{9f'(2s+3t)} +\color{red}{36g'(s-6t)}
+&amp;=\color{blue}{9f''(2s+3t)} +\color{red}{36g''(s-6t)}
 </mrow>
 </md>
 In particular
 <md>
 <mrow>
 \frac{\partial^2 h}{\partial t^2}(2,1)
-                 =9f'(7) +36g'(-4)
+                 =9f''(7) +36g''(-4)
                  =9(-2) +36(-1)
                  =-54
 </mrow>

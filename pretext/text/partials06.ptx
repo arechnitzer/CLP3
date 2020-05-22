@@ -21,14 +21,14 @@ g(t_0+\De t) &amp;\approx g(t_0)
 g(t_0+\De t) &amp;\approx g(t_0) +g'(t_0)\,\De t
                     &amp;&amp;\text{linear, or tangent line, approximation}
 </mrow><mrow>
-g(t_0+\De t) &amp;\approx g(t_0) +g'(t_0)\,\De t +\tfrac{1}{2} g'(t_0)\,\De t^2
+g(t_0+\De t) &amp;\approx g(t_0) +g'(t_0)\,\De t +\tfrac{1}{2} g''(t_0)\,\De t^2
                     &amp;&amp;\text{quadratic approximation}
 </mrow>
 </md>
 More generally, for any natural number <m>n</m>, the  approximation
 <md>
 <mrow>
-g(t_0+\De t) &amp;\approx g(t_0) +g'(t_0)\,\De t + \tfrac{1}{2} g'(t_0)\,\De t^2
+g(t_0+\De t) &amp;\approx g(t_0) +g'(t_0)\,\De t + \tfrac{1}{2} g''(t_0)\,\De t^2
                     +\cdots+ \tfrac{1}{n!} g^{(n)}(t_0)\,\De t^n
 </mrow>
 </md>
@@ -39,7 +39,7 @@ approximation. The error <m>E_n(\De t)</m> is defined by
 <mrow>
 g(t_0+\De t)
 &amp;=
-g(t_0)+g'(t_0)\De t+\tfrac{1}{2!}g'(t_0)\De t^2
+g(t_0)+g'(t_0)\De t+\tfrac{1}{2!}g''(t_0)\De t^2
 +\cdots
 +\tfrac{1}{n!}g^{(n)}(t_0) \De t^n +E_n(\De t)
 </mrow>
@@ -660,11 +660,11 @@ g(1) = f\big(x_0 + \De x\,,\,y_0+\De y\big)
 </me>
 We'll now see what the quadratic approximation
 <me>
-g(t_0+\De t) \approx g(t_0) +g'(t_0)\,\De t +\tfrac{1}{2} g'(t_0)\,\De t^2
+g(t_0+\De t) \approx g(t_0) +g'(t_0)\,\De t +\tfrac{1}{2} g''(t_0)\,\De t^2
 </me>
 and the corresponding exact formula (see (3.4.32) in the CLP-1 text)
 <me>
-g(t_0+\De t) = g(t_0) +g'(t_0)\,\De t +\tfrac{1}{2} g'(t_0+c\De t)\,\De t^2
+g(t_0+\De t) = g(t_0) +g'(t_0)\,\De t +\tfrac{1}{2} g''(t_0+c\De t)\,\De t^2
                     \qquad\text{for some } 0\le c\le 1
 </me>
 tells us about <m>f</m>. We have already found, using the chain rule, that
@@ -672,7 +672,7 @@ tells us about <m>f</m>. We have already found, using the chain rule, that
 g'(t) = \pdiff{f}{x}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\,\De x
        + \pdiff{f}{y}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\,\De y
 </me>
-We now need to evaluate <m>g'(t)</m>. Temporarily write <m>f_1=\pdiff{f}{x}</m>
+We now need to evaluate <m>g''(t)</m>. Temporarily write <m>f_1=\pdiff{f}{x}</m>
 and <m>f_2=\pdiff{f}{y}</m> so that
 <me>
 g'(t) = f_1\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)\,\De x
@@ -719,7 +719,7 @@ and recalling that
 gives
 <md>
 <mrow>
-g'(t) &amp;=
+g''(t) &amp;=
  \frac{\partial^2 f}{\partial x^2}\big(x_0+t\,\De x\,,\,y_0+t\,\De y\big)
                                                                   \,\De x^2
 </mrow><mrow>
@@ -734,7 +734,7 @@ Now setting <m>t_0=0</m> and <m>\De t=1</m>, the quadratic approximation
 <md>
 <mrow>
 f\big(x_0 + \De x\,,\,y_0+\De y\big)
-&amp;=g(1)\approx g(0) +g'(0) +\tfrac{1}{2} g'(0)
+&amp;=g(1)\approx g(0) +g'(0) +\tfrac{1}{2} g''(0)
 </mrow><mrow>
 </mrow>
 </md>
@@ -768,7 +768,7 @@ and the corresponding exact formula
 <md>
 <mrow>
 f\big(x_0 + \De x\,,\,y_0+\De y\big)
-&amp;=g(1) = g(0) +g'(0) +\tfrac{1}{2} g'(c)
+&amp;=g(1) = g(0) +g'(0) +\tfrac{1}{2} g''(c)
 </mrow><mrow>
 </mrow>
 </md>

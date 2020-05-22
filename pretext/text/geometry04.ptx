@@ -79,15 +79,15 @@
   the planes
   <me>
   P:\ x+2y+3z=4 \qquad
-  P':\ 2x-y=7
+  P'':\ 2x-y=7
   </me>
-  have normal vectors  <m>\vn=\llt 1,2,3\rgt</m> and <m>\vn'=\llt 2,-1,0\rgt</m>,
+  have normal vectors  <m>\vn=\llt 1,2,3\rgt</m> and <m>\vn''=\llt 2,-1,0\rgt</m>,
   respectively. Since
   <me>
-  \vn\cdot\vn' = 1\times 2+2\times(-1)+3\times 0 = 0
+  \vn\cdot\vn'' = 1\times 2+2\times(-1)+3\times 0 = 0
   </me>
-  the normal vectors <m>\vn</m> and <m>\vn'</m> are mutually perpendicular,
-  so the corresponding planes <m>P</m> and <m>P'</m> are perpendicular to each other.
+  the normal vectors <m>\vn</m> and <m>\vn''</m> are mutually perpendicular,
+  so the corresponding planes <m>P</m> and <m>P''</m> are perpendicular to each other.
   </p>
 </example>
 

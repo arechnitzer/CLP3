@@ -10,7 +10,7 @@
 <p>Let <m>n\ge </m> be an integer. Then if the function <m>f</m> has <m>n+1</m> derivatives on an interval that contains both <m>x_0</m> and <m>x</m>, we have the Taylor expansion
 <md>
 <mrow>
-f(x)&amp;=f(x_0)+f'(x_0)\,(x-x_0)+\dfrac{1}{2!}f'(x_0)\,(x-x_0)^2+\cdots
+f(x)&amp;=f(x_0)+f'(x_0)\,(x-x_0)+\dfrac{1}{2!}f''(x_0)\,(x-x_0)^2+\cdots
 +\dfrac{1}{n!}f^{(n)}(x_0)\,(x-x_0)^n
 </mrow><mrow> &amp;\hskip0.5in
 +\dfrac{1}{(n+1)!}f^{(n+1)}(c)\,(x-x_0)^{n+1}\qquad\hbox{for some $c$ between

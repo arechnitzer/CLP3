@@ -1516,7 +1516,7 @@ By property 2 of the cross product in Theorem <xref ref="thm_crossPppties"/>,
 <statement><p>
  A particle <m>P</m> of unit mass whose position in space at time
 <m>t</m> is <m>\vr(t)</m> has angular momentum <m>L(t)=\vr(t)\times\vr'(t)</m>.
-If <m>\vr'(t)=\rho(t)\vr(t)</m> for a scalar function <m>\rho</m>, show that
+If <m>\vr''(t)=\rho(t)\vr(t)</m> for a scalar function <m>\rho</m>, show that
 <m>L</m> is constant, i.e. does not change with time. Here <m>'</m> denotes
 <m>\diff{}{t}</m>.
 </p></statement>
@@ -1534,7 +1534,7 @@ The derivative of <m>L</m> is
 <md>
 <mrow>
 \diff{L}{t}&amp;=\diff{}{t}\big(\vr(t)\times\vr'(t)\big)
-=\vr'(t)\times\vr'(t)+\vr(t)\times\vr'(t)
+=\vr'(t)\times\vr'(t)+\vr(t)\times\vr''(t)
 </mrow><mrow>
 &amp;=\vr'(t)\times\vr'(t)+\vr(t)\times\big(\rho(t)\vr(t)\big)
 </mrow>
@@ -1735,7 +1735,7 @@ airborne at some <m>(x_0,y_0)</m> with <m>y_0=h(x_0)</m>. How fast was the skier
 </statement>
 
 <answer><p>
-<m>\sqrt{1+h'\big(x_0\big)^2}\sqrt{-g/h'\big(x_0\big)}</m>
+<m>\sqrt{1+h'\big(x_0\big)^2}\sqrt{-g/h''\big(x_0\big)}</m>
 </p></answer>
 
 <solution><p>
@@ -1746,7 +1746,7 @@ y(t)&amp;=h\big(x(t)\big)
 </mrow><mrow>
 \implies y'(t)&amp;=h'\big(x(t)\big)\,x'(t)
 </mrow><mrow>
-\implies y'(t)&amp;=h'\big(x(t)\big)\, x'(t)^2+h'\big(x(t)\big)\,x'(t)
+\implies y''(t)&amp;=h''\big(x(t)\big)\, x'(t)^2+h'\big(x(t)\big)\,x''(t)
 </mrow>
 </md>
 So the velocity and acceleration vectors of the skier are
@@ -1754,8 +1754,8 @@ So the velocity and acceleration vectors of the skier are
 <mrow>
 \vv(t)&amp;=\llt 1,h'\big(x(t)\big)\rgt x'(t)
 </mrow><mrow>
-\va(t)&amp;=\llt 1,h'\big(x(t)\big)\rgt x'(t)
-+\llt 0,h'\big(x(t)\big)\rgt x'(t)^2
+\va(t)&amp;=\llt 1,h'\big(x(t)\big)\rgt x''(t)
++\llt 0,h''\big(x(t)\big)\rgt x'(t)^2
 </mrow>
 </md>
 The skier is subject to two forces. One is gravity. The other
@@ -1780,10 +1780,10 @@ m\va(t)\cdot\vn(t)=-mg\hj\cdot\vn(t)+p(t)|\vn(t)|^2
 Substituting in
 <md>
 <mrow>
-mh'\big(x(t)\big)\,x'(t)^2&amp;=-mg+p(t)\left[1+h'\big(x(t)\big)^2\right]
+mh''\big(x(t)\big)\,x'(t)^2&amp;=-mg+p(t)\left[1+h'\big(x(t)\big)^2\right]
 </mrow><mrow>
 \implies p(t)\left[1+h'\big(x(t)\big)^2\right]
-&amp;=m\Big(g+h'\big(x(t)\big)\,x'(t)^2\Big)
+&amp;=m\Big(g+h''\big(x(t)\big)\,x'(t)^2\Big)
 </mrow>
 </md>
 As long as <m>p(t)\ge 0</m>, the hill is pushing up in order to keep the skier
@@ -1791,12 +1791,12 @@ on the surface. When <m>p(t)</m> becomes negative, the hill has to pull on the
 skier in order to keep her on the surface. But the hill can't pull,
 so the skier becomes airborne instead. This happens when
 <me>
-g+h'\big(x(t)\big)x'(t)^2=0
+g+h''\big(x(t)\big)x'(t)^2=0
 </me>
-That is when <m>x'(t)=\sqrt{-g/h'\big(x(t)\big)}</m>. At this time <m>x(t)=x_0</m>, <m>y(t)=y_0</m> and the speed of the skier is
+That is when <m>x'(t)=\sqrt{-g/h''\big(x(t)\big)}</m>. At this time <m>x(t)=x_0</m>, <m>y(t)=y_0</m> and the speed of the skier is
 <me>
 \sqrt{x'(t)^2+y'(t)^2}
-=\sqrt{1+h'\big(x_0\big)^2}\sqrt{-g/h'\big(x_0\big)}
+=\sqrt{1+h'\big(x_0\big)^2}\sqrt{-g/h''\big(x_0\big)}
 </me>
 </p></solution>
 </exercise>

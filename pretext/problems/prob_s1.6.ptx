@@ -382,21 +382,21 @@ Velocity is a vector-valued quantity, so it has both a magnitude and a direction
 
 <exercise><title><fromexam>M317 2005D</fromexam></title>
 <statement><p>
-Let <m>\vr(t)</m> be a vector valued function. Let <m>\vr'</m>, <m>\vr'</m> , and <m>\vr''</m>
+Let <m>\vr(t)</m> be a vector valued function. Let <m>\vr'</m>, <m>\vr''</m> , and <m>\vr'''</m>
 denote <m>\diff{\vr}{t}</m>, <m>\difftwo{\vr}{t}</m> and
 <m>\frac{\mathrm{d}^3\vr}{\mathrm{d}{t}^3}</m>, respectively.
 Express
 <me>
-\diff{}{t}\big[ (\vr \times \vr')\cdot\vr' \big]
+\diff{}{t}\big[ (\vr \times \vr')\cdot\vr'' \big]
 </me>
-in terms of <m>\vr</m>, <m>\vr'</m> , <m>\vr'</m> , and <m>\vr''</m>.
+in terms of <m>\vr</m>, <m>\vr'</m> , <m>\vr''</m> , and <m>\vr'''</m>.
 Select the correct answer.
 <ol label="a">
-<li> <m>(\vr'\times\vr' )\cdot\vr''</m>
+<li> <m>(\vr'\times\vr'' )\cdot\vr'''</m>
 </li>
-<li>  <m>(\vr'\times\vr' )\cdot\vr + (\vr\times\vr' )\cdot\vr''</m>
+<li>  <m>(\vr'\times\vr'' )\cdot\vr + (\vr\times\vr' )\cdot\vr'''</m>
 </li>
-<li>  <m>(\vr\times\vr' )\cdot\vr''</m>
+<li>  <m>(\vr\times\vr' )\cdot\vr'''</m>
 </li>
 <li>  <m>0</m>
 </li>
@@ -417,18 +417,18 @@ To simplify your answer, remember: the cross product of <m>\va</m> and <m>\vb</m
 By the product rule
 <md>
 <mrow>
-\diff{}{t}\big[ (\vr \times \vr')\cdot\vr' \big]
-&amp;= (\vr' \times \vr')\cdot\vr'
-  +(\vr \times \vr')\cdot\vr'
-  +(\vr \times \vr')\cdot\vr''
+\diff{}{t}\big[ (\vr \times \vr')\cdot\vr'' \big]
+&amp;= (\vr' \times \vr')\cdot\vr''
+  +(\vr \times \vr'')\cdot\vr''
+  +(\vr \times \vr')\cdot\vr'''
 </mrow>
 </md>
 The first term vanishes because <m>\vr'\times\vr'=\vZero</m>.
-The second term vanishes because <m>\vr \times \vr'</m> is perpendicular to
-<m>\vr'</m>. So
+The second term vanishes because <m>\vr \times \vr''</m> is perpendicular to
+<m>\vr''</m>. So
 <me>
-\diff{}{t}\big[ (\vr \times \vr')\cdot\vr' \big]
-= (\vr \times \vr')\cdot\vr''
+\diff{}{t}\big[ (\vr \times \vr')\cdot\vr'' \big]
+= (\vr \times \vr')\cdot\vr'''
 </me>
 which is (c).
 </p></solution>
@@ -547,7 +547,7 @@ centre <m>\big(0,\frac{a}{2}\big)</m> counterclockwise. At the same time the <m>
 </mrow><mrow>
 \diff{s}{t}(t)=|\vv(t)|&amp;= \sqrt{a^2+c^2}
 </mrow><mrow>
-\va(t)=\vr'(t)&amp;= -a \cos t\,\hi-a\sin t\,\hj
+\va(t)=\vr''(t)&amp;= -a \cos t\,\hi-a\sin t\,\hj
 </mrow>
 </md>
 The <m>(x,y)= a(\cos t,\sin t)</m> coordinates go
@@ -570,7 +570,7 @@ The path is a helix with radius <m>a</m> and with each turn having height <m>2\p
 </mrow><mrow>
 \diff{s}{t}(t)=|\vv(t)|&amp;= a\sqrt{1+\sin^2t}
 </mrow><mrow>
-\va(t)=\vr'(t)&amp;= -2a \sin 2t\,\hi +2a\cos 2t\,\hj-a\cos t\,\hk
+\va(t)=\vr''(t)&amp;= -2a \sin 2t\,\hi +2a\cos 2t\,\hj-a\cos t\,\hk
 </mrow>
 </md>
 The <m>(x,y)</m> coordinates go around a circle of radius <m>\frac{a}{2}</m> and
@@ -678,25 +678,25 @@ A particle's position at time <m>t</m> is given by <m>\vr(t)=(t+\sin t, \cos t)<
 <fn>The particle traces out a cycloid--see Question<nbsp/><xref ref="prob_s1_1_cycloid"/></fn>. What is the magnitude of the acceleration of the particle at time <m>t</m>?
 </p></statement>
 <hint><p>
-<m>\vr(t)</m> is the position of the particle, so its acceleration is <m>r'(t)</m>.
+<m>\vr(t)</m> is the position of the particle, so its acceleration is <m>\vr''(t)</m>.
 </p></hint>
 <answer><p>
 1
 </p></answer>
 <solution><p>
-Since <m>\vr(t)</m> is the position of the particle,  its acceleration is <m>r'(t)</m>.
+Since <m>\vr(t)</m> is the position of the particle,  its acceleration is <m>\vr''(t)</m>.
 <md>
 <mrow>
 \vr(t)&amp;=(t+\sin t, \cos t)
 </mrow><mrow>
 \vr'(t)&amp;=(1+\cos t,-\sin t)
 </mrow><mrow>
-\vr'(t)&amp;=(-\sin t,-\cos t)
+\vr''(t)&amp;=(-\sin t,-\cos t)
 </mrow><mrow>
-|\vr'(t)|&amp;=\sqrt{\sin^2t+\cos^2t}=1
+|\vr''(t)|&amp;=\sqrt{\sin^2t+\cos^2t}=1
 </mrow>
 </md>
-The magnitude of acceleration is constant, but its <em>direction</em> is changing, since <m>\vr'(t)</m> is a vector with changing direction.
+The magnitude of acceleration is constant, but its <em>direction</em> is changing, since <m>\vr''(t)</m> is a vector with changing direction.
 </p></solution>
 </exercise>
 
@@ -1110,7 +1110,7 @@ do not intersect at right angles.
 <exercise><title><fromexam>M200 2001A</fromexam></title>
 <statement><p>
 Suppose a particle in 3-dimensional space travels with
-position vector <m>\vr(t)</m>, which satisfies <m>\vr'(t)=-\vr(t)</m>. Show
+position vector <m>\vr(t)</m>, which satisfies <m>\vr''(t)=-\vr(t)</m>. Show
 that the <q>energy</q> <m>|\vr(t)|^2+|\vr'(t)|^2</m> is constant (that is,
 independent of <m>t</m>).
 </p></statement>
@@ -1125,11 +1125,11 @@ independent of <m>t</m>).
 \diff{}{t}\big[|\vr(t)|^2+|\vr'(t)|^2\big]
 &amp;=\diff{}{t}\big[\vr(t)\cdot\vr(t)+\vr'(t)\cdot\vr'(t)\big]
 </mrow><mrow>
-&amp;=2\vr(t)\cdot\vr'(t)+2\vr'(t)\cdot\vr'(t)
+&amp;=2\vr(t)\cdot\vr'(t)+2\vr'(t)\cdot\vr''(t)
 </mrow><mrow>
-&amp;=2\vr'(t)\cdot\big[\vr(t)+\vr'(t)\big]
+&amp;=2\vr'(t)\cdot\big[\vr(t)+\vr''(t)\big]
 </mrow><mrow>
-&amp;=0\qquad \text{ since } \vr'(t)=-\vr(t)
+&amp;=0\qquad \text{ since } \vr''(t)=-\vr(t)
 </mrow>
 </md>
 Since <m>\diff{}{t}\big[|\vr(t)|^2+|\vr'(t)|^2\big]=0</m> for all
@@ -1193,7 +1193,7 @@ Since <m>z=6u</m>, <m>y=\frac{z^2}{12}=3u^2</m> and <m>x=\frac{yz}{18}=u^3</m>,
 <md>
 <mrow>
 \vr'(u)&amp;=3u^2\,\hi+6u\,\hj+6\,\hk\cr
-\vr'(u)&amp;=6u\,\hi+6\,\hj\cr
+\vr''(u)&amp;=6u\,\hi+6\,\hj\cr
 \diff{s}{u}(u)=|\vr'(u)|
 &amp;=\sqrt{9u^4+36u^2+36}=3\big(u^2+2\big)\cr
 </mrow>
@@ -1227,14 +1227,14 @@ which implies that <m>\diff{u}{t}(t_1)=2</m>.
 <p>(d) By the product and chain rules,
 <me>
 \vR'(t)=\vr'\big(u(t)\big)\diff{u}{t}\implies
-\vR'(t)=\vr'\big(u(t)\big)\Big(\diff{u}{t}\Big)^2
+\vR''(t)=\vr''\big(u(t)\big)\Big(\diff{u}{t}\Big)^2
 +\vr'\big(u(t)\big)\difftwo{u}{t}
 </me>
 In particular,
 <md>
 <mrow>
 27\,\hi+30\,\hj+6\,\hk
-&amp;=\vR'(t_1)=\vr'(1)\Big(\diff{u}{t}(t_1)\Big)^2
+&amp;=\vR''(t_1)=\vr''(1)\Big(\diff{u}{t}(t_1)\Big)^2
 +\vr'\big(1\big)\difftwo{u}{t}(t_1)
 </mrow><mrow>
 &amp;=\big(6\,\hi+6\,\hj\big)2^2+\big(3\,\hi+6\,\hj+6\,\hk\big)\difftwo{u}{t}(t_1)
@@ -1289,8 +1289,8 @@ By Newton's law, <m>\vF=m\va</m>.
 <solution><p> (a)
 According to Newton,
 <me>
-m\vr'(t) = \vF(t)\qquad\text{so that}\qquad
-\vr'(t) = -3t\,\hi + \sin t\,\hj + 2e^{2t}\,\hk
+m\vr''(t) = \vF(t)\qquad\text{so that}\qquad
+\vr''(t) = -3t\,\hi + \sin t\,\hj + 2e^{2t}\,\hk
 </me>
 Integrating once gives
 <md>
@@ -1392,7 +1392,7 @@ of the particle at time <m>t</m> is <m>x(t)</m>, then the position of the partic
 <mrow>
 \vr(x)&amp;=x\,\hi+x^2\,\hj+\frac{2}{3}x^3\,\hk\cr
 \vr'(x)&amp;=\hi+2x\,\hj+2x^2\,\hk\cr
-\vr'(x)&amp;=2\,\hj+4x\,\hk\cr
+\vr''(x)&amp;=2\,\hj+4x\,\hk\cr
 \diff{s}{x}
 &amp;=|\vr'(x)|
 =\sqrt{1+4x^2+4x^4}=1+2x^2\cr
@@ -1435,7 +1435,7 @@ At this time <m>\diff{x}{t}=\frac{6}{1+2\times 1}=2</m> and
 <p>(d) By the product and chain rules,
 <me>
 \vR'(t)=\vr'\big(x(t)\big)\diff{x}{t}\implies
-\vR'(t)=\vr'\big(x(t)\big){\Big(\diff{x}{t}\Big)}^2
+\vR''(t)=\vr''\big(x(t)\big){\Big(\diff{x}{t}\Big)}^2
 +\vr'\big(x(t)\big)\difftwo{x}{t}
 </me>
 Applying <m>\diff{}{t}</m> to <m>6=\big(1+2x(t)^2\big)\diff{x}{t}(t)</m> gives
@@ -1446,7 +1446,7 @@ In particular, when <m>x=1</m> and <m>\diff{x}{t}=2</m>,
  <m>0=4\times 1\big(2\big)^2+(3)\difftwo{x}{t}</m> gives
 <m>\difftwo{x}{t}=-\frac{16}{3}</m> and
 <me>
-\vR'=\big(2\,\hj+4\,\hk\big)\big(2\big)^2
+\vR''=\big(2\,\hj+4\,\hk\big)\big(2\big)^2
 -\big(\hi+2\,\hj+2\,\hk\big)\frac{16}{3}
 = -\frac{8}{3}\big(2\hi+\,\hj-2\,\hk\big)
 </me>

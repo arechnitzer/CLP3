@@ -2328,7 +2328,7 @@ A symmetrical coffee percolator holds 24 cups when full. The interior has a circ
 </statement>
 
 <answer><p>
-About 3.5' above the bottom
+About 3.5'' above the bottom
 </p></answer>
 
 <solution><p>
@@ -2381,7 +2381,7 @@ or
 Since <m>\Big[9z_0-\frac{z_0^3}{18}+\frac{z_0^5}{6480}\Big]_{z_0=-2.495}=-21.61</m>
 and <m>\Big[9z_0-\frac{z_0^3}{18}+\frac{z_0^5}{6480}\Big]_{z_0=-2.490}=-21.57</m>,
 there is a solution <m>z_0=-2.49</m> (to two decimal places). The mark should
-be about 3.5' above the bottom.
+be about 3.5'' above the bottom.
 </p></solution>
 </exercise>
 

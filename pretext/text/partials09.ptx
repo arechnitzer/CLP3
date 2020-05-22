@@ -783,30 +783,30 @@ functions of one variable. Suppose that <m>x=a</m> is a critical point of the
 function <m>f(x)</m>. Any (sufficiently smooth) function is well approximated,
 when <m>x</m> is close to <m>a</m>, by the first few terms of its Taylor expansion
 <me>
-f(x) = f(a) + f'(a)\,(x-a) + \tfrac{1}{2} f'(a)\,(x-a)^2
+f(x) = f(a) + f'(a)\,(x-a) + \tfrac{1}{2} f''(a)\,(x-a)^2
          +\tfrac{1}{3!} f^{(3)}(a)\, (x-a)^3 + \cdots
 </me>
 As <m>a</m> is a critical point, we know that <m>f'(a)=0</m> and
 <me>
-f(x) = f(a) + \tfrac{1}{2} f'(a)\,(x-a)^2
+f(x) = f(a) + \tfrac{1}{2} f''(a)\,(x-a)^2
          +\tfrac{1}{3!} f^{(3)}(a)\, (x-a)^3 + \cdots
 </me>
-If <m>f'(a)\ne 0</m>, <m>f(x)</m> is going to look a lot like
-<m>f(a) + \tfrac{1}{2} f'(a)\,(x-a)^2 </m> when <m>x</m> is really close to
+If <m>f''(a)\ne 0</m>, <m>f(x)</m> is going to look a lot like
+<m>f(a) + \tfrac{1}{2} f''(a)\,(x-a)^2 </m> when <m>x</m> is really close to
 <m>a</m>. In particular
 <ul>
 <li>
-if <m>f'(a) \gt 0</m>, then we will have <m>f(x) \gt f(a)</m> when <m>x</m>
+if <m>f''(a) \gt 0</m>, then we will have <m>f(x) \gt f(a)</m> when <m>x</m>
 is close to (but not equal to) <m>a</m>, so that <m>a</m> will be a local minimum
 and
 </li>
 <li>
-if <m>f'(a) \lt 0</m>, then we will have <m>f(x) \lt f(a)</m> when <m>x</m>
+if <m>f''(a) \lt 0</m>, then we will have <m>f(x) \lt f(a)</m> when <m>x</m>
 is close to (but not equal to) <m>a</m>, so that <m>a</m> will be a local maximum,
 but
 </li>
 <li>
-if <m>f'(a)=0</m>, then we cannot draw any conclusions without more work.
+if <m>f''(a)=0</m>, then we cannot draw any conclusions without more work.
 </li>
 </ul>
 A similar, but messier, analysis is possible for functions of

@@ -302,7 +302,7 @@ by carefully choosing a <em>different order of evaluation</em> of the derivative
 for each of the three terms.
 </p>
 
-<p>(c) Set <m>g(x) = f(x,0,0)</m>. Then <m>f_{xx}(1,0,0)=g'(1)</m>.
+<p>(c) Set <m>g(x) = f(x,0,0)</m>. Then <m>f_{xx}(1,0,0)=g''(1)</m>.
 </p></hint>
 
 <answer><p>
@@ -360,16 +360,16 @@ f_{xyz}(x,y,z)=u_{xyz}(x,y,z)+v_{xyz}(x,y,z)+w_{xyz}(x,y,z)=0
 </me>
 </p>
 
-<p>(c) In the course of evaluating <m>f_{xx}(x,0,0)</m>, both <m>y</m> and <m>z</m> are held fixed at <m>0</m>. Thus, if we set <m>g(x) = f(x,0,0)</m>, then  <m>f_{xx}(x,0,0)=g'(x)</m>.
+<p>(c) In the course of evaluating <m>f_{xx}(x,0,0)</m>, both <m>y</m> and <m>z</m> are held fixed at <m>0</m>. Thus, if we set <m>g(x) = f(x,0,0)</m>, then  <m>f_{xx}(x,0,0)=g''(x)</m>.
 Now
 <me>
 g(x) = f(x,0,0) = \arctan\big(e^{\sqrt{xyz}}\big)\Big|_{y=z=0}
                 =\arctan(1)
                 =\frac{\pi}{4}
 </me>
-for all <m>x</m>. So <m>g'(x)=0</m> and <m>g'(x)=0</m> for all <m>x</m>. In particular,
+for all <m>x</m>. So <m>g'(x)=0</m> and <m>g''(x)=0</m> for all <m>x</m>. In particular,
 <me>
-f_{xx}(1,0,0) = g'(1) = 0
+f_{xx}(1,0,0) = g''(1) = 0
 </me>
 </p>
 
