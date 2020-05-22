@@ -1,0 +1,114 @@
+%!PS-Adobe-3.0
+%%BoundingBox:       0.0 7.2     161.6 115.2
+%%Title:              
+%%Created by:        Figure.java
+%%Date:              Thu Jun 28 11:31:12 PDT 2018
+%%EndComments
+
+gsave
+
+%% ellipse library
+
+/ellipsedict 10 dict def        %% arguments: xcentre ycentre xradius yradius
+ellipsedict /emtrx matrix put  %%            startangle endangle closetype
+
+/ellipse                       %% closetype: 0 for open, 1 for chord, 2 for wedge
+    {ellipsedict begin
+       /closetype exch def
+       /endangle exch def      /startangle exch def
+       /yrad exch def          /xrad exch def
+       /y exch def             /x exch def
+       /savematrix emtrx currentmatrix def
+    x y translate
+    xrad  yrad  scale
+    newpath
+    closetype 2 eq  {0 0 moveto} if
+    0 0 1 startangle endangle arc
+    closetype 1 eq  {closepath} if
+    closetype 2 eq  {closepath} if
+    savematrix setmatrix
+    end
+    } def
+
+%%  Figure2ps dictionary
+
+/Figure2psDict 30 dict def
+Figure2psDict begin
+  /iscp false def
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+newpath -1.0 6.2 moveto 162.6 6.2 lineto 162.6 116.2 lineto -1.0 116.2 lineto closepath clip
+/Helvetica 10 setpsfont
+0.5 setlinewidth
+newpath
+0.0  61.2  moveto
+161.6  61.2  lineto stroke
+newpath
+67.33333333333333  7.200000000000003  moveto
+67.33333333333333  115.2  lineto stroke
+1.0 setlinewidth
+newpath
+  40.39999999999999  22.628571428571433  moveto
+  42.95866666666666  25.02939310714286  lineto
+  45.517333333333326  27.808259142857146  lineto
+  48.07599999999999  30.92548532142857  lineto
+  50.63466666666666  34.34138742857144  lineto
+  53.19333333333333  38.01628125  lineto
+  55.751999999999995  41.910482571428574  lineto
+  60.86933333333333  50.19807085714286  lineto
+  71.104  67.658832  lineto
+  76.22133333333333  76.19705742857143  lineto
+  81.33866666666667  84.18388114285715  lineto
+  83.89733333333334  87.87130682142858  lineto
+  86.45599999999999  91.30182942857144  lineto
+  89.01466666666666  94.43576475  lineto
+  91.57333333333332  97.23342857142858  lineto
+  94.132  99.65513667857144  lineto
+  96.69066666666666  101.66120485714286  lineto
+  99.24933333333333  103.21194889285715  lineto
+  101.80799999999999  104.26768457142856  lineto
+  104.36666666666666  104.78872767857143  lineto
+  106.92533333333333  104.73539399999999  lineto
+  109.48400000000001  104.06799932142857  lineto
+  112.04266666666666  102.74685942857143  lineto
+  114.60133333333333  100.73229010714286  lineto
+  117.16  97.98460714285716  lineto
+  119.71866666666666  94.46412632142857  lineto
+  120.99799999999999  92.40168539732143  lineto
+  122.27733333333333  90.13116342857144  lineto
+  123.55666666666666  87.64759988839285  lineto
+  124.83599999999998  84.94603425000003  lineto
+  126.11533333333333  82.02150598660714  lineto
+  127.39466666666667  78.86905457142856  lineto
+  128.67399999999998  75.48371947767858  lineto
+  129.95333333333332  71.86054017857141  lineto
+  131.23266666666666  67.99455614732142  lineto
+  132.512  63.88080685714286  lineto
+  133.79133333333334  59.51433178125002  lineto
+  135.07066666666665  54.89017039285717  lineto
+  136.35  50.00336216517857  lineto
+  137.6293333333333  44.8489465714286  lineto
+  138.90866666666665  39.421963084821456  lineto
+  140.188  33.717451178571416  lineto
+  141.46733333333333  27.730450325892853  lineto
+  142.74666666666667  21.456000000000024  lineto
+stroke
+
+1 1 0 0 setcmykcolor  
+newpath
+78.48948527991536  104.83858992465551  moveto
+132.35615194658203  104.83858992465551  lineto stroke
+0 1 1 0 setcmykcolor  
+gsave
+  0 1 1 0 setcmykcolor   
+  105.4228186132487 104.83858992465551   1.8853333333333337 1.8899999999999988  0 360 0 ellipse fill
+grestore
+
+%%Trailer
+end
+grestore

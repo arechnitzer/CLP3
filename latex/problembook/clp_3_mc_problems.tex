@@ -1,0 +1,212 @@
+\documentclass[12pt,letterpaper, openany]{book}
+
+\usepackage{clp_problems_header}
+\usepackage{clp_multi_macros}
+\graphicspath{{./figures/}}
+
+\makeatletter
+\newcommand{\leqnomode}{\tagsleft@true}
+\newcommand{\reqnomode}{\tagsleft@false}
+\makeatother
+
+
+\usepackage{qhas} %question-hint-answer-solution - Andrew's hacking was here.
+%\usepackage{qhas_hack} %question-hint-answer-solution - use for editing
+
+%\makeatletter
+%\let\Ref\@refstar
+%\makeatother
+
+\usepackage{xr}
+   \externaldocument[CLP3-]{clp_3_mc_text} 
+   \externaldocument[CLP200-]{clp_3_mc_text} 
+   \externaldocument[CLP101-]{clp_2_ic_text} 
+   \externaldocument[CLP100-]{clp_1_dc_text} 
+   \newcommand{\eref}[2]{\ref*{#1-#2}}
+%   \newcommand{\eref}[2]{\Ref{#1-#2}}
+
+%\newcommand{\dee}[1]{\mathrm{d}#1}
+%\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cL}{\mathcal{L}}
+%\newcommand{\cV}{\mathcal{V}}
+%\newcommand{\Si}{\Sigma}
+\newcommand{\Ga}{\Gamma}
+%\newcommand{\vom}{\pmb{\omega}}
+\newcommand{\dst}{\displaystyle}
+%\newcommand{\vom}{\pmb{\omega}}
+\newcommand{\llt}{\left<}
+\newcommand{\rgt}{\right>}
+\newcommand{\vd}{\mathbf{d}}
+\newcommand{\vw}{\mathbf{w}}
+%\newcommand{\he}{\mathbf{e}}
+%\newcommand{\vg}{\mathbf{g}}
+%\newcommand{\vt}{\mathbf{t}}
+%\newcommand{\vp}{\mathbf{p}}
+\newcommand{\vq}{\mathbf{q}}
+\newcommand{\vs}{\mathbf{s}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\reqnomode
+
+%% Cover image, not numbered
+\setcounter{page}{0}\includepdf[noautoscale=false]{figures/clp3-exercises.pdf}
+
+\begin{titlepage} 
+\begin{center} 
+\textsc{\LARGE
+CLP-3 Multivariable Calculus\\[2ex]
+Exercises
+}\\[2ex]
+
+\vspace{5ex}
+\hrule
+\vspace{5ex}
+
+\begin{tabular}{ccc}
+\large  Joel \textsc{Feldman}  
+& \large \qquad Andrew \textsc{Rechnitzer} 
+&\large  \qquad Elyse \textsc{Yeager}
+\end{tabular}
+
+\end{center}
+\vspace{2ex}
+\hrule
+
+\vfill
+\textsc{This document was typeset on \today.}
+\end{titlepage}
+
+\section*{Legal stuff}
+\begin{itemize}
+ \item Copyright \copyright\ 2016--20 Joel Feldman, Andrew Rechnitzer and Elyse Yeager.
+
+\item In the near future this will be licensed under the 
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International 
+License. You can view a copy of the license at \\
+\url{http://creativecommons.org/licenses/by-nc-sa/4.0/}.
+\begin{center}
+ \includegraphics{figures/by-nc-sa.pdf}
+\end{center}
+\end{itemize}
+
+\newpage
+% \section*{Issues to be sorted}
+% \begin{itemize}
+%  \item 
+% \end{itemize}
+
+\frontmatter
+
+\chapter{How to use this book}
+\input{howtouse}
+
+\addtocontents{toc}{\protect\hypertarget{toc}{}}
+\tableofcontents
+
+\mainmatter
+
+\part{The questions}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\chapter{Vectors and Geometry in Two and Three Dimensions}
+\chaptermark{Vectors and Geometry}
+\setcounter{section}{0}
+\section{Points}
+\input{problems/prob_s1.1}
+\section{Vectors}
+\input{problems/prob_s1.2}
+%\setcounter{section}{3}
+\section{Equations of Lines in 2d}
+\input{problems/prob_s1.3}
+\section{Equations of Planes in 3d}
+\input{problems/prob_s1.4}
+\section{Equations of Lines in 3d}
+\input{problems/prob_s1.5}
+%\setcounter{section}{6}
+\section{Curves and their Tangent Vectors}
+\input{problems/prob_s1.6}
+\section{Sketching Surfaces in 3d}
+\input{problems/prob_s1.7}
+%\section{Cylinders}
+%\input{problems/prob_s1.8}
+%\section{Quadric Surfaces}
+%\input{problems/prob_s1.9}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Partial Derivatives}
+\section{Limits}
+\input{problems/prob_s2.1}
+\section{Partial Derivatives}
+\input{problems/prob_s2.2}
+\section{Higher Order Derivatives}
+\input{problems/prob_s2.3}
+%\setcounter{section}{3}
+\section{The Chain Rule}
+\input{problems/prob_s2.4}
+\section{Tangent Planes and Normal Lines}
+\input{problems/prob_s2.5}
+\section{Linear Approximations and Error}
+\input{problems/prob_s2.6}
+\section{Directional Derivatives and the Gradient}
+\input{problems/prob_s2.7}
+\setcounter{section}{8}
+%%\section{Optional --- Solving the Wave Equation}
+%%\input{problems/prob_s2.8}
+\section{Maximum and Minimum Values}
+\input{problems/prob_s2.9}
+\section{Lagrange Multipliers}
+\input{problems/prob_s2.10}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Multiple Integrals}
+\section{Double Integrals}
+\input{problems/prob_s3.1}
+\section{Double Integrals in Polar Coordinates}
+\input{problems/prob_s3.2}
+\section{Applications of Double Integrals}
+\input{problems/prob_s3.3}
+%\setcounter{section}{4}
+\section{Surface Area}
+\input{problems/prob_s3.4}
+\section{Triple Integrals}
+\input{problems/prob_s3.5}
+\section{Triple Integrals in Cylindrical Coordinates}
+\input{problems/prob_s3.6}
+\section{Triple Integrals in Spherical Coordinates}
+\input{problems/prob_s3.7}
+%\section{ Optional --- Integrals in General Coordinates}
+%\input{problems/prob_s3.8}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\closeoutputstream{thehints}
+\closeoutputstream{theanswers}
+\closeoutputstream{thesolutions}
+
+\newpage
+\part{Hints to problems}
+\input{hints.foo}
+
+\newpage
+\part{Answers to problems}
+\input{answers.foo}
+
+\newpage
+\part{Solutions to problems}
+\input{solutions.foo}
+
+\end{document}
+
+
+

@@ -1,0 +1,75 @@
+%!PS-Adobe-3.0
+%%BoundingBox:       0.0 0.0     96.8 140.0
+%%Title:              
+%%Created by:        Figure.java
+%%Date:              Tue Dec 18 22:28:23 PST 2018
+%%EndComments
+
+gsave
+
+%% ellipse library
+
+/ellipsedict 10 dict def        %% arguments: xcentre ycentre xradius yradius
+ellipsedict /emtrx matrix put  %%            startangle endangle closetype
+
+/ellipse                       %% closetype: 0 for open, 1 for chord, 2 for wedge
+    {ellipsedict begin
+       /closetype exch def
+       /endangle exch def      /startangle exch def
+       /yrad exch def          /xrad exch def
+       /y exch def             /x exch def
+       /savematrix emtrx currentmatrix def
+    x y translate
+    xrad  yrad  scale
+    newpath
+    closetype 2 eq  {0 0 moveto} if
+    0 0 1 startangle endangle arc
+    closetype 1 eq  {closepath} if
+    closetype 2 eq  {closepath} if
+    savematrix setmatrix
+    end
+    } def
+
+%%  Figure2ps dictionary
+
+/Figure2psDict 30 dict def
+Figure2psDict begin
+  /iscp false def
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+newpath -1.0 -1.0 moveto 97.8 -1.0 lineto 97.8 141.0 lineto -1.0 141.0 lineto closepath clip
+/Helvetica 10 setpsfont
+0.5 setlinewidth
+newpath
+0.0  10.769230769230774  moveto
+96.8  10.769230769230774  lineto stroke
+newpath
+10.755555555555555  3.552713678800501E-15  moveto
+10.755555555555555  140.0  lineto stroke
+  10.755555555555555 10.769230769230774   21.51111111111111 21.53846153846154   60.0 90.0   0  ellipse stroke
+newpath
+64.53333333333332  10.769230769230774  moveto
+64.53333333333332  4.307692307692312  lineto stroke
+4.0 setlinewidth
+0.7 setgray
+newpath
+43.02222222222221  66.72779532145603  moveto
+43.02222222222221  113.50114476797877  lineto stroke
+0.0 setgray
+2.0 setlinewidth
+newpath
+10.755555555555555  10.769230769230774  moveto
+10.755555555555555  118.46153846153847  lineto stroke
+newpath
+10.755555555555555  10.769230769230774  moveto
+64.53333333333335  104.03350502293955  lineto stroke
+  10.755555555555555 10.769230769230774   107.55555555555554 107.6923076923077   60.0 90.0   0  ellipse stroke
+
+%%Trailer
+end
+grestore

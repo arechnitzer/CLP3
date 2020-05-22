@@ -1,0 +1,37 @@
+% To create a .eps file, use the command
+%      dvips -E -o file.eps figure
+% Use gv file.eps to check the bounding box.
+% Then to convert the .eps file to a .pdf file while
+% preserving the bounding box, use
+%         epstopdf  file.eps
+% or 
+%         ps2pdf -dEPSCrop file.eps
+
+\documentclass[12pt]{article}
+
+
+\usepackage{amsmath,amsthm,amsfonts, amssymb, mathtools, mathabx}
+\usepackage{../clp_macros}
+\usepackage{../clp_multi_macrosS}
+\usepackage{nicefrac}
+
+
+\thispagestyle{empty}
+\input figMac
+\def\figdir{}
+
+
+\begin{document}
+
+
+
+\null\vskip1in
+
+
+%\centerline{\figput{cart5}}
+%\centerline{\figput{cyl5}}
+\centerline{\figput{spher9}}
+%\centerline{\figput{mobiusA}}
+
+
+\end{document}

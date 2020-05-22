@@ -1,0 +1,1115 @@
+%\documentclass[12pt]{article}
+\newcommand{\vt}{\mathbf{t}}
+
+\questionheader{ex:s2.5}
+
+
+%%%%%%%%%%%%%%%%%%
+\subsection*{\Conceptual}
+%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\Instructions{Questions~\ref{prob_s1.0first} through \ref{prob_s1.0last} provide practice with.}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+Is it reasonable to say that the surfaces $x^2+y^2+(z-1)^2=1$ and
+$x^2+y^2+(z+1)^2=1$ are tangent to each other at $(0,0,0)$?
+\end{question}
+
+\begin{hint}
+What are the tangent planes to the two surfaces at $(0,0,0)$?
+\end{hint}
+
+\begin{answer}
+Yes. The plane $z=0$ is the tangent plane to both surfaces at $(0,0,0)$.
+\end{answer}
+
+\begin{solution}
+Write $F(x,y,z) = x^2+y^2+(z-1)^2-1$ and $G(x,y,z) = x^2+y^2+(z+1)^2-1$.
+Let $S_1$ denote the surface $F(x,y,z)=0$ and $S_2$ denote the surface 
+$G(x,y,z)=0$.
+First note that $F(0,0,0)=G(0,0,0)=0$ so that the point $(0,0,0)$ lies
+on both $S_1$ and $S_2$. The gradients of $F$ and $G$ are 
+\begin{align*}
+\vnabla F(x,y,z)
+  &=\llt\pdiff{F}{x}(x,y,z)\,,\,
+        \pdiff{F}{y}(x,y,z)\,,\,
+        \pdiff{F}{z}(x,y,z)\rgt 
+    =\llt 2x\,,\,2y\,,\,2(z-1)\rgt \\
+\vnabla G(x,y,z)
+  &=\llt\pdiff{G}{x}(x,y,z)\,,\,
+        \pdiff{G}{y}(x,y,z)\,,\,
+        \pdiff{G}{z}(x,y,z)\rgt 
+    =\llt 2x\,,\,2y\,,\,2(z+1)\rgt 
+\end{align*}
+In particular,
+\begin{equation*}
+\vnabla F(0,0,0)=\llt 0,0,-2\rgt\qquad
+\vnabla G(0,0,0)=\llt 0,0,2\rgt
+\end{equation*}
+so that the vector $\hk=-\frac{1}{2}\vnabla F(0,0,0)
+                       =\frac{1}{2}\vnabla G(0,0,0)$
+is normal to both surfaces at $(0,0,0)$. So the tangent plane to 
+both $S_1$ and $S_2$ at $(0,0,0)$ is
+\begin{equation*}
+\hk\cdot\llt x-0,y-0,z-0\rgt=0\qquad\text{or}\qquad z=0
+\end{equation*}
+Denote by $P$ the plane $z=0$. 
+Thus $S_1$ is tangent to $P$ at $(0,0,0)$ and $P$ is tangent to $S_2$ 
+at $(0,0,0)$. So it is reasonable to say that $S_1$ and $S_2$ are tangent at
+$(0,0,0)$.
+\end{solution}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}\label{tan_line_plane}
+Let the point $\vr_0= (x_0,y_0,z_0)$ lie on the surface $G(x,y,z)=0$.
+Assume that $\vnabla G(x_0,y_0,z_0)\ne\vZero$. Suppose that the 
+parametrized curve $\vr(t)=\big(x(t),y(t),z(t)\big)$ is contained in the surface
+and that $\vr(t_0)=\vr_0$. Show that the tangent line to the curve at $\vr_0$
+lies in the tangent plane to $G=0$ at $\vr_0$.
+
+\end{question}
+
+\begin{hint}
+Apply the chain rule to $G\big(\vr(t)\big)=0$.
+\end{hint}
+
+\begin{answer}
+See the solution.
+\end{answer}
+
+\begin{solution} 
+Denote by $S$ the surface $G(x,y,z)=0$ and by $C$ the parametrized curve 
+$\vr(t)=\big(x(t),y(t),z(t)\big)$. To start, we'll find the tangent plane to $S$ at $\vr_0$ and the tangent line to $C$ at $\vr_0$.  
+\begin{itemize}
+\item
+The tangent vector to $C$ at $\vr_0$ is 
+$\llt x'(t_0)\,,\,y'(t_0)\,,\,z'(t_0) \rgt$, so the parametric equations for
+the tangent line to $C$ at $\vr_0$ are
+\begin{equation*}
+x-x_0 = t x'(t_0)\qquad
+y-y_0 = t y'(t_0)\qquad
+z-z_0 = t z'(t_0)
+\tag{$E_1$}\end{equation*}
+
+\item
+The gradient 
+$\llt\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\,,\,
+\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\,,\,
+\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\rgt$ is a normal vector 
+to the surface $S$ at $(x_0,y_0,z_0)$. So the tangent plane
+to the surface $S$ at $(x_0,y_0,z_0)$ is
+\begin{equation*}
+\llt\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\,,\,
+\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\,,\,
+\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\rgt \cdot
+\llt x-x_0\,,\, y-y_0\,,\,z-z_0\rgt = 0
+\end{equation*}
+or
+\begin{equation*}
+\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\ (x-x_0)
++\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\ (y-y_0)
++\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\ (z-z_0) = 0
+\tag{$E_2$}\end{equation*}
+
+\end{itemize}
+Next, we'll show that the tangent vector  
+$\llt x'(t_0)\,,\,y'(t_0)\,,\,z'(t_0) \rgt$ to $C$ at $\vr_0$ and the normal vector $\llt\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\,,\,
+\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\,,\,
+\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\rgt$ to $S$ at $\vr_0$ are 
+perpendicular to each other. To do so, we observe that,
+for every $t$, the point $\big(x(t),y(t),z(t)\big)$
+lies on the surface $G(x,y,z)=0$ and so obeys
+\begin{align*}
+G\big(x(t),y(t),z(t)\big) =0
+\end{align*}
+Differentiating this equation with respect to $t$ gives,
+by the chain rule,
+\begin{align*}
+0&= \diff{}{t}G\big(x(t),y(t),z(t)\big) \\
+&=\pdiff{G}{x}\big( x(t)\,,\,y(t)\,,\,z(t)\big)\ x'(t)
++\pdiff{G}{y}\big( x(t)\,,\,y(t)\,,\,z(t)\big)\ y'(t)
++\pdiff{G}{z}\big( x(t)\,,\,y(t)\,,\,z(t)\big)\ z'(t)
+\end{align*}
+Then setting $t=t_0$ gives 
+\begin{equation*}
+\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\ x'(t_0)
++\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\ y'(t_0)
++\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\ z'(t_0) = 0
+\tag{$E_3$}
+\end{equation*}
+Finally, we are in a position to show that if $(x,y,z)$ is any point on 
+the tangent line to $C$ at $\vr_0$, then $(x,y,z)$ is also on the 
+tangent plane to $S$ at $\vr_0$. As $(x,y,z)$ is on the tangent line to $C$ 
+at $\vr_0$ then there is a $t$ such that, by $(E_1)$,
+\begin{align*}
+&\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\ \textcolor{blue}{\{x-x_0\}}
++\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\ \textcolor{blue}{\{y-y_0\}}
++\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\ \textcolor{blue}{\{z-z_0\}}
+\\
+&=\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\ 
+               \textcolor{blue}{\big\{ t\,x'(t_0)\big\}}
++\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\ 
+               \textcolor{blue}{\big\{ t\,y'(t_0)\big\}}
++\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\ 
+               \textcolor{blue}{\big\{ t\,z'(t_0)\big\}}\\
+&=\textcolor{blue}{t}\left[\pdiff{G}{x}\big( x_0\,,\,y_0\,,\,z_0\big)\ 
+                \textcolor{blue}{x'(t_0)}
++\pdiff{G}{y}\big( x_0\,,\,y_0\,,\,z_0\big)\ 
+                \textcolor{blue}{y'(t_0)}
++\pdiff{G}{z}\big( x_0\,,\,y_0\,,\,z_0\big)\ 
+                 \textcolor{blue}{z'(t_0)} \right]
+=0
+\end{align*}
+by $(E_3)$. That is, $(x,y,z)$ obeys the equation, $(E_2)$, of the tangent plane to $S$ at $\vr_0$ and so is on that tangent plane.  So the tangent 
+line to $C$ at $\vr_0$ is contained in the tangent plane to $S$ at $\vr_0$.
+
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+Let $F(x_0,y_0,z_0)=G(x_0,y_0,z_0)=0$ and let the vectors
+$\vnabla F(x_0,y_0,z_0)$ and $\vnabla G(x_0,y_0,z_0)$ be nonzero and not
+be parallel to each other. Find the equation of the normal plane to the 
+curve of intersection of the surfaces $F(x,y,z)=0$ and $G(x,y,z)=0$ at
+$(x_0,y_0,z_0)$. By definition, that normal plane is the plane through
+$(x_0,y_0,z_0)$ whose normal vector is the tangent vector to the curve of
+intersection at $(x_0,y_0,z_0)$. 
+\end{question}
+
+\begin{hint}
+To find a tangent vector to the curve of intersection of the 
+surfaces $F(x,y,z)=0$ and $G(x,y,z)=0$ at $(x_0,y_0,z_0)$,
+use Q[\ref{tan_line_plane}] twice, once for the surface $F(x,y,z)=0$ and
+once for the surface $G(x,y,z)=0$.
+\end{hint}
+
+\begin{answer}
+The normal plane is $\vn\cdot\llt x-x_0\,,\,y-y_0\,,\,z-z_0\rgt =0$,
+where the normal vector 
+$\vn = \vnabla F(x_0,y_0,z_0)\times \vnabla G(x_0,y_0,z_0)$.
+\end{answer}
+
+\begin{solution}
+Use $S_1$ to denote the surface $F(x,y,z)=0$, 
+    $S_2$ to denote the surface $G(x,y,z)=0$ and 
+    $C$ to denote the curve of intersection of $S_1$ and $S_2$.
+\begin{itemize}
+\item
+Since $C$ is contained in $S_1$, the tangent line to $C$ at $(x_0,y_0,z_0)$
+is contained in the tangent plane to $S_1$ at $(x_0,y_0,z_0)$, by 
+Q[\ref{tan_line_plane}]. In particular, any tangent vector, $\vt$, to 
+$C$ at $(x_0,y_0,z_0)$ must be perpendicular to $\vnabla F(x_0,y_0,z_0)$,
+the normal vector to $S_1$ at $(x_0,y_0,z_0)$.
+
+\item
+Since $C$ is contained in $S_2$, the tangent line to $C$ at $(x_0,y_0,z_0)$
+is contained in the tangent plane to $S_2$ at $(x_0,y_0,z_0)$, by 
+Q[\ref{tan_line_plane}]. In particular, any tangent vector, $\vt$, to 
+$C$ at $(x_0,y_0,z_0)$ must be perpendicular to $\vnabla G(x_0,y_0,z_0)$,
+the normal vector to $S_2$ at $(x_0,y_0,z_0)$.
+\end{itemize}
+So any tangent vector to $C$ at $(x_0,y_0,z_0)$ must be perpendiular to both
+$\vnabla F(x_0,y_0,z_0)$ and $\vnabla G(x_0,y_0,z_0)$.
+One such tangent vector is
+\begin{align*}
+\vt = \vnabla F(x_0,y_0,z_0)\times \vnabla G(x_0,y_0,z_0)
+\end{align*}
+(Because the vectors $\vnabla F(x_0,y_0,z_0)$ and $\vnabla G(x_0,y_0,z_0)$
+are nonzero and not parallel, $\vt$ is nonzero.) So the normal plane in 
+question passes through $(x_0,y_0,z_0)$ and has normal vector $\vn=\vt$.
+Consquently, the normal plane is
+\begin{equation*}
+\vn\cdot\llt x-x_0\,,\,y-y_0\,,\,z-z_0\rgt =0 \qquad\text{where }
+\vn=\vt=\vnabla F(x_0,y_0,z_0)\times \vnabla G(x_0,y_0,z_0)
+\end{equation*}
+
+
+\end{solution}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+Let $f(x_0,y_0)=g(x_0,y_0)$ and let 
+$\llt f_x(x_0,y_0), f_y(x_0,y_0)\rgt\ne \llt g_x(x_0,y_0), g_y(x_0,y_0)\rgt$. Find the equation of the tangent line to the 
+curve of intersection of the surfaces $z=f(x,y)$ and $z=g(x,y)$ at
+$(x_0\,,\,y_0\,,\,z_0=f(x_0,y_0))$.
+\end{question}
+
+\begin{hint}
+To find a tangent vector to the curve of intersection of the 
+surfaces $z=f(x,y)$ and $z=g(x,y)$ at $(x_0,y_0,z_0)$,
+use Q[\ref{tan_line_plane}] twice, once for the surface $z=f(x,y)$ and
+once for the surface $z=g(x,y)$.
+\end{hint}
+
+\begin{answer}
+Tangent line is
+\begin{align*}
+x&=x_0+t\big[g_y(x_0,y_0)-f_y(x_0,y_0)\big] \\
+y&=y_0+t\big[f_x(x_0,y_0)-g_x(x_0,y_0)\big] \\
+z&=z_0+ t\big[f_x(x_0,y_0)g_y(x_0,y_0)-f_y(x_0,y_0)g_x(x_0,y_0)\big]
+\end{align*}
+\end{answer}
+
+\begin{solution}
+Use $S_1$ to denote the surface $z=f(x,y)$, 
+    $S_2$ to denote the surface $z=g(x,y)$ and 
+    $C$ to denote the curve of intersection of $S_1$ and $S_2$.
+\begin{itemize}
+\item
+Since $C$ is contained in $S_1$, the tangent line to $C$ at $(x_0,y_0,z_0)$
+is contained in the tangent plane to $S_1$ at $(x_0,y_0,z_0)$, by 
+Q[\ref{tan_line_plane}]. In particular, any tangent vector, $\vt$, to 
+$C$ at $(x_0,y_0,z_0)$ must be perpendicular to $-f_x(x_0,y_0)\,\hi
+-f_y(x_0,y_0)\,\hj+\hk$,
+the normal vector to $S_1$ at $(x_0,y_0,z_0)$.
+(See Theorem \eref{CLP200}{thm tan plane f} in the CLP-3 text.)
+
+\item
+Since $C$ is contained in $S_2$, the tangent line to $C$ at $(x_0,y_0,z_0)$
+is contained in the tangent plane to $S_2$ at $(x_0,y_0,z_0)$, by 
+Q[\ref{tan_line_plane}]. In particular, any tangent vector, $\vt$, to 
+$C$ at $(x_0,y_0,z_0)$ must be perpendicular to $-g_x(x_0,y_0)\,\hi
+-g_y(x_0,y_0)\,\hj+\hk$,
+the normal vector to $S_2$ at $(x_0,y_0,z_0)$.
+\end{itemize}
+So any tangent vector to $C$ at $(x_0,y_0,z_0)$ must be perpendicular to
+both of the vectors $-f_x(x_0,y_0)\,\hi-f_y(x_0,y_0)\,\hj+\hk$ and
+$-g_x(x_0,y_0)\,\hi -g_y(x_0,y_0)\,\hj+\hk$.
+One such tangent vector is
+\begin{align*}
+&\vt = \big[-f_x(x_0,y_0)\,\hi - f_y(x_0,y_0)\,\hj+\hk\big]\times 
+       \big[-g_x(x_0,y_0)\,\hi - g_y(x_0,y_0)\,\hj+\hk\big] \\
+    &=\det\left[\begin{matrix}
+                     \hi &        \hj &   \hk \\
+           -f_x(x_0,y_0) & -f_y(x_0,y_0) & 1 \\
+           -g_x(x_0,y_0) & -g_y(x_0,y_0) & 1
+                \end{matrix}\right] \\
+    &=\llt g_y(x_0,y_0)-f_y(x_0,y_0)\,,\,
+           f_x(x_0,y_0)-g_x(x_0,y_0)\,,\,
+           f_x(x_0,y_0)g_y(x_0,y_0)-f_y(x_0,y_0)g_x(x_0,y_0)\rgt
+\end{align*}
+So the tangent line in question passes through $(x_0,y_0,z_0)$ and has 
+direction vector $\vd=\vt$. Consquently, the tangent line is 
+\begin{equation*}
+\llt x-x_0\,,\,y-y_0\,,\,z-z_0\rgt = t\,\vd
+\end{equation*}
+or
+\begin{align*}
+x&=x_0+t\big[g_y(x_0,y_0)-f_y(x_0,y_0)\big] \\
+y&=y_0+t\big[f_x(x_0,y_0)-g_x(x_0,y_0)\big] \\
+z&=z_0+ t\big[f_x(x_0,y_0)g_y(x_0,y_0)-f_y(x_0,y_0)g_x(x_0,y_0)\big]
+\end{align*}
+
+
+\end{solution}
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+\subsection*{\Procedural}
+%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}[M200 2009A] %1a
+Let $\displaystyle f(x,y)=\frac{x^2y}{x^4+2y^2}$.
+Find the tangent plane to the surface $z = f(x,y)$ at the point
+$\left( -1\,,\,1\,,\,\frac{1}{3}\right)$.
+\end{question}
+
+%\begin{hint}
+%
+%\end{hint}
+
+\begin{answer}
+$2x+y+9z=2$
+\end{answer}
+
+\begin{solution}
+We are going to use Theorem \eref{CLP200}{thm tan plane f} in the CLP-3 text.
+To do so, we need the first order derivatives of $f(x,y)$ 
+at $(x,y)=(-1,1)$. So we find them first.
+\begin{alignat*}{3}
+f_x(x,y)&=\frac{2xy}{x^4+2y^2}-\frac{x^2y(4x^3)}{{(x^4+2y^2)}^2}\qquad &
+f_x(-1,1)&=-\frac{2}{3} +\frac{4}{3^2}=-\frac{2}{9}
+\\
+f_y(x,y)&=\frac{x^2}{x^4+2y^2}-\frac{x^2y(4y)}{{(x^4+2y^2)}^2}\qquad &
+f_y(-1,1)&=\frac{1}{3} -\frac{4}{3^2}=-\frac{1}{9}
+\end{alignat*}
+
+The tangent plane is
+\begin{align*}
+z&=f(-1,1) + f_x(-1,1)\,(x+1) + f_y(-1,1)\,(y-1)
+ =\frac{1}{3} -\frac{2}{9}\,(x+1) -\frac{1}{9}\,(y-1) \\
+ &=\frac{2}{9}-\frac{2}{9}x-\frac{1}{9}y
+\end{align*}
+or $2x+y+9z=2$.
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}[M200 2015D] %1c
+Find the tangent plane to
+\begin{equation*}
+\frac{27}{\sqrt{x^2+y^2+z^2+3}}=9
+\end{equation*}
+at the point $(2, 1, 1)$.
+\end{question}
+
+%\begin{hint}
+%
+%\end{hint}
+
+\begin{answer}
+$2x+y+z = 6$
+\end{answer}
+
+\begin{solution}
+The equation of the given surface is of the form $G(x,y,z)=9$
+with $G(x,y,z) =\frac{27}{\sqrt{x^2+y^2+z^2+3}}$. So,
+by Theorem \eref{CLP200}{thm tan plane G} in the CLP-3 text, a normal
+vector to the surface at $(2,1,1)$ is
+\begin{align*}
+\vnabla G(2,1,1)
+  &=-\frac{1}{2}\ \frac{27}{(x^2+y^2+z^2+3)^{3/2}}\big(2x\,,\,2y\,,\,2z\big)
+                                          \bigg|_{(x,y,z)=(2,1,1)} \\
+  &=-\llt 2\,,\,1\,,\,1\rgt
+\end{align*}
+and the equation of the tangent plane is
+\begin{equation*}
+-\llt 2\,,\,1\,,\,1\rgt\cdot \llt x-2\,,\,y-1\,,\,z-1\rgt=0\qquad\text{or}\qquad
+2x+y+z = 6
+\end{equation*}
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+Find the equations of the tangent plane and the normal line to the graph
+of the specified function at the specified point.
+\begin{enumerate}[(a)]
+\item
+$f(x,y)=x^2-y^2$ at $(-2,1)$
+
+\item
+$f(x,y)=e^{xy}$ at $(2,0)$
+\end{enumerate}
+\end{question}
+
+%\begin{hint}
+%\end{hint}
+
+\begin{answer}
+(a)  The tangent plane is  $4x+2y+z=-3$
+      and the normal line is  $\llt x,y,z\rgt=\llt -2,1,3\rgt+t\llt 4,2,1\rgt$.
+
+(b) The tangent plane is  $2y-z=-1$
+      and the normal line is  $\llt x,y,z\rgt=\llt 2,0,1\rgt+t\llt 0,2,-1\rgt$.
+
+
+\end{answer}
+
+\begin{solution}
+(a)
+The specified graph is $z=f(x,y)=x^2-y^2$ or $F(x,y,z)=x^2-y^2-z=0$. 
+Observe that $f(-2,1)=3$. The vector 
+\begin{align*}
+\vnabla F(-2,1,3) 
+&= \llt F_x(x,y,z),F_y(x,y,z),F_z(x,y,z)\rgt\Big|_{(x,y,z)=(-2,1,3)} \\
+&= \llt 2x,-2y,-1\rgt\Big|_{(x,y,z)=(-2,1,3)} \\
+&= \llt -4,-2,-1\rgt
+\end{align*} 
+is a normal vector to the graph at $(-2,1,3)$. 
+So the tangent plane is
+\begin{equation*}
+-4(x+2)-2(y-1)-(z-3)=0\text{ or } 4x+2y+z=-3
+\end{equation*}
+and the normal line is 
+\begin{equation*}
+\llt x,y,z\rgt=\llt -2,1,3\rgt+t\llt 4,2,1\rgt
+\end{equation*}
+
+(b)
+The specified graph is $z=f(x,y)=e^{xy}$ or $F(x,y,z)=e^{xy}-z=0$. 
+Observe that $f(2,0)=1$. The vector 
+\begin{align*}
+\vnabla F(2,0,1) 
+&= \llt F_x(x,y,z),F_y(x,y,z),F_z(x,y,z)\rgt\Big|_{(x,y,z)=(2,0,1)} \\
+&= \llt ye^{xy},xe^{xy},-1\rgt\Big|_{(x,y,z)=(2,0,1)} \\
+&= \llt 0,2,-1\rgt
+\end{align*} 
+is a normal vector to the graph at $(2,0,1)$. 
+So the tangent plane is
+\begin{equation*}
+0(x-2)+2(y-0)-(z-1)=0\text{ or } 2y-z=-1
+\end{equation*}
+and the normal line is 
+\begin{equation*}
+\llt x,y,z\rgt=\llt 2,0,1\rgt+t\llt 0,2,-1\rgt
+\end{equation*}
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}[M200 2005D] %4
+Consider the surface $z = f(x,y)$ defined implicitly by the equation 
+$xyz^2 + y^2 z^3 = 3 + x^2$. Use a 3--dimensional gradient vector 
+to find the equation of the tangent plane to this surface at the point
+$(-1, 1, 2)$. Write your answer in the form $z = ax + by + c$, where 
+$a$, $b$ and $c$ are constants.
+\end{question}
+
+%\begin{hint}
+%
+%\end{hint}
+
+\begin{answer}
+$z = -\frac{3}{4} x- \frac{3}{2} y + \frac{11}{4}$
+\end{answer}
+
+\begin{solution}
+We may use $G(x,y,z) = xyz^2 + y^2 z^3 - 3 - x^2 = 0$ as an equation for
+the surface.  Note that $(-1,1,2)$ really is on the surface since
+\begin{align*}
+G(-1,1,2) = (-1)(1)(2)^2 + (1)^2 (2)^3 - 3 - (-1)^2 
+          = -4 + 8 - 3 - 1
+          =0
+\end{align*}
+By Theorem \eref{CLP200}{thm tan plane G} in the CLP-3 text, since
+\begin{alignat*}{5}
+G_x(x,y,z)&=yz^2 -2x \qquad & 
+    G_x(-1,1,2)&=6  \\
+G_y(x,y,z)&=xz^2 +2yz^3 \qquad & 
+    G_y(-1,1,2)&=12  \\
+G_z(x,y,z)&=2xyz+3y^2z^2 \qquad & 
+    G_z(-1,1,2)&=8  
+\end{alignat*}
+one normal vector to the surface at $(-1,1,2)$ is 
+ $\vnabla G(-1,1,2) = \llt 6\,,\,12\,,\,8\rgt$ and an equation
+of the tangent plane to the surface at $(-1,1,2)$ is
+\begin{align*}
+\llt 6\,,\,12\,,\,8\rgt \cdot
+     \llt x+1\,,\,y-1\,,\,z-2\rgt = 0\qquad\text{or}\qquad
+6x+12 y+ 8z = 22
+\end{align*}
+or
+\begin{equation*}
+z = -\frac{3}{4} x- \frac{3}{2} y +\frac{11}{4}
+\end{equation*}
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}[M200 2008D] %1
+A surface is given by
+\begin{equation*}
+z = x^2 - 2xy + y^2 .
+\end{equation*}
+
+\begin{enumerate}[(a)]
+\item
+Find the equation of the tangent plane to the surface at $x = a$, $y = 2a$.
+
+\item 
+For what value of $a$ is the tangent plane parallel to the plane 
+$x - y + z = 1$?
+\end{enumerate}
+\end{question}
+
+%\begin{hint}
+%
+%\end{hint}
+
+\begin{answer}
+(a) $2ax -2ay +z = -a^2$\qquad
+(b) $a=\frac{1}{2}$.
+\end{answer}
+
+\begin{solution}
+(a)
+The surface is $G(x,y,z)=z-x^2+2xy-y^2=0$. When $x=a$ and $y=2a$
+ and $(x,y,z)$ is on the surface, we have $z= a^2-2(a)(2a) +(2a)^2=a^2$.
+So, by Theorem \eref{CLP200}{thm tan plane G} in the CLP-3 text, 
+a normal vector to this surface at $(a,2a,a^2)$ is
+\begin{align*}
+\vnabla G(a,2a,a^2) = \llt -2x+2y\,,\,2x-2y\,,\,1\rgt\Big|_{(x,y,z)=(a,2a,a^2)}
+                    = \llt 2a\,,\,-2a\,,\,1\rgt
+\end{align*}
+and the equation of the tangent plane is 
+\begin{align*}
+\llt 2a\,,\,-2a\,,\,1\rgt\cdot\llt x-a\,,\,y-2a\,,\,z-a^2\rgt =0
+\qquad\text{or}\qquad
+2ax -2ay +z = -a^2
+\end{align*}
+
+(b) The two planes are parallel when their two normal vectors,
+namely $\llt 2a\,,\,-2a\,,\,1\rgt$ and $\llt 1\,,\,-1\,,\,1\rgt$,
+are parallel. This is the case if and only if $a=\frac{1}{2}$.
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}[M200 2010D] %1b
+Find the tangent plane and normal line to the surface 
+$z=f(x,y)=\frac{2y}{x^2+y^2}$ at $(x,y)=(-1,2)$.
+\end{question}
+
+%\begin{hint}
+%
+%\end{hint}
+
+\begin{answer}
+The tangent plane is $\frac{8}{25}x-\frac{6}{25}y-z=-\frac{8}{5}$.\\ 
+  \null\hskip0.3in   The normal line is 
+   $\llt x,y,z\rgt = \llt -1,2,\frac{4}{5}\rgt 
+                  +t \llt \frac{8}{25}\,,\,-\frac{6}{25}\,,\,-1\rgt$.
+\end{answer}
+
+\begin{solution}
+The first order partial derivatives of $f$ are
+\begin{alignat*}{3}
+f_x(x,y) & = -\frac{4xy}{{(x^2+y^2)}^2}\quad &
+      f_x(-1,2) & = \frac{8}{25} \\
+f_y(x,y) & = \frac{2}{x^2+y^2}-\frac{4y^2}{{(x^2+y^2)}^2}\quad &
+      f_y(-1,2) & = \frac{2}{5}-\frac{16}{25}
+                  =-\frac{6}{25} \\
+\end{alignat*}
+So, by Theorem \eref{CLP200}{thm tan plane f} in the CLP-3 text, 
+a normal vector to the surface at $(x,y)=(-1,2)$ is
+$\llt \frac{8}{25}\,,\,-\frac{6}{25}\,,\,-1\rgt$.
+As $f(-1,2)= \frac{4}{5}$, the tangent plane is
+\begin{align*}
+\llt \frac{8}{25}\,,\,-\frac{6}{25}\,,\,-1\rgt\cdot\llt x+1\,,\,y-2\,,\,
+         z -\frac{4}{5}\rgt=0\quad \text{or}\quad
+\frac{8}{25}x-\frac{6}{25}y-z=-\frac{8}{5} % =-\frac{40}{25}
+\end{align*} 
+and the normal line is
+\begin{align*}
+\llt x,y,z\rgt = \llt -1,2,\frac{4}{5}\rgt 
+                  +t \llt \frac{8}{25}\,,\,-\frac{6}{25}\,,\,-1\rgt
+\end{align*}
+\end{solution}
+
+\begin{question}[M200 2013D] %1f
+Find all the points on the surface $x^2 + 9y^2 + 4z^2 = 17$ 
+where the tangent plane is parallel to the plane $x - 8z = 0$.
+\end{question}
+
+\begin{hint}
+Let $(x,y,z)$ be a desired point. Then  
+\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt %\itemindent-15pt
+\item 
+$(x,y,z)$ must be on the surface and
+\item
+the normal vector to the surface at $(x,y,z)$ must be parallel to the
+plane's normal vector.
+\end{itemize}
+\end{hint}
+
+\begin{answer}
+$\pm(1,0,-2)$
+\end{answer}
+
+\begin{solution}
+A normal vector to the surface $x^2 + 9y^2 + 4z^2 = 17$
+at the point $(x,y,z)$ is $\llt 2x\,,\, 18y\,,\,8z\rgt$. 
+A normal vector to the plane $x - 8z = 0$ is $\llt 1\,,\,0\,,\,-8\rgt$.
+So we want $\llt 2x\,,\, 18y\,,\,8z\rgt$ to be parallel to
+$\llt 1\,,\,0\,,\,-8\rgt$, i.e. to be a nonzero constant times
+$\llt 1\,,\,0\,,\,-8\rgt$. This is the case whenever $y=0$ and $z=-2x$
+with $x\ne 0$. In addition, we want $(x,y,z)$ to lie on the surface
+$x^2 + 9y^2 + 4z^2 = 17$. So we want $y=0$, $z=-2x$ and
+\begin{align*}
+17= x^2 + 9y^2 + 4z^2 =x^2 +4(-2x)^2=17x^2
+\implies x=\pm 1
+\end{align*} 
+So the allowed points are $\pm(1,0,-2)$.
+\end{solution}
+
+\begin{question}[M200 2014D] %4
+Let $S$ be the surface $z = x^2 + 2y^2 + 2y - 1$. Find all points 
+$P (x_0,y_0,z_0)$ on $S$ with $x_0 \ne 0$ such that the normal line 
+at $P$ contains the origin $(0,0,0)$.
+\end{question}
+
+\begin{hint}
+First find a parametric equation for the normal line to $S$ at $(x_0,y_0,z_0)$.
+Then the requirement that $(0,0,0)$ lies on that normal line gives 
+three equations in the four unknowns $x_0,y_0,z_0$ and $t$. The requirement
+that $(x_0,y_0,z_0)$ lies on $S$ gives a fourth equation. Solve this system of four equations.
+\end{hint}
+
+
+\begin{answer}
+$\big(\frac{1}{\sqrt{2}}\,,\,-1\,,\,-\frac{1}{2}\big)$
+and 
+  $\big(-\frac{1}{\sqrt{2}}\,,\,-1\,,\,-\frac{1}{2}\big)$
+\end{answer}
+\begin{solution}
+The equation of $S$ is of the form $G(x,y,z) = x^2 + 2y^2 + 2y-z = 1$.
+So one normal vector to $S$ at the point $(x_0,y_0,z_0)$ is 
+\begin{equation*}
+\vnabla G(x_0,y_0,z_0)  = 2x_0\,\hi + (4y_0+2)\,\hj -\hk
+\end{equation*}
+and the normal line to $S$ at $(x_0,y_0,z_0)$ is
+\begin{equation*}
+(x,y,z) = (x_0,y_0,z_0) +t\llt 2x_0\,,\,4y_0+2\,,\, -1\rgt
+\end{equation*}
+For this normal line to pass through the origin, there must be a $t$
+with
+\begin{align*}
+(0,0,0) = (x_0,y_0,z_0) +t\llt 2x_0\,,\,4y_0+2\,,\, -1\rgt
+\end{align*}
+or
+\begin{align*}
+x_0 + 2x_0\,t & =0 \tag{E1}\\
+y_0 +(4y_0+2)t &=0 \tag{E2}\\
+z_0 -t &=0 \tag{E3}
+\end{align*}
+Equation (E3) forces $t=z_0$. Substituting this into equations (E1) and (E2)
+gives
+\begin{align*}
+x_0(1+2z_0) & =0 \tag{E1}\\
+y_0 +(4y_0+2)z_0 &=0 \tag{E2}
+\end{align*}
+The question specifies that $x_0\ne 0$, so (E1) forces $z_0=-\frac{1}{2}$.
+Substituting $z_0=-\frac{1}{2}$ into (E2) gives
+\begin{equation*}
+-y_0-1=0 \implies y_0=-1
+\end{equation*}
+Finally $x_0$ is determined by the requirement that $(x_0,y_0,z_0)$
+must lie on $S$ and so must obey
+\begin{equation*}
+z_0 = x_0^2 + 2y_0^2 + 2y_0 - 1
+\implies -\frac{1}{2} = x_0^2 + 2(-1)^2 +2(-1)-1
+\implies x_0^2 = \frac{1}{2}
+%\implies x_0 = \pm \frac{1}{\sqrt{2}}
+\end{equation*}
+So the allowed points $P$ are 
+  $\big(\frac{1}{\sqrt{2}}\,,\,-1\,,\,-\frac{1}{2}\big)$
+and 
+  $\big(-\frac{1}{\sqrt{2}}\,,\,-1\,,\,-\frac{1}{2}\big)$.
+\end{solution}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}[M226 2009D] %1b
+Find all points on the hyperboloid $z^2=4x^2+y^2-1$
+where the tangent plane is parallel to the plane $2x-y+z=0$.
+\end{question}
+
+\begin{hint}
+Two (nonzero) vectors $\vv$ and $\vw$ are parallel if and only if there  
+is a $t$ such that $\vv=t\,\vw$.
+Don't forget that the point has to be on the hyperboloid.
+\end{hint}
+
+\begin{answer}
+$\pm \big(\half,-1,-1\big)$
+\end{answer}
+
+\begin{solution} 
+Let $(x_0,y_0,z_0)$  be a point on the hyperboloid $z^2=4x^2+y^2-1$
+where the tangent plane is parallel to the plane $2x-y+z=0$. A normal vector
+to the plane $2x-y+z=0$ is $\llt 2,-1,1\rgt$. Because the hyperboloid is
+$G(x,y,z)=4x^2+y^2-z^2-1$ and $\vnabla G(x,y,z) = \llt 8x,2y,-2z\rgt$,
+ a normal vector to the hyperboloid at $(x_0,y_0,z_0)$ is 
+$\vnabla G(x_0,y_0,z_0)=\llt 8x_0,2y_0,-2z_0\rgt$. 
+So $(x_0,y_0,z_0)$ satisfies the required conditions if and only if there is a nonzero $t$ obeying
+\begin{align*}
+&\llt 8x_0,2y_0,-2z_0\rgt =t\llt 2,-1,1\rgt \text{ and }
+ z_0^2=4x_0^2+y_0^2-1\\
+&\iff x_0=\frac{t}{4},\ y_0=z_0=-\frac{t}{2}\text{ and }
+ z_0^2=4x_0^2+y_0^2-1\\
+&\iff \frac{t^2}{4}= \frac{t^2}{4}+ \frac{t^2}{4}-1\text{ and }
+     x_0=\frac{t}{4},\ y_0=z_0=-\frac{t}{2}\\
+& \iff t=\pm 2\qquad
+(x_0,y_0,z_0)=\pm \big(\half,-1,-1\big)
+\end{align*}
+
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+Find a vector of length $\sqrt{3}$ which is tangent to the curve of
+intersection of the surfaces $\ z^2=4x^2+9y^2\ $ and $\ 6x+3y+2z=5\ $ at $\ (2,1,-5)$.
+\end{question}
+
+\begin{hint}
+The curve lies in the surface $z^2=4x^2+9y^2$. So the tangent vector to the
+curve is perpendicular to the normal vector to $z^2=4x^2+9y^2$ at $(2,1,-5)$.
+
+The curve also lies in the surface $6x+3y+2z=5$. So the tangent vector to the
+curve is also perpendicular to the normal vector to $6x+3y+2z=5$ at $(2,1,-5)$.
+\end{hint}
+
+\begin{answer}
+$\pm\sqrt{3}\frac{\llt 3,14,-30\rgt}{|\llt 3,14,-30\rgt|}
+=\pm\sqrt{\frac{3}{1105}}\llt 3,14,-30\rgt$
+\end{answer}
+
+\begin{solution}
+One vector normal to the surface $F(x,y,z)=4x^2+9y^2-z^2=0$ at $(2,1,-5)$ is
+\begin{align*}
+\vnabla F(2,1,-5) = \llt 8x,18y,-2z\rgt\Big|_{(2,1,-5)}=\llt 16,18,10\rgt
+\end{align*}
+One vector normal to the surface $G(x,y,z)=6x+3y+2z=5$ at 
+$(2,1,-5)$ is 
+\begin{align*}
+\vnabla G(2,1,-5) = \llt 6,3,2\rgt
+\end{align*}
+Now
+\begin{itemize}
+\item
+The curve lies in the surface $z^2=4x^2+9y^2$. So the tangent vector to the
+curve at $(2,1,-5)$ is perpendicular to the normal vector 
+$\frac{1}{2}\llt 16,18,10\rgt=\llt 8,9,5\rgt$.
+\item
+The curve also lies in the surface $6x+3y+2z=5$. So the tangent vector to the
+curve at $(2,1,-5)$ is also perpendicular to the normal vector $\llt 6,3,2\rgt$.
+\item
+So the tangent vector to the curve at $(2,1,-5)$ is parallel to
+\begin{align*}
+\llt 8,9,5\rgt\times \llt 6,3,2\rgt
+=\det\left[\begin{matrix}
+                     \hi & \hj & \hk \\
+                     8   &  9  & 5 \\
+                     6   &  3  & 2
+                \end{matrix}\right]
+=\llt 3,14,-30\rgt
+\end{align*}
+\end{itemize}
+The desired vectors are
+\begin{equation*}
+\pm\sqrt{3}\frac{\llt 3,14,-30\rgt}{|\llt 3,14,-30\rgt|}
+=\pm\sqrt{\frac{3}{1105}}\llt 3,14,-30\rgt
+\end{equation*}
+\end{solution}
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+\subsection*{\Application}
+%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+Find all horizontal planes that are tangent to the surface with equation
+\begin{equation*}
+z=xy e^{-(x^2+y^2)/2}
+\end{equation*}
+What are the largest and smallest values of $z$ on this surface?
+\end{question}
+
+\begin{hint}
+At the highest and lowest points of the surface, the tangent plane is horizontal.
+\end{hint}
+
+\begin{answer}
+The horizontal tangent planes are $z=0$, $z=e^{-1}$ and $z=-e^{-1}$.
+The largest and smallest values of $z$ are $e^{-1}$ and $-e^{-1}$, respectively.
+\end{answer}
+
+\begin{solution}
+Let $(x_0,y_0,z_0)$ be any point on the surface. A vector
+normal to the surface at $(x_0,y_0,z_0)$ is
+\begin{align*}
+&\vnabla\Big(xy e^{-(x^2+y^2)/2}-z\Big)\bigg|_{(x_0,y_0,z_0)} 
+\\&\hskip1in
+=\llt y_0 e^{-(x_0^2+y_0^2)/2}-x_0^2y_0 e^{-(x_0^2+y_0^2)/2},
+      x_0 e^{-(x_0^2+y_0^2)/2}-x_0y_0^2 e^{-(x_0^2+y_0^2)/2},-1\rgt
+\end{align*}
+The tangent plane to the surface at $(x_0,y_0,z_0)$ is horizontal
+if and only if this vector is vertical, which is the case 
+if and only if its $x$- and $y$-components are
+zero, which in turn is the case if and only if
+\begin{align*}
+&y_0(1-x_0^2)=0\text{ and }x_0(1-y_0^2)=0\\
+&\iff\big\{y_0=0\text{ or }x_0=1\text{ or }x_0=-1\big\}
+   \text{ and }\big\{x_0=0\text{ or }y_0=1\text{ or }y_0=-1\big\}\\
+&\iff (x_0,y_0)=(0,0)\text{ or }(1,1)\text{ or }(1,-1)
+   \text{ or }(-1,1)\text{ or }(-1,-1)
+\end{align*}
+The values of $z_0$ at these points are $0$, $e^{-1}$, $-e^{-1}$, $-e^{-1}$ 
+and $e^{-1}$, respectively. So the horizontal tangent planes are
+$z=0$, $z=e^{-1}$ and $z=-e^{-1}$.
+At the highest and lowest points of the surface, the tangent plane is horizontal.
+So the largest and smallest values of $z$ are $e^{-1}$ and $-e^{-1}$, respectively.
+
+
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}[M200 2004A] %5
+Let $S$ be the surface
+\begin{equation*}
+xy-2x+yz+x^2+y^2+z^3=7
+\end{equation*}
+\begin{enumerate}[(a)]
+\item
+Find the tangent plane and normal line to the surface $S$
+at the point $(0,2,1)$.
+\item  
+The equation defining $S$ implicitly defines $z$ as a 
+function of $x$ and $y$ for $(x,y,z)$ near $(0,2,1)$. Find expressions for 
+$\pdiff{z}{x}$ and 
+$\pdiff{z}{y}$. Evaluate
+$\pdiff{z}{y}$ at $(x,y,z)=(0,2,1)$.
+\item   
+Find an expression for 
+$\frac{\partial^2\hfil z\hfil\,}{\partial x\partial y}$. 
+\end{enumerate}
+\end{question}
+
+%\begin{hint}
+%
+%\end{hint}
+
+\begin{answer}
+(a) $y+z=3$\qquad $\vr(t)=\llt 0,2,1\rgt+t\llt 0,5,5\rgt$
+
+(b) $z_x(x,y)=\frac{2-2x-y}{y+3z(x,y)^2}$\qquad
+    $z_y(x,y)=-\frac{x+2y+z(x,y)}{y+3z(x,y)^2}$\qquad
+    $z_y(0,2)=-1$
+
+(c) $z_{xy}(x,y)=\frac{1}{y+3z(x,y)^2}
+-\frac{2-2x-y}{{[y+3z(x,y)^2]}^2}
+\left(1-6z(x,y)\frac{x+2y+z(x,y)}{y+3z(x,y)^2}\right)$
+\end{answer}
+
+\begin{solution}
+(a) 
+ A normal vector to the surface at $(0,2,1)$ is
+\begin{align*}
+\vnabla\big(xy-2x+yz+x^2+y^2+z^3-7\big)\big|_{(0,2,1)}
+&=\llt y-2+2x\,,\,x+z+2y\,,\,y+3z^2\rgt\big|_{(0,2,1)}\\
+&=\llt 0, 5, 5\rgt
+\end{align*}
+So the tangent plane is 
+\begin{align*}
+0(x-0)+5(y-2)+5(z-1)=0\text{ or }y+z=3
+\end{align*}
+The vector parametric equations for the normal line are
+\begin{equation*}
+\vr(t)=\llt 0,2,1\rgt+t\llt 0,5,5\rgt
+\end{equation*}
+
+(b) Differentiating
+\begin{equation*}
+xy-2x+y\,z(x,y)+x^2+y^2+z(x,y)^3=7
+\end{equation*}
+gives
+\begin{alignat*}{5}
+y-2+y\,z_x(x,y)+2x+3z(x,y)^2z_x(x,y)&=0 &   &\implies &
+z_x(x,y)&=\frac{2-2x-y}{y+3z(x,y)^2}\\
+x+z(x,y)+y\,z_y(x,y)+2y+3z(x,y)^2z_y(x,y)&=0 &   &\implies &
+z_y(x,y)&=-\frac{x+2y+z(x,y)}{y+3z(x,y)^2}
+\end{alignat*}
+In particular, at $(0,2,1)$, $z_y(0,2)=-\frac{4+1}{2+3}=-1$. 
+
+(c)
+Differentiating $z_x$ with respect to $y$ gives
+\begin{align*}
+z_{xy}(x,y)
+&=-\frac{1}{y+3z(x,y)^2}
+-\frac{2-2x-y}{{[y+3z(x,y)^2]}^2}\big(1+6z(x,y)z_y(x,y)\big)\\
+&=-\frac{1}{y+3z(x,y)^2}
+-\frac{2-2x-y}{{[y+3z(x,y)^2]}^2}
+\left(1-6z(x,y)\frac{x+2y+z(x,y)}{y+3z(x,y)^2}\right)
+\end{align*}
+As an alternate solution, we could also  differentiate $z_y$ with respect 
+to $x$. This gives
+\begin{align*}
+z_{yx}(x,y)
+&=-\frac{1+z_x(x,y)}{y+3z(x,y)^2}
++\frac{x+2y+z(x,y)}{{[y+3z(x,y)^2]}^2}6z(x,y)z_x(x,y)\cr
+&=-\frac{1}{y+3z(x,y)^2}\left(1+\frac{2-2x-y}{y+3z(x,y)^2}\right)
++\frac{x+2y+z(x,y)}{{[y+3z(x,y)^2]}^2}6z(x,y)\frac{2-2x-y}{y+3z(x,y)^2}
+\end{align*}
+\end{solution}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}[M200 2000D] %1
+\begin{enumerate}[(a)]
+\item
+Find a vector perpendicular at the point
+$(1,1,3)$ to the surface with equation $x^2+z^2=10$.
+
+\item 
+Find a vector tangent at the same point to the curve of 
+intersection of the surface in part (a) with surface $y^2+z^2=10$.
+
+\item 
+Find parametric equations for the line tangent to that curve
+at that point.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+(b) If $\vv$ is tangent, at a point $P$, to the curve of intersection of the
+surfaces $S_1$ and $S_2$, then $\vv$ 
+\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt %\itemindent-15pt
+\item
+has to be tangent to $S_1$ at $P$, and so must be perpendicular to the 
+normal vector to $S_1$ at $P$ and
+\item
+has to be tangent to $S_2$ at $P$, and so must be perpendicular to the 
+normal vector to $S_2$ at $P$.
+\end{itemize}
+\end{hint}
+
+
+\begin{answer}
+(a) $\llt 1,0,3\rgt$\qquad
+(b) $\llt 3,3,-1\rgt$\qquad
+(c) $\vr(t)=\llt 1,1,3\rgt+t\llt 3,3,-1\rgt$
+\end{answer}
+
+\begin{solution}
+(a) 
+A vector perpendicular to $x^2+z^2=10$ at $(1,1,3)$ is
+\begin{equation*}
+\vnabla(x^2+z^2)\big|_{(1,1,3)}
+=(2x\hi+2z\hk)\big|_{(1,1,3)}
+=2\hi+6\hk\hbox{ or }
+\frac{1}{2} \llt 2,0,6\rgt=\llt 1,0,3\rgt
+\end{equation*}
+
+(b) A vector perpendicular to $y^2+z^2=10$ at $(1,1,3)$ is
+\begin{equation*}
+\vnabla(y^2+z^2)\big|_{(1,1,3)}
+=(2y\hj+2z\hk)\big|_{(1,1,3)}
+=2\hj+6\hk\hbox{ or }\frac{1}{2} \llt 0,2,6\rgt=\llt 0,1,3\rgt
+\end{equation*}
+A vector is tangent to the specified curve at the specified point if and only
+if it  perpendicular to both $(1,0,3)$ and $(0,1,3)$. One such vector is
+\begin{equation*}
+\llt 0,1,3\rgt\times\llt1,0,3\rgt
+=\det\left[\begin{matrix}
+                     \hi & \hj & \hk \\
+                     0   &  1  & 3 \\
+                     1   &  0  & 3
+                \end{matrix}\right]
+=\llt 3,3,-1\rgt
+\end{equation*}
+
+(c) The specified tangent line passes through $(1,1,3)$ and has direction
+vector $\llt 1,1,3\rgt$ and so has vector parametric equation
+$$
+\vr(t)=\llt 1,1,3\rgt+t\llt 3,3,-1\rgt
+$$
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}[M200 2000A] %2
+Let $P$ be the point where the curve 
+\begin{equation*}
+\vr(t) = t^3\,\hi + t\,\hj + t^2\,\hk,\qquad (0 \le t <\infty)
+\end{equation*}
+ intersects the surface 
+\begin{equation*}
+z^3 + xyz -2 = 0
+\end{equation*}
+Find the (acute) angle between the curve and the surface at $P$. 
+\end{question}
+
+\begin{hint}
+ The angle between the curve and the surface at $P$ is $90^\circ$
+minus the angle between the curve and the normal vector to the surface at $P$.
+\end{hint}
+
+\begin{answer}
+$49.11^\circ$ (to two decimal places)
+\end{answer}
+
+\begin{solution}
+$\vr(t)=\llt x(t)\,,\,y(t)\,,\,z(t)\rgt$ intersects $z^3 + xyz -2 = 0$ when
+\begin{equation*}
+z(t)^3+x(t)\,y(t)\,z(t)-2=0\iff \big(t^2\big)^3 + \big(t^3)(t)\big(t^2\big)-2=0
+\iff 2t^6=2\iff t=1
+\end{equation*}
+since $t$ is required to be positive.
+The direction vector for the curve at $t=1$ is
+\begin{equation*}
+\vr'(1)=3\,\hi+\hj+2\,\hk
+\end{equation*}
+A normal vector for the surface at $\vr(1)=\llt 1,1,1\rgt$ is
+\begin{equation*}
+\vnabla(z^3+xyz)\big|_{(1,1,1)}=[yz\hi+xz\hj+(3z^2+xy)\hk]_{(1,1,1)}
+=\hi+\hj+4\hk
+\end{equation*}
+The angle $\theta$ between the curve and the normal vector to the surface
+is determined by
+\begin{align*}
+\big|\llt 3,1,2\rgt\big|\,\big|\llt 1,1,4\rgt\big|\cos\theta
+             =\llt 3,1,2\rgt \cdot\llt 1,1,4\rgt
+&\iff \sqrt{14}\sqrt{18}\cos\theta=12 \\
+&\iff \sqrt{7\times 36}\cos\theta=12 \\
+&\iff \cos\theta=\frac{2}{\sqrt{7}} \\
+&\iff \theta=40.89^\circ
+\end{align*}
+The angle between the curve and the surface is 
+$90-40.89=49.11^\circ$ (to two decimal places).
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+Find the distance from the point $(1,1,0)$ to the circular
+paraboloid with equation $z=x^2+y^2$.
+\end{question}
+
+\begin{hint}
+Let $D(x,y)$ be the distance (or the square of the distance) from $(1,1,0)$ 
+to the point $\big(x,y, x^2+y^2)$ on the paraboloid. We wish to 
+minimize $D(x,y)$. That is, to find the lowest point on the graph 
+$z=D(x,y)$. At this lowest point, the tangent plane to $z=D(x,y)$ is 
+horizontal.
+\end{hint}
+
+\begin{answer}
+$\frac{\sqrt{3}}{2}$
+\end{answer}
+
+\begin{solution}
+Let $(x,y,z)$ be any point on the paraboloid $z=x^2+y^2$. The square of the
+distance from $(1,1,0)$ to this point is 
+\begin{align*}
+D(x,y)&=(x-1)^2+(y-1)^2+z^2\\
+&=(x-1)^2+(y-1)^2+{(x^2+y^2)}^2
+\end{align*}
+We wish to minimize $D(x,y)$. That is, to find the lowest point on the
+graph $z=D(x,y)$. At this lowest point, the tangent plane to $z=D(x,y)$
+is horizontal. So at the minimum, the normal vector to $z=D(x,y)$
+has $x$ and $y$ components zero. So
+\begin{alignat*}{5}
+0&=\pdiff{D}{x}(x,y)&&= 2(x-1)+2(x^2+y^2)(2x)\\
+0&=\pdiff{D}{y}(x,y)&&= 2(y-1)+2(x^2+y^2)(2y)
+\end{alignat*}
+By symmetry (or multiplying the first equation by $y$, multiplying the
+second equation by $x$ and subtracting) the solution will have $x=y$
+with
+\begin{equation*}
+0=2(x-1)+2(x^2+x^2)(2x)=8x^3+2x-2
+\end{equation*}
+Observe that the value of $8x^3+2x-2=2(4x^3+x-1)$ at $x=\frac{1}{2}$ is $0$.
+(See Appendix \eref{CLP101}{ap:roots} of the CLP-2 text for some 
+useful tricks that can help you guess roots of polynomials with 
+integer coefficients.) So $\big(x-\frac{1}{2}\big)$ is a factor of
+\begin{equation*}
+4x^3+x-1
+={\textstyle 4\big(x^3+\frac{x}{4}-\frac{1}{4}\big)
+            =4\big(x-\frac{1}{2}\big)\big(x^2+\half x+\half\big)}
+\end{equation*}
+and the minimizing $(x,y)$ obeys $x=y$ and
+\begin{equation*}
+0=8x^3+2x-2
+=8\big(x-\half\big)\big(x^2+\half x+\half\big)=0
+\end{equation*}
+By the quadratic root formula, $x^2+\half x+\half$ has no real roots, so
+the only solution is $x=y=\half$, $z=\big(\half\big)^2+\big(\half\big)^2=\half$
+and the distance is $\sqrt{\big(\half-1\big)^2+\big(\half-1\big)^2
++\big(\half\big)^2}=\frac{\sqrt{3}}{2}$.
+\end{solution}

@@ -1,0 +1,208 @@
+%!PS-Adobe-3.0
+%%BoundingBox:       0.0 0.0     184.0 103.2
+%%Title:              
+%%Created by:        Figure.java
+%%Date:              Sat Jul 21 23:05:35 PDT 2018
+%%EndComments
+
+gsave
+
+%% ellipse library
+
+/ellipsedict 10 dict def        %% arguments: xcentre ycentre xradius yradius
+ellipsedict /emtrx matrix put  %%            startangle endangle closetype
+
+/ellipse                       %% closetype: 0 for open, 1 for chord, 2 for wedge
+    {ellipsedict begin
+       /closetype exch def
+       /endangle exch def      /startangle exch def
+       /yrad exch def          /xrad exch def
+       /y exch def             /x exch def
+       /savematrix emtrx currentmatrix def
+    x y translate
+    xrad  yrad  scale
+    newpath
+    closetype 2 eq  {0 0 moveto} if
+    0 0 1 startangle endangle arc
+    closetype 1 eq  {closepath} if
+    closetype 2 eq  {closepath} if
+    savematrix setmatrix
+    end
+    } def
+
+%%  Figure2ps dictionary
+
+/Figure2psDict 30 dict def
+Figure2psDict begin
+  /iscp false def
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+newpath -1.0 -1.0 moveto 185.0 -1.0 lineto 185.0 104.2 lineto -1.0 104.2 lineto closepath clip
+/Helvetica 10 setpsfont
+gsave
+  0.9 setgray
+  92.0 11.466666666666654   81.31727983645297 81.08157757605747   45.0 135.0   0 ellipse fill
+grestore
+gsave
+  0.9 setgray
+newpath
+  34.5  68.8  moveto
+  37.375  63.209999999999994  lineto
+  40.25  57.906666666666666  lineto
+  43.12499999999999  52.89  lineto
+  46.0  48.160000000000004  lineto
+  48.875  43.71666666666666  lineto
+  51.74999999999999  39.56  lineto
+  54.62499999999999  35.69  lineto
+  57.49999999999999  32.10666666666666  lineto
+  60.375  28.80999999999999  lineto
+  63.24999999999999  25.799999999999997  lineto
+  66.125  23.07666666666666  lineto
+  69.0  20.639999999999993  lineto
+  71.875  18.489999999999995  lineto
+  74.75  16.626666666666658  lineto
+  77.625  15.04999999999999  lineto
+  80.5  13.75999999999999  lineto
+  83.375  12.756666666666655  lineto
+  86.25  12.039999999999988  lineto
+  89.125  11.609999999999989  lineto
+  92.0  11.466666666666654  lineto
+  94.875  11.609999999999987  lineto
+  97.75  12.039999999999987  lineto
+  100.625  12.756666666666653  lineto
+  103.5  13.759999999999987  lineto
+  106.375  15.049999999999986  lineto
+  109.25  16.62666666666665  lineto
+  112.125  18.489999999999988  lineto
+  115.0  20.639999999999986  lineto
+  117.875  23.076666666666654  lineto
+  120.75  25.79999999999999  lineto
+  123.625  28.80999999999999  lineto
+  126.5  32.106666666666655  lineto
+  129.375  35.68999999999998  lineto
+  132.25  39.55999999999999  lineto
+  135.125  43.71666666666666  lineto
+  138.0  48.160000000000004  lineto
+  140.875  52.89  lineto
+  143.75  57.906666666666666  lineto
+  146.625  63.209999999999994  lineto
+  149.5  68.8  lineto
+fill grestore
+
+0.5 setlinewidth
+newpath
+0.0  11.466666666666654  moveto
+184.0  11.466666666666654  lineto stroke
+newpath
+92.0  -1.4210854715202004E-14  moveto
+92.0  103.2  lineto stroke
+  92.0 11.466666666666654   81.31727983645297 81.08157757605747   0.0 180.0   0  ellipse stroke
+newpath
+  0.0  158.24000000000007  moveto
+  4.599999999999994  143.9296  lineto
+  9.200000000000003  130.35306666666668  lineto
+  13.800000000000011  117.51039999999999  lineto
+  18.39999999999999  105.4016  lineto
+  22.999999999999986  94.02666666666669  lineto
+  27.599999999999994  83.38560000000001  lineto
+  32.199999999999996  73.47840000000001  lineto
+  36.800000000000004  64.30506666666666  lineto
+  41.400000000000006  55.865599999999986  lineto
+  46.00000000000001  48.15999999999999  lineto
+  50.6  41.18826666666666  lineto
+  55.2  34.95039999999999  lineto
+  59.80000000000001  29.44639999999998  lineto
+  64.4  24.67626666666665  lineto
+  69.0  20.639999999999986  lineto
+  73.60000000000001  17.337599999999984  lineto
+  78.2  14.769066666666651  lineto
+  82.80000000000001  12.934399999999986  lineto
+  87.4  11.833599999999986  lineto
+  92.0  11.466666666666654  lineto
+  96.60000000000001  11.833599999999988  lineto
+  101.2  12.93439999999999  lineto
+  105.80000000000001  14.769066666666657  lineto
+  110.4  17.337599999999995  lineto
+  115.0  20.639999999999993  lineto
+  119.60000000000001  24.676266666666663  lineto
+  124.2  29.446399999999993  lineto
+  128.8  34.9504  lineto
+  133.4  41.18826666666668  lineto
+  138.0  48.160000000000004  lineto
+  142.60000000000002  55.86560000000001  lineto
+  147.20000000000002  64.30506666666668  lineto
+  151.8  73.47840000000001  lineto
+  156.4  83.38560000000001  lineto
+  161.0  94.02666666666669  lineto
+  165.60000000000002  105.40160000000004  lineto
+  170.20000000000002  117.51040000000005  lineto
+  174.8  130.35306666666673  lineto
+  179.40000000000003  143.9296000000001  lineto
+  184.0  158.24000000000007  lineto
+stroke
+
+[2 2] 1.0 setdash
+newpath
+0.0  68.8  moveto
+149.5  68.8  lineto stroke
+[  ] 0 setdash
+1.5 setlinewidth
+0 1 1 0 setcmykcolor  
+  92.0 11.466666666666654   81.31727983645297 81.08157757605747   45.0 135.0   0  ellipse stroke
+newpath
+  34.5  68.8  moveto
+  37.375  63.209999999999994  lineto
+  40.25  57.906666666666666  lineto
+  43.12499999999999  52.89  lineto
+  46.0  48.160000000000004  lineto
+  48.875  43.71666666666666  lineto
+  51.74999999999999  39.56  lineto
+  54.62499999999999  35.69  lineto
+  57.49999999999999  32.10666666666666  lineto
+  60.375  28.80999999999999  lineto
+  63.24999999999999  25.799999999999997  lineto
+  66.125  23.07666666666666  lineto
+  69.0  20.639999999999993  lineto
+  71.875  18.489999999999995  lineto
+  74.75  16.626666666666658  lineto
+  77.625  15.04999999999999  lineto
+  80.5  13.75999999999999  lineto
+  83.375  12.756666666666655  lineto
+  86.25  12.039999999999988  lineto
+  89.125  11.609999999999989  lineto
+  92.0  11.466666666666654  lineto
+  94.875  11.609999999999987  lineto
+  97.75  12.039999999999987  lineto
+  100.625  12.756666666666653  lineto
+  103.5  13.759999999999987  lineto
+  106.375  15.049999999999986  lineto
+  109.25  16.62666666666665  lineto
+  112.125  18.489999999999988  lineto
+  115.0  20.639999999999986  lineto
+  117.875  23.076666666666654  lineto
+  120.75  25.79999999999999  lineto
+  123.625  28.80999999999999  lineto
+  126.5  32.106666666666655  lineto
+  129.375  35.68999999999998  lineto
+  132.25  39.55999999999999  lineto
+  135.125  43.71666666666666  lineto
+  138.0  48.160000000000004  lineto
+  140.875  52.89  lineto
+  143.75  57.906666666666666  lineto
+  146.625  63.209999999999994  lineto
+  149.5  68.8  lineto
+stroke
+
+gsave
+  0.0 setgray
+  149.5 68.8   2.3000000000000003 2.293333333333334  0 360 0 ellipse fill
+grestore
+
+%%Trailer
+end
+grestore

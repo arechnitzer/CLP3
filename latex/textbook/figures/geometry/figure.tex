@@ -1,0 +1,75 @@
+% To create a .eps file, use the command
+%      dvips -E -o file.eps figure
+% Use gv file.eps to check the bounding box.
+% Then to convert the .eps file to a .pdf file while
+% preserving the bounding box, use
+%         epstopdf  file.eps
+% or 
+%         ps2pdf -dEPSCrop file.eps
+
+\newcommand{\llt}{\left<}
+\newcommand{\rgt}{\right>}
+\newcommand{\vd}{\mathbf{d}}
+\newcommand{\vw}{\mathbf{w}}
+
+
+\documentclass[12pt]{article}
+
+
+\usepackage{amsmath,amsthm,amsfonts, amssymb, mathtools, mathabx}
+\usepackage{../clp_macros}
+\usepackage{../clp_multi_macrosS}
+\usepackage{xcolor}
+
+
+\thispagestyle{empty}
+\input figMac
+\def\figdir{}
+
+
+\begin{document}
+
+
+
+\null\vskip1in
+\centerline{\figput{pointDistProjB}}
+
+
+%\centerline{\figput{detji}}
+%\centerline{\figput{projEg}}
+%\centerline{\figput{triangleWalk}}
+%\centerline{\figput{addSubtractMult}}
+%\centerline{\figput{ellipseLevelB}}
+%\centerline{\figput{planeDistB}}
+%\centerline{\figput{xyplaneN}}
+%\centerline{\figput{cylinderA}}
+%\centerline{\figput{hyperbolicCylinderC}}
+%\centerline{\figput{cylinderO}}
+%\centerline{\figput{merryE}}
+%\centerline{\figput{vector3d}}
+%\centerline{\figput{negmul}}
+%\centerline{\figput{basis3d}}
+%\centerline{\figput{cosineB}}
+%\centerline{\figput{cosineB}}
+%\centerline{\figput{dotProd}}
+%\centerline{\figput{projB}}
+%\centerline{\figput{pendulum3}}
+%\centerline{\figput{areaB}}
+%\centerline{\figput{pgramCross}}
+%\centerline{\figput{rigidBB}}
+%\centerline{\figput{crossRR}}
+%\centerline{\figput{pipedVolumeEg}}
+%\centerline{\figput{closestB}}
+%\centerline{\figput{planeSketch}}
+%\centerline{\figput{zedzeroPlane}}
+%\centerline{\figput{hyperboloidDD}}
+%\centerline{\figput{seatA}}
+%\centerline{\figput{spherePlane}}
+%\centerline{\figput{spherA}}
+%\centerline{\figput{cylB}}
+%\centerline{\figput{rampABC}}
+
+
+
+
+\end{document}

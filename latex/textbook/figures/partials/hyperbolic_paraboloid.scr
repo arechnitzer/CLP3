@@ -1,0 +1,65 @@
+This is hyperbolic_paraboloid.scr
+
+name hyperbolic_paraboloid
+size .8  .8
+xlimits -60 60
+ylimits -60 60
+rightmargin -.1 in
+
+setlinewidth .4
+startbezier
+-60 -20 10 50 
+-20 -20 10 -50
+finishbezier open
+
+startbezier
+20 -20 10 50 
+60 -20 10 -50
+finishbezier open
+
+startbezier
+-60 -20 40 30
+20 -20 40 -30
+finishbezier open
+
+startbezier
+-20 -20 40 30
+60 -20 40 -30
+finishbezier open
+
+startbezier
+-40.6 17.8 40 -15
+40.6 17.8  40 15
+finishbezier open
+
+setgray 1
+startpolygon
+-26.7 3.9
+-23.0 -4.4
+-7.0 -8.8
+1.1 -3.8
+-12.8 3.9
+finishpolygon filled
+
+startpolygon
+23.3 3.9
+28.9 1.1
+37.2 16
+26.1 10.4
+finishpolygon filled
+
+setgray 0
+setlinewidth .2
+setdash .75 "1.5 1.5"
+
+startbezier
+20 -20 10 50 
+60 -20 10 -50
+finishbezier open
+
+startbezier
+-60 -20 40 30
+20 -20 40 -30
+finishbezier open
+
+

@@ -1,0 +1,51 @@
+lbl file prepared by figPac Fri May 26 22:13:52 PDT 2017
+274.63
+289.08
+0
+0
+0
+2
+ 
+274.63
+289.08
+2
+0
+ 
+126.47
+-5.42
+1
+0
+$z$
+276.43
+162.61
+0
+1
+$y$
+88.53
+227.00
+2
+2
+$x$
+188.73
+200.90
+1
+2
+$\dee{\rho}$
+230.31
+113.24
+0
+1
+$\,\rho\,\dee{\varphi}$
+202.79
+42.31
+1
+0
+$\rho\sin\varphi\, \dee{\theta}$
+180.67
+234.88
+1
+2
+volume element $\dee{V}=\rho^2\sin\varphi\ \dee{\rho}\,\dee{\theta}\,\dee{\varphi}$
+-1000
+0/1/2 left/center/right
+0/1/2 bottom/center/top

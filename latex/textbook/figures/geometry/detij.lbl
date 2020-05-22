@@ -1,0 +1,51 @@
+lbl file prepared by figPac Wed Sep 11 15:23:00 PDT 2019
+441.65
+65.04
+0
+0
+0
+2
+ 
+441.65
+65.04
+2
+0
+ 
+-34.40
+28.91
+0
+1
+$\hi\times\hj=\det \left[\begin{matrix}\hi&\hj &\hk\\ 1&0&0\\ 0&1&0\end{matrix}\right]$
+75.67
+28.91
+0
+1
+$\ =\ \hi\det \left[\begin{matrix}\hi& \hj &\hk\\ 1&0&0\\ 0&1&0\end{matrix}\right]$
+178.86
+28.91
+0
+1
+$\ -\ \hj\det \left[\begin{matrix}\hi&\hj &\hk\\ 1&0&0\\ 0&1&0\end{matrix}\right]$
+278.61
+28.91
+0
+1
+$\ +\ \hk\det \left[\begin{matrix}\hi&\hj & \hk\\ 1&0&0\\ 0&1&0\end{matrix}\right]$
+75.67
+63.60
+0
+1
+$\ =\ \hi\,(0\times 0-0\times 1)$
+177.49
+63.60
+0
+1
+$\,-\,\hj\,(1\times 0-0\times 0)$
+273.80
+63.60
+0
+1
+$\,+\,\hk\,(1\times 1-0\times 0)\ =\ \hk$
+-1000
+0/1/2 left/center/right
+0/1/2 bottom/center/top

@@ -1,0 +1,51 @@
+lbl file prepared by figPac Thu Dec 26 15:24:31 PST 2013
+441.65
+65.04
+0
+0
+0
+2
+ 
+441.65
+65.04
+2
+0
+ 
+-10.32
+28.91
+0
+1
+$\det \left[\begin{matrix}a_1&a_2&a_3\\ b_1&b_2&b_3\\ c_1&c_2&c_3\end{matrix}\right]$
+75.67
+28.91
+0
+1
+$=a_1\det \left[\begin{matrix}a_1&a_2&a_3\\ b_1&b_2&b_3\\ c_1&c_2&c_3\end{matrix}\right]$
+184.36
+28.91
+0
+1
+$\ -\ a_2\det \left[\begin{matrix}a_1&a_2&a_3\\ b_1&b_2&b_3\\ c_1&c_2&c_3\end{matrix}\right]$
+297.87
+28.91
+0
+1
+$\ +\ a_3\det \left[\begin{matrix}a_1&a_2&a_3\\ b_1&b_2&b_3\\ c_1&c_2&c_3\end{matrix}\right]$
+75.67
+63.60
+0
+1
+$=a_1\,(b_2c_3-b_3c_2)$
+171.98
+63.60
+0
+1
+$\,-\,a_2\,(b_1c_3-b_3c_1)$
+273.80
+63.60
+0
+1
+$\,+\,a_3\,(b_1c_2-b_2c_1)$
+-1000
+0/1/2 left/center/right
+0/1/2 bottom/center/top

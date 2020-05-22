@@ -1,0 +1,116 @@
+%!PS-Adobe-3.0
+%%BoundingBox:       -36.0 -7.2     180.0 208.8
+%%Title:              
+%%Created by:        Figure.java
+%%Date:              Thu May 17 23:08:36 PDT 2018
+%%EndComments
+
+gsave
+
+%% ellipse library
+
+/ellipsedict 10 dict def        %% arguments: xcentre ycentre xradius yradius
+ellipsedict /emtrx matrix put  %%            startangle endangle closetype
+
+/ellipse                       %% closetype: 0 for open, 1 for chord, 2 for wedge
+    {ellipsedict begin
+       /closetype exch def
+       /endangle exch def      /startangle exch def
+       /yrad exch def          /xrad exch def
+       /y exch def             /x exch def
+       /savematrix emtrx currentmatrix def
+    x y translate
+    xrad  yrad  scale
+    newpath
+    closetype 2 eq  {0 0 moveto} if
+    0 0 1 startangle endangle arc
+    closetype 1 eq  {closepath} if
+    closetype 2 eq  {closepath} if
+    savematrix setmatrix
+    end
+    } def
+
+%%  Figure2ps dictionary
+
+/Figure2psDict 30 dict def
+Figure2psDict begin
+  /iscp false def
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+newpath -37.0 -8.2 moveto 181.0 -8.2 lineto 181.0 209.8 lineto -37.0 209.8 lineto closepath clip
+/Helvetica 10 setpsfont
+0.5 setlinewidth
+newpath
+24.480000000000025  73.14174676658146  moveto
+145.44  73.14174676658146  lineto stroke
+newpath
+-18.720000000000006  7.873139248157621  moveto
+102.23999999999998  7.873139248157621  lineto stroke
+newpath
+24.480000000000025  73.14174676658146  moveto
+-18.720000000000006  7.873139248157621  lineto stroke
+newpath
+128.16000000000003  73.14174676658146  moveto
+84.95999999999998  7.873139248157621  lineto stroke
+newpath
+2.8800000000000097  40.507443007369545  moveto
+11.520000000000016  98.78058225552715  lineto stroke
+newpath
+11.520000000000016  98.78058225552715  moveto
+132.48000000000002  98.78058225552715  lineto stroke
+newpath
+106.55999999999999  40.507443007369545  moveto
+115.19999999999999  98.78058225552715  lineto stroke
+1.5 setlinewidth
+newpath
+2.8800000000000097  40.507443007369545  moveto
+106.55999999999999  40.507443007369545  lineto stroke
+0.5 setlinewidth
+newpath
+106.55999999999999  40.507443007369545  moveto
+106.55999999999999  85.7268607518424  lineto stroke
+gsave
+  0.0 setgray
+newpath 106.55999999999999  85.7268607518424 moveto 104.55999999999999   79.7268607518424  lineto  106.55999999999999   81.2268607518424  lineto  108.55999999999999   79.7268607518424 lineto closepath fill grestore
+
+newpath
+106.55999999999999  40.507443007369545  moveto
+91.008  53.186278496315246  lineto stroke
+gsave
+  0.0 setgray
+newpath 91.008  53.186278496315246 moveto 94.39465350292356   47.844876241182654  lineto  94.49580662187824   50.342829012258555  lineto  96.9221641554184   50.94514879396331 lineto closepath fill grestore
+
+newpath
+106.55999999999999  40.507443007369545  moveto
+83.23199999999997  27.872103819657102  lineto stroke
+gsave
+  0.0 setgray
+newpath 83.23199999999997  27.872103819657102 moveto 89.46034216696962   28.97108236865058  lineto  87.18886078918095   30.01529132779587  lineto  87.55528660417961   32.488291959033674 lineto closepath fill grestore
+
+0.8 setgray
+1.5 setlinewidth
+newpath
+106.55999999999999  40.507443007369545  moveto
+137.664  40.507443007369545  lineto stroke
+0.0 setgray
+0.5 setlinewidth
+newpath
+106.55999999999999  40.507443007369545  moveto
+122.112  40.507443007369545  lineto stroke
+gsave
+  0.0 setgray
+newpath 122.112  40.507443007369545 moveto 116.112   42.507443007369545  lineto  117.612   40.507443007369545  lineto  116.112   38.507443007369545 lineto closepath fill grestore
+
+gsave
+  0.8 setgray
+  106.55999999999999 40.507443007369545   2.5919999999999996 2.2609708872236425  0 360 0 ellipse fill
+grestore
+
+%%Trailer
+end
+grestore
