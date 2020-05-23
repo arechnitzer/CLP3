@@ -389,7 +389,7 @@ vertical component of Newton's law <m>\vF =m\va</m> says that
 &amp;\rho(x)\,\sqrt{\De x^2+\De w^2}\,
 \frac{\partial^2 w}{\partial\, t^2}(x,t)
 </mrow><mrow>
-&amp;\hsip0.5in=T(x+\De x,t)\sin\theta(x+\De x,t)-T(x,t)\sin\theta(x,t)+F(x,t)\De x
+&amp;\hskip0.5in=T(x+\De x,t)\sin\theta(x+\De x,t)-T(x,t)\sin\theta(x,t)+F(x,t)\De x
 </mrow>
 </md>
 Dividing by <m>\De x</m> and taking the limit as <m>\De x\rightarrow 0</m> gives

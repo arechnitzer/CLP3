@@ -106,7 +106,7 @@ is within a distance <m>\veps</m> of <m>\vL</m>, whenever <m>\vx</m> is sufficie
 close to <m>\va</m> (i.e. within some nonzero distance of <m>\va</m>),
 without<fn>You may find the condition <q>without  being exactly <m>\va</m></q>
 a little strange, but there is a good reason for it, which we have already seen in Calculus I. In the definition
-  <m>f'(x) = \lim\limits_{x\rightarrow a \frac{f(x)-f(a)}{x-a}</m>,
+  <m>f'(x) = \lim\limits_{x\rightarrow a} \frac{f(x)-f(a)}{x-a}</m>,
 the function whose limit is being taken, namely  <m>\frac{f(x)-f(a)}{x-a}</m>,
 is not defined at all at <m>x=a</m>. This will again happen when we define
 derivatives of functions of more than one variable.
