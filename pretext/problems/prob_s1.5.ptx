@@ -176,7 +176,7 @@ Hence the point <m>(x,y,z)</m> is on the line if and only if
 <md>
 <mrow>
 \llt x,y,z\rgt &amp;= \llt \frac{1}{4}(2y+4z-6), z-1, z\rgt
-=\llt \frac{3}{2}z-2, z-1, z\rgt 
+=\llt \frac{3}{2}z-2, z-1, z\rgt
 </mrow><mrow>
 &amp;= \llt -2,-1,0\rgt+\llt \frac{3}{2},1,1\rgt z
 </mrow>
@@ -435,7 +435,7 @@ The scalar parametric equations for the line are
 x-2=t,\
 y+1=-t,\
 z+1=-t
-\ \ \hbox{or}\ \  
+\ \ \hbox{or}\ \
 x=2+t,\
 y=-1-t,\
 z=-1-t
@@ -865,7 +865,7 @@ Then the angle between <m>\vd</m> and the plane is
 </p>
 
 <sidebyside width="60%">
-  <image source="pfigs/OE13D_1.svg"/>
+  <image source="pfigs/OE13D_1"/>
 </sidebyside>
 </solution>
 </exercise>
@@ -985,7 +985,7 @@ a shadow on the plane <m>x+7y+z=32</m>. (See the diagram.) Find <m>\tilde A</m>.
 </p>
 
 <sidebyside width="66%">
-  <image source="pfigs/OE16D_1.svg"/>
+  <image source="pfigs/OE16D_1"/>
 </sidebyside>
 </li>
 </ol>

@@ -17,16 +17,16 @@ are <m>(r, \theta, z)</m>, and spherical coordinates are <m>(\rho, \theta, \varp
 </p>
 <sbsgroup widths="5% 35% 5% 35%">
 <sidebyside>
-<p>(A)</p> <image source="pfigs/surface1.svg"/>
-<p>(B)</p> <image source="pfigs/surface2.svg"/>
+<p>(A)</p> <image source="pfigs/surface1"/>
+<p>(B)</p> <image source="pfigs/surface2"/>
 </sidebyside>
 <sidebyside>
-<p>(C)</p> <image source="pfigs/surface3.svg"/>
-<p>(D)</p> <image source="pfigs/surface4.svg"/>
+<p>(C)</p> <image source="pfigs/surface3"/>
+<p>(D)</p> <image source="pfigs/surface4"/>
 </sidebyside>
 <sidebyside>
-<p>(E)</p>  <image source="pfigs/surface5.svg"/>
-<p>(F)</p> <image source="pfigs/surface6a.svg"/>
+<p>(E)</p>  <image source="pfigs/surface5"/>
+<p>(F)</p> <image source="pfigs/surface6a"/>
 </sidebyside>
 </sbsgroup>
 
@@ -138,8 +138,8 @@ In each of (a) and (b) below, you are provided with a sketch of the first quadra
 Sketch the first octant part of the corresponding graph <m>z=f(x,y)</m>.
 </p>
 <sidebyside widths="5% 35% 5% 35%">
-  <p>(a)</p>  <image source="pfigs/planeLevelA.svg"/>
-  <p>(b)</p>  <image source="pfigs/paraboloidLevelA.svg"/>
+  <p>(a)</p>  <image source="pfigs/planeLevelA"/>
+  <p>(b)</p>  <image source="pfigs/paraboloidLevelA"/>
 </sidebyside>
 </statement>
 
@@ -149,8 +149,8 @@ For each <m>C</m>, redraw the level curve <m>f(x,y)=C</m> in the plane <m>z=C</m
 
 <answer>
   <sidebyside widths="5% 35% 5% 35%">
-    <p>(a)</p>  <image source="pfigs/planeGraphB.svg"/>
-    <p>(b)</p>  <image source="pfigs/paraboloidGraphB.svg"/>
+    <p>(a)</p>  <image source="pfigs/planeGraphB"/>
+    <p>(b)</p>  <image source="pfigs/paraboloidGraphB"/>
   </sidebyside>
 </answer>
 
@@ -182,15 +182,15 @@ first octant, just by <q>filling in the gaps in the second sketch</q>.
 <sbsgroup  widths="5% 30% 30% 30%">
 <sidebyside>
 <p>(a)</p>
-<image source="pfigs/planeLevelB.svg"/>
-<image source="pfigs/planeGraphA.svg"/>
-<image source="pfigs/planeGraphB.svg"/>
+<image source="pfigs/planeLevelB"/>
+<image source="pfigs/planeGraphA"/>
+<image source="pfigs/planeGraphB"/>
 </sidebyside>
 <sidebyside>
 <p>(b)</p>
-<image source="pfigs/paraboloidLevelB.svg"/>
-<image source="pfigs/paraboloidGraphA.svg"/>
-<image source="pfigs/paraboloidGraphB.svg"/>
+<image source="pfigs/paraboloidLevelB"/>
+<image source="pfigs/paraboloidGraphA"/>
+<image source="pfigs/paraboloidGraphB"/>
 </sidebyside>
 </sbsgroup>
 </solution>
@@ -202,7 +202,7 @@ Sketch a few level curves for the function <m>f(x,y)</m> whose graph <m>z=f(x,y)
 is sketched below.
 </p>
 <sidebyside width="40%">
-<image source="pfigs/hyperCylinderGraph.svg"/>
+<image source="pfigs/hyperCylinderGraph"/>
 </sidebyside>
 </statement>
 
@@ -212,7 +212,7 @@ Draw in the plane <m>z=C</m> for several values of <m>C</m>.
 
 <answer>
   <sidebyside width="50%">
-    <image source="pfigs/hyperCylinderLevel.svg"/>
+    <image source="pfigs/hyperCylinderLevel"/>
 </sidebyside>
 </answer>
 
@@ -221,7 +221,7 @@ We first add into the sketch of the graph the horizontal planes <m>z=C</m>,
 for <m>C=3</m>, <m>2</m>, <m>1</m>, <m>0.5</m>, <m>0.25</m>.
 </p>
 <sidebyside width="40%">
-  <image source="pfigs/hyperCylinderGraphB.svg"/>
+  <image source="pfigs/hyperCylinderGraphB"/>
 </sidebyside>
 
 <p>
@@ -247,7 +247,7 @@ rather than in the plane <m>z=C</m>, gives a level curve. Doing this for each of
 <m>C=3</m>, <m>2</m>, <m>1</m>, <m>0.5</m>, <m>0.25</m> gives five level curves.
 </p>
 <sidebyside width="45%">
-  <image source="pfigs/hyperCylinderLevel.svg"/>
+  <image source="pfigs/hyperCylinderLevel"/>
 </sidebyside>
 </solution>
 </exercise>
@@ -273,15 +273,15 @@ Sketch some of the level curves of
 <sbsgroup widths="10% 50%">
 <sidebyside>
 <p>(a)</p>
-<image source="pfigs/levelEllipse.svg"/>
+<image source="pfigs/levelEllipse"/>
 </sidebyside>
 <sidebyside>
 <p>(b)</p>
-<image source="pfigs/levelHyperbola.svg"/>
+<image source="pfigs/levelHyperbola"/>
 </sidebyside>
 <sidebyside>
   <p>(c)</p>
-<image source="pfigs/levelLog.svg"/>
+<image source="pfigs/levelLog"/>
 </sidebyside>
 </sbsgroup>
 </answer>
@@ -293,7 +293,7 @@ centred on the origin with <m>x</m> semi axis <m>\sqrt{c}</m> and
 is the single point <m>(0,0)</m>.
 </p>
 <sidebyside width="50%">
-  <image source="pfigs/levelEllipse.svg"/>
+  <image source="pfigs/levelEllipse"/>
 </sidebyside>
 
 <p>
@@ -308,7 +308,7 @@ If <m>c=0</m>,  the level curve <m>xy=c=0</m>
 is the single point <m>(0,0)</m>.
 </p>
 <sidebyside width="45%">
-  <image source="pfigs/levelHyperbola.svg"/>
+  <image source="pfigs/levelHyperbola"/>
 </sidebyside>
 <p>
 (c)
@@ -341,7 +341,7 @@ If <m>c=0</m>,  the level curve <m>xe^{-y}=c=0</m>
 is the <m>y</m>-axis, <m>x=0</m>.
 </p>
 <sidebyside width="50%">
-  <image source="pfigs/levelLog.svg"/>
+  <image source="pfigs/levelLog"/>
 </sidebyside>
 </solution>
 </exercise>
@@ -353,7 +353,7 @@ Sketch the level curves of <m>f(x,y)=\frac{2y}{x^2+y^2}</m>.
 
 <answer>
   <sidebyside width="35%">
-    <image source="pfigs/OE10D_1.svg"/>
+    <image source="pfigs/OE10D_1"/>
 </sidebyside>
 </answer>
 
@@ -370,7 +370,7 @@ which is the equation of the circle of radius <m>\frac{1}{|C|}</m> centred on
 </p>
 
 <sidebyside width="35%">
-  <image source="pfigs/OE10D_1.svg"/>
+  <image source="pfigs/OE10D_1"/>
 </sidebyside>
 
 <p>
@@ -394,7 +394,7 @@ Draw a <q>contour map</q> of <m>f(x, y) = e^{-x^2 +4y^2}</m> , showing all types
 
 <answer>
   <sidebyside width="66%">
-    <image source="pfigs/OE11D_1.svg"/>
+    <image source="pfigs/OE11D_1"/>
 </sidebyside>
 </answer>
 
@@ -415,7 +415,7 @@ If <m>C \lt 0</m>, then <m>-x^2+4y^2=C \lt 0</m> is the hyperbola <m>x=\pm\sqrt{
 </p>
 
 <sidebyside width="66%">
-  <image source="pfigs/OE11D_1.svg"/>
+  <image source="pfigs/OE11D_1"/>
 </sidebyside>
 </solution>
 </exercise>
@@ -439,12 +439,12 @@ Draw a rough sketch of the surface.
 <answer>
 <sidebyside widths="10% 50%">
 <p>(a)</p>
-<image source="pfigs/OE253_11D_1a.svg"/>
+<image source="pfigs/OE253_11D_1a"/>
 </sidebyside>
 <sidebyside widths="10% 40% 25%">
 <p>(b)</p>
-<image source="pfigs/OE253_11D_1bl.svg"/>
-<image source="pfigs/OE253_11D_1br.svg"/>
+<image source="pfigs/OE253_11D_1bl"/>
+<image source="pfigs/OE253_11D_1br"/>
 </sidebyside>
 </answer>
 
@@ -462,7 +462,7 @@ That radius is <m>0</m> when <m>z=0,2</m> and increases as <m>z</m> moves away f
 <m>|z|</m>. Here is a sketch of some level curves.
 </p>
 <sidebyside width="45%">
-  <image source="pfigs/OE253_11D_1a.svg"/>
+  <image source="pfigs/OE253_11D_1a"/>
 </sidebyside>
 <p>
 (b)
@@ -477,8 +477,8 @@ first octant. The sketch on the right of the full surface.
 </p>
 
 <sidebyside widths="40% 25%" valign="middle">
-  <image source="pfigs/OE253_11D_1bl.svg"/>
-  <image source="pfigs/OE253_11D_1br.svg"/>
+  <image source="pfigs/OE253_11D_1bl"/>
+  <image source="pfigs/OE253_11D_1br"/>
 </sidebyside>
 </solution>
 </exercise>
@@ -490,8 +490,8 @@ Sketch the hyperboloid <m>z^2=4x^2+y^2-1</m>.
 
 <answer>
 <sidebyside widths="40% 25%" valign="middle">
-  <image source="pfigs/OE226_09A_l.svg"/>
-  <image source="pfigs/OE226_09A_r.svg"/>
+  <image source="pfigs/OE226_09A_l"/>
+  <image source="pfigs/OE226_09A_r"/>
  </sidebyside>
 </answer>
 
@@ -506,8 +506,8 @@ Here are two sketches of the surface. The sketch on the left only shows
 the part of the surface in the first octant  (with axes).
 </p>
 <sidebyside widths="40% 25%" valign="middle">
-  <image source="pfigs/OE226_09A_l.svg"/>
-  <image source="pfigs/OE226_09A_r.svg"/>
+  <image source="pfigs/OE226_09A_l"/>
+  <image source="pfigs/OE226_09A_r"/>
  </sidebyside>
 </solution>
 </exercise>
@@ -588,16 +588,16 @@ Sketch the graphs of
 <sbsgroup>
 <sidebyside widths="10% 40%"  valign="middle">
   <p>(a)</p>
-  <image source="pfigs/sinGraph.svg"/>
+  <image source="pfigs/sinGraph"/>
 </sidebyside>
 <sidebyside widths="10% 50%"  valign="middle">
 <p>(b)</p>
-<image source="pfigs/coneGraph.svg"/>
+<image source="pfigs/coneGraph"/>
 </sidebyside>
 <sidebyside widths="10% 28% 28%" valign="middle">
 <p>(c)</p>
-<image source="pfigs/pmidGraph.svg"/>
-<image source="pfigs/pmidGraphB.svg"/>
+<image source="pfigs/pmidGraph"/>
+<image source="pfigs/pmidGraphB"/>
 </sidebyside>
 </sbsgroup>
 </answer>
@@ -611,8 +611,8 @@ graph is just a bunch of 2-d sin graphs stacked side-by-side. This gives
 the graph on the left below.
 </p>
 <sidebyside widths="40% 50%" valign="middle">
-  <image source="pfigs/sinGraph.svg"/>
-  <image source="pfigs/coneGraph.svg"/>
+  <image source="pfigs/sinGraph"/>
+  <image source="pfigs/coneGraph"/>
  </sidebyside>
 <p>
 (b)
@@ -635,8 +635,8 @@ first octant (that is, <m>x,y,z\ge 0</m>) is the sketch below.
 </p>
 
 <sidebyside widths="28% 28%" valign="middle">
-    <image source="pfigs/pmidGraph.svg"/>
-    <image source="pfigs/pmidGraphB.svg"/>
+    <image source="pfigs/pmidGraph"/>
+    <image source="pfigs/pmidGraphB"/>
  </sidebyside>
 
 </solution>
@@ -688,15 +688,15 @@ This is a plane through <m>(4,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,2)</m>.
 Here is a sketch of the part of the plane in the first octant.
 </p>
 <sidebyside width="55%">
-  <image source="pfigs/plane.svg"/>
+  <image source="pfigs/plane"/>
 </sidebyside>
 <p>
 (c)
 This is a hyperboloid of one sheet with axis the <m>x</m>-axis.
 </p>
 <sidebyside widths="50% 40%" valign="middle">
-  <image source="pfigs/hyperboloidX_l.svg"/>
-<image source="pfigs/hyperboloidX_r.svg"/>
+  <image source="pfigs/hyperboloidX_l"/>
+<image source="pfigs/hyperboloidX_r"/>
 </sidebyside>
 <p>
 (d)
@@ -704,7 +704,7 @@ This is a circular cone centred
 on the <m>y</m>-axis.
 </p>
 <sidebyside width="60%">
-  <image source="pfigs/coneYY_r.svg"/>
+  <image source="pfigs/coneYY_r"/>
 </sidebyside>
 
 <p>(e)
@@ -712,8 +712,8 @@ This is an ellipsoid centered on the origin with semiaxes <m>3</m>,
 <m>\sqrt{12}=2\sqrt{3}</m> and <m>3</m> along the <m>x</m>, <m>y</m> and <m>z</m>-axes, respectively.
 </p>
 <sidebyside widths="40% 60%" valign="middle">
-  <image source="pfigs/ellipsoid_l.svg"/>
-     <image source="pfigs/ellipsoid_r.svg"/>
+  <image source="pfigs/ellipsoid_l"/>
+     <image source="pfigs/ellipsoid_r"/>
 </sidebyside>
 <p>
 (f)
@@ -721,22 +721,22 @@ This is a sphere of radius <m>r_b=\frac{1}{2}\sqrt{b^2+4b+97}</m> centered on
 <m>\frac{1}{2}(-4,b,-9)</m>.
 </p>
 <sidebyside width="90%">
-  <image source="pfigs/shiftSphere.svg"/>
+  <image source="pfigs/shiftSphere"/>
 </sidebyside>
 <p>
 (g)
 This is an elliptic paraboloid with axis the <m>x</m>-axis.
 </p>
 <sidebyside widths="50% 25%" valign="middle">
-<image source="pfigs/paraboloidX_l.svg"/>
-     <image source="pfigs/paraboloidX_r.svg"/>
+<image source="pfigs/paraboloidX_l"/>
+     <image source="pfigs/paraboloidX_r"/>
    </sidebyside>
 <p>
 (h)
 This is an upward openning parabolic cylinder.
 </p>
 <sidebyside width="50%">
-<image source="pfigs/parabolicCylinder.svg"/>
+<image source="pfigs/parabolicCylinder"/>
 </sidebyside>
 </answer>
 
@@ -749,7 +749,7 @@ one semiaxis of length 2 along the <m>x</m>-axis and one semiaxis of length
 Here is a sketch of the part of the surface above the <m>xy</m>--plane.
 </p>
 <sidebyside width="60%">
-  <image source="pfigs/elliptical_cylinder.svg"/>
+  <image source="pfigs/elliptical_cylinder"/>
 </sidebyside>
 <p>
 (b)
@@ -757,7 +757,7 @@ This is a plane through <m>(4,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,2)</m>.
 Here is a sketch of the part of the plane in the first octant.
 </p>
 <sidebyside width="55%">
-<image source="pfigs/plane.svg"/>
+<image source="pfigs/plane"/>
 </sidebyside>
 <p>
 (c)
@@ -771,8 +771,8 @@ is approximately <m>\frac{|x|}{4}</m>.
 This is called a hyperboloid of one sheet. Its
 </p>
 <sidebyside widths="50% 40%" valign="middle">
-<image source="pfigs/hyperboloidX_l.svg"/>
-     <image source="pfigs/hyperboloidX_r.svg"/>
+<image source="pfigs/hyperboloidX_l"/>
+     <image source="pfigs/hyperboloidX_r"/>
    </sidebyside>
 <p>
 (d)
@@ -784,7 +784,7 @@ consists of a bunch of these circles stacked sideways. This is a
 circular cone centred on the <m>y</m>-axis.
 </p>
 <sidebyside width="60%">
-<image source="pfigs/coneYY_r.svg"/>
+<image source="pfigs/coneYY_r"/>
 </sidebyside>
 
 
@@ -793,8 +793,8 @@ This is an ellipsoid centered on the origin with semiaxes <m>3</m>,
 <m>\sqrt{12}=2\sqrt{3}</m> and <m>3</m> along the <m>x</m>, <m>y</m> and <m>z</m>-axes, respectively.
 </p>
 <sidebyside widths="40% 60%" valign="middle">
-<image source="pfigs/ellipsoid_l.svg"/>
-     <image source="pfigs/ellipsoid_r.svg"/>
+<image source="pfigs/ellipsoid_l"/>
+     <image source="pfigs/ellipsoid_r"/>
 </sidebyside>
 <p>
 (f)
@@ -806,7 +806,7 @@ This is a sphere of radius <m>r_b=\frac{1}{2}\sqrt{b^2+4b+97}</m> centered on
 <m>\frac{1}{2}(-4,b,-9)</m>.
 </p>
 <sidebyside width="90%">
-<image source="pfigs/shiftSphere.svg"/>
+<image source="pfigs/shiftSphere"/>
 </sidebyside>
 <p>
 (g)
@@ -819,8 +819,8 @@ the ellipses grow at a rate proportional to <m>\sqrt{x_0}</m>. This is
 an elliptic paraboloid  with axis the <m>x</m>-axis.
 </p>
 <sidebyside widths="50% 25%" valign="middle">
-<image source="pfigs/paraboloidX_l.svg"/>
- <image source="pfigs/paraboloidX_r.svg"/>
+<image source="pfigs/paraboloidX_l"/>
+ <image source="pfigs/paraboloidX_r"/>
 </sidebyside>
 <p>
 (h)
@@ -829,7 +829,7 @@ This is called a parabolic cylinder. For any fixed <m>y_0</m>, the
 opening parabola <m>z=x^2</m> which has vertex on the <m>y</m>-axis.
 </p>
 <sidebyside width="50%">
-  <image source="pfigs/parabolicCylinder.svg"/>
+  <image source="pfigs/parabolicCylinder"/>
 </sidebyside>
 </solution>
 </exercise>

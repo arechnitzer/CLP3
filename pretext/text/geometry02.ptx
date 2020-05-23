@@ -22,8 +22,8 @@ an arrow from the point <m>(0,0,0)</m> to the point <m>(a,b,c)</m>.
 
 
 <sidebyside width="33%">
-<image source="figs/vector2d.svg"/>
-<image source="figs/vector3d.svg"/>
+<image source="figs/vector2d"/>
+<image source="figs/vector3d"/>
 </sidebyside>
 
 <p>
@@ -43,7 +43,7 @@ and its velocity vector at two different times.
 </p>
 
   <sidebyside width="29%">
-  <image source="figs/movingParticle.svg"/>
+  <image source="figs/movingParticle"/>
   </sidebyside>
 
 <p>
@@ -57,7 +57,7 @@ arrows representing the forces with their tails at the ball.
 </p>
 
 <sidebyside width="20%">
-<image source="figs/pendulum.svg"/>
+<image source="figs/pendulum"/>
 </sidebyside>
 
 
@@ -94,7 +94,7 @@ keep straight which is being referred to.
 </p>
 
 <sidebyside width="60%">
-  <image source="figs/positions.svg"/>
+  <image source="figs/positions"/>
 </sidebyside>
 
 <p>By way of summary,</p>
@@ -173,9 +173,9 @@ if <m>s \lt 0</m>, reversing the arrow's direction,
 as in the other two figures below.
 </p>
 <sidebyside widths="33% 25% 25%" valign="middle">
-  <image source="figs/addvec.svg"/>
-  <image source="figs/scalmul.svg"/>
-  <image source="figs/negmul.svg"/>
+  <image source="figs/addvec"/>
+  <image source="figs/scalmul"/>
+  <image source="figs/negmul"/>
   </sidebyside>
 <p>
 The special case of multiplication by <m>s=-1</m> appears so frequently that
@@ -194,7 +194,7 @@ are zero.
 </p>
 
 <sidebyside width="40%">
-  <image source="figs/subtract.svg"/>
+  <image source="figs/subtract"/>
 </sidebyside>
 
 <p>
@@ -299,7 +299,7 @@ The standard basis vectors in two dimensions are
 </me>
 </p>
 <sidebyside width="15%">
-  <image source="figs/basis2d.svg"/>
+  <image source="figs/basis2d"/>
 </sidebyside>
 <p>
 The standard basis vectors in three dimensions are
@@ -309,7 +309,7 @@ The standard basis vectors in three dimensions are
 </me>
 </p>
 <sidebyside width="25%">
-<image source="figs/basis3d.svg"/>
+<image source="figs/basis3d"/>
 </sidebyside>
 </statement>
 </definition>
@@ -386,8 +386,8 @@ one third of the way.
 </ul>
 </p>
     <sidebyside widths="50% 20%" valign="middle">
-    <image source="figs/addSubtractMult.svg"/>
-    <image source="figs/triangleWalk.svg"/>
+    <image source="figs/addSubtractMult"/>
+    <image source="figs/triangleWalk"/>
     </sidebyside>
 
 <p>
@@ -570,7 +570,7 @@ shaded triangle in the right hand figure of
 </p>
 
 <sidebyside width="85%">
-  <image source="figs/cosineB.svg"/>
+  <image source="figs/cosineB"/>
 </sidebyside>
 
 <p>
@@ -686,7 +686,7 @@ tells us that the angle, <m>\theta</m>, between <m>\va</m> and <m>\vb</m> obeys
 </p>
 
 <sidebyside width="40%">
-<image source="figs/dotProd.svg"/>
+<image source="figs/dotProd"/>
 </sidebyside>
 
 </example>
@@ -707,8 +707,8 @@ on the vector <m>\vb</m> is the vector from the tail of <m>\vb</m> to the point
 on the line where the perpendicular hits.
 </p>
   <sidebyside  widths="23% 33%" valign="middle">
-  <image source="figs/projA.svg"/>
-  <image source="figs/projB.svg"/>
+  <image source="figs/projA"/>
+  <image source="figs/projB"/>
   </sidebyside>
 </statement>
 
@@ -775,7 +775,7 @@ on the vector <m>\llt 1,1\rgt</m>, as in the figure
 </p>
 
       <sidebyside width="40%">
-      <image source="figs/projEg.svg"/>
+      <image source="figs/projEg"/>
       </sidebyside>
 <p>
 By Equation <xref ref="eqn_proj"/> with <m>\va=\llt 0,3\rgt</m> and <m>\vb=\llt 1,1\rgt</m>,
@@ -826,7 +826,7 @@ We'll call the constant of proportionality <m>\beta</m>.
 </p>
 
       <sidebyside width="45%">
-      <image source="figs/pendulum3.svg"/>
+      <image source="figs/pendulum3"/>
       </sidebyside>
 
 <p>
@@ -1263,7 +1263,7 @@ the sides of the parallelogram.
 </p>
 
 <sidebyside width="35%">
-<image source="figs/pgramCross.svg"/>
+<image source="figs/pgramCross"/>
 </sidebyside>
 </li>
 <li>
@@ -1351,7 +1351,7 @@ rather peculiar names <m>i</m>, <m>j</m> and <m>k</m>. The determinant of a <m>3
 matrix can be defined in terms of some <m>2\times 2</m> determinants by
 </p>
 <sidebyside width="95%">
-  <image source="figs/det.svg"/>
+  <image source="figs/det"/>
 </sidebyside>
 
 <p>
@@ -1386,14 +1386,14 @@ In this example, we'll use the mnemonic device to compute two very simple cross
 products. First
 </p>
 <sidebyside width="95%">
-  <image source="figs/detij.svg"/>
+  <image source="figs/detij"/>
 </sidebyside>
 
 <p>
 Second
 </p>
 <sidebyside width="95%">
-  <image source="figs/detji.svg"/>
+  <image source="figs/detji"/>
 </sidebyside>
 <p>
 Note that, unlike most (or maybe even all) products that you have seen before, <m>\hi\times\hj</m> is <em>not</em> the same as <m>\hj\times\hi</m>!
@@ -1445,7 +1445,7 @@ The computation showing that <m>\vb\cdot(\va\times \vb)=0</m> is similar.
 </md>
 </p>
 <sidebyside width="20%">
-<image source="figs/area.svg"/>
+<image source="figs/area"/>
 </sidebyside>
 </li>
 </dl>
@@ -1488,7 +1488,7 @@ base of the parallelogram. Then <m>|\va|</m> is the length of the base
 and <m>|\vb|\sin\theta</m> is the height.
 </p>
       <sidebyside width="22%">
-      <image source="figs/areaB.svg"/>
+      <image source="figs/areaB"/>
       </sidebyside>
 </proof>
 
@@ -1500,9 +1500,9 @@ There are precisely two vectors on this line that have the length given by prope
 In the left hand figure of
 </p>
       <sidebyside  widths="25% 22% 20%" valign="middle">
-      <image source="figs/crossLL.svg"/>
-      <image source="figs/crossRR.svg"/>
-      <image source="figs/RHR.svg"/>
+      <image source="figs/crossLL"/>
+      <image source="figs/crossRR"/>
+      <image source="figs/RHR"/>
       </sidebyside>
 <p>
   the two vectors are labeled <m>\vc</m> and <m>\vd</m>. Which of these two
@@ -1533,7 +1533,7 @@ rule give the geometric definition of <m>\va\times\vb</m>. To remember
 these three special cases, just remember this figure.
 </p>
       <sidebyside width="25%">
-      <image source="figs/cp_circle.svg"/>
+      <image source="figs/cp_circle"/>
       </sidebyside>
 <p>
 The product of any two standard basis vectors, taken in the order of
@@ -1617,7 +1617,7 @@ for helping do computations with cross products.
   </md>
   </p>
   <sidebyside width="25%">
-  <image source="figs/area.svg"/>
+  <image source="figs/area"/>
   </sidebyside>
   </li>
   <li><title>(3)</title>
@@ -1809,7 +1809,7 @@ derive the formula for the volume of the parallelepiped with edges
 </p>
 
 <sidebyside width="50%">
-<image source="figs/pipedVolume.svg"/>
+<image source="figs/pipedVolume"/>
 </sidebyside>
 
 <p>
@@ -1878,7 +1878,7 @@ Here is a sketch.
 </p>
 
 <sidebyside width="50%">
-<image source="figs/pipedVolumeEg.svg"/>
+<image source="figs/pipedVolumeEg"/>
 </sidebyside>
 
 <p>
@@ -2181,8 +2181,8 @@ whose direction is the axis of rotation, is called the angular velocity.
 </p>
 
 <sidebyside widths="25% 20%" valign="middle">
-<image source="figs/merry.svg"/>
-<image source="figs/merryB.svg"/>
+<image source="figs/merry"/>
+<image source="figs/merryB"/>
 </sidebyside>
 
 <p>
@@ -2233,7 +2233,7 @@ and <m>x</m>-axis after <m>t</m> seconds is <m>\Omega t</m>, and
 </md>
 </p>
 <sidebyside width="30%">
-  <image source="figs/merryC.svg"/>
+  <image source="figs/merryC"/>
 </sidebyside>
 <p>
 The position of the moving particle, as seen by the fixed observer is
@@ -2370,8 +2370,8 @@ at <m>t=0</m>, <m>\vr=\hi</m> and
 </ul>
 </p>
 <sidebyside widths="22% 22%" valign="middle">
-<image source="figs/merryD.svg"/>
-<image source="figs/merryE.svg"/>
+<image source="figs/merryD"/>
+<image source="figs/merryE"/>
 </sidebyside>
 
 <p>

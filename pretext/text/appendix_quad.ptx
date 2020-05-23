@@ -12,10 +12,10 @@
 
   </p>
   <sidebyside widths="20% 20% 20% 20%" valign="middle">
-  <image source="figs/conePlaneCircle.svg"/>
-      <image source="figs/conePlaneEllipse.svg"/>
-      <image source="figs/conePlaneParabola.svg"/>
-      <image source="figs/conePlaneHyperbola.svg"/>
+  <image source="figs/conePlaneCircle"/>
+      <image source="figs/conePlaneEllipse"/>
+      <image source="figs/conePlaneParabola"/>
+      <image source="figs/conePlaneHyperbola"/>
   </sidebyside>
 
   <p>
@@ -98,10 +98,10 @@
             </p><p> circle </p>
 </sidebyside><sidebyside>
     <p>sketch</p>
-    <image source="figs/cylinder.svg"/>
-    <image source="figs/parabolic_cylinder.svg"/>
-    <image source="figs/hyperbolic_cylinder.svg"/>
-    <image source="figs/sphere.svg"/>
+    <image source="figs/cylinder"/>
+    <image source="figs/parabolic_cylinder"/>
+    <image source="figs/hyperbolic_cylinder"/>
+    <image source="figs/sphere"/>
 </sidebyside>
 </sbsgroup>
 </figure>
@@ -142,9 +142,9 @@
             </p><p> ellipse </p>
 </sidebyside><sidebyside>
 <p>sketch</p>
-<image source="figs/ellipsoid.svg"/>
-<image source="figs/elliptic_paraboloid.svg"/>
-<image source="figs/cone.svg"/>
+<image source="figs/ellipsoid"/>
+<image source="figs/elliptic_paraboloid"/>
+<image source="figs/cone"/>
 </sidebyside>
 </sbsgroup>
 </figure>
@@ -179,9 +179,9 @@
   <p> two lines if <m>z=0</m>, hyperbola if <m>z\ne 0</m> </p>
 </sidebyside><sidebyside>
 <p>sketch</p>
-  <image source="figs/hyperboloid1.svg"/>
-  <image source="figs/hyperboloid2.svg"/>
-  <image source="figs/hyperbolic_paraboloid.svg"/>
+  <image source="figs/hyperboloid1"/>
+  <image source="figs/hyperboloid2"/>
+  <image source="figs/hyperbolic_paraboloid"/>
   </sidebyside>
 </sbsgroup>
 </figure>

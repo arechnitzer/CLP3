@@ -13,7 +13,7 @@ whose direction is parallel to the line.
 </p>
 
 <sidebyside width="40%">
-<image source="figs/twodLine.svg"/>
+<image source="figs/twodLine"/>
 </sidebyside>
 
 
@@ -80,7 +80,7 @@ direction is  perpendicular to that of the line.
 </p>
 
 <sidebyside width="40%">
-<image source="figs/twodLineNormal.svg"/>
+<image source="figs/twodLineNormal"/>
 </sidebyside>
 
 <p>
@@ -155,8 +155,8 @@ on <m>L</m>.
 </p>
 
 <sidebyside width="35%">
-<image source="figs/closestA.svg"/>
-<image source="figs/closestB.svg"/>
+<image source="figs/closestA"/>
+<image source="figs/closestB"/>
 </sidebyside>
 
 <p>
@@ -173,7 +173,7 @@ right above.
 </p>
 
 <sidebyside width="35%">
-<image source="figs/closest.svg"/>
+<image source="figs/closest"/>
 </sidebyside>
 
 

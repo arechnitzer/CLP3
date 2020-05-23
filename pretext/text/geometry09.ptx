@@ -61,7 +61,7 @@
   We saw the quadric surface <m>4x^2+y^2-z^2=1</m> in Example <xref ref="eg_hyperboloid"/>.
   </p>
   <sidebyside width="28%">
-  <image source="figs/hyperboloid1.svg"/>
+  <image source="figs/hyperboloid1"/>
   </sidebyside>
   <p>
   Its constant <m>z</m> cross sections are ellipses and its <m>x=0</m> and <m>y=0</m>
@@ -73,7 +73,7 @@
   We saw the quadric surface <m>x^2+y^2=1</m> in Example <xref ref="eg_cylinders"/>.
   </p>
   <sidebyside  width="25%">
-  <image source="figs/cylinder.svg"/>
+  <image source="figs/cylinder"/>
   </sidebyside>
   <p>
   Its constant <m>z</m> cross sections are circles and its <m>x=0</m> and <m>y=0</m>

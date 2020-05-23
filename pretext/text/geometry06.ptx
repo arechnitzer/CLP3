@@ -22,7 +22,7 @@ might be the position of a particle at time <m>t</m>. As <m>t</m> varies
 <m>\vr(t)</m> sweeps out a curve.
 </p>
 <sidebyside width="38%">
-<image source="figs/parCurve.svg"/>
+<image source="figs/parCurve"/>
 </sidebyside>
 <p>
 While in some applications <m>t</m> will indeed be <q>time</q>, it does not
@@ -41,7 +41,7 @@ the point <m>\big(a\cos\theta\,,\,a\sin\theta\big)</m> on the circle.
 </p>
 
 <sidebyside width="66%">
-<image source="figs/parCircle.svg"/>
+<image source="figs/parCircle"/>
 </sidebyside>
 
 <p>
@@ -77,7 +77,7 @@ in the first octant is the red curve in the figure below.
 </p>
 
 <sidebyside width="50%">
-<image source="figs/spherePlane.svg"/>
+<image source="figs/spherePlane"/>
 </sidebyside>
 
 <p>
@@ -149,7 +149,7 @@ which is the blue curve in the figure
 </p>
 
 <sidebyside width="66%">
-<image source="figs/stokes6.svg"/>
+<image source="figs/stokes6"/>
 </sidebyside>
 
 <p>
@@ -205,7 +205,7 @@ The derivative of the vector valued function <m>\vr(t)</m> is defined to be
 </me>
 </p>
 <sidebyside width="35%">
-  <image source="figs/parCurveDerivA.svg"/>
+  <image source="figs/parCurveDerivA"/>
 </sidebyside>
 
 <p>
@@ -280,7 +280,7 @@ and tail at <m>\vr(t)</m>.
 </p>
 
 <sidebyside width="50%">
-<image source="figs/parCurveDeriv.svg"/>
+<image source="figs/parCurveDeriv"/>
 </sidebyside>
 <p>
 When <m>h</m> is very small this vector
@@ -333,7 +333,7 @@ s(T)-s(T_0)&amp;= \int_{T_0}^T \left|\diff{\vr}{t}(t)\right|\,\dee{t}
 </md>
 </p>
 <sidebyside width="45%">
-  <image source="figs/parCurveDerivB.svg"/>
+  <image source="figs/parCurveDerivB"/>
 </sidebyside>
 </li>
 <li>
@@ -430,7 +430,7 @@ for thousands of years.
 </p>
 
 <sidebyside width="66%">
-<image source="figs/parCircleT.svg"/>
+<image source="figs/parCircleT"/>
 </sidebyside>
 
 <p>
@@ -474,7 +474,7 @@ just increases linearly.
 Our curve is the helix
 </p>
 <sidebyside width="45%">
-<image source="figs/helix4.svg"/>
+<image source="figs/helix4"/>
 </sidebyside>
 <p>
 We have marked three points of the curve on the above sketch. The first has
