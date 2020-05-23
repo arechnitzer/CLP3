@@ -14,17 +14,17 @@ import lxml.etree as ET
 pretextPath = "/home/andrew/Projects/mathbook"
 # source file
 sourceFile = "./clp_3_mc.ptx"
-# output directory
-outDir = "./site"
+# output file
+outFile = "clp_3_mc.tex"
 
 # Hopefully don't need hacking
 # xslt pretext file
-xsltFile = pretextPath + "/xsl/mathbook-html.xsl"
+xsltFile = pretextPath + "/xsl/mathbook-latex.xsl"
 # the schema to check against
 xsFile = pretextPath + "/schema/pretext.rng"
 xs = ET.RelaxNG(ET.parse(xsFile))
 # mbx location
-ptx = pretextPath + "/pretext/pretext"
+mbx = pretextPath + "/script/mbx"
 
 # now some tag operations
 # each in this list should be a 4-ple [ancestor-tag, tag, replace-before, replace-after]
@@ -55,7 +55,7 @@ mySubs = [
     ["conceptual", "<p><alert>Exercises &#8212; Stage 1</alert></p>"],
     ["procedural", "<p><alert>Exercises &#8212; Stage 2</alert></p>"],
     ["application", "<p><alert>Exercises &#8212; Stage 3</alert></p>"],
-    ["fromexam", "<em>&#x2733;</em>"],
+    ["fromexam", "<m>\\ast</m>"],
 ]
 
 # build parameters as dict
@@ -175,15 +175,13 @@ xslt = ET.parse(xsltFile)
 # and build the transform
 print("Load the transform")
 transform = ET.XSLT(xslt)
-os.chdir(outDir)
 
 # apply the pretext transforms to the processed-src
 print("Transform the source")
-htmlSource = transform(procd, **param)
-print("HTML written")
+latexSource = transform(procd, **param)
+print("Writing LaTeX")
+with open(outFile, "w") as fh:
+    fh.write(str(latexSource))
+
 print("Error log:")
 print(transform.error_log)
-print("Processing tikz to svg")
-subprocess.check_output(
-    [ptx, "-c", "latex-image", "-f", "svg", "-d", "images", "../" + sourceFile]
-)
