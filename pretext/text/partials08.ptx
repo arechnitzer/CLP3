@@ -155,13 +155,11 @@ So
 <mrow>
 &amp; w(x,t) \text{ obeys the equation }
 \pdiff{w}{x}(x,t)-\frac{1}{c}\pdiff{w}{t}(x,t)=0 \text{ for all } x,r
-</mrow><mrow>
 </mrow>
 <intertext>if and only if </intertext>
 <mrow>
 &amp;W(u,v) \text{ obeys the equation } \pdiff{W}{v}(x+ct\,,\,x-ct)=0
 \text{ for all } x,t,
-</mrow><mrow>
 </mrow>
 <intertext>which, substituting in <m>x=\frac{u+v}{2}</m> and <m>t=\frac{u-v}{2c}</m>,
                   is the case if and only if
@@ -351,7 +349,7 @@ string obey the wave equation.
 The basic notation that we will use (most of which appears in the sketch) is
 <md>
 <mrow>
-w(x,t) &amp;= \text{vertical displacement of the string from the }x 
+w(x,t) &amp;= \text{vertical displacement of the string from the }x
                  \text{ axis}
 </mrow><mrow>
 &amp;\hskip0.25in\text{at position }x\text{ and time }t
@@ -439,7 +437,7 @@ This implies that <m>|\tan\theta(x,t)|\ll 1</m>, hence that
 <md>
 <mrow>
 \sqrt{1+\left(\frac{\partial w}{\partial x}\right)^2}&amp;\approx 1&amp;
-\sin \theta(x,t)&amp;\approx \frac{\partial w}{\partial x}(x,t) 
+\sin \theta(x,t)&amp;\approx \frac{\partial w}{\partial x}(x,t)
 </mrow><mrow>
 \cos \theta(x,t)&amp;\approx 1 &amp;
 \frac{\partial \theta}{\partial x}(x,t)

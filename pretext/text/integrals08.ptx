@@ -277,7 +277,6 @@ Since
 \pdiff{x}{X}&amp;=0   &amp;\pdiff{y}{X}&amp;=1
 </mrow><mrow>
 \pdiff{x}{Y}&amp;=1   &amp;\pdiff{y}{Y}&amp;=0
-</mrow><mrow>
 </mrow>
 </md>
 (<xref ref="eq_dA"/>), but with <m>u</m> renamed to <m>X</m> and <m>v</m> renamed to <m>Y</m>,
@@ -311,7 +310,6 @@ Since
 \pdiff{x}{r}&amp;=\cos\theta   &amp;\pdiff{y}{r}&amp;=\sin\theta
 </mrow><mrow>
 \pdiff{x}{\theta}&amp;=-r\sin\theta   &amp;\pdiff{y}{\theta}&amp;=r\cos\theta
-</mrow><mrow>
 </mrow>
 </md>
 (<xref ref="eq_dA"/>), but with <m>u</m> renamed to <m>r</m> and <m>v</m> renamed to <m>\theta</m>,
@@ -346,7 +344,6 @@ Since
 \pdiff{x}{u}&amp;= u   &amp;\pdiff{y}{u}&amp;=v
 </mrow><mrow>
 \pdiff{x}{v}&amp;=-v   &amp;\pdiff{y}{v}&amp;=u
-</mrow><mrow>
 </mrow>
 </md>
 (<xref ref="eq_dA"/>) gives

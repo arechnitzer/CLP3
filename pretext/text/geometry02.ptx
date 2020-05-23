@@ -1463,7 +1463,6 @@ The computation showing that <m>\vb\cdot(\va\times \vb)=0</m> is similar.
 +a_3^2b_1^2-2a_3b_1a_1b_3+a_1^2b_3^2
 </mrow><mrow>&amp;\hskip0.5in
 +a_1^2b_2^2-2a_1b_2a_2b_1+a_2^2b_1^2
-</mrow><mrow>
 </mrow>
 <intertext>and</intertext><mrow>
 |\va|^2\,|\vb|^2\sin^2\theta
@@ -1478,7 +1477,6 @@ The computation showing that <m>\vb\cdot(\va\times \vb)=0</m> is similar.
 </mrow><mrow>
 &amp;\hskip0.5in
  -\big(2a_1b_1a_2b_2+2a_1b_1a_3b_3+2a_2b_2a_3b_3\big)
-</mrow><mrow>
 </mrow>
 </md>
 To see that <m>|\va|\,|\vb|\sin\theta</m> is the area of the parallelogram
@@ -1791,7 +1789,6 @@ For example
 &amp;=\hi\times\hk=-\hk\times\hi =-\hj
 </mrow><mrow>
 (\hi\times \hi)\times\hj&amp;= \vZero \times\hj=\vZero
-</mrow><mrow>
 </mrow>
 </md>
 </p>

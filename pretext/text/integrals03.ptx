@@ -1019,7 +1019,6 @@ I_x &amp;= \int_0^{2\pi}\dee{\theta}\int_0^{a(1+\cos\theta)}\dee{r}\ r
 </mrow><mrow>
 &amp;=\frac{a^4}{4}\int_0^{2\pi}\dee{\theta}\ \sin^2\theta
           \big(1+4\cos\theta+6\cos^2\theta+4\cos^3\theta+\cos^4\theta\big)
-</mrow><mrow>
 </mrow>
 </md>
 Now
@@ -1050,7 +1049,6 @@ Now
 \int_0^{2\pi}\dee{\theta}\ \sin^2\theta\ \cos^3\theta
      &amp;\eqover{u=\sin\theta} \int_0^0\dee{u}\ u^2(1-u^2)
      =0
-</mrow><mrow>
 </mrow>
 </md>
 so that

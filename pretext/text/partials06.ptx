@@ -735,7 +735,6 @@ Now setting <m>t_0=0</m> and <m>\De t=1</m>, the quadratic approximation
 <mrow>
 f\big(x_0 + \De x\,,\,y_0+\De y\big)
 &amp;=g(1)\approx g(0) +g'(0) +\tfrac{1}{2} g''(0)
-</mrow><mrow>
 </mrow>
 </md>
 is
@@ -769,7 +768,6 @@ and the corresponding exact formula
 <mrow>
 f\big(x_0 + \De x\,,\,y_0+\De y\big)
 &amp;=g(1) = g(0) +g'(0) +\tfrac{1}{2} g''(c)
-</mrow><mrow>
 </mrow>
 </md>
 is
@@ -951,7 +949,7 @@ that the quadratic approximation to <m>f</m> about <m>(x_0,y_0)</m> is
               +2f_{xy}(x_0, y_0)\De x\De y
                +f_{yy}(x_0, y_0)\De y^2\bigg] \cr
 &amp;\hskip0.5in= 3+\frac{4}{3} \De x+\frac{2}{3}\De y
-    +\frac{10}{27}\De x^2 -\frac{8}{27}\De x\De y+\frac{5}{54}\De y^2 
+    +\frac{10}{27}\De x^2 -\frac{8}{27}\De x\De y+\frac{5}{54}\De y^2
 </mrow>
 </md>
 In particular, with <m>\De x=0.1</m> and <m>\De y=0.05</m>,

@@ -85,7 +85,6 @@
   x+y+t&amp;=2
   </mrow><mrow>
   x-y\phantom{\ \,+t}&amp;=0
-  </mrow><mrow>
   </mrow>
   </md>
   The second equation forces <m>y=x</m>. Substituting this into the first equation
@@ -207,7 +206,6 @@
      x&amp;=t_3\qquad &amp;
      y&amp;=t_3\qquad &amp;
      z&amp;=2-2t_3
-  </mrow><mrow>
   </mrow>
   </md>
   Substituting <m>t_1=2t_2</m> into the Method 1 equations gives the Method 2

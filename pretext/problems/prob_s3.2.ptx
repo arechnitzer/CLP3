@@ -1531,7 +1531,7 @@ Find M when
 
 <answer>
 <p>(a)</p>
-<sidebyside width="45%">  
+<sidebyside width="45%">
   <image source="pfigs/OE06D_5"/>
 </sidebyside>
 
@@ -1958,7 +1958,6 @@ Now we evaluate the integrals of the various powers of cosine.
 </mrow><mrow>
 \int_0^{\pi/2}\cos^3\theta\ \dee{\theta}&amp;=\frac{\cos^2\theta\sin\theta}{3}\,\bigg|_0^{\pi/2}
 +\frac{2}{3}\int _0^{\pi/2}\cos\theta\ \dee{\theta}=\frac{2}{3}
-</mrow><mrow>
 </mrow>
 </md>
 So <m>A=\frac{\pi}{8}+1</m> and
@@ -2004,7 +2003,7 @@ as an iterated integral in polar coordinates <m>(r, \theta)</m> where <m>x = r \
 
 <answer>
 <p>(a)</p>
-<sidebyside width="90%">  
+<sidebyside width="90%">
   <image source="pfigs/OE10A_5"/>
 </sidebyside>
 
@@ -2177,7 +2176,7 @@ Evaluate <m>J</m> by using polar coordinates.
 
 <answer>
  <p>(a)</p>
-<sidebyside width="70%"> 
+<sidebyside width="70%">
 <image source="pfigs/OE11A_6"/>
   </sidebyside>
 
@@ -2285,7 +2284,6 @@ The paraboloid hits the <m>xy</m>--plane at <m>\frac{x^2}{a^2}
 </mrow><mrow>
 &amp;=b\int_0^a \dee{x}\int_0^{\sqrt{1-{x^2\over a^2}}} \dee{v}\
 \left(1-\frac{x^2}{a^2}-v^2\right) \qquad\text{ where } y=bv
-</mrow><mrow>
 </mrow>
 </md>
 Think of this integral as being of the form

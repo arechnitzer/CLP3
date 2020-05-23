@@ -1905,7 +1905,6 @@ By definition,
 \vb\times\vc
 \ =\ &amp;(b_2c_3-b_3c_2)\hi-(b_1c_3-b_3c_1)\hj
     +(b_1c_2-b_2c_1)\hk
-</mrow><mrow>
 </mrow>
 <intertext>so that the left and right hand sides are</intertext><mrow>
 &amp;\va\times(\vb\times\vc)

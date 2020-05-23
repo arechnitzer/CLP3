@@ -385,7 +385,6 @@ when <m>(x,y)</m> is close to <m>(0,0)</m> is to switch to the polar coordinates
 x&amp;=r\cos\theta
 </mrow><mrow>
 y&amp;=r\sin\theta
-</mrow><mrow>
 </mrow>
 </md></p>
 <image source="figs/polar"/>

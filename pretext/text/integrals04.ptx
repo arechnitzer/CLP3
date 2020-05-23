@@ -270,7 +270,6 @@ That forces us to compute the first order partial derivatives
 f_x(x,y) &amp; = \frac{x}{\sqrt{x^2+y^2}}
 </mrow><mrow>
 f_y(x,y) &amp; = \frac{y}{\sqrt{x^2+y^2}}
-</mrow><mrow>
 </mrow>
 </md>
 Substituting them into the first formula in <xref ref="eq_dSgraph"/> yields
