@@ -13,8 +13,8 @@
 </p>
 
 <sidebyside widths="36% 45%" valign="middle">
-<image source="figs/threedPlane.svg"/>
-<image source="figs/threedPlane2.svg"/>
+<image source="figs/threedPlane"/>
+<image source="figs/threedPlane2"/>
 </sidebyside>
 
 <p>
@@ -135,7 +135,7 @@
   </p>
 
 <sidebyside width="40%">
-  <image source="figs/planeSketch.svg"/>
+  <image source="figs/planeSketch"/>
   </sidebyside>
 </example>
 
@@ -170,7 +170,7 @@
   </ul>
 </p>
 <sidebyside width="45%">
-<image source="figs/pointDist.svg"/>
+<image source="figs/pointDist"/>
 </sidebyside>
 <p>
   So imagine that we start walking, and that we start at time <m>t=0</m> at <m>\vx</m>
@@ -238,7 +238,7 @@
 </p>
 
 <sidebyside width="45%">
-<image source="figs/pointDistProj.svg"/>
+<image source="figs/pointDistProj"/>
 </sidebyside>
 
 <p>
@@ -319,7 +319,7 @@
   </ul>
 </p>
   <sidebyside width="45%">
-  <image source="figs/planeDist.svg"/>
+  <image source="figs/planeDist"/>
   </sidebyside>
 <p>
   We can find a point on <m>P</m> just as we did on Example <xref ref="eg_VPdistance-point-plane-bis"/>. The plane <m>P</m> is given by the single equation

@@ -318,7 +318,7 @@ differentiation. However that is not the case for <m>(a,b)=(0,0)</m>.
 To evaluate <m>f_x(0,0)</m>, we need to set <m>y=0</m> and find the derivative of
 <me>
 f(x,0) = \begin{cases}
-             \frac{\cos x-1}{x}&amp;\text{if } x\ne 0 \
+             \frac{\cos x-1}{x}&amp;\text{if } x\ne 0 \\
                     0&amp;\text{if } x=0
         \end{cases}
 </me>

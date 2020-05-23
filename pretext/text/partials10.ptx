@@ -93,7 +93,6 @@ then there is a real number <m>\la</m> such that
 <md>
 <mrow>
 \vnabla f(a,b,c) &amp;= \la\vnabla g(a,b,c)
-</mrow><mrow>
 </mrow>
 <intertext>that is</intertext><mrow>
 f_x(a,b,c) &amp;= \la\, g_x(a,b,c)
@@ -279,8 +278,8 @@ compute <m>f</m> at those points.
 
 <sidebyside>
 <tabular  left="minor" right="minor" bottom="minor" top="minor">
-<col />  <col halign="center"/>  
-         <col halign="center"/> 
+<col />  <col halign="center"/>
+         <col halign="center"/>
 <row>
 <cell> point
        </cell><cell><m>(4,0)</m>
@@ -718,7 +717,6 @@ then there are real numbers <m>\la</m> and <m>\mu</m> such that
 <md>
 <mrow>
 \vnabla f(a,b,c) &amp;= \la\vnabla g(a,b,c) + \mu\vnabla h(a,b,c)
-</mrow><mrow>
 </mrow>
 <intertext>that is</intertext><mrow>
 f_x(a,b,c) &amp;= \la\, g_x(a,b,c) + \mu\, h_x(a,b,c)

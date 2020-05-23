@@ -35,7 +35,7 @@ Here are some examples.
   the surface that lies in the horizontal plane <m>z=z_0</m>.
 </p>
   <sidebyside width="33%">
-  <image source="figs/zedzeroPlane.svg"/>
+  <image source="figs/zedzeroPlane"/>
   </sidebyside>
   <p>
   The intersection of our surface with that horizontal plane is a horizontal
@@ -61,7 +61,7 @@ Here are some examples.
   <m>\sqrt{1+z_0^2}</m>. It's easy to sketch.
 </p>
   <sidebyside width="55%">
-  <image source="figs/ellipse.svg"/>
+  <image source="figs/ellipse"/>
   </sidebyside>
 <p>
   Remember that this ellipse is the part of our surface that lies in the
@@ -73,7 +73,7 @@ Here are some examples.
   This gives a single horizontal ellipse in 3d, as in the figure below.
 </p>
   <sidebyside width="50%">
-  <image source="figs/hyperboloidZX.svg"/>
+  <image source="figs/hyperboloidZX"/>
   </sidebyside>
 <p>
   We can build up the full surface by stacking many of these horizontal
@@ -84,7 +84,7 @@ Here are some examples.
 </p>
 
   <sidebyside width="45%">
-  <image source="figs/hyperboloidZXB.svg"/>
+  <image source="figs/hyperboloidZXB"/>
   </sidebyside>
 
   <p>Here is why it is OK, in this case, to just sketch the first octant.
@@ -118,7 +118,7 @@ Here are some examples.
      </mrow><mrow>
       &amp;&amp;&amp;\text{ and }\quad\text{for large } z,\ y\approx\pm z
   </mrow><mrow>
-  4x^2&amp;=1+z^2 &amp; 
+  4x^2&amp;=1+z^2 &amp;
            \quad\implies\quad &amp;|x|\ge \tfrac{1}{2}
       </mrow><mrow>
      &amp;&amp;&amp;\text{ and }\quad x=\pm\tfrac{1}{2}\text{ when }z=0
@@ -130,8 +130,8 @@ Here are some examples.
 </p>
 
   <sidebyside widths="40% 40%" valign="middle">
-  <image source="figs/hyperbolaXa.svg"/>
-     <image source="figs/hyperbolaYa.svg"/>
+  <image source="figs/hyperbolaXa"/>
+     <image source="figs/hyperbolaYa"/>
   </sidebyside>
 <p>
   Now we'll incorporate them into the 3d sketch. Once again imagine that each
@@ -142,7 +142,7 @@ Here are some examples.
   </p>
 
   <sidebyside width="40%">
-  <image source="figs/hyperboloidBa.svg"/>
+  <image source="figs/hyperboloidBa"/>
   </sidebyside>
 
   <p>
@@ -152,8 +152,8 @@ Here are some examples.
 </p>
 
   <sidebyside  widths="40% 30%" valign="middle">
-  <image source="figs/hyperboloidC.svg"/>
-   <image source="figs/hyperboloidD.svg"/>
+  <image source="figs/hyperboloidC"/>
+   <image source="figs/hyperboloidD"/>
   </sidebyside>
   <p>
   This type of surface is called a hyperboloid of one sheet.
@@ -202,7 +202,7 @@ Here are some examples.
 </p>
 
   <sidebyside width="45%">
-  <image source="figs/hyperboloidZXBB.svg"/>
+  <image source="figs/hyperboloidZXBB"/>
   </sidebyside>
 
 <p>
@@ -215,7 +215,7 @@ Here are some examples.
 </p>
 
   <sidebyside width="45%">
-  <image source="figs/hyperboloidBaa.svg"/>
+  <image source="figs/hyperboloidBaa"/>
   </sidebyside>
 
 <p>
@@ -223,8 +223,8 @@ Here are some examples.
   we clean up and simplify the sketch.
 </p>
   <sidebyside  widths="40% 30%" valign="middle">
-  <image source="figs/hyperboloidCC.svg"/>
-  <image source="figs/hyperboloidDD.svg"/>
+  <image source="figs/hyperboloidCC"/>
+  <image source="figs/hyperboloidDD"/>
   </sidebyside>
 
 <p>
@@ -257,27 +257,27 @@ Here are some examples.
   <p>We'll start with a sketch of the hyperbola <m>yz=1</m> in two dimensions.
 </p>
   <sidebyside width="40%">
-  <image source="figs/hyperbola3.svg"/>
+  <image source="figs/hyperbola3"/>
   </sidebyside>
 <p>
   Next we'll move this 2d sketch into the <m>yz</m>-plane, i.e. the plane <m>x=0</m>,
   in 3d, except that we'll only draw in the part in the first octant.
 </p>
   <sidebyside width="40%">
-  <image source="figs/hyperbolicCylinderA.svg"/>
+  <image source="figs/hyperbolicCylinderA"/>
   </sidebyside>
   <p>
   The we'll draw in <m>x=x_0</m> cross-sections for a couple of more values of
   <m>x_0</m>
 </p>
   <sidebyside width="40%">
-  <image source="figs/hyperbolicCylinderB.svg"/>
+  <image source="figs/hyperbolicCylinderB"/>
   </sidebyside>
 <p>
   and clean up the sketch a bit
 </p>
   <sidebyside width="40%">
-  <image source="figs/hyperbolicCylinderC.svg"/>
+  <image source="figs/hyperbolicCylinderC"/>
   </sidebyside>
 
 </solution>
@@ -316,7 +316,7 @@ Here are some examples.
   are drawn in the figure below.
 </p>
   <sidebyside width="45%">
-  <image source="figs/seatB.svg"/>
+  <image source="figs/seatB"/>
   </sidebyside>
 <p>
   Next we add some vertical cross-sections.
@@ -330,13 +330,13 @@ Here are some examples.
 </p>
 
   <sidebyside width="45%">
-  <image source="figs/seatC.svg"/>
+  <image source="figs/seatC"/>
   </sidebyside>
 <p>
   Finally, we clean up and simplify the sketch.
 </p>
   <sidebyside width="45%">
-  <image source="figs/seatA.svg"/>
+  <image source="figs/seatA"/>
   </sidebyside>
 
 </solution>
@@ -391,7 +391,7 @@ Here are a couple of examples.
   <m>f(x,y) = x^2+4y^2-2x+2</m>.
 </p>
   <sidebyside width="90%">
-  <image source="figs/ellipseLevelB.svg"/>
+  <image source="figs/ellipseLevelB"/>
   </sidebyside>
 <p>
   It is often easier to develop an understanding of the behaviour of a function
@@ -435,7 +435,7 @@ Here are a couple of examples.
   </p>
 
   <sidebyside width="60%">
-  <image source="figs/planeLevel.svg"/>
+  <image source="figs/planeLevel"/>
   </sidebyside>
 
 </solution>
@@ -461,7 +461,7 @@ the value <m>C</m>.
   </p>
 
   <sidebyside width="60%">
-  <image source="figs/spherA.svg"/>
+  <image source="figs/spherA"/>
   </sidebyside>
   </example>
 
@@ -476,7 +476,7 @@ the value <m>C</m>.
   </p>
 
   <sidebyside width="40%">
-  <image source="figs/cylB.svg"/>
+  <image source="figs/cylB"/>
   </sidebyside>
 
   <p>
@@ -491,7 +491,7 @@ the value <m>C</m>.
   </p>
 
   <sidebyside width="40%">
-  <image source="figs/cylA.svg"/>
+  <image source="figs/cylA"/>
   </sidebyside>
 
   </example>
@@ -516,7 +516,7 @@ the value <m>C</m>.
   </p>
 
   <sidebyside width="60%">
-  <image source="figs/rampABC.svg"/>
+  <image source="figs/rampABC"/>
   </sidebyside>
 
   </example>

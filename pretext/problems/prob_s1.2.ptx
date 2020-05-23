@@ -20,9 +20,9 @@ Let <m>\va=\llt 2,0\rgt </m> and <m>\vb=\llt 1,1\rgt </m>. Evaluate and sketch
 </p>
 
 <sidebyside width="30%">
-<image source="pfigs/add1.svg"/>
-<image source="pfigs/add2.svg"/>
-<image source="pfigs/add3.svg"/>
+<image source="pfigs/add1"/>
+<image source="pfigs/add2"/>
+<image source="pfigs/add3"/>
 </sidebyside>
 </answer>
 
@@ -31,9 +31,9 @@ Let <m>\va=\llt 2,0\rgt </m> and <m>\vb=\llt 1,1\rgt </m>. Evaluate and sketch
 <m>2\va-\vb=\llt 3,-1\rgt </m>
 </p>
 <sidebyside width="30%">
-<image source="pfigs/add1.svg"/>
-<image source="pfigs/add2.svg"/>
-<image source="pfigs/add3.svg"/>
+<image source="pfigs/add1"/>
+<image source="pfigs/add2"/>
+<image source="pfigs/add3"/>
 </sidebyside>
 
 </solution>
@@ -60,7 +60,7 @@ must both be parallel to the line, and hence must be parallel to each other
 (i.e. must be multiples of each other).
 </p>
 <sidebyside width="40%">
-  <image source="pfigs/collinear.svg"/>
+  <image source="pfigs/collinear"/>
 </sidebyside>
 </hint>
 
@@ -80,7 +80,7 @@ must both be parallel to the line, and hence must be parallel to each other
 (i.e. must be multiples of each other).
 </p>
 <sidebyside width="40%">
-<image source="pfigs/collinear.svg"/>
+<image source="pfigs/collinear"/>
 </sidebyside>
 
 <p>
@@ -203,7 +203,7 @@ Show that the area of the parallelogram determined by the
 vectors <m>\va</m> and <m>\vb</m> is <m>|\va\times \vb|</m>.
 </p>
 <sidebyside width="33%">
-  <image source="pfigs/sec_1_2_pgramA.svg"/>
+  <image source="pfigs/sec_1_2_pgramA"/>
 </sidebyside>
 </statement>
 
@@ -216,7 +216,7 @@ See the solution.
 base time its height.
 </p>
 <sidebyside width="33%">
-  <image source="pfigs/sec_1_2_pgramB.svg"/>
+  <image source="pfigs/sec_1_2_pgramB"/>
 </sidebyside>
 
 <p>
@@ -240,7 +240,7 @@ vectors <m>\va,\ \vb</m> and <m>\vc</m> is
 </p>
 
 <sidebyside width="25%">
-<image source="pfigs/piped.svg"/>
+<image source="pfigs/piped"/>
 </sidebyside>
 </statement>
 
@@ -255,7 +255,7 @@ determined by the vectors <m>\vb</m> and <m>\vc</m>. It has area <m>|\vb\times\v
 The vector <m>\vb\times\vc</m> is perpendicular to the base.
 </p>
 <sidebyside width="60%">
-<image source="pfigs/pipedVolume.svg"/>
+<image source="pfigs/pipedVolume"/>
 </sidebyside>
 
 <p>
@@ -510,7 +510,7 @@ equidistant from the three vertices <m>O</m>, <m>A</m> and <m>B</m>.
 (a), (c)
 </p>
 <sidebyside width="40%">
-<image source="pfigs/circumA.svg"/>
+<image source="pfigs/circumA"/>
 </sidebyside>
 <p>
 <m>\text{proj}_{\overrightarrow{\scriptstyle OA}}\,\overrightarrow{OC}
@@ -551,8 +551,8 @@ the perpendicular from <m>C</m> to the line from <m>O</m> to <m>B</m> hits the l
 </ul>
 </p>
 <sidebyside width="40%">
-  <image source="pfigs/circumA.svg"/>
-       <image source="pfigs/circum.svg"/>
+  <image source="pfigs/circumA"/>
+       <image source="pfigs/circum"/>
 </sidebyside>
 <p>
 To evaluate the projections we observe that the three lines from
@@ -749,7 +749,7 @@ and <m>\vb</m> be the vector from <m>C</m> to <m>B</m>.
 </p>
 
 <sidebyside width="33%">
-  <image source="pfigs/triangleMidPt.svg"/>
+  <image source="pfigs/triangleMidPt"/>
 </sidebyside>
 
 <p>
@@ -1020,31 +1020,31 @@ Find the angle between them.
 <md alignment="alignat">
 <mrow>
 \va\cdot\vb&amp;=\llt 1,2\rgt\cdot\llt -2,3\rgt=4\qquad &amp;
-\cos\theta&amp;=\frac{4}{\sqrt{5}\sqrt{13}}=.4961 
+\cos\theta&amp;=\frac{4}{\sqrt{5}\sqrt{13}}=.4961
 \notag</mrow><mrow>
 &amp; &amp; \implies\theta &amp;= 60.25^\circ
 \tag{a}
 </mrow><mrow>
 \va\cdot\vb&amp;=\llt -1,1\rgt\cdot\llt 1,1\rgt=0\qquad &amp;
-\cos\theta&amp;=\frac{0}{\sqrt{2}\sqrt{2}}=0 
+\cos\theta&amp;=\frac{0}{\sqrt{2}\sqrt{2}}=0
 \notag</mrow><mrow>
 &amp; &amp; \implies\theta &amp;= 90^\circ
 \tag{b}
 </mrow><mrow>
 \va\cdot\vb&amp;=\llt 1,1\rgt\cdot\llt 2,2\rgt=4\qquad &amp;
-\cos\theta&amp;=\frac{4}{\sqrt{2}\sqrt{8}}=1 
+\cos\theta&amp;=\frac{4}{\sqrt{2}\sqrt{8}}=1
 \notag</mrow><mrow>
 &amp; &amp; \implies\theta &amp;= 0^\circ
 \tag{c}
 </mrow><mrow>
 \va\cdot\vb&amp;=\llt 1,2,1\rgt\cdot\llt -1,1,1\rgt=2\qquad &amp;
-\cos\theta&amp;=\frac{2}{\sqrt{6}\sqrt{3}}=.4714 
+\cos\theta&amp;=\frac{2}{\sqrt{6}\sqrt{3}}=.4714
 \notag</mrow><mrow>
 &amp; &amp; \implies\theta &amp;= 61.87^\circ
 \tag{d}
 </mrow><mrow>
 \va\cdot\vb&amp;=\llt -1,2,3\rgt\cdot\llt 3,0,1\rgt=0\qquad &amp;
-\cos\theta&amp;=\frac{0}{\sqrt{14}\sqrt{10}}=0 
+\cos\theta&amp;=\frac{0}{\sqrt{14}\sqrt{10}}=0
 \notag</mrow><mrow>
 &amp; &amp; \implies\theta &amp;= 90^\circ
 \tag{e}
@@ -1390,7 +1390,7 @@ Check, by direct computation, that
 &amp;=\hi(-4-2)-\hj(1-6)
 +\hk(-1-12)\notag
 </mrow><mrow>
-&amp;= \llt -6,5,-13\rgt\notag 
+&amp;= \llt -6,5,-13\rgt\notag
 </mrow><mrow>
 \vq\times\vp
 &amp;= \det\left[ \begin{matrix}\hi&amp;\hj&amp;\hk\cr3&amp;1&amp;-1\cr-1&amp;4&amp;2\end{matrix}\right]\notag
@@ -1457,7 +1457,7 @@ in parts (b) and (c)
 &amp;=\hi(-44-2)-\hj(11+8)
 +\hk(-1+16)
 </mrow><mrow>
-&amp;= \llt -46,-19,15\rgt 
+&amp;= \llt -46,-19,15\rgt
 </mrow>
 <mrow>
 (\vp\times\vq)\times\vr
@@ -1466,7 +1466,7 @@ in parts (b) and (c)
 &amp;=\hi(-5-39)-\hj(6+26)
 +\hk(18-10)
 </mrow><mrow>
-&amp;= \llt -44,-32,8\rgt 
+&amp;= \llt -44,-32,8\rgt
 </mrow>
 </md>
 </p>
@@ -1490,7 +1490,7 @@ half times the length, <m>|\va|</m>, of its base times its height
 <m>h=|\vb|\sin\theta</m>.
 </p>
 <sidebyside width="28%">
-  <image source="pfigs/sec_1_2_triangle.svg"/>
+  <image source="pfigs/sec_1_2_triangle"/>
 </sidebyside>
 
 <p>
@@ -1905,7 +1905,6 @@ By definition,
 \vb\times\vc
 \ =\ &amp;(b_2c_3-b_3c_2)\hi-(b_1c_3-b_3c_1)\hj
     +(b_1c_2-b_2c_1)\hk
-</mrow><mrow>
 </mrow>
 <intertext>so that the left and right hand sides are</intertext><mrow>
 &amp;\va\times(\vb\times\vc)
@@ -1928,7 +1927,7 @@ By definition,
 &amp;\hskip1.0in
 -(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
 </mrow><mrow>
-&amp;\hskip0.5in= 
+&amp;\hskip0.5in=
 \hi\,[a_1b_1c_1+a_2b_1c_2+a_3b_1c_3-a_1b_1c_1-a_2b_2c_1-a_3b_3c_1]
 </mrow><mrow>
 &amp;\hskip0.5in\ +\hj\,[a_1b_2c_1+a_2b_2c_2+a_3b_2c_3-a_1b_1c_2-a_2b_2c_2-a_3b_3c_2]
@@ -2088,7 +2087,7 @@ perpendicular to each other. Show that <m>D^2=A^2+B^2+C^2</m>.
 </p>
 
 <sidebyside width="28%">
-  <image source="pfigs/tetrahedron.svg"/>
+  <image source="pfigs/tetrahedron"/>
 </sidebyside>
 </statement>
 

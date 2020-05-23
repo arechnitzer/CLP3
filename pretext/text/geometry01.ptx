@@ -11,7 +11,7 @@
 </p>
 
   <sidebyside width="28%" >
-  <image source="figs/point2d.svg"/>
+  <image source="figs/point2d"/>
   </sidebyside>
 <p>
   The set of all points in two dimensions is denoted<fn>
@@ -31,7 +31,7 @@
   Similarly, each point in three dimensions may be labeled by three coordinates <m>(x,y,z)</m>, as in the two figures below.
 </p>
 <sidebyside width="33%" >
-  <image source="figs/point3d.svg"/> <image source="figs/point3db.svg"/>
+  <image source="figs/point3d"/> <image source="figs/point3db"/>
   </sidebyside>
 <p>
   The set of all points in three dimensions is denoted <m>\bbbr^3</m>.
@@ -67,9 +67,9 @@
 </p>
 
   <sidebyside>
-  <image source="figs/xyplaneN.svg"/>
-     <image source="figs/xzplaneN.svg"/>
-     <image source="figs/yzplaneN.svg"/>
+  <image source="figs/xyplaneN"/>
+     <image source="figs/xzplaneN"/>
+     <image source="figs/yzplaneN"/>
   </sidebyside>
 <p>
   Observe that our 2d distances extend quite easily to 3d.
@@ -102,7 +102,7 @@
 </p>
 
 <sidebyside width="40%" >
-  <image source="figs/pythag3d.svg"/>
+  <image source="figs/pythag3d"/>
   </sidebyside>
 <p>
   More generally, the distance from the point <m>(x,y,z)</m> to the point

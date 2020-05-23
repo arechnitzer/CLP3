@@ -300,7 +300,7 @@ to <m>(0,0,7)</m> is <m>\llt 0,0,7\rgt -\llt -1,2,3\rgt =\llt 1,-2,4\rgt </m>.
 A unit vector perpendicular to the plane is
 <m>\frac{1}{\sqrt{3}}\llt 1,1,1\rgt </m>. The distance from
 <m>(-1,2,3)</m> to the plane is the length of the projection of
-<m>\llt 1,-2,4\rgt </m> on <m>\frac{1}{\sqrt{3}}\llt 1,1,1\rgt </m> which is 
+<m>\llt 1,-2,4\rgt </m> on <m>\frac{1}{\sqrt{3}}\llt 1,1,1\rgt </m> which is
 <md>
 <mrow>
 \frac{1}{\sqrt{3}}\llt 1,1,1\rgt \cdot\llt 1,-2,4\rgt
@@ -876,7 +876,7 @@ The vector <m>\vn</m> is perpendicular to the plane
 passes through <m>\vp</m> and is perpendicular to the plane.
 </p>
 <sidebyside width="35%">
-<image source="pfigs/distance.svg"/>
+<image source="pfigs/distance"/>
 </sidebyside>
 
 <p>
@@ -1081,7 +1081,7 @@ has <m>(X,Y,Z)=(1,-1,0)</m>. Call the initial point <m>P</m> and the final point
 </p>
 
 <sidebyside width="40%">
-  <image source="pfigs/OE03AQB.svg"/>
+  <image source="pfigs/OE03AQB"/>
 </sidebyside>
 
 <p>

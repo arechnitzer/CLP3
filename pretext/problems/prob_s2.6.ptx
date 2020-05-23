@@ -183,7 +183,7 @@ The correct computation is
 <mrow>
 Y\big(0.9,\tfrac{\pi}{90}\big) &amp;= Y\big(1-0.1\,,\, 0+\tfrac{\pi}{90}\big)
    \approx 0\ +\ (0)\,(-0.1)\ +\ (1)\big(\tfrac{\pi}{90}\big)
-   </mrow><mrow>      
+   </mrow><mrow>
    &amp;=\tfrac{\pi}{90}
    \approx 0.035
 </mrow>
@@ -431,7 +431,6 @@ and <m>\pdiff{R}{R_2}(2,8)</m>. To find them, we differentiate <m>(*)</m> with r
 </mrow><mrow>
 -\frac{1}{R(R_1,R_2)^2}\pdiff{R}{R_2}(R_1,R_2)
                  &amp;= -\frac{1}{R_2^2}
-</mrow><mrow>
 </mrow>
 </md>
 Setting <m>R_1=2</m> and <m>R_2=8</m> gives
@@ -763,7 +762,6 @@ f_x(x,y) &amp; = -\frac{4xy}{{(x^2+y^2)}^2}\quad &amp;
 f_y(x,y) &amp; = \frac{2}{x^2+y^2}-\frac{4y^2}{{(x^2+y^2)}^2}\quad &amp;
       f_y(-1,2) &amp; = \frac{2}{5}-\frac{16}{25}
                   =-\frac{6}{25}
-</mrow><mrow>
 </mrow>
 </md>
 The linear approximation of <m>f(x,y)</m> about <m>(-1,2)</m> is
@@ -834,7 +832,7 @@ Without knowing <m>f(x,y)</m> explicitly, there's not much that we can do with t
 \iff f(-1,1)^3 -f(-1,1) =0
 </me>
 Since <m>f(-1, 1)  \lt  0</m> we may divide this equation by <m>f(-1, 1)  \lt  0</m>,
-giving <m>f(-1,1)^2 - 1=0</m>. Since <m>f(-1, 1)  \lt  0</m>, we must have 
+giving <m>f(-1,1)^2 - 1=0</m>. Since <m>f(-1, 1)  \lt  0</m>, we must have
 <m>f(-1, 1)=-1</m>.
 By part (a)
 <md>
@@ -1206,7 +1204,7 @@ Differentiating this equation with respect to <m>x</m> gives
 <md>
 <mrow>
 &amp; 3z(x,y)^2\,\pdiff{z}{x}(x,y) -y\, z(x,y)^2 -2xy\,z(x,y)\pdiff{z}{x}(x,y) - 4=0
-</mrow><mrow> 
+</mrow><mrow>
 &amp; \implies \pdiff{z}{x} = \frac{4+yz^2}{3z^2-2xyz}
 </mrow>
 </md>
@@ -1214,7 +1212,7 @@ and differentiating with respect to <m>y</m> gives
 <md>
 <mrow>
 &amp; 3z(x,y)^2\,\pdiff{z}{y}(x,y) -x\, z(x,y)^2 -2xy\,z(x,y)\pdiff{z}{y}(x,y) =0
-</mrow><mrow> 
+</mrow><mrow>
 &amp; \implies \pdiff{z}{y} = \frac{xz^2}{3z^2-2xyz}
 </mrow>
 </md>
@@ -1235,7 +1233,7 @@ When <m>(x,y,z)=(1,1,2)</m>,
 <md>
 <mrow>
 z(x,y) &amp;\approx z(1,1) + z_x(1,1)\,(x-1) + z_y\,(1,1)\,(y-1)
-</mrow><mrow> 
+</mrow><mrow>
        &amp;= 2 + (x-1) +\frac{1}{2}(y-1)
 </mrow>
 </md>
@@ -1334,7 +1332,7 @@ f_y(x,y)&amp;=e^{-x}    &amp; f_y(1,e)&amp;= e^{-1}
 <md>
 <mrow>
 f(x,y) &amp;\approx f(1,e) + f_x(1,e)\,(x-1) +f_y(1,e)\,(y-e)
-</mrow><mrow>       
+</mrow><mrow>
 &amp;= 1 -(x-1) +e^{-1}(y-e)
 </mrow>
 </md>
@@ -1506,7 +1504,7 @@ Find the equation of the tangent plane to the surface at the point <m>(1, 3, 1)<
 <md>
 <mrow>
 f(x,y) &amp;\approx f(1,3) + f_x(1,3)\,(x-1) +f_y(1,3)\,(y-3)
-</mrow><mrow>       
+</mrow><mrow>
 &amp; = 1 + 3(x-1) -2(y-3)
 </mrow>
 </md>
@@ -1777,7 +1775,7 @@ So the equation of the tangent plane is
 <md>
 <mrow>
 &amp;\big(-2-\pi\big)(x-1) + 2(y-1) +3 (z+1) =0
-</mrow><mrow>       
+</mrow><mrow>
 &amp;\text{or}\quad
 -(2+\pi)x +2y +3z = -\pi-3
 </mrow>

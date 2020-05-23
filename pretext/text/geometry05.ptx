@@ -85,7 +85,6 @@
   x+y+t&amp;=2
   </mrow><mrow>
   x-y\phantom{\ \,+t}&amp;=0
-  </mrow><mrow>
   </mrow>
   </md>
   The second equation forces <m>y=x</m>. Substituting this into the first equation
@@ -207,7 +206,6 @@
      x&amp;=t_3\qquad &amp;
      y&amp;=t_3\qquad &amp;
      z&amp;=2-2t_3
-  </mrow><mrow>
   </mrow>
   </md>
   Substituting <m>t_1=2t_2</m> into the Method 1 equations gives the Method 2
@@ -242,11 +240,11 @@
   In this example, we find the distance between the point <m>(2,3,-1)</m> and the line
   <md>
   <mrow>
-      L&amp;:\  \llt x-1,y-2,z-3\rgt=t\llt 1,1,2\rgt 
+      L&amp;:\  \llt x-1,y-2,z-3\rgt=t\llt 1,1,2\rgt
   </mrow><mrow>
       &amp;\quad \text{or, equivalently,}\quad
        x=1+t,\ y=2+t,\ z=3+2t
-  </mrow> 
+  </mrow>
   </md>
   The vector from <m>(2,3,-1)</m> to the point <m>(1+t\,,\,2+t\,,\,3+2t)</m> on <m>L</m> is
   <m>
@@ -297,7 +295,7 @@
   but we use a different method. In the figure below, <m>Q</m> is the point <m>(2,3,-1)</m>.
 </p>
   <sidebyside width="45%">
-  <image source="figs/pointDistProjB.svg"/>
+  <image source="figs/pointDistProjB"/>
   </sidebyside>
 <p>
   If we drop a perpendicular from <m>Q</m> to the line <m>L</m>, it hits the line <m>L</m>
@@ -510,7 +508,7 @@
   </p>
 
   <sidebyside width="55%">
-  <image source="figs/planeDistB.svg"/>
+  <image source="figs/planeDistB"/>
   </sidebyside>
   </li>
 

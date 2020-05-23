@@ -319,7 +319,6 @@ f_{yy}(x,y) &amp;= 12y^2-4x^2\qquad&amp;
 </mrow><mrow>
 f_{xy}(x,y) &amp;=-8xy\qquad&amp;
          f_{xx}(x,y)&amp;=0
-</mrow><mrow>
 </mrow>
 </md>
 As
@@ -934,9 +933,9 @@ All together, we have the following candidates for max and min.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
-<col />  <col halign="center"/>  <col halign="center"/> <col halign="center"/> 
-         <col halign="center"/>  <col halign="center"/> <col halign="center"/> 
-         <col halign="center"/>  <col halign="center"/> <col halign="center"/> 
+<col />  <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+         <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+         <col halign="center"/>  <col halign="center"/> <col halign="center"/>
 <row>
 <cell>      point
        </cell><cell><m>(0,0)</m>
@@ -1037,8 +1036,8 @@ All together, we have the following candidates for max and min.
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
-<col />  <col halign="center"/>  <col halign="center"/> <col halign="center"/> 
-         <col halign="center"/> 
+<col />  <col halign="center"/>  <col halign="center"/> <col halign="center"/>
+         <col halign="center"/>
 <row>
 <cell>      point
        </cell><cell><m>(\half,\half)</m>
@@ -1178,7 +1177,7 @@ the classification is
 </p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
-<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col /> 
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1242,7 +1241,7 @@ all critical points of <m>f(x,y)</m>.
 
 <answer>
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
-<col halign="center"/>  <col /> 
+<col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>   </cell><cell> type </cell>
 </row><row>
@@ -1307,7 +1306,7 @@ So there are two critical points: <m>\big(\frac{3}{2},-\frac{1}{4}\big)</m> and
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
-<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col /> 
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
                                                           <m>f_{xx}</m> </cell><cell> type </cell>
@@ -1340,7 +1339,7 @@ Find the maximum and minimum values of <m>h(x, y)</m> on the disk <m>x^2 + y^2 \
 (a)
 </p>
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
-<col halign="center"/>  <col /> 
+<col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>   </cell><cell> type </cell>
 </row><row>
@@ -1409,7 +1408,7 @@ So there are four critical points:
 <p>The classification is</p>
 
 <sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
-<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col /> 
+<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col />
 <row>
 <cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>h_{xx}h_{yy}-h_{xy}^2</m> </cell><cell>
                                                           <m>h_{xx}</m> </cell><cell> type </cell>
@@ -1479,7 +1478,6 @@ The critical points are the solutions of
 0&amp;=f_x(x,y) = 2-2x
 </mrow><mrow>
 0&amp;=f_y(x,y) = -8y
-</mrow><mrow>
 </mrow>
 </md>
 So the only critical point is <m>(1,0)</m>.
@@ -1931,13 +1929,13 @@ the max and min of <m>2x^3-6x+5</m> for <m>0\le x\le 1</m> must occur either at 
 where <m>f=5</m>, or at <m>x=1</m>, where <m>f=1</m>.
 </li>
 <li>
-Next, we look at the part of the boundary with <m>y=1-x</m>. There 
+Next, we look at the part of the boundary with <m>y=1-x</m>. There
 <md>
 <mrow>
 f=2x^3-6x(1-x)+(1-x)^2+4(1-x)=2x^3+7x^2-12x+5
 </mrow>
 </md>
-As 
+As
 <md>
 <mrow>
 \diff{}{x}(2x^3+7x^2-12x+5)&amp;=6x^2+14x-12
@@ -2473,7 +2471,7 @@ f(x,y)&amp;=x^3-3xy^2-3x^2-3y^2
 </mrow><mrow>
 f_x(x,y)&amp;=3x^2-3y^2-6x\qquad &amp;
 f_{xx}(x,y)&amp;=6x-6
-</mrow><mrow> 
+</mrow><mrow>
 f_y(x,y)&amp;=-6xy-6y &amp;
 f_{yy}(x,y)&amp;=-6x-6
 </mrow><mrow>
@@ -2628,14 +2626,14 @@ A(x,\theta)&amp;=(100-2x)x\sin\theta+2\cdot\half\cdot x\sin\theta\cdot x\cos\the
 The maximize the area, we need to solve
 <md>
 <mrow>
-0=A_x&amp;=(100-4x)\sin\theta+x\sin(2\theta) 
+0=A_x&amp;=(100-4x)\sin\theta+x\sin(2\theta)
 </mrow><mrow>
-&amp;\hskip1in\implies\quad 
+&amp;\hskip1in\implies\quad
 (100-4x)+2x\cos\theta=0
 </mrow><mrow>
 0=A_\theta&amp;=(100x-2x^2)\cos\theta+x^2\cos(2\theta)
 </mrow><mrow>
-&amp;\hskip0.5in\implies\quad 
+&amp;\hskip0.5in\implies\quad
 (100-2x)\cos\theta+x\cos(2\theta)=0
 </mrow>
 </md>

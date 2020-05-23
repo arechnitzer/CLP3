@@ -251,7 +251,7 @@ question passes through <m>(x_0,y_0,z_0)</m> and has normal vector <m>\vn=\vt</m
 Consquently, the normal plane is
 <md>
 <mrow>
-&amp;\vn\cdot\llt x-x_0\,,\,y-y_0\,,\,z-z_0\rgt =0 
+&amp;\vn\cdot\llt x-x_0\,,\,y-y_0\,,\,z-z_0\rgt =0
 </mrow><mrow>
     &amp;\qquad\text{where }
 \vn=\vt=\vnabla F(x_0,y_0,z_0)\times \vnabla G(x_0,y_0,z_0)
@@ -639,7 +639,6 @@ f_x(x,y) &amp; = -\frac{4xy}{{(x^2+y^2)}^2}\quad &amp;
 f_y(x,y) &amp; = \frac{2}{x^2+y^2}-\frac{4y^2}{{(x^2+y^2)}^2}\quad &amp;
       f_y(-1,2) &amp; = \frac{2}{5}-\frac{16}{25}
                   =-\frac{6}{25}
-</mrow><mrow>
 </mrow>
 </md>
 So, by Theorem <xref ref="thm_tan_plane_f"/>,
@@ -1027,12 +1026,12 @@ gives
 <mrow>
 y-2+y\,z_x(x,y)+2x+3z(x,y)^2z_x(x,y)&amp;=0
 </mrow><mrow>
- &amp;\hskip-1in\implies 
+ &amp;\hskip-1in\implies
 z_x(x,y)=\frac{2-2x-y}{y+3z(x,y)^2}
 </mrow><mrow>
 x+z(x,y)+y\,z_y(x,y)+2y+3z(x,y)^2z_y(x,y)&amp;=0
 </mrow><mrow>
- &amp;\hskip-1in\implies 
+ &amp;\hskip-1in\implies
 z_y(x,y)=-\frac{x+2y+z(x,y)}{y+3z(x,y)^2}
 </mrow>
 </md>

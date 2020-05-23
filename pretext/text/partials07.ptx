@@ -717,7 +717,6 @@ in terms of <m>r</m> and <m>\theta</m>. By the chain rule,
 </mrow><mrow>
 &amp;=\pdiff{f}{r}\ \frac{r\cos\theta}{r}
        -\pdiff{f}{\theta}\ \frac{r\sin\theta}{r^2}
-</mrow><mrow>
 </mrow>
 <intertext>since <m>x=r\cos\theta</m> and <m>y=r\sin\theta</m></intertext><mrow>
 &amp;=\pdiff{f}{r}\ \cos\theta

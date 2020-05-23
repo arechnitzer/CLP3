@@ -989,7 +989,6 @@ Then the rate of change of temperature (per unit time) felt by the bee at time
 <mrow>
 &amp;\diff{}{t}T\big(x(t),y(t),z(t),t\big)\Big|_{t=2}
 </mrow><mrow>\hskip1in&amp;=x'(2)y(2) + x(2)y'(2) -3x'(2) +2y'(2)2+2y(2) +z'(2)
-</mrow><mrow>
 </mrow>
 </md>
 Recalling that, at time <m>t=2</m>, the bee is at <m>(1,1,0)</m> and has velocity
@@ -1340,15 +1339,15 @@ So, by way of preparation, let's compute all of these gradients.
 <md>
 <mrow>
 \vnabla P(x,y,z) &amp;= \frac{2x}{1+z^2}\hi + \frac{4y}{1+z^2}\hj
-                          -\frac{(x^2+2y^2)2z}{{(1+z^2)}^2}\hk  
+                          -\frac{(x^2+2y^2)2z}{{(1+z^2)}^2}\hk
 </mrow><mrow>
 &amp;\hskip1in\implies \vnabla P(0,-1,1) =  -2\,\hj  - \hk
 </mrow><mrow>
-\vnabla T(x,y,z) &amp;= y\,\hi + x\,\hj -2z\,\hk  
+\vnabla T(x,y,z) &amp;= y\,\hi + x\,\hj -2z\,\hk
 </mrow><mrow>
 &amp;\hskip1in\implies\vnabla T(0,-1,1) =  -\hi  - 2\hk
 </mrow><mrow>
-\vnabla S(x,y,z) &amp;= z\,\hi + 2y\,\hj +(x+3z^2)\,\hk  
+\vnabla S(x,y,z) &amp;= z\,\hi + 2y\,\hj +(x+3z^2)\,\hk
 </mrow><mrow>
 &amp;\hskip1in\implies\vnabla S(0,-1,1) = \hi  - 2\hj +3\,\hk
 </mrow>
@@ -2209,7 +2208,7 @@ and then
 <md>
 <mrow>
 F(x,y,z)
-&amp;\approx F(0,1,2)\!+\!F_x(0,1,2)\,x\!+\1F_y(0,1,2)\,(y\!-\!1)\!+\!F_z(0,1,2)\,(z\!-\!2)
+&amp;\approx F(0,1,2)\!+\!F_x(0,1,2)\,x\!+\! F_y(0,1,2)\,(y\!-\!1)\!+\!F_z(0,1,2)\,(z\!-\!2)
 </mrow><mrow>
 &amp;=8+ 3 x + 12 (z-2)
 </mrow>

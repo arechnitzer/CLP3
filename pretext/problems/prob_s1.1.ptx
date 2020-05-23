@@ -85,8 +85,8 @@ angle <m>45^\circ</m> with the <m>x</m>- and <m>y</m>-axes. It is sketched in th
 figure on the left below.
 </p>
 <sidebyside widths="28% 33%" valign="middle">
-  <image source="pfigs/sec1_1_Q1a.svg"/>
-   <image source="pfigs/sec1_1_Q1b.svg"/>
+  <image source="pfigs/sec1_1_Q1a"/>
+   <image source="pfigs/sec1_1_Q1b"/>
 </sidebyside>
 </li>
 <li><p>
@@ -98,8 +98,8 @@ figure on the left below.
 sketched in the figure on the left below.
 </p>
 <sidebyside widths="35% 40%" valign="middle">
-<image source="pfigs/sec1_1_Q1c.svg"/>
-<image source="pfigs/sec1_1_Q1d.svg"/>
+<image source="pfigs/sec1_1_Q1c"/>
+<image source="pfigs/sec1_1_Q1d"/>
 </sidebyside>
 </li>
 <li><m>x^2+y^2=2y</m> is the circle with centre <m>(0,1)</m> and radius 1.
@@ -110,7 +110,7 @@ the circle with centre <m>(0,1)</m> and radius 1.
 It is the shaded region (not including the dashed circle) in the sketch below.
 </p>
 <sidebyside width="40%">
-<image source="pfigs/sec1_1_Q1e.svg"/>
+<image source="pfigs/sec1_1_Q1e"/>
 </sidebyside>
 </li>
 </ol>
@@ -125,8 +125,8 @@ and <m>(1,1)</m>. So it is the straight line through the origin that makes an an
 left below.
 </p>
 <sidebyside widths="28% 33%" valign="middle">
-  <image source="pfigs/sec1_1_Q1a.svg"/>
- <image source="pfigs/sec1_1_Q1b.svg"/>
+  <image source="pfigs/sec1_1_Q1a"/>
+ <image source="pfigs/sec1_1_Q1b"/>
 </sidebyside>
 </li>
 <li>
@@ -140,8 +140,8 @@ So <m>x^2+y^2=4</m> is the circle with centre <m>(0,0)</m> and radius 2.
 It is sketched in the figure on the left below.
 </p>
 <sidebyside widths="35% 40%" valign="middle">
-    <image source="pfigs/sec1_1_Q1c.svg"/>
-     <image source="pfigs/sec1_1_Q1d.svg"/>
+    <image source="pfigs/sec1_1_Q1c"/>
+     <image source="pfigs/sec1_1_Q1d"/>
    </sidebyside>
  </li>
  <li>The equation <m>x^2+y^2=2y</m> is equivalent to  <m>x^2+(y-1)^2=1</m>.
@@ -168,7 +168,7 @@ That set is the shaded region (not including the dashed circle)
 in the sketch below.
 </p>
 <sidebyside width="40%">
-  <image source="pfigs/sec1_1_Q1e.svg"/>
+  <image source="pfigs/sec1_1_Q1e"/>
 </sidebyside>
 </li>
 </ol>
@@ -213,7 +213,7 @@ makes an angle <m>45^\circ</m> with the <m>xy</m>-plane. Here is a sketch
 of the part of the plane that is in the first octant.
 </p>
 <sidebyside width="35%">
-  <image source="pfigs/xeqzPlane.svg"/>
+  <image source="pfigs/xeqzPlane"/>
 </sidebyside>
 </li>
 <li>
@@ -224,7 +224,7 @@ that is in the first octant.
 </p>
 
 <sidebyside width="50%">
-  <image source="pfigs/xyzPlane.svg"/>
+  <image source="pfigs/xyzPlane"/>
 </sidebyside>
 </li>
 <li><p>
@@ -233,7 +233,7 @@ Here is a sketch of the part of the sphere that is in the first octant.
 </p>
 
 <sidebyside width="40%">
-  <image source="pfigs/quarterSphere.svg"/>
+  <image source="pfigs/quarterSphere"/>
 </sidebyside>
 </li>
 <li><p>(d)
@@ -242,7 +242,7 @@ that has centre <m>(0,0,1)</m> and radius <m>\sqrt{3}</m>. The part of the circl
 in the first octant is the heavy quarter circle in the sketch
 </p>
 <sidebyside width="40%">
-<image source="pfigs/quarterCircle.svg"/>
+<image source="pfigs/quarterCircle"/>
 </sidebyside>
 </li>
 <li><p>
@@ -250,7 +250,7 @@ in the first octant is the heavy quarter circle in the sketch
 Here is a sketch of the part of the cylinder that is in the first octant.
 </p>
 <sidebyside width="35%">
-  <image source="pfigs/quarterCylinder.svg"/>
+  <image source="pfigs/quarterCylinder"/>
 </sidebyside>
 </li>
 <li>
@@ -262,7 +262,7 @@ that is in the first octant.
 </p>
 
 <sidebyside width="40%">
-  <image source="pfigs/quarterParaboloid.svg"/>
+  <image source="pfigs/quarterParaboloid"/>
 </sidebyside>
 </li>
 </ol>
@@ -286,7 +286,7 @@ plane which contains the <m>y</m>-axis and which  makes an angle
 that is in the first octant.
 </p>
 <sidebyside width="40%">
-  <image source="pfigs/xeqzPlane.svg"/>
+  <image source="pfigs/xeqzPlane"/>
   </sidebyside>
 </li>
 <li><p>
@@ -296,7 +296,7 @@ that is in the first octant.
 </p>
 
 <sidebyside width="50%">
-  <image source="pfigs/xyzPlane.svg"/>
+  <image source="pfigs/xyzPlane"/>
 </sidebyside>
 </li>
 <li><p>
@@ -306,7 +306,7 @@ So <m>x^2+y^2+z^2=4</m> is the set of points whose distance from <m>(0,0,0)</m> 
 Here is a sketch of the part of the sphere that is in the first octant.
 </p>
 <sidebyside width="40%">
-  <image source="pfigs/quarterSphere.svg"/>
+  <image source="pfigs/quarterSphere"/>
 </sidebyside>
 </li>
 <li><p>
@@ -317,7 +317,7 @@ that has centre <m>(0,0,1)</m> and radius <m>\sqrt{3}</m>. The part of the circl
 in the first octant is the heavy quarter circle in the sketch
 </p>
 <sidebyside width="40%">
-  <image source="pfigs/quarterCircle.svg"/>
+  <image source="pfigs/quarterCircle"/>
 </sidebyside>
 </li>
 <li><p>
@@ -329,7 +329,7 @@ circles. It is the cylinder of radius <m>2</m> centered on the <m>z</m>-axis.
 Here is a sketch of the part of the cylinder that is in the first octant.
 </p>
 <sidebyside width="35%">
-  <image source="pfigs/quarterCylinder.svg"/>
+  <image source="pfigs/quarterCylinder"/>
 </sidebyside>
 </li>
 <li><p>
@@ -341,7 +341,7 @@ The intersection of the surface with the <m>yz</m>-plane is the parabola
 first octant.
 </p>
 <sidebyside width="40%">
-  <image source="pfigs/quarterParaboloid.svg"/>
+  <image source="pfigs/quarterParaboloid"/>
 </sidebyside>
 </li>
 </ol>
@@ -362,7 +362,7 @@ equation <m>p(x,y)=c</m> for some constant <m>c</m>.
 
 <answer>
   <sidebyside width="40%">
-    <image source="pfigs/pressure.svg"/>
+    <image source="pfigs/pressure"/>
   </sidebyside>
 </answer>
 
@@ -372,7 +372,7 @@ For each fixed <m>c</m>, the isobar <m>p(x,y)=c</m> is the curve
 circle with centre <m>(c,0)</m> and radius <m>\sqrt{1+c^2}</m>, which for large <m>c</m> is just a bit bigger than <m>c</m>.
 </p>
 <sidebyside width="40%">
-<image source="pfigs/pressure.svg"/>
+<image source="pfigs/pressure"/>
 </sidebyside>
 </solution>
 </exercise>
@@ -446,7 +446,7 @@ with a point at the origin and with radius increasing vertically. The surface
 is a paraboloid and is sketched below.
 </p>
 <sidebyside width="33%">
-<image source="pfigs/OE01AQ1.svg"/>
+<image source="pfigs/OE01AQ1"/>
 </sidebyside>
 </solution>
 </exercise>

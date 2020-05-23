@@ -124,8 +124,8 @@ As <m>\theta =\phi-\frac{\pi}{2}</m>, the desired parametrization is
 </me>
 </p>
 <sidebyside widths="55% 40%" valign="middle">
-<image source="pfigs/parCirclePhi.svg"/>
-<image source="pfigs/parCircleS.svg"/>
+<image source="pfigs/parCirclePhi"/>
+<image source="pfigs/parCircleS"/>
 </sidebyside>
 <p>
 (c) Let <m>\theta</m> be the angle between
@@ -870,7 +870,7 @@ the arclength from <m>t = 0</m> to <m>t = \frac{\pi}{2}</m> is
 	\int_0^{\pi/2} \diff{s}{t}(t)\,\dee{t}
 	&amp;=\int_0^{\pi/2} \sin t\cos t \sqrt{1+ 9\sin^2 t}\,\dee{t}
 </mrow><mrow>
-	&amp;=\frac{1}{18}\int_1^{10} \sqrt{u}\ \dee{u} 
+	&amp;=\frac{1}{18}\int_1^{10} \sqrt{u}\ \dee{u}
 </mrow><mrow>
 	&amp;\hskip0.5in\text{with } u = 1+ 9\sin^2 t,\ \dee{u}  = 18\sin t\cos t\,\dee{t}
 </mrow><mrow>
