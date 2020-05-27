@@ -563,7 +563,7 @@ So <m>(*)</m> tells us that the gradient
 <m>\vr(0)</m> to <m>\vr(t)</m>, is almost tangent to the path that we are walking on.
 The limit
 <me>
-\vr'(0)=\lim_{t\rightarrow 0}\frac{\vr(t)-\vr(t)}{t}
+\vr'(0)=\lim_{t\rightarrow 0}\frac{\vr(t)-\vr(0)}{t}
 </me>
 is thus exactly tangent to our path, and consequently to the surface
 <m>G(x,y,z)=0</m> at <m>(x_0,y_0,z_0)</m>. This is true for all paths on the surface that
