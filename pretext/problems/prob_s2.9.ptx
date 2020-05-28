@@ -319,7 +319,6 @@ f_{yy}(x,y) &amp;= 12y^2-4x^2\qquad&amp;
 </mrow><mrow>
 f_{xy}(x,y) &amp;=-8xy\qquad&amp;
          f_{xx}(x,y)&amp;=0
-</mrow><mrow>
 </mrow>
 </md>
 As
@@ -1479,7 +1478,6 @@ The critical points are the solutions of
 0&amp;=f_x(x,y) = 2-2x
 </mrow><mrow>
 0&amp;=f_y(x,y) = -8y
-</mrow><mrow>
 </mrow>
 </md>
 So the only critical point is <m>(1,0)</m>.
