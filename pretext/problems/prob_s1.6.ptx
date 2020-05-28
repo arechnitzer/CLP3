@@ -6,9 +6,9 @@
 
 <exercises>
 <exercisegroup>
-<introduction><conceptual/></introduction>
+<introduction><conceptual/>
 
-<introduction><p>Questions <xref ref="prob_s1_0first"/> through <xref ref="prob_s1_0last"/> provide practice with curve parametrization. Being comfortable with the
+<p>Questions <xref ref="prob_s1_0first"/> through <xref ref="prob_s1_0last"/> provide practice with curve parametrization. Being comfortable with the
 algebra and interpretation of these descriptions are essential ingredients
 in working effectively with parametrizations.</p></introduction>
 

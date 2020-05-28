@@ -195,9 +195,11 @@ the integral with respect to <m>y</m> treats <m>x</m> as a constant.
 </solution>
 </exercise>
 </exercisegroup>
-<exercisegroup><introduction><procedural/></introduction>
+<exercisegroup>
+  <introduction><procedural/>
 
-<introduction><p>Questions<nbsp/><xref ref="prob_s3_1a"/> through <xref ref="prob_s3_1f"/> provide practice with limits of integration for double integrals in Cartesian coordinates.</p></introduction>
+<p>Questions<nbsp/><xref ref="prob_s3_1a"/> through <xref ref="prob_s3_1f"/> provide practice with limits of integration for double integrals in Cartesian coordinates.</p>
+</introduction>
 
 <exercise xml:id="prob_s3_1a">
 <statement><p>
@@ -1070,7 +1072,7 @@ Evaluate <m>I</m>.
 
 <answer>
 <p>(a)</p>
-<sidebyside widths="60%">  
+<sidebyside widths="60%">
   <image source="pfigs/OE09D_6"/>
 </sidebyside>
 
@@ -1168,7 +1170,7 @@ integration.
 
 <answer>
 <p>(a)</p>
-<sidebyside width="50%">  
+<sidebyside width="50%">
   <image source="pfigs/OE10A_6"/>
 </sidebyside>
 
@@ -1869,7 +1871,7 @@ reversing the order of integration.
 
 <answer>
 <p>(a)</p>
-<sidebyside widths="45%">  
+<sidebyside widths="45%">
   <image source="pfigs/OE16D_6"/>
 </sidebyside>
 
@@ -1947,7 +1949,7 @@ Compute the volume of the solid.
 
 <answer>
 <p>(a)</p>
-<sidebyside width="50%">  
+<sidebyside width="50%">
   <image source="pfigs/OE03DQ6a"/>
 </sidebyside>
 
