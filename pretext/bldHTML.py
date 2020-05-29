@@ -58,9 +58,9 @@ mySubs = [
 
 # build parameters as dict
 param = {
-    "exercise.divisional.answer": "'yes'",
-    "exercise.divisional.hint": "'yes'",
-    "exercise.divisional.solution": "'yes'",
+    "exercise.divisional.answer": "'no'",
+    "exercise.divisional.hint": "'no'",
+    "exercise.divisional.solution": "'no'",
 }
 
 
