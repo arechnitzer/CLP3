@@ -10,21 +10,19 @@ import os
 import subprocess
 import lxml.etree as ET
 
-# Hopefully only these paths need setting
-pretextPath = "/home/andrew/Projects/mathbook"
 # source file
 sourceFile = "./clp_3_mc.ptx"
-# output file
-outFile = "clp_3_mc.tex"
+# output directory
+outDir = "./site"
 
-# Hopefully don't need hacking
+currentDir = os.getcwd()
 # xslt pretext file
-xsltFile = pretextPath + "/xsl/mathbook-latex.xsl"
+xsltFile = currentDir + "/xsl/mathbook-html.xsl"
 # the schema to check against
-xsFile = pretextPath + "/schema/pretext.rng"
+xsFile = currentDir +  "/schema/pretext.rng"
 xs = ET.RelaxNG(ET.parse(xsFile))
 # mbx location
-mbx = pretextPath + "/script/mbx"
+ptx = currentDir + "/pretext/pretext"
 
 # now some tag operations
 # each in this list should be a 4-ple [ancestor-tag, tag, replace-before, replace-after]
@@ -41,7 +39,7 @@ myTags = [
 ]
 
 # These ["foo", "bar"] does replacement of <foo> with <bar>
-# Joel - you might want these when hacking the pretext image sizes, and then comment out to do a proper compile.
+# You might want these when hacking the pretext image sizes, and then comment out to do a proper compile.
 myRep = [
     # I had these set so that I could see all parts of exercises on page.
     # breaks validation, but really helps debugging.
@@ -55,7 +53,7 @@ mySubs = [
     ["conceptual", "<p><alert>Exercises &#8212; Stage 1</alert></p>"],
     ["procedural", "<p><alert>Exercises &#8212; Stage 2</alert></p>"],
     ["application", "<p><alert>Exercises &#8212; Stage 3</alert></p>"],
-    ["fromexam", "<m>\\ast</m>"],
+    ["fromexam", "<em>&#x2733;</em>"],
 ]
 
 # build parameters as dict
@@ -166,7 +164,8 @@ except Exception as err:
     exit(1)
 
 # all passed so now build
-os.makedirs("site", exist_ok=True)
+for dir in ["site", "site/knowl", "site/figs", "site/images", "site/pfigs"]:
+    os.makedirs(dir, exist_ok=True)
 
 # read in the pretext xslt magic
 print("Read in xsl file")
@@ -175,13 +174,15 @@ xslt = ET.parse(xsltFile)
 # and build the transform
 print("Load the transform")
 transform = ET.XSLT(xslt)
+os.chdir(outDir)
 
 # apply the pretext transforms to the processed-src
 print("Transform the source")
-latexSource = transform(procd, **param)
-print("Writing LaTeX")
-with open(outFile, "w") as fh:
-    fh.write(str(latexSource))
-
+htmlSource = transform(procd, **param)
+print("HTML written")
 print("Error log:")
 print(transform.error_log)
+print("Processing tikz to svg")
+subprocess.check_output(
+    [ptx, "-c", "latex-image", "-f", "svg", "-d", "images", "../" + sourceFile]
+)
