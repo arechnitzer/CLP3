@@ -8,7 +8,7 @@
 * See the latex sources for information on how they were produced.
 
 ## Minimal PreTexT installation
-* You do not need to install all of [PreTexT](https://pretextbook.org/) to build CLP-2.
+* You do not need to install all of [PreTexT](https://pretextbook.org/) to build CLP-3.
 * We include here the minimum necessary pretext XSL files needed.
 * Minor changes have been made to allow for CLP styling - those changes are tagged in the source.
 * In time those styling options will be absorbed into the standard PreTexT code base.
