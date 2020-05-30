@@ -19,7 +19,7 @@ currentDir = os.getcwd()
 # xslt pretext file
 xsltFile = currentDir + "/xsl/mathbook-html.xsl"
 # the schema to check against
-xsFile = currentDir +  "/schema/pretext.rng"
+xsFile = currentDir +  "/schema/pretextCLP.rng"
 xs = ET.RelaxNG(ET.parse(xsFile))
 # mbx location
 ptx = currentDir + "/pretext/pretext"

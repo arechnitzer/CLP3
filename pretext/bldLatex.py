@@ -19,7 +19,7 @@ outFile = "clp_3_mc.tex"
 # xslt pretext file
 xsltFile = "./xsl/mathbook-latex.xsl"
 # the schema to check against
-xsFile = "./schema/pretext.rng"
+xsFile = "./schema/pretextCLP.rng"
 xs = ET.RelaxNG(ET.parse(xsFile))
 # mbx location
 mbx = "./script/mbx"
