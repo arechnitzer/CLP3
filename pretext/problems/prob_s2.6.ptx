@@ -828,8 +828,8 @@ Without knowing <m>f(x,y)</m> explicitly, there's not much that we can do with t
 
 <p>(b) <m>f(-1,1)</m> obeys
 <me>
-(-1)(1)\,f(-1,1) + (-1) + (1)^2 + f(-1,1)^3 =0
-\iff f(-1,1)^3 -f(-1,1) =0
+(-1)(1)\,f(-1,1)\! +\! (-1) \!+\! (1)^2 \!+\! f(-1,1)^3 =0
+\iff f(-1,1)^3 \!-\!f(-1,1) =0
 </me>
 Since <m>f(-1, 1)  \lt  0</m> we may divide this equation by <m>f(-1, 1)  \lt  0</m>,
 giving <m>f(-1,1)^2 - 1=0</m>. Since <m>f(-1, 1)  \lt  0</m>, we must have
@@ -1764,11 +1764,12 @@ Find the approximate value of <m>z</m>.
 So a normal vector to the surface at <m>(1,1-1)</m> is
 <md>
 <mrow>
-\vnabla G(1,1,-1)
-&amp;= \big[ \big(2x z^3 +\pi y\cos(\pi x)\big)\hi +\big(\sin(\pi x) +2y\big)\hj
+&amp;\vnabla G(1,1,-1)
+</mrow><mrow>
+&amp;\hskip0.25in= \big[ \big(2x z^3 +\pi y\cos(\pi x)\big)\hi +\big(\sin(\pi x) +2y\big)\hj
            +3z^2 x^2\,\hk\big]_{(x,y,z)=(1,1,-1)}
 </mrow><mrow>
-&amp;= \big(-2-\pi\big)\hi +2\,\hj +3\,\hk
+&amp;\hskip0.25in= \big(-2-\pi\big)\hi +2\,\hj +3\,\hk
 </mrow>
 </md>
 So the equation of the tangent plane is

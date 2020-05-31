@@ -1499,7 +1499,7 @@ Finally, here is a sketch of the part of <m>E</m> in the first octant.
 in the <m>xz</m>--plane, i.e. by replacing <m>y\rightarrow-y</m>.
 </p>
 
-<sidebyside width="60%">
+<sidebyside width="50%">
   <image source="pfigs/OE14D_9"/>
 </sidebyside>
 
@@ -1518,7 +1518,7 @@ in this range <m>(x,z)</m> runs over <m>E_y=\Set{(x,z)}{x\le 3,\ y^2\le z\le 2x}
 Here is a sketch of <m>E_y</m>.
 </p>
 
-<sidebyside width="60%">
+<sidebyside width="45%">
   <image source="pfigs/OE14D_9e"/>
 </sidebyside>
 

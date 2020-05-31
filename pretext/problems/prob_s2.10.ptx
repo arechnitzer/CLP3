@@ -2553,7 +2553,8 @@ So we may assume that <m>x\ne 0</m>. Then
 </mrow><mrow>
 &amp;
   \iff \text{there is a $\la$ such that }
-        f_x(x,y)=\la g_x(x,y),\ f_y(x,y)=\la g_y(x,y),\ g(x,y)=0
+        f_x(x,y)=\la g_x(x,y),\ f_y(x,y)=\la g_y(x,y),
+</mrow><mrow>&amp;\hskip2.0in g(x,y)=0
 </mrow><mrow>
 &amp;
   \iff \text{there is a $\la$ such that }
