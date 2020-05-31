@@ -3367,7 +3367,7 @@ m=\int_0^{2\pi}\dee{\theta}\int_0^{3/2}\dee{r}\ r\int_{\sqrt{3}\,r}^{\sqrt{9-r^2
 </md>
 </p>
 
-<sidebyside width="33%">
+<sidebyside width="27%">
   <image source="pfigs/OE04Q8"/>
 </sidebyside>
 
