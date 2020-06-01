@@ -1279,7 +1279,7 @@ to <m>\frac{\pi}{2}</m> (the <m>xy</m>-plane). Here is a sketch of the side view
 of <m>V</m>.
 </p>
 
-<sidebyside width="40%">
+<sidebyside width="30%">
   <image source="pfigs/OE12D_10"/>
 </sidebyside>
 
@@ -3215,7 +3215,7 @@ S = \Set{(x,y,z)}{x,y\ge 0,\  x^2+y^2\le 1,\
 Here is a sketch of the <m>y=0</m> cross section of S.
 </p>
 
-<sidebyside width="75%">
+<sidebyside width="87%">
 <image source="pfigs/OE16D_7"/>
 </sidebyside>
 
@@ -3367,7 +3367,7 @@ m=\int_0^{2\pi}\dee{\theta}\int_0^{3/2}\dee{r}\ r\int_{\sqrt{3}\,r}^{\sqrt{9-r^2
 </md>
 </p>
 
-<sidebyside width="33%">
+<sidebyside width="27%">
   <image source="pfigs/OE04Q8"/>
 </sidebyside>
 

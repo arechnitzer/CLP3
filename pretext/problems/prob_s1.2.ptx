@@ -19,9 +19,12 @@ Let <m>\va=\llt 2,0\rgt </m> and <m>\vb=\llt 1,1\rgt </m>. Evaluate and sketch
 <m>2\va-\vb=\llt 3,-1\rgt </m>
 </p>
 
-<sidebyside width="30%">
+<sidebyside widths="35% 45%" valign="middle">
 <image source="pfigs/add1"/>
 <image source="pfigs/add2"/>
+</sidebyside>
+
+<sidebyside width="47%">
 <image source="pfigs/add3"/>
 </sidebyside>
 </answer>
@@ -30,9 +33,12 @@ Let <m>\va=\llt 2,0\rgt </m> and <m>\vb=\llt 1,1\rgt </m>. Evaluate and sketch
 <m>\va+\vb=\llt 3,1\rgt </m>, <m>\va+2\vb=\llt 4,2\rgt </m>
 <m>2\va-\vb=\llt 3,-1\rgt </m>
 </p>
-<sidebyside width="30%">
+<sidebyside widths="35% 45%" valign="middle">
 <image source="pfigs/add1"/>
 <image source="pfigs/add2"/>
+</sidebyside>
+
+<sidebyside width="47%">
 <image source="pfigs/add3"/>
 </sidebyside>
 
@@ -150,7 +156,7 @@ By property 7 of Theorem <xref ref="thm_dotPppties"/>,
 \tag{c}
 </mrow>
 </md>
-says that the vectors of parts (a) and (b) are perpendicular, while the vectors of part (c) are not perpendicular/
+says that the vectors of parts (a) and (b) are perpendicular, while the vectors of part (c) are not perpendicular.
 </p></solution>
 </exercise>
 
@@ -611,7 +617,8 @@ which implies
 \overrightarrow{OB}\cdot\overrightarrow{OC}
 &amp;=\llt b,c\rgt\cdot\llt\frac{a}{2}\,,\,\frac{b^2+c^2-ab}{2c}\rgt
 =\frac{ab}{2}+\frac{b^2+c^2-ab}{2}=\frac{b^2+c^2}{2}
-=\frac{1}{2}|\overrightarrow{OB}|^2
+</mrow><mrow>
+&amp;=\frac{1}{2}|\overrightarrow{OB}|^2
 </mrow>
 </md>
 So, by Equation <xref ref="eqn_proj"/>,

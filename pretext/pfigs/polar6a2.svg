@@ -66,7 +66,7 @@
 </defs>
 <g id="surface1">
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(90.039062%,90.039062%,90.039062%);fill-opacity:1;" d="M 66.480469 65.917969 L 117.390625 116.832031 C 130.894531 103.328125 138.480469 85.015625 138.480469 65.917969 C 138.480469 46.824219 130.894531 28.511719 117.390625 15.007812 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 66.480469 65.917969 L 84.480469 97.097656 C 95.617188 90.667969 102.480469 78.78125 102.480469 65.917969 C 102.480469 53.058594 95.617188 41.171875 84.480469 34.742188 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(96.078431%,96.078431%,100%);fill-opacity:1;" d="M 66.480469 65.917969 L 84.480469 97.097656 C 95.617188 90.667969 102.480469 78.78125 102.480469 65.917969 C 102.480469 53.058594 95.617188 41.171875 84.480469 34.742188 "/>
 <g clip-path="url(#clip1)" clip-rule="nonzero">
 <path style="fill:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 592.8125 670.820312 L 1528.789062 670.820312 " transform="matrix(0.1,0,0,-0.1,0,133)"/>
 </g>

@@ -1423,7 +1423,7 @@ So
 \bigg[3a^2\left(\frac{t}{2}\!+\!\frac{\sin(2t)}{4}\right)
     \!-\!3a^2\left(\frac{3t}{8}\!+\! \frac{1}{4} \sin(2t)\!+\! \frac{1}{32}\sin(4t)\right)
 </mrow><mrow>
-&amp;\hskip3.4in  +b^2\left(\frac{t}{2}+\frac{\sin(2t)}{4}\right)\!\bigg]_0^{{\pi\over 2}}
+&amp;\hskip3.0in  +b^2\left(\frac{t}{2}+\frac{\sin(2t)}{4}\right)\!\bigg]_0^{{\pi\over 2}}
 </mrow><mrow>
 &amp;= \frac{4M}{\pi}
          \Big[3a^2\frac{\pi}{4}-3a^2\frac{3\pi}{16}+b^2\frac{\pi}{4}\Big]
