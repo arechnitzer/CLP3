@@ -63,7 +63,7 @@
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(90.039062%,90.039062%,90.039062%);fill-opacity:1;" d="M 148.078125 80.71875 C 148.078125 40.957031 115.84375 8.71875 76.082031 8.71875 C 36.316406 8.71875 4.082031 40.957031 4.082031 80.71875 C 4.082031 120.484375 36.316406 152.71875 76.082031 152.71875 C 115.84375 152.71875 148.078125 120.484375 148.078125 80.71875 "/>
 </g>
 <g clip-path="url(#clip2)" clip-rule="nonzero">
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 76.082031 80.71875 L 138.433594 116.71875 L 76.082031 224.71875 L 13.726562 116.71875 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(96.078431%,96.078431%,100%);fill-opacity:1;" d="M 76.082031 80.71875 L 138.433594 116.71875 L 76.082031 224.71875 L 13.726562 116.71875 "/>
 </g>
 <path style="fill:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 760.820312 12.8125 L 760.820312 1452.8125 " transform="matrix(0.1,0,0,-0.1,0,136)"/>
 <path style="fill:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-dasharray:20,20;stroke-dashoffset:10;stroke-miterlimit:10;" d="M 137.265625 192.8125 L 760.820312 192.8125 " transform="matrix(0.1,0,0,-0.1,0,136)"/>
