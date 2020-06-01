@@ -2049,7 +2049,7 @@ line <m>y=\frac{x}{2}</m>.
 Here is a sketch of <m>G</m>
 </p>
 
-<sidebyside width="90%">
+<sidebyside width="74%">
   <image source="pfigs/OE10A_5"/>
 </sidebyside>
 
@@ -2080,7 +2080,7 @@ is <m>\left(\frac{2}{\sqrt{5}}\,,\,\frac{1}{\sqrt{5}}\right)</m>.
 sketch
 </p>
 
-<sidebyside width="90%">
+<sidebyside width="75%">
 <image source="pfigs/OE10A_5xy"/>
 </sidebyside>
 
@@ -2127,7 +2127,7 @@ or <m>\tan\theta =2</m>.
 Looking at the sketch
 </p>
 
-<sidebyside width="66%">
+<sidebyside width="63%">
   <image source="pfigs/OE10A_5p"/>
 </sidebyside>
 
