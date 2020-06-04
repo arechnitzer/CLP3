@@ -19,7 +19,7 @@ currentDir = os.getcwd()
 # xslt pretext file
 xsltFile = currentDir + "/xsl/mathbook-html.xsl"
 # the schema to check against
-xsFile = currentDir +  "/schema/pretextCLP.rng"
+xsFile = currentDir + "/schema/pretextCLP.rng"
 xs = ET.RelaxNG(ET.parse(xsFile))
 # mbx location
 ptx = currentDir + "/pretext/pretext"
@@ -58,6 +58,7 @@ mySubs = [
 
 # build parameters as dict
 param = {
+    "publisher": "'../pubHTML.ptx'",  # this loads in the publisher options = just the google analytics at this stage
     "exercise.divisional.answer": "'no'",
     "exercise.divisional.hint": "'no'",
     "exercise.divisional.solution": "'no'",
