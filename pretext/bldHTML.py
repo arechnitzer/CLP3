@@ -58,7 +58,7 @@ mySubs = [
 
 # build parameters as dict
 param = {
-    "publisher": "'../pubHTML.ptx'",  # this loads in the publisher options = just the google analytics at this stage
+    "publisher": "'../pubHTML.ptx'",  # this loads in the publisher options = empty at this stage
     "exercise.divisional.answer": "'no'",
     "exercise.divisional.hint": "'no'",
     "exercise.divisional.solution": "'no'",
