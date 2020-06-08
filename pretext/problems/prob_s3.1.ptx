@@ -384,8 +384,8 @@ integrals in this problem.
 =e^2-3
 \tag{a}
 </mrow><mrow>
-\int_0^{e^2} \dee{y}\int_{\ln y}^2 \dee{x}
-&amp;=\int_0^{e^2} \dee{y}\ \big[2-\ln y\big]
+\int_1^{e^2} \dee{y}\int_{\ln y}^2 \dee{x}
+&amp;=\int_1^{e^2} \dee{y}\ \big[2-\ln y\big]
 =\big[2y-y\ln y+y\big]_1^{e^2}
 </mrow><mrow>
 &amp;=e^2-3
