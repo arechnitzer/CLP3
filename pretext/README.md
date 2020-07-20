@@ -15,9 +15,8 @@
 
 ## Compilation instructions
 * The pretext source files can be compiled into html and PDF.
-############  NEEDS UPDATING
-* The user does not need to install pretext, but only the xsltproc command.
-* xsltproc is a standard package in most Linux and OSX distributions. For Windows we recommend taking a look at the [PreTexT installation instructions](https://pretextbook.org/tools.html).
+* The user does not  need to install pretext, but will need a working python3 install.
+* Additionally the user will need to install lxml either through pip or your package manager.
 
 ### Compiling to LaTeX and PDF
 * Move into the directory containing `clp_3_mc.ptx`
@@ -30,7 +29,7 @@
 
 ### Compiling to HTML
 * Move into the directory containing `clp_3_mc.ptx`
-* We will build the website in this directory, which should then be uploaded to its final hosting location.
+* We will build the website in a subdirectory of the current directory; that subdirectory should then be uploaded to its final hosting location.
 * Run the following command
 `./buildHTML.py`
 * This will take a few minutes to run and produce a large number of html files.
