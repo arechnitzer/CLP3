@@ -33,14 +33,19 @@ mySubs = [
     ["fromexam", "<em>&#x2733;</em>"],
 ]
 
+# select publisher options file - the publisher options are empty in the repository
+if os.path.isfile('../../pubHTML.ptx'):
+    pubFile = "'../../../pubHTML.ptx'"
+else:
+    pubFile = "'../pubHTML.ptx'"
+
 # build parameters as dict
 param = {
-    "publisher": "'../pubHTML.ptx'",  # this loads in the publisher options = empty at this stage
+    "publisher": pubFile,  # this loads in the publisher options 
     "exercise.divisional.answer": "'no'",
     "exercise.divisional.hint": "'no'",
     "exercise.divisional.solution": "'no'",
 }
-
 
 def replaceSubsTag(src, tg, sb):
     for repTag in reversed(src.findall("//{}".format(tg))):

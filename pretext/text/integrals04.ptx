@@ -464,7 +464,7 @@ lying above the <m>xy</m>-plane.
 
 <solution>
 <p>
-The equation of the surface is of the form <m>x=f(x,y)</m> with <m>f(x,y)=2-x^2-y^2</m>.
+The equation of the surface is of the form <m>z=f(x,y)</m> with <m>f(x,y)=2-x^2-y^2</m>.
 So
 <md>
 <mrow>

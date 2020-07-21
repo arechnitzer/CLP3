@@ -185,7 +185,7 @@ f_x(x,y,z) &amp;= \la\, g_x(x,y,z)
 </mrow><mrow>
 f_y(x,y,z) &amp;= \la\, g_y(x,y,z)
 </mrow><mrow>
-f_z(x,y,z) &amp;= \la\, g_y(x,y,z)
+f_z(x,y,z) &amp;= \la\, g_z(x,y,z)
 </mrow><mrow>
 g(x,y,z)&amp;=0
 </mrow>
