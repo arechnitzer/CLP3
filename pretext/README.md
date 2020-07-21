@@ -16,7 +16,7 @@
 ## Compilation instructions
 * The pretext source files can be compiled into html and PDF.
 * The user does not  need to install pretext, but will need a working python3 install.
-* Additionally the user will need to install lxml either through pip or your package manager.
+* Additionally the user will need to install python3-lxml either through the Python package installer pip or your package manager.
 
 ### Compiling to LaTeX and PDF
 * Move into the directory containing `clp_3_mc.ptx`
