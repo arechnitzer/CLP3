@@ -124,6 +124,43 @@
   </me>
   </p>
 
+<example>
+<p>
+In this example we are going to find all points <m>(x,y,z)</m> for which
+the distance from <m>(x,y,z)</m> to <m>(9,-12,15)</m> is twice the distance from <m>(x,y,z)</m> to the origin <m>(0,0,0)</m>.
+
+The distance from <m>(x,y,z)</m> to <m>(9,-12,15)</m> is 
+<m>\sqrt{(x-9)^2+(y+12)^2+(z-15)^2}</m>.
+The distance from <m>(x,y,z)</m> to <m>(0,0,0)</m> is 
+<m>\sqrt{x^2+y^2+z^2}</m>. So we want to find all points <m>(x,y,z)</m> for which
+<me>
+\sqrt{(x-9)^2+(y+12)^2+(z-15)^2}
+=2\sqrt{x^2+y^2+z^2}
+</me>
+Squaring both sides of this equation gives
+<me>
+x^2-18x+81 +y^2+24y+144 +z^2-30z+225 = 4\big(x^2+y^2+z^2)
+</me>
+Collecting up terms gives
+<md alignment="alignat">
+<mrow>
+3x^2+18x +3y^2-24y +3z^2+30z \amp= 450\ \text{and, dividing by 3,} 
+</mrow><mrow>
+x^2+6x +y^2-8y +z^2+10z \amp= 150\ \text{and, completing squares,}
+</mrow><mrow>
+x^2+6x +9 +y^2-8y +16  +z^2+10z +25 \amp= 200\ \text{or}
+</mrow><mrow>
+(x+3)^2+(y-4)^2+(z+5)^2 =200 
+</mrow>
+</md>
+This is the sphere of radius <m>10\sqrt{2}</m> centred on <m>(-3,4,-5)</m>.
+</p>
+</example>
+
+
+
+
+
 <xi:include href="../problems/prob_s1.1.ptx" />
 
 </section>

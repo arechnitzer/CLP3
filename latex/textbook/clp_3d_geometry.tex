@@ -121,6 +121,32 @@ from $(1,2,3)$ is $4$, is
 (x-1)^2+(y-2)^2+(z-3)^2=16
 \end{equation*}
 
+\begin{eg}
+In this example we are going to find all points $(x,y,z)$ for which
+the distance from $(x,y,z)$ to $(9,-12,15)$ is twice the distance from $(x,y,z)$   to the origin $(0,0,0)$.
+
+The distance from $(x,y,z)$ to $(9,-12,15)$ is 
+$\sqrt{(x-9)^2+(y+12)^2+(z-15)^2}$.
+The distance from $(x,y,z)$ to $(0,0,0)$ is 
+$\sqrt{x^2+y^2+z^2}$. So we want to find all points $(x,y,z)$ for which
+\begin{equation*}
+\sqrt{(x-9)^2+(y+12)^2+(z-15)^2}
+=2\sqrt{x^2+y^2+z^2}
+\end{equation*}
+Squaring both sides of this equation gives
+\begin{align*}
+x^2-18x+81 +y^2+24y+144 +z^2-30z+225 &= 4\big(x^2+y^2+z^2)
+\end{align*}
+Collecting up terms gives
+\begin{align*}
+3x^2+18x +3y^2-24y +3z^2+30z &= 450\qquad\text{and then, dividing by $3$,} \\
+x^2+6x +y^2-8y +z^2+10z &= 150\qquad\text{and then, completing squares,} \\
+x^2+6x +9 +y^2-8y +16  +z^2+10z +25 &= 200\qquad\text{or}\\
+(x+3)^2+(y-4)^2+(z+5)^2 =200 
+\end{align*}
+Thsi is the sphere of radius $10\sqrt{2}$ centred on $(-3,4,-5)$.
+\end{eg}
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Vectors}\label{sec vectors}
 %%%%%%%%%%%%%%%%%%%%%%%%%
