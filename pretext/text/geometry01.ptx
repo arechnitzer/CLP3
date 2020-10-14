@@ -22,7 +22,11 @@
   <ul>
   <li> the distance from the point <m>(x,y)</m> to the <m>x</m>-axis is <m>|y|</m>
   </li>
+  <li> if <m>y\gt 0</m>, then <m>(x,y)</m> is above the <m>x</m>-axis and if <m>y\lt 0</m>, then <m>(x,y)</m> is below the <m>x</m>-axis
+  </li>
   <li> the distance from the point <m>(x,y)</m> to the <m>y</m>-axis is <m>|x|</m>
+  </li>
+  <li> if <m>x\gt 0</m>, then <m>(x,y)</m> is to the right of the <m>y</m>-axis and if <m>x\lt 0</m>, then <m>(x,y)</m> is to the left of the <m>y</m>-axis
   </li>
   <li> the distance from the point <m>(x,y)</m> to the origin <m>(0,0)</m> is
        <m>\sqrt{x^2+y^2}</m>
