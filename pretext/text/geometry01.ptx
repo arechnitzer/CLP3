@@ -124,11 +124,42 @@
   </me>
   </p>
 
+<p>
+Here are a couple of examples that involve spheres.
+</p>
+
 <example>
 <p>
-In this example we are going to find all points <m>(x,y,z)</m> for which
-the distance from <m>(x,y,z)</m> to <m>(9,-12,15)</m> is twice the distance from <m>(x,y,z)</m> to the origin <m>(0,0,0)</m>.
+In this example, we are going to find the curve formed by the intersection of the <m>xy</m>-plane and the sphere of radius <m>5</m> centred on <m>(0,0,4)</m>.
+</p>
+ 
+<p>
+The point <m>(x,y,z)</m> lies on the <m>xy</m>-plane if and only if <m>z=0</m>, and lies on the sphere of radius <m>5</m> centred on <m>(0,0,4)</m> if and only if
+<m>x^2+y^2+(z-4)^2=25</m>. So the point <m>(x,y,z)</m> lies on the curve of intersection if and only if both <m>z=0</m> and <m>x^2+y^2+(z-4)^2=25</m>, or equivalently
+<me>
+z=0,\quad x^2+y^2+(0-4)^2=25
+\iff
+z=0,\quad x^2+y^2 = 9
+</me>
+This is the circle in the <m>xy</m>-plane that is centred on the origin and
+has radius <m>3</m>. Here is a sketch that show the parts of the sphere 
+and the circle of intersection that are in the first octant. That is, that
+have <m>x\ge 0</m>, <m>y\ge 0</m> and <m>z\ge 0</m>.
+</p>
 
+<sidebyside width="34%" >
+  <image source="figs/sphereCircle"/>
+</sidebyside>
+
+</example>
+
+<example>
+<p>
+In this example, we are going to find all points <m>(x,y,z)</m> for which
+the distance from <m>(x,y,z)</m> to <m>(9,-12,15)</m> is twice the distance from <m>(x,y,z)</m> to the origin <m>(0,0,0)</m>.
+</p>
+
+<p>
 The distance from <m>(x,y,z)</m> to <m>(9,-12,15)</m> is 
 <m>\sqrt{(x-9)^2+(y+12)^2+(z-15)^2}</m>.
 The distance from <m>(x,y,z)</m> to <m>(0,0,0)</m> is 

@@ -121,8 +121,32 @@ from $(1,2,3)$ is $4$, is
 (x-1)^2+(y-2)^2+(z-3)^2=16
 \end{equation*}
 
+Here are a couple of examples that involve spheres.
+
 \begin{eg}
-In this example we are going to find all points $(x,y,z)$ for which
+In this example, we are going to find the curve formed by the intersection of the $xy$-plane and the sphere of radius $5$ centred on $(0,0,4)$. 
+
+The point $(x,y,z)$ lies on the $xy$-plane if and only if $z=0$, and lies on the  
+sphere of radius $5$ centred on $(0,0,4)$ if and only if
+$x^2+y^2+(z-4)^2=25$. So the point $(x,y,z)$ lies on the curve of intersection if and only if both $z=0$ and $x^2+y^2+(z-4)^2=25$, or equivalently
+\begin{equation*}
+z=0,\quad x^2+y^2+(0-4)^2=25
+\iff
+z=0,\quad x^2+y^2 = 9
+\end{equation*}
+This is the circle in the $xy$-plane that is centred on the origin and
+has radius $3$. Here is a sketch that show the parts of the sphere 
+and the circle of intersection that are in the first octant. That is, that
+have $x\ge 0$, $y\ge 0$ and $z\ge 0$.
+\begin{efig}
+\begin{center}
+   \includegraphics{sphereCircle.pdf}
+\end{center}
+\end{efig}
+\end{eg}
+
+\begin{eg}
+In this example, we are going to find all points $(x,y,z)$ for which
 the distance from $(x,y,z)$ to $(9,-12,15)$ is twice the distance from $(x,y,z)$   to the origin $(0,0,0)$.
 
 The distance from $(x,y,z)$ to $(9,-12,15)$ is 
@@ -144,7 +168,7 @@ x^2+6x +y^2-8y +z^2+10z &= 150\qquad\text{and then, completing squares,} \\
 x^2+6x +9 +y^2-8y +16  +z^2+10z +25 &= 200\qquad\text{or}\\
 (x+3)^2+(y-4)^2+(z+5)^2 =200 
 \end{align*}
-Thsi is the sphere of radius $10\sqrt{2}$ centred on $(-3,4,-5)$.
+This is the sphere of radius $10\sqrt{2}$ centred on $(-3,4,-5)$.
 \end{eg}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
