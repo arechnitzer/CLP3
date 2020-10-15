@@ -121,6 +121,84 @@ from $(1,2,3)$ is $4$, is
 (x-1)^2+(y-2)^2+(z-3)^2=16
 \end{equation*}
 
+Here is an example in which we sketch a region in the $xy$-plane that is specified using inequalities.
+
+\begin{eg}
+In this example, we sketch the region
+\begin{equation*}
+\Set{(x,y)}{ -12\le x^2-6x +y^2-4y \le -9,\ \ y\ge 1}
+\end{equation*}
+in the $xy$-plane.
+
+We do so in two steps. In the first step, we sketch the curves
+$x^2-6x +y^2-4y=-12$, $x^2-6x +y^2-4y=-9$, and $y=1$.
+\begin{itemize}
+\item
+By completing squares, we see that the equation  $x^2-6x +y^2-4y=-12$ 
+is equivalent to $(x-3)^2 +(y-2)^2 =1$, which is the circle of radius 
+$1$ centred on $(3,2)$. It is sketched in the figure below.
+
+\item
+By completing squares, we see that the equation  $x^2-6x +y^2-4y=-9$ 
+is equivalent to $(x-3)^2 +(y-2)^2 =4$, which is the circle of radius 
+$2$ centred on $(3,2)$. It is sketched in the figure below.
+
+\item
+The point $(x,y)$ obeys $y=1$ if and only if it is a distance $1$ vertically above the $x$-axis. So $y=1$ is the line that is parallel to the $x$-axis and is one unit above it. This line is also  sketched in the figure below.
+\end{itemize}
+
+\begin{efig}
+\begin{center}
+   \includegraphics{annulusPart.pdf}
+\end{center}
+\end{efig}
+
+In the second step we determine the impact that the inequalities have.
+\begin{itemize}
+\item 
+The inequality $x^2-6x +y^2-4y\ge -12$ is equivalent to 
+$(x-3)^2 +(y-2)^2 \ge 1$ and hence is equivalent to 
+$\sqrt{(x-3)^2 +(y-2)^2} \ge 1$. So the point $(x,y)$ satisfies  
+$x^2-6x +y^2-4y\ge -12$ if and only if the distance from $(x,y)$ to $(3,2)$
+is at least $1$, i.e. if and only if $(x,y)$ is outside (or on) the circle 
+$(x-3)^2 +(y-2)^2 = 1$. 
+
+\item 
+The inequality $x^2-6x +y^2-4y\le -9$ is equivalent to 
+$(x-3)^2 +(y-2)^2 \le 4$ and hence is equivalent to 
+$\sqrt{(x-3)^2 +(y-2)^2} \le 2$. So the point $(x,y)$ satisfies the inequality 
+$x^2-6x +y^2-4y\le -9$ if and only if the distance from $(x,y)$ to $(3,2)$
+is at most $2$, i.e. if and only if $(x,y)$ is inside (or on) the circle 
+$(x-3)^2 +(y-2)^2 = 4$. 
+
+\item 
+The point $(x,y)$ obeys $y\ge 1$ if and only if $(x,y)$ is a vertical distance at least $1$ above the $x$-axis, i.e. is above (or on) the line $y=1$.
+
+\item
+So the region  
+\begin{equation*}
+\Set{(x,y)}{ -12\le x^2-6x +y^2-4y \le -9,\ \ y\ge 1}
+\end{equation*}
+consists of all points $(x,y)$ that 
+\begin{itemize}
+\item 
+are inside or on the circle $(x-3)^2 +(y-2)^2 = 4$ and 
+\item 
+are also outside or on the circle $(x-3)^2 +(y-2)^2 = 1$ and 
+\item 
+are also above or on the line $y=1$. 
+\end{itemize}
+It is the shaded region in the figure below.
+\end{itemize}
+
+\begin{efig}
+\begin{center}
+   \includegraphics{annulusPartB.pdf}
+\end{center}
+\end{efig}
+
+\end{eg}
+
 Here are a couple of examples that involve spheres.
 
 \begin{eg}

@@ -125,6 +125,94 @@
   </p>
 
 <p>
+Here is an example in which we sketch a region in the <m>xy</m>-plane that is specified using inequalities.
+</p>
+
+<example>
+<p>
+In this example, we sketch the region
+<me>
+\Set{(x,y)}{ -12\le x^2-6x +y^2-4y \le -9,\ \ y\ge 1}
+</me>
+in the <m>xy</m>-plane.
+</p>
+
+<p>
+We do so in two steps. In the first step, we sketch the curves
+<m>x^2-6x +y^2-4y=-12</m>, <m>x^2-6x +y^2-4y=-9</m>, and <m>y=1</m>.
+<ul>
+<li>
+By completing squares, we see that the equation  <m>x^2-6x +y^2-4y=-12</m> 
+is equivalent to <m>(x-3)^2 +(y-2)^2 =1</m>, which is the circle of radius 
+<m>1</m> centred on <m>(3,2)</m>. It is sketched in the figure below.
+</li>
+<li>
+By completing squares, we see that the equation  <m>x^2-6x +y^2-4y=-9</m> 
+is equivalent to <m>(x-3)^2 +(y-2)^2 =4</m>, which is the circle of radius 
+<m>2</m> centred on <m>(3,2)</m>. It is sketched in the figure below.
+</li>
+<li>
+The point <m>(x,y)</m> obeys <m>y=1</m> if and only if it is a distance <m>1</m> vertically above the <m>x</m>-axis. So <m>y=1</m> is the line that is parallel to the <m>x</m>-axis and is one unit above it. This line is also  sketched in the figure below.
+</li>
+</ul>
+</p>
+
+<sidebyside width="63%" >
+  <image source="figs/annulusPart"/>
+</sidebyside>
+
+<p>
+In the second step we determine the impact that the inequalities have.
+<ul>
+<li> 
+The inequality <m>x^2-6x +y^2-4y\ge -12</m> is equivalent to 
+<m>(x-3)^2 +(y-2)^2 \ge 1</m> and hence is equivalent to 
+<m>\sqrt{(x-3)^2 +(y-2)^2} \ge 1</m>. So the point <m>(x,y)</m> satisfies  
+<m>x^2-6x +y^2-4y\ge -12</m> if and only if the distance from <m>(x,y)</m> to <m>(3,2)</m>
+is at least <m>1</m>, i.e. if and only if <m>(x,y)</m> is outside (or on) the circle 
+<m>(x-3)^2 +(y-2)^2 = 1</m>. 
+</li>
+<li> 
+The inequality <m>x^2-6x +y^2-4y\le -9</m> is equivalent to 
+<m>(x-3)^2 +(y-2)^2 \le 4</m> and hence is equivalent to 
+<m>\sqrt{(x-3)^2 +(y-2)^2} \le 2</m>. So the point <m>(x,y)</m> satisfies the inequality 
+<m>x^2-6x +y^2-4y\le -9</m> if and only if the distance from <m>(x,y)</m> to <m>(3,2)</m>
+is at most <m>2</m>, i.e. if and only if <m>(x,y)</m> is inside (or on) the circle 
+<m>(x-3)^2 +(y-2)^2 = 4</m>. 
+</li>
+<li> 
+The point <m>(x,y)</m> obeys <m>y\ge 1</m> if and only if <m>(x,y)</m> is a vertical distance at least <m>1</m> above the <m>x</m>-axis, i.e. is above (or on) the line <m>y=1</m>.
+</li>
+<li>
+<p>
+So the region  
+<me>
+\Set{(x,y)}{ -12\le x^2-6x +y^2-4y \le -9,\ \ y\ge 1}
+</me>
+consists of all points <m>(x,y)</m> that 
+<ul>
+<li> 
+are inside or on the circle <m>(x-3)^2 +(y-2)^2 = 4</m> and 
+</li><li>
+are also outside or on the circle <m>(x-3)^2 +(y-2)^2 = 1</m> and 
+</li><li>
+are also above or on the line <m>y=1</m>. 
+</li>
+</ul>
+It is the shaded region in the figure below.
+</p>
+</li>
+</ul>
+</p>
+
+<sidebyside width="63%" >
+  <image source="figs/annulusPartB"/>
+</sidebyside>
+
+</example>
+
+
+<p>
 Here are a couple of examples that involve spheres.
 </p>
 
