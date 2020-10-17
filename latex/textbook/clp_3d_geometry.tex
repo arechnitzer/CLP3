@@ -611,7 +611,7 @@ leg of the walk, and our final location.
 \end{eg}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The Dot Product}
+\subsection{The Dot Product}\label{subsec dot product}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Let's get back to the arithmetic operations of addition and multiplication.
 We will be using both scalars and vectors. So, for each operation there are 
@@ -629,6 +629,40 @@ The first is the \emph{dot product}, which is the topic of this section,
 and which is used to easily determine the angle $\theta$ (or more precisely,
 $\cos\theta$) between two vectors.
 We'll get to the second, the cross product, later. 
+
+Here is preview of what we will do in this dot product 
+subsection \S\ref{subsec dot product}. We are going to give two formulae
+for the dot product, $\va\cdot\vb$, of the pair of vectors 
+$\va=\llt a_1,a_2,a_3\rgt$ and $\vb=\llt b_1,b_2,b_3\rgt$.
+\begin{itemize}
+\item 
+The first formula is $\va\cdot\vb = a_1b_1+a_2b_2+a_3b_3$.
+We will take it as our official definition of $\va\cdot\vb$.
+This formula provides us with an easy way to compute dot products.
+
+\item
+The second formula is $\va\cdot\vb=|\va|\,|\vb|\,\cos\theta$, 
+        where $\theta$ is the angle between $\va$ and $\vb$.
+      \begin{efig} 
+      \begin{center}
+      \includegraphics{dotAngle.pdf}
+      \end{center}
+      \end{efig}
+We will show, in Theorem \ref{thm:dotPppties} below, that this second formula always gives the same answer as the first formula.
+The second formula provides us with an easy way to determine the angle between two vectors. In particular, it provides us with an easy way to test whether or not two vectors are perpendicular to each other. For example,
+the vectors $\llt 1,2,3\rgt$ and $\llt -1,-1,1\rgt$ have dot product
+\begin{equation*}
+\llt 1,2,3\rgt\cdot\llt -1,-1,1\rgt = 1\times(-1)+2\times(-1)+3\times 1=0
+\end{equation*}
+This tell us as the angle $\theta$ between the two vectors obeys 
+$\cos\theta=0$, so that $\theta=\frac{\pi}{2}$. That is, the two vectors are perpendicular to each other.
+\end{itemize}
+After we give our official definition of the dot product in
+Definition \ref{def:dotProd}, and give the important properties of the dot product, including the formula  $\va\cdot\vb=|\va|\,|\vb|\,\cos\theta$,
+in Theorem \ref{thm:dotPppties}, we'll give some examples.
+Finally, to see the dot product in action, we'll define what it means to 
+project one vector on another vector and give an example.
+
 \begin{defn}[Dot Product]\label{def:dotProd}
 The dot product of the vectors $\va$ and $\vb$ is denoted $\va\cdot\vb$ 
 and is defined by
