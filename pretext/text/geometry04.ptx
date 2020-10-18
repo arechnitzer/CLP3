@@ -20,7 +20,7 @@
 <p>
   on the plane and one vector <m>\vn=\llt n_x,n_y, n_z\rgt </m> with direction
   perpendicular to that of the plane does uniquely determine the plane.
-  If <m>(x,y,z)</m> is any point on the line then the vector
+  If <m>(x,y,z)</m> is any point on the plane then the vector
   <m>\llt x-x_0,y-y_0,z-z_0\rgt </m>,
   whose tail is at <m>(x_0,y_0,z_0)</m> and whose head is at <m>(x,y,z)</m>,  lies
   entirely inside the plane and so must be perpendicular to <m>\vn</m>. That is,
@@ -91,7 +91,7 @@
   </p>
 </example>
 
-
+<p> Here is an example that illustrates how one can sketch a plane, given the equation of the plane.</p>
 <example xml:id="eg_VPsketchPlane">
   <p>
   In this example, we'll sketch the plane
@@ -139,7 +139,7 @@
   </sidebyside>
 </example>
 
-
+<p>Here are two examples that illustrate how one can find the distance between a point and a plane.</p>
 <example xml:id="eg_VPdistance-point-plane">
   <p>
   In this example, we'll compute the distance between the point
@@ -280,7 +280,7 @@
   </p>
 </example>
 
-
+<p>In the next example, we find the distance between two planes.</p>
 <example xml:id="eg_VPdistance-Planes">
   <p>
   Now we'll increase the degree of difficulty a tiny bit, and compute
@@ -336,7 +336,7 @@
   <p>Now imagine that we start walking, and that we start at time <m>t=0</m> at <m>\vx</m>
   and walk in the direction <m>\vn</m>. Then at time <m>t</m> we might be at
   <me>
-  \vx+t\vn = (1,0,0) +t\,\llt 1,2,2\rgt
+  \vx+t\vn = (1,0,0) +t\llt 1,2,2\rgt
            = (1+t, 2t, 2t)
   </me>
   We hit the second plane <m>P'</m> at exactly the time <m>t</m> for which
@@ -369,7 +369,7 @@
   </p>
 </example>
 
-
+<p>Now we'll find the angle between two intersecting planes.</p>
 <example xml:id="eg_VPangle-Planes">
   <p>
   The orientation (i.e. direction) of a plane is determined by its normal vector.
