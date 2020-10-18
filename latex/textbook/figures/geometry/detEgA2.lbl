@@ -1,0 +1,56 @@
+lbl file prepared by figPac Sat Oct 17 11:12:41 PDT 2020
+441.65
+82.71
+0
+0
+0
+2
+ 
+441.65
+82.71
+2
+0
+ 
+-34.40
+28.77
+0
+1
+$\vb\times\va=\det \left[\begin{matrix}\hi&\hj &\hk\\ 1&\!-1&2\\ 1&2&3\end{matrix}\right]$
+89.43
+28.77
+0
+1
+$\ =\ \hi\det \left[\begin{matrix}\hi& \hj &\hk\\ 1&\!-1&2\\ 1&2&3\end{matrix}\right]$
+196.06
+28.77
+0
+1
+$\ -\ \hj\det \left[\begin{matrix}\hi&\hj &\hk\\ 1&\!-1&2\\ 1&2&3\end{matrix}\right]$
+299.25
+28.77
+0
+1
+$\ +\ \hk\det \left[\begin{matrix}\hi&\hj & \hk\\ 1&\!-1&2\\ 1&2&3\end{matrix}\right]$
+-5.50
+63.29
+0
+1
+$\ =\ \hi\,\{(- 1)\times3-2\times 2\}$
+116.95
+63.29
+0
+1
+$\,-\,\hj\,\{1\times 3-2\times 1\}$
+213.26
+63.29
+0
+1
+$\,+\,\hk\,\{1\times 2-(-1)\times 1\}$
+-5.50
+79.11
+0
+1
+$\ =\ -7\,\hi-\hj+3\,\hk$
+-1000
+0/1/2 left/center/right
+0/1/2 bottom/center/top

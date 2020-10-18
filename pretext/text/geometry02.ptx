@@ -1274,7 +1274,7 @@ alternates, starting with a <q><m>+</m></q>.
 </p>
 
 
-<p>We shall not prove this formula completely. It gets a little tedious.
+<p>We shall not prove this formula completely here<fn>For a full derivation, see Example <xref ref="eg_GEOcross"/></fn>. It gets a little tedious.
 But, there is one case in which we can easily verify that the volume of the
 parallelepiped is really given by the absolute value of the
 claimed determinant. If the vectors <m>\vb</m> and <m>\vc</m> happen to lie
@@ -1352,7 +1352,7 @@ is the cross product
 </ul>
 </p>
 <p>
-Finally, here is the definition of the cross product.
+Finally, here is the definition of the cross product. Note that it applies only to vectors in three dimensions.
 </p>
 
 <definition xml:id="def_crossProd"><title>Cross Product</title>
@@ -1444,8 +1444,7 @@ b_1&amp;b_2&amp;b_3\end{matrix}\right]
 </mrow>
 </md>
 is a mnemonic device for remembering the definition of <m>\va\times\vb</m>.
-It is also good from the point of view of
-evaluating <m>\va\times\vb</m>.
+It is also good from the point of view of evaluating <m>\va\times\vb</m>. Here are several examples in which we use the determinant mnemonic device to evaluate cross products.
 </p>
 
 
@@ -1470,8 +1469,55 @@ Note that, unlike most (or maybe even all) products that you have seen before, <
 </example>
 
 
+<example xml:id="eg_GEOcrossEgA">
 <p>
-  Our first properties of the cross product lead up to a more intuitive geometric definition of <m>\va\times\vb</m>, which is better for interpreting <m>\va\times\vb</m>.
+In this example, we'll use the mnemonic device to compute two more complicated cross products. Let <m>\va=\llt 1,2,3 \rgt</m> and <m>\vb=\llt 1,-1,2 \rgt</m>. First
+</p>
+<sidebyside width="95%">
+  <image source="figs/detEgA1"/>
+</sidebyside>
+
+<p>
+Second
+</p>
+<sidebyside width="95%">
+  <image source="figs/detEgA2"/>
+</sidebyside>
+<p>
+Here are some important observations.
+<ul>
+<li> 
+The vectors <m>\va\times\vb</m> and <m>\vb\times\va</m> are not the same! In fact
+    <m>\vb\times\va=-\va\times\vb</m>. We shall see in Theorem <xref ref="thm_crossPppties"/> below that this was not a fluke.
+
+</li><li>
+The vector <m>\va\times\vb</m> has dot product zero with both <m>\va</m> and <m>\vb</m>.
+So the vector  <m>\va\times\vb</m> is prependicular to both <m>\va</m> and <m>\vb</m>. 
+We shall see in Theorem <xref ref="thm_crossPppties"/> below that this was also not a fluke.
+</li>
+</ul>
+</p>
+</example>
+
+
+<example xml:id="eg_GEOcrossEgB">
+<p>
+Yet again we use the mnemonic device to compute a more complicated cross product. This time let <m>\va=\llt 3,2,1 \rgt</m> and <m>\vb=\llt 6,4,2 \rgt</m>. Then
+</p>
+<sidebyside width="95%">
+  <image source="figs/detEgB"/>
+</sidebyside>
+<p>
+We shall see in Theorem <xref ref="thm_crossPppties"/>
+    below that it is not a fluke that the cross product is <m>\vZero</m>.
+It is a consequence of the fact that <m>\va</m> and <m>\vb=2\va</m> are parallel.
+</p>
+</example>
+
+
+<p>
+We now move on to learning about the properties of the cross product.
+  Our first properties lead up to a more intuitive geometric definition of <m>\va\times\vb</m>, which is better for interpreting <m>\va\times\vb</m>.
  These properties of the cross product, which state that  <m>\va\times\vb</m>
 is a vector and then determine its direction and length, are as follows.
 We will collect these properties, and a few others, into a theorem shortly.

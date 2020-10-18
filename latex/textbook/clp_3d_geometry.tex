@@ -1211,7 +1211,7 @@ a sign times the entry itself times the determinant of the $2\times 2$ matrix
 gotten by deleting the row and column that contains the entry. The sign
 alternates, starting with a $+$. 
 
-We shall not prove this formula completely. It gets a little tedious.
+We shall not prove this formula completely here\footnote{For a full derivation, see Example \ref{eg:GEOcross}}. It gets a little tedious.
 But, there is one case in which we can easily verify that the volume of the 
 parallelepiped is really given by the absolute value of the
 claimed determinant. If the vectors $\vb$ and $\vc$ happen to lie
@@ -1281,7 +1281,7 @@ $\vr$ from any point on the axis of rotation to $P$.
 \end{itemize}
 
 \noindent
-Finally, here is the definition of the cross product.
+Finally, here is the definition of the cross product. Note that it applies only to vectors in three dimensions.
 
 \begin{defn}[Cross Product]\label{def:crossProd}
 The cross product of the vectors $\va=\llt a_1,a_2,a_3\rgt$ and 
@@ -1344,8 +1344,9 @@ choice of names for the matrix entries. So
 &=\hi\big(a_2b_3-a_3b_2) -\hj(a_1b_3-a_3b_1) +\hk(a_1b_2-a_2b_1)
 \end{align*}
 is a mnemonic device for remembering the definition of $\va\times\vb$.
-It is also good from the point of view of 
-evaluating $\va\times\vb$.
+It is also good from the point of view of evaluating $\va\times\vb$.
+Here are several examples in which we use the determinant mnemonic device to 
+evaluate cross products.
 
 \begin{eg}\label{eg:GEOcrossijji}
 In this example, we'll use the mnemonic device to compute two very simple cross
@@ -1360,7 +1361,41 @@ Second
 Note that, unlike most (or maybe even all) products that you have seen before, $\hi\times\hj$ is \emph{not} the same as $\hj\times\hi$!
 \end{eg}
 
-Our first properties of the cross product 
+\begin{eg}\label{eg:GEOcrossEgA}
+In this example, we'll use the mnemonic device to compute two more complicated cross products. Let $\va=\llt 1,2,3 \rgt$ and $\vb=\llt 1,-1,2 \rgt$. First
+      \begin{center}
+      \includegraphics{detEgA1.pdf}
+      \end{center}
+Second
+      \begin{center}
+      \includegraphics{detEgA2.pdf}
+      \end{center}
+Here are some important observations.
+\begin{itemize}
+\item 
+The vectors $\va\times\vb$ and $\vb\times\va$ are not the same! In fact
+    $\vb\times\va=-\va\times\vb$. We shall see in Theorem \ref{thm:crossPppties}
+    below that this was not a fluke.
+
+\item
+The vector $\va\times\vb$ has dot product zero with both $\va$ and $\vb$.
+So the vector  $\va\times\vb$ is prependicular to both $\va$ and $\vb$. 
+We shall see in Theorem \ref{thm:crossPppties} below that this was also not a fluke.
+\end{itemize}
+\end{eg}
+
+\begin{eg}\label{eg:GEOcrossEgB}
+Yet again we use the mnemonic device to compute a more complicated cross product. This time let $\va=\llt 3,2,1 \rgt$ and $\vb=\llt 6,4,2 \rgt$. Then
+      \begin{center}
+      \includegraphics{detEgB.pdf}
+      \end{center}
+We shall see in Theorem \ref{thm:crossPppties}
+    below that it is not a fluke that the cross product is $\vZero$.
+It is a consequence of the fact that $\va$ and $\vb=2\va$ are parallel. 
+\end{eg}
+
+We now move on to learning about the properties of the cross product.
+Our first properties
 lead up to a more intuitive geometric definition of $\va\times\vb$, which is better for interpreting $\va\times\vb$. 
  These properties of the cross product, which state that  $\va\times\vb$
 is a vector and then determine its direction and length, are as follows.
@@ -1547,14 +1582,14 @@ with sides $\va$ and $\vb$}\qquad
 \item $\va\times\vb=\vZero\iff \va=\vZero \text{ or }\vb=\vZero 
 \text{ or }\va\parallel\vb$
 
-
-\end{enumerate}
-\end{theorem}
-
-\addtocounter{theorem}{-1}
-\begin{theorem}[continued]
-\begin{enumerate}[(1)]
-\setcounter{enumi}{5}
+%
+%\end{enumerate}
+%\end{theorem}
+%
+%\addtocounter{theorem}{-1}
+%\begin{theorem}[continued]
+%\begin{enumerate}[(1)]
+%\setcounter{enumi}{5}
 
 \item $\va\times \vb=-\vb\times\va$
 
