@@ -3110,7 +3110,9 @@ For example
 \begin{equation*}
 \vr(t) = \big( x(t), y(t), z(t)\big)
 \end{equation*}
-might be the position of a particle at time $t$. As $t$ varies
+might be the position\footnote{When we say 
+$\vr(t) = \big( x(t), y(t), z(t)\big)$, we mean that 
+$\big( x(t), y(t), z(t)\big)$ is the point at the head of the vector $\vr(t)$ when its tail is at the origin.} of a particle at time $t$. As $t$ varies
 $\vr(t)$ sweeps out a curve.
 \begin{efig}
 \begin{center}
@@ -3122,7 +3124,7 @@ have to be. It can be simply a parameter that is used to label the
 different points on the curve that $\vr(t)$ sweeps out. We then say 
 that $\vr(t)$ provides a parametrization of the curve.
 
-\begin{eg}\label{eg:paramCircle}
+\begin{eg}[Parametrization of  $x^2+y^2=a^2$]\label{eg:paramCircle}
 While we will often use $t$ as the parameter in a parametrized curve $\vr(t)$,
 there is no need to call it $t$. Sometimes it is natural to use a different 
 name for the parameter. For example, consider the circle $x^2+y^2=a^2$.
@@ -3136,7 +3138,7 @@ the point $\big(a\cos\theta\,,\,a\sin\theta\big)$ on the circle.
 That is,
 \begin{equation*}
 \vr(\theta) = \big(a\cos\theta\,,\,a\sin\theta\big)\qquad
-0\le \theta\le 2\pi
+0\le \theta< 2\pi
 \end{equation*}
 is a parametrization of the circle $x^2+y^2=a^2$. Just looking at the figure above, it is clear that, as $\theta$ runs from $0$ to $2\pi$, $\vr(\theta)$
 traces out the full circle. 
@@ -3154,6 +3156,118 @@ For all $t$,
 is well-defined and obeys $x(t)^2+y(t)^2=a^2$. But this $\vr(t)$ does not
 cover the entire circle because $y(t)$ is always positive.
 
+\end{eg}
+
+\begin{eg}[Parametrization of  $(x-h)^2+(y-k)^2=a^2$]\label{eg:paramCircleB}
+We can tweak the parametrization of Example \ref{eg:paramCircle} to get
+a parametrization of the circle of radius $a$ that is centred on $(h,k)$.
+One way to do so is to redraw the sketch of Example \ref{eg:paramCircle}
+with the circle translated so that its centre is at $(h,k)$.
+\begin{efig}
+\begin{center}
+     \includegraphics{parCirclehk.pdf}
+\end{center}
+\end{efig}
+We see from the sketch that 
+\begin{equation*}
+\vr(\theta) = \big(h+a\cos\theta\,,\,k+a\sin\theta\big)\qquad
+0\le \theta< 2\pi
+\end{equation*}
+is a parametrization of the circle $(x-h)^2+(y-k)^2=a^2$.
+
+A second way to come up with this parametrization is to observe that 
+we can turn the trig identity $\cos^2 t + \sin^2 t=1$ into 
+the equation $(x-h)^2+(y-k)^2=a^2$ of the circle by
+\begin{itemize}
+\item
+multiplying the trig identity by $a^2$ to get
+$(a\cos t)^2 +(a\sin t)^2 =a^2$ and then
+\item
+setting $\ a\cos t=x-h\ $ and $\ a\sin t=y-k\ $, which turns  $(a\cos t)^2 +(a\sin t)^2 =a^2$ into $(x-h)^2+(y-k)^2=a^2$.
+\end{itemize}
+\end{eg}
+
+\begin{eg}[Parametrization of  $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ and of
+$x^{2/3}+y^{2/3}=a^{2/3}$]    \label{eg:paramEllipse}
+
+We can build parametrizations of the curves $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 
+and $x^{2/3}+y^{2/3}=a^{2/3}$ from the trig identity $\cos^2 t + \sin^2 t=1$,
+like we did in the second part of the last example.
+\begin{itemize}
+\item
+Setting $\ \cos t=\frac{x}{a}\ $ and $\ \sin t=\frac{y}{b}\ $ turns  
+$\cos^2 t +\sin^2 t =1$ into $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$.
+
+\item
+Setting $\ \cos t= \big(\frac{x}{a}\big)^{\frac{1}{3}}\ $ and 
+$\ \sin t=\big(\frac{y}{a}\big)^{\frac{1}{3}}\ $ turns  
+$\cos^2 t +\sin^2 t =1$ into $\frac{x^{2/3}}{a^{2/3}}+\frac{y^{2/3}}{a^{2/3}}=1$.
+\end{itemize}
+So
+\begin{alignat*}{3}
+\vr(t) &= \big(a\cos t\,,\,b\sin t\big)\qquad &0\le t< 2\pi
+\\
+\vr(t) &= \big(a\cos^3 t\,,\,a\sin^3 t\big) &0\le t< 2\pi
+\end{alignat*}
+give parametrizations of $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 
+and $x^{2/3}+y^{2/3}=a^{2/3}$, respectively. To see that running $t$ from $0$ to $2\pi$ runs $\vr(t)$ once around the curve, look at the figures below.
+\begin{wfig}
+\begin{center}
+     \includegraphics{parEllipse.pdf}\quad
+     \includegraphics{astroid4.pdf}
+\end{center}
+\end{wfig}
+The curve $x^{2/3}+y^{2/3}=a^{2/3}$ is called an astroid. From its equation,
+we would expect its sketch to look like a deformed circle. But it is probably 
+not so obvious that it would have the pointy bits of the right hand figure.
+We will not explain here why they arise. The astroid is studied in some 
+detail in Example \eref{CLP317}{eg:astroid} of the CLP-4 text.
+In particular, the above sketch is carefully developed there.  
+ 
+\end{eg}
+
+\begin{eg}[Parametrization of  $e^y=1+x^2$]\label{eg:paramMessy}
+A very easy method that can often create parametrizations for a curve is to use $x$ or $y$ as a parameter. Because we can solve $e^y=1+x^2$ for $y$ as a function of $x$, namely $y=\ln\big(1+x^2\big)$, we can use $x$ as 
+the parameter simply by setting $t=x$. This gives the parametrization
+\begin{equation*}
+\vr(t) = \big(t\,,\,\ln(1+t^2)\big)\qquad -\infty<t<\infty
+\end{equation*}  
+\end{eg}
+
+\begin{eg}[Parametrization of  $x^2+y^2=a^2$, again]\label{eg:paramCircleC}
+It is also quite common that one can use either $x$ or $y$ to parametrize part of, but all of, a curve. A simple example is the circle $x^2+y^2=a^2$.
+For each $-a<x<a$, there are two points on the circle with that value of $x$.
+So one cannot use $x$ to parametrize the whole circle.
+Similarly, for each $-a<y<a$, there are two points on the circle with that value of $y$. So one cannot use $y$ to parametrize the whole circle. On the other 
+hand
+\begin{alignat*}{3}
+\vr(t) &= \big(t\,,\,\sqrt{a^2-t^2}\big)\qquad &-a<t<a \\
+\vr(t) &= \big(t\,,\,-\sqrt{a^2-t^2}\big)\qquad &-a<t<a
+\end{alignat*}
+provide parametrizations of the top half and bottom half, respectively,
+of the circle using $x$ as the parameter, and
+\begin{alignat*}{3}
+\vr(t) &= \big(\sqrt{a^2-t^2}\,,\,t\big)\qquad &-a<t<a \\
+\vr(t) &= \big(-\sqrt{a^2-t^2}\,,\,t\big)\qquad &-a<t<a
+\end{alignat*}
+provide parametrizations of the right half and left half, respectively,
+of the circle using $y$ as the parameter.
+\end{eg}
+
+\begin{eg}[Unparametrization of  $\vr(t)=(\cos t, 7-t)$] \label{eg:unparam}
+In this example, we will undo the parametrization $\vr(t)=(\cos t, 7-t)$
+and find the Cartesian equation of the curve in question. We may rewrite the
+parametrization as
+\begin{align*}
+x&=\cos t \\
+y&=7-t
+\end{align*}
+Note that we can eliminate the parameter $t$ simply by using the second equation 
+to solve for $t$ as a function of $y$. Namely $t=7-y$. Substituting this
+into the first equation  gives us the Cartesian equation
+\begin{equation*}
+x=\cos(7-y)
+\end{equation*}
 \end{eg}
 
 Curves often arise as the intersection of two surfaces. For example,
@@ -3293,9 +3407,9 @@ The derivative of the vector valued function $\vr(t)$ is defined to be
 \raisebox{-25pt}[25pt][20pt]{\includegraphics{parCurveDerivA.pdf}}
 \end{equation*}
 when the limit exists. In particular, if 
-$\vr(t)=\big(x(t)\,,\,y(t)\,,\,z(t)\big)$, then
+$\vr(t)=x(t)\hi + y(t)\hj + z(t)\hk$, then
 \begin{equation*}
-\vr'(t)=\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big)
+\vr'(t)=x'(t)\hi + y'(t)\hj + z'(t)\hk
 \end{equation*}
 That is, to differentiate a vector valued function of $t$, just differentiate
 each of its components.
@@ -3402,7 +3516,7 @@ then
 Denote by $s(t)$ the length of the part of the curve between
 $\vr(0)$ and $\vr(t)$. Then
 \begin{align*}
-\diff{s}{t}(t)&=\Big|\diff{\vr}{t}(t)\Big| \\
+\diff{s}{t}(t)&=\left|\diff{\vr}{t}(t)\right| \\
 s(T)-s(T_0)&= \int_{T_0}^T \left|\diff{\vr}{t}(t)\right|\,\dee{t}\qquad
 \raisebox{-20pt}{\smash{\includegraphics{parCurveDerivB.pdf}}}
 \end{align*}
@@ -3428,12 +3542,12 @@ particle at time $t$, then
 %\text{position at time $t$}
 %       &=\vr(t)=\big(x(t)\,,\,y(t)\,,\,z(t)\big) \\
 \text{velocity at time $t$}
-       &=\vv(t)=\vr'(t)=\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big) 
+       &=\vv(t)=\vr'(t)=x'(t)\hi+y'(t)\hj+z'(t)\hk 
         = \diff{s}{t}(t)\,\hat\vT(t)\\
 \text{speed at time $t$}
        &= \diff{s}{t}(t)=|\vv(t)|=|\vr'(t)|=\sqrt{(x'(t)^2+y'(t)^2+z'(t)^2} \\
 \text{acceleration at time $t$}
-       &=\va(t)=\vr''(t)=\vv'(t)=\big(x''(t)\,,\,y''(t)\,,\,z''(t)\big) \\
+       &=\va(t)=\vr''(t)=\vv'(t)=x''(t)\hi + y''(t)\hj + z''(t)\hk \\
 \intertext{and the distance travelled between times $T_0$ and $T$ is}
   s(T)-s(T_0)&= \int_{T_0}^T \Big|\diff{\vr}{t}(t)\Big|\,\dee{t}
        = \int_{T_0}^T \sqrt{(x'(t)^2+y'(t)^2+z'(t)^2}\,\dee{t}
@@ -3456,9 +3570,9 @@ the circle. We'll use the parametrization
 of Example \ref{eg:paramCircle}. Using Lemma \ref{lem:CVtanArclen},
 but with the parameter $t$ renamed to $\theta$
 \begin{align*}
-\vr'(\theta) &= a\big(-\sin\theta\,,\cos\theta\big) \\
+\vr'(\theta) &= -a\sin\theta\hi + a\cos\theta\hj \\
 \hat\vT(\theta) &= \frac{\vr'(\theta)}{|\vr'(\theta)|}
-               =  \big(-\sin\theta\,,\cos\theta\big) \\
+               =  -\sin\theta\hi + \cos\theta\hj \\
 \diff{s}{\theta}(\theta)&=\big|\vr'(\theta)\big| = a\\
 s(\Theta)-s(0)&= \int_{0}^\Theta \big|\vr'(\theta)\big|\,\dee{\theta}
           =a\Theta
