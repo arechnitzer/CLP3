@@ -360,7 +360,121 @@ each of its components.
 <p>And of course differentiation interacts with arithmetic operations,
 like addition, in the obvious way. Only a little more thought is required to
 see that differentiation interacts quite nicely with dot and cross
-products too.
+products too. Here are some examples.
+</p>
+
+<example xml:id="eg_diffDot">
+<p>
+Let
+<md>
+<mrow>
+\va(t)&amp;= t^2\,\hi + t^4\,\hj + t^6\,\hk
+</mrow><mrow>
+\vb(t)&amp;= e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk
+</mrow><mrow>
+\ga(t)&amp;= t^2
+</mrow><mrow>
+s(t)&amp;= \sin t
+</mrow>
+</md>
+Then
+<md>
+<mrow>
+\ga(t)\,\vb(t) &amp; = t^2e^{-t}\,\hi + t^2 e^{-3t}\,\hj + t^2 e^{-5t}\,\hk
+</mrow>
+</md>
+gives
+<md>
+<mrow>
+\diff{}{t}\big[\ga(t)\vb(t)\big]
+&amp;=\big[\color{blue}{2t e^{-t}}-t^2e^{-t}\big]\hi
+  +\big[\color{blue}{2t e^{-3t}}-3t^2e^{-3t}\big]\hj
+  +\big[\color{blue}{2t e^{-5t}}-5t^2e^{-5t}\big]\hk
+</mrow><mrow>
+&amp;=\color{blue}{2t\big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}}
++ t^2\big\{-e^{-t}\,\hi -3 e^{-3t}\,\hj -5 e^{-5t}\,\hk\big\}
+</mrow><mrow>
+&amp;=\ga'(t)\vb(t)+\ga(t)\vb'(t)
+</mrow>
+</md>
+and 
+<md>
+<mrow>
+\va(t)\cdot\vb(t) &amp; = t^2e^{-t} + t^4 e^{-3t} + t^6 e^{-5t}
+</mrow>
+</md>
+gives
+<md>
+<mrow>
+\diff{}{t}\big[\va(t)\cdot\vb(t)\big]
+&amp;=\big[\color{blue}{2t e^{-t}}-t^2e^{-t}\big]
+  +\big[\color{blue}{4t^3 e^{-3t}}-3t^4e^{-3t}\big]
+  +\big[\color{blue}{6t^5 e^{-5t}}-5t^6e^{-5t}\big]
+</mrow><mrow>
+&amp;=\color{blue}{\big[2t e^{-t}+4t^3 e^{-3t}+6t^5 e^{-5t}\big]}
+  +\big[-t^2e^{-t}-3t^4e^{-3t}-5t^6e^{-5t}\big]
+</mrow><mrow>
+&amp;=\big\{2t\,\hi+4t^3\,\hj+6t^5\,\hk\big\}\cdot
+           \big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}\\&amp;\hskip0.5in
+  +\big\{t^2\,\hi + t^4\,\hj + t^6\,\hk\big\}\cdot
+         \big\{-e^{-t}\,\hi-3e^{-3t}\,\hj-5e^{-5t}\,\hk\big\}
+</mrow><mrow>
+&amp;=\va'(t)\cdot\vb(t)+\va(t)\cdot\vb'(t)
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\va(t)\times\vb(t) 
+&amp;=\det\left[\begin{matrix}\hi&amp; \hj &amp;\hk\\ 
+                            t^2 &amp; t^4 &amp; t^6\\ 
+                            e^{-t} &amp; e^{-3t} &amp; e^{-5t}\end{matrix}\right]
+</mrow><mrow>
+&amp;=\hi\big(t^4 e^{-5t}-t^6 e^{-3t}) 
+  -\hj(t^2 e^{-5t}- t^6 e^{-t}) 
+   +\hk(t^2 e^{-3t}-t^4 e^{-t})
+</mrow>
+</md>
+gives
+<md>
+<mrow>
+&amp;\diff{}{t}\big[\va(t)\times\vb(t)\big]
+</mrow><mrow>
+&amp;=\ \hi\big(\ 4t^3 e^{-5t}\ \ -\ 6t^5 e^{-3t}) 
+  \ -\ \hj(\ 2t e^{-5t}\ -\  6t^5 e^{-t}) 
+   +\hk(\ 2t e^{-3t}\ -\ 4t^3 e^{-t}) \\&amp;\hskip0.1in
+ +\hi\big(-5t^4 e^{-5t}+3t^6 e^{-3t}) 
+  -\hj(-5t^2 e^{-5t}+ t^6 e^{-t}) 
+   +\hk(-3t^2 e^{-3t}+t^4 e^{-t})
+</mrow><mrow>
+&amp;=\big\{2t\,\hi+4t^3\,\hj+6t^5\,\hk\big\}\times
+           \big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}\\&amp;\hskip0.5in
+  +\big\{t^2\,\hi + t^4\,\hj + t^6\,\hk\big\}\times
+         \big\{-e^{-t}\,\hi-3e^{-3t}\,\hj-5e^{-5t}\,\hk\big\}
+</mrow><mrow>
+&amp;=\va'(t)\times\vb(t)+\va(t)\times\vb'(t)
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\va\big(s(t)\big)
+&amp;=(\sin t)^2\,\hi +(\sin t)^4\,\hj + (\sin t)^6\,\hk
+</mrow><mrow>
+\implies \diff{}{t}\big[\va\big(s(t)\big)\big]
+&amp;=2(\sin t)\cos t\,\hi +4(\sin t)^3\cos t\,\hj + 6(\sin t)^5\cos t\,\hk
+</mrow><mrow>
+&amp;=\big\{2(\sin t)\,\hi +4(\sin t)^3\hj + 6(\sin t)^5\hk\big\}\cos t 
+</mrow><mrow>
+&amp;=\va'\big(s(t)\big)\,s'(t)
+</mrow>
+</md>
+</p>
+</example>
+
+<p>
+Of course these examples extend to general (differentiable)
+<m>\va(t)</m>, <m>\vb(t)</m>, <m>\ga(t)</m> and <m>s(t)</m> and give us (most of) the following theorem.
 </p>
 
 <theorem xml:id="thm_DIFFalgebra"><title>Arithmetic of differentiation</title>
