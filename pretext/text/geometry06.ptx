@@ -641,7 +641,7 @@ Note that the velocity <m>\vv(t) = \vr'(t)</m> is a vector quantity while the
 speed <m>\diff{s}{t}(t)=|\vr'(t)|</m> is a scalar quantity.
 </p>
 
-<example xml:id="eg_paramCircleTan">
+<example xml:id="eg_paramCircleTan"><title>Circumference of a circle</title>
 <p>
 In general it can be quite difficult to compute arc lengths.
 So, as an easy warmup example, we will compute the circumference of the circle
@@ -701,7 +701,7 @@ that has been known<fn>It is Proposition 18 in Book 3 of Euclid's Elements. It w
 </p>
 </example>
 
-<example xml:id="eg_paramHelix">
+<example xml:id="eg_paramHelix"><title>Arc length of a helix</title>
 <p>
 Consider the curve
 <me>
@@ -753,6 +753,55 @@ s(\pi)-s(0)&amp;= \int_{0}^\pi \big|\vr'(t)\big|\,\dee{t}
 </mrow>
 </md>
 </p></example>
+
+<example xml:id="eg_velAccel"><title>Velocity and acceleration</title>
+<p>
+Imagine that, at time <m>t</m>, a particle is at 
+<me>
+\vr(t) = \left[h+a\cos\left(2\pi\frac{t}{T}\right)\right]\hi
+            +\left[k+a\sin\left(2\pi\frac{t}{T}\right)\right]\hj
+</me>
+As <m>|\vr(t) -h\,\hi-k\,\hj| = a</m>, the particle is running around the circle of radius <m>a</m> centred on <m>(h,k)</m>. When <m>t</m> increases by <m>T</m>, the argument, <m>2\pi\frac{t}{T}</m>, of <m>\cos\left(2\pi\tfrac{t}{T}\right)</m> and 
+<m>\sin\left(2\pi\tfrac{t}{T}\right)</m> increases by exactly <m>2\pi</m> and the particle runs exactly once around the circle. In particular, it travels a distance 
+<m>2\pi a</m>. So it is moving at speed  <m>\frac{2\pi a}{T}</m>. 
+According to Lemma <xref ref="lem_CVvelocityEtc"/>, it has 
+<md>
+<mrow>
+\text{velocity }
+      =\vr'(t) &amp;=-\frac{2\pi a}{T}\sin\left(2\pi\frac{t}{T}\right)\hi
+            +\frac{2\pi a}{T}\cos\left(2\pi\frac{t}{T}\right)\hj
+</mrow><mrow>
+\text{speed}
+       = \diff{s}{t}(t)&amp;=|\vr'(t)|=\frac{2\pi a}{T}
+</mrow><mrow>
+\text{acceleration}
+       =\vr''(t)
+        &amp;=-\frac{4\pi^2 a}{T^2}\cos\left(2\pi\frac{t}{T}\right)\hi
+            -\frac{4\pi^2 a}{T^2}\sin\left(2\pi\frac{t}{T}\right)\hj 
+</mrow><mrow>
+        &amp;= - \frac{4\pi^2}{T^2}\big[\vr(t) -h\,\hi-k\,\hj\big]
+</mrow>
+</md>
+Here are some observations.
+<ul>
+<li> 
+The velocity <m>\vr'(t)</m> has dot product zero with <m>\vr(t) -h\,\hi-k\,\hj</m>, which is the radius vector from the centre of the circle to the particle.
+So the velocity is perpendicular to the radius vector, and hence parallel to the 
+tangent vector of the circle at <m>\vr(t)</m>.
+</li><li>
+The speed given by Lemma <xref ref="lem_CVvelocityEtc"/> is exactly the speed
+we found above, just before we started applying Lemma <xref ref="lem_CVvelocityEtc"/>.
+</li><li> 
+The acceleration <m>\vr''(t)</m> points in the direction opposite to the radius 
+vector.
+</li>
+</ul>
+</p>
+
+<sidebyside width="38%">
+<image source="figs/circleVA"/>
+</sidebyside>
+</example>
 
 </subsection>
 

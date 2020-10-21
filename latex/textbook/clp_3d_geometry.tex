@@ -3644,7 +3644,7 @@ speed $\diff{s}{t}(t)=|\vr'(t)|$ is a scalar quantity.
 \goodbreak
 
 
-\begin{eg}\label{eg:paramCircleTan}
+\begin{eg}[Circumference of a circle]\label{eg:paramCircleTan}
 In general it can be quite difficult to compute arc lengths.
 So, as an easy warmup example, we will compute the circumference of the circle
 $x^2+y^2=a^2$. We'll also find a unit tangent to the circle at any point on
@@ -3696,7 +3696,7 @@ that has been known\footnote{It is Proposition 18 in Book 3 of Euclid's Elements
 \end{eg}
 \goodbreak
 
-\begin{eg}\label{eg:paramHelix}
+\begin{eg}[Arc length of a helix]\label{eg:paramHelix}
 Consider the curve
 \begin{equation*}
 \vr(t) = 6\sin(2t)\hi + 6\cos(2t)\hj +5t\hk
@@ -3737,6 +3737,50 @@ $\hat\vT(t)$ to the curve at $\vr(t)$ and also the arclength of the part of curv
 s(\pi)-s(0)&= \int_{0}^\pi \big|\vr'(t)\big|\,\dee{t}
           =13\pi
 \end{align*}
+\end{eg}
+
+\begin{eg}[Velocity and acceleration]\label{eg:velAccel}
+Imagine that, at time $t$, a particle is at 
+\begin{equation*}
+\vr(t) = \left[h+a\cos\left(2\pi\frac{t}{T}\right)\right]\hi
+            +\left[k+a\sin\left(2\pi\frac{t}{T}\right)\right]\hj
+\end{equation*}
+As $|\vr(t) -h\,\hi-k\,\hj| = a$, the particle is running around the circle of radius $a$ centred on $(h,k)$. When $t$ increases by $T$, the argument, $2\pi\frac{t}{T}$, of $\cos\left(2\pi\tfrac{t}{T}\right)$ and 
+$\sin\left(2\pi\tfrac{t}{T}\right)$ increases by exactly $2\pi$ and the particle runs exactly once around the circle. In particular, it travels a distance 
+$2\pi a$. So it is moving at speed  $\frac{2\pi a}{T}$. 
+According to Lemma \ref{lem:CVvelocityEtc}, it has 
+\begin{align*}
+\text{velocity }
+       &=\vr'(t)=-\frac{2\pi a}{T}\sin\left(2\pi\frac{t}{T}\right)\hi
+            +\frac{2\pi a}{T}\cos\left(2\pi\frac{t}{T}\right)\hj
+      \\
+\text{speed}
+       &= \diff{s}{t}(t)=|\vr'(t)|=\frac{2\pi a}{T} \\
+\text{acceleration}
+       &=\vr''(t)
+        =-\frac{4\pi^2 a}{T^2}\cos\left(2\pi\frac{t}{T}\right)\hi
+            -\frac{4\pi^2 a}{T^2}\sin\left(2\pi\frac{t}{T}\right)\hj 
+        = - \frac{4\pi^2}{T^2}\big[\vr(t) -h\,\hi-k\,\hj\big]
+\end{align*}
+Here are some observations.
+\begin{itemize}
+\item 
+The velocity $\vr'(t)$ has dot product zero with $\vr(t) -h\,\hi-k\,\hj$, which is the radius vector from the centre of the circle to the particle.
+So the velocity is perpendicular to the radius vector, and hence parallel to the 
+tangent vector of the circle at $\vr(t)$.
+\item 
+The speed given by Lemma \ref{lem:CVvelocityEtc} is exactly the speed
+we found above, just before we started applying Lemma \ref{lem:CVvelocityEtc}.
+\item 
+The acceleration $\vr''(t)$ points in the direction opposite to the radius 
+vector.
+\end{itemize}
+
+\begin{efig}
+\begin{center}
+     \includegraphics{circleVA.pdf}
+\end{center}
+\end{efig}
 \end{eg}
 \goodbreak
 
