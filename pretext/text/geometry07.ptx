@@ -5,6 +5,7 @@
 
 <section  xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_sketching">
   <title>Sketching Surfaces in 3d</title>
+<introduction>
 
 <p>In practice students taking multivariable calculus regularly have great
 difficulty visualising surfaces in three dimensions, despite the fact
@@ -155,6 +156,15 @@ Here are some examples.
   <image source="figs/hyperboloidC"/>
    <image source="figs/hyperboloidD"/>
   </sidebyside>
+
+  <p>
+  Here is a sketch created by graphing software.
+  </p>
+
+  <sidebyside  width="66%">
+  <image source="figs/hyperboloid1sheet"/>
+  </sidebyside>
+
   <p>
   This type of surface is called a hyperboloid of one sheet.
   </p>
@@ -227,6 +237,14 @@ Here are some examples.
   <image source="figs/hyperboloidDD"/>
   </sidebyside>
 
+  <p>
+  Here is a sketch created by graphing software.
+  </p>
+
+  <sidebyside  width="66%">
+  <image source="figs/hyperboloid2sheet"/>
+  </sidebyside>
+
 <p>
   This type of surface is called a hyperboloid of two sheets.
   </p>
@@ -278,6 +296,13 @@ Here are some examples.
 </p>
   <sidebyside width="40%">
   <image source="figs/hyperbolicCylinderC"/>
+  </sidebyside>
+  <p>
+  Here is a sketch created by graphing software.
+  </p>
+
+  <sidebyside  width="66%">
+  <image source="figs/hypCylinder"/>
   </sidebyside>
 
 </solution>
@@ -342,6 +367,10 @@ Here are some examples.
 </solution>
 </example>
 
+</introduction>
+
+<subsection xml:id="subsec-Level">
+  <title>Level Curves and Surfaces</title>
 
 <p>Often the reason you are interested in a surface in 3d is that it is
 the graph <m>z=f(x,y)</m> of a function of two variables <m>f(x,y)</m>. Another good
@@ -520,6 +549,7 @@ the value <m>C</m>.
   </sidebyside>
 
   </example>
+</subsection>
 
 <xi:include href="../problems/prob_s1.7.ptx" />
 
