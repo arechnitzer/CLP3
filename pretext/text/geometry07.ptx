@@ -158,11 +158,12 @@ Here are some examples.
   </sidebyside>
 
   <p>
-  Here is a sketch created by graphing software.
+  Here are two figures created by graphing software.
   </p>
 
-  <sidebyside  width="66%">
+  <sidebyside  widths="66% 28%" valign="middle">
   <image source="figs/hyperboloid1sheet"/>
+  <image source="figs/hyperboloid1sheetD"/>
   </sidebyside>
 
   <p>
@@ -238,11 +239,12 @@ Here are some examples.
   </sidebyside>
 
   <p>
-  Here is a sketch created by graphing software.
+  Here is are two figures created by graphing software.
   </p>
 
-  <sidebyside  width="66%">
+  <sidebyside  widths="66% 28%" valign="middle">
   <image source="figs/hyperboloid2sheet"/>
+  <image source="figs/hyperboloid2sheetD"/>
   </sidebyside>
 
 <p>
@@ -298,11 +300,12 @@ Here are some examples.
   <image source="figs/hyperbolicCylinderC"/>
   </sidebyside>
   <p>
-  Here is a sketch created by graphing software.
+  Here are two figures created by graphing software.
   </p>
 
-  <sidebyside  width="66%">
+  <sidebyside  widths="48% 48%" valign="middle">
   <image source="figs/hypCylinder"/>
+ <image source="figs/hypCylinderD"/>
   </sidebyside>
 
 </solution>
