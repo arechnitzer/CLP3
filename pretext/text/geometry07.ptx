@@ -163,7 +163,7 @@ Here are some examples.
 
   <sidebyside  widths="66% 28%" valign="middle">
   <image source="figs/hyperboloid1sheet"/>
-  <image source="figs/hyperboloid1sheetD"/>
+  <image source="figs/hyperboloid1sheetDD"/>
   </sidebyside>
 
   <p>
@@ -244,7 +244,7 @@ Here are some examples.
 
   <sidebyside  widths="66% 28%" valign="middle">
   <image source="figs/hyperboloid2sheet"/>
-  <image source="figs/hyperboloid2sheetD"/>
+  <image source="figs/hyperboloid2sheetDD"/>
   </sidebyside>
 
 <p>
@@ -305,7 +305,7 @@ Here are some examples.
 
   <sidebyside  widths="48% 48%" valign="middle">
   <image source="figs/hypCylinder"/>
- <image source="figs/hypCylinderD"/>
+ <image source="figs/hypCylinderDD"/>
   </sidebyside>
 
 </solution>
