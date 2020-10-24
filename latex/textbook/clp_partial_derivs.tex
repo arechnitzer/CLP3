@@ -417,16 +417,25 @@ does not exist.
 
 
 Here is another way to come to the same conclusion.
-Pick any really small positive number, like for example 
-$10^{-137}$.  For every number $F$ between $-1$ and $1$, like
-for example $F=\frac{\sqrt{3}}{2}$, $f(x,y)$ takes the value $F$
-for some $(x,y)$ obeying $|(x,y)|<10^{-137}$. That is true regardless
-of which really small number you picked. So $f(x,y)=\frac{x^2-y^2}{x^2+y^2}$ 
+\begin{itemize}
+\item[$\circ$]
+Pick any really small positive number. We'll use $10^{-137}$ as an example.  
+\item[$\circ$]
+Pick any real number $F$ between $-1$ and $1$. We'll use 
+$F=\frac{\sqrt{3}}{2}$ as an example.
+\item[$\circ$]
+Looking at the sketch above, we see that $f(x,y)$ takes the value $F$
+along an entire ray $\theta={\rm const}$, $r>0$. In the case $F=\frac{\sqrt{3}}{2}$,
+the ray is $2\theta=30^{\circ}$, $r>0$. In particular, because the ray
+extends all the way to $(0,0)$, $f$ takes the value $F$ for some $(x,y)$ 
+obeying $|(x,y)|<10^{-137}$. 
+\item[$\circ$]
+That is true regardless of which really small number you picked. So $f(x,y)=\frac{x^2-y^2}{x^2+y^2}$ 
 does not approach any single value as $r=|(x,y)|$ approaches $0$
 and we conclude that 
 $\lim\limits_{(x,y)\rightarrow (0,0)}\frac{x^2-y^2}{x^2+y^2}$
 does not exist.
-
+\end{itemize}
 
 \end{eg}
 

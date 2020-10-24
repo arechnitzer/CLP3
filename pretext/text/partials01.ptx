@@ -453,15 +453,21 @@ does not exist.
 </p>
 
 <p>Here is another way to come to the same conclusion.
-Pick any really small positive number, like for example
-<m>10^{-137}</m>.  For every number <m>F</m> between <m>-1</m> and <m>1</m>, like
-for example <m>F=\frac{\sqrt{3}}{2}</m>, <m>f(x,y)</m> takes the value <m>F</m>
-for some <m>(x,y)</m> obeying <m>|(x,y)| \lt 10^{-137}</m>. That is true regardless
-of which really small number you picked. So <m>f(x,y)=\frac{x^2-y^2}{x^2+y^2}</m>
-does not approach any single value as <m>r=|(x,y)|</m> approaches <m>0</m>
-and we conclude that
-<m>\lim\limits_{(x,y)\rightarrow (0,0)}\frac{x^2-y^2}{x^2+y^2}</m>
-does not exist.
+<ul>
+<li>
+Pick any really small positive number. We'll use <m>10^{-137}</m> as an example.  
+</li><li>
+Pick any real number <m>F</m> between <m>-1</m> and <m>1</m>. We'll use 
+<m>F=\frac{\sqrt{3}}{2}</m> as an example.
+</li><li>
+Looking at the sketch above, we see that <m>f(x,y)</m> takes the value <m>F</m>
+along an entire ray <m>\theta={\rm const}</m>, <m>r\gt 0</m>. In the case <m>F=\frac{\sqrt{3}}{2}</m>, the ray is <m>2\theta=30^{\circ}</m>, <m>r\gt 0</m>. 
+In particular, because the ray extends all the way to <m>(0,0)</m>, <m>f</m> takes the value <m>F</m> for some <m>(x,y)</m> obeying <m>|(x,y)|\lt 10^{-137}</m>. 
+</li><li>
+That is true regardless of which really small number you picked. So <m>f(x,y)=\frac{x^2-y^2}{x^2+y^2}</m> does not approach any single value as <m>r=|(x,y)|</m> approaches 
+<m>0</m> and we conclude that <m>\lim\limits_{(x,y)\rightarrow (0,0)}\frac{x^2-y^2}{x^2+y^2}</m> does not exist.
+</li>
+</ul>
 </p>
 
 </example>
