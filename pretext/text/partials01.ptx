@@ -80,16 +80,15 @@ Here is a more careful definition of limit.
 Let
 <ul>
 <li>
-<m>m</m>, <m>n</m> be natural numbers
+<m>m</m> and <m>n</m> be natural numbers<fn>In this text, we will interested in
+<m>m,n\in\big\{1,2,3\big\}</m>, but the definition works for all natural
+numbers <m>m,n</m>.</fn>
 </li>
 <li>
-<m>D</m> be a subset of <m>\bbbr^m</m>
+<m>\va\in \bbbr^m</m>
 </li>
 <li>
-<m>\va\in D</m>
-</li>
-<li>
-<m>f:D\setminus\{\va\}\rightarrow\bbbr^n</m>
+the function <m>f(\vx)</m> be defined for all <m>\vx</m> near<fn>To be precise, there is a number <m>r\gt 0</m> such that <m>f(\vx)</m> is defined for all <m>\vx</m> obeying <m>|\vx-\va|\lt r</m>.</fn> <m>\va</m> and take values in <m>\bbbr^n</m>
 </li>
 <li>
 <m>\vL\in\bbbr^n</m>
@@ -101,10 +100,7 @@ Let
   \lim_{\vx\to \va} f(\vx) = \vL
 </mrow>
 </md>
-if, no matter how small a number <m>\veps \gt 0</m> you pick, the value of <m>f(\vx)</m>
-is within a distance <m>\veps</m> of <m>\vL</m>, whenever <m>\vx</m> is sufficiently
-close to <m>\va</m> (i.e. within some nonzero distance of <m>\va</m>),
-without<fn>You may find the condition <q>without  being exactly <m>\va</m></q>
+if<fn>There is a precise, formal version of this definition that looks just like Definition 1.7.1 of the CLP-1 text.</fn> the value of the function <m>f(\vx)</m> is sure to be arbitrarily close to <m>\vL</m> whenever the value of <m>\vx</m> is close enough to <m>\va</m>, without<fn>You may find the condition <q>without  being exactly <m>\va</m></q>
 a little strange, but there is a good reason for it, which we have already seen in Calculus I. In the definition
   <m>f'(x) = \lim\limits_{x\rightarrow a} \frac{f(x)-f(a)}{x-a}</m>,
 the function whose limit is being taken, namely  <m>\frac{f(x)-f(a)}{x-a}</m>,
@@ -126,16 +122,13 @@ of continuity.
 Let
 <ul>
 <li>
-<m>m</m>, <m>n</m> be natural numbers
+<m>m</m> and <m>n</m> be natural numbers
 </li>
 <li>
-<m>D</m> be a subset of <m>\bbbr^m</m>
+<m>\va\in\bbbr^m</m>
 </li>
 <li>
-<m>\va\in D</m>
-</li>
-<li>
-<m>f:D\rightarrow\bbbr^n</m>
+the function <m>f(\vx)</m> be defined for all <m>\vx</m> near <m>\va</m> and take values in <m>\bbbr^n</m>
 </li>
 </ul>
 <ol label="a">
@@ -146,7 +139,7 @@ The function <m>f</m> is continuous at a point <m>\va</m> if
 </me>
 </li>
 <li>
-The function <m>f</m> is continuous on the set <m>D</m> if it is continuous at
+The function <m>f</m> is continuous on a set <m>D</m> if it is continuous at
 every point of <m>D</m>.
 </li>
 </ol>
@@ -201,7 +194,7 @@ The following theorem summarizes a bunch of them. For simplicity,
 it concerns primarily real valued functions. That is, functions that output
 real numbers as opposed to vectors. However it does contain one
 vector valued function. The function <m>\vX</m> in the theorem takes as input
-an <m>m</m>-component vector and returns another <m>m</m>-component vector.
+an <m>n</m>-component vector and returns an <m>m</m>-component vector.
 We will not deal with many vector valued functions here in CLP-3,
 but we will see a lot in CLP-4.
 </p>
@@ -211,13 +204,13 @@ but we will see a lot in CLP-4.
 Let
 <ul>
 <li>
-<m>m</m> be a natural number
+<m>m</m> and <m>n</m> be natural numbers
 </li>
 <li>
-<m>D</m> be a subset of <m>\bbbr^m</m>
+<m>\va\in \bbbr^m</m> and <m>\vb\in\bbbr^n</m>
 </li>
 <li>
-<m>\va,\vb\in D</m>
+<m>D</m> be a subset of <m>\bbbr^m</m> that contains all <m>\vx\in\bbbr^m</m> that are near <m>\va</m> 
 </li>
 <li>
 <m>c,F,G\in\bbbr</m>
@@ -277,7 +270,7 @@ Then
 
 <p>
 This shows that multivariable limits interact very nicely with arithmetic,
-just like single variable limits did. Also recall, from Theorem 1.6.8 in the
+just as single variable limits did. Also recall, from Theorem 1.6.8 in the
 CLP-1 text,
 </p>
 

@@ -118,13 +118,14 @@ Here is a more careful definition of limit.
 Let 
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item[$\circ$]
-$m$, $n$ be natural numbers
-\item[$\circ$] 
-$D$ be a subset of $\bbbr^m$
+$m$ and $n$ be natural numbers\footnote{In this text, we will interested in
+$m,n\in\big\{1,2,3\big\}$, but the definition works for all natural
+numbers $m,n$.}
 \item[$\circ$]
-$\va\in D$
+$\va\in \bbbr^m$
 \item[$\circ$] 
-$f:D\setminus\{\va\}\rightarrow\bbbr^n$
+the function $f(\vx)$ be defined for all $\vx$ near\footnote{To be precise, there is a number $r>0$ such that $f(\vx)$ is defined for all $\vx$ obeying
+$|\vx-\va|<r$.} $\va$ and take values in $\bbbr^n$
 \item[$\circ$]
 $\vL\in\bbbr^n$
 \end{itemize}
@@ -132,11 +133,8 @@ $\vL\in\bbbr^n$
 \begin{align*}
   \lim_{\vx\to \va} f(\vx) = \vL
 \end{align*}
-if, no matter how small a number $\veps>0$ you pick, the value of $f(\vx)$
-is within a distance $\veps$ of $\vL$, whenever $\vx$ is sufficiently 
-close to $\va$ (i.e. within some nonzero distance of $\va$), 
-%if the value of the function $f(x,y)$ is sure to be arbitrarily close 
-%to $L$ whenever the value of $(x,y)$ is close enough to $(a,b)$, 
+if\footnote{There is a precise, formal version of this definition that looks just like Definition 1.7.1 of the CLP-1 text.} the value of the function $f(\vx)$ is sure to be arbitrarily close 
+to $\vL$ whenever the value of $\vx$ is close enough to $\va$, 
 without\footnote{You may find the condition ``without  being exactly $\va$'' 
 a little strange, but there is a good reason for it, which we have already seen in Calculus I. In the definition 
   $f'(x) = \lim\limits_{x\rightarrow a}\frac{f(x)-f(a)}{x-a}$, 
@@ -153,13 +151,11 @@ of continuity.
 Let 
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item[$\circ$]
-$m$, $n$ be natural numbers
-\item[$\circ$] 
-$D$ be a subset of $\bbbr^m$
+$m$ and $n$ be natural numbers
 \item[$\circ$]
-$\va\in D$
+$\va\in \bbbr^m$
 \item[$\circ$] 
-$f:D\rightarrow\bbbr^n$
+the function $f(\vx)$ be defined for all $\vx$ near $\va$ and take values in $\bbbr^n$
 \end{itemize}
 \begin{enumerate}[(a)]
 \item
@@ -168,7 +164,7 @@ The function $f$ is continuous at a point $\va$ if
 \lim_{\vx\to \va} f(\vx) = f(\va)
 \end{equation*}
 \item
-The function $f$ is continuous on the set $D$ if it is continuous at
+The function $f$ is continuous on a set $D$ if it is continuous at
 every point of $D$.
 \end{enumerate} 
 \end{defn}
@@ -214,7 +210,7 @@ The following theorem summarizes a bunch of them. For simplicity,
 it concerns primarily real valued functions. That is, functions that output
 real numbers as opposed to vectors. However it does contain one
 vector valued function. The function $\vX$ in the theorem takes as input
-an $m$-component vector and returns another $m$-component vector.
+an $n$-component vector and returns an $m$-component vector.
 We will not deal with many vector valued functions here in CLP-3,
 but we will see a lot in CLP-4.
 
@@ -223,11 +219,11 @@ but we will see a lot in CLP-4.
 Let 
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item[$\circ$]
-$m$ be a natural number
-\item[$\circ$] 
-$D$ be a subset of $\bbbr^m$
+$m$ and $n$ be natural numbers
 \item[$\circ$]
-$\va,\vb\in D$
+$\va\in\bbbr^m$ and $\vb\in\bbbr^n$
+\item[$\circ$] 
+$D$ be a subset of $\bbbr^m$ that contains all $\vx\in\bbbr^m$ that are near $\va$ 
 \item[$\circ$]
 $c,F,G\in\bbbr$
 \end{itemize}
@@ -273,7 +269,7 @@ $\lim\limits_{\vx\rightarrow \va} \ga\big(f(\vx)\big)
 \end{enumerate}
 \end{theorem}
 This shows that multivariable limits interact very nicely with arithmetic, 
-just like single variable limits did. Also recall, from Theorem 1.6.8 in the
+just as single variable limits did. Also recall, from Theorem 1.6.8 in the
 CLP-1 text, 
 \begin{theorem}\label{thm one d continuity}
 The following functions are continuous everywhere in their domains 
