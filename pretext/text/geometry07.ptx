@@ -367,6 +367,15 @@ Here are some examples.
   <image source="figs/seatA"/>
   </sidebyside>
 
+ <p>
+ Here are two figures created by graphing software.
+  </p>
+
+  <sidebyside  widths="53% 43%" valign="middle">
+  <image source="figs/xyzSurfB"/>
+ <image source="figs/xyzSurfDD"/>
+  </sidebyside>
+
 </solution>
 </example>
 
