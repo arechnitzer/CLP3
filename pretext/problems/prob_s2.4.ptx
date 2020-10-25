@@ -2208,7 +2208,14 @@ or
 
 <exercise><title><fromexam>M200 2003A</fromexam></title>
 <statement><p>
-Suppose <m>f(x,y)</m> is a differentiable function and we know
+By definition, the gradient of the differentiable function <m>f(x,y)</m> at the point 
+<m>\big( x_0\,,\,y_0\big)</m> is
+<me>
+\vnabla f(x_0,y_0)
+=\llt \pdiff{f}{x}\big( x_0\,,\,y_0\big)\,,\,
+     \pdiff{f}{y}\big( x_0\,,\,y_0\big)\rgt
+</me>
+Suppose that we know
 <me>
 \vnabla f(3,6)=\llt 7,8\rgt
 </me>
