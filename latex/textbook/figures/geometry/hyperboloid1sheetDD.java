@@ -29,7 +29,8 @@ public class hyperboloid1sheetDD extends Template {
 //     static double[] view = {1, 1, 1} ;
 
 //  General orthogonal projection.  
-     static double[] fwd = {1,1,0.5} ; 
+//     static double[] fwd = {1,1,0.5} ; 
+     static double[] fwd = {1,0.7,0.5} ; 
      static double[] up = {0,0,1} ;
      static double Lfwd = Math.sqrt(fwd[0]*fwd[0]+fwd[1]*fwd[1]+fwd[2]*fwd[2]) ; 
      static double[] Nfwd = {fwd[0]/Lfwd,fwd[1]/Lfwd,fwd[2]/Lfwd} ; 
@@ -50,8 +51,10 @@ public class hyperboloid1sheetDD extends Template {
      static double Ia =  0.4 ;  // ambient intensity
      static double Id =  0.2 ;  // directional intensity
                                 // keep Ia, Id >=0, Ia+Id <= 1
-     static double Drnth = -60 ;  // lighting direction angle, in degrees
-     static double Drnphi = 100 ;
+//     static double Drnth = -60 ;  // lighting direction angle, in degrees
+     static double Drnth = 20 ;  // lighting direction angle, in degrees
+//     static double Drnphi = 100 ;
+     static double Drnphi = 120 ;
      static double cosDrnth = Math.cos(Drnth*Math.PI/180.0) ;  
      static double sinDrnth = Math.sin(Drnth*Math.PI/180.0) ;  
      static double cosDrnphi = Math.cos(Drnphi*Math.PI/180.0) ;  
