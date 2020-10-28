@@ -30,7 +30,7 @@ public class hyperboloid1sheetDD extends Template {
 
 //  General orthogonal projection.  
 //     static double[] fwd = {1,1,0.5} ; 
-     static double[] fwd = {1,0.7,0.5} ; 
+     static double[] fwd = {1,0.7,0.4} ; 
      static double[] up = {0,0,1} ;
      static double Lfwd = Math.sqrt(fwd[0]*fwd[0]+fwd[1]*fwd[1]+fwd[2]*fwd[2]) ; 
      static double[] Nfwd = {fwd[0]/Lfwd,fwd[1]/Lfwd,fwd[2]/Lfwd} ; 
@@ -109,7 +109,7 @@ public class hyperboloid1sheetDD extends Template {
           boolean[] skip ;
 
 
-          Ia =  0.5 ;  // ambient intensity
+          Ia =  0.6 ;  // ambient intensity
           Id =  0.2 ;  // directional intensity
           int nth = 13 ;
           int nz = 13 ;
@@ -152,7 +152,7 @@ public class hyperboloid1sheetDD extends Template {
           canvas.append( new fCoonsRect(x,y,hx,hy,vx,vy,dens,skip,nz)) ;
 
 
-          Ia =  0.5 ;  // ambient intensity
+          Ia =  0.6 ;  // ambient intensity
           Id =  0.2 ;  // directional intensity
           nth = 37 ;
           nz = 21 ;
