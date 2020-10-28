@@ -109,8 +109,8 @@ public class hyperboloid1sheetDD extends Template {
           boolean[] skip ;
 
 
-          Ia =  0.3 ;  // ambient intensity
-          Id =  0.3 ;  // directional intensity
+          Ia =  0.5 ;  // ambient intensity
+          Id =  0.2 ;  // directional intensity
           int nth = 13 ;
           int nz = 13 ;
           double th1 = 90 ;
