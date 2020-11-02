@@ -632,7 +632,7 @@ Now we just have to integrate
                         _{\arcsin\frac{b}{a}}^{\frac{\pi}{2}}
 </mrow>
 <mrow>
-&amp;\hskip1in\text{since } \int \csc^2\varphi\ \dee{\varphi} =\cot\varphi+C
+&amp;\hskip1in\text{since } \int \csc^2\varphi\ \dee{\varphi} =-\cot\varphi+C
 </mrow><mrow>
 &amp;=\frac{\pi}{6}
             \left[-a^3 \cos\varphi + b^3\cot\varphi\right]
