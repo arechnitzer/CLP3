@@ -1212,6 +1212,111 @@ of <m>-3\,\hi + 3\sqrt{3}\,\hj</m> by <m>3</m>, giving  <m>\llt -1\,,\,\sqrt{3}\
 </solution>
 </example>
 
+<example xml:id="eg_hidden_surface"><title>(Optional) computer graphics hidden-surface elimination</title>
+<p>
+When you look at a solid three dimensional object, you do not see all of 
+the surface of the object <mdash/> parts of the surface are hidden from your view by other parts of the object. For example, the following sketch shows, schematically, a ray of light leaving your eye and hitting the surface of the object at the light dot. The object is solid, so the light cannot penetrate any further. But, if it could, it would follow the dotted line, hitting the surface of the object three more times.Your eye can see the light dot,  but cannot see the other three dark dots. 
+</p>
+
+<sidebyside width="35%">
+<image source="figs/hiddenA"/>
+</sidebyside>
+
+<p>
+Recreating this effect in computer generated graphics is called <q>hidden-surface elimination</q>.  In general, implementing hidden-surface elimination can be quite complicated. Often a technique called <q>ray tracing</q> is used<fn>You can find out more about it by plugging <q>ray tracing</q> into the search engine of your choice.</fn>. However, it is easy if you know about vectors and gradients, and 
+you are only looking at a single convex body. By definition, a solid is convex if, whenever two points are in the solid, then the line segment joining the two points is also contained in the solid. 
+</p>
+
+<sidebyside widths="31.7% 31.7%" valign="middle">
+<image source="figs/hiddenB"/>
+<image source="figs/hiddenC"/>
+</sidebyside>
+
+<p>
+So suppose that we are looking at a convex solid, that the equation of the 
+surface of the solid is <m>G(x,y,z)=0</m>, and that our eye is at <m>(x_e,y_e,z_e)</m>.
+</p>
+
+<p>
+<ul>
+<li>
+<p>
+First consider a light ray that leaves our eye and then just barely nicks
+the solid at the point <m>(x,y,z)</m>, as in the figure on the left below. The light ray is a tangent line to the surface at <m>(x,y,z)</m>. So the direction vector of 
+the light ray,
+ <m>\llt x-x_e,y-y_e,z-z_e \rgt</m>, is tangent to the surface at <m>(x,y,z)</m>  and consequently is perpendicular to the normal vector, 
+<m>\vn=\vnabla G(x,y,z)</m>, of the surface at <m>(x,y,z)</m>. Thus 
+<me>
+\llt x-x_e,y-y_e,z-z_e \rgt\cdot \vnabla G(x,y,z)=0
+</me>
+</p>
+</li>
+</ul>
+</p>
+
+<sidebyside widths="43.6% 51.7%" valign="middle">
+<image source="figs/hiddenD"/>
+<image source="figs/hiddenE"/>
+</sidebyside>
+
+<p>
+<ul>
+<li>
+<p>
+Now consider a light ray that leaves our eye and then passes through
+the solid, as in the figure on the right above. Call the point at which the light ray first enters the solid <m>(x,y,z)</m> and the point at which the light ray leaves the solid <m>(x',y,'z')</m>.
+<ul>
+<li>
+Let <m>\vv</m> be a vector that has the same direction
+as, i.e. is a positive multiple of, the vector <m>\llt x-x_e, y-y_e, z-z_e\rgt</m>.
+</li><li>
+Let <m>\vn</m> be an outward pointing normal to the solid at <m>(x,y,z)</m>.
+It will be either <m>\vnabla G(x,y,z)</m> or <m>-\vnabla G(x,y,z)</m>.
+</li><li>
+Let <m>\vn'</m> be an outward pointing normal to the solid at <m>(x',y',z')</m>.
+It will be either <m>\vnabla G(x',y',z')</m> or <m>-\vnabla G(x',y',z')</m>. 
+</li>  
+</ul> 
+Then
+<ul>
+<li>
+at the point <m>(x,y,z)</m> where the ray enters the solid, which is a visible point,
+the direction vector <m>\vv</m> points into the solid. The angle between <m>\vv</m> and the outward pointing normal <m>\vn</m> is greater than <m>90^\circ</m>, so that the dot product <m>\vv\cdot\vn\lt 0</m>. But
+</li><li>
+at the point <m>(x',y',z')</m> where the ray leaves the solid, which is a 
+hidden point, the direction vector <m>\vv</m> points out of the solid. The angle between <m>\vv</m> and the outward pointing normal <m>\vn'</m> is less than <m>90^\circ</m>, 
+so that the dot product <m>\vv\cdot\vn'\gt 0</m>.
+</li>
+</ul>
+</p>
+</li>
+</ul>
+</p>
+
+<p>
+Our conclusion is that, if we are looking in the direction <m>\vv</m>,
+and if the outward pointing normal<fn>If <m>\vnabla G(x,y,z)</m> is the 
+inward pointing normal, just replace <m>G</m> by <m>-G</m>.</fn> to the surface of the 
+solid at <m>(x,y,z)</m> is <m>\vnabla G(x,y,z)</m> then the point <m>(x,y,z)</m> is hidden 
+if and only if <m>\vv\cdot\vnabla G(x,y,z)\gt 0</m>.
+</p>
+
+<p>
+This method was used by the computer graphics program that created the
+shaded figures<fn>Those figures are not convex. But it was still possible to use the method discussed above because any light ray from our eye that passes through the figure intersects the figure at most twice. It first enters the figure at a visible point and then exits the figure at a hidden point.</fn> in 
+Examples  <xref ref="eg_hyperboloid"/> and <xref ref="eg_hyperboloid_two"/>, which are reproduced here.
+</p>
+
+<sidebyside widths="28% 31.7%" valign="middle">
+<image source="figs/hyperboloid1sheetDD"/>
+<image source="figs/hyperboloid2sheetDD"/>
+</sidebyside>
+
+
+</example>
+
+
+
 <p>Tangent planes, in addition to being geometric objects, provide a
 simple but powerful tool for approximating functions of two variables
 near a specified point. We saw something very similar in the CLP-1 text
