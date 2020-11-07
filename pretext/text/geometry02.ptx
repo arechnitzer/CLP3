@@ -430,7 +430,7 @@ So our displacement vector <mdash/> the vector whose tail is at our starting poi
 As we started at <m>(0,0)</m> we finish the first leg of the walk at <m>(4,0)</m>.
 </li>
 <li>
-On the second leg of our walk, our direction of motion is northeast. i.e. is
+On the second leg of our walk, our direction of motion is northeast, i.e. is
 <m>45^\circ</m> above the direction of the positive <m>x</m>-axis. Looking at the figure
 on the right above, we see that our displacement vector, for the second leg of the walk, has to be in the same direction as the vector <m>\llt 1,1\rgt</m>.
 So our displacement vector is the vector of length <m>5\sqrt{2}</m> with the same direction as <m>\llt 1,1\rgt</m>. The vector <m>\llt 1,1\rgt</m> has length
@@ -809,7 +809,7 @@ If <m>|\theta|</m> is larger than <m>90^\circ</m>, as in the figure on the right
 <md>
 <mrow>
 {\rm proj}_{\vb}\,\va
-=-\frac{\va\cdot\vb}{|\vb|}\frac{-\vb}{|\vb|}
+=-\frac{\va\cdot\vb}{|\vb|}\ \frac{-\vb}{|\vb|}
 =\frac{\va\cdot\vb}{|\vb|^2}\ \vb
 </mrow>
 </md>

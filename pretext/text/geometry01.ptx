@@ -269,7 +269,7 @@ x^2+6x +y^2-8y +z^2+10z \amp= 150\ \text{and, completing squares,}
 </mrow><mrow>
 x^2+6x +9 +y^2-8y +16  +z^2+10z +25 \amp= 200\ \text{or}
 </mrow><mrow>
-(x+3)^2+(y-4)^2+(z+5)^2 =200 
+(x+3)^2+(y-4)^2+(z+5)^2 \amp=200 
 </mrow>
 </md>
 This is the sphere of radius <m>10\sqrt{2}</m> centred on <m>(-3,4,-5)</m>.
