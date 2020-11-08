@@ -1616,53 +1616,25 @@ and the right hand sides and observe that they are equal.
 \va\cdot(\vb\times\vc)
 &=\llt a_1,a_2,a_3\rgt\cdot
       \llt b_2c_3-b_3c_2\,,\, b_3c_1-b_1c_3\,,\, b_1c_2-b_2c_1\rgt\\
-&=a_1b_2c_3 - a_1b_3c_2 + a_2b_3c_1 - a_2b_1c_3 + a_3b_1c_2 - a_3b_2c_1
+&=\textcolor{blue}{a_1b_2c_3} - \textcolor{blue}{a_1b_3c_2} 
+    + \textcolor{orange}{a_2b_3c_1} - \textcolor{orange}{a_2b_1c_3} 
+    + a_3b_1c_2 - a_3b_2c_1
 \end{align*}
 The right hand side is
 \begin{align*}
 (\va\times\vb)\cdot\vc
 &=\llt a_2b_3-a_3b_2\,,\, a_3b_1-a_1b_3\,,\, a_1b_2-a_2b_1\rgt\cdot
        \llt c_1,c_2,c_3\rgt \\
-&=a_2b_3c_1 - a_3b_2c_1 + a_3b_1c_2 - a_1b_3c_2 + a_1b_2c_3 - a_2b_1c_3
+&=\textcolor{orange}{a_2b_3c_1} - a_3b_2c_1 + a_3b_1c_2 
+- \textcolor{blue}{a_1b_3c_2} + \textcolor{blue}{a_1b_2c_3} 
+- \textcolor{orange}{a_2b_1c_3}
 \end{align*}
 The left and right hand sides are the same.
 
 \medskip
-\noindent (10)\ \ \ Since
-$$
-\vb\times\vc
-\ =\ (b_2c_3-b_3c_2)\,\hi-(b_1c_3-b_3c_1)\,\hj
-    +(b_1c_2-b_2c_1)\,\hk
-$$
-The left hand side is
-\begin{align*}
-\va\times(\vb\times\vc)
-\ =\ &\det\left[\begin{matrix} \hi & \hj & \hk \\
-                     a_1&a_2&a_3\\
-                 b_2c_3-b_3c_2&-b_1c_3+b_3c_1&b_1c_2-b_2c_1
-             \end{matrix}\right]\\[0.05in]
-\ =\ &\phantom{-}\hi\,[a_2(b_1c_2-b_2c_1)-a_3(-b_1c_3+b_3c_1)]\\
-     & {-}\hj\,[a_1(b_1c_2-b_2c_1)-a_3(b_2c_3-b_3c_2)]\\
-     & {+}\hk\,[a_1(-b_1c_3+b_3c_1)-a_2(b_2c_3-b_3c_2)]
-\end{align*}
-The right hand side is
-\begin{align*}
-(\va\cdot\vc)\vb-(\va\cdot\vb)\vc
-&=(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk) \\
-     &\hskip1in -(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)\\
-&=\phantom{-}
-\hi[a_1b_1c_1+a_2b_1c_2+a_3b_1c_3-a_1b_1c_1-a_2b_2c_1-a_3b_3c_1] \\
-&\phantom{=}+\hj[a_1b_2c_1+a_2b_2c_2+a_3b_2c_3-a_1b_1c_2-a_2b_2c_2-a_3b_3c_2] \\
-&\phantom{=}+\hk[a_1b_3c_1+a_2b_3c_2+a_3b_3c_3-a_1b_1c_3-a_2b_2c_3-a_3b_3c_3]
-\\[0.05in]
-&=\phantom{-} \hi[a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1] \\
- &\phantom{=} +\hj[a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]\\
- &\phantom{=} +\hk[a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
-\end{align*}
-The left and right hand sides are the same. Oof! This is a little tedious
-to do by hand. But any computer algebra system will do it for you in a 
-flash.
-\end{proof}
+\noindent (10)\ \ \ We will give the straightforward, but slightly tedious,
+computations in (the optional) \S\ref{sec vector identities}.
+ \end{proof}
 
 
 \begin{warning}\label{warning:GEOMcross} 
@@ -1805,22 +1777,9 @@ $\va\times(\vb\times\vc)=(\vc\cdot\va)\vb-(\vb\cdot\va)\vc$
 \end{enumerate}
 \end{lemma}
 \begin{proof} (a)
-Here are two proofs.
-For the first, just write out both sides
-\begin{align*}
-\va\cdot(\vb\times\vc)
-&=(a_1,a_2,a_3)\cdot(b_2c_3-b_3c_2\,,\,b_3c_1-b_1c_3\,,\,b_1c_2-b_2c_1)\\
-&=a_1b_2c_3-a_1b_3c_2+a_2b_3c_1-a_2b_1c_3+a_3b_1c_2-a_3b_2c_1\\
-(\va\times\vb)\cdot\vc
-&=(a_2b_3-a_3b_2\,,\,a_3b_1-a_1b_3\,,\,a_1b_2-a_2b_1)\cdot(c_1,c_2,c_3)\\
-&=a_2b_3c_1-a_3b_2c_1+a_3b_1c_2-a_1b_3c_2+a_1b_2c_3-a_2b_1c_3
-\end{align*}
-and observe that they are the same.
-
-\medskip
-For the second proof,
-we again write out both sides, but this time we express them
-in terms of determinants.
+We proved this in Theorem \ref{thm:crossPppties}, by evaluating the left and right hand  sides, and observing that they are the same.
+Here is a second proof, in which we again write out both sides, 
+but this time we express them in terms of determinants.
 \begin{align*}
 \va\cdot\vb\times\vc
 &=(a_1,a_2,a_3)\cdot\det\left[\begin{matrix}\hi&\hj&\hk\\
@@ -1881,33 +1840,37 @@ gives, for the left hand side,
 On the other hand, the right hand side
 \begin{align*}
 (\va\cdot\vc)\vb-(\va\cdot\vb)\vc
-\ =\ &(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
--(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)\cr
-=\ &
+&=(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk) \\
+     &\hskip1in -(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
+\\
+&=\phantom{-}
 \hi\ \big[\textcolor{blue}{a_1b_1c_1}
          +a_2b_1c_2+a_3b_1c_3-
          \textcolor{blue}{a_1b_1c_1}
          -a_2b_2c_1-a_3b_3c_1\big]
 \\
-{+}&\hj\ \big[a_1b_2c_1
+&\phantom{=}+\hj\ \big[a_1b_2c_1
       +\textcolor{blue}{a_2b_2c_2}
       +a_3b_2c_3-a_1b_1c_2
       -\textcolor{blue}{a_2b_2c_2}
       -a_3b_3c_2\big]
-\cr
-{+}&\hk\ \big[a_1b_3c_1+a_2b_3c_2
+\\
+&\phantom{=}+\hk\ \big[a_1b_3c_1+a_2b_3c_2
           +\textcolor{blue}{a_3b_3c_3}
           -a_1b_1c_3-a_2b_2c_3
           -\textcolor{blue}{a_3b_3c_3}\big]
 \\
-{=}\ &
+&=\phantom{-}
 \hi\ [a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]
-\cr
-{+}&\hj\ [a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
-\cr
-{+}&\hk\ [a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
+\\
+&\phantom{=}+\hj\ [a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
+\\
+&\phantom{=}+\hk\ [a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
 \end{align*}
-The last formula that we had for the left hand side is the same as the last formula we had for the right hand side.
+The last formula that we had for the left hand side is the same as the last formula we had for the right hand side. Oof! This is a little tedious
+to do by hand. But any computer algebra system will do it for you in a 
+flash.
+
 
 \noindent (c)
 We just apply part (b) three times

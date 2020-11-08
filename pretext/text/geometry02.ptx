@@ -1804,7 +1804,7 @@ The left hand side is
 &amp;=\llt a_1,a_2,a_3\rgt\cdot
       \llt b_2c_3\!-\!b_3c_2\,,\, b_3c_1\!-\!b_1c_3\,,\, b_1c_2\!-\!b_2c_1\rgt
 </mrow><mrow>
-&amp;=a_1b_2c_3 \!-\! a_1b_3c_2 \!+\! a_2b_3c_1 \!-\! a_2b_1c_3 \!+\! a_3b_1c_2 \!-\! a_3b_2c_1
+&amp;=\color{blue}{a_1b_2c_3} \!-\! \color{blue}{a_1b_3c_2} \!+\! \color{orange}{a_2b_3c_1} \!-\! \color{orange}{a_2b_1c_3} \!+\! a_3b_1c_2 \!-\! a_3b_2c_1
 </mrow>
 </md>
 The right hand side is
@@ -1814,7 +1814,7 @@ The right hand side is
 &amp;=\llt a_2b_3\!-\!a_3b_2\,,\, a_3b_1\!-\!a_1b_3\,,\, a_1b_2\!-\!a_2b_1\rgt\cdot
        \llt c_1,c_2,c_3\rgt
 </mrow><mrow>
-&amp;=a_2b_3c_1 \!-\! a_3b_2c_1 \!+\! a_3b_1c_2 \!-\! a_1b_3c_2 \!+\! a_1b_2c_3 \!-\! a_2b_1c_3
+&amp;=\color{orange}{a_2b_3c_1} \!-\! a_3b_2c_1 \!+\! a_3b_1c_2 \!-\! \color{blue}{a_1b_3c_2} \!+\! \color{blue}{a_1b_2c_3} \!-\! \color{orange}{a_2b_1c_3}
 </mrow>
 </md>
 The left and right hand sides are the same.
@@ -1822,60 +1822,7 @@ The left and right hand sides are the same.
 </li>
 <li><title>(10)</title>
 <p>
-Since
-<me>
-\vb\times\vc
-\ =\ (b_2c_3-b_3c_2)\,\hi-(b_1c_3-b_3c_1)\,\hj
-    +(b_1c_2-b_2c_1)\,\hk
-</me>
-The left hand side is
-<md>
-<mrow>
-\va\times(\vb\times\vc)
- = &amp;\det\left[\begin{matrix}
-\hi &amp; \hj &amp; \hk \\
-a_1&amp;a_2&amp;a_3 \\
-b_2c_3-b_3c_2&amp;-b_1c_3+b_3c_1&amp;b_1c_2-b_2c_1
-\end{matrix}\right]
-</mrow>
-<mrow>
-= &amp;\phantom{-}\hi\,[a_2(b_1c_2-b_2c_1)-a_3(-b_1c_3+b_3c_1)]
-</mrow><mrow>
-     &amp; {-}\hj\,[a_1(b_1c_2-b_2c_1)-a_3(b_2c_3-b_3c_2)]
-</mrow><mrow>
-     &amp; {+}\hk\,[a_1(-b_1c_3+b_3c_1)-a_2(b_2c_3-b_3c_2)]
-</mrow>
-</md>
-</p>
-<p>
-The right hand side is
-<md>
-<mrow>
-&amp;(\va\cdot\vc)\vb-(\va\cdot\vb)\vc
-</mrow><mrow>
-&amp;\hskip0.1in=(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
-</mrow><mrow>
-     &amp;\hskip1.1in -(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
-</mrow><mrow>
-&amp;\hskip0.1in=\phantom{-}
-\hi[a_1b_1c_1+a_2b_1c_2+a_3b_1c_3-a_1b_1c_1-a_2b_2c_1-a_3b_3c_1]
-</mrow><mrow>
-&amp;\hskip0.1in\phantom{=}+\hj[a_1b_2c_1+a_2b_2c_2+a_3b_2c_3-a_1b_1c_2-a_2b_2c_2-a_3b_3c_2]
-</mrow><mrow>
-&amp;\hskip0.1in\phantom{=}+\hk[a_1b_3c_1+a_2b_3c_2+a_3b_3c_3-a_1b_1c_3-a_2b_2c_3-a_3b_3c_3]
-</mrow><mrow>
-&amp;\hskip0.1in=\phantom{-} \hi[a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]
-</mrow><mrow>
- &amp;\hskip0.1in\phantom{=} +\hj[a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
-</mrow><mrow>
- &amp;\hskip0.1in\phantom{=} +\hk[a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
-</mrow>
-</md>
-</p>
-<p>
-The left and right hand sides are the same. Oof! This is a little tedious
-to do by hand. But any computer algebra system will do it for you in a
-flash.
+We will give the straightforward, but slightly tedious, computations in (the optional) &#xA7;<xref ref="sec_vector_identities"/>.
 </p>
 </li>
 </dl>
@@ -2065,28 +2012,9 @@ and the volume of the parallelepiped is
 
 <proof><title>Proof of (a)</title>
 <p>
-Here are two proofs.
-For the first, just write out both sides
-<md>
-<mrow>
-\va\cdot(\vb\times\vc)
-&amp;=(a_1,a_2,a_3)\cdot(b_2c_3-b_3c_2\,,\,b_3c_1-b_1c_3\,,\,b_1c_2-b_2c_1)
-</mrow><mrow>
-&amp;=a_1b_2c_3-a_1b_3c_2+a_2b_3c_1-a_2b_1c_3+a_3b_1c_2-a_3b_2c_1
-</mrow><mrow>
-(\va\times\vb)\cdot\vc
-&amp;=(a_2b_3-a_3b_2\,,\,a_3b_1-a_1b_3\,,\,a_1b_2-a_2b_1)\cdot(c_1,c_2,c_3)
-</mrow><mrow>
-&amp;=a_2b_3c_1-a_3b_2c_1+a_3b_1c_2-a_1b_3c_2+a_1b_2c_3-a_2b_1c_3
-</mrow>
-</md>
-and observe that they are the same.
-</p>
-
-<p>
-For the second proof,
-we again write out both sides, but this time we express them
-in terms of determinants.
+We proved this in Theorem <xref ref="thm_crossPppties"/>, by evaluating the left and right hand  sides, and observing that they are the same.
+Here is a second proof, in which we again write out both sides, 
+but this time we express them in terms of determinants.
 <md>
 <mrow>
 \va\cdot\vb\times\vc
@@ -2155,35 +2083,36 @@ On the other hand, the right hand side
 <md>
 <mrow>
 (\va\cdot\vc)\vb-(\va\cdot\vb)\vc
-\ =\ &amp;(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
+&amp;=(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
 </mrow><mrow>
-&amp;\hskip0.5in-(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)\cr
-=\ &amp;
+&amp;\hskip0.5in-(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
+</mrow><mrow>
+&amp;=\phantom{-}
 \hi\ \big[\color{blue}{a_1b_1c_1}
          +a_2b_1c_2+a_3b_1c_3-
          \color{blue}{a_1b_1c_1}
          -a_2b_2c_1-a_3b_3c_1\big]
 </mrow><mrow>
-{+}&amp;\hj\ \big[a_1b_2c_1
+&amp;\phantom{=}+\hj\ \big[a_1b_2c_1
       +\color{blue}{a_2b_2c_2}
       +a_3b_2c_3-a_1b_1c_2
       -\color{blue}{a_2b_2c_2}
       -a_3b_3c_2\big]
 </mrow><mrow>
-{+}&amp;\hk\ \big[a_1b_3c_1+a_2b_3c_2
+&amp;\phantom{=}+\hk\ \big[a_1b_3c_1+a_2b_3c_2
           +\color{blue}{a_3b_3c_3}
           -a_1b_1c_3-a_2b_2c_3
           -\color{blue}{a_3b_3c_3}\big]
 </mrow><mrow>
-{=}\ &amp;
+&amp;=\phantom{-}
 \hi\ [a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]
 </mrow><mrow>
-{+}&amp;\hj\ [a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
+&amp;\phantom{=}+\hj\ [a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
 </mrow><mrow>
-{+}&amp;\hk\ [a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
+&amp;\phantom{=}+\hk\ [a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
 </mrow>
 </md>
-The last formula that we had for the left hand side is the same as the last formula we had for the right hand side.
+The last formula that we had for the left hand side is the same as the last formula we had for the right hand side. Oof! This is a little tedious to do by hand. But any computer algebra system will do it for you in a flash.
 </p>
 </proof>
 
