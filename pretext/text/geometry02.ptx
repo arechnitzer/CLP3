@@ -1566,7 +1566,7 @@ The computation showing that <m>\vb\cdot(\va\times \vb)=0</m> is similar.
 </dl>
 </p>
 <proof>
-<p>The formula <m>|\va\times\vb|=|\va|\,|\vb|\sin\theta</m> is gotten by comparing
+<p>The formula <m>|\va\times\vb|=|\va|\,|\vb|\sin\theta</m> is gotten by verifying that
 <md>
 <mrow>
 |\va\times\vb|^2
@@ -1579,7 +1579,7 @@ The computation showing that <m>\vb\cdot(\va\times \vb)=0</m> is similar.
 </mrow><mrow>&amp;\hskip0.5in
 +a_1^2b_2^2-2a_1b_2a_2b_1+a_2^2b_1^2
 </mrow>
-<intertext>and</intertext><mrow>
+<intertext>is equal to</intertext><mrow>
 |\va|^2\,|\vb|^2\sin^2\theta
 &amp;=|\va|^2|\vb|^2(1-\cos^2\theta)
 </mrow><mrow>
@@ -1619,8 +1619,7 @@ In the left hand figure of
       </sidebyside>
 <p>
   the two vectors are labeled <m>\vc</m> and <m>\vd</m>. Which of these two
-candidates is correct is determined by the right hand rule<fn>
-That the cross product uses the right hand rule, rather than the left hand rule, is an example of the tyranny of the masses <mdash/> only roughly 10\%
+candidates is correct is determined by the right hand rule<fn>That the cross product uses the right hand rule, rather than the left hand rule, is an example of the tyranny of the masses <mdash/> only roughly 10\%
 of humans are left-handed. </fn>,
 which says that if you form your right hand into a fist with your fingers curling from
 <m>\va</m> to <m>\vb</m>, then when you stick your thumb straight out from
@@ -2017,6 +2016,8 @@ We should not be surprised that <m>\vb\times\vc</m> has direction <m>\hk</m>.
 <li> <m>\vb\times\vc</m> has to be perpendicular to both <m>\vb</m> and <m>\vc</m> and
 </li>
 <li> both <m>\vb</m> and <m>\vc</m> lie in the <m>xy</m>-plane,
+</li>
+<li> so that <m>\vb\times\vc</m> has to the perpendicular to the <m>xy</m>-plane,
 </li>
 <li> so that <m>\vb\times\vc</m> has to the parallel to the <m>z</m>-axis.
 </li>
