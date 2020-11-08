@@ -36,7 +36,7 @@
 <p>
   These are called the parametric equations of the line.
   Solving all three equations for the parameter <m>t</m>
-  assuming that <m>d_x</m>, <m>d_y</m> and <m>d_z</m> are all nonzero)
+  (assuming that <m>d_x</m>, <m>d_y</m> and <m>d_z</m> are all nonzero)
   <md>
   <mrow>
   t=\frac{x-x_0}{d_x}=\frac{y-y_0}{d_y}=\frac{z-z_0}{d_z}
@@ -158,7 +158,7 @@
   &amp;=-\hi-\hj+2\hk
   </mrow>
   </md>
-  We now have both a point on the line and a direction vector for the line,
+  We now have both a point on the line (namely <m>(1,1,0)</m>) and a direction vector for the line (namely <m>\llt -1,-1,2\rgt</m>),
   so, as usual, the parametric equations for the line are
   <md>
   <mrow>

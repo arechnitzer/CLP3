@@ -130,7 +130,7 @@
   from <m>(3,0,0)</m> to <m>(0,0,6)</m> and  the part of the intersection of
   <m>P</m> with the <m>yz</m>-plane that is in the first octant is the line segment
   from <m>(0,4,0)</m> to <m>(0,0,6)</m>. So we just have to sketch the three line segments
-  joining three axis intercepts <m>(3,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,6)</m>.
+  joining the three axis intercepts <m>(3,0,0)</m>, <m>(0,4,0)</m> and <m>(0,0,6)</m>.
   That's it.
   </p>
 

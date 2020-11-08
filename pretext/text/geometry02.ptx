@@ -2398,13 +2398,13 @@ you start walking around the edge of the merry-go-round. Then,
 at <m>t=0</m>, <m>\vr=\hi</m> and
 <ul>
 <li>
-   if you walk in the direction of rotation, as in the figure on the
+   if you walk in the direction of rotation (with speed one), as in the figure on the
    left below, <m>\vv=\hj</m> and the Coriolis force <m>\vF_{{\rm cor}}=
    -2\Om\hk\times\hj = 2\Om\,\hi</m> tries to push you off of
    the merry-go-round, while
 </li>
 <li>
-   if you walk opposite to the direction of rotation, as in the figure
+   if you walk opposite to the direction of rotation (with speed one), as in the figure
    on the right below,  <m>\vv=-\hj</m> so that the Coriolis force
    <m>\vF_{{\rm cor}}=-2\Om\hk\times(-\hj) = -2\Om\,\hi</m> tries to pull you
    into the centre of the merry-go-round.
