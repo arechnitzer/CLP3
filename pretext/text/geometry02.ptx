@@ -1804,7 +1804,7 @@ The left hand side is
 &amp;=\llt a_1,a_2,a_3\rgt\cdot
       \llt b_2c_3\!-\!b_3c_2\,,\, b_3c_1\!-\!b_1c_3\,,\, b_1c_2\!-\!b_2c_1\rgt
 </mrow><mrow>
-&amp;=\color{blue}{a_1b_2c_3} \!-\! \color{blue}{a_1b_3c_2} \!+\! \color{orange}{a_2b_3c_1} \!-\! \color{orange}{a_2b_1c_3} \!+\! a_3b_1c_2 \!-\! a_3b_2c_1
+&amp;={\color{blue}{a_1b_2c_3}} \!-\! {\color{blue}{a_1b_3c_2}} \!+\! {\color{orange}{a_2b_3c_1}} \!-\! {\color{orange}{a_2b_1c_3}} \!+\! a_3b_1c_2 \!-\! a_3b_2c_1
 </mrow>
 </md>
 The right hand side is
@@ -1814,7 +1814,7 @@ The right hand side is
 &amp;=\llt a_2b_3\!-\!a_3b_2\,,\, a_3b_1\!-\!a_1b_3\,,\, a_1b_2\!-\!a_2b_1\rgt\cdot
        \llt c_1,c_2,c_3\rgt
 </mrow><mrow>
-&amp;=\color{orange}{a_2b_3c_1} \!-\! a_3b_2c_1 \!+\! a_3b_1c_2 \!-\! \color{blue}{a_1b_3c_2} \!+\! \color{blue}{a_1b_2c_3} \!-\! \color{orange}{a_2b_1c_3}
+&amp;={\color{orange}{a_2b_3c_1}} \!-\! a_3b_2c_1 \!+\! a_3b_1c_2 \!-\! {\color{blue}{a_1b_3c_2}} \!+\! {\color{blue}{a_1b_2c_3}} \!-\! {\color{orange}{a_2b_1c_3}}
 </mrow>
 </md>
 The left and right hand sides are the same.
@@ -2088,21 +2088,21 @@ On the other hand, the right hand side
 &amp;\hskip0.5in-(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
 </mrow><mrow>
 &amp;=\phantom{-}
-\hi\ \big[\color{blue}{a_1b_1c_1}
+\hi\ \big[{\color{blue}{a_1b_1c_1}}
          +a_2b_1c_2+a_3b_1c_3-
-         \color{blue}{a_1b_1c_1}
+         {\color{blue}{a_1b_1c_1}}
          -a_2b_2c_1-a_3b_3c_1\big]
 </mrow><mrow>
 &amp;\phantom{=}+\hj\ \big[a_1b_2c_1
-      +\color{blue}{a_2b_2c_2}
+      +{\color{blue}{a_2b_2c_2}}
       +a_3b_2c_3-a_1b_1c_2
-      -\color{blue}{a_2b_2c_2}
+      -{\color{blue}{a_2b_2c_2}}
       -a_3b_3c_2\big]
 </mrow><mrow>
 &amp;\phantom{=}+\hk\ \big[a_1b_3c_1+a_2b_3c_2
-          +\color{blue}{a_3b_3c_3}
+          +{\color{blue}{a_3b_3c_3}}
           -a_1b_1c_3-a_2b_2c_3
-          -\color{blue}{a_3b_3c_3}\big]
+          -{\color{blue}{a_3b_3c_3}}\big]
 </mrow><mrow>
 &amp;=\phantom{-}
 \hi\ [a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]

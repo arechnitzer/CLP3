@@ -377,7 +377,13 @@ Let
 s(t)&amp;= \sin t
 </mrow>
 </md>
-Then
+We are about to compute some derivatives. To make it easier to follow what is going on, we'll use some colour. When we apply the product rule
+<me>
+\diff{}{t}\big[f(t)\,g(t)\big]
+={\color{blue}{f'(t)}}\,g(t) + f(t)\,{\color{blue}{g'(t)}}
+</me> 
+we'll use blue to highlight the factors <m>f'(t)</m> and <m>g'(t)</m>.
+Here we go.
 <md>
 <mrow>
 \ga(t)\,\vb(t) &amp; = t^2e^{-t}\,\hi + t^2 e^{-3t}\,\hj + t^2 e^{-5t}\,\hk
@@ -387,14 +393,14 @@ gives
 <md>
 <mrow>
 \diff{}{t}\big[\ga(t)\vb(t)\big]
-&amp;=\big[\color{blue}{2t e^{-t}}-t^2e^{-t}\big]\hi
-  +\big[\color{blue}{2t e^{-3t}}-3t^2e^{-3t}\big]\hj
-  +\big[\color{blue}{2t e^{-5t}}-5t^2e^{-5t}\big]\hk
+&amp;=\big[{\color{blue}{2t}} e^{-t}{\color{blue}{-}}t^2{\color{blue}{e^{-t}}}\big]\hi
+  +\big[{\color{blue}{2t}} e^{-3t}{\color{blue}{-3}}t^2{\color{blue}{e^{-3t}}}\big]\hj
+  +\big[{\color{blue}{2t}} e^{-5t}{\color{blue}{-5}}t^2{\color{blue}{e^{-5t}}}\big]\hk
 </mrow><mrow>
-&amp;=\color{blue}{2t\big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}}
-+ t^2\big\{-e^{-t}\,\hi -3 e^{-3t}\,\hj -5 e^{-5t}\,\hk\big\}
+&amp;={\color{blue}{2t}}\big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}
++ t^2{\color{blue}{\big\{-e^{-t}\,\hi -3 e^{-3t}\,\hj -5 e^{-5t}\,\hk\big\}}}
 </mrow><mrow>
-&amp;=\ga'(t)\vb(t)+\ga(t)\vb'(t)
+&amp;={\color{blue}{\ga'(t)}}\vb(t)+\ga(t){\color{blue}{\vb'(t)}}
 </mrow>
 </md>
 and 
@@ -407,19 +413,21 @@ gives
 <md>
 <mrow>
 \diff{}{t}\big[\va(t)\cdot\vb(t)\big]
-&amp;=\big[\color{blue}{2t e^{-t}}-t^2e^{-t}\big]
-  +\big[\color{blue}{4t^3 e^{-3t}}-3t^4e^{-3t}\big]
-  +\big[\color{blue}{6t^5 e^{-5t}}-5t^6e^{-5t}\big]
+&amp;=\big[{\color{blue}{2t}} e^{-t}{\color{blue}{-}}t^2{\color{blue}{e^{-t}}}\big]
+  +\big[{\color{blue}{4t^3}} e^{-3t}{\color{blue}{-3}}t^4{\color{blue}{e^{-3t}}}\big]
+  +\big[{\color{blue}{6t^5}} e^{-5t}{\color{blue}{-5}}t^6{\color{blue}{e^{-5t}}}\big]
 </mrow><mrow>
-&amp;=\color{blue}{\big[2t e^{-t}+4t^3 e^{-3t}+6t^5 e^{-5t}\big]}
-  +\big[-t^2e^{-t}-3t^4e^{-3t}-5t^6e^{-5t}\big]
+&amp;=\big[{\color{blue}{2t}} e^{-t}+{\color{blue}{4t^3}} e^{-3t}+{\color{blue}{6t^5}} e^{-5t}\big]
+  +\big[{\color{blue}{-}}t^2{\color{blue}{e^{-t}}}
+         {\color{blue}{-3}}t^4{\color{blue}{e^{-3t}}}
+         {\color{blue}{-5}}t^6{\color{blue}{e^{-5t}}}\big]
 </mrow><mrow>
-&amp;=\big\{2t\,\hi+4t^3\,\hj+6t^5\,\hk\big\}\cdot
+&amp;={\color{blue}{\big\{2t\,\hi+4t^3\,\hj+6t^5\,\hk\big\}}}\cdot
            \big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}\\&amp;\hskip0.5in
   +\big\{t^2\,\hi + t^4\,\hj + t^6\,\hk\big\}\cdot
-         \big\{-e^{-t}\,\hi-3e^{-3t}\,\hj-5e^{-5t}\,\hk\big\}
+         {\color{blue}{\big\{-e^{-t}\,\hi-3e^{-3t}\,\hj-5e^{-5t}\,\hk\big\}}}
 </mrow><mrow>
-&amp;=\va'(t)\cdot\vb(t)+\va(t)\cdot\vb'(t)
+&amp;={\color{blue}{\va'(t)}}\cdot\vb(t)+\va(t)\cdot{\color{blue}{\vb'(t)}}
 </mrow>
 </md>
 and
@@ -440,19 +448,19 @@ gives
 <mrow>
 &amp;\diff{}{t}\big[\va(t)\times\vb(t)\big]
 </mrow><mrow>
-&amp;=\ \hi\big(\ 4t^3 e^{-5t}\ \ -\ 6t^5 e^{-3t}) 
-  \ -\ \hj(\ 2t e^{-5t}\ -\  6t^5 e^{-t}) 
-   +\hk(\ 2t e^{-3t}\ -\ 4t^3 e^{-t}) \\&amp;\hskip0.1in
- +\hi\big(-5t^4 e^{-5t}+3t^6 e^{-3t}) 
-  -\hj(-5t^2 e^{-5t}+ t^6 e^{-t}) 
-   +\hk(-3t^2 e^{-3t}+t^4 e^{-t})
+&amp;=\ \hi\big(\ {\color{blue}{4t^3}} e^{-5t}\ \ -\ {\color{blue}{6t^5}} e^{-3t}) 
+  \ -\ \hj(\ {\color{blue}{2t}} e^{-5t}\ -\  {\color{blue}{6t^5}} e^{-t}) 
+   +\hk(\ {\color{blue}{2t}} e^{-3t}\ -\ {\color{blue}{4t^3}} e^{-t}) \\&amp;\hskip0.1in
+ +\hi\big({\color{blue}{-5}}t^4 {\color{blue}{e^{-5t}}}{\color{blue}{+3}}t^6 {\color{blue}{e^{-3t}}}) 
+  -\hj({\color{blue}{-5}}t^2 {\color{blue}{e^{-5t}}}{\color{blue}{+}} t^6 {\color{blue}{e^{-t}}}) 
+   +\hk({\color{blue}{-3}}t^2 {\color{blue}{e^{-3t}}}{\color{blue}{+}}t^4 {\color{blue}{e^{-t}}})
 </mrow><mrow>
-&amp;=\big\{2t\,\hi+4t^3\,\hj+6t^5\,\hk\big\}\times
+&amp;={\color{blue}{\big\{2t\,\hi+4t^3\,\hj+6t^5\,\hk\big\}}}\times
            \big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}\\&amp;\hskip0.5in
   +\big\{t^2\,\hi + t^4\,\hj + t^6\,\hk\big\}\times
-         \big\{-e^{-t}\,\hi-3e^{-3t}\,\hj-5e^{-5t}\,\hk\big\}
+         {\color{blue}{\big\{-e^{-t}\,\hi-3e^{-3t}\,\hj-5e^{-5t}\,\hk\big\}}}
 </mrow><mrow>
-&amp;=\va'(t)\times\vb(t)+\va(t)\times\vb'(t)
+&amp;={\color{blue}{\va'(t)}}\times\vb(t)+\va(t)\times{\color{blue}{\vb'(t)}}
 </mrow>
 </md>
 and

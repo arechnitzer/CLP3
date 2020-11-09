@@ -693,7 +693,7 @@ The normal line is
 or
 <me>
 \frac{x-1}{12} = \frac{y-2}{-3} = \frac{z-3}{-1}\quad
-  \color{gray}{\Big(=t\Big)}
+  {\color{gray}{\Big(=t\Big)}}
 </me>
 </p>
 </solution>
@@ -757,7 +757,7 @@ the plane:
 or
 <me>
 \frac{x-2}{2} = \frac{y+3}{-3} = \frac{z-3}{-3}\quad
-  \color{gray}{\Big(=t\Big)}
+  {\color{gray}{\Big(=t\Big)}}
 </me>
 </p>
 </solution>
