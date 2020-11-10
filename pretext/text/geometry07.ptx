@@ -53,8 +53,8 @@ Here are some examples.
   Think of <m>z_0</m> as a constant.
   Then <m>4x^2+y^2=1+z_0^2</m> is a curve in the <m>xy</m>-plane. As <m>1+z_0^2</m> is a constant, the curve is an ellipse. To determine its semi-axes<fn>The
   semi-axes of an ellipse are the line segments from the centre of the ellipse
-  to the farthest point on the curve and to the nearest point on the curve.
-  For a circle the lengths of both of these line segments are just the  radius.
+  to the farthest points on the ellipse and to the nearest points on the ellipse.
+  For a circle the lengths of all of these line segments are just the  radius.
   </fn>, we observe that
   when <m>y=0</m>, we have <m>x=\pm\frac{1}{2}\sqrt{1+z_0^2}</m> and when <m>x=0</m>,
   we have <m>y=\pm\sqrt{1+z_0^2}</m>. So the curve is just an ellipse with
