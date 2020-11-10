@@ -35,7 +35,7 @@ that <m>\vr(t)</m> provides a parametrization of the curve.
 <p>
 While we will often use <m>t</m> as the parameter in a parametrized curve <m>\vr(t)</m>,
 there is no need to call it <m>t</m>. Sometimes it is natural to use a different
-name for the parameter. For example, consider the circle <m>x^2+y^2=a^2</m>.
+name for the parameter. For example, consider the circle<fn>We of course assume that the constant <m>a\gt 0</m>.</fn> <m>x^2+y^2=a^2</m>.
 It is natural to use the angle <m>\theta</m> in the sketch below to label
 the point <m>\big(a\cos\theta\,,\,a\sin\theta\big)</m> on the circle.
 </p>
@@ -652,7 +652,7 @@ speed <m>\diff{s}{t}(t)=|\vr'(t)|</m> is a scalar quantity.
 <example xml:id="eg_paramCircleTan"><title>Circumference of a circle</title>
 <p>
 In general it can be quite difficult to compute arc lengths.
-So, as an easy warmup example, we will compute the circumference of the circle
+So, as an easy warmup example, we will compute the circumference of the circle<fn>We of course assume that the constant <m>a\gt 0</m>.</fn>
 <m>x^2+y^2=a^2</m>. We'll also find a unit tangent to the circle at any point on
 the circle. We'll use the parametrization
 <me>
