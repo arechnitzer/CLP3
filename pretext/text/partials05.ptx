@@ -1215,7 +1215,7 @@ of <m>-3\,\hi + 3\sqrt{3}\,\hj</m> by <m>3</m>, giving  <m>\llt -1\,,\,\sqrt{3}\
 <example xml:id="eg_hidden_surface"><title>(Optional) computer graphics hidden-surface elimination</title>
 <p>
 When you look at a solid three dimensional object, you do not see all of 
-the surface of the object <mdash/> parts of the surface are hidden from your view by other parts of the object. For example, the following sketch shows, schematically, a ray of light leaving your eye and hitting the surface of the object at the light dot. The object is solid, so the light cannot penetrate any further. But, if it could, it would follow the dotted line, hitting the surface of the object three more times.Your eye can see the light dot,  but cannot see the other three dark dots. 
+the surface of the object <mdash/> parts of the surface are hidden from your view by other parts of the object. For example, the following sketch shows, schematically, a ray of light leaving your eye and hitting the surface of the object at the light dot. The object is solid, so the light cannot penetrate any further. But, if it could, it would follow the dotted line, hitting the surface of the object three more times. Your eye can see the light dot,  but cannot see the other three dark dots. 
 </p>
 
 <sidebyside width="35%">
