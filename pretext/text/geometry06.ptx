@@ -18,7 +18,7 @@ For example
 <me>
 \vr(t) = \big( x(t), y(t), z(t)\big)
 </me>
-might be the position of a particle at time <m>t</m>. As <m>t</m> varies
+might be the position<fn>When we say <m>\vr(t) = \big( x(t), y(t), z(t)\big)</m>, we mean that <m>\big( x(t), y(t), z(t)\big)</m> is the point at the head of the vector <m>\vr(t)</m> when its tail is at the origin.</fn> of a particle at time <m>t</m>. As <m>t</m> varies
 <m>\vr(t)</m> sweeps out a curve.
 </p>
 <sidebyside width="38%">
@@ -31,11 +31,11 @@ different points on the curve that <m>\vr(t)</m> sweeps out. We then say
 that <m>\vr(t)</m> provides a parametrization of the curve.
 </p>
 
-<example xml:id="eg_paramCircle">
+<example xml:id="eg_paramCircle"><title>Parametrization of  <m>x^2+y^2=a^2</m></title>
 <p>
 While we will often use <m>t</m> as the parameter in a parametrized curve <m>\vr(t)</m>,
 there is no need to call it <m>t</m>. Sometimes it is natural to use a different
-name for the parameter. For example, consider the circle <m>x^2+y^2=a^2</m>.
+name for the parameter. For example, consider the circle<fn>We of course assume that the constant <m>a\gt 0</m>.</fn> <m>x^2+y^2=a^2</m>.
 It is natural to use the angle <m>\theta</m> in the sketch below to label
 the point <m>\big(a\cos\theta\,,\,a\sin\theta\big)</m> on the circle.
 </p>
@@ -48,7 +48,7 @@ the point <m>\big(a\cos\theta\,,\,a\sin\theta\big)</m> on the circle.
 That is,
 <me>
 \vr(\theta) = \big(a\cos\theta\,,\,a\sin\theta\big)\qquad
-0\le \theta\le 2\pi
+0\le \theta\lt 2\pi
 </me>
 is a parametrization of the circle <m>x^2+y^2=a^2</m>. Just looking at the figure above, it is clear that, as <m>\theta</m> runs from <m>0</m> to <m>2\pi</m>, <m>\vr(\theta)</m>
 traces out the full circle.
@@ -67,8 +67,145 @@ For all <m>t</m>,
 is well-defined and obeys <m>x(t)^2+y(t)^2=a^2</m>. But this <m>\vr(t)</m> does not
 cover the entire circle because <m>y(t)</m> is always positive.
 </p>
-
 </example>
+
+
+<example xml:id="eg_paramCircleB"><title>Parametrization of  <m>(x-h)^2+(y-k)^2=a^2</m></title>
+<p>
+We can tweak the parametrization of Example <xref ref="eg_paramCircle"/> to get
+a parametrization of the circle of radius <m>a</m> that is centred on <m>(h,k)</m>.
+One way to do so is to redraw the sketch of Example <xref ref="eg_paramCircle"/>
+with the circle translated so that its centre is at <m>(h,k)</m>.
+</p>
+
+<sidebyside width="64%">
+<image source="figs/parCirclehk"/>
+</sidebyside>
+
+<p>
+We see from the sketch that 
+<me>
+\vr(\theta) = \big(h+a\cos\theta\,,\,k+a\sin\theta\big)\qquad
+0\le \theta\lt 2\pi
+</me>
+is a parametrization of the circle <m>(x-h)^2+(y-k)^2=a^2</m>.
+</p>
+
+<p>
+A second way to come up with this parametrization is to observe that 
+we can turn the trig identity <m>\cos^2 t + \sin^2 t=1</m> into 
+the equation <m>(x-h)^2+(y-k)^2=a^2</m> of the circle by
+<ul>
+<li>
+multiplying the trig identity by <m>a^2</m> to get
+<m>(a\cos t)^2 +(a\sin t)^2 =a^2</m> and then
+</li><li>
+setting <m>\ a\cos t=x-h\ </m> and <m>\ a\sin t=y-k\ </m>, which turns  <m>(a\cos t)^2 +(a\sin t)^2 =a^2</m> into <m>(x-h)^2+(y-k)^2=a^2</m>.
+</li>
+</ul>
+</p>
+</example>
+
+<example xml:id="eg_paramEllipse"><title>Parametrization of  <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m> and of <m>x^{2/3}+y^{2/3}=a^{2/3}</m></title>
+
+<p>
+We can build parametrizations of the curves <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m> 
+and <m>x^{2/3}+y^{2/3}=a^{2/3}</m> from the trig identity <m>\cos^2 t + \sin^2 t=1</m>,
+like we did in the second part of the last example.
+<ul>
+<li>
+Setting <m>\ \cos t=\frac{x}{a}\ </m> and <m>\ \sin t=\frac{y}{b}\ </m> turns  
+<m>\cos^2 t +\sin^2 t =1</m> into <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m>.
+</li><li>
+Setting <m>\ \cos t= \big(\frac{x}{a}\big)^{\frac{1}{3}}\ </m> and 
+<m>\ \sin t=\big(\frac{y}{a}\big)^{\frac{1}{3}}\ </m> turns  
+<m>\cos^2 t +\sin^2 t =1</m> into <m>\frac{x^{2/3}}{a^{2/3}}+\frac{y^{2/3}}{a^{2/3}}=1</m>.
+</li>
+</ul>
+So
+<md alignment="alignat">
+<mrow>
+\vr(t) &amp;= \big(a\cos t\,,\,b\sin t\big)\qquad &amp;0\le t\lt 2\pi
+</mrow><mrow>
+\vr(t) &amp;= \big(a\cos^3 t\,,\,a\sin^3 t\big) &amp;0\le t\lt 2\pi
+</mrow>
+</md>
+give parametrizations of <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m> 
+and <m>x^{2/3}+y^{2/3}=a^{2/3}</m>, respectively. To see that running <m>t</m> from <m>0</m> to <m>2\pi</m> runs <m>\vr(t)</m> once around the curve, look at the figures below.
+</p>
+<sidebyside widths="45% 46%" valign="middle">
+<image source="figs/parEllipse"/>
+<image source="figs/astroid4"/>
+</sidebyside>
+<p>
+The curve <m>x^{2/3}+y^{2/3}=a^{2/3}</m> is called an astroid. From its equation,
+we would expect its sketch to look like a deformed circle. But it is probably 
+not so obvious that it would have the pointy bits of the right hand figure.
+We will not explain here why they arise. The astroid is studied in some 
+detail in Example 1.1.7 of the CLP-4 text.
+In particular, the above sketch is carefully developed there.  
+</p>
+</example>
+
+<example xml:id="eg_paramMessy"><title>Parametrization of <m>e^y=1+x^2</m></title>
+<p>
+A very easy method that can often create parametrizations for a curve is to use <m>x</m> or <m>y</m> as a parameter. Because we can solve <m>e^y=1+x^2</m> for <m>y</m> as a function of <m>x</m>, namely <m>y=\ln\big(1+x^2\big)</m>, we can use <m>x</m> as 
+the parameter simply by setting <m>t=x</m>. This gives the parametrization
+<me>
+\vr(t) = \big(t\,,\,\ln(1+t^2)\big)\qquad -\infty\lt t\lt \infty
+</me>
+</p>  
+</example>
+
+<example xml:id="eg_paramCircleC"><title>Parametrization of <m>x^2+y^2=a^2</m>, again</title>
+<p>
+It is also quite common that one can use either <m>x</m> or <m>y</m> to parametrize part of, but all of, a curve. A simple example is the circle <m>x^2+y^2=a^2</m>.
+For each <m>-a\lt x\lt a</m>, there are two points on the circle with that value of <m>x</m>.
+So one cannot use <m>x</m> to parametrize the whole circle.
+Similarly, for each <m>-a\lt y\lt a</m>, there are two points on the circle with that value of <m>y</m>. So one cannot use <m>y</m> to parametrize the whole circle. On the other hand
+<md alignment="alignat">
+<mrow>
+\vr(t) &amp;= \big(t\,,\,\sqrt{a^2-t^2}\big)\qquad &amp;-a\lt t\lt a 
+</mrow><mrow>
+\vr(t) &amp;= \big(t\,,\,-\sqrt{a^2-t^2}\big)\qquad &amp;-a\lt t\lt a
+</mrow>
+</md>
+provide parametrizations of the top half and bottom half, respectively,
+of the circle using <m>x</m> as the parameter, and
+<md alignment="alignat">
+<mrow>
+\vr(t) &amp;= \big(\sqrt{a^2-t^2}\,,\,t\big)\qquad &amp;-a\lt t\lt a 
+</mrow><mrow>
+\vr(t) &amp;= \big(-\sqrt{a^2-t^2}\,,\,t\big)\qquad &amp;-a\lt t\lt a
+</mrow>
+</md>
+provide parametrizations of the right half and left half, respectively,
+of the circle using <m>y</m> as the parameter.
+</p>
+</example>
+
+
+<example xml:id="eg_unparam"><title>Unparametrization of  <m>\vr(t)=(\cos t, 7-t)</m></title>
+<p>In this example, we will undo the parametrization <m>\vr(t)=(\cos t, 7-t)</m>
+and find the Cartesian equation of the curve in question. We may rewrite the
+parametrization as
+<md>
+<mrow>
+x&amp;=\cos t 
+</mrow><mrow>
+y&amp;=7-t
+</mrow>
+</md>
+Note that we can eliminate the parameter <m>t</m> simply by using the second equation 
+to solve for <m>t</m> as a function of <m>y</m>. Namely <m>t=7-y</m>. Substituting this
+into the first equation  gives us the Cartesian equation
+<me>
+x=\cos(7-y)
+</me>
+</p>
+</example>
+
+
 
 <p>Curves often arise as the intersection of two surfaces. For example,
 the intersection of the sphere <m>x^2+y^2+z^2=1</m>
@@ -210,9 +347,9 @@ The derivative of the vector valued function <m>\vr(t)</m> is defined to be
 
 <p>
 when the limit exists. In particular, if
-<m>\vr(t)=\big(x(t)\,,\,y(t)\,,\,z(t)\big)</m>, then
+<m>\vr(t)=x(t)\hi + y(t)\hj + z(t)\hk</m>, then
 <me>
-\vr'(t)=\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big)
+\vr'(t)=x'(t)\hi + y'(t)\hj + z'(t)\hk
 </me>
 That is, to differentiate a vector valued function of <m>t</m>, just differentiate
 each of its components.
@@ -223,7 +360,129 @@ each of its components.
 <p>And of course differentiation interacts with arithmetic operations,
 like addition, in the obvious way. Only a little more thought is required to
 see that differentiation interacts quite nicely with dot and cross
-products too.
+products too. Here are some examples.
+</p>
+
+<example xml:id="eg_diffDot">
+<p>
+Let
+<md>
+<mrow>
+\va(t)&amp;= t^2\,\hi + t^4\,\hj + t^6\,\hk
+</mrow><mrow>
+\vb(t)&amp;= e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk
+</mrow><mrow>
+\ga(t)&amp;= t^2
+</mrow><mrow>
+s(t)&amp;= \sin t
+</mrow>
+</md>
+We are about to compute some derivatives. To make it easier to follow what is going on, we'll use some colour. When we apply the product rule
+<me>
+\diff{}{t}\big[f(t)\,g(t)\big]
+={\color{blue}{f'(t)}}\,g(t) + f(t)\,{\color{blue}{g'(t)}}
+</me> 
+we'll use blue to highlight the factors <m>f'(t)</m> and <m>g'(t)</m>.
+Here we go.
+<md>
+<mrow>
+\ga(t)\,\vb(t) &amp; = t^2e^{-t}\,\hi + t^2 e^{-3t}\,\hj + t^2 e^{-5t}\,\hk
+</mrow>
+</md>
+gives
+<md>
+<mrow>
+\diff{}{t}\big[\ga(t)\vb(t)\big]
+&amp;=\big[{\color{blue}{2t}} e^{-t}{\color{blue}{-}}t^2{\color{blue}{e^{-t}}}\big]\hi
+  +\big[{\color{blue}{2t}} e^{-3t}{\color{blue}{-3}}t^2{\color{blue}{e^{-3t}}}\big]\hj
+  +\big[{\color{blue}{2t}} e^{-5t}{\color{blue}{-5}}t^2{\color{blue}{e^{-5t}}}\big]\hk
+</mrow><mrow>
+&amp;={\color{blue}{2t}}\big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}
++ t^2{\color{blue}{\big\{-e^{-t}\,\hi -3 e^{-3t}\,\hj -5 e^{-5t}\,\hk\big\}}}
+</mrow><mrow>
+&amp;={\color{blue}{\ga'(t)}}\vb(t)+\ga(t){\color{blue}{\vb'(t)}}
+</mrow>
+</md>
+and 
+<md>
+<mrow>
+\va(t)\cdot\vb(t) &amp; = t^2e^{-t} + t^4 e^{-3t} + t^6 e^{-5t}
+</mrow>
+</md>
+gives
+<md>
+<mrow>
+\diff{}{t}\big[\va(t)\cdot\vb(t)\big]
+&amp;=\big[{\color{blue}{2t}} e^{-t}{\color{blue}{-}}t^2{\color{blue}{e^{-t}}}\big]
+  +\big[{\color{blue}{4t^3}} e^{-3t}{\color{blue}{-3}}t^4{\color{blue}{e^{-3t}}}\big]
+  +\big[{\color{blue}{6t^5}} e^{-5t}{\color{blue}{-5}}t^6{\color{blue}{e^{-5t}}}\big]
+</mrow><mrow>
+&amp;=\big[{\color{blue}{2t}} e^{-t}+{\color{blue}{4t^3}} e^{-3t}+{\color{blue}{6t^5}} e^{-5t}\big]
+  +\big[{\color{blue}{-}}t^2{\color{blue}{e^{-t}}}
+         {\color{blue}{-3}}t^4{\color{blue}{e^{-3t}}}
+         {\color{blue}{-5}}t^6{\color{blue}{e^{-5t}}}\big]
+</mrow><mrow>
+&amp;={\color{blue}{\big\{2t\,\hi+4t^3\,\hj+6t^5\,\hk\big\}}}\cdot
+           \big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}\\&amp;\hskip0.5in
+  +\big\{t^2\,\hi + t^4\,\hj + t^6\,\hk\big\}\cdot
+         {\color{blue}{\big\{-e^{-t}\,\hi-3e^{-3t}\,\hj-5e^{-5t}\,\hk\big\}}}
+</mrow><mrow>
+&amp;={\color{blue}{\va'(t)}}\cdot\vb(t)+\va(t)\cdot{\color{blue}{\vb'(t)}}
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\va(t)\times\vb(t) 
+&amp;=\det\left[\begin{matrix}\hi&amp; \hj &amp;\hk\\ 
+                            t^2 &amp; t^4 &amp; t^6\\ 
+                            e^{-t} &amp; e^{-3t} &amp; e^{-5t}\end{matrix}\right]
+</mrow><mrow>
+&amp;=\hi\big(t^4 e^{-5t}-t^6 e^{-3t}) 
+  -\hj(t^2 e^{-5t}- t^6 e^{-t}) 
+   +\hk(t^2 e^{-3t}-t^4 e^{-t})
+</mrow>
+</md>
+gives
+<md>
+<mrow>
+&amp;\diff{}{t}\big[\va(t)\times\vb(t)\big]
+</mrow><mrow>
+&amp;=\ \hi\big(\ {\color{blue}{4t^3}} e^{-5t}\ \ -\ {\color{blue}{6t^5}} e^{-3t}) 
+  \ -\ \hj(\ {\color{blue}{2t}} e^{-5t}\ -\  {\color{blue}{6t^5}} e^{-t}) 
+   +\hk(\ {\color{blue}{2t}} e^{-3t}\ -\ {\color{blue}{4t^3}} e^{-t}) \\&amp;\hskip0.1in
+ +\hi\big({\color{blue}{-5}}t^4 {\color{blue}{e^{-5t}}}{\color{blue}{+3}}t^6 {\color{blue}{e^{-3t}}}) 
+  -\hj({\color{blue}{-5}}t^2 {\color{blue}{e^{-5t}}}{\color{blue}{+}} t^6 {\color{blue}{e^{-t}}}) 
+   +\hk({\color{blue}{-3}}t^2 {\color{blue}{e^{-3t}}}{\color{blue}{+}}t^4 {\color{blue}{e^{-t}}})
+</mrow><mrow>
+&amp;={\color{blue}{\big\{2t\,\hi+4t^3\,\hj+6t^5\,\hk\big\}}}\times
+           \big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}\\&amp;\hskip0.5in
+  +\big\{t^2\,\hi + t^4\,\hj + t^6\,\hk\big\}\times
+         {\color{blue}{\big\{-e^{-t}\,\hi-3e^{-3t}\,\hj-5e^{-5t}\,\hk\big\}}}
+</mrow><mrow>
+&amp;={\color{blue}{\va'(t)}}\times\vb(t)+\va(t)\times{\color{blue}{\vb'(t)}}
+</mrow>
+</md>
+and
+<md>
+<mrow>
+\va\big(s(t)\big)
+&amp;=(\sin t)^2\,\hi +(\sin t)^4\,\hj + (\sin t)^6\,\hk
+</mrow><mrow>
+\implies \diff{}{t}\big[\va\big(s(t)\big)\big]
+&amp;=2(\sin t)\cos t\,\hi +4(\sin t)^3\cos t\,\hj + 6(\sin t)^5\cos t\,\hk
+</mrow><mrow>
+&amp;=\big\{2(\sin t)\,\hi +4(\sin t)^3\hj + 6(\sin t)^5\hk\big\}\cos t 
+</mrow><mrow>
+&amp;=\va'\big(s(t)\big)\,s'(t)
+</mrow>
+</md>
+</p>
+</example>
+
+<p>
+Of course these examples extend to general (differentiable)
+<m>\va(t)</m>, <m>\vb(t)</m>, <m>\ga(t)</m> and <m>s(t)</m> and give us (most of) the following theorem.
 </p>
 
 <theorem xml:id="thm_DIFFalgebra"><title>Arithmetic of differentiation</title>
@@ -326,7 +585,7 @@ Denote by <m>s(t)</m> the length of the part of the curve between
 <m>\vr(0)</m> and <m>\vr(t)</m>. Then
 <md>
 <mrow>
-\diff{s}{t}(t)&amp;=\Big|\diff{\vr}{t}(t)\Big|
+\diff{s}{t}(t)&amp;=\left|\diff{\vr}{t}(t)\right|
 </mrow><mrow>
 s(T)-s(T_0)&amp;= \int_{T_0}^T \left|\diff{\vr}{t}(t)\right|\,\dee{t}
 </mrow>
@@ -359,7 +618,7 @@ particle at time <m>t</m>, then
 <md>
 <mrow>
 \text{velocity at time } t
-       &amp;=\vv(t)=\vr'(t)=\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big)
+       &amp;=\vv(t)=\vr'(t)=x'(t)\hi + y'(t)\hj + z'(t)\hk
         = \diff{s}{t}(t)\,\hat\vT(t)
 </mrow>
 
@@ -371,7 +630,7 @@ particle at time <m>t</m>, then
 <mrow>
 \text{acceleration at time } t
        &amp;=\va(t)=\vr''(t)=\vv'(t)
-       =\big(x''(t)\,,\,y''(t)\,,\,z''(t)\big)
+       =\big(x''(t)\hi + y''(t)\hj + z''(t)\hk
 </mrow>
 
 <intertext>and the distance travelled between times <m>T_0</m> and <m>T</m> is</intertext>
@@ -390,10 +649,10 @@ Note that the velocity <m>\vv(t) = \vr'(t)</m> is a vector quantity while the
 speed <m>\diff{s}{t}(t)=|\vr'(t)|</m> is a scalar quantity.
 </p>
 
-<example xml:id="eg_paramCircleTan">
+<example xml:id="eg_paramCircleTan"><title>Circumference of a circle</title>
 <p>
 In general it can be quite difficult to compute arc lengths.
-So, as an easy warmup example, we will compute the circumference of the circle
+So, as an easy warmup example, we will compute the circumference of the circle<fn>We of course assume that the constant <m>a\gt 0</m>.</fn>
 <m>x^2+y^2=a^2</m>. We'll also find a unit tangent to the circle at any point on
 the circle. We'll use the parametrization
 <me>
@@ -404,10 +663,10 @@ of Example <xref ref="eg_paramCircle"/>. Using Lemma <xref ref="lem_CVtanArclen"
 but with the parameter <m>t</m> renamed to <m>\theta</m>
 <md>
 <mrow>
-\vr'(\theta) &amp;= a\big(-\sin\theta\,,\cos\theta\big)
+\vr'(\theta) &amp;= -a\sin\theta\hi + a\cos\theta\hj
 </mrow><mrow>
 \hat\vT(\theta) &amp;= \frac{\vr'(\theta)}{|\vr'(\theta)|}
-               =  \big(-\sin\theta\,,\cos\theta\big)
+               =  -\sin\theta\hi + \cos\theta\hj
 </mrow><mrow>
 \diff{s}{\theta}(\theta)&amp;=\big|\vr'(\theta)\big| = a
 </mrow><mrow>
@@ -450,7 +709,7 @@ that has been known<fn>It is Proposition 18 in Book 3 of Euclid's Elements. It w
 </p>
 </example>
 
-<example xml:id="eg_paramHelix">
+<example xml:id="eg_paramHelix"><title>Arc length of a helix</title>
 <p>
 Consider the curve
 <me>
@@ -502,6 +761,55 @@ s(\pi)-s(0)&amp;= \int_{0}^\pi \big|\vr'(t)\big|\,\dee{t}
 </mrow>
 </md>
 </p></example>
+
+<example xml:id="eg_velAccel"><title>Velocity and acceleration</title>
+<p>
+Imagine that, at time <m>t</m>, a particle is at 
+<me>
+\vr(t) = \left[h+a\cos\left(2\pi\frac{t}{T}\right)\right]\hi
+            +\left[k+a\sin\left(2\pi\frac{t}{T}\right)\right]\hj
+</me>
+As <m>|\vr(t) -h\,\hi-k\,\hj| = a</m>, the particle is running around the circle of radius <m>a</m> centred on <m>(h,k)</m>. When <m>t</m> increases by <m>T</m>, the argument, <m>2\pi\frac{t}{T}</m>, of <m>\cos\left(2\pi\tfrac{t}{T}\right)</m> and 
+<m>\sin\left(2\pi\tfrac{t}{T}\right)</m> increases by exactly <m>2\pi</m> and the particle runs exactly once around the circle. In particular, it travels a distance 
+<m>2\pi a</m>. So it is moving at speed  <m>\frac{2\pi a}{T}</m>. 
+According to Lemma <xref ref="lem_CVvelocityEtc"/>, it has 
+<md>
+<mrow>
+\text{velocity }
+      =\vr'(t) &amp;=-\frac{2\pi a}{T}\sin\left(2\pi\frac{t}{T}\right)\hi
+            +\frac{2\pi a}{T}\cos\left(2\pi\frac{t}{T}\right)\hj
+</mrow><mrow>
+\text{speed}
+       = \diff{s}{t}(t)&amp;=|\vr'(t)|=\frac{2\pi a}{T}
+</mrow><mrow>
+\text{acceleration}
+       =\vr''(t)
+        &amp;=-\frac{4\pi^2 a}{T^2}\cos\left(2\pi\frac{t}{T}\right)\hi
+            -\frac{4\pi^2 a}{T^2}\sin\left(2\pi\frac{t}{T}\right)\hj 
+</mrow><mrow>
+        &amp;= - \frac{4\pi^2}{T^2}\big[\vr(t) -h\,\hi-k\,\hj\big]
+</mrow>
+</md>
+Here are some observations.
+<ul>
+<li> 
+The velocity <m>\vr'(t)</m> has dot product zero with <m>\vr(t) -h\,\hi-k\,\hj</m>, which is the radius vector from the centre of the circle to the particle.
+So the velocity is perpendicular to the radius vector, and hence parallel to the 
+tangent vector of the circle at <m>\vr(t)</m>.
+</li><li>
+The speed given by Lemma <xref ref="lem_CVvelocityEtc"/> is exactly the speed
+we found above, just before we started applying Lemma <xref ref="lem_CVvelocityEtc"/>.
+</li><li> 
+The acceleration <m>\vr''(t)</m> points in the direction opposite to the radius 
+vector.
+</li>
+</ul>
+</p>
+
+<sidebyside width="38%">
+<image source="figs/circleVA"/>
+</sidebyside>
+</example>
 
 </subsection>
 

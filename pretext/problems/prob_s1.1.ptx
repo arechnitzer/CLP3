@@ -355,30 +355,6 @@ first octant.
 
 <exercise>
 <statement><p>
-The pressure <m>p(x,y)</m> at the point <m>(x,y)</m> is determined by
-<m>x^2-2px+y^2=1</m>. Sketch several isobars. An isobar is a curve with
-equation <m>p(x,y)=c</m> for some constant <m>c</m>.
-</p></statement>
-
-<answer>
-  <sidebyside width="40%">
-    <image source="pfigs/pressure"/>
-  </sidebyside>
-</answer>
-
-<solution><p>
-For each fixed <m>c</m>, the isobar <m>p(x,y)=c</m> is the curve
-<m>x^2-2cx+y^2=1</m>, or equivalently, <m>(x-c)^2+y^2=1+c^2</m>. This is a
-circle with centre <m>(c,0)</m> and radius <m>\sqrt{1+c^2}</m>, which for large <m>c</m> is just a bit bigger than <m>c</m>.
-</p>
-<sidebyside width="40%">
-<image source="pfigs/pressure"/>
-</sidebyside>
-</solution>
-</exercise>
-
-<exercise>
-<statement><p>
 Consider any triangle. Pick a coordinate system so that one vertex
 is at the origin and a second vertex is on the positive <m>x</m>-axis. Call
 the coordinates of the second vertex <m>(a,0)</m> and those of the third vertex
@@ -418,7 +394,7 @@ The radius is the distance from the vertex <m>(0,0)</m> to the centre
 
 <exercise><title><fromexam>M200 2001A</fromexam></title>
 <statement><p>
-A certain quadric surface consists of all points <m>P=(x,y,z)</m>
+A certain surface consists of all points <m>P=(x,y,z)</m>
 such that the distance from <m>P</m> to the point <m>(0,0,1)</m> is equal to the
 distance from <m>P</m> to the plane <m>z+1=0</m>. Find an equation for the surface,
 sketch and describe it verbally.
@@ -452,4 +428,40 @@ is a paraboloid and is sketched below.
 </exercise>
 
 </exercisegroup>
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise>
+<statement><p>
+The pressure <m>p(x,y)</m> at the point <m>(x,y)</m>  is at least zero and is determined by the equation <m>x^2-2px+y^2=3p^2</m>. Sketch several isobars. An isobar is a curve with
+equation <m>p(x,y)=c</m> for some constant <m>c\ge 0</m>.
+</p></statement>
+
+<hint><p>
+It is not necessary to solve the equation <m>x^2-2px+y^2=3p^2</m> for <m>p(x,y)</m>.
+For example, a point <m>(x,y)</m> is on the isobar <m>p(x,y)=1</m> if and only if
+<m>x^2-2x+y^2=3</m>. This curve can be easily identified if one first completes a 
+square.
+</p></hint>
+
+<answer>
+  <sidebyside width="40%">
+    <image source="pfigs/pressureB"/>
+  </sidebyside>
+</answer>
+
+<solution><p>
+For each fixed <m>c\ge 0</m>, the isobar <m>p(x,y)=c</m> is the curve
+<m>x^2-2cx+y^2=3c^2</m>, or equivalently, <m>(x-c)^2+y^2=4c^2</m>. This is a
+circle with centre <m>(c,0)</m> and radius <m>2c</m>.  Here is a sketch of the isobars
+<m>p(x,y)=c</m> with <m>c=0,1,2,3</m>.
+</p>
+<sidebyside width="40%">
+<image source="pfigs/pressureB"/>
+</sidebyside>
+</solution>
+</exercise>
+
+</exercisegroup>
+
 </exercises>

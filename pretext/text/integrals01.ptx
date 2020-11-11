@@ -1472,13 +1472,13 @@ corresponds to <m>\theta=\frac{\pi}{2}</m>, so that
 \int_0^a \sqrt{a^2-x^2}\ \dee{x}
 &amp;=\int_0^{\pi/2} \sqrt{\underbrace{a^2-a^2\sin^2\theta}_{a^2\cos^2\theta}}
         \ a\cos\theta\ \dee{\theta}
-=a^2\int_0^{\pi2} \cos^2\theta\ \dee{\theta}
+=a^2\int_0^{\pi/2} \cos^2\theta\ \dee{\theta}
 </mrow>
 </md>
 </p>
 
 <p>The orthodox procedure for evaluating the resulting trigonometric integral
-<m>\int_0^{\pi2} \cos^2\theta\ \dee{\theta}</m>, covered in
+<m>\int_0^{\pi/2} \cos^2\theta\ \dee{\theta}</m>, covered in
 §1.8 of the CLP-2 text, uses the trigonometric
 double angle formula
 <me>
@@ -1489,7 +1489,7 @@ and then
 <md>
 <mrow>
 \int_0^a \sqrt{a^2-x^2}\ \dee{x}
-&amp;=a^2\int_0^{\pi2} \cos^2\theta\ \dee{\theta}
+&amp;=a^2\int_0^{\pi/2} \cos^2\theta\ \dee{\theta}
 =\frac{a^2}{2} \int_0^{\pi/2} \big[1+\cos(2\theta)\big]\ \dee{\theta}
 </mrow><mrow>
 &amp;=\frac{a^2}{2}\left[\theta+\frac{\sin(2\theta)}{2}\right]_0^{\pi/2}

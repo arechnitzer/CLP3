@@ -31,7 +31,11 @@ is denoted  $\bbbc^2$.} $\bbbr^2$.
 Observe that 
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item the distance from the point $(x,y)$ to the $x$-axis is $|y|$
+\item if $y>0$, then $(x,y)$ is above the $x$-axis and if $y<0$, then
+        $(x,y)$ is below the $x$-axis
 \item the distance from the point $(x,y)$ to the $y$-axis is $|x|$
+\item if $x>0$, then $(x,y)$ is the right of the $y$-axis and if $x<0$, then
+        $(x,y)$ is to the left of the $y$-axis
 \item the distance from the point $(x,y)$ to the origin $(0,0)$ is 
      $\sqrt{x^2+y^2}$
 \end{itemize}
@@ -117,6 +121,134 @@ from $(1,2,3)$ is $4$, is
 (x-1)^2+(y-2)^2+(z-3)^2=16
 \end{equation*}
 
+Here is an example in which we sketch a region in the $xy$-plane that is specified using inequalities.
+
+\begin{eg}
+In this example, we sketch the region
+\begin{equation*}
+\Set{(x,y)}{ -12\le x^2-6x +y^2-4y \le -9,\ \ y\ge 1}
+\end{equation*}
+in the $xy$-plane.
+
+We do so in two steps. In the first step, we sketch the curves
+$x^2-6x +y^2-4y=-12$, $x^2-6x +y^2-4y=-9$, and $y=1$.
+\begin{itemize}
+\item
+By completing squares, we see that the equation  $x^2-6x +y^2-4y=-12$ 
+is equivalent to $(x-3)^2 +(y-2)^2 =1$, which is the circle of radius 
+$1$ centred on $(3,2)$. It is sketched in the figure below.
+
+\item
+By completing squares, we see that the equation  $x^2-6x +y^2-4y=-9$ 
+is equivalent to $(x-3)^2 +(y-2)^2 =4$, which is the circle of radius 
+$2$ centred on $(3,2)$. It is sketched in the figure below.
+
+\item
+The point $(x,y)$ obeys $y=1$ if and only if it is a distance $1$ vertically above the $x$-axis. So $y=1$ is the line that is parallel to the $x$-axis and is one unit above it. This line is also  sketched in the figure below.
+\end{itemize}
+
+\begin{efig}
+\begin{center}
+   \includegraphics{annulusPart.pdf}
+\end{center}
+\end{efig}
+
+In the second step we determine the impact that the inequalities have.
+\begin{itemize}
+\item 
+The inequality $x^2-6x +y^2-4y\ge -12$ is equivalent to 
+$(x-3)^2 +(y-2)^2 \ge 1$ and hence is equivalent to 
+$\sqrt{(x-3)^2 +(y-2)^2} \ge 1$. So the point $(x,y)$ satisfies  
+$x^2-6x +y^2-4y\ge -12$ if and only if the distance from $(x,y)$ to $(3,2)$
+is at least $1$, i.e. if and only if $(x,y)$ is outside (or on) the circle 
+$(x-3)^2 +(y-2)^2 = 1$. 
+
+\item 
+The inequality $x^2-6x +y^2-4y\le -9$ is equivalent to 
+$(x-3)^2 +(y-2)^2 \le 4$ and hence is equivalent to 
+$\sqrt{(x-3)^2 +(y-2)^2} \le 2$. So the point $(x,y)$ satisfies the inequality 
+$x^2-6x +y^2-4y\le -9$ if and only if the distance from $(x,y)$ to $(3,2)$
+is at most $2$, i.e. if and only if $(x,y)$ is inside (or on) the circle 
+$(x-3)^2 +(y-2)^2 = 4$. 
+
+\item 
+The point $(x,y)$ obeys $y\ge 1$ if and only if $(x,y)$ is a vertical distance at least $1$ above the $x$-axis, i.e. is above (or on) the line $y=1$.
+
+\item
+So the region  
+\begin{equation*}
+\Set{(x,y)}{ -12\le x^2-6x +y^2-4y \le -9,\ \ y\ge 1}
+\end{equation*}
+consists of all points $(x,y)$ that 
+\begin{itemize}
+\item 
+are inside or on the circle $(x-3)^2 +(y-2)^2 = 4$ and 
+\item 
+are also outside or on the circle $(x-3)^2 +(y-2)^2 = 1$ and 
+\item 
+are also above or on the line $y=1$. 
+\end{itemize}
+It is the shaded region in the figure below.
+\end{itemize}
+
+\begin{efig}
+\begin{center}
+   \includegraphics{annulusPartB.pdf}
+\end{center}
+\end{efig}
+
+\end{eg}
+
+Here are a couple of examples that involve spheres.
+
+\begin{eg}
+In this example, we are going to find the curve formed by the intersection of the $xy$-plane and the sphere of radius $5$ centred on $(0,0,4)$. 
+
+The point $(x,y,z)$ lies on the $xy$-plane if and only if $z=0$, and lies on the  
+sphere of radius $5$ centred on $(0,0,4)$ if and only if
+$x^2+y^2+(z-4)^2=25$. So the point $(x,y,z)$ lies on the curve of intersection if and only if both $z=0$ and $x^2+y^2+(z-4)^2=25$, or equivalently
+\begin{equation*}
+z=0,\quad x^2+y^2+(0-4)^2=25
+\iff
+z=0,\quad x^2+y^2 = 9
+\end{equation*}
+This is the circle in the $xy$-plane that is centred on the origin and
+has radius $3$. Here is a sketch that show the parts of the sphere 
+and the circle of intersection that are in the first octant. That is, that
+have $x\ge 0$, $y\ge 0$ and $z\ge 0$.
+\begin{efig}
+\begin{center}
+   \includegraphics{sphereCircle.pdf}
+\end{center}
+\end{efig}
+\end{eg}
+
+\begin{eg}
+In this example, we are going to find all points $(x,y,z)$ for which
+the distance from $(x,y,z)$ to $(9,-12,15)$ is twice the distance from $(x,y,z)$   to the origin $(0,0,0)$.
+
+The distance from $(x,y,z)$ to $(9,-12,15)$ is 
+$\sqrt{(x-9)^2+(y+12)^2+(z-15)^2}$.
+The distance from $(x,y,z)$ to $(0,0,0)$ is 
+$\sqrt{x^2+y^2+z^2}$. So we want to find all points $(x,y,z)$ for which
+\begin{equation*}
+\sqrt{(x-9)^2+(y+12)^2+(z-15)^2}
+=2\sqrt{x^2+y^2+z^2}
+\end{equation*}
+Squaring both sides of this equation gives
+\begin{align*}
+x^2-18x+81 +y^2+24y+144 +z^2-30z+225 &= 4\big(x^2+y^2+z^2)
+\end{align*}
+Collecting up terms gives
+\begin{align*}
+3x^2+18x +3y^2-24y +3z^2+30z &= 450\qquad\text{and then, dividing by $3$,} \\
+x^2+6x +y^2-8y +z^2+10z &= 150\qquad\text{and then, completing squares,} \\
+x^2+6x +9 +y^2-8y +16  +z^2+10z +25 &= 200\qquad\text{or}\\
+(x+3)^2+(y-4)^2+(z+5)^2 &=200 
+\end{align*}
+This is the sphere of radius $10\sqrt{2}$ centred on $(-3,4,-5)$.
+\end{eg}
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Vectors}\label{sec vectors}
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -160,7 +292,7 @@ is pulling the bob straight down, tension $\vt$ in the rod, which is
 pulling the bob in the direction of the rod, and air resistance $\vr$, 
 which is pulling the bob in a direction opposite to its direction of motion.
 All three forces are acting on the bob. So it is natural to draw all three
-arrows representing the forces with their tails at the ball. 
+arrows representing the forces with their tails at the bob. 
       \begin{efig} 
       \begin{center}
       \includegraphics{pendulum.pdf}
@@ -223,9 +355,37 @@ rather than a vector.
 Just as we have done many times in the CLP texts, when we define a new 
 type of object, we want to understand how it interacts with the basic 
 operations of addition and multiplication. Vectors are no different, and 
-the following is a natural way to define addition of vectors.
-Multiplication will be more subtle, and we start with multiplication of a vector by a number (rather than with multiplication of a vector by 
+we shall shortly see a natural way to define addition of vectors.
+Multiplication will be more subtle, and we shall start with multiplication of a vector by a number (rather than with multiplication of a vector by 
 another vector).
+
+By way of motivation for the definitions of addition and multiplication by a number, imagine that we are out for a walk on the $xy$-plane. 
+\begin{itemize}
+\item 
+Suppose that we take a step and, in doing so, we move $a_1$ units parallel to the $x$-axis and $a_2$ units parallel to the $y$-axis. 
+Then we say that $\llt a_1, a_2\rgt$ is the displacement vector for the step. Suppose now that we take a second step which moves us an additional $b_1$ units  parallel to the $x$-axis and an additional $b_2$ units  parallel to the $y$-axis, as in the figure on the left below. So the displacement 
+vector for the second step is $\llt b_1, b_2\rgt$. All together, we have moved $a_1+b_1$ units  parallel to the $x$-axis and $a_2+b_2$ units parallel to the $y$-axis. The displacement vector for the two steps combined is  
+$\llt a_1+b_1, a_2+b_2\rgt$. We shall define
+the sum of $\llt a_1, a_2\rgt$ and $\llt b_1, b_2\rgt$, denoted by
+$\llt a_1, a_2\rgt+\llt b_1,b_2\rgt$, to be $\llt a_1+b_1, a_2+b_2\rgt$.
+
+\item
+Suppose now that, instead, we decide to step in the same direction
+as the first step above, but to move twice as far, as in the figure on the right below. That is, our step will move us $2a_1$ units in the direction of the $x$-axis and $2a_2$ units in the direction of the $y$-axis and the 
+corresponding displacement vector will be $\llt 2a_1, 2a_2\rgt$. 
+We shall define the product of the number $2$ and the vector
+$\llt a_1, a_2\rgt$, denoted by $2\llt a_1, a_2\rgt$, to be 
+$\llt 2a_1, 2a_2\rgt$.
+\end{itemize}
+
+\begin{efig}
+  \begin{center}
+  \includegraphics{maddvec.pdf}\qquad
+  \includegraphics{mscalmul.pdf}
+  \end{center}
+\end{efig}
+
+Here are the formal definitions.
 
 \begin{defn}[Adding Vectors and Multiplying a Vector by a Number]
              \label{def:addScalMult}
@@ -420,7 +580,7 @@ On the first leg of our walk, we go 4 units in the positive $x$-direction.
 So our displacement vector --- the vector whose tail is at our starting point and whose head is at the end point of the first leg --- is $\llt 4,0\rgt$. 
 As we started at $(0,0)$ we finish the first leg of the walk at $(4,0)$.
 \item
-On the second leg of our walk, our direction of motion is northeast. i.e. is
+On the second leg of our walk, our direction of motion is northeast, i.e. is
 $45^\circ$ above the direction of the positive $x$-axis. Looking at the figure 
 on the right above, we see that our displacement vector, for the second leg of the walk, has to be in the same direction as the vector $\llt 1,1\rgt$.
 So our displacement vector is the vector of length $5\sqrt{2}$ with the same direction as $\llt 1,1\rgt$. The vector $\llt 1,1\rgt$ has length
@@ -451,7 +611,7 @@ leg of the walk, and our final location.
 \end{eg}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The Dot Product}
+\subsection{The Dot Product}\label{subsec dot product}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Let's get back to the arithmetic operations of addition and multiplication.
 We will be using both scalars and vectors. So, for each operation there are 
@@ -469,6 +629,40 @@ The first is the \emph{dot product}, which is the topic of this section,
 and which is used to easily determine the angle $\theta$ (or more precisely,
 $\cos\theta$) between two vectors.
 We'll get to the second, the cross product, later. 
+
+Here is preview of what we will do in this dot product 
+subsection \S\ref{subsec dot product}. We are going to give two formulae
+for the dot product, $\va\cdot\vb$, of the pair of vectors 
+$\va=\llt a_1,a_2,a_3\rgt$ and $\vb=\llt b_1,b_2,b_3\rgt$.
+\begin{itemize}
+\item 
+The first formula is $\va\cdot\vb = a_1b_1+a_2b_2+a_3b_3$.
+We will take it as our official definition of $\va\cdot\vb$.
+This formula provides us with an easy way to compute dot products.
+
+\item
+The second formula is $\va\cdot\vb=|\va|\,|\vb|\,\cos\theta$, 
+        where $\theta$ is the angle between $\va$ and $\vb$.
+      \begin{efig} 
+      \begin{center}
+      \includegraphics{dotAngle.pdf}
+      \end{center}
+      \end{efig}
+We will show, in Theorem \ref{thm:dotPppties} below, that this second formula always gives the same answer as the first formula.
+The second formula provides us with an easy way to determine the angle between two vectors. In particular, it provides us with an easy way to test whether or not two vectors are perpendicular to each other. For example,
+the vectors $\llt 1,2,3\rgt$ and $\llt -1,-1,1\rgt$ have dot product
+\begin{equation*}
+\llt 1,2,3\rgt\cdot\llt -1,-1,1\rgt = 1\times(-1)+2\times(-1)+3\times 1=0
+\end{equation*}
+This tell us as the angle $\theta$ between the two vectors obeys 
+$\cos\theta=0$, so that $\theta=\frac{\pi}{2}$. That is, the two vectors are perpendicular to each other.
+\end{itemize}
+After we give our official definition of the dot product in
+Definition \ref{def:dotProd}, and give the important properties of the dot product, including the formula  $\va\cdot\vb=|\va|\,|\vb|\,\cos\theta$,
+in Theorem \ref{thm:dotPppties}, we'll give some examples.
+Finally, to see the dot product in action, we'll define what it means to 
+project one vector on another vector and give an example.
+
 \begin{defn}[Dot Product]\label{def:dotProd}
 The dot product of the vectors $\va$ and $\vb$ is denoted $\va\cdot\vb$ 
 and is defined by
@@ -666,7 +860,7 @@ $|\va|\,\cos(\pi-\theta)=-|\va|\cos\theta=-\va\cdot\vb/|\vb|$
  and direction $-\vb/|\vb|$. In this case
 \begin{align*}
 {\rm proj}_{\vb}\,\va
-=-\frac{\va\cdot\vb}{|\vb|}\frac{-\vb}{|\vb|}
+=-\frac{\va\cdot\vb}{|\vb|}\ \frac{-\vb}{|\vb|}
 =\frac{\va\cdot\vb}{|\vb|^2}\ \vb
 \end{align*}
 So the formula 
@@ -1017,7 +1211,7 @@ a sign times the entry itself times the determinant of the $2\times 2$ matrix
 gotten by deleting the row and column that contains the entry. The sign
 alternates, starting with a $+$. 
 
-We shall not prove this formula completely. It gets a little tedious.
+We shall not prove this formula completely here\footnote{For a full derivation, see Example \ref{eg:GEOcross}}. It gets a little tedious.
 But, there is one case in which we can easily verify that the volume of the 
 parallelepiped is really given by the absolute value of the
 claimed determinant. If the vectors $\vb$ and $\vc$ happen to lie
@@ -1087,7 +1281,7 @@ $\vr$ from any point on the axis of rotation to $P$.
 \end{itemize}
 
 \noindent
-Finally, here is the definition of the cross product.
+Finally, here is the definition of the cross product. Note that it applies only to vectors in three dimensions.
 
 \begin{defn}[Cross Product]\label{def:crossProd}
 The cross product of the vectors $\va=\llt a_1,a_2,a_3\rgt$ and 
@@ -1150,8 +1344,9 @@ choice of names for the matrix entries. So
 &=\hi\big(a_2b_3-a_3b_2) -\hj(a_1b_3-a_3b_1) +\hk(a_1b_2-a_2b_1)
 \end{align*}
 is a mnemonic device for remembering the definition of $\va\times\vb$.
-It is also good from the point of view of 
-evaluating $\va\times\vb$.
+It is also good from the point of view of evaluating $\va\times\vb$.
+Here are several examples in which we use the determinant mnemonic device to 
+evaluate cross products.
 
 \begin{eg}\label{eg:GEOcrossijji}
 In this example, we'll use the mnemonic device to compute two very simple cross
@@ -1166,7 +1361,41 @@ Second
 Note that, unlike most (or maybe even all) products that you have seen before, $\hi\times\hj$ is \emph{not} the same as $\hj\times\hi$!
 \end{eg}
 
-Our first properties of the cross product 
+\begin{eg}\label{eg:GEOcrossEgA}
+In this example, we'll use the mnemonic device to compute two more complicated cross products. Let $\va=\llt 1,2,3 \rgt$ and $\vb=\llt 1,-1,2 \rgt$. First
+      \begin{center}
+      \includegraphics{detEgA1.pdf}
+      \end{center}
+Second
+      \begin{center}
+      \includegraphics{detEgA2.pdf}
+      \end{center}
+Here are some important observations.
+\begin{itemize}
+\item 
+The vectors $\va\times\vb$ and $\vb\times\va$ are not the same! In fact
+    $\vb\times\va=-\va\times\vb$. We shall see in Theorem \ref{thm:crossPppties}
+    below that this was not a fluke.
+
+\item
+The vector $\va\times\vb$ has dot product zero with both $\va$ and $\vb$.
+So the vector  $\va\times\vb$ is prependicular to both $\va$ and $\vb$. 
+We shall see in Theorem \ref{thm:crossPppties} below that this was also not a fluke.
+\end{itemize}
+\end{eg}
+
+\begin{eg}\label{eg:GEOcrossEgB}
+Yet again we use the mnemonic device to compute a more complicated cross product. This time let $\va=\llt 3,2,1 \rgt$ and $\vb=\llt 6,4,2 \rgt$. Then
+      \begin{center}
+      \includegraphics{detEgB.pdf}
+      \end{center}
+We shall see in Theorem \ref{thm:crossPppties}
+    below that it is not a fluke that the cross product is $\vZero$.
+It is a consequence of the fact that $\va$ and $\vb=2\va$ are parallel. 
+\end{eg}
+
+We now move on to learning about the properties of the cross product.
+Our first properties
 lead up to a more intuitive geometric definition of $\va\times\vb$, which is better for interpreting $\va\times\vb$. 
  These properties of the cross product, which state that  $\va\times\vb$
 is a vector and then determine its direction and length, are as follows.
@@ -1201,7 +1430,7 @@ with sides $\va$ and $\vb$}\qquad\qquad\quad
 %$|\va\times\vb|^2
 %=|\va|^2|\vb|^2-(\va\cdot\vb)^2
 %=|\va|^2|\vb|^2(1-\cos^2\theta)$ which in turn is gotten by comparing
-The formula $|\va\times\vb|=|\va|\,|\vb|\sin\theta$ is gotten by comparing
+The formula $|\va\times\vb|=|\va|\,|\vb|\sin\theta$ is gotten by verifying that
 \begin{align*}
 |\va\times\vb|^2
 &=\big(\va\times\vb\big)\cdot\big(\va\times\vb\big) \\
@@ -1209,7 +1438,7 @@ The formula $|\va\times\vb|=|\va|\,|\vb|\sin\theta$ is gotten by comparing
 &=a_2^2b_3^2-2a_2b_3a_3b_2+a_3^2b_2^2
 +a_3^2b_1^2-2a_3b_1a_1b_3+a_1^2b_3^2\\&\hskip0.5in
 +a_1^2b_2^2-2a_1b_2a_2b_1+a_2^2b_1^2\\
-\intertext{and}
+\intertext{is equal to}
 |\va|^2\,|\vb|^2\sin^2\theta
 &=|\va|^2|\vb|^2(1-\cos^2\theta)\\
 &=|\va|^2|\vb|^2-(\va\cdot\vb)^2 \\
@@ -1248,8 +1477,8 @@ figure of
       \end{center}
       \end{efig}
 the two vectors are labeled $\vc$ and $\vd$. Which of these two
-candidates is correct is determined by the right hand rule\footnote{
-That the cross product uses the right hand rule, rather than the left hand rule, is an example of the tyranny of the masses --- only roughly 10\% 
+candidates is correct is determined by the right hand rule\footnote{That 
+the cross product uses the right hand rule, rather than the left hand rule, is an example of the tyranny of the masses --- only roughly 10\% 
 of humans are left-handed. }, which says
 that if you form your right hand into a fist with your fingers curling from 
 $\va$ to $\vb$, then when you stick your thumb straight out from
@@ -1353,14 +1582,14 @@ with sides $\va$ and $\vb$}\qquad
 \item $\va\times\vb=\vZero\iff \va=\vZero \text{ or }\vb=\vZero 
 \text{ or }\va\parallel\vb$
 
-
-\end{enumerate}
-\end{theorem}
-
-\addtocounter{theorem}{-1}
-\begin{theorem}[continued]
-\begin{enumerate}[(1)]
-\setcounter{enumi}{5}
+%
+%\end{enumerate}
+%\end{theorem}
+%
+%\addtocounter{theorem}{-1}
+%\begin{theorem}[continued]
+%\begin{enumerate}[(1)]
+%\setcounter{enumi}{5}
 
 \item $\va\times \vb=-\vb\times\va$
 
@@ -1387,53 +1616,25 @@ and the right hand sides and observe that they are equal.
 \va\cdot(\vb\times\vc)
 &=\llt a_1,a_2,a_3\rgt\cdot
       \llt b_2c_3-b_3c_2\,,\, b_3c_1-b_1c_3\,,\, b_1c_2-b_2c_1\rgt\\
-&=a_1b_2c_3 - a_1b_3c_2 + a_2b_3c_1 - a_2b_1c_3 + a_3b_1c_2 - a_3b_2c_1
+&=\textcolor{blue}{a_1b_2c_3} - \textcolor{blue}{a_1b_3c_2} 
+    + \textcolor{orange}{a_2b_3c_1} - \textcolor{orange}{a_2b_1c_3} 
+    + a_3b_1c_2 - a_3b_2c_1
 \end{align*}
 The right hand side is
 \begin{align*}
 (\va\times\vb)\cdot\vc
 &=\llt a_2b_3-a_3b_2\,,\, a_3b_1-a_1b_3\,,\, a_1b_2-a_2b_1\rgt\cdot
        \llt c_1,c_2,c_3\rgt \\
-&=a_2b_3c_1 - a_3b_2c_1 + a_3b_1c_2 - a_1b_3c_2 + a_1b_2c_3 - a_2b_1c_3
+&=\textcolor{orange}{a_2b_3c_1} - a_3b_2c_1 + a_3b_1c_2 
+- \textcolor{blue}{a_1b_3c_2} + \textcolor{blue}{a_1b_2c_3} 
+- \textcolor{orange}{a_2b_1c_3}
 \end{align*}
 The left and right hand sides are the same.
 
 \medskip
-\noindent (10)\ \ \ Since
-$$
-\vb\times\vc
-\ =\ (b_2c_3-b_3c_2)\,\hi-(b_1c_3-b_3c_1)\,\hj
-    +(b_1c_2-b_2c_1)\,\hk
-$$
-The left hand side is
-\begin{align*}
-\va\times(\vb\times\vc)
-\ =\ &\det\left[\begin{matrix} \hi & \hj & \hk \\
-                     a_1&a_2&a_3\\
-                 b_2c_3-b_3c_2&-b_1c_3+b_3c_1&b_1c_2-b_2c_1
-             \end{matrix}\right]\\[0.05in]
-\ =\ &\phantom{-}\hi\,[a_2(b_1c_2-b_2c_1)-a_3(-b_1c_3+b_3c_1)]\\
-     & {-}\hj\,[a_1(b_1c_2-b_2c_1)-a_3(b_2c_3-b_3c_2)]\\
-     & {+}\hk\,[a_1(-b_1c_3+b_3c_1)-a_2(b_2c_3-b_3c_2)]
-\end{align*}
-The right hand side is
-\begin{align*}
-(\va\cdot\vc)\vb-(\va\cdot\vb)\vc
-&=(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk) \\
-     &\hskip1in -(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)\\
-&=\phantom{-}
-\hi[a_1b_1c_1+a_2b_1c_2+a_3b_1c_3-a_1b_1c_1-a_2b_2c_1-a_3b_3c_1] \\
-&\phantom{=}+\hj[a_1b_2c_1+a_2b_2c_2+a_3b_2c_3-a_1b_1c_2-a_2b_2c_2-a_3b_3c_2] \\
-&\phantom{=}+\hk[a_1b_3c_1+a_2b_3c_2+a_3b_3c_3-a_1b_1c_3-a_2b_2c_3-a_3b_3c_3]
-\\[0.05in]
-&=\phantom{-} \hi[a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1] \\
- &\phantom{=} +\hj[a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]\\
- &\phantom{=} +\hk[a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
-\end{align*}
-The left and right hand sides are the same. Oof! This is a little tedious
-to do by hand. But any computer algebra system will do it for you in a 
-flash.
-\end{proof}
+\noindent (10)\ \ \ We will give the straightforward, but slightly tedious,
+computations in (the optional) \S\ref{sec vector identities}.
+ \end{proof}
 
 
 \begin{warning}\label{warning:GEOMcross} 
@@ -1541,6 +1742,8 @@ $\vb\times\vc$ has to be perpendicular to both $\vb$ and $\vc$ and
 \item[$\circ$]
 both $\vb$ and $\vc$ lie in the $xy$-plane, 
 \item[$\circ$]
+so that $\vb\times\vc$ has to the perpendicular to the $xy$-plane,
+\item[$\circ$]
 so that $\vb\times\vc$ has to the parallel to the $z$-axis.
 \end{itemize}
 The area of the base, i.e. of the shaded parallelogram in the figure above,
@@ -1574,22 +1777,9 @@ $\va\times(\vb\times\vc)=(\vc\cdot\va)\vb-(\vb\cdot\va)\vc$
 \end{enumerate}
 \end{lemma}
 \begin{proof} (a)
-Here are two proofs.
-For the first, just write out both sides
-\begin{align*}
-\va\cdot(\vb\times\vc)
-&=(a_1,a_2,a_3)\cdot(b_2c_3-b_3c_2\,,\,b_3c_1-b_1c_3\,,\,b_1c_2-b_2c_1)\\
-&=a_1b_2c_3-a_1b_3c_2+a_2b_3c_1-a_2b_1c_3+a_3b_1c_2-a_3b_2c_1\\
-(\va\times\vb)\cdot\vc
-&=(a_2b_3-a_3b_2\,,\,a_3b_1-a_1b_3\,,\,a_1b_2-a_2b_1)\cdot(c_1,c_2,c_3)\\
-&=a_2b_3c_1-a_3b_2c_1+a_3b_1c_2-a_1b_3c_2+a_1b_2c_3-a_2b_1c_3
-\end{align*}
-and observe that they are the same.
-
-\medskip
-For the second proof,
-we again write out both sides, but this time we express them
-in terms of determinants.
+We proved this in Theorem \ref{thm:crossPppties}, by evaluating the left and right hand  sides, and observing that they are the same.
+Here is a second proof, in which we again write out both sides, 
+but this time we express them in terms of determinants.
 \begin{align*}
 \va\cdot\vb\times\vc
 &=(a_1,a_2,a_3)\cdot\det\left[\begin{matrix}\hi&\hj&\hk\\
@@ -1650,33 +1840,37 @@ gives, for the left hand side,
 On the other hand, the right hand side
 \begin{align*}
 (\va\cdot\vc)\vb-(\va\cdot\vb)\vc
-\ =\ &(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
--(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)\cr
-=\ &
+&=(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk) \\
+     &\hskip1in -(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
+\\
+&=\phantom{-}
 \hi\ \big[\textcolor{blue}{a_1b_1c_1}
          +a_2b_1c_2+a_3b_1c_3-
          \textcolor{blue}{a_1b_1c_1}
          -a_2b_2c_1-a_3b_3c_1\big]
 \\
-{+}&\hj\ \big[a_1b_2c_1
+&\phantom{=}+\hj\ \big[a_1b_2c_1
       +\textcolor{blue}{a_2b_2c_2}
       +a_3b_2c_3-a_1b_1c_2
       -\textcolor{blue}{a_2b_2c_2}
       -a_3b_3c_2\big]
-\cr
-{+}&\hk\ \big[a_1b_3c_1+a_2b_3c_2
+\\
+&\phantom{=}+\hk\ \big[a_1b_3c_1+a_2b_3c_2
           +\textcolor{blue}{a_3b_3c_3}
           -a_1b_1c_3-a_2b_2c_3
           -\textcolor{blue}{a_3b_3c_3}\big]
 \\
-{=}\ &
+&=\phantom{-}
 \hi\ [a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]
-\cr
-{+}&\hj\ [a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
-\cr
-{+}&\hk\ [a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
+\\
+&\phantom{=}+\hj\ [a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
+\\
+&\phantom{=}+\hk\ [a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
 \end{align*}
-The last formula that we had for the left hand side is the same as the last formula we had for the right hand side.
+The last formula that we had for the left hand side is the same as the last formula we had for the right hand side. Oof! This is a little tedious
+to do by hand. But any computer algebra system will do it for you in a 
+flash.
+
 
 \noindent (c)
 We just apply part (b) three times
@@ -1894,12 +2088,12 @@ you start walking around the edge of the merry-go-round. Then,
 at $t=0$, $\vr=\hi$ and
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item 
-   if you walk in the direction of rotation, as in the figure on the 
+   if you walk in the direction of rotation (with speed one), as in the figure on the 
    left below, $\vv=\hj$ and the Coriolis force $\vF_{{\rm cor}}=
    -2\Om\hk\times\hj = 2\Om\,\hi$ tries to push you off of 
    the merry-go-round, while
 \item 
-   if you walk opposite to the direction of rotation, as in the figure 
+   if you walk opposite to the direction of rotation (with speed one), as in the figure 
    on the right below,  $\vv=-\hj$ so that the Coriolis force 
    $\vF_{{\rm cor}}=-2\Om\hk\times(-\hj) = -2\Om\,\hi$ tries to pull you
    into the centre of the merry-go-round.
@@ -1963,7 +2157,7 @@ as
 \begin{align*}
    \frac{x-x_0}{d_x}=\frac{y-y_0}{d_y}
 \end{align*}
-\end{impeqn}
+\end{impeqn}\noindent
 which is called the symmetric equation for the line. 
 
 
@@ -2197,7 +2391,7 @@ $P$ with the $xz$-plane that is in the first octant is the line segment
 from $(3,0,0)$ to $(0,0,6)$ and  the part of the intersection of
 $P$ with the $yz$-plane that is in the first octant is the line segment
 from $(0,4,0)$ to $(0,0,6)$. So we just have to sketch the three line segments
-joining three axis intercepts $(3,0,0)$, $(0,4,0)$ and $(0,0,6)$.
+joining the three axis intercepts $(3,0,0)$, $(0,4,0)$ and $(0,0,6)$.
 That's it.
 
 \begin{efig}
@@ -2455,8 +2649,8 @@ y-y_0 = t d_y\qquad
 z-z_0 = t d_z
 \end{align*}
 \end{impeqn}\noindent
-again gives the parametric equations of the plane.
-Solving all three equations for the parameter $t$ 
+These are called the parametric equations of the plane.
+Solving all three equations for the parameter $t$ (assuming that $d_x$, $d_y$ and $d_z$ are all nonzero)
 \begin{align*}
 t=\frac{x-x_0}{d_x}=\frac{y-y_0}{d_y}=\frac{z-z_0}{d_z}
 \end{align*}
@@ -2519,29 +2713,36 @@ on the line and $z=0$, then
 x+y&=2\\
 x-y&=0
 \end{align*}
-The second equation forces again $y=x$. Substituting this into the first 
+The second equation again forces $y=x$. Substituting this into the first 
 equation gives
 \begin{align*}
 2x=2 \implies x=y=1
 \end{align*}
 So $(1,1,0)$ is on the line. Now we'll find a direction vector, $\vd$,
-for the line. Since the line is contained in the plane $x+y+z=2$,
+for the line. 
+\begin{itemize}
+\item 
+Since the line is contained in the plane $x+y+z=2$,
 any vector lying on the line, like $\vd$, is also completely contained
 in that plane. So $\vd$ must be perpendicular to the normal vector of
-$x+y+z=2$, which is $\llt 1,1,1\rgt $. Similarly, since the line is 
+$x+y+z=2$, which is $\llt 1,1,1\rgt $. 
+\item
+Similarly, since the line is 
 contained in the plane $x-y=0$, any vector lying on the line, like $\vd$, is also completely contained in that plane.  So $\vd$ must be perpendicular to 
-the normal vector of $x-y=0$, which is $\llt 1,-1,0\rgt $. So we may choose for
+the normal vector of $x-y=0$, which is $\llt 1,-1,0\rgt $. 
+\end{itemize}
+So we may choose for
 $\vd$ any vector which is perpendicular to both $\llt 1,1,1\rgt $ and 
 $\llt 1,-1,0\rgt$, like, for example,
 \begin{align*}
-\vd&=\llt 1,-1,0\rgt \times\llt 1,1,1\rgt 
-=\det\left[ \begin{matrix}\hi &\hj&\hk\\ 1&-1&0\\ 1&1&1\end{matrix}\right]
+\vd&=\llt 1,-1,0\rgt \times\llt 1,1,1\rgt \\
+&=\det\left[ \begin{matrix}\hi &\hj&\hk\\ 1&-1&0\\ 1&1&1\end{matrix}\right]
 =\hi\det\left[\begin{matrix}-1&0\\1&1\end{matrix}\right]
 -\hj\det\left[\begin{matrix}1&0\\ 1&1\end{matrix}\right]
 +\hk\det\left[\begin{matrix}1&-1\\ 1&1\end{matrix}\right]\\
 &=-\hi-\hj+2\hk
 \end{align*}
-We now have both a point on the line and a direction vector for the line,
+We now have both a point on the line (namely $(1,1,0)$) and a direction vector for the line (namely $\llt -1,-1,2\rgt $),
 so, as usual, the parametric equations for the line are
 \begin{align*}
 \llt x-1,y-1,z\rgt =t\llt -1,-1,2\rgt \qquad\text{or}\qquad
@@ -2592,7 +2793,7 @@ The parametric equations then become
 \end{alignat*}  
 Substituting $t_1=2t_2$ into the Method 1 equations gives the Method 2
 equations, and substituting $t_3=1-t_2$ into the Method 3 equations gives 
-the Method 2 equations. So all three really give the same line, just parametrized a little differently,
+the Method 2 equations. So all three really give the same line, just parametrized a little differently.
 
 \end{eg}
 
@@ -2615,6 +2816,7 @@ of which $\llt 2,-1,0\rgt$, $\llt 0,1,1\rgt$ and $\llt 2,0,1\rgt$
 are only three examples.
 \end{warning}
 
+The next two examples illustrate two different methods for finding the distance between a point and a line.
 \begin{eg}\label{eg:VPdistance-point-line}
 In this example, we find the distance between the point $(2,3,-1)$ and the line
 \begin{equation*}
@@ -2715,6 +2917,7 @@ and finally the distance from $Q$ to the  line $L$ is
 
 \end{eg}
 
+The next two (optional) examples illustrate two different methods for finding the distance between two lines.
 \begin{eg}[Optional]\label{eg:VPdistance-line-line}
 In this example, we find the distance between the lines
 \begin{align*}
@@ -2752,7 +2955,7 @@ direction vector of $L'$. Consequently
 So $s=1$ and $t=\nicefrac{1}{3}$ and the distance between $L$ and $L'$ is
 \begin{align*}
 \big|\llt  t-s\,,\,-2t\,,\,-2+s+t \rgt\big|_{s=1,\ t=1/3}
-=\big|\llt -2/3\,,\,-2/3\,,\,-2/3 \rgt\big|_{s=1,\ t=1/3}
+=\big|\llt -2/3\,,\,-2/3\,,\,-2/3 \rgt\big|
 =\frac{2}{\sqrt{3}}
 \end{align*}
 
@@ -2872,7 +3075,9 @@ For example
 \begin{equation*}
 \vr(t) = \big( x(t), y(t), z(t)\big)
 \end{equation*}
-might be the position of a particle at time $t$. As $t$ varies
+might be the position\footnote{When we say 
+$\vr(t) = \big( x(t), y(t), z(t)\big)$, we mean that 
+$\big( x(t), y(t), z(t)\big)$ is the point at the head of the vector $\vr(t)$ when its tail is at the origin.} of a particle at time $t$. As $t$ varies
 $\vr(t)$ sweeps out a curve.
 \begin{efig}
 \begin{center}
@@ -2884,10 +3089,10 @@ have to be. It can be simply a parameter that is used to label the
 different points on the curve that $\vr(t)$ sweeps out. We then say 
 that $\vr(t)$ provides a parametrization of the curve.
 
-\begin{eg}\label{eg:paramCircle}
+\begin{eg}[Parametrization of  $x^2+y^2=a^2$]\label{eg:paramCircle}
 While we will often use $t$ as the parameter in a parametrized curve $\vr(t)$,
 there is no need to call it $t$. Sometimes it is natural to use a different 
-name for the parameter. For example, consider the circle $x^2+y^2=a^2$.
+name for the parameter. For example, consider the circle\footnote{We of course assume that the constant $a>0$.} $x^2+y^2=a^2$.
 It is natural to use the angle $\theta$ in the sketch below to label
 the point $\big(a\cos\theta\,,\,a\sin\theta\big)$ on the circle. 
 \begin{efig}
@@ -2898,7 +3103,7 @@ the point $\big(a\cos\theta\,,\,a\sin\theta\big)$ on the circle.
 That is,
 \begin{equation*}
 \vr(\theta) = \big(a\cos\theta\,,\,a\sin\theta\big)\qquad
-0\le \theta\le 2\pi
+0\le \theta< 2\pi
 \end{equation*}
 is a parametrization of the circle $x^2+y^2=a^2$. Just looking at the figure above, it is clear that, as $\theta$ runs from $0$ to $2\pi$, $\vr(\theta)$
 traces out the full circle. 
@@ -2916,6 +3121,118 @@ For all $t$,
 is well-defined and obeys $x(t)^2+y(t)^2=a^2$. But this $\vr(t)$ does not
 cover the entire circle because $y(t)$ is always positive.
 
+\end{eg}
+
+\begin{eg}[Parametrization of  $(x-h)^2+(y-k)^2=a^2$]\label{eg:paramCircleB}
+We can tweak the parametrization of Example \ref{eg:paramCircle} to get
+a parametrization of the circle of radius $a$ that is centred on $(h,k)$.
+One way to do so is to redraw the sketch of Example \ref{eg:paramCircle}
+with the circle translated so that its centre is at $(h,k)$.
+\begin{efig}
+\begin{center}
+     \includegraphics{parCirclehk.pdf}
+\end{center}
+\end{efig}
+We see from the sketch that 
+\begin{equation*}
+\vr(\theta) = \big(h+a\cos\theta\,,\,k+a\sin\theta\big)\qquad
+0\le \theta< 2\pi
+\end{equation*}
+is a parametrization of the circle $(x-h)^2+(y-k)^2=a^2$.
+
+A second way to come up with this parametrization is to observe that 
+we can turn the trig identity $\cos^2 t + \sin^2 t=1$ into 
+the equation $(x-h)^2+(y-k)^2=a^2$ of the circle by
+\begin{itemize}
+\item
+multiplying the trig identity by $a^2$ to get
+$(a\cos t)^2 +(a\sin t)^2 =a^2$ and then
+\item
+setting $\ a\cos t=x-h\ $ and $\ a\sin t=y-k\ $, which turns  $(a\cos t)^2 +(a\sin t)^2 =a^2$ into $(x-h)^2+(y-k)^2=a^2$.
+\end{itemize}
+\end{eg}
+
+\begin{eg}[Parametrization of  $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ and of
+$x^{2/3}+y^{2/3}=a^{2/3}$]    \label{eg:paramEllipse}
+
+We can build parametrizations of the curves $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 
+and $x^{2/3}+y^{2/3}=a^{2/3}$ from the trig identity $\cos^2 t + \sin^2 t=1$,
+like we did in the second part of the last example.
+\begin{itemize}
+\item
+Setting $\ \cos t=\frac{x}{a}\ $ and $\ \sin t=\frac{y}{b}\ $ turns  
+$\cos^2 t +\sin^2 t =1$ into $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$.
+
+\item
+Setting $\ \cos t= \big(\frac{x}{a}\big)^{\frac{1}{3}}\ $ and 
+$\ \sin t=\big(\frac{y}{a}\big)^{\frac{1}{3}}\ $ turns  
+$\cos^2 t +\sin^2 t =1$ into $\frac{x^{2/3}}{a^{2/3}}+\frac{y^{2/3}}{a^{2/3}}=1$.
+\end{itemize}
+So
+\begin{alignat*}{3}
+\vr(t) &= \big(a\cos t\,,\,b\sin t\big)\qquad &0\le t< 2\pi
+\\
+\vr(t) &= \big(a\cos^3 t\,,\,a\sin^3 t\big) &0\le t< 2\pi
+\end{alignat*}
+give parametrizations of $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 
+and $x^{2/3}+y^{2/3}=a^{2/3}$, respectively. To see that running $t$ from $0$ to $2\pi$ runs $\vr(t)$ once around the curve, look at the figures below.
+\begin{wfig}
+\begin{center}
+     \includegraphics{parEllipse.pdf}\quad
+     \includegraphics{astroid4.pdf}
+\end{center}
+\end{wfig}
+The curve $x^{2/3}+y^{2/3}=a^{2/3}$ is called an astroid. From its equation,
+we would expect its sketch to look like a deformed circle. But it is probably 
+not so obvious that it would have the pointy bits of the right hand figure.
+We will not explain here why they arise. The astroid is studied in some 
+detail in Example \eref{CLP317}{eg:astroid} of the CLP-4 text.
+In particular, the above sketch is carefully developed there.  
+ 
+\end{eg}
+
+\begin{eg}[Parametrization of  $e^y=1+x^2$]\label{eg:paramMessy}
+A very easy method that can often create parametrizations for a curve is to use $x$ or $y$ as a parameter. Because we can solve $e^y=1+x^2$ for $y$ as a function of $x$, namely $y=\ln\big(1+x^2\big)$, we can use $x$ as 
+the parameter simply by setting $t=x$. This gives the parametrization
+\begin{equation*}
+\vr(t) = \big(t\,,\,\ln(1+t^2)\big)\qquad -\infty<t<\infty
+\end{equation*}  
+\end{eg}
+
+\begin{eg}[Parametrization of  $x^2+y^2=a^2$, again]\label{eg:paramCircleC}
+It is also quite common that one can use either $x$ or $y$ to parametrize part of, but all of, a curve. A simple example is the circle $x^2+y^2=a^2$.
+For each $-a<x<a$, there are two points on the circle with that value of $x$.
+So one cannot use $x$ to parametrize the whole circle.
+Similarly, for each $-a<y<a$, there are two points on the circle with that value of $y$. So one cannot use $y$ to parametrize the whole circle. On the other 
+hand
+\begin{alignat*}{3}
+\vr(t) &= \big(t\,,\,\sqrt{a^2-t^2}\big)\qquad &-a<t<a \\
+\vr(t) &= \big(t\,,\,-\sqrt{a^2-t^2}\big)\qquad &-a<t<a
+\end{alignat*}
+provide parametrizations of the top half and bottom half, respectively,
+of the circle using $x$ as the parameter, and
+\begin{alignat*}{3}
+\vr(t) &= \big(\sqrt{a^2-t^2}\,,\,t\big)\qquad &-a<t<a \\
+\vr(t) &= \big(-\sqrt{a^2-t^2}\,,\,t\big)\qquad &-a<t<a
+\end{alignat*}
+provide parametrizations of the right half and left half, respectively,
+of the circle using $y$ as the parameter.
+\end{eg}
+
+\begin{eg}[Unparametrization of  $\vr(t)=(\cos t, 7-t)$] \label{eg:unparam}
+In this example, we will undo the parametrization $\vr(t)=(\cos t, 7-t)$
+and find the Cartesian equation of the curve in question. We may rewrite the
+parametrization as
+\begin{align*}
+x&=\cos t \\
+y&=7-t
+\end{align*}
+Note that we can eliminate the parameter $t$ simply by using the second equation 
+to solve for $t$ as a function of $y$. Namely $t=7-y$. Substituting this
+into the first equation  gives us the Cartesian equation
+\begin{equation*}
+x=\cos(7-y)
+\end{equation*}
 \end{eg}
 
 Curves often arise as the intersection of two surfaces. For example,
@@ -3055,9 +3372,9 @@ The derivative of the vector valued function $\vr(t)$ is defined to be
 \raisebox{-25pt}[25pt][20pt]{\includegraphics{parCurveDerivA.pdf}}
 \end{equation*}
 when the limit exists. In particular, if 
-$\vr(t)=\big(x(t)\,,\,y(t)\,,\,z(t)\big)$, then
+$\vr(t)=x(t)\hi + y(t)\hj + z(t)\hk$, then
 \begin{equation*}
-\vr'(t)=\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big)
+\vr'(t)=x'(t)\hi + y'(t)\hj + z'(t)\hk
 \end{equation*}
 That is, to differentiate a vector valued function of $t$, just differentiate
 each of its components.
@@ -3066,7 +3383,117 @@ each of its components.
 And of course differentiation interacts with arithmetic operations, 
 like addition, in the obvious way. Only a little more thought is required to 
 see that differentiation interacts quite nicely with dot and cross 
-products too.  
+products too.  Here are some examples.
+
+\begin{eg}\label{eg:diffDot}
+Let
+\begin{align*}
+\va(t)&= t^2\,\hi + t^4\,\hj + t^6\,\hk
+\\
+\vb(t)&= e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk
+\\
+\ga(t)&= t^2
+\\
+s(t)&= \sin t
+\end{align*}
+We are about to compute some derivatives. To make it easier to follow what is going on, we'll use some colour. When we apply the product rule
+\begin{align*}
+\diff{}{t}\big[f(t)\,g(t)\big]
+&=\textcolor{blue}{f'(t)}\,g(t) + f(t)\,\textcolor{blue}{g'(t)}
+\end{align*} 
+we'll use blue to highlight the factors $f'(t)$ and $g'(t)$.
+Here we go.
+\begin{align*}
+\ga(t)\,\vb(t) & = t^2e^{-t}\,\hi + t^2 e^{-3t}\,\hj + t^2 e^{-5t}\,\hk
+\\
+\implies \diff{}{t}\big[\ga(t)\vb(t)\big]
+&=\big[\textcolor{blue}{2t} e^{-t}
+           \textcolor{blue}{-}t^2\textcolor{blue}{e^{-t}}\big]\hi
+  +\big[\textcolor{blue}{2t} e^{-3t}
+           \textcolor{blue}{-3}t^2\textcolor{blue}{e^{-3t}}\big]\hj
+  +\big[\textcolor{blue}{2t} e^{-5t}
+          \textcolor{blue}{-5}t^2e^{-5t}\big]\hk
+\\
+&=\textcolor{blue}{2t}\big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}
++ t^2
+    \textcolor{blue}{\big\{-e^{-t}\,\hi -3 e^{-3t}\,\hj -5 e^{-5t}\,\hk\big\}}
+\\
+&=\textcolor{blue}{\ga'(t)}\vb(t)
+         +\ga(t)\textcolor{blue}{\vb'(t)}
+\end{align*}
+and 
+\begin{align*}
+\va(t)\cdot\vb(t) & = t^2e^{-t} + t^4 e^{-3t} + t^6 e^{-5t}
+\\
+\implies \diff{}{t}\big[\va(t)\cdot\vb(t)\big]
+&=\big[\textcolor{blue}{2t} e^{-t}
+            \textcolor{blue}{-}t^2\textcolor{blue}{e^{-t}}\big]
+  +\big[\textcolor{blue}{4t^3} e^{-3t}
+            \textcolor{blue}{-3}t^4\textcolor{blue}{e^{-3t}}\big]
+  +\big[\textcolor{blue}{6t^5} e^{-5t}
+             \textcolor{blue}{-5}t^6\textcolor{blue}{e^{-5t}}\big]
+\\
+&=\big[\textcolor{blue}{2t} e^{-t}
+            +\textcolor{blue}{4t^3} e^{-3t}
+            +\textcolor{blue}{6t^5} e^{-5t}\big]
+  +\big[\textcolor{blue}{-}t^2\textcolor{blue}{e^{-t}}
+             \textcolor{blue}{-3}t^4\textcolor{blue}{e^{-3t}}
+             \textcolor{blue}{-5t}^6\textcolor{blue}{e^{-5t}}\big]
+\\
+&=\textcolor{blue}{\big\{2t\,\hi+4t^3\,\hj+6t^5\,\hk\big\}}\cdot
+           \big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}\\&\hskip0.5in
+  +\big\{t^2\,\hi + t^4\,\hj + t^6\,\hk\big\}\cdot
+         \textcolor{blue}{\big\{-e^{-t}\,\hi-3e^{-3t}\,\hj-5e^{-5t}\,\hk\big\}}
+\\
+&=\textcolor{blue}{\va'(t)}\cdot\vb(t)+\va(t)\cdot\textcolor{blue}{\vb'(t)}
+\end{align*}
+and
+\begin{align*}
+\va(t)\times\vb(t) 
+&=\det\left[\begin{matrix}\hi& \hj &\hk\\ 
+                            t^2 & t^4 & t^6\\ 
+                            e^{-t} & e^{-3t} & e^{-5t}\end{matrix}\right] \\
+&=\hi\big(t^4 e^{-5t}-t^6 e^{-3t}) 
+  -\hj(t^2 e^{-5t}- t^6 e^{-t}) 
+   +\hk(t^2 e^{-3t}-t^4 e^{-t})
+\\
+\implies \diff{}{t}\big[\va(t)\times\vb(t)\big]
+&=\ \hi\big(\ \textcolor{blue}{4t^3} e^{-5t}\ \ 
+        -\ \textcolor{blue}{6t^5} e^{-3t}) 
+  \ -\ \hj(\ \textcolor{blue}{2t} e^{-5t}
+      \ -\  \textcolor{blue}{6t^5} e^{-t}) 
+   +\hk(\ \textcolor{blue}{2t} e^{-3t}
+   \ -\ \textcolor{blue}{4t^3} e^{-t}) \\&\hskip0.1in
+ +\hi\big(\textcolor{blue}{-5}t^4 \textcolor{blue}{e^{-5t}}
+           \textcolor{blue}{+3}t^6 \textcolor{blue}{e^{-3t}}) 
+  -\hj(\textcolor{blue}{-5}t^2 \textcolor{blue}{e^{-5t}}
+          \textcolor{blue}{+} t^6 \textcolor{blue}{e^{-t}}) 
+   +\hk(\textcolor{blue}{-3}t^2 \textcolor{blue}{e^{-3t}}
+     \textcolor{blue}{+}t^4 \textcolor{blue}{e^{-t}})
+\\
+&=\textcolor{blue}{\big\{2t\,\hi+4t^3\,\hj+6t^5\,\hk\big\}}\times
+           \big\{e^{-t}\,\hi + e^{-3t}\,\hj + e^{-5t}\,\hk\big\}\\&\hskip0.1in
+  +\big\{t^2\,\hi + t^4\,\hj + t^6\,\hk\big\}\times
+         \textcolor{blue}{\big\{-e^{-t}\,\hi-3e^{-3t}\,\hj-5e^{-5t}\,\hk\big\}}
+\\
+&=\textcolor{blue}{\va'(t)}\times\vb(t)+\va(t)\times\textcolor{blue}{\vb'(t)}
+\end{align*}
+and
+\begin{align*}
+\va\big(s(t)\big)
+&=(\sin t)^2\,\hi +(\sin t)^4\,\hj + (\sin t)^6\,\hk
+\\
+\implies \diff{}{t}\big[\va\big(s(t)\big)\big]
+&=2(\sin t)\cos t\,\hi +4(\sin t)^3\cos t\,\hj + 6(\sin t)^5\cos t\,\hk
+\\
+&=\big\{2(\sin t)\,\hi +4(\sin t)^3\hj + 6(\sin t)^5\hk\big\}\cos t 
+\\
+&=\va'\big(s(t)\big)\,s'(t)
+\end{align*}
+\end{eg}
+
+Of course these examples extend to general (differentiable)
+$\va(t)$, $\vb(t)$, $\ga(t)$ and $s(t)$ and give us (most of) the following theorem.
 
 \begin{theorem}[Arithmetic of differentiation]\label{thm:DIFFalgebra}
 Let 
@@ -3164,7 +3591,7 @@ then
 Denote by $s(t)$ the length of the part of the curve between
 $\vr(0)$ and $\vr(t)$. Then
 \begin{align*}
-\diff{s}{t}(t)&=\Big|\diff{\vr}{t}(t)\Big| \\
+\diff{s}{t}(t)&=\left|\diff{\vr}{t}(t)\right| \\
 s(T)-s(T_0)&= \int_{T_0}^T \left|\diff{\vr}{t}(t)\right|\,\dee{t}\qquad
 \raisebox{-20pt}{\smash{\includegraphics{parCurveDerivB.pdf}}}
 \end{align*}
@@ -3190,12 +3617,12 @@ particle at time $t$, then
 %\text{position at time $t$}
 %       &=\vr(t)=\big(x(t)\,,\,y(t)\,,\,z(t)\big) \\
 \text{velocity at time $t$}
-       &=\vv(t)=\vr'(t)=\big(x'(t)\,,\,y'(t)\,,\,z'(t)\big) 
+       &=\vv(t)=\vr'(t)=x'(t)\hi+y'(t)\hj+z'(t)\hk 
         = \diff{s}{t}(t)\,\hat\vT(t)\\
 \text{speed at time $t$}
        &= \diff{s}{t}(t)=|\vv(t)|=|\vr'(t)|=\sqrt{(x'(t)^2+y'(t)^2+z'(t)^2} \\
 \text{acceleration at time $t$}
-       &=\va(t)=\vr''(t)=\vv'(t)=\big(x''(t)\,,\,y''(t)\,,\,z''(t)\big) \\
+       &=\va(t)=\vr''(t)=\vv'(t)=x''(t)\hi + y''(t)\hj + z''(t)\hk \\
 \intertext{and the distance travelled between times $T_0$ and $T$ is}
   s(T)-s(T_0)&= \int_{T_0}^T \Big|\diff{\vr}{t}(t)\Big|\,\dee{t}
        = \int_{T_0}^T \sqrt{(x'(t)^2+y'(t)^2+z'(t)^2}\,\dee{t}
@@ -3206,9 +3633,10 @@ speed $\diff{s}{t}(t)=|\vr'(t)|$ is a scalar quantity.
 \goodbreak
 
 
-\begin{eg}\label{eg:paramCircleTan}
+\begin{eg}[Circumference of a circle]\label{eg:paramCircleTan}
 In general it can be quite difficult to compute arc lengths.
-So, as an easy warmup example, we will compute the circumference of the circle
+So, as an easy warmup example, we will compute the circumference of the 
+circle\footnote{We of course assume that the constant $a>0$.}
 $x^2+y^2=a^2$. We'll also find a unit tangent to the circle at any point on
 the circle. We'll use the parametrization
 \begin{equation*}
@@ -3218,9 +3646,9 @@ the circle. We'll use the parametrization
 of Example \ref{eg:paramCircle}. Using Lemma \ref{lem:CVtanArclen},
 but with the parameter $t$ renamed to $\theta$
 \begin{align*}
-\vr'(\theta) &= a\big(-\sin\theta\,,\cos\theta\big) \\
+\vr'(\theta) &= -a\sin\theta\hi + a\cos\theta\hj \\
 \hat\vT(\theta) &= \frac{\vr'(\theta)}{|\vr'(\theta)|}
-               =  \big(-\sin\theta\,,\cos\theta\big) \\
+               =  -\sin\theta\hi + \cos\theta\hj \\
 \diff{s}{\theta}(\theta)&=\big|\vr'(\theta)\big| = a\\
 s(\Theta)-s(0)&= \int_{0}^\Theta \big|\vr'(\theta)\big|\,\dee{\theta}
           =a\Theta
@@ -3258,7 +3686,7 @@ that has been known\footnote{It is Proposition 18 in Book 3 of Euclid's Elements
 \end{eg}
 \goodbreak
 
-\begin{eg}\label{eg:paramHelix}
+\begin{eg}[Arc length of a helix]\label{eg:paramHelix}
 Consider the curve
 \begin{equation*}
 \vr(t) = 6\sin(2t)\hi + 6\cos(2t)\hj +5t\hk
@@ -3299,6 +3727,50 @@ $\hat\vT(t)$ to the curve at $\vr(t)$ and also the arclength of the part of curv
 s(\pi)-s(0)&= \int_{0}^\pi \big|\vr'(t)\big|\,\dee{t}
           =13\pi
 \end{align*}
+\end{eg}
+
+\begin{eg}[Velocity and acceleration]\label{eg:velAccel}
+Imagine that, at time $t$, a particle is at 
+\begin{equation*}
+\vr(t) = \left[h+a\cos\left(2\pi\frac{t}{T}\right)\right]\hi
+            +\left[k+a\sin\left(2\pi\frac{t}{T}\right)\right]\hj
+\end{equation*}
+As $|\vr(t) -h\,\hi-k\,\hj| = a$, the particle is running around the circle of radius $a$ centred on $(h,k)$. When $t$ increases by $T$, the argument, $2\pi\frac{t}{T}$, of $\cos\left(2\pi\tfrac{t}{T}\right)$ and 
+$\sin\left(2\pi\tfrac{t}{T}\right)$ increases by exactly $2\pi$ and the particle runs exactly once around the circle. In particular, it travels a distance 
+$2\pi a$. So it is moving at speed  $\frac{2\pi a}{T}$. 
+According to Lemma \ref{lem:CVvelocityEtc}, it has 
+\begin{align*}
+\text{velocity }
+       &=\vr'(t)=-\frac{2\pi a}{T}\sin\left(2\pi\frac{t}{T}\right)\hi
+            +\frac{2\pi a}{T}\cos\left(2\pi\frac{t}{T}\right)\hj
+      \\
+\text{speed}
+       &= \diff{s}{t}(t)=|\vr'(t)|=\frac{2\pi a}{T} \\
+\text{acceleration}
+       &=\vr''(t)
+        =-\frac{4\pi^2 a}{T^2}\cos\left(2\pi\frac{t}{T}\right)\hi
+            -\frac{4\pi^2 a}{T^2}\sin\left(2\pi\frac{t}{T}\right)\hj 
+        = - \frac{4\pi^2}{T^2}\big[\vr(t) -h\,\hi-k\,\hj\big]
+\end{align*}
+Here are some observations.
+\begin{itemize}
+\item 
+The velocity $\vr'(t)$ has dot product zero with $\vr(t) -h\,\hi-k\,\hj$, which is the radius vector from the centre of the circle to the particle.
+So the velocity is perpendicular to the radius vector, and hence parallel to the 
+tangent vector of the circle at $\vr(t)$.
+\item 
+The speed given by Lemma \ref{lem:CVvelocityEtc} is exactly the speed
+we found above, just before we started applying Lemma \ref{lem:CVvelocityEtc}.
+\item 
+The acceleration $\vr''(t)$ points in the direction opposite to the radius 
+vector.
+\end{itemize}
+
+\begin{efig}
+\begin{center}
+     \includegraphics{circleVA.pdf}
+\end{center}
+\end{efig}
 \end{eg}
 \goodbreak
 
@@ -3345,8 +3817,8 @@ satisfies both
 Think of $z_0$ as a constant.
 Then $4x^2+y^2=1+z_0^2$ is a curve in the $xy$-plane. As $1+z_0^2$ is a constant, the curve is an ellipse. To determine its semi-axes\footnote{The
 semi-axes of an ellipse are the line segments from the centre of the ellipse
-to the farthest point on the curve and to the nearest point on the curve.
-For a circle the lengths of both of these line segments are just the  radius.}, we observe that
+to the farthest points on the ellipse and to the nearest points on the ellipse.
+For a circle the lengths of all of these line segments are just the  radius.}, we observe that
 when $y=0$, we have $x=\pm\frac{1}{2}\sqrt{1+z_0^2}$ and when $x=0$,
 we have $y=\pm\sqrt{1+z_0^2}$. So the curve is just an ellipse with 
 $x$ semi-axis $\frac{1}{2}\sqrt{1+z_0^2}$ and $y$ semi-axis 
@@ -3438,6 +3910,13 @@ possibilities.
    \raisebox{0.2\height}{\includegraphics{hyperboloidD.pdf}}
 \end{center}
 \end{efig}
+Here are two figures created by graphing software.
+\begin{efig}
+\begin{center}
+   \includegraphics[scale=0.43]{hyperboloid1sheet.pdf}\qquad\qquad
+   \includegraphics[scale=1.3]{hyperboloid1sheetDD.pdf}
+\end{center}
+\end{efig}
 This type of surface is called a hyperboloid of one sheet.
 
 There are also hyperboloids of two sheets. For example, replacing the $+1$
@@ -3496,6 +3975,13 @@ we clean up and simplify the sketch.
    \raisebox{0.2\height}{\includegraphics{hyperboloidDD.pdf}}
 \end{center}
 \end{efig}
+Here are two figures created by graphing software.
+\begin{efig}
+\begin{center}
+   \includegraphics[scale=0.43]{hyperboloid2sheet.pdf}\qquad\qquad
+   \includegraphics[scale=1.3]{hyperboloid2sheetDD.pdf}
+\end{center}
+\end{efig}
 This type of surface is called a hyperboloid of two sheets. 
 \end{eg}
 
@@ -3542,6 +4028,14 @@ and clean up the sketch a bit
    \includegraphics{hyperbolicCylinderC.pdf}
 \end{center}
 \end{efig}
+Here are two figures created by graphing software.
+\begin{efig}
+\begin{center}
+   \includegraphics[scale=0.4]{hypCylinder.pdf}\quad
+   \raisebox{0.13in}{\includegraphics[scale=1.2]{hypCylinderDD.pdf}}
+\end{center}
+\end{efig}
+
 \end{eg}
 
 \bigskip
@@ -3594,8 +4088,19 @@ Finally, we clean up and simplify the sketch.
    \includegraphics{seatA.pdf}
 \end{center}
 \end{efig}
+Here are two figures created by graphing software.
+\begin{efig}
+\begin{center}
+   \includegraphics[scale=0.4]{xyzSurfB.pdf}\quad
+   \raisebox{0.2in}{\includegraphics[scale=0.8]{xyzSurfDD.pdf}}
+\end{center}
+\end{efig}
 
 \end{eg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Level Curves and Surfaces}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Often the reason you are interested in a surface in 3d is that it is
 the graph $z=f(x,y)$ of a function of two variables $f(x,y)$. Another good
@@ -3769,7 +4274,7 @@ like $x^2+y^2=1$.
    \includegraphics{cylinderA.pdf}
 \end{center}
 \end{efig}
-In Mathematics the word ``cylinder'' is given a more general meaning.
+In Mathematics, the word ``cylinder'' is given a more general meaning.
 
 \begin{defn}[Cylinder]\label{def cylinder}
 A \emph{cylinder} is a surface that consists of all points that are 

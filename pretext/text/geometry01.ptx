@@ -22,7 +22,11 @@
   <ul>
   <li> the distance from the point <m>(x,y)</m> to the <m>x</m>-axis is <m>|y|</m>
   </li>
+  <li> if <m>y\gt 0</m>, then <m>(x,y)</m> is above the <m>x</m>-axis and if <m>y\lt 0</m>, then <m>(x,y)</m> is below the <m>x</m>-axis
+  </li>
   <li> the distance from the point <m>(x,y)</m> to the <m>y</m>-axis is <m>|x|</m>
+  </li>
+  <li> if <m>x\gt 0</m>, then <m>(x,y)</m> is to the right of the <m>y</m>-axis and if <m>x\lt 0</m>, then <m>(x,y)</m> is to the left of the <m>y</m>-axis
   </li>
   <li> the distance from the point <m>(x,y)</m> to the origin <m>(0,0)</m> is
        <m>\sqrt{x^2+y^2}</m>
@@ -119,6 +123,162 @@
   (x-1)^2+(y-2)^2+(z-3)^2=16
   </me>
   </p>
+
+<p>
+Here is an example in which we sketch a region in the <m>xy</m>-plane that is specified using inequalities.
+</p>
+
+<example>
+<p>
+In this example, we sketch the region
+<me>
+\Set{(x,y)}{ -12\le x^2-6x +y^2-4y \le -9,\ \ y\ge 1}
+</me>
+in the <m>xy</m>-plane.
+</p>
+
+<p>
+We do so in two steps. In the first step, we sketch the curves
+<m>x^2-6x +y^2-4y=-12</m>, <m>x^2-6x +y^2-4y=-9</m>, and <m>y=1</m>.
+<ul>
+<li>
+By completing squares, we see that the equation  <m>x^2-6x +y^2-4y=-12</m> 
+is equivalent to <m>(x-3)^2 +(y-2)^2 =1</m>, which is the circle of radius 
+<m>1</m> centred on <m>(3,2)</m>. It is sketched in the figure below.
+</li>
+<li>
+By completing squares, we see that the equation  <m>x^2-6x +y^2-4y=-9</m> 
+is equivalent to <m>(x-3)^2 +(y-2)^2 =4</m>, which is the circle of radius 
+<m>2</m> centred on <m>(3,2)</m>. It is sketched in the figure below.
+</li>
+<li>
+The point <m>(x,y)</m> obeys <m>y=1</m> if and only if it is a distance <m>1</m> vertically above the <m>x</m>-axis. So <m>y=1</m> is the line that is parallel to the <m>x</m>-axis and is one unit above it. This line is also  sketched in the figure below.
+</li>
+</ul>
+</p>
+
+<sidebyside width="63%" >
+  <image source="figs/annulusPart"/>
+</sidebyside>
+
+<p>
+In the second step we determine the impact that the inequalities have.
+<ul>
+<li> 
+The inequality <m>x^2-6x +y^2-4y\ge -12</m> is equivalent to 
+<m>(x-3)^2 +(y-2)^2 \ge 1</m> and hence is equivalent to 
+<m>\sqrt{(x-3)^2 +(y-2)^2} \ge 1</m>. So the point <m>(x,y)</m> satisfies  
+<m>x^2-6x +y^2-4y\ge -12</m> if and only if the distance from <m>(x,y)</m> to <m>(3,2)</m>
+is at least <m>1</m>, i.e. if and only if <m>(x,y)</m> is outside (or on) the circle 
+<m>(x-3)^2 +(y-2)^2 = 1</m>. 
+</li>
+<li> 
+The inequality <m>x^2-6x +y^2-4y\le -9</m> is equivalent to 
+<m>(x-3)^2 +(y-2)^2 \le 4</m> and hence is equivalent to 
+<m>\sqrt{(x-3)^2 +(y-2)^2} \le 2</m>. So the point <m>(x,y)</m> satisfies the inequality 
+<m>x^2-6x +y^2-4y\le -9</m> if and only if the distance from <m>(x,y)</m> to <m>(3,2)</m>
+is at most <m>2</m>, i.e. if and only if <m>(x,y)</m> is inside (or on) the circle 
+<m>(x-3)^2 +(y-2)^2 = 4</m>. 
+</li>
+<li> 
+The point <m>(x,y)</m> obeys <m>y\ge 1</m> if and only if <m>(x,y)</m> is a vertical distance at least <m>1</m> above the <m>x</m>-axis, i.e. is above (or on) the line <m>y=1</m>.
+</li>
+<li>
+<p>
+So the region  
+<me>
+\Set{(x,y)}{ -12\le x^2-6x +y^2-4y \le -9,\ \ y\ge 1}
+</me>
+consists of all points <m>(x,y)</m> that 
+<ul>
+<li> 
+are inside or on the circle <m>(x-3)^2 +(y-2)^2 = 4</m> and 
+</li><li>
+are also outside or on the circle <m>(x-3)^2 +(y-2)^2 = 1</m> and 
+</li><li>
+are also above or on the line <m>y=1</m>. 
+</li>
+</ul>
+It is the shaded region in the figure below.
+</p>
+</li>
+</ul>
+</p>
+
+<sidebyside width="63%" >
+  <image source="figs/annulusPartB"/>
+</sidebyside>
+
+</example>
+
+
+<p>
+Here are a couple of examples that involve spheres.
+</p>
+
+<example>
+<p>
+In this example, we are going to find the curve formed by the intersection of the <m>xy</m>-plane and the sphere of radius <m>5</m> centred on <m>(0,0,4)</m>.
+</p>
+ 
+<p>
+The point <m>(x,y,z)</m> lies on the <m>xy</m>-plane if and only if <m>z=0</m>, and lies on the sphere of radius <m>5</m> centred on <m>(0,0,4)</m> if and only if
+<m>x^2+y^2+(z-4)^2=25</m>. So the point <m>(x,y,z)</m> lies on the curve of intersection if and only if both <m>z=0</m> and <m>x^2+y^2+(z-4)^2=25</m>, or equivalently
+<me>
+z=0,\quad x^2+y^2+(0-4)^2=25
+\iff
+z=0,\quad x^2+y^2 = 9
+</me>
+This is the circle in the <m>xy</m>-plane that is centred on the origin and
+has radius <m>3</m>. Here is a sketch that show the parts of the sphere 
+and the circle of intersection that are in the first octant. That is, that
+have <m>x\ge 0</m>, <m>y\ge 0</m> and <m>z\ge 0</m>.
+</p>
+
+<sidebyside width="34%" >
+  <image source="figs/sphereCircle"/>
+</sidebyside>
+
+</example>
+
+<example>
+<p>
+In this example, we are going to find all points <m>(x,y,z)</m> for which
+the distance from <m>(x,y,z)</m> to <m>(9,-12,15)</m> is twice the distance from <m>(x,y,z)</m> to the origin <m>(0,0,0)</m>.
+</p>
+
+<p>
+The distance from <m>(x,y,z)</m> to <m>(9,-12,15)</m> is 
+<m>\sqrt{(x-9)^2+(y+12)^2+(z-15)^2}</m>.
+The distance from <m>(x,y,z)</m> to <m>(0,0,0)</m> is 
+<m>\sqrt{x^2+y^2+z^2}</m>. So we want to find all points <m>(x,y,z)</m> for which
+<me>
+\sqrt{(x-9)^2+(y+12)^2+(z-15)^2}
+=2\sqrt{x^2+y^2+z^2}
+</me>
+Squaring both sides of this equation gives
+<me>
+x^2-18x+81 +y^2+24y+144 +z^2-30z+225 = 4\big(x^2+y^2+z^2)
+</me>
+Collecting up terms gives
+<md alignment="alignat">
+<mrow>
+3x^2+18x +3y^2-24y +3z^2+30z \amp= 450\ \text{and, dividing by 3,} 
+</mrow><mrow>
+x^2+6x +y^2-8y +z^2+10z \amp= 150\ \text{and, completing squares,}
+</mrow><mrow>
+x^2+6x +9 +y^2-8y +16  +z^2+10z +25 \amp= 200\ \text{or}
+</mrow><mrow>
+(x+3)^2+(y-4)^2+(z+5)^2 \amp=200 
+</mrow>
+</md>
+This is the sphere of radius <m>10\sqrt{2}</m> centred on <m>(-3,4,-5)</m>.
+</p>
+</example>
+
+
+
+
 
 <xi:include href="../problems/prob_s1.1.ptx" />
 

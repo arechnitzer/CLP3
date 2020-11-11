@@ -34,8 +34,9 @@
 </fact>
 
 <p>
-  again gives the parametric equations of the plane.
+  These are called the parametric equations of the line.
   Solving all three equations for the parameter <m>t</m>
+  (assuming that <m>d_x</m>, <m>d_y</m> and <m>d_z</m> are all nonzero)
   <md>
   <mrow>
   t=\frac{x-x_0}{d_x}=\frac{y-y_0}{d_y}=\frac{z-z_0}{d_z}
@@ -45,6 +46,7 @@
   equations for the line.
   </p>
 
+<p>Here is an example in which we find the parametric equations of a line that is given by the intersection of two planes.</p>
 <example xml:id="eg_line_equations">
   <p>
   The set of points <m>(x,y,z)</m> that obey <m>x+y+z=2</m> form a
@@ -117,7 +119,7 @@
   x-y&amp;=0
   </mrow>
   </md>
-  The second equation forces again <m>y=x</m>. Substituting this into the first
+  The second equation again forces <m>y=x</m>. Substituting this into the first
   equation gives
   <md>
   <mrow>
@@ -125,12 +127,19 @@
   </mrow>
   </md>
   So <m>(1,1,0)</m> is on the line. Now we'll find a direction vector, <m>\vd</m>,
-  for the line. Since the line is contained in the plane <m>x+y+z=2</m>,
+  for the line. 
+  <ul>
+  <li>Since the line is contained in the plane <m>x+y+z=2</m>,
   any vector lying on the line, like <m>\vd</m>, is also completely contained
   in that plane. So <m>\vd</m> must be perpendicular to the normal vector of
-  <m>x+y+z=2</m>, which is <m>\llt 1,1,1\rgt </m>. Similarly, since the line is
+  <m>x+y+z=2</m>, which is <m>\llt 1,1,1\rgt </m>. 
+  </li><li>
+   Similarly, since the line is
   contained in the plane <m>x-y=0</m>, any vector lying on the line, like <m>\vd</m>, is also completely contained in that plane.  So <m>\vd</m> must be perpendicular to
-  the normal vector of <m>x-y=0</m>, which is <m>\llt 1,-1,0\rgt </m>. So we may choose for
+  the normal vector of <m>x-y=0</m>, which is <m>\llt 1,-1,0\rgt </m>. 
+  </li>
+  </ul>
+  So we may choose for
   <m>\vd</m> any vector which is perpendicular to both <m>\llt 1,1,1\rgt </m> and
   <m>\llt 1,-1,0\rgt</m>, like, for example,
   <md>
@@ -149,7 +158,7 @@
   &amp;=-\hi-\hj+2\hk
   </mrow>
   </md>
-  We now have both a point on the line and a direction vector for the line,
+  We now have both a point on the line (namely <m>(1,1,0)</m>) and a direction vector for the line (namely <m>\llt -1,-1,2\rgt</m>),
   so, as usual, the parametric equations for the line are
   <md>
   <mrow>
@@ -210,7 +219,7 @@
   </md>
   Substituting <m>t_1=2t_2</m> into the Method 1 equations gives the Method 2
   equations, and substituting <m>t_3=1-t_2</m> into the Method 3 equations gives
-  the Method 2 equations. So all three really give the same line, just parametrized a little differently,
+  the Method 2 equations. So all three really give the same line, just parametrized a little differently.
   </p>
 
   </example>
@@ -235,6 +244,7 @@
 
 </warning>
 
+<p>The next two examples illustrate two different methods for finding the distance between a point and a line.</p>
 <example xml:id="eg_VPdistance-point-line">
   <p>
   In this example, we find the distance between the point <m>(2,3,-1)</m> and the line
@@ -355,6 +365,7 @@
   </p>
 </example>
 
+<p>The next two (optional) examples illustrate two different methods for finding the distance between two lines.</p>
 <example xml:id="eg_VPdistance-line-line"><title>(Optional) Distance between lines</title>
   <p>
   In this example, we find the distance between the lines
@@ -404,7 +415,7 @@
   <md>
   <mrow>
   \big|\llt  t-s\,,\,-2t\,,\,-2+s+t \rgt\big|_{s=1,\ t=1/3}
-  &amp;=\big|\llt -2/3\,,\,-2/3\,,\,-2/3 \rgt\big|_{s=1,\ t=1/3}
+  &amp;=\big|\llt -2/3\,,\,-2/3\,,\,-2/3 \rgt\big|
   </mrow><mrow>
   &amp;=\frac{2}{\sqrt{3}}
   </mrow>
