@@ -118,13 +118,14 @@ Here is a more careful definition of limit.
 Let 
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item[$\circ$]
-$m$, $n$ be natural numbers
-\item[$\circ$] 
-$D$ be a subset of $\bbbr^m$
+$m$ and $n$ be natural numbers\footnote{In this text, we will interested in
+$m,n\in\big\{1,2,3\big\}$, but the definition works for all natural
+numbers $m,n$.}
 \item[$\circ$]
-$\va\in D$
+$\va\in \bbbr^m$
 \item[$\circ$] 
-$f:D\setminus\{\va\}\rightarrow\bbbr^n$
+the function $f(\vx)$ be defined for all $\vx$ near\footnote{To be precise, there is a number $r>0$ such that $f(\vx)$ is defined for all $\vx$ obeying
+$|\vx-\va|<r$.} $\va$ and take values in $\bbbr^n$
 \item[$\circ$]
 $\vL\in\bbbr^n$
 \end{itemize}
@@ -132,11 +133,8 @@ $\vL\in\bbbr^n$
 \begin{align*}
   \lim_{\vx\to \va} f(\vx) = \vL
 \end{align*}
-if, no matter how small a number $\veps>0$ you pick, the value of $f(\vx)$
-is within a distance $\veps$ of $\vL$, whenever $\vx$ is sufficiently 
-close to $\va$ (i.e. within some nonzero distance of $\va$), 
-%if the value of the function $f(x,y)$ is sure to be arbitrarily close 
-%to $L$ whenever the value of $(x,y)$ is close enough to $(a,b)$, 
+if\footnote{There is a precise, formal version of this definition that looks just like Definition 1.7.1 of the CLP-1 text.} the value of the function $f(\vx)$ is sure to be arbitrarily close 
+to $\vL$ whenever the value of $\vx$ is close enough to $\va$, 
 without\footnote{You may find the condition ``without  being exactly $\va$'' 
 a little strange, but there is a good reason for it, which we have already seen in Calculus I. In the definition 
   $f'(x) = \lim\limits_{x\rightarrow a}\frac{f(x)-f(a)}{x-a}$, 
@@ -153,13 +151,11 @@ of continuity.
 Let 
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item[$\circ$]
-$m$, $n$ be natural numbers
-\item[$\circ$] 
-$D$ be a subset of $\bbbr^m$
+$m$ and $n$ be natural numbers
 \item[$\circ$]
-$\va\in D$
+$\va\in \bbbr^m$
 \item[$\circ$] 
-$f:D\rightarrow\bbbr^n$
+the function $f(\vx)$ be defined for all $\vx$ near $\va$ and take values in $\bbbr^n$
 \end{itemize}
 \begin{enumerate}[(a)]
 \item
@@ -168,7 +164,7 @@ The function $f$ is continuous at a point $\va$ if
 \lim_{\vx\to \va} f(\vx) = f(\va)
 \end{equation*}
 \item
-The function $f$ is continuous on the set $D$ if it is continuous at
+The function $f$ is continuous on a set $D$ if it is continuous at
 every point of $D$.
 \end{enumerate} 
 \end{defn}
@@ -214,7 +210,7 @@ The following theorem summarizes a bunch of them. For simplicity,
 it concerns primarily real valued functions. That is, functions that output
 real numbers as opposed to vectors. However it does contain one
 vector valued function. The function $\vX$ in the theorem takes as input
-an $m$-component vector and returns another $m$-component vector.
+an $n$-component vector and returns an $m$-component vector.
 We will not deal with many vector valued functions here in CLP-3,
 but we will see a lot in CLP-4.
 
@@ -223,11 +219,11 @@ but we will see a lot in CLP-4.
 Let 
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item[$\circ$]
-$m$ be a natural number
-\item[$\circ$] 
-$D$ be a subset of $\bbbr^m$
+$m$ and $n$ be natural numbers
 \item[$\circ$]
-$\va,\vb\in D$
+$\va\in\bbbr^m$ and $\vb\in\bbbr^n$
+\item[$\circ$] 
+$D$ be a subset of $\bbbr^m$ that contains all $\vx\in\bbbr^m$ that are near $\va$ 
 \item[$\circ$]
 $c,F,G\in\bbbr$
 \end{itemize}
@@ -273,7 +269,7 @@ $\lim\limits_{\vx\rightarrow \va} \ga\big(f(\vx)\big)
 \end{enumerate}
 \end{theorem}
 This shows that multivariable limits interact very nicely with arithmetic, 
-just like single variable limits did. Also recall, from Theorem 1.6.8 in the
+just as single variable limits did. Also recall, from Theorem 1.6.8 in the
 CLP-1 text, 
 \begin{theorem}\label{thm one d continuity}
 The following functions are continuous everywhere in their domains 
@@ -421,16 +417,25 @@ does not exist.
 
 
 Here is another way to come to the same conclusion.
-Pick any really small positive number, like for example 
-$10^{-137}$.  For every number $F$ between $-1$ and $1$, like
-for example $F=\frac{\sqrt{3}}{2}$, $f(x,y)$ takes the value $F$
-for some $(x,y)$ obeying $|(x,y)|<10^{-137}$. That is true regardless
-of which really small number you picked. So $f(x,y)=\frac{x^2-y^2}{x^2+y^2}$ 
+\begin{itemize}
+\item[$\circ$]
+Pick any really small positive number. We'll use $10^{-137}$ as an example.  
+\item[$\circ$]
+Pick any real number $F$ between $-1$ and $1$. We'll use 
+$F=\frac{\sqrt{3}}{2}$ as an example.
+\item[$\circ$]
+Looking at the sketch above, we see that $f(x,y)$ takes the value $F$
+along an entire ray $\theta={\rm const}$, $r>0$. In the case $F=\frac{\sqrt{3}}{2}$,
+the ray is $2\theta=30^{\circ}$, $r>0$. In particular, because the ray
+extends all the way to $(0,0)$, $f$ takes the value $F$ for some $(x,y)$ 
+obeying $|(x,y)|<10^{-137}$. 
+\item[$\circ$]
+That is true regardless of which really small number you picked. So $f(x,y)=\frac{x^2-y^2}{x^2+y^2}$ 
 does not approach any single value as $r=|(x,y)|$ approaches $0$
 and we conclude that 
 $\lim\limits_{(x,y)\rightarrow (0,0)}\frac{x^2-y^2}{x^2+y^2}$
 does not exist.
-
+\end{itemize}
 
 \end{eg}
 
@@ -816,8 +821,8 @@ f(x,0) = \begin{cases}
                     0&\text{if $x=0$}
         \end{cases}
 \end{equation*}
-with respect to $x$ at $x=0$. To do so, we basically have to apply the
-definition
+with respect to $x$ at $x=0$. As we cannot use the usual differentiation rules, 
+we evaluate the derivative by applying the definition
 \begin{align*}
 f_x(0,0) &= \lim_{h\rightarrow 0}\frac{f(h,0)-f(0,0)}{h} \\
          &= \lim_{h\rightarrow 0}\frac{\frac{\cos h-1}{h}-0}{h}
@@ -834,6 +839,32 @@ by substituting in the Taylor expansion
 \begin{equation*}
 \cos h = 1 -\frac{h^2}{2}+\frac{h^4}{4!} -\cdots
 \end{equation*}
+We can also use Taylor expansions to understand the behaviour of $f(x,y)$ 
+for $(x,y)$ near $(0,0)$. For $x\ne y$,
+\begin{align*}
+\frac{\cos x-\cos y}{x-y}
+&=\frac{\left[1-\frac{x^2}{2!} +\frac{x^4}{4!}-\cdots\right]
+         -\left[1-\frac{y^2}{2!} +\frac{y^4}{4!}-\cdots\right]}{x-y} \\
+&=\frac{-\frac{x^2-y^2}{2!} +\frac{x^4-y^4}{4!}-\cdots}{x-y} \\
+&= -\frac{1}{2!}\frac{x^2-y^2}{x-y} +\frac{1}{4!}\frac{x^4-y^4}{x-y}-\cdots \\
+&= -\frac{x+y}{2!} +\frac{x^3+x^2y+xy^2+y^3}{4!}-\cdots
+\end{align*}
+So for $(x,y)$ near $(0,0)$,
+\begin{align*}
+f(x,y)\approx\begin{cases}
+                 -\frac{x+y}{2} &\text{if $x\ne y$} \\
+                              0 &\text{if $x=y$}
+             \end{cases}
+\end{align*}
+So it sure looks like (and in fact it is true that)
+\begin{itemize}
+\item 
+$f(x,y)$ is continuous at $(0,0)$ and
+\item
+$f(x,y)$ is not continuous at $(a,a)$ for small $a\ne 0$ and
+\item
+$f_x(0,0)=f_y(0,0)=-\frac{1}{2}$
+\end{itemize}
 
 \end{eg}
 
@@ -873,11 +904,18 @@ f_y(x,y) &= \lim_{h\rightarrow 0}\frac{f(x,y+h)-f(x,y)}{h}
          &\qquad\text{(Recall that $h\ne 0$ in the limit.)} \\
          &= \lim_{h\rightarrow 0}\frac{\cos(x+h)-\cos x}{h^2} 
 \end{align*}
-Now we apply L'H\^opital's rule twice, remembering that, in this limit,
+Now we apply L'H\^opital's rule, remembering that, in this limit,
 $x$ is a constant and $h$ is the variable --- so we differentiate with respect to $h$.
 \begin{align*}
-f_y(x,y)  &= \lim_{h\rightarrow 0}\frac{-\sin(x+h)}{2h}  \\
-         &= \lim_{h\rightarrow 0}\frac{-\cos(x+h)}{2}  \\
+f_y(x,y)  &= \lim_{h\rightarrow 0}\frac{-\sin(x+h)}{2h}
+\end{align*}
+Note that if $x$ is not an integer multiple of $\pi$, then the numerator
+$-\sin(x+h)$ does \emph{not} tend to zero as $h$ tends to zero, and the limit
+giving $f_y(x,y)$ does not exist. On the other hand, if $x$ is an integer multiple of $\pi$,
+both the numerator and denominator tend to zero as $h$ tends to zero, and we can
+apply  L'H\^opital's rule a second time. Then
+\begin{align*}
+f_y(x,y)  &= \lim_{h\rightarrow 0}\frac{-\cos(x+h)}{2}  \\
          &=-\frac{\cos x}{2}
 \end{align*}
 
@@ -888,7 +926,10 @@ f_y(x,y)  &= \lim_{h\rightarrow 0}\frac{-\sin(x+h)}{2h}  \\
 f_y(x,y)=\begin{cases}
              \frac{(x-y)\sin y
                   + \cos x-\cos y }{(x-y)^2}&\text{if $x\ne y$}\\ 
-                    -\frac{\cos x}{2}&\text{if $x=y$}
+                    -\frac{\cos x}{2}&\text{if $x=y$ with $x$ an integer 
+                                             multiple of $\pi$} \\
+                    DNE&\text{if $x=y$ with $x$ not an integer 
+                                             multiple of $\pi$}
         \end{cases}
 \end{equation*}
 \end{eg}
@@ -3317,6 +3358,91 @@ So a tangent vector is
 There is an easy common factor of $3$ in both components. So
 we can create a slightly neater tangent vector by dividing the length 
 of $-3\,\hi + 3\sqrt{3}\,\hj$ by $3$, giving  $\llt -1\,,\,\sqrt{3}\,,\,0\rgt$.
+\end{eg}
+
+\begin{eg}[(Optional) computer graphics hidden-surface elimination ]
+                                             \label{eg:hidden_surface}
+When you look at a solid three dimensional object, you do not see all of 
+the surface of the object --- parts of the surface are hidden from your view by other parts of the object. For example, the following sketch shows, schematically, a ray of light leaving your eye and hitting the surface of the object at the light dot. The object is solid, so the light cannot penetrate any further. But, if it could, it would follow the dotted line, hitting the surface of the object three more times. Your eye can see the light dot,  but cannot see the other three dark dots. 
+
+\begin{efig}
+\begin{center}
+   \includegraphics{hiddenA.pdf}
+\end{center}
+\end{efig}
+
+Recreating this effect in computer generated graphics is called ``hidden-surface elimination''.  In general, implementing hidden-surface elimination can be quite complicated. Often a technique called ``ray tracing'' is used\footnote{You can find out more about it by plugging ``ray tracing'' into the search engine of your choice.}. However, it is easy if you know about vectors and gradients, and 
+you are only looking at a single convex body. By definition, a solid is convex if, whenever two points are in the solid, then the line segment joining the two points is also contained in the solid. 
+\begin{efig}
+\begin{center}
+   \includegraphics{hiddenB.pdf}\qquad
+   \includegraphics{hiddenC.pdf}
+\end{center}
+\end{efig}
+
+So suppose that we are looking at a convex solid, that the equation of the 
+surface of the solid is $G(x,y,z)=0$, and that our eye is at $(x_e,y_e,z_e)$.
+\begin{itemize}
+\item
+First consider a light ray that leaves our eye and then just barely nicks
+the solid at the point $(x,y,z)$, as in the figure on the left below. The light ray is a tangent line to the surface at $(x,y,z)$. So the direction vector of 
+the light ray,
+ $\llt x-x_e,y-y_e,z-z_e \rgt$, is tangent to the surface at $(x,y,z)$  and consequently is perpendicular to the normal vector, 
+$\vn=\vnabla G(x,y,z)$, of the surface at $(x,y,z)$. Thus 
+\begin{equation*}
+\llt x-x_e,y-y_e,z-z_e \rgt\cdot \vnabla G(x,y,z)=0
+\end{equation*}
+
+\begin{efig}
+\begin{center}
+   \includegraphics{hiddenD.pdf}\qquad
+   \includegraphics{hiddenE.pdf}
+\end{center}
+\end{efig}
+
+\item
+Now consider a light ray that leaves our eye and then passes through
+the solid, as in the figure on the right above. Call the point at which the light ray first enters the solid $(x,y,z)$ and the point at which the light ray leaves the solid $(x',y,'z')$. 
+\begin{itemize}
+\item
+Let $\vv$ be a vector that has the same direction
+as, i.e. is a positive multiple of, the vector $\llt x-x_e, y-y_e, z-z_e\rgt$.
+\item 
+Let $\vn$ be an outward pointing normal to the solid at $(x,y,z)$.
+It will be either $\vnabla G(x,y,z)$ or $-\vnabla G(x,y,z)$.
+\item 
+Let $\vn'$ be an outward pointing normal to the solid at $(x',y',z')$.
+It will be either $\vnabla G(x',y',z')$ or $-\vnabla G(x',y',z')$.   
+\end{itemize} 
+Then
+\begin{itemize}
+\item
+at the point $(x,y,z)$ where the ray enters the solid, which is a visible point,
+the direction vector $\vv$ points into the solid. The angle between $\vv$ and the outward pointing normal $\vn$ is greater than $90^\circ$, so that the dot product
+$\vv\cdot\vn<0$. But
+\item
+at the point $(x',y',z')$ where the ray leaves the solid, which is a 
+hidden point, the direction vector $\vv$ points out of the solid. The angle between $\vv$ and the outward pointing normal $\vn'$ is less than $90^\circ$, 
+so that the dot product $\vv\cdot\vn'>0$.
+\end{itemize}
+\end{itemize}
+Our conclusion is that, if we are looking in the direction $\vv$,
+and if the outward pointing normal\footnote{If $\vnabla G(x,y,z)$ is the 
+inward pointing normal, just replace $G$ by $-G$. } to the surface of the 
+solid at $(x,y,z)$ is $\vnabla G(x,y,z)$ then the point $(x,y,z)$ is hidden 
+if and only if $\vv\cdot\vnabla G(x,y,z)>0$.
+
+This method was used by the computer graphics program that created the
+shaded figures\footnote{Those figures are not convex. But it was still possible to use the method discussed above because any light ray from our eye that passes through the figure intersects the figure at most twice. It first enters the figure at a visible point and then exits the figure at a hidden point.} in 
+Examples  \ref{eg hyperboloid} and \ref{eg hyperboloid two}, which are reproduced here.
+
+\begin{efig}
+\begin{center}
+   \includegraphics[scale=1.0]{hyperboloid1sheetDD.pdf}\qquad\qquad
+   \includegraphics[scale=1.0]{hyperboloid2sheetDD.pdf}
+\end{center}
+\end{efig}
+
 \end{eg}
 
 Tangent planes, in addition to being geometric objects, provide a 

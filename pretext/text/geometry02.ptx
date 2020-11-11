@@ -53,7 +53,7 @@ is pulling the bob straight down, tension <m>\vt</m> in the rod, which is
 pulling the bob in the direction of the rod, and air resistance <m>\vr</m>,
 which is pulling the bob in a direction opposite to its direction of motion.
 All three forces are acting on the bob. So it is natural to draw all three
-arrows representing the forces with their tails at the ball.
+arrows representing the forces with their tails at the bob.
 </p>
 
 <sidebyside width="20%">
@@ -130,9 +130,40 @@ rather than a vector.
 <p>Just as we have done many times in the CLP texts, when we define a new
 type of object, we want to understand how it interacts with the basic
 operations of addition and multiplication. Vectors are no different, and
-the following is a natural way to define addition of vectors.
-Multiplication will be more subtle, and we start with multiplication of a vector by a number (rather than with multiplication of a vector by
+we shall shortly see a natural way to define addition of vectors.
+Multiplication will be more subtle, and we shall start with multiplication of a vector by a number (rather than with multiplication of a vector by
 another vector).
+</p>
+
+<p>
+By way of motivation for the definitions of addition and multiplication by a number, imagine that we are out for a walk on the <m>xy</m>-plane.
+<ul>
+<li> 
+Suppose that we take a step and, in doing so, we move <m>a_1</m> units parallel to the <m>x</m>-axis and <m>a_2</m> units parallel to the <m>y</m>-axis. 
+Then we say that <m>\llt a_1, a_2\rgt</m> is the displacement vector for the step. Suppose now that we take a second step which moves us an additional <m>b_1</m> units  parallel to the <m>x</m>-axis and an additional <m>b_2</m> units  parallel to the <m>y</m>-axis, as in the figure on the left below. So the displacement 
+vector for the second step is <m>\llt b_1, b_2\rgt</m>. All together, we have moved <m>a_1+b_1</m> units  parallel to the <m>x</m>-axis and <m>a_2+b_2</m> units parallel to the <m>y</m>-axis. The displacement vector for the two steps combined is  
+<m>\llt a_1+b_1, a_2+b_2\rgt</m>. We shall define
+the sum of <m>\llt a_1, a_2\rgt</m> and <m>\llt b_1, b_2\rgt</m>, denoted by
+<m>\llt a_1, a_2\rgt+\llt b_1,b_2\rgt</m>, to be <m>\llt a_1+b_1, a_2+b_2\rgt</m>.
+</li>
+<li>
+Suppose now that, instead, we decide to step in the same direction
+as the first step above, but to move twice as far, as in the figure on the right below. That is, our step will move us <m>2a_1</m> units in the direction of the <m>x</m>-axis and <m>2a_2</m> units in the direction of the <m>y</m>-axis and the 
+corresponding displacement vector will be <m>\llt 2a_1, 2a_2\rgt</m>. 
+We shall define the product of the number <m>2</m> and the vector
+<m>\llt a_1, a_2\rgt</m>, denoted by <m>2\llt a_1, a_2\rgt</m>, to be 
+<m>\llt 2a_1, 2a_2\rgt</m>.
+</li>
+</ul>
+</p>
+
+<sidebyside widths="39.4% 37.8%" valign="middle">
+  <image source="figs/maddvec"/>
+  <image source="figs/mscalmul"/>
+  </sidebyside>
+
+<p>
+Here are the formal definitions.
 </p>
 
 <definition xml:id="def_addScalMult">
@@ -399,7 +430,7 @@ So our displacement vector <mdash/> the vector whose tail is at our starting poi
 As we started at <m>(0,0)</m> we finish the first leg of the walk at <m>(4,0)</m>.
 </li>
 <li>
-On the second leg of our walk, our direction of motion is northeast. i.e. is
+On the second leg of our walk, our direction of motion is northeast, i.e. is
 <m>45^\circ</m> above the direction of the positive <m>x</m>-axis. Looking at the figure
 on the right above, we see that our displacement vector, for the second leg of the walk, has to be in the same direction as the vector <m>\llt 1,1\rgt</m>.
 So our displacement vector is the vector of length <m>5\sqrt{2}</m> with the same direction as <m>\llt 1,1\rgt</m>. The vector <m>\llt 1,1\rgt</m> has length
@@ -457,6 +488,43 @@ The first is the <em>dot product</em>, which is the topic of this section,
 and which is used to easily determine the angle <m>\theta</m> (or more precisely,
 <m>\cos\theta</m>) between two vectors.
 We'll get to the second, the cross product, later.
+</p>
+
+<p>
+Here is preview of what we will do in this dot product 
+subsection &#xA7;<xref ref="subsec-dotprod"/>. We are going to give two formulae
+for the dot product, <m>\va\cdot\vb</m>, of the pair of vectors 
+<m>\va=\llt a_1,a_2,a_3\rgt</m> and <m>\vb=\llt b_1,b_2,b_3\rgt</m>.
+<ul>
+<li> 
+The first formula is <m>\va\cdot\vb = a_1b_1+a_2b_2+a_3b_3</m>.
+We will take it as our official definition of <m>\va\cdot\vb</m>.
+This formula provides us with an easy way to compute dot products.
+</li><li>
+<p>
+The second formula is <m>\va\cdot\vb=|\va|\,|\vb|\,\cos\theta</m>, 
+        where <m>\theta</m> is the angle between <m>\va</m> and <m>\vb</m>.
+</p>
+    <sidebyside width="15.3%">
+     <image source="figs/dotAngle"/>
+     </sidebyside>
+<p>
+We will show, in Theorem <xref ref="thm_dotPppties"/> below, that this second formula always gives the same answer as the first formula.
+The second formula provides us with an easy way to determine the angle between two vectors. In particular, it provides us with an easy way to test whether or not two vectors are perpendicular to each other. For example,
+the vectors <m>\llt 1,2,3\rgt</m> and <m>\llt -1,-1,1\rgt</m> have dot product
+<me>
+\llt 1,2,3\rgt\cdot\llt -1,-1,1\rgt = 1\times(-1)+2\times(-1)+3\times 1=0
+</me>
+This tell us as the angle <m>\theta</m> between the two vectors obeys 
+<m>\cos\theta=0</m>, so that <m>\theta=\frac{\pi}{2}</m>. That is, the two vectors are perpendicular to each other.
+</p>
+</li>
+</ul>
+After we give our official definition of the dot product in
+Definition <xref ref="def_dotProd"/>, and give the important properties of the dot product, including the formula  <m>\va\cdot\vb=|\va|\,|\vb|\,\cos\theta</m>,
+in Theorem <xref ref="thm_dotPppties"/>, we'll give some examples.
+Finally, to see the dot product in action, we'll define what it means to 
+project one vector on another vector and give an example.
 </p>
 
 
@@ -741,10 +809,11 @@ If <m>|\theta|</m> is larger than <m>90^\circ</m>, as in the figure on the right
 <md>
 <mrow>
 {\rm proj}_{\vb}\,\va
-=-\frac{\va\cdot\vb}{|\vb|}\frac{-\vb}{|\vb|}
+=-\frac{\va\cdot\vb}{|\vb|}\ \frac{-\vb}{|\vb|}
 =\frac{\va\cdot\vb}{|\vb|^2}\ \vb
 </mrow>
 </md>
+too. So the formula
 </p>
 <fact xml:id="eqn_proj">
 <p>
@@ -1205,7 +1274,7 @@ alternates, starting with a <q><m>+</m></q>.
 </p>
 
 
-<p>We shall not prove this formula completely. It gets a little tedious.
+<p>We shall not prove this formula completely here<fn>For a full derivation, see Example <xref ref="eg_GEOcross"/></fn>. It gets a little tedious.
 But, there is one case in which we can easily verify that the volume of the
 parallelepiped is really given by the absolute value of the
 claimed determinant. If the vectors <m>\vb</m> and <m>\vc</m> happen to lie
@@ -1283,7 +1352,7 @@ is the cross product
 </ul>
 </p>
 <p>
-Finally, here is the definition of the cross product.
+Finally, here is the definition of the cross product. Note that it applies only to vectors in three dimensions.
 </p>
 
 <definition xml:id="def_crossProd"><title>Cross Product</title>
@@ -1375,8 +1444,7 @@ b_1&amp;b_2&amp;b_3\end{matrix}\right]
 </mrow>
 </md>
 is a mnemonic device for remembering the definition of <m>\va\times\vb</m>.
-It is also good from the point of view of
-evaluating <m>\va\times\vb</m>.
+It is also good from the point of view of evaluating <m>\va\times\vb</m>. Here are several examples in which we use the determinant mnemonic device to evaluate cross products.
 </p>
 
 
@@ -1401,8 +1469,55 @@ Note that, unlike most (or maybe even all) products that you have seen before, <
 </example>
 
 
+<example xml:id="eg_GEOcrossEgA">
 <p>
-  Our first properties of the cross product lead up to a more intuitive geometric definition of <m>\va\times\vb</m>, which is better for interpreting <m>\va\times\vb</m>.
+In this example, we'll use the mnemonic device to compute two more complicated cross products. Let <m>\va=\llt 1,2,3 \rgt</m> and <m>\vb=\llt 1,-1,2 \rgt</m>. First
+</p>
+<sidebyside width="95%">
+  <image source="figs/detEgA1"/>
+</sidebyside>
+
+<p>
+Second
+</p>
+<sidebyside width="95%">
+  <image source="figs/detEgA2"/>
+</sidebyside>
+<p>
+Here are some important observations.
+<ul>
+<li> 
+The vectors <m>\va\times\vb</m> and <m>\vb\times\va</m> are not the same! In fact
+    <m>\vb\times\va=-\va\times\vb</m>. We shall see in Theorem <xref ref="thm_crossPppties"/> below that this was not a fluke.
+
+</li><li>
+The vector <m>\va\times\vb</m> has dot product zero with both <m>\va</m> and <m>\vb</m>.
+So the vector  <m>\va\times\vb</m> is prependicular to both <m>\va</m> and <m>\vb</m>. 
+We shall see in Theorem <xref ref="thm_crossPppties"/> below that this was also not a fluke.
+</li>
+</ul>
+</p>
+</example>
+
+
+<example xml:id="eg_GEOcrossEgB">
+<p>
+Yet again we use the mnemonic device to compute a more complicated cross product. This time let <m>\va=\llt 3,2,1 \rgt</m> and <m>\vb=\llt 6,4,2 \rgt</m>. Then
+</p>
+<sidebyside width="95%">
+  <image source="figs/detEgB"/>
+</sidebyside>
+<p>
+We shall see in Theorem <xref ref="thm_crossPppties"/>
+    below that it is not a fluke that the cross product is <m>\vZero</m>.
+It is a consequence of the fact that <m>\va</m> and <m>\vb=2\va</m> are parallel.
+</p>
+</example>
+
+
+<p>
+We now move on to learning about the properties of the cross product.
+  Our first properties lead up to a more intuitive geometric definition of <m>\va\times\vb</m>, which is better for interpreting <m>\va\times\vb</m>.
  These properties of the cross product, which state that  <m>\va\times\vb</m>
 is a vector and then determine its direction and length, are as follows.
 We will collect these properties, and a few others, into a theorem shortly.
@@ -1451,7 +1566,7 @@ The computation showing that <m>\vb\cdot(\va\times \vb)=0</m> is similar.
 </dl>
 </p>
 <proof>
-<p>The formula <m>|\va\times\vb|=|\va|\,|\vb|\sin\theta</m> is gotten by comparing
+<p>The formula <m>|\va\times\vb|=|\va|\,|\vb|\sin\theta</m> is gotten by verifying that
 <md>
 <mrow>
 |\va\times\vb|^2
@@ -1464,7 +1579,7 @@ The computation showing that <m>\vb\cdot(\va\times \vb)=0</m> is similar.
 </mrow><mrow>&amp;\hskip0.5in
 +a_1^2b_2^2-2a_1b_2a_2b_1+a_2^2b_1^2
 </mrow>
-<intertext>and</intertext><mrow>
+<intertext>is equal to</intertext><mrow>
 |\va|^2\,|\vb|^2\sin^2\theta
 &amp;=|\va|^2|\vb|^2(1-\cos^2\theta)
 </mrow><mrow>
@@ -1504,8 +1619,7 @@ In the left hand figure of
       </sidebyside>
 <p>
   the two vectors are labeled <m>\vc</m> and <m>\vd</m>. Which of these two
-candidates is correct is determined by the right hand rule<fn>
-That the cross product uses the right hand rule, rather than the left hand rule, is an example of the tyranny of the masses <mdash/> only roughly 10\%
+candidates is correct is determined by the right hand rule<fn>That the cross product uses the right hand rule, rather than the left hand rule, is an example of the tyranny of the masses <mdash/> only roughly 10\%
 of humans are left-handed. </fn>,
 which says that if you form your right hand into a fist with your fingers curling from
 <m>\va</m> to <m>\vb</m>, then when you stick your thumb straight out from
@@ -1690,7 +1804,7 @@ The left hand side is
 &amp;=\llt a_1,a_2,a_3\rgt\cdot
       \llt b_2c_3\!-\!b_3c_2\,,\, b_3c_1\!-\!b_1c_3\,,\, b_1c_2\!-\!b_2c_1\rgt
 </mrow><mrow>
-&amp;=a_1b_2c_3 \!-\! a_1b_3c_2 \!+\! a_2b_3c_1 \!-\! a_2b_1c_3 \!+\! a_3b_1c_2 \!-\! a_3b_2c_1
+&amp;={\color{blue}{a_1b_2c_3}} \!-\! {\color{blue}{a_1b_3c_2}} \!+\! {\color{orange}{a_2b_3c_1}} \!-\! {\color{orange}{a_2b_1c_3}} \!+\! a_3b_1c_2 \!-\! a_3b_2c_1
 </mrow>
 </md>
 The right hand side is
@@ -1700,7 +1814,7 @@ The right hand side is
 &amp;=\llt a_2b_3\!-\!a_3b_2\,,\, a_3b_1\!-\!a_1b_3\,,\, a_1b_2\!-\!a_2b_1\rgt\cdot
        \llt c_1,c_2,c_3\rgt
 </mrow><mrow>
-&amp;=a_2b_3c_1 \!-\! a_3b_2c_1 \!+\! a_3b_1c_2 \!-\! a_1b_3c_2 \!+\! a_1b_2c_3 \!-\! a_2b_1c_3
+&amp;={\color{orange}{a_2b_3c_1}} \!-\! a_3b_2c_1 \!+\! a_3b_1c_2 \!-\! {\color{blue}{a_1b_3c_2}} \!+\! {\color{blue}{a_1b_2c_3}} \!-\! {\color{orange}{a_2b_1c_3}}
 </mrow>
 </md>
 The left and right hand sides are the same.
@@ -1708,60 +1822,7 @@ The left and right hand sides are the same.
 </li>
 <li><title>(10)</title>
 <p>
-Since
-<me>
-\vb\times\vc
-\ =\ (b_2c_3-b_3c_2)\,\hi-(b_1c_3-b_3c_1)\,\hj
-    +(b_1c_2-b_2c_1)\,\hk
-</me>
-The left hand side is
-<md>
-<mrow>
-\va\times(\vb\times\vc)
- = &amp;\det\left[\begin{matrix}
-\hi &amp; \hj &amp; \hk \\
-a_1&amp;a_2&amp;a_3 \\
-b_2c_3-b_3c_2&amp;-b_1c_3+b_3c_1&amp;b_1c_2-b_2c_1
-\end{matrix}\right]
-</mrow>
-<mrow>
-= &amp;\phantom{-}\hi\,[a_2(b_1c_2-b_2c_1)-a_3(-b_1c_3+b_3c_1)]
-</mrow><mrow>
-     &amp; {-}\hj\,[a_1(b_1c_2-b_2c_1)-a_3(b_2c_3-b_3c_2)]
-</mrow><mrow>
-     &amp; {+}\hk\,[a_1(-b_1c_3+b_3c_1)-a_2(b_2c_3-b_3c_2)]
-</mrow>
-</md>
-</p>
-<p>
-The right hand side is
-<md>
-<mrow>
-&amp;(\va\cdot\vc)\vb-(\va\cdot\vb)\vc
-</mrow><mrow>
-&amp;\hskip0.1in=(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
-</mrow><mrow>
-     &amp;\hskip1.1in -(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
-</mrow><mrow>
-&amp;\hskip0.1in=\phantom{-}
-\hi[a_1b_1c_1+a_2b_1c_2+a_3b_1c_3-a_1b_1c_1-a_2b_2c_1-a_3b_3c_1]
-</mrow><mrow>
-&amp;\hskip0.1in\phantom{=}+\hj[a_1b_2c_1+a_2b_2c_2+a_3b_2c_3-a_1b_1c_2-a_2b_2c_2-a_3b_3c_2]
-</mrow><mrow>
-&amp;\hskip0.1in\phantom{=}+\hk[a_1b_3c_1+a_2b_3c_2+a_3b_3c_3-a_1b_1c_3-a_2b_2c_3-a_3b_3c_3]
-</mrow><mrow>
-&amp;\hskip0.1in=\phantom{-} \hi[a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]
-</mrow><mrow>
- &amp;\hskip0.1in\phantom{=} +\hj[a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
-</mrow><mrow>
- &amp;\hskip0.1in\phantom{=} +\hk[a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
-</mrow>
-</md>
-</p>
-<p>
-The left and right hand sides are the same. Oof! This is a little tedious
-to do by hand. But any computer algebra system will do it for you in a
-flash.
+We will give the straightforward, but slightly tedious, computations in (the optional) &#xA7;<xref ref="sec_vector_identities"/>.
 </p>
 </li>
 </dl>
@@ -1903,6 +1964,8 @@ We should not be surprised that <m>\vb\times\vc</m> has direction <m>\hk</m>.
 </li>
 <li> both <m>\vb</m> and <m>\vc</m> lie in the <m>xy</m>-plane,
 </li>
+<li> so that <m>\vb\times\vc</m> has to the perpendicular to the <m>xy</m>-plane,
+</li>
 <li> so that <m>\vb\times\vc</m> has to the parallel to the <m>z</m>-axis.
 </li>
 </ul>
@@ -1949,28 +2012,9 @@ and the volume of the parallelepiped is
 
 <proof><title>Proof of (a)</title>
 <p>
-Here are two proofs.
-For the first, just write out both sides
-<md>
-<mrow>
-\va\cdot(\vb\times\vc)
-&amp;=(a_1,a_2,a_3)\cdot(b_2c_3-b_3c_2\,,\,b_3c_1-b_1c_3\,,\,b_1c_2-b_2c_1)
-</mrow><mrow>
-&amp;=a_1b_2c_3-a_1b_3c_2+a_2b_3c_1-a_2b_1c_3+a_3b_1c_2-a_3b_2c_1
-</mrow><mrow>
-(\va\times\vb)\cdot\vc
-&amp;=(a_2b_3-a_3b_2\,,\,a_3b_1-a_1b_3\,,\,a_1b_2-a_2b_1)\cdot(c_1,c_2,c_3)
-</mrow><mrow>
-&amp;=a_2b_3c_1-a_3b_2c_1+a_3b_1c_2-a_1b_3c_2+a_1b_2c_3-a_2b_1c_3
-</mrow>
-</md>
-and observe that they are the same.
-</p>
-
-<p>
-For the second proof,
-we again write out both sides, but this time we express them
-in terms of determinants.
+We proved this in Theorem <xref ref="thm_crossPppties"/>, by evaluating the left and right hand  sides, and observing that they are the same.
+Here is a second proof, in which we again write out both sides, 
+but this time we express them in terms of determinants.
 <md>
 <mrow>
 \va\cdot\vb\times\vc
@@ -2039,35 +2083,36 @@ On the other hand, the right hand side
 <md>
 <mrow>
 (\va\cdot\vc)\vb-(\va\cdot\vb)\vc
-\ =\ &amp;(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
+&amp;=(a_1c_1+a_2c_2+a_3c_3)(b_1\hi+b_2\hj+b_3\hk)
 </mrow><mrow>
-&amp;\hskip0.5in-(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)\cr
-=\ &amp;
-\hi\ \big[\color{blue}{a_1b_1c_1}
+&amp;\hskip0.5in-(a_1b_1+a_2b_2+a_3b_3)(c_1\hi+c_2\hj+c_3\hk)
+</mrow><mrow>
+&amp;=\phantom{-}
+\hi\ \big[{\color{blue}{a_1b_1c_1}}
          +a_2b_1c_2+a_3b_1c_3-
-         \color{blue}{a_1b_1c_1}
+         {\color{blue}{a_1b_1c_1}}
          -a_2b_2c_1-a_3b_3c_1\big]
 </mrow><mrow>
-{+}&amp;\hj\ \big[a_1b_2c_1
-      +\color{blue}{a_2b_2c_2}
+&amp;\phantom{=}+\hj\ \big[a_1b_2c_1
+      +{\color{blue}{a_2b_2c_2}}
       +a_3b_2c_3-a_1b_1c_2
-      -\color{blue}{a_2b_2c_2}
+      -{\color{blue}{a_2b_2c_2}}
       -a_3b_3c_2\big]
 </mrow><mrow>
-{+}&amp;\hk\ \big[a_1b_3c_1+a_2b_3c_2
-          +\color{blue}{a_3b_3c_3}
+&amp;\phantom{=}+\hk\ \big[a_1b_3c_1+a_2b_3c_2
+          +{\color{blue}{a_3b_3c_3}}
           -a_1b_1c_3-a_2b_2c_3
-          -\color{blue}{a_3b_3c_3}\big]
+          -{\color{blue}{a_3b_3c_3}}\big]
 </mrow><mrow>
-{=}\ &amp;
+&amp;=\phantom{-}
 \hi\ [a_2b_1c_2+a_3b_1c_3-a_2b_2c_1-a_3b_3c_1]
 </mrow><mrow>
-{+}&amp;\hj\ [a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
+&amp;\phantom{=}+\hj\ [a_1b_2c_1+a_3b_2c_3-a_1b_1c_2-a_3b_3c_2]
 </mrow><mrow>
-{+}&amp;\hk\ [a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
+&amp;\phantom{=}+\hk\ [a_1b_3c_1+a_2b_3c_2-a_1b_1c_3-a_2b_2c_3]
 </mrow>
 </md>
-The last formula that we had for the left hand side is the same as the last formula we had for the right hand side.
+The last formula that we had for the left hand side is the same as the last formula we had for the right hand side. Oof! This is a little tedious to do by hand. But any computer algebra system will do it for you in a flash.
 </p>
 </proof>
 
@@ -2353,13 +2398,13 @@ you start walking around the edge of the merry-go-round. Then,
 at <m>t=0</m>, <m>\vr=\hi</m> and
 <ul>
 <li>
-   if you walk in the direction of rotation, as in the figure on the
+   if you walk in the direction of rotation (with speed one), as in the figure on the
    left below, <m>\vv=\hj</m> and the Coriolis force <m>\vF_{{\rm cor}}=
    -2\Om\hk\times\hj = 2\Om\,\hi</m> tries to push you off of
    the merry-go-round, while
 </li>
 <li>
-   if you walk opposite to the direction of rotation, as in the figure
+   if you walk opposite to the direction of rotation (with speed one), as in the figure
    on the right below,  <m>\vv=-\hj</m> so that the Coriolis force
    <m>\vF_{{\rm cor}}=-2\Om\hk\times(-\hj) = -2\Om\,\hi</m> tries to pull you
    into the centre of the merry-go-round.

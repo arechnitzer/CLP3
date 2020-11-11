@@ -322,8 +322,8 @@ f(x,0) = \begin{cases}
                     0&amp;\text{if } x=0
         \end{cases}
 </me>
-with respect to <m>x</m> at <m>x=0</m>. To do so, we basically have to apply the
-definition
+with respect to <m>x</m> at <m>x=0</m>. As we cannot use the usual differentiation rules, 
+we evaluate the derivative by applying the definition
 <md>
 <mrow>
 f_x(0,0) &amp;= \lim_{h\rightarrow 0}\frac{f(h,0)-f(0,0)}{h}
@@ -349,6 +349,40 @@ by substituting in the Taylor expansion
 </me>
 </p>
 
+<p>
+We can also use Taylor expansions to understand the behaviour of <m>f(x,y)</m> 
+for <m>(x,y)</m> near <m>(0,0)</m>. For <m>x\ne y</m>,
+<md>
+<mrow>
+\frac{\cos x-\cos y}{x-y}
+&amp;=\frac{\left[1-\frac{x^2}{2!} +\frac{x^4}{4!}-\cdots\right]
+         -\left[1-\frac{y^2}{2!} +\frac{y^4}{4!}-\cdots\right]}{x-y}
+</mrow><mrow>
+&amp;=\frac{-\frac{x^2-y^2}{2!} +\frac{x^4-y^4}{4!}-\cdots}{x-y} 
+</mrow><mrow>
+&amp;= -\frac{1}{2!}\frac{x^2-y^2}{x-y} +\frac{1}{4!}\frac{x^4-y^4}{x-y}-\cdots 
+</mrow><mrow>
+&amp;= -\frac{x+y}{2!} +\frac{x^3+x^2y+xy^2+y^3}{4!}-\cdots
+</mrow>
+</md>
+So for <m>(x,y)</m> near <m>(0,0)</m>,
+<me>
+f(x,y)\approx\begin{cases}
+                 -\frac{x+y}{2} &amp;\text{if $x\ne y$} \\
+                              0 &amp;\text{if $x=y$}
+             \end{cases}
+</me>
+So it sure looks like (and in fact it is true that)
+<ul>
+<li> 
+<m>f(x,y)</m> is continuous at <m>(0,0)</m> and
+</li><li>
+<m>f(x,y)</m> is not continuous at <m>(a,a)</m> for small <m>a\ne 0</m> and
+</li><li>
+<m>f_x(0,0)=f_y(0,0)=-\frac{1}{2}</m>
+</li>
+</ul>
+</p>
 </example>
 
 <example xml:id="eg_partials_DD">
@@ -394,13 +428,21 @@ f_y(x,y) &amp;= \lim_{h\rightarrow 0}\frac{f(x,y+h)-f(x,y)}{h}
          &amp;= \lim_{h\rightarrow 0}\frac{\cos(x+h)-\cos x}{h^2}
 </mrow>
 </md>
-Now we apply L'Hôpital's rule twice, remembering that, in this limit,
+Now we apply L'Hôpital's rule, remembering that, in this limit,
 <m>x</m> is a constant and <m>h</m> is the variable <mdash/> so we differentiate with respect to <m>h</m>.
 <md>
 <mrow>
 f_y(x,y)  &amp;= \lim_{h\rightarrow 0}\frac{-\sin(x+h)}{2h}
-</mrow><mrow>
-         &amp;= \lim_{h\rightarrow 0}\frac{-\cos(x+h)}{2}
+</mrow>
+</md>
+Note that if <m>x</m> is not an integer multiple of <m>\pi</m>, then the numerator
+<m>-\sin(x+h)</m> does <em>not</em> tend to zero as <m>h</m> tends to zero, and the limit
+giving <m>f_y(x,y)</m> does not exist. On the other hand, if <m>x</m> is an integer multiple of <m>\pi</m>,
+both the numerator and denominator tend to zero as <m>h</m> tends to zero, and we can
+apply  L'Hôpital's rule a second time. Then
+<md>
+<mrow>
+f_y(x,y)  &amp;= \lim_{h\rightarrow 0}\frac{-\cos(x+h)}{2}
 </mrow><mrow>
          &amp;=-\frac{\cos x}{2}
 </mrow>
@@ -411,9 +453,10 @@ f_y(x,y)  &amp;= \lim_{h\rightarrow 0}\frac{-\sin(x+h)}{2h}
 <me>
 f_y(x,y)=\begin{cases}
              \frac{(x-y)\sin y
-                  + \cos x-\cos y }{(x-y)^2}&amp;\text{if } x\ne y \\
-                    -\frac{\cos x}{2}&amp;\text{if } x=y
-        \end{cases}
+                  + \cos x-\cos y }{(x-y)^2}&amp;\text{if } x\ne y\\
+-\frac{\cos x}{2}&amp;\text{if } x=y  \text{ with } x \text{ an integer multiple of }\pi\\
+DNE&amp;\text{if } x=y  \text{ with } x \text{ not an integer multiple of }\pi
+         \end{cases}
 </me>
 </p>
 </example>

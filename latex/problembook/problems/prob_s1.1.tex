@@ -323,39 +323,7 @@ first octant.
 \subsection*{\Procedural}
 %%%%%%%%%%%%%%%%%%
 
-\begin{question}
-The pressure $p(x,y)$ at the point $(x,y)$ is determined by 
-$x^2-2px+y^2=1$. Sketch several isobars. An isobar is a curve with
-equation $p(x,y)=c$ for some constant $c$.
-\end{question}
 
-%\begin{hint}
-%
-%\end{hint}
-
-
-\begin{answer}
-\begin{center}
-     \includegraphics{pressure.pdf}
-\end{center}
-
-\end{answer}
-
-
-\begin{solution}
-For each fixed $c$, the isobar $p(x,y)=c$ is the curve
-$x^2-2cx+y^2=1$, or equivalently, $(x-c)^2+y^2=1+c^2$. This is a 
-circle with centre $(c,0)$ and radius $\sqrt{1+c^2}$, which for large $c$ is just a bit bigger than $c$.
-
-\begin{center}
-     \includegraphics{pressure.pdf}
-\end{center}
-
-
-\end{solution}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}
 Consider any triangle. Pick a coordinate system so that one vertex
 is at the origin and a second vertex is on the positive $x$--axis. Call
@@ -400,7 +368,7 @@ $\sqrt{\big(\frac{a}{2}\big)^2+\big(\frac{b^2+c^2-ab}{2c}\big)^2}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question} [M200 2001A] % 1
-A certain quadric surface consists of all points $P=(x,y,z)$
+A certain surface consists of all points $P=(x,y,z)$
 such that the distance from $P$ to the point $(0,0,1)$ is equal to the
 distance from $P$ to the plane $z+1=0$. Find an equation for the surface,
 sketch and describe it verbally.
@@ -437,12 +405,41 @@ is a paraboloid and is sketched below.
 
 
 
-
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%
-%\subsection*{\Application}
+\subsection*{\Application}
 %%%%%%%%%%%%%%%%%%
+
+\begin{question}
+The pressure $p(x,y)$ at the point $(x,y)$ is at least zero and is 
+determined by the equation $x^2-2px+y^2=3p^2$. Sketch several isobars. 
+An isobar is a curve with equation $p(x,y)=c$ for some constant $c\ge 0$.
+\end{question}
+
+\begin{hint}
+It is not necessary to solve the equation $x^2-2px+y^2=3p^2$ for $p(x,y)$.
+For example, a point $(x,y)$ is on the isobar $p(x,y)=1$ if and only if
+$x^2-2x+y^2=3$. This curve can be easily identified if one first completes a 
+square.
+\end{hint}
+
+
+\begin{answer}
+\begin{center}
+     \includegraphics{pressureB.pdf}
+\end{center}
+
+\end{answer}
+
+
+\begin{solution}
+For each fixed $c\ge 0$, the isobar $p(x,y)=c$ is the curve
+$x^2-2cx+y^2=3c^2$, or equivalently, $(x-c)^2+y^2=4c^2$. This is a 
+circle with centre $(c,0)$ and radius $2c$. Here is a sketch of the isobars
+$p(x,y)=c$ with $c=0,1,2,3$.
+
+\begin{center}
+     \includegraphics{pressureB.pdf}
+\end{center}
+
+
+\end{solution}
