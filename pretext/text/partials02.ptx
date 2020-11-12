@@ -819,31 +819,31 @@ and if you multiply<fn>Matrix multiplication is usually covered in courses on li
 <md>
 <mrow>
 &amp;\left[\begin{matrix}
-      \pdiff{r}{x}(x,y) &amp; \pdiff{r}{y}(x,y) \\
-      \pdiff{\theta}{x}(x,y) &amp; \pdiff{\theta}{y}(x,y)
-      \end{matrix}\right]
-\left[\begin{matrix}
       \pdiff{r}{x}\big(x(r,\theta),y(r,\theta)\big) &amp;
                      \pdiff{r}{y}\big(x(r,\theta),y(r,\theta)\big) \\
       \pdiff{\theta}{x}\big(x(r,\theta),y(r,\theta)\big) &amp;
                       \pdiff{\theta}{y}\big(x(r,\theta),y(r,\theta)\big)
+      \end{matrix}\right]\ 
+      \left[\begin{matrix}
+      \pdiff{x}{r}(r,\theta) &amp; \pdiff{x}{\theta}(r,\theta) \\
+      \pdiff{y}{r}(r,\theta) &amp; \pdiff{y}{\theta}(r,\theta)
       \end{matrix}\right]
 </mrow><mrow>
 &amp;=\left[\begin{matrix}
+      \cos\theta &amp; \sin\theta \\
+      -\frac{\sin\theta}{r} &amp; \frac{\cos\theta}{r}
+      \end{matrix}\right]\ 
+     \left[\begin{matrix}
       \cos\theta &amp; -r\sin\theta \\
       \sin\theta &amp;  r\cos\theta
       \end{matrix}\right]\
-\left[\begin{matrix}
-      \cos\theta &amp; \sin\theta \\
-      -\frac{\sin\theta}{r} &amp; \frac{\cos\theta}{r}
-      \end{matrix}\right]
 </mrow><mrow>
 &amp;=\left[\begin{matrix}
-      (\cos\theta)(\cos\theta) + (-r\sin\theta)(-\frac{\sin\theta}{r})
-            &amp;(\cos\theta)(\sin\theta)+(-r\sin\theta)(\frac{\cos\theta}{r})
+      (\cos\theta)(\cos\theta) + (\sin\theta)(\sin\theta)
+            &amp;(\cos\theta)(-r\sin\theta)+(\sin\theta)(r\cos\theta)
                                                               \\
-      (\sin\theta)(\cos\theta)+(r\cos\theta)(-\frac{\sin\theta}{r}) &amp;
-         (\sin\theta)(\sin\theta) + (r\cos\theta)(\frac{\cos\theta}{r})
+      (-\frac{\sin\theta}{r})(\cos\theta)+(\frac{\cos\theta}{r})(\sin\theta) &amp;
+      (-\frac{\sin\theta}{r})(-r\sin\theta) + (\frac{\cos\theta}{r})(r\cos\theta)
       \end{matrix}\right]
 </mrow>
 </md>
@@ -859,6 +859,15 @@ then the result is the identity matrix
 and indeed it is!
 </li>
 </ul>
+This two variable version of the inverse function theorem can be derived by applying the derivatives <m>\pdiff{}{r}</m> and <m>\pdiff{}{\theta}</m> to the equations
+<md>
+<mrow>
+r\big(x(r,\theta),y(r,\theta)\big) &amp;=r 
+</mrow><mrow>
+\theta\big(x(r,\theta),y(r,\theta)\big) &amp;=\theta
+</mrow>
+</md>
+and using the two variable version of the chain rule, which we will see in &#xA7;<xref ref="sec_chain_rule"/>.
 </p>
 
 </example>

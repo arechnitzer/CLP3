@@ -1207,30 +1207,31 @@ and if you evaluate the second matrix at $x=x(r,\theta)$, $y=y(r,\theta)$,
 \item
 and if you multiply\footnote{Matrix multiplication is usually covered in courses on linear algebra, which you may or may not have taken. That's why this example is optional.} the two matrices together
 \begin{align*}
-&\left[\begin{matrix}
-      \pdiff{r}{x}(x,y) & \pdiff{r}{y}(x,y) \\[0.05in]
-      \pdiff{\theta}{x}(x,y) & \pdiff{\theta}{y}(x,y) 
-      \end{matrix}\right]\ 
-\left[\begin{matrix}
+& \left[\begin{matrix}
       \pdiff{r}{x}\big(x(r,\theta),y(r,\theta)\big) & 
                      \pdiff{r}{y}\big(x(r,\theta),y(r,\theta)\big) \\[0.05in]
       \pdiff{\theta}{x}\big(x(r,\theta),y(r,\theta)\big) & 
                       \pdiff{\theta}{y}\big(x(r,\theta),y(r,\theta)\big) 
+      \end{matrix}\right]\ 
+    \left[\begin{matrix}
+      \pdiff{x}{r}(r,\theta) & \pdiff{x}{\theta}(r,\theta) \\[0.05in]
+      \pdiff{y}{r}(r,\theta) & \pdiff{y}{\theta}(r,\theta) 
       \end{matrix}\right] \\
 &\hskip0.5in=\left[\begin{matrix}
-      \cos\theta & -r\sin\theta \\[0.05in]
-      \sin\theta &  r\cos\theta 
-      \end{matrix}\right]\ 
-\left[\begin{matrix}
       \cos\theta & \sin\theta \\[0.1in]
       -\frac{\sin\theta}{r} & \frac{\cos\theta}{r}
-      \end{matrix}\right]\\
+      \end{matrix}\right]\ 
+     \left[\begin{matrix}
+      \cos\theta & -r\sin\theta \\[0.05in]
+      \sin\theta &  r\cos\theta 
+      \end{matrix}\right]
+\\
 &\hskip0.5in=\left[\begin{matrix}
-      (\cos\theta)(\cos\theta) + (-r\sin\theta)(-\frac{\sin\theta}{r})
-            &(\cos\theta)(\sin\theta)+(-r\sin\theta)(\frac{\cos\theta}{r}) 
-                                                              \\[0.05in]
-      (\sin\theta)(\cos\theta)+(r\cos\theta)(-\frac{\sin\theta}{r}) &    
-         (\sin\theta)(\sin\theta) + (r\cos\theta)(\frac{\cos\theta}{r})
+      (\cos\theta)(\cos\theta) + (\sin\theta)(\sin\theta) 
+            &(\cos\theta)(-r\sin\theta)+(\sin\theta)(r\cos\theta) 
+              \\[0.05in]   
+     (-\frac{\sin\theta}{r})(\cos\theta) + (\frac{\cos\theta}{r})(\sin\theta) &    
+    (-\frac{\sin\theta}{r})(-r\sin\theta) + (\frac{\cos\theta}{r})(r\cos\theta)
       \end{matrix}\right]
 \end{align*}
 \item
@@ -1244,8 +1245,13 @@ then the result is the identity matrix
 and indeed it is!
 
 \end{itemize}
-
-
+This two variable version of the inverse function theorem can be derived by applying the derivatives $\pdiff{}{r}$ and $\pdiff{}{\theta}$ to the equations
+\begin{align*}
+r\big(x(r,\theta),y(r,\theta)\big) &=r \\ 
+\theta\big(x(r,\theta),y(r,\theta)\big) &=\theta \\
+\end{align*}
+and using the two variable version of the chain rule, which we will see in 
+\S\ref{sec chain rule}.
 \end{eg}
 
 %%%%%%%%%%%%%%%%%%%
