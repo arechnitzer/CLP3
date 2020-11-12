@@ -665,7 +665,7 @@ so that
 <md>
 <mrow>
 \pdiff{x}{r}(r_0,\theta_0)=\left(\pdiff{r}{x}(x_0,y_0)\right)^{-1}
-&amp;\iff \cos\theta_0= \bigg(\frac{x_0}{\sqrt{x_0^2+y_0^2}}\bigg)^{-1}
+&amp;\iff \cos\theta_0= \left(\frac{x_0}{\sqrt{x_0^2+y_0^2}}\right)^{-1}
                   = \left(\cos\theta_0\right)^{-1}
 </mrow><mrow>
 &amp;\iff \cos^2\theta_0= 1
