@@ -1058,7 +1058,7 @@ In this example we are going to see that, in contrast to the ordinary
 derivative case, $\pdiff{r}{x}$ is not, in general, the same as 
 $\big(\pdiff{x}{r}\big)^{-1}$.
 
-Recall that Cartesian and polar coordinates (for $(x,y)\ne (0,0)$ and $r>0$)
+Recall that Cartesian and polar coordinates\footnote{If you are not familiar with polar coordinates, don't worry about it. There will be an introduction to them in \S\ref{sec polar coords}.} (for $(x,y)\ne (0,0)$ and $r>0$)
 are related by
 \begin{align*}
 \hskip1in x&=r\cos\theta\hskip1in
@@ -1419,7 +1419,7 @@ in the details below that
 Note that the two right hand sides here are identical except for the 
 order in which the limits are taken.
 
-Now, by the mean value theorem (six times),
+Now, by the mean value theorem (four times),
 \begin{align*}
 F(h,k)\ &\eqf{(2)}\ \frac{1}{h}
 \left[\pdiff{f}{y}(x_0+h,y_0+\theta_1k)
@@ -1593,13 +1593,13 @@ $f(0,y)=0$ for all $y$. We now compute the first order
 partial derivatives. For $(x,y)\ne (0,0)$,
 \begin{alignat*}{3}
 \pdiff{f}{x}(x,y)
-  &= y\frac{x^2-y^2}{x^2+y^2} +xy\frac{2x}{x^2+y^2}
+  &= \textcolor{blue}{y\frac{x^2-y^2}{x^2+y^2}} +xy\frac{2x}{x^2+y^2}
       - xy\frac{2x(x^2-y^2)}{{(x^2+y^2)}^2}
-  &\ = y\frac{x^2-y^2}{x^2+y^2}  + xy\frac{4xy^2}{{(x^2+y^2)}^2}\cr
+  &\ = \textcolor{blue}{y\frac{x^2-y^2}{x^2+y^2}}  + xy\frac{4xy^2}{{(x^2+y^2)}^2}\cr
 \pdiff{f}{y}(x,y)
-  &= x\frac{x^2-y^2}{x^2+y^2} -xy\frac{2y}{x^2+y^2}
+  &= \textcolor{blue}{x\frac{x^2-y^2}{x^2+y^2}} -xy\frac{2y}{x^2+y^2}
       - xy\frac{2y(x^2-y^2)}{{(x^2+y^2)}^2}
-  &\ = x\frac{x^2-y^2}{x^2+y^2}  - xy\frac{4yx^2}{{(x^2+y^2)}^2}
+  &\ = \textcolor{blue}{x\frac{x^2-y^2}{x^2+y^2}}  - xy\frac{4yx^2}{{(x^2+y^2)}^2}
 \end{alignat*}
 For $(x,y)= (0,0)$,
 \begin{alignat*}{5}

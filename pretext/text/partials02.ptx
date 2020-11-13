@@ -625,7 +625,7 @@ derivative case, <m>\pdiff{r}{x}</m> is not, in general, the same as
 </p>
 
 <p>
-  Recall that Cartesian and polar coordinates (for <m>(x,y)\ne (0,0)</m> and <m>r \gt 0</m>)
+  Recall that Cartesian and polar coordinates<fn>If you are not familiar with polar coordinates, don't worry about it. There will be an introduction to them in &#xA7;<xref ref="sec_polar_coords"/>.</fn> (for <m>(x,y)\ne (0,0)</m> and <m>r \gt 0</m>)
 are related by
 </p>
 <sidebyside width="20%" valign="middle">

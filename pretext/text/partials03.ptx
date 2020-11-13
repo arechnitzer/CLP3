@@ -205,7 +205,7 @@ Note that the two right hand sides here are identical except for the
 order in which the limits are taken.
 </p>
 
-<p>Now, by the mean value theorem (six times),
+<p>Now, by the mean value theorem (four times),
 <md>
 <mrow>
 F(h,k)\ &amp;\eqf{(2)}\ \frac{1}{h}
@@ -417,16 +417,16 @@ partial derivatives. For <m>(x,y)\ne (0,0)</m>,
 <md>
 <mrow>
 \pdiff{f}{x}(x,y)
-  &amp;= y\frac{x^2-y^2}{x^2+y^2} +xy\frac{2x}{x^2+y^2}
+  &amp;= {\color{blue}{y\frac{x^2-y^2}{x^2+y^2}}} +xy\frac{2x}{x^2+y^2}
       - xy\frac{2x(x^2-y^2)}{{(x^2+y^2)}^2}
 </mrow><mrow>
-  &amp;\ = y\frac{x^2-y^2}{x^2+y^2}  + xy\frac{4xy^2}{{(x^2+y^2)}^2}
+  &amp;\ = {\color{blue}{y\frac{x^2-y^2}{x^2+y^2}}}  + xy\frac{4xy^2}{{(x^2+y^2)}^2}
 </mrow><mrow>
 \pdiff{f}{y}(x,y)
-  &amp;= x\frac{x^2-y^2}{x^2+y^2} -xy\frac{2y}{x^2+y^2}
+  &amp;= {\color{blue}{x\frac{x^2-y^2}{x^2+y^2}}} -xy\frac{2y}{x^2+y^2}
       - xy\frac{2y(x^2-y^2)}{{(x^2+y^2)}^2}
 </mrow><mrow>
-  &amp;\ = x\frac{x^2-y^2}{x^2+y^2}  - xy\frac{4yx^2}{{(x^2+y^2)}^2}
+  &amp;\ = {\color{blue}{x\frac{x^2-y^2}{x^2+y^2}}}  - xy\frac{4yx^2}{{(x^2+y^2)}^2}
 </mrow>
 </md>
 For <m>(x,y)= (0,0)</m>,
