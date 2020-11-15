@@ -2283,7 +2283,7 @@ There is a $c_{x,h}$ between $x_0=x(s,t)$ and $x_1=x(s+h,t)$ such that
 f(x_1,y_1) - f(x_0,y_1)
 &=g(x_1) - g(x_0)
 =g'(c_{x,h}) [x_1-x_0] 
-=\pdiff{f}{x}(c_{x,h},y_1)\,[x_1-x_0] \\
+=\pdiff{f}{x}(c_{x,h}\,,\,y_1)\,[x_1-x_0] \\
 &=\pdiff{f}{x}\big(c_{x,h}\,,\,y(s+h,t)\big)\,\big[x(s+h,t)-x(s,t)\big]
 \end{align*}
 We have introduced the two subscripts in $c_{x,h}$ to remind ourselves that
@@ -2650,7 +2650,7 @@ But, in this case,
 we can guess one solution\footnote{See Appendix \eref{CLP101}{ap:roots} in the 
 CLP-2 text. There it is shown that any integer root of a polynomial with 
 integer coefficients must divide the constant term exactly. So in this case
-only $\pm 1$ and $\pm 3$ could be integer roots. So it good to check to 
+only $\pm 1$ and $\pm 3$ could be integer roots. So it is good to check to 
 see if any of these are solutions before moving on to more sophisticated
 techniques.}, namely $b=1$. So $(b-1)$
 must be a factor of $2b^3+b-3$ and a little division then gives us
@@ -2775,7 +2775,7 @@ which we already know is a normal vector to the surface $z=f(x,y)$ at
 
 This shows that the point on the surface that minimises the distance 
 to $(0,3,0)$ is joined to $(0,3,0)$ by a line that is parallel to the 
-normal vector --- just as we require. 
+normal vector --- just as we required. 
 
 \end{eg}
 
@@ -3339,7 +3339,7 @@ the vector
  =\llt 2x\,,\,2y\,,\,2z \rgt\Big|_{(x,y,z)=(\sqrt{3},1,1)}
  = 2\llt \sqrt{3}\,,\,1\,,\,1 \rgt
 \end{equation*} 
-is normal to the surface $F(x,y,z)$ at $\big(\sqrt{3}\,,\,1\,,\,1\big)$,
+is normal to the surface $F(x,y,z)=5$ at $\big(\sqrt{3}\,,\,1\,,\,1\big)$,
 and
 \item[$\circ$] 
 the vector 
@@ -3348,7 +3348,7 @@ the vector
  =\llt 2x\,,\,2y\,,\,-4 \rgt\Big|_{(x,y,z)=(\sqrt{3},1,1)}
  = 2\llt \sqrt{3}\,,\,1\,,\,-2 \rgt
 \end{equation*} 
-is normal to the surface $G(x,y,z)$ at $\big(\sqrt{3}\,,\,1\,,\,1\big)$.
+is normal to the surface $G(x,y,z)=0$ at $\big(\sqrt{3}\,,\,1\,,\,1\big)$.
 \end{itemize}
 So a tangent vector is
 \begin{align*}
@@ -3424,12 +3424,11 @@ Then
 \begin{itemize}
 \item
 at the point $(x,y,z)$ where the ray enters the solid, which is a visible point,
-the direction vector $\vv$ points into the solid. The angle between $\vv$ and the outward pointing normal $\vn$ is greater than $90^\circ$, so that the dot product
-$\vv\cdot\vn<0$. But
+the direction vector $\vv$ points into the solid. The angle $\theta$ between $\vv$ and the outward pointing normal $\vn$ is greater than $90^\circ$, so that the dot product $\vv\cdot\vn=|\vv|\,|\vn|\,\cos\theta <0$. But
 \item
 at the point $(x',y',z')$ where the ray leaves the solid, which is a 
-hidden point, the direction vector $\vv$ points out of the solid. The angle between $\vv$ and the outward pointing normal $\vn'$ is less than $90^\circ$, 
-so that the dot product $\vv\cdot\vn'>0$.
+hidden point, the direction vector $\vv$ points out of the solid. The angle $\theta$ between $\vv$ and the outward pointing normal $\vn'$ is less than $90^\circ$, 
+so that the dot product $\vv\cdot\vn'=|\vv|\,|\vn'|\,\cos\theta >0$.
 \end{itemize}
 \end{itemize}
 Our conclusion is that, if we are looking in the direction $\vv$,
@@ -3843,7 +3842,7 @@ We want this to be less than $1$.
 Of course we do not know exactly what $a_0$, $b_0$ and $\theta_0$ are.
 But suppose that we are confident that $a_0\ge 10$, $b_0\ge 10$
 and $\frac{\pi}{6}\le \theta_0 \le \frac{\pi}{2}$ so that 
-$\cot\theta_0\le \sqrt{3}\le 2$. Then 
+$\cot\theta_0\le \cot\frac{\pi}{6}=\sqrt{3}\le 2$. Then 
 \begin{align*}
 100\left|\frac{\De a}{a_0}\right|&\le 100\left|\frac{\De a}{10}\right|
                                  = 10\,|\De a| \\

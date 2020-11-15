@@ -56,7 +56,7 @@ public class distanceSideC extends Template {
            double th1 = Math.atan(0.5)*180/Math.PI ;
          canvas.append( new fPsWrite(Blue+"\n")) ;
          fLine(xmin,1.5-0.5*xmin, xmax,1.5-0.5*xmax) ;
-         fTeXlabel(xmax+0.05,1.5-0.5*xmax, "lc", "x+2y+3z=20") ;
+         fTeXlabel(xmax+0.05,1.5-0.5*xmax, "lc", "$x+2y+3z=20$") ;
 
 
          canvas.append( new fPsWrite(Black+"\n")) ;

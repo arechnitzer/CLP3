@@ -775,7 +775,7 @@ There is a <m>c_{x,h}</m> between <m>x_0=x(s,t)</m> and <m>x_1=x(s+h,t)</m> such
 f(x_1,y_1) - f(x_0,y_1)
 &amp;=g(x_1) - g(x_0)
 =g'(c_{x,h}) [x_1-x_0]
-=\pdiff{f}{x}(c_{x,h},y_1)\,[x_1-x_0]
+=\pdiff{f}{x}(c_{x,h}\,,\,y_1)\,[x_1-x_0]
 </mrow><mrow>
 &amp;=\pdiff{f}{x}\big(c_{x,h}\,,\,y(s+h,t)\big)\,\big[x(s+h,t)-x(s,t)\big]
 </mrow>

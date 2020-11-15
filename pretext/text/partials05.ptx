@@ -374,7 +374,7 @@ But, in this case,
 we can guess one solution<fn>See Appendix A.16 in the
 CLP-2 text. There it is shown that any integer root of a polynomial with
 integer coefficients must divide the constant term exactly. So in this case
-only <m>\pm 1</m> and <m>\pm 3</m> could be integer roots. So it good to check to
+only <m>\pm 1</m> and <m>\pm 3</m> could be integer roots. So it is good to check to
 see if any of these are solutions before moving on to more sophisticated
 techniques.</fn>, namely <m>b=1</m>. So <m>(b-1)</m>
 must be a factor of <m>2b^3+b-3</m> and a little division then gives us
@@ -484,7 +484,7 @@ which we already know is a normal vector to the surface <m>z=f(x,y)</m> at
 
 <p>This shows that the point on the surface that minimises the distance
 to <m>(0,3,0)</m> is joined to <m>(0,3,0)</m> by a line that is parallel to the
-normal vector <mdash/> just as we require.
+normal vector <mdash/> just as we required.
 </p>
 </solution>
 </example>
@@ -1177,7 +1177,7 @@ the vector
  =\llt 2x\,,\,2y\,,\,2z \rgt\Big|_{(x,y,z)=(\sqrt{3},1,1)}
  = 2\llt \sqrt{3}\,,\,1\,,\,1 \rgt
 </me>
-is normal to the surface <m>F(x,y,z)</m> at <m>\big(\sqrt{3}\,,\,1\,,\,1\big)</m>,
+is normal to the surface <m>F(x,y,z)=5</m> at <m>\big(\sqrt{3}\,,\,1\,,\,1\big)</m>,
 and
 </li>
 <li>
@@ -1187,7 +1187,7 @@ the vector
  =\llt 2x\,,\,2y\,,\,-4 \rgt\Big|_{(x,y,z)=(\sqrt{3},1,1)}
  = 2\llt \sqrt{3}\,,\,1\,,\,-2 \rgt
 </me>
-is normal to the surface <m>G(x,y,z)</m> at <m>\big(\sqrt{3}\,,\,1\,,\,1\big)</m>.
+is normal to the surface <m>G(x,y,z)=0</m> at <m>\big(\sqrt{3}\,,\,1\,,\,1\big)</m>.
 </li>
 </ul>
 So a tangent vector is
@@ -1281,11 +1281,11 @@ Then
 <ul>
 <li>
 at the point <m>(x,y,z)</m> where the ray enters the solid, which is a visible point,
-the direction vector <m>\vv</m> points into the solid. The angle between <m>\vv</m> and the outward pointing normal <m>\vn</m> is greater than <m>90^\circ</m>, so that the dot product <m>\vv\cdot\vn\lt 0</m>. But
+the direction vector <m>\vv</m> points into the solid. The angle <m>\theta</m> between <m>\vv</m> and the outward pointing normal <m>\vn</m> is greater than <m>90^\circ</m>, so that the dot product <m>\vv\cdot\vn=|\vv|\,|\vn|\,\cos\theta \lt 0</m>. But
 </li><li>
 at the point <m>(x',y',z')</m> where the ray leaves the solid, which is a 
-hidden point, the direction vector <m>\vv</m> points out of the solid. The angle between <m>\vv</m> and the outward pointing normal <m>\vn'</m> is less than <m>90^\circ</m>, 
-so that the dot product <m>\vv\cdot\vn'\gt 0</m>.
+hidden point, the direction vector <m>\vv</m> points out of the solid. The angle <m>\theta</m> between <m>\vv</m> and the outward pointing normal <m>\vn'</m> is less than <m>90^\circ</m>, 
+so that the dot product <m>\vv\cdot\vn'=|\vv|\,|\vn'|\,\cos\theta\gt 0</m>.
 </li>
 </ul>
 </p>
