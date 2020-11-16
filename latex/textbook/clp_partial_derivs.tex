@@ -4557,7 +4557,7 @@ partial derivatives of $f$.
 \diff{\hfill}{t}\big[f(a+v_1t\,,\, b+v_2t)\big]
   =f_x(a+v_1t\,,\, b+v_2t)\,v_1 + f_y(a+v_1t\,,\, b+v_2t)\,v_2
 \end{equation*}
-So, setting $t=0$,
+So, the instantaneous rate of change per unit time as you leave $(a,b)$ is
 \begin{align*}
 \lim_{t\rightarrow 0}\frac{f(a+v_1t\,,\, b+v_2t)-f(a,b)}{t}
 &=\big[f_x(a+v_1t\,,\, b+v_2t)\,v_1 + f_y(a+v_1t\,,\, b+v_2t)\,v_2
@@ -4688,7 +4688,7 @@ curve $f(x,y)=f(a,b)$.  So $\vnabla f(a,b)$ is perpendicular to the
 level curve $f(x,y)=f(a,b)$ at $(a,b)$. The corresponding statement
 in three dimensions is that $\vnabla F(a,b,c)$ is perpendicular to the
 level surface $F(x,y,z)=F(a,b,c)$ at $(a,b,c)$. Hence a good way to find a 
-vector normal to the surface $F(x,y,z)=0$ at the point $(a,b,c$) is to compute the gradient $\vnabla F(a,b,c)$. This is precisely what we saw back in
+vector normal to the surface $F(x,y,z)=F(a,b,c)$ at the point $(a,b,c$) is to compute the gradient $\vnabla F(a,b,c)$. This is precisely what we saw back in
 Theorem \ref{thm tan plane G}.
 \end{itemize}
 
@@ -4888,7 +4888,7 @@ positive $x$ component is
 \end{equation*}
 The desired rate of change is
 \begin{align*}
-D_{\frac{4}{5}\,\hi -\frac{3}{5}\,\hj} f(3,5,4) 
+D_{\frac{4}{5}\,\hi -\frac{3}{5}\,\hk} f(3,5,4) 
    &= \vnabla f(3,5,4)\cdot\left(\frac{4}{5}\,\hi -\frac{3}{5}\,\hk\right)
    = \overbrace{\big( 6\,\hi +10\, \hj + 8\,\hk\big)}^
               {[2x\,\hi+2y\,\hj+2z\,\hk]_{(x,y,z)=(3,5,4)}}\hskip-0.15in\cdot\,  
@@ -4988,13 +4988,13 @@ A normal vector to $G(x,y,z)=(x-a)^2+(y-b)^2+(z-c)^2 =1$ at $(x_0,y_0,z_0)$
 is
 \begin{equation*}
 \vN = \vnabla G(x_0,y_0,z_0) 
-     = \llt 2(x_0-a)\,\hi\,,\,2(y_0-b)\,\hj\,,\,2(z_0-c)\,\hk\rgt 
+     = \llt 2(x_0-a)\,,\,2(y_0-b)\,,\,2(z_0-c)\rgt 
 \end{equation*}
 A normal vector to $g(x,y,z)=x^2+y^2+z^2 =1$ at $(x_0,y_0,z_0)$
 is
 \begin{equation*}
 \vn = \vnabla g(x_0,y_0,z_0) 
-     = \llt 2x_0\,\hi\,,\,2y_0\,\hj\,,\,2z_0\,\hk\rgt 
+     = \llt 2x_0\,,\,2y_0\,,\,2z_0\rgt 
 \end{equation*}
 The two tangent planes are perpendicular if and only if $\hN$ and $\hn$
 are perpendicular, which is the case if and only if
@@ -5597,7 +5597,11 @@ f(a+h)\le f(a)
 \implies \frac{f(a+h)-f(a)}{h}\le 0\quad\text{if $h>0$}
 \end{equation*}
 Taking the limit $h\rightarrow 0$ tells us that $f'(a)\le 0$.
-Similarly,  for all $h<0$,
+Similarly\footnote{Recall that if $h<0$ and $A\le B$, then $hA\ge hB$. This is because the product of any two negative numbers is positive, so that
+$h<0,\ A\le B
+  \implies A-B\le 0
+  \implies h(A-B)\ge 0
+  \implies hA\ge hB$.},  for all $h<0$,
 \begin{equation*}
 f(a+h)\le f(a)
 \implies f(a+h)-f(a)\le 0
@@ -5739,7 +5743,7 @@ x-y&=-1 \tag{E1}\\
 \end{align*}
 \end{subequations}
 This is a system of two equations in two unknowns ($x$ and $y$).
-One strategy for solving system like this is to 
+One strategy for solving a system like this is to 
 \begin{itemize}
 \item First use one of the equations to solve for one of the unknowns
 in terms of the other unknown. For example, (E1) tells
@@ -6134,10 +6138,13 @@ S_{x^2}\, m+\frac{1}{n}S_x\, \big(S_y-S_xm\big)=S_{xy}\quad\implies\quad
 \end{equation*}
 for $m$. We can then solve this equation for $m$ and substitute back into
 (E3) to get $b$. This gives
-\begin{equation*}
-m=\frac{nS_{xy}-S_xS_y}{nS_{x^2} -S_x^2}\qquad
-b=-\frac{S_xS_{xy}-S_yS_{x^2}}{nS_{x^2} -S_x^2}
-\end{equation*}
+\begin{align*}
+m&=\frac{nS_{xy}-S_xS_y}{nS_{x^2} -S_x^2} \\
+b&=\frac{S_y}{n}\,\frac{nS_{x^2} -S_x^2}{nS_{x^2} -S_x^2}
+   -\frac{S_x}{n}\,\frac{nS_{xy}-S_xS_y}{nS_{x^2} -S_x^2}
+=\frac{nS_yS_{x^2}-nS_xS_{xy}}{n(nS_{x^2} -S_x^2)}
+=-\frac{S_xS_{xy}-S_yS_{x^2}}{nS_{x^2} -S_x^2}
+\end{align*}
 Another way to solve the system of equations is
 \begin{alignat*}{3}
 n\text{(E1)}-S_x\text{(E2)}:&\quad \Big[nS_{x^2} -S_x^2\Big]m&&=nS_{xy}-S_xS_y\\
@@ -6686,7 +6693,7 @@ The classification is
    $(0,0)$  & $0\times0-(-15)^2<0$ & & saddle point \\ \hline
    $(0,15)$ & $150\times0-15^2<0$ & & saddle point \\ \hline
    $(3,0)$  & $0\times 6-15^2<0$  & & saddle point \\ \hline
-   $(1,5)$  & $50\times 2-5^2>0$ & 50 & local min \\ \hline
+   $(1,5)$  & $50\times 2-5^2>0$ & 75 & local min \\ \hline
      \end{tabular}
 \renewcommand{\arraystretch}{1.0}
 \end{center}
