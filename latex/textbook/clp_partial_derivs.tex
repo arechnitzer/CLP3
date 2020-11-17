@@ -800,7 +800,7 @@ Then
 \end{align*}
 \end{eg}
 Now here is a more complicated example --- our function takes a special
-value at $(0,0)$. To compute derivatives there we have to revert to
+value at $(0,0)$. To compute derivatives there we revert to
 the definition.
 \begin{eg}\label{eg partials D}
 Set
@@ -822,7 +822,7 @@ f(x,0) = \begin{cases}
         \end{cases}
 \end{equation*}
 with respect to $x$ at $x=0$. As we cannot use the usual differentiation rules, 
-we evaluate the derivative by applying the definition
+we evaluate the derivative\footnote{It is also possible to evaluate the derivative by using the technique of the optional \S\eref{CLP100}{sec:cont_deriv} in the CLP-1 text.} by applying the definition
 \begin{align*}
 f_x(0,0) &= \lim_{h\rightarrow 0}\frac{f(h,0)-f(0,0)}{h} \\
          &= \lim_{h\rightarrow 0}\frac{\frac{\cos h-1}{h}-0}{h}

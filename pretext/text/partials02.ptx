@@ -298,7 +298,7 @@ Then
 
 <p>
 Now here is a more complicated example <mdash/> our function takes a special
-value at <m>(0,0)</m>. To compute derivatives there we have to revert to
+value at <m>(0,0)</m>. To compute derivatives there we revert to
 the definition.
 </p>
 
@@ -323,7 +323,7 @@ f(x,0) = \begin{cases}
         \end{cases}
 </me>
 with respect to <m>x</m> at <m>x=0</m>. As we cannot use the usual differentiation rules, 
-we evaluate the derivative by applying the definition
+we evaluate the derivative<fn>It is also possible to evaluate the derivative by using the technique of the optional Section 2.15 in the CLP-1 text.</fn> by applying the definition
 <md>
 <mrow>
 f_x(0,0) &amp;= \lim_{h\rightarrow 0}\frac{f(h,0)-f(0,0)}{h}
