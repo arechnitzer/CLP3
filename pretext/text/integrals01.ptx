@@ -1990,7 +1990,7 @@ the origin.
 <p>First, let <m>\de_1,\de_2,\de_3,\ \cdots</m> be any sequence of real numbers
 obeying
 <me>
-1=\de_1 \gt \de_2 \gt \de_3,\ \cdots,\ \de_n\rightarrow 0
+1=\de_1 \gt \de_2 \gt \de_3\gt\ \cdots\ \gt\de_n\rightarrow 0
 </me>
 For example <m>\de_n=\frac{1}{n}</m> or <m>\de_n=\frac{1}{2^{n-1}}</m> are both
 acceptable.
@@ -2008,7 +2008,7 @@ and
 </ul>
 There are many such functions. For example
 <me>
-g_n(t)=\frac{2}{\de_n-\de_{n+1}}\begin{cases}
+g_n(t)=\left(\frac{2}{\de_n-\de_{n+1}}\right)^2\begin{cases}
    \de_n-t&amp; \text{if } \half(\de_{n+1}+\de_n)\le t\le \de_n\\
    t-\de_{n+1}&amp; \text{if }\de_{n+1}\le t\le \half(\de_{n+1}+\de_n)\\
    0&amp; \text{otherwise}

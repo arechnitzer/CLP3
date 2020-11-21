@@ -1628,7 +1628,7 @@ the origin.
 First, let $\de_1,\de_2,\de_3,\ \cdots$ be any sequence of real numbers
 obeying 
 $$
-1=\de_1>\de_2>\de_3,\ \cdots,\ \de_n\rightarrow 0
+1=\de_1>\de_2>\de_3>\ \cdots\ >\de_n\rightarrow 0
 $$ 
 For example $\de_n=\frac{1}{n}$ or $\de_n=\frac{1}{2^{n-1}}$ are both
 acceptable.
@@ -1644,7 +1644,7 @@ $\int_{I_n}g(t)\,dt=1$
 \end{itemize}
 There are many such functions. For example
 \begin{equation*}
-g_n(t)=\frac{2}{\de_n-\de_{n+1}}\begin{cases}
+g_n(t)=\left(\frac{2}{\de_n-\de_{n+1}}\right)^2\begin{cases}
    \de_n-t& \text{if $\half(\de_{n+1}+\de_n)\le t\le \de_n$}\\[0.05in]
    t-\de_{n+1}& \text{if $\de_{n+1}\le t\le \half(\de_{n+1}+\de_n)$}\\[0.05in]
    0& \text{otherwise}
@@ -1755,7 +1755,7 @@ for all $0\le x\le 1$, $0\le y\le 1$ and is continuous except at $(0,0)$,
 \section{Double Integrals in Polar Coordinates} \label{sec polars}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 So far, in setting up integrals, we have always cut up the
-domain of integration into tiny rectangle by drawing in many lines
+domain of integration into tiny rectangles by drawing in many lines
 of constant $x$ and many lines of constant $y$.
 \begin{efig}
 \begin{center}
@@ -1864,7 +1864,7 @@ Let's sketch the curve
 \begin{equation*}
 r= 1+\cos\theta
 \end{equation*}
-Our starting will be to understand how $1+\cos\theta$ varies with $\theta$.
+Our starting point will be to understand how $1+\cos\theta$ varies with $\theta$.
 So it will be helpful to 
 remember what the graph of $\cos\theta$ looks like for $0\le\theta\le 2\pi$.
 \begin{efig}
@@ -1952,7 +1952,7 @@ so that $r(\pi+\theta) = r(\pi-\theta)$. So we get the figure.
 
 \item
 Finally, we fill in a smooth curve through the dots and we get the
-graph below. This curve is called a \emph{cardiod} because it looks
+graph below. This curve is called a \emph{cardioid} because it looks
 like a heart\footnote{Well, a mathematician's heart. The name ``cardioid''
 comes from the Greek word $\kappa \alpha \rho \delta \iota \alpha$
 (which anglicizes to kardia) for heart.}.
@@ -2773,7 +2773,7 @@ $\dee{x}\dee{y} = r\,\dee{r}\dee{\theta}$ and the first  quadrant is
 So
 \begin{align*}
 \left[\int_0^\infty e^{-x^2}\ \dee{x}\right]^2
-=\int_0^\infty e^{-x^2}\ \dee{x}\   \int_0^\infty e^{-y^2}\ \dee{y}
+=\int_0^\infty\dee{x}\int_0^\infty\dee{y}\ e^{-x^2-y^2}
 =\int_0^{\pi/2}\dee{\theta}\int_0^\infty \dee{r}\ r\, e^{-r^2}
 \end{align*}
 As $r$ runs all the way to $+\infty$, this is an improper integral,
@@ -3852,7 +3852,8 @@ inertia is
 \begin{equation*}
 I_\cA = \dblInt_\cR (x^2+y^2)\ \dee{x}\dee{y}
 \end{equation*}
-Switching to polar coordinates,
+Switching to polar coordinates using $\dee{x}\dee{y}=r\,\dee{r}\dee{\theta}$
+and $x^2+y^2=r^2$,
 \begin{align*}
 I_\cA &= \int_0^{2\pi}\dee{\theta}\int_0^{a(1+\cos\theta)}\dee{r}\ r\times r^2
       = \int_0^{2\pi}\dee{\theta}\ \int_0^{a(1+\cos\theta)}\dee{r}\ r^3 \\
@@ -3893,7 +3894,7 @@ to give
 \end{align*}
 All together
 \begin{align*}
-I_\cA&= \frac{a^4}{4}\left[2\pi + 4\times 0 +6\pi+4\times 0
+I_\cA&= \frac{a^4}{4}\left[2\pi + 4\times 0 +6\times\pi+4\times 0
                         +\frac{3}{4}\pi\right] \\
    &=\frac{35}{16}\pi a^4
 \end{align*}

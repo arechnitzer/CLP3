@@ -915,7 +915,8 @@ inertia is
 <me>
 I_\cA = \dblInt_\cR (x^2+y^2)\ \dee{x}\dee{y}
 </me>
-Switching to polar coordinates,
+Switching to polar coordinates, using <m>\dee{x}\dee{y}=r\,\dee{r}\dee{\theta}</m>
+and <m>x^2+y^2=r^2</m>,
 <md>
 <mrow>
 I_\cA &amp;= \int_0^{2\pi}\dee{\theta}\int_0^{a(1+\cos\theta)}\dee{r}\ r\times r^2
@@ -973,7 +974,7 @@ to give
 All together
 <md>
 <mrow>
-I_\cA&amp;= \frac{a^4}{4}\left[2\pi + 4\times 0 +6\pi+4\times 0
+I_\cA&amp;= \frac{a^4}{4}\left[2\pi + 4\times 0 +6\times\pi+4\times 0
                         +\frac{3}{4}\pi\right]
 </mrow><mrow>
    &amp;=\frac{35}{16}\pi a^4
