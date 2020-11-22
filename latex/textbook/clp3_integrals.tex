@@ -4562,7 +4562,8 @@ namely  $1$. The mass in the first octant is thus
 &=\int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\ 
                       \left[\frac{z(1-z^2)}{2}y-\frac{z}{2}y^3\right] \\
 &=\int_0^1\dee{z}\ \left[\frac{z{(1-z^2)}^2}{4}-\frac{z{(1-z^2)}^2}{8}\right] \\
-&=-\int_1^0\dee{u}\ \frac{u^2}{16}
+&=\int_0^1\dee{z}\ z\ \frac{{(1-z^2)}^2}{8} \\
+&=\int_1^0\frac{\dee{u}}{-2}\ \frac{u^2}{8}
            \qquad\text{with }u=1-z^2,\ \dee{u}=-2z\,\dee{z} \\
 &=\frac{1}{48}
 \end{align*}
@@ -4649,9 +4650,9 @@ Observe from that figure that, on $\cV$,
 \item
 $x$ runs from $0$ to $2$, and
 \item
-for each $x$ in that range, $y$ runs from $0$ to $4-x$ and
+for each fixed $x$ in that range, $y$ runs from $0$ to $4-x$ and
 \item
-for each $(x,y)$ as above,
+for each fixed $(x,y)$ as above,
 $z$ runs from $0$ to $4-x^2$.
 \end{itemize}
 So
@@ -4679,9 +4680,9 @@ Observe from that figure that, on $\cV$,
 \item
 $z$ runs from $0$ to $4$, and
 \item
-for each $z$ in that range, $x$ runs from $0$ to $\sqrt{4-z}$ and
+for each fixed $z$ in that range, $x$ runs from $0$ to $\sqrt{4-z}$ and
 \item
-for each $(x,z)$ as above,
+for each fixed $(x,z)$ as above,
 $y$ runs from $0$ to $4-x$.
 \end{itemize}
 So
@@ -4711,9 +4712,9 @@ Our first task is to get a good idea as to what the domain of integration looks 
 \item
 the outside integral says that $y$ runs from $0$ to $2$, and
 \item
-the middle integral says that, for each $y$ in that range, $z$ runs from $0$ to $2-y$ and
+the middle integral says that, for each fixed $y$ in that range, $z$ runs from $0$ to $2-y$ and
 \item
-the inside integral says that, for each $(y,z)$ as above,
+the inside integral says that, for each fixed $(y,z)$ as above,
 $x$ runs from $0$ to $\frac{2-y}{2}$.
 \end{itemize}
 So the domain of integration is
@@ -4777,7 +4778,7 @@ Since
 $y$ is essentially constant on each strip with the leftmost strip having $y=0$ 
 and the rightmost strip having $y=2-z$ and
 \item
-for each $y$ in that range, $x$ runs from $0$ to $\tfrac{2-y}{2}$
+for each fixed $y$ in that range, $x$ runs from $0$ to $\tfrac{2-y}{2}$
 \end{itemize}
 we have
 \begin{equation*}
@@ -4796,9 +4797,9 @@ Since
 $x$ is essentially constant on each strip with the first strip having $x=0$ 
 and the last strip having $x=1$ and
 \item
-for each $x$ between $0$ and $z/2$, $y$ runs from $0$ to $2-z$ and
+for each fixed $x$ between $0$ and $z/2$, $y$ runs from $0$ to $2-z$ and
 \item
-for each $x$ between $z/2$ and $1$, $y$ runs from $0$ to $2-2x$
+for each fixed $x$ between $z/2$ and $1$, $y$ runs from $0$ to $2-2x$
 \end{itemize}
 we have
 \begin{equation*}
@@ -4813,7 +4814,7 @@ I=\int_0^2\dee{z}\int_0^{z/2}\dee{x}\int_0^{2-z}\dee{y}\ f(x,y,z)
 
 Many problems possess natural symmetries. We can make our work easier 
 by using coordinate systems, like  polar coordinates, that are 
-tailored to those symmetries. In this section we will look at two 
+tailored to those symmetries. We will look at two 
 more such coordinate systems --- cylindrical and spherical coordinates.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
