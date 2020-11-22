@@ -4952,20 +4952,18 @@ $\dee{V}$ works perfectly when we take the limit $\dee{r},\dee{\theta},
 
 Now we can use \eqref{eq dV cylindrical} to handle a variant of 
 Example \ref{eg sphere mass A}
-in which the density is invariant under rotations around the $z$ axis.
+in which the density is invariant under rotations around the $z$-axis.
 Cylindrical coordinates are tuned to provide easier integrals to 
 evaluate when the integrand is invariant under rotations about the $z$-axis,
 or when the domain of integration is cylindrical.
 
 
 \begin{eg}\label{eg sphere mass B}
-Find the mass inside the sphere $x^2+y^2+z^2=1$ if the density
-is $\rho(x,y,z) = x^2+y^2$ (which is the square of the 
-distance from the $z$-axis).
+Find the mass of the solid body consisting of the inside of the sphere $x^2+y^2+z^2=1$ if the density is $\rho(x,y,z) = x^2+y^2$.
 
 \soln
-Before we get started, note that both the integrand, $x^2+y^2$, 
-and the domain of integration, $x^2+y^2+z^2\le 1$, are invariant under rotations about the $z$-axis. That makes this
+Before we get started, note that $x^2+y^2$ is the square of the distance from $(x,y,z)$ to the $z$-axis. Consequently both the integrand, $x^2+y^2$, 
+and the domain of integration, $x^2+y^2+z^2\le 1$, and hence our solid, are invariant under rotations about the $z$-axis\footnote{Imagine that you are looking that the solid from, for example, far out on the $x$-axis. You close your eyes for a minute. Your evil twin then sneaks in, rotates the solid about the $z$-axis, and sneaks out. You open your eyes. You will not be able to tell that the solid has been rotated.}. That makes this
 integral a good candidate for cylindrical coordinates.
 
 Again, by symmetry the total mass of the sphere will be eight times 
@@ -5033,7 +5031,7 @@ approximate cube in black. Each cube
 \vspace{-\topsep}
 \begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
 \item
-has volume $r\,\dee{r}\,\dee{\theta}\,\dee{z}$, by \eqref{eq dV cylindrical}
+has volume $r\,\dee{r}\,\dee{\theta}\,\dee{z}$, by \eqref{eq dV cylindrical},
 and 
 \item
 has $r$, $\theta$ and $z$ all essentially constant on the cube.
@@ -5080,7 +5078,7 @@ $\sqrt{1-z^2}$. The mass of the wedge is thus
 To get the mass of any one plate, say the plate whose $z$ coordinate runs 
 from $z$ to $z+\dee{z}$, we just add up the masses of the wedges 
 in that plate, by integrating $\theta$ from its smallest value on 
-the wedge, namely $0$, to its largest value on the wedge, namely 
+the plate, namely $0$, to its largest value on the plate, namely 
 $\nicefrac{\pi}{2}$. The mass of the plate is thus
 \begin{align*}
 \dee{z}\int_0^{\pi/2}\dee{\theta}\int_0^{\sqrt{1-z^2}}  \dee{r}\,r^3
@@ -5167,7 +5165,7 @@ and call the cone $\cV$.
 \end{center}
 \end{efig}
 
-We shall use \eqref{eg moment cone} to find the moment of inertia.
+We shall use \eqref{eqn mom of inertia 3d} to find the moment of inertia.
 In the current problem, the axis of rotation is the $y$-axis. The point on the 
 $y$-axis that is closest to $(x,y,z)$ is $(0,y,0)$ so that the distance from $(x,y,z)$ to the axis is just
 \begin{equation*}
@@ -5279,11 +5277,11 @@ as expected, and
 &=\int_0^h\dee{z}\int_0^{2\pi}\dee{\theta}\left[
       \frac{1}{4}\left(\frac{a}{h}z\right)^4\cos^2\theta
        +\frac{1}{2}\left(\frac{a}{h}z\right)^2z^2\right] \\
-&\hskip1in\text{since $\int_0^{2\pi}\cos^2\theta\ \dee{\theta}=\pi$
-                 by Remark \ref{rem sneaky}} \\
 &=\int_0^h\dee{z}\left[
       \frac{1}{4}\frac{a^4}{h^4}
        +\frac{a^2}{h^2}\right]\pi z^4\\
+&\hskip1in\text{since $\int_0^{2\pi}\cos^2\theta\ \dee{\theta}=\pi$
+                 by Remark \ref{rem sneaky}} \\
 &=\frac{1}{5}\left[
       \frac{1}{4}\frac{a^4}{h^4}
        +\frac{a^2}{h^2}\right]\pi h^5 
@@ -5659,9 +5657,9 @@ is thus
 \end{align*}
 
 \item
-To get the volume of the part of the ice cream cone in the first octant, 
-we just add up the volumes of the segments that it contains, by integrating 
-$\theta$ from its smallest value in the octant, namely $0$, to its largest value on the octant, namely  $\nicefrac{\pi}{2}$. 
+To get the volume of $\cV_1$, the part of the ice cream cone in the first 
+octant, we just add up the volumes of the segments that it contains, by 
+integrating $\theta$ from its smallest value in the octant, namely $0$, to its largest value on the octant, namely  $\nicefrac{\pi}{2}$. 
 
 \item
 The volume in the first octant is thus
@@ -5675,7 +5673,7 @@ The volume in the first octant is thus
 &=\frac{\pi a^3}{6}\big[1-\cos\be\big]
 \end{align*}
 \item
-So the volume of the total (four octant) ice cream cone is 
+So the volume of $\cV$, the total (four octant) ice cream cone, is 
 \begin{equation*}
 \text{Volume}(\cV)=4\,\text{Volume}(\cV_1)
 =\frac{4\pi a^3}{6}\big[1-\cos\be\big]
@@ -5986,7 +5984,7 @@ constant $v$ (the red curves in the figure below).
     \includegraphics{RSlice.pdf}
 \end{center}
 \end{nfig}
-Concentrate on any one the small pieces. Here is a greatly magnified
+Concentrate on any one of the small pieces. Here is a greatly magnified
 sketch.
 \begin{nfig}
 \begin{center}
@@ -6459,8 +6457,8 @@ we approximated, for example, the vectors
 \end{alignat*}
 where $\vE_1$ is bounded\footnote{Remember the error in the Taylor polynomial 
 approximations. See \eqref{eqn quadratic exact} and
-\eqref{eqn linear bound}.} by a constant times $\dee{u}^2$
-and $E_2$ is bounded by a constant times $\dee{v}^2$. That is, we assumed 
+\eqref{eqn linear bound}.} by a constant times $(\dee{u})^2$
+and $E_2$ is bounded by a constant times $(\dee{v})^2$. That is, we assumed 
 that we could just ignore the errors and drop $E_1$ and $E_2$ by setting them
 to zero. 
 
@@ -6478,7 +6476,7 @@ So we approximated
 \Big|
 \end{align*}
 where the length of the vector $\vE_3$ is bounded by a constant times 
-$\dee{u}^2\,\dee{v}+\dee{u}\,\dee{v}^2$.
+$(\dee{u})^2\,\dee{v}+\dee{u}\,(\dee{v})^2$.
 We'll now see why dropping terms like $\vE_3$ does not change the value
 of the integral at all\footnote{See the optional \S 1.1.6 of the CLP-2 text
 for an analogous argument concerning Riemann sums.}. 
@@ -6498,7 +6496,7 @@ $\dee{v} = \frac{H}{n}$. Now suppose that in setting up the integral
 we make, for each subrectangle, an error that is bounded by some constant
 times
 \begin{equation*}
-\dee{u}^2\,\dee{v}+\dee{u}\,\dee{v}^2
+(\dee{u})^2\,\dee{v}+\dee{u}\,(\dee{v})^2
 =\Big(\frac{W}{n}\Big)^2 \frac{H}{n}
  +  \frac{W}{n}\Big(\frac{H}{n}\Big)^2
 =\frac{WH(W+H)}{n^3}

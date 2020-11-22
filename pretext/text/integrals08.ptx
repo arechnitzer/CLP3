@@ -97,7 +97,7 @@ constant <m>v</m> (the red curves in the figure below).
 </sidebyside>
 
 <p>
-Concentrate on any one the small pieces. Here is a greatly magnified
+Concentrate on any one of the small pieces. Here is a greatly magnified
 sketch.
 </p>
 
@@ -704,8 +704,8 @@ the <m>\dee{A}</m> formula for
 where <m>\vE_1</m> is bounded<fn>Remember the error in the Taylor polynomial
 approximations. See <xref ref="eqn_quadratic_exact"/> and
 <xref ref="eqn_linear_bound"/>.</fn>
- by a constant times <m>\dee{u}^2</m>
-and <m>E_2</m> is bounded by a constant times <m>\dee{v}^2</m>. That is, we assumed
+ by a constant times <m>(\dee{u})^2</m>
+and <m>E_2</m> is bounded by a constant times <m>(\dee{v})^2</m>. That is, we assumed
 that we could just ignore the errors and drop <m>E_1</m> and <m>E_2</m> by setting them
 to zero.
 </p>
@@ -728,7 +728,7 @@ to zero.
 </mrow>
 </md>
 where the length of the vector <m>\vE_3</m> is bounded by a constant times
-<m>\dee{u}^2\,\dee{v}+\dee{u}\,\dee{v}^2</m>.
+<m>(\dee{u})^2\,\dee{v}+\dee{u}\,(\dee{v})^2</m>.
 We'll now see why dropping terms like <m>\vE_3</m> does not change the value
 of the integral at all<fn>See the optional § 1.1.6 of the CLP-2 text
 for an analogous argument concerning Riemann sums.</fn>.
@@ -749,7 +749,7 @@ Each subrectangle has width <m>\dee{u} = \frac{W}{n}</m> and height
 we make, for each subrectangle, an error that is bounded by some constant
 times
 <me>
-\dee{u}^2\,\dee{v}+\dee{u}\,\dee{v}^2
+(\dee{u})^2\,\dee{v}+\dee{u}\,(\dee{v})^2
 =\Big(\frac{W}{n}\Big)^2 \frac{H}{n}
  +  \frac{W}{n}\Big(\frac{H}{n}\Big)^2
 =\frac{WH(W+H)}{n^3}
