@@ -1250,7 +1250,7 @@ Note that
 <ul>
 <li>
 The variable <m>z</m> does not appear in the equation <m>x^2+y^2=a^2</m>.
-So, for every value of the constant <m>z_0</m> the part of the cylinder
+So, for every value of the constant <m>z_0</m>, the part of the cylinder
 <m>x^2+y^2=a^2</m> in the plane <m>z=z_0</m>, is the circle <m>x^2+y^2=a^2</m>, <m>z=z_0</m>.
 So the cylinder <m>x^2+y^2=a^2</m> consists of many circles stacked
 vertically, one on top of the other. The part of the cylinder
@@ -1260,7 +1260,7 @@ figure on the left below.
 <li>
 <p>
 The variable <m>y</m> does not appear in the equation <m>x^2+z^2=a^2</m>.
-So, for every value of the constant <m>y_0</m> the part of the cylinder
+So, for every value of the constant <m>y_0</m>, the part of the cylinder
 <m>x^2+z^2=a^2</m> in the plane <m>y=y_0</m>, is the circle <m>x^2+z^2=a^2</m>, <m>y=y_0</m>.
 So the cylinder <m>x^2+z^2=a^2</m> consists of many circles stacked
 horizontally, one beside the other. The part of the cylinder
@@ -1437,7 +1437,8 @@ We want the volume of the part of this cylinder that lies above
 
 <p>The constant <m>y</m> cross-sections of this volume are quarter
 circles of radius <m>a</m> and hence of area <m>\frac{1}{4}\pi a^2</m>.
-As <m>y</m> runs from <m>0</m> to <m>2</m>
+The inside integral, <m>\int_0^a \sqrt{a^2-x^2}\ \dee{x}</m>, is exactly this area.
+So, as <m>y</m> runs from <m>0</m> to <m>2</m>,
 <me>
 \int_0^2\int_0^a \sqrt{a^2-x^2}\ \dee{x}\,\dee{y}
 =\frac{1}{4}\pi a^2\times 2
@@ -1546,7 +1547,7 @@ just as we saw in Example <xref ref="eg_dblInt_C"/>.
 <p>
 The integral <m>\displaystyle\int_{-1}^2\int_{x^2}^{x+2}\dee{y}\,\dee{x}</m>
 represents the area of a region in the <m>xy</m>-plane. Express the same area
-as a double integral with the order on integration reversed.
+as a double integral with the order of integration reversed.
 </p>
 
 <p>\soln The critical step in reversing the order of integration is
@@ -1989,7 +1990,7 @@ the origin.
 <p>First, let <m>\de_1,\de_2,\de_3,\ \cdots</m> be any sequence of real numbers
 obeying
 <me>
-1=\de_1 \gt \de_2 \gt \de_3,\ \cdots,\ \de_n\rightarrow 0
+1=\de_1 \gt \de_2 \gt \de_3\gt\ \cdots\ \gt\de_n\rightarrow 0
 </me>
 For example <m>\de_n=\frac{1}{n}</m> or <m>\de_n=\frac{1}{2^{n-1}}</m> are both
 acceptable.
@@ -2007,7 +2008,7 @@ and
 </ul>
 There are many such functions. For example
 <me>
-g_n(t)=\frac{2}{\de_n-\de_{n+1}}\begin{cases}
+g_n(t)=\left(\frac{2}{\de_n-\de_{n+1}}\right)^2\begin{cases}
    \de_n-t&amp; \text{if } \half(\de_{n+1}+\de_n)\le t\le \de_n\\
    t-\de_{n+1}&amp; \text{if }\de_{n+1}\le t\le \half(\de_{n+1}+\de_n)\\
    0&amp; \text{otherwise}

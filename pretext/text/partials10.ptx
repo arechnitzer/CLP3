@@ -369,7 +369,7 @@ satisfied.
 <li><p> If <m>\la=\sqrt{2}</m>, then
 <ul>
 <li>
-(E1) gives <m>x=\sqrt{2}y</m> and then
+(E2) gives <m>x=\sqrt{2}y</m> and then
 </li>
 <li>
 (E3) gives <m>2y^2+2y^2=1</m> or <m>y^2=\frac{1}{4}</m> so that
@@ -382,7 +382,7 @@ satisfied.
 <li><p> If <m>\la=-\sqrt{2}</m>, then
 <ul>
 <li>
-(E1) gives <m>x=-\sqrt{2}y</m> and then
+(E2) gives <m>x=-\sqrt{2}y</m> and then
 </li>
 <li>
 (E3) gives <m>2y^2+2y^2=1</m> or <m>y^2=\frac{1}{4}</m> so that
@@ -531,7 +531,7 @@ Subbing these into either (E1) or (E2) gives
 </mrow>
 </md>
 Here <q><m>\impliesover{(E3)}</m></q> indicates that we have
-just used (E1). We now have <m>(x,y)=\pm (1,1)</m>, from <m>\la=\frac{1}{2}</m>,
+just used (E3). We now have <m>(x,y)=\pm (1,1)</m>, from <m>\la=\frac{1}{2}</m>,
 and <m>(x,y)=\pm\left(\frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\right)</m> from
 <m>\la=\frac{1}{4}</m>.
 The distance from <m>(0,0)</m> to <m>\pm (1,1)</m>, namely <m>\sqrt{2}</m>,

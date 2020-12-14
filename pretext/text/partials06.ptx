@@ -510,7 +510,7 @@ We want this to be less than <m>1</m>.
 <p>Of course we do not know exactly what <m>a_0</m>, <m>b_0</m> and <m>\theta_0</m> are.
 But suppose that we are confident that <m>a_0\ge 10</m>, <m>b_0\ge 10</m>
 and <m>\frac{\pi}{6}\le \theta_0 \le \frac{\pi}{2}</m> so that
-<m>\cot\theta_0\le \sqrt{3}\le 2</m>. Then
+<m>\cot\theta_0\le \cot\frac{\pi}{6}=\sqrt{3}\le 2</m>. Then
 <md>
 <mrow>
 100\left|\frac{\De a}{a_0}\right|&amp;\le 100\left|\frac{\De a}{10}\right|

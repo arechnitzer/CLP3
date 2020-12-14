@@ -85,7 +85,11 @@ f(a\!+\!h)\le f(a)
 \implies \frac{f(a\!+\!h)-f(a)}{h}\le 0\quad\text{if } h \gt 0
 </me>
 Taking the limit <m>h\rightarrow 0</m> tells us that <m>f'(a)\le 0</m>.
-Similarly,  for all <m>h \lt 0</m>,
+Similarly<fn>Recall that if <m>h\lt 0</m> and <m>A\le B</m>, then <m>hA\ge hB</m>. This is because the product of any two negative numbers is positive, so that
+<m>h\lt 0,\ A\le B
+  \implies A-B\le 0
+  \implies h(A-B)\ge 0
+  \implies hA\ge hB</m>.</fn>,  for all <m>h \lt 0</m>,
 <me>
 f(a\!+\!h)\le f(a)
 \implies f(a\!+\!h)-f(a)\le 0
@@ -258,7 +262,7 @@ x-y&amp;=-1 \tag{E1}
 </mrow>
 </md>
 This is a system of two equations in two unknowns (<m>x</m> and <m>y</m>).
-One strategy for solving system like this is to
+One strategy for a solving system like this is to
 <ul>
 <li> First use one of the equations to solve for one of the unknowns
 in terms of the other unknown. For example, (E1) tells
@@ -746,10 +750,17 @@ S_{x^2}\, m+\frac{1}{n}S_x\, \big(S_y-S_xm\big)=S_{xy}\quad\implies\quad
 </me>
 for <m>m</m>. We can then solve this equation for <m>m</m> and substitute back into
 (E3) to get <m>b</m>. This gives
-<me>
-m=\frac{nS_{xy}-S_xS_y}{nS_{x^2} -S_x^2}\qquad
-b=-\frac{S_xS_{xy}-S_yS_{x^2}}{nS_{x^2} -S_x^2}
-</me>
+<md>
+<mrow>
+m\amp=\frac{nS_{xy}-S_xS_y}{nS_{x^2} -S_x^2}
+</mrow><mrow>
+b\amp=\frac{S_y}{n}\,\frac{nS_{x^2} -S_x^2}{nS_{x^2} -S_x^2}
+   -\frac{S_x}{n}\,\frac{nS_{xy}-S_xS_y}{nS_{x^2} -S_x^2}
+=\frac{nS_yS_{x^2}-nS_xS_{xy}}{n(nS_{x^2} -S_x^2)}
+</mrow><mrow>
+\amp=-\frac{S_xS_{xy}-S_yS_{x^2}}{nS_{x^2} -S_x^2}
+</mrow>
+</md>
 Another way to solve the system of equations is
 <md alignment="alignat">
 <mrow>
@@ -1413,7 +1424,7 @@ The classification is
    <m>(3,0)</m>  </cell><cell> <m>0\times 6-15^2 \lt 0</m>  </cell><cell> </cell><cell> saddle point </cell>
 </row><row>
 <cell>
-   <m>(1,5)</m>  </cell><cell> <m>50\times 2-5^2 \gt 0</m> </cell><cell> 50 </cell><cell> local min </cell>
+   <m>(1,5)</m>  </cell><cell> <m>50\times 2-5^2 \gt 0</m> </cell><cell> 75 </cell><cell> local min </cell>
 </row>
 </tabular>
 </sidebyside>

@@ -9,7 +9,7 @@
 <introduction>
 
 <p>So far, in setting up integrals, we have always cut up the
-domain of integration into tiny rectangle by drawing in many lines
+domain of integration into tiny rectangles by drawing in many lines
 of constant <m>x</m> and many lines of constant <m>y</m>.
 </p>
 
@@ -149,7 +149,7 @@ Let's sketch the curve
 <me>
 r= 1+\cos\theta
 </me>
-Our starting will be to understand how <m>1+\cos\theta</m> varies with <m>\theta</m>.
+Our starting point will be to understand how <m>1+\cos\theta</m> varies with <m>\theta</m>.
 So it will be helpful to
 remember what the graph of <m>\cos\theta</m> looks like for <m>0\le\theta\le 2\pi</m>.
 </p>
@@ -250,7 +250,7 @@ so that <m>r(\pi+\theta) = r(\pi-\theta)</m>. So we get the figure.
 </li>
 <li><p>
 Finally, we fill in a smooth curve through the dots and we get the
-graph below. This curve is called a <em>cardiod</em> because it looks
+graph below. This curve is called a <em>cardioid</em> because it looks
 like a heart<fn>Well, a mathematician's heart. The name <q>cardioid</q>
 comes from the Greek word <m>\kappa \alpha \rho \delta \iota \alpha</m>
 (which anglicizes to kardia) for heart.</fn>.
@@ -1117,7 +1117,7 @@ So
 <md>
 <mrow>
 \left[\int_0^\infty e^{-x^2}\ \dee{x}\right]^2
-=\int_0^\infty e^{-x^2}\ \dee{x}\   \int_0^\infty e^{-y^2}\ \dee{y}
+=\int_0^\infty \dee{x} \int_0^\infty \dee{y}\ e^{-x^2-y^2}
 =\int_0^{\pi/2}\dee{\theta}\int_0^\infty \dee{r}\ r\, e^{-r^2}
 </mrow>
 </md>

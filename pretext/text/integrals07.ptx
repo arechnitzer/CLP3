@@ -405,7 +405,7 @@ is thus
 </md>
 </li>
 <li>
-To get the volume of the part of the ice cream cone in the first octant,
+To get the volume of <m>\cV_1</m>, the part of the ice cream cone in the first octant,
 we just add up the volumes of the segments that it contains, by integrating
 <m>\theta</m> from its smallest value in the octant, namely <m>0</m>, to its largest value on the octant, namely  <m>\frac{\pi}{2}</m>.
 </li>
@@ -427,7 +427,7 @@ The volume in the first octant is thus
 </md>
 </li>
 <li>
-So the volume of the total (four octant) ice cream cone is
+So the volume of <m>\cV</m>, the total (four octant) ice cream cone, is
 <me>
 \text{Volume}(\cV)=4\,\text{Volume}(\cV_1)
 =\frac{4\pi a^3}{6}\big[1-\cos\be\big]

@@ -997,7 +997,7 @@ Note that
 \begin{itemize}
 \item
 The variable $z$ does not appear in the equation $x^2+y^2=a^2$.
-So, for every value of the constant $z_0$ the part of the cylinder
+So, for every value of the constant $z_0$, the part of the cylinder
 $x^2+y^2=a^2$ in the plane $z=z_0$, is the circle $x^2+y^2=a^2$, $z=z_0$.
 So the cylinder $x^2+y^2=a^2$ consists of many circles stacked
 vertically, one on top of the other. The part of the cylinder
@@ -1006,7 +1006,7 @@ figure on the left below.
 
 \item
 The variable $y$ does not appear in the equation $x^2+z^2=a^2$.
-So, for every value of the constant $y_0$ the part of the cylinder
+So, for every value of the constant $y_0$, the part of the cylinder
 $x^2+z^2=a^2$ in the plane $y=y_0$, is the circle $x^2+z^2=a^2$, $y=y_0$.
 So the cylinder $x^2+z^2=a^2$ consists of many circles stacked
 horizontally, one beside the other. The part of the cylinder
@@ -1159,7 +1159,8 @@ $\cR$. It is sketched in the figure below.
 \end{efig}
 The constant $y$ cross-sections of this volume are quarter
 circles of radius $a$ and hence of area $\frac{1}{4}\pi a^2$. 
-As $y$ runs from $0$ to $2$
+The inside integral, $\int_0^a \sqrt{a^2-x^2}\ \dee{x}$, is exactly this area.
+So, as $y$ runs from $0$ to $2$,
 \begin{equation*}
 \int_0^2\int_0^a \sqrt{a^2-x^2}\ \dee{x}\,\dee{y}
 =\frac{1}{4}\pi a^2\times 2
@@ -1252,7 +1253,7 @@ just as we saw in Example \ref{eg dblInt C}.
 \begin{eg}[ Order of Integration]\label{eg dblInt D}
 The integral $\displaystyle\int_{-1}^2\int_{x^2}^{x+2}\dee{y}\,\dee{x}$
 represents the area of a region in the $xy$-plane. Express the same area
-as a double integral with the order on integration reversed.
+as a double integral with the order of integration reversed.
 
 \soln The critical step in reversing the order of integration is
 to sketch the region in the $xy$-plane. Rewrite the given integral as
@@ -1627,7 +1628,7 @@ the origin.
 First, let $\de_1,\de_2,\de_3,\ \cdots$ be any sequence of real numbers
 obeying 
 $$
-1=\de_1>\de_2>\de_3,\ \cdots,\ \de_n\rightarrow 0
+1=\de_1>\de_2>\de_3>\ \cdots\ >\de_n\rightarrow 0
 $$ 
 For example $\de_n=\frac{1}{n}$ or $\de_n=\frac{1}{2^{n-1}}$ are both
 acceptable.
@@ -1643,7 +1644,7 @@ $\int_{I_n}g(t)\,dt=1$
 \end{itemize}
 There are many such functions. For example
 \begin{equation*}
-g_n(t)=\frac{2}{\de_n-\de_{n+1}}\begin{cases}
+g_n(t)=\left(\frac{2}{\de_n-\de_{n+1}}\right)^2\begin{cases}
    \de_n-t& \text{if $\half(\de_{n+1}+\de_n)\le t\le \de_n$}\\[0.05in]
    t-\de_{n+1}& \text{if $\de_{n+1}\le t\le \half(\de_{n+1}+\de_n)$}\\[0.05in]
    0& \text{otherwise}
@@ -1754,7 +1755,7 @@ for all $0\le x\le 1$, $0\le y\le 1$ and is continuous except at $(0,0)$,
 \section{Double Integrals in Polar Coordinates} \label{sec polars}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 So far, in setting up integrals, we have always cut up the
-domain of integration into tiny rectangle by drawing in many lines
+domain of integration into tiny rectangles by drawing in many lines
 of constant $x$ and many lines of constant $y$.
 \begin{efig}
 \begin{center}
@@ -1863,7 +1864,7 @@ Let's sketch the curve
 \begin{equation*}
 r= 1+\cos\theta
 \end{equation*}
-Our starting will be to understand how $1+\cos\theta$ varies with $\theta$.
+Our starting point will be to understand how $1+\cos\theta$ varies with $\theta$.
 So it will be helpful to 
 remember what the graph of $\cos\theta$ looks like for $0\le\theta\le 2\pi$.
 \begin{efig}
@@ -1951,7 +1952,7 @@ so that $r(\pi+\theta) = r(\pi-\theta)$. So we get the figure.
 
 \item
 Finally, we fill in a smooth curve through the dots and we get the
-graph below. This curve is called a \emph{cardiod} because it looks
+graph below. This curve is called a \emph{cardioid} because it looks
 like a heart\footnote{Well, a mathematician's heart. The name ``cardioid''
 comes from the Greek word $\kappa \alpha \rho \delta \iota \alpha$
 (which anglicizes to kardia) for heart.}.
@@ -2772,7 +2773,7 @@ $\dee{x}\dee{y} = r\,\dee{r}\dee{\theta}$ and the first  quadrant is
 So
 \begin{align*}
 \left[\int_0^\infty e^{-x^2}\ \dee{x}\right]^2
-=\int_0^\infty e^{-x^2}\ \dee{x}\   \int_0^\infty e^{-y^2}\ \dee{y}
+=\int_0^\infty\dee{x}\int_0^\infty\dee{y}\ e^{-x^2-y^2}
 =\int_0^{\pi/2}\dee{\theta}\int_0^\infty \dee{r}\ r\, e^{-r^2}
 \end{align*}
 As $r$ runs all the way to $+\infty$, this is an improper integral,
@@ -3851,7 +3852,8 @@ inertia is
 \begin{equation*}
 I_\cA = \dblInt_\cR (x^2+y^2)\ \dee{x}\dee{y}
 \end{equation*}
-Switching to polar coordinates,
+Switching to polar coordinates using $\dee{x}\dee{y}=r\,\dee{r}\dee{\theta}$
+and $x^2+y^2=r^2$,
 \begin{align*}
 I_\cA &= \int_0^{2\pi}\dee{\theta}\int_0^{a(1+\cos\theta)}\dee{r}\ r\times r^2
       = \int_0^{2\pi}\dee{\theta}\ \int_0^{a(1+\cos\theta)}\dee{r}\ r^3 \\
@@ -3892,7 +3894,7 @@ to give
 \end{align*}
 All together
 \begin{align*}
-I_\cA&= \frac{a^4}{4}\left[2\pi + 4\times 0 +6\pi+4\times 0
+I_\cA&= \frac{a^4}{4}\left[2\pi + 4\times 0 +6\times\pi+4\times 0
                         +\frac{3}{4}\pi\right] \\
    &=\frac{35}{16}\pi a^4
 \end{align*}
@@ -4560,7 +4562,8 @@ namely  $1$. The mass in the first octant is thus
 &=\int_0^1\dee{z}\int_0^{\sqrt{1-z^2}}\dee{y}\ 
                       \left[\frac{z(1-z^2)}{2}y-\frac{z}{2}y^3\right] \\
 &=\int_0^1\dee{z}\ \left[\frac{z{(1-z^2)}^2}{4}-\frac{z{(1-z^2)}^2}{8}\right] \\
-&=-\int_1^0\dee{u}\ \frac{u^2}{16}
+&=\int_0^1\dee{z}\ z\ \frac{{(1-z^2)}^2}{8} \\
+&=\int_1^0\frac{\dee{u}}{-2}\ \frac{u^2}{8}
            \qquad\text{with }u=1-z^2,\ \dee{u}=-2z\,\dee{z} \\
 &=\frac{1}{48}
 \end{align*}
@@ -4647,9 +4650,9 @@ Observe from that figure that, on $\cV$,
 \item
 $x$ runs from $0$ to $2$, and
 \item
-for each $x$ in that range, $y$ runs from $0$ to $4-x$ and
+for each fixed $x$ in that range, $y$ runs from $0$ to $4-x$ and
 \item
-for each $(x,y)$ as above,
+for each fixed $(x,y)$ as above,
 $z$ runs from $0$ to $4-x^2$.
 \end{itemize}
 So
@@ -4677,9 +4680,9 @@ Observe from that figure that, on $\cV$,
 \item
 $z$ runs from $0$ to $4$, and
 \item
-for each $z$ in that range, $x$ runs from $0$ to $\sqrt{4-z}$ and
+for each fixed $z$ in that range, $x$ runs from $0$ to $\sqrt{4-z}$ and
 \item
-for each $(x,z)$ as above,
+for each fixed $(x,z)$ as above,
 $y$ runs from $0$ to $4-x$.
 \end{itemize}
 So
@@ -4709,9 +4712,9 @@ Our first task is to get a good idea as to what the domain of integration looks 
 \item
 the outside integral says that $y$ runs from $0$ to $2$, and
 \item
-the middle integral says that, for each $y$ in that range, $z$ runs from $0$ to $2-y$ and
+the middle integral says that, for each fixed $y$ in that range, $z$ runs from $0$ to $2-y$ and
 \item
-the inside integral says that, for each $(y,z)$ as above,
+the inside integral says that, for each fixed $(y,z)$ as above,
 $x$ runs from $0$ to $\frac{2-y}{2}$.
 \end{itemize}
 So the domain of integration is
@@ -4775,7 +4778,7 @@ Since
 $y$ is essentially constant on each strip with the leftmost strip having $y=0$ 
 and the rightmost strip having $y=2-z$ and
 \item
-for each $y$ in that range, $x$ runs from $0$ to $\tfrac{2-y}{2}$
+for each fixed $y$ in that range, $x$ runs from $0$ to $\tfrac{2-y}{2}$
 \end{itemize}
 we have
 \begin{equation*}
@@ -4794,9 +4797,9 @@ Since
 $x$ is essentially constant on each strip with the first strip having $x=0$ 
 and the last strip having $x=1$ and
 \item
-for each $x$ between $0$ and $z/2$, $y$ runs from $0$ to $2-z$ and
+for each fixed $x$ between $0$ and $z/2$, $y$ runs from $0$ to $2-z$ and
 \item
-for each $x$ between $z/2$ and $1$, $y$ runs from $0$ to $2-2x$
+for each fixed $x$ between $z/2$ and $1$, $y$ runs from $0$ to $2-2x$
 \end{itemize}
 we have
 \begin{equation*}
@@ -4811,7 +4814,7 @@ I=\int_0^2\dee{z}\int_0^{z/2}\dee{x}\int_0^{2-z}\dee{y}\ f(x,y,z)
 
 Many problems possess natural symmetries. We can make our work easier 
 by using coordinate systems, like  polar coordinates, that are 
-tailored to those symmetries. In this section we will look at two 
+tailored to those symmetries. We will look at two 
 more such coordinate systems --- cylindrical and spherical coordinates.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4949,20 +4952,18 @@ $\dee{V}$ works perfectly when we take the limit $\dee{r},\dee{\theta},
 
 Now we can use \eqref{eq dV cylindrical} to handle a variant of 
 Example \ref{eg sphere mass A}
-in which the density is invariant under rotations around the $z$ axis.
+in which the density is invariant under rotations around the $z$-axis.
 Cylindrical coordinates are tuned to provide easier integrals to 
 evaluate when the integrand is invariant under rotations about the $z$-axis,
 or when the domain of integration is cylindrical.
 
 
 \begin{eg}\label{eg sphere mass B}
-Find the mass inside the sphere $x^2+y^2+z^2=1$ if the density
-is $\rho(x,y,z) = x^2+y^2$ (which is the square of the 
-distance from the $z$-axis).
+Find the mass of the solid body consisting of the inside of the sphere $x^2+y^2+z^2=1$ if the density is $\rho(x,y,z) = x^2+y^2$.
 
 \soln
-Before we get started, note that both the integrand, $x^2+y^2$, 
-and the domain of integration, $x^2+y^2+z^2\le 1$, are invariant under rotations about the $z$-axis. That makes this
+Before we get started, note that $x^2+y^2$ is the square of the distance from $(x,y,z)$ to the $z$-axis. Consequently both the integrand, $x^2+y^2$, 
+and the domain of integration, $x^2+y^2+z^2\le 1$, and hence our solid, are invariant under rotations about the $z$-axis\footnote{Imagine that you are looking that the solid from, for example, far out on the $x$-axis. You close your eyes for a minute. Your evil twin then sneaks in, rotates the solid about the $z$-axis, and sneaks out. You open your eyes. You will not be able to tell that the solid has been rotated.}. That makes this
 integral a good candidate for cylindrical coordinates.
 
 Again, by symmetry the total mass of the sphere will be eight times 
@@ -5030,7 +5031,7 @@ approximate cube in black. Each cube
 \vspace{-\topsep}
 \begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
 \item
-has volume $r\,\dee{r}\,\dee{\theta}\,\dee{z}$, by \eqref{eq dV cylindrical}
+has volume $r\,\dee{r}\,\dee{\theta}\,\dee{z}$, by \eqref{eq dV cylindrical},
 and 
 \item
 has $r$, $\theta$ and $z$ all essentially constant on the cube.
@@ -5077,7 +5078,7 @@ $\sqrt{1-z^2}$. The mass of the wedge is thus
 To get the mass of any one plate, say the plate whose $z$ coordinate runs 
 from $z$ to $z+\dee{z}$, we just add up the masses of the wedges 
 in that plate, by integrating $\theta$ from its smallest value on 
-the wedge, namely $0$, to its largest value on the wedge, namely 
+the plate, namely $0$, to its largest value on the plate, namely 
 $\nicefrac{\pi}{2}$. The mass of the plate is thus
 \begin{align*}
 \dee{z}\int_0^{\pi/2}\dee{\theta}\int_0^{\sqrt{1-z^2}}  \dee{r}\,r^3
@@ -5164,7 +5165,7 @@ and call the cone $\cV$.
 \end{center}
 \end{efig}
 
-We shall use \eqref{eg moment cone} to find the moment of inertia.
+We shall use \eqref{eqn mom of inertia 3d} to find the moment of inertia.
 In the current problem, the axis of rotation is the $y$-axis. The point on the 
 $y$-axis that is closest to $(x,y,z)$ is $(0,y,0)$ so that the distance from $(x,y,z)$ to the axis is just
 \begin{equation*}
@@ -5276,11 +5277,11 @@ as expected, and
 &=\int_0^h\dee{z}\int_0^{2\pi}\dee{\theta}\left[
       \frac{1}{4}\left(\frac{a}{h}z\right)^4\cos^2\theta
        +\frac{1}{2}\left(\frac{a}{h}z\right)^2z^2\right] \\
-&\hskip1in\text{since $\int_0^{2\pi}\cos^2\theta\ \dee{\theta}=\pi$
-                 by Remark \ref{rem sneaky}} \\
 &=\int_0^h\dee{z}\left[
       \frac{1}{4}\frac{a^4}{h^4}
        +\frac{a^2}{h^2}\right]\pi z^4\\
+&\hskip1in\text{since $\int_0^{2\pi}\cos^2\theta\ \dee{\theta}=\pi$
+                 by Remark \ref{rem sneaky}} \\
 &=\frac{1}{5}\left[
       \frac{1}{4}\frac{a^4}{h^4}
        +\frac{a^2}{h^2}\right]\pi h^5 
@@ -5656,9 +5657,9 @@ is thus
 \end{align*}
 
 \item
-To get the volume of the part of the ice cream cone in the first octant, 
-we just add up the volumes of the segments that it contains, by integrating 
-$\theta$ from its smallest value in the octant, namely $0$, to its largest value on the octant, namely  $\nicefrac{\pi}{2}$. 
+To get the volume of $\cV_1$, the part of the ice cream cone in the first 
+octant, we just add up the volumes of the segments that it contains, by 
+integrating $\theta$ from its smallest value in the octant, namely $0$, to its largest value on the octant, namely  $\nicefrac{\pi}{2}$. 
 
 \item
 The volume in the first octant is thus
@@ -5672,7 +5673,7 @@ The volume in the first octant is thus
 &=\frac{\pi a^3}{6}\big[1-\cos\be\big]
 \end{align*}
 \item
-So the volume of the total (four octant) ice cream cone is 
+So the volume of $\cV$, the total (four octant) ice cream cone, is 
 \begin{equation*}
 \text{Volume}(\cV)=4\,\text{Volume}(\cV_1)
 =\frac{4\pi a^3}{6}\big[1-\cos\be\big]
@@ -5983,7 +5984,7 @@ constant $v$ (the red curves in the figure below).
     \includegraphics{RSlice.pdf}
 \end{center}
 \end{nfig}
-Concentrate on any one the small pieces. Here is a greatly magnified
+Concentrate on any one of the small pieces. Here is a greatly magnified
 sketch.
 \begin{nfig}
 \begin{center}
@@ -6456,8 +6457,8 @@ we approximated, for example, the vectors
 \end{alignat*}
 where $\vE_1$ is bounded\footnote{Remember the error in the Taylor polynomial 
 approximations. See \eqref{eqn quadratic exact} and
-\eqref{eqn linear bound}.} by a constant times $\dee{u}^2$
-and $E_2$ is bounded by a constant times $\dee{v}^2$. That is, we assumed 
+\eqref{eqn linear bound}.} by a constant times $(\dee{u})^2$
+and $E_2$ is bounded by a constant times $(\dee{v})^2$. That is, we assumed 
 that we could just ignore the errors and drop $E_1$ and $E_2$ by setting them
 to zero. 
 
@@ -6475,7 +6476,7 @@ So we approximated
 \Big|
 \end{align*}
 where the length of the vector $\vE_3$ is bounded by a constant times 
-$\dee{u}^2\,\dee{v}+\dee{u}\,\dee{v}^2$.
+$(\dee{u})^2\,\dee{v}+\dee{u}\,(\dee{v})^2$.
 We'll now see why dropping terms like $\vE_3$ does not change the value
 of the integral at all\footnote{See the optional \S 1.1.6 of the CLP-2 text
 for an analogous argument concerning Riemann sums.}. 
@@ -6495,7 +6496,7 @@ $\dee{v} = \frac{H}{n}$. Now suppose that in setting up the integral
 we make, for each subrectangle, an error that is bounded by some constant
 times
 \begin{equation*}
-\dee{u}^2\,\dee{v}+\dee{u}\,\dee{v}^2
+(\dee{u})^2\,\dee{v}+\dee{u}\,(\dee{v})^2
 =\Big(\frac{W}{n}\Big)^2 \frac{H}{n}
  +  \frac{W}{n}\Big(\frac{H}{n}\Big)^2
 =\frac{WH(W+H)}{n^3}

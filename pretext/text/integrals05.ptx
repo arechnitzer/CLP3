@@ -182,7 +182,9 @@ namely  <m>1</m>. The mass in the first octant is thus
 </mrow><mrow>
 &amp;\hskip0.5in=\int_0^1\dee{z}\ \left[\frac{z{(1-z^2)}^2}{4}-\frac{z{(1-z^2)}^2}{8}\right]
 </mrow><mrow>
-&amp;\hskip0.5in=-\int_1^0\dee{u}\ \frac{u^2}{16}
+&amp;\hskip0.5in=\int_0^1\dee{z}\ z\ \frac{{(1-z^2)}^2}{8}
+</mrow><mrow>
+&amp;\hskip0.5in=\int_1^0\frac{\dee{u}}{-2}\ \frac{u^2}{8}
            \qquad\text{with }u=1-z^2,\ \dee{u}=-2z\,\dee{z}
 </mrow><mrow>
 &amp;\hskip0.5in=\frac{1}{48}
@@ -288,10 +290,10 @@ Observe from that figure that, on <m>\cV</m>,
 <m>x</m> runs from <m>0</m> to <m>2</m>, and
 </li>
 <li>
-for each <m>x</m> in that range, <m>y</m> runs from <m>0</m> to <m>4-x</m> and
+for each fixed <m>x</m> in that range, <m>y</m> runs from <m>0</m> to <m>4-x</m> and
 </li>
 <li>
-for each <m>(x,y)</m> as above,
+for each fixed <m>(x,y)</m> as above,
 <m>z</m> runs from <m>0</m> to <m>4-x^2</m>.
 </li>
 </ul>
@@ -326,10 +328,10 @@ Observe from that figure that, on <m>\cV</m>,
 <m>z</m> runs from <m>0</m> to <m>4</m>, and
 </li>
 <li>
-for each <m>z</m> in that range, <m>x</m> runs from <m>0</m> to <m>\sqrt{4-z}</m> and
+for each fixed <m>z</m> in that range, <m>x</m> runs from <m>0</m> to <m>\sqrt{4-z}</m> and
 </li>
 <li>
-for each <m>(x,z)</m> as above,
+for each fixed <m>(x,z)</m> as above,
 <m>y</m> runs from <m>0</m> to <m>4-x</m>.
 </li>
 </ul>
@@ -367,10 +369,10 @@ figure out the limits of integration for both the order
 the outside integral says that <m>y</m> runs from <m>0</m> to <m>2</m>, and
 </li>
 <li>
-the middle integral says that, for each <m>y</m> in that range, <m>z</m> runs from <m>0</m> to <m>2-y</m> and
+the middle integral says that, for each fixed <m>y</m> in that range, <m>z</m> runs from <m>0</m> to <m>2-y</m> and
 </li>
 <li>
-the inside integral says that, for each <m>(y,z)</m> as above,
+the inside integral says that, for each fixed <m>(y,z)</m> as above,
 <m>x</m> runs from <m>0</m> to <m>\frac{2-y}{2}</m>.
 </li>
 </ul>
@@ -451,7 +453,7 @@ Since
 and the rightmost strip having <m>y=2-z</m> and
 </li>
 <li>
-for each <m>y</m> in that range, <m>x</m> runs from <m>0</m> to <m>\tfrac{2-y}{2}</m>
+for each fixed <m>y</m> in that range, <m>x</m> runs from <m>0</m> to <m>\tfrac{2-y}{2}</m>
 </li>
 </ul>
 we have
@@ -474,10 +476,10 @@ Alternatively, to express <m>I</m> as an integral with the order of integration
 and the last strip having <m>x=1</m> and
 </li>
 <li>
-for each <m>x</m> between <m>0</m> and <m>z/2</m>, <m>y</m> runs from <m>0</m> to <m>2-z</m> and
+for each fixed <m>x</m> between <m>0</m> and <m>z/2</m>, <m>y</m> runs from <m>0</m> to <m>2-z</m> and
 </li>
 <li>
-for each <m>x</m> between <m>z/2</m> and <m>1</m>, <m>y</m> runs from <m>0</m> to <m>2-2x</m>
+for each fixed <m>x</m> between <m>z/2</m> and <m>1</m>, <m>y</m> runs from <m>0</m> to <m>2-2x</m>
 </li>
 </ul>
 we have

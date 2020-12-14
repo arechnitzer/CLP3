@@ -10,7 +10,7 @@
 
 <p>Many problems possess natural symmetries. We can make our work easier
 by using coordinate systems, like  polar coordinates, that are
-tailored to those symmetries. In this section we will look at two
+tailored to those symmetries. We will look at two
 more such coordinate systems <mdash/> cylindrical and spherical coordinates.
 </p>
 
@@ -193,7 +193,7 @@ So the volume of the approximate cube in cylindrical coordinates is
 
 <p>Now we can use <xref ref="eq_dV_cylindrical"/> to handle a variant of
 Example <xref ref="eg_sphere_mass_A"/>
-in which the density is invariant under rotations around the <m>z</m> axis.
+in which the density is invariant under rotations around the <m>z</m>-axis.
 Cylindrical coordinates are tuned to provide easier integrals to
 evaluate when the integrand is invariant under rotations about the <m>z</m>-axis,
 or when the domain of integration is cylindrical.
@@ -202,17 +202,14 @@ or when the domain of integration is cylindrical.
 <example xml:id="eg_sphere_mass_B">
 <statement>
 <p>
-Find the mass inside the sphere <m>x^2+y^2+z^2=1</m> if the density
-is <m>\rho(x,y,z) = x^2+y^2</m> (which is the square of the
-distance from the <m>z</m>-axis).
+Find the mass of the solid body consisting of the inside of the sphere <m>x^2+y^2+z^2=1</m> if the density
+is <m>\rho(x,y,z) = x^2+y^2</m>.
 </p>
 </statement>
 
 <solution>
 <p>
-Before we get started, note that both the integrand, <m>x^2+y^2</m>,
-and the domain of integration, <m>x^2+y^2+z^2\le 1</m>, are invariant under rotations about the <m>z</m>-axis. That makes this
-integral a good candidate for cylindrical coordinates.
+Before we get started, note that <m>x^2+y^2</m> is the square of the distance from <m>(x,y,z)</m> to the <m>z</m>-axis. Consequently both the integrand, <m>x^2+y^2</m>, and the domain of integration, <m>x^2+y^2+z^2\le 1</m>, and hence our solid, are invariant under rotations about the <m>z</m>-axis<fn>Imagine that you are looking that the solid from, for example, far out on the <m>x</m>-axis. You close your eyes for a minute. Your evil twin then sneaks in, rotates the solid about the <m>z</m>-axis, and sneaks out. You open your eyes. You will not be able to tell that the solid has been rotated.</fn>. That makes this integral a good candidate for cylindrical coordinates.
 </p>
 
 <p>Again, by symmetry the total mass of the sphere will be eight times
@@ -285,7 +282,7 @@ by inserting many surfaces of constant <m>r</m>, with the various values of <m>r
 approximate cube in black. Each cube
 <ul>
 <li>
-has volume <m>r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>, by <xref ref="eq_dV_cylindrical"/>
+has volume <m>r\,\dee{r}\,\dee{\theta}\,\dee{z}</m>, by <xref ref="eq_dV_cylindrical"/>,
 and
 </li>
 <li>
@@ -341,7 +338,7 @@ value on the wedge, namely <m>0</m>, to its largest value on the wedge, namely
 To get the mass of any one plate, say the plate whose <m>z</m> coordinate runs
 from <m>z</m> to <m>z+\dee{z}</m>, we just add up the masses of the wedges
 in that plate, by integrating <m>\theta</m> from its smallest value on
-the wedge, namely <m>0</m>, to its largest value on the wedge, namely
+the plate, namely <m>0</m>, to its largest value on the plate, namely
 <m>\frac{\pi}{2}</m>. The mass of the plate is thus
 <md>
 <mrow>
@@ -587,12 +584,12 @@ as expected, and
       \frac{1}{4}\left(\frac{a}{h}z\right)^4\cos^2\theta
        +\frac{1}{2}\left(\frac{a}{h}z\right)^2z^2\right]
 </mrow><mrow>
-&amp;\hskip1in\text{since } \int_0^{2\pi}\cos^2\theta\ \dee{\theta}=\pi
-                 \text{ by Remark } <xref ref="rem_sneaky"/>
-</mrow><mrow>
 &amp;=\int_0^h\dee{z}\left[
       \frac{1}{4}\frac{a^4}{h^4}
        +\frac{a^2}{h^2}\right]\pi z^4
+</mrow><mrow>
+&amp;\hskip0.5in\text{since } \int_0^{2\pi}\cos^2\theta\ \dee{\theta}=\pi
+                 \text{ by Remark } <xref ref="rem_sneaky"/>
 </mrow><mrow>
 &amp;=\frac{1}{5}\left[
       \frac{1}{4}\frac{a^4}{h^4}
