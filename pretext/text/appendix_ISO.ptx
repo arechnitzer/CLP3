@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018-2020 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xml:id="ap_ISO">
+<title>ISO Coordinate System Notation</title>
+
+<introduction>
+<p>
+In this text we have chosen symbols for the various polar, cylindrical and 
+spherical coordinates that are standard for mathematics. There is 
+another, different, set of symbols that are commonly used in the 
+physical sciences and engineering. Indeed, there is an international convention, called ISO 80000-2, that specifies those symbols<fn>It specifies more than just those symbols. See 
+<url href="https://en.wikipedia.org/wiki/ISO_31-11">https://en.wikipedia.org/wiki/ISO_31-11</url>
+and 
+<url href="https://en.wikipedia.org/wiki/ISO/IEC_80000">https://en.wikipedia.org/wiki/ISO/IEC_80000</url>
+The full
+ISO 80000-2 is available at 
+<url href="https://www.iso.org/standard/64973.html">https://www.iso.org/standard/64973.html</url>
+<mdash/> for $$.</fn>. In this appendix, we summarize the definitions and standard properties of the polar, cylindrical and spherical coordinate systems using the ISO symbols.  
+</p>
+</introduction>
+
+<subsection xml:id="ap_ISOpolar">
+  <title>Polar Coordinates</title>
+
+<p>
+In the ISO convention the symbols <m>\rho</m> and <m>\phi</m> are used 
+(instead of <m>r</m> and <m>\theta</m>) for polar coordinates.
+<md>
+<mrow>
+\rho&amp;=\text{ the distance from }(0,0)\text{ to }(x,y)
+</mrow><mrow>
+\phi&amp;=\text{ the (counter-clockwise) angle between the $x$-axis }
+</mrow><mrow>
+      &amp; \qquad \text{ and the line joining $(x,y)$ to $(0,0)$}
+</mrow>
+</md>
+</p>
+
+<sidebyside width="27%">
+<image source="figs/ISOpolar"/>
+</sidebyside>
+
+<p>
+Cartesian and polar coordinates are related by
+<md>
+<mrow>
+x&amp;=\rho\cos\phi &amp;
+y&amp;=\rho\sin\phi  
+</mrow><mrow>
+    \rho&amp;=\sqrt{x^2+y^2} &amp;
+    \phi&amp;=\arctan\frac{y}{x}
+</mrow>
+</md>
+The following two figures show a number of lines of constant <m>\phi</m>,
+on the left, and curves of constant <m>\rho</m>, on the right.
+</p>
+
+<sidebyside widths="32% 32%" valign="middle">
+<image source="figs/ISOpolarTh"/>
+<image source="figs/ISOpolarR"/>
+</sidebyside>
+
+<p>
+Note that the polar angle <m>\phi</m> is only defined up to integer multiples
+of <m>2\pi</m>. For example, the point <m>(1,0)</m> on the <m>x</m>-axis could have 
+<m>\phi=0</m>, but could also have <m>\phi=2\pi</m> or <m>\phi=4\pi</m>. It is sometimes
+convenient to assign <m>\phi</m> negative values. When <m>\phi\lt 0</m>, the
+counter-clockwise angle <m>\phi</m> refers to the clockwise angle <m>|\phi|</m>. 
+For example, the point <m>(0,-1)</m> on the negative <m>y</m>-axis can have <m>\phi=-\frac{\pi}{2}</m> and can also have <m>\phi=\frac{3\pi}{2}</m>.
+</p>
+
+<sidebyside width="52%">
+<image source="figs/ISOpolarNegTh"/>
+</sidebyside>
+
+<p>
+It is also sometimes convenient to extend the above definitions by saying that
+<m>x=\rho\cos\phi</m> and <m>y=\rho\sin\phi</m> even when <m>\rho</m> is negative. For example,
+the following figure shows <m>(x,y)</m> for <m>\rho=1</m>, <m>\phi=\frac{\pi}{4}</m>
+and for <m>\rho=-1</m>, <m>\phi=\frac{\pi}{4}</m>.
+</p>
+
+
+<sidebyside width="67.5%">
+<image source="figs/ISOpolarNeg"/>
+</sidebyside>
+
+<p>
+Both points lie on the  line through the origin that makes an angle of
+<m>45^\circ</m> with the <m>x</m>-axis and both are a distance one from the origin.
+But they are on opposite sides of the the origin.
+</p>
+
+<p>
+The area element in polar coordinates is
+<me>
+\dee{A} = \rho\,\dee{\rho}\,\dee{\phi}
+</me>
+</p>
+
+<sidebyside width="37%">
+<image source="figs/ISOpolarA"/>
+</sidebyside>
+
+</subsection>
+
+<subsection xml:id="ap_ISOcylCoord">
+
+<title> Cylindrical Coordinates</title>
+
+<p>In the ISO convention the symbols <m>\rho</m>, <m>\phi</m> and <m>z</m> are used 
+(instead of <m>r</m>, <m>\theta</m> and <m>z</m>) for cylindrical coordinates.
+<md>
+<mrow>
+\rho&amp;=\text{ distance from }(0,0,0)\text{ to }(x,y,0)
+</mrow><mrow>
+\phi&amp;=\text{ angle between the the $x$ axis and the line joining $(x,y,0)$ to $(0,0,0)$}
+</mrow><mrow>
+z&amp;=\text{ signed distance from }(x,y,z)
+\text{ to the $xy$-plane}
+</mrow>
+</md>
+</p>
+
+<sidebyside width="36%">
+<image source="figs/ISOcyl1"/>
+</sidebyside>
+
+<p>
+The cartesian and cylindrical coordinates are related by
+<md>
+<mrow>
+x&amp;=\rho\cos\phi &amp;
+y&amp;=\rho\sin\phi &amp;
+z&amp;=z
+</mrow><mrow>
+    \rho&amp;=\sqrt{x^2+y^2} &amp;
+    \phi&amp;=\arctan\frac{y}{x} &amp;
+    z&amp;=z
+</mrow>
+</md>
+Here are three figures showing a surface of constant <m>\rho</m>,
+a surface of constant <m>\phi</m>, and a surface of constant <m>z</m>.
+</p>
+
+<sidebyside widths="31% 31% 30%" valign="middle">
+<image source="figs/ISOcyl3"/>
+<image source="figs/ISOcyl4"/>
+<image source="figs/ISOcyl2"/>
+</sidebyside>
+
+<p>
+Finally here is a figure showing the volume element <m>\dee{V}</m> in
+cylindrical coordinates.
+</p>
+
+<sidebyside width="47%">
+<image source="figs/ISOcyl5"/>
+</sidebyside>
+
+</subsection>
+
+<subsection xml:id="ap_ISOspherCoord">
+<title>Spherical Coordinates</title>
+
+<p>In the ISO convention the symbols <m>r</m> (instead of <m>\rho</m>), 
+<m>\phi</m> (instead of <m>\theta</m>) and <m>\theta</m> (instead of <m>\phi</m>) are used 
+for spherical coordinates.
+<md>
+<mrow>
+r&amp;=\text{ distance from }(0,0,0)\text{ to }(x,y,z)
+</mrow><mrow>
+\theta&amp;=\text{ angle between the $z$ axis and the line joining $(x,y,z)$ to $(0,0,0)$}
+</mrow><mrow>
+\phi&amp;=\text{ angle between the $x$ axis and the line joining $(x,y,0)$ to $(0,0,0)$}
+</mrow>
+</md>
+</p>
+
+<sidebyside width="44%">
+<image source="figs/ISOspherical"/>
+</sidebyside>
+<p>
+Here are two more figures giving the side and top views of the
+previous figure.
+</p>
+
+<sidebyside widths="45% 51%" valign="middle">
+<image source="figs/ISOsphericalSide"/>
+<image source="figs/ISOsphericalTop"/>
+</sidebyside>
+
+<p>
+The cartesian and spherical coordinates
+are related by
+<md>
+<mrow>
+x&amp;=r\sin\theta\cos\phi &amp;
+y&amp;=r\sin\theta\sin\phi &amp;
+z&amp;=r\cos\theta
+</mrow><mrow>
+ r&amp;=\sqrt{x^2+y^2+z^2} &amp;
+ \phi&amp;=\arctan\frac{y}{x} &amp;
+ \theta&amp;=\arctan\frac{\sqrt{x^2+y^2}}{z}
+</mrow>
+</md>
+Here are three figures showing a surface of constant <m>r</m>,
+a surface of constant <m>\phi</m>, and a surface of constant <m>\theta</m>.
+</p>
+
+<sidebyside widths="32% 31% 31%" valign="middle">
+<image source="figs/ISOspher2"/>
+<image source="figs/ISOspher3"/>
+<image source="figs/ISOspher4"/>
+</sidebyside>
+
+<p>
+Finally, here is a figure showing the volume element <m>\dee{V}</m> in
+spherical coordinates
+</p>
+<sidebyside width="59%">
+<image source="figs/ISOspher5"/>
+</sidebyside>
+<p>
+and two extracts of the above figure to make it easier to see
+how the factors <m>r\ \dee{\theta}</m> and
+<m>r\sin\theta\ \dee{\phi}</m> arise.
+</p>
+
+<sidebyside widths="48% 48%" valign="middle">
+<image source="figs/ISOspher6"/>
+<image source="figs/ISOspher7"/>
+</sidebyside>
+
+</subsection>
+</section>

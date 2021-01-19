@@ -43,9 +43,10 @@ So let's review before we resume integrating.
 <statement><p>
 The polar coordinates<fn>In the mathematical literature,
 the angular coordinate is usually denoted <m>\theta</m>, as we do here.
-The symbol <m>\varphi</m> is also often used for the angular coordinate.
-In fact there is an ISO standard (\#31 <ndash/> 11) which specifies
-that <m>\varphi</m> should be used in the natural sciences and in technology.</fn> 
+The symbol <m>\phi</m> is also often used for the angular coordinate.
+In fact there is an ISO standard (#80000 <ndash/> 2) which specifies
+that <m>\phi</m> should be used in the natural sciences and in technology.
+See Appendix  <xref ref="ap_ISO"/>.</fn> 
 of any point <m>(x,y)</m> in the <m>xy</m>-plane are
 <md>
 <mrow>

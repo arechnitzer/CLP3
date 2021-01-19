@@ -22,7 +22,7 @@ coordinates</em>.
 <statement><p>
 Spherical coordinates are denoted<fn>We are using the
 standard mathematics conventions for the spherical coordinates.
-Under the ISO conventions they are <m>(r,\varphi,\theta)</m>.</fn>
+Under the ISO conventions they are <m>(r,\phi,\theta)</m>. See Appendix  <xref ref="ap_ISO"/>.</fn>
 <m>\rho</m>, <m>\theta</m> and <m>\varphi</m> and are defined by
 <md>
 <mrow>

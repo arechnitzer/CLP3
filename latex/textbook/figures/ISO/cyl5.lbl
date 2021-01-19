@@ -1,0 +1,41 @@
+lbl file prepared by figPac Thu Jan 14 20:02:03 PST 2021
+144.54
+144.54
+0
+0
+0
+2
+ 
+144.54
+144.54
+2
+0
+ 
+54.33
+26.47
+1
+0
+$\rho$
+110.59
+28.40
+1
+0
+$\dee{\rho}$
+127.34
+41.64
+0
+1
+$\dee{z}$
+95.54
+65.73
+0
+1
+$\rho\,\dee{\phi}$
+72.27
+81.91
+1
+2
+volume element $\dee{V}=\rho\,\dee{\rho}\,\dee{\phi}\,\dee{z}$
+-1000
+0/1/2 left/center/right
+0/1/2 bottom/center/top

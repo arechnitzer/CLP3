@@ -32,7 +32,7 @@ coordinates</em>.
 <statement><p>
 Cylindrical coordinates are denoted<fn>We are using the
 standard mathematics conventions for the cylindrical coordinates.
-Under the ISO conventions they are <m>(\rho,\varphi,z)</m>.</fn>
+Under the ISO conventions they are <m>(\rho,\phi,z)</m>. See Appendix  <xref ref="ap_ISO"/>.</fn>
 <m>r</m>, <m>\theta</m> and <m>z</m> and are defined by
 <md>
 <mrow>

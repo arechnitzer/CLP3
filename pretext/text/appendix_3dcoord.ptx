@@ -151,12 +151,11 @@ a surface of constant <m>\theta</m>, and a surface of constant <m>\varphi</m>.
 
 
 <p>
-Here is a figure showing the surface element <m>\dee{S}</m> in
+Finally, here is a figure showing the volume element <m>\dee{V}</m> in
 spherical coordinates
 </p>
-
-<sidebyside width="80%">
-<image source="figs/spher11"/>
+<sidebyside width="60%">
+<image source="figs/spher5"/>
 </sidebyside>
 <p>
 and two extracts of the above figure to make it easier to see
@@ -165,16 +164,8 @@ how the factors <m>\rho\ \dee{\varphi}</m> and
 </p>
 
 <sidebyside widths="48% 48%" valign="middle">
-<image source="figs/spher9"/>
-<image source="figs/spher10"/>
-</sidebyside>
-
-<p>
-Finally, here is a figure showing the volume element <m>\dee{V}</m> in
-spherical coordinates
-</p>
-<sidebyside width="60%">
-<image source="figs/spher5"/>
+<image source="figs/spher6"/>
+<image source="figs/spher7"/>
 </sidebyside>
 
 </subsection>
