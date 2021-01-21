@@ -31,6 +31,91 @@ three possible choices are <m>-\hk</m>, <m>2\,\hk</m>, <m>7.12345\,\hk</m>.
 </p></solution>
 </exercise>
 
+<exercise>
+<statement><p>
+<ol>
+<li>
+Find the equation of the plane that passes through the origin and has normal vector <m>\llt 1,2,3\rgt</m>.
+</li><li>
+Find the equation of the plane that passes through the point <m>(0,0,1)</m> and has normal vector <m>\llt 1,1,3\rgt</m>.
+</li><li>
+Find, if possible, the equation of a plane that passes through both <m>(1,2,3)</m>
+and <m>(1,0,0)</m> and has normal vector <m>\llt 4,5,6\rgt</m>.
+</li><li>
+Find, if possible, the equation of a plane that passes through both <m>(1,2,3)</m>
+and <m>(0,3,4)</m> and has normal vector <m>\llt 2,1,1\rgt</m>.
+</li>
+</ol>
+</p></statement>
+
+
+<answer><p>
+<ol>
+<li>
+<m>x+2y+3z=0</m>
+</li><li>
+<m>x+y+3z=3</m>
+</li><li>
+There is <em>no plane</em> that passes through both <m>(1,2,3)</m>
+and <m>(1,0,0)</m> and has normal vector <m>\llt 4,5,6\rgt</m>.
+</li><li>
+<m>2x+y+z=7</m>
+</li>
+</ol>
+</p></answer>
+
+<solution><p>
+<ol>
+<li>
+If <m>(x,y,z)</m> is any point on the plane, then both the head and the tail of the vector from <m>(x,y,z)</m> to <m>(0,0,0)</m>, namely <m>\llt x,y,z\rgt</m>, lie in the plane. So the vector  <m>\llt x,y,z\rgt</m> must be perpendicular to <m>\llt 1,2,3\rgt</m> and
+<me>
+0=\llt x,y,z\rgt\cdot \llt 1,2,3\rgt =x+2y+3z
+</me>
+</li>
+<li>
+If <m>(x,y,z)</m> is any point on the plane, then both the head and the tail of the vector from <m>(x,y,z)</m> to <m>(0,0,1)</m>, namely <m>\llt x,y,z-1\rgt</m>, lie in the plane. So the vector  <m>\llt x,y,z-1\rgt</m> must be perpendicular to <m>\llt 1,1,3\rgt</m> and
+<me>
+0=\llt x,y,z-1\rgt\cdot \llt 1,1,3\rgt =x+y+3(z-1)
+\iff x+y+3z=3
+</me>
+</li>
+<li>
+If both <m>(1,2,3)</m> and <m>(1,0,0)</m> are on the plane, then both the head and the tail of the vector from <m>(1,2,3)</m> to <m>(1,0,0)</m>, namely <m>\llt 0,2,3\rgt</m>, lie in the plane. So the vector <m>\llt 0,2,3\rgt</m> must be perpendicular to <m>\llt 4,5,6\rgt</m>. As
+<me>
+\llt 0,2,3\rgt \cdot \llt 4,5,6\rgt = 28\ne 0
+</me>
+the vector  <m>\llt 0,2,3\rgt</m> is not perpendicular to <m>\llt 4,5,6\rgt</m>.
+So there is <em>no plane</em> that passes through both <m>(1,2,3)</m>
+and <m>(1,0,0)</m> and has normal vector <m>\llt 4,5,6\rgt</m>.
+</li>
+<li>
+<p>
+If both <m>(1,2,3)</m> and <m>(0,3,4)</m> are on the plane, then both the head and the tail of the vector from <m>(1,2,3)</m> to <m>(0,3,4)</m>, namely <m>\llt 1,-1,-1\rgt</m>, lie in the plane. So the vector  <m>\llt 1,-1,-1\rgt</m> must be perpendicular to <m>\llt 2,1,1\rgt</m>. As
+<me>
+\llt 1,-1,-1\rgt \cdot \llt 2,1,1\rgt = 0
+</me>
+the vector  <m>\llt 1,-1,-1\rgt</m> is indeed perpendicular to <m>\llt 2,1,1\rgt</m>.
+So <em>there is a plane</em> that passes through both <m>(1,2,3)</m> and <m>(0,3,4)</m> and has normal vector <m>\llt 2,1,1\rgt</m>. We now just have to build its equation.
+</p>
+
+<p>
+If <m>(x,y,z)</m> is any point on the plane, then both the head and the tail of the vector from <m>(x,y,z)</m> to <m>(1,2,3)</m>, namely <m>\llt x-1,y-2,z-3\rgt</m>, lie in the plane. So the vector  <m>\llt x-1,y-2,z-3\rgt</m> must be perpendicular to <m>\llt 2,1,1\rgt</m> and
+<md>
+<mrow>
+&amp;0=\llt x-1,y-2,z-3\rgt\cdot \llt 2,1,1\rgt =2(x-1)+(y-2)+(z-3)
+</mrow><mrow>
+&amp;\iff 2x+y+z=7
+</mrow>
+</md>
+As a check, note that both <m>(x,y,z)=(1,2,3)</m> and <m>(x,y,z)=(0,3,4)</m>
+obey the equation  <m>2x+y+z=7</m>.
+</p>
+</li>
+</ol>
+</p>
+</solution>
+</exercise>
+
 <exercise xml:id="prob1_4_planeeqn"><title><fromexam>M200 2008A</fromexam></title>
 <statement><p>
 Find the equation of the plane that contains <m>(1,0,0)</m>,
@@ -110,19 +195,42 @@ is an equation for the plane.
 
 <exercise>
 <statement><p>
+<ol>
+<li>
 Find the equation of the plane containing the points <m>(1,0,1)</m>,
 <m>(1,1,0)</m> and <m>(0,1,1)</m>.
+</li><li>
+Is the point <m>(1,1,1)</m> on the plane?
+</li><li>
+Is the origin on the plane?
+</li><li>
+Is the point <m>(4,-1,-1)</m> on the plane?
+</li>
+</ol>
 </p></statement>
 
 <hint><p>
-See Question<nbsp/><xref ref="prob1_4_planeeqn"/> <mdash/> or just have a guess!
+a. See Question<nbsp/><xref ref="prob1_4_planeeqn"/> <mdash/> or just have a guess!
 </p></hint>
 
 <answer><p>
+<ol>
+<li>
 <m>x+y+z=2</m>
+</li><li>
+No.
+</li><li>
+No.
+</li><li>
+Yes.
+</li>
+</ol>
 </p></answer>
 
 <solution><p>
+<ol>
+<li>
+<p>
 <em>Solution 1:</em> That's too easy. We just guess.
 The plane <m>x+y+z=2</m> contains all three given points.
 </p>
@@ -154,7 +262,29 @@ x+y+z=2
 </mrow>
 </md>
 is an equation for the plane.
-</p></solution>
+</p>
+</li><li>
+Since
+<me>
+\Big[x+y+z\Big]_{(x,y,z)=(1,1,1)} = 3\ne 2
+</me>
+the point <m>(1,1,1)</m> <em>is not</em> on <m>x+y+z=2</m>.
+</li><li>
+Since
+<me>
+\Big[x+y+z\Big]_{(x,y,z)=(0,0,0)} = 0\ne 2
+</me>
+the origin <em>is not</em> on <m>x+y+z=2</m>.
+</li><li>
+Since
+<me>
+\Big[x+y+z\Big]_{(x,y,z)=(4,-1,-1)} = 2
+</me>
+the point <m>(4,-1,-1)</m> <em>is</em> on <m>x+y+z=2</m>.
+</li>
+</ol>
+</p>
+</solution>
 </exercise>
 
 <exercise>
