@@ -33,6 +33,72 @@ three possible choices are <m>-\hk</m>, <m>2\,\hk</m>, <m>7.12345\,\hk</m>.
 
 <exercise>
 <statement><p>
+Consider the plane <m>P</m> with equation <m>3x+\frac{1}{2}y+z=4</m>.
+<ol>
+<li>
+Find the intersection of <m>P</m> with the <m>y</m>-axis.
+</li><li>
+Find the intersection of <m>P</m> with the <m>z</m>-axis.
+</li><li>
+Sketch the part of the intersection of <m>P</m> with the <m>yz</m>-plane that is
+in the first octant. (That is, with <m>x,y,z\ge 0</m>.)
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+A point <m>(x,y,z)</m> is on the <m>y</m>-axis if and only if <m>x=z=0</m>. Similarly,
+a point <m>(x,y,z)</m> is on the <m>z</m>-axis if and only if <m>x=y=0</m>.
+</p></hint>
+
+<answer><p>
+<ol>
+<li>
+<m>(0,8,0)</m>
+</li><li>
+<m>(0,0,4)</m>
+</li><li>
+<sidebyside width="50%">
+<image source="pfigs/intersectSketch"/>
+</sidebyside>
+</li>
+</ol>
+</p></answer>
+
+<solution><p>
+<ol>
+<li>
+Each point on the <m>y</m>-axis is of the form <m>(0,y,0)</m>. Such a point is on the plane <m>P</m> if
+<me>
+3(0)+\frac{1}{2}y+0=4
+\iff y=8
+</me>
+So the intersection of <m>P</m> with the <m>y</m>-axis is the single point <m>(0,8,0)</m>.
+</li><li>
+Each point on the <m>z</m>-axis is of the form <m>(0,0,z)</m>. Such a point is on the plane <m>P</m> if
+<me>
+3(0)+\frac{1}{2}(0)+z=4
+\iff z=4
+</me>
+So the intersection of <m>P</m> with the <m>z</m>-axis is the single point <m>(0,0,4)</m>.
+</li><li>
+<p>
+The intersection of the plane <m>P</m> with the <m>yz</m>-plane is a line. 
+We have shown in parts (a) and (b) that the points <m>(0,8,0)</m> and <m>(0,0,4)</m>
+are on that line. Here is a sketch of the part of that line that is in the first
+octant.
+</p>
+<sidebyside width="50%">
+<image source="pfigs/intersectSketch"/>
+</sidebyside>
+</li>
+</ol>
+</p></solution>
+</exercise>
+
+
+<exercise>
+<statement><p>
 <ol>
 <li>
 Find the equation of the plane that passes through the origin and has normal vector <m>\llt 1,2,3\rgt</m>.

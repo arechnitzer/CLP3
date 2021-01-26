@@ -7,6 +7,145 @@
 <exercises>
 <exercisegroup>
 <introduction><conceptual/></introduction>
+<exercise>
+<statement><p>
+Let <m>f(x,y) = e^x\cos y</m>. The following table gives some values of <m>f(x,y)</m>.
+</p>
+
+<sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
+<col halign="center"/> <col />  <col halign="center"/> <col /> <col halign="center"/> <col />
+<row>
+<cell>  </cell><cell> <m>x=0</m> </cell><cell> <m>x=0.01</m> </cell><cell> <m>x=0.1</m> </cell>
+</row><row>
+<cell> <m>y=-0.1</m> </cell><cell> 0.99500 </cell><cell> 1.00500 </cell><cell> 1.09965 </cell>
+</row><row>
+<cell> <m>y=-0.01</m> </cell><cell> 0.99995 </cell><cell> 1.01000 </cell><cell> 1.10512 </cell>
+</row><row>
+<cell> <m>y=0</m> </cell><cell> 1.0 </cell><cell> 1.01005 </cell><cell> 1.10517 </cell>
+</row>
+</tabular></sidebyside>
+
+<p>
+<ol>
+<li>
+Find two different approximate values for <m>\pdiff{f}{x}(0,0)</m> using the data in 
+the above table.
+</li><li>
+Find two different approximate values for <m>\pdiff{f}{y}(0,0)</m> using the data in the above table.
+</li><li>
+Evaluate <m>\pdiff{f}{x}(0,0)</m> and <m>\pdiff{f}{y}(0,0)</m> exactly.
+</li>
+</ol>
+</p>
+</statement>
+
+<hint><p>
+Review Definition <xref ref="def_partials"/>.
+</p></hint>
+
+<answer><p>
+<ol>
+<li>
+<me>
+\pdiff{f}{x}(0,0)
+\approx \left.\frac{f(h,0)-f(0,0)}{h}\right|_{h=0.1}
+=\frac{1.10517-1}{0.1}
+=1.0517
+</me>
+and
+<me>
+\pdiff{f}{x}(0,0)
+\approx \left.\frac{f(h,0)-f(0,0)}{h}\right|_{h=0.01}
+=\frac{1.01005-1}{0.01}
+=1.005
+</me>
+</li><li>
+<me>
+\pdiff{f}{y}(0,0)
+\approx \left.\frac{f(0,h)-f(0,0)}{h}\right|_{h=-0.1}
+=\frac{0.99500-1}{-0.1}
+=0.0500
+</me>
+and
+<me>
+\pdiff{f}{y}(0,0)
+\approx \left.\frac{f(0,h)-f(0,0)}{h}\right|_{h=-0.01}
+=\frac{0.99995-1}{0.01}
+=.0050
+</me>
+</li><li>
+<m>
+\pdiff{f}{x}(0,0) =1 
+</m>
+and
+<m>
+\pdiff{f}{y}(0,0) = 0
+</m>
+</li>
+</ol>
+</p></answer>
+
+<solution><p>
+<ol>
+<li>
+By definition
+<me>
+\pdiff{f}{x}(0,0)
+=\lim_{h\rightarrow 0}\frac{f(h,0)-f(0,0)}{h}
+</me>
+One approximation to this is
+<me>
+\pdiff{f}{x}(0,0)
+\approx \left.\frac{f(h,0)-f(0,0)}{h}\right|_{h=0.1}
+=\frac{1.10517-1}{0.1}
+=1.0517
+</me>
+Another approximation to this is
+<me>
+\pdiff{f}{x}(0,0)
+\approx \left.\frac{f(h,0)-f(0,0)}{h}\right|_{h=0.01}
+=\frac{1.01005-1}{0.01}
+=1.005
+</me>
+</li><li>
+By definition
+<me>
+\pdiff{f}{y}(0,0)
+=\lim_{h\rightarrow 0}\frac{f(0,h)-f(0,0)}{h}
+</me>
+One approximation to this is
+<me>
+\pdiff{f}{y}(0,0)
+\approx \left.\frac{f(0,h)-f(0,0)}{h}\right|_{h=-0.1}
+=\frac{0.99500-1}{-0.1}
+=0.0500
+</me>
+Another approximation to this is
+<me>
+\pdiff{f}{y}(0,0)
+\approx \left.\frac{f(0,h)-f(0,0)}{h}\right|_{h=-0.01}
+=\frac{0.99995-1}{0.01}
+=.0050
+</me>
+</li><li>
+To take the partial derivative with respect to <m>x</m> at <m>(0,0)</m>,
+we set <m>y=0</m>, differentiate with respect to <m>x</m> and then set <m>x=0</m>. So
+<me>
+\pdiff{f}{x}(0,0) = \left.\diff{}{x} e^x\cos 0\right|_{x=0}
+=\left.e^x\right|_{x=0}=1
+</me>
+To take the partial derivative with respect to <m>y</m> at <m>(0,0)</m>,
+we set <m>x=0</m>, differentiate with respect to <m>y</m> and then set <m>y=0</m>. So
+<me>
+\pdiff{f}{y}(0,0) = \left.\diff{}{y} e^0\cos y\right|_{y=0}
+=\left.\sin y\right|_{y=0}
+=0
+</me>
+</li>
+</ol>
+</p></solution>
+</exercise>
+
 
 <exercise>
 <statement><p>
