@@ -31,6 +31,137 @@ three possible choices are $-\hk$, $2\,\hk$, $7.12345\,\hk$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+Consider the plane $P$ with equation $3x+\frac{1}{2}y+z=4$.
+\begin{enumerate}[(a)]
+\item
+Find the intersection of $P$ with the $y$-axis.
+\item
+Find the intersection of $P$ with the $z$-axis.
+\item
+Sketch the part of the intersection of $P$ with the $yz$-plane that is
+in the first octant. (That is, with $x,y,z\ge 0$.)
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+A point $(x,y,z)$ is on the $y$-axis if and only if $x=z=0$. Similarly,
+a point $(x,y,z)$ is on the $z$-axis if and only if $x=y=0$.
+\end{hint}
+
+\begin{answer}
+(a) $(0,8,0)$ \qquad
+(b) $(0,0,4)$
+
+(c)
+\begin{center}
+     \includegraphics{intersectSketch.pdf}
+\end{center}
+
+\end{answer}
+
+\begin{solution}
+\begin{enumerate}[(a)]
+\item
+Each point on the $y$-axis is of the form $(0,y,0)$. Such a point is on the plane $P$ if
+\begin{equation*}
+3(0)+\frac{1}{2}y+0=4
+\iff y=8
+\end{equation*}
+So the intersection of $P$ with the $y$-axis is the single point $(0,8,0)$.
+\item
+Each point on the $z$-axis is of the form $(0,0,z)$. Such a point is on the plane $P$ if
+\begin{equation*}
+3(0)+\frac{1}{2}(0)+z=4
+\iff z=4
+\end{equation*}
+So the intersection of $P$ with the $z$-axis is the single point $(0,0,4)$.
+\item
+The intersection of the plane $P$ with the $yz$-plane is a line. 
+We have shown in parts (a) and (b) that the points $(0,8,0)$ and $(0,0,4)$
+are on that line. Here is a sketch of the part of that line that is in the first
+octant.
+
+\begin{center}
+     \includegraphics{intersectSketch.pdf}
+\end{center}
+\end{enumerate}
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+\begin{enumerate}[(a)]
+\item
+Find the equation of the plane that passes through the origin and has normal vector $\llt 1,2,3\rgt$.
+\item
+Find the equation of the plane that passes through the point $(0,0,1)$ and has normal vector $\llt 1,1,3\rgt$.
+\item
+Find, if possible, the equation of a plane that passes through both $(1,2,3)$
+and $(1,0,0)$ and has normal vector $\llt 4,5,6\rgt$.
+\item
+Find, if possible, the equation of a plane that passes through both $(1,2,3)$
+and $(0,3,4)$ and has normal vector $\llt 2,1,1\rgt$.
+\end{enumerate}
+\end{question}
+
+%\begin{hint}
+%\end{hint}
+
+\begin{answer}
+(a) $x+2y+3z=0$ \qquad
+(b) $x+y+3z=3$ 
+
+(c) There is \emph{no plane} that passes through both $(1,2,3)$
+and $(1,0,0)$ and has normal vector $\llt 4,5,6\rgt$.
+
+(d) $2x+y+z=7$
+\end{answer}
+
+\begin{solution}
+(a) 
+If $(x,y,z)$ is any point on the plane, then both the head and the tail of the vector from $(x,y,z)$ to $(0,0,0)$, namely $\llt x,y,z\rgt$, lie in the plane. So the vector  $\llt x,y,z\rgt$ must be perpendicular to $\llt 1,2,3\rgt$ and
+\begin{equation*}
+0=\llt x,y,z\rgt\cdot \llt 1,2,3\rgt =x+2y+3z
+\end{equation*}
+
+(b) 
+If $(x,y,z)$ is any point on the plane, then both the head and the tail of the vector from $(x,y,z)$ to $(0,0,1)$, namely $\llt x,y,z-1\rgt$, lie in the plane. So the vector  $\llt x,y,z-1\rgt$ must be perpendicular to $\llt 1,1,3\rgt$ and
+\begin{equation*}
+0=\llt x,y,z-1\rgt\cdot \llt 1,1,3\rgt =x+y+3(z-1)
+\iff x+y+3z=3
+\end{equation*}
+
+(c)
+If both $(1,2,3)$ and $(1,0,0)$ are on the plane, then both the head and the tail of the vector from $(1,2,3)$ to $(1,0,0)$, namely $\llt 0,2,3\rgt$, lie in the plane. So the vector $\llt 0,2,3\rgt$ must be perpendicular to 
+$\llt 4,5,6\rgt$. As
+\begin{equation*}
+\llt 0,2,3\rgt \cdot \llt 4,5,6\rgt = 28\ne 0
+\end{equation*}
+the vector  $\llt 0,2,3\rgt$ is not perpendicular to $\llt 4,5,6\rgt$.
+So there is \emph{no plane} that passes through both $(1,2,3)$
+and $(1,0,0)$ and has normal vector $\llt 4,5,6\rgt$.
+
+(d)
+If both $(1,2,3)$ and $(0,3,4)$ are on the plane, then both the head and the tail of the vector from $(1,2,3)$ to $(0,3,4)$, namely $\llt 1,-1,-1\rgt$, lie in the plane. So the vector  $\llt 1,-1,-1\rgt$ must be perpendicular to 
+$\llt 2,1,1\rgt$. As
+\begin{equation*}
+\llt 1,-1,-1\rgt \cdot \llt 2,1,1\rgt = 0
+\end{equation*}
+the vector  $\llt 1,-1,-1\rgt$ is indeed perpendicular to $\llt 2,1,1\rgt$.
+So \emph{there is a plane} that passes through both $(1,2,3)$
+and $(0,3,4)$ and has normal vector $\llt 2,1,1\rgt$. We now just have to build its equation.
+
+If $(x,y,z)$ is any point on the plane, then both the head and the tail of the vector from $(x,y,z)$ to $(1,2,3)$, namely $\llt x-1,y-2,z-3\rgt$, lie in the plane. So the vector  $\llt x-1,y-2,z-3\rgt$ must be perpendicular to 
+$\llt 2,1,1\rgt$ and
+\begin{equation*}
+0=\llt x-1,y-2,z-3\rgt\cdot \llt 2,1,1\rgt =2(x-1)+(y-2)+(z-3)
+\iff 2x+y+z=7
+\end{equation*}
+As a check, note that both $(x,y,z)=(1,2,3)$ and $(x,y,z)=(0,3,4)$
+obey the equation  $2x+y+z=7$.
+\end{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}[M200 2008A] \label{prob1.4_planeeqn} %1b
 Find the equation of the plane that contains $(1,0,0)$, 
 $(0,1,0)$ and $(0,0,1)$.
@@ -97,19 +228,32 @@ is an equation for the plane.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}
+\begin{enumerate}[(a)]
+\item
 Find the equation of the plane containing the points $(1,0,1)$,
 $(1,1,0)$ and $(0,1,1)$.
+\item
+Is the point $(1,1,1)$ on the plane?
+\item
+Is the origin on the plane?
+\item
+Is the point $(4,-1,-1)$ on the plane?
+\end{enumerate}
 \end{question}
 
 \begin{hint}
-See Question~\ref{prob1.4_planeeqn} --- or just have a guess!
+(a) See Question~\ref{prob1.4_planeeqn} --- or just have a guess!
 \end{hint}
 
 \begin{answer}
-$x+y+z=2$
+(a) $x+y+z=2$ \qquad
+(b) No.\qquad
+(c) No. \qquad
+(d) Yes.
 \end{answer}
 
 \begin{solution}
+(a)
 \emph{Solution 1:}\ \ \ That's too easy. We just guess.
 The plane $x+y+z=2$ contains all three given points.
 
@@ -134,6 +278,29 @@ is a normal vector for the plane. As $(0,1,1)$ is a point in the plane,
 x+y+z=2
 \end{align*}
 is an equation for the plane.
+
+(b)
+Since
+\begin{equation*}
+\Big[x+y+z\Big]_{(x,y,z)=(1,1,1)} = 3\ne 2
+\end{equation*}
+the point $(1,1,1)$ \emph{is not} on $x+y+z=2$.
+
+(c)
+Since
+\begin{equation*}
+\Big[x+y+z\Big]_{(x,y,z)=(0,0,0)} = 0\ne 2
+\end{equation*}
+the origin \emph{is} not on $x+y+z=2$.
+
+(d)
+Since
+\begin{equation*}
+\Big[x+y+z\Big]_{(x,y,z)=(4,-1,-1)} = 2
+\end{equation*}
+the point $(4,-1,-1)$ \emph{is} on $x+y+z=2$.
+
+
 \end{solution}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

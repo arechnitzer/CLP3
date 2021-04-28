@@ -1,0 +1,46 @@
+lbl file prepared by figPac Thu Jan 14 22:42:09 PST 2021
+274.63
+289.08
+0
+0
+0
+2
+ 
+274.63
+289.08
+2
+0
+ 
+75.16
+ 2.68
+1
+0
+$z$
+290.24
+190.29
+0
+1
+$y$
+20.81
+270.92
+2
+2
+$x$
+218.94
+126.73
+0
+1
+$r\,d\theta$
+191.54
+40.41
+1
+0
+$r\sin\theta\, \dee{\phi}$
+144.54
+270.98
+1
+2
+surface element $\dee{S}=r^2\sin\theta\,\dee{\theta}\,\dee{\phi}$
+-1000
+0/1/2 left/center/right
+0/1/2 bottom/center/top

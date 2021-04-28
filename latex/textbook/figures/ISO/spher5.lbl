@@ -1,0 +1,51 @@
+lbl file prepared by figPac Sat Jan 16 13:57:16 PST 2021
+274.63
+289.08
+0
+0
+0
+2
+ 
+274.63
+289.08
+2
+0
+ 
+126.47
+-5.42
+1
+0
+$z$
+276.43
+162.61
+0
+1
+$y$
+88.53
+227.00
+2
+2
+$x$
+188.73
+200.90
+1
+2
+$\dee{r}$
+230.31
+113.24
+0
+1
+$\,r\,\dee{\theta}$
+202.79
+42.31
+1
+0
+$r\sin\theta\,\dee{\phi}$
+180.67
+234.88
+1
+2
+volume element $\dee{V}=r^2\sin\theta\ \dee{r}\,\dee{\theta}\,\dee{\phi}$
+-1000
+0/1/2 left/center/right
+0/1/2 bottom/center/top

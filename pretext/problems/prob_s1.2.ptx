@@ -163,6 +163,194 @@ says that the vectors of parts (a) and (b) are perpendicular, while the vectors 
 
 <exercise>
 <statement><p>
+Consider the vector <m>\va=\llt 3,4 \rgt</m>.
+<ol label="a">
+<li>
+Find a unit vector in the same direction as <m>\va</m>. 
+</li>
+<li>
+Find all unit vectors that are parallel to <m>\va</m>.
+</li>
+<li>
+Find all vectors that are parallel to <m>\va</m> and have length <m>10</m>.
+</li>
+<li>
+Find all unit vectors that are perpendicular to <m>\va</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review Definition <xref ref="def_parallel_vectors"/> and Theorem <xref ref="thm_dotPppties"/>.
+</p></hint>
+
+<answer><p>
+<ol label="a">
+  <li> <m>\frac{1}{5}\llt 3,4 \rgt</m> </li>
+  <li> <m>\pm\frac{1}{5}\llt 3,4 \rgt</m> </li>
+  <li> <m>\pm \llt 6,8 \rgt</m> </li>
+  <li> <m>\pm\frac{1}{5}\llt 4,-3 \rgt</m> </li>
+</ol>
+</p></answer>
+
+<solution><p>
+<ol label="a">
+<li>
+The vector <m>\va</m> has length
+<me>
+|\llt 3,4 \rgt|
+=\sqrt{3^2+4^2}
+=\sqrt{25}
+=5
+</me>
+So the vector <m>\frac{1}{5}\llt 3,4 \rgt</m> has length <m>1</m> (i.e. is a unit vector)
+and is in the same direction as  <m>\llt 3,4 \rgt</m>.
+</li>
+<li>
+Recall, from Definition  <xref ref="def_parallel_vectors"/>, that a vector is parallel to <m>\va</m> if and only if it is of the form <m>s\va</m> for some nonzero real number <m>s</m>. Such a vector is a unit vector if and only if
+<md>
+<mrow>
+|s\va|=1
+&amp;\iff |s|\,|\llt 3,4 \rgt|=1
+\iff |s| = \frac{1}{|\llt 3,4 \rgt|}= \frac{1}{5} 
+</mrow><mrow>
+&amp;\iff s  = \pm \frac{1}{5}
+</mrow>
+</md>
+So there are two unit vectors that are parallel to <m>\va</m>, namely
+<m>\pm\frac{1}{5}\llt 3,4 \rgt</m>.
+</li>
+<li>
+We have already found, in part (b), all vectors that are parallel to <m>\va</m> and have length <m>1</m>, namely <m>\pm\frac{1}{5}\llt 3,4 \rgt</m>. To increase the 
+lengths of those vectors to <m>10</m>, we just need to multiply them by <m>10</m>, giving
+<m>\pm\frac{10}{5}\llt 3,4 \rgt=\pm 2\llt 3,4 \rgt=\pm\llt 6,8 \rgt</m>.
+</li>
+<li>
+ A vector <m>\llt x,y \rgt</m> is perpendicular to <m>\va=\llt 3,4\rgt</m>
+if and only if
+<me>
+0=\llt x,y \rgt\cdot\llt 3,4\rgt
+ = 3x+4y
+\iff y=-\frac{3}{4}x
+\iff \llt x,y \rgt = \llt x,-\frac{3}{4}x \rgt = \frac{x}{4} \llt 4,-3\rgt
+</me>
+ Such a vector is a unit vector if and only if
+<md>
+<mrow>
+ \frac{|x|}{4}\,|\llt 4,-3 \rgt|=1
+&amp;\iff \frac{|x|}{4} = \frac{1}{|\llt 4,-3 \rgt|}= \frac{1}{5} 
+</mrow><mrow>
+&amp;\iff \frac{x}{4}   = \pm \frac{1}{5}
+</mrow>
+</md>
+So there are two unit vectors that are perpendicular to <m>\va</m>, namely
+<m>\pm\frac{1}{5}\llt 4,-3 \rgt</m>.
+</li> 
+</ol>
+</p></solution>
+</exercise>
+
+
+<exercise>
+<statement><p>
+Consider the vector <m>\vb=\llt 3,4,0 \rgt</m>.
+<ol label="a">
+<li>
+Find a unit vector in the same direction as <m>\vb</m>.
+</li>
+<li>
+Find all unit vectors that are parallel to <m>\vb</m>.
+</li>
+<li>
+Find four different unit vectors that are perpendicular to <m>\vb</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Review Definition <xref ref="def_parallel_vectors"/> and Theorem <xref ref="thm_dotPppties"/>.
+</p></hint>
+
+
+<answer><p>
+<ol label="a">
+  <li> <m>\frac{1}{5}\llt 3,4,0 \rgt</m> </li>
+  <li> <m>\pm\frac{1}{5}\llt 3,4,0 \rgt</m> </li>
+  <li>   A vector is of length one and perpendicular to <m>\vb</m> if and only if it is of the form <m>\llt x,-\frac{3}{4}x,z \rgt</m> with <m>\sqrt{\frac{25}{16}x^2+z^2}=1</m>.
+There are infinitely many such vectors. Four of them are 
+<me>
+\pm\llt 0,0,1\rgt\qquad
+\pm\frac{1}{5}\llt 4,-3,0\rgt
+</me>
+</li>
+</ol>
+</p></answer>
+
+<solution><p>
+<ol label="a">
+<li>   
+The vector <m>\vb</m> has length
+<me>
+|\llt 3,4,0 \rgt|
+=\sqrt{3^2+4^2+0^2}
+=\sqrt{25}
+=5
+</me>
+So the vector <m>\frac{1}{5}\llt 3,4,0 \rgt</m> has length <m>1</m> (i.e. is a 
+unit vector) and is in the same direction as  <m>\llt 3,4,0 \rgt</m>.
+</li>
+<li>
+ Recall, from Definition  <xref ref="def_parallel_vectors"/>, that a vector is parallel to <m>\vb</m> if and only if it is of the form <m>s\vb</m> for some nonzero real number <m>s</m>. Such a vector is a unit vector if and only if
+<md>
+<mrow>
+|s\vb|=1
+&amp;\iff |s|\,|\llt 3,4,0 \rgt|=1
+\iff |s| = \frac{1}{|\llt 3,4,0 \rgt|}= \frac{1}{5} 
+</mrow><mrow>
+&amp;\iff s  = \pm \frac{1}{5}
+</mrow>
+</md>
+So there are two unit vectors that are parallel to <m>\vb</m>, namely
+<m>\pm\frac{1}{5}\llt 3,4,0 \rgt</m>.
+</li>
+<li>
+ A vector <m>\llt x,y,z \rgt</m> is perpendicular to <m>\va=\llt 3,4,0\rgt</m>
+if and only if
+<me>
+0=\llt x,y,z \rgt\cdot\llt 3,4,0\rgt
+ = 3x+4y
+\iff y=-\frac{3}{4}x
+\iff \llt x,y,z \rgt = \llt x,-\frac{3}{4}x,z \rgt 
+</me>
+ Such a vector is a unit vector if and only if
+<md>
+<mrow>
+ \left|\llt x,-\frac{3}{4}x,z \rgt\right|=1
+&amp;\iff \sqrt{x^2+\frac{9}{16}x^2+z^2}=1
+ \iff \sqrt{\frac{25}{16}x^2+z^2}=1
+</mrow>
+</md>
+There are infinitely many pairs <m>x</m>, <m>z</m> that 
+obey <m>\sqrt{\frac{25}{16}x^2+z^2}=1</m>. We can easily get two of them
+by setting <m>x=0</m> and choosing <m>z</m> to obey <m>\sqrt{z^2}=1</m>, i.e. choosing 
+<m>z=\pm 1</m>. We can easily get two more of them
+by setting <m>z=0</m> and choosing <m>x</m> to obey <m>\sqrt{\frac{25}{16}x^2}=1</m>, 
+i.e. choosing <m>x=\pm \frac{4}{5}</m>. This gives us four vectors of length one that
+are perpendicular to <m>\vb</m>, namely
+<me>
+\pm\llt 0,0,1\rgt\qquad
+\pm\llt \frac{4}{5}\,,\,-\frac{3}{4}\,\frac{4}{5}\,,\,0\rgt
+=\pm\frac{1}{5}\llt 4,-3,0\rgt
+</me>
+</li>
+</ol>
+</p></solution>
+</exercise>
+
+
+
+<exercise>
+<statement><p>
 Let <m>\va=\llt a_1,a_2\rgt</m>. Compute the projection of <m>\va</m> on
 <m>\hi</m> and <m>\hj</m>.
 </p></statement>
@@ -670,52 +858,6 @@ The center of the sphere is
 </p></solution>
 </exercise>
 
-<exercise>
-<statement><p>
-Show that the set of all points <m>P</m> that are twice as far from
-<m>(3,-2,3)</m> as from <m>(3/2,1,0)</m> is a sphere. Find its centre and radius.
-</p></statement>
-
-<answer><p>
-The sphere has radius 3 and is centered on <m>(1,2,-1)</m>.
-</p></answer>
-
-<solution><p>
-Let <m>(x,y,z)</m> be a point in <m>P</m>. The distances from
-<m>(x,y,z)</m> to <m>(3,-2,3)</m> and to <m>(3/2,1,0)</m> are
-<me>
-\sqrt{(x-3)^2+(y+2)^2+(z-3)^2}\quad\text{ and }\quad
-\sqrt{(x-3/2)^2+(y-1)^2+z^2}
-</me>
-respectively. To be in <m>P</m>, <m>(x,y,z)</m> must obey
-<md>
-<mrow>
-\sqrt{(x-3)^2+(y+2)^2+(z-3)^2}&amp;=2\sqrt{(x-3/2)^2+(y-1)^2+z^2}
-</mrow><mrow>
-(x-3)^2+(y+2)^2+(z-3)^2&amp;=4(x-3/2)^2+4(y-1)^2+4z^2
-</mrow>
-</md>
-Squaring out both sides gives
-<md>
-<mrow>
-&amp;x^2-6x+9+y^2+4y+4+z^2-6z+9
-</mrow><mrow>
-&amp;\hskip1in=4x^2-12x+9+4y^2-8y+4+4z^2
-</mrow>
-</md>
-and the simplifying gives
-<md>
-<mrow>
-3x^2-6 x+3y^2-12y+3z^2+6z-9&amp;=0
-</mrow><mrow>
-x^2-2 x+y^2-4y+z^2+2z-3&amp;=0
-</mrow><mrow>
-(x-1)^2+(y-2)^2+(z+1)^2&amp;=9
-</mrow>
-</md>
-This is a sphere of radius 3 centered on <m>(1,2,-1)</m>.
-</p></solution>
-</exercise>
 
 <exercise>
 <statement><p>

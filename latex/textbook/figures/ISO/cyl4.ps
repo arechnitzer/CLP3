@@ -1,0 +1,79 @@
+%!PS-Adobe-3.0
+%%BoundingBox:       0.0 0.0     108.0 108.0
+%%Title:              
+%%Created by:        Figure.java
+%%Date:              Thu Jan 14 19:55:21 PST 2021
+%%EndComments
+
+gsave
+
+%% ellipse library
+
+/ellipsedict 10 dict def        %% arguments: xcentre ycentre xradius yradius
+ellipsedict /emtrx matrix put  %%            startangle endangle closetype
+
+/ellipse                       %% closetype: 0 for open, 1 for chord, 2 for wedge
+    {ellipsedict begin
+       /closetype exch def
+       /endangle exch def      /startangle exch def
+       /yrad exch def          /xrad exch def
+       /y exch def             /x exch def
+       /savematrix emtrx currentmatrix def
+    x y translate
+    xrad  yrad  scale
+    newpath
+    closetype 2 eq  {0 0 moveto} if
+    0 0 1 startangle endangle arc
+    closetype 1 eq  {closepath} if
+    closetype 2 eq  {closepath} if
+    savematrix setmatrix
+    end
+    } def
+
+%%  Figure2ps dictionary
+
+/Figure2psDict 30 dict def
+Figure2psDict begin
+  /iscp false def
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+newpath -1.0 -1.0 moveto 109.0 -1.0 lineto 109.0 109.0 lineto -1.0 109.0 lineto closepath clip
+/Helvetica 10 setpsfont
+0.5 setlinewidth
+newpath
+36.0  50.4  moveto
+36.0  108.0  lineto stroke
+newpath
+36.0  50.4  moveto
+23.82859406186786  24.298335733344473  lineto stroke
+newpath
+68.76415267426901  50.4  moveto
+79.2  50.4  lineto stroke
+[3 3] 0.0 setdash
+newpath
+36.0  50.4  moveto
+68.76415267426901  50.4  lineto stroke
+[ ] 0 setdash
+0 0.53333 0.8 setrgbcolor  
+1.0 setlinewidth
+newpath
+36.0  50.4  moveto
+36.0  100.80000000000001  lineto stroke
+newpath
+36.0  50.4  moveto
+68.76415267426901  36.16014370342479  lineto stroke
+newpath
+36.0  100.80000000000001  moveto
+68.76415267426901  86.5601437034248  lineto stroke
+newpath
+68.76415267426901  36.16014370342479  moveto
+68.76415267426901  86.5601437034248  lineto stroke
+
+%%Trailer
+end
+grestore

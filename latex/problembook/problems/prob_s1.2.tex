@@ -138,6 +138,166 @@ By property 7 of Theorem \eref{CLP200}{thm:dotPppties} in the CLP-3 text,
 \reqnomode
 \end{solution}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+Consider the vector $\va=\llt 3,4 \rgt$.
+\begin{enumerate}[(a)]
+\item
+Find a unit vector in the same direction as $\va$. 
+\item
+Find all unit vectors that are parallel to $\va$.
+\item
+Find all vectors that are parallel to $\va$ and have length $10$.
+\item
+Find all unit vectors that are perpendicular to $\va$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Review Definition \eref{CLP200}{def parallel vectors} and 
+Theorem \eref{CLP200}{thm:dotPppties} in the CLP-3 text.
+\end{hint}
+
+\begin{answer}
+(a) $\frac{1}{5}\llt 3,4 \rgt$\quad
+(b) $\pm\frac{1}{5}\llt 3,4 \rgt$\quad
+(c) $\pm \llt 6,8 \rgt$\quad
+(d) $\pm\frac{1}{5}\llt 4,-3 \rgt$
+\end{answer}
+
+\begin{solution}
+(a) The vector $\va$ has length
+\begin{equation*}
+|\llt 3,4 \rgt|
+=\sqrt{3^2+4^2}
+=\sqrt{25}
+=5
+\end{equation*}
+So the vector $\frac{1}{5}\llt 3,4 \rgt$ has length $1$ (i.e. is a unit vector)
+and is in the same direction as  $\llt 3,4 \rgt$.
+
+(b) Recall, from Definition \eref{CLP200}{def parallel vectors} in the CLP-3 text, that a vector is parallel to $\va$ if and only if it is of the form $s\va$
+for some nonzero real number $s$. Such a vector is a unit vector if and only if
+\begin{align*}
+|s\va|=1
+&\iff |s|\,|\llt 3,4 \rgt|=1
+\iff |s| = \frac{1}{|\llt 3,4 \rgt|}= \frac{1}{5} \\
+&\iff s  = \pm \frac{1}{5}
+\end{align*}
+So there are two unit vectors that are parallel to $\va$, namely
+$\pm\frac{1}{5}\llt 3,4 \rgt$.
+
+(c) We have already found, in part (b), all vectors that are parallel to $\va$ and have length $1$, namely $\pm\frac{1}{5}\llt 3,4 \rgt$. To increase the 
+lengths of those vectors to $10$, we just need to multiply them by $10$, giving
+$\pm\frac{10}{5}\llt 3,4 \rgt=\pm 2\llt 3,4 \rgt=\pm\llt 6,8 \rgt$.
+
+(d) A vector $\llt x,y \rgt$ is perpendicular to $\va=\llt 3,4\rgt$
+if and only if
+\begin{equation*}
+0=\llt x,y \rgt\cdot\llt 3,4\rgt
+ = 3x+4y
+\iff y=-\frac{3}{4}x
+\iff \llt x,y \rgt = \llt x,-\frac{3}{4}x \rgt = \frac{x}{4} \llt 4,-3\rgt
+\end{equation*}
+ Such a vector is a unit vector if and only if
+\begin{align*}
+ \frac{|x|}{4}\,|\llt 4,-3 \rgt|=1
+&\iff \frac{|x|}{4} = \frac{1}{|\llt 4,-3 \rgt|}= \frac{1}{5} \\
+&\iff \frac{x}{4}   = \pm \frac{1}{5}
+\end{align*}
+So there are two unit vectors that are perpendicular to $\va$, namely
+$\pm\frac{1}{5}\llt 4,-3 \rgt$.
+
+
+
+\end{solution}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+Consider the vector $\vb=\llt 3,4,0 \rgt$.
+\begin{enumerate}[(a)]
+\item
+Find a unit vector in the same direction as $\vb$. 
+\item
+Find all unit vectors that are parallel to $\vb$.
+\item
+Find four different unit vectors that are perpendicular to $\vb$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Review Definition \eref{CLP200}{def parallel vectors} and 
+Theorem \eref{CLP200}{thm:dotPppties} in the CLP-3 text.
+\end{hint}
+
+\begin{answer}
+(a) $\frac{1}{5}\llt 3,4,0 \rgt$\quad
+(b) $\pm\frac{1}{5}\llt 3,4,0 \rgt$
+
+(c) A vector is of length one and perpendicular to $\vb$ if and only if it is of the form $\llt x,-\frac{3}{4}x,z \rgt $ with $\sqrt{\frac{25}{16}x^2+z^2}=1$.
+There are infinitely many such vectors. Four of them are 
+\begin{equation*}
+\pm\llt 0,0,1\rgt\qquad
+\pm\frac{1}{5}\llt 4,-3,0\rgt
+\end{equation*}
+
+\end{answer}
+
+\begin{solution}
+(a) The vector $\vb$ has length
+\begin{equation*}
+|\llt 3,4,0 \rgt|
+=\sqrt{3^2+4^2+0^2}
+=\sqrt{25}
+=5
+\end{equation*}
+So the vector $\frac{1}{5}\llt 3,4,0 \rgt$ has length $1$ (i.e. is a 
+unit vector) and is in the same direction as  $\llt 3,4,0 \rgt$.
+
+(b) Recall, from Definition \eref{CLP200}{def parallel vectors} in the CLP-3 text, that a vector is parallel to $\vb$ if and only if it is of the form $s\vb$
+for some nonzero real number $s$. Such a vector is a unit vector if and only if
+\begin{align*}
+|s\vb|=1
+&\iff |s|\,|\llt 3,4,0 \rgt|=1
+\iff |s| = \frac{1}{|\llt 3,4,0 \rgt|}= \frac{1}{5} \\
+&\iff s  = \pm \frac{1}{5}
+\end{align*}
+So there are two unit vectors that are parallel to $\vb$, namely
+$\pm\frac{1}{5}\llt 3,4,0 \rgt$.
+
+(c) A vector $\llt x,y,z \rgt$ is perpendicular to $\va=\llt 3,4,0\rgt$
+if and only if
+\begin{equation*}
+0=\llt x,y,z \rgt\cdot\llt 3,4,0\rgt
+ = 3x+4y
+\iff y=-\frac{3}{4}x
+\iff \llt x,y,z \rgt = \llt x,-\frac{3}{4}x,z \rgt 
+\end{equation*}
+ Such a vector is a unit vector if and only if
+\begin{align*}
+ \left|\llt x,-\frac{3}{4}x,z \rgt\right|=1
+&\iff \sqrt{x^2+\frac{9}{16}x^2+z^2}=1
+ \iff \sqrt{\frac{25}{16}x^2+z^2}=1
+\end{align*}
+There are infinitely many pairs $x$, $z$ that 
+obey $\sqrt{\frac{25}{16}x^2+z^2}=1$. We can easily get two of them
+by setting $x=0$ and choosing $z$ to obey $\sqrt{z^2}=1$, i.e. choosing 
+$z=\pm 1$. We can easily get two more of them
+by setting $z=0$ and choosing $x$ to obey $\sqrt{\frac{25}{16}x^2}=1$, 
+i.e. choosing $x=\pm \frac{4}{5}$. This gives us four vectors of length one that
+are perpendicular to $\vb$, namely
+\begin{equation*}
+\pm\llt 0,0,1\rgt\qquad
+\pm\llt \frac{4}{5}\,,\,-\frac{3}{4}\,\frac{4}{5}\,,\,0\rgt
+=\pm\frac{1}{5}\llt 4,-3,0\rgt
+\end{equation*}
+
+\end{solution}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}
 Let $\va=\llt a_1,a_2\rgt$. Compute the projection of $\va$ on
@@ -624,37 +784,6 @@ the equation of the sphere is
 \end{equation*}
 \end{solution}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{question}
-Show that the set of all points $P$ that are twice as far from
-$(3,-2,3)$ as from $(3/2,1,0)$ is a sphere. Find its centre and radius.
-\end{question}
-
-%\begin{hint}
-%\end{hint}
-
-\begin{answer}
-The sphere has radius 3 and is centered on $(1,2,-1)$.
-\end{answer}
-
-\begin{solution}
-Let $(x,y,z)$ be a point in $P$. The distances from
-$(x,y,z)$ to $(3,-2,3)$ and to $(3/2,1,0)$ are 
-\begin{equation*}
-\sqrt{(x-3)^2+(y+2)^2+(z-3)^2}\quad\text{ and }\quad
-\sqrt{(x-3/2)^2+(y-1)^2+z^2}
-\end{equation*}
-respectively. To be in $P$, $(x,y,z)$ must obey
-\begin{align*}
-\sqrt{(x-3)^2+(y+2)^2+(z-3)^2}&=2\sqrt{(x-3/2)^2+(y-1)^2+z^2} \\
-(x-3)^2+(y+2)^2+(z-3)^2&=4(x-3/2)^2+4(y-1)^2+4z^2 \\
-x^2-6x+9+y^2+4y+4+z^2-6z+9&=4x^2-12x+9+4y^2-8y+4+4z^2 \\
-3x^2-6 x+3y^2-12y+3z^2+6z-9&=0 \\
-x^2-2 x+y^2-4y+z^2+2z-3&=0 \\
-(x-1)^2+(y-2)^2+(z+1)^2&=9
-\end{align*}
-This is a sphere of radius 3 centered on $(1,2,-1)$.
-\end{solution}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}
