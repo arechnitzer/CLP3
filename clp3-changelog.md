@@ -7,6 +7,7 @@ permalink: /CLP3-changelog/
 ---
 
 # CLP-3 Multivariable Calculus textbook
+* May 17, 2021 - Typo correction in Example 1.4.7.
 * January 18, 2021 - Added an appendix giving the ISO coordinate system notation.
 * November 22, 2020 - Minor tweaks and typo corrections to Chapters 2 and 3.
 * November 11, 2020 - Cleaned up and expanded Example 2.2.13 a bit.

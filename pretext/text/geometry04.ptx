@@ -395,7 +395,7 @@
   If we use <m>\theta</m> to denote the angle between <m>\vn_1</m> and <m>\vn_2</m>, then
   <md>
   <mrow>
-  \cos\theta &amp;=\frac{\vn_1\cdot\vn_1}{|\vn_1|\,|\vn_2|}
+  \cos\theta &amp;=\frac{\vn_1\cdot\vn_2}{|\vn_1|\,|\vn_2|}
   </mrow><mrow>
              &amp;=\frac{\llt 2,1,-1\rgt\cdot\llt 1,1,1\rgt}
                          {|\llt 2,1,-1\rgt|\,|\llt 1,1,1\rgt|}
