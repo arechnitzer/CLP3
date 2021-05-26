@@ -333,7 +333,7 @@ Here are some examples.
   the hyperbola
   <md>
   <mrow>
-  &amp;z=z_0\ \ \text{and}\ \ xy=\frac{1}{z_0}
+  &amp;z=z_0\ \ \text{and}\ \ xy=\frac{4}{z_0}
   </mrow>
   </md>
   Note that <m>x\rightarrow\infty</m> as <m>y\rightarrow 0</m> and that
