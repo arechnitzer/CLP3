@@ -1137,7 +1137,7 @@ if it  perpendicular to both <m>(1,0,3)</m> and <m>(0,1,3)</m>. One such vector 
 </p>
 
 <p>(c) The specified tangent line passes through <m>(1,1,3)</m> and has direction
-vector <m>\llt 1,1,3\rgt</m> and so has vector parametric equation
+vector <m>\llt 3,3,-1\rgt</m> and so has vector parametric equation
 <me>
 \vr(t)=\llt 1,1,3\rgt+t\llt 3,3,-1\rgt
 </me>
