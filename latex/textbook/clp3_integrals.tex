@@ -13,7 +13,7 @@ integrals.
 
 \section{Double Integrals}\label{sec 2d integrals}
 
-\subsection{Vertical Slices}
+\subsection{Vertical Slices}\label{sec_vertical_slices}
 
 Suppose that you want to compute the mass of a plate that
 fills the region $\cR$ in the $xy$-plane. Suppose further that the
@@ -197,7 +197,7 @@ At this point you may be wondering ``Do we always have to use vertical
 slices?'' and ``Do we always have to integrate with respect to $y$ first?''
 The answer is ``no''. This brings us to consider ``horizontal slices''.
 
-\subsection{Horizontal Slices}
+\subsection{Horizontal Slices}\label{sec_horizontal_slices}
 We found, when computing areas of regions in the $xy$-plane, that
 it is often advantageous to use horizontal slices, rather than vertical
 slices. See, for example,
@@ -1748,6 +1748,467 @@ for all $0\le x\le 1$, $0\le y\le 1$ and is continuous except at $(0,0)$,
 \int_0^1\dee{y}\bigg[\int_0^1 \dee{x}\ f(x,y)\bigg]=0
 \qquad
 \int_0^1\dee{x}\bigg[\int_0^1 \dee{y}\ f(x,y)\bigg]=1
+\end{equation*}
+\end{eg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Even and Odd Functions}
+\label{sec int symmetry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+During the course of our study of integrals of functions of one variable,
+we found that the evaluation of certain integrals could be substantially simplified by exploiting symmetry properties of the integrand. Concretely,
+in \S\eref{CLP101}{sec:evenodd} of the CLP-2 text, we gave the
+\begin{defn}[Definition  \eref{CLP101}{def:INTevenodd} in the CLP-2 text]\label{def_evenodd_one_variable}
+  Let $f(x)$ be a function of one variable. Then,
+ \begin{itemize}
+  \item we say that $f(x)$ is even when $f(-x)=f(x)$ for all $x$, and
+  \item we say that $f(x)$ is odd when $f(-x)=-f(x)$ for all $x$
+ \end{itemize}
+\end{defn}
+and we saw that 
+\begin{itemize}
+\item 
+$f(x)=|x|$, $f(x)=\cos x$ and $f(x)=x^2$ are even functions and
+\item
+$f(x)=\sin x$, $f(x)=\tan x$ and  $f(x)=x^3$ are odd functions.
+\item
+In fact, if $f(x)$ is any even power of $x$, then $f(x)$ is an
+even function and if $f(x)$ is any odd power of $x$, then $f(x)$ is
+         an odd function.
+\end{itemize}
+We also learned how to exploit evenness and oddness to simplify integration.
+\begin{theorem}[Theorem \eref{CLP101}{thm:INTevenodd} in the CLP-2 text]
+\label{thm:INTevenodd}
+Let $a>0$.
+\begin{enumerate}[(a)]
+\item If $f(x)$ is an even function, then
+\begin{align*}
+\int_{-a}^a f(x) \dee{x} = 2\int_0^a f(x) \dee{x}
+\end{align*}
+\item If $f(x)$ is an odd function, then
+\begin{align*}
+\int_{-a}^a f(x) \dee{x} = 0
+\end{align*}
+\end{enumerate}
+\end{theorem}
+
+We will now see that we can similarly exploit evenness and oddness of functions
+of more than one variable. But for functions of more than one variable there is also more than one kind of oddness and evenness. In the 
+Definition~\ref{def_evenodd_one_variable} (Definition  \eref{CLP101}{def:INTevenodd} in the CLP-2 text) of evenness and oddness of the function $f(x)$, we compared the value of $f$ at $x$ with the value of $f$ at $-x$. The points $x$ and $-x$ are the same distance from the origin, $0$, and
+are on opposite sides of $0$. The point $-x$ is called the reflection of $x$
+across the origin. To prepare for our definitions of evenness and oddness of functions of two variables, we now define three different reflections 
+in the two dimensional world of the $xy$-plane.
+\begin{defn}\label{def_reflection_twod}
+  Let $x$ and $y$ be two real numbers. 
+ \begin{itemize}
+  \item The reflection of $(x,y)$ across the $y$-axis is $(-x,y)$.
+  \item The reflection of $(x,y)$ across the $x$-axis is $(x,-y)$.
+  \item The reflection of $(x,y)$ across the origin is $(-x,-y)$.
+ \end{itemize}
+   \begin{efig}
+    \begin{center}
+        \includegraphics{refl2d.pdf}
+    \end{center}
+    \end{efig}
+\end{defn}
+\begin{itemize}
+\item
+ To get from the
+     point $(x,y)$ to its image reflected across the $y$-axis, you
+     \begin{itemize}
+       \item start from $(x,y)$, and
+       \item walk horizontally straight to the $y$-axis, and
+       \item cross the $y$-axis, and
+       \item continue horizontally the same distance as you have 
+                  already travelled to $(-x,y)$. 
+     \end{itemize}
+     Here are four examples.
+    \begin{efig}
+    \begin{center}
+        \includegraphics{refl2dX.pdf}
+    \end{center}
+    \end{efig}
+\item
+ To get from the
+     point $(x,y)$ to its image reflected across the $x$-axis, you
+     \begin{itemize}
+       \item start from $(x,y)$, and
+       \item walk vertically straight to the $x$-axis, and
+       \item cross the $x$-axis, and
+       \item continue vertically the same distance as you have 
+                  already travelled to the reflected image $(x,-y)$. 
+     \end{itemize}
+     Here are four examples.
+    \begin{efig}
+    \begin{center}
+        \includegraphics{refl2dY.pdf}
+    \end{center}
+    \end{efig}
+\item
+ To get from the
+     point $(x,y)$ to its image reflected across the origin, you
+     \begin{itemize}
+       \item start from $(x,y)$, and
+       \item walk radially straight to the origin, and
+       \item cross the origin, and
+       \item continue radially in the same direction the same distance 
+               as you have already travelled to the reflected image $(-x,-y)$. 
+     \end{itemize}
+     Here are three examples.
+    \begin{efig}
+    \begin{center}
+        \includegraphics{refl2dXY.pdf}
+    \end{center}
+    \end{efig}
+\end{itemize}
+
+For each of these three types of reflection, there is a corresponding kind of 
+oddness and evenness.
+
+\begin{defn}\label{def_evenodd_two_variables}
+  Let $f(x,y)$ be a function of two variables. Then,
+ \begin{itemize}
+  \item we say that $f(x,y)$ is even (under reflection across the origin) 
+    when $f(-x,-y)=f(x,y)$ for all $x$ and $y$, and
+  \item we say that $f(x,y)$ is odd (under reflection across the origin) 
+     when $f(-x,-y)=-f(x,y)$ for all $x$ and $y$
+ \end{itemize}
+and
+ \begin{itemize}
+  \item we say that $f(x,y)$ is even under $x\rightarrow -x$ (i.e. under           
+         reflection across the $y$-axis) when $f(-x,y)=f(x,y)$ for all $x$ 
+         and $y$, and
+  \item we say that $f(x,y)$ is odd  under $x\rightarrow -x$ (i.e. under           
+         reflection across the $y$-axis) when $f(-x,y)=-f(x,y)$ for all $x$ 
+         and $y$
+ \end{itemize}
+and
+ \begin{itemize}
+  \item we say that $f(x,y)$ is even under $y\rightarrow -y$ (i.e. under           
+         reflection across the $x$-axis) when $f(x,-y)=f(x,y)$ for all $x$ 
+         and $y$, and
+  \item we say that $f(x,y)$ is odd  under $y\rightarrow -y$ (i.e. under           
+         reflection across the $x$-axis) when $f(x,-y)=-f(x,y)$ for all $x$ 
+         and $y$.
+ \end{itemize}
+\end{defn}
+
+\begin{eg}\label{eg_evenodd_two_variables}
+Let $m$ and $n$ be two integers and set $f(x,y)=x^m y^n$. Then
+\begin{align*}
+f(-x,y)&= (-x)^my^n = (-1)^m x^m y^n = (-1)^m f(x,y) \\
+f(x,-y)&= x^m(-y)^n = (-1)^n x^m y^n= (-1)^n f(x,y) \\
+f(-x,-y)&= (-x)^m(-y)^n = (-1)^{m+n} x^m y^n = (-1)^{m+n} f(x,y) 
+\end{align*}
+Consequently
+\begin{itemize}
+\item if $m$ is even, then $f(x,y)$ is even under $x\rightarrow -x$ and
+\item if $m$ is odd, then $f(x,y)$ is odd under $x\rightarrow -x$ and
+\item if $n$ is even, then $f(x,y)$ is even under $y\rightarrow -y$ and
+\item if $n$ is odd, then $f(x,y)$ is odd under $y\rightarrow -y$ and
+\item if $m+n$ is even, then $f(x,y)$ is even  (under reflection across the origin) and
+\item if $m+n$ is odd, then $f(x,y)$ is odd  (under reflection across the origin).
+\end{itemize}
+\end{eg}
+
+Recall from  Theorem~\ref{thm:INTevenodd} (or Theorem~\eref{CLP101}{thm:INTevenodd} in the CLP-2 text) that we can exploit the evenness or oddness of the integrand, $f(x)$, 
+of the integral $\int_b^a f(x)\,\dee{x}$ to simplify the evaluation of 
+the integral  when $b=-a$, i.e. when the domain of integration is 
+invariant under reflection across the origin. Similarly, we will be able to 
+simplify the evaluation of the double integral 
+$\dblInt_\cR f\big(x,y\big)\,\dee{x}\,\dee{y}$ when the integrand is even or odd and the domain of integration $\cR$ is invariant under the corresponding reflection --- meaning that the reflected $\cR$ is identical to the original $\cR$. Here are some details for ``reflection across the $y$-axis''. The details for the other reflections are similar.
+\begin{itemize}
+\item
+If $\cR$ is any subset of the $xy$-plane, 
+\begin{equation*}
+\text{the reflection of $\cR$ across the $y$-axis} =\Set{(-x,y)}{(x,y)\in\cR} 
+\end{equation*}
+The set notation on the right hand side means ``the set of all points $(-x,y)$
+with $(x,y)$ a point of $\cR$''.
+
+\item
+In the special case\footnote{Here $L(y)$ (``$L$'' stands for ``left'') is the leftmost allowed value of $x$ when the $y$-coordinate is $y$, and 
+$R(y)$ (``$R$'' stands for ``right'') is the rightmost allowed value of $x$, 
+when the $y$-coordinate is $y$.} 
+that 
+\begin{equation*}
+\cR=\Set{(x,y)}{c\le y\le d, L(y)\le x\le R(y)}
+\end{equation*}
+(see \S\ref{sec_horizontal_slices} on horizontal slices) then
+\begin{equation*}
+\text{the reflection of $\cR$ across the $y$-axis} =\Set{(x,y)}{c\le y\le d,
+                         -R(y)\le x\le -L(y)} 
+\end{equation*}
+In the sketch below $\cR_y$ is the reflection of $\cR$ across the $y$-axis.
+\begin{wfig}
+\begin{center}
+   \includegraphics[scale=0.89]{hSliceA.pdf}\quad
+   \includegraphics[scale=0.89]{hSliceAry.pdf}
+\end{center}
+\end{wfig}
+
+\item A subset $\cR$ of the $xy$-plane is invariant under reflection across the $y$-axis (or is also known as ``symmetric about the $y$-axis'') when
+\begin{equation*}
+(-x,y)\text{ is in }\cR
+\iff
+(x,y)\text{ is in }\cR
+\end{equation*}   
+Recall that the symbol $\iff$ is read ``if and only if''. In the special case
+that 
+\begin{equation*}
+\cR=\Set{(x,y)}{c\le y\le d, L(y)\le x\le R(y)}
+\end{equation*}
+$\cR$ is is invariant under reflection across the $y$-axis when $L(y)=-R(y)$.
+\end{itemize} 
+Here are some more sketches. The first sketch is of a rectangle that is
+invariant under reflection across the $y$-axis, but is not invariant under reflection across the $x$-axis. The remaining three sketches show a triangle 
+and its reflections across the $y$-axis, across the $x$-axis and across 
+the origin.
+
+\begin{wfig}
+\begin{center}
+   \includegraphics[scale=1.0]{reflDySym.pdf}\quad
+   \includegraphics[scale=1.0]{reflDy.pdf}
+\end{center}
+\end{wfig}
+
+\begin{wfig}
+\begin{center}
+   \includegraphics[scale=1.0]{reflDx.pdf}\quad
+   \includegraphics[scale=1.0]{reflDo.pdf}
+\end{center}
+\end{wfig}
+
+We are finally ready for the analog of Theorem~\ref{thm:INTevenodd}
+(Theorem \eref{CLP101}{thm:INTevenodd} in the CLP-2 text)
+for functions of two variables. By way of motivation for that theorem,
+consider the integral $\dblInt_{\cR} f(x,y)\,\dee{x}\dee{y}$, with the 
+integrand, $f(x,y)$, odd under $x\rightarrow -x$, and the domain of integration, 
+$\cR$, symmetric about the $y$-axis. Slice up $\cR$ into tiny (think 
+``infinitesmal'') squares, either by subdividing vertical slices into tiny 
+squares, as in \S\ref{sec_vertical_slices}, or by subdividing horizontal slices 
+into tiny squares, as in \S\ref{sec_horizontal_slices}. Concentrate on any point 
+$(x_0,y_0)$ in $\cR$. 
+\vadjust{
+\begin{efig}
+\begin{center}
+   \includegraphics{oddSymmetric.pdf}
+\end{center}
+\end{efig}
+}
+The contribution to the integral coming from the square that contains
+$(x_0,y_0)$ is (essentially\footnote{In this motivation, we suppress the 
+$\De x\rightarrow 0$ and $\De y\rightarrow 0$ limits.}) 
+$f(x_0,y_0)\,\De x\,\De y$. That contribution is cancelled by the contribution
+coming from the square containing (the reflected point) $(-x_0,y_0)$, which is
+\begin{equation*}
+f(-x_0,y_0)\,\De x\,\De y = -f(x_0,y_0)\,\De x\,\De y
+\end{equation*} 
+This is the case for all points $(x_0,y_0)$ in $\cR$. Consequently
+\begin{equation*}
+\dblInt_{\cR} f(x,y)\,\dee{x}\dee{y} = 0
+\end{equation*}
+Here is the analog of Theorem~\ref{thm:INTevenodd} for functions of two variables.
+
+\begin{theorem}[2d Even and Odd]\label{thm:INTevenodd2d}
+\begin{enumerate}[(a)]
+\item 
+Let $\cR$ be a subset of the $xy$-plane that is symmetric about the $y$-axis.
+If $f(x,y)$ is odd under $x\rightarrow -x$, then
+\begin{align*}
+\dblInt_{\cR} f(x,y)\,\dee{x}\dee{y} = 0
+\end{align*}
+Denote by $\cR_+$ the set of all points in $\cR$ that have $x\ge 0$.
+If $f(x,y)$ is even under $x\rightarrow -x$, then
+\begin{align*}
+\dblInt_{\cR} f(x,y)\,\dee{x}\dee{y} = 2\dblInt_{\cR_+} f(x,y)\,\dee{x}\dee{y}
+\end{align*}
+ 
+
+\item 
+Let $\cR$ be a subset of the $xy$-plane that is symmetric about the $x$-axis.
+ If $f(x,y)$ is odd under $y\rightarrow -y$, then
+\begin{align*}
+\dblInt_{\cR} f(x,y)\,\dee{x}\dee{y} = 0
+\end{align*}
+Denote by $\cR_+$ the set of all points in $\cR$ that have $y\ge 0$.
+If $f(x,y)$ is even under $y\rightarrow -y$, then
+\begin{align*}
+\dblInt_{\cR} f(x,y)\,\dee{x}\dee{y} = 2\dblInt_{\cR_+} f(x,y)\,\dee{x}\dee{y}
+\end{align*}
+%\end{enumerate}
+%\end{theorem}
+%\addtocounter{theorem}{-1}
+%\begin{theorem}[continued]
+%\begin{enumerate}[(a)]
+\item[(c)]
+Let $\cR$ be a subset of the $xy$-plane that is invariant under reflection across the origin.
+If $f(x,y)$ is odd (under reflection across the origin), then
+\begin{align*}
+\dblInt_{\cR} f(x,y)\,\dee{x}\dee{y} = 0
+\end{align*}
+Denote by $\cR_+$ either the set of all points in $\cR$ that have $x\ge 0$
+or the set of all points in $\cR$ that have $y\ge 0$.
+If $f(x,y)$ is even (under reflection across the origin), then
+\begin{align*}
+\dblInt_{\cR} f(x,y)\,\dee{x}\dee{y} = 2\dblInt_{\cR_+} f(x,y)\,\dee{x}\dee{y}
+\end{align*}
+
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+We will give only the proof for part (a) in the special case that
+\begin{equation*}
+\cR=\Set{(x,y)}{c\le y\le d, L(y)\le x\le R(y)}
+\end{equation*}
+In part (a), we are assuming that $\cR$ is symmetric about the $y$-axis,
+so that $L(y)=-R(y)$. So, using horizontal strips, as described in 
+\S\ref{sec_horizontal_slices},
+\begin{equation*}
+\dblInt_{\cR} f(x,y)\,\dee{x}\dee{y}
+=\int_c^d \dee{y} \int_{-R(y)}^{R(y)} \dee{x}\ f(x,y)
+\end{equation*}  
+Fix any $c\le y\le d$.
+\begin{itemize}
+\item
+If $f(x,y)$ is odd under $x\rightarrow -x$, then
+$f(-x,y)=-f(x,y)$ for all $-R(y)\le x\le R(y)$ and
+\begin{equation*}
+\int_{-R(y)}^{R(y)} \dee{x}\ f(x,y)=0
+\end{equation*}
+by part (b) of Theorem \ref{thm:INTevenodd} (Theorem \eref{CLP101}{thm:INTevenodd} in the CLP-2 text).
+\item
+If $f(x,y)$ is even under $x\rightarrow -x$, then
+$f(-x,y)=f(x,y)$ for all $-R(y)\le x\le R(y)$ and
+\begin{equation*}
+\int_{-R(y)}^{R(y)} \dee{x}\ f(x,y)=2\int_0^{R(y)} \dee{x}\ f(x,y)
+\end{equation*}
+by part (a) of Theorem \ref{thm:INTevenodd}.
+\end{itemize}
+As the statements of the two bullets are true for each fixed $c\le y\le d$,
+we have that
+\begin{itemize}
+\item
+if $f(x,y)$ is odd under $x\rightarrow -x$, then
+\begin{align*}
+\dblInt_{\cR} f(x,y)\,\dee{x}\dee{y}
+&=\int_c^d \dee{y} \int_{-R(y)}^{R(y)} \dee{x}\ f(x,y) 
+=\int_c^d \dee{y}\ 0 \\
+&=0
+\end{align*}
+\item and if $f(x,y)$ is even under $x\rightarrow -x$, then
+\begin{align*}
+\dblInt_{\cR} f(x,y)\,\dee{x}\dee{y}
+&=\int_c^d \dee{y} \int_{-R(y)}^{R(y)} \dee{x}\ f(x,y)
+=\int_c^d \dee{y}\ 2\int_0^{R(y)} \dee{x}\ f(x,y) \\
+&=2\dblInt_{\cR_+} f(x,y)\,\dee{x}\dee{y}
+\end{align*}
+\end{itemize}
+The proof of part (a) when $\cR$ is not of the form 
+$\cR=\Set{(x,y)}{c\le y\le d, L(y)\le x\le R(y)}$ (for example if $\cR$ 
+has holes in it) is most easily done using the change of variables
+$x=-u$, $y=v$ in Theorem~\ref{thm 2d sub}, which is part of the optional \S\ref{sec Jacobian}.
+
+The proof of part (b) is similar to the proof of part (a).
+
+The proof of part (c) is most easily done using the change of variables
+$x=-u$, $y=-v$ in Theorem~\ref{thm 2d sub}, which is part of the optional \S\ref{sec Jacobian}.
+\end{proof}
+
+\begin{eg}\label{eg_odd_integralA}
+Evaluate the integral $\dblInt_{\cR} e^x\sin(y+y^3)\,\dee{x}\dee{y}$ over 
+the triangular region $\cR$ in the sketch
+\begin{efig}
+\begin{center}
+   \includegraphics{reflDxSym.pdf}
+\end{center}
+\end{efig}
+
+\soln
+Start by checking the evenness and oddness properties of the integrand
+$f(x,y) =  e^x\sin(y+y^3)$.
+Since
+\begin{align*}
+f(-x,y)&=e^{-x}\sin(y+y^3) \\
+f(x,-y)&=e^{x}\sin\big(-y+(-y)^3\big)
+        =e^{x}\sin(-y-y^3)
+        =-e^{x}\sin(y+y^3) \\
+        &=-f(x,y) \\
+f(-x,-y)&=-e^{-x}\sin(y+y^3) 
+\end{align*}
+the integrand is odd under $y\rightarrow-y$ but is neither even nor odd
+under $x\rightarrow -x$ and $(x,y)\rightarrow-(x,y)$. Fortunately (or by rigging), the domain of integration $\cR$ is invariant under $y\rightarrow -y$ (i.e. is symmetric about the $x$-axis) and so
+\begin{equation*}
+\dblInt_{\cR} e^x\sin(y+y^3)\,\dee{x}\dee{y}=0
+\end{equation*}
+by part (b) of Theorem \ref{thm:INTevenodd2d} (Theorem \eref{CLP101}{thm:INTevenodd} in the CLP-2 text).
+\end{eg}
+
+\begin{eg}\label{eg_odd_integralB}
+Evaluate the integral $\dblInt_{\cR}(xe^y + ye^x + xe^{xy} + 7)\,\dee{x}\dee{y}$ 
+over the region $\cR$ whose outer boundary is the ellipse $x^2+4y^2=1$.
+
+\soln
+First, let's sketch the ellipse $x^2+4y^2=1$. Notice that its $x$ intercepts
+are the points $(x,0)$ that obey $x^2+4(0)^2=1$. So the $x$-intercepts are
+$(\pm 1,0)$. Similarly its $y$ intercepts
+are the points $(0,y)$ that obey $0^2+4y^2=1$. So the $y$-intercepts are
+$(0,\pm 1/2)$. Here is a sketch of $\cR$.
+\begin{efig}
+\begin{center}
+   \includegraphics{ellipticalDomain.pdf}
+\end{center}
+\end{efig}
+From the sketch, it looks like $\cR$ is invariant under $x\rightarrow-x$
+(i.e. is symmetric about the $y$-axis) and is also invariant under $y\rightarrow-y$ (i.e. is symmetric about the $x$-axis) and is also 
+invariant under $(x,y)\rightarrow-(x,y)$. It is easy to check analytically that 
+this is indeed the case. The point $(x,y)$ is in $\cR$ if and only if it is inside $x^2+4y^2=1$. That is the case if and only if $x^2+4y^2\le 1$.
+Since
+\begin{align*}
+(-x)^2+4y^2 = x^2+(-4y)^2 = (-x)^2+4(-y)^2 = x^2+4y^2
+\end{align*}
+we have
+\begin{align*}
+(x,y)\text{ is in $\cR$} &\iff (-x,y)\text{ is in $\cR$} \\
+                         &\iff (x,-y)\text{ is in $\cR$} \\
+                         &\iff (-x,-y)\text{ is in $\cR$} 
+\end{align*}
+Now let's check the evenness and oddness properties of the integrand.
+\begin{alignat*}{5}
+f(x,y) &= xe^y &&+ ye^x &&+ xe^{xy} &&+ 7 \\
+f(-x,y) &= -xe^y &&+ ye^{-x} &&- xe^{-xy} &&+ 7 \\
+f(x,-y) &= xe^{-y} &&- ye^x &&+ xe^{-xy} &&+ 7 \\
+f(-x,-y) &= -xe^{-y} &&- ye^{-x} &&- xe^{xy} &&+ 7 
+\end{alignat*}
+So $f(x,y)$ is neither even nor odd under any of $x\rightarrow-x$,
+$y\rightarrow-y$, and $(x,y)\rightarrow-(x,y)$. BUT, look at the four terms of 
+$f(x,y)$ separately.
+\begin{itemize}
+\item 
+   The first term of $f(x,y)$, namely $xe^y$, is odd under $x\rightarrow-x$.
+\item 
+   The second term of $f(x,y)$, namely $ye^x$, is odd under $y\rightarrow-y$.
+\item 
+   The third term of $f(x,y)$, namely $xe^{xy}$, is odd under 
+        $(x,y)\rightarrow-(x,y)$.
+\item 
+   The fourth term of $f(x,y)$, namely $7$, is even under all of  
+      $x\rightarrow-x$, $y\rightarrow-y$, and $(x,y)\rightarrow-(x,y)$.
+\end{itemize}
+So, by parts (a), (b) and (c) of Theorem \ref{thm:INTevenodd2d}, in order,
+\begin{align*}
+\dblInt_{\cR}(xe^y + ye^x + xe^{xy} + 7)\,\dee{x}\dee{y}
+&= \dblInt_{\cR}xe^y\,\dee{x}\dee{y}
+   + \dblInt_{\cR}ye^x\,\dee{x}\dee{y}
+   + \dblInt_{\cR}xe^{xy}\,\dee{x}\dee{y}
+   + 7 \dblInt_{\cR} \dee{x}\dee{y} \\
+&= 0 + 0 +0 + 7\,\text{Area}(\cR)
+\end{align*}
+Since $\cR$ is an ellipse with semi-major axis $a=1$ and semi-minor axis $b=\frac{1}{2}$, it has area $\pi a b = \tfrac{1}{2}\pi$ and
+\begin{equation*}
+\dblInt_{\cR}(xe^y + ye^x + xe^{xy} + 7)\,\dee{x}\dee{y}
+ = \tfrac{7}{2}\pi
 \end{equation*}
 \end{eg}
 
@@ -3568,7 +4029,7 @@ note that the integral $\dblInt_\cR y\  \dee{x}\,\dee{y}$
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item 
 has domain of integration, namely $\cR$,  invariant 
-under $y\rightarrow -y$ (i.e. under reflection in the $x$-axis), and
+under $y\rightarrow -y$ (i.e. under reflection across the $x$-axis), and
 \item 
 has integrand, namely $y$, that is odd under $y\rightarrow -y$.
 \end{itemize}
@@ -3624,7 +4085,7 @@ The integral we want, namely $\dblInt_\cR x\  \dee{x}\,\dee{y}$,
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item 
 has domain of integration, namely $\cR$,  invariant 
-under $y\rightarrow -y$ (i.e. under reflection in the $x$-axis), and
+under $y\rightarrow -y$ (i.e. under reflection across the $x$-axis), and
 \item 
 has integrand, namely $x$, that is even under $y\rightarrow -y$.
 \end{itemize}
