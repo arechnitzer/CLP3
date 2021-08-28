@@ -7,6 +7,10 @@ permalink: /CLP3-changelog/
 ---
 
 # CLP-3 Multivariable Calculus textbook
+* August 27, 2021 - Added, in Section 1.2, the definition of the component of one vector in the direction of another vector. 
+* July 30, 2021 - Tweaked Definition 1.8.1. 
+* July 10, 2021 - Added a subsection on 2d integrals of odd/even functions.
+* May 25, 2021 - Typo correction in Example 1.7.4.
 * May 17, 2021 - Typo correction in Example 1.4.7.
 * January 18, 2021 - Added an appendix giving the ISO coordinate system notation.
 * November 22, 2020 - Minor tweaks and typo corrections to Chapters 2 and 3.
@@ -65,6 +69,8 @@ permalink: /CLP3-changelog/
 * August 15, 2018 - Initial upload.
 
 # CLP-3 Multivariable Calculus problem book
+* June 6, 2021 - Typo correction in Section 2.10 A[27].
+* June 1, 2021 - Typo correction in Section 2.5 S[17c].
 * January 26, 2021: Added a couple of problems to Sections 1.4 and 2.2.
 * January 21, 2021: Added some problems to Sections 1.1, 1.2 and 1.4.
 * October 25, 2020: Added the definition of gradient to Section 2.4 Q[22].
