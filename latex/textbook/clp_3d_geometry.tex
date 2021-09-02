@@ -869,7 +869,13 @@ So the formula
 {\rm proj}_{\vb}\,\va=\frac{\va\cdot\vb}{|\vb|^2}\,\vb
 \end{equation*} 
 \end{impeqn}\noindent
-is applicable whenever $\vb\ne\vZero $. As a special case, if $\vb$ happens 
+is applicable whenever $\vb\ne\vZero $.
+We may rewrite ${\rm proj}_{\vb}\,\va
+        =\frac{\va\cdot\vb}{|\vb|}\,\frac{\vb}{|\vb|}$.
+The coefficient, $\frac{\va\cdot\vb}{|\vb|}$, of the unit vector 
+$\frac{\vb}{|\vb|}$, is called the component of $\va$
+in the direction $\vb$.
+ As a special case, if $\vb$ happens 
 to be a unit vector, which, for emphasis, we'll now write has $\hat\vb$, 
 the projection formula simplifies to
 \begin{impeqn}\label{eqn unit proj}
@@ -2613,7 +2619,7 @@ are
 \end{align*}
 If we use $\theta$ to denote the angle between $\vn_1$ and $\vn_2$, then
 \begin{align*}
-\cos\theta &=\frac{\vn_1\cdot\vn_1}{|\vn_1|\,|\vn_2|} \\
+\cos\theta &=\frac{\vn_1\cdot\vn_2}{|\vn_1|\,|\vn_2|} \\
            &=\frac{\llt 2,1,-1\rgt\cdot\llt 1,1,1\rgt}
                        {|\llt 2,1,-1\rgt|\,|\llt 1,1,1\rgt|} \\
            &=\frac{2}{\sqrt{6}\,\sqrt{3}}
@@ -4056,7 +4062,7 @@ and sketching the part of the surface that lies in the horizontal
 plane $z=z_0$. The intersection of our surface with that horizontal plane is 
 the hyperbola
 \begin{align*}
-&z=z_0\text{\  \ and\ \ }xy=\frac{1}{z_0}
+&z=z_0\text{\  \ and\ \ }xy=\frac{4}{z_0}
 \end{align*}
 Note that $x\rightarrow\infty$ as $y\rightarrow 0$ and that 
 $y\rightarrow\infty$ as $x\rightarrow 0$. So the hyperbola 
@@ -4281,8 +4287,8 @@ A \emph{cylinder} is a surface that consists of all points that are
 on all lines that are
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item   parallel to a given line and
-\item   pass through a given fixed plane curve (in a plane not parallel
-to the given line).
+\item   pass through a given fixed curve, that lies in a fixed plane that is not 
+parallel to the given line.
 \end{itemize}
 \end{defn}
 
@@ -4295,15 +4301,15 @@ The familiar cylinder on the left below
    \includegraphics{cylinderO.pdf}
 \end{center}
 \end{efig}
-is called a right circular cylinder, because the given fixed plane curve
+is called a right circular cylinder, because the given fixed curve
 ($x^2+y^2=1$, $z=0$)
 is a circle and the given line (the $z$-axis) is perpendicular 
-(i.e. at right angles) to the fixed plane curve.
+(i.e. at right angles) to the fixed curve.
 
 The cylinder on the left above can be thought of as a vertical stack of 
 circles. The cylinder on the right above can also be thought of as a stack 
 of circles, but the centre of the circle at height $z$ has been shifted
-rightward to $(0,z,z)$. For that cylinder, the given fixed plane curve 
+rightward to $(0,z,z)$. For that cylinder, the given fixed curve 
 is once again the circle $x^2+y^2=1$, $z=0$, but the given line is $y=z$, $x=0$.
 
 We have already seen the the third cylinder 
@@ -4313,7 +4319,7 @@ We have already seen the the third cylinder
 \end{center}
 \end{efig}
 in Example \ref{eg hyperbolic cylinder}. It is called a hyperbolic cylinder.
-In this example, the given fixed plane curve is the hyperbola $yz=1$, $x=0$
+In this example, the given fixed curve is the hyperbola $yz=1$, $x=0$
 and the given line is the $x$-axis.
 \end{eg}
 

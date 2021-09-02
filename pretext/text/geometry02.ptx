@@ -823,9 +823,7 @@ too. So the formula
 </p>
 </fact>
 <p>
-is applicable whenever <m>\vb\ne\vZero </m>. As a special case, if <m>\vb</m> happens
-to be a unit vector, which, for emphasis, we'll now write has <m>\hat\vb</m>,
-the projection formula simplifies to
+is applicable whenever <m>\vb\ne\vZero </m>. We may rewrite <m>{\rm proj}_{\vb}\,\va=\frac{\va\cdot\vb}{|\vb|}\,\frac{\vb}{|\vb|}</m>. The coefficient, <m>\frac{\va\cdot\vb}{|\vb|}</m>, of the unit vector <m>\frac{\vb}{|\vb|}</m>, is called the component of <m>\va</m> in the direction <m>\vb</m>. As a special case, if <m>\vb</m> happens to be a unit vector, which, for emphasis, we'll now write has <m>\hat\vb</m>, the projection formula simplifies to
 </p>
 <fact xml:id="eqn_unit_proj">
 <p>
