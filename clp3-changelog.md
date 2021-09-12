@@ -69,6 +69,8 @@ permalink: /CLP3-changelog/
 * August 15, 2018 - Initial upload.
 
 # CLP-3 Multivariable Calculus problem book
+* September 12, 2021: Added a problem to Section 2.1.
+* September 12, 2021: Minor tweaks to S[6] of Section 2.1.
 * June 6, 2021 - Typo correction in Section 2.10 A[27].
 * June 1, 2021 - Typo correction in Section 2.5 S[17c].
 * January 26, 2021: Added a couple of problems to Sections 1.4 and 2.2.

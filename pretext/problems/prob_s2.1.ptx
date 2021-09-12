@@ -271,10 +271,9 @@ For part (f),
 \lim_{(x,y)\rightarrow(0,0)}\ \frac{x}{x^2+y^2}
     &amp;=\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ \frac{r\cos\theta}{r^2}
      =\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ \frac{\cos\theta}{r}
-    =\text{undefined}
 </mrow>
 </md>
-since, for example,
+which does not exist, since, for example,
 <ul>
 <li>
 if <m>\theta=0</m>, then
@@ -301,10 +300,9 @@ while if <m>\theta=\pi</m>, then
 \lim_{(x,y)\rightarrow(0,0)}\ \frac{x^2}{x^2+y^2}
   &amp;=\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ \frac{r^2\cos^2\theta}{r^2}
      =\lim_{\Atop{r\rightarrow0^+}{0\le\theta \lt 2\pi}}\ \cos^2\theta
-    =\text{undefined}
 </mrow>
 </md>
-since, for example,
+which does not exist, since, for example,
 <ul>
 <li>
 if <m>\theta=0</m>, then
@@ -352,11 +350,20 @@ since <m>|\cos\theta|\le 1</m> for all <m>\theta</m>.
 </mrow>
 </md>
 Here, we used that
-<me>
+<md>
+<mrow>
 \left|\sin^2\theta\frac{\cos^2\theta} {\cos^2\theta+r^2\sin^4\theta}\right|
-\le \left|\frac{\cos^2\theta} {\cos^2\theta+r^2\sin^4\theta}\right|
-\le \left|\frac{\cos^2\theta} {\cos^2\theta}\right|\le 1
-</me>
+&amp;\le \frac{\cos^2\theta} {\cos^2\theta+r^2\sin^4\theta}
+</mrow><mrow>
+&amp;\le \left.\begin{cases}
+             \frac{\cos^2\theta} {\cos^2\theta}&amp;\text{ if }\cos\theta\ne 0 \\
+              0 &amp;\text { if }\cos\theta =0
+           \end{cases}
+     \right\}
+</mrow><mrow>
+&amp;\le 1
+</mrow>
+</md>
 for all <m>r \gt 0</m>.
 </p>
 
@@ -856,6 +863,66 @@ and the limit along the <m>y</m>-axis
 </me>
 are different, the limit as <m>(x,y)\rightarrow 0</m> does not exist.
 </p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Evaluate each of the following limits or show that it does not exist.
+<ol label="a">
+<li> <m>\ds\lim_{(x,y)\rightarrow (0,0)}\begin{cases}
+                                   \frac{x^2}{y-x} &amp;\text{if }y\ne x \\
+                                   0 &amp; \text{if }y=x
+                                   \end{cases}</m>
+</li>
+<li> <m>\ds\lim_{(x,y)\rightarrow (0,0)}\begin{cases}
+                                   \frac{x^8}{y-x} &amp;\text{if }y\ne x \\
+                                   0 &amp; \text{if }y=x
+                                   \end{cases}</m>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+For part (a), determine what happens as <m>(x,y)</m> tends to <m>(0,0)</m>
+along the curve <m>y=x+\frac{x^2}{a}</m>, where <m>a</m> is any nonzero constant.
+</p>
+</hint>
+
+<answer><p>
+(a), (b). The limit does not exist. See the solution.</p>
+</answer>
+
+<solution><p>
+(a) Let <m>a</m> be any nonzero constant. When <m>y=x+\frac{x^2}{a}</m> and <m>x\ne 0</m>,
+<me>
+\frac{x^2}{y-x} =\frac{x^2}{x^2/a} =a
+</me>
+So the limit along the curve <m>y=x+\frac{x^2}{a}</m> is
+<me>
+\lim_{t\rightarrow 0}\frac{x^2}{y-x}\Big|_{(x,y)=(t,t+t^2/a)}
+=\lim_{t\rightarrow 0}a
+=a
+</me>
+In particular, the limit along the curve <m>y=x+x^2</m>, which is <m>1</m>, and 
+the limit along the curve <m>y=x-x^2</m>, which is <m>-1</m>, are different.
+So the limit as <m>(x,y)\rightarrow 0</m> does not exist.
+</p>
+
+<p>(b) Let <m>a</m> be any nonzero constant. When <m>y=x+\frac{x^8}{a}</m> and <m>x\ne 0</m>,
+<me>
+\frac{x^8}{y-x} =\frac{x^8}{x^8/a} =a
+</me>
+So the limit along the curve <m>y=x+\frac{x^8}{a}</m> is
+<me>
+\lim_{t\rightarrow 0}\frac{x^8}{y-x}\Big|_{(x,y)=(t,t+t^8/a)}
+=\lim_{t\rightarrow 0}a
+=a
+</me>
+In particular, the limit along the curve <m>y=x+x^8</m>, which is <m>1</m>, and 
+the limit along the curve <m>y=x-x^8</m>, which is <m>-1</m>, are different.
+So the limit as <m>(x,y)\rightarrow 0</m> does not exist.
+</p>
+</solution>
 </exercise></exercisegroup>
 
 </exercises>
