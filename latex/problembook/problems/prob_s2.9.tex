@@ -929,12 +929,6 @@ The largest and smallest values of $T$ in this table are
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}[M200 2010A] %2
-\begin{enumerate}[(a)]
-\item
-For the function $z = f (x, y) = x^3 + 3xy + 3y^2 - 6x - 3y - 6$.
-Find and classify as [local maxima, local minima, or saddle points] all critical points of
-$f(x, y)$.
-\item
 The images below depict level sets $f (x, y) = c$ of the functions in the list at heights
 $c = 0, 0.1, 0.2, \ldots , 1.9, 2$.
 Label the pictures with the corresponding function and mark the critical points in each
@@ -949,8 +943,6 @@ $f(x, y) = \sqrt{x^2 + y^2}$
 $f(x, y) = y(x + y)(x - y) + 1$
 \item
 $f(x, y) = x^2 + y^2$
-\end{enumerate}
-
 \end{enumerate}
 
 \begin{center}
@@ -970,17 +962,6 @@ $f(x, y) = x^2 + y^2$
 %\end{hint}
 
 \begin{answer}
-(a)
-\renewcommand{\arraystretch}{1.3}
-     \begin{tabular}{|c|c|}
-     \hline
-    $\Atop{\text{critical}}{\text{point}}$  & type \\    
-    \hline
-     $(\frac{3}{2},-\frac{1}{4})$  & local min  \\ \hline
-     $(-1,1)$    & saddle point \\  \hline
-     \end{tabular}
-
-(b)
 \begin{center}
 %(i)   \raisebox{-0.5\height}{\includegraphics{level1b.pdf}}
 (i)   \raisebox{-0.5\height}{\includegraphics[width=0.33\textwidth, height=0.3\textwidth]{level1b.pdf}}
@@ -998,50 +979,7 @@ $f(x, y) = x^2 + y^2$
 \end{answer}
 
 \begin{solution}
-(a)
-To find the critical points we will need the
-gradient of $f$ and to apply the second derivative test of 
-Theorem \eref{CLP200}{thm second deriv test} in the CLP-3 text 
-we will need all 
-second order partial derivatives. So we need all partial derivatives of
-$f$ up to order two.
-Here they are.
-\begin{alignat*}{3}
-f&=x^3 + 3xy + 3y^2 - 6x - 3y - 6 \hidewidth\\
-f_x&=3x^2+3y-6   & f_{xx}&=6x \qquad & f_{xy}&= 3\\
-f_y&=3x+6y-3 \qquad & f_{yy}&=6\qquad & f_{yx}&= 3
-\end{alignat*}
-
-The critical points are the solutions of
-\begin{equation*}
-f_x=3x^2+3y-6=0   \qquad
-f_y=3x+6y-3 = 0
-\end{equation*}
-Subtracting the second equation from $2$ times the first equation gives
-\begin{equation*}
-6x^2-3x-9=0
-\iff
-3(2x-3)(x+1)=0
-\iff x=\frac{3}{2},\ -1
-\end{equation*}
-Since $y=\frac{1-x}{2}$ (from the second equation),
-the critical points are $(\frac{3}{2},-\frac{1}{4})$, $(-1,1)$ and 
-the classification is
-\begin{center}
-\renewcommand{\arraystretch}{1.3}
-     \begin{tabular}{|c|c|c|c|}
-     \hline
-    $\Atop{\text{critical}}{\text{point}}$  & $f_{xx}f_{yy}-f_{xy}^2$ & 
-                                                          $f_{xx}$ & type \\    
-    \hline
-     $(\frac{3}{2},-\frac{1}{4})$  & $(9)\times(6)-(3)^2> 0$ & $9$   
-                       & local min  \\ \hline
-     $(-1,1)$  & $(-6)\times (6)-(3)^2<0$ &   & saddle point \\  \hline
-     \end{tabular}
-\renewcommand{\arraystretch}{1.0}
-\end{center}
-
-(b) Both of the functions  $f(x, y) = \sqrt{x^2 + y^2}$ (i.e. (ii))
+Both of the functions  $f(x, y) = \sqrt{x^2 + y^2}$ (i.e. (ii))
 and  $f(x, y) = x^2 + y^2$ (i.e. (iv)) are invariant under rotations
 around the $(0,0)$. So their level curves are circles centred on 
 the origin. In polar coordinates $\sqrt{x^2 + y^2}$ is $r$. 
