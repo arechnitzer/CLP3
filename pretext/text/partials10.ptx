@@ -265,7 +265,7 @@ From (E2), we see that we must have either
 <m>-\frac{5}{4}x=-5</m>, i.e. <m>x=4</m>, and then
 (E3) gives <m>y=0</m>.
 </li>
-<li> If <m>y=0</m>, then (c) gives <m>x=\pm 4</m> (and while we could easily
+<li> If <m>y=0</m>, then (E3) gives <m>x=\pm 4</m> (and while we could easily
 use (E1) to solve for <m>\la</m>, we don't actually need <m>\la</m>).
 </li>
 </ul>
