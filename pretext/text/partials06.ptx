@@ -207,6 +207,9 @@ write<fn>Don't take the notation <m>\dee{x}</m> or the terminology
        + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\dee{y}
 </mrow>
 </md>
+People sometimes call <m>\dee{x}</m>, <m>\dee{y}</m> and <m>\dee{f}</m> <q>differentials</q> and
+sometimes <m>\dee{f}</m> is called the <q>total differential of <m>f</m></q> to indicate that
+it includes the impact of small changes in both <m>x</m> and <m>y</m>.
 </p></statement>
 </definition>
 
