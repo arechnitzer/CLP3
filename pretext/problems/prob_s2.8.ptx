@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+<exercisegroup>
+<introduction><conceptual/></introduction>
+
+<exercise>
+<statement><p>
+Let <m>u(x,t)= e^{-t-x^2}</m>. Find a function <m>g(x)</m> so that <m>u(x,t)</m>
+obeys the partial differential equation
+<me>
+u_{xx}(x,t)+u(x,t) = g(x)\, u_t(x,t)
+</me>
+</p></statement>
+
+<hint><p>
+Just evaluate <m>u_t(x,t)</m> and <m>u_{xx}(x,t)+u(x,t)</m> and stare at them for a while.
+</p></hint>
+
+<answer><p>
+<m>g(x) = 1-4x^2</m>
+</p></answer>
+
+<solution><p>
+We start by evaluating  <m>u_t(x,t)</m> and <m>u_{xx}(x,t)+u(x,t)</m> when
+<m>u(x,t)= e^{-t-x^2}</m>.
+<md>
+<mrow>
+u(x,t)\amp= e^{-t-x^2}
+</mrow><mrow>
+u_t(x,t)\amp= -e^{-t-x^2}
+</mrow><mrow>
+u_x(x,t)\amp= -2x e^{-t-x^2}
+</mrow><mrow>
+u_{xx}(x,t)\amp= -2 e^{-t-x^2} +4x^2 e^{-t-x^2}
+</mrow>
+</md>
+So
+<md>
+<mrow>
+u_{xx}(x,t)+u(x,t) \amp= \big[-2 e^{-t-x^2} +4x^2 e^{-t-x^2}\big] +e^{-t-x^2} 
+</mrow><mrow>
+                   \amp= \big[4x^2-1]e^{-t-x^2}
+</mrow>
+</md>
+For this to equal <m>g(x)\, u_t(x,t) = -g(x)\, e^{-t-x^2}</m>, we need
+<m>g(x) = 1-4x^2</m>.
+</p></solution>
+</exercise>
+
+
+<exercise>
+<statement><p>
+<ol label="a">
+<li>
+Find all functions <m>u(x,y)</m> that obey the partial differential equation
+<me>
+u_x=0
+</me>
+</li><li> 
+Let <m>f(x)</m> be a given function.
+Find all functions <m>u(x,y)</m> that obey the partial differential equation
+<me>
+u_x(x,y)= f(x)
+</me>
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+(a), (b) Fix any <m>y_0</m> and set <m>v(x)=u(x,y_0)</m>. What is <m>\diff{v}{x}(x)</m>?
+</p></hint>
+
+<answer><p>
+(a) <m>u(x,y)=C(y)</m> with <m>C(y)</m> being any function of the single variable <m>y</m>.</p><p>
+(b) <m>u(x,y)=F(x)+C(y)</m> where <m>F(x)</m> is any function obeying <m>F'(x)=f(x)</m>
+(i.e. any antiderivative of <m>f(x)</m>) and <m>C(y)</m> is any function of the single variable <m>y</m>.
+</p></answer>
+
+<solution><p>
+(a) Fix any <m>y_0</m> and set <m>v(x)=u(x,y_0)</m>. Then
+<me>
+\diff{v}{x}(x) =\pdiff{u}{x}(x,y_0) = 0
+</me>
+So, for each fixed <m>y_0</m>, <m>v(x)=u(x,y_0)</m>, which is a function of <m>x</m>, has to be 
+a constant. The constant may be different for each different choice of <m>y_0</m>. 
+So <m>u(x,y_0) = C(y_0)</m> with <m>C(y_0)</m> depending only on <m>y_0</m>, not on <m>x</m>. 
+Or, renaming <m>y_0</m> back to <m>y</m>, <m>u(x,y)=C(y)</m> with <m>C(y)</m> being any 
+function of the single variable <m>y</m>. 
+</p><p>
+(b) Fix any <m>y_0</m> and set <m>v(x)=u(x,y_0)</m>. Then
+<me>
+\diff{v}{x}(x) =\pdiff{u}{x}(x,y_0) = f(x)
+</me>
+In words, <m>v(x)</m> has to have derivative <m>f(x)</m>, i.e. be an antiderivative 
+of <m>f(x)</m>. So if <m>F(x)</m> is any function whose derivative is <m>f(x)</m>, i.e. 
+if <m>F(x)</m> is any antiderivative of <m>f(x)</m>, then, for each fixed <m>y_0</m>, <m>v(x)=u(x,y_0) = F(x) +C</m>, with <m>C</m> being a constant. The constant may be different for each different choice of <m>y_0</m>. So <m>u(x,y_0) = F(x)+ C(y_0)</m> with <m>C(y_0)</m> depending only on <m>y_0</m>, not on <m>x</m>. Or, renaming <m>y_0</m> back to <m>y</m>, <m>u(x,y)=F(x) + C(y)</m> with <m>F(x)</m> being
+any antiderivative of <m>f(x)</m> and <m>C(y)</m> being any function of the single variable <m>y</m>.
+</p></solution>
+</exercise>
+
+</exercisegroup>
+
+<exercisegroup><introduction><procedural/></introduction>
+
+<exercise>
+<statement><p>
+Solutions of Laplace's equation <m>u_{xx}(x,y)+u_{yy}(x,y)=0</m> are called
+<em>harmonic functions</em>. Which of the following functions are harmonic?
+<ol label="a">
+<li>
+<m>x^3-3xy^2</m>
+</li><li>
+<m>x^3-y^3</m>
+</li><li>
+<m>\sin(x)\,\cos(y)</m>
+</li><li>
+<m>e^{7x}\,\cos(7y)</m>
+</li><li>
+<m>\ln(x^2+y^2)</m>
+</li>
+</ol>
+</p></statement>
+
+<answer><p>
+(a), (d) and (e) are harmonic.
+(b) and (c) are not harmonic.
+</p></answer>
+
+<solution><p>
+(a) If <m>u(x,y) = x^3-3xy^2</m>, then
+<md alignment="alignat">
+<mrow>
+u_x\amp= 3x^2-3y^2 \qquad\amp u_{xx}\amp= 6x 
+</mrow><mrow>
+u_y\amp= -6xy \qquad\amp u_{yy}\amp= -6x 
+</mrow>
+</md>
+So <m>u_{xx}(x,y)+u_{yy}(x,y)=6x-6x=0</m> and <m>x^3-3xy^2</m> <em>is</em> harmonic.
+</p>
+<p>
+(b) If <m>u(x,y) = x^3-y^3</m>, then
+<md alignment="alignat">
+<mrow>
+u_x\amp= 3x^2 \qquad\amp u_{xx}\amp= 6x 
+</mrow><mrow>
+u_y\amp= -3y^2 \qquad\amp u_{yy}\amp= -6y 
+</mrow>
+</md>
+So <m>u_{xx}(x,y)+u_{yy}(x,y)=6x-6y</m> is not identically zero and <m>x^3-y^3</m> 
+<em>is not</em> harmonic.
+</p>
+<p>
+(c) If <m>u(x,y) = \sin(x)\,\cos(y)</m>, then
+<md alignment="alignat">
+<mrow>
+u_x\amp= \cos(x)\,\cos(y) \qquad\amp u_{xx}\amp= -\sin(x)\,\cos(y) 
+</mrow><mrow>
+u_y\amp= -\sin(x)\,\sin(y) \qquad\amp u_{yy}\amp= -\sin(x)\,\cos(y) 
+</mrow>
+</md>
+So <m>u_{xx}(x,y)+u_{yy}(x,y)=-2\sin(x)\,\cos(y)</m> is not identically zero 
+and <m>\sin(x)\,\cos(y)</m> <em>is not</em> harmonic.
+</p>
+<p>
+(d) If <m>u(x,y) = e^{7x}\,\cos(7y)</m>, then
+<md alignment="alignat">
+<mrow>
+u_x\amp= 7\,e^{7x}\,\cos(7y) \qquad\amp u_{xx}\amp= 49\,e^{7x}\,\cos(7y) 
+</mrow><mrow>
+u_y\amp= -7\,e^{7x}\ \sin(7y) \qquad\amp u_{yy}\amp= -49\,e^{7x}\,\cos(7y) 
+</mrow>
+</md>
+So <m>u_{xx}(x,y)+u_{yy}(x,y)=49\,e^{7x}\,\cos(7y)-49\,e^{7x}\,\cos(7y)=0</m> 
+and <m>e^{7x}\,\cos(7y)</m> <em>is</em> harmonic.
+</p>
+<p>
+(e) If <m>u(x,y) = \ln(x^2+y^2)</m>, then
+<md alignment="alignat">
+<mrow>
+u_x\amp= \frac{2x}{x^2+y^2} \qquad\amp 
+        u_{xx}\amp= \frac{2}{x^2+y^2}- \frac{4x^2}{{(x^2+y^2)}^2}
+</mrow><mrow>
+u_y\amp= \frac{2y}{x^2+y^2} \qquad\amp 
+        u_{yy}\amp= \frac{2}{x^2+y^2}- \frac{4y^2}{{(x^2+y^2)}^2} 
+</mrow>
+</md>
+So 
+<md>
+<mrow>
+u_{xx}(x,y)+u_{yy}(x,y)\amp=\frac{2}{x^2+y^2}- \frac{4x^2}{{(x^2+y^2)}^2}
+                        +\frac{2}{x^2+y^2}- \frac{4y^2}{{(x^2+y^2)}^2} 
+</mrow><mrow>
+\amp=\frac{4}{x^2+y^2} - 4\frac{x^2+y^2}{{(x^2+y^2)}^2} 
+</mrow><mrow>
+\amp=\frac{4}{x^2+y^2}-\frac{4}{x^2+y^2} 
+</mrow><mrow>
+\amp=0
+</mrow>
+</md>
+and <m>\ln(x^2+y^2)</m> <em>is</em> harmonic.
+</p></solution>
+</exercise>
+
+<exercise><title><fromexam>M253 2013A</fromexam></title>
+<statement><p>
+Let <m>u(x,t) = e^{t+ax} + e^{t-ax}</m> where <m>a</m> is a constant. Find <m>a</m> such that
+<m>5u_t = u_{xx} + u</m>.
+</p></statement>
+
+<hint><p>
+Just substitute the given <m>u(x,t)</m> into the given PDE.
+</p></hint>
+
+<answer><p>
+<m>a=\pm 2</m>
+</p></answer>
+
+<solution><p>
+We evaluate both sides of the given PDE with <m>u=u(x,t) = e^{t+ax} + e^{t-ax}</m>.
+Since
+<md alignment="alignat">
+<mrow>
+u(x,t) \amp=  e^{t+ax} + e^{t-ax} 
+</mrow><mrow>
+u_t(x,t) \amp =  e^{t+ax} + e^{t-ax} 
+</mrow><mrow>
+u_x(x,t) \amp=  ae^{t+ax} - ae^{t-ax}\qquad \amp
+u_{xx}(x,t) \amp=  a^2e^{t+ax} + a^2e^{t-ax}
+</mrow>
+</md>
+the left hand side of the PDE is
+<me>
+5u_t = 5e^{t+ax} + 5e^{t-ax}
+</me>
+and the right hand side of the PDE is
+<md>
+<mrow>
+u_{xx} + u
+\amp=\big(a^2e^{t+ax} + a^2e^{t-ax}\big)+\big(e^{t+ax} + e^{t-ax}\big) 
+</mrow><mrow>
+\amp= (a^2+1)e^{t+ax} + (a^2+1)e^{t-ax}
+</mrow>
+</md>
+The left and right hand sides are equal if and only if
+<me>
+5=(a^2+1) \iff a^2=4 \iff a=\pm 2
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>u(x,y,z) = e^{3x+4y}\sin(az)</m> where <m>a</m> is a constant. Find all <m>a</m>'s 
+such that 
+<me>
+u_{xx}+u_{yy}+u_{zz}=0
+</me>
+</p></statement>
+
+<hint><p>
+Just substitute the given <m>u(x,y,z)</m> into the given PDE.
+</p></hint>
+
+<answer><p>
+<m>a=\pm 5</m>
+</p></answer>
+
+<solution><p>
+We evaluate <m>u_{xx}+u_{yy}+u_{zz}</m> with <m>u = u(x,y,z) =  e^{3x+4y}\sin(az)</m>.
+Since
+<md alignment="alignat">
+<mrow>
+u(x,y,z) \amp=  e^{3x+4y}\sin(az) 
+</mrow><mrow>
+u_x(x,y,z) \amp =  3\,e^{3x+4y}\sin(az)\qquad \amp
+u_{xx}(x,y,z) \amp=  9\,e^{3x+4y}\sin(az) 
+</mrow><mrow>
+u_y(x,y,z) \amp=  4\,e^{3x+4y}\sin(az)\qquad \amp
+u_{yy}(x,y,z) \amp= 16\,e^{3x+4y}\sin(az)
+</mrow><mrow>
+u_z(x,y,z) \amp=  a\,e^{3x+4y}\cos(az)\qquad \amp
+u_{zz}(x,y,z) \amp= -a^2\,e^{3x+4y}\sin(az)
+</mrow>
+</md>
+We have 
+<me>
+u_{xx}+u_{yy}+u_{zz} = \big(9+16-a^2) e^{3x+4y}\sin(az)
+</me>
+This is zero (for all <m>x</m>, <m>y</m>, <m>z</m>) if and only if
+<me>
+a^2=9+16=25 \iff a=\pm 5
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>u(x,t) = \sin(at)\,\cos(bx)</m> where <m>a</m> and <m>b</m> are constants. Find all <m>a</m>'s and <m>b</m>'s such that <m>u_{tt} = u_{xx}</m>.
+</p></statement>
+
+<hint><p>
+Just substitute the given <m>u(x,t)</m> into the given PDE.
+</p></hint>
+
+<answer><p>
+<m>a=\pm b</m>, for any real number <m>b</m>. 
+</p></answer>
+
+<solution><p>
+We evaluate both sides of the given PDE with <m>u=u(x,t)=\sin(at)\,\cos(bx)</m>.
+Since
+<md alignment="alignat">
+<mrow>
+u(x,t) \amp=  \sin(at)\,\cos(bx)  
+</mrow><mrow>
+u_t(x,t) \amp =  a\,\cos(at)\,\cos(bx)\qquad \amp
+u_{tt}(x,t) \amp=  -a^2\,\sin(at)\,\cos(bx) 
+</mrow><mrow>
+u_x(x,t) \amp=  -b\,\sin(at)\,\sin(bx)\qquad \amp
+u_{xx}(x,t) \amp=   -b^2\sin(at)\,\cos(bx)
+</mrow>
+</md>
+the left hand side of the PDE is
+<me>
+u_{tt} = -a^2\,\sin(at)\,\cos(bx)
+</me>
+and the right hand side of the PDE is
+<me>
+u_{xx} =-b^2\,\sin(at)\,\cos(bx)
+</me>
+The left and right hand sides are equal if and only if
+<me>
+a^2=b^2 \iff a=\pm b
+</me>
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>F(u)</m> be any differentiable function of one variable. Define
+<m>z(x,y)=F\big(x^2+y^2\big)</m>. Is the partial differential equation
+<me>
+y\pdiff{z}{x} - x\pdiff{z}{y}=0
+</me>
+necessarily satisfied? You must justify your answer.
+</p></statement>
+
+<hint><p>
+Just substitute the given <m>z(x,y)</m> into the given PDE.
+</p></hint>
+
+<answer><p>
+Yes it is. For the justification, see the solution.
+</p></answer>
+
+<solution><p>
+We simply evaluate the two terms on the left hand side  when 
+<m>z=z(x,y)=F\big(x^2+y^2\big)</m>. By the chain rule,
+<md>
+<mrow>
+y\pdiff{z}{x}\amp= y\pdiff{}{x}F\big(x^2+y^2\big)
+=yF'\big(x^2+y^2\big) \pdiff{}{x}\,\big(x^2+y^2\big)
+=yF'\big(x^2+y^2\big)\left(2x\right) 
+</mrow><mrow>
+\amp=2xy\,F'\big(x^2+y^2\big)
+</mrow><mrow>
+x\pdiff{z}{y}\amp= x\pdiff{}{y}F\big(x^2+y^2\big)
+=xF'\big(x^2+y^2\big)  \pdiff{}{y}\,\big(x^2+y^2\big)
+=xF'\big(x^2+y^2\big)\left(2y\right) 
+</mrow><mrow>
+\amp=2xyF'\big(x^2+y^2\big)
+</mrow>
+</md>
+So
+<me>
+y\pdiff{z}{x} - x\pdiff{z}{y}
+=2xy\,F'\big(x^2+y^2\big) - 2xy\,F'\big(x^2+y^2\big) 
+=0
+</me>
+and 
+<m>z(x,y)=F\big(x^2+y^2\big)</m> really does solve the PDE
+<m>
+y\pdiff{z}{x} - x\pdiff{z}{y}=0
+</m>
+for any differentiable function <m>F</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>u(x,t) = f(t)\,\cos(2x)</m>. Find all functions <m>f(t)</m> such that  such that <m>u_t = u_{xx}</m>.
+</p></statement>
+
+<hint><p>
+Substitute the given <m>u(x,t)</m> into the given PDE. Review Theorem 3.3.2 in the CLP-1 text.
+</p></hint>
+
+<answer><p>
+<m>f(t) = Ce^{-4t}</m> with <m>C</m> being an arbitrary constant.
+</p></answer>
+
+<solution><p>
+We evaluate both sides of the given PDE with <m>u=u(x,t)=f(t)\,\cos(2x)</m>.
+Since
+<md alignment="alignat">
+<mrow>
+u(x,t) \amp=  f(t)\,\cos(2x) 
+</mrow><mrow>
+u_t(x,t) \amp =   f'(t)\,\cos(2x)
+</mrow><mrow>
+u_x(x,t) \amp=  -2\,f(t)\,\sin(2x)\qquad \amp
+u_{xx}(x,t) \amp=   -4\,f(t)\,\cos(2x)
+</mrow>
+</md>
+the left hand side of the PDE is
+<me>
+u_t(x,t) =  f'(t)\,\cos(2x)
+</me>
+and the right hand side of the PDE is
+<me>
+u_{xx}(x,t) =  -4\,f(t)\,\cos(2x)
+</me>
+The left and right hand sides are equal if and only if
+<me>
+f'(t)=-4 f(t)
+</me>
+This is the type of ordinary differential equation that we studied in 
+Section 3.3,  on exponential growth and decay, 
+in the CLP-1 text. We found in Theorem 3.3.2 
+there that the general solution to this ODE is <m>f(t) = Ce^{-4t}</m> with <m>C</m> 
+being an arbitrary constant.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>u_1(x,t)</m> and <m>u_2(x,t)</m> both be solutions of the wave equation
+<m>u_{tt}=u_{xx}</m> and let <m>a_1</m> and <m>a_2</m> be constants. Show that
+<m>u(x,t)=a_1u_1(x,t)+a_2u_2(t,x)</m> is also a solution of <m>u_{tt}=u_{xx}</m>.
+Because of this property, the wave equation is said to be a <em>linear PDE</em>.
+</p></statement>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+Let <m>u_1(x,t)</m> and <m>u_2(x,t)</m> obey 
+  <m>\frac{\partial^2}{\partial t^2}u_1(x,t)
+           =\frac{\partial^2}{\partial x^2}u_1(x,t)</m> and 
+  <m>\frac{\partial^2}{\partial t^2}u_2(x,t)
+           =\frac{\partial^2}{\partial x^2}u_2(x,t)</m>. Then
+<m>u(x,t)=a_1u_1(x,t)+a_2u_2(t,x)</m> obeys
+<md>
+<mrow>
+u_{tt}(x,t) \amp= \frac{\partial^2}{\partial t^2}
+                       \big[a_1u_1(x,t)+a_2u_2(t,x)\big] 
+</mrow><mrow>
+\amp=a_1\frac{\partial^2}{\partial t^2}u_1(x,t) 
+ + a_2\frac{\partial^2}{\partial t^2}u_2(x,t) 
+</mrow><mrow>
+\amp=a_1\frac{\partial^2}{\partial x^2}u_1(x,t) 
+     + a_2\frac{\partial^2}{\partial x^2}u_2(x,t) 
+</mrow><mrow>
+\amp= \frac{\partial^2}{\partial x^2}\big[a_1u_1(x,t)+a_2u_2(t,x)\big] 
+</mrow><mrow>
+\amp=u_{xx}(x,t)
+</mrow>
+</md>
+as desired.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Let <m>v(x,y)</m> be a harmonic function. That is, <m>v(x,y)</m> obeys <m>v_{xx}+v_{yy}=0</m>. 
+Let <m>a</m>, <m>b</m>, <m>c</m>, <m>d</m> be constants. Show that if the vectors <m>\llt a,b\rgt</m> and 
+<m>\llt c,d\rgt</m> have the same length and are mutually <m>\underline{\ \ \ \ \ \ \ \ \ \ \ \ }</m> 
+(fill in the missing word),  then <m>u(x,y)=v(ax+by\,,\,cx+dy)</m> is also a harmonic function.
+</p></statement>
+
+<hint><p>
+Evaluate <m>u_{xx}+u_{yy}</m> for the given <m>u(x,y)</m>.
+</p></hint>
+
+<answer><p>
+perpendicular
+</p></answer>
+
+<solution><p>
+We evaluate <m>u_{xx}+u_{yy}</m> with <m>u(x,y)=v(ax+by\,,\,cx+dy)</m>.
+Since, by the chain rule,
+<md>
+<mrow>
+u(x,y) \amp=  v(ax+by\,,\,cx+dy)
+</mrow><mrow>
+u_x(x,y) \amp=  a\,v_x(ax+by\,,\,cx+dy)+c\,v_y(ax+by\,,\,cx+dy) 
+</mrow><mrow>
+u_y(x,y) \amp=  b\,v_x(ax+by\,,\,cx+dy)+d\,v_y(ax+by\,,\,cx+dy) 
+</mrow><mrow>
+u_{xx}(x,y) \amp=  a^2\,v_{xx}(ax+by\,,\,cx+dy)+ ac\,v_{xy}(ax+by\,,\,cx+dy) 
+</mrow><mrow>
+            \amp\hskip0.5in + ca\,v_{yx}(ax+by\,,\,cx+dy)
+                +c^2\,v_{yy}(ax+by\,,\,cx+dy) 
+</mrow><mrow>
+u_{yy}(x,y) \amp=  b^2\,v_{xx}(ax+by\,,\,cx+dy)+ bd\,v_{xy}(ax+by\,,\,cx+dy) 
+</mrow><mrow>
+            \amp\hskip0.5in + db\,v_{yx}(ax+by\,,\,cx+dy)
+                +d^2\,v_{yy}(ax+by\,,\,cx+dy)
+</mrow>
+</md>
+we have
+<md>
+<mrow>
+u_{xx}+u_{yy}
+\amp=(a^2+b^2) v_{xx}(ax+by\,,\,cx+dy)
+  +(c^2+d^2) v_{yy}(ax+by\,,\,cx+dy) 
+</mrow><mrow>
+\amp\hskip0.5in
+  +2(ac+bd) v_{xy}(ax+by\,,\,cx+dy)
+</mrow>
+</md>
+<ul>
+<li> 
+If <m>a^2+b^2=c^2+d^2</m>, i.e. if <m>\llt a,b\rgt</m> and <m>\llt c,d\rgt</m> have the same length, then the first line of the right hand side is zero, since <m>v_{xx}+v_{yy}=0</m>. 
+</li><li>
+If <m>\llt a,b\rgt\cdot\llt c,d\rgt=ac+bd=0</m>, 
+i.e. if  <m>\llt a,b\rgt</m> and <m>\llt c,d\rgt</m> are mutally perpendicular, then the
+second line of the right hand side is zero. 
+</li>
+</ul>
+So if <m>\llt a,b\rgt</m> and <m>\llt c,d\rgt</m> have the same length and are  mutally perpendicular, then <m>u_{xx}+u_{yy}=0</m>. The missing word is <q>perpendicular</q>.
+</p></solution>
+</exercise>
+
+
+</exercisegroup>
+
+
+<exercisegroup><introduction><application/></introduction>
+
+<exercise>
+<statement><p>
+The distance from the point <m>(x,y,z)</m> to the origin <m>(0,0,0)</m> is 
+<me>
+r(x,y,z) = \sqrt{x^2+y^2+z^2}
+</me>
+Find all functions <m> u(x,y,z) = r(x,y,z)^n </m>, with <m>n</m> being a real constant, that obey
+Laplace's equation
+<me>
+u_{xx}+u_{yy}+u_{zz}=0
+</me>
+for all <m>(x,y,z)\ne  (0,0,0)</m>.
+</p></statement>
+
+<!-- <hint><p>
+
+</p></hint> -->
+
+<answer><p>
+<m>n=0,-1</m>
+</p></answer>
+
+<solution><p>
+In preparation for substituting into the PDE, we compute <m>u_{xx}</m>, <m>u_{yy}</m> and <m>u_{zz}</m>.   
+<md>
+<mrow>
+u(x,y,z) \amp= r(x,y,z)^n = \big(x^2+y^2+z^2\big)^{n/2}
+</mrow><mrow>
+u_x(x,y,z)\amp= \frac{n}{2}\,\big(x^2+y^2+z^2\big)^{n/2-1}\ 
+                             \pdiff{}{x}\big(x^2+y^2+z^2\big) 
+</mrow><mrow>
+          \amp= nx\ \big(x^2+y^2+z^2\big)^{n/2-1}
+</mrow><mrow>
+u_{xx}(x,y,z)\amp= n\ \big(x^2+y^2+z^2\big)^{n/2-1}
+              + nx\ (n/2-1) \big(x^2+y^2+z^2\big)^{n/2-2} (2x) 
+</mrow><mrow>
+             \amp=n\ \big(x^2+y^2+z^2\big)^{n/2-1}
+              +n(n-2)x^2 \big(x^2+y^2+z^2\big)^{n/2-2} 
+</mrow><mrow>
+u_y(x,y,z)\amp= \frac{n}{2}\,\big(x^2+y^2+z^2\big)^{n/2-1}\ 
+                             \pdiff{}{y}\big(x^2+y^2+z^2\big)
+</mrow><mrow> 
+          \amp= ny\ \big(x^2+y^2+z^2\big)^{n/2-1}
+</mrow><mrow>
+u_{yy}(x,y,z)\amp= n\ \big(x^2+y^2+z^2\big)^{n/2-1}
+              + ny\ (n/2-1) \big(x^2+y^2+z^2\big)^{n/2-2} (2y) 
+</mrow><mrow>
+             \amp=n\ \big(x^2+y^2+z^2\big)^{n/2-1}
+              +n(n-2)y^2 \big(x^2+y^2+z^2\big)^{n/2-2} 
+</mrow><mrow>
+u_z(x,y,z)\amp= \frac{n}{2}\,\big(x^2+y^2+z^2\big)^{n/2-1}\ 
+                             \pdiff{}{z}\big(x^2+y^2+z^2\big) 
+</mrow><mrow>
+          \amp= nz\ \big(x^2+y^2+z^2\big)^{n/2-1}
+</mrow><mrow>
+u_{zz}(x,y,z)\amp= n\ \big(x^2+y^2+z^2\big)^{n/2-1}
+              + nz\ (n/2-1) \big(x^2+y^2+z^2\big)^{n/2-2} (2z) 
+</mrow><mrow>
+             \amp=n\ \big(x^2+y^2+z^2\big)^{n/2-1}
+              +n(n-2)z^2 \big(x^2+y^2+z^2\big)^{n/2-2} )
+</mrow>
+</md>
+So
+<md>
+<mrow>
+u_{xx}+u_{yy}+u_{zz}
+\amp=3n\big(x^2+y^2+z^2\big)^{n/2-1}
+   +n(n-2)\ (x^2+y^2+z^2) \big(x^2+y^2+z^2\big)^{n/2-2}  
+</mrow><mrow>
+\amp=3n\big(x^2+y^2+z^2\big)^{n/2-1}
+   +n(n-2)\  \big(x^2+y^2+z^2\big)^{n/2-1}  
+</mrow><mrow>
+\amp=[3n+n^2-2n]\  \big(x^2+y^2+z^2\big)^{n/2-1}
+</mrow>
+</md>
+This is zero if and only if
+<me>
+n+n^2=n(1+n)=0
+\iff n=0,-1
+</me>
+</p></solution>
+</exercise>
+
+
+<exercise>
+<statement><p>
+In this question we are going to find all solutions <m>u(t,x)</m> to the PDE
+<me>
+u_t=xu_x\qquad\text{for }x>0
+</me>
+that are of the special form <m>u(x,t)= X(x)\,T(t)</m>, with, for simplicity, <m>X>0</m> and <m>T>0</m>. 
+We will use a technique called <q>separation of variables</q>.
+<ol label="a">
+<li> 
+Show that <m>u(x,t)= X(x)\,T(t)</m>, with <m>X</m> and <m>T</m> nonzero, obeys the PDE
+<m>u_t=xu_x</m> if and only if
+<me>
+\frac{T'(t)}{T(t)} = x\frac{X'(x)}{X(x)}
+</me>
+</li><li> 
+Show that <m>\frac{T'(t)}{T(t)} = x\frac{X'(x)}{X(x)}</m> if and only if there is a constant <m>\la</m> such that
+<md>
+<mrow>
+T'(t)\amp=\la T(t) 
+</mrow><mrow>
+X'(x)\amp=\frac{\la}{x} X(x)
+</mrow> 
+</md>
+</li><li> 
+Find the general solutions to  <m>T'(t)=\la T(t)</m> and <m>X'(x)=\frac{\la}{x} X(x)</m>
+with <m>T,X>0</m>.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+(b) The left hand side is independent of <m>x</m> and the right hand side is 
+independent of <m>t</m>.</p><p>
+(c) Review Section 3.3 in the CLP-1 text
+and Section 2.4 in the CLP-2 text.
+</p></hint>
+
+<answer><p>
+(a), (b) See the solutions.</p><p>
+(c) <m>T(t) = Ce^{\la t}</m>, <m>X(x) = K x^\la</m>, <m>u(x,t)= D\,e^{\la t}\,x^\la</m> with <m>C</m>, <m>D</m> and <m>K</m> being arbitrary positive constants.
+</p></answer>
+
+<solution><p>
+(a)
+Substituting <m>u(x,t)= X(x)\,T(t)</m> into the given PDE yields
+<me>
+X(x)\,T'(t) = u_t=x\,u_x=x\, X'(x)\,T(t)
+</me>
+Then dividing both sides by <m>X(x)\,T(t)</m> gives
+<me>
+\frac{T'(t)}{T(t)} = x\,\frac{X'(x)}{X(x)}
+</me>
+as desired.
+</p><p>
+(b)
+The left hand side <m>\frac{T'(t)}{T(t)}</m> is independent of <m>x</m>, and 
+the right hand side <m>x\,\frac{X'(x)}{X(x)}</m> is independent of <m>t</m>.
+The left and right hand sides are equal to each other, so both are independent 
+of both <m>t</m> and <m>x</m>, i.e. are constant. If we call the constant <m>\la</m>, then
+<md>
+<mrow>
+\frac{T'(t)}{T(t)} \amp= x\,\frac{X'(x)}{X(x)}=\la 
+</mrow><mrow>
+\implies T'(t)\amp=\la\,T(t),\qquad X'(x)=\frac{\la}{x} X(x)
+</mrow>
+</md>
+</p><p>
+(c)
+The equation <m>T'(t)=\la\,T(t)</m> is the type of ordinary differential 
+equation that we studied in Section 3.3,  
+on exponential growth and decay, in the CLP-1 text. We found in 
+Theorem 3.3.2 there that the general solution 
+to this ODE is <m>T(t) = Ce^{\la t}</m> with <m>C</m> 
+being an arbitrary constant, which we require to be positive to make <m>T>0</m>.
+
+The equation <m>X'(x)=\frac{\la}{x} X(x)</m> is a separable ODE. We studied 
+such ODE's in Section 2.4 in the CLP-2 text.
+To solve it, we divide across by <m>X(x)</m>, giving
+<md alignment="alignat">
+<mrow>
+\frac{X'(x)}{X(x)} = \frac{\la}{x}
+\amp\implies \diff{}{x} \ln X(x) = \frac{\la}{x} 
+                   \qquad\amp\amp\text{assuming }X,x>0 
+</mrow><mrow>
+\amp\implies \ln X(x) = \la\ln x+K'\qquad\amp\amp\text{with }K'\text{ constant} 
+</mrow><mrow>
+\amp\implies X(x) = K x^\la \qquad\amp\amp\text{with }K=e^{K'}>0\text{ constant} 
+</mrow>
+</md>
+So
+<me>
+u(x,t)= X(x)\,T(t)
+= D\,e^{\la t}\,x^\la\qquad
+\text{with }D=CK>0\text{ a constant}
+</me>
+solves the PDE <m>u_t=xu_x</m> for <m>x>0</m>.
+</p></solution>
+</exercise>
+
+<exercise>
+<statement><p>
+Suppose that <m>u(x,y)</m> obeys the PDE
+<me>
+\al(x,y)\,u_x(x,y) +\be(x,y)\,u_y(x,y)=0
+</me>
+where <m>\al(x,y)</m> and <m>\be(x,y)</m> are given functions. Let <m>\big(X(t),Y(t)\big)</m>
+be a curve<fn>Such curves are called <em>characteristics</em> of the PDE.</fn> in the <m>xy</m>-plane that obeys
+<md>
+<mrow>
+\diff{X}{t}(t)\amp=\al\big(X(t),Y(t)\big) 
+</mrow><mrow>
+\diff{Y}{t}(t)\amp=\be\big(X(t),Y(t)\big) 
+</mrow>
+</md>
+Show that <m>u</m> is constant along that curve. That is, show that <m>u\big(X(t),Y(t)\big)</m> is independent of <m>t</m>. 
+</p></statement>
+
+<hint><p>
+Evaluate <m>\diff{}{t}u\big(X(t),Y(t)\big)</m>.
+</p></hint>
+
+<answer><p>
+See the solution.
+</p></answer>
+
+<solution><p>
+By the chain rule,
+<md>
+<mrow>
+\diff{}{t}u\big(X(t),Y(t)\big)
+\amp=u_x\big(X(t),Y(t)\big)\,\diff{X}{t}(t)
+  +u_y\big(X(t),Y(t)\big)\,\diff{Y}{t}(t) 
+</mrow><mrow>
+\amp=\al\big(X(t),Y(t)\big)\, u_x\big(X(t),Y(t)\big)
+  +\be\big(X(t),Y(t)\big)\, u_y\big(X(t),Y(t)\big)
+</mrow>
+</md>
+But evaluating <m>\al(x,y)\,u_x(x,y) +\be(x,y)\,u_y(x,y)=0</m> at <m>x=X(t)</m>, 
+<m>y=Y(t)</m> gives
+<me>
+\al\big(X(t),Y(t)\big)\, u_x\big(X(t),Y(t)\big)
+  +\be\big(X(t),Y(t)\big)\, u_y\big(X(t),Y(t)\big)
+   =0
+</me>
+so
+<me>
+\diff{}{t}u\big(X(t),Y(t)\big)=0
+</me> 
+</p></solution>
+</exercise>
+
+
+<exercise>
+<statement><p>
+<ol label="a">
+<li> 
+Suppose that <m>u(x,y)</m> obeys the PDE <me>3u_x(x,y) + 6u_y(x,y)=u(x,y)</me>. Define
+<m>v(X,Y) = u(X, Y+2X)</m>. Find a PDE that <m>v</m> obeys.
+</li><li> 
+Suppose that <m>u(x,y)</m> obeys the PDE <me>xu_x(x,y) + yu_y(x,y)=u(x,y)</me>. Define
+<m>v(X,Y) = u(X, Xe^Y)</m>. Find a PDE that <m>v</m> obeys.
+</li>
+</ol>
+</p></statement>
+
+<hint><p>
+Evaluate <m>v_X</m>.
+</p></hint>
+
+<answer><p>
+(a) <m>v_X(X,Y)=\frac{1}{3} v(X,Y)</m> </p><p>
+(b) <m>v_X(X,Y)=\frac{1}{X} v(X,Y)</m>
+</p></answer>
+
+<solution><p>
+(a)
+Suppose that <m>u(x,y)</m> obeys the PDE 
+<me>
+3u_x(x,y) + 6u_y(x,y)=u(x,y)
+</me>
+Define <m>v(X,Y) = u(X, Y+2X)</m>.
+Then, by the chain rule,
+<md>
+<mrow>
+v_X(X,Y)\amp=\pdiff{}{X}\big[ u(X, Y+2X)\big] 
+</mrow><mrow>
+         \amp=u_x(X, Y+2X) +2u_y(X, Y+2X) 
+</mrow><mrow>
+         \amp=\frac{1}{3}\big\{3u_x(X, Y+2X) + 6u_y(X, Y+2X)\big\} 
+</mrow><mrow>
+         \amp=\frac{1}{3} u(X, Y+2X) 
+</mrow><mrow>
+         \amp=\frac{1}{3} v(X,Y)
+</mrow>
+</md>
+</p><p>
+(b)
+Define <m>v(X,Y) = u(X, Xe^Y)</m>.
+Then, by the chain rule,
+<md>
+<mrow>
+v_X(X,Y)\amp=\pdiff{}{X}\big[ u(X, Xe^Y)\big] 
+</mrow><mrow>
+         \amp=u_x(X, Xe^Y) +e^Yu_y(X, Xe^Y) 
+</mrow>
+</md>
+Now notice that if <m>xu_x(x,y) + yu_y(x,y)=u(x,y)</m>, then, evaluating at <m>x=X</m> and <m>y=Xe^Y</m> gives 
+<me>
+Xu_x(X, Xe^Y) + Xe^Yu_y(X, Xe^Y)=u(X, Xe^Y)
+</me>
+So
+<md>
+<mrow>
+v_X(X,Y) \amp=\frac{1}{X}\big\{X u_x(X, Xe^Y) +X e^Y u_y(X, Xe^Y) \big\} 
+</mrow><mrow>
+         \amp=\frac{1}{X} u(X, Xe^Y) 
+</mrow><mrow>        
+         \amp=\frac{1}{X} v(X,Y)
+</mrow>
+</md>
+</p></solution>
+</exercise>
+
+</exercisegroup>
+
+</exercises>
