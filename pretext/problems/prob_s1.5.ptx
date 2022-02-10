@@ -64,11 +64,11 @@ The two lines <m>\llt x-x_0\,,\,y-y_0\,,\,z-z_0\rgt =t\vd</m> and
 There are infinitely many correct answers. One is
 <md>
 <mrow>
-\llt x\,,\,x\,,\,z-1\rgt &amp;= t\llt 1,0,0\rgt &amp;
-\llt x\,,\,x\,,\,z-2\rgt &amp;= t\llt 0,1,0\rgt
+\llt x\,,\,y\,,\,z-1\rgt &amp;= t\llt 1,0,0\rgt &amp;
+\llt x\,,\,y\,,\,z-2\rgt &amp;= t\llt 0,1,0\rgt
 </mrow><mrow>
-\llt x\,,\,x\,,\,z-3\rgt &amp;= t\llt 1,1,0\rgt &amp;
-\llt x\,,\,x\,,\,z-4\rgt &amp;= t\llt 1,-1,0\rgt
+\llt x\,,\,y\,,\,z-3\rgt &amp;= t\llt 1,1,0\rgt &amp;
+\llt x\,,\,y\,,\,z-4\rgt &amp;= t\llt 1,-1,0\rgt
 </mrow>
 </md>
 </p>
@@ -78,11 +78,11 @@ There are infinitely many correct answers. One is
 There are infinitely many correct answers. One is
 <md>
 <mrow>
-L_1:\ \llt x\,,\,x\,,\,z-1\rgt &amp;= t\llt 1,0,0\rgt &amp;
-L_2:\ \llt x\,,\,x\,,\,z-2\rgt &amp;= t\llt 0,1,0\rgt
+L_1:\ \llt x\,,\,y\,,\,z-1\rgt &amp;= t\llt 1,0,0\rgt &amp;
+L_2:\ \llt x\,,\,y\,,\,z-2\rgt &amp;= t\llt 0,1,0\rgt
 </mrow><mrow>
-L_3:\ \llt x\,,\,x\,,\,z-3\rgt &amp;= t\llt 1,1,0\rgt &amp;
-L_4:\ \llt x\,,\,x\,,\,z-4\rgt &amp;= t\llt 1,-1,0\rgt
+L_3:\ \llt x\,,\,y\,,\,z-3\rgt &amp;= t\llt 1,1,0\rgt &amp;
+L_4:\ \llt x\,,\,y\,,\,z-4\rgt &amp;= t\llt 1,-1,0\rgt
 </mrow>
 </md>
 No two of the lines are parallel because

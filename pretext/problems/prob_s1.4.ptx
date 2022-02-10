@@ -992,7 +992,7 @@ y=2x,\ z=3x,\ x+y+z=6x=6
 </me>
 gives <m>(1,2,3)</m> as the centre. <m>(1,1,1)</m> is a point on
 <m>x+y+z=3</m>. <m>(3,3,3)</m> is a point on <m>x+y+z=9</m>. So <m>\llt 2,2,2\rgt</m> is a vector
-with tail on <m>x+y+x=3</m> and head on <m>x+y+z=9</m>. Furthermore <m>\llt 2,2,2\rgt</m>
+with tail on <m>x+y+z=3</m> and head on <m>x+y+z=9</m>. Furthermore <m>\llt 2,2,2\rgt</m>
 is perpendicular to the two planes. So the distance between the planes
 is <m>|\llt 2,2,2\rgt|=2\sqrt{3}</m> and the radius of the sphere is <m>\sqrt{3}</m>.
 The sphere is
