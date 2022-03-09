@@ -28,8 +28,8 @@ For each $1\le i\le 5$,
 \item
 sketch, in the $xy$-plane, the point $(x_i,y_i)$ and
 \item
-find the polar coordinates $r_i$ and $\theta_i$,
-with $0\le\theta_i<2\pi$, for the point $(x_i,y_i)$.
+find polar coordinates $r_i$ and $\theta_i$,
+with $r_i>0$ and $0\le\theta_i<2\pi$, for the point $(x_i,y_i)$.
 \end{itemize}
 \end{question}
 
@@ -63,7 +63,7 @@ points, $(x_2,y_2)$, $(x_4,y_4)$, that are not on the axes.
 Recall that the polar coordinates $r$, $\theta$
 are related to the cartesian coordinates $x$, $y$, by $x=r\cos\theta$,
 $y=r\sin\theta$. So $r=\sqrt{x^2+y^2}$ and $\tan\theta=\frac{y}{x}$
-(assuming that $x\ne 0$) and
+(assuming that $x\ne 0$ and $r>0$) and
 \begin{alignat*}{5}
 (x_1,y_1) &= (3,0) &&\implies &r_1=3,\ \tan\theta_1=0
                    &&\implies \theta_1&=0 
@@ -86,22 +86,28 @@ $y=r\sin\theta$. So $r=\sqrt{x^2+y^2}$ and $\tan\theta=\frac{y}{x}$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}
+For each of the following points $(x_i,y_i)$,
+\begin{itemize}
+\item
+find \emph{all} pairs $(r_i,\theta_i)$ such that 
+  $(x_i,y_i) = \big(r_i\cos\theta_i\,,\,r_i\sin\theta_i\big)$, and
+\item
+ in particular, find a pair $(r_i,\theta_i)$ with $r_i<0$ and 
+$0\le\theta_i<2\pi$ such that 
+  $(x_i,y_i) = \big(r_i\cos\theta_i\,,\,r_i\sin\theta_i\big)$
+\end{itemize}
+
 \begin{enumerate}[(a)]
 \item
-Find \emph{all} pairs $(r,\theta)$ such that
-\begin{equation*}
-(-2,0) = \big(r\cos\theta\,,\,r\sin\theta\big)
-\end{equation*}
+$ (x_1,y_1) = (-2,0) $ 
 \item
-Find \emph{all} pairs $(r,\theta)$ such that
-\begin{equation*}
-(1,1) = \big(r\cos\theta\,,\,r\sin\theta\big)
-\end{equation*}
+$ (x_2,y_2) = (1,1) $ 
 \item
-Find \emph{all} pairs $(r,\theta)$ such that
-\begin{equation*}
-(-1,-1) = \big(r\cos\theta\,,\,r\sin\theta\big)
-\end{equation*}
+$ (x_3,y_3) = (-1,-1) $ 
+\item
+$ (x_4,y_4) = (3,0) $ 
+\item
+$ (x_5,y_5) = (0,1) $ 
 \end{enumerate}
 \end{question}
 
@@ -110,20 +116,38 @@ $r$ is allowed to be negative.
 \end{hint}
 
 \begin{answer} 
-(a) $\big(r=2\,,\,\theta= n\pi,\ n\text{ odd integer }\big)$ or 
-    $\big(r=-2\,,\,\theta= n\pi,\ n\text{ even integer }\big)$ 
+(a) $\big(r_1=2\,,\,\theta_1= n\pi,\ n\text{ odd integer }\big)$ or 
+    $\big(r_1=-2\,,\,\theta_1= n\pi,\ n\text{ even integer }\big)$.
+    In particular,  $\big(r_1=-2\,,\,\theta_1= 0\big)$ has $r_1<0$
+    and $0\le\theta_1<2\pi$.
 
-(b) $\big(r=\sqrt{2}\,,\,\theta= \nicefrac{\pi}{4} + 2n\pi\big)$ or 
-    $\big(r=-\sqrt{2}\,,\,\theta= \nicefrac{5\pi}{4} + 2n\pi\big)$,
-    with $n$ integer. 
+(b) $\big(r_2=\sqrt{2}\,,\,\theta_2= \nicefrac{\pi}{4} + 2n\pi\big)$ or 
+    $\big(r_2=-\sqrt{2}\,,\,\theta_2= \nicefrac{5\pi}{4} + 2n\pi\big)$,
+    with $n$ integer. In particular,  $\big(r_2=-\sqrt{2}\,,\,
+    \theta_2= \nicefrac{5\pi}{4}\big)$ has $r_2<0$
+    and $0\le\theta_2<2\pi$.
 
-(c) $\big(r=\sqrt{2}\,,\,\theta= \nicefrac{5\pi}{4} + 2n\pi\big)$ or 
-    $\big(r=-\sqrt{2}\,,\,\theta= \nicefrac{\pi}{4} + 2n\pi\big)$,
-    with $n$ integer. 
+(c) $\big(r_3=\sqrt{2}\,,\,\theta_3= \nicefrac{5\pi}{4} + 2n\pi\big)$ or 
+    $\big(r_3=-\sqrt{2}\,,\,\theta_3= \nicefrac{\pi}{4} + 2n\pi\big)$,
+    with $n$ integer. In particular,  $\big(r_3=-\sqrt{2}\,,\,
+    \theta_3= \nicefrac{\pi}{4}\big)$ has $r_3<0$
+    and $0\le\theta_3<2\pi$.
+
+(d) $\big(r_4=3\,,\,\theta_4= 0 + 2n\pi\big)$ or 
+    $\big(r_4=-3\,,\,\theta_4= \pi + 2n\pi\big)$,
+    with $n$ integer. In particular,  $\big(r_4=-3\,,\,
+    \theta_4= \pi\big)$ has $r_4<0$ and $0\le\theta_4<2\pi$.
+
+(e) $\big(r_5=1\,,\,\theta_5= \nicefrac{\pi}{2} + 2n\pi\big)$ or 
+    $\big(r_5=-1\,,\,\theta_5= \nicefrac{3\pi}{2} + 2n\pi\big)$,
+    with $n$ integer. In particular,  $\big(r_5=-1\,,\,
+    \theta_5= \nicefrac{3\pi}{2}\big)$ has $r_5<0$
+    and $0\le\theta_5<2\pi$.
 \end{answer}
 
 
 \begin{solution}
+In this solution, we'll supress the subscripts. That is, we'll write $r$ in place of $r_i$ and $\theta$ in place of $\theta_i$.
 Note that the distance from the point $\big(r\cos\theta\,,\,r\sin\theta\big)$
 to the origin is
 \begin{equation*}
@@ -152,15 +176,18 @@ The distance from $(-2,0)$ to the origin is $2$. So either $r=2$ or $r=-2$.
 &\iff \theta= n\pi,\ n\text{ even integer }
 \end{align*}
 \end{itemize}
+In particular,  $\big(r=-2\,,\,\theta= 0\big)$ has $r<0$
+    and $0\le\theta<2\pi$.
+
 In the figure on the left below, the blue half-line is the set of all points 
-with polar coordinates $\theta=\pi$, $r>0$ and the pink half-line is the set 
+with polar coordinates $\theta=\pi$, $r>0$ and the orange half-line is the set 
 of all points  with polar coordinates $\theta=\pi$, $r<0$. 
 In the figure on the right below, the blue half-line is the set of all points 
-with polar coordinates $\theta=0$, $r>0$ and the pink half-line is the set 
+with polar coordinates $\theta=0$, $r>0$ and the orange half-line is the set 
 of all points  with polar coordinates $\theta=0$, $r<0$. 
 \begin{center}
-  \includegraphics{polar6B.pdf}\qquad
-  \includegraphics{polar6A.pdf}
+  \includegraphics{polar6BB.pdf}\qquad
+  \includegraphics{polar6AA.pdf}
 \end{center}
 
 
@@ -181,16 +208,20 @@ So either $r=\sqrt{2}$ or $r=-\sqrt{2}$.
 &\iff \theta= \nicefrac{5\pi}{4} + 2n\pi,\ n\text{ integer }
 \end{align*}
 \end{itemize}
+In particular,  $\big(r=-\sqrt{2}\,,\,
+    \theta= \nicefrac{5\pi}{4}\big)$ has $r<0$
+    and $0\le\theta<2\pi$.
+
 In the figure on the left below, the blue half-line is the set of all points 
-with polar coordinates $\theta=\frac{\pi}{4}$, $r>0$ and the pink half-line 
+with polar coordinates $\theta=\frac{\pi}{4}$, $r>0$ and the orange half-line 
 is the set of all points  with polar coordinates $\theta=\frac{\pi}{4}$, $r<0$. 
 In the figure on the right below, the blue half-line is the set of all points 
-with polar coordinates $\theta=\frac{5\pi}{4}$, $r>0$ and the pink 
+with polar coordinates $\theta=\frac{5\pi}{4}$, $r>0$ and the orange 
 half-line is the set of all points  with polar coordinates 
 $\theta=\frac{5\pi}{4}$, $r<0$. 
 \begin{center}
-  \includegraphics{polar4A.pdf}\qquad
-  \includegraphics{polar4B.pdf}
+  \includegraphics{polar4AA.pdf}\qquad
+  \includegraphics{polar4BB.pdf}
 \end{center}
 
 (c)
@@ -210,18 +241,87 @@ So either $r=\sqrt{2}$ or $r=-\sqrt{2}$.
 &\iff \theta= \nicefrac{\pi}{4} + 2n\pi,\ n\text{ integer }
 \end{align*}
 \end{itemize}
+In particular,  $\big(r=-\sqrt{2}\,,\,
+    \theta= \nicefrac{\pi}{4}\big)$ has $r<0$
+    and $0\le\theta<2\pi$.
+
 In the figure on the left below, the blue half-line is the set of all points 
-with polar coordinates $\theta=\frac{5\pi}{4}$, $r>0$ and the pink half-line 
+with polar coordinates $\theta=\frac{5\pi}{4}$, $r>0$ and the orange half-line 
 is the set of all points  with polar coordinates 
 $\theta=\frac{5\pi}{4}$, $r<0$. 
 In the figure on the right below, the blue half-line is the set of all points 
-with polar coordinates $\theta=\frac{\pi}{4}$, $r>0$ and the pink 
+with polar coordinates $\theta=\frac{\pi}{4}$, $r>0$ and the orange 
 half-line is the set of all points  with polar coordinates 
 $\theta=\frac{\pi}{4}$, $r<0$. 
 \begin{center}
-  \includegraphics{polar5A.pdf}\qquad
-  \includegraphics{polar5B.pdf}
+  \includegraphics[scale=0.9]{polar5AA.pdf}\qquad
+  \includegraphics[scale=0.9]{polar5BB.pdf}
 \end{center}
+
+(d)
+The distance from $(3,0)$ to the origin is $3$. 
+So either $r=3$ or $r=-3$.
+\begin{itemize}
+\item If $r=3$, then $\theta$ must obey 
+\begin{align*}
+(3,0) = \big(3\,\cos\theta\,,\,3\,\sin\theta\big)
+&\iff \sin\theta=0,\ \cos\theta=1 \\
+&\iff \theta= 0 + 2n\pi,\ n\text{ integer }
+\end{align*}
+\item If $r=-3$, then $\theta$ must obey 
+\begin{align*}
+(3,0) = \big(-3\,\cos\theta\,,\,-3\,\sin\theta\big)
+&\iff \sin\theta=0,\ \cos\theta=-1 \\
+&\iff \theta= \pi + 2n\pi,\ n\text{ integer }
+\end{align*}
+\end{itemize}
+In particular,  $\big(r=-3\,,\,
+    \theta= \pi\big)$ has $r<0$
+    and $0\le\theta<2\pi$.
+
+In the figure on the left below, the blue half-line is the set of all points 
+with polar coordinates $\theta=\pi$, $r>0$ and the orange half-line is the set 
+of all points  with polar coordinates $\theta=\pi$, $r<0$. 
+In the figure on the right below, the blue half-line is the set of all points 
+with polar coordinates $\theta=0$, $r>0$ and the orange half-line is the set 
+of all points  with polar coordinates $\theta=0$, $r<0$. 
+\begin{center}
+  \includegraphics{polar3AA.pdf}\qquad
+  \includegraphics{polar3BB.pdf}
+\end{center}
+
+(e)
+The distance from $(0,1)$ to the origin is $1$. 
+So either $r=1$ or $r=-1$.
+\begin{itemize}
+\item If $r=1$, then $\theta$ must obey 
+\begin{align*}
+(0,1) = \big(\cos\theta\,,\,\sin\theta\big)
+&\iff \cos\theta=0,\ \sin\theta=1 \\
+&\iff \theta= \nicefrac{\pi}{2} + 2n\pi,\ n\text{ integer }
+\end{align*}
+\item If $r=-1$, then $\theta$ must obey 
+\begin{align*}
+(0,1) = \big(-\cos\theta\,,\,-\sin\theta\big)
+&\iff \cos\theta=0,\ \sin\theta=-1 \\
+&\iff \theta= \nicefrac{3\pi}{2} + 2n\pi,\ n\text{ integer }
+\end{align*}
+\end{itemize}
+In particular,  $\big(r=-1\,,\,
+    \theta= \nicefrac{3\pi}{2}\big)$ has $r<0$
+    and $0\le\theta<2\pi$.
+
+In the figure on the left below, the blue half-line is the set of all points 
+with polar coordinates $\theta=\frac{3\pi}{2}$, $r>0$ and the orange half-line is the set 
+of all points  with polar coordinates $\theta=\frac{3\pi}{2}$, $r<0$. 
+In the figure on the right below, the blue half-line is the set of all points 
+with polar coordinates $\theta=\frac{\pi}{2}$, $r>0$ and the orange half-line is the set 
+of all points  with polar coordinates $\theta=\frac{\pi}{2}$, $r<0$. 
+\begin{center}
+  \includegraphics{polar2AA.pdf}\qquad
+  \includegraphics{polar2BB.pdf}
+\end{center}
+
 
 \end{solution}
 

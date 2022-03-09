@@ -27,8 +27,8 @@ For each <m>1\le i\le 5</m>,
 sketch, in the <m>xy</m>-plane, the point <m>(x_i,y_i)</m> and
 </li>
 <li>
-find the polar coordinates <m>r_i</m> and <m>\theta_i</m>,
-with <m>0\le\theta_i \lt 2\pi</m>, for the point <m>(x_i,y_i)</m>.
+find polar coordinates <m>r_i</m> and <m>\theta_i</m>,
+with <m>r_i>0</m> and <m>0\le\theta_i \lt 2\pi</m>, for the point <m>(x_i,y_i)</m>.
 </li>
 </ul>
 </p></statement>
@@ -68,7 +68,7 @@ points, <m>(x_2,y_2)</m>, <m>(x_4,y_4)</m>, that are not on the axes.
 Recall that the polar coordinates <m>r</m>, <m>\theta</m>
 are related to the cartesian coordinates <m>x</m>, <m>y</m>, by <m>x=r\cos\theta</m>,
 <m>y=r\sin\theta</m>. So <m>r=\sqrt{x^2+y^2}</m> and <m>\tan\theta=\frac{y}{x}</m>
-(assuming that <m>x\ne 0</m>) and
+(assuming that <m>x\ne 0</m> and <m>r\gt 0</m>) and
 <md alignment="alignat">
 <mrow>
 (x_1,y_1) &amp;= (3,0) &amp;&amp;\implies r_1=3,\ \tan\theta_1=0
@@ -102,24 +102,40 @@ are related to the cartesian coordinates <m>x</m>, <m>y</m>, by <m>x=r\cos\theta
 
 <exercise>
 <statement><p>
+For each of the following points <m>(x_i,y_i)</m>,
+<ul>
+<li>
+find <em>all</em> pairs <m>(r_i,\theta_i)</m> such that 
+  <m>(x_i,y_i) = \big(r_i\cos\theta_i\,,\,r_i\sin\theta_i\big)</m>, and
+</li><li>
+ in particular, find a pair <m>(r_i,\theta_i)</m> with <m>r_i\lt 0</m> and 
+<m>0\le\theta_i\lt 2\pi</m> such that 
+  <m>(x_i,y_i) = \big(r_i\cos\theta_i\,,\,r_i\sin\theta_i\big)</m>
+</li>
+</ul>
 <ol label="a">
 <li>
-Find <em>all</em> pairs <m>(r,\theta)</m> such that
-<me>
-(-2,0) = \big(r\cos\theta\,,\,r\sin\theta\big)
-</me>
+<m>
+(x_1,y_1)=(-2,0) 
+</m>
 </li>
 <li>
-Find <em>all</em> pairs <m>(r,\theta)</m> such that
-<me>
-(1,1) = \big(r\cos\theta\,,\,r\sin\theta\big)
-</me>
+<m>
+(x_2,y_2)=(1,1) 
+</m>
 </li>
 <li>
-Find <em>all</em> pairs <m>(r,\theta)</m> such that
-<me>
-(-1,-1) = \big(r\cos\theta\,,\,r\sin\theta\big)
-</me>
+<m>
+(x_3,y_3)=(-1,-1)</m>
+</li>
+<li>
+<m>
+(x_4,y_4)=(3,0)</m>
+</li>
+<li>
+<m>
+(x_5,y_5)=(0,1)
+</m>
 </li>
 </ol>
 </p></statement>
@@ -129,21 +145,39 @@ Find <em>all</em> pairs <m>(r,\theta)</m> such that
 </p></hint>
 
 <answer><p>
-(a) <m>\big(r=2\,,\,\theta= n\pi,\ n\text{ odd integer }\big)</m> or
-    <m>\big(r=-2\,,\,\theta= n\pi,\ n\text{ even integer }\big)</m>
+(a) <m>\big(r_1=2\,,\,\theta_1= n\pi,\ n\text{ odd integer }\big)</m> or
+    <m>\big(r_1=-2\,,\,\theta_1= n\pi,\ n\text{ even integer }\big)</m>.
+    In particular,  <m>\big(r_1=-2\,,\,\theta_1= 0\big)</m> has <m>r_1\lt 0</m>
+    and <m>0\le\theta_1\lt 2\pi</m>.
 </p>
 
-<p>(b) <m>\big(r=\sqrt{2}\,,\,\theta= \frac{\pi}{4} + 2n\pi\big)</m> or
-    <m>\big(r=-\sqrt{2}\,,\,\theta= \frac{5\pi}{4} + 2n\pi\big)</m>,
-    with <m>n</m> integer.
+<p>(b) <m>\big(r_2=\sqrt{2}\,,\,\theta_2= \frac{\pi}{4} + 2n\pi\big)</m> or
+    <m>\big(r_2=-\sqrt{2}\,,\,\theta_2= \frac{5\pi}{4} + 2n\pi\big)</m>,
+    with <m>n</m> integer. In particular,  <m>\big(r_2=-\sqrt{2}\,,\,
+    \theta_2= \frac{5\pi}{4}\big)</m> has <m>r_2\lt 0</m>
+    and <m>0\le\theta_2\lt 2\pi</m>.
 </p>
 
-<p>(c) <m>\big(r=\sqrt{2}\,,\,\theta= \frac{5\pi}{4} + 2n\pi\big)</m> or
-    <m>\big(r=-\sqrt{2}\,,\,\theta= \frac{\pi}{4} + 2n\pi\big)</m>,
-    with <m>n</m> integer.
+<p>(c) <m>\big(r_3=\sqrt{2}\,,\,\theta_3= \frac{5\pi}{4} + 2n\pi\big)</m> or
+    <m>\big(r_3=-\sqrt{2}\,,\,\theta_3= \frac{\pi}{4} + 2n\pi\big)</m>,
+    with <m>n</m> integer. In particular,  <m>\big(r_3=-\sqrt{2}\,,\,
+    \theta_3= \frac{\pi}{4}\big)</m> has <m>r_3\lt 0</m>
+    and <m>0\le\theta_3\lt 2\pi</m>.
+</p>
+<p>(d) <m>\big(r_4=3\,,\,\theta_4= 0 + 2n\pi\big)</m> or
+    <m>\big(r_4=-3\,,\,\theta_4= \pi + 2n\pi\big)</m>,
+    with <m>n</m> integer. In particular,  <m>\big(r_4=-3\,,\,
+    \theta_4= \pi\big)</m> has <m>r_4\lt 0</m> and <m>0\le\theta_4\lt 2\pi</m>.
+</p>
+<p>(e) <m>\big(r_5=1\,,\,\theta_5= \frac{\pi}{2} + 2n\pi\big)</m> or
+    <m>\big(r_5=-1\,,\,\theta_5= \frac{3\pi}{2} + 2n\pi\big)</m>,
+    with <m>n</m> integer. In particular,  <m>\big(r_5=-1\,,\,
+    \theta_5= \frac{3\pi}{2}\big)</m> has <m>r_5\lt 0</m>
+    and <m>0\le\theta_5\lt 2\pi</m>.
 </p></answer>
 
 <solution><p>
+In this solution, we'll supress the subscripts. That is, we'll write <m>r</m> in place of <m>r_i</m> and <m>\theta</m> in place of <m>\theta_i</m>.
 Note that the distance from the point <m>\big(r\cos\theta\,,\,r\sin\theta\big)</m>
 to the origin is
 <me>
@@ -183,16 +217,20 @@ The distance from <m>(-2,0)</m> to the origin is <m>2</m>. So either <m>r=2</m> 
 </md>
 </li>
 </ul>
+In particular,  <m>\big(r=-2\,,\,\theta= 0\big)</m> has <m>r\lt 0</m>
+    and <m>0\le\theta\lt 2\pi</m>.
+</p>
+<p>    
 In the figure on the left below, the blue half-line is the set of all points
-with polar coordinates <m>\theta=\pi</m>, <m>r \gt 0</m> and the pink half-line is the set
+with polar coordinates <m>\theta=\pi</m>, <m>r \gt 0</m> and the orange half-line is the set
 of all points  with polar coordinates <m>\theta=\pi</m>, <m>r \lt 0</m>.
 In the figure on the right below, the blue half-line is the set of all points
-with polar coordinates <m>\theta=0</m>, <m>r \gt 0</m> and the pink half-line is the set
+with polar coordinates <m>\theta=0</m>, <m>r \gt 0</m> and the orange half-line is the set
 of all points  with polar coordinates <m>\theta=0</m>, <m>r \lt 0</m>.
 </p>
 <sidebyside width="45%">
-<image source="pfigs/polar6B"/>
-<image source="pfigs/polar6A"/>
+<image source="pfigs/polar6BB"/>
+<image source="pfigs/polar6AA"/>
 </sidebyside>
 
 <p>
@@ -221,17 +259,22 @@ So either <m>r=\sqrt{2}</m> or <m>r=-\sqrt{2}</m>.
 </md>
 </li>
 </ul>
+In particular,  <m>\big(r=-\sqrt{2}\,,\,
+    \theta= \frac{5\pi}{4}\big)</m> has <m>r\lt 0</m>
+    and <m>0\le\theta\lt 2\pi</m>.
+</p>
+<p>    
 In the figure on the left below, the blue half-line is the set of all points
-with polar coordinates <m>\theta=\frac{\pi}{4}</m>, <m>r \gt 0</m> and the pink half-line
+with polar coordinates <m>\theta=\frac{\pi}{4}</m>, <m>r \gt 0</m> and the orange half-line
 is the set of all points  with polar coordinates <m>\theta=\frac{\pi}{4}</m>, <m>r \lt 0</m>.
 In the figure on the right below, the blue half-line is the set of all points
-with polar coordinates <m>\theta=\frac{5\pi}{4}</m>, <m>r \gt 0</m> and the pink
+with polar coordinates <m>\theta=\frac{5\pi}{4}</m>, <m>r \gt 0</m> and the orange
 half-line is the set of all points  with polar coordinates
 <m>\theta=\frac{5\pi}{4}</m>, <m>r \lt 0</m>.
 </p>
-<sidebyside width="40%">
-  <image source="pfigs/polar4A"/>
-  <image source="pfigs/polar4B"/>
+<sidebyside width="45%">
+  <image source="pfigs/polar4AA"/>
+  <image source="pfigs/polar4BB"/>
 </sidebyside>
 
 <p>
@@ -260,19 +303,115 @@ So either <m>r=\sqrt{2}</m> or <m>r=-\sqrt{2}</m>.
 </md>
 </li>
 </ul>
+In particular,  <m>\big(r=-\sqrt{2}\,,\,
+    \theta= \frac{\pi}{4}\big)</m> has <m>r\lt 0</m>
+    and <m>0\le\theta\lt 2\pi</m>.
+</p>
+<p>    
 In the figure on the left below, the blue half-line is the set of all points
-with polar coordinates <m>\theta=\frac{5\pi}{4}</m>, <m>r \gt 0</m> and the pink half-line
+with polar coordinates <m>\theta=\frac{5\pi}{4}</m>, <m>r \gt 0</m> and the orange half-line
 is the set of all points  with polar coordinates
 <m>\theta=\frac{5\pi}{4}</m>, <m>r \lt 0</m>.
 In the figure on the right below, the blue half-line is the set of all points
-with polar coordinates <m>\theta=\frac{\pi}{4}</m>, <m>r \gt 0</m> and the pink
+with polar coordinates <m>\theta=\frac{\pi}{4}</m>, <m>r \gt 0</m> and the orange
 half-line is the set of all points  with polar coordinates
 <m>\theta=\frac{\pi}{4}</m>, <m>r \lt 0</m>.
 </p>
 
 <sidebyside width="45%">
-  <image source="pfigs/polar5A"/>
-  <image source="pfigs/polar5B"/>
+  <image source="pfigs/polar5AA"/>
+  <image source="pfigs/polar5BB"/>
+</sidebyside>
+
+<p>
+(d)
+The distance from <m>(3,0)</m> to the origin is <m>3</m>.
+So either <m>r=3</m> or <m>r=-3</m>.
+<ul>
+<li> If <m>r=3</m>, then <m>\theta</m> must obey
+<md>
+<mrow>
+(3,0) = \big(3\,\cos\theta\,,\,3\,\sin\theta\big)
+&amp;\iff \sin\theta=0,\ \cos\theta=1
+</mrow><mrow>
+&amp;\iff \theta= 0 + 2n\pi,\ n\text{ integer }
+</mrow>
+</md>
+</li>
+<li> If <m>r=-3</m>, then <m>\theta</m> must obey
+<md>
+<mrow>
+(3,0) = \big(-3\,\cos\theta\,,\,-3\,\sin\theta\big)
+&amp;\iff \sin\theta=0,\ \cos\theta=-1
+</mrow><mrow>
+&amp;\iff \theta= \pi + 2n\pi,\ n\text{ integer }
+</mrow>
+</md>
+</li>
+</ul>
+In particular,  <m>\big(r=-3\,,\,
+    \theta= \pi\big)</m> has <m>r\lt 0</m> and <m>0\le\theta\lt 2\pi</m>.
+ </p>
+ <p>   
+In the figure on the left below, the blue half-line is the set of all points
+with polar coordinates <m>\theta=\pi</m>, <m>r \gt 0</m> and the orange half-line
+is the set of all points  with polar coordinates
+<m>\theta=\pi</m>, <m>r \lt 0</m>.
+In the figure on the right below, the blue half-line is the set of all points
+with polar coordinates <m>\theta=0</m>, <m>r \gt 0</m> and the orange
+half-line is the set of all points  with polar coordinates
+<m>\theta=0</m>, <m>r \lt 0</m>.
+</p>
+
+<sidebyside width="45%">
+  <image source="pfigs/polar3AA"/>
+  <image source="pfigs/polar3BB"/>
+</sidebyside>
+
+<p>
+(e)
+The distance from <m>(0,1)</m> to the origin is <m>1</m>.
+So either <m>r=1</m> or <m>r=-1</m>.
+<ul>
+<li> If <m>r=1</m>, then <m>\theta</m> must obey
+<md>
+<mrow>
+(0,1) = \big(\cos\theta\,,\,\sin\theta\big)
+&amp;\iff \cos\theta=0,\ \sin\theta=1
+</mrow><mrow>
+&amp;\iff \theta= \frac{\pi}{2} + 2n\pi,\ n\text{ integer }
+</mrow>
+</md>
+</li>
+<li> If <m>r=-1</m>, then <m>\theta</m> must obey
+<md>
+<mrow>
+(0,1) = \big(-\cos\theta\,,\,-\sin\theta\big)
+&amp;\iff \cos\theta=0,\ \sin\theta=-1
+</mrow><mrow>
+&amp;\iff \theta= \frac{3\pi}{2} + 2n\pi,\ n\text{ integer }
+</mrow>
+</md>
+</li>
+</ul>
+In particular,  <m>\big(r=-1\,,\,
+    \theta= \frac{3\pi}{2}\big)</m> has <m>r\lt 0</m>
+    and <m>0\le\theta\lt 2\pi</m>.
+</p>
+<p>    
+In the figure on the left below, the blue half-line is the set of all points
+with polar coordinates <m>\theta=\frac{3\pi}{2}</m>, <m>r \gt 0</m> and the orange half-line
+is the set of all points  with polar coordinates
+<m>\theta=\frac{3\pi}{2}</m>, <m>r \lt 0</m>.
+In the figure on the right below, the blue half-line is the set of all points
+with polar coordinates <m>\theta=\frac{\pi}{2}</m>, <m>r \gt 0</m> and the orange
+half-line is the set of all points  with polar coordinates
+<m>\theta=\frac{\pi}{2}</m>, <m>r \lt 0</m>.
+</p>
+
+<sidebyside width="40%">
+  <image source="pfigs/polar2AA"/>
+  <image source="pfigs/polar2BB"/>
 </sidebyside>
 
 </solution>
