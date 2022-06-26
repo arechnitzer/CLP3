@@ -1249,7 +1249,7 @@ E=\Set{(x,y,z)}{0\le x\le 1,\ 0\le y\le 1-x,\ 0\le z\le y^2}
 and the integral
 <md>
 <mrow>
-\tripInt_E x\ \dee{V}
+\tripInt_E z\ \dee{V}
 &amp;=\int_0^1\dee{x}\int_0^{1-x}\dee{y}\int_0^{y^2}\dee{z}\ z
 </mrow><mrow>
 &amp;=\int_0^1\dee{x}\int_0^{1-x}\dee{y}\ \frac{y^4}{2}
