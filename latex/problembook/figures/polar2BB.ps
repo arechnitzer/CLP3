@@ -1,0 +1,75 @@
+%!PS-Adobe-3.0
+%%BoundingBox:       0.0 0.0     142.4 142.4
+%%Title:              
+%%Created by:        Figure.java
+%%Date:              Sun Mar 06 16:53:47 PST 2022
+%%EndComments
+
+gsave
+
+%% ellipse library
+
+/ellipsedict 10 dict def        %% arguments: xcentre ycentre xradius yradius
+ellipsedict /emtrx matrix put  %%            startangle endangle closetype
+
+/ellipse                       %% closetype: 0 for open, 1 for chord, 2 for wedge
+    {ellipsedict begin
+       /closetype exch def
+       /endangle exch def      /startangle exch def
+       /yrad exch def          /xrad exch def
+       /y exch def             /x exch def
+       /savematrix emtrx currentmatrix def
+    x y translate
+    xrad  yrad  scale
+    newpath
+    closetype 2 eq  {0 0 moveto} if
+    0 0 1 startangle endangle arc
+    closetype 1 eq  {closepath} if
+    closetype 2 eq  {closepath} if
+    savematrix setmatrix
+    end
+    } def
+
+%%  Figure2ps dictionary
+
+/Figure2psDict 30 dict def
+Figure2psDict begin
+  /iscp false def
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+newpath -1.0 -1.0 moveto 143.4 -1.0 lineto 143.4 143.4 lineto -1.0 143.4 lineto closepath clip
+/Helvetica 10 setpsfont
+0.5 setlinewidth
+newpath
+0.0  71.2  moveto
+142.4  71.2  lineto stroke
+newpath
+71.2  0.0  moveto
+71.2  142.4  lineto stroke
+  71.2 71.2   14.24 14.24   0.0 90.0   0  ellipse stroke
+2.0 setlinewidth
+0 0.53333 0.8 setrgbcolor  
+newpath
+71.2  71.2  moveto
+71.2  142.4  lineto stroke
+gsave
+   0 0 0 1 setcmykcolor  
+  71.2 118.66666666666667   3.322666666666667 3.322666666666667  0 360 0 ellipse fill
+grestore
+0.93333 0.46666 0.2 setrgbcolor  
+newpath
+71.2  71.2  moveto
+71.2  0.0  lineto stroke
+gsave
+   0 0 0 1 setcmykcolor  
+  71.2 23.733333333333334   3.322666666666667 3.322666666666667  0 360 0 ellipse fill
+grestore
+
+%%Trailer
+end
+grestore

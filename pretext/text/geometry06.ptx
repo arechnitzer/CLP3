@@ -159,7 +159,7 @@ the parameter simply by setting <m>t=x</m>. This gives the parametrization
 
 <example xml:id="eg_paramCircleC"><title>Parametrization of <m>x^2+y^2=a^2</m>, again</title>
 <p>
-It is also quite common that one can use either <m>x</m> or <m>y</m> to parametrize part of, but all of, a curve. A simple example is the circle <m>x^2+y^2=a^2</m>.
+It is also quite common that one can use either <m>x</m> or <m>y</m> to parametrize part of, but not all of, a curve. A simple example is the circle <m>x^2+y^2=a^2</m>.
 For each <m>-a\lt x\lt a</m>, there are two points on the circle with that value of <m>x</m>.
 So one cannot use <m>x</m> to parametrize the whole circle.
 Similarly, for each <m>-a\lt y\lt a</m>, there are two points on the circle with that value of <m>y</m>. So one cannot use <m>y</m> to parametrize the whole circle. On the other hand

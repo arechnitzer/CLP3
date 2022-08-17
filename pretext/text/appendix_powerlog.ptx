@@ -124,10 +124,10 @@ others use it to mean <m>\log_2 x</m>.
 </li>
 <li><p>
     <m>\lim\limits_{x\rightarrow\infty}\ln x=\infty,
-    \quad \lim\limits_{x\rightarrow0}\ln x=-\infty</m>
+    \quad \lim\limits_{x\rightarrow0+}\ln x=-\infty</m>
          </p><p>
     <m>\lim\limits_{x\rightarrow\infty}\log_q x=\infty,
-    \quad \lim\limits_{x\rightarrow0}\log_q x=-\infty</m>
+    \quad \lim\limits_{x\rightarrow0+}\log_q x=-\infty</m>
          </p>
 </li>
 <li><p>

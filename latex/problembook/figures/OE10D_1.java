@@ -50,7 +50,7 @@ public class OE10D_1 extends Template {
            canvas.append( new fPsWrite(Red+"\n")) ;
            fEnv("lineWidth", 1.0) ;
            C = 0; fLine(0, ymin, 0,ymax) ;
-                  fTeXlabel(-0.06, ymin, "br", "${\\scriptstyle f=0}$") ;
+                  fTeXlabel(-1.3, 0.04 , "bl", "${\\scriptstyle f=0}$") ;
 
            C = 1; fDisk(0,1/C, 1/Math.abs(C),1/Math.abs(C), CLOSED) ;
                   fTeXlabel(1.06,1, "cl", "${\\scriptstyle f=1}$") ;

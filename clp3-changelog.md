@@ -7,6 +7,16 @@ permalink: /CLP3-changelog/
 ---
 
 # CLP-3 Multivariable Calculus textbook
+* June 19, 2022 - Typo correction in Example 3.5.3 (latex version only).
+* March 17, 2022 - Typo correction in Example 2.7.10 (html and combined versions only).
+* January 14, 2022 - Typo correction in Example 1.7.4.
+* January 11, 2022 - Typo correction in Example 1.7.1.
+* January 8, 2022 - Expanded the PDE Section 2.8.
+* December 30, 2021 - Added the teminology "differential" to Notation 2.6.5.
+* December 16, 2021 - Typo correction in Example 1.6.5.
+* November 16, 2021 - Typo correction in Example 2.10.3.
+* October 10, 2021 - Typo correction following Equation 1.5.1.
+* September 30, 2021 - Typo correction in Theorem 2.1.5.
 * August 27, 2021 - Added, in Section 1.2, the definition of the component of one vector in the direction of another vector. 
 * July 30, 2021 - Tweaked Definition 1.8.1. 
 * July 10, 2021 - Added a subsection on 2d integrals of odd/even functions.
@@ -69,6 +79,15 @@ permalink: /CLP3-changelog/
 * August 15, 2018 - Initial upload.
 
 # CLP-3 Multivariable Calculus problem book
+* June 26, 2022: Typo correction in S[13] of Section 3.5.
+* May 20, 2022: Typo correction in A[1] and S[1] of Section 2.2.
+* March 9, 2022: Expanded Q[2] of Section 3.2.
+* February 9, 2022: Typo corrections in S[14] of Section 1.4 and A[2] and S[2] of Section 1.5.
+* January 8, 2022 - Added an exercise section corresponding to the PDE Section 2.8.
+* October 3, 2021: Typo  correction in the labelling of the figure for A[5] and S[5] of Section 1.7.
+* September 26, 2021: Removed the redundant Q[14(a)] from Section 2.9.
+* September 12, 2021: Added a problem to Section 2.1.
+* September 12, 2021: Minor tweaks to S[6] of Section 2.1.
 * June 6, 2021 - Typo correction in Section 2.10 A[27].
 * June 1, 2021 - Typo correction in Section 2.5 S[17c].
 * January 26, 2021: Added a couple of problems to Sections 1.4 and 2.2.

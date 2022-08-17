@@ -530,7 +530,7 @@ vector whose tail is at <m>P</m> and whose head is at <m>Q</m>.
 So the given rates of change tell us that
 <md alignment="alignat">
 <mrow>
-\sqrt{2}&amp;=D_{\frac{\llt 1,1\rgt}{|\llt 1,1\rgt|}} f(1,2)
+2\sqrt{2}&amp;=D_{\frac{\llt 1,1\rgt}{|\llt 1,1\rgt|}} f(1,2)
    &amp;&amp;= \vnabla f(1,2)\cdot\frac{\llt 1,1\rgt}{|\llt 1,1\rgt|}
    &amp;&amp;= \llt a,b\rgt\cdot\frac{\llt 1,1\rgt}{\sqrt{2}}
 </mrow><mrow>

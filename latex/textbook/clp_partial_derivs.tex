@@ -230,7 +230,7 @@ $c,F,G\in\bbbr$
 and
 \begin{equation*}
 f,g:D\setminus\{\va\}\rightarrow\bbbr\qquad
-\vX:\bbbr^m\setminus\{\vb\}\rightarrow D\setminus\{\va\}\qquad
+\vX:\bbbr^n\setminus\{\vb\}\rightarrow D\setminus\{\va\}\qquad
 \ga:\bbbr\rightarrow\bbbr
 \end{equation*}
 Assume that
@@ -3610,6 +3610,9 @@ write\footnote{Don't take the notation $\dee{x}$ or the terminology
 &\approx  \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\dee{x}
        + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\dee{y}
 \end{align*}
+People sometimes call $\dee{x}$, $\dee{y}$ and $\dee{f}$ ``differentials'' and
+sometimes $\dee{f}$ is called the ``total differential of $f$'' to indicate that
+it includes the impact of small changes in both $x$ and $y$.
 \end{notn}
 
 \begin{defn}\label{def error}
@@ -5117,12 +5120,167 @@ f_r\big(r(x,y),\theta(x,y)\big)\ \llt\cos\theta(x,y)\,,\,\sin\theta(x,y)\rgt \\
 \end{align*}
 \end{eg}
 
-\section{Optional --- Solving the Wave Equation}\label{sec wave}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{A First Look at Partial Differential Equations}\label{sec pde}
+
 Many phenomena are modelled by equations that relate the rates of
-change of various quantities. As rates of change are given by derivatives
+change of various quantities. As rates of change are given by derivatives,
 the resulting equations contain derivatives and so are called
 differential equations. We saw a number of such differential equations
-in \S\eref{CLP101}{sec sep de} of the CLP-1 text.
+in \S\eref{CLP101}{sec sep de} of the CLP-2 text. In particular, a partial differential equation is an equation for an unknown function of two or more 
+variables that involves the partial derivatives of the unknown function. 
+The standard acronym for partial differential equation is PDE. PDEs\footnote{There is a divided community on what the plural of PDE should be.
+Most people use PDEs as the plural. But some people use PDE as its own plural.} play a central role in modelling a huge number of different phenomena. Here is a table giving a bunch of named PDEs and what they are used for. It is far from complete.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+     \begin{tabular}{|c|c|}
+        \hline
+  Maxwell's equations
+      &describes electromagnetic radiation \\ \hline
+  Navier--Stokes equations
+      &describes fluid motion \\ \hline
+  Heat equation
+      &describes heat flow \\ \hline
+  Wave equation
+      &describes wave motion \\ \hline
+  Schr\"odinger equation
+      &describes atoms, molecules and crystals \\ \hline
+  Black--Scholes equation
+      &used for pricing stock options \\ \hline
+  Einstein's equations
+      &connects gravity and geometry  \\ \hline
+  Laplace's equation
+      &used in many applications, including electrostatics
+     \\ \hline
+     \end{tabular}
+\renewcommand{\arraystretch}{1.0}
+\end{center}
+
+
+We are just going to scratch the surface of the study of partial of differential equations. Many of you will take a separate course on the subject. Some very important PDEs are very hard. One of the 
+millon U.S. dollar prizes\footnote{See \url{https://www.claymath.org/millennium-problems} or
+\url{https://en.wikipedia.org/wiki/Millennium_Prize_Problems}} announced in 2000 
+by the Clay Institute concerns the Navier-Stokes equations. On the other hand, 
+we already know enough to accomplish some PDE tasks. In particular, we can check if a given function really does satisfy a given PDE. Here are some examples.
+
+\begin{eg}[$x\pdiff{z}{x}+ y\pdiff{z}{y}=0$]\label{eg_check_PDF_A}
+Show that the function $z(x,y)=\frac{x+y}{x-y}$ obeys
+\begin{equation*}
+x\pdiff{z}{x}+ y\pdiff{z}{y}=0
+\end{equation*}
+
+\soln We simply evaluate the two terms on the left hand side when 
+$z=z(x,y)=\frac{x+y}{x-y}$.
+\begin{align*}
+x\pdiff{z}{x}&= x\pdiff{}{x}\left(\frac{x+y}{x-y}\right)
+=x\frac{(1)(x-y)-(x+y)(1)}{(x-y)^2}
+=\frac{-2xy}{(x-y)^2} 
+\\
+y\pdiff{z}{y}&= y\pdiff{}{y}\left(\frac{x+y}{x-y}\right)
+=y\frac{(1)(x-y)-(x+y)(-1)}{(x-y)^2}
+=\frac{2xy}{(x-y)^2}
+\end{align*}
+So
+\begin{equation*}
+x\pdiff{z}{x}+y\pdiff{z}{y}
+=\frac{-2xy}{(x-y)^2} +\frac{2xy}{(x-y)^2}
+=0
+\end{equation*}
+and 
+$z(x,y)=\frac{x+y}{x-y}$ really does solve the PDE
+$
+x\pdiff{z}{x}+ y\pdiff{z}{y}=0
+$.
+
+Beware however, that while we have found one solution to the given PDE, we have not found all solutions. There are many others. Trivially, if $z(x,y)=7$, or any other constant, then we certainly have  $x\pdiff{z}{x}=0$ and $y\pdiff{z}{y}=0$
+so that $x\pdiff{z}{x}+ y\pdiff{z}{y}=0$. Less trivially, in the next example,
+we'll find a ton\footnote{Or, if you prefer, we will find 1.01605 
+tonnes of solutions. Although the authors of this text believe strongly in the supremacy of the modern metric system over the archaic chaos of imperial units, they are less certain of the appropriateness of revising well established colloquialisms. It is not at all clear that rewriting ``I have a ton of work to do'' as ``I have a tonne of work to do'' achieves very much except to give the impression that the author is wasting time adding two letters when they are expressing the sheer quantity of tasks that require their attention. Speaking of which, the authors should end this footnote, and get on with the next 
+example.}\footnote{In the previous footnote, the authors, writing from Canada, are using imperial tons rather than U.S. tons. The interested reader is invited to proceed to their favourite search engine to discover just how much time they can waste investigating the history, similarities and differences of these systems.} of solutions.
+\end{eg}
+
+
+\begin{eg}[$x\pdiff{z}{x}+ y\pdiff{z}{y}=0$, again]\label{eg_check_PDF_B}
+Let $G(u)$ be any differentiable function.
+Show that the function $z(x,y)=G\big(\frac{y}{x}\big)$ obeys
+\begin{equation*}
+x\pdiff{z}{x}+ y\pdiff{z}{y}=0
+\end{equation*}
+for all $x\ne 0$.
+
+\soln
+We again simply evaluate the two terms on the left hand side  when 
+$z=z(x,y)=G\big(\frac{y}{x}\big)$. By the chain rule
+\begin{align*}
+x\pdiff{z}{x}&= x\pdiff{}{x}\left(G\Big(\frac{y}{x}\Big)\right)
+=xG'\left(\frac{y}{x}\right)\left(\pdiff{}{x}\,\frac{y}{x}\right)
+=xG'\left(\frac{y}{x}\right)\left(-\frac{y}{x^2}\right)
+=-G'\left(\frac{y}{x}\right)\frac{y}{x} 
+\\
+y\pdiff{z}{y}&= y\pdiff{}{y}\left(G\Big(\frac{y}{x}\Big)\right)
+=yG'\left(\frac{y}{x}\right)\left(\pdiff{}{y}\,\frac{y}{x}\right)
+=yG'\left(\frac{y}{x}\right)\left(\frac{1}{x}\right)
+=G'\left(\frac{y}{x}\right)\frac{y}{x} 
+\end{align*}
+So
+\begin{equation*}
+x\pdiff{z}{x} + y\pdiff{z}{y}
+=-G'\left(\frac{y}{x}\right)\frac{y}{x} + G'\left(\frac{y}{x}\right)\frac{y}{x} 
+=0
+\end{equation*}
+and 
+$z(x,y)=G\big(\frac{y}{x}\big)$ really does solve the PDE
+$
+x\pdiff{z}{x}+ y\pdiff{z}{y}=0
+$.
+Note that we can rewrite the solution $\frac{x+y}{x-y}$ of 
+Example~\ref{eg_check_PDF_A} as $\frac{1+y/x}{1-y/x}$, which is of the form 
+$G\big(\frac{y}{x}\big)$.
+\end{eg}
+
+
+\begin{eg}[Harmonic]\label{eg_check_PDF_C}
+A function $u(x,y)$ is said to be harmonic if it satisfies Laplace's equation
+\begin{equation*}
+u_{xx} + u_{yy}=0
+\end{equation*} 
+We will now find all harmonic polynomials (in the variables $x$ and $y$)
+of degree at most two. Any polynomial of degree at most two is of the form
+\begin{equation*}
+u(x,y) = a +bx +cy + \al x^2 +\be xy +\ga y^2
+\end{equation*} 
+for some constants $a$, $b$, $c$, $\al$, $\be$, $\ga$. We will need $u_{xx}$ and $u_{yy}$, so we compute them now.
+\begin{align*}
+u(x,y) &= a +bx +cy + \al x^2 +\be xy +\ga y^2 \\
+u_x(x,y) &= b + 2\al x +\be y  \\
+u_{xx}(x,y) &=  2\al  \\
+u_y(x,y) &= c + \be x +2\ga y  \\
+u_{yy}(x,y) &=  2\ga  
+\end{align*}
+The polynomial $u(x,y)$ is harmonic if and only if
+\begin{align*}
+0&= u_{xx}(x,y) + u_{yy}(x,y)
+  = 2\al+2\ga
+\end{align*}
+So the polynomial $u(x,y)$ is harmonic if and only if $\al+\ga=0$, i.e. if and only if the polynomial is of the form
+\begin{align*}
+u(x,y) = a +\overbrace{bx+cy}^{\rm degree\ 1}
+           +\overbrace{\al(x^2-y^2)\ +\ \be xy}^{\rm degree\ 2}
+\end{align*}
+with $a$, $b$, $c$, $\al$, and $\be$ all constants.
+Notice that since both terms in the equation involve a second derivative, we 
+would not expect there to be any conditions on the constant and linear terms.
+There aren't. Beware that, while we have found all harmonic degree-two polynomials, there are many other \emph{harmonic functions}, like, for example
+$e^x\cos y$.
+\end{eg}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Optional --- Solving the Advection and Wave Equations}\label{sec wave}
+
 
 In this section we consider 
 \begin{equation*}
@@ -5140,6 +5298,7 @@ of the slightly simpler equation
 \begin{equation*}
 \pdiff{w}{x}(x,t)-\frac{1}{c}\pdiff{w}{t}(x,t)=0
 \end{equation*}
+which is called an advection equation.
 By way of motivation for what will follow, note that
 \begin{itemize} 
 \item 
@@ -7684,7 +7843,7 @@ $\la=-\nicefrac{1}{4}$ or $y=0$.
 $-\frac{5}{4}x=-5$, i.e. $x=4$, and then
 (E3) gives $y=0$.
 
-\item If $y=0$, then (c) gives $x=\pm 4$ (and while we could easily 
+\item If $y=0$, then (E3) gives $x=\pm 4$ (and while we could easily 
 use (E1) to solve for $\la$, we don't actually need $\la$).  
 
 \end{itemize}

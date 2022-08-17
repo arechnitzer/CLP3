@@ -1070,13 +1070,6 @@ The largest and smallest values of <m>T</m> in this table are
 
 <exercise><title><fromexam>M200 2010A</fromexam></title>
 <statement><p>
-<ol label="a">
-<li>
-For the function <m>z = f (x, y) = x^3 + 3xy + 3y^2 - 6x - 3y - 6</m>.
-Find and classify as [local maxima, local minima, or saddle points] all critical points of
-<m>f(x, y)</m>.
-</li>
-<li><p>
 The images below depict level sets <m>f (x, y) = c</m> of the functions in the list at heights
 <m>c = 0, 0.1, 0.2, \ldots , 1.9, 2</m>.
 Label the pictures with the corresponding function and mark the critical points in each
@@ -1096,9 +1089,6 @@ already. In those cases you should add them to the picture.)
 <m>f(x, y) = x^2 + y^2</m>
 </li>
 </ol></p>
-</li>
-</ol>
-</p>
 <sidebyside width="22%">
 <image source="pfigs/level3"/>
 <image source="pfigs/level1"/>
@@ -1107,22 +1097,7 @@ already. In those cases you should add them to the picture.)
 </sidebyside>
 </statement>
 
-<answer><p>
-(a)
-</p>
-<sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
-<row>
-<cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> type </cell>
-</row><row>
-<cell>
-         <m>(\frac{3}{2},-\frac{1}{4})</m>  </cell><cell> local min  </cell>
-</row><row>
-<cell>      <m>(-1,1)</m>    </cell><cell> saddle point </cell>
-</row>
-</tabular></sidebyside>
-
-
-<p>(b)</p>
+<answer>
 <sbsgroup widths="10% 40%">
 <sidebyside>
 <p>(i)</p> <image source="pfigs/level1b"/>
@@ -1140,58 +1115,7 @@ already. In those cases you should add them to the picture.)
 </answer>
 
 <solution><p>
-(a)
-To find the critical points we will need the
-gradient of <m>f</m> and to apply the second derivative test of
-Theorem <xref ref="thm_second_deriv_test"/>
-we will need all
-second order partial derivatives. So we need all partial derivatives of
-<m>f</m> up to order two.
-Here they are.
-<md alignment="alignat">
-<mrow>
-f&amp;=x^3 + 3xy + 3y^2 - 6x - 3y - 6
-</mrow><mrow>
-f_x&amp;=3x^2+3y-6   &amp; f_{xx}&amp;=6x \qquad &amp; f_{xy}&amp;= 3
-</mrow><mrow>
-f_y&amp;=3x+6y-3 \qquad &amp; f_{yy}&amp;=6\qquad &amp; f_{yx}&amp;= 3
-</mrow>
-</md>
-</p>
-
-<p>The critical points are the solutions of
-<me>
-f_x=3x^2+3y-6=0   \qquad
-f_y=3x+6y-3 = 0
-</me>
-Subtracting the second equation from <m>2</m> times the first equation gives
-<me>
-6x^2-3x-9=0
-\iff
-3(2x-3)(x+1)=0
-\iff x=\frac{3}{2},\ -1
-</me>
-Since <m>y=\frac{1-x}{2}</m> (from the second equation),
-the critical points are <m>(\frac{3}{2},-\frac{1}{4})</m>, <m>(-1,1)</m> and
-the classification is
-</p>
-
-<sidebyside><tabular left="minor" right="minor" bottom="minor" top="minor">
-<col halign="center"/>  <col halign="center"/> <col halign="center"/>  <col /> 
-<row>
-<cell>   <m>\Atop{\text{critical}}{\text{point}}</m>  </cell><cell> <m>f_{xx}f_{yy}-f_{xy}^2</m> </cell><cell>
-                                                          <m>f_{xx}</m> </cell><cell> type </cell>
-</row><row>
-<cell>
-         <m>(\frac{3}{2},-\frac{1}{4})</m>  </cell><cell> <m>(9)\times(6)-(3)^2 \gt  0</m> </cell><cell> <m>9</m>
-                       </cell><cell> local min  </cell>
-</row><row>
-<cell>      <m>(-1,1)</m>  </cell><cell> <m>(-6)\times (6)-(3)^2 \lt 0</m> </cell><cell>   </cell><cell> saddle point </cell>
-</row>
-</tabular></sidebyside>
-
-<p>
-(b) Both of the functions  <m>f(x, y) = \sqrt{x^2 + y^2}</m> (i.e. (ii))
+Both of the functions  <m>f(x, y) = \sqrt{x^2 + y^2}</m> (i.e. (ii))
 and  <m>f(x, y) = x^2 + y^2</m> (i.e. (iv)) are invariant under rotations
 around the <m>(0,0)</m>. So their level curves are circles centred on
 the origin. In polar coordinates <m>\sqrt{x^2 + y^2}</m> is <m>r</m>.
