@@ -499,8 +499,8 @@ The limit is
 =\lim_{x\rightarrow 0} \frac{1}{x}
 </mrow>
 </md>
-which does not exist. Indeed as <m>x</m> approoaches <m>0</m> through positive numbers,
-<m>\frac{1}{x}</m> approaches <m>+\infty</m>, and as <m>x</m> approoaches <m>0</m> through negative
+which does not exist. Indeed as <m>x</m> approaches <m>0</m> through positive numbers,
+<m>\frac{1}{x}</m> approaches <m>+\infty</m>, and as <m>x</m> approaches <m>0</m> through negative
 numbers, <m>\frac{1}{x}</m> approaches <m>-\infty</m>.
 </p>
 
