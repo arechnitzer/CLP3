@@ -4167,6 +4167,138 @@ So $\cR$ has area $\pi$ and centre of mass $(\bar x,\bar y)=(1,0)$ and
 \end{align*}
 \end{eg}
 
+\begin{eg}[Compound bodies]\label{eg_dblInt_K}
+In \S \eref{CLP101}{sec com} of the CLP-2 text, we saw that it was possible
+to think of a body as being made up of a number of component parts, and then it was possible to compute the centre of mass of the body as a whole by using 
+the centres of mass of the component parts. In that discussion, we could 
+only consider bodies consisting of a finite number of point particles 
+arrayed along a straight line. We will now see that the same procedure can be used with continuous mass distributions.
+
+Suppose that we have a dumbbell which consists of
+\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt %\itemindent-15pt
+\item one end contained in a region $\cR_1$ and having mass density $\rho_1(x,y)$ and
+\item a second end contained in a region $\cR_2$ and having mass density $\rho_2(x,y)$ and
+\item an infinitely strong, weightless (idealized) rod joining the two ends.
+\end{itemize}
+Suppose that both $\cR_1$ and $\cR_2$ are contained in the larger region $\cR$,
+that $\rho_1(x,y)=0$ for all $(x,y)$ not in $\cR_1$ and that $\rho_2(x,y)=0$ for all $(x,y)$ not in $\cR_2$.
+\vadjust{
+\begin{efig}
+\begin{center}
+   \includegraphics{dumbbell.pdf}\qquad\qquad
+\end{center}
+\end{efig}
+}
+Then the mass and centre of mass of the $\cR_1$ end are
+\begin{equation*}
+M_1=\dblInt_{\cR_1} \rho_1(x,y)\,\dee{x}\,\dee{y}
+\end{equation*}
+and
+\begin{equation*}
+(\bar X_1,\bar Y_1)\quad\text{with}\quad
+\bar X_1 = \frac{\dblInt_{\cR_1} x\,\rho_1(x,y)\,\dee{x}\,\dee{y}}{M_1},\ 
+\bar Y_1 = \frac{\dblInt_{\cR_1} y\,\rho_1(x,y)\,\dee{x}\,\dee{y}}{M_1}
+\end{equation*}
+and the mass and centre of mass of the $\cR_2$ end are
+\begin{equation*}
+M_2=\dblInt_{\cR_2} \rho_2(x,y)\,\dee{x}\,\dee{y}
+\end{equation*}
+and
+\begin{equation*}
+(\bar X_2,\bar Y_2)\quad\text{with}\quad
+\bar X_2 = \frac{\dblInt_{\cR_2} x\,\rho_2(x,y)\,\dee{x}\,\dee{y}}{M_2},\ 
+\bar Y_2 = \frac{\dblInt_{\cR_2} y\,\rho_2(x,y)\,\dee{x}\,\dee{y}}{M_2}
+\end{equation*}
+The mass and centre of mass of the entire dumbbell are
+\begin{align*}
+M&= \dblInt_{\cR} \{\rho_1(x,y)+\rho_2(x,y)\}\,\dee{x}\,\dee{y}
+ = \dblInt_{\cR} \rho_1(x,y)\,\dee{x}\,\dee{y}
+      +\dblInt_{\cR} \rho_2(x,y)\,\dee{x}\,\dee{y} \\
+ &= \dblInt_{\cR_1} \rho_1(x,y)\,\dee{x}\,\dee{y}
+      +\dblInt_{\cR_2} \rho_2(x,y)\,\dee{x}\,\dee{y} \\
+ &=M_1+M_2
+\end{align*}
+and $(\bar X,\bar Y)$ with
+\begin{align*}
+\bar X &=\frac{\dblInt_{\cR} 
+                  x\{\rho_1(x,y)+\rho_2(x,y)\}\,\dee{x}\,\dee{y}}{M}\\
+&=\frac{\dblInt_{\cR_1} x\,\rho_1(x,y)\,\dee{x}\,\dee{y}
+         +\dblInt_{\cR_2} x\,\rho_2(x,y)\,\dee{x}\,\dee{y}}{M}\\
+       &=\frac{M_1 \bar X_1 + M_2 \bar X_2}{M_1+M_2}
+\\
+\bar Y &=\frac{\dblInt_{\cR} 
+                  y\{\rho_1(x,y)+\rho_2(x,y)\}\,\dee{x}\,\dee{y}}{M}\\
+&=\frac{\dblInt_{\cR_1} y\,\rho_1(x,y)\,\dee{x}\,\dee{y}
+         +\dblInt_{\cR_2} y\,\rho_2(x,y)\,\dee{x}\,\dee{y}}{M}\\
+       &=\frac{M_1 \bar Y_1 + M_2 \bar Y_2}{M_1+M_2}
+\end{align*}
+So we can compute the centre of mass of the entire dumbbell by treating
+it as being made up of two point particles, one of mass $M_1$ located at
+the centre of mass $(\bar X_1,\bar Y_1)$ of the $\cR_1$ end, and one of mass 
+$M_2$ located at the centre of mass $(X_2,Y_2)$ of the $\cR_2$ end.
+\end{eg}
+
+\begin{eg}[Example \eref{CLP101}{eg:TRQcentroidBb} of CLP-2 revisited]
+                                                \label{eg_dblInt_L}
+In Example \eref{CLP101}{eg:TRQcentroidBb} of the CLP-2 text, we found the 
+centroid, i.e. the centre of mass with density $1$, of the region $\cR_1$ in the
+sketch
+\begin{efig}
+\begin{center}
+    \includegraphics{PSIVca}
+\end{center}
+\end{efig}
+We now again compute the centroid of $\cR_1$, but this time we use the ideas of 
+Example \ref{eg_dblInt_K} above. We think of $\cR_1$ as one end of the 
+``dumbbell'' whose other end, $\cR_2$, is the quarter circular disk which 
+fills out $\cR_1$ to the $2\times 2$ square in the sketch below.  That is, 
+the full 
+dumbbell is 
+\begin{equation*}
+\cR=\cR_1\cup\cR_2=\Set{(x,y)}{0\le x\le 2,\ 0\le y\le 2}
+\end{equation*}
+with
+\begin{align*}
+\cR_1&=\Set{(x,y)}{0\le x\le 2,\ 0\le y\le 2,\ x^2+y^2\ge 1} \\
+\cR_2&=\Set{(x,y)}{x\ge 0,\ y\ge 0,\ x^2+y^2\le 1} 
+\end{align*}
+\vadjust{
+\begin{efig}
+\begin{center}
+    \includegraphics{PSIVcb}
+\end{center}
+\end{efig}
+}
+\begin{itemize}\itemindent-0.1in \itemsep1pt \parskip0pt \parsep0pt
+\item 
+The full dumbbell $\cR$ is a $2\times 2$ square and so has area, and hence 
+mass, $M=2\times 2=4$.
+Just by symmetry, the centre of mass of $\cR$ is $(\bar X,\bar Y)=(1,1)$. 
+\item
+The end $\cR_2$ is one quarter of a circular disk of radius $1$ and so has
+area, and hence mass, $M_2=\tfrac{\pi}{4}$. In Example \ref{eg dblInt Iqc} 
+above with $r=1$, we found that the centre of mass of $\cR_2$ is 
+$(\bar X_2,\bar Y_2)=\big(\tfrac{4}{3\pi},\tfrac{4}{3\pi})$.
+\end{itemize}
+So $M_1=M-M_2=4-\tfrac{\pi}{4}$ and
+just filling all of this data into the formulae at the end of 
+Example \ref{eg_dblInt_K}, above, gives
+\begin{alignat*}{5}
+1&= \bar X &= \frac{M_1 \bar X_1 + M_2 \bar X_2}{M_1+M_2}
+  &= \frac{ (4-\frac{\pi}{4})\bar X_1 + (\frac{\pi}{4})(\tfrac{4}{3\pi})}{4}
+  &= \left(1-\frac{\pi}{16}\right)\bar X_1 + \frac{1}{12}
+\\
+1&= \bar Y &= \frac{M_1 \bar Y_1 + M_2 \bar Y_2}{M_1+M_2}
+  &= \frac{ (4-\frac{\pi}{4})\bar Y_1 + (\frac{\pi}{4})(\tfrac{4}{3\pi})}{4}
+  &= \left(1-\frac{\pi}{16}\right)\bar Y_1 + \frac{1}{12}
+\end{alignat*}
+Solving gives
+\begin{align*}
+\bar X_1=\bar Y_1&=\frac{\frac{11}{12}}{1-\frac{\pi}{16}}=\frac{44}{48-3\pi}
+\end{align*}
+which is exactly the answer that we found in Example \eref{CLP101}{eg:TRQcentroidBb} of the CLP-2 text.
+
+\end{eg}
 
 \subsubsection{Moment of Inertia}
 Consider a plate that fills the region $\cR$ in the $xy$-plane,
