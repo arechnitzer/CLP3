@@ -27,7 +27,7 @@ f_x(x,y,z)&amp;=yz e^{xyz}\qquad &amp;
    f_x(0,1,1)&amp;= 1
 </mrow><mrow>
 f_y(x,y,z)&amp;=xz e^{xyz}\qquad &amp;
-   f_x(0,1,1)&amp;= 0
+   f_y(0,1,1)&amp;= 0
 </mrow><mrow>
 f_z(x,y,z)&amp;=xy e^{xyz}\qquad &amp;
    f_z(0,1,1)&amp;= 0
