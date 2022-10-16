@@ -870,7 +870,7 @@ approximation is exactly
 </mrow>
 </md>
 with
-   <m>\vr(c) = \big(1-0.002 c\,,\,1+0.0003 c\big)</m>
+   <m>\vr(c) = \big(1-0.002 c\,,\,1+0.003 c\big)</m>
 for some, unknown, <m>0\le c\le 1</m>. For our function <m>f</m>
 <md>
 <mrow>
@@ -883,7 +883,7 @@ f(x,y)&amp;=\frac{x^3}{y} &amp;
 \frac{\partial^2 f}{\partial y^2}(x,y)&amp;=\frac{2 x^3}{y^3}
 </mrow>
 </md>
-We don't know what <m>\vr(c)=\big(1-0.002 c\,,\,1+0.0003 c\big)</m> is.
+We don't know what <m>\vr(c)=\big(1-0.002 c\,,\,1+0.003 c\big)</m> is.
 But we know that <m>0\le c\le 1</m>, so we definitely know that the <m>x</m> component
 of <m>\vr(c)</m> is smaller that <m>1</m> and the <m>y</m> component of <m>\vr(c)</m> is bigger
 than <m>1</m>. So
