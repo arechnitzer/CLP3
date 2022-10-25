@@ -319,7 +319,7 @@ any integer multiple of <m>2\pi</m>).
 0=y=r\sin\theta\qquad
 1=z
 </me>
-So <m>z=0</m>, <m>r=\sqrt{0^2+0^2}=0</m> and
+So <m>z=1</m>, <m>r=\sqrt{0^2+0^2}=0</m> and
 <m>\theta</m> is completely arbitrary.
 </p>
 
