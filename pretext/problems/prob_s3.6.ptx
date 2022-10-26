@@ -394,11 +394,11 @@ Use cylindrical coordinates to evaluate the volumes of each of the following
 regions.
 <ol label="a">
 <li>
-Above the <m>xy</m>--plane, inside the cone <m>z=2a-\sqrt{x^2+y^2}</m> and
-inside the cylinder <m>x^2+y^2=2ay</m>.
+Above the <m>xy</m>-plane, inside the cone <m>z=2a-\sqrt{x^2+y^2}</m> and
+inside the cylinder <m>x^2+y^2=2ay</m>, where <m>a>0</m> is a constant.
 </li>
 <li>
-Above the <m>xy</m>--plane, under the paraboloid <m>z=1-x^2-y^2</m> and
+Above the <m>xy</m>-plane, under the paraboloid <m>z=1-x^2-y^2</m> and
 in the wedge <m>-x\le y\le \sqrt{3}x</m>.
 </li>
 <li>
