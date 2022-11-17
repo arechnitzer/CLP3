@@ -286,8 +286,8 @@ is at <m>x=R(y_i^*)</m>.
 </li>
 <li>
 If we were computing the area of <m>\cR</m>, we would now
-approximate the area of slice <m>i</m> by <m>\big[R(x_i^*)-L(x_i^*)\big]\De y</m>,
-which is the area of the rectangle with width <m>\big[R(x_i^*)-L(x_i^*)\big]</m>
+approximate the area of slice <m>i</m> by <m>\big[R(y_i^*)-L(y_i^*)\big]\De y</m>,
+which is the area of the rectangle with width <m>\big[R(y_i^*)-L(y_i^*)\big]</m>
 and height <m>\De y</m>.
 </li>
 <li><p>
@@ -2378,7 +2378,7 @@ that
 <me>
 \cR=\Set{(x,y)}{c\le y\le d, L(y)\le x\le R(y)}
 </me>
-<m>\cR</m> is is invariant under reflection across the <m>y</m>-axis when <m>L(y)=-R(y)</m>.
+<m>\cR</m> is invariant under reflection across the <m>y</m>-axis when <m>L(y)=-R(y)</m>.
 </li>
 </ul> 
 </p>
