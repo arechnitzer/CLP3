@@ -2062,7 +2062,7 @@ or at <m>x=1</m>, where <m>f=0</m>.
 <li><p>
  Finally, we look at the part of the boundary with <m>x=1</m>. There <m>f=f(1,y)=y-y^2</m>.
  As <m>\tfrac{d}{dy}(y-y^2)=1-2y</m>, the only critical point of <m>y-y^2</m>
-is at <m>y=\frac{1}{2}</m>. So the the max and min of <m>y-y^2</m> for <m>0\le y\le 1</m>
+is at <m>y=\frac{1}{2}</m>. So the max and min of <m>y-y^2</m> for <m>0\le y\le 1</m>
 must occur
 <ul>
 <li>

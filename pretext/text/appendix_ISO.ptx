@@ -92,7 +92,7 @@ and for <m>\rho=-1</m>, <m>\phi=\frac{\pi}{4}</m>.
 <p>
 Both points lie on the  line through the origin that makes an angle of
 <m>45^\circ</m> with the <m>x</m>-axis and both are a distance one from the origin.
-But they are on opposite sides of the the origin.
+But they are on opposite sides of the origin.
 </p>
 
 <p>
@@ -118,7 +118,7 @@ The area element in polar coordinates is
 <mrow>
 \rho&amp;=\text{ distance from }(0,0,0)\text{ to }(x,y,0)
 </mrow><mrow>
-\phi&amp;=\text{ angle between the the $x$ axis and the line joining $(x,y,0)$ to $(0,0,0)$}
+\phi&amp;=\text{ angle between the $x$ axis and the line joining $(x,y,0)$ to $(0,0,0)$}
 </mrow><mrow>
 z&amp;=\text{ signed distance from }(x,y,z)
 \text{ to the $xy$-plane}
