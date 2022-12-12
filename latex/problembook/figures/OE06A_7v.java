@@ -61,7 +61,7 @@ public class OE06A_7v extends Template {
           fEnv("psFillGray", 0.0) ;
           double r = 0.04 ;
           fDisk(2, 0, r, r, FILLED) ;
-          fTeXlabel(2.0, -0.07, "ct", "$\\scriptstyle (0,2)$") ;
+          fTeXlabel(2.0, -0.07, "ct", "$\\scriptstyle (2,0)$") ;
 
           canvas.append( new fPsWrite("0.6 setgray\n")) ;
           double X = 0.8 ;
