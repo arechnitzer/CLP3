@@ -382,8 +382,8 @@ contains <m>(3,2,-2)</m> if and only if <m>d=3a+2b-2c</m> and is parallel to
 
 <exercise>
 <statement><p>
-Find the equation of the line through <m>(2,-1,-1)</m> and parallel
-to each of the two planes <m>x+y=0</m> and <m>x-y+2z=0</m>. Express the equations
+Find the equation(s) of the line through <m>(2,-1,-1)</m> and parallel
+to each of the two planes <m>x+y=0</m> and <m>x-y+2z=0</m>. Express the equation(s)
 of the line in vector and scalar parametric forms and in symmetric form.
 </p></statement>
 
