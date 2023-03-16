@@ -659,7 +659,7 @@ Let <m>0\le a \lt b\le 2\pi</m> be constants. Find the area of the
 region
 <me>
 \cR=\Set{(r\cos\theta,r\sin\theta)}{a\le\theta\le b,
-              0\le r\le B(\theta)}
+              0\le r\le R(\theta)}
 </me>
 where the function  <m>R(\theta)\ge 0</m> is continuous.
 </p>

@@ -446,7 +446,8 @@ the vectors <m>\he_r(\theta)</m> and <m>\he_\theta(\theta)</m>. Compute
 components).
 </li>
 <li>
-For each <m>1\le i\le 5</m>, sketch, in the <m>xy</m>-plane, the point <m>(x_i,y_i)</m>
+For each <m>1\le i\le 5</m>, sketch, in the <m>xy</m>-plane, the point 
+<m>(x_i,y_i)= \big(r_i\cos\theta_i\,,\,r_i\sin\theta_i\big)</m>
 and the vectors <m>\he_r(\theta_i)</m> and <m>\he_\theta(\theta_i)</m>. In your
 sketch of the vectors, place the tails of the vectors
 <m>\he_r(\theta_i)</m> and <m>\he_\theta(\theta_i)</m> at <m>(x_i,y_i)</m>.
