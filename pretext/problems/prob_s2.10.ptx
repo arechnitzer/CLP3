@@ -1624,7 +1624,7 @@ Subtracting,
 <statement><p>
  Consider the unit sphere
 <me>
-S=§et{(x,y,z)}{x^2+y^2+z^2=1}
+S=\Set{(x,y,z)}{x^2+y^2+z^2=1}
 </me>
 in <m>\bbbr^3</m>. Assume that the temperature at a point <m>(x,y,z)</m> of <m>S</m> is
 <me>

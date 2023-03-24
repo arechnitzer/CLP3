@@ -136,14 +136,14 @@ the directional derivative of <m>f</m> at <m>(a,b)</m> in direction <m>\vd</m>
 must be zero or smaller. Writing this in mathematical symbols, we get
 <md>
 <mrow>
-D_\vd f(a,b) = \vnabla f(a,b)\cdot\frac{\vd}{|\vd|}\le 0
+D_{\frac{\vd}{|\vd|}} f(a,b) = \vnabla f(a,b)\cdot\frac{\vd}{|\vd|}\le 0
 </mrow>
 </md>
 And the directional derivative of <m>f</m> at <m>(a,b)</m> in the direction <m>-\vd</m>
 also must be zero or negative.
 <md>
 <mrow>
-D_{-\vd} f(a,b) = \vnabla f(a,b)\cdot\frac{-\vd}{|\vd|}\le 0
+D_{-\frac{\vd}{|\vd|}} f(a,b) = \vnabla f(a,b)\cdot\frac{-\vd}{|\vd|}\le 0
 \quad\text{which implies that}\quad \vnabla f(a,b)\cdot\frac{\vd}{|\vd|}\ge 0
 </mrow>
 </md>

@@ -5800,12 +5800,12 @@ Then the function $f(x,y)$ must decrease in value as $(x,y)$ moves away from $(a
 the directional derivative of $f$ at $(a,b)$ in direction $\vd$ 
 must be zero or smaller. Writing this in mathematical symbols, we get
 \begin{align*}
-D_\vd f(a,b) = \vnabla f(a,b)\cdot\frac{\vd}{|\vd|}\le 0
+D_{\frac{\vd}{|\vd|}} f(a,b) = \vnabla f(a,b)\cdot\frac{\vd}{|\vd|}\le 0
 \end{align*}
 And the directional derivative of $f$ at $(a,b)$ in the direction $-\vd$ 
 also must be zero or negative.
 \begin{align*}
-D_{-\vd} f(a,b) = \vnabla f(a,b)\cdot\frac{-\vd}{|\vd|}\le 0
+D_{-\frac{\vd}{|\vd|}} f(a,b) = \vnabla f(a,b)\cdot\frac{-\vd}{|\vd|}\le 0
 \quad\text{which implies that}\quad \vnabla f(a,b)\cdot\frac{\vd}{|\vd|}\ge 0
 \end{align*}
 As $\vnabla f(a,b)\cdot\frac{\vd}{|\vd|}$ must be both positive (or zero)
