@@ -32,7 +32,7 @@ g(t_0+\De t) &amp;\approx g(t_0) +g'(t_0)\,\De t + \tfrac{1}{2} g''(t_0)\,\De t^
                     +\cdots+ \tfrac{1}{n!} g^{(n)}(t_0)\,\De t^n
 </mrow>
 </md>
-is known as the Taylor polynomial of degree <m>n</m>.
+is known as the Taylor polynomial of order <m>n</m>.
 You may have also found a formula for the error introduced in making this
 approximation. The error <m>E_n(\De t)</m> is defined by
 <md>
@@ -1057,7 +1057,7 @@ We have just found linear and quadratic approximations
 to the function <m>f(x,y)</m>, for <m>(x,y)</m> near the point <m>(x_0,y_0)</m>.
 In CLP-1, we found not only linear and quadratic approximations,
 but in fact a whole hierarchy of approximations. For each
-integer <m>n\ge 0</m>, the <m>n^\mathrm{th}</m> degree Taylor polynomial
+integer <m>n\ge 0</m>, the <m>n^\mathrm{th}</m> order Taylor polynomial
 for <m>f(x)</m> about <m>x=a</m> was defined, in Definition 3.4.11 of the CLP-1 text,
 to be
 <md>
@@ -1067,9 +1067,9 @@ to be
 </md>
 </p>
 
-<p>We'll now define, and find, the Taylor polynomial of degree <m>n</m>
+<p>We'll now define, and find, the Taylor polynomial of order <m>n</m>
 for the function <m>f(x,y)</m> about <m>(x,y)=(x_0,y_0)</m>. It is going
-to be a polynomial of degree <m>n</m> in <m>\De x</m> and <m>\De y</m>. The most
+to be a polynomial of degree at most <m>n</m> in <m>\De x</m> and <m>\De y</m>. The most
 general such polynomial is
 <me>
 T_n(\De x,\De y)
@@ -1165,7 +1165,7 @@ p!\,q!\,a_{p,q} = \frac{\partial^{p+q}\ f}{\partial x^p\, \partial y^q}(x_0,y_0)
 </p>
 
 
-<p>So the Taylor polynomial of degree <m>n</m> for the function <m>f(x,y)</m>
+<p>So the Taylor polynomial of order <m>n</m> for the function <m>f(x,y)</m>
 about <m>(x,y)=(x_0,y_0)</m> is the right hand side of
 </p>
 
@@ -1188,7 +1188,7 @@ f\big(x_0 + \De x\,,\,y_0+\De y\big)
 <p>
 This is for functions, <m>f(x,y)</m>, of two variables. There are natural
 extensions of this for functions of any (finite) number of variables.
-For example, the Taylor polynomial of degree <m>n</m> for a function, <m>f(x,y,z)</m>,
+For example, the Taylor polynomial of order <m>n</m> for a function, <m>f(x,y,z)</m>,
 of three variables is the right hand side of
 <md>
 <mrow>

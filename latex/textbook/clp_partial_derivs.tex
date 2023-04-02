@@ -3480,7 +3480,7 @@ More generally, for any natural number $n$, the  approximation
 g(t_0+\De t) &\approx g(t_0) +g'(t_0)\,\De t + \tfrac{1}{2} g''(t_0)\,\De t^2
                     +\cdots+ \tfrac{1}{n!} g^{(n)}(t_0)\,\De t^n
 \end{align*}
-is known as the Taylor polynomial of degree $n$. 
+is known as the Taylor polynomial of order $n$. 
 You may have also found a formula for the error introduced in making this 
 approximation. The error $E_n(\De t)$ is defined by
 \begin{align*}
@@ -4267,7 +4267,7 @@ We have just found linear and quadratic approximations
 to the function $f(x,y)$, for $(x,y)$ near the point $(x_0,y_0)$.
 In CLP-1, we found not only linear and quadratic approximations,
 but in fact a whole hierarchy of approximations. For each
-integer $n\ge 0$, the $n^\mathrm{th}$ degree Taylor polynomial 
+integer $n\ge 0$, the $n^\mathrm{th}$ order Taylor polynomial 
 for $f(x)$ about $x=a$ was defined, in Definition 3.4.11 of the CLP-1 text,
 to be
 \begin{align*}
@@ -4275,9 +4275,9 @@ to be
 \end{align*}
 
 
-We'll now define, and find, the Taylor polynomial of degree $n$
+We'll now define, and find, the Taylor polynomial of order $n$
 for the function $f(x,y)$ about $(x,y)=(x_0,y_0)$. It is going
-to be a polynomial of degree $n$ in $\De x$ and $\De y$. The most
+to be a polynomial of degree at most $n$ in $\De x$ and $\De y$. The most
 general such polynomial is
 \begin{equation*}
 T_n(\De x,\De y)
@@ -4484,7 +4484,7 @@ and renaming $k-\ell$ to $m$, we get the slightly more compact form
 }
 %
 %
-So the Taylor polynomial of degree $n$ for the function $f(x,y)$ 
+So the Taylor polynomial of order $n$ for the function $f(x,y)$ 
 about $(x,y)=(x_0,y_0)$ is the right hand side of
 \begin{impeqn}\label{eqn Taylor n 2d}
 \begin{align*}
@@ -4497,7 +4497,7 @@ f\big(x_0 + \De x\,,\,y_0+\De y\big)
 \end{impeqn}
 This is for functions, $f(x,y)$, of two variables. There are natural
 extensions of this for functions of any (finite) number of variables.
-For example, the Taylor polynomial of degree $n$ for a function, $f(x,y,z)$,
+For example, the Taylor polynomial of order $n$ for a function, $f(x,y,z)$,
 of three variables is the right hand side of 
 \begin{align*}
 f\big(x_0 + \De x\,,\,y_0+\De y\,,\,z_0+\De z\big)
