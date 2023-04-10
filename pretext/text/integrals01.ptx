@@ -719,7 +719,7 @@ and the integrand is the product <m>f(x,y)=g(x)h(y)</m>,
 &amp;=\left[ \int_a^b\dee{x}\ g(x)\right]\ \left[\int_c^d\dee{y}\  h(y)\right]
 </mrow>
 </md>
-since <m>\int_c^d\dee{y}\  h(y)</m> is a constant as far as the $x$-integral is concerned.
+since <m>\int_c^d\dee{y}\  h(y)</m> is a constant as far as the <m>x</m>-integral is concerned.
 </p>
 <p>
 This is worth stating as a theorem
@@ -1544,13 +1544,16 @@ just as we saw in Example <xref ref="eg_dblInt_C"/>.
 </example>
 
 <example xml:id="eg_dblInt_D"><title> Order of Integration</title>
+<statement>
 <p>
 The integral <m>\displaystyle\int_{-1}^2\int_{x^2}^{x+2}\dee{y}\,\dee{x}</m>
 represents the area of a region in the <m>xy</m>-plane. Express the same area
 as a double integral with the order of integration reversed.
 </p>
+</statement>
 
-<p>\soln The critical step in reversing the order of integration is
+<solution>
+<p> The critical step in reversing the order of integration is
 to sketch the region in the <m>xy</m>-plane. Rewrite the given integral as
 <me>
 \int_{-1}^2\int_{x^2}^{x+2}\dee{y}\,\dee{x}
@@ -1602,7 +1605,9 @@ So
   + \int_1^4\dee{y}\int_{y-2}^{\sqrt{y}}\dee{x}
 </mrow>
 </md>
-</p></example>
+</p>
+</solution>
+</example>
 
 
 <p>There was a moral to the last example. Just because both orders of integration
