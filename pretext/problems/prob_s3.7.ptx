@@ -11,7 +11,7 @@
 <exercise>
 <statement><p>
 Use <m>(\rho,\theta,\varphi)</m> to denote spherical coordinates.
-<ol label="a">
+<ol marker="a">
 <li>
 Draw <m>\varphi=0</m>.
 </li>
@@ -93,7 +93,7 @@ for any <m>0 \lt \Phi \lt \pi</m>,
 <exercise>
 <statement><p>
 Sketch the point with the specified spherical coordinates.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\rho=0</m>, <m>\theta=0.1\pi</m>, <m>\varphi=0.7\pi</m>
 </li>
@@ -152,7 +152,7 @@ lie in the <m>xy</m>-plane.
 <exercise>
 <statement><p>
 Convert from Cartesian to spherical coordinates.
-<ol label="a">
+<ol marker="a">
 <li> <m>(-2,0,0)</m>
 </li>
 <li> <m>(0,3,0)</m>
@@ -253,7 +253,7 @@ quadrant, we have <m>\frac{\pi}{2}\le\theta\le\pi</m> and so
 <exercise>
 <statement><p>
 Convert from spherical to Cartesian coordinates.
-<ol label="a">
+<ol marker="a">
 <li> <m>\rho=1</m>, <m>\theta=\frac{\pi}{3}</m>, <m>\varphi=\frac{\pi}{6}</m>
 </li>
 <li> <m>\rho=2</m>, <m>\theta=\frac{\pi}{2}</m>, <m>\varphi=\frac{\pi}{2}</m>
@@ -331,7 +331,7 @@ and is a distance <m>2</m> from the origin and so is <m>(0,2,0)</m>.
 <exercise>
 <statement><p>
 Rewrite the following equations in spherical coordinates.
-<ol label="a">
+<ol marker="a">
 <li> <m>z^2=3x^2+3y^2</m>
 </li>
 <li> <m>x^2+y^2+(z-1)^2=1</m>
@@ -473,7 +473,7 @@ spherical inequalities
 <me>
 1 \le \rho \le 1 + \cos \varphi
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
   Draw a reasonably accurate picture of <m>E</m> in 3-dimensions.
 Be sure to show the units on the coordinates axes.
@@ -703,7 +703,7 @@ I&amp;= \int_0^{\pi/4}\dee{\varphi}\int_0^{2\pi}\dee{\theta}
 <exercise>
 <statement><p>
 Use spherical coordinates to find
-<ol label="a">
+<ol marker="a">
 <li>
 The volume inside the cone <m>z=\sqrt{x^2+y^2}</m> and inside the sphere
 <m>x^2+y^2+z^2=a^2</m>.
@@ -909,7 +909,7 @@ x^2 + y^2 + z^2 = 9\qquad\text{and}\qquad
 x^2 + y^2 + z^2 = 4
 </me>
 and above the plane <m>z = 0</m>. Let the shell have constant density <m>D</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the mass of the shell.
 </li>
@@ -1043,7 +1043,7 @@ I = \tripInt_T xz\ \dee{V}
 </me>
 where <m>T</m> is the eighth of the sphere <m>x^2 + y^2 + z^2 \le 1</m> with
 <m>x,y,z \ge 0</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the volume <m>T</m>.
 </li>
@@ -1406,7 +1406,7 @@ or <m>\varphi=\frac{\pi}{4},\ \frac{3\pi}{4}</m>. So
 
 <exercise><title><fromexam>M200 2002A</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Evaluate <m>\ds\tripInt_\Om z\,\dee{V}</m> where <m>\Om</m>
 is the three dimensional region in the first octant <m>x\ge 0</m>, <m>y\ge 0</m>,
@@ -1483,7 +1483,7 @@ So
 Consider the top half of a ball of radius 2 centred at the
 origin. Suppose that the ball has variable density equal to <m>9z</m> units
 of mass per unit volume.
-<ol label="a">
+<ol marker="a">
 <li>
 Set up a triple integral giving the mass of this half-ball.
 </li>
@@ -1620,7 +1620,7 @@ It has height <m>2</m> and density <m>\sqrt{x^2 + y^2}</m>.
 whose base is the top surface of <m>V</m> and whose vertex is the point <m>(0, 0, 0)</m>.
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
     Use cylindrical coordinates to set up an integral giving the mass of <m>U</m>.
 </li>
@@ -1802,7 +1802,7 @@ by the sphere <m>x^2+y^2+z^2 = 2</m>.
 It has density <m>\de(x,y,z) = x^2 + y^2</m>.
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 Express the mass <m>M</m> of the solid as a triple integral, with limits, in cylindrical coordinates.
 </li>
@@ -1952,7 +1952,7 @@ I = \tripInt_E xz\ \dee{V}
 </md>
 where <m>E</m> is the eighth of the sphere <m>x^2+y^2+z^2\le 1</m> with
 <m>x,y,z\ge 0</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Express <m>I</m> as a triple integral in spherical coordinates.
 </li>
@@ -2086,7 +2086,7 @@ I = \tripInt_T  (x^2+y^2)\ \dee{V}
 where <m>T</m> is the solid region bounded below by the cone
 <m>z =\sqrt{3x^2+3y^2}</m> and above by the sphere
 <m>x^2 + y^2 + z^2 = 9</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Express <m>I</m> as a triple integral in spherical coordinates.
 </li>
@@ -2238,7 +2238,7 @@ Let <m>E</m> be the <q>ice cream cone</q> <m>x^2 + y^2 + z^2 \le 1</m>,
 <me>
 J =\tripInt_E \sqrt{x^2+y^2+z^2}\ \dee{V}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Write <m>J</m> as an iterated integral, with limits, in cylindrical coordinates.
 </li>
@@ -2360,7 +2360,7 @@ J &amp;=\int_0^{1}\dee{\rho}\int_0^{2\pi}\dee{\theta}
 <statement><p>
 The body of a snowman is formed by the snowballs <m>x^2 + y^2 + z^2 = 12</m>
 (this is its body) and <m>x^2 + y^2 + (z - 4)^2 = 4</m> (this is its head).
-<ol label="a">
+<ol marker="a">
 <li>
 Find the volume of the snowman by subtracting the intersection of the two snow
 balls from the sum of the volumes of the snow balls. [Recall that the volume of a
@@ -2393,7 +2393,7 @@ in the following descriptions of the region of integration for each integral.
 [Note: We have translated the axes in order to write down some of the
 integrals above. The equations you specify should be those before
 the translation is performed.]
-<ol label="i">
+<ol marker="i">
 <li>
 The region of integration in (1) is a part of the snowman's
 <me>
@@ -2676,7 +2676,7 @@ z = \sqrt{3(x^2+y^2)}
 
 <exercise><title><fromexam>M200 2013D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li><p>
 Find the volume of the solid inside the surface defined by the equation
 <m>\rho = 8 \sin(\varphi)</m> in spherical coordinates.
@@ -2807,7 +2807,7 @@ and consider the integral
 <me>
 I = \tripInt_E z \sqrt{x^2 + y^2 + z^2}\  \dee{V}.
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Write the integral <m>I</m> in cylindrical coordinates.
 </li>
@@ -2929,7 +2929,7 @@ I =\int_{-a}^0\int_{-\sqrt{a^2-x^2}}^0 \int_0^{\sqrt{a^2-x^2-y^2}}
     \big(x^2+y^2+z^2\big)^{2014}\ \dee{z}\,\dee{y}\,\dee{x}
 </me>
 where <m>a</m> is a positive constant.
-<ol label="a">
+<ol marker="a">
 <li>
 Write <m>I</m> as an iterated integral in cylindrical coordinates.
 </li>
@@ -3062,7 +3062,7 @@ and above by the cone <m>z=\sqrt{x^2+y^2}</m>. Let
 <me>
 I = \tripInt_E z\big(x^2+y^2+z^2\big)\ \dee{V}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Write <m>I</m> in terms of cylindrical coordinates. Do not evaluate.
 </li>
@@ -3165,7 +3165,7 @@ I &amp;= \int_0^1 \dee{r}\ r \int_0^{2\pi}\dee{\theta} \int_{r^2}^r\dee{z}\
 Let <m>S</m> be the region on the first octant (so that <m>x,y,z\ge 0</m>)
 which lies above the cone <m>z=\sqrt{x^2+y^2}</m> and below the sphere
 <m>(z-1)^2 +x^2+y^2=1</m>. Let <m>V</m> be its volume.
-<ol label="a">
+<ol marker="a">
 <li>
 Express <m>V</m> as a triple integral in cylindrical coordinates.
 </li>
@@ -3324,7 +3324,7 @@ V &amp;= \int_0^{\pi/4}\dee{\varphi} \int_0^{\pi/2}\dee{\theta}
 <statement><p>
 A solid is bounded below by the cone <m>z=\sqrt{3x^2+3y^2}</m>
 and above by the sphere <m>x^2+y^2+z^2=9</m>. It has density <m>\de(x,y,z)=x^2+y^2</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Express the mass <m>m</m> of the solid as a triple integral in
 cylindrical coordinates.

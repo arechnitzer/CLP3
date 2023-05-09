@@ -10,7 +10,7 @@
 
 <exercise><title><fromexam>M200 2010A</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Does the function <m>f(x, y) = x^2 +y^2</m> have a maximum or a minimum on the curve <m>xy = 1</m>?
 Explain.
@@ -56,7 +56,7 @@ You are walking on <m>S</m> measuring the function <m>f(x,y,z)</m> as you go.
 You are currently at the point <m>(x_0,y_0,z_0)</m> where <m>f</m> takes its
 largest value on <m>S</m>, and are walking in the direction <m>\vd\ne\vZero</m>. Because
 you are walking on <m>S</m>, the vector <m>\vd</m> is tangent to <m>S</m> at <m>(x_0,y_0,z_0)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 What is the directional derivative of <m>f</m> at <m>(x_0,y_0,z_0)</m> in
 the direction <m>\vd</m>? Do not use the method of Lagrange multipliers.
@@ -998,7 +998,7 @@ to the origin, the maximum allowed radius for the enclosed sphere is
 <statement><p>
 Let <m>C</m> be the intersection of the plane <m>x + y + z = 2</m> and the sphere
 <m>x^2 + y^2 + z^2 = 2</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Use Lagrange multipliers to find the maximum value of <m>f(x, y, z) = z</m> on <m>C</m>.
 </li>
@@ -1079,7 +1079,7 @@ When <m>z=0</m>, (E4) reduces to <m>2x=2</m>. So the desired point is
 
 <exercise><title><fromexam>M200 2012D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Use Lagrange multipliers to find the extreme values of
 <me>
@@ -1182,7 +1182,7 @@ which is <m>(-1,1,-2)</m>.
 
 <exercise><title><fromexam>M200 2013D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Find the minimum of the function
 <me>
@@ -2189,9 +2189,9 @@ So we have the following candidates for the locations of the min and max
 <exercise><title><fromexam>M200 2016D</fromexam></title>
 <statement><p>
 The temperature in the plane is given by <m>T(x,y) = e^y\big(x^2+y^2\big)</m>.
-<ol label="a">
+<ol marker="a">
 <li><p>
-<ol label="i">
+<ol marker="i">
 <li>
 Give the system of equations that must be solved in order to find the
 warmest and coolest point on the circle <m>x^2+y^2=100</m> by the method
@@ -2203,7 +2203,7 @@ Find the warmest and coolest points on the circle by solving that system.
 </ol>
 </p></li>
 <li>
-<p><ol label="i">
+<p><ol marker="i">
 <li>
 Give the system of equations that must be solved in order to find the
 critical points of <m>T(x,y)</m>.
@@ -2382,7 +2382,7 @@ either <m>(0,0)</m>, where <m>T=0</m>, or <m>(0,-2)</m>, where <m>T= 4e^{-2}</m>
 
 <exercise><title><fromexam>M200 2002D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 By finding the points of tangency, determine the values of <m>c</m> for
 which <m>x+y+z=c</m> is a tangent plane to the surface <m>4x^2+4y^2+z^2=96</m>.

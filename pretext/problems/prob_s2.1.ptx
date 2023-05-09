@@ -58,7 +58,7 @@ A millstone pounds wheat into flour. The wheat sits in a basin, and the millston
 In this context, describe the variables below from Definition<nbsp/><xref ref="def_limit"/>.
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li> <m>\mathbf x</m>
 </li>
 <li> <m>\mathbf a</m>
@@ -79,7 +79,7 @@ In this analogy, <m>f(x,y)</m> is the diameter of a particle taken from the posi
 </p></answer>
 <solution>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li> The function we're taking the limit of has its input as the position of the particle, and its output the size of the particle. So, <m>f(x,y)</m> gives the size of particles found at position <m>(x,y)</m>. In the definition, we write <m>\mathbf x = (x,y)</m>. So, <m>\mathbf x</m> is the position in the basin the particle was taken from.
 </li>
 <li> Our claim deals with particles very close to where the millstone hits the basin, so <m>\mathbf a</m> is the position in the basinfwhere the millstone hits.
@@ -95,7 +95,7 @@ In this analogy, <m>f(x,y)</m> is the diameter of a particle taken from the posi
 <exercise>
 <statement><p>
 Let <m>f(x,y)=\dfrac{x^2}{x^2+y^2}</m>.
-<ol label="a">
+<ol marker="a">
 <li> Find a ray approaching the origin along which <m>f(x,y)=1</m>.
 </li>
 <li> Find a ray approaching the origin along which <m>f(x,y)=0</m>.
@@ -115,7 +115,7 @@ You can probably solve (a) and (b) by just staring at <m>f(x,y)</m>.
 (c) <m>\lim\limits_{(x,y)\to(0,0)}f(x,y)</m> does not exist
 </p></answer>
 <solution><p>
-<ol label="a">
+<ol marker="a">
 <li> By inspection, when <m>y=0</m>, then <m>f(x,y)=1</m> as long as <m>x \neq 0</m>. So, if we follow the <m>x</m>-axis in towards the origin, <m>f(x,y)=1</m> along this route.
 </li>
 <li> Also by inspection, when <m>x=0</m>, then <m>f(x,y)=0</m> as long as <m>y \neq 0</m>. So, if we follow the <m>y</m>-axis in towards the origin, <m>f(x,y)=0</m> along this route.
@@ -143,7 +143,7 @@ You can probably solve (a) and (b) by just staring at <m>f(x,y)</m>.
 <exercise>
 <statement><p>
 Let <m>f(x,y)=x^2-y^2</m>
-<ol label="a">
+<ol marker="a">
 <li> Express the function in terms of the polar coordinates <m>r</m> and <m>\theta</m>, and simplify.
 </li>
 <li> Suppose <m>(x,y)</m> is a distance of 1 from the origin.
@@ -173,7 +173,7 @@ Recall <m>\cos^2\theta-\sin^2\theta=\cos(2\theta)</m>
 
 </answer>
 <solution><p>
-<ol label="a">
+<ol marker="a">
 <li> Since <m>x=r\cos\theta</m> and <m>y=r\sin\theta</m>, we have that
 <me>
 f=x^2-y^2=r^2\cos^2\theta-r^2\sin^2\theta=r^2\cos(2\theta)
@@ -222,7 +222,7 @@ By Theorem<nbsp/><xref ref="thm_one_d_continuity"/>,
 <exercise>
 <statement><p>
 Evaluate, if possible,
-<ol label="a">
+<ol marker="a">
 <li> <m>\ds\lim_{(x,y)\rightarrow(2,-1)}\ \big(xy+x^2\big)</m>
 </li>
 <li> <m>\ds\lim_{(x,y)\rightarrow(0,0)}\ \frac{x}{x^2+y^2}</m>
@@ -413,7 +413,7 @@ So all together
 
 <exercise><title><fromexam>M253 2009D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Find the limit: <m>\ds \lim_{(x,y)\to(0,0)}\frac{x^8+y^8}{x^4+y^4}</m>.
 </li>
@@ -513,7 +513,7 @@ So <m>\frac{xy^5}{x^8+y^{10}}</m> does not approach a single value as
 <exercise><title><fromexam>M2226 2009D</fromexam></title>
 <statement><p>
 Evaluate each of the following limits or show that it does not exist.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\ds\lim_{(x,y)\rightarrow (0,0)}\frac{x^3-y^3}{x^2+y^2}</m>
 </li>
@@ -609,7 +609,7 @@ But if <m>\cos\theta= 0</m> (i.e. the ray is part of the <m>y</m>-axis)
 <exercise><title><fromexam>M226 2010D</fromexam></title>
 <statement><p>
 Evaluate each of the following limits or show that it does not exist.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\ds\lim_{(x,y)\rightarrow (0,0)}\frac{2x^2 + x^2y - y^2x + 2y^2}{x^2 + y^2}</m>
 </li>
@@ -681,7 +681,7 @@ while if we send <m>(x,y)</m> to <m>(0,1)</m> along the line <m>y=x+1</m>, so th
 <exercise>
 <statement><p>
 Define, for all <m>(x,y)\ne(0,0)</m>, <m>f(x,y)=\frac{x^2y}{x^4+y^2}</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Let <m>0\le \theta \lt 2\pi</m>. Compute
 <m>\ds\lim_{r\rightarrow 0^+}f(r\cos\theta,r\sin\theta)</m>.
@@ -772,7 +772,7 @@ close to <m>(0,0)</m>. So the limit does not exist.
 <exercise><title><fromexam>M226 2007D</fromexam></title>
 <statement><p>
 Compute the following limits or explain why they do not exist.
-<ol label="a">
+<ol marker="a">
 <li> <m>\ds\lim_{(x,y)\rightarrow(0,0)}\frac{xy}{x^2+y^2}</m>
 </li>
 <li> <m>\ds\lim_{(x,y)\rightarrow(0,0)}\frac{\sin(xy)}{x^2+y^2}</m>
@@ -868,7 +868,7 @@ are different, the limit as <m>(x,y)\rightarrow 0</m> does not exist.
 <exercise>
 <statement><p>
 Evaluate each of the following limits or show that it does not exist.
-<ol label="a">
+<ol marker="a">
 <li> <m>\ds\lim_{(x,y)\rightarrow (0,0)}\begin{cases}
                                    \frac{x^2}{y-x} &amp;\text{if }y\ne x \\
                                    0 &amp; \text{if }y=x

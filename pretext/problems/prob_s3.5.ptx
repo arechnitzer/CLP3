@@ -223,7 +223,7 @@ So the specified integral is
 For each of the following, express the given iterated integral as an
 iterated integral in which the integrations are  performed in the order:
 first <m>z</m>, then <m>y</m>, then <m>x</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\ds\int_0^1\dee{z}\int_0^{1-z}\dee{y}\int_0^{1-z} \dee{x}\ f(x,y,z)</m>
 </li>
@@ -339,7 +339,7 @@ iterated form by
 \int_{y=-1}^{y=1} \int_{z=0}^{z=1-y^2} \int_{x=0}^{2-y-z} f(x,y,z)
                                     \ \dee{x}\,\dee{z}\,\dee{y}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Draw a reasonably accurate picture of <m>E</m> in 3--dimensions. Be sure
 to show the units on the coordinate axes.
@@ -490,7 +490,7 @@ iterated form
 J = \int_0^1 \int_0^{1-\frac{x}{2}} \int_0^{4-2x-4z} f(x,y,z)
                                     \ \dee{y}\,\dee{z}\,\dee{x}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the domain <m>E</m> in 3--dimensions. Be sure to show the units.
 </li>
@@ -878,7 +878,7 @@ where <m>E</m> is the tetrahedron with vertices <m>(-1, 0, 0)</m>,
 <m>(0, 0, 0)</m>, <m>(0, 0, 3)</m> and <m>(0, -2, 0)</m>.
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 Rewrite the integral I in the form
 <me>
@@ -1301,7 +1301,7 @@ The integral
 
 <exercise><title><fromexam>M200 2013D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the surface given by the equation <m>z = 1 - x^2</m>.
 </li>
@@ -1756,7 +1756,7 @@ you may need only one integral to express your answer. In that
 case, leave the other blank.
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 <m>\displaystyle I=\int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
                  \int_{\underline{\ \ \ \ }}^{\underline{\ \ \ \ }}
@@ -2119,7 +2119,7 @@ so that
 <statement><p> 
 The solid region <m>T</m> is bounded by the planes <m>x=0</m>, <m>y=0</m>,
 <m>z=0</m>, and <m>x+y+z=2</m> and the surface <m>x^2+z=1</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Draw the region indicating coordinates of all corners.
 </li>

@@ -171,7 +171,7 @@ Say, they can be any pair satisfying <m>7x_0+24=9y_0</m>.
 Find the vector parametric, scalar parametric
  and symmetric equations for the line
 containing the given point and with the given direction.
-<ol label="a">
+<ol marker="a">
 <li> point <m>(1,2)</m>, direction <m>\llt 3,2\rgt </m>
 </li>
 <li> point <m>(5,4)</m>, direction <m>\llt 2,-1\rgt </m>
@@ -226,7 +226,7 @@ The symmetric equation is <m>\frac{x+1}{-1}=\frac{y-3}{2}</m>.
 Find the vector parametric, scalar parametric
  and symmetric equations for the line
 containing the given point and with the given normal.
-<ol label="a">
+<ol marker="a">
 <li> point <m>(1,2)</m>, normal <m>\llt 3,2\rgt </m>
 </li>
 <li> point <m>(5,4)</m>, normal <m>\llt 2,-1\rgt </m>
@@ -311,7 +311,7 @@ of <m>\llt-2,2\rgt</m> on <m>\frac{1}{5}\llt 3,-4\rgt</m>, which is the magnitud
 Let <m>\va</m>, <m>\vb</m> and <m>\vc</m> be the vertices of a triangle. By definition,
 a median of a triangle is a straight line that passes through a vertex of
 the triangle and through the midpoint of the opposite side.
-<ol label="a">
+<ol marker="a">
 <li>
  Find the parametric equations of the three medians.
 </li>

@@ -11,7 +11,7 @@
 <exercise>
 <statement><p>
 Use <m>(r,\theta,z)</m> to denote cylindrical coordinates.
-<ol label="a">
+<ol marker="a">
 <li>
 Draw <m>r=0</m>.
 </li>
@@ -95,7 +95,7 @@ to <m>(x,y,0)</m>, the sets
 <exercise>
 <statement><p>
 Sketch the points with the specified cylindrical coordinates.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>r=1</m>, <m>\theta=0</m>, <m>z=0</m>
 </li>
@@ -146,7 +146,7 @@ In particular all points with <m>z=0</m> lie on the <m>xy</m>-plane.
 <exercise>
 <statement><p>
 Convert from cylindrical to Cartesian coordinates.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>r=1</m>, <m>\theta=0</m>, <m>z=0</m>
 </li>
@@ -239,7 +239,7 @@ to the Cartesian coordinates
 <exercise>
 <statement><p>
 Convert from Cartesian to cylindrical coordinates.
-<ol label="a">
+<ol marker="a">
 <li> <m>(1,1,2)</m>
 </li>
 <li> <m>(-1,-1,2)</m>
@@ -329,7 +329,7 @@ So <m>z=0</m>, <m>r=\sqrt{0^2+0^2}=0</m> and
 <exercise>
 <statement><p>
 Rewrite the following equations in cylindrical coordinates.
-<ol label="a">
+<ol marker="a">
 <li> <m>z=2xy</m>
 </li>
 <li> <m>x^2+y^2+z^2=1</m>
@@ -392,7 +392,7 @@ Note that the solution <m>r=0</m> is included in <m>r=2\cos\theta</m> <mdash/> j
 <statement><p>
 Use cylindrical coordinates to evaluate the volumes of each of the following
 regions.
-<ol label="a">
+<ol marker="a">
 <li>
 Above the <m>xy</m>--plane, inside the cone <m>z=2a-\sqrt{x^2+y^2}</m> and
 inside the cylinder <m>x^2+y^2=2ay</m>.
@@ -1009,7 +1009,7 @@ Dividing by <m>M=\frac{\pi}{6}\rho a^3</m> gives
 A sphere of radius <m>2{\rm m}</m> centred on the origin has variable density
 <m>\frac{5}{\sqrt{3}}(z^2+1)</m>kg/<m>{\rm m}^3</m>. A hole of diameter 1m is drilled
 through the sphere along the <m>z</m>--axis.
-<ol label="a">
+<ol marker="a">
 <li>
 Set up a triple integral in cylindrical coordinates giving
 the mass of the sphere after the hole has been drilled.
@@ -1084,7 +1084,7 @@ Make the change of variables <m>s=4-r^2</m>, <m>\dee{s}=-2r\,\dee{r}</m>. This g
 <statement><p> 
 Consider the finite solid bounded by the three surfaces:
 <m>z=e^{-x^2-y^2}</m>, <m>z=0</m> and <m>x^2+y^2=4</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Set up (but do not evaluate) a triple integral in rectangular
 coordinates that describes the volume of the solid.
@@ -1207,7 +1207,7 @@ The density of hydrogen gas in a region of space is given by the formula
 <me>
 \rho(x,y,z) =\frac{z+2x^2}{1+x^2+y^2}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 At <m>(1,0,-1)</m>, in which direction is the density of hydrogen increasing
 most rapidly?

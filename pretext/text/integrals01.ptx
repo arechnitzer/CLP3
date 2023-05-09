@@ -446,7 +446,7 @@ for the mass of regions in the <m>xy</m>-plane.
 <statement><p>
 Let <m>\cR</m> be a region in the <m>xy</m>-plane and let the function
 <m>f(x,y)</m> be defined and continuous on <m>\cR</m>.
-<ol label="a">
+<ol marker="a">
 <li> If
 <md>
 <mrow>
@@ -750,7 +750,7 @@ Theorem 1.2.12 of the CLP-2 text.
 <theorem xml:id="thm_INT2dineq"><title>Inequalities for Integrals</title>
 <statement><p>
 Under the hypotheses of Theorem <xref ref="thm_xy_mass"/>,
-<ol label="a">
+<ol marker="a">
 <li>
 If <m>f(x,y)\ge 0</m> for all <m>(x,y)</m> in <m>\cR</m>, then
 <md>
@@ -2175,7 +2175,7 @@ We also learned how to exploit evenness and oddness to simplify integration.
 <theorem xml:id="thm_INTevenodd"><title>(Theorem 1.2.11 in the CLP-2 text)</title>
 <statement><p>
 Let <m>a>0</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 If <m>f(x)</m> is an even function, then
 <me>
@@ -2430,7 +2430,7 @@ Here is the analog of Theorem<nbsp/><xref ref="thm_INTevenodd"/> for functions o
 
 <theorem xml:id="thm_INTevenodd2d"><title>2d Even and Odd</title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Let <m>\cR</m> be a subset of the <m>xy</m>-plane that is symmetric about the <m>y</m>-axis.
 If <m>f(x,y)</m> is odd under <m>x\rightarrow -x</m>, then

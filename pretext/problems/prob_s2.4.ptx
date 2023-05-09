@@ -12,7 +12,7 @@
 <statement><p>
 Write out the chain rule
 for each of the following functions.
-<ol label="a">
+<ol marker="a">
 <li>
    <m>\pdiff{h}{x}</m> for <m>h(x,y)=f\big(x,u(x,y)\big)</m>
 </li>
@@ -1174,7 +1174,7 @@ u(x,y) = e^y\, F\big(xe^{-y^2}\big)
 for an arbitrary function <m>F(z)</m>.
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 If <m>F(z) = \ln(z)</m>, find <m>\pdiff{u}{x}</m> and <m>\pdiff{u}{y}</m>.
 </li>
@@ -1373,7 +1373,7 @@ as desired.
 Suppose <m>z = f (x, y)</m> has continuous second order partial derivatives, and <m>x = r \cos t</m>,
 <m>y = r \sin t</m>. Express the following partial derivatives in terms <m>r</m>, <m>t</m>, and partial derivatives
 of <m>f</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\pdiff{z}{t}</m>
 </li>
@@ -1882,7 +1882,7 @@ that <m>f(xz,yz)=0</m> is can be solved for <m>z</m> as a function of <m>x</m> a
 <statement><p>
 Let <m>w(s,t) = u(2s + 3t, 3s - 2t)</m> for some twice differentiable function
 <m>u = u(x, y)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find <m>w_{ss}</m> in terms of <m>u_{xx}</m>, <m>u_{xy}</m> , and <m>u_{yy}</m>.
 You can assume that <m>u_{xy} = u_{yx}</m>.
@@ -1994,7 +1994,7 @@ if <m>A=-1</m>. (Then <m>(4-9A)=(9-4A)=13</m>.)
 <statement><p>
 Suppose that <m>f(x,y)</m> is twice differentiable (with <m>f_{xy}=f_{yx}</m>),
 and <m>x=r\cos\theta</m> and <m>y=r\sin\theta</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Evaluate <m>f_\theta</m>, <m>f_r</m> and <m>f_{r\theta}</m> in terms of <m>r</m>, <m>\theta</m>
 and partial derivatives of <m>f</m> with respect to <m>x</m> and <m>y</m>.
@@ -2293,7 +2293,7 @@ Hence <m>\vnabla z(1,2)=\llt -47,108\rgt</m>.
 <exercise><title><fromexam>M200 2002D</fromexam></title>
 
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Let <m>f</m> be an arbitrary differentiable function defined on the entire
 real line. Show that the function <m>w</m> defined on the entire plane as
@@ -2447,7 +2447,7 @@ x^2+y^2-\sin(uv)&amp;=\frac{4}{\pi}u
 define <m>x</m> and <m>y</m> implicitly as functions of <m>u</m> and <m>v</m> (i.e. <m>x=x(u,v)</m>,
 and <m>y=y(u,v)</m>) near the point <m>(x,y)=(1,1)</m> at which
 <m>(u,v)=\big(\frac{\pi}{2},0\big)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find
 <me>
@@ -2640,7 +2640,7 @@ u(x,t)&amp;=v\big(\xi(x,t),\eta(x,t)\big)\cr
 </md>
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 Show that
 <m>\ \frac{\partial^2u}{\partial x^2}
@@ -2856,7 +2856,7 @@ Similarly, <m>G(x+ct)</m> represents a wave moving to the left with speed <m>c</
 <exercise>
 <statement><p>
  Evaluate
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\pdiff{y}{z}</m>  if <m>e^{yz}-x^2 z \ln y = \pi</m>
 </li>

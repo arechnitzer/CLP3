@@ -245,7 +245,7 @@ as desired. To complete the proof we just have to justify the details
 
 <subsubsection><title>The Details</title>
 <p>
-<ol label="(1)">
+<ol marker="(1)">
 <li>
 By definition,
 <md>

@@ -13,7 +13,7 @@
 Let <m>x_0</m> and <m>y_0</m> be constants and let <m>m</m> and <m>n</m> be integers.
 If <m>m \lt 0</m> assume that <m>x_0\ne 0</m>, and if <m>n \lt 0</m> assume that <m>y_0\ne 0</m>.
 Define <m>P(x,y) = x^m y^n</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the linear approximation to <m>P(x_0+\De x,y_0+\De y)</m>.
 </li>
@@ -789,7 +789,7 @@ Suppose that a function <m>z = f (x, y)</m> is implicitly defined by an equation
 <me>
          xyz + x + y^2 + z^3 = 0
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Find <m>\pdiff{z}{x}</m>.
 </li>
@@ -878,7 +878,7 @@ Let <m>z = f(x,y)</m> be given implicitly by
 </me>
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 Find the differential <m>\dee{z}</m>.
 </li>
@@ -1082,7 +1082,7 @@ Let <m>z</m> be a function of <m>x</m>, <m>y</m> such that
 <me>
 z^3 - z + 2xy - y^2 = 0,\qquad z(2, 4) = 1.
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Find the linear approximation to <m>z</m> at the point <m>(2, 4)</m>.
 </li>
@@ -1157,7 +1157,7 @@ Consider the surface given by:
 <me>
 z^3 - xyz^2 - 4x = 0.
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Find expressions for <m>\pdiff{z}{x}</m>, <m>\pdiff{z}{y}</m> as functions of <m>x</m>, <m>y</m>,
 <m>z</m>.
@@ -1297,7 +1297,7 @@ and
 <statement><p>
 Consider the function <m>f</m> that maps each point <m>(x, y)</m> in <m>\bbbr^2</m>
 to <m>ye^{-x}</m>.
-<ol label="a">
+<ol marker="a">
 <li>
  Suppose that <m>x = 1</m> and <m>y = e</m>, but errors of size <m>0.1</m> are
 made in measuring each of <m>x</m> and <m>y</m>. Estimate the maximum error
@@ -1359,7 +1359,7 @@ is perpendicular to <m>g=0</m> at <m>(1,e,1)</m>.
 <exercise><title><fromexam>M200 2009D</fromexam></title>
 <statement><p>
 A surface is defined implicitly by <m>z^4 - xy^2 z^2 + y = 0</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Compute <m>\pdiff{z}{x}</m>, <m>\pdiff{z}{y}</m> in terms of <m>x</m>, <m>y</m>, <m>z</m>.
 </li>
@@ -1481,7 +1481,7 @@ or
 <statement><p>
 A surface <m>z = f (x, y)</m> has derivatives <m>\pdiff{f}{x}=3</m> and
 <m>\pdiff{f}{y}=-2</m> at <m>(x, y, z) = (1, 3, 1)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 If <m>x</m> increases from <m>1</m> to <m>1.2</m>, and <m>y</m> decreases from <m>3</m> to <m>2.6</m>,
 find the change in <m>z</m> using a linear approximation.
@@ -1597,7 +1597,7 @@ V(1.2\,,\,5.3)-V(1,5) \approx  V_p(1,5)\,(0.2) + V_T(1,5)\,(0.3)
 <exercise><title><fromexam>M200 2011D</fromexam></title>
 <statement><p>
 Consider the function <m>f(x, y) = e^{-x^2 +4y^2}</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the equation of the tangent plane to the graph <m>z = f (x,y)</m> at the
 point where <m>(x, y) = (2, 1)</m>.
@@ -1645,7 +1645,7 @@ f(1.99, 1.01) \approx 1 -4 (1.99-2) +8(1.01-1)
 <exercise><title><fromexam>M200 2012a</fromexam></title>
 <statement><p>
 Let <m>z = f (x, y) = \ln(4x^2 + y^2)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Use a linear approximation of the function <m>z = f (x, y)</m> at <m>(0, 1)</m> to estimate
 <m>f(0.1, 1.2)</m>.
@@ -1732,7 +1732,7 @@ c=\ln\left(\frac{4}{5^2}+\frac{4^2}{5^2}\right)
 
 <exercise><title><fromexam>M200 2013D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Find the equation of the tangent plane to the surface
 <m>x^2 z^3 + y \sin(\pi x) = -y^2</m> at the point <m>P = (1,1,-1)</m>.
@@ -1826,7 +1826,7 @@ z(0.97,1) \approx -1 +\frac{\pi+2}{3}\ (-0.03)
 The surface <m>x^4+y^4+z^4+xyz=17</m> passes through <m>(0,1,2)</m>,
 and near this point the surface determines <m>x</m> as a function, <m>x=F(y,z)</m>,
 of <m>y</m> and <m>z</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find <m>F_y</m> and <m>F_z</m> at <m>(x,y,z)=(0,1,2)</m>.
 </li>

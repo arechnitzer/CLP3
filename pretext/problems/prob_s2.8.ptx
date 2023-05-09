@@ -55,7 +55,7 @@ For this to equal <m>g(x)\, u_t(x,t) = -g(x)\, e^{-t-x^2}</m>, we need
 
 <exercise>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Find all functions <m>u(x,y)</m> that obey the partial differential equation
 <me>
@@ -111,7 +111,7 @@ any antiderivative of <m>f(x)</m> and <m>C(y)</m> being any function of the sing
 <statement><p>
 Solutions of Laplace's equation <m>u_{xx}(x,y)+u_{yy}(x,y)=0</m> are called
 <em>harmonic functions</em>. Which of the following functions are harmonic?
-<ol label="a">
+<ol marker="a">
 <li>
 <m>x^3-3xy^2</m>
 </li><li>
@@ -636,7 +636,7 @@ u_t=xu_x\qquad\text{for }x>0
 </me>
 that are of the special form <m>u(x,t)= X(x)\,T(t)</m>, with, for simplicity, <m>X>0</m> and <m>T>0</m>. 
 We will use a technique called <q>separation of variables</q>.
-<ol label="a">
+<ol marker="a">
 <li> 
 Show that <m>u(x,t)= X(x)\,T(t)</m>, with <m>X</m> and <m>T</m> nonzero, obeys the PDE
 <m>u_t=xu_x</m> if and only if
@@ -783,7 +783,7 @@ so
 
 <exercise>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li> 
 Suppose that <m>u(x,y)</m> obeys the PDE <me>3u_x(x,y) + 6u_y(x,y)=u(x,y)</me>. Define
 <m>v(X,Y) = u(X, Y+2X)</m>. Find a PDE that <m>v</m> obeys.

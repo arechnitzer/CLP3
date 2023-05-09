@@ -1991,7 +1991,7 @@ and the volume of the parallelepiped is
 
 <lemma xml:id="lem_tripProd">
 <statement><p>
-<ol label="(a)">
+<ol marker="(a)">
 <li>
 <m>\va\cdot(\vb\times\vc)=(\va\times\vb)\cdot\vc</m>
 </li>
@@ -2206,7 +2206,7 @@ velocity vector, the velocity of the point <m>P</m> is
 
 
 <p>Imagine a moving particle that is being tracked by two observers.
-<ol label="a">
+<ol marker="a">
 <li> One observer is fixed (out in space) and measures the position of
   the particle to be <m>\big(X(t), Y(t), Z(t)\big)</m>.
 </li>

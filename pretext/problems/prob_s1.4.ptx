@@ -384,7 +384,7 @@ through that line.
 <exercise>
 <statement><p>
 Find the plane containing the given three points.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>(1,0,1),\ (2,4,6),\ (1,2,-1)</m>
 </li>
@@ -398,7 +398,7 @@ Find the plane containing the given three points.
 </p></statement>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
 <li><m>9x-y-z=8</m></li>
 <li><m>14x-7y-8z=52</m></li>
 </ol>
@@ -473,7 +473,7 @@ satisfy the equation <m>ax+by-(a+b)z=4a+b</m> for all <m>a</m> and <m>b</m>.
 <exercise>
 <statement><p>
 Find the distance from the given point to the given plane.
-<ol label="a">
+<ol marker="a">
 <li>
 point <m>(-1,2,3)</m>, plane <m>x+y+z=7</m>
 </li>
@@ -484,7 +484,7 @@ point <m>(1,-4,3)</m>, plane <m>x-2y+z=5</m>
 </p></statement>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
 <li><m>\sqrt{3}</m></li>
 <li><m>7/\sqrt{6}</m></li>
 </ol>
@@ -524,7 +524,7 @@ or <m>7/\sqrt{6}</m>.
 <statement><p>
 A plane <m>\Pi</m> passes through the points <m>A = (1, 1, 3)</m>, <m>B = (2, 0, 2)</m>
 and <m>C = (2, 1, 0)</m> in <m>\bbbr^3</m>.
-<ol label="a">
+<ol marker="a">
 <li>
  Find an equation for the plane <m>\Pi</m>.
 </li>
@@ -536,7 +536,7 @@ and <m>C = (2, 1, 0)</m> in <m>\bbbr^3</m>.
 </p></statement>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
 <li><m>3x+2y+z = 8</m></li>
 <li><m>\big(3\,,\,-1\,,\,1\big)</m></li>
 </ol>
@@ -600,7 +600,7 @@ So <m>(x,y,z) = \big(6+3(-1)\,,\,1+2(-1)\,,\,2+(-1)\big)
 <statement><p>
 Let <m>A = (2, 3, 4)</m> and let <m>L</m> be the line given by the equations <m>x + y = 1</m> and
 <m>x + 2y + z = 3</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Write an equation for the plane containing <m>A</m> and perpendicular to <m>L</m>.
 </li>
@@ -611,7 +611,7 @@ Write an equation for the plane containing <m>A</m> and <m>L</m>.
 </p></statement>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
 <li><m>x-y+z=3</m></li>
 <li><m>5x+y-4z=-3</m></li>
 </ol>
@@ -809,7 +809,7 @@ M\ &amp;:\
 \frac{x}{2} = \frac{2y-4}{4} = z + 5
 </mrow>
 </md>
-<ol label="a">
+<ol marker="a">
 <li>
 Find a parametric equation of the line of intersection <m>L</m> of <m>W_1</m> and <m>W_2</m>.
 </li>
@@ -820,7 +820,7 @@ Find the distance from L to M .
 </p></statement>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
 <li><m>(x,y,z) = (-3,1,0) +t \llt 0,-1,1\rgt</m></li>
 <li><m>\sqrt{17}</m></li>
 </ol>
@@ -1168,7 +1168,7 @@ with normal vector  <m>\vb-\va</m>.
 <statement><p>
 Consider a point <m>P(5,-10,2)</m> and the triangle with vertices
 <m>A(0,1,1)</m>, <m>B(1,0,1)</m> and <m>C(1,3,0)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Compute the area of the triangle <m>ABC</m>.
 </li>
@@ -1180,7 +1180,7 @@ the triangle.
 </p></statement>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
 <li><m>\half\sqrt{11}\approx 1.658</m></li>
 <li><m>\frac{3}{\sqrt{11}}\approx 0.9045</m></li>
 </ol>

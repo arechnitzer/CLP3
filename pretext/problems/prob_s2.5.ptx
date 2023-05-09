@@ -438,7 +438,7 @@ and the equation of the tangent plane is
 <statement><p>
 Find the equations of the tangent plane and the normal line to the graph
 of the specified function at the specified point.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>f(x,y)=x^2-y^2</m> at <m>(-2,1)</m>
 </li>
@@ -570,7 +570,7 @@ z = x^2 - 2xy + y^2 .
 </me>
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 Find the equation of the tangent plane to the surface at <m>x = a</m>, <m>y = 2a</m>.
 </li>
@@ -960,7 +960,7 @@ Let <m>S</m> be the surface
 <me>
 xy-2x+yz+x^2+y^2+z^3=7
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Find the tangent plane and normal line to the surface <m>S</m>
 at the point <m>(0,2,1)</m>.
@@ -1069,7 +1069,7 @@ z_{yx}(x,y)
 
 <exercise><title><fromexam>M200 2000D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Find a vector perpendicular at the point
 <m>(1,1,3)</m> to the surface with equation <m>x^2+z^2=10</m>.

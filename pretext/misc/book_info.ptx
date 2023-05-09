@@ -196,9 +196,5 @@
   <cross-references text="global" />
   <rename element="fact" xml:lang="en-US">Equation</rename> <!-- use to replace impeqn -->
 
-  <feedback>
-    <url>mailto:clp@ugrad.math.ubc.ca?subject=clp3-pretext</url>
-  </feedback>
-
 
 </docinfo>

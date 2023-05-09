@@ -13,8 +13,8 @@
 
 		<xi:include href="misc/frontmatter.ptx" />
 		<xi:include href="text/geometry00.ptx" />
-		<xi:include href="text/partials00.ptx" />
-		<xi:include href="text/integrals00.ptx" />
+		<!-- <xi:include href="text/partials00.ptx" /> -->
+		<!-- <xi:include href="text/integrals00.ptx" /> -->
 		<backmatter>
 			<title>Appendices</title>
 			<xi:include href="text/appendix00.ptx" />

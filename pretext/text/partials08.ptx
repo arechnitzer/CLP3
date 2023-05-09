@@ -540,7 +540,7 @@ T(x,t) &amp;= \text{tension in the string at position $x$ and time $t$}
 </mrow>
 </md>
 The forces acting on the tiny element of string at time <m>t</m> are
-<ol label="a">
+<ol marker="a">
 <li>
 tension pulling to the right, which has magnitude <m>T(x+\De x,t)</m> and
 acts at an angle <m>\theta(x+\De x,t)</m> above horizontal

@@ -569,7 +569,7 @@ This is worth stating formally.
 <lemma xml:id="lem_CVtanArclen">
 <statement><p>
 Let <m>\vr(t)</m> be a parametrized curve.
-<ol label="(a)">
+<ol marker="(a)">
 <li>
 Denote by <m>\hat\vT(t)</m> the unit tangent vector to the curve
 at <m>\vr(t)</m> pointing in the direction of increasing <m>t</m>. If

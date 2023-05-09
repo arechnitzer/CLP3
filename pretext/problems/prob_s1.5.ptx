@@ -133,7 +133,7 @@ No two of the lines intersect because
 <statement><p>
 Find a vector parametric equation for the line of intersection
 of the given planes.
-<ol label="a">
+<ol marker="a">
 <li> <m>x-2z=3</m> and <m>y+\half z=5</m>
 </li>
 <li> <m>2x-y-2z=-3</m> and <m>4x-3y-3 z=-5</m>
@@ -191,7 +191,7 @@ parametric equation <m>\llt x,y,z\rgt =  \llt -2,-1,0\rgt
 <statement><p>
 Determine a vector equation for the line of intersection
 of the planes
-<ol label="a">
+<ol marker="a">
 <li> <m>x+y+z=3</m> and <m>x+2y+3z=7</m>
 </li>
 <li> <m>x+y+z=3</m> and <m>2x+2y+2z=7</m>
@@ -247,7 +247,7 @@ contradictory. They have no solution. The two planes are parallel and
 <statement><p>
 In each case, determine whether or not the given pair
 of lines intersect. Also find all planes containing the pair of lines.
-<ol label="a">
+<ol marker="a">
 <li> <m>\llt x,y,z\rgt = \llt -3,2,4\rgt+t\llt -4,2,1\rgt</m> and
       <m>\llt x,y,z\rgt = \llt 2,1,2\rgt+t\llt 1,1,-1\rgt</m>
 </li>
@@ -494,7 +494,7 @@ is a vector parametric equation for <m>L</m>.
 
 <exercise>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Find a vector parametric equation for the line
 <m>x+2y+3z=11,\ x-2y+z=-1</m>.
@@ -579,7 +579,7 @@ Let <m>L_1</m> be the line passing through <m>(1,-2,-5)</m> in the direction of
 <m>\vd_1=\llt 2,3,2\rgt</m>.
 Let <m>L_2</m> be the line passing through <m>(-3,4,-1)</m> in the direction
 <m>\vd_2=\llt 5,2,4\rgt</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the equation of the plane <m>P</m> that contains <m>L_1</m>
 and is parallel to <m>L_2</m>.
@@ -639,7 +639,7 @@ The distance from <m>L_2</m> to <m>P</m> is the length of the projection of the 
 <statement><p>
 Let <m>L</m> be a line which is parallel to the plane <m>2x + y  - z = 5</m> and
 perpendicular to the line <m>x = 3 - t</m>, <m>y = 1 - 2t</m> and <m>z = 3t</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find a vector parallel to the line <m>L</m>.
 </li>
@@ -712,7 +712,7 @@ z = 2 - 3t
 <statement><p>
 Let <m>L</m> be the line of intersection of the planes <m>x + y + z = 6</m> and
 <m>x - y + 2z = 0</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the points in which the line <m>L</m> intersects the coordinate planes.
 </li>
@@ -806,7 +806,7 @@ is a vector parametric equation for the line. We can also write this as
 <statement><p>
 The line <m>L</m> has vector parametric equation
 <m>\vr(t) = (2 + 3t)\hi + 4t\hj - \hk</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Write the symmetric equations for <m>L</m>.
 </li>
@@ -903,7 +903,7 @@ second equation from the first gives <m>2y=-2-2t</m>. So
 
 <exercise><title><fromexam>M200 2000A</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Find a point on the y-axis equidistant from
                 <m>(2, 5, -3)</m> and <m>(-3, 6, 1)</m>.
@@ -968,7 +968,7 @@ equation of the plane is
 <exercise><title><fromexam>M200 2016D</fromexam></title>
 <statement><p>
 Let <m>A=(0,2,2)</m>, <m>B=(2,2,2)</m>, <m>C=(5,2,1)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the parametric equations for the line which contains <m>A</m>
 and is perpendicular to the triangle <m>ABC</m>.

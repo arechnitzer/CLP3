@@ -62,7 +62,7 @@ The curve <q>crosses itself</q> when the same coordinates occur for different va
 <statement><p>
 Find the specified parametrization of the first quadrant part
 of the circle <m>x^2+y^2=a^2</m>.
-<ol label="a">
+<ol marker="a">
 <li>
   In terms of the <m>y</m> coordinate.
 </li>
@@ -173,7 +173,7 @@ and the desired parametrization is
 \end{tikzpicture}</latex-image></image>
 </sidebyside><p>
 A circle of radius <m>a</m> rolls along the <m>x</m>-axis in the positive direction, starting with its centre at <m>(a,a)</m>. In that position, we mark the topmost point on the circle <m>P</m>. As the circle moves, <m>P</m> moves with it. Let <m>\theta</m> be  the angle the circle has rolled - see the diagram below.
-<ol label="a">
+<ol marker="a">
 <li> Give the position of the centre of the circle as a function of <m>\theta</m>.
 </li>
 <li> Give the position of <m>P</m> a function of <m>\theta</m>.
@@ -391,7 +391,7 @@ Express
 </me>
 in terms of <m>\vr</m>, <m>\vr'</m> , <m>\vr''</m> , and <m>\vr'''</m>.
 Select the correct answer.
-<ol label="a">
+<ol marker="a">
 <li> <m>(\vr'\times\vr'' )\cdot\vr'''</m>
 </li>
 <li>  <m>(\vr'\times\vr'' )\cdot\vr + (\vr\times\vr' )\cdot\vr'''</m>
@@ -444,7 +444,7 @@ Find the speed of a particle with the given position function
 \vr(t) = 5 \sqrt{2}\,t\,\hi + e^{5t}\,\hj - e^{-5t}\,\hk
 </me>
 Select the correct answer:
-<ol label="a">
+<ol marker="a">
 <li>
 <m>|\vv(t)| = \big(e^{5t} + e^{-5t}\big)</m>
 </li>
@@ -492,7 +492,7 @@ Since <m>2+ e^{10t}+ e^{-10t} = \big(e^{5t}+e^{-5t}\big)^2</m>, that's (d).
 <statement><p>
 Find the velocity, speed and acceleration at time <m>t</m> of
 the particle whose position is <m>\vr(t)</m>. Describe the path of the particle.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\vr(t)= a \cos t\,\hi + a\sin t\,\hj + ct\,\hk</m>
 </li>
@@ -579,7 +579,7 @@ centre <m>\big(0,\frac{a}{2}\big)</m> counterclockwise. At the same time the <m>
 </exercise>
 
 <exercise><title><fromexam>M317 2013D</fromexam></title>
-<statement><p><ol label="a">
+<statement><p><ol marker="a">
 <li>
 Let
 <me>
@@ -706,7 +706,7 @@ A curve in <m>\bbbr^3</m> is given by the vector equation
 <m>\vr(t) = \left(2t \cos t, 2t \sin t,\frac{t^3}{3}\right)</m>
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 Find the length of the curve between <m>t = 0</m> and <m>t = 2</m>.
 </li>
@@ -783,7 +783,7 @@ z(t) &amp;= \frac{\pi^3}{3} + \pi^2 t
 <statement><p>
 Let <m>\vr(t) = \big(3 \cos t, 3 \sin t, 4t\big)</m> be the position vector
 of a particle as a function of time <m>t \ge 0</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the velocity of the particle as a function of time <m>t</m>.
 </li>
@@ -831,7 +831,7 @@ the arclength of its path between <m>t = 1</m> and <m>t = 2</m> is
 	<me>
 	\vr(t) = \frac{1}{3}\cos^3 t\,\hi +\frac{1}{3} \sin^3 t\,\hj + \sin^3 t\,\hk
 	</me>
-	<ol label="a">
+	<ol marker="a">
 <li>
 		Compute the arc length of the curve from <m>t = 0</m> to <m>t = \frac{\pi}{2}</m>.
 </li>
@@ -1050,7 +1050,7 @@ Using the product rule:
 </me>
 This curve starts from the origin and eventually reaches the ellipsoid
 <m>E</m> whose equation is <m>2x^2+2y^2+z^2=24</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Determine the coordinates of the point <m>P</m> where <m>\Gamma</m> intersects <m>E</m>.
 </li>
@@ -1149,7 +1149,7 @@ is at <m>(1,3,6)</m> its velocity <m>\vv</m> and acceleration <m>\va</m> are giv
 \vv =6\,\hi+12\,\hj+12\,\hk\qquad
 \va = 27\,\hi+30\,\hj+6\,\hk
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
  Write a vector parametric equation for <m>\cC</m> using
 <m>u=\frac{z}{6}</m> as a parameter.
@@ -1173,7 +1173,7 @@ the position of the particle at time <m>t</m> is <m>\vR(t) = \vr\big(u(t)\big)</
 </p></hint>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
 <li> <m>\vr(u)=u^3\,\hi+3u^2\,\hj+6u\,\hk</m> </li>
 <li> <m>7</m> </li>
 <li>  <m>2</m> </li>
@@ -1257,7 +1257,7 @@ It moves under a force
 <me>
 \vF(t) = -3t\,\hi + \sin t\,\hj + 2e^{2t}\,\hk.
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Determine the position <m>\vr(t)</m> of the particle depending on <m>t</m>.
 </li>
@@ -1356,7 +1356,7 @@ the surfaces <m>y=x^2</m> and <m>z=\frac{2}{3}x^3</m>.
 A particle moves along <m>C</m> with constant speed such that <m>\diff{x}{t} \gt 0</m>.
 The particle is at <m>(0,0,0)</m> at time <m>t=0</m> and is at <m>(3,9,18)</m> at time
 <m>t=\frac{7}{2}</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the length of the part of <m>C</m> between <m>(0,0,0)</m> and <m>(3,9,18)</m>.
 </li>
@@ -1378,7 +1378,7 @@ of the particle at time <m>t</m> is <m>x(t)</m>, then the position of the partic
 </p></hint>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
 <li><m>21</m></li>
 <li><m>6</m></li>
 <li><m>2\hi+4\,\hj+4\,\hk</m></li>
@@ -1564,7 +1564,7 @@ the particle has acceleration vector
 <me>
 \va(t)=\llt \cos t,\sin t,0\rgt
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Find the position of the particle after <m>t</m> seconds.
 </li>
@@ -1657,7 +1657,7 @@ is given by
 \vr(t)=t\cos\left(\frac{\pi t}{2}\right)\hi
          +t\sin\left(\frac{\pi t}{2}\right)\hj +t\,\hk
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Show that the path of the particle lies on the cone <m>z^2=x^2+y^2</m>.
 </li>
@@ -1755,7 +1755,7 @@ flew off the cone.
 
 <exercise><title><fromexam>M200 2001D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 The curve <m>\vr_1(t)=\llt 1+t, t^2, t^3\rgt</m> and
 <m>\vr_2(t)=\llt \cos t, \sin t, t\rgt</m> intersect at the point <m>P(1,0,0)</m>.

@@ -131,7 +131,7 @@ Let
 the function <m>f(\vx)</m> be defined for all <m>\vx</m> near <m>\va</m> and take values in <m>\bbbr^n</m>
 </li>
 </ul>
-<ol label="a">
+<ol marker="a">
 <li>
 The function <m>f</m> is continuous at a point <m>\va</m> if
 <me>
@@ -153,7 +153,7 @@ that can be used to build complicated limits from simpler ones.
 
 <example xml:id="eg_trivial_limits">
 <p>
-<ol label="a">
+<ol marker="a">
 <li>
 If <m>f(x,y)</m> is the constant function which always takes the value <m>L</m>,
 then
@@ -230,7 +230,7 @@ Assume that
 \lim_{t\to F} \ga(t) = \ga(F)
 </me>
 Then
-<ol label="a">
+<ol marker="a">
 <li>
   <p>
 <m>\lim\limits_{\vx\rightarrow \va}\big[f(\vx)+g(\vx)\big]

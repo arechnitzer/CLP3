@@ -10,7 +10,7 @@
 
 <exercise><title><fromexam>M200 2016D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li><p>
 Some level curves of a function <m>f(x,y)</m> are plotted in the <m>xy</m>--plane
 below.
@@ -228,7 +228,7 @@ The second condition is to ensure that <m>x_0</m> lies on the line.
 <exercise><title><fromexam>M200 2005D</fromexam></title>
 <statement><p>
 Let <m>z = f(x,y) = {(y^2 - x^2)}^2</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Make a reasonably accurate sketch of the level curves in the <m>xy</m>--plane
 of <m>z = f(x,y)</m> for <m>z = 0</m>, <m>1</m> and <m>16</m>. Be sure to show the units
@@ -1075,7 +1075,7 @@ The images below depict level sets <m>f (x, y) = c</m> of the functions in the l
 Label the pictures with the corresponding function and mark the critical points in each
 picture. (Note that in some cases, the critical points might not be drawn on the images
 already. In those cases you should add them to the picture.)
-<ol label="(i)">
+<ol marker="(i)">
 <li>
 <m>f(x, y) = (x^2 + y^2 - 1)(x - y) + 1</m>
 </li>
@@ -1248,7 +1248,7 @@ So there are two critical points: <m>\big(\frac{3}{2},-\frac{1}{4}\big)</m> and
 <exercise><title><fromexam>M200 2011A</fromexam></title>
 <statement><p>
 Let <m>h(x, y) = y(4 - x^2 - y^2)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find and classify the critical points of <m>h(x, y)</m> as local maxima, local minima or
 saddle points.
@@ -1522,7 +1522,7 @@ The minimum is <m>6-2\sqrt{5}</m>.
 <exercise><title><fromexam>M200 2014D</fromexam></title>
 <statement><p>
 Let <m>f(x,y) = xy(x + y - 3)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find all critical points of <m>f</m>, and classify each one as a local maximum,
 a local minimum, or saddle point.
@@ -1769,7 +1769,7 @@ Consider the function
 <me>
 f(x,y)=2x^3 - 6xy + y^2 +4y
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Find and classify all of the critical points of <m>f(x,y)</m>.
 </li>
@@ -1974,7 +1974,7 @@ Let
 <me>
 f(x,y)=xy(x+2y-6)
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
  Find every critical point of <m>f(x,y)</m> and classify each one.
 </li>
@@ -2277,7 +2277,7 @@ Consider the function
 <m>
 g(x,y)=x^2-10y-y^2
 .</m>
-<ol label="a">
+<ol marker="a">
 <li>
 Find and classify  all critical points of <m>g</m>.
 </li>
@@ -2635,7 +2635,7 @@ The temperature <m>T(x,y)</m> at a point of the <m>xy</m>--plane is given by
 <me>
 T(x,y) = 20 - 4x^2 - y^2
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Find the maximum and minimum values of <m>T(x,y)</m> on the disk <m>D</m>
 defined by <m>x^2 + y^2 \le 4</m>.
@@ -2896,7 +2896,7 @@ the classification is
 
 <exercise><title><fromexam>M200 2002A</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Show that the function
 <m>f(x,y)=2x+4y+\frac{1}{xy}</m>

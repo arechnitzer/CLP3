@@ -12,7 +12,7 @@
 <statement><p>
 Let <m>0 \lt \theta \lt \frac{\pi}{2}</m>, and <m>a,b \gt 0</m>. Denote by <m>S</m> the part of
 the surface <m>z=y\,\tan\theta</m> with <m>0\le x\le a</m>, <m>0\le y\le b</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the surface area of <m>S</m> without using any calculus.
 </li>
@@ -101,7 +101,7 @@ Hence by Theorem <xref ref="thm_surface_area"/>
 <statement><p>
 Let <m>a,b,c  \gt  0</m>. Denote by <m>S</m> the triangle with vertices <m>(a,0,0)</m>,
 <m>(0,b,0)</m> and <m>(0,0,c)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the surface area of <m>S</m> in three different ways, each using
 Theorem <xref ref="thm_surface_area"/>.
@@ -410,7 +410,7 @@ So, by Theorem <xref ref="thm_surface_area"/>.a,
 
 <exercise><title><fromexam>M253 2016D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 To find the surface area of the surface <m>z = f (x,y)</m> above the region <m>D</m>,
 we integrate <m>\dblInt_D F(x,y)\ \dee{A}</m>. What is <m>F(x,y)</m>?
@@ -426,7 +426,7 @@ The diagram below shows the slice where <m>y = 0</m>.
   <image source="pfigs/OE253_16D_2"/>
 </sidebyside>
 <p>
-<ol label="(i)">
+<ol marker="(i)">
 <li>
 The Rebels want to paint part of the surface of Death Star hot pink; specifically, the concave part (indicated with a thick line in the diagram).
 To help them determine how much paint is needed, carefully fill in the
