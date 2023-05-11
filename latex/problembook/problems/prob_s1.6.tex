@@ -439,6 +439,7 @@ Since $2+ e^{10t}+ e^{-10t} = \big(e^{5t}+e^{-5t}\big)^2$, that's (d).
 \begin{question}
 Find the velocity, speed and acceleration at time $t$ of
 the particle whose position is $\vr(t)$. Describe the path of the particle.
+Let $a>0$.
 \begin{enumerate}[(a)]
 \item
 $\vr(t)= a \cos t\,\hi + a\sin t\,\hj + ct\,\hk$
@@ -470,7 +471,8 @@ The path is a helix with radius $a$ and with each turn having height $2\pi c$.
 \va(t)&= -2a \sin 2t\,\hi +2a\cos 2t\,\hj-a\cos t\,\hk
 \end{align*}
 The $(x,y)$ coordinates go around a circle of radius $\frac{a}{2}$ and
-centre $\big(0,\frac{a}{2}\big)$ counterclockwise. At the same time the $z$ coordinate oscillates over the interval between $1$ and $-1$ half as fast.
+centre $\big(0,\frac{a}{2}\big)$ counterclockwise. At the same time the $z$ coordinate oscillates over the interval between $1$ and $-1$ half as fast. In addition, the curve lies on 
+the intersection of the cylinder $x^2+\big[y-\tfrac{a}{2}\big]^2=\tfrac{a^2}{4}$ and the sphere $x^2+y^2+z^2=a^2$. 
 \end{answer}
 
 \begin{solution}
@@ -497,8 +499,32 @@ The path is a helix with radius $a$ and with each turn having height $2\pi c$.
 \diff{s}{t}(t)=|\vv(t)|&= a\sqrt{1+\sin^2t}\\
 \va(t)=\vr''(t)&= -2a \sin 2t\,\hi +2a\cos 2t\,\hj-a\cos t\,\hk
 \end{align*}
-The $(x,y)$ coordinates go around a circle of radius $\frac{a}{2}$ and
-centre $\big(0,\frac{a}{2}\big)$ counterclockwise. At the same time the $z$ coordinate oscillates over the interval between $1$ and $-1$ half as fast.
+Write
+\begin{align*}
+x(t)=\tfrac{a}{2} \sin 2t \qquad
+y(t)=a\tfrac{1-\cos 2t}{2} \qquad
+z(t)=a\cos t
+\end{align*}
+Then
+\begin{align*}
+x(t)^2+\big[y(t)-\tfrac{a}{2}\big]^2&=\tfrac{a^2}{4} \sin^2 2t + \tfrac{a^2}{4} \cos^2 2t 
+                                     =\tfrac{a^2}{4} 
+\end{align*}
+Thus the $(x,y)$ coordinates go around a circle of radius $\frac{a}{2}$ and
+centre $\big(0,\frac{a}{2}\big)$ counterclockwise. At the same time the $z$ coordinate oscillates over the interval between $1$ and $-1$ half as fast. In fact,
+one can say more about the curve.
+\begin{align*}
+x(t)^2+y(t)^2&=\tfrac{a^2}{4} \sin^2 2t + \tfrac{a^2}{4}\big(1-\cos 2t\big)^2 \\
+             &=\tfrac{a^2}{4} \sin^2 2t + \tfrac{a^2}{4} - \tfrac{a^2}{2}\cos 2t 
+                 + \tfrac{a^2}{4} \cos^2 2t \\
+             &= \tfrac{a^2}{2}  - \tfrac{a^2}{2} (1- 2\sin^2 t) \\
+             &=  a^2\sin^2 t
+\\
+x(t)^2+y(t)^2+z(t)^2 &= a^2\sin^2 t + a^2\cos^2 t =a^2 
+\end{align*}
+So our curve lies on the intersection of the cylinder  
+$x^2+\big[y-\tfrac{a}{2}\big]^2=\tfrac{a^2}{4}$ and the sphere $x^2+y^2+z^2=a^2$. 
+(Don't worry if you didn't think of trying to evaluate $x(t)^2+y(t)^2+z(t)^2$.)
 \end{solution}
 
 %%%%%%%%%%%%%%%%%%%

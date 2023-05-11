@@ -1624,7 +1624,7 @@ Subtracting,
 <statement><p>
  Consider the unit sphere
 <me>
-S=§et{(x,y,z)}{x^2+y^2+z^2=1}
+S=\Set{(x,y,z)}{x^2+y^2+z^2=1}
 </me>
 in <m>\bbbr^3</m>. Assume that the temperature at a point <m>(x,y,z)</m> of <m>S</m> is
 <me>
@@ -2111,7 +2111,7 @@ So we have the following candidates for the locations of the min and max
 On the sphere we have <m>y^2=36-x^2-z^2</m> and hence
 <m>f= 36 + 6x +xz -x^2-z^2</m> and <m>x^2+z^2\le 36</m>. So it suffices
 to find the max and min of <m>h(x,z)= 36 + 6x +xz -x^2-z^2</m>
-on the disk <m>D=§et{(x,z)}{x^2+z^2\le 36}</m>.
+on the disk <m>D=\Set{(x,z)}{x^2+z^2\le 36}</m>.
 <ul>
 <li>
 If a max or min occurs at an interior point <m>(x,z)</m> of <m>D</m>,

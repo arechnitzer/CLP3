@@ -1416,7 +1416,7 @@ Differentiating <m>(*)</m> with respect to <m>x</m> gives
 \pdiff{z}{x}(x,y) = \frac{y^2 z(x,y)^2}{4z(x,y)^3-2xy^2z(x,y)}
 </mrow>
 </md>
-Similarly, differentiating this equation with respect to <m>x</m> gives
+Similarly, differentiating this equation with respect to <m>y</m> gives
 <md>
 <mrow>
 &amp;4z(x,y)^3\pdiff{z}{y}(x,y) - 2xy\,z(x,y)^2 -2xy^2z(x,y)\pdiff{z}{y}(x,y) +1=0

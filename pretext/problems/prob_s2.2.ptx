@@ -483,7 +483,7 @@ Find  <m>\pdiff{U}{T}</m> and <m>\pdiff{T}{V}</m> at <m>(1, 1, 2, 4)</m> if <m>(
 </p></answer>
 
 <solution><p>
-We are told that the four variables <m>T</m>, <m>U</m>, <m>V</m>, <m>W</m> obey the
+We are told that the four variables <m>T</m>, <m>U</m>, <m>V</m>, <m>W</m> obey
 the single equation <m>(TU-V)^2 \ln(W-UV) = \ln 2</m>. So they are not all
 independent variables. Roughly speaking, we can treat any three of them
 as independent variables and solve the given equation for the fourth

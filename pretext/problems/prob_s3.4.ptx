@@ -517,41 +517,47 @@ is <m>4\pi a^2 = 4 \pi 2^2=16\pi</m>.
 </solution>
 </exercise>
 
-<exercise><title><fromexam>M200 2003A</fromexam></title>
+<exercise>
 <statement><p> 
-Find the area of the cone <m>z^2=x^2+y^2</m> between <m>z=1</m> and <m>z=16</m>.
+Find the area of the part of the cone <m>x^2=3y^2+3z^2</m> between <m>x=\sqrt{3}</m> and <m>x=2\sqrt{3}</m>.
 </p></statement>
 
+<hint><p>
+Rewrite the equation of the cone in the form <m>x=g(y,z)</m>.
+</p></hint>
+
 <answer><p>
-<m>255\sqrt{2}\pi\approx 1132.9</m>
+<m>6\pi\approx 18.85</m>
 </p></answer>
 
 <solution><p>
-On the upper half of the cone
+The equation of the half of the cone with <m>x\ge 0</m> can be rewritten in the form 
+<m>x=g(y,z)</m> with <m>g(y,z)=\sqrt{3}\sqrt{y^2+z^2}</m>. Note that
 <me>
-z=f(x,y)=\sqrt{x^2+y^2}\quad
-f_x(x,y)=\frac{x}{\sqrt{x^2+y^2}}\quad
-f_y(x,y)=\frac{y}{\sqrt{x^2+y^2}}
+g_y(y,z)=\frac{\sqrt{3}y}{\sqrt{y^2+z^2}}\quad
+g_z(y,z)=\frac{\sqrt{3}z}{\sqrt{y^2+z^2}}
 </me>
-so that
+so that, by Theorem <xref ref="thm_surface_area"/>,
 <md>
 <mrow>
-\dee{S}&amp;=\sqrt{1+f_x(x,y)^2+f_y(x,y)^2}\,\dee{x}\,\dee{y}
+\dee{S}&amp;=\sqrt{1+g_y(y,z)^2+g_z(y,z)^2}\,\dee{y}\,\dee{z}
 </mrow><mrow>
-&amp;=\sqrt{1+\frac{x^2}{x^2+y^2}+\frac{y^2}{x^2+y^2}}\,\dee{x}\,\dee{y}
-</mrow><mrow>&amp;=\sqrt{2}\,\dee{x}\,\dee{y}
+&amp;=\sqrt{1+\frac{3y^2}{y^2+z^2}+\frac{3z^2}{y^2+z^2}}\,\dee{y}\,\dee{z}
+</mrow><mrow>
+&amp;=2\,\dee{y}\,\dee{z}
 </mrow>
 </md>
-and
+A point <m>(x,y,z)</m> on <m>x=\sqrt{3}\sqrt{y^2+z^2}</m> has <m>\sqrt{3}\le x\le 2\sqrt{3}</m> if and only if
+<m>1\le\sqrt{y^2+z^2}\le 2</m>. So
 <md>
 <mrow>
-&amp;\text{Area}= \dblInt_{1\le x^2+y^2\le 16^2}\sqrt{2}\,\dee{x}\,\dee{y}
+&amp;\text{Area}= \dblInt_{1\le \sqrt{y^2+z^2}\le 2}2\,\dee{y}\,\dee{z} 
 </mrow><mrow>
-&amp;\hskip0.25in=\sqrt{2}\,\Big[\text{area of }\Set{(x,y)}{x^2+y^2\le 16^2}-
-           \text{area of }\Set{(x,y)}{x^2+y^2\le 1}\Big]
+&amp;\hskip0.25in=2\,\Big[\text{area of }\Set{(y,z)}{\sqrt{y^2+z^2}\le 2}-
+           \text{area of }\Set{(y,z)}{\sqrt{y^2+z^2}\le 1}\Big]
 </mrow><mrow>
-&amp;\hskip0.25in=\sqrt{2}\,\big[\pi 16^2-\pi 1^2\big]
-=255\sqrt{2}\pi\approx 1132.9
+&amp;\hskip0.25in=2\,\big[\pi 2^2-\pi 1^2\big]
+=6\pi\approx 18.85
 </mrow>
 </md>
 </p></solution>

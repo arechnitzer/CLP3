@@ -301,7 +301,7 @@ Review Example<nbsp/><xref ref="eg_nearest_point"/>.
 head is at <m>(-2,3)</m>. <m>\llt 3,-4\rgt</m> is a vector perpendicular to the line,
 so <m>\frac{1}{5}\llt 3,-4\rgt</m> is a unit vector perpendicular to the line.
 The distance from <m>(-2,3)</m> to the line is the length of the projection
-of <m>\llt-2,2\rgt</m> on <m>\frac{1}{5}\llt 3,-4\rgt</m>, which is the magnitude of
+of <m>\llt-2,2\rgt</m> on <m>\frac{1}{5}\llt 3,-4\rgt</m>, which is the absolute value of
 <m>\frac{1}{5}\llt 3,-4\rgt\cdot\llt -2,2\rgt</m>. So the distance is <m>14/5</m>.
 </p></solution>
 </exercise>

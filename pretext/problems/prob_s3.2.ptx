@@ -446,7 +446,8 @@ the vectors <m>\he_r(\theta)</m> and <m>\he_\theta(\theta)</m>. Compute
 components).
 </li>
 <li>
-For each <m>1\le i\le 5</m>, sketch, in the <m>xy</m>-plane, the point <m>(x_i,y_i)</m>
+For each <m>1\le i\le 5</m>, sketch, in the <m>xy</m>-plane, the point 
+<m>(x_i,y_i)= \big(r_i\cos\theta_i\,,\,r_i\sin\theta_i\big)</m>
 and the vectors <m>\he_r(\theta_i)</m> and <m>\he_\theta(\theta_i)</m>. In your
 sketch of the vectors, place the tails of the vectors
 <m>\he_r(\theta_i)</m> and <m>\he_\theta(\theta_i)</m> at <m>(x_i,y_i)</m>.
@@ -1183,8 +1184,8 @@ with vertices <m>(0,0), (1,0)</m> and <m>(1,1)</m>.
 (a) In polar coordinates, the domain of integration,
 <m>x^2+y^2\le a^2</m>, <m>0\le y\le \sqrt{3}x</m>, becomes
 <me>
-r\le a,\ 0\le r\sin\theta\le\sqrt{3}r\cos\theta\qquad\text{ or }\qquad
-r\le a,\ 0\le\theta\le \arctan\sqrt{3}=\frac{\pi}{3}
+0\le r\le a,\ 0\le r\sin\theta\le\sqrt{3}r\cos\theta\quad\text{ or }\quad
+0\le r\le a,\ 0\le\theta\le \arctan\sqrt{3}=\frac{\pi}{3}
 </me>
 The integral is
 <md>
@@ -1263,7 +1264,7 @@ coordinates version of <m>x=1</m>). The integral is
 </p>
 
 <p>(d) In polar coordinates, the domain of integration,
-<m>x^2+y^2\le 1</m>, becomes <m>r\le 1</m>, <m>0\le\theta\le 2\pi</m>. So
+<m>x^2+y^2\le 1</m>, becomes <m>0\le r\le 1</m>, <m>0\le\theta\le 2\pi</m>. So
 <md>
 <mrow>
 \dblInt_{x^2+y^2\le 1}\hskip-5pt \ln(x^2+y^2)\,\dee{x}\,\dee{y}
