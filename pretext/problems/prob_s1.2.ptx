@@ -49,7 +49,7 @@ Let <m>\va=\llt 2,0\rgt </m> and <m>\vb=\llt 1,1\rgt </m>. Evaluate and sketch
 <statement><p>
 Determine whether or not the given points are collinear (that is,
 lie on a common straight line)
-<ol label="a">
+<ol marker="a">
 <li>
  <m>(1,2,3),\ (0,3,7),\ (3,5,11)</m>
 </li>
@@ -72,7 +72,7 @@ must both be parallel to the line, and hence must be parallel to each other
 
 <answer>
 <p>
-<ol label="a">
+<ol marker="a">
   <li>not collinear</li>
   <li>collinear</li>
 </ol>
@@ -90,7 +90,7 @@ must both be parallel to the line, and hence must be parallel to each other
 </sidebyside>
 
 <p>
-<ol label="a">
+<ol marker="a">
   <li>
     <p>
 The vectors <m>\llt 0,3,7\rgt -\llt 1,2,3\rgt =\llt -1,1,4\rgt </m> and <m>\llt 3,5,11\rgt -\llt 1,2,3\rgt =\llt 2,3,8\rgt </m>
@@ -114,7 +114,7 @@ so the three points are on the same line.
 <exercise>
 <statement><p>
 Determine whether the given pair of vectors is perpendicular
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\llt 1,3,2\rgt ,\ \llt 2,-2,2\rgt </m>
 </li>
@@ -132,7 +132,7 @@ Review Theorem <xref ref="thm_dotPppties"/>.
 </p></hint>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
   <li>perpendicular</li>
   <li>perpendicular</li>
   <li>not perpendicular</li>
@@ -164,7 +164,7 @@ says that the vectors of parts (a) and (b) are perpendicular, while the vectors 
 <exercise>
 <statement><p>
 Consider the vector <m>\va=\llt 3,4 \rgt</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find a unit vector in the same direction as <m>\va</m>. 
 </li>
@@ -185,7 +185,7 @@ Review Definition <xref ref="def_parallel_vectors"/> and Theorem <xref ref="thm_
 </p></hint>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
   <li> <m>\frac{1}{5}\llt 3,4 \rgt</m> </li>
   <li> <m>\pm\frac{1}{5}\llt 3,4 \rgt</m> </li>
   <li> <m>\pm \llt 6,8 \rgt</m> </li>
@@ -194,7 +194,7 @@ Review Definition <xref ref="def_parallel_vectors"/> and Theorem <xref ref="thm_
 </p></answer>
 
 <solution><p>
-<ol label="a">
+<ol marker="a">
 <li>
 The vector <m>\va</m> has length
 <me>
@@ -254,7 +254,7 @@ So there are two unit vectors that are perpendicular to <m>\va</m>, namely
 <exercise>
 <statement><p>
 Consider the vector <m>\vb=\llt 3,4,0 \rgt</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find a unit vector in the same direction as <m>\vb</m>.
 </li>
@@ -273,7 +273,7 @@ Review Definition <xref ref="def_parallel_vectors"/> and Theorem <xref ref="thm_
 
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
   <li> <m>\frac{1}{5}\llt 3,4,0 \rgt</m> </li>
   <li> <m>\pm\frac{1}{5}\llt 3,4,0 \rgt</m> </li>
   <li>   A vector is of length one and perpendicular to <m>\vb</m> if and only if it is of the form <m>\llt x,-\frac{3}{4}x,z \rgt</m> with <m>\sqrt{\frac{25}{16}x^2+z^2}=1</m>.
@@ -287,7 +287,7 @@ There are infinitely many such vectors. Four of them are
 </p></answer>
 
 <solution><p>
-<ol label="a">
+<ol marker="a">
 <li>   
 The vector <m>\vb</m> has length
 <me>
@@ -466,7 +466,7 @@ The height of the parallelepiped is <m>|\va| |\cos\theta|</m>. So
 <exercise>
 <statement><p>
 Verify by direct computation that
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\hi\times\hj=\hk</m>, <m>\hj\times\hk=\hi</m>, <m>\hk\times\hi=\hj</m>
 </li>
@@ -631,7 +631,7 @@ be of this form.
 <exercise>
 <statement><p>
 Consider the three points <m>O=(0,0)</m>, <m>A=(a,0)</m> and <m>B=(b,c)</m>.
-<ol label="a">
+<ol marker="a">
 <li><p>
 Sketch, in a single figure,
 <ul>
@@ -924,7 +924,7 @@ and half its length.
 <statement><p>
 Compute the areas of the parallelograms determined by the
 following vectors.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\llt -3,1\rgt,\ \llt 4,3\rgt</m>
 </li>
@@ -939,7 +939,7 @@ Review § <xref ref="sec_GEOparallelogram"/>.
 </p></hint>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
   <li><m>13</m></li>
   <li><m>20</m></li>
 </ol>
@@ -1037,7 +1037,7 @@ form two sides of the paralleogram. So the area of the parallelogram is
 <statement><p>
 Compute the volumes of the parallelepipeds determined by the
 following vectors.
-<ol label="a">
+<ol marker="a">
 <li>
  <m>\llt 4,1,-1\rgt,\ \llt -1,5,2\rgt,\ \llt 1,1,6\rgt</m>
 </li>
@@ -1052,7 +1052,7 @@ Review §<xref ref="sec_GEOparallelogram"/>.
 </p></hint>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
   <li><m>126</m></li>
   <li><m>5</m></li>
 </ol>
@@ -1124,7 +1124,7 @@ By <xref ref="eq_piped_volume"/>, the volume is
 <statement><p>
 Compute the dot product of the vectors <m>\va</m> and <m>\vb</m>.
 Find the angle between them.
-<ol label="a">
+<ol marker="a">
 <li> <m>\va=\llt 1,2\rgt ,\ \vb=\llt -2,3\rgt </m>
 </li>
 <li> <m>\va=\llt -1,1\rgt ,\ \vb=\llt 1,1\rgt </m>
@@ -1204,7 +1204,7 @@ Find the angle between them.
 <exercise>
 <statement><p>
 Determine the angle between the vectors <m>\va</m> and <m>\vb</m> if
-<ol label="a">
+<ol marker="a">
 <li>
    <m>\va=\llt 1,2\rgt,\ \vb=\llt 3,4\rgt</m>
 </li>
@@ -1218,7 +1218,7 @@ Determine the angle between the vectors <m>\va</m> and <m>\vb</m> if
 </p></statement>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
   <li><m>10.3^\circ</m></li>
   <li><m>61.6^\circ</m></li>
   <li><m>82.6^\circ</m></li>
@@ -1257,7 +1257,7 @@ By property 6 of Theorem <xref ref="thm_dotPppties"/>,
 <exercise>
 <statement><p>
 Determine all values of <m>y</m> for which the given vectors are perpendicular.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\llt 2,4\rgt ,\ \llt 2,y\rgt </m>
 </li>
@@ -1271,7 +1271,7 @@ Determine all values of <m>y</m> for which the given vectors are perpendicular.
 </p></statement>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
   <li><m>-1</m></li>
   <li><m>0,4</m></li>
   <li><m>-2,-3</m></li>
@@ -1301,7 +1301,7 @@ Determine all values of <m>y</m> for which the given vectors are perpendicular.
 <exercise>
 <statement><p>
 Let <m>\vu=-2\hi+5\hj</m> and <m>\vv=\al\hi-2\hj</m>. Find <m>\al</m> so that
-<ol label="a">
+<ol marker="a">
 <li>
    <m>\vu\perp\vv</m>
 </li>
@@ -1353,7 +1353,7 @@ Both of these <m>\al</m>'s give <m>\vu\cdot\vv \lt 0</m> so no <m>\al</m> works.
 <exercise>
 <statement><p>
 Define <m>\va=\llt 1,2,3\rgt</m> and <m>\vb=\llt 4,10,6\rgt</m>.
-<ol label="a">
+<ol marker="a">
 <li>
    Find the component of <m>\vb</m> in the direction <m>\va</m>.
 </li>
@@ -1367,7 +1367,7 @@ Define <m>\va=\llt 1,2,3\rgt</m> and <m>\vb=\llt 4,10,6\rgt</m>.
 </p></statement>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
   <li><m>\frac{42}{\sqrt{14}}</m></li>
   <li><m>\llt 3,6,9\rgt</m></li>
   <li><m>\llt 1,4,-3\rgt</m></li>
@@ -1426,7 +1426,7 @@ Compute <m>\llt 1,2,3\rgt\times\llt 4,5,6\rgt</m>.
 <exercise>
 <statement><p>
 Calculate the following cross products.
-<ol label="a">
+<ol marker="a">
 <li> <m>\llt 1,-5,2\rgt \times\llt -2,1,5\rgt </m>
 </li>
 <li> <m>\llt 2,-3,-5\rgt \times\llt 4,-2,7\rgt </m>
@@ -1437,7 +1437,7 @@ Calculate the following cross products.
 </p></statement>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
 <li><m>\llt -27,-9,-9\rgt</m></li>
 <li><m>\llt -31,-34,8\rgt</m></li>
 <li><m>\llt -4,5,-4\rgt</m></li>
@@ -1487,7 +1487,7 @@ Calculate the following cross products.
 <statement><p>
 Let <m>\vp=\llt -1,4,2\rgt ,\ \vq=\llt 3,1,-1\rgt ,\ \vr=\llt 2,-3,-1\rgt </m>.
 Check, by direct computation, that
-<ol label="a">
+<ol marker="a">
 <li> <m>\vp\times\vp=\vZero</m>
 </li>
 <li> <m>\vp\times\vq=-\vq\times\vp</m>
@@ -1732,7 +1732,7 @@ meet at their midpoints.
 Consider a cube such that each side has length <m>s</m>. Name,
 in order, the four vertices on the bottom of the cube <m>A, B, C, D</m> and the
 corresponding four vertices on the top of the cube <m>A', B', C', D'</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Show that all edges of the tetrahedron <m>A'C'BD</m> have the same length.
 </li>
@@ -1743,7 +1743,7 @@ Let <m>E</m> be the center of the cube. Find the angle between <m>EA</m> and <m>
 </p></statement>
 
 <answer><p>
-<ol label="a">
+<ol marker="a">
 <li>All <m>6</m> edges have length <m>\sqrt{2}s</m>.</li>
 <li><m>109.5^\circ</m></li>
 </ol>
@@ -2141,7 +2141,7 @@ B&amp;=(0,3,0)   &amp;  B'&amp;=(4,3,1)
 C&amp;=(0,0,4)   &amp;  C'&amp;=(4,0,5)
 </mrow>
 </md>
-<ol label="a">
+<ol marker="a">
 <li>
   Verify that three of the faces are parallelograms.
   Are they rectangular?

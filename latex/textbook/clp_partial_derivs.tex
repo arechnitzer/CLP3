@@ -2227,7 +2227,7 @@ them so that
 \begin{equation*}
 f(x_1) - f(x_0) = f'(c)\ (x_1-x_0)
 \end{equation*}
-For this proof, we choose $x_0=x(t)$ and $x_1=x(t+h)$. The the mean value theorem tells us that there exists a $c_h$ so that
+For this proof, we choose $x_0=x(t)$ and $x_1=x(t+h)$. The mean value theorem tells us that there exists a $c_h$ so that
 \begin{align*}
 f\big(x(t+h)\big)-f\big(x(t)\big)
 &= f(x_1)-f(x_0)
@@ -3480,7 +3480,7 @@ More generally, for any natural number $n$, the  approximation
 g(t_0+\De t) &\approx g(t_0) +g'(t_0)\,\De t + \tfrac{1}{2} g''(t_0)\,\De t^2
                     +\cdots+ \tfrac{1}{n!} g^{(n)}(t_0)\,\De t^n
 \end{align*}
-is known as the Taylor polynomial of degree $n$. 
+is known as the Taylor polynomial of order $n$. 
 You may have also found a formula for the error introduced in making this 
 approximation. The error $E_n(\De t)$ is defined by
 \begin{align*}
@@ -4126,7 +4126,7 @@ approximation is exactly
        \right|
 \end{align*}
 with
-   $\vr(c) = \big(1-0.002 c\,,\,1+0.0003 c\big)$
+   $\vr(c) = \big(1-0.002 c\,,\,1+0.003 c\big)$
 for some, unknown, $0\le c\le 1$. For our function $f$
 \begin{align*}
 f(x,y)&=\frac{x^3}{y} &
@@ -4136,7 +4136,7 @@ f(x,y)&=\frac{x^3}{y} &
 \frac{\partial^2 f}{\partial x\partial y}(x,y)&=-\frac{3 x^2}{y^2} &
 \frac{\partial^2 f}{\partial y^2}(x,y)&=\frac{2 x^3}{y^3} 
 \end{align*}
-We don't know what $\vr(c)=\big(1-0.002 c\,,\,1+0.0003 c\big)$ is. 
+We don't know what $\vr(c)=\big(1-0.002 c\,,\,1+0.003 c\big)$ is. 
 But we know that $0\le c\le 1$, so we definitely know that the $x$ component
 of $\vr(c)$ is smaller that $1$ and the $y$ component of $\vr(c)$ is bigger
 than $1$. So
@@ -4267,7 +4267,7 @@ We have just found linear and quadratic approximations
 to the function $f(x,y)$, for $(x,y)$ near the point $(x_0,y_0)$.
 In CLP-1, we found not only linear and quadratic approximations,
 but in fact a whole hierarchy of approximations. For each
-integer $n\ge 0$, the $n^\mathrm{th}$ degree Taylor polynomial 
+integer $n\ge 0$, the $n^\mathrm{th}$ order Taylor polynomial 
 for $f(x)$ about $x=a$ was defined, in Definition 3.4.11 of the CLP-1 text,
 to be
 \begin{align*}
@@ -4275,9 +4275,9 @@ to be
 \end{align*}
 
 
-We'll now define, and find, the Taylor polynomial of degree $n$
+We'll now define, and find, the Taylor polynomial of order $n$
 for the function $f(x,y)$ about $(x,y)=(x_0,y_0)$. It is going
-to be a polynomial of degree $n$ in $\De x$ and $\De y$. The most
+to be a polynomial of degree at most $n$ in $\De x$ and $\De y$. The most
 general such polynomial is
 \begin{equation*}
 T_n(\De x,\De y)
@@ -4484,7 +4484,7 @@ and renaming $k-\ell$ to $m$, we get the slightly more compact form
 }
 %
 %
-So the Taylor polynomial of degree $n$ for the function $f(x,y)$ 
+So the Taylor polynomial of order $n$ for the function $f(x,y)$ 
 about $(x,y)=(x_0,y_0)$ is the right hand side of
 \begin{impeqn}\label{eqn Taylor n 2d}
 \begin{align*}
@@ -4497,7 +4497,7 @@ f\big(x_0 + \De x\,,\,y_0+\De y\big)
 \end{impeqn}
 This is for functions, $f(x,y)$, of two variables. There are natural
 extensions of this for functions of any (finite) number of variables.
-For example, the Taylor polynomial of degree $n$ for a function, $f(x,y,z)$,
+For example, the Taylor polynomial of order $n$ for a function, $f(x,y,z)$,
 of three variables is the right hand side of 
 \begin{align*}
 f\big(x_0 + \De x\,,\,y_0+\De y\,,\,z_0+\De z\big)
@@ -5800,12 +5800,12 @@ Then the function $f(x,y)$ must decrease in value as $(x,y)$ moves away from $(a
 the directional derivative of $f$ at $(a,b)$ in direction $\vd$ 
 must be zero or smaller. Writing this in mathematical symbols, we get
 \begin{align*}
-D_\vd f(a,b) = \vnabla f(a,b)\cdot\frac{\vd}{|\vd|}\le 0
+D_{\frac{\vd}{|\vd|}} f(a,b) = \vnabla f(a,b)\cdot\frac{\vd}{|\vd|}\le 0
 \end{align*}
 And the directional derivative of $f$ at $(a,b)$ in the direction $-\vd$ 
 also must be zero or negative.
 \begin{align*}
-D_{-\vd} f(a,b) = \vnabla f(a,b)\cdot\frac{-\vd}{|\vd|}\le 0
+D_{-\frac{\vd}{|\vd|}} f(a,b) = \vnabla f(a,b)\cdot\frac{-\vd}{|\vd|}\le 0
 \quad\text{which implies that}\quad \vnabla f(a,b)\cdot\frac{\vd}{|\vd|}\ge 0
 \end{align*}
 As $\vnabla f(a,b)\cdot\frac{\vd}{|\vd|}$ must be both positive (or zero)
@@ -7370,7 +7370,7 @@ or at $x=1$, where $f=0$.
 \item
  Finally, we look at the part of the boundary with $x=1$. There $f=f(1,y)=y-y^2$.
  As $\tfrac{d\hfill}{dy}(y-y^2)=1-2y$, the only critical point of $y-y^2$
-is at $y=\frac{1}{2}$. So the the max and min of $y-y^2$ for $0\le y\le 1$ 
+is at $y=\frac{1}{2}$. So the max and min of $y-y^2$ for $0\le y\le 1$ 
 must occur
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item
@@ -7695,7 +7695,7 @@ Italians continued to claim that he was an Italian mathematician.
 
 } multipliers''
 that comes to our rescue in these scenarios. Here is the three dimensional
-version of the method. There are obvious analogs is other dimensions.
+version of the method. There are obvious analogs in other dimensions.
 
 \begin{theorem}[Lagrange Multipliers]\label{thm Lagrange}
 Let $f(x,y,z)$ and $g(x,y,z)$  have continuous first partial derivatives in a 
@@ -8290,7 +8290,7 @@ is normal to $g=0$ at $(a,b,c)$, we have
 \begin{equation*}
 \vnabla g(a,b,c) \cdot \vv=0
 \tag{E1}\end{equation*}
-Similarly, since the the curve $g=h=0$ lies inside the surface $h=0$ 
+Similarly, since the curve $g=h=0$ lies inside the surface $h=0$ 
 and $\vnabla h(a,b,c)$ is normal to $h=0$ at $(a,b,c)$, we have
 \begin{equation*}
 \vnabla h(a,b,c) \cdot \vv=0

@@ -13,7 +13,7 @@
 For each of the following, evaluate the given double integral
 <em>without</em> using iteration. Instead, interpret the integral in terms of,
 for example, areas or average values.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\dblInt_D(x+3)\ \dee{x}\,\dee{y}</m>, where <m>D</m> is the half disc
 <m>0\le y\le \sqrt{4-x^2}</m>
@@ -146,7 +146,7 @@ by <m>x^2 + y^2 = 4</m>. The density in <m>R</m> is
 <me>
 \rho(x,y) =\frac{1}{\sqrt{x^2+y^2}}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the region <m>R</m>.
 </li>
@@ -590,7 +590,7 @@ So the average is
 A metal crescent is obtained by removing the interior of the circle defined by
 the equation <m>x^2 + y^2 = x</m> from the metal plate of constant density 1
 occupying the unit disc <m>x^2 + y^2 \le 1</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the total mass of the crescent.
 </li>
@@ -774,7 +774,7 @@ and, as the density is <m>\frac{2}{r}</m>,
 <statement><p>
 Let <m>a</m>, <m>b</m> and <m>c</m> be positive numbers, and let <m>T</m> be
 the triangle whose vertices are <m>(-a,0)</m>, <m>(b,0)</m> and <m>(0,c)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Assuming that the density is constant on <m>T</m>, find the center
 of mass of <m>T</m>.

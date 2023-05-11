@@ -142,7 +142,7 @@ are not equal.
 <exercise>
 <statement><p>
 Find the specified partial derivatives.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>f(x,y) = x^2y^3</m>;
 <m>f_{xx}(x,y)</m>, <m>f_{xyy}(x,y)</m>, <m>f_{yxy}(x,y)</m>
@@ -277,7 +277,7 @@ f_{yy}&amp;=\frac{5x^2}{(x^2+5y^2)^{3/2}}
 <exercise>
 <statement><p>
 Find the specified partial derivatives.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>f(x,y,z) = \arctan\big(e^{\sqrt{xy}}\big)</m>; <m>f_{xyz}(x,y,z)</m>
 </li>
@@ -380,7 +380,7 @@ f_{xx}(1,0,0) = g''(1) = 0
 <statement><p>
  Let <m>f(r,\theta)=r^m\cos m\theta</m> be a function of <m>r</m> and <m>\theta</m>,
 where <m>m</m> is a positive integer.
-<ol label="a">
+<ol marker="a">
 <li>
  Find the second order partial derivatives <m>f_{rr}</m>, <m>f_{r\theta}</m>,
 <m>f_{\theta\theta}</m> and evaluate their respective values at <m>(r,\theta)=(1,0)</m>.

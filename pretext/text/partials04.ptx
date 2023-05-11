@@ -699,7 +699,7 @@ them so that
 <me>
 f(x_1) - f(x_0) = f'(c)\ (x_1-x_0)
 </me>
-For this proof, we choose <m>x_0=x(t)</m> and <m>x_1=x(t+h)</m>. The the mean value theorem tells us that there exists a <m>c_h</m> so that
+For this proof, we choose <m>x_0=x(t)</m> and <m>x_1=x(t+h)</m>. The mean value theorem tells us that there exists a <m>c_h</m> so that
 <md>
 <mrow>
 f\big(x(t+h)\big)-f\big(x(t)\big)

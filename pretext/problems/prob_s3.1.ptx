@@ -13,7 +13,7 @@
 For each of the following, evaluate the given double integral
 <em>without</em> using iteration. Instead, interpret the integral as, for
 example, an area or a volume.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\ds\int_{-1}^3\int_{-4}^1 \dee{y}\,\dee{x}</m>
 </li>
@@ -94,7 +94,7 @@ centre <m>(0,0,0)</m> with <m>x\ge 0</m> and <m>z\ge 0</m>. So
 <exercise>
 <statement><p>
 Let <m>f(x,y)= 12 x^2y^3</m>. Evaluate
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\ds\int_0^3 f(x,y)\,\dee{x}</m>
 </li>
@@ -205,7 +205,7 @@ the integral with respect to <m>y</m> treats <m>x</m> as a constant.
 <statement><p>
 For each of the following, evaluate the given double integral
 <em>using</em> iteration.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\displaystyle\dblInt_R (x^2+y^2)\,\dee{x}\,\dee{y}</m> where <m>R</m> is the rectangle
 <m>0\le x\le a,\ 0\le y\le b</m> where <m>a \gt 0</m> and <m>b \gt 0</m>.
@@ -337,7 +337,7 @@ integrals in this problem.
 <statement><p>
 For each of the following integrals (i) sketch the region of integration,
 (ii) write an equivalent double integral with the order of integration reversed and (iii) evaluate both double integrals.
-<ol label="a">
+<ol marker="a">
 <li>  <m>\displaystyle\int_0^2\dee{x}\int_1^{e^x}\dee{y}</m>
 </li>
 <li>  <m>\displaystyle\int_0^{\sqrt{2}}\dee{y}
@@ -487,7 +487,7 @@ Consider the integral
 <me>
 \int_0^1\int_x^1 e^{x/y}\ \dee{y}\ \dee{x}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the domain of integration.
 </li>
@@ -560,7 +560,7 @@ I =\dblInt_R f(x,y)\ \dee{A}
 </me>
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
  Sketch the region <m>R</m>.
 </li>
@@ -666,7 +666,7 @@ continuous functions f
 </me>
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
  Compute <m>\dblInt_E x\,\dee{A}</m>.
 </li>
@@ -816,7 +816,7 @@ I = \int_0^1 \int_{\sqrt{y}}^1 \frac{\sin(\pi x^2)}{x}\ \dee{x}\,\dee{y}
 </me>
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 Sketch the region of integration.
 </li>
@@ -901,7 +901,7 @@ over the triangle with vertices <m>(0, 0)</m>, <m>(0, 1)</m> and <m>(1, 1)</m>
 in the <m>xy</m>--plane.
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 Write <m>I</m> as an iterated integral in two different ways.
 </li>
@@ -1057,7 +1057,7 @@ Consider the integral
    <m>\displaystyle I=\int_0^1 \int_y^{2-y}\frac{y}{x} \ \dee{x}\,\dee{y}</m>.
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 Sketch the region of integration.
 </li>
@@ -1152,7 +1152,7 @@ For the integral
 <me>
 I = \int_0^1 \int_{\sqrt{x}}^1 \sqrt{1+y^3}\ \dee{y}\,\dee{x}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the region of integration.
 </li>
@@ -1236,7 +1236,7 @@ I &amp;= \int_0^1\dee{y} \int_0^{y^2}\dee{x}\ \sqrt{1+y^3}
 
 <exercise><title><fromexam>M200 2010D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 <m>D</m> is the region bounded by the parabola <m>y^2 = x</m> and the line <m>y = x - 2</m>.
 Sketch <m>D</m> and evaluate <m>J</m> where
@@ -1375,7 +1375,7 @@ Consider the iterated integral
 <me>
 \int_{-4}^0\int_{\sqrt{-y}}^2 \cos(x^3)\,\dee{x}\,\dee{y}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Draw the region of integration.
 </li>
@@ -1452,7 +1452,7 @@ So the integral
 
 <exercise><title><fromexam>M200 2012A</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Combine the sum of the iterated integrals
 <me>
@@ -1538,7 +1538,7 @@ Let
 <me>
 I=\int_0^4\int_{\sqrt{y}}^{\sqrt{8-y}} f(x,y)\,\dee{x}\,\dee{y}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the domain of integration.
 </li>
@@ -1763,7 +1763,7 @@ I = \int_0^2 \int_y^{6-y^2} f(x,y)\ \dee{x}\,\dee{y}
 <statement><p>
 Consider the domain <m>D</m> above the <m>x</m>--axis and below parabola
 <m>y = 1-x^2</m> in the <m>xy</m>--plane.
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch <m>D</m>.
 </li>
@@ -1851,7 +1851,7 @@ So
 <exercise><title><fromexam>M200 2016D</fromexam></title>
 <statement><p>
 Let <m>I=\int_0^1 \int_{x^2}^1 x^3\ \sin(y^3)\ \dee{y}\ \dee{x}</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the region of integration in the <m>xy</m>--plane. Label your
 sketch sufficiently well that one could use it to determine the
@@ -1936,7 +1936,7 @@ I&amp;=\int_0^1\dee{y} \int_0^{\sqrt{y}}\dee{x}\  x^3\ \sin(y^3)
 Consider the solid under the surface <m>z=6-xy</m>, bounded by
 the five planes <m>x=0</m>, <m>x=3</m>, <m>y=0</m>, <m>y=3</m>, <m>z=0</m>. Note that no part of
 the solid lies below the <m>x</m>--<m>y</m> plane.
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the base of the solid in the <m>xy</m>--plane. Note that
 it is <em>not</em> a square!
@@ -2086,7 +2086,7 @@ and the given integral as
 <statement><p>
 Consider the volume above the <m>xy</m>-plane that is inside
 the circular cylinder <m>x^2+y^2=2y</m> and underneath the surface <m>z=8+2xy</m>.
-<ol label="a">
+<ol marker="a">
 <li>
  Express this volume as a double integral <m>I</m>, stating clearly
 the domain over which I is to be taken.
@@ -2174,7 +2174,7 @@ to <m>1+\sqrt{1-x^2}</m>
 </ul>
 so that
 <me>
-D=\Set{(x,y)}{-1\le x\le 1,\ 1-\sqrt{1-x^2}\le x\le 1+\sqrt{1-x^2}}
+D=\Set{(x,y)}{-1\le x\le 1,\ 1-\sqrt{1-x^2}\le y\le 1+\sqrt{1-x^2}}
 </me>
 Thus
 <md>
@@ -2284,7 +2284,7 @@ I=\int_0^1\bigg[\int_{-\sqrt{x}}^{\sqrt{x}} \sin\big(y^3-3y\big)\,\dee{y}\bigg]
 </me>
 is equal to <m>\dblInt_R\sin\big(y^3-3y)\ dA</m> for a suitable region <m>R</m> in
 the <m>xy</m>-plane.
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the region <m>R</m>.
 </li>

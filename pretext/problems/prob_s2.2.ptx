@@ -184,7 +184,7 @@ f(x,y)=\begin{cases}\frac{x^2y}{x^2+y^2}&amp; \text{if } (x,y)\ne (0,0)\\
        \end{cases}
 </me>
 Compute, directly from the definitions,
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\pdiff{f}{x}(0,0)</m>
 </li>
@@ -265,7 +265,7 @@ g(t)=f(t,t)=\begin{cases}
 <statement><p>
 Find all first partial derivatives of the following functions
 and evaluate them at the given point.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>f(x,y,z)=x^3y^4z^5\qquad (0,-1,-1)</m>
 </li>
@@ -392,7 +392,7 @@ x\pdiff{z}{x}(x,y)+y\pdiff{z}{y}(x,y)
 <exercise><title><fromexam>M200 2010A</fromexam></title>
 <statement><p>
 A surface <m>z(x, y)</m> is defined by <m>zy - y + x = \ln(xyz)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Compute <m>\pdiff{z}{x}</m>, <m>\pdiff{z}{y}</m> in terms of <m>x</m>, <m>y</m>, <m>z</m>.
 </li>
@@ -483,7 +483,7 @@ Find  <m>\pdiff{U}{T}</m> and <m>\pdiff{T}{V}</m> at <m>(1, 1, 2, 4)</m> if <m>(
 </p></answer>
 
 <solution><p>
-We are told that the four variables <m>T</m>, <m>U</m>, <m>V</m>, <m>W</m> obey the
+We are told that the four variables <m>T</m>, <m>U</m>, <m>V</m>, <m>W</m> obey
 the single equation <m>(TU-V)^2 \ln(W-UV) = \ln 2</m>. So they are not all
 independent variables. Roughly speaking, we can treat any three of them
 as independent variables and solve the given equation for the fourth
@@ -708,7 +708,7 @@ f(x,y)=\begin{cases}\frac{(x+2y)^2}{x+y}&amp; \text{if } x+y\ne 0 \\
                         0 &amp;\text{if } x+y=0
        \end{cases}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Evaluate, if possible, <m>\pdiff{f}{x}(0,0)</m> and
 <m>\pdiff{f}{y}(0,0)</m>.

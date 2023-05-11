@@ -27,7 +27,7 @@ f_x(x,y,z)&amp;=yz e^{xyz}\qquad &amp;
    f_x(0,1,1)&amp;= 1
 </mrow><mrow>
 f_y(x,y,z)&amp;=xz e^{xyz}\qquad &amp;
-   f_x(0,1,1)&amp;= 0
+   f_y(0,1,1)&amp;= 0
 </mrow><mrow>
 f_z(x,y,z)&amp;=xy e^{xyz}\qquad &amp;
    f_z(0,1,1)&amp;= 0
@@ -79,7 +79,7 @@ In three dimensions, write <m>g(x,y,z) = y^2+\sin(xy)</m>. Then
 <statement><p>
 Find the rate of change of the given function at the given point in
 the given direction.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>f(x,y)=3x-4y</m> at the point <m>(0,2)</m> in the direction <m>-2\hi</m>.
 </li>
@@ -121,7 +121,7 @@ So the specified rate of change is
 <statement><p>
  In what directions at the point <m>(2,0)</m> does the function <m>f(x,y)=xy</m>
 have the specified rates of change?
-<ol label="a">
+<ol marker="a">
 <li>
 <m>-1</m>
 </li>
@@ -286,7 +286,7 @@ So the slope in the eastern direction is
 Assume that the directional derivative of <m>w = f(x,y,z)</m> at a point <m>P</m>
 is a maximum in the direction of the vector <m>2\hi - \hj + \hk</m>, and
 the value of the directional derivative in that direction is <m>3\sqrt{6}</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the gradient vector of <m>w = f(x,y,z)</m> at <m>P</m>.
 </li>
@@ -342,7 +342,7 @@ z = f(x,y) = 6 - xy^2
 </me>
 The positive <m>x</m>-axis points east and the positive <m>y</m>-axis points north,
 and the hiker starts from the point <m>P(2, 1, 4)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 In what direction should the hiker proceed from <m>P</m> to ascend
 along the steepest path? What is the slope of the path?
@@ -450,7 +450,7 @@ As <m>(1,1)</m> must also be on <m>y=ax^b</m>, we need <m>1=a1^b</m>, which forc
 A mosquito is at the location <m>(3, 2, 1)</m> in <m>\bbbr^3</m>.
 She knows that the temperature <m>T</m> near there is given by
 <m>T = 2x^2 + y^2 - z^2</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 She wishes to stay at the same temperature, but must fly in some
 initial direction. Find a direction in which the initial rate of
@@ -518,7 +518,7 @@ The air temperature <m>T(x,y,z)</m> at a location <m>(x,y,z)</m> is given by:
 <me>
 T(x,y,z) = 1 + x^2 + yz.
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 A bird passes through <m>(2,1,3)</m> travelling towards <m>(4,3,4)</m> with speed <m>2</m>.
 At what rate does the air temperature it experiences change at this instant?
@@ -588,7 +588,7 @@ and the direction of travel has to be a nonzero constant times
 Let <m>f(x,y) = 2x^2 + 3xy + y^2</m> be a function of <m>x</m> and <m>y</m>.
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 Find the maximum rate of change of <m>f(x,y)</m> at the point
 <m>P\left(1, -\frac{4}{3}\right)</m>.
@@ -703,7 +703,7 @@ passes through the point <m>(1, 1)</m> is
 <statement><p>
 Suppose the function <m>T=F(x,y,z)=3+xy-y^2+z^2-x</m> describes the temperature at
 a point <m>(x,y,z)</m> in space, with <m>F(3,2,1)=3</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the directional derivative of <m>T</m> at <m>(3, 2, 1)</m>, in the direction of the
 point <m>(0,1,2)</m>.
@@ -812,7 +812,7 @@ f(x, y, z) &amp;= (2x + y)e^{-(x^2 +y^2 +z^2)}
 g(x, y, z) &amp;= xz + y^2 + yz + z^2
 </mrow>
 </md>
-<ol label="a">
+<ol marker="a">
 <li>
 Find the gradients of <m>f</m> and <m>g</m> at <m>(0,1,-1)</m>.
 </li>
@@ -913,7 +913,7 @@ positive constant times <m>\llt -1 \,,\, 0 \,,\, 1 \rgt</m> is fine.
 A bee is flying along the curve of intersection of the surfaces <m>3z + x^2 + y^2 = 2</m> and
 <m>z = x^2 - y^2</m> in the direction for which <m>z</m> is increasing. At time <m>t = 2</m>, the bee passes
 through the point <m>(1, 1, 0)</m> at speed <m>6</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the velocity (vector) of the bee at time <m>t = 2</m>.
 </li>
@@ -1050,7 +1050,7 @@ Also recalling that, at time <m>t=2</m>, the bee is at <m>(1,1,0)</m> and has ve
 The temperature at a point <m>(x, y, z)</m> is given by
 <m>T(x, y, z) = 5e^{-2x^2-y^2-3z^2}</m>,
 where <m>T</m> is measured in centigrade and <m>x</m>, <m>y</m>, <m>z</m> in meters.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the rate of change of temperature at the point <m>P(1, 2, -1)</m> in the
 direction toward the point <m>(1, 1, 0)</m>.
@@ -1194,7 +1194,7 @@ are <m>\pm\frac{1}{\sqrt{5}}\llt 2, -1\rgt</m>.
 The shape of a hill is given by <m>z = 1000 - 0.02x^2 - 0.01y^2</m>.
 Assume that the <m>x</m>-axis is pointing East, and the <m>y</m>-axis
 is pointing North, and all distances are in metres.
-<ol label="a">
+<ol marker="a">
 <li>
 What is the direction of the steepest ascent at the point <m>(0, 100, 900)</m>?
 (The answer should be in terms of directions of the compass).
@@ -1286,7 +1286,7 @@ Let the pressure <m>P</m> and temperature <m>T</m> at a point <m>(x, y, z)</m> b
 P(x,y,z) = \frac{x^2+2y^2}{1+z^2},\qquad
 T(x,y,z) = 5 + xy - z^2
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 If the position of an airplane at time <m>t</m> is
 <me>
@@ -1522,7 +1522,7 @@ Adding (E1) and (E2) gives <m>H=-4\sqrt{3}</m> and substituting
 <statement><p>
 The elevation of a hill is given by the equation
 <m>f(x,y)=x^2y^2e^{-x-y}</m>. An ant sits at the point <m>(1,1,e^{-2})</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the unit vector <m>\vu=\llt u_1,u_2\rgt</m> that maximizes
 <me>
@@ -1597,7 +1597,7 @@ of this vector is also a correct answer.
 <statement><p>
 Let the temperature in a region of space be given by
 <m>T(x,y,z)=3x^2+\half y^2+2z^2</m> degrees.
-<ol label="a">
+<ol marker="a">
 <li>
 A sparrow is flying along the curve <m>\vr(s)=\big(\frac{1}{3}s^3,2s,s^2\big)</m>
 at a constant speed of <m>3{\rm ms}^{-1}</m>. What is the velocity of the sparrow
@@ -1694,7 +1694,7 @@ where the coordinates are given in meters and the temperature is in degrees
 Celsius. Suppose that at some moment in time, a moth is at the point <m>(3,4,0)</m>
 and is flying at a constant speed of <m>1 {\rm m/s}</m> in the direction of maximum
 increase of temperature.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the velocity vector <m>\vv</m> of the moth at this moment.
 </li>
@@ -1743,7 +1743,7 @@ is a constant <m>k</m> so that <m>u=k/v</m>. Suppose that the temperature <m>T</
 a metal ball is inversely proportional to the distance from the centre
 of the ball, which we take to be the origin. The temperature at the point
 <m>(1,2,2)</m> is <m>120^\circ</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Find the constant of proportionality.
 </li>
@@ -1808,7 +1808,7 @@ and indeed <m>T(x,y,z)</m>, is not defined.
 <statement><p>
 The depth of a lake in the <m>xy</m>-plane is equal to
    <m>f(x, y) = 32-x^2-4x-4y^2</m> meters.
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the shoreline of the lake in the <m>xy</m>-plane.
 </li>
@@ -1816,7 +1816,7 @@ Sketch the shoreline of the lake in the <m>xy</m>-plane.
 Your calculus instructor is in the water at the point <m>(-1, 1)</m>.
 Find a unit vector which indicates in which direction he should swim
 in order to:
-<ol label="a">
+<ol marker="a">
 <li>[(b)]
 stay at a constant depth?
 </li>
@@ -1867,7 +1867,7 @@ of the depth gradient, which is <m>-\frac{1}{\sqrt{17}}\llt 1,4\rgt</m>.
 <statement><p>
 The temperature <m>T(x,y)</m> at points of the <m>xy</m>-plane is given by
 <m>T(x,y)=x^2-2y^2</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Draw a contour diagram for <m>T</m> showing some isotherms (curves
 of constant temperature).
@@ -1986,7 +1986,7 @@ To pass through <m>(2,-1)</m>, we need <m>C'=-4</m>, so <m>y=-\frac{4}{x^2}</m>.
 Consider the function <m>f(x,y,z) = x^2 + \cos(yz)</m>.
 </p>
 
-<p><ol label="a">
+<p><ol marker="a">
 <li>
 Give the direction in which <m>f</m> is increasing the fastest at the point
 <m>(1, 0, \pi/2)</m>.
@@ -2077,7 +2077,7 @@ which obeys
 <statement><p>
 A function <m>T(x,y,z)</m> at <m>P = (2,1,1)</m> is known to have
 <m>T(P) = 5</m>, <m>T_x (P) = 1</m>, <m>T_y(P) = 2</m>, and <m>T_z(P) = 3</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 A bee starts flying at <m>P</m> and flies along the unit vector pointing
 towards the point <m>Q = (3,2,2)</m>. What is the rate of change of
@@ -2160,7 +2160,7 @@ So the desired unit vectors are <m>\pm\frac{\llt 1,1,-1\rgt}{\sqrt{3}}</m>.
 <statement><p>
 Consider the functions <m>F(x,y,z) = z^3 +xy^2 +xz</m> and <m>G(x,y,z)=3x-y+4z</m>.
 You are standing at the point <m>P(0,1,2)</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 You jump from <m>P</m> to <m>Q(0.1\,,\,0.9\,,\,1.8)</m>. Use the linear approximation
 to determine approximately the amount by which <m>F</m> changes.
@@ -2275,7 +2275,7 @@ z=f(x,y)=-\frac{100}{x^2+2x+4y^2+11}
 </me>
 of the resulting crater is made and a plan is drawn up to convert the site into
 a tourist attraction. A car park is to be built at  <m>(4,5)</m> and a hiking trail is to be made. The trail is to start at the car park and take the steepest route to the bottom of the crater.
-<ol label="a">
+<ol marker="a">
 <li>
   Sketch a map of the proposed site clearly marking the car park,
 a few level curves for the function <m>f</m>  and the trail.
@@ -2334,7 +2334,7 @@ h(x,y)=100 e^{-(x^2+2y^2)}
 where <m>x</m> represents the number of meters east of the palm tree (west if
 <m>x</m> is negative) and <m>y</m> represents the number of meters north of the palm
 tree (south if <m>y</m> is negative).
-<ol label="a">
+<ol marker="a">
 <li>
 Suppose that you walk <m>3</m> meters east and 2 meters north.
 At your new location, <m>(3,2)</m>, in what direction is the sand dune sloping
@@ -2413,7 +2413,7 @@ Let <m>f(x,y)</m> be a differentiable function with <m>f(1,2)=7</m>. Let
 </me>
 be unit vectors. Suppose it is known that the directional derivatives
 <m>D_\vu f(1,2)</m> and <m>D_\vv f(1,2)</m> are equal to <m>10</m> and <m>2</m> respectively.
-<ol label="a">
+<ol marker="a">
 <li>
 Show that the gradient vector <m>\vnabla f</m> at <m>(1,2)</m> is <m>10\hi+5\hj</m>.
 </li>

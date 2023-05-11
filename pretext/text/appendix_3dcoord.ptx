@@ -50,7 +50,7 @@ three cylindrical coordinates
 <mrow>
 r&amp;=\text{ distance from }(0,0,0)\text{ to }(x,y,0)
 </mrow><mrow>
-\theta&amp;=\text{ angle between the the $x$ axis and the line joining $(x,y,0)$ to $(0,0,0)$}
+\theta&amp;=\text{ angle between the $x$ axis and the line joining $(x,y,0)$ to $(0,0,0)$}
 </mrow><mrow>
 z&amp;=\text{ signed distance from }(x,y,z)
 \text{ to the $xy$-plane}

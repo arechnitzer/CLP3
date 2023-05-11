@@ -36,10 +36,9 @@ public class OE10D_1 extends Template {
          double r = 0.1 ;
          fEnv("lineWidth", 0.5) ;
          fLine(xmin, 0, xmax, 0) ;
-         fLine(0, 0, 0, ymax) ;
-         fLine(0, ymin, 0, -0.4) ;
-         fTeXlabel(xmax, -0.1, "tr", "$x$") ;
-         fTeXlabel(-0.1, ymax, "tr", "$y$") ;
+         fLine(0, ymin, 0, ymax) ;
+         fTeXlabel(xmax, -0.07, "tr", "$x$") ;
+         fTeXlabel(-0.05, ymax, "tr", "$y$") ;
          String Red = "0 1 1 0 setcmykcolor  " ;
          String Blue = "1 1 0 0 setcmykcolor  " ;
          String Black = "0 0 0 1 setcmykcolor  " ;
@@ -49,7 +48,7 @@ public class OE10D_1 extends Template {
            double C ;
            canvas.append( new fPsWrite(Red+"\n")) ;
            fEnv("lineWidth", 1.0) ;
-           C = 0; fLine(0, ymin, 0,ymax) ;
+           C = 0; fLine(xmin, 0, xmax, 0) ;
                   fTeXlabel(-1.3, 0.04 , "bl", "${\\scriptstyle f=0}$") ;
 
            C = 1; fDisk(0,1/C, 1/Math.abs(C),1/Math.abs(C), CLOSED) ;

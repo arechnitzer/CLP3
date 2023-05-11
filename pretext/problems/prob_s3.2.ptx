@@ -113,7 +113,7 @@ find <em>all</em> pairs <m>(r_i,\theta_i)</m> such that
   <m>(x_i,y_i) = \big(r_i\cos\theta_i\,,\,r_i\sin\theta_i\big)</m>
 </li>
 </ul>
-<ol label="a">
+<ol marker="a">
 <li>
 <m>
 (x_1,y_1)=(-2,0) 
@@ -437,7 +437,7 @@ Also define, for each angle <m>\theta</m>, the vectors
 \he_\theta(\theta) = -\sin\theta\ \hi + \cos\theta\ \hj
 </mrow>
 </md>
-<ol label="a">
+<ol marker="a">
 <li>
 Determine, for each angle <m>\theta</m>, the lengths of the vectors
 <m>\he_r(\theta)</m> and <m>\he_\theta(\theta)</m> and the angle between
@@ -446,7 +446,8 @@ the vectors <m>\he_r(\theta)</m> and <m>\he_\theta(\theta)</m>. Compute
 components).
 </li>
 <li>
-For each <m>1\le i\le 5</m>, sketch, in the <m>xy</m>-plane, the point <m>(x_i,y_i)</m>
+For each <m>1\le i\le 5</m>, sketch, in the <m>xy</m>-plane, the point 
+<m>(x_i,y_i)= \big(r_i\cos\theta_i\,,\,r_i\sin\theta_i\big)</m>
 and the vectors <m>\he_r(\theta_i)</m> and <m>\he_\theta(\theta_i)</m>. In your
 sketch of the vectors, place the tails of the vectors
 <m>\he_r(\theta_i)</m> and <m>\he_\theta(\theta_i)</m> at <m>(x_i,y_i)</m>.
@@ -546,7 +547,7 @@ and here is a sketch (to a different scale) of <m>(x_i,y_i)</m>, <m>\he_r(\theta
 <statement><p>
 Let <m>\llt a, b\rgt</m> be a vector. Let <m>r</m> be the length of <m>\llt a, b\rgt</m>
 and <m>\theta</m> be the angle between <m>\llt a, b\rgt</m> and the <m>x</m>-axis.
-<ol label="a">
+<ol marker="a">
 <li>
 Express <m>a</m> and <m>b</m> in terms of <m>r</m> and <m>\theta</m>.
 </li>
@@ -984,7 +985,7 @@ So
 <statement><p>
 Sketch the domain of integration in the <m>xy</m>-plane for each of the
 following polar coordinate integrals.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\displaystyle
       \int_1^2\dee{r}
@@ -1152,7 +1153,7 @@ and <m>D</m> is the shaded region in the lower sketch.
 <exercise>
 <statement><p>
 Use polar coordinates to evaluate each of the following integrals.
-<ol label="a">
+<ol marker="a">
 <li>
 <m>\displaystyle\dblInt_S (x+y)\dee{x}\,\dee{y}</m> where <m>S</m> is the region
 in the first quadrant lying inside the disc <m>x^2+y^2\le a^2</m> and under
@@ -1183,8 +1184,8 @@ with vertices <m>(0,0), (1,0)</m> and <m>(1,1)</m>.
 (a) In polar coordinates, the domain of integration,
 <m>x^2+y^2\le a^2</m>, <m>0\le y\le \sqrt{3}x</m>, becomes
 <me>
-r\le a,\ 0\le r\sin\theta\le\sqrt{3}r\cos\theta\qquad\text{ or }\qquad
-r\le a,\ 0\le\theta\le \arctan\sqrt{3}=\frac{\pi}{3}
+0\le r\le a,\ 0\le r\sin\theta\le\sqrt{3}r\cos\theta\quad\text{ or }\quad
+0\le r\le a,\ 0\le\theta\le \arctan\sqrt{3}=\frac{\pi}{3}
 </me>
 The integral is
 <md>
@@ -1263,7 +1264,7 @@ coordinates version of <m>x=1</m>). The integral is
 </p>
 
 <p>(d) In polar coordinates, the domain of integration,
-<m>x^2+y^2\le 1</m>, becomes <m>r\le 1</m>, <m>0\le\theta\le 2\pi</m>. So
+<m>x^2+y^2\le 1</m>, becomes <m>0\le r\le 1</m>, <m>0\le\theta\le 2\pi</m>. So
 <md>
 <mrow>
 \dblInt_{x^2+y^2\le 1}\hskip-5pt \ln(x^2+y^2)\,\dee{x}\,\dee{y}
@@ -1446,7 +1447,7 @@ to <m>y\ge 0</m>, <m>z\ge 0</m> and multiply by 4. The volume is
 <statement><p>
 Consider  the region <m>E</m> in 3--dimensions specified by the inequalities
 <m>x^2 + y^2 \le 2y</m> and <m>0 \le z \le \sqrt{x^2 + y^2}</m>.
-<ol label="a">
+<ol marker="a">
 <li>
   Draw a reasonably accurate picture of <m>E</m> in 3--dimensions.
 Be sure to show the units on the coordinate axes.
@@ -1640,7 +1641,7 @@ is, in polar coordinates,
 
 <exercise><title><fromexam>M200 2006D</fromexam></title>
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the region <m>\cL</m> (in the first quadrant of the <m>xy</m>--plane)
 with boundary curves
@@ -1842,7 +1843,7 @@ This question is about the integral
 \int_0^1 \int_{\sqrt{3}y}^{\sqrt{4-y^2}} \ln\big(1+x^2+y^2)\
                          \dee{x}\,\dee{y}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the domain of integration.
 </li>
@@ -1972,7 +1973,7 @@ and, as <m>\dee{A} = r\,\dee{r}\,\dee{\theta}</m>, the specified integral is
 <statement><p>
 In the <m>xy</m>--plane, the disk <m>x^2 + y^2 \le 2x</m> is cut into <m>2</m> pieces
 by the line <m>y = x</m>. Let <m>D</m> be the larger piece.
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch <m>D</m> including an accurate description of the center and radius
 of the given disk. Then describe <m>D</m> in polar coordinates <m>(r, \theta)</m>.
@@ -2124,7 +2125,7 @@ x^2 + y^2 \le 1
 y \le 2x
 </mrow>
 </md>
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the region <m>G</m>.
 </li>
@@ -2300,7 +2301,7 @@ Consider
 J = \int_0^{\sqrt{2}}  \int_y^{\sqrt{4-y^2}}  \frac{y}{x}  e^{x^2+y^2}\
                                             \dee{x}\,\dee{y}
 </me>
-<ol label="a">
+<ol marker="a">
 <li>
 Sketch the region of integration.
 </li>
@@ -2525,7 +2526,7 @@ be about 3.5'' above the bottom.
 <exercise><title><fromexam>M200 2003A</fromexam></title>
 <statement><p>
 Consider the surface <m>S</m> given by <m>z=e^{x^2+y^2}</m>.
-<ol label="a">
+<ol marker="a">
 <li>
 Compute the volume under <m>S</m> and above the disk <m>x^2+y^2\le 9</m>
 in the <m>xy</m>-plane.

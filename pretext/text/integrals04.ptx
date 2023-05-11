@@ -212,7 +212,7 @@ Consequently, we have
 
 <theorem xml:id="thm_surface_area">
 <statement><p>
-<ol label="a">
+<ol marker="a">
 <li>
 The area of the part of the surface <m>z=f(x,y)</m> with <m>(x,y)</m> running over the
 region <m>\cD</m> in the <m>xy</m>-plane is
