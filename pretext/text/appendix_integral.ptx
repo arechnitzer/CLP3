@@ -119,7 +119,7 @@ and <m>C</m> is an arbitrary constant.
 <m>\frac{1}{a^2+x^2}</m> </cell><cell> <m>\frac{1}{a}\arctan \frac{x}{a}+C</m> </cell>
 </row><row>
 <cell>
-<m>\frac{1}{x\sqrt{x^2-1}}</m> </cell><cell> <m>\arcsec x+C</m> \quad(<m>x \gt 1</m>)</cell>
+<m>\frac{1}{x\sqrt{x^2-1}}</m> </cell><cell> <m>\arcsec x+C\hbox{ for }x \gt 1</m></cell>
 </row>
 </tabular>
 </sidebyside>
