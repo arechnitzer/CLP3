@@ -12,7 +12,7 @@
 <statement><p>
 <ol marker="a">
 <li><p>
-Some level curves of a function <m>f(x,y)</m> are plotted in the <m>xy</m>--plane
+Some level curves of a function <m>f(x,y)</m> are plotted in the <m>xy</m><ndash/>plane
 below.
 </p>
 
@@ -23,26 +23,25 @@ below.
 <p>
 For each of the four statements below, circle the letters of
 <alert>all</alert> points in the diagram where the situation applies.
-For example, if the statement were <q>These points are on the <m>y</m>--axis</q>, you would circle both <m>P</m> and <m>U</m>, but none of the other letters.
+For example, if the statement were <q>These points are on the <m>y</m><ndash/>axis</q>, you would circle both <m>P</m> and <m>U</m>, but none of the other letters.
 You may assume that a local maximum occurs at point <m>T</m>.
 <md>
 <mrow>
-\text{(i) }&amp; \vnabla f\text{ is zero} &amp; &amp;\text{P R S T U}
+\text{(i) }&amp; \vnabla f\text{ is zero} &amp; &amp;\text{P Q R S T U}
 </mrow><mrow>
-\text{(ii) }&amp; f \text{ has a saddle point} &amp; &amp;\text{P R S T U}
+\text{(ii) }&amp; f \text{ has a saddle point} &amp; &amp;\text{P Q R S T U}
 </mrow><mrow>
-\text{(iii) }&amp; \text{ the partial derivative $f_y$ is positive} &amp; &amp;\text{P R S T U}
+\text{(iii) }&amp; \text{ the partial derivative $f_y$ is positive} &amp; &amp;\text{P Q R S T U}
 </mrow><mrow>
-\text{(iv) }&amp; \text{ the directional derivative of $f$ in the
-                 direction $\llt 0,-1\rgt$ is} &amp; &amp;\text{P R S T U}
+\text{(iv) }&amp; \text{ the directional derivative of $f$ in the} &amp; &amp;\text{P Q R S T U}
 </mrow><mrow>
-          &amp; \text{ negative} &amp; &amp;
+          &amp; \text{ direction $\llt 0,-1\rgt$ is negative} &amp; &amp;
 </mrow>
 </md>
 </p></li>
 <li><p>
 The diagram below shows three <q><m>y</m> traces</q> of a graph <m>z=F(x,y)</m> plotted
-on <m>xz</m>--axes. (Namely the intersections of the surface  <m>z=F(x,y)</m> with the
+on <m>xz</m><ndash/>axes. (Namely the intersections of the surface  <m>z=F(x,y)</m> with the
 three planes (<m>y=1.9</m>, <m>y=2</m>, <m>y=2.1</m>). For each statement below, circle the
 correct word.
 <md>
@@ -230,7 +229,7 @@ The second condition is to ensure that <m>x_0</m> lies on the line.
 Let <m>z = f(x,y) = {(y^2 - x^2)}^2</m>.
 <ol marker="a">
 <li>
-Make a reasonably accurate sketch of the level curves in the <m>xy</m>--plane
+Make a reasonably accurate sketch of the level curves in the <m>xy</m><ndash/>plane
 of <m>z = f(x,y)</m> for <m>z = 0</m>, <m>1</m> and <m>16</m>. Be sure to show the units
 on the coordinate axes.
 </li>
