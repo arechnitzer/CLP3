@@ -94,7 +94,7 @@ Here are some examples.
   surface if and only if the point <m>(-x,y,z)</m> is on the surface. So the surface
   is invariant under reflection in the <m>yz</m>-plane. Similarly, the equation
   <m>4x^2+y^2-z^2=1</m> does not change when <m>y</m> is replaced by <m>-y</m> or <m>z</m> is
-  replaced by <m>-z</m>. Our surface is also invariant reflection in the <m>xz</m>-
+  replaced by <m>-z</m>. Our surface is also invariant under reflection in the <m>xz</m>-
   and <m>xy</m>-planes. Once we have the part in the first octant, the remaining
   octants can be gotten simply by reflecting about the coordinate planes.
   </p>
