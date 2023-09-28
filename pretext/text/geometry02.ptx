@@ -1490,7 +1490,7 @@ The vectors <m>\va\times\vb</m> and <m>\vb\times\va</m> are not the same! In fac
 
 </li><li>
 The vector <m>\va\times\vb</m> has dot product zero with both <m>\va</m> and <m>\vb</m>.
-So the vector  <m>\va\times\vb</m> is prependicular to both <m>\va</m> and <m>\vb</m>. 
+So the vector  <m>\va\times\vb</m> is perpendicular to both <m>\va</m> and <m>\vb</m>. 
 We shall see in Theorem <xref ref="thm_crossPppties"/> below that this was also not a fluke.
 </li>
 </ul>
