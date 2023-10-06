@@ -510,7 +510,7 @@ the value <m>C</m>.
 <p>
   Let <m>F(x,y,z)=x^2+z^2</m> and <m>C \gt 0</m>. Consider the level surface
   <m>x^2+z^2=C</m>.  The variable <m>y</m> does not appear in this equation.
-  So for any fixed <m>y_0</m>, the intersection of the our surface
+  So for any fixed <m>y_0</m>, the intersection of our surface
   <m>x^2+z^2=C</m> with the plane <m>y=y_0</m> is the circle of radius <m>\sqrt{C}</m>
   centred on <m>x=z=0</m>. Here is a sketch of the first quadrant part of
   one such circle.
