@@ -264,7 +264,7 @@ we can also easily find
 <mrow>
 \pdiff{f}{x}(1,1) &amp;= 3\frac{1^2}{1}=3
 </mrow><mrow>
-\pdiff{f}{y}(1,1) &amp;= 1\frac{1^3}{1^2}=-1
+\pdiff{f}{y}(1,1) &amp;= -1\frac{1^3}{1^2}=-1
 </mrow>
 </md>
 So, setting <m>\De x=-0.002</m> and <m>\De y=0.003</m>, we have
