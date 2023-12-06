@@ -400,7 +400,7 @@ parabola <m>z=1-y^2</m> stacked front to back. The top figure below
 provides a sketch of <m>z=1-y^2</m>.
 </li>
 <li>
-The surface <m>x = 2-y-z</m>, or equivalenty, <m>x+y+z=2</m> is a plane.
+The surface <m>x = 2-y-z</m>, or equivalently, <m>x+y+z=2</m> is a plane.
 It passes through the points  <m>(2,0,0)</m>, <m>(0,2,0)</m> and <m>(0,0,2)</m>.
 It is sketched in the bottom figure below. We know that our
 domain of integration extends to <m>y=-1</m>, so we have chosen to include
