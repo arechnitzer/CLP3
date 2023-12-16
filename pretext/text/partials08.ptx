@@ -41,8 +41,8 @@ Most people use PDEs as the plural. But some people use PDE as its own plural.</
 </sidebyside>
 
 <p>
-We are just going to scratch the surface of the study of partial of differential equations. Many of you will take a separate course on the subject. Some very important PDEs are very hard. One of the 
-millon U.S. dollar prizes<fn>See <url href="https://www.claymath.org/millennium-problems"/> or
+We are just going to scratch the surface of the study of partial differential equations. Many of you will take a separate course on the subject. Some very important PDEs are very hard. One of the 
+million U.S. dollar prizes<fn>See <url href="https://www.claymath.org/millennium-problems"/> or
 <url href="https://en.wikipedia.org/wiki/Millennium_Prize_Problems"/></fn> announced in 2000 
 by the Clay Institute concerns the Navier-Stokes equations. On the other hand, 
 we already know enough to accomplish some PDE tasks. In particular, we can check if a given function really does satisfy a given PDE. Here are some examples.

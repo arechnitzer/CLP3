@@ -3591,29 +3591,47 @@ f\big(x_0+\De x\,,\,y_0+\De y\big)
 
 \end{eg}
 
-\begin{notn}\label{notn approx}
-People often write $\De f$ for the change 
-$f\big(x_0+\De x\,,\,y_0+\De y\big)
-  - f\big(x_0\,,\,y_0\big)$ in the value of $f$. 
-Then the linear approximation \eqref{eqn lin approx 2d} becomes
+We now formalise the above terminology and notation, and add some new terminology and notation
+(for functions of two variables --- the variants for functions of three or more variables are obvious).
+
+\begin{defn}\label{def_differential}
+\begin{enumerate}[(a)]
+\item 
+The linear approximation to the function $f(x,y)$ at the point $(x_0,y_0)$
+is  
+\begin{equation*}
+f(x_0,y_0)
+       + \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,(x-x_0)
+       + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,(y-y_0)
+\end{equation*}
+People often write $\De f$ for the change, 
+$f\big(x_0+\De x\,,\,y_0+\De y\big) - f\big(x_0\,,\,y_0\big)$, 
+in the value of $f$, 
+$\De x=x-x_0$ for the change in the value of $x$, and 
+$\De y=y-y_0$  for the change in the value of $y$.
+In this notation, the linear approximation gives
 \begin{align*}
 \De f
 &\approx  \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\De x
        + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\De y
 \end{align*}
-If they want to emphasize that that $\De x$, $\De y$ and $\De f$
-are really small (they may even say ``infinitesimal''), they'll
-write\footnote{Don't take the notation $\dee{x}$ or the terminology
-``infinitesimal'' too seriously. It is just intended to signal ``very small''.} $\dee{x}$, $\dee{y}$ and $\dee{f}$ instead. In this notation
+
+\item
+If they want to emphasize that $\De x$ and $\De y$
+are really small (they may even say\footnote{Don't take the terminology ``infinitesimal'' too seriously. It is just intended to signal ``very small''.}  ``infinitesimal''), they'll write $\dee{x}$, $\dee{y}$ instead and define
 \begin{align*}
 \dee{f}
-&\approx  \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\dee{x}
+&=  \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\dee{x}
        + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\dee{y}
 \end{align*}
+That is, $\dee{f}$ is the change of the value of the linear approximation to 
+$f$  when $x$ is changed by $\dee{x}$ and $y$ is changed by $\dee{y}$. It approximates the corresponding change  $f\big(x_0+\dee{x}\,,\,y_0+\dee{y}\big) - f\big(x_0\,,\,y_0\big)$ in the value of $f$.
 People sometimes call $\dee{x}$, $\dee{y}$ and $\dee{f}$ ``differentials'' and
 sometimes $\dee{f}$ is called the ``total differential of $f$'' to indicate that
 it includes the impact of small changes in both $x$ and $y$.
-\end{notn}
+\end{enumerate}
+\end{defn}
+
 
 \begin{defn}\label{def error}
 Suppose that we wish to approximate a quantity $Q$ and that the
@@ -5158,8 +5176,8 @@ Most people use PDEs as the plural. But some people use PDE as its own plural.} 
 \end{center}
 
 
-We are just going to scratch the surface of the study of partial of differential equations. Many of you will take a separate course on the subject. Some very important PDEs are very hard. One of the 
-millon U.S. dollar prizes\footnote{See \url{https://www.claymath.org/millennium-problems} or
+We are just going to scratch the surface of the study of partial differential equations. Many of you will take a separate course on the subject. Some very important PDEs are very hard. One of the 
+million U.S. dollar prizes\footnote{See \url{https://www.claymath.org/millennium-problems} or
 \url{https://en.wikipedia.org/wiki/Millennium_Prize_Problems}} announced in 2000 
 by the Clay Institute concerns the Navier-Stokes equations. On the other hand, 
 we already know enough to accomplish some PDE tasks. In particular, we can check if a given function really does satisfy a given PDE. Here are some examples.
