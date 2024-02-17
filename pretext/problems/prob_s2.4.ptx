@@ -153,7 +153,7 @@ course <m>1</m>. So
 <md>
 <mrow>
 \pdiff{h}{x}=\pdiff{f}{x}
-             +\pdiff{f}{u}\diff{u}{x}
+             +\pdiff{f}{u}\pdiff{u}{x}
 </mrow>
 </md>
 Finally we put in the only functional depedence that makes sense.
