@@ -382,7 +382,7 @@ Velocity is a vector-valued quantity, so it has both a magnitude and a direction
 
 <exercise><title><fromexam>M317 2005D</fromexam></title>
 <statement><p>
-Let <m>\vr(t)</m> be a vector valued function. Let <m>\vr'</m>, <m>\vr''</m> , and <m>\vr'''</m>
+Let <m>\vr(t)</m> be a vector-valued function. Let <m>\vr'</m>, <m>\vr''</m> , and <m>\vr'''</m>
 denote <m>\diff{\vr}{t}</m>, <m>\difftwo{\vr}{t}</m> and
 <m>\frac{\mathrm{d}^3\vr}{\mathrm{d}{t}^3}</m>, respectively.
 Express
