@@ -191,11 +191,11 @@ then
 <p>Limits of multivariable functions have much the same
 computational properties as limits of functions of one variable.
 The following theorem summarizes a bunch of them. For simplicity,
-it concerns primarily real valued functions. That is, functions that output
+it concerns primarily real-valued functions. That is, functions that output
 real numbers as opposed to vectors. However it does contain one
-vector valued function. The function <m>\vX</m> in the theorem takes as input
+vector-valued function. The function <m>\vX</m> in the theorem takes as input
 an <m>n</m>-component vector and returns an <m>m</m>-component vector.
-We will not deal with many vector valued functions here in CLP-3,
+We will not deal with many vector-valued functions here in CLP-3,
 but we will see a lot in CLP-4.
 </p>
 
@@ -445,7 +445,7 @@ at every point of that ray)
 <li> and so on
 </li>
 </ul>
-So there is not single number <m>L</m> such that <m>f(x,y)</m> approaches
+So there is not a single number <m>L</m> such that <m>f(x,y)</m> approaches
 <m>L</m> as <m>r=|(x,y)|\rightarrow 0</m>, no matter what the direction of
 approach is. The limit
 <m>\lim\limits_{(x,y)\rightarrow (0,0)}\frac{x^2-y^2}{x^2+y^2}</m>

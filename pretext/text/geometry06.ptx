@@ -336,7 +336,7 @@ as follows.
 
 <definition xml:id="def__curve_deriv">
 <statement><p>
-The derivative of the vector valued function <m>\vr(t)</m> is defined to be
+The derivative of the vector-valued function <m>\vr(t)</m> is defined to be
 <me>
 \vr'(t) =  \diff{\vr}{t}(t)=\lim_{h\rightarrow 0}\frac{\vr(t+h)-\vr(t)}{h}
 </me>
@@ -351,7 +351,7 @@ when the limit exists. In particular, if
 <me>
 \vr'(t)=x'(t)\hi + y'(t)\hj + z'(t)\hk
 </me>
-That is, to differentiate a vector valued function of <m>t</m>, just differentiate
+That is, to differentiate a vector-valued function of <m>t</m>, just differentiate
 each of its components.
 </p></statement>
 </definition>
@@ -490,14 +490,14 @@ Of course these examples extend to general (differentiable)
 Let
 <ul>
 <li>
-<m>\va(t),\vb(t)</m> be vector valued differentiable functions of <m>t\in\bbbr</m>
+<m>\va(t),\vb(t)</m> be vector-valued differentiable functions of <m>t\in\bbbr</m>
 that take values in <m>\bbbr^n</m> and
 </li>
 <li>
  <m>\alpha,\beta \in \mathbb{R}</m> be constants and
 </li>
 <li>
- <m>\ga(t)</m> and <m>s(t)</m> be real valued differentiable functions of <m>t\in\bbbr</m>
+ <m>\ga(t)</m> and <m>s(t)</m> be real-valued differentiable functions of <m>t\in\bbbr</m>
 </li>
 </ul>
 Then

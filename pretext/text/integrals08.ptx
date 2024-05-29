@@ -63,7 +63,7 @@ x&amp;=x(u,v)
 y&amp;=y(u,v)
 </mrow>
 </md>
-To make formulae more compact, we'll define the vector valued function
+To make formulae more compact, we'll define the vector-valued function
 <m>\vr(u,v)</m> by
 <me>
 \vr(u,v) = \llt x(u,v) \,,\, y(u,v) \rgt

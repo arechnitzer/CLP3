@@ -915,7 +915,7 @@ We are now going to use Newton's law of motion
 </md>
 to determine now <m>\theta</m> evolves in time. By definition, the
 velocity and acceleration vectors<fn>
-  For a more comprehensive treatment of derivatives of vector valued functions <m>\vr(t)</m>, and in particular of velocity and acceleration, see Section <xref ref="sec_curves"/> in this text and Section 1.1 in the CLP-4 text.
+  For a more comprehensive treatment of derivatives of vector-valued functions <m>\vr(t)</m>, and in particular of velocity and acceleration, see Section <xref ref="sec_curves"/> in this text and Section 1.1 in the CLP-4 text.
 </fn> for the position vector
 <m>\llt x(t),y(t)\rgt</m> are
 <md>
