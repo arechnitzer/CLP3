@@ -122,7 +122,7 @@ and <m>f</m> is differentiable at <m>a</m>, then <m>f'(a)=0</m>.
 <p>Let's use the ideas of the above discourse to extend the study of
 local maxima and local minima to functions of more than one variable.
 Suppose that the function <m>f(x,y)</m> is defined for all <m>(x,y)</m> in some
-subset <m>R</m> of <m>\bbbr^2</m>, that <m>(a,b)</m> is point of <m>R</m> that is not on the boundary of <m>R</m>, and that <m>f</m> has a local maximum at <m>(a,b)</m>.
+subset <m>R</m> of <m>\bbbr^2</m>, that <m>(a,b)</m> is a point of <m>R</m> that is not on the boundary of <m>R</m>, and that <m>f</m> has a local maximum at <m>(a,b)</m>.
 See the figure below.
 </p>
 
