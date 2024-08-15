@@ -183,12 +183,28 @@ f\big(x_0+\De x\,,\,y_0+\De y\big)
 
 </example>
 
+<p>
+We now formalise the above terminology and notation, and add some new terminology and notation
+(for functions of two variables <mdash/> the variants for functions of three or more variables are obvious).
+</p>
+
 <definition xml:id="notn_approx">
 <statement><p>
-People often write <m>\De f</m> for the change
+<ol marker="(a)">
+<li>
+The linear approximation to the function <m>f(x,y)</m> at the point <m>(x_0,y_0)</m>
+is  
+<me>
+f(x_0,y_0)
+       + \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,(x-x_0)
+       + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,(y-y_0)
+</me>
+People often write <m>\De f</m> for the change,
 <m>f\big(x_0+\De x\,,\,y_0+\De y\big)
-  - f\big(x_0\,,\,y_0\big)</m> in the value of <m>f</m>.
-Then the linear approximation <xref ref="eqn_lin_approx_2d"/> becomes
+  - f\big(x_0\,,\,y_0\big)</m> in the value of <m>f</m>,
+<m>\De x=x-x_0</m> for the change in the value of <m>x</m>, and 
+<m>\De y=y-y_0</m>  for the change in the value of <m>y</m>.
+In this notation, the linear approximation gives
 <md>
 <mrow>
 \De f
@@ -196,21 +212,29 @@ Then the linear approximation <xref ref="eqn_lin_approx_2d"/> becomes
        + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\De y
 </mrow>
 </md>
-If they want to emphasize that that <m>\De x</m>, <m>\De y</m> and <m>\De f</m>
-are really small (they may even say <q>infinitesimal</q>), they'll
-write<fn>Don't take the notation <m>\dee{x}</m> or the terminology
-<q>infinitesimal</q> too seriously. It is just intended to signal <q>very small</q>.</fn> <m>\dee{x}</m>, <m>\dee{y}</m> and <m>\dee{f}</m> instead. In this notation
+</li>
+<li>
+If they want to emphasize that <m>\De x</m> and <m>\De y</m>
+are really small (they may even say<fn>Don't take the terminology
+<q>infinitesimal</q> too seriously. It is just intended to signal <q>very small</q>.</fn> 
+<q>infinitesimal</q>), they'll write <m>\dee{x}</m> and <m>\dee{y}</m> instead and define
 <md>
 <mrow>
 \dee{f}
-&amp;\approx  \pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\dee{x}
+&amp;=\pdiff{f}{x}\big(x_0\,,\,y_0\big)\,\dee{x}
        + \pdiff{f}{y}\big(x_0\,,\,y_0\big)\,\dee{y}
 </mrow>
 </md>
+That is, <m>\dee{f}</m> is the change of the value of the linear approximation to <m>f</m>  when <m>x</m> 
+is changed by <m>\dee{x}</m> and <m>y</m> is changed by <m>\dee{y}</m>. It approximates the corresponding 
+change  <m>f\big(x_0+\dee{x}\,,\,y_0+\dee{y}\big) - f\big(x_0\,,\,y_0\big)</m> in the value of <m>f</m>.
 People sometimes call <m>\dee{x}</m>, <m>\dee{y}</m> and <m>\dee{f}</m> <q>differentials</q> and
 sometimes <m>\dee{f}</m> is called the <q>total differential of <m>f</m></q> to indicate that
 it includes the impact of small changes in both <m>x</m> and <m>y</m>.
-</p></statement>
+</li>
+</ol>
+</p>
+</statement>
 </definition>
 
 <definition xml:id="def_error">
@@ -264,7 +288,7 @@ we can also easily find
 <mrow>
 \pdiff{f}{x}(1,1) &amp;= 3\frac{1^2}{1}=3
 </mrow><mrow>
-\pdiff{f}{y}(1,1) &amp;= 1\frac{1^3}{1^2}=-1
+\pdiff{f}{y}(1,1) &amp;= -1\frac{1^3}{1^2}=-1
 </mrow>
 </md>
 So, setting <m>\De x=-0.002</m> and <m>\De y=0.003</m>, we have

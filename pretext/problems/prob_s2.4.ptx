@@ -153,7 +153,7 @@ course <m>1</m>. So
 <md>
 <mrow>
 \pdiff{h}{x}=\pdiff{f}{x}
-             +\pdiff{f}{u}\diff{u}{x}
+             +\pdiff{f}{u}\pdiff{u}{x}
 </mrow>
 </md>
 Finally we put in the only functional depedence that makes sense.
@@ -2944,16 +2944,23 @@ for all <m>x</m>. Applying
 </p>
 
 <p>(c)
-We are told to evaluate <m>\left(\pdiff{y}{x}\right)_u</m>, which is the partial
-derivative of <m>y</m> with respect to <m>x</m> with <m>u</m> being held fixed.
-So <m>x</m> and <m>u</m> have to be independent variables and <m>y</m> has to be a function of
-<m>x</m> and <m>u</m>.
+The hard part of this question is figuring out what it is that we are to compute. We 
+are asked to find some derivative of some function <m>y</m>. But what function? Four variables
+appear in this question. Namely  <m>x</m>, <m>y</m>, <m>u</m> and <m>v</m>. But we are not free to assign 
+arbitrary values to all four of them. They have to be related by the two equations 
+<m>xyuv=1</m> and <m>x+y+u+v=0</m>. If we assign values to any two of  <m>x</m>, <m>y</m>, <m>u</m> 
+and <m>v</m>, the values of the other two are to be determined by solving <m>xyuv=1</m>, <m>x+y+u+v=0</m>.
+That is, we may choose any two of  <m>x</m>, <m>y</m>, <m>u</m> and <m>v</m> to be independent variables (i.e. 
+variables that may be assigned any value). Then the other two variables are functions of those 
+independent variables that are determined by solving the given equations.   
 </p>
 
-<p>Now the four variables <m>x</m>, <m>y</m>, <m>u</m> and <m>v</m> are related by the two equations
-<m>xyuv=1</m> and <m>x+y+u+v=0</m>. As <m>x</m> and <m>u</m> are to be independent variables,
-<m>y=y(x,u)</m>, <m>v=v(x,u)</m> are to be determined by solving <m>xyuv=1</m>, <m>x+y+u+v=0</m>
-for <m>y</m> and <m>v</m> as functions of <m>x</m> and <m>u</m>. That is
+<p>We are told to evaluate <m>\left(\pdiff{y}{x}\right)_u</m>. According to 
+Definition <xref ref="notn_partial"/>,  <m>\left(\pdiff{y}{x}\right)_u</m> is the partial derivative of 
+<m>y</m> with respect to <m>x</m> with <m>u</m> being held fixed. So <m>x</m> and <m>u</m> have to be 
+independent variables and <m>y</m> has to be a function of <m>x</m> and <m>u</m>. The fourth variable 
+<m>v</m> also has to be a function of <m>x</m> and <m>u</m>. The functions <m>y(x,u)</m> and 
+<m>v(x,u)</m> must obey 
 <md>
 <mrow>
 x\,y(x,u)\,u\,v(x,u)&amp;=1

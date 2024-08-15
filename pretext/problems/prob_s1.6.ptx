@@ -228,7 +228,7 @@ From the diagram, we see that <m>P</m> is <m>a\cos \theta</m> units above the ce
 
 <exercise xml:id="prob_s1_0last">
 <statement><p>
-The curve <m>C</m> is defined to be the intersection of the ellipsoid
+The curve <m>C</m> is defined to be the intersection of the hyperboloid
 <me>
 x^2-\frac{1}{4}y^2+3z^2=1</me>
 </p>
@@ -382,7 +382,7 @@ Velocity is a vector-valued quantity, so it has both a magnitude and a direction
 
 <exercise><title><fromexam>M317 2005D</fromexam></title>
 <statement><p>
-Let <m>\vr(t)</m> be a vector valued function. Let <m>\vr'</m>, <m>\vr''</m> , and <m>\vr'''</m>
+Let <m>\vr(t)</m> be a vector-valued function. Let <m>\vr'</m>, <m>\vr''</m> , and <m>\vr'''</m>
 denote <m>\diff{\vr}{t}</m>, <m>\difftwo{\vr}{t}</m> and
 <m>\frac{\mathrm{d}^3\vr}{\mathrm{d}{t}^3}</m>, respectively.
 Express

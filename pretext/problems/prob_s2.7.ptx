@@ -37,7 +37,7 @@ So <m>\vnabla f(0,1,1) =\llt 1,0,0\rgt</m> and the specified directional derivat
 is
 <md>
 <mrow>
-D_{\frac{\llt 0,1,1\rgt}{\sqrt{2}}}
+D_{\frac{\llt 0,1,1\rgt}{\sqrt{2}}}f(0,1,1)
 =\llt 1,0,0\rgt\cdot\frac{\llt 0,1,1\rgt}{\sqrt{2}}
 =0
 </mrow>

@@ -341,8 +341,7 @@ iterated form by
 </me>
 <ol marker="a">
 <li>
-Draw a reasonably accurate picture of <m>E</m> in 3--dimensions. Be sure
-to show the units on the coordinate axes.
+Draw a reasonably accurate picture of <m>E</m> in 3--dimensions.
 </li>
 <li>
 Rewrite the triple integral <m>\tripInt_E f\ \dee{V}</m> as one or more
@@ -400,7 +399,7 @@ parabola <m>z=1-y^2</m> stacked front to back. The top figure below
 provides a sketch of <m>z=1-y^2</m>.
 </li>
 <li>
-The surface <m>x = 2-y-z</m>, or equivalenty, <m>x+y+z=2</m> is a plane.
+The surface <m>x = 2-y-z</m>, or equivalently, <m>x+y+z=2</m> is a plane.
 It passes through the points  <m>(2,0,0)</m>, <m>(0,2,0)</m> and <m>(0,0,2)</m>.
 It is sketched in the bottom figure below. We know that our
 domain of integration extends to <m>y=-1</m>, so we have chosen to include
@@ -492,7 +491,7 @@ J = \int_0^1 \int_0^{1-\frac{x}{2}} \int_0^{4-2x-4z} f(x,y,z)
 </me>
 <ol marker="a">
 <li>
-Sketch the domain <m>E</m> in 3--dimensions. Be sure to show the units.
+Sketch the domain <m>E</m> in 3--dimensions.
 </li>
 <li>
 Rewrite the integral as one or more iterated integrals in the form

@@ -120,7 +120,7 @@ In $\diff{x}{x}$ we are to differentiate the (explicit) function $x$
 course $1$. So 
 \begin{align*}
 \pdiff{h}{x}=\pdiff{f}{x}
-             +\pdiff{f}{u}\diff{u}{x}
+             +\pdiff{f}{u}\pdiff{u}{x}
 \end{align*} 
 Finally we put in the only functional depedence that makes sense. 
 The left hand side is a function of $x$, and $y$, because $h$
@@ -1754,7 +1754,14 @@ or
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}[M200 2003A] %2
-Suppose $f(x,y)$ is a differentiable function and we know
+By definition, the gradient of the differentiable function $f(x,y)$ at the point 
+$\big( x_0\,,\,y_0\big)$ is
+\begin{equation*}
+\vnabla f(x_0,y_0)
+=\llt \pdiff{f}{x}\big( x_0\,,\,y_0\big)\,,\,
+     \pdiff{f}{y}\big( x_0\,,\,y_0\big)\rgt
+\end{equation*}
+Suppose that we know
 \begin{equation*}
 \vnabla f(3,6)=\llt 7,8\rgt
 \end{equation*}
@@ -2369,15 +2376,21 @@ $\diff{}{x}$ to both sides of that equation and using the chain rule gives
 \end{align*}
 
 (c) 
-We are told to evaluate $\left(\pdiff{y}{x}\right)_u$, which is the partial
-derivative of $y$ with respect to $x$ with $u$ being held fixed.
-So $x$ and $u$ have to be independent variables and $y$ has to be a function of
-$x$ and $u$.
+The hard part of this question is figuring out what it is that we are to compute. We 
+are asked to find some derivative of some function y. But what function? Four variables
+appear in this question. Namely  $x$, $y$, $u$ and $v$. But we are not free to assign 
+arbitrary values to all four of them. They have to be related by the two equations 
+$xyuv=1$ and $x+y+u+v=0$. If we assign values to any two of  $x$, $y$, $u$ and $v$,
+the values of the other two are to be determined by solving $xyuv=1$, $x+y+u+v=0$.
+That is, we may choose any two of  $x$, $y$, $u$ and $v$ to be independent variables (i.e. 
+variables that may be assigned any value). Then the other two variables are functions of those 
+independent variables that are determined by solving the given equations.   
 
-Now the four variables $x$, $y$, $u$ and $v$ are related by the two equations
-$xyuv=1$ and $x+y+u+v=0$. As $x$ and $u$ are to be independent variables,
-$y=y(x,u)$, $v=v(x,u)$ are to be determined by solving $xyuv=1$, $x+y+u+v=0$
-for $y$ and $v$ as functions of $x$ and $u$. That is 
+We are told to evaluate $\left(\pdiff{y}{x}\right)_u$. According to Notation \eref{CLP3}{notn partial}
+in the CLP-3 text, $\left(\pdiff{y}{x}\right)_u$ is the partial derivative of $y$ with respect to $x$ 
+with $u$ being held fixed. So $x$ and $u$ have to be independent variables and $y$ has to be a function 
+of $x$ and $u$. The fourth variable $v$ also has to be a function of $x$ and $u$. The functions 
+$y(x,u)$ and $v(x,u)$ must obey 
 \begin{align*}
 x\,y(x,u)\,u\,v(x,u)&=1 \\
 x+y(x,u)+u+v(x,u)&=0

@@ -82,7 +82,7 @@ In this analogy, <m>f(x,y)</m> is the diameter of a particle taken from the posi
 <p><ol marker="a">
 <li> The function we're taking the limit of has its input as the position of the particle, and its output the size of the particle. So, <m>f(x,y)</m> gives the size of particles found at position <m>(x,y)</m>. In the definition, we write <m>\mathbf x = (x,y)</m>. So, <m>\mathbf x</m> is the position in the basin the particle was taken from.
 </li>
-<li> Our claim deals with particles very close to where the millstone hits the basin, so <m>\mathbf a</m> is the position in the basinfwhere the millstone hits.
+<li> Our claim deals with particles very close to where the millstone hits the basin, so <m>\mathbf a</m> is the position in the basin where the millstone hits.
 </li>
 <li> <m>\mathbf L</m> is the limit of the function: in this case, 50 <m>\mu</m>m.
 </li>

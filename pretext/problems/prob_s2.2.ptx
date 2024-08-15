@@ -246,7 +246,7 @@ g(t)=f(t,t)=\begin{cases}
 \diff{}{t} f(t,t)\Big|_{t=0}
 &amp;=\lim_{t\rightarrow 0}\frac{f(t,t)-f(0,0)}{t}
 </mrow><mrow>
-&amp;=\lim_{h\rightarrow 0}\frac{\frac{(t^2)(t)}{t^2+t^2}-0}{t}
+&amp;=\lim_{t\rightarrow 0}\frac{\frac{(t^2)(t)}{t^2+t^2}-0}{t}
 </mrow><mrow>
 &amp;=\lim_{t\rightarrow 0}\frac{t/2}{t}
 </mrow><mrow>
