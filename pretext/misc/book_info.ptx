@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <docinfo>
-
-<latex-preamble>
-  <!-- <package>palatino</package> -->
-  <!-- <package>mathrsfs</package> -->
-	<package>cancel</package>
-  <!-- <package>nicefrac</package> -->
-</latex-preamble>
+  <math-package latex-name="cancel" mathjax-name="cancel"/>
 
 <macros>
   \newcommand{\dee}[1]{\mathrm{d}#1}

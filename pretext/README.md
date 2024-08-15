@@ -7,7 +7,7 @@
 * In order to compile the pretext into both html and pdf, the figures have been saved as both svg and pdf.
 * See the latex sources for information on how they were produced.
 
-### New html build instructions May 2023
+### New html build instructions August 2024
 
 * First install the new python pretext package
 ```
@@ -16,10 +16,10 @@ pip3 install pretext
 
 * Then build using the pretext-cli (much easier)
 ```
-pretext build html -g all
+pretext build html -g 
 ```
   * this can take some time - its a big document.
-  * the `-g all` tells pretext to also build all the extra (latex encoded) images.
+  * the `-g` tells pretext to also build all the extra (latex encoded) images.
 
 #### Some notes
 * At this point I don't have CLP-styling for the latex build working. 

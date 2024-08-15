@@ -46,11 +46,8 @@
 
 		<edition>CLP3 Multivariable Calculus: May 2021</edition>
 
-		<website>
-			<name>
-				<c>CLP-3</c>
-			</name>
-			<address>http://www.math.ubc.ca/~CLP/</address>
+    <website>
+			<url href="http://www.math.ubc.ca/~CLP/">CLP-3</url>
 		</website>
 
 		<copyright>
