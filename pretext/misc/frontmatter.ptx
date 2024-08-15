@@ -44,14 +44,14 @@
 		</entity>
 		</credit>
 
-		<edition>CLP3 Multivariable Calculus: May 2021</edition>
+    <edition>CLP3 Multivariable Calculus: August 2024</edition>
 
     <website>
 			<url href="http://www.math.ubc.ca/~CLP/">CLP-3</url>
 		</website>
 
 		<copyright>
-			<year>2016 <ndash/> 2021</year>
+			<year>2016 <ndash/> 2024</year>
 			<holder>Joel Feldman, Andrew Rechnitzer, Elyse Yeager</holder>
 			<minilicense>CC-BY-NC-SA 4.0 License</minilicense>
 			<shortlicense>
