@@ -1556,7 +1556,7 @@ of this vector is also a correct answer.
 \lim_{t\rightarrow 0}\frac{f((1,1)+t\vu)-f(1,1)}{t}
 </m>
 is the directional derivative of <m>f</m> at <m>(1,1)</m> in the direction <m>\vu</m>,
-which is <m>D_\vu f(1,1)=\vnabla f(1,1)\cdot\vu</m>. This is mazimized when <m>\vu</m> is
+which is <m>D_\vu f(1,1)=\vnabla f(1,1)\cdot\vu</m>. This is maximized when <m>\vu</m> is
 parallel to  <m>\vnabla f(1,1)</m>. Since
 <me>
 f_x(x,y)=2xy^2e^{-x-y}-x^2y^2e^{-x-y}\qquad
