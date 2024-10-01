@@ -463,7 +463,7 @@ in parallel is determined by
 \frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}
 </me>
 If the resistances, measured in Ohms, are <m>R_1=25\Om</m>, <m>R_2=40\Om</m> and
-<m>R_3=50\Om</m>, with a possible error of 0.5\% in each case, estimate the
+<m>R_3=50\Om</m>, with a possible error of <m>0.5\%</m> in each case, estimate the
 maximum error in the calculated value of <m>R</m>.
 </p></statement>
 
