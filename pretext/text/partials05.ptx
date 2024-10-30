@@ -165,7 +165,7 @@ almost tangent to the blue curve. Taking the limit <m>h\rightarrow0</m> gives th
 &amp;=\llt 0\,,\, 1\,,\, f_y(x_0,y_0)\rgt
 </mrow>
 </md>
-to the blue curve at the point  <m>\big(a\,,\,b\,,\,f(a,b)\big)</m>.
+to the blue curve at the point  <m>\big(x_0\,,\,y_0\,,\,f(x_0,y_0)\big)</m>.
 </p>
 
 <p>Now that we have two vectors in the tangent plane to the surface <m>z=f(x,y)</m>
