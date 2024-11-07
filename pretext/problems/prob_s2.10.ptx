@@ -872,7 +872,7 @@ on the ellipsoid.
 </p>
 
 <p>We have to minimize <m>f(x,y,z)=x^2+y^2+z^2</m> subject to the constraint
-<m>g(x,y,z) = 2(x+1)^2 + y^2 + 2(z-1)^2 -8</m>.
+<m>g(x,y,z) = 2(x+1)^2 + y^2 + 2(z-1)^2 -8=0</m>.
 By Theorem <xref ref="thm_Lagrange"/>, any local minimum
 or maximum <m>(x,y,z)</m> must obey the  Lagrange multiplier equations
 <md>
