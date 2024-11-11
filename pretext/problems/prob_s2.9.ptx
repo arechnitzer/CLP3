@@ -2646,7 +2646,7 @@ temperature as quickly as possible?
 </li>
 <li>
 Suppose that the ant moves at a velocity <m>\vv = \llt -2, -1\rgt</m>.
-What is its rate of increase of temperature as it passes through <m>(1, 1)</m>?
+What is the rate of increase (per unit time) of its temperature as it passes through <m>(1, 1)</m>?
 </li>
 <li>
 Suppose the ant is constrained to stay on the curve <m>y = 2 - x^2</m>.
