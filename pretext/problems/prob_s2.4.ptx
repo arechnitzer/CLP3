@@ -1281,7 +1281,7 @@ By the chain rule,
 \pdiff{h}{t}(s,t)
 &amp;=\pdiff{}{t}\big[f(2s + 3t)\big] + \pdiff{}{t}\big[g(s - 6t)\big]
 </mrow><mrow>
-&amp;=f'(2s + 3t)\pdiff{}{t}(2s+3t) + g(s - 6t)\pdiff{}{t}(s-6t)
+&amp;=f'(2s + 3t)\pdiff{}{t}(2s+3t) + g'(s - 6t)\pdiff{}{t}(s-6t)
 </mrow><mrow>
 &amp;= 3f'(2s + 3t) - 6g'(s - 6t)
 </mrow><mrow>
