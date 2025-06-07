@@ -472,8 +472,6 @@ D_{\frac{4}{5}\,\hi -\frac{3}{5}\,\hk} f(3,5,4)
 </md>
 Actually, we could have known that the rate of change would be zero.
 <ul>
-<li>indent=-0.1in
-</li>
 <li>
 Any point <m>(x,y,z)</m> on the curve obeys both <m>y^2=x^2+z^2</m>
       and <m>2x^2-y^2+2z^2=25</m>.
