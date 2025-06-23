@@ -171,6 +171,12 @@ $\displaystyle\int_a^b \int_{B(x)}^{T(x)} f\big(x,y\big)\,\dee{y}\,\dee{x}$,
    whose integrand is the answer to the inside integral. Again, this
    integral is evaluated using standard single variable integration 
    techniques.
+  \item
+    Beware that, in this notation, the inside integral sign provides the limits
+    of integration, in this example $B(x)$ and $T(x)$, for the inside 
+    integration variable, in this example, the $y$ of $\dee{y}$. The outside 
+    integral sign provides the limits of integration, in this example $a$, $b$, 
+    for the outside integration variable, in this example, the $x$ of $\dee{x}$. 
 \end{itemize}
 
 \item
@@ -190,7 +196,21 @@ $\displaystyle\int_a^b \dee{x} \int_{B(x)}^{T(x)} \dee{y}\, f\big(x,y\big)$,
    Then evaluate the outside integral $\int_a^b \dee{x}\,F(x)$,
    whose integrand is the answer to the inside integral and whose limits
    of integration are directly beside the $\dee{x}$.
+  \item
+  Beware that, in this notation, each integral sign provides the limits
+    of integration for the integration variable directly beside it. In this
+    example, the limits of integration for $x$ are $a$ and $b$, and the limits
+    of integration for $y$ are $B(x)$ and $T(x)$.
+  
 \end{itemize}
+
+\item
+Notation \ref{notn dbl int} provides several different styles of notation 
+for the same integral. All are used ``in the wild\footnote{Though mathematicians 
+do enjoy getting out into the wilderness as much as anyone, they do not regularly compute multivariate integrals while far from blackboards and civilisation. You will find that practitioners of calculus use a variety of different notations depending on the problem, the context, the conventions of the area, their education, and so on. Accordingly, we recommend that you become comfortable with all of these notations.}'' 
+and you should make yourself familar with all of them.
+
+
 \end{itemize}
 
 At this point you may be wondering ``Do we always have to use vertical 
@@ -5964,7 +5984,7 @@ a surface of constant $\theta$, i.e. a surface $y= x\,\tan\theta$
 with\footnote{and with the sign of $x$ being the same as the sign of $\cos\theta$} $\theta$ a constant (which looks like the page of a book), and 
 \item
 a surface of constant $\varphi$, i.e. a surface
-$z=\sqrt{x^2+y^2}\ \tan\varphi$ with $\varphi$ a constant 
+$z=\sqrt{x^2+y^2}\ \cot\varphi$ with $\varphi$ a constant 
 (which looks a conical funnel).
 \end{itemize}
 \begin{wfig}

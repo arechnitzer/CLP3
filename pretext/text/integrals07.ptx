@@ -91,7 +91,7 @@ with<fn>and with the sign of <m>x</m> being the same as the sign of <m>\cos\thet
 </li>
 <li>
 a surface of constant <m>\varphi</m>, i.e. a surface
-<m>z=\sqrt{x^2+y^2}\ \tan\varphi</m> with <m>\varphi</m> a constant
+<m>z=\sqrt{x^2+y^2}\ \cot\varphi</m> with <m>\varphi</m> a constant
 (which looks a conical funnel).
 </li>
 </ul>
