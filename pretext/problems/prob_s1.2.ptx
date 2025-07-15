@@ -764,7 +764,7 @@ midpoint of the line segement from <m>O</m> to <m>A</m>. That is, <m>P_A</m> is 
 </li>
 <li>
 Similarly, the triangle <m>OCB</m> is an isoceles triangle, so that <m>P_B</m> is
-exactly the midpoint of the line segement from <m>O</m> to <m>B</m>. That is <m>P_A</m> is <m>(b/2,c/2)</m> and
+exactly the midpoint of the line segement from <m>O</m> to <m>B</m>. That is <m>P_B</m> is <m>(b/2,c/2)</m> and
 <me>
 \text{proj}_{\overrightarrow{\scriptstyle OB}}\,\overrightarrow{OC}
     =\overrightarrow{OP_B}=\llt b/2,c/2\rgt
