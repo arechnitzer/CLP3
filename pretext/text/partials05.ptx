@@ -768,7 +768,7 @@ or
 The vector <m>\vnabla G(x,y,z)</m> is not a normal vector to the surface
 <m>G(x,y,z)\!=\!K</m> at <m>(x_0,y_0,z_0)</m>. The vector  <m>\vnabla G(x_0,y_0,z_0)</m> is
 a normal vector to <m>G(x,y,z)\!=\!K</m> at <m>(x_0,y_0,z_0)</m>
-(provided <m>G(x_0,y_0,z_0)=K</m>).
+(provided <m>G(x_0,y_0,z_0)=K</m> and <m>\vnabla G(x_0,y_0,z_0)</m> is nonzero).
 </p>
 
 <p>As an example of the consequences of failing to evaluate
