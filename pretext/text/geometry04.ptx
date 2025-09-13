@@ -18,7 +18,7 @@
 </sidebyside>
 
 <p>
-  on the plane and one vector <m>\vn=\llt n_x,n_y, n_z\rgt </m> with direction
+  on the plane and one nonzero vector <m>\vn=\llt n_x,n_y, n_z\rgt </m> with direction
   perpendicular to that of the plane does uniquely determine the plane.
   If <m>(x,y,z)</m> is any point on the plane then the vector
   <m>\llt x-x_0,y-y_0,z-z_0\rgt </m>,
