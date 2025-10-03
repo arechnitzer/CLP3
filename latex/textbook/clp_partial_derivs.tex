@@ -7798,7 +7798,10 @@ theorem.
 So to find the maximum and minimum values of $f(x,y,z)$ on a surface 
 $g(x,y,z)=0$, assuming that both the objective function $f(x,y,z)$ 
 and constraint function $g(x,y,z)$ have continuous first partial 
-derivatives and that $\vnabla g(x,y,z)\ne\vZero$, you
+derivatives and that $\vnabla g(x,y,z)\ne\vZero$ and that the surface 
+$g(x,y,z)=0$ is bounded\footnote{The condition that the surface $g(x,y,z)=0$ be bounded
+is there to ensure that $f$ actually has maximum and minimum values on the surface
+$g(x,y,z)=0$. To see what can go wrong when the surface is not bounded, observe that if $f(x,y,z)=z$ and $g(x,y,z)=x$, then $f$ takes all real values on the surface $g=0$. To learn more about this issue, plug ``extreme value theorem'' into the search engine of your choice.}, you
 \begin{enumerate}
 \item build up a list of candidate points $(x,y,z)$ by finding all 
 solutions to the equations
