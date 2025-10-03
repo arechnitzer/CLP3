@@ -8,7 +8,7 @@
   Another named class of relatively simple, but commonly occurring,  surfaces is the quadric surfaces.</p>
 <definition xml:id="def_quadric"><title>Quadrics</title>
   <statement><p>
-  A <term>quadric</term> surface is surface that consists of all points that
+  A <term>quadric</term> surface is a surface that consists of all points that
   obey <m>Q(x,y,z)=0</m>, with <m>Q</m> being a polynomial of degree two<fn>Technically, we should also require that the polynomial
   can't be factored into the product of two polynomials of degree one.</fn>.
   </p></statement>

@@ -545,7 +545,7 @@ and tail at <m>\vr(t)</m>.
 When <m>h</m> is very small this vector
 <ul>
 <li>
-has the essentially the same direction as the tangent vector to the curve at <m>\vr(t)</m> and
+has essentially the same direction as the tangent vector to the curve at <m>\vr(t)</m> and
 </li>
 <li>
 has length being essentially the length of the part of the curve between

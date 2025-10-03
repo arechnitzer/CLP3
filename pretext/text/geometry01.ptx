@@ -230,7 +230,7 @@ z=0,\quad x^2+y^2+(0-4)^2=25
 z=0,\quad x^2+y^2 = 9
 </me>
 This is the circle in the <m>xy</m>-plane that is centred on the origin and
-has radius <m>3</m>. Here is a sketch that show the parts of the sphere 
+has radius <m>3</m>. Here is a sketch that shows the parts of the sphere 
 and the circle of intersection that are in the first octant. That is, that
 have <m>x\ge 0</m>, <m>y\ge 0</m> and <m>z\ge 0</m>.
 </p>

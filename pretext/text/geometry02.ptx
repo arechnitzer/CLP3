@@ -61,7 +61,7 @@ arrows representing the forces with their tails at the bob.
 </sidebyside>
 
 
-<p>In this text, we will used bold faced letters, like <m>\vv</m>, <m>\vt</m>, <m>\vg</m>,
+<p>In this text, we will use bold faced letters, like <m>\vv</m>, <m>\vt</m>, <m>\vg</m>,
 to designate vectors. In handwriting, it is clearer to use a small
 overhead arrow<fn>
     Some people use an underline, as in <m>\underline{v}</m>, rather than an arrow.</fn>,
@@ -491,7 +491,7 @@ We'll get to the second, the cross product, later.
 </p>
 
 <p>
-Here is preview of what we will do in this dot product 
+Here is a preview of what we will do in this dot product 
 subsection &#xA7;<xref ref="subsec-dotprod"/>. We are going to give two formulae
 for the dot product, <m>\va\cdot\vb</m>, of the pair of vectors 
 <m>\va=\llt a_1,a_2,a_3\rgt</m> and <m>\vb=\llt b_1,b_2,b_3\rgt</m>.
@@ -515,7 +515,7 @@ the vectors <m>\llt 1,2,3\rgt</m> and <m>\llt -1,-1,1\rgt</m> have dot product
 <me>
 \llt 1,2,3\rgt\cdot\llt -1,-1,1\rgt = 1\times(-1)+2\times(-1)+3\times 1=0
 </me>
-This tell us as the angle <m>\theta</m> between the two vectors obeys 
+This tells us that the angle <m>\theta</m> between the two vectors obeys 
 <m>\cos\theta=0</m>, so that <m>\theta=\frac{\pi}{2}</m>. That is, the two vectors are perpendicular to each other.
 </p>
 </li>
@@ -823,7 +823,7 @@ too. So the formula
 </p>
 </fact>
 <p>
-is applicable whenever <m>\vb\ne\vZero </m>. We may rewrite <m>{\rm proj}_{\vb}\,\va=\frac{\va\cdot\vb}{|\vb|}\,\frac{\vb}{|\vb|}</m>. The coefficient, <m>\frac{\va\cdot\vb}{|\vb|}</m>, of the unit vector <m>\frac{\vb}{|\vb|}</m>, is called the component of <m>\va</m> in the direction <m>\vb</m>. As a special case, if <m>\vb</m> happens to be a unit vector, which, for emphasis, we'll now write has <m>\hat\vb</m>, the projection formula simplifies to
+is applicable whenever <m>\vb\ne\vZero </m>. We may rewrite <m>{\rm proj}_{\vb}\,\va=\frac{\va\cdot\vb}{|\vb|}\,\frac{\vb}{|\vb|}</m>. The coefficient, <m>\frac{\va\cdot\vb}{|\vb|}</m>, of the unit vector <m>\frac{\vb}{|\vb|}</m>, is called the component of <m>\va</m> in the direction <m>\vb</m>. As a special case, if <m>\vb</m> happens to be a unit vector, which, for emphasis, we'll now write as <m>\hat\vb</m>, the projection formula simplifies to
 </p>
 <fact xml:id="eqn_unit_proj">
 <p>
@@ -913,7 +913,7 @@ We are now going to use Newton's law of motion
 \text{mass}\times\text{acceleration}=\text{total applied force}
 </mrow>
 </md>
-to determine now <m>\theta</m> evolves in time. By definition, the
+to determine how <m>\theta</m> evolves in time. By definition, the
 velocity and acceleration vectors<fn>
   For a more comprehensive treatment of derivatives of vector-valued functions <m>\vr(t)</m>, and in particular of velocity and acceleration, see Section <xref ref="sec_curves"/> in this text and Section 1.1 in the CLP-4 text.
 </fn> for the position vector
@@ -1639,7 +1639,7 @@ The important special cases
 all follow directly from the definition of the cross product (see, for example,
 Example <xref ref="eg_GEOcrossijji"/>) and all
 obey the right hand rule.  Combining properties 1, 2 and the right hand
-rule give the geometric definition of <m>\va\times\vb</m>. To remember
+rule gives the geometric definition of <m>\va\times\vb</m>. To remember
 these three special cases, just remember this figure.
 </p>
       <sidebyside width="25%">
