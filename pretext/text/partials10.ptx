@@ -317,7 +317,7 @@ we have to do a little geometry to extract them.
 <example xml:id="eg_LagrangeB">
   <statement>
 <p>
-Find the rectangle of largest area (with sides parallel to the coordinates
+Find the rectangle of largest area (with sides parallel to the coordinate
 axes) that can be inscribed in the ellipse <m>x^2+2y^2=1</m>.
 </p>
 </statement>
@@ -811,7 +811,7 @@ for all vectors <m>\vv</m> that are tangent to the curve <m>g=h=0</m>
 at <m>(a,b,c)</m>. Let's denote by <m>\cT</m> the set of all vectors <m>\vv</m>
 that are tangent to the curve <m>g=h=0</m> at <m>(a,b,c)</m> and let's denote
 by <m>\cT^\perp</m> the set of all vectors that are perpendicular to all vectors
-in <m>\cT</m>. So <m>(*)</m> says that <m>\vnabla f(a,b,c)</m> must in <m>\cT^\perp</m>.
+in <m>\cT</m>. So <m>(*)</m> says that <m>\vnabla f(a,b,c)</m> must be in <m>\cT^\perp</m>.
 </p>
 
 <p>We now find all vectors in <m>\cT^\perp</m>. We can easily guess two such vectors.
@@ -841,7 +841,7 @@ is in <m>\cT^\perp</m>.
 curve at the same point.) So, <m>\cT^\perp</m>, the set of all vectors
 perpendicular to <m>\cT</m>,  forms a plane. As <m>\la</m> and <m>\mu</m> run over all
 real numbers, the vectors <m>\la\vnabla g(a,b,c)
-+\mu\vnabla h(a,b,c)</m>  form a plane. Thus we have found all vector
++\mu\vnabla h(a,b,c)</m>  form a plane. Thus we have found all vectors
 in <m>\cT^\perp</m> and we conclude that <m>\vnabla f(a,b,c)</m> must be
 of the form <m>\la\vnabla g(a,b,c)+\mu\vnabla h(a,b,c)</m>
 for some real numbers <m>\la</m> and <m>\mu</m>. The three components of the

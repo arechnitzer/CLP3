@@ -95,7 +95,7 @@ are defined analogously.
 </definition>
 
 
-<p>Partial derivatives are used a lot. And there many notations for them.</p>
+<p>Partial derivatives are used a lot. And there are many notations for them.</p>
 
 <definition xml:id="notn_partial">
 <statement><p>
@@ -273,7 +273,7 @@ Then, since <m>\pdiff{}{x}</m> treats <m>y</m> as a constant,
 
 <p>
 Let's move up to a function of four variables. Things generalize
-in a quite straight forward way.
+in a quite straightforward way.
 </p>
 <example xml:id="eg_partials_C">
 <p>

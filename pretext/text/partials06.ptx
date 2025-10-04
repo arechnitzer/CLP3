@@ -909,7 +909,7 @@ f(x,y)&amp;=\frac{x^3}{y} &amp;
 </md>
 We don't know what <m>\vr(c)=\big(1-0.002 c\,,\,1+0.003 c\big)</m> is.
 But we know that <m>0\le c\le 1</m>, so we definitely know that the <m>x</m> component
-of <m>\vr(c)</m> is smaller that <m>1</m> and the <m>y</m> component of <m>\vr(c)</m> is bigger
+of <m>\vr(c)</m> is smaller than <m>1</m> and the <m>y</m> component of <m>\vr(c)</m> is bigger
 than <m>1</m>. So
 <md>
 <mrow>

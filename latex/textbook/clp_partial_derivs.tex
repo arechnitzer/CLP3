@@ -118,7 +118,7 @@ Here is a more careful definition of limit.
 Let 
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item[$\circ$]
-$m$ and $n$ be natural numbers\footnote{In this text, we will interested in
+$m$ and $n$ be natural numbers\footnote{In this text, we will be interested in
 $m,n\in\big\{1,2,3\big\}$, but the definition works for all natural
 numbers $m,n$.}
 \item[$\circ$]
@@ -643,7 +643,7 @@ Partial derivatives are used a lot.
 %is differentiable at $(x_0,y_0)$'' that is more restrictive than ``the partial 
 %derivatives $\pdiff{f}{x}(x_0,y_0)$ and $\pdiff{f}{y}(x_0,y_0)$ exist''. That %definition is beyond the scope of this text. You can learn more by plugging 
 %``differentiability  several  variables'' (without the quotes) into your %favourite search engine. The definition is designed to rule out weirdness like %that illustrated in Example \ref{eg partials DDD}.}. 
-And there many notations for them.
+And there are many notations for them.
 \begin{notn}\label{notn partial}
 The partial derivative $\pdiff{f}{x}(x,y)$ of a function $f(x,y)$ is also denoted
 \begin{equation*}
@@ -790,7 +790,7 @@ $\pdiff{}{x} e^{yx}=y e^{yx}$ and
 \end{align*}
 \end{eg}
 Let's move up to a function of four variables. Things generalize
-in a quite straight forward way. 
+in a quite straightforward way. 
 \begin{eg}\label{eg partials C}
 Let
 \begin{equation*}
@@ -1709,7 +1709,7 @@ you understand what the arguments are before doing so.
 Theorem \ref{thm:chainRule} is given for the case that $F$ is the
 composition of a function of two variables, $f(x,y)$, with two functions, 
 $x(s,t)$ and $y(s,t)$,  of two variables each. There is nothing magical about 
-the number two. There are obvious variants for any numbers of variables. 
+the number two. There are obvious variants for any number of variables. 
 For example,
 \begin{impeqn}\label{eqn chain rule A}
 if $F(t) = f\big(x(t),y(t),z(t)\big)$, then
@@ -1760,7 +1760,7 @@ Write down the template
 Note that 
 \begin{itemize}
 \item
-The function $F$ appears once in the numerator on the left.
+the function $F$ appears once in the numerator on the left.
 The function $f$, from which $F$ is constructed by a change of variables,
 appears once in the numerator on the right.
 
@@ -1815,7 +1815,7 @@ also useful to pretend that our variables are physical quantities with
 $f,F$ having units of grams, $x,y$ having units of meters and $s,t$ having units of seconds. Note that
 \begin{itemize}
 \item 
-the left hand side, $\pdiff{F}{s}$, has units grams per second.
+the left hand side, $\pdiff{F}{s}$, has units of grams per second.
 \item
 Each term on the right hand side
 contains the partial derivative of $f$ with respect to a different
@@ -1847,7 +1847,7 @@ As in the figure on the left below,
 write, on the top row, ``$f$''.
 \item[$\circ$]
 Write, on the middle row, each of the variables that the function $f(x,y)$ 
-depends on, namely``$x$'' and ``$y$''.
+depends on, namely ``$x$'' and ``$y$''.
 \item[$\circ$]
 Write, on the bottom row, 
    \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
@@ -4161,7 +4161,7 @@ f(x,y)&=\frac{x^3}{y} &
 \end{align*}
 We don't know what $\vr(c)=\big(1-0.002 c\,,\,1+0.003 c\big)$ is. 
 But we know that $0\le c\le 1$, so we definitely know that the $x$ component
-of $\vr(c)$ is smaller that $1$ and the $y$ component of $\vr(c)$ is bigger
+of $\vr(c)$ is smaller than $1$ and the $y$ component of $\vr(c)$ is bigger
 than $1$. So
 \begin{align*}
 \left|\frac{\partial^2 f}{\partial x^2}\big(\vr(c)\big)\right|&\le 6 &
@@ -4739,7 +4739,7 @@ So the gradient of $f$ at $(0,1)$ is
 \vnabla f(0,1) = f_x(0,1)\,\hi + f_y(0,1)\,\hj 
                = e\,\hi + 2e\,\hj
 \end{equation*}
-and the direction derivative in the direction $-\hi + \hj$ is
+and the directional derivative in the direction $-\hi + \hj$ is
 \begin{equation*}
 D_{\frac{-\hi+\hj}{|-\hi+\hj|}} f(0,1) 
    = \vnabla f(0,1)\cdot\frac{-\hi+\hj}{|-\hi+\hj|}
@@ -4771,7 +4771,7 @@ so the gradient of $w$ at $(1,3,1)$ is
                = \llt 4\,,\,1\,,\,4\rgt
 %               = 4\,\hi + \hj + 4\,\hk
 \end{equation*}
-and the direction derivative in the direction $\llt 1\,,\,0\,,\,1\rgt$ is
+and the directional derivative in the direction $\llt 1\,,\,0\,,\,1\rgt$ is
 \begin{equation*}
 D_{\frac{\llt 1\,,\,0\,,\,1\rgt}{|\llt 1\,,\,0\,,\,1\rgt|}} w(1,3,1) 
    = \vnabla w(1,3,1)\cdot
@@ -5373,12 +5373,12 @@ This solution represents a wave packet moving to the left with speed $c$.
 You can see this by observing that all points $(x,t)$ in space-time for 
 which $x+ct$ takes the same fixed value, say $z$, have the same value 
 of $U(x+ct)$, namely $U(z)$. So if you move so that your position at 
-time $t$ is $x=z-ct$  (i.e. move the left with speed $c$) you always 
+time $t$ is $x=z-ct$  (i.e. move to the left with speed $c$) you always 
 see the same value of $w$.
 The figure below illustrates this. It contains the graphs of $U(x)$, $U(x+c)
 =U(x+ct)\big|_{t=1}$ and  $U(x+2c)=U(x+ct)\big|_{t=2}$ for a bump shaped
 $U(x)$. In the figure the location of the tick $z$ on the
-$x$-axis was chosen so that so that $U(z)=\max_x U(x)$.
+$x$-axis was chosen so that $U(z)=\max_x U(x)$.
 
 \begin{efig}
 \begin{center}
@@ -5386,7 +5386,7 @@ $x$-axis was chosen so that so that $U(z)=\max_x U(x)$.
 \end{center}
 \end{efig}
 
-The above argument that lead to the solution $w(x,t)=U(x+ct)$
+The above argument that leads to the solution $w(x,t)=U(x+ct)$
 was somewhat handwavy. But we can easily turn it into
 a much tighter argument by simply changing variables from $(x,y)$
 to $(u,v)$ with $u=x+ct$. It doesn't much matter what we choose
@@ -5525,7 +5525,7 @@ for all $u$ and $v$.
 This tells us that the $u$-derivative of $\pdiff{W}{v}$ is zero, 
 so that $\pdiff{W}{v}$ is independent of $u$.
 That is $\pdiff{W}{v}(u,v) = \widetilde V(v)$ for some function $\tilde V$.
-The reason that we have called it $\widetilde V$ instead of $V$ with become
+The reason that we have called it $\widetilde V$ instead of $V$ will become
 evident shortly.
 \item
 Recall that to apply $\pdiff{}{v}$, you treat $u$ as a constant
@@ -5694,7 +5694,7 @@ vibrations, (E3) simplifies further to
 In the event that the string density $\rho$ is a constant, independent
 of $x$, the string tension $T(t)$ is a constant independent of $t$
 (in other words you are not continually playing with the tuning pegs)
-and there are no external forces $F$ we end up with the wave equation
+and there are no external forces $F$, we end up with the wave equation
 \begin{equation*}
 \frac{\partial^2 w}{\partial\, t^2}(x,t)
 =c^2\,\frac{\partial^2 w}{\partial x^2}(x,t)
@@ -5895,7 +5895,7 @@ in Examples \ref{eg maxminA} and
 \ref{eg maxminC}, critical points that are neither local maxima nor a local minima. None-the-less, 
 Theorem \ref{thm stationary point} is very useful because often functions have
 only a small number of critical points. To find local maxima and minima
-of such functions, we only need to consider its critical and singular
+of such functions, we only need to consider their critical and singular
 points. We'll return later to the question of how to tell if a 
 critical point is a local maximum, local minimum or neither. For now, 
 we'll just practice finding critical points. 
@@ -6209,7 +6209,7 @@ To maximize the area, we need to solve
 \end{align*}
 Note that both terms in the first equation contain the factor $\sin\theta$
 and all terms in the second equation contain the factor $x$. If either
-$\sin\theta$ or $x$ are zero the area $A(x,\theta)$ will also  be zero,
+$\sin\theta$ or $x$ is zero the area $A(x,\theta)$ will also  be zero,
 and so will certainly not be maximal. So we may divide the first equation
 by $\sin\theta$ and the second equation by $x$, giving
 \begin{align*}
@@ -6268,7 +6268,7 @@ given by the line $y=mx+b$.
 All terms in the sum are positive, regardless of whether the points
 $(x_i,y_i)$ are above or below the line.
 \end{itemize}
-Our problem is to find the $m$ and $b$ that minimizes $E(m,b)$. 
+Our problem is to find the $m$ and $b$ that minimize $E(m,b)$. 
 This technique for drawing a line through a bunch of
 data points is called ``linear regression''. It is used 
 \emph{a lot}\footnote{Proof by search engine.}
@@ -6490,7 +6490,7 @@ Here are some figures showing the graph of $f$.
   \includegraphics{hypPara}
 \end{center}
 \end{efig}
-The figure below show some level curves of $f$. Observe from the level 
+The figure below shows some level curves of $f$. Observe from the level 
 curves that
 \begin{itemize}
 \item
@@ -7037,7 +7037,7 @@ no top, the symmetry does not extend to $z$.
 
 
 Of course a local maximum or minimum of a function need not be the 
-absolute maximum of minimum. We'll now consider how to find the 
+absolute maximum or minimum. We'll now consider how to find the 
 absolute maximum and minimum.
 Let's start by reviewing how one finds the absolute maximum and minimum 
 of a function of one variable on an interval. 
@@ -7088,7 +7088,7 @@ Theorem \ref{thm stationary point}.}
     and $f_x(a,b)=f_y(a,b)=0$ or
    \item $(a,b)$ is in the interior of the set and  $f_x(a,b)$ or $f_y(a,b)$
         does not exist or
-   \item $(a,b)$ is a boundary\footnote{It should intuitively obvious 
+   \item $(a,b)$ is a boundary\footnote{It should be intuitively obvious 
        from a sketch that the boundary of the disk $x^2+y^2\le 1$ is 
        the circle $x^2+y^2=1$.
        But if you really need a formal definition, here it is. A point
@@ -7496,13 +7496,13 @@ on that side is $f=0$ at $(0,0)$ and the largest value of $f$
 on that side is $f=2$ at $(1,0)$.
 \item
  Finally,  we look at the side that runs from $(0,2)$ to $(1,0)$.
-Or first job is to find the equation of the line that contains 
+Our first job is to find the equation of the line that contains 
 $(0,2)$ and $(1,0)$. By way of review, we'll find the equation using three 
 different methods.
 \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 \item \emph{Method 1:}\ \ \ 
  You (probably) learned in high school that any line in 
-the $xy$-plane\footnote{To be picky, any line the $xy$-plane that is not parallel to the $y$ axis.}
+the $xy$-plane\footnote{To be picky, any line in the $xy$-plane that is not parallel to the $y$ axis.}
 has equation $y=mx + b$ where $b$ is the $y$ intercept and $m$ is the slope.
 In this case, the line crosses the $y$ axis at $y=2$ and so has $y$ intercept 
 $b=2$. The line passes through $(0,2)$ and $(1,0)$ and so, as we see in the figure below, has slope
@@ -7537,7 +7537,7 @@ As we see from the figure above, it is a direction vector for the line. One poin
 x=t,\ y=2-2t
 \end{equation*}
 \end{itemize}
-By any of these three methods\footnote{In the third method, $x$ has just be renamed to $t$.}, we have that the side of the triangle that 
+By any of these three methods\footnote{In the third method, $x$ has just been renamed to $t$.}, we have that the side of the triangle that 
 runs from $(0,2)$ to $(1,0)$ is $y=2-2x$ with $0\le x\le 1$. On that side of the triangle
 \begin{equation*}
 f(x,2-2x) = x(2-2x)+2x+(2-2x)
@@ -7907,7 +7907,7 @@ specified explicitly. That will not always be the case. In the next example,
 we have to do a little geometry to extract them.
 
 \begin{eg}\label{eg LagrangeB}
-Find the rectangle of largest area (with sides parallel to the coordinates
+Find the rectangle of largest area (with sides parallel to the coordinate
 axes) that can be inscribed in the ellipse $x^2+2y^2=1$.
 
 \soln 
@@ -8306,7 +8306,7 @@ for all vectors $\vv$ that are tangent to the curve $g=h=0$
 at $(a,b,c)$. Let's denote by $\cT$ the set of all vectors $\vv$ 
 that are tangent to the curve $g=h=0$ at $(a,b,c)$ and let's denote
 by $\cT^\perp$ the set of all vectors that are perpendicular to all vectors
-in $\cT$. So $(*)$ says that $\vnabla f(a,b,c)$ must in $\cT^\perp$.
+in $\cT$. So $(*)$ says that $\vnabla f(a,b,c)$ must be in $\cT^\perp$.
 
 
 We now find all vectors in $\cT^\perp$. We can easily guess two such vectors. 
@@ -8335,7 +8335,7 @@ Now the vectors in $\cT$ form a line. (They are all tangent to the same
 curve at the same point.) So, $\cT^\perp$, the set of all vectors 
 perpendicular to $\cT$,  forms a plane. As $\la$ and $\mu$ run over all 
 real numbers, the vectors $\la\vnabla g(a,b,c)
-+\mu\vnabla h(a,b,c)$  form a plane. Thus we have found all vector
++\mu\vnabla h(a,b,c)$  form a plane. Thus we have found all vectors
 in $\cT^\perp$ and we conclude that $\vnabla f(a,b,c)$ must be
 of the form $\la\vnabla g(a,b,c)+\mu\vnabla h(a,b,c)$ 
 for some real numbers $\la$ and $\mu$. The three components of the

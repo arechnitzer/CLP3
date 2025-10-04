@@ -254,7 +254,7 @@ So the gradient of <m>f</m> at <m>(0,1)</m> is
 \vnabla f(0,1) = f_x(0,1)\,\hi + f_y(0,1)\,\hj
                = e\,\hi + 2e\,\hj
 </me>
-and the direction derivative in the direction <m>-\hi + \hj</m> is
+and the directional derivative in the direction <m>-\hi + \hj</m> is
 <me>
 D_{\frac{-\hi+\hj}{|-\hi+\hj|}} f(0,1)
    = \vnabla f(0,1)\cdot\frac{-\hi+\hj}{|-\hi+\hj|}
@@ -292,7 +292,7 @@ so the gradient of <m>w</m> at <m>(1,3,1)</m> is
 \vnabla w(1,3,1) = \llt w_x(1,3,1)\,,\,w_y(1,3,1)\,,\,w_z(1,3,1)\rgt
                = \llt 4\,,\,1\,,\,4\rgt
 </me>
-and the direction derivative in the direction <m>\llt 1\,,\,0\,,\,1\rgt</m> is
+and the directional derivative in the direction <m>\llt 1\,,\,0\,,\,1\rgt</m> is
 <md>
 <mrow>
 D_{\frac{\llt 1\,,\,0\,,\,1\rgt}{|\llt 1\,,\,0\,,\,1\rgt|}} w(1,3,1)

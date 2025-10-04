@@ -78,7 +78,7 @@ you understand what the arguments are before doing so.
 <p>Theorem <xref ref="thm_chainRule"/> is given for the case that <m>F</m> is the
 composition of a function of two variables, <m>f(x,y)</m>, with two functions,
 <m>x(s,t)</m> and <m>y(s,t)</m>,  of two variables each. There is nothing magical about
-the number two. There are obvious variants for any numbers of variables.
+the number two. There are obvious variants for any number of variables.
 For example,
 </p>
 <fact xml:id="eqn_chain_rule_A">
@@ -149,7 +149,7 @@ Write down the template
 Note that
 <ul>
 <li>
-The function <m>F</m> appears once in the numerator on the left.
+the function <m>F</m> appears once in the numerator on the left.
 The function <m>f</m>, from which <m>F</m> is constructed by a change of variables,
 appears once in the numerator on the right.
 </li>
@@ -203,7 +203,7 @@ also useful to pretend that our variables are physical quantities with
 <m>f,F</m> having units of grams, <m>x,y</m> having units of meters and <m>s,t</m> having units of seconds. Note that
 <ul>
 <li>
-the left hand side, <m>\pdiff{F}{s}</m>, has units grams per second.
+the left hand side, <m>\pdiff{F}{s}</m>, has units of grams per second.
 </li>
 <li>
 Each term on the right hand side
@@ -236,7 +236,7 @@ write, on the top row, <q><m>f</m></q>.
 </li>
 <li>
 Write, on the middle row, each of the variables that the function <m>f(x,y)</m>
-depends on, namely<q><m>x</m></q> and <q><m>y</m></q>.
+depends on, namely <q><m>x</m></q> and <q><m>y</m></q>.
 </li>
 <li><p>
 Write, on the bottom row,

@@ -206,7 +206,7 @@ Note that some people (and texts) combine both of these cases and call
 Theorem <xref ref="thm_stationary_point"/> tells us that every local maximum
 or minimum (in the interior of the domain of a function whose partial derivatives exist)
 is a critical point.  Beware that it does <em>not</em><fn>A very common error of logic that people make is <q>Affirming the consequent</q>.
-<q>If P then Q</q> is true, does not imply that <q>If Q then P</q> is true .
+<q>If P then Q</q> is true, does not imply that <q>If Q then P</q> is true.
 The statement <q>If he is Shakespeare then he is dead</q> is true.
 But concluding from <q>That man is dead</q> that <q>He must be Shakespeare</q>
 is just silly.
@@ -222,7 +222,7 @@ in Examples <xref ref="eg_maxminA"/> and
 <xref ref="eg_maxminC"/>, critical points that are neither local maxima nor a local minima. None-the-less,
 Theorem <xref ref="thm_stationary_point"/> is very useful because often functions have
 only a small number of critical points. To find local maxima and minima
-of such functions, we only need to consider its critical and singular
+of such functions, we only need to consider their critical and singular
 points. We'll return later to the question of how to tell if a
 critical point is a local maximum, local minimum or neither. For now,
 we'll just practice finding critical points.
@@ -617,7 +617,7 @@ To maximize the area, we need to solve
 </md>
 Note that both terms in the first equation contain the factor <m>\sin\theta</m>
 and all terms in the second equation contain the factor <m>x</m>. If either
-<m>\sin\theta</m> or <m>x</m> are zero the area <m>A(x,\theta)</m> will also  be zero,
+<m>\sin\theta</m> or <m>x</m> is zero the area <m>A(x,\theta)</m> will also  be zero,
 and so will certainly not be maximal. So we may divide the first equation
 by <m>\sin\theta</m> and the second equation by <m>x</m>, giving
 <md>
@@ -691,7 +691,7 @@ All terms in the sum are positive, regardless of whether the points
 <m>(x_i,y_i)</m> are above or below the line.
 </li>
 </ul>
-Our problem is to find the <m>m</m> and <m>b</m> that minimizes <m>E(m,b)</m>.
+Our problem is to find the <m>m</m> and <m>b</m> that minimize <m>E(m,b)</m>.
 This technique for drawing a line through a bunch of
 data points is called <q>linear regression</q>. It is used
 <em>a lot</em><fn>Proof by search engine.</fn>
@@ -953,7 +953,7 @@ Here are some figures showing the graph of <m>f</m>.
 </sidebyside>
 
 <p>
-The figure below show some level curves of <m>f</m>. Observe from the level
+The figure below shows some level curves of <m>f</m>. Observe from the level
 curves that
 <ul>
 <li>
@@ -1621,7 +1621,7 @@ no top, the symmetry does not extend to <m>z</m>.
   <title>Absolute Minima and Maxima</title>
 
 <p>Of course a local maximum or minimum of a function need not be the
-absolute maximum of minimum. We'll now consider how to find the
+absolute maximum or minimum. We'll now consider how to find the
 absolute maximum and minimum.
 Let's start by reviewing how one finds the absolute maximum and minimum
 of a function of one variable on an interval.
@@ -1686,7 +1686,7 @@ Theorem <xref ref="thm_stationary_point"/>.</fn>
         does not exist or
 </li>
 <li><p>
-<m>(a,b)</m> is a boundary<fn>It should intuitively obvious
+<m>(a,b)</m> is a boundary<fn>It should be intuitively obvious
        from a sketch that the boundary of the disk <m>x^2+y^2\le 1</m> is
        the circle <m>x^2+y^2=1</m>.
        But if you really need a formal definition, here it is. A point
@@ -2183,13 +2183,13 @@ on that side is <m>f=2</m> at <m>(1,0)</m>.
 </li>
 <li><p>
  Finally,  we look at the side that runs from <m>(0,2)</m> to <m>(1,0)</m>.
-Or first job is to find the equation of the line that contains
+Our first job is to find the equation of the line that contains
 <m>(0,2)</m> and <m>(1,0)</m>. By way of review, we'll find the equation using three
 different methods.
 <ul>
 <li><p> <em>Method 1:</em>
  You (probably) learned in high school that any line in
-the <m>xy</m>-plane<fn>To be picky, any line the <m>xy</m>-plane that is not parallel to the <m>y</m> axis.</fn>
+the <m>xy</m>-plane<fn>To be picky, any line in the <m>xy</m>-plane that is not parallel to the <m>y</m> axis.</fn>
 has equation <m>y=mx + b</m> where <m>b</m> is the <m>y</m> intercept and <m>m</m> is the slope.
 In this case, the line crosses the <m>y</m> axis at <m>y=2</m> and so has <m>y</m> intercept
 <m>b=2</m>. The line passes through <m>(0,2)</m> and <m>(1,0)</m> and so, as we see in the figure below, has slope
@@ -2225,7 +2225,7 @@ x=t,\ y=2-2t
 </me>
 </li>
 </ul>
-By any of these three methods<fn>In the third method, <m>x</m> has just be renamed to <m>t</m>.</fn>, we have that the side of the triangle that
+By any of these three methods<fn>In the third method, <m>x</m> has just been renamed to <m>t</m>.</fn>, we have that the side of the triangle that
 runs from <m>(0,2)</m> to <m>(1,0)</m> is <m>y=2-2x</m> with <m>0\le x\le 1</m>. On that side of the triangle
 <me>
 f(x,2-2x) = x(2-2x)+2x+(2-2x)

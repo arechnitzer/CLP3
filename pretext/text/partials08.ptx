@@ -271,19 +271,19 @@ This solution represents a wave packet moving to the left with speed <m>c</m>.
 You can see this by observing that all points <m>(x,t)</m> in space-time for
 which <m>x+ct</m> takes the same fixed value, say <m>z</m>, have the same value
 of <m>U(x+ct)</m>, namely <m>U(z)</m>. So if you move so that your position at
-time <m>t</m> is <m>x=z-ct</m>  (i.e. move the left with speed <m>c</m>) you always
+time <m>t</m> is <m>x=z-ct</m>  (i.e. move to the left with speed <m>c</m>) you always
 see the same value of <m>w</m>.
 The figure below illustrates this. It contains the graphs of <m>U(x)</m>, <m>U(x+c)
 =U(x+ct)\big|_{t=1}</m> and  <m>U(x+2c)=U(x+ct)\big|_{t=2}</m> for a bump shaped
 <m>U(x)</m>. In the figure the location of the tick <m>z</m> on the
-<m>x</m>-axis was chosen so that so that <m>U(z)=\max_x U(x)</m>.
+<m>x</m>-axis was chosen so that <m>U(z)=\max_x U(x)</m>.
 </p>
 
 <sidebyside width="66%">
 <image source="figs/bumpLeft"/>
 </sidebyside>
 
-<p>The above argument that lead to the solution <m>w(x,t)=U(x+ct)</m>
+<p>The above argument that leads to the solution <m>w(x,t)=U(x+ct)</m>
 was somewhat handwavy. But we can easily turn it into
 a much tighter argument by simply changing variables from <m>(x,y)</m>
 to <m>(u,v)</m> with <m>u=x+ct</m>. It doesn't much matter what we choose
@@ -459,7 +459,7 @@ for all <m>u</m> and <m>v</m>.
 This tells us that the <m>u</m>-derivative of <m>\pdiff{W}{v}</m> is zero,
 so that <m>\pdiff{W}{v}</m> is independent of <m>u</m>.
 That is <m>\pdiff{W}{v}(u,v) = \widetilde V(v)</m> for some function <m>\tilde V</m>.
-The reason that we have called it <m>\widetilde V</m> instead of <m>V</m> with become
+The reason that we have called it <m>\widetilde V</m> instead of <m>V</m> will become
 evident shortly.
 </li>
 <li>
@@ -658,7 +658,7 @@ vibrations, (E3) simplifies further to
 In the event that the string density <m>\rho</m> is a constant, independent
 of <m>x</m>, the string tension <m>T(t)</m> is a constant independent of <m>t</m>
 (in other words you are not continually playing with the tuning pegs)
-and there are no external forces <m>F</m> we end up with the wave equation
+and there are no external forces <m>F</m>, we end up with the wave equation
 <me>
 \frac{\partial^2 w}{\partial\, t^2}(x,t)
 =c^2\,\frac{\partial^2 w}{\partial x^2}(x,t)
