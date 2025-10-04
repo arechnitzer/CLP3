@@ -26,7 +26,7 @@ the plane <m>y=y_0</m> for some constant <m>y_0</m>.
 <image source="figs/sphericaldSxy"/>
 </sidebyside>
 <p>
-Concentrate on any one the tiny pieces. Here is a greatly magnified
+Concentrate on any one of the tiny pieces. Here is a greatly magnified
 sketch of it, looking at it from above.
 </p>
 
@@ -315,7 +315,7 @@ is the circle of radius <m>a</m> centred on <m>x=z=0</m>. So <m>\cS</m> is a
 bunch of circles stacked sideways. It is a cylinder on its side (with both
 ends open).
 By symmetry, the area of <m>\cS</m> is four times the area of the part of <m>\cS</m>
-that is in the first octanct, which is
+that is in the first octant, which is
 <me>
 \cS_1 = \Big\{(x,y,z)\ \Big|\ z=f(x,y)=\sqrt{a^2-x^2},\ 0\le x\le a,\
                                0\le y\le b\Big\}

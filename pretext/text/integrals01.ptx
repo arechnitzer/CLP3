@@ -267,7 +267,7 @@ value of <m>x</m>, when the <m>y</m>-coordinate is <m>y</m>, and
 of <m>x</m>, when the <m>y</m>-coordinate is <m>y</m>.
 Suppose that we wish to evaluate the mass of a plate that
 fills the region <m>\cR</m>, and that the density of the plate is <m>f(x,y)</m>.
-We follow essentially the same the procedure as we used
+We follow essentially the same procedure as we used
 with vertical slices, but with the roles of <m>x</m> and <m>y</m> swapped.
 <ul>
 <li>
@@ -1245,7 +1245,7 @@ Find the volume common to the two cylinders <m>x^2+y^2=a^2</m> and
 
 <solution>
 <p>
-Our first job is figure out what the specified solid looks like.
+Our first job is to figure out what the specified solid looks like.
 Note that
 <ul>
 <li>
@@ -1281,7 +1281,7 @@ We have to compute the volume common to these two intersecting cylinders.
 <li>
 The equations <m>x^2+y^2=a^2</m> and <m>x^2+z^2=a^2</m> do not change at all
 if <m>x</m> is replaced by <m>-x</m>. Consequently both cylinders, and hence our solid,
-is symmetric about the <m>yz</m>-plane. In particular the volume of the
+are symmetric about the <m>yz</m>-plane. In particular the volume of the
 part of the solid in the octant <m>x\le 0</m>, <m>y\ge 0</m>, <m>z\ge 0</m>
 is the same as the volume in the first octant <m>x\ge 0</m>, <m>y\ge 0</m>, <m>z\ge 0</m>.
 Similarly, the equations do not change at all
@@ -1803,7 +1803,7 @@ to give
 </mrow>
 </md>
 Then to integrate <m>\cos^4\theta</m>, we use the double angle
-formula<fn>We weren't joking about his being a good review of
+formula<fn>We weren't joking about this being a good review of
 single variable integration techniques. See Example 1.8.8 in the CLP-2 text.</fn>
 <md>
 <mrow>

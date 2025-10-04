@@ -445,7 +445,7 @@ the <q>three petal rose</q>.
 </sidebyside>
 
 <p>
-There is an infinite family of similar rose curves (also called rhodonea<fn>The name rhodenea first appeared in the 1728 publication
+There is an infinite family of similar rose curves (also called rhodonea<fn>The name rhodonea first appeared in the 1728 publication
 <em>Flores geometrici</em> of the Italian monk, theologian, mathematician
 and engineer, Guido Grandi (1671<ndash/> 1742).</fn>
  curves).
@@ -1098,7 +1098,7 @@ be expressed in terms of elementary functions<fn>On the other hand it is the cor
 gives Gaussian (i.e. bell curve) probabilities.
 <q>erf</q> stands for <q>error function</q>.</fn>.
 So we cannot evaluate this integral using the usual Calculus II methods.
-However we can evaluate it's square
+However we can evaluate its square
 <md>
 <mrow>
 \left[\int_0^\infty e^{-x^2}\ \dee{x}\right]^2
@@ -1318,7 +1318,7 @@ All together
 
 <p>We used some hand waving in deriving the area formula <xref ref="eq_polar_area"/>:
 the word <q>essentially</q> appeared quite a few times. Here is
-how do that derivation more rigorously.
+how to do that derivation more rigorously.
 </p>
 
 </subsection>

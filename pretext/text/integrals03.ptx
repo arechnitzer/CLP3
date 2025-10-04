@@ -145,7 +145,7 @@ All together, the average height is
 \bar z = \frac{\frac{1}{3}\pi a^3}{\frac{1}{2} \pi a^2}
 =\frac{2}{3}\, a
 </me>
-Notice this this number is bigger than zero and less than the maximum height,
+Notice that this number is bigger than zero and less than the maximum height,
 which is <m>a</m>. That makes sense.
 </p>
 </solution>
@@ -307,7 +307,7 @@ is just <m>F</m>, just as you would want.
 
 <p>One important example of a weighted average is the centre of mass.
 If you support a body at its centre of mass (in a uniform gravitational
-field) it balances perfectly. That's the definition of the centre of mass
+field), it balances perfectly. That's the definition of the centre of mass
 of the body. In Section 2.3 of the CLP-2 text, we found
 that the centre of mass of a body that consists of mass distributed
 continuously along a straight line, with mass density <m>\rho(x)</m>kg/m and
@@ -957,7 +957,7 @@ where
 <me>
 I_\cA=\dblInt_\cR D(x,y)^2\rho(x,y)\ \dee{x}\,\dee{y}
 </me>
-is called the <em>moment of inertial</em> of <m>\cR</m> about the axis <m>\cA</m>.
+is called the <em>moment of inertia</em> of <m>\cR</m> about the axis <m>\cA</m>.
 In particular the moment of inertia of <m>\cR</m> about the <m>y</m>-axis is
 <me>
 I_y=\dblInt_\cR x^2\,\rho(x,y)\ \dee{x}\,\dee{y}
@@ -1038,14 +1038,14 @@ Remark <xref ref="rem_sneaky"/>.
 <statement>
 <p>
 Find the moment of inertia of the interior, <m>\cR</m>,
-of the cardiod <m>r=a(1+\cos\theta)</m> about the <m>z</m>-axis.
-Assume that the cardiod lies in the <m>xy</m>-plane and  has density one.
+of the cardioid <m>r=a(1+\cos\theta)</m> about the <m>z</m>-axis.
+Assume that the cardioid lies in the <m>xy</m>-plane and  has density one.
 </p>
 </statement>
 
 <solution>
 <p>
-  We sketched the cardiod (with <m>a=1</m>) in Example <xref ref="eg_cardioid"/>.
+  We sketched the cardioid (with <m>a=1</m>) in Example <xref ref="eg_cardioid"/>.
 </p>
 
 <sidebyside width="35%">
@@ -1137,11 +1137,11 @@ I_\cA&amp;= \frac{a^4}{4}\left[2\pi + 4\times 0 +6\times\pi+4\times 0
 <example><title>Cardoid</title>
 <p>xml:id="eg_moment_cardiod_B"
 Find the moment of inertia of the interior, <m>\cR</m>,
-of the cardiod <m>r=a(1+\cos\theta)</m>
+of the cardioid <m>r=a(1+\cos\theta)</m>
 about the <m>x</m>-axis. Assume that it has density one.
 </p>
 
-<p>\soln We sketched the cardiod (with <m>a=1</m>) in Example <xref ref="eg_cardioid"/>.
+<p>\soln We sketched the cardioid (with <m>a=1</m>) in Example <xref ref="eg_cardioid"/>.
 \vadjust{
 </p>
 

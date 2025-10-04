@@ -209,7 +209,7 @@ is <m>\rho(x,y,z) = x^2+y^2</m>.
 
 <solution>
 <p>
-Before we get started, note that <m>x^2+y^2</m> is the square of the distance from <m>(x,y,z)</m> to the <m>z</m>-axis. Consequently both the integrand, <m>x^2+y^2</m>, and the domain of integration, <m>x^2+y^2+z^2\le 1</m>, and hence our solid, are invariant under rotations about the <m>z</m>-axis<fn>Imagine that you are looking that the solid from, for example, far out on the <m>x</m>-axis. You close your eyes for a minute. Your evil twin then sneaks in, rotates the solid about the <m>z</m>-axis, and sneaks out. You open your eyes. You will not be able to tell that the solid has been rotated.</fn>. That makes this integral a good candidate for cylindrical coordinates.
+Before we get started, note that <m>x^2+y^2</m> is the square of the distance from <m>(x,y,z)</m> to the <m>z</m>-axis. Consequently both the integrand, <m>x^2+y^2</m>, and the domain of integration, <m>x^2+y^2+z^2\le 1</m>, and hence our solid, are invariant under rotations about the <m>z</m>-axis<fn>Imagine that you are looking at the solid from, for example, far out on the <m>x</m>-axis. You close your eyes for a minute. Your evil twin then sneaks in, rotates the solid about the <m>z</m>-axis, and sneaks out. You open your eyes. You will not be able to tell that the solid has been rotated.</fn>. That makes this integral a good candidate for cylindrical coordinates.
 </p>
 
 <p>Again, by symmetry the total mass of the sphere will be eight times
@@ -323,7 +323,7 @@ essentially has mass <m>r^3\,\dee{r}\,\dee{\theta}\,\dee{z}</m>.
 </ul></p>
 </li>
 <li>
-To get the mass any one wedge, say the wedge whose <m>\theta</m> coordinate runs
+To get the mass of any one wedge, say the wedge whose <m>\theta</m> coordinate runs
 from <m>\theta</m> to <m>\theta+\dee{\theta}</m>, we just add up the masses of
 the approximate cubes in that wedge, by integrating <m>r</m> from its smallest
 value on the wedge, namely <m>0</m>, to its largest value on the wedge, namely

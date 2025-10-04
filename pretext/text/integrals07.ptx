@@ -92,7 +92,7 @@ with<fn>and with the sign of <m>x</m> being the same as the sign of <m>\cos\thet
 <li>
 a surface of constant <m>\varphi</m>, i.e. a surface
 <m>z=\sqrt{x^2+y^2}\ \cot\varphi</m> with <m>\varphi</m> a constant
-(which looks a conical funnel).
+(which looks like a conical funnel).
 </li>
 </ul>
 </p>
@@ -238,7 +238,7 @@ on <m>\big(0,0, \rho\cos\varphi\big)</m>.
 <p>
 When we introduced segments using surfaces of constant <m>\theta</m>,
 the difference between the successive <m>\theta</m>'s was <m>\dee{\theta}</m>.
-Thus these four edge of the cube are circular arcs of radius
+Thus these four edges of the cube are circular arcs of radius
 essentially <m>\rho\sin\varphi</m> that subtend an angle <m>\dee{\theta}</m>, and so
 have length <m>\rho\sin\varphi\,\dee{\theta}</m>.
 </p>
@@ -378,7 +378,7 @@ The cube has volume essentially <m>\dee{V}
 by <xref ref="eq_dV_spherical"/>.
 </li>
 <li>
-To get the volume any one searchlight, say the searchlight whose
+To get the volume of any one searchlight, say the searchlight whose
 <m>\varphi</m> coordinate runs from <m>\varphi</m> to <m>\varphi+\dee{\varphi}</m>,
 we just add up the volumes of the approximate cubes in that searchlight,
 by integrating <m>\rho</m> from its smallest value on the searchlight, namely <m>0</m>,
@@ -516,7 +516,7 @@ Each segment, viewed from the side, looks like
 <p>
 Subdivide it into long thin searchlights
 by inserting many cones of constant <m>\varphi</m>, with the various values of
-<m>\varphi</m> differing by <m>\dee{\varphi}</m>. The figure on below shows
+<m>\varphi</m> differing by <m>\dee{\varphi}</m>. The figure below shows
 one searchlight outlined in blue. Each searchlight
 <ul>
 <li>
@@ -571,7 +571,7 @@ The cube has volume essentially <m>\dee{V}
 by <xref ref="eq_dV_spherical"/>.
 </li>
 <li>
-To get the volume any one searchlight, say the searchlight whose
+To get the volume of any one searchlight, say the searchlight whose
 <m>\varphi</m> coordinate runs from <m>\varphi</m> to <m>\varphi+\dee{\varphi}</m>,
 we just add up the volumes of the approximate cubes in that searchlight,
 by integrating <m>\rho</m> from its smallest value on the searchlight, namely
