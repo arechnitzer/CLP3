@@ -1154,7 +1154,7 @@ a+b+c&amp;=-5
 From these equations we read off, in order,
 <m>a=2</m>, <m>b=-4</m> and <m>c=-3</m>.
 The function <m>f</m> has maximum rate of change at <m>P</m> in the
-direction if the gradient of <m>f</m>. The unit vector in that direction is
+direction of the gradient of <m>f</m>. The unit vector in that direction is
 <me>
 \frac{\llt 2\,,\,-4\,,\,-3\rgt}{|\llt 2\,,\,-4\,,\,-3\rgt|}
 =\frac{\llt 2\,,\,-4\,,\,-3\rgt}{\sqrt{29}}
