@@ -1994,7 +1994,7 @@ Give the direction in which <m>f</m> is increasing the fastest at the point
 <li>
 Give an equation for the plane <m>T</m> tangent to the surface
 <me>
-S = \Set{(x,y,z)}{f(x,y,z) = 1}
+S = \Set{(x,y,z)}{f(x,y,z) = 2}
 </me>
 at the point <m>(1, 0, \pi/2)</m>.
 </li>
@@ -2040,7 +2040,7 @@ is <m>\hi</m>.
 </p>
 
 <p>(b) The gradient vector <m>\vnabla f(1, 0, \pi/2)=\llt 2,0,0\rgt</m> is a normal
-vector to the surface <m>f=1</m> at <m>(1, 0, \pi/2)</m>. So the specified tangent
+vector to the surface <m>f=2</m> at <m>(1, 0, \pi/2)</m>. So the specified tangent
 plane is
 <md>
 <mrow>
