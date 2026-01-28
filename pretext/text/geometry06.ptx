@@ -624,19 +624,19 @@ particle at time <m>t</m>, then
 
 <mrow>
 \text{speed at time } t
-       &amp;= \diff{s}{t}(t)=|\vv(t)|=|\vr'(t)|=\sqrt{(x'(t)^2+y'(t)^2+z'(t)^2}
+       &amp;= \diff{s}{t}(t)=|\vv(t)|=|\vr'(t)|=\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}
 </mrow>
 
 <mrow>
 \text{acceleration at time } t
        &amp;=\va(t)=\vr''(t)=\vv'(t)
-       =\big(x''(t)\hi + y''(t)\hj + z''(t)\hk
+       = x''(t)\hi + y''(t)\hj + z''(t)\hk
 </mrow>
 
 <intertext>and the distance travelled between times <m>T_0</m> and <m>T</m> is</intertext>
 <mrow>
   s(T)-s(T_0)&amp;= \int_{T_0}^T \Big|\diff{\vr}{t}(t)\Big|\,\dee{t}
-       = \int_{T_0}^T \sqrt{(x'(t)^2+y'(t)^2+z'(t)^2}\,\dee{t}
+       = \int_{T_0}^T \sqrt{x'(t)^2+y'(t)^2+z'(t)^2}\,\dee{t}
 </mrow>
 </md>
 </p></statement>
