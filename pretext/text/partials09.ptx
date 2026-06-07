@@ -631,7 +631,7 @@ These equations might look a little scary. But there is no need to panic.
 They are not as bad as they look because <m>\theta</m> enters only through
 <m>\cos\theta</m> and <m>\sin^2\theta</m>, which we can easily write in terms
 of <m>\cos\theta</m>. Furthermore we can eliminate <m>\cos\theta</m> by observing
-that the first equation forces <m>\cos\theta=-\frac{100-4x}{2x}</m>
+that the first equation forces <m>\cos\theta=-\frac{1}{2x}(100-4x)</m>
 and hence <m>\sin^2\theta=1-\cos^2\theta=1-\frac{(100-4x)^2}{4x^2}</m>.
 Substituting these into the second equation gives
 <md alignment="alignat">
