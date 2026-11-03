@@ -973,8 +973,8 @@ curves that
 
 <p>Approximately speaking, if a critical point <m>(a,b)</m> is neither a local
 minimum nor a local maximum, then it is a saddle point. For <m>(a,b)</m> to not
-be a local minimum, <m>f</m> has to take values bigger than <m>f(a,b)</m> at some
-points nearby <m>(a,b)</m>. For <m>(a,b)</m> to not be a local maximum, <m>f</m> has to take values smaller than <m>f(a,b)</m> at some points nearby <m>(a,b)</m>.  Writing this
+be a local minimum, <m>f</m> has to take values smaller than <m>f(a,b)</m> at some
+points nearby <m>(a,b)</m>. For <m>(a,b)</m> to not be a local maximum, <m>f</m> has to take values bigger than <m>f(a,b)</m> at some points nearby <m>(a,b)</m>.  Writing this
 more mathematically we get the following definition.
 </p>
 
