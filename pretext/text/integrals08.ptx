@@ -760,7 +760,7 @@ a constant times
 <me>
 n^2 \times \frac{WH(W+H)}{n^3} = \frac{WH(W+H)}{n}
 </me>
-When we define our integral by taking the limit <m>n\rightarrow 0</m> of
+When we define our integral by taking the limit <m>n\rightarrow \infty</m> of
 the Riemann sums, this error converges to exactly <m>0</m>. As a consequence,
 it was safe for us to ignore the error terms when we established the change
 of variables formulae.
